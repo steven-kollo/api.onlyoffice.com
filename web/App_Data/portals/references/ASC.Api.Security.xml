@@ -22,7 +22,6 @@
             <collection>list</collection>
             <path>api/2.0/security/audit/login/last</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.GetLastAuditEvents">
             <summary>
@@ -36,7 +35,6 @@
             <collection>list</collection>
             <path>api/2.0/security/audit/events/last</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.GetLoginEventsByFilter(System.Guid,ASC.MessagingSystem.MessageAction,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
             <summary>
@@ -54,7 +52,6 @@
             <collection>list</collection>
             <path>api/2.0/security/audit/login/filter</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.GetAuditEventsByFilter(System.Guid,ASC.AuditTrail.Types.ProductType,ASC.AuditTrail.Types.ModuleType,ASC.AuditTrail.Types.ActionType,ASC.MessagingSystem.MessageAction,ASC.AuditTrail.Types.EntryType,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
             <summary>
@@ -77,7 +74,6 @@
             <collection>list</collection>
             <path>api/2.0/security/audit/events/filter</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.GetTypes">
             <summary>
@@ -89,6 +85,7 @@
             <category>Audit trail data</category>
             <returns>Audit trail types</returns>
             <path>api/2.0/security/audit/types</path>
+            <requiresAuthorization>false</requiresAuthorization>
             <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.GetMappers(System.Nullable{ASC.AuditTrail.Types.ProductType},System.Nullable{ASC.AuditTrail.Types.ModuleType})">
@@ -103,6 +100,7 @@
             <param type="ASC.AuditTrail.Types.ModuleType, ASC.AuditTrail.Types" name="moduleType">Module</param>
             <returns>Audit trail mappers</returns>
             <path>api/2.0/security/audit/mappers</path>
+            <requiresAuthorization>false</requiresAuthorization>
             <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.CreateLoginHistoryReport">
@@ -116,7 +114,6 @@
             <returns>URL to the xlsx report file</returns>
             <path>api/2.0/security/audit/login/report</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.CreateAuditTrailReport">
             <summary>
@@ -129,7 +126,6 @@
             <returns>URL to the xlsx report file</returns>
             <path>api/2.0/security/audit/events/report</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.GetAuditSettings">
             <summary>
@@ -142,7 +138,6 @@
             <returns>Audit settings</returns>
             <path>api/2.0/security/audit/settings/lifetime</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.SetAuditSettings(ASC.Core.Tenants.TenantAuditSettings)">
             <summary>
@@ -156,7 +151,6 @@
             <returns>Audit trail settings</returns>
             <path>api/2.0/security/audit/settings/lifetime</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.GetAllActiveConnections">
             <summary>
@@ -169,7 +163,6 @@
             <returns>Active portal connections</returns>
             <path>api/2.0/security/activeconnections</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.LogOutAllActiveConnectionsChangePassword">
             <summary>
@@ -182,7 +175,6 @@
             <returns>URL to the confirmation message for changing a password</returns>
             <path>api/2.0/security/activeconnections/logoutallchangepassword</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.LogOutAllActiveConnectionsForUser(System.Guid)">
             <summary>
@@ -195,7 +187,6 @@
             <param type="System.Guid, System" name="userId">User ID</param>
             <path>api/2.0/security/activeconnections/logoutall/{userId}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.LogOutAllExceptThisConnection">
             <summary>
@@ -208,7 +199,6 @@
             <returns>Current user name</returns>
             <path>api/2.0/security/activeconnections/logoutallexceptthis</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.LogOutActiveConnection(System.Int32)">
             <summary>
@@ -222,7 +212,6 @@
             <returns>Boolean value: true if the operation is successful</returns>
             <path>api/2.0/security/activeconnections/logout/{loginEventId}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
     </members>
 </doc>

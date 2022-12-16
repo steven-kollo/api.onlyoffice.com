@@ -29,6 +29,7 @@
             <path>api/2.0/authentication</path>
             <returns type="ASC.Specific.AuthorizationApi.AuthenticationTokenData, ASC.Specific">Authentication token to use in the 'Authorization' header when calling API methods</returns>
             <exception cref="T:System.Security.Authentication.AuthenticationException">Thrown when not authenticated</exception>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.SaveMobilePhone(System.String,System.String,System.String,System.String,System.String)">
             <summary>
@@ -43,6 +44,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/setphone</path>
             <returns type="ASC.Specific.AuthorizationApi.AuthenticationTokenData, ASC.Specific">Mobile phone</returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.SendSmsCode(System.String,System.String,System.String,System.String)">
             <summary>
@@ -56,6 +58,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/sendsms</path>
             <returns type="ASC.Specific.AuthorizationApi.AuthenticationTokenData, ASC.Specific">Mobile phone</returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
@@ -72,6 +75,7 @@
             <param type="System.String, System" name="codeOAuth">Code for getting a token</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/{code}</path>
+            <requiresAuthorization>false</requiresAuthorization>
             <returns type="ASC.Specific.AuthorizationApi.AuthenticationTokenData, ASC.Specific">Two-factor authentication token to use in the 'Authorization' header when calling API methods</returns>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean,System.String)">
@@ -85,6 +89,7 @@
             <param type="System.String, System" name="recaptchaResponse">ReCAPTCHA token</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/register</path>
+            <requiresAuthorization>false</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String)">
@@ -98,6 +103,7 @@
             <exception cref="T:System.Security.Authentication.AuthenticationException">Thrown when not authenticated.</exception>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/login</path>
+            <requiresAuthorization>false</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Specific.AuthorizationApi.AuthenticationTokenData.Token">
@@ -167,6 +173,7 @@
             </short>
             <returns type="ASC.Specific.CapabilitiesApi.CapabilitiesData, ASC.Specific">Portal capabilities</returns>
             <path>api/2.0/capabilities</path>
+             <requiresAuthorization>false</requiresAuthorization>
             <httpMethod>GET</httpMethod>
         </member>
         <member name="P:ASC.Specific.WarmupApi.WarmUpEntryPoint.Name">
@@ -191,6 +198,7 @@
             <returns>Warmup progress</returns>
             <path>api/2.0/warmup/progress</path>
             <httpMethod>GET</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Specific.WarmupApi.WarmUpEntryPoint.Restart">
@@ -203,6 +211,7 @@
             <returns>The "Ok" message if the operation is successful</returns>
             <path>api/2.0/warmup/restart</path>
             <httpMethod>GET</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
             <visible>false</visible>
         </member>
     </members>

@@ -21,7 +21,6 @@
             </returns>
             <path>api/2.0/crm/currency/rates</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCurrencyRate(System.Int32)">
@@ -37,7 +36,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/currency/rates/{id}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCurrencyRate(System.String,System.String)">
             <summary>
@@ -53,7 +51,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/currency/rates/{fromCurrency}/{toCurrency}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCurrencyRate(System.String,System.String,System.Decimal)">
             <summary>
@@ -67,7 +64,6 @@
             <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM">Currency rate</returns>
             <path>api/2.0/crm/currency/rates</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCurrencyRate(System.Int32,System.String,System.String,System.Decimal)">
             <summary>
@@ -82,7 +78,6 @@
             <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM">Updated currency rate</returns>
             <path>api/2.0/crm/currency/rates/{id}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetCurrencyRates(System.String,System.Collections.Generic.List{ASC.CRM.Core.CurrencyRate})">
             <summary>
@@ -95,7 +90,6 @@
             <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM">Currency information</returns>
             <path>api/2.0/crm/currency/setrates</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddCurrencyRates(System.Collections.Generic.List{ASC.CRM.Core.CurrencyRate})">
@@ -108,7 +102,6 @@
             <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM">Currency information</returns>
             <path>api/2.0/crm/currency/addrates</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCurrencyRate(System.Int32)">
@@ -121,7 +114,6 @@
             <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM">Currency rate</returns>
             <path>api/2.0/crm/currency/rates/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceByID(System.Int32)">
             <summary>
@@ -133,7 +125,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceWrapper, ASC.Api.CRM">Invoice</returns>
             <path>api/2.0/crm/invoice/{invoiceid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceSample">
             <summary>
@@ -144,7 +135,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceWrapper, ASC.Api.CRM">Invoice</returns>
             <path>api/2.0/crm/invoice/sample</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceJsonData(System.Int32)">
             <summary>
@@ -156,7 +146,6 @@
             <returns>Invoice JSON data</returns>
             <path>api/2.0/crm/invoice/jsondata/{invoiceid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoices(System.Nullable{ASC.CRM.Core.InvoiceStatus},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Int32,System.String)">
             <summary>
@@ -175,7 +164,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceBaseWrapper, ASC.Api.CRM">List of invoices</returns>
             <path>api/2.0/crm/invoice/filter</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetEntityInvoices(System.String,System.Int32)">
@@ -189,7 +177,6 @@
             <returns type="ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM">List of invoices</returns>
             <path>api/2.0/crm/{entityType}/invoicelist/{entityid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceBatchStatus(System.Int32[],ASC.CRM.Core.InvoiceStatus)">
@@ -203,7 +190,6 @@
             <returns>Invoice information</returns>
             <path>api/2.0/crm/invoice/status/{status}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteInvoice(System.Int32)">
@@ -216,7 +202,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceBaseWrapper, ASC.Api.CRM">Invoice</returns>
             <path>api/2.0/crm/invoice/{invoiceid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchInvoices(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -228,7 +213,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceBaseWrapper, ASC.Api.CRM">List of invoices</returns>
             <path>api/2.0/crm/invoice</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoice(System.String,ASC.Specific.ApiDateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,ASC.Specific.ApiDateTime,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{ASC.CRM.Core.Entities.InvoiceLine})">
@@ -286,7 +270,6 @@
             </example>
             <path>api/2.0/crm/invoice</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoice(System.Int32,ASC.Specific.ApiDateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,ASC.Specific.ApiDateTime,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{ASC.CRM.Core.Entities.InvoiceLine})">
             <summary>
@@ -343,7 +326,6 @@
             </example>
             <path>api/2.0/crm/invoice/{id}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoicePdfExistOrCreate(System.Int32)">
             <summary>
@@ -355,7 +337,6 @@
             <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">Pdf file</returns>
             <path>api/2.0/crm/invoice/{invoiceid}/pdf</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceConverterData(System.Int32,System.String,System.String)">
             <summary>
@@ -369,7 +350,6 @@
             <returns type="ASC.Web.CRM.Classes.ConverterData, ASC.Web.CRM">Converter data</returns>
             <path>api/2.0/crm/invoice/converter/data</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceByNumberExistence(System.String)">
             <summary>
@@ -381,7 +361,6 @@
             <returns>Invoice existence</returns>
             <path>api/2.0/crm/invoice/bynumber/exist</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceByNumber(System.String)">
             <summary>
@@ -393,7 +372,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceWrapper, ASC.Api.CRM">Invoice</returns>
             <path>api/2.0/crm/invoice/bynumber</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceItems(System.Int32,System.Nullable{System.Boolean})">
             <summary>
@@ -406,7 +384,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">List of invoice items</returns>
             <path>api/2.0/crm/invoiceitem/filter</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceItemByID(System.Int32)">
@@ -419,7 +396,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">Invoice item</returns>
             <path>api/2.0/crm/invoiceitem/{invoiceitemid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal)">
             <summary>
@@ -439,7 +415,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceLineWrapper, ASC.Api.CRM">Invoice line</returns>
             <path>api/2.0/crm/invoiceline</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal)">
             <summary>
@@ -460,7 +435,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceLineWrapper, ASC.Api.CRM">Updated invoice line</returns>
             <path>api/2.0/crm/invoiceline/{id}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteInvoiceLine(System.Int32)">
             <summary>
@@ -472,7 +446,6 @@
             <returns>Invoice line ID</returns>
             <path>api/2.0/crm/invoiceline/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceItem(System.String,System.String,System.Decimal,System.String,System.Decimal,System.Boolean,System.Int32,System.Int32)">
             <summary>
@@ -491,7 +464,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">Invoice item</returns>
             <path>api/2.0/crm/invoiceitem</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceItem(System.Int32,System.String,System.String,System.Decimal,System.String,System.Decimal,System.Boolean,System.Int32,System.Int32)">
             <summary>
@@ -511,7 +483,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">Updated invoice item</returns>
             <path>api/2.0/crm/invoiceitem/{id}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteInvoiceItem(System.Int32)">
             <summary>
@@ -523,7 +494,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">Invoice item</returns>
             <path>api/2.0/crm/invoiceitem/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchItems(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -535,7 +505,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">List of invoice items</returns>
             <path>api/2.0/crm/invoiceitem</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceTaxes">
@@ -547,7 +516,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM">List of invoice taxes</returns>
             <path>api/2.0/crm/invoice/tax</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceTax(System.String,System.String,System.Decimal)">
@@ -562,7 +530,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM">Invoice tax</returns>
             <path>api/2.0/crm/invoice/tax</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceTax(System.Int32,System.String,System.String,System.Decimal)">
             <summary>
@@ -577,7 +544,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM">Updated invoice tax</returns>
             <path>api/2.0/crm/invoice/tax/{id}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteInvoiceTax(System.Int32)">
             <summary>
@@ -589,7 +555,6 @@
             <returns type="ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM">Invoice tax</returns>
             <path>api/2.0/crm/invoice/tax/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetSettings">
             <summary>
@@ -600,7 +565,6 @@
             <returns type="ASC.Web.CRM.Classes.InvoiceSetting, ASC.Web.CRM">Default invoice settings</returns>
             <path>api/2.0/crm/invoice/settings</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SaveNumberSettings(System.Boolean,System.String,System.String)">
             <summary>
@@ -614,7 +578,6 @@
             <returns type="ASC.Web.CRM.Classes.InvoiceSetting, ASC.Web.CRM">Invoice settings</returns>
             <path>api/2.0/crm/invoice/settings/name</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SaveTermsSettings(System.String)">
             <summary>
@@ -626,7 +589,6 @@
             <returns type="ASC.Web.CRM.Classes.InvoiceSetting, ASC.Web.CRM">Invoice settings</returns>
             <path>api/2.0/crm/invoice/settings/terms</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetInvoiceCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
             <summary>
@@ -638,7 +600,6 @@
             <category>Invoices</category>
             <path>api/2.0/crm/invoice/{invoiceid}/creationdate</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetInvoiceLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -665,7 +626,6 @@
             </returns>
             <path>api/2.0/crm/case/{caseid}/close</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ReOpenCases(System.Int32)">
             <summary>
@@ -681,7 +641,6 @@
             </returns>
             <path>api/2.0/crm/case/{caseid}/reopen</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCases(System.String,System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
             <summary>
@@ -712,7 +671,6 @@
             </example>
             <path>api/2.0/crm/case</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCases(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
             <summary>
@@ -746,7 +704,6 @@
             </example>
             <path>api/2.0/crm/case/{caseid}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToCases(System.Int32,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -764,7 +721,6 @@
             </returns>
             <path>api/2.0/crm/case/{caseid}/access</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchCases(System.Collections.Generic.IEnumerable{System.Int32},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -782,7 +738,6 @@
             </returns>
             <path>api/2.0/crm/case/access</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
@@ -803,7 +758,6 @@
              </returns>
              <path>api/2.0/crm/case/filter/access</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCaseByID(System.Int32)">
@@ -817,7 +771,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/case/{caseid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">Case</returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})">
@@ -834,7 +787,6 @@
             </returns>
             <path>api/2.0/crm/case/filter</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCase(System.Int32)">
@@ -851,7 +803,6 @@
             </returns>
             <path>api/2.0/crm/case/{caseid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchCases(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -867,7 +818,6 @@
             </returns>
             <path>api/2.0/crm/case</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})">
@@ -886,7 +836,6 @@
             </returns>
             <path>api/2.0/crm/case/filter</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCasesMembers(System.Int32)">
@@ -900,7 +849,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/case/{caseid}/contact</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddMemberToCases(System.Int32,System.Int32)">
@@ -918,7 +866,6 @@
             </returns>
             <path>api/2.0/crm/case/{caseid}/contact</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteMemberFromCases(System.Int32,System.Int32)">
             <summary>
@@ -935,7 +882,6 @@
             </returns>
             <path>api/2.0/crm/case/{caseid}/contact/{contactid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCasesByPrefix(System.String,System.Int32)">
             <summary>
@@ -949,7 +895,6 @@
             </returns>
             <path>api/2.0/crm/case/byprefix</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -966,7 +911,6 @@
             <path>api/2.0/crm/contact/data/{infoType}/category</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactInfoType">
             <summary>
@@ -976,7 +920,6 @@
             <category>Contacts</category>
             <returns>List of all the contact information types</returns>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
             <path>api/2.0/crm/contact/data/infoType</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -993,7 +936,6 @@
             <path>api/2.0/crm/contact/{contactid}/data</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactInfoByID(System.Int32,System.Int32)">
              <summary>
@@ -1007,7 +949,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/contact/{contactid}/data/{id}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactInfo(System.Int32,ASC.CRM.Core.ContactInfoType,System.String,System.Boolean,System.String)">
              <summary>
@@ -1028,7 +969,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/contact/{contactid}/data</path>
             <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactInfoAddress(System.Int32,ASC.Api.CRM.Wrappers.Address)">
             <summary>
@@ -1047,7 +987,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/contact/{contactid}/addressdata</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateBatchContactInfo(System.Int32,System.Collections.Generic.IEnumerable{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
              <summary>
@@ -1069,7 +1008,6 @@
              </returns>
              <path>api/2.0/crm/contact/{contactid}/batch</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
              <visible>false</visible>
         </member>
@@ -1091,7 +1029,6 @@
              </returns>
              <path>api/2.0/crm/contact/{contactid}/data/{id}</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactInfoAddress(System.Int32,System.Int32,ASC.Api.CRM.Wrappers.Address)">
             <summary>
@@ -1109,7 +1046,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}/addressdata/{id}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateBatchContactInfo(System.Int32,System.Collections.Generic.IEnumerable{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
              <summary>
@@ -1129,7 +1065,6 @@
              </returns>
              <path>api/2.0/crm/contact/{contactid}/batch</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
              <visible>false</visible>
         </member>
@@ -1147,7 +1082,6 @@
             <path>api/2.0/crm/contact/{contactid}/data/{infoType}</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactInfo(System.Int32,System.Int32)">
             <summary>
@@ -1164,7 +1098,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}/data/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactByID(System.Int32)">
             <summary>
@@ -1178,7 +1111,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/contact/{contactid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactsByProjectID(System.Int32)">
              <summary>
@@ -1195,7 +1127,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/contact/project/{projectid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetRelativeContactToProject(System.Int32,System.Int32)">
@@ -1211,7 +1142,6 @@
             <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">Contact information</returns>
             <path>api/2.0/crm/contact/{contactid}/project/{projectid}</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetRelativeContactListToProject(System.Collections.Generic.IEnumerable{System.Int32},System.Int32)">
             <summary>
@@ -1229,7 +1159,6 @@
             <path>api/2.0/crm/contact/project/{projectid}</path>
             <httpMethod>POST</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.RemoveRelativeContactToProject(System.Int32,System.Int32)">
             <summary>
@@ -1244,7 +1173,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}/project/{projectid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddDealToContact(System.Int32,System.Int32)">
             <summary>
@@ -1260,7 +1188,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}/opportunity/{opportunityid}</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteDealFromContact(System.Int32,System.Int32)">
             <summary>
@@ -1276,7 +1203,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}/opportunity/{opportunityid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContacts(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},ASC.CRM.Core.ContactListViewType,System.Nullable{System.Guid},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
             <summary>
@@ -1298,7 +1224,6 @@
             <path>api/2.0/crm/contact/filter</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SearchContactsByEmail(System.String,System.Int32)">
             <summary>
@@ -1313,7 +1238,6 @@
             </returns>
             <path>api/2.0/crm/contact/simple/byEmail</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -1336,7 +1260,6 @@
             </returns>
             <path>api/2.0/crm/contact/simple/filter</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -1354,7 +1277,6 @@
             </returns>
             <path>api/2.0/crm/contact/mail</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -1378,7 +1300,6 @@
             <path>api/2.0/crm/contact/filter</path>
             <httpMethod>DELETE</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetPeopleFromCompany(System.Int32)">
             <summary>
@@ -1394,7 +1315,6 @@
             <path>api/2.0/crm/contact/company/{companyid}/person</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddPeopleToCompany(System.Int32,System.Int32)">
             <summary>
@@ -1411,7 +1331,6 @@
             </returns>
             <path>api/2.0/crm/contact/company/{companyid}/person</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeletePeopleFromCompany(System.Int32,System.Int32)">
             <summary>
@@ -1428,7 +1347,6 @@
             </returns>
             <path>api/2.0/crm/contact/company/{companyid}/person</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreatePerson(System.String,System.String,System.String,System.Int32,System.String,ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
@@ -1447,7 +1365,6 @@
             <category>Contacts</category>
             <returns type="ASC.Api.CRM.Wrappers.PersonWrapper, ASC.Api.CRM">Person</returns>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <path>api/2.0/crm/contact/person</path>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
@@ -1465,7 +1382,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}/changephoto</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ChangeContactPhoto(System.Int32,System.String)">
             <summary>
@@ -1481,7 +1397,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}/changephotobyurl</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.MergeContacts(System.Int32,System.Int32)">
             <summary>
@@ -1499,7 +1414,6 @@
             </returns>
             <path>api/2.0/crm/contact/merge</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdatePerson(System.Int32,System.String,System.String,System.String,System.Int32,System.String,ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
@@ -1522,7 +1436,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/contact/person/{personid}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCompany(System.String,System.String,System.Collections.Generic.IEnumerable{System.Int32},ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
@@ -1540,7 +1453,6 @@
             <returns type="ASC.Api.CRM.Wrappers.CompanyWrapper, ASC.Api.CRM">Company</returns>
             <path>api/2.0/crm/contact/company</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCompany(System.Collections.Generic.IEnumerable{System.String})">
@@ -1555,7 +1467,6 @@
             <returns type="ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM">List of contacts</returns>
             <path>api/2.0/crm/contact/company/quick</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
             <collection>list</collection>
         </member>
@@ -1578,7 +1489,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/contact/person/quick</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCompany(System.Int32,System.String,System.String,ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}})">
@@ -1599,7 +1509,6 @@
             </returns>
             <path>api/2.0/crm/contact/company/{companyid}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactStatus(System.Int32,System.Int32)">
             <summary>
@@ -1616,7 +1525,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}/status</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCompanyAndParticipantsStatus(System.Int32,System.Int32)">
             <summary>
@@ -1633,7 +1541,6 @@
             </returns>
             <path>api/2.0/crm/contact/company/{companyid}/status</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdatePersonAndItsCompanyStatus(System.Int32,System.Int32)">
             <summary>
@@ -1650,7 +1557,6 @@
             </returns>
             <path>api/2.0/crm/contact/person/{personid}/status</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactAccessList(System.Int32)">
              <summary>
@@ -1666,7 +1572,6 @@
              <path>api/2.0/crm/contact/{contactid}/access</path>
              <httpMethod>GET</httpMethod>
              <collection>list</collection>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToContact(System.Int32,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
              <summary>
@@ -1685,7 +1590,6 @@
              </returns>
              <path>api/2.0/crm/contact/{contactid}/access</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchContact(System.Collections.Generic.IEnumerable{System.Int32},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -1703,7 +1607,6 @@
             </returns>
             <path>api/2.0/crm/contact/access</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchContact(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},ASC.CRM.Core.ContactListViewType,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
@@ -1727,7 +1630,6 @@
             </returns>
             <path>api/2.0/crm/contact/filter/access</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContact(System.Int32)">
@@ -1744,7 +1646,6 @@
             </returns>
             <path>api/2.0/crm/contact/{contactid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchContacts(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -1760,7 +1661,6 @@
             </returns>
             <path>api/2.0/crm/contact</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactsByPrefix(System.String,System.Int32,ASC.CRM.Core.EntityType,System.Int32)">
@@ -1778,7 +1678,6 @@
             </returns>
             <path>api/2.0/crm/contact/byprefix</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -1798,7 +1697,6 @@
             <path>api/2.0/crm/contact/bycontactinfo</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetUserTweets(System.Int32,System.Int32)">
             <summary>
@@ -1811,7 +1709,6 @@
             <returns type="ASC.Thrdparty.Message, ASC.Thrdparty">List of tweets</returns>
             <path>api/2.0/crm/contact/{contactid}/tweets</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.FindTwitterProfiles(System.String)">
@@ -1825,7 +1722,6 @@
             <path>api/2.0/crm/contact/twitterprofile</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactAvatar(System.Int32,System.String,System.Boolean)">
             <summary>
@@ -1839,7 +1735,6 @@
             <returns>Default photo</returns>
             <path>api/2.0/crm/contact/{contactid}/avatar</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImages(System.Int32)">
             <summary>
@@ -1851,7 +1746,6 @@
             <returns type="ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription, ASC.Web.CRM">List of social media images</returns>
             <path>api/2.0/crm/contact/{contactid}/socialmediaavatar</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImagesByNetworks(System.Collections.Generic.List{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
@@ -1864,7 +1758,6 @@
             <returns type="ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription, ASC.Web.CRM">List of social media images</returns>
             <path>api/2.0/crm/contact/socialmediaavatar</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.Thrdparty.SocialNetworks,System.String,System.Boolean,System.String)">
@@ -1881,7 +1774,6 @@
             <returns type="ASC.Web.CRM.Classes.ContactPhotoManager.PhotoData, ASC.Web.CRM">Avatar</returns>
             <path>api/2.0/crm/contact/{contactid}/avatar</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SendMailSMTPToContacts(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String,System.String,System.Boolean)">
             <summary>
@@ -1897,7 +1789,6 @@
             <returns>Mail</returns>
             <path>api/2.0/crm/contact/mailsmtp/send</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetMailSMTPToContactsPreview(System.String,System.Int32)">
@@ -1911,7 +1802,6 @@
             <returns>Mail preview</returns>
             <path>api/2.0/crm/contact/mailsmtp/preview</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetMailSMTPToContactsStatus">
@@ -1923,7 +1813,6 @@
             <returns>Mail status</returns>
             <path>api/2.0/crm/contact/mailsmtp/status</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CancelMailSMTPToContacts">
@@ -1935,7 +1824,6 @@
             <returns>Mail status</returns>
             <path>api/2.0/crm/contact/mailsmtp/cancel</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetContactCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -1948,7 +1836,6 @@
             <category>Contacts</category>
             <path>api/2.0/crm/contact/{contactid}/creationdate</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetContactLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -1960,7 +1847,6 @@
             <short>Set the contact last modified date</short>
             <path>api/2.0/crm/contact/{contactid}/lastmodifeddate</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.CRM.CRMApi.Name">
@@ -1986,7 +1872,6 @@
              </returns>
              <path>api/2.0/crm/{entityType}/customfield/definitions</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
             <collection>list</collection>
         </member>
@@ -2002,7 +1887,6 @@
             <path>api/2.0/crm/{entityType}/{entityid}/customfield</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetEntityCustomFieldValue(System.String,System.Int32,System.Int32,System.String)">
             <summary>
@@ -2019,7 +1903,6 @@
             </returns>
             <path>api/2.0/crm/{entityType}/{entityid}/customfield/{fieldid}</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCustomFieldValue(System.String,System.String,System.Int32,System.Int32,System.String)">
              <summary>
@@ -2116,7 +1999,6 @@
              </example>
              <path>api/2.0/crm/{entityType}/customfield</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCustomFieldValue(System.Int32,System.String,System.String,System.Int32,System.Int32,System.String)">
              <summary>
@@ -2145,7 +2027,6 @@
              <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
              <path>api/2.0/crm/{entityType}/customfield/{id}</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCustomField(System.String,System.Int32)">
             <summary>
@@ -2162,7 +2043,6 @@
             </returns>
             <path>api/2.0/crm/{entityType}/customfield/{fieldid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCustomFieldsOrder(System.Collections.Generic.IEnumerable{System.Int32},System.String)">
             <summary>
@@ -2181,7 +2061,6 @@
             <path>api/2.0/crm/{entityType}/customfield/reorder</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealByID(System.Int32)">
              <summary>
@@ -2197,7 +2076,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/opportunity/{opportunityid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateToDealMilestone(System.Int32,System.Int32)">
              <summary>
@@ -2214,7 +2092,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/opportunity/{opportunityid}/stage/{id}</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToDeal(System.Int32,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
              <summary>
@@ -2232,7 +2109,6 @@
              </returns>
              <path>api/2.0/crm/opportunity/{opportunityid}/access</path>
              <httpMethod>PUT</httpMethod>
-              <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchDeal(System.Guid,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{ASC.CRM.Core.DealMilestoneStatus},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -2257,7 +2133,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/filter/access</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchDeal(System.Collections.Generic.IEnumerable{System.Int32},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
@@ -2276,7 +2151,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/access</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchDeals(System.Collections.Generic.IEnumerable{System.Int32})">
@@ -2293,7 +2167,6 @@
             </returns>
             <path>api/2.0/crm/opportunity</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchDeals(System.Guid,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{ASC.CRM.Core.DealMilestoneStatus},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
@@ -2317,7 +2190,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/filter</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDeals(System.Guid,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{ASC.CRM.Core.DealMilestoneStatus},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
@@ -2339,7 +2211,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/filter</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteDeal(System.Int32)">
@@ -2356,7 +2227,6 @@
              </returns>
              <path>api/2.0/crm/opportunity/{opportunityid}</path>
              <httpMethod>DELETE</httpMethod>
-              <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateDeal(System.Int32,System.Collections.Generic.IEnumerable{System.Int32},System.String,System.String,System.Guid,ASC.CRM.Core.BidType,System.Decimal,System.String,System.Int32,System.Int32,System.Int32,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
              <summary>
@@ -2387,7 +2257,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/opportunity</path>
             <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateDeal(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32},System.String,System.String,System.Guid,ASC.CRM.Core.BidType,System.Decimal,System.String,System.Int32,System.Int32,System.Int32,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
              <summary>
@@ -2419,7 +2288,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/opportunity/{opportunityid}</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealMembers(System.Int32)">
              <summary>
@@ -2433,7 +2301,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/opportunity/{opportunityid}/contact</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddMemberToDeal(System.Int32,System.Int32)">
@@ -2450,7 +2317,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/{opportunityid}/contact/{contactid}</path>
             <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteMemberFromDeal(System.Int32,System.Int32)">
             <summary>
@@ -2467,7 +2333,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/{opportunityid}/contact/{contactid}</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealsByPrefix(System.String,System.Int32,System.Boolean)">
             <summary>
@@ -2482,7 +2347,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/byprefix</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -2498,7 +2362,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/bycontact/{contactid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetDealCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -2511,7 +2374,6 @@
             <category>Opportunities</category>
             <path>api/2.0/crm/opportunity/{opportunityid}/creationdate</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetDealLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -2524,7 +2386,6 @@
             <category>Opportunities</category>
             <path>api/2.0/crm/opportunity/{opportunityid}/lastmodifeddate</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateDealMilestone(System.String,System.String,System.String,System.Int32,ASC.CRM.Core.DealMilestoneStatus)">
@@ -2544,7 +2405,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/stage</path>
             <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateDealMilestone(System.Int32,System.String,System.String,System.String,System.Int32,ASC.CRM.Core.DealMilestoneStatus)">
             <summary>
@@ -2565,7 +2425,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/stage/{id}</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateDealMilestoneColor(System.Int32,System.String)">
             <summary>
@@ -2582,7 +2441,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/stage/{id}/color</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateDealMilestonesOrder(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -2601,7 +2459,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/opportunity/stage/reorder</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteDealMilestone(System.Int32)">
@@ -2618,7 +2475,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/stage/{id}</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateHistoryCategory(System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -2634,7 +2490,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/history/category</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateHistoryCategory(System.Int32,System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -2652,7 +2507,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/history/category/{id}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateHistoryCategoryIcon(System.Int32,System.String)">
             <summary>
@@ -2669,7 +2523,6 @@
             </returns>
             <path>api/2.0/crm/history/category/{id}/icon</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateHistoryCategoriesOrder(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -2688,7 +2541,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/history/category/reorder</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteHistoryCategory(System.Int32)">
@@ -2704,7 +2556,6 @@
             <returns type="ASC.Api.CRM.Wrappers.HistoryCategoryWrapper, ASC.Api.CRM">History category</returns>
             <path>api/2.0/crm/history/category/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskCategory(System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -2720,7 +2571,6 @@
             <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">Task category</returns>
             <path>api/2.0/crm/task/category</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskCategory(System.Int32,System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -2739,7 +2589,6 @@
              <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/task/category/{id}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskCategoryIcon(System.Int32,System.String)">
             <summary>
@@ -2756,7 +2605,6 @@
             </returns>
             <path>api/2.0/crm/task/category/{id}/icon</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskCategoriesOrder(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -2775,7 +2623,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/task/category/reorder</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTaskCategory(System.Int32,System.Int32)">
@@ -2791,7 +2638,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/task/category/{categoryid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">Task category</returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactStatus(System.String,System.String,System.String,System.Int32)">
@@ -2808,7 +2654,6 @@
              <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">Contact status</returns>
              <path>api/2.0/crm/contact/status</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactStatus(System.Int32,System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -2828,7 +2673,6 @@
              <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">Contact status</returns>
              <path>api/2.0/crm/contact/status/{id}</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactStatusColor(System.Int32,System.String)">
             <summary>
@@ -2845,7 +2689,6 @@
             </returns>
             <path>api/2.0/crm/contact/status/{id}/color</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactStatusesOrder(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -2864,7 +2707,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/contact/status/reorder</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactStatus(System.Int32)">
@@ -2882,7 +2724,6 @@
              </returns>
              <path>api/2.0/crm/contact/status/{contactStatusid}</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactStatusByID(System.Int32)">
              <summary>
@@ -2896,7 +2737,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/contact/status/{contactStatusid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactType(System.String,System.Int32)">
              <summary>
@@ -2910,7 +2750,6 @@
              <returns type="ASC.Api.CRM.Wrappers.ContactTypeWrapper, ASC.Api.CRM">Contact type</returns>
              <path>api/2.0/crm/contact/type</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactType(System.Int32,System.String,System.Int32)">
              <summary>
@@ -2928,7 +2767,6 @@
              <returns type="ASC.Api.CRM.Wrappers.ContactTypeWrapper, ASC.Api.CRM">Contact type</returns>
              <path>api/2.0/crm/contact/type/{id}</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactTypesOrder(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -2948,7 +2786,6 @@
             <path>api/2.0/crm/contact/type/reorder</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactType(System.Int32)">
              <summary>
@@ -2965,7 +2802,6 @@
              </returns>
              <path>api/2.0/crm/contact/type/{contactTypeid}</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactTypeByID(System.Int32)">
              <summary>
@@ -2979,7 +2815,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/contact/type/{contactTypeid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealMilestoneByID(System.Int32)">
              <summary>
@@ -2993,7 +2828,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/opportunity/stage/{stageid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskCategoryByID(System.Int32)">
              <summary>
@@ -3007,7 +2841,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/task/category/{categoryid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetHistoryCategoryWrapper">
             <summary>
@@ -3020,7 +2853,6 @@
             </returns>
             <path>api/2.0/crm/history/category</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskCategories">
@@ -3034,7 +2866,6 @@
             </returns>
             <path>api/2.0/crm/task/category</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactStatuses">
@@ -3048,7 +2879,6 @@
              </returns>
              <path>api/2.0/crm/contact/status</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactTypes">
@@ -3062,7 +2892,6 @@
             </returns>
             <path>api/2.0/crm/contact/type</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealMilestones">
@@ -3076,7 +2905,6 @@
             </returns>
             <path>api/2.0/crm/opportunity/stage</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetHistory(System.String,System.Int32,System.Int32,System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
@@ -3098,7 +2926,6 @@
             </returns>
             <path>api/2.0/crm/history/filter</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteHistory(System.Int32)">
@@ -3117,7 +2944,6 @@
             </returns>
             <path>api/2.0/crm/history/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTextFile(System.String,System.Int32,System.String,System.String)">
             <summary>
@@ -3134,7 +2960,6 @@
             </returns>
             <path>api/2.0/crm/{entityType}/{entityid}/files/text</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UploadFileInCRM(System.String,System.Int32,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean)">
             <summary>
@@ -3162,7 +2987,6 @@
             </returns>
             <path>api/2.0/crm/{entityType}/{entityid}/files/upload</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddHistoryTo(System.String,System.Int32,System.Int32,System.String,System.Int32,ASC.Specific.ApiDateTime,System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -3190,7 +3014,6 @@
             </returns>
             <path>api/2.0/crm/history</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AttachFiles(System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -3206,7 +3029,6 @@
             <returns type="ASC.Api.CRM.Wrappers.RelationshipEventWrapper, ASC.Api.CRM">Entity with the file(s) attached</returns>
             <path>api/2.0/crm/{entityType}/{entityid}/files</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetRootFolderID">
             <summary>
@@ -3219,7 +3041,6 @@
             </returns>
             <path>api/2.0/crm/files/root</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetFiles(System.String,System.Int32)">
             <summary>
@@ -3234,7 +3055,6 @@
             </returns>
             <path>api/2.0/crm/{entityType}/{entityid}/files</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCRMFile(System.Int32)">
@@ -3251,7 +3071,6 @@
             </returns>
             <path>api/2.0/crm/files/{fileid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetFiles">
             <summary>Returns a list of all the user report files.</summary>
@@ -3261,7 +3080,6 @@
             <exception cref="T:System.Security.SecurityException">If the user can't create reports</exception>
             <path>api/2.0/crm/report/files</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteFile(System.Int32)">
@@ -3274,7 +3092,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">If file is not found</exception>
             <path>api/2.0/crm/report/file/{fileid}</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetStatus">
             <summary>Returns a status of the report generation task.</summary>
@@ -3284,7 +3101,6 @@
             <exception cref="T:System.Security.SecurityException">If the user can't create reports</exception>
             <path>api/2.0/crm/report/status</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.Terminate">
             <summary>Terminates the report generation task.</summary>
@@ -3293,7 +3109,6 @@
             <exception cref="T:System.Security.SecurityException">If the user can't create reports</exception>
             <path>api/2.0/crm/report/terminate</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CheckReportData(ASC.CRM.Core.ReportType,ASC.CRM.Core.ReportTimePeriod,System.Guid[])">
             <summary>Checks the report data for the parameters specified in the request.</summary>
@@ -3305,7 +3120,6 @@
             <returns>Report information</returns>
             <path>api/2.0/crm/report/check</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.Security.SecurityException">If the user can't create reports</exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GenerateReport(ASC.CRM.Core.ReportType,ASC.CRM.Core.ReportTimePeriod,System.Guid[])">
@@ -3319,7 +3133,6 @@
             <exception cref="T:System.Security.SecurityException">If the user can't create reports</exception>
             <path>api/2.0/crm/report/generate</path>
             <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetEntityTags(System.String,System.Int32)">
              <summary>
@@ -3335,7 +3148,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/{entityType}/tag/{entityid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactTags(System.Int32)">
@@ -3350,7 +3162,6 @@
              </returns>
              <path>api/2.0/crm/contact/{contactid}/tag</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
             <collection>list</collection>
         </member>
@@ -3367,7 +3178,6 @@
              </returns>
              <path>api/2.0/crm/{entityType}/tag</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAllTags(System.String)">
@@ -3383,7 +3193,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/{entityType}/tag</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagToBatch(System.String,System.Collections.Generic.IEnumerable{System.Int32},System.String)">
@@ -3401,7 +3210,6 @@
             </returns> 
             <path>api/2.0/crm/{entityType}/taglist</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagToBatchContacts(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,ASC.CRM.Core.ContactListViewType,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String)">
             <summary>
@@ -3422,7 +3230,6 @@
             </returns> 
             <path>api/2.0/crm/contact/filter/taglist</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagToBatchDeals(System.Guid,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{ASC.CRM.Core.DealMilestoneStatus},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String)">
             <summary>
@@ -3445,7 +3252,6 @@
             </returns> 
             <path>api/2.0/crm/opportunity/filter/taglist</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagToBatchCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String)">
             <summary>
@@ -3463,7 +3269,6 @@
             </returns> 
             <path>api/2.0/crm/case/filter/taglist</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteUnusedTag(System.String)">
             <summary>
@@ -3475,7 +3280,6 @@
             <returns>Tags</returns>
             <path>api/2.0/crm/{entityType}/tag/unused</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagTo(System.String,System.Int32,System.String)">
@@ -3493,7 +3297,6 @@
             </returns> 
             <path>api/2.0/crm/{entityType}/{entityid}/tag</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddContactTagToGroup(System.String,System.Int32,System.String)">
             <summary>
@@ -3511,7 +3314,6 @@
             Tag
             </returns>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <path>api/2.0/crm/{entityType}/{entityid}/tag/group</path>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTag(System.String,System.String)">
@@ -3529,7 +3331,6 @@
              </returns>
              <path>api/2.0/crm/{entityType}/tag</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTagFrom(System.String,System.Int32,System.String)">
             <summary>
@@ -3546,7 +3347,6 @@
             </returns> 
             <path>api/2.0/crm/{entityType}/{entityid}/tag</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactTagFromGroup(System.String,System.Int32,System.String)">
             <summary>
@@ -3565,7 +3365,6 @@
             </returns>
             <path>api/2.0/crm/{entityType}/{entityid}/tag/group</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskByID(System.Int32)">
              <summary>
@@ -3579,7 +3378,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/task/{taskid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAllTasks(System.Guid,System.Int32,System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Int32)">
             <summary>
@@ -3600,7 +3398,6 @@
             </returns>
             <path>api/2.0/crm/task/filter</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ReOpenTask(System.Int32)">
@@ -3616,7 +3413,6 @@
             </returns>
             <path>api/2.0/crm/task/{taskid}/reopen</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CloseTask(System.Int32)">
             <summary>
@@ -3631,7 +3427,6 @@
             </returns>
             <path>api/2.0/crm/task/{taskid}/close</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTask(System.Int32)">
             <summary>
@@ -3647,7 +3442,6 @@
             </returns>
             <path>api/2.0/crm/task/{taskid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTask(System.String,System.String,ASC.Specific.ApiDateTime,System.Guid,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Int32)">
             <summary>
@@ -3669,7 +3463,6 @@
             <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">Task</returns>
             <path>api/2.0/crm/task</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskGroup(System.String,System.String,ASC.Specific.ApiDateTime,System.Guid,System.Int32,System.Int32[],System.String,System.Int32,System.Boolean,System.Int32)">
             <summary>
@@ -3691,7 +3484,6 @@
             <returns>Tasks</returns>
             <path>api/2.0/crm/contact/task/group</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -3715,7 +3507,6 @@
             <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">Task</returns>
             <path>api/2.0/crm/task/{taskid}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetTaskCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
             <summary>
@@ -3727,7 +3518,6 @@
             <category>Tasks</category>
             <path>api/2.0/crm/task/{taskid}/creationdate</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetTaskLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -3740,7 +3530,6 @@
             <category>Tasks</category>
             <path>api/2.0/crm/task/{taskid}/lastmodifeddate</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskTemplateContainer(System.String,System.String)">
@@ -3757,7 +3546,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/{entityType}/tasktemplatecontainer</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateContainers(System.String)">
@@ -3772,7 +3560,6 @@
             </returns>
             <path>api/2.0/crm/{entityType}/tasktemplatecontainer</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -3790,7 +3577,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/tasktemplatecontainer/{containerid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskTemplateContainer(System.Int32,System.String)">
@@ -3808,7 +3594,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/tasktemplatecontainer/{containerid}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateContainerByID(System.Int32)">
@@ -3825,7 +3610,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/tasktemplatecontainer/{containerid}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplates(System.Int32)">
@@ -3842,7 +3626,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/tasktemplatecontainer/{containerid}/tasktemplate</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -3865,7 +3648,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/tasktemplatecontainer/{containerid}/tasktemplate</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskTemplate(System.Int32,System.Int32,System.String,System.String,System.Guid,System.Int32,System.Boolean,System.Int64,System.Boolean)">
@@ -3888,7 +3670,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/tasktemplatecontainer/{containerid}/tasktemplate</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTaskTemplate(System.Int32)">
@@ -3903,7 +3684,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/tasktemplatecontainer/tasktemplate/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateByID(System.Int32)">
@@ -3918,7 +3698,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/tasktemplatecontainer/tasktemplate/{id}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAvaliableCurrency">
@@ -3933,7 +3712,6 @@
             <path>api/2.0/crm/settings/currency</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ConvertAmount(System.Decimal,System.String,System.String)">
             <summary>
@@ -3949,7 +3727,6 @@
             </returns>
             <path>api/2.0/crm/settings/currency/convert</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetSummaryTable(System.String)">
             <summary>
@@ -3964,7 +3741,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/settings/currency/summarytable</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCRMContactStatusSettings(System.Nullable{System.Boolean})">
@@ -3980,7 +3756,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/contact/status/settings</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCRMWriteMailToHistorySettings(System.Boolean)">
             <summary>
@@ -3995,7 +3770,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/contact/mailtohistory/settings</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCRMContactTagSettings(System.Nullable{System.Boolean})">
             <summary>
@@ -4010,7 +3784,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/contact/tag/settings</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetIsPortalConfigured(System.Nullable{System.Boolean},System.Nullable{System.Guid})">
             <summary>
@@ -4025,7 +3798,6 @@
             </returns>
             <path>api/2.0/crm/settings</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsCompanyName(System.String)">
             <summary>
@@ -4037,7 +3809,6 @@
             <returns>Updated company name</returns>
             <path>api/2.0/crm/settings/organisation/base</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.Security.SecurityException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsCompanyAddress(System.String,System.String,System.String,System.String,System.String)">
@@ -4055,7 +3826,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/settings/organisation/address</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsLogo(System.Boolean)">
             <summary>
@@ -4069,7 +3839,6 @@
             <exception cref="T:System.Exception"></exception>
             <path>api/2.0/crm/settings/organisation/logo</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetOrganisationSettingsLogo(System.Int32)">
             <summary>
@@ -4082,7 +3851,6 @@
             <exception cref="T:System.Exception"></exception>
             <path>api/2.0/crm/settings/organisation/logo</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ChangeWebToLeadFormKey">
             <summary>
@@ -4094,7 +3862,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/settings/webformkey/change</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCRMCurrency(System.String)">
             <summary>
@@ -4108,7 +3875,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/settings/currency</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.StartImportFromCSV(System.String,System.String,System.String)">
             <summary>
@@ -4121,7 +3887,6 @@
             <category>Import</category>
             <path>api/2.0/crm/{entityType}/import/start</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetImportFromCSVStatus(System.String)">
@@ -4134,7 +3899,6 @@
             <returns>Import status</returns>
             <path>api/2.0/crm/{entityType}/import/status</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetImportFromCSVSampleRow(System.String,System.Int32,System.String)">
@@ -4149,7 +3913,6 @@
             <returns>Sample row</returns>
             <path>api/2.0/crm/import/samplerow</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ProcessUploadFake(System.String,System.String)">
@@ -4163,7 +3926,6 @@
             <returns>Uploaded file</returns>
             <path>api/2.0/crm/import/uploadfake</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetExportStatus">
@@ -4175,7 +3937,6 @@
             <returns>Export status</returns>
             <path>api/2.0/crm/export/status</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CancelExport">
@@ -4187,7 +3948,6 @@
             <returns>Export status</returns>
             <path>api/2.0/crm/export/cancel</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.StartExport">
@@ -4199,7 +3959,6 @@
             <returns>Export data operation</returns>
             <path>api/2.0/crm/export/start</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetPartialExportStatus">
@@ -4211,7 +3970,6 @@
             <returns>Partial export status</returns>
             <path>api/2.0/crm/export/partial/status</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CancelPartialExport">
@@ -4223,7 +3981,6 @@
             <returns>Partial export status</returns>
             <path>api/2.0/crm/export/partial/cancel</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.StartPartialExport(System.String,System.String)">
@@ -4237,7 +3994,6 @@
             <returns>Export data operation</returns>
             <path>api/2.0/crm/export/partial/{entityType}/start</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAvailablePhoneNumbers(ASC.VoipService.Twilio.PhoneNumberType,System.String)">
@@ -4253,7 +4009,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/voip/numbers/available</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetUnlinkedPhoneNumbers">
@@ -4266,7 +4021,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/unlinked</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetExistingPhoneNumbers">
@@ -4279,7 +4033,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/existing</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.BuyNumber(System.String)">
@@ -4293,7 +4046,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.LinkNumber(System.String)">
             <summary>
@@ -4306,7 +4058,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/link</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteNumber(System.String)">
             <summary>
@@ -4319,7 +4070,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/{numberId}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetNumber(System.String)">
             <summary>
@@ -4332,7 +4082,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/{numberId}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCurrentNumber">
             <summary>
@@ -4343,7 +4092,6 @@
             <returns type="ASC.VoipService.VoipPhone, ASC.VoipService">Current phone number</returns>
             <path>api/2.0/crm/voip/numbers/current</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetToken">
             <summary>
@@ -4354,7 +4102,6 @@
             <returns>Token</returns>
             <path>api/2.0/crm/voip/token</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateSettings(System.String,System.String,System.String,System.String,System.String,ASC.VoipService.WorkingHours,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String)">
             <summary>
@@ -4375,7 +4122,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/{numberId}/settings</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateSettings(ASC.VoipService.Queue,System.Boolean)">
             <summary>
@@ -4389,7 +4135,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/settings</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetVoipSettings">
             <summary>
@@ -4401,7 +4146,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/settings</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetUploadedFilesUri">
             <summary>
@@ -4413,7 +4157,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/uploads</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteUploadedFile(ASC.VoipService.AudioType,System.String)">
@@ -4429,7 +4172,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/voip/uploads</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetOperators(System.String)">
             <summary>
@@ -4442,7 +4184,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/{numberId}/oper</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddOperators(System.String,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -4457,7 +4198,6 @@
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/voip/numbers/{numberId}/oper</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteOperator(System.String,System.Guid)">
@@ -4472,7 +4212,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/{numberId}/oper</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOperator(System.Guid,System.Nullable{ASC.VoipService.AgentStatus},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.VoipService.AnswerType},System.String)">
             <summary>
@@ -4490,7 +4229,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/opers/{operatorId}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.MakeCall(System.String,System.String)">
             <summary>
@@ -4504,7 +4242,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/call</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AnswerCall(System.String)">
             <summary>
@@ -4516,7 +4253,6 @@
             <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM">Phone call information</returns>
             <path>api/2.0/crm/voip/call/{callId}/answer</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.RejectCall(System.String)">
             <summary>
@@ -4528,7 +4264,6 @@
             <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM">Phone call information</returns>
             <path>api/2.0/crm/voip/call/{callId}/reject</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ReditectCall(System.String,System.String)">
             <summary>
@@ -4541,7 +4276,6 @@
             <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM">Phone call information</returns>
             <path>api/2.0/crm/voip/call/{callId}/redirect</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SaveCall(System.String,System.String,System.String,System.Guid,System.Nullable{ASC.VoipService.VoipCallStatus},System.String,System.Nullable{System.Decimal})">
             <summary>
@@ -4559,7 +4293,6 @@
             <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM">Phone call information</returns>
             <path>api/2.0/crm/voip/call/{callId}</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SavePrice(System.String)">
             <summary>
@@ -4570,7 +4303,6 @@
             <category>VoIP</category>
             <path>api/2.0/crm/voip/price/{callId}</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCalls(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
@@ -4587,7 +4319,6 @@
             <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM">List of calls</returns>
             <path>api/2.0/crm/voip/call</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetMissedCalls">
@@ -4600,7 +4331,6 @@
             <path>api/2.0/crm/voip/call/missed</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCall(System.String)">
             <summary>
@@ -4612,7 +4342,6 @@
             <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM">Phone call information</returns>
             <path>api/2.0/crm/voip/call/{callId}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.CasesWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>

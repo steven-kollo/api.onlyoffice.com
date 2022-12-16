@@ -35,7 +35,6 @@
             <path>api/2.0/community/blog</path>
             <collection>list</collection>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.CreatePost(System.String,System.String,System.String,System.Boolean)">
             <summary>
@@ -62,7 +61,6 @@
             </example>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <category>Blogs</category>
-             <requiresAuthorization>true</requiresAuthorization>
              <path>api/2.0/community/blog</path>
              <httpMethod>POST</httpMethod>
         </member>
@@ -94,7 +92,6 @@
             <category>Blogs</category>
             <path>api/2.0/community/blog/{postid}</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeletePost(System.Guid)">
             <summary>
@@ -105,7 +102,6 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <category>Blogs</category>
             <path>api/2.0/community/blog/{postid}</path>
-             <requiresAuthorization>true</requiresAuthorization>
              <httpMethod>DELETE</httpMethod>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetMyPosts">
@@ -118,7 +114,6 @@
             <colletion>list</colletion>
             <path>api/2.0/community/blog/@self</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetSearchPosts(System.String)">
             <summary>
@@ -132,7 +127,6 @@
             <returns type="ASC.Api.Blogs.BlogPostWrapperSummary, ASC.Api.Community">List of found posts</returns>
             <path>api/2.0/community/blog/@search/{query}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetUserPosts(System.String)">
@@ -145,7 +139,6 @@
             <returns type="ASC.Api.Blogs.BlogPostWrapperSummary, ASC.Api.Community">List of user posts</returns>
             <path>api/2.0/community/blog/user/{username}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <colletion>list</colletion>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetPostsByTag(System.String)">
@@ -159,7 +152,6 @@
             <collection>list</collection>
             <path>api/2.0/community/blog/tag/{tag}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetTags">
             <summary>
@@ -171,7 +163,6 @@
             <path>api/2.0/community/blog/tag</path>
             <httpMethod>GET</httpMethod>
             <colletion>list</colletion>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetPost(System.Guid)">
             <summary>
@@ -183,7 +174,6 @@
             <returns type="ASC.Api.Blogs.BlogPostWrapperFull, ASC.Api.Community">Post information</returns>
             <path>api/2.0/community/blog/{postid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetComments(System.Guid)">
             <summary>
@@ -195,7 +185,6 @@
             <returns type="ASC.Api.Blogs.BlogPostCommentWrapper, ASC.Api.Community">List of post comments</returns>
             <path>api/2.0/community/blog/{postid}/comment</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <colletion>list</colletion>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddComment(System.Guid,System.String,System.Guid)">
@@ -226,7 +215,6 @@
              </remarks>
              <path>api/2.0/community/blog/{postid}/comment</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetBlogCommentPreview(System.String,System.String)">
             <summary>
@@ -240,7 +228,6 @@
             <category>Blogs</category>
             <path>api/2.0/community/blog/comment/preview</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.RemoveBlogComment(System.String)">
             <summary>
@@ -253,7 +240,6 @@
             <category>Blogs</category>
             <path>api/2.0/community/blog/comment/{commentid}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddBlogComment(System.String,System.String,System.String)">
             <summary>
@@ -268,7 +254,6 @@
             <category>Blogs</category>
             <path>api/2.0/community/blog/comment</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateBlogComment(System.String,System.String)">
             <summary>
@@ -282,7 +267,6 @@
             <returns>Updated blog comment</returns>
             <path>api/2.0/community/blog/comment/{commentid}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetBookmarks">
             <summary>
@@ -296,7 +280,6 @@
             <collection>list</collection>
             <path>api/2.0/community/bookmark</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetMyBookmarks">
             <summary>
@@ -309,7 +292,6 @@
             <returns type="ASC.Api.Bookmarks.BookmarkWrapper, ASC.Api.Community">List of bookmarks</returns>
             <path>api/2.0/community/bookmark/@self</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.SearchBookmarks(System.String)">
@@ -324,7 +306,6 @@
             <returns type="ASC.Api.Bookmarks.BookmarkWrapper, ASC.Api.Community">List of bookmarks</returns>
             <path>api/2.0/community/bookmark/@search/{query}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetFavsBookmarks">
@@ -338,7 +319,6 @@
             <returns type="ASC.Api.Bookmarks.BookmarkWrapper, ASC.Api.Community">List of bookmarks</returns>
             <path>api/2.0/community/bookmark/@favs</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetBookmarksTags">
@@ -353,7 +333,6 @@
             <collection>list</collection>
             <path>api/2.0/community/bookmark/tag</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetBookmarksByTag(System.String)">
             <summary>
@@ -368,7 +347,6 @@
             <collection>list</collection>
             <path>api/2.0/community/bookmark/bytag</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetRecentBookmarks">
             <summary>
@@ -381,7 +359,6 @@
             <returns type="ASC.Api.Bookmarks.BookmarkWrapper, ASC.Api.Community">List of bookmarks</returns>
             <path>api/2.0/community/bookmark/top/recent</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetTopDayBookmarks">
@@ -395,7 +372,6 @@
             <returns type="ASC.Api.Bookmarks.BookmarkWrapper, ASC.Api.Community">List of bookmarks</returns>
             <path>api/2.0/community/bookmark/top/day</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetTopMonthBookmarks">
@@ -409,7 +385,6 @@
             <returns type="ASC.Api.Bookmarks.BookmarkWrapper, ASC.Api.Community">List of bookmarks</returns>
             <path>api/2.0/community/bookmark/top/month</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetTopWeekBookmarks">
@@ -423,7 +398,6 @@
             <returns type="ASC.Api.Bookmarks.BookmarkWrapper, ASC.Api.Community">List of bookmarks</returns>
             <path>api/2.0/community/bookmark/top/week</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetTopYearBookmarks">
@@ -437,7 +411,6 @@
             <returns  type="ASC.Api.Bookmarks.BookmarkWrapper, ASC.Api.Community">List of bookmarks</returns>
              <path>api/2.0/community/bookmark/top/year</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetBookmarkComments(System.Int64)">
@@ -453,7 +426,6 @@
             <path>api/2.0/community/bookmark/{id}/comment</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddBookmarkComment(System.Int64,System.String,System.Guid)">
             <summary>
@@ -485,7 +457,6 @@
              <category>Bookmarks</category>
              <path>api/2.0/community/bookmark/{id}/comment</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetBookmarkById(System.Int64)">
             <summary>
@@ -499,7 +470,6 @@
             <category>Bookmarks</category>
             <path>api/2.0/community/bookmark/{id}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddBookmark(System.String,System.String,System.String,System.String)">
             <summary>
@@ -531,7 +501,6 @@
              <category>Bookmarks</category>
              <path>api/2.0/community/bookmark</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetBookmarkCommentPreview(System.String,System.String)">
             <summary>
@@ -545,7 +514,6 @@
             <category>Bookmarks</category>
             <path>api/2.0/community/bookmark/comment/preview</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.RemoveBookmarkComment(System.String)">
              <summary>
@@ -558,7 +526,6 @@
              <category>Bookmarks</category>
              <path>api/2.0/community/bookmark/comment/{commentid}</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddBookmarkComment(System.String,System.Int64,System.String)">
             <summary>
@@ -573,7 +540,6 @@
              <returns type="ASC.Web.Studio.UserControls.Common.Comments.CommentInfo, ASC.Web.Studio">List of bookmark comments</returns>
              <path>api/2.0/community/bookmark/comment</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <category>Bookmarks</category>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateBookmarkComment(System.String,System.String)">
@@ -586,7 +552,6 @@
             <returns>Updated bookmark</returns>
             <path>api/2.0/community/bookmark/comment/{commentid}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <category>Bookmarks</category>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.RemoveBookmarkFromFavourite(System.Int64)">
@@ -599,7 +564,6 @@
             <category>Bookmarks</category>
             <path>api/2.0/community/bookmark/@favs/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.RemoveBookmark(System.Int64)">
             <summary>
@@ -610,7 +574,6 @@
             <category>Bookmarks</category>
             <path>api/2.0/community/bookmark/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetEvents">
             <summary>
@@ -623,7 +586,6 @@
             <category>Events</category>
             <path>api/2.0/community/event</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.CreateEvent(System.String,System.String,ASC.Web.Community.News.Code.FeedType)">
@@ -640,7 +602,6 @@
             <path>api/2.0/community/event</path>
             <httpMethod>POST</httpMethod>
             <category>Events</category>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateEvent(System.Int32,System.String,System.String,ASC.Web.Community.News.Code.FeedType)">
             <summary>
@@ -657,7 +618,6 @@
             <category>Events</category>
             <path>api/2.0/community/event/{feedid}</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeleteEvent(System.Int32)">
             <summary>
@@ -669,7 +629,6 @@
             <category>Events</category>
             <path>api/2.0/community/event/{feedid}</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetMyEvents">
             <summary>
@@ -682,7 +641,6 @@
             <category>Events</category>
             <path>api/2.0/community/event/@self</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <colletion>list</colletion>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.SearchEvents(System.String)">
@@ -698,7 +656,6 @@
             <path>api/2.0/community/event/@search/{query}</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetEvent(System.Int32)">
             <summary>
@@ -712,7 +669,6 @@
             <category>Events</category>
             <path>api/2.0/community/event/{feedid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetEventComments(System.Int32)">
             <summary>
@@ -727,7 +683,6 @@
             <path>api/2.0/community/event/{feedid}/comment</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddEventComments(System.Int32,System.String,System.Int64)">
             <summary>
@@ -759,7 +714,6 @@
              <category>Events</category>
              <path>api/2.0/community/event/{feedid}/comment</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.VoteForEvent(System.Int32,System.Int64[])">
             <summary>
@@ -789,7 +743,6 @@
              <category>Events</category>
              <path>api/2.0/community/event/{feedid}/vote</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.SubscribeOnComments(System.Boolean,System.String)">
             <summary>
@@ -804,7 +757,6 @@
             <category>Events</category>
             <path>api/2.0/community/event/{feedid}/subscribe</path>
             <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetEventCommentPreview(System.String,System.String)">
             <summary>
@@ -818,7 +770,6 @@
             <category>Events</category>
             <path>api/2.0/community/event/comment/preview</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.RemoveEventComment(System.String)">
              <summary>
@@ -831,7 +782,6 @@
              <category>Events</category>
              <path>api/2.0/community/event/comment/{commentid}</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddEventComment(System.String,System.String,System.String)">
             <summary>
@@ -846,7 +796,6 @@
              <returns type="ASC.Web.Studio.UserControls.Common.Comments.CommentInfo, ASC.Web.Studio">Comment information</returns>
              <path>api/2.0/community/event/comment</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <category>Events</category>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateComment(System.String,System.String)">
@@ -862,7 +811,6 @@
              <returns>Updated comment</returns>
              <path>api/2.0/community/event/comment/{commentid}</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetForums">
             <summary>
@@ -875,7 +823,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetForumsCount">
             <summary>
@@ -887,7 +834,6 @@
             <returns>Number of forums</returns>
             <visible>false</visible>
             <category>Forums</category>
-            <requiresAuthorization>true</requiresAuthorization>
              <path>api/2.0/community/forum/count</path>
              <httpMethod>GET</httpMethod>
         </member>
@@ -903,7 +849,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/{threadid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetLastTopics">
             <summary>
@@ -916,7 +861,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/topic/recent</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetTopicPosts(System.Int32)">
@@ -931,7 +875,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/topic/{topicid}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddThreadToCategory(System.Int32,System.String,System.String,System.String)">
             <summary>
@@ -948,7 +891,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddTopic(System.Int32,System.String,System.String,ASC.Forum.TopicType)">
             <summary>
@@ -965,7 +907,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/{threadid}</path>
             <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateTopic(System.Int32,System.String,System.Boolean,System.Boolean)">
             <summary>
@@ -982,7 +923,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/topic/{topicid}</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddTopicPosts(System.Int32,System.Int32,System.String,System.String)">
             <summary>
@@ -999,7 +939,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/topic/{topicid}</path>
             <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateTopicPosts(System.Int32,System.Int32,System.String,System.String)">
             <summary>
@@ -1016,7 +955,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/topic/{topicid}/{postid}</path>
             <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.SearchTopics(System.String)">
             <summary>
@@ -1030,7 +968,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/@search/{query}</path>
             <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeletePost(System.Int32)">
@@ -1045,7 +982,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/post/{postid}</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeleteTopic(System.Int32)">
             <summary>
@@ -1059,7 +995,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/topic/{topicid}</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeleteThread(System.Int32)">
             <summary>
@@ -1073,7 +1008,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/thread/{threadid}</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeleteThreadCategory(System.Int32)">
             <summary>
@@ -1087,7 +1021,6 @@
             <category>Forums</category>
             <path>api/2.0/community/forum/category/{categoryid}</path>
             <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetPreview(System.String,System.String)">
             <summary>
@@ -1099,7 +1032,6 @@
             <returns>Preview information</returns>
             <path>api/2.0/community/preview</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.CreatePage(System.String,System.String)">
             <summary>
@@ -1112,7 +1044,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetPages(System.String)">
             <summary>
@@ -1125,7 +1056,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetPage(System.String,System.Nullable{System.Int32})">
@@ -1140,7 +1070,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/{name}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetHistory(System.String)">
             <summary>
@@ -1153,7 +1082,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/{page}/story</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.SearchPages(System.String)">
@@ -1167,7 +1095,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/search/byname/{name}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.SearchPagesByContent(System.String)">
@@ -1182,7 +1109,6 @@
             <path>api/2.0/community/wiki/search/bycontent/{content}</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdatePage(System.String,System.String)">
             <summary>
@@ -1196,7 +1122,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/{name}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeletePage(System.String)">
             <summary>
@@ -1208,7 +1133,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/{name}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.CreateComment(System.String,System.String,System.String)">
             <summary>
@@ -1223,7 +1147,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/{page}/comment</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetComments(System.String)">
             <summary>
@@ -1236,7 +1159,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/{page}/comment</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UploadFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
@@ -1249,7 +1171,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/file</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetFile(System.String)">
@@ -1263,7 +1184,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/file/{name}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeleteFile(System.String)">
             <summary>
@@ -1274,7 +1194,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/file/{name}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetWikiCommentPreview(System.String,System.String)">
             <summary>
@@ -1288,7 +1207,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/comment/preview</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.RemoveWikiComment(System.String)">
              <summary>
@@ -1301,7 +1219,6 @@
              <category>Wiki</category>
              <path>api/2.0/community/wiki/comment/{commentid}</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddWikiComment(System.String,System.String,System.String)">
             <summary>
@@ -1315,7 +1232,6 @@
             <param type="System.String, System" name="content">Comment text</param>
             <path>api/2.0/community/wiki/comment</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <returns type="ASC.Web.Studio.UserControls.Common.Comments.CommentInfo, ASC.Web.Studio">Comment information</returns>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateWikiComment(System.String,System.String)">
@@ -1330,7 +1246,6 @@
             <category>Wiki</category>
             <path>api/2.0/community/wiki/comment/{commentid}</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="P:ASC.Api.Blogs.BlogPostCommentWrapper.Text">
             <example>comment text</example>

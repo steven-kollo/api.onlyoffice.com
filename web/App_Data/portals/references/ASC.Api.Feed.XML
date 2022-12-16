@@ -18,7 +18,6 @@
             Read feeds
             </short>
              <path>api/2.0/feed/read</path>
-             <requiresAuthorization>true</requiresAuthorization>
              <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.Api.Feed.FeedApi.GetFeed(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime)">
@@ -37,7 +36,6 @@
              <returns>List of filtered feeds</returns>
              <path>api/2.0/feed/filter</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Feed.FeedApi.GetFreshNewsCount">
             <summary>
@@ -49,7 +47,6 @@
             <returns>Number of fresh feeds</returns>
              <path>api/2.0/feed/newfeedscount</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
         </member>
     </members>
 </doc>

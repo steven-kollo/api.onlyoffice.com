@@ -20,7 +20,6 @@
             <category>CardDav address book</category>
             <path>api/2.0/settings/carddavurl</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteCardDavAddressBook">
@@ -33,7 +32,6 @@
             <category>CardDav address book</category>
             <path>api/2.0/settings/deletebook</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSmtpSettings">
@@ -47,7 +45,6 @@
             <returns type="ASC.Api.Settings.Smtp.SmtpSettingsWrapper, ASC.Api.Settings">SMTP settings</returns>
             <path>api/2.0/settings/smtp</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveSmtpSettings(ASC.Api.Settings.Smtp.SmtpSettingsWrapper)">
             <summary>
@@ -60,7 +57,6 @@
             <param type="ASC.Api.Settings.Smtp.SmtpSettingsWrapper, ASC.Api.Settings.Smtp" file="ASC.Api.Settings" name="smtpSettings">SMTP settings</param>
             <returns type="ASC.Api.Settings.Smtp.SmtpSettingsWrapper, ASC.Api.Settings">SMTP settings</returns>
             <path>api/2.0/settings/smtp</path>
-            <requiresAuthorization>true</requiresAuthorization>
             <httpMethod>POST</httpMethod>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.ResetSmtpSettings">
@@ -74,7 +70,6 @@
             <returns type="ASC.Api.Settings.Smtp.SmtpSettingsWrapper, ASC.Api.Settings">Default SMTP settings</returns>
             <path>api/2.0/settings/smtp</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TestSmtpSettings">
             <summary>
@@ -87,7 +82,6 @@
             <returns type="ASC.Api.Settings.Smtp.SmtpOperationStatus, ASC.Api.Settings">SMTP operation status</returns>
             <path>api/2.0/settings/smtp/test</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSmtpOperationStatus">
             <summary>
@@ -100,7 +94,6 @@
             <returns type="ASC.Api.Settings.Smtp.SmtpOperationStatus, ASC.Api.Settings">SMTP operation status</returns>
             <path>api/2.0/settings/smtp/test/status</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettingsV2">
             <summary>
@@ -113,7 +106,6 @@
             <returns type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Studio">SSO settings</returns>
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetDefaultSsoSettingsV2">
             <summary>
@@ -126,7 +118,6 @@
             <returns type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Studio">Default SSO settings</returns>
             <path>api/2.0/settings/ssov2/default</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettingsV2Constants">
             <summary>
@@ -139,7 +130,6 @@
             <returns>The SSO settings Constants</returns>
             <path>api/2.0/settings/ssov2/constants</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveSsoSettingsV2(System.String)">
             <summary>
@@ -153,7 +143,6 @@
             <returns>SSO settings</returns>
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.ResetSsoSettingsV2">
             <summary>
@@ -166,7 +155,6 @@
             <returns type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Studio">Default SSO settings</returns>
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSettings">
             <summary>
@@ -179,7 +167,6 @@
             <returns type="ASC.ActiveDirectory.Base.Settings.LdapSettings, ASC.ActiveDirectory">LDAP settings</returns>
             <path>api/2.0/settings/ldap</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetLdapCronSettings">
             <summary>
@@ -192,7 +179,6 @@
             <returns>Cron expression or null</returns>
             <path>api/2.0/settings/ldap/cron</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetLdapCronSettings(System.String)">
             <summary>
@@ -205,7 +191,6 @@
             <path>api/2.0/settings/ldap/cron</path>
             <param type="System.String, System" name="cron">Cron expression</param>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SyncLdap">
             <summary>
@@ -217,7 +202,6 @@
             <category>LDAP</category>
             <path>api/2.0/settings/ldap/sync</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <returns type="ASC.ActiveDirectory.ComplexOperations.LdapOperationStatus, ASC.ActiveDirectory">Operation status</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TestLdapSync">
@@ -230,7 +214,6 @@
             <category>LDAP</category>
             <path>api/2.0/settings/ldap/sync/test</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <returns type="ASC.ActiveDirectory.ComplexOperations.LdapOperationStatus, ASC.ActiveDirectory">Operation status</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveLdapSettings(System.String,System.Boolean)">
@@ -246,7 +229,6 @@
             <returns type="ASC.ActiveDirectory.ComplexOperations.LdapOperationStatus, ASC.ActiveDirectory">Operation status</returns>
             <path>api/2.0/settings/ldap</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TestLdapSave(System.String,System.Boolean)">
             <summary>
@@ -260,7 +242,6 @@
             <param type="System.Boolean, System" name="acceptCertificate">Specifies if a certificate will be accepted (true) or not (false)</param>
             <path>api/2.0/settings/ldap/save/test</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <returns type="ASC.ActiveDirectory.ComplexOperations.LdapOperationStatus, ASC.ActiveDirectory">Operation status</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetLdapOperationStatus">
@@ -274,7 +255,6 @@
             <returns type="ASC.ActiveDirectory.ComplexOperations.LdapOperationStatus, ASC.ActiveDirectory">Operation status</returns>
             <path>api/2.0/settings/ldap/status</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetDefaultLdapSettings">
             <summary>
@@ -287,7 +267,6 @@
             <returns type="ASC.ActiveDirectory.Base.Settings.LdapSettings, ASC.ActiveDirectory">LDAP default settings</returns>
             <path>api/2.0/settings/ldap/default</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSettings">
             <summary>
@@ -300,7 +279,6 @@
             <returns type="ASC.Api.Settings.SettingsWrapper, ASC.Api.Settings">Settings</returns>
             <path>api/2.0/settings</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetQuotaUsed">
             <summary>
@@ -313,7 +291,6 @@
             <returns type="ASC.Web.Studio.Core.Quota.QuotaWrapper, ASC.Web.Studio">Space usage and limits for upload</returns>
             <path>api/2.0/settings/quota</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.RecalculateQuota">
             <summary>
@@ -325,7 +302,6 @@
             <category>Quota</category>
             <path>api/2.0/settings/recalculatequota</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CheckRecalculateQuota">
             <summary>
@@ -338,7 +314,6 @@
             <returns>Boolean value: true - quota recalculation process is enabled, false - quota recalculation process is disabled</returns>
             <path>api/2.0/settings/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetBuildVersions">
             <summary>
@@ -349,6 +324,7 @@
             <path>api/2.0/settings/version/build</path>
             <httpMethod>GET</httpMethod>
             <visible>false</visible>
+            <requiresAuthorization>false</requiresAuthorization>
             <returns>Current ONLYOFFICE, editor, mailserver versions</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetVersions">
@@ -361,7 +337,6 @@
             <category>Versions</category>
             <path>api/2.0/settings/version</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
             <returns>List of availibe portal versions including the current version</returns>
         </member>
@@ -376,7 +351,6 @@
             <param type="System.Int32, System" name="versionId">Version ID</param>
             <path>api/2.0/settings/version</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
             <returns>List of availibe portal versions including the current version</returns>
         </member>
@@ -392,7 +366,6 @@
             <returns type="ASC.Api.Settings.SecurityWrapper, ASC.Api.Settings">Security settings</returns>
             <path>api/2.0/settings/security</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWebItemSecurityInfo(System.Guid)">
@@ -407,7 +380,6 @@
             <returns>Boolean value: true - module is enabled, false - module is disabled</returns>
             <path>api/2.0/settings/security/{id}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetEnabledModules">
             <summary>
@@ -420,7 +392,6 @@
             <returns>List of enabled modules</returns>
             <path>api/2.0/settings/security/modules</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetPasswordSettings">
@@ -434,7 +405,6 @@
             <returns>Password settings</returns>
             <path>api/2.0/settings/security/password</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetWebItemSecurity(System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -450,7 +420,6 @@
             <path>api/2.0/settings/security</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
             <returns type="ASC.Api.Settings.SecurityWrapper, ASC.Api.Settings">Security settings</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetAccessToWebItems(System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.Boolean}})">
@@ -464,7 +433,6 @@
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.Boolean}}" name="items">Modules with security information</param>
             <path>api/2.0/settings/security/access</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <returns type="ASC.Api.Settings.SecurityWrapper, ASC.Api.Settings">Security settings</returns>
         </member>
@@ -481,7 +449,6 @@
             <path>api/2.0/settings/security/administrator/{productid}</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.IsProductAdministrator(System.Guid,System.Guid)">
             <summary>
@@ -496,7 +463,6 @@
             <returns>Object with the user security information</returns>
             <path>api/2.0/settings/security/administrator</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetProductAdministrator(System.Guid,System.Guid,System.Boolean)">
             <summary>
@@ -512,7 +478,6 @@
             <returns>Object with the user security information</returns>
             <path>api/2.0/settings/security/administrator</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetLogo">
             <summary>
@@ -525,7 +490,6 @@
             <returns>Portal logo image URL</returns>
             <path>api/2.0/settings/logo</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettings(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean)">
             <summary>
@@ -540,7 +504,6 @@
             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
             <path>api/2.0/settings/whitelabel/save</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettingsFromFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean)">
@@ -555,7 +518,6 @@
             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
             <path>api/2.0/settings/whitelabel/savefromfiles</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelSizes">
@@ -569,7 +531,6 @@
             <returns>White label sizes</returns>
             <path>api/2.0/settings/whitelabel/sizes</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogos(System.Boolean,System.Boolean)">
@@ -585,7 +546,6 @@
             <returns>White label logos</returns>
             <path>api/2.0/settings/whitelabel/logos</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText(System.Boolean)">
@@ -600,7 +560,6 @@
             <returns>Logo text</returns>
             <path>api/2.0/settings/whitelabel/logotext</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelOptions(System.Boolean)">
@@ -614,7 +573,6 @@
             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
             <path>api/2.0/settings/whitelabel/restore</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetIpRestrictions">
@@ -626,7 +584,6 @@
             <returns type="ASC.IPSecurity.IPRestriction, ASC.IPSecurity">IP restrictions</returns>
             <path>api/2.0/settings/iprestrictions</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveIpRestrictions(System.Collections.Generic.IEnumerable{System.String})">
@@ -639,7 +596,6 @@
             <returns>New IP restrictions</returns>
             <path>api/2.0/settings/iprestrictions</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateIpRestrictionsSettings(System.Boolean)">
@@ -652,7 +608,6 @@
             <returns type="ASC.Web.Studio.Core.IPRestrictionsSettings, ASC.Web.Studio">Updated IP restriction settings</returns>
             <path>api/2.0/settings/iprestrictions/settings</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateTipsSettings(System.Boolean)">
             <summary>
@@ -663,7 +618,6 @@
             <param type="System.Boolean, System" name="show">Specifies whether to show tips for the user or not</param>
             <returns type="ASC.Web.Studio.Core.TipsSettings, ASC.Web.Studio">Updated tip settings</returns>
             <path>api/2.0/settings/tips</path>
-            <requiresAuthorization>true</requiresAuthorization>
             <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateTipsSubscription">
@@ -675,7 +629,6 @@
             <returns>Updated tip subscription</returns>
             <path>api/2.0/settings/tips/change/subscription</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CompleteWizard">
             <summary>
@@ -686,7 +639,6 @@
             <returns>Wizard settings</returns>
             <path>api/2.0/settings/wizard/complete</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TfaSettings(System.String)">
@@ -699,7 +651,6 @@
              <returns>True if an operation is successful</returns>
             <path>api/2.0/settings/tfaapp</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TfaAppGetCodes">
             <summary>
@@ -710,7 +661,6 @@
             <returns>List of TFA application codes</returns>
             <path>api/2.0/settings/tfaappcodes</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -723,7 +673,6 @@
             <returns>New backup codes</returns>
             <path>api/2.0/settings/tfaappnewcodes</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TfaAppNewApp(System.Guid)">
@@ -736,7 +685,6 @@
             <returns>Login URL</returns>
             <path>api/2.0/settings/tfaappnewapp</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DocRegisterPusnNotificationDevice(System.String)">
             <summary>
@@ -748,7 +696,6 @@
             <returns>FireBase user</returns>
             <path>api/2.0/settings/push/docregisterdevice</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.ProjRegisterPusnNotificationDevice(System.String)">
             <summary>
@@ -760,7 +707,6 @@
             <returns>Firebase user</returns>
             <path>api/2.0/settings/push/projregisterdevice</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SubscribeDocumentsPushNotification(System.String,System.Boolean)">
             <summary>
@@ -773,7 +719,6 @@
             <returns>Firebase user</returns>
             <path>api/2.0/settings/push/docsubscribe</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SubscribeProjectsPushNotification(System.String,System.Boolean)">
@@ -787,7 +732,6 @@
             <returns>Firebase user</returns>
             <path>api/2.0/settings/push/projsubscribe</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramLink">
@@ -799,7 +743,6 @@
             <returns>Telegram link</returns>
             <path>api/2.0/settings/telegramlink</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramIsConnected">
@@ -811,7 +754,6 @@
             <returns>Integer value: 0 - not connected, 1 - connected, 2 - awaiting confirmation</returns>
             <path>api/2.0/settings/telegramisconnected</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramDisconnect">
             <summary>
@@ -821,7 +763,6 @@
             <category>Telegram</category>
             <path>api/2.0/settings/telegramdisconnect</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CloseWelcomePopup">
             <summary>
@@ -831,7 +772,6 @@
             <category>Common settings</category>
             <path>api/2.0/settings/welcome/close</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CloseAdminHelper">
             <summary>
@@ -841,7 +781,6 @@
             <category>Common settings</category>
             <path>api/2.0/settings/closeadminhelper</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveColorTheme(System.String)">
             <summary>
@@ -852,7 +791,6 @@
             <param type="System.String, System" name="theme">Portal theme</param>
             <path>api/2.0/settings/colortheme</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TimaAndLanguage(System.String,System.String)">
@@ -866,7 +804,6 @@
             <returns>Message about the operation result</returns>
             <path>api/2.0/settings/timeandlanguage</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveDefaultPageSettings(System.String)">
@@ -879,7 +816,6 @@
              <returns>Message about the operation result</returns>
              <path>api/2.0/settings/defaultpage</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.RefreshLicense">
@@ -891,7 +827,6 @@
             <returns>Boolean value: true - an operation is successful, false - an operation is unsuccessful</returns>
             <path>api/2.0/settings/license/refresh</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItems">
@@ -903,7 +838,6 @@
             <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio">List of the custom navigation items</returns>
             <path>api/2.0/settings/customnavigation/getall</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItemSample">
@@ -915,7 +849,6 @@
             <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/getsample</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItem(System.Guid)">
             <summary>
@@ -927,7 +860,6 @@
             <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/get/{id}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CreateCustomNavigationItem(ASC.Web.Studio.Core.CustomNavigationItem)">
             <summary>
@@ -939,7 +871,6 @@
             <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/create</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteCustomNavigationItem(System.Guid)">
             <summary>
@@ -950,7 +881,6 @@
             <param type="System.Guid, System" method="url" name="id">Item ID</param>
             <path>api/2.0/settings/customnavigation/delete/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateEmailActivationSettings(System.Boolean)">
             <summary>
@@ -962,7 +892,6 @@
             <returns type="ASC.Web.Studio.Core.EmailActivationSettings, ASC.Web.Studio">Updated email activation settings</returns>
             <path>api/2.0/settings/emailactivation</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetLicensorData">
              <summary>
@@ -973,7 +902,6 @@
              <returns>List of company white label settings</returns>
              <path>api/2.0/settings/companywhitelabel</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
             <visible>false</visible>
         </member>
@@ -987,7 +915,6 @@
             <returns type="ASC.Api.Settings.UsageSpaceStatItemWrapper, ASC.Api.Settings">Module space usage statistics</returns>
             <path>api/2.0/settings/statistics/spaceusage/{id}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetVisitStatistics(ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
@@ -1001,7 +928,6 @@
             <returns type="ASC.Api.Settings.ChartPointWrapper, ASC.Api.Settings">List of point charts</returns>
             <path>api/2.0/settings/statistics/visit</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetAllStorages">
@@ -1013,7 +939,6 @@
             <returns type="ASC.Api.Settings.StorageWrapper, ASC.Api.Settings">List of storages</returns>
             <path>api/2.0/settings/storage</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetStorageProgress">
@@ -1025,7 +950,6 @@
             <returns>Storage progress</returns>
             <path>api/2.0/settings/storage/progress</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateStorage(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}})">
             <summary>
@@ -1038,7 +962,6 @@
             <returns type="ASC.Data.Storage.Configuration.StorageSettings, ASC.Data.Storage">Updated storage</returns>
             <path>api/2.0/settings/storage</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.ResetStorageToDefault">
             <summary>
@@ -1048,7 +971,6 @@
             <short>Reset the storage settings</short>
             <path>api/2.0/settings/storage</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetAllCdnStorages">
             <summary>
@@ -1059,7 +981,6 @@
             <returns type="ASC.Api.Settings.StorageWrapper, ASC.Api.Settings">List of the CDN storages</returns>
             <path>api/2.0/settings/storage/cdn</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateCdn(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}})">
@@ -1073,7 +994,6 @@
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.String}}" name="props">New CDN storage properties</param>
             <path>api/2.0/settings/storage/cdn</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.ResetCdnToDefault">
             <summary>
@@ -1083,7 +1003,6 @@
             <short>Reset the CDN storage settings</short>
             <path>api/2.0/settings/storage/cdn</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetAllBackupStorages">
             <summary>
@@ -1094,7 +1013,6 @@
             <returns type="ASC.Api.Settings.StorageWrapper, ASC.Api.Settings">List of the backup storages</returns>
             <path>api/2.0/settings/storage/backup</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSocketSettings">
@@ -1105,7 +1023,6 @@
             <short>Get the socket settings</short>
             <path>api/2.0/settings/socket</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <returns>Socket settings</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetTenantControlPanelSettings">
@@ -1117,7 +1034,6 @@
              <returns>Tenant Control Panel settings</returns>
              <path>api/2.0/settings/controlpanel</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveCompanyWhiteLabelSettings(ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings)">
@@ -1129,7 +1045,6 @@
              <param type="ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">White label settings</param>
              <path>api/2.0/settings/rebranding/company</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetCompanyWhiteLabelSettings">
@@ -1141,7 +1056,6 @@
              <returns>Company white label settings</returns>
              <path>api/2.0/settings/rebranding/company</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteCompanyWhiteLabelSettings">
@@ -1153,7 +1067,6 @@
              <returns>Default company white label settings</returns>
              <path>api/2.0/settings/rebranding/company</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveAdditionalWhiteLabelSettings(ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings)">
@@ -1165,7 +1078,6 @@
             <param type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Additional white label settings</param>
             <path>api/2.0/settings/rebranding/additional</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetAdditionalWhiteLabelSettings">
@@ -1177,7 +1089,6 @@
              <returns>Additional white label settings</returns>
              <path>api/2.0/settings/rebranding/additional</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteAdditionalWhiteLabelSettings">
@@ -1189,7 +1100,6 @@
              <returns>Default additional white label settings</returns>
              <path>api/2.0/settings/rebranding/additional</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveMailWhiteLabelSettings(ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings)">
@@ -1201,7 +1111,6 @@
              <param type="ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Mail white label settings</param>
              <path>api/2.0/settings/rebranding/mail</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateMailWhiteLabelSettings(System.Boolean)">
@@ -1213,7 +1122,6 @@
              <param type="System.Boolean, System" name="footerEnabled">Specifies if a footer will be enabled or not</param>
              <path>api/2.0/settings/rebranding/mail</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetMailWhiteLabelSettings">
@@ -1225,7 +1133,6 @@
              <returns>Mail white label settings</returns>
              <path>api/2.0/settings/rebranding/mail</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteMailWhiteLabelSettings">
@@ -1237,7 +1144,6 @@
              <returns>Default mail white label settings</returns>
              <path>api/2.0/settings/rebranding/mail</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetStorageEncryptionSettings">
@@ -1249,7 +1155,6 @@
             <returns>Storage encryption settings</returns>
             <path>api/2.0/settings/encryption/settings</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetStorageEncryptionProgress">
@@ -1261,7 +1166,6 @@
             <returns>Storage encryption progress</returns>
             <path>api/2.0/settings/encryption/progress</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.StartStorageEncryption(System.Boolean)">
@@ -1273,7 +1177,6 @@
             <param type="System.Boolean, System" name="notifyUsers">Specifies if the users will be notified about the encryption process or not</param>
             <path>api/2.0/settings/encryption/start</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.Settings.UsageSpaceStatItemWrapper.Name">

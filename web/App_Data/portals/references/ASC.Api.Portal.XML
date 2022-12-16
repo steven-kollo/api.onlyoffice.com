@@ -25,7 +25,6 @@
             <returns type="ASC.Core.Tenants.Tenant, ASC.Core.Common">Portal</returns>
              <path>api/2.0/portal</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetUser(System.Guid)">
             <summary>
@@ -39,7 +38,6 @@
             <returns type="ASC.Core.Users.UserInfo, ASC.Core.Common">User</returns>
             <path>api/2.0/portal/users/{userID}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GeInviteLink(ASC.Core.Users.EmployeeType)">
             <summary>
@@ -57,7 +55,6 @@
             </returns>
             <path>api/2.0/portal/users/invite/{employeeType}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetShortenLink(System.String)">
             <summary>
@@ -69,7 +66,6 @@
             <returns>Shortened invitation link</returns>
             <path>api/2.0/portal/getshortenlink</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetUsedSpace">
@@ -83,7 +79,6 @@
             <returns>Used space</returns>
             <path>api/2.0/portal/usedspace</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetUsersCount">
             <summary>
@@ -96,7 +91,6 @@
             <returns>User count</returns>
             <path>api/2.0/portal/userscount</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.UploadLicense(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
@@ -110,7 +104,6 @@
             <returns>License</returns>
             <path>api/2.0/portal/uploadlicense</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.ActivateLicense">
@@ -124,7 +117,6 @@
             <returns>License</returns>
             <path>api/2.0/portal/activatelicense</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.ActivateTrial">
@@ -138,7 +130,6 @@
             <returns>Trial license</returns>
             <path>api/2.0/portal/activatetrial</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetTenantExtra">
@@ -152,7 +143,6 @@
             <returns>Extra tenant license information</returns>
             <path>api/2.0/portal/tenantextra</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetTariff">
@@ -166,7 +156,6 @@
             <returns type="ASC.Core.Billing.Tariff, ASC.Core.Common">Tariff</returns>
             <path>api/2.0/portal/tariff</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetQuota">
             <summary>
@@ -179,7 +168,6 @@
             <returns type="ASC.Core.Tenants.TenantQuota, ASC.Core.Common">Quota</returns>
             <path>api/2.0/portal/quota</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetRightQuota">
             <summary>
@@ -192,7 +180,6 @@
             <returns type="ASC.Core.Tenants.TenantQuota, ASC.Core.Common">Quota</returns>
             <path>api/2.0/portal/quota/right</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetFullAbsolutePath(System.String)">
             <summary>
@@ -205,7 +192,6 @@
             <returns>Portal path</returns>
             <path>api/2.0/portal/path</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetMessageCount">
@@ -219,7 +205,6 @@
             <returns>Number of unread messages</returns>
             <path>api/2.0/portal/talk/unreadmessages</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.RemoveXmppConnection(System.String)">
@@ -234,7 +219,6 @@
             <returns>XMPP connection ID</returns>
             <path>api/2.0/portal/talk/connection</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.AddXmppConnection(System.String,System.Byte)">
@@ -250,7 +234,6 @@
             <returns>Updated inner channel</returns>
             <path>api/2.0/portal/talk/connection</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetState(System.String)">
@@ -265,7 +248,6 @@
             <returns>State</returns>
             <path>api/2.0/portal/talk/state</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.SendState(System.Byte)">
@@ -280,7 +262,6 @@
             <returns>State</returns>
             <path>api/2.0/portal/talk/state</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.SendMessage(System.String,System.String,System.String)">
@@ -296,7 +277,6 @@
             <param type="System.String, System" name="subject">Message subject</param>
             <path>api/2.0/portal/talk/message</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetAllStates">
@@ -310,7 +290,6 @@
             <returns>Dictionary of all the service states</returns>
             <path>api/2.0/portal/talk/states</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetRecentMessages(System.String,System.Int32)">
@@ -326,7 +305,6 @@
             <returns>Recent messages</returns>
             <path>api/2.0/portal/talk/recentMessages</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.Ping(System.Byte)">
@@ -340,7 +318,6 @@
             <param type="System.Byte, System" name="state">Service state</param>
             <path>api/2.0/portal/talk/ping</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.RegisterMobileAppInstall(ASC.Core.Common.Notify.Push.MobileAppType)">
@@ -354,7 +331,6 @@
             <param type="ASC.Core.Common.Notify.Push.MobileAppType, ASC.Core.Common.Notify.Push" name="type">Mobile app type ("IosProjects", "AndroidProjects", "IosDocuments", "AndroidDocuments", or "DesktopEditor")</param>
             <path>api/2.0/portal/mobile/registration</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetBackupSchedule">
@@ -366,7 +342,6 @@
             <returns type="ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule, ASC.Web.Studio">Backup schedule</returns>
             <path>api/2.0/portal/getbackupschedule</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.CreateBackupSchedule(ASC.Core.Common.Contracts.BackupStorageType,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Int32,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.CronParams,System.Boolean)">
             <summary>
@@ -381,7 +356,6 @@
             <category>Backup</category>
             <path>api/2.0/portal/createbackupschedule</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBackupSchedule">
             <summary>
@@ -391,7 +365,6 @@
             <category>Backup</category>
             <path>api/2.0/portal/deletebackupschedule</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.StartBackup(ASC.Core.Common.Contracts.BackupStorageType,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Boolean)">
             <summary>
@@ -405,7 +378,6 @@
             <returns type="ASC.Core.Common.Contracts.BackupProgress, ASC.Core.Common">Backup progress</returns>
             <path>api/2.0/portal/startbackup</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetBackupProgress">
             <summary>
@@ -416,7 +388,6 @@
             <returns type="ASC.Core.Common.Contracts.BackupProgress, ASC.Core.Common">Backup progress</returns>
             <path>api/2.0/portal/getbackupprogress</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetBackupHistory">
             <summary>
@@ -427,7 +398,6 @@
             <returns type="ASC.Core.Common.Contracts.BackupHistoryRecord, ASC.Core.Common">Backup history</returns>
             <path>api/2.0/portal/getbackuphistory</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBackup(System.Guid)">
@@ -439,7 +409,6 @@
             <category>Backup</category>
             <path>api/2.0/portal/deletebackup/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBackupHistory">
             <summary>
@@ -449,7 +418,6 @@
             <category>Backup</category>
             <path>api/2.0/portal/deletebackuphistory</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.StartBackupRestore(System.String,ASC.Core.Common.Contracts.BackupStorageType,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Boolean)">
             <summary>
@@ -464,7 +432,6 @@
             <returns type="ASC.Core.Common.Contracts.BackupProgress, ASC.Core.Common">Restoring progress</returns>
             <path>api/2.0/portal/startrestore</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetRestoreProgress">
             <summary>
@@ -475,7 +442,6 @@
             <returns type="ASC.Core.Common.Contracts.BackupProgress, ASC.Core.Common">Restoring progress</returns>
             <path>api/2.0/portal/getrestoreprogress</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetTempPath(System.String)">
              <summary>
@@ -487,7 +453,6 @@
              <returns>The path to the backup temporary directory</returns>
              <path>api/2.0/portal/backuptmp</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeletePortalImmediately">
@@ -497,7 +462,6 @@
              <short>Delete the current portal</short>
              <path>api/2.0/portal/deleteportalimmediately</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalName(System.String)">
@@ -509,7 +473,6 @@
              <returns>Message about renaming a portal</returns>
              <path>api/2.0/portal/portalrename</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.SendCongratulations(System.Guid,System.String)">
@@ -522,6 +485,7 @@
              <path>api/2.0/portal/sendcongratulations</path>
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
+             <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.RemoveCommentComplete(System.String,System.String)">
              <summary>
@@ -534,7 +498,6 @@
              <returns>Operation status</returns>
              <path>api/2.0/portal/fcke/comment/removecomplete</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.CancelCommentComplete(System.String,System.String,System.Boolean)">
@@ -549,7 +512,6 @@
              <returns>Operation status</returns>
              <path>api/2.0/portal/fcke/comment/cancelcomplete</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.EditCommentComplete(System.String,System.String,System.String,System.Boolean)">
@@ -565,7 +527,6 @@
              <returns>Operation status</returns>
              <path>api/2.0/portal/fcke/comment/editcomplete</path>
              <httpMethod>PUT</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetBarPromotions(System.String,System.String,System.Boolean)">
@@ -580,7 +541,6 @@
              <returns>Promotion bar</returns>
              <path>api/2.0/portal/bar/promotions</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.MarkBarPromotion(System.String)">
@@ -592,7 +552,6 @@
              <param type="System.String, System" name="id">ID</param>
              <path>api/2.0/portal/bar/promotions/mark/{id}</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetBarTips(System.String,System.String,System.Boolean,System.Boolean)">
@@ -608,7 +567,6 @@
              <returns>Promotion bar tips</returns>
              <path>api/2.0/portal/bar/tips</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.MarkBarTip(System.String)">
@@ -620,7 +578,6 @@
              <param type="System.String, System" name="id">ID</param>
              <path>api/2.0/portal/bar/tips/mark/{id}</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBarTips">
@@ -631,7 +588,6 @@
              <category>Promotions</category>
              <path>api/2.0/portal/bar/tips</path>
              <httpMethod>DELETE</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetSearchSettings">
@@ -643,7 +599,6 @@
              <returns>Search settings</returns>
             <path>api/2.0/portal/search</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.CheckSearchAvailable">
@@ -655,7 +610,6 @@
              <returns>Search information</returns>
             <path>api/2.0/portal/search/state</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.Reindex(System.String)">
             <summary>
@@ -667,7 +621,6 @@
             <returns>Search information</returns>
             <path>api/2.0/portal/search/reindex</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.SetSearchSettings(System.Collections.Generic.List{ASC.ElasticSearch.Core.SearchSettingsItem})">
             <summary>
@@ -678,7 +631,6 @@
             <param type="System.Collections.Generic.List{ASC.ElasticSearch.Core.SearchSettingsItem}, System.Collections.Generic" name="items">Search settings</param>
             <path>api/2.0/portal/search</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetRandomPassword">
              <summary>
@@ -688,7 +640,6 @@
              <returns>Random password</returns>
              <path>api/2.0/portal/randompwd</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetIPInformation(System.String)">
@@ -700,7 +651,6 @@
              <returns>IP information</returns>
              <path>api/2.0/portal/ip/{ipAddress}</path>
              <httpMethod>GET</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.MarkGiftAsReaded">
@@ -710,7 +660,6 @@
              <short>Mark a gift message as read</short>
              <path>api/2.0/portal/gift/mark</path>
              <httpMethod>POST</httpMethod>
-             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
     </members>
