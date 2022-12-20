@@ -116,7 +116,7 @@
             <category>Calendars and subscriptions</category>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/calendar</path>
-            <returns type="ASC.Api.Calendar.Wrappers.CalendarWrapper,ASC.Api.Calendar">Created calendar</returns>
+            <returns type="ASC.Api.Calendar.Wrappers.CalendarWrapper, ASC.Api.Calendar">Created calendar</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.UpdateCalendar(System.String,System.String,System.String,System.String,System.String,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Boolean,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String)">
             <summary>
@@ -167,6 +167,7 @@
             Delete a calendar
             </short>
             <param type="System.Int32, System" method="url" name="calendarId">Calendar ID</param>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/calendar/{calendarId}</path>
             <category>Calendars and subscriptions</category>
@@ -207,6 +208,7 @@
             </short>
             <param type="System.String, System" name="change">New calendar storage</param>
             <param type="System.String, System" name="key">Email key</param>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
             <category>Calendars and subscriptions</category>
             <path>api/2.0/calendar/change_to_storage</path>
             <httpMethod>GET</httpMethod>
@@ -222,6 +224,7 @@
             </short>
             <param type="System.String, System" name="eventInfo">Event information that will be deleted</param>
             <param type="System.String, System" name="key">Email key</param>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
             <category>Events</category>
             <path>api/2.0/calendar/caldav_delete_event</path>
             <httpMethod>GET</httpMethod>
@@ -422,6 +425,7 @@
             </short>
             <param type="System.Int32, System" method="url" name="todoId">Task ID</param>
             <param type="System.Boolean, System" name="fromCaldavServer">Defines if the request is from the CalDav server or not</param>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
             <category>Tasks</category>
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/calendar/todos/{todoId}</path>
@@ -437,7 +441,7 @@
             <param type="System.String, System" name="eventGuid">Event GUID</param>
             <param type="System.String, System" name="ics">Event in the iCal format</param>
             <category>Events</category>
-            <returns>Event</returns>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/calendar/outsideevent</path>
         </member>
@@ -450,6 +454,7 @@
             </short>
             <param type="System.String, System" name="calendarId">Calendar ID</param>
             <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="team">Project team</param>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
             <category>Calendars and subscriptions</category>
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/calendar/caldavprojcal</path>
@@ -464,6 +469,7 @@
             <param type="System.String, System" name="calendarId">Calendar ID</param>
             <param type="System.String, System" name="uid">Event UID</param>
             <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="responsibles">Task responsibles</param>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
             <category>Events</category>
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/calendar/caldavevent</path>
@@ -494,6 +500,7 @@
             <param type="System.String, System" name="uid">Event UID</param>
             <param type="System.Int32, System" name="alert">Defines how many minutes before the event a reminder will be displayed</param>
             <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="responsibles">Task responsibles</param>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
             <category>Events</category>
             <path>api/2.0/calendar/caldavevent</path>
             <httpMethod>PUT</httpMethod>
@@ -547,6 +554,7 @@
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/calendar/events/{eventId}</path>
             <category>Events</category>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.RemoveEvent(System.Int32,ASC.Specific.ApiDateTime,ASC.Api.Calendar.CalendarApi.EventRemoveType,System.Uri,System.Boolean)">
             <summary>
@@ -577,6 +585,7 @@
             <path>api/2.0/calendar/events/{eventId}/unsubscribe</path>
             <httpMethod>DELETE</httpMethod>
             <category>Events</category>
+            <returns type="System.Threading.Tasks.Task, System.Threading.Tasks">Task awaiter</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.GetEventHistoryByUid(System.String)">
             <summary>

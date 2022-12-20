@@ -191,6 +191,7 @@
             <path>api/2.0/settings/ldap/cron</path>
             <param type="System.String, System" name="cron">Cron expression</param>
             <httpMethod>POST</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SyncLdap">
             <summary>
@@ -302,6 +303,7 @@
             <category>Quota</category>
             <path>api/2.0/settings/recalculatequota</path>
             <httpMethod>GET</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CheckRecalculateQuota">
             <summary>
@@ -763,6 +765,7 @@
             <category>Telegram</category>
             <path>api/2.0/settings/telegramdisconnect</path>
             <httpMethod>DELETE</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CloseWelcomePopup">
             <summary>
@@ -881,6 +884,7 @@
             <param type="System.Guid, System" method="url" name="id">Item ID</param>
             <path>api/2.0/settings/customnavigation/delete/{id}</path>
             <httpMethod>DELETE</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateEmailActivationSettings(System.Boolean)">
             <summary>
@@ -971,6 +975,7 @@
             <short>Reset the storage settings</short>
             <path>api/2.0/settings/storage</path>
             <httpMethod>DELETE</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetAllCdnStorages">
             <summary>
@@ -1003,6 +1008,7 @@
             <short>Reset the CDN storage settings</short>
             <path>api/2.0/settings/storage/cdn</path>
             <httpMethod>DELETE</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetAllBackupStorages">
             <summary>

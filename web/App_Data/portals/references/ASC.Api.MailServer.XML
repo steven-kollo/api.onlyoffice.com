@@ -109,6 +109,7 @@
             <category>Mailboxes</category>
             <path>api/2.0/mailserver/mailboxes/changepwd</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.IsAddressAlreadyRegistered(System.String,System.Int32)">
             <summary>
@@ -215,6 +216,7 @@
             <category>Notifications</category>
             <path>api/2.0/mailserver/notification/address/remove</path>
             <httpMethod>DELETE</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetMailServer">
             <summary>

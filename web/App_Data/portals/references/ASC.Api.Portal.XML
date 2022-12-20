@@ -356,6 +356,7 @@
             <category>Backup</category>
             <path>api/2.0/portal/createbackupschedule</path>
             <httpMethod>POST</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBackupSchedule">
             <summary>
@@ -365,6 +366,7 @@
             <category>Backup</category>
             <path>api/2.0/portal/deletebackupschedule</path>
             <httpMethod>DELETE</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.StartBackup(ASC.Core.Common.Contracts.BackupStorageType,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Boolean)">
             <summary>
@@ -409,6 +411,7 @@
             <category>Backup</category>
             <path>api/2.0/portal/deletebackup/{id}</path>
             <httpMethod>DELETE</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBackupHistory">
             <summary>
@@ -418,6 +421,7 @@
             <category>Backup</category>
             <path>api/2.0/portal/deletebackuphistory</path>
             <httpMethod>DELETE</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.StartBackupRestore(System.String,ASC.Core.Common.Contracts.BackupStorageType,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Boolean)">
             <summary>
@@ -631,6 +635,7 @@
             <param type="System.Collections.Generic.List{ASC.ElasticSearch.Core.SearchSettingsItem}, System.Collections.Generic" name="items">Search settings</param>
             <path>api/2.0/portal/search</path>
             <httpMethod>POST</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetRandomPassword">
              <summary>

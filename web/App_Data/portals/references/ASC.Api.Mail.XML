@@ -190,6 +190,7 @@
             <category>Settings</category>
             <path>api/2.0/mail/settings/conversationsEnabled</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetAlwaysDisplayImagesFlag">
             <summary>
@@ -210,6 +211,7 @@
             <category>Settings</category>
             <path>api/2.0/mail/settings/alwaysDisplayImages</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetCacheUnreadMessagesFlag">
             <summary>
@@ -230,6 +232,7 @@
             <category>Settings</category>
             <path>api/2.0/mail/settings/cacheMessagesEnabled</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetEnableGoNextAfterMoveFlag">
             <summary>
@@ -250,6 +253,7 @@
             <category>Settings</category>
             <path>api/2.0/mail/settings/goNextAfterMoveEnabled</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetEnableReplaceMessageBodyFlag">
             <summary>
@@ -270,6 +274,7 @@
             <category>Settings</category>
             <path>api/2.0/mail/settings/replaceMessageBody</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.ExportAttachmentsToDocuments(System.Int32,System.String)">
             <summary>
@@ -690,6 +695,7 @@
             <category>Accounts</category>
             <path>api/2.0/mail/accounts/updateuseractivity</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetAlerts">
             <summary>
@@ -969,6 +975,7 @@
             <param type="System.Collections.Generic.IEnumerable{ASC.Mail.Data.Contracts.CrmContactData}, System.Collections.Generic" name="crm_contact_ids">List of CRM entities in the following format: {entity_id: 0, entity_type: 0}.
             Entity types: 1 - Contact, 2 - Case, 3 - Opportunity
             </param>
+            <returns></returns>
             <category>Conversations</category>
             <path>api/2.0/mail/conversations/crm/link</path>
             <httpMethod>PUT</httpMethod>
@@ -983,6 +990,7 @@
             <param type="System.Collections.Generic.IEnumerable{ASC.Mail.Data.Contracts.CrmContactData}, System.Collections.Generic" name="crm_contact_ids">List of CRM entities in the following format: {entity_id: 0, entity_type: 0}.
             Entity types: 1 - Contact, 2 - Case, 3 - Opportunity
             </param>
+            <returns></returns>
             <category>Conversations</category>
             <path>api/2.0/mail/conversations/crm/mark</path>
             <httpMethod>PUT</httpMethod>
@@ -997,6 +1005,7 @@
             <param type="System.Collections.Generic.IEnumerable{ASC.Mail.Data.Contracts.CrmContactData}, System.Collections.Generic" name="crm_contact_ids">List of CRM entities in the following format: {entity_id: 0, entity_type: 0}.
             Entity types: 1 - Contact, 2 - Case, 3 - Opportunity
             </param>
+            <returns></returns>
             <category>Conversations</category>
             <path>api/2.0/mail/conversations/crm/unmark</path>
             <httpMethod>PUT</httpMethod>
@@ -1198,6 +1207,7 @@
             <category>Messages</category>
             <path>api/2.0/mail/messages/reassign</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetPrevNextMessageId(System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32})">
             <summary>
@@ -1435,6 +1445,7 @@
             <category>Messages</category>
             <path>api/2.0/mail/messages/crm/export</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetTags">
             <summary>

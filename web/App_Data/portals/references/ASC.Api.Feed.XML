@@ -19,6 +19,7 @@
             </short>
              <path>api/2.0/feed/read</path>
              <httpMethod>PUT</httpMethod>
+             <returns></returns>
         </member>
         <member name="M:ASC.Api.Feed.FeedApi.GetFeed(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime)">
             <summary>

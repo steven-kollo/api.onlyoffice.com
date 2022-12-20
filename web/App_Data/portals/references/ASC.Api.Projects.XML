@@ -931,6 +931,7 @@
             <category>Reports</category>
             <path>api/2.0/project/report/terminate</path>
             <httpMethod>GET</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.SaveReportTemplate(System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,ASC.Projects.Core.Domain.AverageTime,System.Boolean)">
             <summary>

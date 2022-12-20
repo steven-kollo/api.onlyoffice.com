@@ -187,6 +187,7 @@
             <param type="System.Guid, System" name="userId">User ID</param>
             <path>api/2.0/security/activeconnections/logoutall/{userId}</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.LogOutAllExceptThisConnection">
             <summary>

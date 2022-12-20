@@ -3087,6 +3087,7 @@
             <param type="System.Int32, System" method="url" name="fileid">File ID</param>
             <short>Delete a report file</short>
             <category>Reports</category>
+            <returns></returns>
             <exception cref="T:System.Security.SecurityException">If the user can't create reports</exception>
             <exception cref="T:System.ArgumentException">If file ID is less than 0</exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">If file is not found</exception>
@@ -3106,6 +3107,7 @@
             <summary>Terminates the report generation task.</summary>
             <short>Terminate the report generation</short>
             <category>Reports</category>
+            <returns></returns>
             <exception cref="T:System.Security.SecurityException">If the user can't create reports</exception>
             <path>api/2.0/crm/report/terminate</path>
             <httpMethod>GET</httpMethod>
@@ -4303,6 +4305,7 @@
             <category>VoIP</category>
             <path>api/2.0/crm/voip/price/{callId}</path>
             <httpMethod>POST</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCalls(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>

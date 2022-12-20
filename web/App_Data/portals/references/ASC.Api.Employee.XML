@@ -611,6 +611,7 @@
             <category>User data</category>
             <path>api/2.0/people/reassign/terminate</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.StartReassign(System.Guid,System.Guid,System.Boolean)">
             <summary>
@@ -645,6 +646,7 @@
             <category>User data</category>
             <path>api/2.0/people/remove/terminate</path>
             <httpMethod>PUT</httpMethod>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.StartRemove(System.Guid)">
             <summary>
