@@ -198,11 +198,16 @@
                 <td>string</td>
                 <td>optional</td>
             </tr>
-            <tr class="tablerow">
+            <tr>
                 <td id="spreadsheetLayout" class="copy-link">spreadsheetLayout</td>
                 <td>Defines settings for converting the spreadsheet to pdf.</td>
                 <td>object</td>
                 <td>optional</td>
+            </tr>
+            <tr class="tablerow tablerow-note">
+                <td colspan="4">
+                    <div class="note">Please note that the maximum number of pages that can be returned at once after converting a spreadsheet into the pdf or image formats is no more than 1500.</div>
+                </td>
             </tr>
             <tr class="tablerow">
                 <td id="fitToHeight" class="copy-link">spreadsheetLayout.fitToHeight</td>

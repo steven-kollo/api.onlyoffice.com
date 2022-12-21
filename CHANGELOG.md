@@ -1,6 +1,8 @@
 # Change Log
 
 - editors: added the history.serverVersion parameter description
+- editors: added the conversion limitation for the spreadsheets
+- editors: added the information about hiding changes when the server version is updated
 
 ## 2.11.0
 - editors: mobile edit, mobile view and embedded view buttons on try page
