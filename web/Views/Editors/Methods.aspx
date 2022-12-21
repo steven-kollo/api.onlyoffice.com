@@ -296,7 +296,7 @@ docEditor.refreshHistory({
 });
 </pre>
             <p>
-                If after editing and saving the document the <em>history</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
+                If after editing and saving the document the <em>history</em> with the object changes and server version is returned, send the object changes in the <em>changes</em> parameter and the server version in the <em>serverVersion</em> parameter.
             </p>
             <pre>
 docEditor.refreshHistory({
@@ -338,7 +338,7 @@ docEditor.refreshHistory({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col style="width: 160px;" />
                     <col />
                     <col style="width: 100px;" />
                     <col style="width: 150px;" />
@@ -387,6 +387,12 @@ docEditor.refreshHistory({
                         <td>Defines the unique document identifier used by the service to recognize the document.</td>
                         <td>string</td>
                         <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>history.serverVersion</td>
+                        <td>Defines the current server version number.</td>
+                        <td>integer</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user</td>
