@@ -481,7 +481,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
                 else
                 {
-                    msdoc = null;
+                    return response;
                 }
                 response.Add(msdoc);
             }
@@ -501,6 +501,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private Dictionary<string, object> GetResponse(string type, string file)
         {
             var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", file + ".xml");
+            if (!File.Exists(xml)) return null;
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
             var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
