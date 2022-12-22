@@ -153,7 +153,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="initDataType" class="copy-link">variations.initDataType</td>
-                <td>The data type selected in the editor and sent to the plugin (<b>text</b>, <b>html</b>, <b>ole</b>, <b>desktop</b>, <b>destop-external</b>, or <b>none</b>).</td>
+                <td>The data type selected in the editor and sent to the plugin (<b>text</b>, <b>html</b>, <b>ole</b>, <b>desktop</b>, <b>destop-external</b>, <b>sign</b>, or <b>none</b>).</td>
                 <td><a href="<%= Url.Action("global") %>#initDataType">initDataType</a></td>
                 <td>"ole"</td>
             </tr>
