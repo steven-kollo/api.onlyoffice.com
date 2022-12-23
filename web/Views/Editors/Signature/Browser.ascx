@@ -52,7 +52,7 @@
 }
 </pre>
 <p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
     See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 </p>
 
@@ -78,7 +78,7 @@
 }
 </pre>
         <p>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
         </p>
 
@@ -106,7 +106,7 @@
 }
 </pre>
         <p>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
         </p>
 
@@ -128,7 +128,7 @@
 }
 </pre>
         <p>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
         </p>
 
@@ -150,7 +150,7 @@
 }
 </pre>
         <p>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
         </p>
 

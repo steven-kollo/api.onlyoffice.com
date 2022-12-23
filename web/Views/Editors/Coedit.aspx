@@ -32,7 +32,7 @@
         </li>
         <li>Specify your ONLYOFFICE Document Server link with the JavaScript API that will be used for your website.
             <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;https://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre>
-            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+            Where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
             <pre>
@@ -52,7 +52,7 @@ new DocsAPI.DocEditor("placeholder", {
     }
 });
 </pre>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser.</li>
         <li>Now make a copy of your <em>html</em> file created above.</li>
@@ -74,7 +74,7 @@ new DocsAPI.DocEditor("placeholder", {
     }
 });
 </pre>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your copied and edited <em>html</em> file in the browser.</li>
     </ol>
@@ -127,7 +127,7 @@ new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             </p>
         </li>
         <li>
@@ -148,7 +148,7 @@ new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             </p>
         </li>
         <li>
@@ -173,7 +173,7 @@ new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             </p>
         </li>
         <li>
@@ -204,7 +204,7 @@ new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             </p>
         </li>
         <li>
@@ -234,7 +234,7 @@ new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             </p>
         </li>
         <li>
@@ -258,7 +258,7 @@ new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             </p>
         </li>
         <li>
@@ -286,7 +286,7 @@ new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             </p>
         </li>
     </ol>
