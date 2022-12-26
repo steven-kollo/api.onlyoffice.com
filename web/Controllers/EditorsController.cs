@@ -138,6 +138,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/RestApi/GetFile",
                 "WOPI/RestApi/Lock",
                 "WOPI/RestApi/PutFile",
+                "WOPI/RestApi/PutRelativeFile",
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
