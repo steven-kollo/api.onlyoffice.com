@@ -2060,6 +2060,7 @@
     <Content Include="Content\img\Editor\compare-documents.png" />
     <Content Include="Content\img\Editor\compare.png" />
     <Content Include="Content\img\Editor\conversion.jpg" />
+    <Content Include="Content\img\Editor\convert-binary-files.jpg" />
     <Content Include="Content\img\Editor\create.png" />
     <Content Include="Content\img\Editor\customization.png" />
     <Content Include="Content\img\Editor\e-coedit.png" />
@@ -2610,6 +2611,7 @@
     <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
     <Content Include="Views\Editors\WOPI\Discovery.ascx" />
+    <Content Include="Views\Editors\WOPI\EditingBinary.ascx" />
     <Content Include="Views\Editors\WOPI\HostPage.ascx" />
     <Content Include="Views\Editors\WOPI\PostMessage.ascx" />
     <Content Include="Views\Editors\WOPI\ProofKeys.ascx" />

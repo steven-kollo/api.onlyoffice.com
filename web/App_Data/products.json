@@ -79,6 +79,10 @@
                "Item2":"wopi/postmessage"
             },
             {
+               "Item1":"Editing binary documents",
+               "Item2":"wopi/editingbinary"
+            },
+            {
                "Item1":"API vs WOPI",
                "Item2":"wopi/apivswopi"
             }

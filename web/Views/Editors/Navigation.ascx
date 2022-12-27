@@ -260,6 +260,9 @@
         <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
     </li>
     <li>
+        <a href="<%= Url.Action("wopi/editingbinary") %>">Editing binary documents</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("wopi/apivswopi") %>">API vs WOPI</a>
     </li>
 </ul>

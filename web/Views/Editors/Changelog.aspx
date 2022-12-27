@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="73" class="copy-link">Version 7.3</h2>
     <ul>
+        <li>Added a scheme for <a href="<%= Url.Action("wopi/editingbinary") %>">editing binary document formats</a>.</li>
         <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#convert">convert</a> action to the WOPI discovery.</li>
         <li>Added the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> WOPI operation.</li>
     </ul>

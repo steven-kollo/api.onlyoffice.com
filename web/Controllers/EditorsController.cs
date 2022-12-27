@@ -130,6 +130,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI",
                 "WOPI/ApiVsWopi",
                 "WOPI/Discovery",
+                "WOPI/EditingBinary",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
                 "WOPI/ProofKeys",
