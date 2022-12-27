@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the setReferenceData method
 - editors: added the events.onRequestReferenceData event
 - editors: added the document.referenceData parameter
 - editors: added the mode field to the editorConfig.customization.layout.leftMenu and editorConfig.customization.layout.rightMenu parameters
