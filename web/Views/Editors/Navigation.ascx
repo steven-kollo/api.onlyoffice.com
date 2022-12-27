@@ -160,6 +160,9 @@
             <li>
                 <a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a>
+            </li>
         </ul>
     </li>
 </ul>

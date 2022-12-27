@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Inserting external data page
 - editors: added the setReferenceData method
 - editors: added the events.onRequestReferenceData event
 - editors: added the document.referenceData parameter
