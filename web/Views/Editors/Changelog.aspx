@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="73" class="copy-link">Version 7.3</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">events.onRequestReferenceData</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> parameter.</li>
     </ul>
 

@@ -2115,6 +2115,7 @@
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
+    <Content Include="Content\img\Editor\paste-link.png" />
     <Content Include="Content\img\Editor\permissions.png" />
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
@@ -2134,6 +2135,7 @@
     <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarHideFileName.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
+    <Content Include="Content\img\Editor\update-values.png" />
     <Content Include="Content\img\Editor\viewer.png" />
     <Content Include="Content\img\get-docs\docker.png" />
     <Content Include="Content\img\get-docs\linux.svg" />
