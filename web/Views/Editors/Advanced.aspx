@@ -74,6 +74,10 @@
             "<a href="<%= Url.Action("config/document/info") %>#uploaded">uploaded</a>": "2010-07-07 3:46 PM"
         },
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
+        "<a href="<%= Url.Action("config/document") %>#referenceData">referenceData</a>": {
+            "fileKey": "Mgetl3dYUppf2",
+            "instanceId": "https://example.com"
+        },
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
             "<a href="<%= Url.Action("config/document/permissions") %>#chat">chat</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
