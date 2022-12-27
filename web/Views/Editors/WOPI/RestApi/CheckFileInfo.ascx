@@ -375,6 +375,13 @@
                 <td>true</td>
             </tr>
             <tr>
+                <td id="UserCanNotWriteRelative" class="copy-link">UserCanNotWriteRelative</td>
+                <td>Specifies if the user has permissions to create new files on the WOPI server or not.
+                The <b>true</b> value means that the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> execution will fail for this user on the current file.</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+            <tr>
                 <td id="UserCanRename" class="copy-link">UserCanRename</td>
                 <td>Specifies if the user has permissions to rename a file.</td>
                 <td>boolean</td>

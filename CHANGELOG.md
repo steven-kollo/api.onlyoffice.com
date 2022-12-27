@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the UserCanNotWriteRelative property to the CheckFileInfo WOPI operation
 - editors: added the scheme for editing binary document formats
 - editors: added the convert action to the WOPI discovery
 - editors: added the PutRelativeFile WOPI operation
