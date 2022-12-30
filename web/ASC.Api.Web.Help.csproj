@@ -260,8 +260,8 @@
     <Content Include="500.aspx" />
     <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
     <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
-    <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\Angle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\AxisPos.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\BlipFillType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\bookmarkRefTo.docbuilder" />
@@ -274,6 +274,7 @@
     <Content Include="App_Data\docbuilder\examples\captionType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddDefName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddSheet.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.attachEvent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateBlipFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateBullet.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateColorByName.docbuilder" />
@@ -293,6 +294,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateSolidFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateStroke.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.detachEvent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Format.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetActiveSheet.docbuilder" />
@@ -305,6 +307,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetSheets.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetThemesColors.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Intersect.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.onWorksheetChange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.RecalculateAllFormulas.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.ReplaceTextSmart.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Save.docbuilder" />
@@ -2868,9 +2871,6 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\docbuilder\examples\cell\Api.detachEvent.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\Api.attachEvent.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\Api.onWorksheetChange.docbuilder" />
     <Content Include="web.autofac.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2879,6 +2879,45 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.AddComment.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetBackgroundColor.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.AddReply.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.Delete.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetAutorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetQuoteText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetRepliesCount.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetReply.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetTimeUTC.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.IsSolved.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.RemoveReplies.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetAutorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetSolved.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetTimeUTC.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetAutorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetAutorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddTableOfContents.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddTableOfFigures.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllComments.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetControlsHighlight.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.AddComment.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.AddCaption.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiRange.AddComment.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiRange.GetRange.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiRun.AddComment.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiTable.AddComment.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
