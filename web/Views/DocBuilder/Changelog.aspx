@@ -70,6 +70,7 @@
     <p><b>Other methods</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/setbackgroundcolor") %>">ApiBlockLvlSdt/SetBackgroundColor</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getstatistics") %>">ApiDocument/GetStatistics</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/setcontrolshighlight") %>">ApiDocument/SetControlsHighlight</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apirange/getrange") %>">ApiRange/GetRange</a> method to Text document API.</li>
     </ul>
