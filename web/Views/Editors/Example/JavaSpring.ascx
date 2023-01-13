@@ -141,7 +141,7 @@ sudo apt-get install oracle-java11-installer</span>
         <ul>
             <li>
                 <p>download the archive with the Java-Spring example and unpack it:</p>
-                <span class="commandline">wget https://api.onlyoffice.com/app_data/editor/Java-Spring%20Example.zip</span>
+                <span class="commandline">wget https://api.onlyoffice.com/app_data/editor/Java%20Spring%20Example.zip</span>
                 <span class="commandline">unzip Java-Spring\ Example.zip</span>
             </li>
             <li>
