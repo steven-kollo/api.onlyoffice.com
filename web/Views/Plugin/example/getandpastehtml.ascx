@@ -9,6 +9,7 @@
 <p class="dscr">Gets the document content as HTML code, modifies it, and pastes back to the document.</p>
 <p><b>Plugin type:</b> visual, non-system.</p>
 <p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
+<p><b>Analogue:</b> <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/doc2md" target="_blank">Doc2md</a>.</p>
 
 <img alt="GetAndPasteHTML" src="<%= Url.Content("~/content/img/plugins/gifs/get-and-paste-html.gif") %>" />
 

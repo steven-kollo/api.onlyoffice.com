@@ -12,7 +12,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 </p>
 <p><b>Plugin type:</b> visual, non-system.</p>
 <p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
-<p><b>Analogues:</b> <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/rainbow" target="_blank">Rainbow</a>.</p>
+<p><b>Analogues:</b> <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/rainbow" target="_blank">Rainbow</a>, <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/jitsi" target="_blank">Jitsi</a>.</p>
 
 <img alt="Telegram" src="<%= Url.Content("~/content/img/plugins/gifs/telegram.gif") %>" />
 
