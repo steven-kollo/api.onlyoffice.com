@@ -31,6 +31,7 @@
         <li><a href="#descriptionLocale">descriptionLocale</a></li>
         <li><a href="#EditorsSupport">EditorsSupport</a></li>
         <li><a href="#icons">icons</a></li>
+        <li><a href="#icons2">icons2</a></li>
         <li><a href="#initData">initData</a></li>
         <li><a href="#initDataType">initDataType</a></li>
         <li><a href="#initOnSelectionChanged">initOnSelectionChanged</a></li>
@@ -176,6 +177,14 @@
                     Plugin icon image files used in the editors. More information you can find <a href="<%= Url.Action("icons") %>">here</a>.
                 </td>
                 <td>array of string</td>
+                <td></td>
+            </tr>
+            <tr class="tablerow">
+                <td id="icons2" class="copy-link">variations.icons2</td>
+                <td>
+                    Scalable icons for plugin extensions. More information you can find <a href="<%= Url.Action("icons") %>">here</a>.
+                </td>
+                <td>array of objects</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
