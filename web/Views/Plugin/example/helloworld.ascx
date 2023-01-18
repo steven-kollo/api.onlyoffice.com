@@ -6,7 +6,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">Inserts the <em>Hello world!</em> phrase when he/she presses the button.</p>
+<p class="dscr">Inserts the <em>Hello world!</em> phrase when the user presses the button.</p>
 <p><b>Plugin type:</b> non-visual, non-system.</p>
 <p><b>Supported editors:</b> documents.</p>
 
@@ -31,7 +31,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld</a>.</p>
 <ol>
-    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li><em>config.json</em>, <em>index.html</em>, and <em>helloworld.js</em></li>
     <li>Icons</li>
     <li><em>index_about.html</em> for the plugin <b>About</b> window</li>
 </ol>
