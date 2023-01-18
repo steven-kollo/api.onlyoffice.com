@@ -113,7 +113,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         The additional data must be saved to the <b>document storage service</b> when <a href="<%= Url.Action("save") %>">saving</a> the editing session beside the document versions themselves to achieve that.
         After editing in <b>document editor</b> the information about the changes during the editing session is sent together with the changed document:</p>
     <note>When the server version is updated, the <b>document editor</b> does not use the <em>changes</em> data to highlight changes in the history.
-        It only returns the changed document by the <em>changesurl</em> parameter.</note>
+        It only returns the changed document in the <em>changesurl</em> parameter.</note>
     <ul>
         <li>
             <p>
