@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the EnableInsertRemoteImage, CopyPasteRestrictions, SupportsLocks, and SupportsUpdate CheckFileInfo properties
+- editors: added the Action_InsertGraphic, Blur_Focus, Grab_Focus, and Host_PostmessageReady PostMessage messages
 - editors: added the information about the syncronous conversion timeout
 - editors: added the history.serverVersion parameter description
 - editors: added the conversion limitation for the spreadsheets

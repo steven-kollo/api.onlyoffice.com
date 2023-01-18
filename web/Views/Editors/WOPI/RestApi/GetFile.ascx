@@ -107,3 +107,6 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="header-gray">Response body</div>
+    <p>The response body must be the full binary contents of the file.</p>
