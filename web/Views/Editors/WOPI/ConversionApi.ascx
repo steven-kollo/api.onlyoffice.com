@@ -57,33 +57,33 @@
         </tbody>
     </table>
 
-    <div class="header-gray">Sample of conversion request</div>
+    <div id="sample-curl" class="copy-link header-gray">Sample of conversion request</div>
     <pre>
 curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.docx
 </pre>
     <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.</p>
 
-    <div class="header-gray">Sample of conversion request in the HTML format</div>
+    <div id="sample-html" class="copy-link header-gray">Sample of conversion request in the HTML format</div>
     <pre>
 &lt;form action="https://documentserver/cool/convert-to/docx" enctype="multipart/form-data" method="post"&gt;
-File: &lt;input type="file" name="data"&gt;&lt;br/&gt;
-&lt;input type="submit" value="Convert to DOCX"&gt;
+    File: &lt;input type="file" name="data"&gt;&lt;br/&gt;
+    &lt;input type="submit" value="Convert to DOCX"&gt;
 &lt;/form&gt;
 </pre>
     <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.</p>
 
-    <div class="header-gray">Sample of conversion request with the <em>format</em> parameter</div>
+    <div id="sample-curl-format" class="copy-link header-gray">Sample of conversion request with the <em>format</em> parameter</div>
     <pre>
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 </pre>
     <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.</p>
 
-    <div class="header-gray">Sample of conversion request with the <em>format</em> parameter in the HTML format</div>
+    <div id="sample-html-format" class="copy-link header-gray">Sample of conversion request with the <em>format</em> parameter in the HTML format</div>
     <pre>
 &lt;form action="https://documentserver/cool/convert-to" enctype="multipart/form-data" method="post"&gt;
-File: &lt;input type="file" name="data"&gt;&lt;br/&gt;
-Format: &lt;input type="text" name="format"&gt;&lt;br/&gt;
-&lt;input type="submit" value="Convert"&gt;
+    File: &lt;input type="file" name="data"&gt;&lt;br/&gt;
+    Format: &lt;input type="text" name="format"&gt;&lt;br/&gt;
+    &lt;input type="submit" value="Convert"&gt;
 &lt;/form&gt;
 </pre>
     <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.</p>
