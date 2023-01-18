@@ -83,10 +83,6 @@ otherWindow.postMessage (msg, targetOrigin)
         </thead>
         <tbody>
             <tr>
-                <td id="Action_InsertGraphic" class="copy-link">Action_InsertGraphic</td>
-                <td>This message is posted to download an image from the URL and insert it into the document.</td>
-            </tr>
-            <tr>
                 <td id="App_LoadingStatus" class="copy-link">App_LoadingStatus</td>
                 <td>This message is posted after the online office application frame was loaded. 
                     Until the host receives this message, it must assume that the online office frame cannot react to any incoming messages except <em>Host_PostmessageReady</em>.</td>
@@ -157,6 +153,10 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
         </thead>
         <tbody>
+            <tr>
+                <td id="Action_InsertGraphic" class="copy-link">Action_InsertGraphic</td>
+                <td>This message is posted to download an image from the URL and insert it into the document.</td>
+            </tr>
             <tr>
                 <td id="UI_InsertGraphic" class="copy-link">UI_InsertGraphic</td>
                 <td>This message is posted to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration.

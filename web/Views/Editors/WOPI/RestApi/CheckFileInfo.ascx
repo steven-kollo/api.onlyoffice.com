@@ -203,15 +203,6 @@
                 <td>true</td>
             </tr>
             <tr>
-                <td id="EnableInsertRemoteImage" class="copy-link">EnableInsertRemoteImage</td>
-                <td>Specifies whether to enable the menu entry and toolbar item which call the <a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">UI_InsertGraphic</a> message.
-                This property is used to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration.
-                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back
-                via the <a href="<%= Url.Action("wopi/postmessage") %>#Action_InsertGraphic">Action_InsertGraphic</a> message with <em>Values</em> set to the temporary URL.</td>
-                <td>boolean</td>
-                <td>true</td>
-            </tr>
-            <tr>
                 <td id="FileSharingPostMessage" class="copy-link">FileSharingPostMessage</td>
                 <td>Specifies if the WOPI client should notify the WOPI server in case the user tries to share a file. 
                     The host expects to receive the <a href="<%= Url.Action("wopi/postmessage") %>#UI_Sharing">UI_Sharing</a> PostMessage when the <em>Share</em> UI in the online office is activated.</td>
@@ -479,6 +470,15 @@
             </tr>
         </thead>
         <tbody>
+            <tr>
+                <td id="EnableInsertRemoteImage" class="copy-link">EnableInsertRemoteImage</td>
+                <td>Specifies whether to enable the menu entry and toolbar item which call the <a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">UI_InsertGraphic</a> message.
+                This property is used to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration.
+                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back
+                via the <a href="<%= Url.Action("wopi/postmessage") %>#Action_InsertGraphic">Action_InsertGraphic</a> message with <em>Values</em> set to the temporary URL.</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
             <tr>
                 <td id="HidePrintOption" class="copy-link">HidePrintOption</td>
                 <td>Specifies if the WOPI server hides the print option from the file menu bar in the UI.</td>
