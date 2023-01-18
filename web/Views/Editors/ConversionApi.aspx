@@ -39,7 +39,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="tablerow">
+            <tr>
                 <td id="async" class="copy-link">async</td>
                 <td>
                     Defines the conversion request type: asynchronous or not.<br />
@@ -54,6 +54,12 @@
                 </td>
                 <td>boolean</td>
                 <td>optional</td>
+            </tr>
+            <tr class="tablerow tablerow-note">
+                <td colspan="4">
+                    <div class="note">If the conversion is synchronous and the file takes a long time to be converted, a web request timeout error may occur.
+                        Although the conversion can be eventually completed, the result can only be obtained by sending the request again with the same key.</div>
+                </td>
             </tr>
             <tr class="tablerow">
                 <td id="codePage" class="copy-link">codePage</td>
