@@ -129,6 +129,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Vue",
                 "WOPI",
                 "WOPI/ApiVsWopi",
+                "WOPI/ConversionApi",
                 "WOPI/Discovery",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",

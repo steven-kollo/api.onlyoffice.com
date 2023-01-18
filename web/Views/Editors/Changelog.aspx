@@ -17,7 +17,9 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="73" class="copy-link">Version 7.3</h2>
-    <ul></ul>
+    <ul>
+        <li>Added the WOPI <a href="<%= Url.Action("wopi/conversionapi") %>">Conversion API</a>.</li>
+    </ul>
 
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <ul>

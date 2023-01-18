@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the WOPI Conversion API
 - editors: added the mode field to the editorConfig.customization.layout.leftMenu and editorConfig.customization.layout.rightMenu parameters
 - editors: added the editorConfig.customization.font parameter
 
