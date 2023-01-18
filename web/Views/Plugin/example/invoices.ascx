@@ -31,7 +31,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices</a>.</p>
 <ol>
-    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li><em>config.json</em>, <em>index.html</em>, and <em>code.js</em></li>
     <li>Icons</li>
 </ol>
 
