@@ -16,7 +16,6 @@
     </h1>
 
     <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-chamilo" target="_blank">plugin</a> enables users to edit office documents within <a href="https://chamilo.org/en/" target="_blank">Chamilo</a> using ONLYOFFICE Docs.</p>
-    <p>The app is compatible with Chamilo v1.11.16 or newer.</p>
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
