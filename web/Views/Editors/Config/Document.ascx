@@ -35,7 +35,7 @@
             <td>string</td>
             <td>"docx"</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="key" class="copy-link">key<span class="required">*</span></td>
             <td>
                 Defines the unique document identifier used by the service to recognize the document.
@@ -45,6 +45,12 @@
             </td>
             <td>string</td>
             <td>"Khirz6zTPdfd7"</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">The key characters can be used: <b>0-9</b>, <b>a-z</b>, <b>A-Z</b>, <b>-._=</b>.
+                The maximal key length is <b>20</b> characters.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="title" class="copy-link">title<span class="required">*</span></td>
@@ -87,8 +93,3 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
     See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 </p>
-
-<div class="note">
-    The key characters can be used: <b>0-9</b>, <b>a-z</b>, <b>A-Z</b>, <b>-._=</b>.
-    The maximal key length is <b>20</b> characters.
-</div>
