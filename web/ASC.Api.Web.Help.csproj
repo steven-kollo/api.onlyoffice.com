@@ -2609,6 +2609,7 @@
     <Content Include="Views\Editors\Vue.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
     <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
+    <Content Include="Views\Editors\WOPI\ConversionApi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
     <Content Include="Views\Editors\WOPI\Discovery.ascx" />
     <Content Include="Views\Editors\WOPI\EditingBinary.ascx" />

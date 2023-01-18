@@ -141,8 +141,8 @@ sudo apt-get install oracle-java11-installer</span>
         <ul>
             <li>
                 <p>download the archive with the Java-Spring example and unpack it:</p>
-                <span class="commandline">wget https://api.onlyoffice.com/app_data/editor/Java-Spring%20Example.zip</span>
-                <span class="commandline">unzip Java-Spring\ Example.zip</span>
+                <span class="commandline">wget https://api.onlyoffice.com/app_data/editor/Java%20Spring%20Example.zip</span>
+                <span class="commandline">unzip Java\ Spring\ Example.zip</span>
             </li>
             <li>
                 <p>clone the git repository:</p>
@@ -155,7 +155,7 @@ sudo apt-get install oracle-java11-installer</span>
         <ul>
             <li>
                 <p>in the archive:</p>
-                <div class="commandline">cd Java-Spring\ Example</div>
+                <div class="commandline">cd Java\ Spring\ Example/</div>
             </li>
             <li>
                 <p>in the git repository:</p>

@@ -42,8 +42,7 @@
     <p>To start using ONLYOFFICE Docs with Plone, the following steps must be performed:</p>
     <ol>
         <li>Install plugin by adding it to your <em>buildout.cfg</em>:
-            <span class="commandline">
-[buildout]
+            <span class="commandline">[buildout]
 
 ...
 
@@ -63,11 +62,12 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
     </span>
 
     <p>Both options will automatically install plugin from <a target="_blank" href="https://pypi.org/project/onlyoffice.plone/">PyPi</a>.</p>
+    <note>Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name <em>onlyoffice.connector</em>), please remove it before installing the new version.</note>
 
     <h2 id="configuration" class="copy-link">Configuring Plone ONLYOFFICE integration plugin</h2>
 
     <p>
-        To configure plugin go to <b>Site Setup</b>.
+        To configure plugin, go to <b>Site Setup</b>.
         Scroll down to <b>Add-ons Configuration</b> section and press the <b>ONLYOFFICE Configuration</b> button.
     </p>
 
@@ -107,8 +107,7 @@ virtualenv .
         <li>In the <em>scr</em> directory create the <em>onlyoffice.plone</em> directory.</li>
         <li>Put your project files received by Git into the <em>onlyoffice.plone</em> directory.</li>
         <li>Edit the <em>buildout.cfg</em> file:
-            <span class="commandline">
-[buildout]
+            <span class="commandline">[buildout]
 
 ...
 
@@ -135,8 +134,7 @@ develop =
     <ol>
         <li>If you specified a concrete plugin version in your <em>buildout.cfg</em> file (so-called <em>pinning</em>, and a recommended practice), like <em>onlyoffice.plone = 1.0.0</em>, update this reference to point to the newer version. 
             If the plugin version is not specified, then the latest version will be automatically loaded:
-            <span class="commandline">
-[versions]
+            <span class="commandline">[versions]
 
 ...
 
@@ -150,6 +148,7 @@ onlyoffice.plone = 1.0.1
 
 
     <h2 id="how-it-works" class="copy-link">How it works</h2>
+    <p>The ONLYOFFICE integration follows the API documented <a href="https://api.onlyoffice.com/editors/basic">here</a>.</p>
     <ol>
         <li>User navigates to a document within Plone and selects the <b>ONLYOFFICE Edit</b> action.</li>
         <li>
@@ -164,9 +163,9 @@ onlyoffice.plone = 1.0.1
         <li>Plone constructs a page from the <em>.pt</em> template, filling in all of those values so that the client browser can load up the editor.</li>
         <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
         <li>Then ONLYOFFICE Docs downloads the document from Plone and the user begins editing.</li>
-        <li>ONLYOFFICE Docs sends a POST request to the <em>callback</em> URL to inform Plone that a user is editing the document.</li>
+        <li>ONLYOFFICE Docs sends a POST request to <em>callbackUrl</em> to inform Plone that a user is editing the document.</li>
         <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <em>callback</em> URL letting Plone know that the clients have finished editing the document and closed it.</li>
+        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to <em>callbackUrl</em> letting Plone know that the clients have finished editing the document and closed it.</li>
         <li>Plone downloads a new version of the document, replacing the old one.</li>
     </ol>
 
