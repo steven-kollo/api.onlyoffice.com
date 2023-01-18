@@ -72,7 +72,7 @@ otherWindow.postMessage (msg, targetOrigin)
     <div class="header-gray">Available messages</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
         </colgroup>
         <thead>

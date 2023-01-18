@@ -57,10 +57,10 @@
     <div class="header-gray">Request headers</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
             <col />
         </colgroup>
         <thead>
@@ -84,10 +84,10 @@
     <div class="header-gray">Required response properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -117,10 +117,10 @@
     <div class="header-gray">Breadcrumb properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -167,10 +167,10 @@
     <div class="header-gray">PostMessage properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -237,10 +237,10 @@
     <div class="header-gray">File URL properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -281,10 +281,10 @@
     <div class="header-gray">Other miscellaneous properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -338,10 +338,10 @@
     <div class="header-gray">User metadata properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -376,10 +376,10 @@
     <div class="header-gray">User permissions properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -420,10 +420,10 @@
     <div class="header-gray">WOPI host capabilities properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -465,10 +465,10 @@
     <div class="header-gray">Nextcloud/Collabora/Seafile properties</div>
     <table class="table">
         <colgroup>
-            <col style="width: 200px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
