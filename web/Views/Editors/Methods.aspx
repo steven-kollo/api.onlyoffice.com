@@ -715,7 +715,6 @@ docEditor.setMailMergeRecipients({
             <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
             <pre>
 docEditor.setReferenceData({
-    "error": "",
     "path": "sample.xlsx",
     "referenceData": {
         "fileKey": "BCFA2CED",
@@ -728,6 +727,12 @@ docEditor.setReferenceData({
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
+            <p>Show the error message explaining if some error occurred.</p>
+            <pre>
+docEditor.setReferenceData({
+    "error": "Exception",
+});
+</pre>
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
