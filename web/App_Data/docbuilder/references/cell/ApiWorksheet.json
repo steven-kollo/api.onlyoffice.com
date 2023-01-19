@@ -824,7 +824,7 @@
         {
           "type": "string",
           "name": "subAddress",
-          "description": "<p>The subaddress of the hyperlink.</p>",
+          "description": "<p>The link subaddress to insert internal sheet hyperlinks.</p>",
           "optional": false
         },
         {

@@ -20,7 +20,7 @@
     "GetText": {
       "memberof": "ApiComment",
       "name": "GetText",
-      "description": "<p>Gets the comment text.</p>",
+      "description": "<p>Returns the comment text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -54,6 +54,7 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>The comment text.</p>",
           "optional": false
         }
       ]
@@ -61,7 +62,7 @@
     "GetAutorName": {
       "memberof": "ApiComment",
       "name": "GetAutorName",
-      "description": "<p>Gets the autor name.</p>",
+      "description": "<p>Returns the comment author's name.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -78,7 +79,7 @@
     "SetAutorName": {
       "memberof": "ApiComment",
       "name": "SetAutorName",
-      "description": "<p>Sets the autor name.</p>",
+      "description": "<p>Sets the comment author's name.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -95,6 +96,7 @@
         {
           "type": "string",
           "name": "sAutorName",
+          "description": "<p>The comment author's name.</p>",
           "optional": false
         }
       ]
@@ -102,7 +104,7 @@
     "GetUserId": {
       "memberof": "ApiComment",
       "name": "GetUserId",
-      "description": "<p>Gets the user id.</p>",
+      "description": "<p>Returns the user ID of the comment author.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -119,7 +121,7 @@
     "SetUserId": {
       "memberof": "ApiComment",
       "name": "SetUserId",
-      "description": "<p>Sets the user id.</p>",
+      "description": "<p>Sets the user ID to the comment author.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -136,6 +138,7 @@
         {
           "type": "string",
           "name": "sUserId",
+          "description": "<p>The user ID of the comment author.</p>",
           "optional": false
         }
       ]
@@ -143,7 +146,7 @@
     "IsSolved": {
       "memberof": "ApiComment",
       "name": "IsSolved",
-      "description": "<p>Gets the comment solved info.</p>",
+      "description": "<p>Checks if a comment is solved or not.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -160,7 +163,7 @@
     "SetSolved": {
       "memberof": "ApiComment",
       "name": "SetSolved",
-      "description": "<p>Sets the comment solved.</p>",
+      "description": "<p>Marks a comment as solved.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -177,6 +180,7 @@
         {
           "type": "boolean",
           "name": "bSolved",
+          "description": "<p>Specifies if a comment is solved or not.</p>",
           "optional": false
         }
       ]
@@ -184,7 +188,7 @@
     "GetTimeUTC": {
       "memberof": "ApiComment",
       "name": "GetTimeUTC",
-      "description": "<p>Gets the timestamp of comment creation in UTC format.</p>",
+      "description": "<p>Returns the timestamp of the comment creation in UTC format.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -201,7 +205,7 @@
     "SetTimeUTC": {
       "memberof": "ApiComment",
       "name": "SetTimeUTC",
-      "description": "<p>Sets the timestamp of comment creation in UTC format.</p>",
+      "description": "<p>Sets the timestamp of the comment creation in UTC format.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -218,6 +222,7 @@
         {
           "type": "Number | String",
           "name": "nTimeStamp",
+          "description": "<p>The timestamp of the comment creation in UTC format.</p>",
           "optional": false
         }
       ]
@@ -225,7 +230,7 @@
     "GetTime": {
       "memberof": "ApiComment",
       "name": "GetTime",
-      "description": "<p>Gets the timestamp of comment creation.</p>",
+      "description": "<p>Returns the timestamp of the comment creation in the current time zone format.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -242,7 +247,7 @@
     "SetTime": {
       "memberof": "ApiComment",
       "name": "SetTime",
-      "description": "<p>Sets the timestamp of comment creation in current time zone format.</p>",
+      "description": "<p>Sets the timestamp of the comment creation in the current time zone format.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -259,6 +264,7 @@
         {
           "type": "Number | String",
           "name": "nTimeStamp",
+          "description": "<p>The timestamp of the comment creation in the current time zone format.</p>",
           "optional": false
         }
       ]
@@ -266,7 +272,7 @@
     "GetQuoteText": {
       "memberof": "ApiComment",
       "name": "GetQuoteText",
-      "description": "<p>Gets the quote text of comment.</p>",
+      "description": "<p>Returns the quote text of the current comment.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -283,7 +289,7 @@
     "GetRepliesCount": {
       "memberof": "ApiComment",
       "name": "GetRepliesCount",
-      "description": "<p>Gets count of the comment replies.</p>",
+      "description": "<p>Returns a number of the comment replies.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -300,7 +306,7 @@
     "GetReply": {
       "memberof": "ApiComment",
       "name": "GetReply",
-      "description": "<p>Gets the specified reply of comment.</p>",
+      "description": "<p>Returns the specified comment reply.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -317,6 +323,7 @@
         {
           "type": "Number",
           "name": "nIndex",
+          "description": "<p>The comment reply index.</p>",
           "optional": true,
           "defaultValue": 0
         }
@@ -325,7 +332,7 @@
     "AddReply": {
       "memberof": "ApiComment",
       "name": "AddReply",
-      "description": "<p>Adds the reply to comment.</p>",
+      "description": "<p>Adds a reply to a comment.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -342,24 +349,25 @@
         {
           "type": "String",
           "name": "sText",
-          "description": "<p>reply text. Required.</p>",
+          "description": "<p>The comment reply text (required).</p>",
           "optional": false
         },
         {
           "type": "String",
           "name": "sAutorName",
-          "description": "<p>Optional.</p>",
+          "description": "<p>The name of the comment reply author (optional).</p>",
           "optional": false
         },
         {
           "type": "String",
           "name": "sUserId",
-          "description": "<p>Optional.</p>",
+          "description": "<p>The user ID of the comment reply author (optional).</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "nPos",
+          "description": "<p>The comment reply position.</p>",
           "optional": true,
           "defaultValue": "this.GetRepliesCount()"
         }
@@ -368,7 +376,7 @@
     "RemoveReplies": {
       "memberof": "ApiComment",
       "name": "RemoveReplies",
-      "description": "<p>Removes the specified replies.</p>",
+      "description": "<p>Removes the specified comment replies.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -385,19 +393,21 @@
         {
           "type": "Number",
           "name": "nPos",
+          "description": "<p>The position of the first comment reply to remove.</p>",
           "optional": true,
           "defaultValue": 0
         },
         {
           "type": "Number",
           "name": "nCount",
+          "description": "<p>A number of comment replies to remove.</p>",
           "optional": true,
           "defaultValue": 1
         },
         {
           "type": "boolean",
           "name": "bRemoveAll",
-          "description": "<p>indicates whether to remove all</p>",
+          "description": "<p>Specifies whether to remove all comment replies or not.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -406,7 +416,7 @@
     "Delete": {
       "memberof": "ApiComment",
       "name": "Delete",
-      "description": "<p>Deletes the comment.</p>",
+      "description": "<p>Deletes the current comment from the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -422,8 +432,8 @@
     }
   },
   "events": {},
-  "comment": "/**\n\t * Class representing the comment.\n\t * @constructor\n\t */",
-  "description": "<p>Class representing the comment.</p>",
+  "comment": "/**\n\t * Class representing a comment.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing a comment.</p>",
   "scope": "global",
   "params": []
 }

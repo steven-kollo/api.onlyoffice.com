@@ -20,7 +20,7 @@
     "GetText": {
       "memberof": "ApiCommentReply",
       "name": "GetText",
-      "description": "<p>Gets the comment reply text.</p>",
+      "description": "<p>Returns the comment reply text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -54,6 +54,7 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>The comment reply text.</p>",
           "optional": false
         }
       ]
@@ -61,7 +62,7 @@
     "GetAutorName": {
       "memberof": "ApiCommentReply",
       "name": "GetAutorName",
-      "description": "<p>Gets the autor name.</p>",
+      "description": "<p>Returns the comment reply author's name.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -78,7 +79,7 @@
     "SetAutorName": {
       "memberof": "ApiCommentReply",
       "name": "SetAutorName",
-      "description": "<p>Sets the autor name.</p>",
+      "description": "<p>Sets the comment reply author's name.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -95,6 +96,7 @@
         {
           "type": "string",
           "name": "sAutorName",
+          "description": "<p>The comment reply author's name.</p>",
           "optional": false
         }
       ]
@@ -102,7 +104,7 @@
     "GetUserId": {
       "memberof": "ApiCommentReply",
       "name": "GetUserId",
-      "description": "<p>Gets the user id.</p>",
+      "description": "<p>Returns the user ID of the comment reply author.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -119,7 +121,7 @@
     "SetUserId": {
       "memberof": "ApiCommentReply",
       "name": "SetUserId",
-      "description": "<p>Sets the user id.</p>",
+      "description": "<p>Sets the user ID to the comment reply author.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -136,14 +138,15 @@
         {
           "type": "string",
           "name": "sUserId",
+          "description": "<p>The user ID of the comment reply author.</p>",
           "optional": false
         }
       ]
     }
   },
   "events": {},
-  "comment": "/**\n\t * Class representing the comment reply.\n\t * @constructor\n\t */",
-  "description": "<p>Class representing the comment reply.</p>",
+  "comment": "/**\n\t * Class representing a comment reply.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing a comment reply.</p>",
   "scope": "global",
   "params": []
 }

@@ -220,7 +220,14 @@
       ],
       "see": null,
       "inherits": null,
-      "params": []
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bWriteNumberings",
+          "description": "<p>Specifies if the used numberings will be written to the JSON object or not.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "events": {},
