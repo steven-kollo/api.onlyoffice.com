@@ -715,12 +715,13 @@ docEditor.setMailMergeRecipients({
             <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
             <pre>
 docEditor.setReferenceData({
+    "fileType": "xlsx",
     "path": "sample.xlsx",
     "referenceData": {
         "fileKey": "BCFA2CED",
         "instanceId": "https://example.com"
     },
-    "url": "https://example.com/url-to-example-document.docx"
+    "url": "https://example.com/url-to-example-document.xlsx"
 });
 </pre>
             <p>
@@ -752,6 +753,12 @@ docEditor.setReferenceData({
                     <tr class="tablerow">
                         <td>error</td>
                         <td>Defines the error message text.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
