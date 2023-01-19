@@ -2094,6 +2094,10 @@ article {
 .columns-4 {
     column-count: 4;
 }
+.columns-3 {
+    column-count: 3;
+    column-gap: 90px;
+}
 .columns-2 {
     column-count: 2;
 }

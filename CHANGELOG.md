@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: added the icons2 and store parameters to the plugin config
 - editors: added the history.serverVersion parameter description
 - editors: added the conversion limitation for the spreadsheets
 - editors: added the information about hiding changes when the server version is updated

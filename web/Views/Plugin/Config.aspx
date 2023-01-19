@@ -17,43 +17,43 @@
     <div class="header-gray">Description</div>
     <p class="dscr">The <em>config.json</em> file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.</p>
 
-    <ul class="columns-4" style="list-style: none;">
+    <ul class="columns-3" style="list-style: none;">
         <li><a href="#baseUrl">baseUrl</a></li>
         <li><a href="#guid">guid</a></li>
-        <li><a href="#version">version</a></li>
-        <li><a href="#minVersion">minVersion</a></li>
         <li><a href="#help">help</a></li>
+        <li><a href="#minVersion">minVersion</a></li>
         <li><a href="#name">name</a></li>
         <li><a href="#nameLocale">nameLocale</a></li>
         <li><a href="#variations">variations</a></li>
-        <li><a href="#buttons">buttons</a></li>
-        <li><a href="#description">description</a></li>
-        <li><a href="#descriptionLocale">descriptionLocale</a></li>
-        <li><a href="#EditorsSupport">EditorsSupport</a></li>
-        <li><a href="#icons">icons</a></li>
-        <li><a href="#icons2">icons2</a></li>
-        <li><a href="#initData">initData</a></li>
-        <li><a href="#initDataType">initDataType</a></li>
-        <li><a href="#initOnSelectionChanged">initOnSelectionChanged</a></li>
-        <li><a href="#cryptoMode">cryptoMode</a></li>
-        <li><a href="#isDisplayedInViewer">isDisplayedInViewer</a></li>
-        <li><a href="#isInsideMode">isInsideMode</a></li>
-        <li><a href="#isModal">isModal</a></li>
-        <li><a href="#isCustomWindow">isCustomWindow</a></li>
-        <li><a href="#isSystem">isSystem</a></li>
-        <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
-        <li><a href="#isViewer">isViewer</a></li>
-        <li><a href="#isVisual">isVisual</a></li>
-        <li><a href="#url">url</a></li>
-        <li><a href="#size">size</a></li>
-        <li><a href="#events">events</a></li>
-        <li><a href="#cryptoDisabledForInternalCloud">cryptoDisabledForInternalCloud</a></li>
-        <li><a href="#cryptoDisabledForExternalCloud">cryptoDisabledForExternalCloud</a></li>
-        <li><a href="#cryptoDisabledOnStart">cryptoDisabledOnStart</a></li>
-        <li><a href="#store">store</a></li>
-        <li><a href="#store-background">store.background</a></li>
-        <li><a href="#store-screenshots">store.screenshots</a></li>
-        <li><a href="#store-icons">store.icons</a></li>
+        <li><a href="#buttons">variations.buttons</a></li>
+        <li><a href="#cryptoDisabledForExternalCloud">variations.cryptoDisabledForExternalCloud</a></li>
+        <li><a href="#cryptoDisabledForInternalCloud">variations.cryptoDisabledForInternalCloud</a></li>
+        <li><a href="#cryptoDisabledOnStart">variations.cryptoDisabledOnStart</a></li>
+        <li><a href="#cryptoMode">variations.cryptoMode</a></li>
+        <li><a href="#description">variations.description</a></li>
+        <li><a href="#descriptionLocale">variations.descriptionLocale</a></li>
+        <li><a href="#EditorsSupport">variations.EditorsSupport</a></li>
+        <li><a href="#events">variations.events</a></li>
+        <li><a href="#icons">variations.icons</a></li>
+        <li><a href="#icons2">variations.icons2</a></li>
+        <li><a href="#initData">variations.initData</a></li>
+        <li><a href="#initDataType">variations.initDataType</a></li>
+        <li><a href="#initOnSelectionChanged">variations.initOnSelectionChanged</a></li>
+        <li><a href="#isCustomWindow">variations.isCustomWindow</a></li>
+        <li><a href="#isDisplayedInViewer">variations.isDisplayedInViewer</a></li>
+        <li><a href="#isInsideMode">variations.isInsideMode</a></li>
+        <li><a href="#isModal">variations.isModal</a></li>
+        <li><a href="#isSystem">variations.isSystem</a></li>
+        <li><a href="#isUpdateOleOnResize">variations.isUpdateOleOnResize</a></li>
+        <li><a href="#isViewer">variations.isViewer</a></li>
+        <li><a href="#isVisual">variations.isVisual</a></li>
+        <li><a href="#size">variations.size</a></li>
+        <li><a href="#store">variations.store</a></li>
+        <li><a href="#store-background">variations.store.background</a></li>
+        <li><a href="#store-icons">variations.store.icons</a></li>
+        <li><a href="#store-screenshots">variations.store.screenshots</a></li>
+        <li><a href="#url">variations.url</a></li>
+        <li><a href="#version">version</a></li>
     </ul>
 
     <div class="header-gray">Parameters</div>
@@ -85,22 +85,16 @@
                 <td>"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"</td>
             </tr>
             <tr class="tablerow">
-                <td id="minVersion" class="copy-link">minVersion</td>
-                <td>The minimum supported editors version.</td>
-                <td>string</td>
-                <td>"6.3.0"</td>
-            </tr>
-            <tr class="tablerow">
-                <td id="version" class="copy-link">version</td>
-                <td>The plugin version.</td>
-                <td>string</td>
-                <td>"1.0"</td>
-            </tr>
-            <tr class="tablerow">
                 <td id="help" class="copy-link">help</td>
                 <td>Path to the plugin description page. If the parameter is specified, the <em>help</em> button is displayed in the plugin window. When the user clicks the button, he follows the link to the plugin description page.</td>
                 <td>string</td>
                 <td>""</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="minVersion" class="copy-link">minVersion</td>
+                <td>The minimum supported editors version.</td>
+                <td>string</td>
+                <td>"6.3.0"</td>
             </tr>
             <tr class="tablerow">
                 <td id="name" class="copy-link">name</td>
@@ -158,6 +152,36 @@
                 <td></td>
             </tr>
             <tr class="tablerow">
+                <td id="cryptoDisabledForExternalCloud" class="copy-link">variations.cryptoDisabledForExternalCloud</td>
+                <td>
+                    Specifies if the encryption for the third-party clouds is disabled or not.
+                </td>
+                <td>string</td>
+                <td>"true"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="cryptoDisabledForInternalCloud" class="copy-link">variations.cryptoDisabledForInternalCloud</td>
+                <td>
+                    Specifies if the encryption for the ONLYOFFICE clouds is disabled or not.
+                </td>
+                <td>string</td>
+                <td>"true"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="cryptoDisabledOnStart" class="copy-link">variations.cryptoDisabledOnStart</td>
+                <td>
+                    Specifies if the mode is reset on restart or not.
+                </td>
+                <td>string</td>
+                <td>"true"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="cryptoMode" class="copy-link">variations.cryptoMode</td>
+                <td>The encryption plugin ID as there are several encryption plugins.</td>
+                <td>string</td>
+                <td>"1"</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="description" class="copy-link">variations.description</td>
                 <td>The description, i.e. what describes your plugin the best way.</td>
                 <td>string</td>
@@ -172,6 +196,14 @@
             <tr class="tablerow">
                 <td id="EditorsSupport" class="copy-link">variations.EditorsSupport</td>
                 <td>The editors which the plugin is available for (<b>word</b> - text document editor, <b>cell</b> - spreadsheet editor, <b>slide</b> - presentation editor).</td>
+                <td>array of strings</td>
+                <td></td>
+            </tr>
+            <tr class="tablerow">
+                <td id="events" class="copy-link">variations.events</td>
+                <td>
+                    Plugin events.
+                </td>
                 <td>array of strings</td>
                 <td></td>
             </tr>
@@ -206,10 +238,10 @@
                 <td>true</td>
             </tr>
             <tr class="tablerow">
-                <td id="cryptoMode" class="copy-link">variations.cryptoMode</td>
-                <td>The encryption plugin ID as there are several encryption plugins.</td>
-                <td>string</td>
-                <td>"1"</td>
+                <td id="isCustomWindow" class="copy-link">variations.isCustomWindow</td>
+                <td>Specifies if the plugin uses a custom window, without standard borders and buttons (used for modal plugins only).</td>
+                <td>boolean</td>
+                <td>true</td>
             </tr>
             <tr class="tablerow">
                 <td id="isDisplayedInViewer" class="copy-link">variations.isDisplayedInViewer</td>
@@ -226,12 +258,6 @@
             <tr class="tablerow">
                 <td id="isModal" class="copy-link">variations.isModal</td>
                 <td>Specifies if the opened plugin window is modal (used for visual plugins only, and if <em>isInsideMode</em> is not true).</td>
-                <td>boolean</td>
-                <td>true</td>
-            </tr>
-            <tr class="tablerow">
-                <td id="isCustomWindow" class="copy-link">variations.isCustomWindow</td>
-                <td>Specifies if the plugin uses a custom window, without standard borders and buttons (used for modal plugins only).</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -260,15 +286,6 @@
                 <td>true</td>
             </tr>
             <tr class="tablerow">
-                <td id="url" class="copy-link">variations.url</td>
-                <td>
-                    Plugin entry point, i.e. an HTML file which connects the <em>plugin.js</em> file (the base file needed for work with plugins) and launches the plugin code.
-                    See the <a href="<%= Url.Action("indexhtml") %>">index.html</a> section for the detailed information.
-                </td>
-                <td>string</td>
-                <td>"index.html"</td>
-            </tr>
-            <tr class="tablerow">
                 <td id="size" class="copy-link">variations.size</td>
                 <td>
                     Plugin window size.
@@ -277,45 +294,13 @@
                 <td></td>
             </tr>
             <tr class="tablerow">
-                <td id="events" class="copy-link">variations.events</td>
-                <td>
-                    Plugin events.
-                </td>
-                <td>array of strings</td>
-                <td></td>
-            </tr>
-            <tr class="tablerow">
-                <td id="cryptoDisabledForInternalCloud" class="copy-link">variations.cryptoDisabledForInternalCloud</td>
-                <td>
-                    Specifies if the encryption for the ONLYOFFICE clouds is disabled or not.
-                </td>
-                <td>string</td>
-                <td>"true"</td>
-            </tr>
-            <tr class="tablerow">
-                <td id="cryptoDisabledForExternalCloud" class="copy-link">variations.cryptoDisabledForExternalCloud</td>
-                <td>
-                    Specifies if the encryption for the third-party clouds is disabled or not.
-                </td>
-                <td>string</td>
-                <td>"true"</td>
-            </tr>
-            <tr class="tablerow">
-                <td id="cryptoDisabledOnStart" class="copy-link">variations.cryptoDisabledOnStart</td>
-                <td>
-                    Specifies if the mode is reset on restart or not.
-                </td>
-                <td>string</td>
-                <td>"true"</td>
-            </tr>
-            <tr class="tablerow">
-                <td id="store" class="copy-link">store</td>
+                <td id="store" class="copy-link">variations.store</td>
                 <td>Plugin display options in <b>ONLYOFFICE Plugin Marketplace</b>.</td>
                 <td>object</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
-                <td id="store-background" class="copy-link">store.background</td>
+                <td id="store-background" class="copy-link">variations.store.background</td>
                 <td>
                     Background colors used for plugin icons in <b>ONLYOFFICE Plugin Marketplace</b>:
                     <ul>
@@ -339,13 +324,7 @@
                 <td></td>
             </tr>
             <tr class="tablerow">
-                <td id="store-screenshots" class="copy-link">store.screenshots</td>
-                <td>Images that are used for the plugin description in <b>ONLYOFFICE Plugin Marketplace</b>.</td>
-                <td>array of string</td>
-                <td></td>
-            </tr>
-            <tr class="tablerow">
-                <td id="store-icons" class="copy-link">store.icons</td>
+                <td id="store-icons" class="copy-link">variations.store.icons</td>
                 <td>
                     Plugin icon image files used in <b>ONLYOFFICE Plugin Marketplace</b>:
                     <ul>
@@ -368,6 +347,27 @@
                 <td>object</td>
                 <td></td>
             </tr>
+            <tr class="tablerow">
+                <td id="store-screenshots" class="copy-link">variations.store.screenshots</td>
+                <td>Images that are used for the plugin description in <b>ONLYOFFICE Plugin Marketplace</b>.</td>
+                <td>array of strings</td>
+                <td></td>
+            </tr>
+            <tr class="tablerow">
+                <td id="url" class="copy-link">variations.url</td>
+                <td>
+                    Plugin entry point, i.e. an HTML file which connects the <em>plugin.js</em> file (the base file needed for work with plugins) and launches the plugin code.
+                    See the <a href="<%= Url.Action("indexhtml") %>">index.html</a> section for the detailed information.
+                </td>
+                <td>string</td>
+                <td>"index.html"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="version" class="copy-link">version</td>
+                <td>The plugin version.</td>
+                <td>string</td>
+                <td>"1.0"</td>
+            </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
@@ -376,9 +376,8 @@
     <pre>{
         "baseUrl": "",
         "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-        "version": "1.0",
-        "minVersion": "6.3.0",
         "help": "",
+        "minVersion": "6.3.0",
         "name": "plugin name",
         "nameLocale": {
             "fr": "french plugin name",
@@ -397,13 +396,19 @@
                         }
                     }
                 ],
+                "cryptoDisabledForExternalCloud": "true",
+                "cryptoDisabledForInternalCloud": "true",
+                "cryptoDisabledOnStart": "true",
+                "cryptoMode": "1",
                 "description": "plugin description",
                 "descriptionLocale": {
                     "fr": "french plugin description",
                     "es": "spanish plugin description"
                 },
                 "EditorsSupport": ["word", "cell", "slide"],
-                "icons": [
+                "events": ["onClick"],
+                "icons": ["icon.png", "icon@2x.png"],
+                "icons2": [
                     {
                         "100%": { "normal": "icon.png" },
                         "125%": { "normal": "icon@1.25.png" },
@@ -418,23 +423,30 @@
                 "initData": "",
                 "initDataType": "ole",
                 "initOnSelectionChanged": true,
-                "cryptoMode": "1",
+                "isCustomWindow": true,
                 "isDisplayedInViewer": true,
                 "isInsideMode": false,
                 "isModal": true,
-                "isCustomWindow": true,
                 "isSystem": false,
                 "isUpdateOleOnResize": true,
                 "isViewer": true,
                 "isVisual": false,
-                "url": "index.html",
                 "size": [600, 700],
-                "events": ["onClick"],
-                "cryptoDisabledForInternalCloud": "true",
-                "cryptoDisabledForExternalCloud": "true",
-                "cryptoDisabledOnStart": "true"
+                "store": {
+                    "background": {
+                        "light" : "#F5F5F5",
+                        "dark" : "#444444"
+                    },
+                    "icons"       : {
+                        "light" : "resources/store/icons",
+                        "dark"  : "resources/store/icons"
+                    },
+                    "screenshots" : ["resources/store/screenshots/screen_1.png"]
+                },
+                "url": "index.html"
             }
-        ]
+        ],
+        "version": "1.0"
     };</pre>
 
 </asp:Content>
