@@ -10,14 +10,15 @@
   },
   "initDataType": {
     "name": "initDataType",
-    "description": "<p>The data type selected in the editor and sent to the plugin:</p>\n<ul>\n<li><strong>text</strong> - the text data,</li>\n<li><strong>html</strong> - HTML formatted code,</li>\n<li><strong>ole</strong> - OLE object data,</li>\n<li><strong>desktop</strong> - the desktop editor data,</li>\n<li><strong>destop-external</strong> - the main page data of the desktop app (system messages),</li>\n<li><strong>none</strong> - no data will be send to the plugin from the editor.</li>\n</ul>",
+    "description": "<p>The data type selected in the editor and sent to the plugin:</p>\n<ul>\n<li><strong>text</strong> - the text data,</li>\n<li><strong>html</strong> - HTML formatted code,</li>\n<li><strong>ole</strong> - OLE object data,</li>\n<li><strong>desktop</strong> - the desktop editor data,</li>\n<li><strong>destop-external</strong> - the main page data of the desktop app (system messages),</li>\n<li><strong>none</strong> - no data will be send to the plugin from the editor.</li>\n<li><strong>sign</strong> - the sign for the keychain plugin.</li>\n</ul>",
     "type": [
       "\"text\"",
       "\"html\"",
       "\"ole\"",
       "\"desktop\"",
       "\"destop-external\"",
-      "\"none\""
+      "\"none\"",
+      "\"sign\""
     ]
   },
   "EventType": {

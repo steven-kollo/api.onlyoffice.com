@@ -288,7 +288,7 @@
     "GetVBAMacros": {
       "memberof": "Api",
       "name": "GetVBAMacros",
-      "description": "<p>Returns all VBA macros into a document.</p>",
+      "description": "<p>Returns all VBA macros from the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -899,9 +899,9 @@
       "inherits": null,
       "params": [
         {
-          "type": "string",
-          "name": "url",
-          "description": "<p>The URL to the plugin config for installing.</p>",
+          "type": "object",
+          "name": "config",
+          "description": "<p>The plugin config for installing.</p>",
           "optional": true
         }
       ]
@@ -926,9 +926,9 @@
       "inherits": null,
       "params": [
         {
-          "type": "string",
-          "name": "url",
-          "description": "<p>The URL to the plugin config for updating.</p>",
+          "type": "object",
+          "name": "config",
+          "description": "<p>The plugin config for updating.</p>",
           "optional": true
         }
       ]
@@ -959,6 +959,29 @@
           "name": "bShow",
           "description": "<p>The flag specifies whether the button is shown (<strong>true</strong>) or hidden (<strong>false</strong>).</p>",
           "optional": true
+        }
+      ]
+    },
+    "OnDropEvent": {
+      "memberof": "Api",
+      "name": "OnDropEvent",
+      "description": "<p>On drop event. Use this method for external drag&amp;drop emulation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "object",
+          "name": "The",
+          "description": "<p>event object</p>",
+          "optional": false
         }
       ]
     }
