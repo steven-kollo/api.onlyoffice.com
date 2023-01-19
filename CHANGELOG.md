@@ -1,6 +1,10 @@
 # Change Log
 
 - editors: added the WOPI Conversion API
+- editors: added the UserCanNotWriteRelative property to the CheckFileInfo WOPI operation
+- editors: added the scheme for editing binary document formats
+- editors: added the convert action to the WOPI discovery
+- editors: added the PutRelativeFile WOPI operation
 - editors: added the mode field to the editorConfig.customization.layout.leftMenu and editorConfig.customization.layout.rightMenu parameters
 - editors: added the editorConfig.customization.font parameter
 
