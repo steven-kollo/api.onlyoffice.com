@@ -796,6 +796,12 @@ docEditor.setReferenceData({
                         <td>object</td>
                         <td>optional</td>
                     </tr>
+                    <tr id="setReferenceData-token" class="tablerow">
+                        <td>token</td>
+                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setReferenceData">token</a>.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
                     <tr class="tablerow">
                         <td>url</td>
                         <td>Defines the URL address to download the current file.</td>
