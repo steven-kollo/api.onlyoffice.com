@@ -54,31 +54,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <pre>
 docEditor.setActionLink(link);
 </pre>
-            <table class="table">
-                <colgroup>
-                    <col class="table-name" />
-                    <col />
-                    <col class="table-type" />
-                    <col class="table-example" />
-                </colgroup>
-                <thead>
-                    <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tablerow">
-                        <td>link</td>
-                        <td>Defines the link which allows scrolling to the bookmark position in the document.</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="mobile-content"></div>
         </li>
     </ol>
 

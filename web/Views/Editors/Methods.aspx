@@ -228,7 +228,7 @@ docEditor.insertImage({
                         <td>string</td>
                         <td>required</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="insertImage-token" class="tablerow">
                         <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#insertImage">token</a>.</td>
                         <td>string</td>
@@ -620,7 +620,7 @@ docEditor.setHistoryData({
                         <td>string</td>
                         <td>required</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setHistoryData-token" class="tablerow">
                         <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setHistoryData">token</a>.</td>
                         <td>string</td>
@@ -688,7 +688,7 @@ docEditor.setMailMergeRecipients({
                         <td>string</td>
                         <td>required</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setMailMergeRecipients-token" class="tablerow">
                         <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setMailMergeRecipients">token</a>.</td>
                         <td>string</td>
@@ -744,7 +744,7 @@ docEditor.setRevisedFile({
                         <td>string</td>
                         <td>required</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setRevisedFile-token" class="tablerow">
                         <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setRevisedFile">token</a>.</td>
                         <td>string</td>
