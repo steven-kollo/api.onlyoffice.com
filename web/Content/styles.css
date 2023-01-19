@@ -992,6 +992,14 @@ pre,
     width: 200px;
 }
 
+.table-api {
+    width: 300px;
+}
+
+.table-wopi {
+    width: 290px;
+}
+
 .button-popap-try {
     border-bottom: 1px dotted;
     cursor: pointer;

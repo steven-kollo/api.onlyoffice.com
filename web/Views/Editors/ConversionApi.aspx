@@ -25,10 +25,10 @@
     <h2 id="request" class="copy-link">Request parameters and their description</h2>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
-            <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-name" />
+			<col />
+			<col class="table-type" />
+			<col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -1411,10 +1411,10 @@
     </p>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
-            <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-name" />
+			<col />
+			<col class="table-type" />
+			<col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -1515,7 +1515,7 @@
     <div id="error-codes" class="copy-link header-gray">Possible error codes and their description</div>
     <table class="error-table">
         <colgroup>
-            <col style="width: 105px;" />
+            <col class="table-name" />
             <col />
         </colgroup>
         <thead>

@@ -59,10 +59,10 @@ docEditor.denyEditingRights(message);
             
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -105,10 +105,10 @@ docEditor.downloadAs(format);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -168,10 +168,10 @@ docEditor.insertImage({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -338,10 +338,10 @@ docEditor.refreshHistory({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 160px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -447,10 +447,10 @@ docEditor.setActionLink(link);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -482,10 +482,10 @@ docEditor.setFavorite(favorite);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -555,10 +555,10 @@ docEditor.setHistoryData({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -665,10 +665,10 @@ docEditor.setMailMergeRecipients({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -724,10 +724,10 @@ docEditor.setRevisedFile({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -784,10 +784,10 @@ docEditor.setSharingSettings({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -847,10 +847,10 @@ docEditor.setUsers({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -894,10 +894,10 @@ docEditor.showMessage(message);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">

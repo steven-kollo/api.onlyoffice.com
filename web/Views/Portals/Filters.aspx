@@ -17,7 +17,7 @@
     </p>
     <table class="table">
         <colgroup>
-            <col style="width: 25%"/>
+            <col class="table-name" />
             <col/>
         </colgroup>
         <thead>

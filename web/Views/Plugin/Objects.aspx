@@ -23,9 +23,8 @@
 <div class="header-gray">Objects</div>
 <table class="table">
     <colgroup>
-            <col style="width: 100px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
         </colgroup>
     <thead>
         <tr class="tablerow">

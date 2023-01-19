@@ -33,15 +33,17 @@ window.Asc.plugin.executeMethod ("GetAllComments");
 <div class="header-gray">Parameters</div>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
-            <col />
-            <col style="width: 100px;" />
+            <col class="table-name" />
+			<col />
+			<col class="table-type" />
+			<col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
                 <td>Parameter</td>
                 <td>Description</td>
                 <td>Type</td>
+				<td>Example</td>
             </tr>
         </thead>
         <tbody>

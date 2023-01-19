@@ -47,9 +47,9 @@
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -84,9 +84,9 @@ window.Asc.plugin.button = function (id) {
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -124,9 +124,9 @@ window.Asc.plugin.init = function () {
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -194,9 +194,9 @@ window.Asc.plugin.inputHelper_onSelectItem = function(item) {
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -278,9 +278,9 @@ window.Asc.plugin.event_onAddComment = function(comment)
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -427,9 +427,9 @@ connector.attachEvent("onBlurContentControl", function(oPr)
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -510,9 +510,9 @@ window.Asc.plugin.event_onChangeCommentData = function(comment)
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -614,9 +614,9 @@ connector.attachEvent("onChangeContentControl", function()
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -685,9 +685,9 @@ window.Asc.plugin.event_onDocumentContentReady = function() {
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -735,9 +735,9 @@ window.Asc.plugin.onExternalMouseUp = function () {
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -803,9 +803,9 @@ window.Asc.plugin.onExternalPluginMessage = function(data) {
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -918,9 +918,9 @@ window.Asc.plugin.event_onInputHelperClear = function() {
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -976,9 +976,9 @@ window.Asc.plugin.event_onInputHelperInput = function(data) {
             <div class="header-gray">Parameters</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -1029,9 +1029,9 @@ window.Asc.plugin.onMethodReturn = function(returnValue) {
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
-                <col style="width: 100px;" />
-                <col />
-                <col style="width: 100px;" />
+                <col class="table-name" />
+				<col />
+				<col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">

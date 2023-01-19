@@ -93,8 +93,8 @@
     <table class="table">
         <colgroup>
             <col class="table-name" />
-            <col style="width: 150px;" />
-            <col style="width: 200px;" />
+            <col />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">

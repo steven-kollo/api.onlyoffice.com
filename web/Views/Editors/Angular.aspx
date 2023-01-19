@@ -94,10 +94,10 @@ export class ExampleComponent {
     <div class="header-gray">Properties</div>
     <table class="table">
         <colgroup>
+            <col class="table-name" />
+            <col class="table-type" />
             <col />
-            <col style="width: 50px;" />
-            <col style="width: 100px;" />
-            <col style="width: 250px;" />
+            <col />
         </colgroup>
         <thead>
             <tr class="tablerow">
