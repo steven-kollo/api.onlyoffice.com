@@ -50,6 +50,10 @@
         <li><a href="#cryptoDisabledForInternalCloud">cryptoDisabledForInternalCloud</a></li>
         <li><a href="#cryptoDisabledForExternalCloud">cryptoDisabledForExternalCloud</a></li>
         <li><a href="#cryptoDisabledOnStart">cryptoDisabledOnStart</a></li>
+        <li><a href="#store">store</a></li>
+        <li><a href="#store-background">store.background</a></li>
+        <li><a href="#store-screenshots">store.screenshots</a></li>
+        <li><a href="#store-icons">store.icons</a></li>
     </ul>
 
     <div class="header-gray">Parameters</div>
@@ -113,7 +117,7 @@
             <tr class="tablerow">
                 <td id="variations" class="copy-link">variations</td>
                 <td>Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find <a href="<%= Url.Action("variations") %>">here</a>.</td>
-                <td>array of object</td>
+                <td>array of objects</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
@@ -150,7 +154,7 @@
                         </li>
                     </ul>
                 </td>
-                <td>array of object</td>
+                <td>array of objects</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
@@ -168,22 +172,18 @@
             <tr class="tablerow">
                 <td id="EditorsSupport" class="copy-link">variations.EditorsSupport</td>
                 <td>The editors which the plugin is available for (<b>word</b> - text document editor, <b>cell</b> - spreadsheet editor, <b>slide</b> - presentation editor).</td>
-                <td>array of string</td>
+                <td>array of strings</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="icons" class="copy-link">variations.icons</td>
-                <td>
-                    Plugin icon image files used in the editors. More information you can find <a href="<%= Url.Action("icons") %>">here</a>.
-                </td>
-                <td>array of string</td>
+                <td>Plugin icon image files used in the editors.</td>
+                <td>array of strings</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="icons2" class="copy-link">variations.icons2</td>
-                <td>
-                    Scalable icons for plugin extensions. More information you can find <a href="<%= Url.Action("icons") %>">here</a>.
-                </td>
+                <td>Scalable icons for plugin extensions. More information can be found <a href="<%= Url.Action("icons") %>">here</a>.</td>
                 <td>array of objects</td>
                 <td></td>
             </tr>
@@ -273,7 +273,7 @@
                 <td>
                     Plugin window size.
                 </td>
-                <td>array of integer</td>
+                <td>array of integers</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
@@ -281,7 +281,7 @@
                 <td>
                     Plugin events.
                 </td>
-                <td>array of string</td>
+                <td>array of strings</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
@@ -307,6 +307,66 @@
                 </td>
                 <td>string</td>
                 <td>"true"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="store" class="copy-link">store</td>
+                <td>Plugin display options in <b>ONLYOFFICE Plugin Marketplace</b>.</td>
+                <td>object</td>
+                <td></td>
+            </tr>
+            <tr class="tablerow">
+                <td id="store-background" class="copy-link">store.background</td>
+                <td>
+                    Background colors used for plugin icons in <b>ONLYOFFICE Plugin Marketplace</b>:
+                    <ul>
+                        <li>
+                            <b>light</b> - the background color used for the light theme plugin icon,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "#F5F5F5";
+                        </li>
+                        <li>
+                            <b>dark</b> - the background color used for the dark theme plugin icon,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "#444444".
+                        </li>
+                    </ul>
+                </td>
+                <td>object</td>
+                <td></td>
+            </tr>
+            <tr class="tablerow">
+                <td id="store-screenshots" class="copy-link">store.screenshots</td>
+                <td>Images that are used for the plugin description in <b>ONLYOFFICE Plugin Marketplace</b>.</td>
+                <td>array of string</td>
+                <td></td>
+            </tr>
+            <tr class="tablerow">
+                <td id="store-icons" class="copy-link">store.icons</td>
+                <td>
+                    Plugin icon image files used in <b>ONLYOFFICE Plugin Marketplace</b>:
+                    <ul>
+                        <li>
+                            <b>light</b> - the path to the scalable plugin icons for the light theme,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "resources/store/icons";
+                        </li>
+                        <li>
+                            <b>dark</b> - the path to the scalable plugin icons for the dark theme,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "resources/store/icons".
+                        </li>
+                    </ul>
+                </td>
+                <td>object</td>
+                <td></td>
             </tr>
         </tbody>
     </table>
