@@ -60,7 +60,7 @@ var onDocumentReady = function (event) {
 /&gt;
 ...
 </pre>
-    <p>where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
+    <p>where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
 
 
     <h2 id="api" class="copy-link">ONLYOFFICE Docs React component API</h2>
@@ -264,7 +264,7 @@ var onDocumentReady = function (event) {
             <pre>
 "documentServerUrl": "http://documentserver/"
 </pre>
-            <p>where the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
+            <p>where <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
         </li>
         <li>
             <p>Build Storybook with the following command:</p>

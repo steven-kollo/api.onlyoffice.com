@@ -163,7 +163,7 @@ docEditor.insertImage({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
             <table class="table">
@@ -228,7 +228,7 @@ docEditor.insertImage({
                         <td>string</td>
                         <td>required</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="insertImage-token" class="tablerow">
                         <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#insertImage">token</a>.</td>
                         <td>string</td>
@@ -328,8 +328,8 @@ docEditor.refreshHistory({
     ],
 });
 </pre>
-            <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
-            <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <p>Where <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <p>Where <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
             <p>Show the error message explaining why the version history can not be displayed.</p>
             <pre>
 docEditor.refreshHistory({
@@ -521,7 +521,7 @@ docEditor.setHistoryData({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
             <p>
@@ -543,7 +543,7 @@ docEditor.setHistoryData({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
             <p>Send the error message explaining why the document version can not be displayed.</p>
@@ -620,7 +620,7 @@ docEditor.setHistoryData({
                         <td>string</td>
                         <td>required</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setHistoryData-token" class="tablerow">
                         <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setHistoryData">token</a>.</td>
                         <td>string</td>
@@ -660,7 +660,7 @@ docEditor.setMailMergeRecipients({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
             <table class="table">
@@ -688,7 +688,7 @@ docEditor.setMailMergeRecipients({
                         <td>string</td>
                         <td>required</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setMailMergeRecipients-token" class="tablerow">
                         <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setMailMergeRecipients">token</a>.</td>
                         <td>string</td>
@@ -719,7 +719,7 @@ docEditor.setRevisedFile({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
             <table class="table">
@@ -744,7 +744,7 @@ docEditor.setRevisedFile({
                         <td>string</td>
                         <td>required</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setRevisedFile-token" class="tablerow">
                         <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setRevisedFile">token</a>.</td>
                         <td>string</td>
@@ -842,7 +842,7 @@ docEditor.setUsers({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
             <table class="table">
