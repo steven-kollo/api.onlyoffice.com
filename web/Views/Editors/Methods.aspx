@@ -717,11 +717,11 @@ docEditor.setMailMergeRecipients({
 docEditor.setReferenceData({
     "url": "https://example.com/url-to-example-document.docx",
     "referenceData": {
-        "fileKey": "Mgetl3dYUppf2",
+        "fileKey": "BCFA2CED",
         "instanceId": "https://example.com"
     },
     "path": "sample.xlsx",
-    "error": "Exception"
+    "error": ""
 });
 </pre>
             <p>
@@ -762,7 +762,7 @@ docEditor.setReferenceData({
                                     <br />
                                     <b>type</b>: string,
                                     <br />
-                                    <b>example</b>:  "Mgetl3dYUppf2";
+                                    <b>example</b>:  "BCFA2CED";
                                 </li>
                                 <li>
                                     <b>instanceId</b> - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another,
@@ -782,7 +782,7 @@ docEditor.setReferenceData({
                         <td>Defines the file name or relative path for the formula editor.
                             It is used to identify a file when the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is executed.</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>error</td>

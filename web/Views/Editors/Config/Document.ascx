@@ -57,7 +57,7 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>:  "Mgetl3dYUppf2";
+                        <b>example</b>:  "BCFA2CED";
                     </li>
                     <li>
                         <b>instanceId</b> - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another,
@@ -103,7 +103,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "referenceData": {
-            "fileKey": "Mgetl3dYUppf2",
+            "fileKey": "BCFA2CED",
             "instanceId": "https://example.com"
         },
         "title": "Example Document Title.docx",

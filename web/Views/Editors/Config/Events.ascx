@@ -589,14 +589,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 var onRequestReferenceData = function () {
     var referenceData =  event.data.referenceData;
     var path = event.data.path;
+    ...
+
     docEditor.setReferenceData({
         "url": "https://example.com/url-to-example-document.docx",
         "referenceData": {
-            "fileKey": "Mgetl3dYUppf2",
+            "fileKey": "BCFA2CED",
             "instanceId": "https://example.com"
         },
         "path": "sample.xlsx",
-        "error": "Exception"
+        "error": ""
     });
 };
 

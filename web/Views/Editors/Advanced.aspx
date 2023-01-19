@@ -75,7 +75,7 @@
         },
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
         "<a href="<%= Url.Action("config/document") %>#referenceData">referenceData</a>": {
-            "fileKey": "Mgetl3dYUppf2",
+            "fileKey": "BCFA2CED",
             "instanceId": "https://example.com"
         },
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
