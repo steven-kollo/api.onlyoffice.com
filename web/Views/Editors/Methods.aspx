@@ -728,7 +728,7 @@ docEditor.setReferenceData({
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
-            <p>Show the error message explaining if some error occurred.</p>
+            <p>Show an error message explaining if any error occurred:</p>
             <pre>
 docEditor.setReferenceData({
     "error": "Exception",
