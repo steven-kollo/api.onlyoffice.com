@@ -592,13 +592,12 @@ var onRequestReferenceData = function () {
     ...
 
     docEditor.setReferenceData({
-        "url": "https://example.com/url-to-example-document.docx",
+        "path": "sample.xlsx",
         "referenceData": {
             "fileKey": "BCFA2CED",
             "instanceId": "https://example.com"
         },
-        "path": "sample.xlsx",
-        "error": ""
+        "url": "https://example.com/url-to-example-document.docx"
     });
 };
 

@@ -715,13 +715,13 @@ docEditor.setMailMergeRecipients({
             <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
             <pre>
 docEditor.setReferenceData({
-    "url": "https://example.com/url-to-example-document.docx",
+    "error": "",
+    "path": "sample.xlsx",
     "referenceData": {
         "fileKey": "BCFA2CED",
         "instanceId": "https://example.com"
     },
-    "path": "sample.xlsx",
-    "error": ""
+    "url": "https://example.com/url-to-example-document.docx"
 });
 </pre>
             <p>
@@ -745,8 +745,15 @@ docEditor.setReferenceData({
                 </thead>
                 <tbody>
                     <tr class="tablerow">
-                        <td>url</td>
-                        <td>Defines the URL address to download the current file.</td>
+                        <td>error</td>
+                        <td>Defines the error message text.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>path</td>
+                        <td>Defines the file name or relative path for the formula editor.
+                            It is used to identify a file when the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is executed.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -778,17 +785,10 @@ docEditor.setReferenceData({
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
-                        <td>path</td>
-                        <td>Defines the file name or relative path for the formula editor.
-                            It is used to identify a file when the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is executed.</td>
+                        <td>url</td>
+                        <td>Defines the URL address to download the current file.</td>
                         <td>string</td>
                         <td>required</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>error</td>
-                        <td>Defines the error message text.</td>
-                        <td>string</td>
-                        <td>optional</td>
                     </tr>
                 </tbody>
             </table>

@@ -74,10 +74,6 @@
             "<a href="<%= Url.Action("config/document/info") %>#uploaded">uploaded</a>": "2010-07-07 3:46 PM"
         },
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
-        "<a href="<%= Url.Action("config/document") %>#referenceData">referenceData</a>": {
-            "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com"
-        },
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
             "<a href="<%= Url.Action("config/document/permissions") %>#chat">chat</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
@@ -99,6 +95,10 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#review">review</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a>": ["Group1", "Group2", ""],
             "<a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">userInfoGroups</a>": ["Group1", ""]
+        },
+        "<a href="<%= Url.Action("config/document") %>#referenceData">referenceData</a>": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com"
         },
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
         "<a href="<%= Url.Action("config/document") %>#url">url</a>": "https://example.com/url-to-example-document.docx"
