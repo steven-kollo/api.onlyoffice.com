@@ -454,7 +454,7 @@
             </tr>
             <tr>
                 <td id="SupportsUpdate" class="copy-link">SupportsUpdate</td>
-                <td>Specifies if the WOPI server supports the <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> operation.</td>
+                <td>Specifies if the WOPI server supports the <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> and <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> operations.</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
