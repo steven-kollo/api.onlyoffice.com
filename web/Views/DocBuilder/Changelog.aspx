@@ -59,6 +59,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/addcomment") %>">ApiTable/AddComment</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getcomments") %>">Api/GetComments</a> method to Spreadsheet API.</li>
     </ul>
+    <br />
 
     <p><b>Table of contents/figures methods</b></p>
     <ul>
@@ -66,6 +67,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/addtableoffigures") %>">ApiDocument/AddTableOfFigures</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/addcaption") %>">ApiParagraph/AddCaption</a> method to Text document API.</li>
     </ul>
+    <br />
 
     <p><b>Other methods</b></p>
     <ul>

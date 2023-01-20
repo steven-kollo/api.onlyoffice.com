@@ -1153,6 +1153,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetReviewReport.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetSections.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetSelectedDrawings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetStatistics.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetTagsOfAllContentControls.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.InsertContent.docbuilder" />
@@ -2844,7 +2845,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetStatistics.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.RemoveComments.docbuilder" />
@@ -2852,6 +2852,7 @@
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.RemoveComments.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
