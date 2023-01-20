@@ -32,7 +32,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_add_comment_in_cell" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_add_comment_in_cell</a>.</p>
 <ol>
-    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li><em>config.json</em>, <em>index.html</em>, and <em>code.js</em></li>
     <li>Icons</li>
 </ol>
 

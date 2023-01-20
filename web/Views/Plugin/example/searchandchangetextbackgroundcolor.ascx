@@ -35,7 +35,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color</a>.</p>
 <ol>
-    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li><em>config.json</em>, <em>index.html</em>, and <em>code.js</em></li>
     <li>Icons</li>
 </ol>
 

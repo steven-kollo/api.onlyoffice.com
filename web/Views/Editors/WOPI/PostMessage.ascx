@@ -88,6 +88,12 @@ otherWindow.postMessage (msg, targetOrigin)
                     Until the host receives this message, it must assume that the online office frame cannot react to any incoming messages except <em>Host_PostmessageReady</em>.</td>
             </tr>
             <tr>
+                <td id="Blur_Focus" class="copy-link">Blur_Focus</td>
+                <td>This message is posted by the host to stop the online office application from aggressively grabbing focus.
+                    Hosts should send this message whenever the host application UI is drawn over the online office frame so that the online office application does not interfere with the host UI behavior.
+                    This message is used only for the edit modes. It does not affect view modes.</td>
+            </tr>
+            <tr>
                 <td id="Edit_Notification" class="copy-link">Edit_Notification</td>
                 <td>This message is posted when the user first makes an edit to a document, and every five minutes thereafter, if the user has made edits over the last five minutes. 
                     Hosts can use this message to gauge whether users are interacting with the online office. In co-authoring sessions, hosts cannot use the WOPI calls for this purpose.</td>
@@ -95,6 +101,17 @@ otherWindow.postMessage (msg, targetOrigin)
             <tr>
                 <td id="File_Rename" class="copy-link">File_Rename</td>
                 <td>This message is posted when the user renames the current file in the online office. The host can use this message to optionally update the UI, such as the page title.</td>
+            </tr>
+            <tr>
+                <td id="Grab_Focus" class="copy-link">Grab_Focus</td>
+                <td>This message is posted by the host to resume aggressively grabbing focus by the online office application.
+                    Hosts should send this message whenever the host application UI that's drawn over the online office frame is closing. This lets the online office application resume functioning.
+                    This message is used only for the edit modes. It does not affect view modes.</td>
+            </tr>
+            <tr>
+                <td id="Host_PostmessageReady" class="copy-link">Host_PostmessageReady</td>
+                <td>This message is posted by the host when it finishes loading. Then the online office frame receives <em>Host_PostmessageReady</em>,
+                finishes loading, and sends the <a href="#App_LoadingStatus">App_LoadingStatus</a> message to the host page. After that, all the other PostMessage messages become available..</td>
             </tr>
             <tr>
                 <td id="UI_Close" class="copy-link">UI_Close</td>
@@ -137,9 +154,14 @@ otherWindow.postMessage (msg, targetOrigin)
         </thead>
         <tbody>
             <tr>
+                <td id="Action_InsertGraphic" class="copy-link">Action_InsertGraphic</td>
+                <td>This message is posted to download an image from the URL and insert it into the document.</td>
+            </tr>
+            <tr>
                 <td id="UI_InsertGraphic" class="copy-link">UI_InsertGraphic</td>
-                <td>This message is posted to present a user interface element (like a dialog) allowing the user to pick an image from the integration.
-                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back via the <a href="https://sdk.collaboraonline.com/docs/postmessage_api.html#id1" target="_blank">Action_InsertGraphic</a> message with values set to the temporary URL.</td>
+                <td>This message is posted to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration.
+                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back
+                via the <a href="#Action_InsertGraphic">Action_InsertGraphic</a> message with <em>Values</em> set to the temporary URL.</td>
             </tr>
         </tbody>
     </table>

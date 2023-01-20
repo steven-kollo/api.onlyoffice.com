@@ -26,8 +26,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <ol>
     <li>Open the <b>Plugins</b> tab and press <b>Example load custom fields</b>.</li>
-    <li>To answer a <b>simple question</b> type your answer in the <b>type here...</b> field.</li>
-    <li>To answer a <b>question with drop down variants</b> select one option.</li>
+    <li>To answer a <b>simple question</b>, type your answer in the <b>type here...</b> field.</li>
+    <li>To answer a <b>question with drop down variants</b>, select one option.</li>
     <li>Press the <b>Next</b> button to go to the next question or the <b>Back</b> button to go back to the previous one.</li>
     <li>When all the questions are answered, the plugin will be automatically closed. Your answers will appear in the document.</li>
 </li>
@@ -38,7 +38,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load</a>.</p>
 <ol>
-    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li><em>config.json</em>, <em>index.html</em>, and <em>code.js</em></li>
     <li>Icons</li>
 </ol>
 

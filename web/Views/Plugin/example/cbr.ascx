@@ -32,13 +32,13 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/cbr" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/cbr</a>.</p>
 <ol>
-    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li><em>config.json</em>, <em>index.html</em>, and <em>cbr.js</em></li>
     <li>Icons</li>
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
-            <li><b>jQuery UI</b> - a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice (<a href="https://jqueryui.com" target="_blank">https://jqueryui.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/jQuery.license" target="_blank">MIT</a>.</li>
-            <li><b>Fixer</b> is a free API for current and historical foreign exchange rates published by the European Central Bank (<a href="https://fixer.io/" target="_blank">https://fixer.io/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/Fixer.license" target="_blank">MIT License</a>.</li>
+            <li><a href="https://jquery.com" target="_blank">jQuery</a> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><a href="https://jqueryui.com" target="_blank">jQuery UI</a> - a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice. License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/jQuery.license" target="_blank">MIT</a>.</li>
+            <li><a href="https://fixer.io/" target="_blank">Fixer</a> is a free API for current and historical foreign exchange rates published by the European Central Bank. License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/Fixer.license" target="_blank">MIT License</a>.</li>
         </ul>
     </li>
 </ol>

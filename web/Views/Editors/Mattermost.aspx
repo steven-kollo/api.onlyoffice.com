@@ -20,7 +20,7 @@
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
         <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX.</li>
-        <li>The following formats are available for viewing: XLS, XLSX, CSV, XLSM, XLT, XLTM, ODS, FODS, OTS, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP, DOC, DOCX, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF.</li>
+        <li>The following formats are available for viewing only: XLS, CSV, XLSM, XLT, XLTM, ODS, FODS, OTS, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP, DOC, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF.</li>
         <li>The plugin will create a new <b>Open in ONLYOFFICE</b> menu option within the document library for office documents. 
             This allows multiple users to collaborate in real time and save back those changes to Mattermost.</li>
     </ul>
@@ -44,6 +44,11 @@
     <ol>
         <li>Clone the <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">master branch</a>.</li>
         <li>Go to the project root.</li>
+        <li>
+            <p>Install the dependencies:</p>
+            <span class="commandline">npm install --legacy-peer-deps</span>
+            <note>Please note that you need to have Node.js v.15.14.0 installed on your machine to build the plugin.</note>
+        </li>
         <li>
             <p>Run the following command:</p>
             <span class="commandline">make dist</span>

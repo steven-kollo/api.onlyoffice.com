@@ -17,7 +17,7 @@
     <p class="dscr">
         For the interaction with the <b>document conversion service</b> the POST requests are used.
         The request parameters are entered in JSON format in the request body.
-        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
     </p>
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
@@ -39,7 +39,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="tablerow">
+            <tr>
                 <td id="async" class="copy-link">async</td>
                 <td>
                     Defines the conversion request type: asynchronous or not.<br />
@@ -54,6 +54,12 @@
                 </td>
                 <td>boolean</td>
                 <td>optional</td>
+            </tr>
+            <tr class="tablerow tablerow-note">
+                <td colspan="4">
+                    <div class="note">If the conversion is synchronous and the file takes a long time to be converted, a web request timeout error may occur.
+                        Although the conversion can be eventually completed, the result can only be obtained by sending the request again with the same key.</div>
+                </td>
             </tr>
             <tr class="tablerow">
                 <td id="codePage" class="copy-link">codePage</td>
@@ -169,12 +175,12 @@
                     They are used when we do not know in advance what extension is required:
                     <ul>
                         <li>
-                            <b>ooxml</b> - defines that the file will be coverted into <em>docx</em>, <em>docm</em>, <em>xlsx</em>, <em>xlsm</em>, <em>pptx</em> or <em>pptm</em>.
+                            <b>ooxml</b> - defines that the file will be converted into <em>docx</em>, <em>docm</em>, <em>xlsx</em>, <em>xlsm</em>, <em>pptx</em> or <em>pptm</em>.
                             For example, when the <em>doc</em> file is converted into the OOXML format, the resulting file can be <em>docx</em> or <em>docm</em> if this file contains macros (the same for <em>xls</em> and <em>ppt</em>).
                             It is also applied when converting XML files into OOXML formats (<em>docx</em>, <em>xlsx</em> or <em>pptx</em> depending on the content);
                         </li>
                         <li>
-                            <b>odf</b> - defines that the file will be coverted into <em>odt</em>, <em>ods</em> or <em>odp</em>.
+                            <b>odf</b> - defines that the file will be converted into <em>odt</em>, <em>ods</em> or <em>odp</em>.
                             For example, it is used when converting XML files into ODF formats (<em>odt</em>, <em>ods</em> or <em>odp</em> depending on the content).
                         </li>
                     </ul>
@@ -198,11 +204,16 @@
                 <td>string</td>
                 <td>optional</td>
             </tr>
-            <tr class="tablerow">
+            <tr>
                 <td id="spreadsheetLayout" class="copy-link">spreadsheetLayout</td>
                 <td>Defines settings for converting the spreadsheet to pdf.</td>
                 <td>object</td>
                 <td>optional</td>
+            </tr>
+            <tr class="tablerow tablerow-note">
+                <td colspan="4">
+                    <div class="note">Please note that the maximum number of pages that can be returned at once after converting a spreadsheet into pdf or image formats is no more than 1500.</div>
+                </td>
             </tr>
             <tr class="tablerow">
                 <td id="fitToHeight" class="copy-link">spreadsheetLayout.fitToHeight</td>
@@ -1304,7 +1315,7 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
@@ -1321,7 +1332,7 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
@@ -1342,7 +1353,7 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
@@ -1377,7 +1388,7 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
@@ -1388,7 +1399,7 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 

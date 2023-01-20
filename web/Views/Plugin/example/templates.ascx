@@ -31,7 +31,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/templates" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/templates</a>.</p>
 <ol>
-    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li><em>config.json</em>, <em>index.html</em>, and <em>templates.js</em></li>
     <li>Icons</li>
     <li>The <em>templates</em> folder contains document templates.</li>
 </ol>
