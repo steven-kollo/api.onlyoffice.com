@@ -16,32 +16,48 @@
     <p class="dscr">The reference figure and the steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Document Server.</p>
     <img alt="Inserting external data" src="<%= Url.Content("~/content/img/editor/inserting-external-data.png") %>" />
     <ol>
-        <li>The user copies the data in the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> sends the data to the <b>document manager</b>.</li>
-        <li>The <b>document manager</b> sends the copied data to another <b>document editor</b> to paste it into the spreadsheet.</li>
-        <li>The user sends a request to refresh the data inserted from the external file by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab in the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> informs the <b>document manager</b> about the request.</li>
-        <li>The <b>document manager</b> sends the file data to the <b>document editor</b> which uses it to update the inserted data in the current document.</li>
+        <li>The user copies the special data to the clipboard from the <b>document editor</b> of the source spreadsheet.</li>
+        <li>The user inserts the copied data into the <b>document editor</b> of the destination spreadsheet.</li>
+        <li>The <b>document editor</b> requests a link to the source file by sending the data to the <b>document manager</b>.</li>
+        <li>The <b>document manager</b> sends the source spreadsheet link to the <b>document editor</b>.</li>
+        <li>The <b>document editor</b> sends a request to the <b>document editing service</b> for spreadsheet downloading.</li>
+        <li>The <b>document editing service</b> downloads the source spreadsheet from the <b>document storage service</b>.</li>
+        <li>The <b>document editing service</b> sends all the necessary data to display in the <b>document editor</b> of the destination spreadsheet.</li>
     </ol>
 
     <h2 id="apply" class="copy-link">How this can be done in practice</h2>
     <ol>
-        <li>Create an <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
+        <li>Create a source spreadsheet from where the data will be copied.</li>
         <li>
-            <p>
-                Specify the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> parameter
-                and the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event handler for the <em>Paste link</em>
-                and <em>Update values</em> buttons to be displayed in the configuration script for Document Editor initialization:
-            </p>
+            <p>Specify the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> parameter in the initialization config of the source spreadsheet:</p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
-            "referenceData": {
-                "fileKey": "BCFA2CED",
-                "instanceId": "https://example.com"
-            },
-            ...
+        "referenceData": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com"
         },
+        ...
+    },
+    ...
+});
+</pre>
+        </li>
+        <li>
+            <p>When the user copies the data from the source spreadsheet, the clipboard receives a list of the following values:</p>
+            <ul>
+                <li>the sheet name and the range from where the data was copied which will be used later to refresh the copied data;</li>
+                <li>the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> object which will be used to check the availability of insering data into the destination spreadsheet by the external link;</li>
+                <li>the file name which will be used to display a formula in the editor.</li>
+            </ul>
+        </li>
+        <li>Create a destination spreadsheet where the external data will be inserted.</li>
+        <li>
+            <p>Specify the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event handler in the initialization config of the destination spreadsheet
+                for the <em>Paste link</em> and <em>Update values</em> buttons to be displayed:
+            </p>
+            <pre>
+var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestReferenceData": onRequestReferenceData,
         ...
@@ -51,30 +67,22 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
         </li>
         <li>
-            <p>The user copies some data from another spreadsheet. The clipboard receives the following values:</p>
-            <ul>
-                <li>the sheet name and the range where the data was copied which will be used later to refresh the copied data;</li>
-                <li>the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> object which will be used to check the availability of insering data into another spreadsheet by the external link;</li>
-                <li>the file name which will be used to display a formula in the editor.</li>
-            </ul>
-        </li>
-        <li>
-            <p>The user pastes the copied data to the current spreadsheet. If there are the <em>document.referenceData</em> object
-                and the <em>onRequestReferenceData</em> event in the config, then the <em>Paste link</em> button is displayed in the dialog box.</p>
+            <p>If the clipboard has the source spreadsheet data specified in step 3, and the destination spreadsheet has the <em>onRequestReferenceData</em> event handler
+                in the initialization config, then the <em>Paste link</em> button is displayed in the dialog box.</p>
             <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
         </li>
         <li>
-            <p>When the user clicks the <em>Paste link</em> button, the formula is inserted into the current cell and the <em>referenceData</em> object is saved to the current file.
+            <p>When the user clicks the <em>Paste link</em> button, the formula is inserted into the current cell, and the <em>referenceData</em> object is saved to the destination file.
                 The inserted formula is displayed as follows:</p>
             <pre>
 ='[fileName]sheetName'!cell
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-type" />
+                    <col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -87,19 +95,19 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 <tbody>
                     <tr class="tablerow">
                         <td>cell</td>
-                        <td>The cell where the data was copied.</td>
+                        <td>The cell from where the data was copied.</td>
                         <td>string</td>
                         <td>E5</td>
                     </tr>
                     <tr class="tablerow">
                         <td>fileName</td>
-                        <td>The file name where the data was copied.</td>
+                        <td>The file name from where the data was copied.</td>
                         <td>string</td>
                         <td>new.xlsx</td>
                     </tr>
                     <tr class="tablerow">
                         <td>sheetName</td>
-                        <td>The sheet name where the data was copied.</td>
+                        <td>The sheet name from where the data was copied.</td>
                         <td>string</td>
                         <td>Sheet1</td>
                     </tr>
@@ -109,9 +117,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <p>The data update request to the file will be sent to the file URL.</p>
         </li>
         <li>
-            <p>When the user is trying to refresh data from the external file by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab,
+            <p>When the user is trying to refresh data from the source file by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab,
                 the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is called. An object with the unique file data received
-                from the external file and the file path or name are sent in the <em>data</em> parameter:</p>
+                from the source file and the file path or name are sent in the <em>data</em> parameter:</p>
             <pre>
 var onRequestReferenceData = function (event) {
     var referenceData = event.data.referenceData;
@@ -122,8 +130,8 @@ var onRequestReferenceData = function (event) {
             <img alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
         </li>
         <li>
-            <p>In order to refresh the data from the external file, the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method must be called:</p>
-            <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
+            <p>In order to refresh the data from the source file, the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method must be called:</p>
+            <note>Please note that this method is executed only when the user has permissions to the source file.</note>
             <pre>
 docEditor.setReferenceData({
     "fileType": "xlsx",
