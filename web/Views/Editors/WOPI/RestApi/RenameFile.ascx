@@ -142,3 +142,29 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="header-gray">Response body</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+            <col class="table-type" />
+            <col />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Type</td>
+                <td>Presence</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td>The renamed file name without a path or file extension.</td>
+                <td>string</td>
+                <td>required</td>
+            </tr>
+        </tbody>
+    </table>

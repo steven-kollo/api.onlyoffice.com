@@ -21,7 +21,7 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
+        <li>Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
         <li>
             <p>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents.</p>
             <img alt="Edit in OnlyOffice" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
@@ -112,6 +112,7 @@ mvn clean install</span>
     <span class="commandline">docker-compose up</span>
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
+    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
     <ol>
         <li>User navigates to a document within Alfresco Share and selects the <b>Edit in ONLYOFFICE</b> menu option.</li>
         <li>Alfresco Share makes a request to the repo end (URL of the form: <em>/parashift/onlyoffice/prepare?nodeRef={nodeRef}</em>).</li>
@@ -128,10 +129,10 @@ mvn clean install</span>
         <li>Alfresco Share takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.</li>
         <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
         <li>Then ONLYOFFICE Docs downloads the document from Alfresco and the user begins editing.</li>
-        <li>ONLYOFFICE Docs sends a POST request to the <em>callback</em> URL to inform Alfresco that a user is editing the document.</li>
+        <li>ONLYOFFICE Docs sends a POST request to <em>callbackUrl</em> to inform Alfresco that a user is editing the document.</li>
         <li>Alfresco locks the document, but still allows other users with write access to collaborate in real time with ONLYOFFICE Docs by leaving the Action present.</li>
         <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <em>callback</em> URL letting Alfresco know that the clients have finished editing the document and closed it.</li>
+        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to <em>callbackUrl</em> letting Alfresco know that the clients have finished editing the document and closed it.</li>
         <li>Alfresco downloads a new version of the document, replacing the old one.</li>
     </ol>
 

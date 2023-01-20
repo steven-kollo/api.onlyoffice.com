@@ -69,43 +69,6 @@ docEditor.setUsers({
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
-            <table class="table">
-                <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
-                </colgroup>
-                <thead>
-                    <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tablerow">
-                        <td>users</td>
-                        <td>Defines the list of the users.</td>
-                        <td>array of strings</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>users.email</td>
-                        <td>Defines the email address of the user.</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>users.name</td>
-                        <td>Defines the full name of the user.</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="mobile-content"></div>
         </li>
     </ol>
 
@@ -144,7 +107,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 
-    <h2 id="apply-changes" class="copy-link">Sharing settings</h2>
+    <h2 id="sharing-setttings" class="copy-link">Sharing settings</h2>
     <p>
         When the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is called, the software integrators provide access to the file, send notifications to the mentioned users with the action link which allows scrolling to the comment position in the document.
     </p>
@@ -167,43 +130,6 @@ docEditor.setSharingSettings({
     ]
 });
 </pre>
-            <table class="table">
-                <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
-                </colgroup>
-                <thead>
-                    <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tablerow">
-                        <td>sharingSettings</td>
-                        <td>Defines the settings which allow sharing the document with other users.</td>
-                        <td>array of object</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>sharingSettings.permissions</td>
-                        <td>Defines the access rights for the user with the name above.</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>sharingSettings.user</td>
-                        <td>Defines the name of the user with whom the document will be shared.</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                </tbody>
-            </table>
-    <div class="mobile-content"></div>
     <p>
         In the case when the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event does not provide access to the file, the <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a> parameter in the customization section of the editor configuration must be set to <b>false</b>.
     </p>
