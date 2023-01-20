@@ -24,13 +24,13 @@
 */
 
 
+
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using ASC.Api.Interfaces;
-using ASC.Common.DependencyInjection;
-using ASC.Common.Logging;
-using Autofac;
+using System.Web.Hosting;
+using log4net;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
 {
@@ -38,39 +38,24 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     {
         private static List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
 
+        private static ILog _logger;
+
         public static void Load()
         {
-            LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
+            _logger = LogManager.GetLogger("ASC.MsDocDocumentGenerator");
+            _logger.Debug("Generate documentations");
             //Load documentation
             _points = GenerateDocs();
         }
 
         private static List<MsDocEntryPoint> GenerateDocs()
         {
-            var containerBuilder = AutofacConfigLoader.Load("api");
-
-            containerBuilder.Register(c => LogManager.GetLogger("ASC"))
-                .As<ILog>()
-                .SingleInstance();
-
-            containerBuilder.Register(c => c.Resolve<IApiRouteConfigurator>().RegisterEntryPoints())
-                .As<IEnumerable<IApiMethodCall>>()
-                .SingleInstance();
-
-            var container = containerBuilder.Build();
-
-            var entries = container.Resolve<IEnumerable<IApiMethodCall>>();
-
-            var apiEntryPoints = container.ComponentRegistry.Registrations.Where(x => typeof(IApiEntryPoint).IsAssignableFrom(x.Activator.LimitType)).ToList();
-
-            var generator = new MsDocDocumentGenerator(container);
-
-            foreach (var apiEntryPoint in entries.GroupBy(x => x.ApiClassType))
+            var lookupDir = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references");
+            var generator = new MsDocDocumentGenerator();
+            foreach (var file in Directory.GetFiles(lookupDir))
             {
-                var point = apiEntryPoint;
-                generator.GenerateDocForEntryPoint(
-                    apiEntryPoints.SingleOrDefault(x => x.Activator.LimitType == point.Key),
-                    apiEntryPoint.AsEnumerable());
+                generator.GenerateDocForEntryPoint(file);
+                _logger.Debug("Generated " + file);
             }
 
             foreach (var method in generator.Points.SelectMany(x => x.Methods))
@@ -79,9 +64,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 {
                     try
                     {
-                        MsDocDocumentGenerator.GenerateRequestExample(method);
+                        generator.GenerateRequestExample(method);
+                        _logger.Debug("Generated example " + method.Path);
                     }
-                    catch { }
+                    catch(Exception e) {
+                        _logger.Error("Error " + method, e);
+                    }
                 }
             }
 

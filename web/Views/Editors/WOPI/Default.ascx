@@ -16,6 +16,7 @@
         <li>supported <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a> functions;</li>
         <li>available messages that can be posted via <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>;</li>
         <li>request parameters for <a href="<%= Url.Action("wopi/conversionapi") %>">converting</a> different file formats in the online office;</li>
+        <li>a scheme for <a href="<%= Url.Action("wopi/editingbinary") %>">editing binary document formats</a>;</li>
         <li><a href="<%= Url.Action("wopi/apivswopi") %>">differences</a> between ONLYOFFICE Docs API and WOPI.</li>
     </ul>
 

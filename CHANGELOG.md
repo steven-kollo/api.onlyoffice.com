@@ -1,13 +1,17 @@
 # Change Log
 
 - editors: added the WOPI Conversion API
+- editors: added the UserCanNotWriteRelative property to the CheckFileInfo WOPI operation
+- editors: added the scheme for editing binary document formats
+- editors: added the convert action to the WOPI discovery
+- editors: added the PutRelativeFile WOPI operation
 - editors: added the Inserting external data page
 - editors: added the setReferenceData method
 - editors: added the events.onRequestReferenceData event
 - editors: added the document.referenceData parameter
 - editors: added the mode field to the editorConfig.customization.layout.leftMenu and editorConfig.customization.layout.rightMenu parameters
 - editors: added the editorConfig.customization.font parameter
-
+- portals: generate documentation without dll 
 - editors: added the EnableInsertRemoteImage, CopyPasteRestrictions, SupportsLocks, and SupportsUpdate CheckFileInfo properties
 - editors: added the Action_InsertGraphic, Blur_Focus, Grab_Focus, and Host_PostmessageReady PostMessage messages
 - editors: added the information about the syncronous conversion timeout

@@ -22,6 +22,10 @@
         <li>Added the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">events.onRequestReferenceData</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> parameter.</li>
+        <li>Added the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#UserCanNotWriteRelative">UserCanNotWriteRelative</a> property to the <em>CheckFileInfo</em> WOPI operation.</li>
+        <li>Added a scheme for <a href="<%= Url.Action("wopi/editingbinary") %>">editing binary document formats</a>.</li>
+        <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#convert">convert</a> action to the WOPI discovery.</li>
+        <li>Added the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> WOPI operation.</li>
     </ul>
 
     <h2 id="72" class="copy-link">Version 7.2</h2>

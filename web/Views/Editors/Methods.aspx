@@ -331,7 +331,7 @@ docEditor.refreshHistory({
 </pre>
             <p>Where <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
             <p>Where <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
-            <p>Show the error message explaining why the version history can not be displayed.</p>
+            <p>Show an error message explaining why the version history cannot be displayed:</p>
             <pre>
 docEditor.refreshHistory({
     "error": "Exception",
@@ -547,7 +547,7 @@ docEditor.setHistoryData({
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
-            <p>Send the error message explaining why the document version can not be displayed.</p>
+            <p>Send an error message explaining why the document version cannot be displayed:</p>
             <pre>
 docEditor.setHistoryData({
     "error": "Exception",
