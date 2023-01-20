@@ -115,6 +115,7 @@ connector.attachEvent("onChangeContentControl", function()
                     </tr>
                 </tbody>
             </table>
+			<div class="mobile-content"></div>
             <p>This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope", "plugin") %>">Asc.scope</a> object.</p>
             <div class="header-gray">Example</div>
             <pre>

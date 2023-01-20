@@ -232,6 +232,7 @@ new DocsAPI.DocEditor("placeholder", {
             </tr>
         </tbody>
     </table>
+	<div class="mobile-content"></div>
 
     <div class="header-gray">Sample local.json configuration</div>
     <pre>
