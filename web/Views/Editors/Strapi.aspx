@@ -62,7 +62,7 @@
             <span class="commandline">npm install onlyoffice-stapi --save</span>
         </li>
         <li>
-            <p>After successful installation you have to rebuild the admin UI so it'll include this plugin. To rebuild and restart Strapi run:</p>
+            <p>After successful installation, you have to rebuild the admin UI so it'll include this plugin. To rebuild and restart Strapi, run:</p>
             <span class="commandline"># using yarn
 yarn build
 yarn develop

@@ -121,6 +121,9 @@
         </tbody>
     </table>
 
+    <div class="header-gray">Request body</div>
+    <p>The request body must be the full binary contents of the file.</p>
+
     <div class="header-gray">Response headers</div>
     <table class="table">
         <colgroup>
