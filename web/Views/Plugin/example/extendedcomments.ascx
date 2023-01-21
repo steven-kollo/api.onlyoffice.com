@@ -120,17 +120,17 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <div class="header-gray">Methods and events</div>
 
 <ul class="columns-2">
-    <li><a href="<%= Url.Action("events") %>#button">button</a></li>
-    <li><a href="<%= Url.Action("events") %>#init">init</a></li>
+    <li><a href="<%= Url.Action("events/button") %>">button</a></li>
+    <li><a href="<%= Url.Action("events/init") %>">init</a></li>
     <li><a href="<%= Url.Action("events") %>#onAddComment">onAddComment</a></li>
     <li><a href="<%= Url.Action("events") %>#onChangeCommentData">onChangeCommentData</a></li>
     <li><a href="<%= Url.Action("events") %>#onRemoveComment">onRemoveComment</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
-    <li><a href="<%= Url.Action("executemethod/addcomment") %>">executeMethod ("AddComment")</a></li>
-    <li><a href="<%= Url.Action("executemethod/changecomment") %>">executeMethod ("ChangeComment")</a></li>
-    <li><a href="<%= Url.Action("executemethod/getallcomments") %>">executeMethod ("GetAllComments")</a></li>
-    <li><a href="<%= Url.Action("executemethod/movetocomment") %>">executeMethod ("MoveToComment")</a></li>
-    <li><a href="<%= Url.Action("executemethod/removecomments") %>">executeMethod ("RemoveComments")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/addcomment") %>">executeMethod ("AddComment")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/changecomment") %>">executeMethod ("ChangeComment")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/getallcomments") %>">executeMethod ("GetAllComments")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/movetocomment") %>">executeMethod ("MoveToComment")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/removecomments") %>">executeMethod ("RemoveComments")</a></li>
 </ul>
 
 

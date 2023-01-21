@@ -6,12 +6,12 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    config.json
+    Configuring plugin
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">config.json</span>
+        <span class="hdr">Configuring plugin</span>
     </h1>
 
     <div class="header-gray">Description</div>
@@ -60,9 +60,9 @@
     <table class="table">
         <colgroup>
             <col class="table-name" />
-			<col />
-			<col class="table-type" />
-			<col class="table-example" />
+            <col />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -106,73 +106,36 @@
             <tr class="tablerow">
                 <td id="nameLocale" class="copy-link">nameLocale</td>
                 <td>Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.</td>
-                <td>object</td>
+                <td><a href="<%= Url.Action("global") %>#localeTranslate">localeTranslate</a></td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="variations" class="copy-link">variations</td>
                 <td>Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find <a href="<%= Url.Action("variations") %>">here</a>.</td>
-                <td>array of objects</td>
+                <td>Array.&lt;object&gt;</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="buttons" class="copy-link">variations.buttons</td>
-                <td>
-                    The list of skinnable plugin buttons used in the plugin interface (used for visual plugins with their own window only, i.e. <em>isVisual == true &amp;&amp; isInsideMode == false</em>). 
-                    The button object can have the folowing parameters:
-                    <ul>
-                        <li>
-                            <b>text</b> - the label which is displayed on the button,
-                            <br />
-                            <b>type</b>: string,
-                            <br />
-                            <b>example</b>: "Cancel";
-                        </li>
-                        <li>
-                            <b>primary</b> - defines if the button is primary or not. The primary flag affects the button skin only,
-                            <br />
-                            <b>type</b>: boolean,
-                            <br />
-                            <b>example</b>: true;
-                        </li>
-                        <li>
-                            <b>isViewer</b> - defines if the button is shown in the viewer mode only or not,
-                            <br />
-                            <b>type</b>: boolean,
-                            <br />
-                            <b>example</b>: false;
-                        </li>
-                        <li>
-                            <b>textLocale</b> - translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language,
-                            <br />
-                            <b>type</b>: object
-                        </li>
-                    </ul>
-                </td>
-                <td>array of objects</td>
+                <td>The list of skinnable plugin buttons used in the plugin interface (used for visual plugins with their own window only, i.e. <em>isVisual == true &amp;&amp; isInsideMode == false</em>).</td>
+                <td>Array.&lt;<a href="<%= Url.Action("global") %>#Button">Button</a>&gt;</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="cryptoDisabledForExternalCloud" class="copy-link">variations.cryptoDisabledForExternalCloud</td>
-                <td>
-                    Specifies if the encryption for the third-party clouds is disabled or not.
-                </td>
+                <td>Specifies if the encryption for the third-party clouds is disabled or not.</td>
                 <td>string</td>
                 <td>"true"</td>
             </tr>
             <tr class="tablerow">
                 <td id="cryptoDisabledForInternalCloud" class="copy-link">variations.cryptoDisabledForInternalCloud</td>
-                <td>
-                    Specifies if the encryption for the ONLYOFFICE clouds is disabled or not.
-                </td>
+                <td>Specifies if the encryption for the ONLYOFFICE clouds is disabled or not.</td>
                 <td>string</td>
                 <td>"true"</td>
             </tr>
             <tr class="tablerow">
                 <td id="cryptoDisabledOnStart" class="copy-link">variations.cryptoDisabledOnStart</td>
-                <td>
-                    Specifies if the mode is reset on restart or not.
-                </td>
+                <td>Specifies if the mode is reset on restart or not.</td>
                 <td>string</td>
                 <td>"true"</td>
             </tr>
@@ -191,33 +154,31 @@
             <tr class="tablerow">
                 <td id="descriptionLocale" class="copy-link">variations.descriptionLocale</td>
                 <td>Translations for the description field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin description translation for each language.</td>
-                <td>object</td>
+                <td><a href="<%= Url.Action("global") %>#localeTranslate">localeTranslate</a></td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="EditorsSupport" class="copy-link">variations.EditorsSupport</td>
-                <td>The editors which the plugin is available for (<b>word</b> - text document editor, <b>cell</b> - spreadsheet editor, <b>slide</b> - presentation editor).</td>
-                <td>array of strings</td>
+                <td>The editors which the plugin is available for (<b>word</b>, <b>cell</b>, or <b>slide</b>).</td>
+                <td>Array.&lt;<a href="<%= Url.Action("global") %>#editorType">editorType</a>&gt;</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="events" class="copy-link">variations.events</td>
-                <td>
-                    Plugin events.
-                </td>
-                <td>array of strings</td>
+                <td>Plugin events.</td>
+                <td>Array.&lt;<a href="<%= Url.Action("global") %>#EventType">EventType</a>&gt;</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="icons" class="copy-link">variations.icons</td>
                 <td>Plugin icon image files used in the editors.</td>
-                <td>array of strings</td>
+                <td>Array.&lt;string&gt;</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td id="icons2" class="copy-link">variations.icons2</td>
                 <td>Scalable icons for plugin extensions. More information can be found <a href="<%= Url.Action("icons") %>">here</a>.</td>
-                <td>array of objects</td>
+                <td>Array.&lt;object&gt;</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
@@ -228,8 +189,8 @@
             </tr>
             <tr class="tablerow">
                 <td id="initDataType" class="copy-link">variations.initDataType</td>
-                <td>The data type selected in the editor and sent to the plugin: <b>text</b> - the text data, <b>html</b> - HTML formatted code, <b>ole</b> - OLE object data, <b>desktop</b> - the desktop editor data, <b>destop-external</b> - the main page data of the desktop app (system messages), <b>none</b> - no data will be send to the plugin from the editor.</td>
-                <td>string</td>
+                <td>The data type selected in the editor and sent to the plugin (<b>text</b>, <b>html</b>, <b>ole</b>, <b>desktop</b>, <b>destop-external</b>, <b>sign</b>, or <b>none</b>).</td>
+                <td><a href="<%= Url.Action("global") %>#initDataType">initDataType</a></td>
                 <td>"ole"</td>
             </tr>
             <tr class="tablerow">
@@ -288,10 +249,8 @@
             </tr>
             <tr class="tablerow">
                 <td id="size" class="copy-link">variations.size</td>
-                <td>
-                    Plugin window size.
-                </td>
-                <td>array of integers</td>
+                <td>Plugin window size.</td>
+                <td>Array.&lt;number&gt;</td>
                 <td></td>
             </tr>
             <tr class="tablerow">

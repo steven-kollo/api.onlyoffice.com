@@ -193,11 +193,23 @@ namespace ASC.Api.Web.Help
                         {
                             try
                             {
-                                DocBuilderDocumentation.Load();
+                                DocBuilderDocumentation.Instance.Load();
                             }
                             catch (Exception error)
                             {
                                 LogManager.GetLogger("ASC.DocumentBuilder").Error(error);
+                            }
+                        }
+
+                        if (enabledProducts.Contains("plugin", StringComparer.InvariantCulture))
+                        {
+                            try
+                            {
+                                DocPluginsDocumentation.Instance.Load();
+                            }
+                            catch (Exception error)
+                            {
+                                LogManager.GetLogger("ASC.Plugins").Error(error);
                             }
                         }
                     }

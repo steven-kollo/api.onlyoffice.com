@@ -572,6 +572,23 @@
           "optional": false
         }
       ]
+    },
+    "GetComments": {
+      "memberof": "Api",
+      "name": "GetComments",
+      "description": "<p>Returns an array of ApiComment objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiComment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "events": {
@@ -581,16 +598,17 @@
       "description": "<p>The callback function which is called when the specified range of the current sheet changes.\n<note>Please note that the event is not called for the undo/redo operations.</note></p>",
       "tags": {},
       "see": null,
-      "properties": [
+      "params": [
         {
           "type": "ApiRange",
           "name": "range",
-          "description": "<p>The modified range represented as the ApiRange object.</p>"
+          "description": "<p>The modified range represented as the ApiRange object.</p>",
+          "optional": false
         }
       ]
     }
   },
-  "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\n\t */",
+  "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\n\t * @property {ApiComment[]} Comments - Returns an array of ApiComment objects.\n\t */",
   "description": "<p>Base class.</p>",
   "scope": "global",
   "properties": [
@@ -608,6 +626,11 @@
       "type": "ApiRange",
       "name": "Selection",
       "description": "<p>Returns an object that represents the selected range.</p>"
+    },
+    {
+      "type": "Array.<ApiComment>",
+      "name": "Comments",
+      "description": "<p>Returns an array of ApiComment objects.</p>"
     }
   ]
 }

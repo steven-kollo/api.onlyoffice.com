@@ -8,6 +8,11 @@
 - editors: added the mode field to the editorConfig.customization.layout.leftMenu and editorConfig.customization.layout.rightMenu parameters
 - editors: added the editorConfig.customization.font parameter
 
+- docbuilder: v7.3
+- plugins: v7.3
+- plugins: changed the structure of the Plugins and Macros section
+- plugins: parsing documentation from source code
+
 - portals: generate documentation without dll 
 - plugins: added the icons2 and store parameters to the plugin config
 - editors: added the EnableInsertRemoteImage, CopyPasteRestrictions, SupportsLocks, and SupportsUpdate CheckFileInfo properties

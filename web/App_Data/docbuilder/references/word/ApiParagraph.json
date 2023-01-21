@@ -474,7 +474,7 @@
     "AddComment": {
       "memberof": "ApiParagraph",
       "name": "AddComment",
-      "description": "<p>Adds a comment to the paragraph.</p>",
+      "description": "<p>Adds a comment to the current paragraph.\n<note>Please note that this paragraph must be in the document.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -482,7 +482,7 @@
       },
       "returns": [
         [
-          "boolean"
+          "ApiComment"
         ]
       ],
       "see": null,
@@ -490,14 +490,14 @@
       "params": [
         {
           "type": "string",
-          "name": "Comment",
-          "description": "<p>The comment text.</p>",
+          "name": "sText",
+          "description": "<p>The comment text (required).</p>",
           "optional": false
         },
         {
           "type": "string",
-          "name": "Autor",
-          "description": "<p>The author's name (not obligatory).</p>",
+          "name": "sAutor",
+          "description": "<p>The author's name (optional).</p>",
           "optional": false
         }
       ]
@@ -737,8 +737,7 @@
       },
       "returns": [
         [
-          "ApiParagraph",
-          "false"
+          "ApiParagraph"
         ]
       ],
       "see": null,
@@ -866,49 +865,6 @@
           "type": "hps",
           "name": "nPosition",
           "description": "<p>Specifies a positive (raised text) or negative (lowered text)\nmeasurement in half-points (1/144 of an inch).</p>",
-          "optional": false
-        }
-      ]
-    },
-    "SetShd": {
-      "memberof": "ApiParagraph",
-      "name": "SetShd",
-      "description": "<p>Specifies the shading applied to the contents of the current paragraph.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "ApiParagraph"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "ShdType",
-          "name": "sType",
-          "description": "<p>The shading type applied to the contents of the current paragraph.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "r",
-          "description": "<p>Red color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "g",
-          "description": "<p>Green color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "b",
-          "description": "<p>Blue color component value.</p>",
           "optional": false
         }
       ]
@@ -1399,7 +1355,7 @@
     "AddNumberedCrossRef": {
       "memberof": "ApiParagraph",
       "name": "AddNumberedCrossRef",
-      "description": "<p>Adds a numbered cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "description": "<p>Adds a numbered cross-reference to the current paragraph.\n<note>Please note that this paragraph must be in the document.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1451,7 +1407,7 @@
     "AddHeadingCrossRef": {
       "memberof": "ApiParagraph",
       "name": "AddHeadingCrossRef",
-      "description": "<p>Adds a heading cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "description": "<p>Adds a heading cross-reference to the current paragraph.\n<note>Please note that this paragraph must be in the document.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1496,7 +1452,7 @@
     "AddBookmarkCrossRef": {
       "memberof": "ApiParagraph",
       "name": "AddBookmarkCrossRef",
-      "description": "<p>Adds a bookmark cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "description": "<p>Adds a bookmark cross-reference to the current paragraph.\n<note>Please note that this paragraph must be in the document.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1548,7 +1504,7 @@
     "AddFootnoteCrossRef": {
       "memberof": "ApiParagraph",
       "name": "AddFootnoteCrossRef",
-      "description": "<p>Adds a footnote cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "description": "<p>Adds a footnote cross-reference to the current paragraph.\n<note>Please note that this paragraph must be in the document.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1593,7 +1549,7 @@
     "AddEndnoteCrossRef": {
       "memberof": "ApiParagraph",
       "name": "AddEndnoteCrossRef",
-      "description": "<p>Adds an endnote cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "description": "<p>Adds an endnote cross-reference to the current paragraph.\n<note>Please note that this paragraph must be in the document.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1638,7 +1594,7 @@
     "AddCaptionCrossRef": {
       "memberof": "ApiParagraph",
       "name": "AddCaptionCrossRef",
-      "description": "<p>Adds a caption cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "description": "<p>Adds a caption cross-reference to the current paragraph.\n<note>Please note that this paragraph must be in the document.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1655,7 +1611,7 @@
         {
           "type": "CaptionLabel | string",
           "name": "sCaption",
-          "description": "<p>The caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
+          "description": "<p>The caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot;, or another caption label).</p>",
           "optional": false
         },
         {
@@ -1702,7 +1658,20 @@
       ],
       "see": null,
       "inherits": null,
-      "params": []
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bWriteNumberings",
+          "description": "<p>Specifies if the used numberings will be written to the JSON object or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWriteStyles",
+          "description": "<p>Specifies if the used styles will be written to the JSON object or not.</p>",
+          "optional": false
+        }
+      ]
     },
     "GetPosInParent": {
       "memberof": "ApiParagraph",
@@ -1743,6 +1712,72 @@
           "name": "oElement",
           "description": "<p>The element to replace the current paragraph with.</p>",
           "optional": false
+        }
+      ]
+    },
+    "AddCaption": {
+      "memberof": "ApiParagraph",
+      "name": "AddCaption",
+      "description": "<p>Adds a caption paragraph after (or before) the current paragraph.\n<note></p>\n<ol>\n<li>The current paragraph must be in the document (not in the footer/header).</li>\n<li>If the current paragraph is placed in a shape, then a caption is added after (or before) the parent shape.\n</note></li>\n</ol>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sAdditional",
+          "description": "<p>The additional text.</p>",
+          "optional": false
+        },
+        {
+          "type": "CaptionLabel | String",
+          "name": "sLabel",
+          "description": "<p>The caption label.</p>",
+          "optional": true,
+          "defaultValue": "\"Table\""
+        },
+        {
+          "type": "boolean",
+          "name": "bExludeLabel",
+          "description": "<p>Specifies whether to exclude the label from the caption.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "CaptionNumberingFormat",
+          "name": "sNumberingFormat",
+          "description": "<p>The possible caption numbering format.</p>",
+          "optional": true,
+          "defaultValue": "\"Arabic\""
+        },
+        {
+          "type": "boolean",
+          "name": "bBefore",
+          "description": "<p>Specifies whether to insert the caption before the current paragraph (true) or after (false) (after/before the shape if it is placed in the shape).</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "Number",
+          "name": "nHeadingLvl",
+          "description": "<p>The heading level (used if you want to specify the chapter number).\n<note>If you want to specify &quot;Heading 1&quot;, then nHeadingLvl === 0 and etc.</note></p>",
+          "optional": true
+        },
+        {
+          "type": "CaptionSep",
+          "name": "sCaptionSep",
+          "description": "<p>The caption separator (used if you want to specify the chapter number).</p>",
+          "optional": true,
+          "defaultValue": "\"hyphen\""
         }
       ]
     },
@@ -2212,6 +2247,52 @@
       ],
       "see": null,
       "inherits": "Inherited From: {@link ApiParaPr#GetSpacingAfter}"
+    },
+    "SetShd": {
+      "memberof": "ApiParagraph",
+      "name": "SetShd",
+      "description": "<p>Specifies the shading applied to the contents of the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#SetShd}",
+      "params": [
+        {
+          "type": "ShdType",
+          "name": "sType",
+          "description": "<p>The shading type which will be applied to the contents of the current paragraph.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isAuto",
+          "description": "<p>The true value disables paragraph contents shading.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
     },
     "GetShd": {
       "memberof": "ApiParagraph",
