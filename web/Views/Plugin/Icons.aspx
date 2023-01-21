@@ -14,8 +14,7 @@
         <span class="hdr">Plugin icons</span>
     </h1>
 
-    <p class="dscr">Plugin icon image files that are specified in the <a href="<%= Url.Action("config") %>#icons">config.json</a> file to display plugins 
-        on the <b>Plugins</b> tab or in the plugin <b>Settings</b> window. Here you can find all the available plugin icon parameters.</p>
+    <p class="dscr">Plugin icon image files that are specified in the <a href="<%= Url.Action("config") %>#icons2">config.json</a> file to display the plugin extensions. Here you can find all the available plugin icon parameters.</p>
 
 
     <h2 id="scaling" class="copy-link">Scaling</h2>
