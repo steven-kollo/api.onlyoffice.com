@@ -46,9 +46,10 @@
 
     <table class="table">
         <colgroup>
-            <col style="width: 220px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -67,6 +68,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <pre>
 "icons": [
     {

@@ -30,9 +30,9 @@
     <div class="header-gray">Parameters</div>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
-            <col />
-            <col style="width: 100px;" />
+            <col class="table-name" />
+			<col />
+			<col class="table-type" />
         </colgroup>
         <thead>
             <tr class="tablerow">
