@@ -67,6 +67,7 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <p>Here you can find the messages that are available for ONLYOFFICE Docs to send to the host page. The process of receiving messages by the online office will be available later.</p>
     <div class="header-gray">Available messages</div>
@@ -139,6 +140,7 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Collabora specific</div>
     <table class="table">
@@ -165,6 +167,7 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <note>Please note that the PostMessage messages have the higher priority than the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#CloseUrl">CloseUrl</a>,
     <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#HostEditUrl">HostEditUrl</a>, <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingUrl">FileSharingUrl</a>,
