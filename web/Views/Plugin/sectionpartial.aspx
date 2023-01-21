@@ -43,6 +43,7 @@
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 
     <% if (section.Properties != null && section.Properties.Any()) { %>
@@ -65,6 +66,7 @@
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 
     <h2>Methods</h2>
@@ -90,6 +92,7 @@
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <% if (section.Example != null) { %>
         <% if (!string.IsNullOrEmpty(section.Example.Script)) { %>

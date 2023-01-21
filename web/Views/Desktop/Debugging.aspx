@@ -93,8 +93,8 @@
     <table class="table">
         <colgroup>
             <col class="table-name" />
-            <col style="width: 150px;" />
-            <col style="width: 200px;" />
+            <col />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -121,6 +121,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <p>To launch ONLYOFFICE Desktop Editors with this flag, use the same instructions as for the <em>--ascdesktop-support-debug-info</em> flag <a href="#system-instructions">above</a>.
         The only difference is that the <em>--ascdesktop-support-debug-info-keep</em> flag stores the value passed to it.
         You will not need to specify it every time you run the application.</p>

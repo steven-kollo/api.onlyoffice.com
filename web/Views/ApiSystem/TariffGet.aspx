@@ -22,10 +22,10 @@
     <div class="header-gray">Parameters</div>
     <table class="table">
         <colgroup>
-            <col style="width: 20%" />
+            <col class="table-name" />
             <col />
-            <col style="width: 120px" />
-            <col style="width: 20%" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
