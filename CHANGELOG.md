@@ -1,5 +1,6 @@
 # Change Log
 
+##
 - editors: added the WOPI Conversion API
 - editors: added the UserCanNotWriteRelative property to the CheckFileInfo WOPI operation
 - editors: added the scheme for editing binary document formats
@@ -7,20 +8,18 @@
 - editors: added the PutRelativeFile WOPI operation
 - editors: added the mode field to the editorConfig.customization.layout.leftMenu and editorConfig.customization.layout.rightMenu parameters
 - editors: added the editorConfig.customization.font parameter
-
-- docbuilder: v7.3
-- plugins: v7.3
-- plugins: changed the structure of the Plugins and Macros section
-- plugins: parsing documentation from source code
-
-- portals: generate documentation without dll 
-- plugins: added the icons2 and store parameters to the plugin config
 - editors: added the EnableInsertRemoteImage, CopyPasteRestrictions, SupportsLocks, and SupportsUpdate CheckFileInfo properties
 - editors: added the Action_InsertGraphic, Blur_Focus, Grab_Focus, and Host_PostmessageReady PostMessage messages
 - editors: added the information about the syncronous conversion timeout
 - editors: added the history.serverVersion parameter description
 - editors: added the conversion limitation for the spreadsheets
 - editors: added the information about hiding changes when the server version is updated
+- plugins: v7.3
+- plugins: changed the structure of the Plugins and Macros section
+- plugins: parsing documentation from source code
+- plugins: added the icons2 and store parameters to the plugin config
+- docbuilder: v7.3
+- portals: generate documentation without dll 
 
 ## 2.11.0
 - editors: mobile edit, mobile view and embedded view buttons on try page
