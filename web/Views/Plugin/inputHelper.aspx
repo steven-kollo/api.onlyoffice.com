@@ -81,8 +81,8 @@ function getInputHelperSize () {
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
-					<col />
-					<col class="table-type" />
+                    <col />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -151,8 +151,8 @@ function getInputHelperSize () {
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
-					<col />
-					<col class="table-type" />
+                    <col />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -185,7 +185,7 @@ function getInputHelperSize () {
                     </tr>
                 </tbody>
             </table>
-			<div class="mobile-content"></div>
+            <div class="mobile-content"></div>
             <div class="header-gray">Example</div>
             <pre>
 {

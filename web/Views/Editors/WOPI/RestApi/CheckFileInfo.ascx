@@ -30,7 +30,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Query parameters</div>
     <table class="table">
@@ -54,7 +54,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Request headers</div>
     <table class="table">
@@ -82,7 +82,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Required response properties</div>
     <table class="table">
@@ -116,7 +116,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Breadcrumb properties</div>
     <table class="table">
@@ -167,7 +167,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">PostMessage properties</div>
     <table class="table">
@@ -229,7 +229,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">File URL properties</div>
     <table class="table">
@@ -274,7 +274,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Other miscellaneous properties</div>
     <table class="table">
@@ -332,7 +332,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">User metadata properties</div>
     <table class="table">
@@ -371,7 +371,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">User permissions properties</div>
     <table class="table">
@@ -416,7 +416,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">WOPI host capabilities properties</div>
     <table class="table">
@@ -462,7 +462,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Nextcloud/Collabora/Seafile properties</div>
     <table class="table">
@@ -498,4 +498,4 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>

@@ -49,7 +49,7 @@
                             <% } %>
                         </tbody>
                     </table>
-					<div class="mobile-content"></div>
+                    <div class="mobile-content"></div>
                 <% } %>
             </div>
 

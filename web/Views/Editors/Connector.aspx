@@ -40,8 +40,8 @@ var connector = docEditor.createConnector()
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
-					<col />
-					<col class="table-type" />
+                    <col />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -83,8 +83,8 @@ connector.attachEvent("onChangeContentControl", function()
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
-					<col />
-					<col class="table-type" />
+                    <col />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -115,7 +115,7 @@ connector.attachEvent("onChangeContentControl", function()
                     </tr>
                 </tbody>
             </table>
-			<div class="mobile-content"></div>
+            <div class="mobile-content"></div>
             <p>This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope", "plugin") %>">Asc.scope</a> object.</p>
             <div class="header-gray">Example</div>
             <pre>
@@ -149,8 +149,8 @@ connector.connect()
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
-					<col />
-					<col class="table-type" />
+                    <col />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -189,8 +189,8 @@ connector.disconnect()
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
-					<col />
-					<col class="table-type" />
+                    <col />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">

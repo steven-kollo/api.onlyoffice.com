@@ -111,5 +111,5 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
     <p>Further information about building a host page can be found <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage" target="_blank">here</a>.</p>

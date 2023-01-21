@@ -86,9 +86,9 @@ new DocsAPI.DocEditor("placeholder", {
     <table class="table">
         <colgroup>
             <col class="table-name" />
-			<col />
-			<col class="table-type" />
-			<col class="table-example" />
+            <col />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -145,9 +145,9 @@ new DocsAPI.DocEditor("placeholder", {
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
-					<col />
-					<col class="table-type" />
-					<col class="table-example" />
+                    <col />
+                    <col class="table-type" />
+                    <col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -208,9 +208,9 @@ new DocsAPI.DocEditor("placeholder", {
     <table class="table">
         <colgroup>
             <col class="table-name" />
-			<col />
-			<col class="table-type" />
-			<col class="table-example" />
+            <col />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -232,7 +232,7 @@ new DocsAPI.DocEditor("placeholder", {
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Sample local.json configuration</div>
     <pre>

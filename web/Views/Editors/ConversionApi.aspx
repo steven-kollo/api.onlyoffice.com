@@ -26,9 +26,9 @@
     <table class="table">
         <colgroup>
             <col class="table-name" />
-			<col />
-			<col class="table-type" />
-			<col class="table-example" />
+            <col />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -895,7 +895,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
     <table class="table-conversion-matrix-spreadsheet">
@@ -1098,7 +1098,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <h2 id="presentation-matrix" class="copy-link">Presentation file formats</h2>
     <table class="table-conversion-matrix-presentation">
@@ -1304,7 +1304,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div id="sample-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
     <pre>
@@ -1415,9 +1415,9 @@
     <table class="table">
         <colgroup>
             <col class="table-name" />
-			<col />
-			<col class="table-type" />
-			<col class="table-example" />
+            <col />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -1460,7 +1460,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Sample of the response in XML format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>

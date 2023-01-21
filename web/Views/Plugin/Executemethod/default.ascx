@@ -16,8 +16,8 @@
     <table class="table">
         <colgroup>
             <col class="table-name" />
-			<col />
-			<col class="table-type" />
+            <col />
+            <col class="table-type" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -44,7 +44,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
 
 <p>See the available <em>window.Asc.plugin.executeMethod</em> methods below to find more about them.</p>

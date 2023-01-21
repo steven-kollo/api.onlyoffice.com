@@ -50,7 +50,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Attributes</div>
     <table class="table">
@@ -75,7 +75,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Example</div>
     <pre>
@@ -134,7 +134,7 @@ ui=en-us&thm=1&"/&gt;
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
 
     <h2 id="collabora-specific" class="copy-link">Collabora specific</h2>

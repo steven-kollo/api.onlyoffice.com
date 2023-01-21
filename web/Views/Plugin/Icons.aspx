@@ -48,9 +48,9 @@
     <table class="table">
         <colgroup>
             <col class="table-name" />
-			<col />
-			<col class="table-type" />
-			<col class="table-example" />
+            <col />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -69,7 +69,7 @@
             </tr>
         </tbody>
     </table>
-	<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
     <pre>
 "icons": [
     {

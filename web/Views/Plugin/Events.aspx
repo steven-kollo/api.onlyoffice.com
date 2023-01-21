@@ -48,8 +48,8 @@
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -85,8 +85,8 @@ window.Asc.plugin.button = function (id) {
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -125,8 +125,8 @@ window.Asc.plugin.init = function () {
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -195,8 +195,8 @@ window.Asc.plugin.inputHelper_onSelectItem = function(item) {
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -279,8 +279,8 @@ window.Asc.plugin.event_onAddComment = function(comment)
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -428,8 +428,8 @@ connector.attachEvent("onBlurContentControl", function(oPr)
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -511,8 +511,8 @@ window.Asc.plugin.event_onChangeCommentData = function(comment)
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -615,8 +615,8 @@ connector.attachEvent("onChangeContentControl", function()
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -686,8 +686,8 @@ window.Asc.plugin.event_onDocumentContentReady = function() {
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -736,8 +736,8 @@ window.Asc.plugin.onExternalMouseUp = function () {
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -804,8 +804,8 @@ window.Asc.plugin.onExternalPluginMessage = function(data) {
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -919,8 +919,8 @@ window.Asc.plugin.event_onInputHelperClear = function() {
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
@@ -977,8 +977,8 @@ window.Asc.plugin.event_onInputHelperInput = function(data) {
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
-					<col />
-					<col class="table-type" />
+                    <col />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -997,7 +997,7 @@ window.Asc.plugin.event_onInputHelperInput = function(data) {
                     </tr>
                 </tbody>
             </table>
-			<div class="mobile-content"></div>
+            <div class="mobile-content"></div>
             <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [_obj]);
@@ -1030,8 +1030,8 @@ window.Asc.plugin.onMethodReturn = function(returnValue) {
         <table class="table">
             <colgroup>
                 <col class="table-name" />
-				<col />
-				<col class="table-type" />
+                <col />
+                <col class="table-type" />
             </colgroup>
             <thead>
                 <tr class="tablerow">
