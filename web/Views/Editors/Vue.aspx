@@ -81,10 +81,10 @@ export default defineComponent({
     <div class="header-gray">Properties</div>
     <table class="table">
         <colgroup>
-            <col />
-            <col style="width: 50px;" />
-            <col style="width: 100px;" />
-            <col style="width: 250px;" />
+            <col class="table-name" />
+			<col class="table-type" />
+			<col />
+			<col />
         </colgroup>
         <thead>
             <tr class="tablerow">

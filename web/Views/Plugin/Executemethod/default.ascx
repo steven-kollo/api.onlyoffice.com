@@ -15,9 +15,9 @@
 <div class="header-gray">Parameters</div>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
+            <col class="table-type" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -44,7 +44,7 @@
             </tr>
         </tbody>
     </table>
-<div class="mobile-content"></div>
+    <div class="mobile-content"></div>
 
 
 <p>See the available <em>window.Asc.plugin.executeMethod</em> methods below to find more about them.</p>
@@ -53,8 +53,8 @@
 
 <table class="table">
     <colgroup>
-        <col style="width: 250px;" />
-        <col style="width: 500px;" />
+        <col class="table-name" />
+        <col />
     </colgroup>
     <thead>
         <tr class="tablerow">
@@ -336,3 +336,5 @@
             <td>This method allows to update a plugin by the URL to the plugin config.</td>
         </tr>
     </tbody>
+</table>
+<div class="mobile-content"></div>

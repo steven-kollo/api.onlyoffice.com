@@ -17,10 +17,10 @@ window.Asc.plugin.executeMethod ("SetProperties", [obj]);
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
-        <col style="width: 100px;" />
+        <col class="table-name" />
         <col />
-        <col style="width: 100px;" />
-        <col style="width: 150px;" />
+        <col class="table-type" />
+        <col class="table-example" />
     </colgroup>
     <thead>
         <tr class="tablerow">
@@ -88,10 +88,10 @@ window.Asc.plugin.executeMethod ("SetProperties", [obj]);
 <div id="watermark-properties" class="header-gray copy-link">Watermark properties</div>
 <table class="table">
     <colgroup>
-        <col style="width: 170px;" />
+        <col class="table-name" />
         <col />
-        <col style="width: 100px;" />
-        <col style="width: 150px;" />
+        <col class="table-type" />
+        <col class="table-example" />
     </colgroup>
     <thead>
         <tr class="tablerow">
@@ -267,10 +267,10 @@ window.Asc.plugin.executeMethod ("SetProperties", [obj]);
 <div id="forms-properties" class="header-gray copy-link">Form properties</div>
 <table class="table">
     <colgroup>
-        <col style="width: 100px;" />
+        <col class="table-name" />
         <col />
-        <col style="width: 100px;" />
-        <col style="width: 150px;" />
+        <col class="table-type" />
+        <col class="table-example" />
     </colgroup>
     <thead>
         <tr class="tablerow">
