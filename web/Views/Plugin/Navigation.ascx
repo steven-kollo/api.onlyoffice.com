@@ -67,6 +67,26 @@
                                     </ul>
                                 </li>
                                 <li>
+                                    <a href="<%= Url.Action("executemethod/cell") %>">Spreadsheet Api</a>
+                                    <ul>
+                                        <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("cellPluginMethods")["api"].Methods) { %>
+                                            <li>
+                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/cell/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="<%= Url.Action("executemethod/slide") %>">Presentation Api</a>
+                                    <ul>
+                                        <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("slidePluginMethods")["api"].Methods) { %>
+                                            <li>
+                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/slide/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                </li>
+                                <li>
                                     <a href="<%= Url.Action("executemethod/form") %>">Form Api</a>
                                     <ul>
                                         <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("formPluginMethods")["api"].Methods) { %>
