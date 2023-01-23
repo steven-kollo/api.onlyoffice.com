@@ -58,6 +58,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 { "pluginBase", "pluginBase" },
                 { "sharedPluginMethods", "common" },
                 { "wordPluginMethods", "text" },
+                { "cellPluginMethods", "cell" },
+                { "slidePluginMethods", "slide" },
                 { "formPluginMethods", "form" },
             };
 

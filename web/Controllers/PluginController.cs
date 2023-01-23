@@ -218,6 +218,16 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return RenderSectionOrMethod("wordPluginMethods", "api", catchall);
         }
+        
+        public ActionResult CellMethods(string catchall)
+        {
+            return RenderSectionOrMethod("cellPluginMethods", "api", catchall);
+        }
+        
+        public ActionResult SlideMethods(string catchall)
+        {
+            return RenderSectionOrMethod("slidePluginMethods", "api", catchall);
+        }
 
         public ActionResult FormMethods(string catchall)
         {

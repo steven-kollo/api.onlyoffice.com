@@ -2000,6 +2000,7 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InputText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InstallPlugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnEncryption.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnDropEvent.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteHtml.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PutImageDataToSelection.docbuilder" />
@@ -2052,6 +2053,8 @@
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectContentControl.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectOleObject.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SetDisplayModeInReview.docbuilder" />
+    <Content Include="App_Data\plugins\references\cellPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\cellPluginMethods\Globals.json" />
     <Content Include="App_Data\plugins\references\formPluginMethods\Api.json" />
     <Content Include="App_Data\plugins\references\formPluginMethods\Globals.json" />
     <Content Include="App_Data\plugins\references\pluginBase\Globals.json" />
@@ -2059,6 +2062,8 @@
     <Content Include="App_Data\plugins\references\pluginBase\Plugin.json" />
     <Content Include="App_Data\plugins\references\sharedPluginMethods\Api.json" />
     <Content Include="App_Data\plugins\references\sharedPluginMethods\Globals.json" />
+    <Content Include="App_Data\plugins\references\slidePluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\slidePluginMethods\Globals.json" />
     <Content Include="App_Data\plugins\references\wordPluginMethods\Api.json" />
     <Content Include="App_Data\plugins\references\wordPluginMethods\Globals.json" />
     <Content Include="App_Data\portals\class_descriptions.xml" />
@@ -2860,7 +2865,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.docbuilder" />
-    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnDropEvent.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
