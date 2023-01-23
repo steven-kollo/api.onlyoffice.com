@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -1920,6 +1920,9 @@
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.RemoveComments.docbuilder" />
     <Content Include="App_Data\plugins\examples\comment.docbuilder" />
     <Content Include="App_Data\plugins\examples\CommentData.docbuilder" />
     <Content Include="App_Data\plugins\examples\ContentControl.docbuilder" />
@@ -1992,10 +1995,12 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetMacros.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectedText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectionType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVBAMacros.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVersion.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InputText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InstallPlugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnEncryption.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnDropEvent.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteHtml.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PutImageDataToSelection.docbuilder" />
@@ -2008,6 +2013,9 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.StartAction.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.UnShowInputHelper.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.UpdatePlugin.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.AddComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.RemoveComments.docbuilder" />
     <Content Include="App_Data\plugins\examples\watermark_on_draw.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AcceptReviewChanges.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddComment.docbuilder" />
@@ -2045,6 +2053,8 @@
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectContentControl.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectOleObject.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SetDisplayModeInReview.docbuilder" />
+    <Content Include="App_Data\plugins\references\cellPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\cellPluginMethods\Globals.json" />
     <Content Include="App_Data\plugins\references\formPluginMethods\Api.json" />
     <Content Include="App_Data\plugins\references\formPluginMethods\Globals.json" />
     <Content Include="App_Data\plugins\references\pluginBase\Globals.json" />
@@ -2052,6 +2062,8 @@
     <Content Include="App_Data\plugins\references\pluginBase\Plugin.json" />
     <Content Include="App_Data\plugins\references\sharedPluginMethods\Api.json" />
     <Content Include="App_Data\plugins\references\sharedPluginMethods\Globals.json" />
+    <Content Include="App_Data\plugins\references\slidePluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\slidePluginMethods\Globals.json" />
     <Content Include="App_Data\plugins\references\wordPluginMethods\Api.json" />
     <Content Include="App_Data\plugins\references\wordPluginMethods\Globals.json" />
     <Content Include="App_Data\portals\class_descriptions.xml" />
@@ -2225,6 +2237,7 @@
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
+    <Content Include="Content\img\Editor\paste-link.png" />
     <Content Include="Content\img\Editor\permissions.png" />
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
@@ -2244,6 +2257,7 @@
     <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarHideFileName.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
+    <Content Include="Content\img\Editor\update-values.png" />
     <Content Include="Content\img\Editor\viewer.png" />
     <Content Include="Content\img\get-docs\docker.png" />
     <Content Include="Content\img\get-docs\linux.svg" />
@@ -2685,6 +2699,7 @@
     <Content Include="Views\Editors\HowItWorks.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
+    <Content Include="Views\Editors\InsertingExternalData.aspx" />
     <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />
@@ -2849,18 +2864,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
-    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
-    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.RemoveComments.docbuilder" />
-    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVBAMacros.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.AddComment.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.RemoveComments.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.docbuilder" />
-    <Content Include="App_Data\plugins\references\cellPluginMethods\Api.json" />
-    <Content Include="App_Data\plugins\references\cellPluginMethods\Globals.json" />
-    <Content Include="App_Data\plugins\references\slidePluginMethods\Api.json" />
-    <Content Include="App_Data\plugins\references\slidePluginMethods\Globals.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

@@ -98,6 +98,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "InsertingExternalData",
                 "Jira",
                 "Liferay",
                 "Mattermost",
@@ -338,6 +339,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult InlineEditors()
+        {
+            return View();
+        }
+
+        public ActionResult InsertingExternalData()
         {
             return View();
         }
