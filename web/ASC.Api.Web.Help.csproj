@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -2857,6 +2857,10 @@
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.RemoveComments.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.docbuilder" />
+    <Content Include="App_Data\plugins\references\cellPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\cellPluginMethods\Globals.json" />
+    <Content Include="App_Data\plugins\references\slidePluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\slidePluginMethods\Globals.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
