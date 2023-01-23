@@ -1920,6 +1920,9 @@
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.RemoveComments.docbuilder" />
     <Content Include="App_Data\plugins\examples\comment.docbuilder" />
     <Content Include="App_Data\plugins\examples\CommentData.docbuilder" />
     <Content Include="App_Data\plugins\examples\ContentControl.docbuilder" />
@@ -1992,6 +1995,7 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetMacros.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectedText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectionType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVBAMacros.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVersion.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InputText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InstallPlugin.docbuilder" />
@@ -2008,6 +2012,9 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.StartAction.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.UnShowInputHelper.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.UpdatePlugin.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.AddComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.RemoveComments.docbuilder" />
     <Content Include="App_Data\plugins\examples\watermark_on_draw.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AcceptReviewChanges.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddComment.docbuilder" />
@@ -2852,14 +2859,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
-    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
-    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.RemoveComments.docbuilder" />
-    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVBAMacros.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.AddComment.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.RemoveComments.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnDropEvent.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
