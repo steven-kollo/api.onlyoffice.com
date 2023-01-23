@@ -323,7 +323,7 @@
         {
           "type": "number",
           "name": "type",
-          "description": "<p>A value which defines an action type which can take <strong>0</strong> if this is an <em>Information</em> action or <strong>1</strong> if this is a <em>BlockInteraction</em> action.</p>",
+          "description": "<p>A value which defines an action type which can take <b>0</b> if this is an <em>Information</em> action or <b>1</b> if this is a <em>BlockInteraction</em> action.</p>",
           "optional": false
         },
         {
@@ -352,7 +352,7 @@
         {
           "type": "number",
           "name": "type",
-          "description": "<p>A value which defines an action type which can take <strong>0</strong> if this is the <em>Information</em> action or <strong>1</strong> if this is the <em>BlockInteraction</em> action.</p>",
+          "description": "<p>A value which defines an action type which can take <b>0</b> if this is the <em>Information</em> action or <b>1</b> if this is the <em>BlockInteraction</em> action.</p>",
           "optional": false
         },
         {
@@ -387,7 +387,7 @@
         {
           "type": "string",
           "name": "obj.type",
-          "description": "<p>The type of encrypting operation:</p>\n<ul>\n<li><strong>generatePassword</strong> - generates a password for the document,</li>\n<li><strong>getPasswordByFile</strong> - sends the password when opening the document,</li>\n<li><strong>setPasswordByFile</strong> - sets a password to the document,</li>\n<li><strong>encryptData</strong> - encrypts changes when co-editing,</li>\n<li><strong>decryptData</strong> - decrypts changes when co-editing.</li>\n</ul>",
+          "description": "<p>The type of encrypting operation:</p>\n<ul>\n<li><b>generatePassword</b> - generates a password for the document,</li>\n<li><b>getPasswordByFile</b> - sends the password when opening the document,</li>\n<li><b>setPasswordByFile</b> - sets a password to the document,</li>\n<li><b>encryptData</b> - encrypts changes when co-editing,</li>\n<li><b>decryptData</b> - decrypts changes when co-editing.</li>\n</ul>",
           "optional": false
         },
         {
@@ -965,7 +965,7 @@
     "OnDropEvent": {
       "memberof": "Api",
       "name": "OnDropEvent",
-      "description": "<p>On drop event. Use this method for external drag&amp;drop emulation.</p>",
+      "description": "<p>Implements the external drag&amp;drop emulation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -979,8 +979,38 @@
       "params": [
         {
           "type": "object",
-          "name": "The",
-          "description": "<p>event object</p>",
+          "name": "obj",
+          "description": "<p>The drag&amp;drop emulation properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.type",
+          "description": "<p>The drag&amp;drop event type:</p>\n<ul>\n<li><b>onbeforedrop</b> - an event that is fired when the selected text or element is dragged;</li>\n<li><b>ondrop</b> - an event that is fired when the selected text or element is dropped on a valid drop target.</li>\n</ul>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "obj.x",
+          "description": "<p>The horizontal coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "obj.y",
+          "description": "<p>The vertical coordinate (in pixels) at which the mouse was clicked, relative to the top edge of the entire document.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.html",
+          "description": "<p>The dragged HTML element.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.text",
+          "description": "<p>The dragged text.</p>",
           "optional": false
         }
       ]

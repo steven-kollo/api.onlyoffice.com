@@ -3,7 +3,7 @@
     "executeCommand": {
       "memberof": "Plugin",
       "name": "executeCommand",
-      "description": "<p>Defines the method used to send the data back to the editor.\n<note>This method is deprecated, please use the {@link Plugin#callCommand callCommand} method which runs the code from the <em>data</em> string parameter.</note></p>\n<p>Now this method is mainly used to work with the OLE objects or close the plugin without any other commands.\nIt is also retained for using with text so that the previous versions of the plugin remain compatible.</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.</p>\n<p>The second parameter is the JavaScript code for working with <strong>ONLYOFFICE Document Builder</strong> {@link /docbuilder/basic API}\nthat allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).\n<note><strong>ONLYOFFICE Document Builder</strong> commands can be only used to create content and insert it to the document editor\n(using the <em>Api.GetDocument().InsertContent(...)</em>). This limitation exists due to the co-editing feature in the online editors.\nIf it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</note></p>\n<p>When creating/editing OLE objects, two extensions are used to work with them:</p>\n<ul>\n<li><em>Api.asc_addOleObject (window.Asc.plugin.info)</em> - used to create an OLE object in the document;</li>\n<li><em>Api.asc_editOleObject (window.Asc.plugin.info)</em> - used to edit the created OLE object.</li>\n</ul>\n<p>When creating/editing the objects, their properties can be passed to the {@link /plugin/info window.Asc.plugin.info} object that defines how the object should look.</p>",
+      "description": "<p>Defines the method used to send the data back to the editor.\n<note>This method is deprecated, please use the {@link Plugin#callCommand callCommand} method which runs the code from the <em>data</em> string parameter.</note></p>\n<p>Now this method is mainly used to work with the OLE objects or close the plugin without any other commands.\nIt is also retained for using with text so that the previous versions of the plugin remain compatible.</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.</p>\n<p>The second parameter is the JavaScript code for working with <b>ONLYOFFICE Document Builder</b> {@link /docbuilder/basic API}\nthat allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).\n<note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor\n(using the <em>Api.GetDocument().InsertContent(...)</em>). This limitation exists due to the co-editing feature in the online editors.\nIf it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</note></p>\n<p>When creating/editing OLE objects, two extensions are used to work with them:</p>\n<ul>\n<li><em>Api.asc_addOleObject (window.Asc.plugin.info)</em> - used to create an OLE object in the document;</li>\n<li><em>Api.asc_editOleObject (window.Asc.plugin.info)</em> - used to edit the created OLE object.</li>\n</ul>\n<p>When creating/editing the objects, their properties can be passed to the {@link /plugin/info window.Asc.plugin.info} object that defines how the object should look.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -112,7 +112,7 @@
     "callCommand": {
       "memberof": "Plugin",
       "name": "callCommand",
-      "description": "<p>Defines the method used to send the data back to the editor.\nIt replaces the {@link Plugin#executeCommand executeCommand} method when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors using <strong>ONLYOFFICE Document Builder</strong> {@link /docbuilder/basic API}.\nIt allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.\n<note><strong>ONLYOFFICE Document Builder</strong> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...)</em>).\nThis limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</note></p>\n<p>This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use {@link /plugin/scope Asc.scope} object.</p>",
+      "description": "<p>Defines the method used to send the data back to the editor.\nIt replaces the {@link Plugin#executeCommand executeCommand} method when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors using <b>ONLYOFFICE Document Builder</b> {@link /docbuilder/basic API}.\nIt allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.\n<note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...)</em>).\nThis limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</note></p>\n<p>This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use {@link /plugin/scope Asc.scope} object.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -245,7 +245,7 @@
         {
           "type": "number",
           "name": "buttonIndex",
-          "description": "<p>Defines the button index in the {@link /plugin/config#buttons buttons} array of the <em>config.json</em> file. If <em>id == -1</em>, then the plugin considers that the <strong>Close</strong> window cross button has been clicked or its operation has been somehow interrupted.</p>",
+          "description": "<p>Defines the button index in the {@link /plugin/config#buttons buttons} array of the <em>config.json</em> file. If <em>id == -1</em>, then the plugin considers that the <b>Close</b> window cross button has been clicked or its operation has been somehow interrupted.</p>",
           "optional": false
         }
       ]
@@ -289,7 +289,7 @@
         {
           "type": "object",
           "name": "item",
-          "description": "<p>Defines the selected item:</p>\n<ul>\n<li><strong>text</strong> - the item text,<br>\n<strong>type</strong>: string,<br>\n<strong>example</strong>: &quot;name&quot;;</li>\n<li><strong>id</strong> - the item index,<br>\n<strong>type</strong>: string,<br>\n<strong>example</strong>: &quot;1&quot;.</li>\n</ul>",
+          "description": "<p>Defines the selected item:</p>\n<ul>\n<li><b>text</b> - the item text,<br>\n<b>type</b>: string,<br>\n<b>example</b>: &quot;name&quot;;</li>\n<li><b>id</b> - the item index,<br>\n<b>type</b>: string,<br>\n<b>example</b>: &quot;1&quot;.</li>\n</ul>",
           "optional": false
         }
       ]
@@ -311,7 +311,7 @@
         {
           "type": "object",
           "name": "data",
-          "description": "<p>Defines the text which the user inputs:</p>\n<ul>\n<li><strong>add</strong> - defines if the text is added to the current text (<strong>true</strong>) or this is the beginning of the text (<strong>false</strong>),<br>\n<strong>type</strong>: boolean,<br>\n<strong>example</strong>: true;</li>\n<li><strong>text</strong> - the text which the user inputs,<br>\n<strong>type</strong>: string,<br>\n<strong>example</strong>: &quot;text&quot;.</li>\n</ul>",
+          "description": "<p>Defines the text which the user inputs:</p>\n<ul>\n<li><b>add</b> - defines if the text is added to the current text (<strong>true</strong>) or this is the beginning of the text (<strong>false</strong>),<br>\n<b>type</b>: boolean,<br>\n<b>example</b>: true;</li>\n<li><b>text</b> - the text which the user inputs,<br>\n<b>type</b>: string,<br>\n<b>example</b>: &quot;text&quot;.</li>\n</ul>",
           "optional": false
         }
       ]
@@ -355,7 +355,7 @@
         {
           "type": "Object",
           "name": "data",
-          "description": "<p>Defines the editor integrator message:</p>\n<ul>\n<li><strong>type</strong> - the message type,<br>\n<strong>type</strong>: string,<br>\n<strong>example</strong>: &quot;close&quot;;</li>\n<li><strong>text</strong> - the message text,<br>\n<strong>type</strong>: string,<br>\n<strong>example</strong>: &quot;text&quot;.</li>\n</ul>",
+          "description": "<p>Defines the editor integrator message:</p>\n<ul>\n<li><b>type</b> - the message type,<br>\n<b>type</b>: string,<br>\n<b>example</b>: &quot;close&quot;;</li>\n<li><b>text</b> - the message text,<br>\n<b>type</b>: string,<br>\n<b>example</b>: &quot;text&quot;.</li>\n</ul>",
           "optional": false
         }
       ]

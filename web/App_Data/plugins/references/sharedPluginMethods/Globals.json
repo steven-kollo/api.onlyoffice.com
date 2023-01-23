@@ -1,7 +1,7 @@
 {
   "editorType": {
     "name": "editorType",
-    "description": "<p>The editors which the plugin is available for:</p>\n<ul>\n<li><strong>word</strong> - text document editor,</li>\n<li><strong>cell</strong> - spreadsheet editor,</li>\n<li><strong>slide</strong> - presentation editor.</li>\n</ul>",
+    "description": "<p>The editors which the plugin is available for:</p>\n<ul>\n<li><b>word</b> - text document editor,</li>\n<li><b>cell</b> - spreadsheet editor,</li>\n<li><b>slide</b> - presentation editor.</li>\n</ul>",
     "type": [
       "\"word\"",
       "\"cell\"",
@@ -10,7 +10,7 @@
   },
   "initDataType": {
     "name": "initDataType",
-    "description": "<p>The data type selected in the editor and sent to the plugin:</p>\n<ul>\n<li><strong>text</strong> - the text data,</li>\n<li><strong>html</strong> - HTML formatted code,</li>\n<li><strong>ole</strong> - OLE object data,</li>\n<li><strong>desktop</strong> - the desktop editor data,</li>\n<li><strong>destop-external</strong> - the main page data of the desktop app (system messages),</li>\n<li><strong>none</strong> - no data will be send to the plugin from the editor.</li>\n<li><strong>sign</strong> - the sign for the keychain plugin.</li>\n</ul>",
+    "description": "<p>The data type selected in the editor and sent to the plugin:</p>\n<ul>\n<li><b>text</b> - the text data,</li>\n<li><b>html</b> - HTML formatted code,</li>\n<li><b>ole</b> - OLE object data,</li>\n<li><b>desktop</b> - the desktop editor data,</li>\n<li><b>destop-external</b> - the main page data of the desktop app (system messages),</li>\n<li><b>none</b> - no data will be send to the plugin from the editor,</li>\n<li><b>sign</b> - the sign for the keychain plugin.</li>\n</ul>",
     "type": [
       "\"text\"",
       "\"html\"",
@@ -147,7 +147,7 @@
       {
         "type": "number",
         "name": "m_eFontFormat",
-        "description": "<p>The specific file type(s) used to store font data: <strong>0</strong> - *.fon, <strong>1</strong> - *.ttf, <strong>2</strong> - *.ttf, *.otf (CFF), <strong>3</strong> - unknown font format.</p>"
+        "description": "<p>The specific file type(s) used to store font data: <b>0</b> - *.fon, <b>1</b> - *.ttf, <b>2</b> - *.ttf, *.otf (CFF), <b>3</b> - unknown font format.</p>"
       },
       {
         "type": "number",
@@ -255,7 +255,7 @@
       {
         "type": "number",
         "name": "align",
-        "description": "<p>The vertical text align in the watermark shape: <strong>0</strong> - bottom, <strong>1</strong> - center, <strong>4</strong> - top.</p>"
+        "description": "<p>The vertical text align in the watermark shape: <b>0</b> - bottom, <b>1</b> - center, <b>4</b> - top.</p>"
       },
       {
         "type": "Array.<object>",
@@ -265,7 +265,7 @@
       {
         "type": "number",
         "name": "paragraphs.align",
-        "description": "<p>The horizontal text align in the current paragraph: <strong>0</strong> - right, <strong>1</strong> - left, <strong>2</strong> - center, <strong>3</strong> - justify.</p>"
+        "description": "<p>The horizontal text align in the current paragraph: <b>0</b> - right, <b>1</b> - left, <b>2</b> - center, <b>3</b> - justify.</p>"
       },
       {
         "type": "Array.<number>",
@@ -344,7 +344,7 @@
       {
         "type": "string",
         "name": "tags.checkBox",
-        "description": "<p>The checkbox form value (<strong>true</strong> - checked, <strong>false</strong> - unchecked).</p>"
+        "description": "<p>The checkbox form value (<b>true</b> - checked, <b>false</b> - unchecked).</p>"
       },
       {
         "type": "string",
