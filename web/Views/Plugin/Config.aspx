@@ -310,7 +310,7 @@
             <tr class="tablerow">
                 <td id="store-screenshots" class="copy-link">variations.store.screenshots</td>
                 <td>Images that are used for the plugin description in <b>ONLYOFFICE Plugin Marketplace</b>.</td>
-                <td>array of strings</td>
+                <td>Array.&lt;string&gt;</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
