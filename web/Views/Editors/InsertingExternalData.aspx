@@ -16,7 +16,7 @@
     <p class="dscr">The reference figure and the steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Document Server.</p>
     <img alt="Inserting external data" src="<%= Url.Content("~/content/img/editor/inserting-external-data.png") %>" />
     <ol>
-        <li>The user copies the special data to the clipboard from the <b>document editor</b> of the source spreadsheet.</li>
+        <li>The user copies the cell value to the clipboard from the <b>document editor</b> of the source spreadsheet. At the same time, the special data is also copied.</li>
         <li>The user inserts the copied data into the <b>document editor</b> of the destination spreadsheet.</li>
         <li>The <b>document editor</b> requests a link to the source file by sending the data to the <b>document manager</b>.</li>
         <li>The <b>document manager</b> sends the source spreadsheet link to the <b>document editor</b>.</li>
@@ -115,11 +115,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             </table>
             <div class="mobile-content"></div>
             <p>The data update request to the file will be sent to the file URL.</p>
+            <note>Please note that you can enter a formula of the specified format in the cell, and the data from the extrenal file will be inserted as well.
+                But in this case, the <em>onRequestReferenceData</em> event will be executed only with the <em>path</em> parameter.</note>
         </li>
         <li>
             <p>When the user is trying to refresh data from the source file by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab,
                 the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is called. An object with the unique file data received
-                from the source file and the file path or name are sent in the <em>data</em> parameter:</p>
+                from the source file and the file path or name are sent in the <em>data</em> parameter.</p>
+            <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
+                If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
             <pre>
 var onRequestReferenceData = function (event) {
     var referenceData = event.data.referenceData;

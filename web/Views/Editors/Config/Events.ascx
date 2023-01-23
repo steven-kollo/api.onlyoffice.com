@@ -576,6 +576,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             To refresh data by a link to a file which is specified with the event parameters, you must call the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.
             An object with the unique file data and the file path or name are sent in the <em>data</em> parameter. If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.
         </p>
+        <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
+        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
         <div class="img-block-2">
             <div>
                 <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
