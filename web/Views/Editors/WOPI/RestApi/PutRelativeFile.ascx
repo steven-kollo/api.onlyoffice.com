@@ -44,6 +44,7 @@
             </tr>
         </tbody>
     </table>
+	<div class="mobile-content"></div>
 
     <div class="header-gray">Query parameters</div>
     <table class="table">
@@ -67,6 +68,7 @@
             </tr>
         </tbody>
     </table>
+	<div class="mobile-content"></div>
 
     <div class="header-gray">Request headers</div>
     <table class="table">
@@ -111,6 +113,7 @@
             </tr>
         </tbody>
     </table>
+	<div class="mobile-content"></div>
 
     <div class="header-gray">Request body</div>
     <p>The request body must contain the full file contents in the binary format.</p>
@@ -147,6 +150,7 @@
             </tr>
         </tbody>
     </table>
+	<div class="mobile-content"></div>
 
     <div class="header-gray">Response body</div>
     <table class="table">
@@ -191,3 +195,4 @@
             </tr>
         </tbody>
     </table>
+	<div class="mobile-content"></div>
