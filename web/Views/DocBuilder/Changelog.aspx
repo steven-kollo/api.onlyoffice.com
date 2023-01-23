@@ -16,6 +16,68 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <h2 id="73" class="copy-link">Version 7.3</h2>
+    <p><b>Comment methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/addcomment") %>">ApiBlockLvlSdt/AddComment</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment") %>">ApiComment</a> class to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/addreply") %>">ApiComment/AddReply</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/delete") %>">ApiComment/Delete</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getautorname") %>">ApiComment/GetAutorName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getclasstype") %>">ApiComment/GetClassType</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getquotetext") %>">ApiComment/GetQuoteText</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getrepliescount") %>">ApiComment/GetRepliesCount</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getreply") %>">ApiComment/GetReply</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/gettext") %>">ApiComment/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/gettime") %>">ApiComment/GetTime</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/gettimeutc") %>">ApiComment/GetTimeUTC</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getuserid") %>">ApiComment/GetUserId</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/issolved") %>">ApiComment/IsSolved</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/removereplies") %>">ApiComment/RemoveReplies</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/setautorname") %>">ApiComment/SetAutorName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/setsolved") %>">ApiComment/SetSolved</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/settext") %>">ApiComment/SetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/settime") %>">ApiComment/SetTime</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/settimeutc") %>">ApiComment/SetTimeUTC</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/setuserid") %>">ApiComment/SetUserId</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply") %>">ApiCommentReply</a> class to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/getautorname") %>">ApiCommentReply/GetAutorName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/getclasstype") %>">ApiCommentReply/GetClassType</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/gettext") %>">ApiCommentReply/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/getuserid") %>">ApiCommentReply/GetUserId</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/setautorname") %>">ApiCommentReply/SetAutorName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/settext") %>">ApiCommentReply/SetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/setuserid") %>">ApiCommentReply/SetUserId</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getallcomments") %>">ApiDocument/GetAllComments</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getcommentbyid") %>">ApiDocument/GetCommentById</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/addcomment") %>">ApiInlineLvlSdt/AddComment</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirange/addcomment") %>">ApiRange/AddComment</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/addcomment") %>">ApiRun/AddComment</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/addcomment") %>">ApiTable/AddComment</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getcomments") %>">Api/GetComments</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>Table of contents/figures methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/addtableofcontents") %>">ApiDocument/AddTableOfContents</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/addtableoffigures") %>">ApiDocument/AddTableOfFigures</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/addcaption") %>">ApiParagraph/AddCaption</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Other methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/setbackgroundcolor") %>">ApiBlockLvlSdt/SetBackgroundColor</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getstatistics") %>">ApiDocument/GetStatistics</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/setcontrolshighlight") %>">ApiDocument/SetControlsHighlight</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirange/getrange") %>">ApiRange/GetRange</a> method to Text document API.</li>
+    </ul>
+
+
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <p><b>Events</b></p>
     <ul>

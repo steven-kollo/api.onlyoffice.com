@@ -37,12 +37,13 @@
             <% foreach(var p in section.Params) { %>
                 <tr class="tablerow">
                     <td><em><%= p.Name %></em></td>
-                    <td><%= DocBuilderDocumentation.ParamTypeToHtml(p) %></td>
+                    <td><%= DocBuilderDocumentation.Instance.ParamTypeToHtml(p) %></td>
                     <td><%= p.Description %></td>
                 </tr>
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 
     <% if (section.Properties != null && section.Properties.Any()) { %>
@@ -65,6 +66,7 @@
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 
     <h2>Methods</h2>
@@ -84,6 +86,7 @@
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <% if (section.Events != null && section.Events.Any()) { %>
     <h2>Events</h2>
@@ -103,6 +106,7 @@
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 
     <% if (section.Example != null) { %>

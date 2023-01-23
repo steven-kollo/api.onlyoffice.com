@@ -587,7 +587,7 @@
       },
       "returns": [
         [
-          "boolean"
+          "ApiComment"
         ]
       ],
       "see": null,
@@ -595,14 +595,14 @@
       "params": [
         {
           "type": "string",
-          "name": "Comment",
-          "description": "<p>The comment text.</p>",
+          "name": "sText",
+          "description": "<p>The comment text (required).</p>",
           "optional": false
         },
         {
           "type": "string",
-          "name": "Autor",
-          "description": "<p>The author's name (not obligatory).</p>",
+          "name": "sAutor",
+          "description": "<p>The author's name (optional).</p>",
           "optional": false
         }
       ]
@@ -902,7 +902,44 @@
       ],
       "see": null,
       "inherits": null,
-      "params": []
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bWriteDefaultTextPr",
+          "description": "<p>Specifies if the default text properties will be written to the JSON object or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWriteDefaultParaPr",
+          "description": "<p>Specifies if the default paragraph properties will be written to the JSON object or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWriteTheme",
+          "description": "<p>Specifies if the document theme will be written to the JSON object or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWriteSectionPr",
+          "description": "<p>Specifies if the document section properties will be written to the JSON object or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWriteNumberings",
+          "description": "<p>Specifies if the document numberings will be written to the JSON object or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWriteStyles",
+          "description": "<p>Specifies if the document styles will be written to the JSON object or not.</p>",
+          "optional": false
+        }
+      ]
     },
     "GetAllForms": {
       "memberof": "ApiDocument",
@@ -971,6 +1008,48 @@
           "description": "<p>Defines that highlight will not be set.</p>",
           "optional": true,
           "defaultValue": false
+        }
+      ]
+    },
+    "GetAllComments": {
+      "memberof": "ApiDocument",
+      "name": "GetAllComments",
+      "description": "<p>Returns all comments from the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiComment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetCommentById": {
+      "memberof": "ApiDocument",
+      "name": "GetCommentById",
+      "description": "<p>Returns a comment from the current document by its ID.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiComment"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sId",
+          "description": "<p>The comment ID.</p>",
+          "optional": false
         }
       ]
     },
@@ -1062,7 +1141,7 @@
         {
           "type": "CaptionLabel | string",
           "name": "sCaption",
-          "description": "<p>The caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
+          "description": "<p>The caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot;, or another caption label).</p>",
           "optional": false
         }
       ]
@@ -1230,6 +1309,118 @@
       "returns": [
         [
           "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetControlsHighlight": {
+      "memberof": "ApiDocument",
+      "name": "SetControlsHighlight",
+      "description": "<p>Sets the highlight to the content controls from the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that highlight will not be set.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddTableOfContents": {
+      "memberof": "ApiDocument",
+      "name": "AddTableOfContents",
+      "description": "<p>Adds a table of content to the current document.\n<note>Please note that the new table of contents replaces the existing table of contents.</note></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TocPr",
+          "name": "oTocPr",
+          "description": "<p>Table of contents properties.</p>",
+          "optional": true,
+          "defaultValue": "{}"
+        }
+      ]
+    },
+    "AddTableOfFigures": {
+      "memberof": "ApiDocument",
+      "name": "AddTableOfFigures",
+      "description": "<p>Adds a table of figures to the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TofPr",
+          "name": "oTofPr",
+          "description": "<p>Table of figures properties.\n<note>Please note that the table of figures properties will be filled with the default properties if they are undefined.</note></p>",
+          "optional": true,
+          "defaultValue": "{}"
+        },
+        {
+          "type": "boolean",
+          "name": "bReplace",
+          "description": "<p>Specifies whether to replace the selected table of figures instead of adding a new one.</p>",
+          "optional": true,
+          "defaultValue": true
+        }
+      ]
+    },
+    "GetStatistics": {
+      "memberof": "ApiDocument",
+      "name": "GetStatistics",
+      "description": "<p>Returns the document statistics represented as an object with the following parameters:</p>\n<ul>\n<li><strong>PageCount</strong> - number of pages;</li>\n<li><strong>WordsCount</strong> - number of words;</li>\n<li><strong>ParagraphCount</strong> - number of paragraphs;</li>\n<li><strong>SymbolsCount</strong> - number of symbols;</li>\n<li><strong>SymbolsWSCount</strong> - number of symbols with spaces.</li>\n</ul>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "object"
         ]
       ],
       "see": null,

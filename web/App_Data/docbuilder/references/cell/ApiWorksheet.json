@@ -258,8 +258,14 @@
       "inherits": null,
       "params": [
         {
-          "type": "string",
-          "name": "sRange",
+          "type": "string | ApiRange",
+          "name": "Range1",
+          "description": "<p>The range of cells from the current sheet.</p>",
+          "optional": false
+        },
+        {
+          "type": "string | ApiRange",
+          "name": "Range2",
           "description": "<p>The range of cells from the current sheet.</p>",
           "optional": false
         }
@@ -813,6 +819,12 @@
           "type": "string",
           "name": "sAddress",
           "description": "<p>The link address.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "subAddress",
+          "description": "<p>The link subaddress to insert internal sheet hyperlinks.</p>",
           "optional": false
         },
         {

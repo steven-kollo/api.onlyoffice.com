@@ -19,8 +19,8 @@
     </h1>
     <table class="table hover">
         <colgroup>
-            <col style="width: 25%" />
-            <col style="width: 40%" />
+            <col class="table-name" />
+            <col />
             <col />
         </colgroup>
         <thead>
@@ -67,8 +67,8 @@
     </h1>
     <table class="table hover">
         <colgroup>
-            <col style="width: 25%" />
-            <col style="width: 40%" />
+            <col class="table-name" />
+            <col />
             <col />
         </colgroup>
         <thead>

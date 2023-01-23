@@ -415,7 +415,7 @@
     <li>
         <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>
         <ul>
-            <% foreach (var entry in DocBuilderDocumentation.GetModule("word")) { %>
+            <% foreach (var entry in DocBuilderDocumentation.Instance.GetModule("word")) { %>
                 <li>
                     <a href="<%= Url.Action(string.Format("textdocumentapi/{0}", entry.Key.ToLower())) %>"> <%= entry.Key %></a>
                     <ul>
@@ -438,7 +438,7 @@
     <li>
         <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>
         <ul>
-            <% foreach (var entry in DocBuilderDocumentation.GetModule("cell")) { %>
+            <% foreach (var entry in DocBuilderDocumentation.Instance.GetModule("cell")) { %>
                 <li>
                     <a href="<%= Url.Action(string.Format("spreadsheetapi/{0}", entry.Key.ToLower())) %>"> <%= entry.Key %></a>
                     <ul>
@@ -462,7 +462,7 @@
     <li>
         <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>
         <ul>
-            <% foreach (var entry in DocBuilderDocumentation.GetModule("slide")) { %>
+            <% foreach (var entry in DocBuilderDocumentation.Instance.GetModule("slide")) { %>
                 <li>
                     <a href="<%= Url.Action(string.Format("presentationapi/{0}", entry.Key.ToLower())) %>"> <%= entry.Key %></a>
                     <ul>
@@ -486,7 +486,7 @@
     <li>
         <a href="<%= Url.Action("formapi") %>">Form API</a>
         <ul>
-            <% foreach (var entry in DocBuilderDocumentation.GetModule("form")) { %>
+            <% foreach (var entry in DocBuilderDocumentation.Instance.GetModule("form")) { %>
                 <li>
                     <a href="<%= Url.Action(string.Format("formapi/{0}", entry.Key.ToLower())) %>"> <%= entry.Key %></a>
                     <ul>

@@ -1,10 +1,10 @@
 'use strict';
 let fs = require('fs');
 let data;
-exports.publish = function(taffyData) {
+exports.publish = function (taffyData) {
     data = taffyData;
     let main_data = {};
-    data().each(function(doclet) {
+    data().each(function (doclet) {
         if (!doclet.undocumented) {
             if (doclet.kind === "class") {
                 create_class_if_not_exist(doclet, main_data);
@@ -97,8 +97,8 @@ function add_event(doclet, main_data) {
     event.tags = get_tags(doclet.tags);
     event.see = doclet.see ? doclet.see[0] : null;
 
-    if (doclet.properties) {
-        event.properties = get_props(doclet.properties);
+    if (doclet.params) {
+        event.params = get_params(doclet.params);
     }
 
     main_data[doclet.memberof].events[event.name] = event;
