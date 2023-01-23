@@ -6,6 +6,10 @@
 - editors: added the scheme for editing binary document formats
 - editors: added the convert action to the WOPI discovery
 - editors: added the PutRelativeFile WOPI operation
+- editors: added the Inserting external data page
+- editors: added the setReferenceData method
+- editors: added the events.onRequestReferenceData event
+- editors: added the document.referenceData parameter
 - editors: added the mode field to the editorConfig.customization.layout.leftMenu and editorConfig.customization.layout.rightMenu parameters
 - editors: added the editorConfig.customization.font parameter
 - editors: added the EnableInsertRemoteImage, CopyPasteRestrictions, SupportsLocks, and SupportsUpdate CheckFileInfo properties
