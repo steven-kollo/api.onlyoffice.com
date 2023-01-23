@@ -1412,7 +1412,7 @@
     "GetStatistics": {
       "memberof": "ApiDocument",
       "name": "GetStatistics",
-      "description": "<p>Returns the document statistics represented as an object with the following parameters:</p>\n<ul>\n<li><strong>PageCount</strong> - number of pages;</li>\n<li><strong>WordsCount</strong> - number of words;</li>\n<li><strong>ParagraphCount</strong> - number of paragraphs;</li>\n<li><strong>SymbolsCount</strong> - number of symbols;</li>\n<li><strong>SymbolsWSCount</strong> - number of symbols with spaces.</li>\n</ul>",
+      "description": "<p>Returns the document statistics represented as an object with the following parameters:</p>\n<ul>\n<li><b>PageCount</b> - number of pages;</li>\n<li><b>WordsCount</b> - number of words;</li>\n<li><b>ParagraphCount</b> - number of paragraphs;</li>\n<li><b>SymbolsCount</b> - number of symbols;</li>\n<li><b>SymbolsWSCount</b> - number of symbols with spaces.</li>\n</ul>",
       "tags": {
         "typeofeditors": [
           "CDE"

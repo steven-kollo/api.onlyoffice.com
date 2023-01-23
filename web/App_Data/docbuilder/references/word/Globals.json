@@ -55,7 +55,7 @@
   },
   "BorderType": {
     "name": "BorderType",
-    "description": "<p>A border type which will be added to the document element.</p>\n<ul>\n<li><strong>&quot;none&quot;</strong> - no border will be added to the created element or the selected element side.</li>\n<li><strong>&quot;single&quot;</strong> - a single border will be added to the created element or the selected element side.</li>\n</ul>",
+    "description": "<p>A border type which will be added to the document element.</p>\n<ul>\n<li><b>&quot;none&quot;</b> - no border will be added to the created element or the selected element side.</li>\n<li><b>&quot;single&quot;</b> - a single border will be added to the created element or the selected element side.</li>\n</ul>",
     "type": [
       "\"none\"",
       "\"single\""
@@ -95,7 +95,7 @@
   },
   "HdrFtrType": {
     "name": "HdrFtrType",
-    "description": "<p>Header and footer types which can be applied to the document sections.</p>\n<ul>\n<li><strong>&quot;default&quot;</strong> - a header or footer which can be applied to any default page.</li>\n<li><strong>&quot;title&quot;</strong> - a header or footer which is applied to the title page.</li>\n<li><strong>&quot;even&quot;</strong> - a header or footer which can be applied to even pages to distinguish them from the odd ones (which will be considered default).</li>\n</ul>",
+    "description": "<p>Header and footer types which can be applied to the document sections.</p>\n<ul>\n<li><b>&quot;default&quot;</b> - a header or footer which can be applied to any default page.</li>\n<li><b>&quot;title&quot;</b> - a header or footer which is applied to the title page.</li>\n<li><b>&quot;even&quot;</b> - a header or footer which can be applied to even pages to distinguish them from the odd ones (which will be considered default).</li>\n</ul>",
     "type": [
       "\"default\"",
       "\"title\"",
@@ -104,7 +104,7 @@
   },
   "TableWidth": {
     "name": "TableWidth",
-    "description": "<p>The possible values for the units of the width property are defined by a specific table or table cell width property.</p>\n<ul>\n<li><strong>&quot;auto&quot;</strong> - sets the table or table cell width to auto width.</li>\n<li><strong>&quot;twips&quot;</strong> - sets the table or table cell width to be measured in twentieths of a point.</li>\n<li><strong>&quot;nul&quot;</strong> - sets the table or table cell width to be of a zero value.</li>\n<li><strong>&quot;percent&quot;</strong> - sets the table or table cell width to be measured in percent to the parent container.</li>\n</ul>",
+    "description": "<p>The possible values for the units of the width property are defined by a specific table or table cell width property.</p>\n<ul>\n<li><b>&quot;auto&quot;</b> - sets the table or table cell width to auto width.</li>\n<li><b>&quot;twips&quot;</b> - sets the table or table cell width to be measured in twentieths of a point.</li>\n<li><b>&quot;nul&quot;</b> - sets the table or table cell width to be of a zero value.</li>\n<li><b>&quot;percent&quot;</b> - sets the table or table cell width to be measured in percent to the parent container.</li>\n</ul>",
     "type": [
       "\"auto\"",
       "\"twips\"",
@@ -114,7 +114,7 @@
   },
   "TableStyleOverrideType": {
     "name": "TableStyleOverrideType",
-    "description": "<p>This simple type specifies possible values for the table sections to which the current conditional formatting properties will be applied when this selected table style is used.</p>\n<ul>\n<li><strong>&quot;topLeftCell&quot;</strong> - specifies that the table formatting is applied to the top left cell.</li>\n<li><strong>&quot;topRightCell&quot;</strong> - specifies that the table formatting is applied to the top right cell.</li>\n<li><strong>&quot;bottomLeftCell&quot;</strong> - specifies that the table formatting is applied to the bottom left cell.</li>\n<li><strong>&quot;bottomRightCell&quot;</strong> - specifies that the table formatting is applied to the bottom right cell.</li>\n<li><strong>&quot;firstRow&quot;</strong> - specifies that the table formatting is applied to the first row.</li>\n<li><strong>&quot;lastRow&quot;</strong> - specifies that the table formatting is applied to the last row.</li>\n<li><strong>&quot;firstColumn&quot;</strong> - specifies that the table formatting is applied to the first column. Any subsequent row which is in <em>table header</em> ({@link ApiTableRowPr#SetTableHeader}) will also use this conditional format.</li>\n<li><strong>&quot;lastColumn&quot;</strong> - specifies that the table formatting is applied to the last column.</li>\n<li><strong>&quot;bandedColumn&quot;</strong> - specifies that the table formatting is applied to odd numbered groupings of rows.</li>\n<li><strong>&quot;bandedColumnEven&quot;</strong> - specifies that the table formatting is applied to even numbered groupings of rows.</li>\n<li><strong>&quot;bandedRow&quot;</strong> - specifies that the table formatting is applied to odd numbered groupings of columns.</li>\n<li><strong>&quot;bandedRowEven&quot;</strong> - specifies that the table formatting is applied to even numbered groupings of columns.</li>\n<li><strong>&quot;wholeTable&quot;</strong> - specifies that the conditional formatting is applied to the whole table.</li>\n</ul>",
+    "description": "<p>This simple type specifies possible values for the table sections to which the current conditional formatting properties will be applied when this selected table style is used.</p>\n<ul>\n<li><b>&quot;topLeftCell&quot;</b> - specifies that the table formatting is applied to the top left cell.</li>\n<li><b>&quot;topRightCell&quot;</b> - specifies that the table formatting is applied to the top right cell.</li>\n<li><b>&quot;bottomLeftCell&quot;</b> - specifies that the table formatting is applied to the bottom left cell.</li>\n<li><b>&quot;bottomRightCell&quot;</b> - specifies that the table formatting is applied to the bottom right cell.</li>\n<li><b>&quot;firstRow&quot;</b> - specifies that the table formatting is applied to the first row.</li>\n<li><b>&quot;lastRow&quot;</b> - specifies that the table formatting is applied to the last row.</li>\n<li><b>&quot;firstColumn&quot;</b> - specifies that the table formatting is applied to the first column. Any subsequent row which is in <em>table header</em> ({@link ApiTableRowPr#SetTableHeader}) will also use this conditional format.</li>\n<li><b>&quot;lastColumn&quot;</b> - specifies that the table formatting is applied to the last column.</li>\n<li><b>&quot;bandedColumn&quot;</b> - specifies that the table formatting is applied to odd numbered groupings of rows.</li>\n<li><b>&quot;bandedColumnEven&quot;</b> - specifies that the table formatting is applied to even numbered groupings of rows.</li>\n<li><b>&quot;bandedRow&quot;</b> - specifies that the table formatting is applied to odd numbered groupings of columns.</li>\n<li><b>&quot;bandedRowEven&quot;</b> - specifies that the table formatting is applied to even numbered groupings of columns.</li>\n<li><b>&quot;wholeTable&quot;</b> - specifies that the conditional formatting is applied to the whole table.</li>\n</ul>",
     "type": [
       "\"topLeftCell\"",
       "\"topRightCell\"",
@@ -624,7 +624,7 @@
   },
   "TickLabelPosition": {
     "name": "TickLabelPosition",
-    "description": "<p>Possible values for the position of chart tick labels (either horizontal or vertical).</p>\n<ul>\n<li><strong>&quot;none&quot;</strong> - not display the selected tick labels.</li>\n<li><strong>&quot;nextTo&quot;</strong> - sets the position of the selected tick labels next to the main label.</li>\n<li><strong>&quot;low&quot;</strong> - sets the position of the selected tick labels in the part of the chart with lower values.</li>\n<li><strong>&quot;high&quot;</strong> - sets the position of the selected tick labels in the part of the chart with higher values.</li>\n</ul>",
+    "description": "<p>Possible values for the position of chart tick labels (either horizontal or vertical).</p>\n<ul>\n<li><b>&quot;none&quot;</b> - not display the selected tick labels.</li>\n<li><b>&quot;nextTo&quot;</b> - sets the position of the selected tick labels next to the main label.</li>\n<li><b>&quot;low&quot;</b> - sets the position of the selected tick labels in the part of the chart with lower values.</li>\n<li><b>&quot;high&quot;</b> - sets the position of the selected tick labels in the part of the chart with higher values.</li>\n</ul>",
     "type": [
       "\"none\"",
       "\"nextTo\"",
@@ -634,7 +634,7 @@
   },
   "BlipFillType": {
     "name": "BlipFillType",
-    "description": "<p>The type of a fill which uses an image as a background.</p>\n<ul>\n<li><strong>&quot;tile&quot;</strong> - if the image is smaller than the shape which is filled, the image will be tiled all over the created shape surface.</li>\n<li><strong>&quot;stretch&quot;</strong> - if the image is smaller than the shape which is filled, the image will be stretched to fit the created shape surface.</li>\n</ul>",
+    "description": "<p>The type of a fill which uses an image as a background.</p>\n<ul>\n<li><b>&quot;tile&quot;</b> - if the image is smaller than the shape which is filled, the image will be tiled all over the created shape surface.</li>\n<li><b>&quot;stretch&quot;</b> - if the image is smaller than the shape which is filled, the image will be stretched to fit the created shape surface.</li>\n</ul>",
     "type": [
       "\"tile\"",
       "\"stretch\""
@@ -818,7 +818,7 @@
   },
   "numberedRefTo": {
     "name": "numberedRefTo",
-    "description": "<p>Available values of the &quot;numbered&quot; reference type:</p>\n<ul>\n<li><strong>&quot;pageNum&quot;</strong> - the numbered item page number;</li>\n<li><strong>&quot;paraNum&quot;</strong> - the numbered item paragraph number;</li>\n<li><strong>&quot;noCtxParaNum&quot;</strong> - the abbreviated paragraph number (the specific item only, e.g. instead of &quot;4.1.1&quot; you refer to &quot;1&quot; only);</li>\n<li><strong>&quot;fullCtxParaNum&quot;</strong> - the full paragraph number, e.g. &quot;4.1.1&quot;;</li>\n<li><strong>&quot;text&quot;</strong> - the paragraph text value, e.g. if you have &quot;4.1.1. Terms and Conditions&quot;, you refer to &quot;Terms and Conditions&quot; only;</li>\n<li><strong>&quot;aboveBelow&quot;</strong> - the words &quot;above&quot; or &quot;below&quot; depending on the item position.</li>\n</ul>",
+    "description": "<p>Available values of the &quot;numbered&quot; reference type:</p>\n<ul>\n<li><b>&quot;pageNum&quot;</b> - the numbered item page number;</li>\n<li><b>&quot;paraNum&quot;</b> - the numbered item paragraph number;</li>\n<li><b>&quot;noCtxParaNum&quot;</b> - the abbreviated paragraph number (the specific item only, e.g. instead of &quot;4.1.1&quot; you refer to &quot;1&quot; only);</li>\n<li><b>&quot;fullCtxParaNum&quot;</b> - the full paragraph number, e.g. &quot;4.1.1&quot;;</li>\n<li><b>&quot;text&quot;</b> - the paragraph text value, e.g. if you have &quot;4.1.1. Terms and Conditions&quot;, you refer to &quot;Terms and Conditions&quot; only;</li>\n<li><b>&quot;aboveBelow&quot;</b> - the words &quot;above&quot; or &quot;below&quot; depending on the item position.</li>\n</ul>",
     "type": [
       "\"pageNum\"",
       "\"paraNum\"",
@@ -830,7 +830,7 @@
   },
   "headingRefTo": {
     "name": "headingRefTo",
-    "description": "<p>Available values of the &quot;heading&quot; reference type:</p>\n<ul>\n<li><strong>&quot;text&quot;</strong> - the entire heading text;</li>\n<li><strong>&quot;pageNum&quot;</strong> - the heading page number;</li>\n<li><strong>&quot;headingNum&quot;</strong> - the heading sequence number;</li>\n<li><strong>&quot;noCtxHeadingNum&quot;</strong> - the abbreviated heading number. Make sure the cursor pointer is in the section you are referencing to, e.g. you are in section 4 and you wish to refer to heading 4.B, so instead of &quot;4.B&quot; you receive &quot;B&quot; only;</li>\n<li><strong>&quot;fullCtxHeadingNum&quot;</strong> - the full heading number even if the cursor pointer is in the same section;</li>\n<li><strong>&quot;aboveBelow&quot;</strong> - the words &quot;above&quot; or &quot;below&quot; depending on the item position.</li>\n</ul>",
+    "description": "<p>Available values of the &quot;heading&quot; reference type:</p>\n<ul>\n<li><b>&quot;text&quot;</b> - the entire heading text;</li>\n<li><b>&quot;pageNum&quot;</b> - the heading page number;</li>\n<li><b>&quot;headingNum&quot;</b> - the heading sequence number;</li>\n<li><b>&quot;noCtxHeadingNum&quot;</b> - the abbreviated heading number. Make sure the cursor pointer is in the section you are referencing to, e.g. you are in section 4 and you wish to refer to heading 4.B, so instead of &quot;4.B&quot; you receive &quot;B&quot; only;</li>\n<li><b>&quot;fullCtxHeadingNum&quot;</b> - the full heading number even if the cursor pointer is in the same section;</li>\n<li><b>&quot;aboveBelow&quot;</b> - the words &quot;above&quot; or &quot;below&quot; depending on the item position.</li>\n</ul>",
     "type": [
       "\"text\"",
       "\"pageNum\"",
@@ -842,7 +842,7 @@
   },
   "bookmarkRefTo": {
     "name": "bookmarkRefTo",
-    "description": "<p>Available values of the &quot;bookmark&quot; reference type:</p>\n<ul>\n<li><strong>&quot;text&quot;</strong> - the entire bookmark text;</li>\n<li><strong>&quot;pageNum&quot;</strong> - the bookmark page number;</li>\n<li><strong>&quot;paraNum&quot;</strong> - the bookmark paragraph number;</li>\n<li><strong>&quot;noCtxParaNum&quot;</strong> - the abbreviated paragraph number (the specific item only, e.g. instead of &quot;4.1.1&quot; you refer to &quot;1&quot; only);</li>\n<li><strong>&quot;fullCtxParaNum&quot;</strong> - the full paragraph number, e.g. &quot;4.1.1&quot;;</li>\n<li><strong>&quot;aboveBelow&quot;</strong> - the words &quot;above&quot; or &quot;below&quot; depending on the item position.</li>\n</ul>",
+    "description": "<p>Available values of the &quot;bookmark&quot; reference type:</p>\n<ul>\n<li><b>&quot;text&quot;</b> - the entire bookmark text;</li>\n<li><b>&quot;pageNum&quot;</b> - the bookmark page number;</li>\n<li><b>&quot;paraNum&quot;</b> - the bookmark paragraph number;</li>\n<li><b>&quot;noCtxParaNum&quot;</b> - the abbreviated paragraph number (the specific item only, e.g. instead of &quot;4.1.1&quot; you refer to &quot;1&quot; only);</li>\n<li><b>&quot;fullCtxParaNum</b> - the full paragraph number, e.g. &quot;4.1.1&quot;;</li>\n<li><b>&quot;aboveBelow&quot;</b> - the words &quot;above&quot; or &quot;below&quot; depending on the item position.</li>\n</ul>",
     "type": [
       "\"text\"",
       "\"pageNum\"",
@@ -854,7 +854,7 @@
   },
   "footnoteRefTo": {
     "name": "footnoteRefTo",
-    "description": "<p>Available values of the &quot;footnote&quot; reference type:</p>\n<ul>\n<li><strong>&quot;footnoteNum&quot;</strong> - the footnote number;</li>\n<li><strong>&quot;pageNum&quot;</strong> - the page number of the footnote;</li>\n<li><strong>&quot;aboveBelow&quot;</strong> - the words &quot;above&quot; or &quot;below&quot; depending on the position of the item;</li>\n<li><strong>&quot;formFootnoteNum&quot;</strong> - the form number formatted as a footnote. The numbering of the actual footnotes is not affected.</li>\n</ul>",
+    "description": "<p>Available values of the &quot;footnote&quot; reference type:</p>\n<ul>\n<li><b>&quot;footnoteNum&quot;</b> - the footnote number;</li>\n<li><b>&quot;pageNum&quot;</b> - the page number of the footnote;</li>\n<li><b>&quot;aboveBelow&quot;</b> - the words &quot;above&quot; or &quot;below&quot; depending on the position of the item;</li>\n<li><b>&quot;formFootnoteNum&quot;</b> - the form number formatted as a footnote. The numbering of the actual footnotes is not affected.</li>\n</ul>",
     "type": [
       "\"footnoteNum\"",
       "\"pageNum\"",
@@ -864,7 +864,7 @@
   },
   "endnoteRefTo": {
     "name": "endnoteRefTo",
-    "description": "<p>Available values of the &quot;endnote&quot; reference type:</p>\n<ul>\n<li><strong>&quot;endnoteNum&quot;</strong> - the endnote number;</li>\n<li><strong>&quot;pageNum&quot;</strong> - the endnote page number;</li>\n<li><strong>&quot;aboveBelow&quot;</strong> - the words &quot;above&quot; or &quot;below&quot; depending on the item position;</li>\n<li><strong>&quot;formEndnoteNum&quot;</strong> - the form number formatted as an endnote. The numbering of the actual endnotes is not affected.</li>\n</ul>",
+    "description": "<p>Available values of the &quot;endnote&quot; reference type:</p>\n<ul>\n<li><b>&quot;endnoteNum&quot;</b> - the endnote number;</li>\n<li><b>&quot;pageNum&quot;</b> - the endnote page number;</li>\n<li><b>&quot;aboveBelow&quot;</b> - the words &quot;above&quot; or &quot;below&quot; depending on the item position;</li>\n<li><b>&quot;formEndnoteNum&quot;</b> - the form number formatted as an endnote. The numbering of the actual endnotes is not affected.</li>\n</ul>",
     "type": [
       "\"endnoteNum\"",
       "\"pageNum\"",
@@ -874,7 +874,7 @@
   },
   "captionRefTo": {
     "name": "captionRefTo",
-    "description": "<p>Available values of the &quot;equation&quot;/&quot;figure&quot;/&quot;table&quot; reference type:</p>\n<ul>\n<li><strong>&quot;entireCaption&quot;</strong> - the entire caption text;</li>\n<li><strong>&quot;labelNumber&quot;</strong> - the label and object number only, e.g. &quot;Table 1.1&quot;;</li>\n<li><strong>&quot;captionText&quot;</strong> - the caption text only;</li>\n<li><strong>&quot;pageNum&quot;</strong> - the page number containing the referenced object;</li>\n<li><strong>&quot;aboveBelow&quot;</strong> - the words &quot;above&quot; or &quot;below&quot; depending on the item position.</li>\n</ul>",
+    "description": "<p>Available values of the &quot;equation&quot;/&quot;figure&quot;/&quot;table&quot; reference type:</p>\n<ul>\n<li><b>&quot;entireCaption&quot;</b>- the entire caption text;</li>\n<li><b>&quot;labelNumber&quot;</b> - the label and object number only, e.g. &quot;Table 1.1&quot;;</li>\n<li><b>&quot;captionText&quot;</b> - the caption text only;</li>\n<li><b>&quot;pageNum&quot;</b> - the page number containing the referenced object;</li>\n<li><b>&quot;aboveBelow&quot;</b> - the words &quot;above&quot; or &quot;below&quot; depending on the item position.</li>\n</ul>",
     "type": [
       "\"entireCaption\"",
       "\"labelNumber\"",
@@ -940,7 +940,7 @@
   },
   "CaptionNumberingFormat": {
     "name": "CaptionNumberingFormat",
-    "description": "<p>Possible values for the caption numbering format.</p>\n<ul>\n<li><strong>&quot;ALPHABETIC&quot;</strong> - upper letter.</li>\n<li><strong>&quot;alphabetic&quot;</strong> - lower letter.</li>\n<li><strong>&quot;Roman&quot;</strong> - upper Roman.</li>\n<li><strong>&quot;roman&quot;</strong> - lower Roman.</li>\n<li><strong>&quot;Arabic&quot;</strong> - arabic.</li>\n</ul>",
+    "description": "<p>Possible values for the caption numbering format.</p>\n<ul>\n<li><b>&quot;ALPHABETIC&quot;</b> - upper letter.</li>\n<li><b>&quot;alphabetic&quot;</b> - lower letter.</li>\n<li><b>&quot;Roman&quot;</b> - upper Roman.</li>\n<li><b>&quot;roman&quot;</b> - lower Roman.</li>\n<li><b>&quot;Arabic&quot;</b> - arabic.</li>\n</ul>",
     "type": [
       "\"ALPHABETIC\"",
       "\"alphabetic\"",
@@ -951,7 +951,7 @@
   },
   "CaptionSep": {
     "name": "CaptionSep",
-    "description": "<p>Possible values for the caption separator.</p>\n<ul>\n<li><strong>&quot;hyphen&quot;</strong> - &quot;-&quot;.</li>\n<li><strong>&quot;period&quot;</strong> - &quot;.&quot;.</li>\n<li><strong>&quot;colon&quot;</strong> - &quot;:&quot;.</li>\n<li><strong>&quot;longDash&quot;</strong> - &quot;—&quot;.</li>\n<li><strong>&quot;dash&quot;</strong> - &quot;-&quot;.</li>\n</ul>",
+    "description": "<p>Possible values for the caption separator.</p>\n<ul>\n<li><b>&quot;hyphen&quot;</b> - the &quot;-&quot; punctuation mark.</li>\n<li><b>&quot;period&quot;</b> - the &quot;.&quot; punctuation mark.</li>\n<li><b>&quot;colon&quot;</b> - the &quot;:&quot; punctuation mark.</li>\n<li><b>&quot;longDash&quot;</b> - the &quot;—&quot; punctuation mark.</li>\n<li><b>&quot;dash&quot;</b> - the &quot;-&quot; punctuation mark.</li>\n</ul>",
     "type": [
       "\"hyphen\"",
       "\"period\"",
@@ -1092,7 +1092,7 @@
   },
   "TocLeader": {
     "name": "TocLeader",
-    "description": "<p>Possible values for the table of contents leader:</p>\n<ul>\n<li><strong>&quot;dot&quot;</strong> - &quot;.......&quot;</li>\n<li><strong>&quot;dash&quot;</strong> - &quot;-------&quot;</li>\n<li><strong>&quot;underline&quot;</strong> - &quot;_______&quot;</li>\n</ul>",
+    "description": "<p>Possible values for the table of contents leader:</p>\n<ul>\n<li><b>&quot;dot&quot;</b> - &quot;.......&quot;</li>\n<li><b>&quot;dash&quot;</b> - &quot;-------&quot;</li>\n<li><b>&quot;underline&quot;</b> - &quot;_______&quot;</li>\n</ul>",
     "type": [
       "\"dot\"",
       "\"dash\"",

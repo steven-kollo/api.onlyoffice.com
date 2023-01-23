@@ -109,7 +109,7 @@
         {
           "type": "string",
           "name": "sLabel",
-          "description": "<p>The label which will be added to the current container. Can be a positive or negative integer from <strong>-2147483647</strong> to <strong>2147483647</strong>.</p>",
+          "description": "<p>The label which will be added to the current container. Can be a positive or negative integer from <b>-2147483647</b> to <b>2147483647</b>.</p>",
           "optional": false
         }
       ]

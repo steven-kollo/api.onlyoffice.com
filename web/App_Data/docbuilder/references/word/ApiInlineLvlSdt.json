@@ -109,7 +109,7 @@
         {
           "type": "string",
           "name": "sLabel",
-          "description": "<p>The label which will be added to the current inline text content control. Can be a positive or negative integer from <strong>-2147483647</strong> to <strong>2147483647</strong>.</p>",
+          "description": "<p>The label which will be added to the current inline text content control. Can be a positive or negative integer from <b>-2147483647</b> to <b>2147483647</b>.</p>",
           "optional": false
         }
       ]
@@ -273,7 +273,7 @@
         {
           "type": "ParagraphContent",
           "name": "oElement",
-          "description": "<p>The document element which will be added at the position specified. Returns <strong>false</strong> if the type of <em>oElement</em> is not supported by an inline text content control.</p>",
+          "description": "<p>The document element which will be added at the position specified. Returns <b>false</b> if the type of <em>oElement</em> is not supported by an inline text content control.</p>",
           "optional": false
         },
         {
