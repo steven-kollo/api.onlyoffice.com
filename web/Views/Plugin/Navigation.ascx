@@ -487,6 +487,9 @@
              <li>
                 <a href="<%= Url.Action("macrosamples/removeshapes") %>">Remove shapes from slides</a>
             </li>
+             <li>
+                <a href="<%= Url.Action("macrosamples/insertid") %>">Insert unique id</a>
+            </li>
         </ul>
     <li>
 </ul>

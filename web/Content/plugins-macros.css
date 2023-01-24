@@ -117,6 +117,10 @@
     background-repeat: no-repeat;
 }
 
+.assign_unique_id {
+    background-image: url("img/macros/assign_unique_id.svg");
+    background-repeat: no-repeat;
+}
 .example-plug-img {
     height: 120px;
     margin: auto;
