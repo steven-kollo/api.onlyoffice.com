@@ -23,6 +23,10 @@
                "Item2":"demopreview"
             },
             {
+               "Item1":"Frontend frameworks",
+               "Item2":"frameworks"
+            },
+            {
                "Item1":"Ready-to-use connectors",
                "Item2":"plugins"
             },
@@ -219,6 +223,10 @@
                "Item2":"gettingstarted"
             },
             {
+               "Item1":"Try now",
+               "Item2":"try"
+            },
+            {
                "Item1":"Integrating Builder",
                "Item2":"integratingdocumentbuilder"
             },
@@ -375,6 +383,10 @@
             {
                "Item1":"project",
                "Item2":"section/project"
+            },
+            {
+               "Item1":"security",
+               "Item2":"section/security"
             },
             {
                "Item1":"settings",
