@@ -84,7 +84,7 @@
 
         var documentType = "<%= documentType %>";
         var methodNames = [];
-        var sections = <%= Newtonsoft.Json.JsonConvert.SerializeObject(DocBuilderDocumentation.GetModule(documentType)) %>;
+        var sections = <%= Newtonsoft.Json.JsonConvert.SerializeObject(DocBuilderDocumentation.Instance.GetModule(documentType)) %>;
 
         for (var section in sections) {
             for (var md in sections[section].methods) {
@@ -105,7 +105,7 @@
             }
         }
 
-        <% var defaultMethod = DocBuilderDocumentation.GetMethod(documentType, "api", "save"); %>
+        <% var defaultMethod = DocBuilderDocumentation.Instance.GetMethod(documentType, "api", "save"); %>
         $("#builderScript").val("<%= Regex.Replace(defaultMethod.Example.Script.Replace("\"", "\\\""), @"\r\n|\n", "") %>".replaceAll(";", ";\n"));
 
         var postScript = function () {
