@@ -22,8 +22,8 @@
         <li>Added the <em>sign</em> type to the <a href="<%= Url.Action("config") %>#initDataType">initDataType</a> config parameter.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/common/getvbamacros") %>">GetVBAMacros</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/common/ondropevent") %>">OnDropEvent</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/spreadsheet") %>">Spreadsheet Api</a> methods to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/presentation") %>">Presentation Api</a> methods to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/cell") %>">Spreadsheet Api</a> methods to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide") %>">Presentation Api</a> methods to <em>window.Asc.plugin.executeMethod</em>.</li>
     
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <ul>

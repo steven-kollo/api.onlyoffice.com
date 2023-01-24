@@ -190,9 +190,9 @@
     <li><a href="<%= Url.Action("events/onTranslate") %>">onTranslate</a></li>
     <li><a href="<%= Url.Action("callcommand") %>">callCommand</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
-    <li><a href="<%= Url.Action("executemethod/getimagedatafromselection") %>">executeMethod ("GetImageDataFromSelection")</a></li>
-    <li><a href="<%= Url.Action("executemethod/getversion") %>">executeMethod ("GerVersion")</a></li>
-    <li><a href="<%= Url.Action("executemethod/putimagedatatoselection") %>">executeMethod ("PutImageDataToSelection")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/getimagedatafromselection") %>">executeMethod ("GetImageDataFromSelection")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/getversion") %>">executeMethod ("GerVersion")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/putimagedatatoselection") %>">executeMethod ("PutImageDataToSelection")</a></li>
     <li><a href="<%= Url.Action("resizewindow") %>">resizeWindow</a></li>
     <li><a href="<%= Url.Action("scope") %>">Asc.scope object</a></li>
     <li><a href="<%= Url.Action("info") %>#editorType">info.editorType</a></li>
