@@ -1101,6 +1101,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetTime.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetTimeUTC.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetAutorName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetText.docbuilder" />
@@ -1869,6 +1870,8 @@
     <Content Include="App_Data\docbuilder\references\word\ApiChart.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiCheckBoxForm.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiComboBoxForm.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiComment.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiCommentReply.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiComplexForm.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiDocument.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiDocumentContent.json" />
@@ -2864,9 +2867,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.docbuilder" />
-    <Content Include="App_Data\docbuilder\references\word\ApiComment.json" />
-    <Content Include="App_Data\docbuilder\references\word\ApiCommentReply.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
