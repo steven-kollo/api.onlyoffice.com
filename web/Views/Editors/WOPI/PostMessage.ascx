@@ -86,7 +86,7 @@ otherWindow.postMessage (msg, targetOrigin)
             <tr>
                 <td id="App_LoadingStatus" class="copy-link">App_LoadingStatus</td>
                 <td>This message is posted after the online office application frame was loaded. 
-                    Until the host receives this message, it must assume that the online office frame cannot react to any incoming messages except <em>Host_PostmessageReady</em>.</td>
+                    Until the host receives this message, it must assume that the online office frame cannot react to any incoming messages except <a href="#Host_PostmessageReady">Host_PostmessageReady</a>.</td>
             </tr>
             <tr>
                 <td id="Blur_Focus" class="copy-link">Blur_Focus</td>
@@ -112,7 +112,7 @@ otherWindow.postMessage (msg, targetOrigin)
             <tr>
                 <td id="Host_PostmessageReady" class="copy-link">Host_PostmessageReady</td>
                 <td>This message is posted by the host when it finishes loading. Then the online office frame receives <em>Host_PostmessageReady</em>,
-                finishes loading, and sends the <a href="#App_LoadingStatus">App_LoadingStatus</a> message to the host page. After that, all the other PostMessage messages become available..</td>
+                finishes loading, and sends the <a href="#App_LoadingStatus">App_LoadingStatus</a> message to the host page. After that, all the other PostMessage messages become available.</td>
             </tr>
             <tr>
                 <td id="UI_Close" class="copy-link">UI_Close</td>
