@@ -67,6 +67,7 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <p>在这里，您可以找到可供 ONLYOFFICE Docs 发送到主机页面的消息。Online office接收消息的过程将在稍后提供。</p>
     <div class="header-gray">可用消息</div>
@@ -88,6 +89,12 @@ otherWindow.postMessage (msg, targetOrigin)
                     在主机收到此消息之前，它必须假定online office 框架无法对除 <em>Host_PostmessageReady</em>之外的任何传入消息做出反应。</td>
             </tr>
             <tr>
+                <td id="Blur_Focus" class="copy-link">Blur_Focus</td>
+                <td>This message is posted by the host to stop the online office application from aggressively grabbing focus.
+                    Hosts should send this message whenever the host application UI is drawn over the online office frame so that the online office application does not interfere with the host UI behavior.
+                    This message is used only for the edit modes. It does not affect view modes.</td>
+            </tr>
+            <tr>
                 <td id="Edit_Notification" class="copy-link">Edit_Notification</td>
                 <td>此消息在用户首次对文档进行编辑时被发布，此后每五分钟被发布一次(如果用户在过去五分钟内进行了编辑)。
                     主机可以使用此消息来衡量用户是否正在与online office进行交互。在共同创作会话中，主机不能为此目的使用 WOPI 调用。</td>
@@ -95,6 +102,17 @@ otherWindow.postMessage (msg, targetOrigin)
             <tr>
                 <td id="File_Rename" class="copy-link">File_Rename</td>
                 <td>当用户重命名online office中的当前文件时，会发布此消息。主机可以使用此消息选择性地更新 UI，例如页面标题。</td>
+            </tr>
+            <tr>
+                <td id="Grab_Focus" class="copy-link">Grab_Focus</td>
+                <td>This message is posted by the host to resume aggressively grabbing focus by the online office application.
+                    Hosts should send this message whenever the host application UI that's drawn over the online office frame is closing. This lets the online office application resume functioning.
+                    This message is used only for the edit modes. It does not affect view modes.</td>
+            </tr>
+            <tr>
+                <td id="Host_PostmessageReady" class="copy-link">Host_PostmessageReady</td>
+                <td>This message is posted by the host when it finishes loading. Then the online office frame receives <em>Host_PostmessageReady</em>,
+                finishes loading, and sends the <a href="#App_LoadingStatus">App_LoadingStatus</a> message to the host page. After that, all the other PostMessage messages become available.</td>
             </tr>
             <tr>
                 <td id="UI_Close" class="copy-link">UI_Close</td>
@@ -122,6 +140,7 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Collabora特性</div>
     <table class="table">
@@ -137,12 +156,18 @@ otherWindow.postMessage (msg, targetOrigin)
         </thead>
         <tbody>
             <tr>
+                <td id="Action_InsertGraphic" class="copy-link">Action_InsertGraphic</td>
+                <td>This message is posted to download an image from the URL and insert it into the document.</td>
+            </tr>
+            <tr>
                 <td id="UI_InsertGraphic" class="copy-link">UI_InsertGraphic</td>
-                <td>发布此消息以呈现用户界面元素（如对话框），允许用户从集成应用中选择图像。
-                    集成应用应该提供一个可以下载一次的临时 URL，并通过 <a href="https://sdk.collaboraonline.com/docs/postmessage_api.html#id1" target="_blank">Action_InsertGraphic</a> 消息将其返回，并将值设置为临时 URL。</td>
+                <td>This message is posted to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration.
+                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back
+                via the <a href="#Action_InsertGraphic">Action_InsertGraphic</a> message with <em>Values</em> set to the temporary URL.</td>
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <note>请注意，PostMessage 消息的优先级高于 <em>CheckFileInfo</em>中提供的 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#CloseUrl">CloseUrl</a>、
     <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#HostEditUrl">HostEditUrl</a>、<a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingUrl">FileSharingUrl</a>、

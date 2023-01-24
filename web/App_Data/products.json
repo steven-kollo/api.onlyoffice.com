@@ -3,7 +3,7 @@
       "id":"editors",
       "title":"Document Server",
       "description":"Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
-      "version":"7.2",
+      "version":"7.3",
       "links":{
          "Get Started":[
             {
@@ -21,6 +21,10 @@
             {
                "Item1":"Language-specific examples",
                "Item2":"demopreview"
+            },
+            {
+               "Item1":"Frontend frameworks",
+               "Item2":"frameworks"
             },
             {
                "Item1":"Ready-to-use connectors",
@@ -45,7 +49,7 @@
                "Item2":"methods"
             },
             {
-               "Item1":"Connector",
+               "Item1":"Automation API",
                "Item2":"connector"
             },
             {
@@ -77,6 +81,14 @@
             {
                "Item1":"PostMessage",
                "Item2":"wopi/postmessage"
+            },
+            {
+               "Item1":"Conversion API",
+               "Item2":"wopi/conversionapi"
+            },
+            {
+               "Item1":"Editing binary documents",
+               "Item2":"wopi/editingbinary"
             },
             {
                "Item1":"API vs WOPI",

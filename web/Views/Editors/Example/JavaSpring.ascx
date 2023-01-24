@@ -141,8 +141,8 @@ sudo apt-get install oracle-java11-installer</span>
         <ul>
             <li>
                 <p>下载包含 Java-Spring 示例的压缩文件并解压缩：</p>
-                <span class="commandline">wget https://api.onlyoffice.com/app_data/editor/Java-Spring%20Example.zip</span>
-                <span class="commandline">unzip Java-Spring\ Example.zip</span>
+                <span class="commandline">wget https://api.onlyoffice.com/app_data/editor/Java%20Spring%20Example.zip</span>
+                <span class="commandline">unzip Java\ Spring\ Example.zip</span>
             </li>
             <li>
                 <p>克隆 git 存储库：</p>
@@ -155,7 +155,7 @@ sudo apt-get install oracle-java11-installer</span>
         <ul>
             <li>
                 <p>在归档中：</p>
-                <div class="commandline">cd Java-Spring\ Example</div>
+                <div class="commandline">cd Java\ Spring\ Example</div>
             </li>
             <li>
                 <p>在 git 存储库中：</p>

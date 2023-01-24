@@ -79,7 +79,8 @@ npm run develop
     <p>您可以通过 Strapi <b>面板 -> 设置 -> 全局设置 -> ONLYOFFICE</b>配置 ONLYOFFICE 应用程序。在设置页面，输入：</p>
     <ul>
         <li><b>文档服务器地址</b>。安装的 ONLYOFFICE 文档服务器的 URL。</li>
-        <li><b>文档服务器 JWT 密钥</b>。为了保护您的文档免遭未经授权的访问，请启用 JWT（可以在 <a href="<%= Url.Action("signature/") %>">此处</a>找到更多信息）。</li>
+        <li><b>Document server JWT secret key</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+            Specify your own secret key on the Strapi settings page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
     </ul>
 
 

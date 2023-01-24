@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2021
+ * (c) Copyright Ascensio System SIA 2023
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -40,6 +40,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "ActionLink",
                 "Advanced",
                 "Alfresco",
+                "Angular",
                 "AnonymousUsers",
                 "Basic",
                 "Callback",
@@ -91,11 +92,13 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Security",
                 "FAQ/Sharing",
                 "FAQ/UsingWOPI",
+                "Frameworks",
                 "GetDocs",
                 "History",
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "InsertingExternalData",
                 "Jira",
                 "Liferay",
                 "Mattermost",
@@ -109,6 +112,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "React",
                 "Redmine",
                 "Rename",
                 "Review",
@@ -123,9 +127,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "Troubleshooting",
                 "Try",
                 "Viewing",
+                "Vue",
                 "WOPI",
                 "WOPI/ApiVsWopi",
+                "WOPI/ConversionApi",
                 "WOPI/Discovery",
+                "WOPI/EditingBinary",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
                 "WOPI/ProofKeys",
@@ -134,6 +141,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/RestApi/GetFile",
                 "WOPI/RestApi/Lock",
                 "WOPI/RestApi/PutFile",
+                "WOPI/RestApi/PutRelativeFile",
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
@@ -170,6 +178,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Alfresco()
+        {
+            return View();
+        }
+
+        public ActionResult Angular()
         {
             return View();
         }
@@ -305,6 +318,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Frameworks()
+        {
+            return View();
+        }
+
         public ActionResult History()
         {
             return View();
@@ -321,6 +339,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult InlineEditors()
+        {
+            return View();
+        }
+
+        public ActionResult InsertingExternalData()
         {
             return View();
         }
@@ -390,6 +413,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult React()
+        {
+            return View();
+        }
+
         public ActionResult Redmine()
         {
             return View();
@@ -445,6 +473,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Viewing()
+        {
+            return View();
+        }
+
+        public ActionResult Vue()
         {
             return View();
         }

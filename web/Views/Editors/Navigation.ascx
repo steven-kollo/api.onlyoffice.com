@@ -2,8 +2,6 @@
     Language="C#"
     Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<% var connector = !string.IsNullOrEmpty(Page.Request["connector"]); %>
-
 <div class="treeheader">开始使用</div>
 <ul class="side-nav root">
     <li>
@@ -38,6 +36,20 @@
             </li>
             <li>
                 <a href="<%= Url.Action("example/ruby") %>">Ruby示例</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="<%= Url.Action("frameworks") %>">Frontend frameworks</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("angular") %>">Angular</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("react") %>">React</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("vue") %>">Vue</a>
             </li>
         </ul>
     </li>
@@ -148,6 +160,9 @@
             <li>
                 <a href="<%= Url.Action("mobileintegration") %>">移动设备整合</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a>
+            </li>
         </ul>
     </li>
 </ul>
@@ -193,12 +208,9 @@
     <li>
         <a href="<%= Url.Action("methods") %>">方法</a>
     </li>
-    <% if (connector)
-       { %>
     <li>
-        <a href="<%= Url.Action("connector") %>?connector=true">连接器</a>
+        <a href="<%= Url.Action("connector") %>">Automation API</a>
     </li>
-    <% } %>
     <li>
         <a href="<%= Url.Action("callback") %>">回调处理程序</a>
     </li>
@@ -240,12 +252,21 @@
                 <a href="<%= Url.Action("wopi/restapi/putfile") %>">放置文件</a>
             </li>
             <li>
+                <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("wopi/restapi/renamefile") %>">重新命名文件</a>
             </li>
         </ul>
     </li>
     <li>
         <a href="<%= Url.Action("wopi/postmessage") %>">留言</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/conversionapi") %>">Conversion API</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/editingbinary") %>">Editing binary documents</a>
     </li>
     <li>
         <a href="<%= Url.Action("wopi/apivswopi") %>">API 与 WOPI</a>

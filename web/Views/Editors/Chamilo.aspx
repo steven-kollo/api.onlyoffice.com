@@ -39,6 +39,37 @@
         启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
+    <h2 id="collect" class="copy-link">Collecting Chamilo ONLYOFFICE integration plugin</h2>
+    <ol>
+        <li>
+            <p>Get the latest version of the <a href="https://github.com/ONLYOFFICE/onlyoffice-chamilo" target="_blank">repository</a> running the command:</p>
+            <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-chamilo
+cd onlyoffice-chamilo
+</span>
+        </li>
+        <li>
+            <p>Get a submodule:</p>
+            <span class="commandline">git submodule update --init --recursive</span>
+        </li>
+        <li>
+            <p>Collect all files:</p>
+            <span class="commandline">mkdir /tmp/onlyoffice-deploy
+mkdir /tmp/onlyoffice-deploy/onlyoffice
+cp -r ./ /tmp/onlyoffice-deploy/onlyoffice
+cd /tmp/onlyoffice-deploy/onlyoffice
+rm -rf ./.git*
+rm -rf */.git*
+</span>
+        </li>
+        <li>
+            <p>Archive the files obtained in the previous step:</p>
+            <span class="commandline">cd ../
+zip onlyoffice.zip -r onlyoffice
+</span>
+        </li>
+    </ol>
+
+
     <h2 id="install" class="copy-link">安装 Chamilo ONLYOFFICE 集成插件</h2>
     <p>要开始将 ONLYOFFICE Docs 与 Chamilo 一起使用，必须执行以下步骤：</p>
     <ol>
@@ -57,14 +88,17 @@
         该地址必须可从用户浏览器和 Chamilo 服务器访问。
         为了正常工作，Chamilo 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问。
     </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Chamilo <b>Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
 
     <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
+    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
     <ol>
-        <li>要创建新文件，用户打开必要的文件夹并单击ONLYOFFICE 图标 <b>新建</b>。</li>
-        <li>用户被重定向到文件创建页面，在这里需要输入文件名和格式（文本文档、电子表格或演示文稿）。
-            浏览器调用 <em>/plugin/onlyoffice/create.php</em> 方法。它将空文件的副本添加到用户文件夹。</li>
-        <li>要打开现有文件，用户选择 <b>用 ONLYOFFICE打开</b> 图标。</li>
+        <li>To create a new file, the teacher opens the necessary folder and clicks the <b>Create new</b> ONLYOFFICE icon.</li>
+        <li>The user is redirected to the file creation page where they need to enter the file name and format (text document, spreadsheet, or presentation).
+            The browser calls the <em>/plugin/onlyoffice/create.php</em> method. It adds a copy of an empty file to the course folder.</li>
+        <li>To open an existing file, the user chooses the <b>Open with ONLYOFFICE</b> icon.</li>
         <li>
             <p>请求被发送到 <em>/plugin/onlyoffice/editor.php?docId="document identificator"</em>。
             服务器处理请求，生成具有以下属性的编辑器初始化配置：</p>

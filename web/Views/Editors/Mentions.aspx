@@ -69,43 +69,6 @@ docEditor.setUsers({
                 其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
                 有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
-            <table class="table">
-                <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
-                </colgroup>
-                <thead>
-                    <tr class="tablerow">
-                        <td>参数</td>
-                        <td>描述</td>
-                        <td>类型</td>
-                        <td>出现</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tablerow">
-                        <td>users</td>
-                        <td>定义用户列表。</td>
-                        <td>字符串数组</td>
-                        <td>可选的</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>users.email</td>
-                        <td>定义用户的电子邮件地址。</td>
-                        <td>string</td>
-                        <td>必需的</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>users.name</td>
-                        <td>定义用户的全名。</td>
-                        <td>string</td>
-                        <td>必需的</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="mobile-content"></div>
         </li>
     </ol>
 
@@ -144,7 +107,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 
-    <h2 id="apply-changes" class="copy-link">共享设置</h2>
+    <h2 id="sharing-setttings" class="copy-link">共享设置</h2>
     <p>当
         <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件被调用时，软件集成商提供对文件的访问，通过允许滚动到文档中评论位置的操作链接向提到的用户发送通知。
     </p>
@@ -167,43 +130,6 @@ docEditor.setSharingSettings({
     ]
 });
 </pre>
-            <table class="table">
-                <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
-                </colgroup>
-                <thead>
-                    <tr class="tablerow">
-                        <td>参数</td>
-                        <td>描述</td>
-                        <td>类型</td>
-                        <td>出现</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tablerow">
-                        <td>sharingSettings</td>
-                        <td>定义允许与其他用户共享文档的设置。</td>
-                        <td>对象数组</td>
-                        <td>可选的</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>sharingSettings.permissions</td>
-                        <td>定义具有上述名称的用户的访问权限。</td>
-                        <td>string</td>
-                        <td>可选的</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>sharingSettings.user</td>
-                        <td>定义将与之共享文档的用户的名称。</td>
-                        <td>string</td>
-                        <td>可选的</td>
-                    </tr>
-                </tbody>
-            </table>
-    <div class="mobile-content"></div>
     <p>
         在 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件不提供对文件的访问的情况下，编辑器配置的自定义部分中的 <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a> 参数必须设置为 <b>false</b>。
     </p>

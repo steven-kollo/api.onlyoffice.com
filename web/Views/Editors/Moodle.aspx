@@ -54,7 +54,8 @@
                 Moodle 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问才能正常工作。
             </p>
         </li>
-        <li>输入 <b>Document Server Secret</b> 以启用 JWT 保护您的文档免受未经授权的访问（可以在 <a href="<%= Url.Action("signature/") %>">此处</a>找到更多信息）。</li>
+        <li>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+            Specify your own <b>Document Server Secret</b> on the Moodle <b>Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
     </ul>
 
 

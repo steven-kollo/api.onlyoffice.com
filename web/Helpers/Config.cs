@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2021
+ * (c) Copyright Ascensio System SIA 2023
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -29,10 +29,14 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Web.Configuration;
+
 using JWT;
 using JWT.Algorithms;
+using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json;
+
+using System.Text.RegularExpressions;
+using System.Web.Configuration;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 
@@ -41,7 +45,7 @@ namespace ASC.Api.Web.Help.Helpers
     [DataContract(Name = "EditorConfiguration", Namespace = "")]
     public class Config
     {
-        private static string GetSignatureSecret()
+        public static string GetSignatureSecret()
         {
             var result = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
 
@@ -313,6 +317,9 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "hideRulers", EmitDefaultValue = false)]
                 public bool? HideRulers;
+
+                [DataMember(Name = "integrationMode", EmitDefaultValue = false)]
+                public string IntegrationMode;
 
                 [DataMember(Name = "logo", EmitDefaultValue = false)]
                 public LogoConfig Logo;

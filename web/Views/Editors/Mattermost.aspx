@@ -45,6 +45,11 @@
         <li>克隆 <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">主分支</a>。</li>
         <li>转到项目根目录。</li>
         <li>
+            <p>Install the dependencies:</p>
+            <span class="commandline">npm install --legacy-peer-deps</span>
+            <note>Please note that you need to have Node.js v.15.14.0 installed on your machine to build the plugin.</note>
+        </li>
+        <li>
             <p>运行以下命令：</p>
             <span class="commandline">make dist</span>
         </li>
@@ -66,7 +71,8 @@
                 也必须可以从 <b>ONLYOFFICE Docs</b> 访问 Mattermost 服务器地址才能正确工作。
             </p>
         </li>
-        <li><b>秘钥</b>。要保护您的文档免遭未经授权的访问，请启用 JWT。</li>
+        <li><b>Secret key</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+            Specify your own secret key in the Mattermost plugin configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
         <li><b>JWT 头</b>.果启用了 JWT 保护，则必须指定自定义标头名称，因为 
             Mattermost 安全策略会阻止外部 <b>授权</b> 标头此标头也应在 ONLYOFFICE Docs 签名设置中指定。
             更多关于签名的信息可以在 <a href="<%= Url.Action("signature/") %>">这里</a>找到。</li>

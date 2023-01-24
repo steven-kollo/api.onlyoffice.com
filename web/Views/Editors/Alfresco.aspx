@@ -80,8 +80,9 @@ sudo ./alfresco.sh start</span>
         您还可以将 <em>onlyoffice.url</em> 添加到 <b>alfresco-global.properties</b>。
         通过设置页面进行的配置将覆盖 <b>alfresco-global.properties</b>。
     </div>
-    <p>JWT 可以通过 <a href="#configuration">配置页面</a> 或添加 <em>onlyoffice.jwtsecret</em> 到 <b>alfresco-global.properties</b>进行配置。</p>
-    <p>文档服务器端的 JWT 配置可以在 <a href="/editors/signature/">这里</a>找到。</p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Alfresco configuration page or by adding <em>onlyoffice.jwtsecret</em> to <b>alfresco-global.properties</b>.
+        In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
     <h2 id="compile" class="copy-link">编译 ONLYOFFICE Alfresco 模块包</h2>
 
@@ -111,6 +112,7 @@ mvn clean install</span>
     <span class="commandline">docker-compose up</span>
 
     <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
+    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
     <ol>
         <li>用户导航到 Alfresco Share 中的文档并选择 <b>在ONLYOFFICE中编辑</b> 菜单选项。</li>
         <li>Alfresco Share 向 repo 端发出请求（表单URL为：<em>/parashift/onlyoffice/prepare?nodeRef={nodeRef}</em>).</li>

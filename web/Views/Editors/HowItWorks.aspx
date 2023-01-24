@@ -36,6 +36,7 @@
         <li><a href="<%= Url.Action("comparing") %>">比较文件</a></li>
         <li><a href="<%= Url.Action("viewing") %>">查看</a></li>
         <li><a href="<%= Url.Action("mobileintegration") %>">移动设备整合</a></li>
+        <li><a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a></li>
     </ul>
     
     <br />

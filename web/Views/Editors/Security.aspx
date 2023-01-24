@@ -41,10 +41,10 @@
             否则会出现错误。
         </p>
         <p>
-            在以下方法中使用本地链接时，请务必添加令牌： <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a>、
-            <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a>、 <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a>、
-            <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a>。此外，为 <a href="<%= Url.Action("config/document") %>#url">打开</a> 或
-            <a href="<%= Url.Action("conversionapi") %>#url">转换</a>定义本地 url 时，它是必要的。
+            Be sure to add a token when using local links in the following methods: <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a>, 
+            <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a>, <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a>,
+            <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a>, <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a>.
+            Moreover, it is necessary when defining the local url for <a href="<%= Url.Action("config/document") %>#url">opening</a> or <a href="<%= Url.Action("conversionapi") %>#url">conversion</a>.
         </p>
     </note>
 </asp:Content>

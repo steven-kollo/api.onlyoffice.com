@@ -55,7 +55,8 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
     <p>通过WordPress界面配置插件。转到 <b>WordPress管理仪表板->ONLYOFFICE->设置</b>，并指定以下参数：</p>
     <ul>
         <li><b>文件编辑服务地址</b>。安装的 ONLYOFFICE 文档服务器的 URL。</li>
-        <li><b>文档服务器 JWT 密钥</b>。使JWT能够保护您的文档免受未经授权的访问（更多信息可在 <a href="<%= Url.Action("signature/") %>">此处</a>找到）。</li>
+        <li><b>Document server JWT secret key</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+            Specify your own secret key in the WordPress administrative configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
     </ul>
 
 

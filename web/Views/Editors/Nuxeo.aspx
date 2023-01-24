@@ -15,7 +15,7 @@
         <span class="hdr">Nuxeo ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-nuxeo">插件</a> 使用户能够从 <a href="https://www.nuxeo.com/">Nuxeo</a> 中用 ONLYOFFICE Docs编辑办公文档。</p>
+    <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-nuxeo" target="_blank">插件</a> 使用户能够从 <a href="https://www.nuxeo.com/">Nuxeo</a> 中用 ONLYOFFICE Docs编辑办公文档。</p>
     
     <h2 id="features" class="copy-link">特性</h2>
 
@@ -36,22 +36,27 @@
 
     <h2 id="installing-nuxeo-onlyoffice-integration-plugin" class="copy-link">安装 Nuxeo ONLYOFFICE 集成插件</h2>
 
-    <p>从 <a href="https://connect.nuxeo.com/nuxeo/site/marketplace">市场</a>安装它。</p>
+    <p>从 <a href="https://connect.nuxeo.com/nuxeo/site/marketplace" target="_blank">市场</a>安装它。</p>
 
-    <p>您也可以使用 <a href="https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/">nuxeoctl</a>安装它。</p>
+    <p>您也可以使用 <a href="https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/" target="_blank">nuxeoctl</a>安装它。</p>
 
     <span class="commandline">nuxeoctl mp-install /path/to/onlyoffice-nuxeo-package-x.x.zip</span>
 
     <h2 id="configuring-nuxeo-onlyoffice-integration-plugin" class="copy-link">配置 Nuxeo ONLYOFFICE 集成插件</h2>
 
-    <p>编辑 <a href="https://doc.nuxeo.com/nxdoc/configuration-parameters-index-nuxeoconf/">nuxeo.conf</a> 并添加以下行：</p>
+    <p>编辑 <a href="https://doc.nuxeo.com/nxdoc/configuration-parameters-index-nuxeoconf/" target="_blank">nuxeo.conf</a> 并添加以下行：</p>
 
-    <pre>onlyoffice.docserv.url=http://documentserver/
-onlyoffice.jwt.secret=</pre>
+    <pre>onlyoffice.docserv.url=http://documentserver/</pre>
 
-    <p>如果您使用 Docker 安装 ONLYOFFICE Docs，请使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer/#available-configuration-parameters">此 repo</a> 中的信息来配置 JWT。</p>
+    <p>
+        where the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.
+        The address must be accessible from the user browser and from the Nuxeo server.
+        The Nuxeo server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
+    </p>
 
-    <p>如果您使用了其他安装选项，请查看用于在 Document Server 端配置 JWT 的 <a href="https://api.onlyoffice.com/editors/signature/">API 文档</a> 。</p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own secret key by adding the <b>onlyoffice.jwt.secret=yoursecret</b> line to the <em>nuxeo.conf</em> file.
+        In the ONLYOFFICE Docs <a href="/editors/signature/" target="_blank">config file</a>, specify the same secret key and enable the validation.</p>
 
     <h2 id="compiling-nuxeo-onlyoffice-plugin" class="copy-link">编译 Nuxeo ONLYOFFICE 插件</h2>
 
@@ -67,7 +72,7 @@ sudo apt-get install openjdk-8-jdk</pre>
         </li>
         <li>
             <p>
-                安装最新的 <b>Maven</b>。<a href="https://maven.apache.org/install.html">此处</a>描述了安装过程。
+                安装最新的 <b>Maven</b>。<a href="https://maven.apache.org/install.html" target="_blank">此处</a>描述了安装过程。
             </p>
         </li>
         <li>

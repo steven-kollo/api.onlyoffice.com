@@ -37,6 +37,9 @@
     <ul>
         <li>目前可以使用此应用程序打开和编辑以下文档格式：DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM。</li>
         <li>以下格式仅供查看：PDF, DJVU, XPS。</li>
+        <li>以下格式可以转换为OOXML：DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX。
+            ODT、ODS 和 ODP 也可用于即时转换。在管理设置中启用相应选项后，ODF 格式的文档会立即在编辑器中转换并在您单击后打开。
+        </li>
         <li>
             该应用程序将在 <b>新建 (+)</b> 菜单中创建一个菜单项，这个菜单项用来创建 <b>文档</b>、 <b>电子表格</b>或 <b>演示文稿</b>。
             它还将在 Office 文档的文档库中创建一个新的 <b>在 ONLYOFFICE 中打开</b> 菜单选项。
@@ -44,9 +47,6 @@
             在连接到一个文档服务器的多个联合 ownCloud 实例之间也可以进行共同编辑。
         </li>
         <li>可以使用不同的权限类型共享文件 - 查看/编辑、评论、审查、填写表单。也可以限制下载（在所有编辑器中）和修改过滤器（在电子表格中）。也可以通过公共链接分享。</li>
-        <li>以下格式可以转换为OOXML：DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX。
-            ODT、ODS 和 ODP 也可用于即时转换。在管理设置中启用相应选项后，ODF 格式的文档会立即在编辑器中转换并在您单击后打开。
-        </li>
         <li>可以在 <b>ownCloud Web</b>中处理文档、电子表格和演示文稿。</li>
     </ul>
 
@@ -60,8 +60,8 @@
     <p>
         ONLYOFFICE Docs 和 ownCloud 可以安装在不同的计算机上，也可以安装在同一台机器上。
         如果您选择后一种变体，您需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE Docs 和 ownCloud 都在端口 80 上工作。
-        或者您可以在代理后面使用文档服务器，请参阅 <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">此文</a> 了解如何配置它。</p>
-    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+        或者您可以在代理后面使用文档服务器，请参阅 <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx" target="_blank">此文</a> 了解如何配置它。
+    </p>
     <p>您还可以使用我们的 <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud">Docker 安装</a> 通过几个命令来安装和配置文档服务器和 ownCloud 安装。</p>
 
 
@@ -120,11 +120,8 @@ git submodule update --init --recursive</span>
     </p>
     <img alt="公共网络" src="<%= Url.Content("~/content/img/editor/owncloud-public.jpg") %>" />
 
-    <p>
-        为了限制对 ONLYOFFICE Docs 的访问，出于安全原因和数据完整性，使用了加密签名。
-        在 ownCloud 管理配置中指定 <b>Secret key</b>。
-        在 ONLYOFFICE Docs <a href="<%= Url.Action("signature") %>">配置文件</a> 中指定相同的secret key并启用验证。
-    </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> in the ownCloud administrative configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
     <p>启用或禁用 <b>在同一选项卡中打开文件</b> 设置。</p>
 
@@ -132,6 +129,12 @@ git submodule update --init --recursive</span>
         在 <b>ONLYOFFICE 中打开</b> 操作将被添加到文件上下文菜单中。
         您可以将此操作指定为默认操作，当单击所选文件类型的文件名时将使用该操作。
     </p>
+
+    <h2 id="check-connection" class="copy-link">Checking the connection</h2>
+    <p>You can check the connection to ONLYOFFICE Docs by using the following occ command:</p>
+    <span class="commandline">occ onlyoffice:documentserver --check</span>
+    <p>You will see a text either with information about the successful connection or the cause of the error.</p>
+
 
     <h2 id="ownCloud-web" class="copy-link">为 ownCloud Web 启用编辑</h2>
     <p>要在 <b>ownCloud Web</b>中启用工作，请在 ownCloud Web <em>config.json</em>中注册连接器：</p>
@@ -148,8 +151,10 @@ git submodule update --init --recursive</span>
     }
 ]
 </pre>
+    <p>Depending on your webserver configuration you can drop the <em>index.php</em> segment from the URL path.</p>
     
     <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
+    <p>The ONLYOFFICE integration follows the API documented <a href="https://api.onlyoffice.com/editors/basic">here</a>.</p>
     <ol>
         <li>创建新文件时，用户导航到 ownCloud 中的文档文件夹，然后单击 <b>新建 (+)</b>菜单中的 <b>文档</b> 、 <b>电子表格</b> 或 <b>演示文稿</b> 菜单项。</li>
         <li>
@@ -163,10 +168,8 @@ git submodule update --init --recursive</span>
             <ul>
                 <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL；</li>
                 <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>documentServerUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (can be set at the administrative settings page);</li>
                 <li><b>key</b> ： <em>UUID+Modified Timestamp</em> 指示 ONLYOFFICE Docs 是否再次下载文档；</li>
-                <li><b>title</b> - 文档标题（名称）；</li>
-                <li><b>id</b> - 用户标识；</li>
-                <li><b>name</b> - 用户名。</li>
             </ul>
         </li>
         <li>ownCloud获取这个对象并从 <em>templates/editor.php</em> 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>

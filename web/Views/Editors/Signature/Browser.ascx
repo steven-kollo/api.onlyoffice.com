@@ -64,7 +64,7 @@
 
 <ul>
     <li>
-        <p><b id="insertImage" class="copy-link">insertImage</b> - 调用 <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> 方法将图像插入文件时，必须添加 <a href="<%= Url.Action("config/") %>#token">令牌</a> 以验证参数。</p>
+        <p><b id="insertImage" class="copy-link">insertImage</b> - 调用 <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> 方法将图像插入文件时，必须添加 <a href="<%= Url.Action("methods") %>#insertImage-token">令牌</a> 以验证参数。</p>
 
         <p>
             JSON 格式的 JWT 令牌的 <em>有效负载</em> 必须与方法参数具有相同的结构。
@@ -86,7 +86,7 @@
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UucG5nIn0.FXuC3GUvPq3japwyzo4i-utUe3g1rfSDt1ytuK_VyCc</pre>
     </li>
     <li>
-        <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - 在 ONLYOFFICE 文档服务器中调用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法查看文档 <a href="<%= Url.Action("history") %>">历史</a> 版本时，必须添加 <a href="<%= Url.Action("config/") %>#token">令牌</a> 以验证参数。</p>
+        <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - 在 ONLYOFFICE 文档服务器中调用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法查看文档 <a href="<%= Url.Action("history") %>">历史</a> 版本时，必须添加 <a href="<%= Url.Action("methods") %>#setHistoryData-token">令牌</a> 以验证参数。</p>
 
         <p>
             JSON 格式的 JWT 令牌的 <em>有效负载</em> 必须与方法参数具有相同的结构。
@@ -114,7 +114,7 @@
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.7gaOe1_4OvgRLYD0oGk_bMrVdPaLmgZVNIgQCUQdgoE</pre>
     </li>
     <li>
-        <p><b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - 当调用 <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> 方法将邮件合并的收件人数据插入文件时，必须添加 <a href="<%= Url.Action("config/") %>#token">令牌</a> 以验证参数。</p>
+        <p><b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - 当调用 <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> 方法将邮件合并的收件人数据插入文件时，必须添加 <a href="<%= Url.Action("methods") %>#setMailMergeRecipients-token">令牌</a> 以验证参数。</p>
 
         <p>
             JSON 格式的 JWT 令牌的 <em>有效负载</em> 必须与方法参数具有相同的结构。
@@ -136,11 +136,38 @@
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ</pre>
     </li>
     <li>
-        <p><b id="setRevisedFile" class="copy-link">setRevisedFile</b> - 当调用 <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> 方法来选择一个文档进行比较时，必须添加 <a href="<%= Url.Action("config/") %>#token">令牌</a> 来验证参数。</p>
+        <p><b id="setRevisedFile" class="copy-link">setRevisedFile</b> - 当调用 <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> 方法来选择一个文档进行比较时，必须添加 <a href="<%= Url.Action("methods") %>#setReferenceData-token">令牌</a> 来验证参数。</p>
 
         <p>
             JSON 格式的 JWT 令牌的 <em>有效负载</em> 必须与方法参数具有相同的结构。
             要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
+        </p>
+
+        <pre>
+{
+    "fileType": "xlsx",
+    "path": "sample.xlsx",
+    "referenceData": {
+        "fileKey": "BCFA2CED",
+        "instanceId": "https://example.com"
+    },
+    "url": "https://example.com/url-to-example-document.xlsx"
+}
+</pre>
+        <p>
+            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+
+        <div class="header-gray">Sample token</div>
+        <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w</pre>
+    </li>
+    <li>
+        <p><b id="setRevisedFile" class="copy-link">setRevisedFile</b> - when calling the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method to select a document for comparing, the <a href="<%= Url.Action("methods") %>#setRevisedFile-token">token</a> must be added to validate the parameters.</p>
+
+        <p>
+            The <em>payload</em> for the JWT token in the JSON format must have the same structure as the method parameter.
+            The parameter list to be signed is not strictly regulated, but we recommend that you specify all the parameter sent:
         </p>
 
         <pre>

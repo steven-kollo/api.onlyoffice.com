@@ -35,6 +35,7 @@
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
 
         <div class="header-gray">示例</div>
         <pre>
@@ -94,6 +95,7 @@
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
 
         <div class="header-gray">示例</div>
         <pre>

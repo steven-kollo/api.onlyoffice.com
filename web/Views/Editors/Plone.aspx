@@ -42,13 +42,12 @@
     <p>要开始使用带有 Plone 的 ONLYOFFICE Docs，必须执行以下步骤：</p>
     <ol>
         <li>通过将插件添加到您的 <em>buildout.cfg</em>来安装插件：
-            <span class="commandline">
-[buildout]
+            <span class="commandline">[buildout]
 
 ...
 
 eggs =
-    onlyoffice.connector
+    onlyoffice.plone
             </span>
         </li>
 
@@ -59,10 +58,11 @@ eggs =
 
     <p>你也可以通过 Docker 安装插件：</p>
     <span class="commandline">
-docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.connector" plone
+docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
     </span>
 
-    <p>这两个选项都会自动从 <a target="_blank" href="https://pypi.org/project/onlyoffice.connector/">PyPi</a>安装插件。</p>
+    <p>这两个选项都会自动从 <a target="_blank" href="https://pypi.org/project/onlyoffice.plone/">PyPi</a>安装插件。</p>
+    <note>Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name <em>onlyoffice.connector</em>), please remove it before installing the new version.</note>
 
     <h2 id="configuration" class="copy-link">配置 Plone ONLYOFFICE 集成插件</h2>
 
@@ -70,6 +70,9 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.connector" plone
         要配置插件，请转到 <b>站点设置</b>。
         向下滚动到 <b>附加组件配置</b> 部分，然后按 <b>ONLYOFFICE 配置</b> 按钮。
     </p>
+
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Plone configuration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
     <h2 id="developing" class="copy-link">开发 Plone ONLYOFFICE 插件</h2>
 
@@ -101,18 +104,17 @@ virtualenv .
         如果你有一个工作的 Plone 实例，你可以通过将项目文件添加到 <em>scr</em> 目录来安装插件：
     </p>
     <ol>
-        <li>在 <em>scr</em> 目录中创建 <em>onlyoffice.connector</em> 目录。</li>
-        <li>将 Git 收到的项目文件放入 <em>onlyoffice.connector</em> 目录。</li>
+        <li>在 <em>scr</em> 目录中创建 <em>onlyoffice.plone</em> 目录。</li>
+        <li>将 Git 收到的项目文件放入 <em>onlyoffice.plone</em> 目录。</li>
         <li>编辑 <em>buildout.cfg</em> 文件：
-            <span class="commandline">
-[buildout]
+            <span class="commandline">[buildout]
 
 ...
 
 eggs =
-    onlyoffice.connector
+    onlyoffice.plone
 develop = 
-    src/onlyoffice.connector
+    src/onlyoffice.plone
             </span>
         </li>
         <li>重新运行 buildout 以使更改生效：
@@ -130,23 +132,23 @@ develop =
     <h2 id="upgrade" class="copy-link">升级 Plone ONLYOFFICE 集成插件</h2>
 
     <ol>
-        <li>如果您在 <em>buildout.cfg</em> 文件中指定了具体的插件版本（所谓的pinning，及推荐的做法），例如 <em>onlyoffice.connector = 1.0.0</em>，请更新此引用以指向较新的版本。
+        <li>如果您在 <em>buildout.cfg</em> 文件中指定了具体的插件版本（所谓的pinning，及推荐的做法），例如 <em>onlyoffice.plone = 1.0.0</em>，请更新此引用以指向较新的版本。
             如果未指定插件版本，则将自动加载最新版本：
-            <span class="commandline">
-[versions]
+            <span class="commandline">[versions]
 
 ...
 
-onlyoffice.connector = 1.0.1
+onlyoffice.plone = 1.0.1
             </span>
         </li>
         <li>运行 <em>bin/buildout</em>。等到下载并安装新版本。</li>
         <li>重新启动克隆。在您执行下一步之前，您的网站可能看起来很奇怪，甚至无法访问。</li>
-        <li>导航到 <b>附加组件</b> 屏幕（将 <em>/prefs_install_products_form</em> 添加到您的站点 URL）并在 <b>升级</b> 列表中选择 <b>onlyoffice.connector</b> 并单击 <b>升级 onlyoffice.connector</b>。</li>
+        <li>导航到 <b>附加组件</b> 屏幕（将 <em>/prefs_install_products_form</em> 添加到您的站点 URL）并在 <b>升级</b> 列表中选择 <b>onlyoffice.plone</b> 并单击 <b>升级 onlyoffice.plone</b>。</li>
     </ol>
 
 
     <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
+    <p>The ONLYOFFICE integration follows the API documented <a href="https://api.onlyoffice.com/editors/basic">here</a>.</p>
     <ol>
         <li>用户导航到 Plone 中的文档并选择 <b>ONLYOFFICE 编辑</b> 操作。</li>
         <li>

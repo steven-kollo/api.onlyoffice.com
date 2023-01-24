@@ -84,7 +84,7 @@ https://&lt;documentserver&gt;/
 </pre>
     <p>其中 <b>documentserver</b> 是安装了ONLYOFFICE 文档服务器的服务器的名称。必须可以从用户浏览器和Drupal服务器访问该地址。
         为了正确运行，Drupal服务器地址还必须可以从ONLYOFFICE 文档服务器访问。</p>
-    <p>为了限制对ONLYOFFICE文档服务器的访问，并出于安全原因和数据完整性，使用加密签名。
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
         在Drupal管理配置中指定 <b>密钥</b>。在ONLYOFFICE 文档服务器 <a href="<%= Url.Action("signature") %>">配置文件</a> 中，指定相同的密钥并启用验证。</p>
 
     <h2 id="usage" class="copy-link">使用Drupal ONLYOFFICE连接器模块</h2>

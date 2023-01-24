@@ -25,10 +25,10 @@
     <h2 id="request" class="copy-link">请求参数及其说明：</h2>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -39,7 +39,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="tablerow">
+            <tr>
                 <td id="async" class="copy-link">async</td>
                 <td>
                     定义转换请求类型：异步与否。<br />
@@ -54,6 +54,12 @@
                 </td>
                 <td>boolean</td>
                 <td>可选的</td>
+            </tr>
+            <tr class="tablerow tablerow-note">
+                <td colspan="4">
+                    <div class="note">If the conversion is synchronous and the file takes a long time to be converted, a web request timeout error may occur.
+                        Although the conversion can be eventually completed, the result can only be obtained by sending the request again with the same key.</div>
+                </td>
             </tr>
             <tr class="tablerow">
                 <td id="codePage" class="copy-link">codePage</td>
@@ -198,11 +204,16 @@
                 <td>string</td>
                 <td>可选的</td>
             </tr>
-            <tr class="tablerow">
+            <tr>
                 <td id="spreadsheetLayout" class="copy-link">spreadsheetLayout</td>
                 <td>定义将电子表格转换为 pdf 的设置。</td>
                 <td>对象</td>
                 <td>可选的</td>
+            </tr>
+            <tr class="tablerow tablerow-note">
+                <td colspan="4">
+                    <div class="note">Please note that the maximum number of pages that can be returned at once after converting a spreadsheet into pdf or image formats is no more than 1500.</div>
+                </td>
             </tr>
             <tr class="tablerow">
                 <td id="fitToHeight" class="copy-link">spreadsheetLayout.fitToHeight</td>
@@ -456,8 +467,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
@@ -884,6 +895,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <h2 id="spreadsheet-matrix" class="copy-link">电子表格文件格式</h2>
     <table class="table-conversion-matrix-spreadsheet">
@@ -1086,6 +1098,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <h2 id="presentation-matrix" class="copy-link">演示文稿格式</h2>
     <table class="table-conversion-matrix-presentation">
@@ -1291,6 +1304,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div id="sample-conversion" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于将文件从 <em>docx</em> 格式转换为 <em>pdf</em> 格式</div>
     <pre>
@@ -1400,10 +1414,10 @@
     </p>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -1446,6 +1460,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">XML 格式的响应示例</div>
     <p>在形成结果文件的链接时，使用与转换请求相同的服务器名称。</p>
@@ -1504,7 +1519,7 @@
     <div id="error-codes" class="copy-link header-gray">可能的错误代码及其描述</div>
     <table class="error-table">
         <colgroup>
-            <col style="width: 105px;" />
+            <col class="table-name" />
             <col />
         </colgroup>
         <thead>

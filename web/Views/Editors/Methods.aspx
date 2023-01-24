@@ -11,8 +11,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <% var connector = !string.IsNullOrEmpty(Page.Request["connector"]); %>
-
     <h1>
         <span class="hdr">方法</span>
     </h1>
@@ -23,10 +21,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
     <ul>
-        <% if (connector)
-           { %>
         <li><a href="#createConnector">createConnector</a> - 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。</li>
-        <% } %>
         <li><a href="#denyEditingRights">denyEditingRights</a> - 拒绝编辑。</li>
         <li><a href="#destroyEditor">destroyEditor</a> - 销毁 <em>docEditor</em> 对象。</li>
         <li><a href="#downloadAs">downloadAs</a> - 下载编辑后的文件。</li>
@@ -37,6 +32,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setFavorite">setFavorite</a> - 更改 <em>收藏</em> 图标状态。</li>
         <li><a href="#setHistoryData">setHistoryData</a> - 发送文档链接以查看版本历史。</li>
         <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - 将邮件合并的收件人数据插入文件中。</li>
+        <li><a href="#setReferenceData">setReferenceData</a> - refresh data by a link to a file.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - 选择一个文档进行比较。</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
         <li><a href="#setUsers">setUsers</a> - 设置要在评论中提及的用户列表。</li>
@@ -45,8 +41,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 
     <h2>方法及其描述：</h2>
     <ul>
-        <% if (connector)
-           { %>
         <li>
             <p>
                 <b id="createConnector" class="copy-link">createConnector</b><span class="required">*</span> - 创建 <a href="<%= Url.Action("connector") %>">连接器</a>与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。
@@ -55,7 +49,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 docEditor.createConnector();
 </pre>
         </li>
-        <% } %>
         <li>
             <p>
                 <b id="denyEditingRights" class="copy-link">denyEditingRights</b> - 拒绝编辑。
@@ -67,10 +60,10 @@ docEditor.denyEditingRights(message);
 
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -113,10 +106,10 @@ docEditor.downloadAs(format);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -176,10 +169,10 @@ docEditor.insertImage({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -236,7 +229,7 @@ docEditor.insertImage({
                         <td>string</td>
                         <td>必需的</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="insertImage-token" class="tablerow">
                         <td>token</td>
                         <td>定义以 <a href="<%= Url.Action("signature/browser") %>#insertImage">令牌</a>形式添加到参数的加密签名。</td>
                         <td>string</td>
@@ -346,10 +339,10 @@ docEditor.refreshHistory({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -395,6 +388,12 @@ docEditor.refreshHistory({
                         <td>定义服务用来识别文档的唯一文档标识符。</td>
                         <td>string</td>
                         <td>必需的</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>history.serverVersion</td>
+                        <td>Defines the current server version number.</td>
+                        <td>integer</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user</td>
@@ -449,10 +448,10 @@ docEditor.setActionLink(link);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -484,10 +483,10 @@ docEditor.setFavorite(favorite);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -549,7 +548,7 @@ docEditor.setHistoryData({
                 有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
             <p>发送错误消息，说明文档版本无法显示的原因。</p>
-            <pre>d
+            <pre>
 docEditor.setHistoryData({
     "error": "Exception",
     "version": 2
@@ -557,10 +556,10 @@ docEditor.setHistoryData({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -622,7 +621,7 @@ docEditor.setHistoryData({
                         <td>string</td>
                         <td>必需的</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setHistoryData-token" class="tablerow">
                         <td>token</td>
                         <td>定义以 <a href="<%= Url.Action("signature/browser") %>#setHistoryData">令牌</a>形式添加到参数的加密签名。</td>
                         <td>string</td>
@@ -667,10 +666,10 @@ docEditor.setMailMergeRecipients({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -690,7 +689,7 @@ docEditor.setMailMergeRecipients({
                         <td>string</td>
                         <td>必需的</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setMailMergeRecipients-token" class="tablerow">
                         <td>token</td>
                         <td>定义以 <a href="<%= Url.Action("signature/browser") %>#setMailMergeRecipients">令牌</a>形式添加到参数的加密签名。</td>
                         <td>string</td>
@@ -702,6 +701,112 @@ docEditor.setMailMergeRecipients({
                             使用本地链接时请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。否则会出现错误。</td>
                         <td>string</td>
                         <td>必需的</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+
+        <li>
+            <p>
+                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em> or <em>path</em> parameters.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event.
+            </p>
+            <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
+            <pre>
+docEditor.setReferenceData({
+    "fileType": "xlsx",
+    "path": "sample.xlsx",
+    "referenceData": {
+        "fileKey": "BCFA2CED",
+        "instanceId": "https://example.com"
+    },
+    "url": "https://example.com/url-to-example-document.xlsx"
+});
+</pre>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
+            <p>Show an error message explaining if any error occurred:</p>
+            <pre>
+docEditor.setReferenceData({
+    "error": "Exception",
+});
+</pre>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>error</td>
+                        <td>Defines the error message text.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>path</td>
+                        <td>Defines the file name or relative path for the formula editor.
+                            It is used to identify a file when the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is executed.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>referenceData</td>
+                        <td>
+                            Defines an object that is generated by the integrator to uniquely identify a file in its system.
+                            This data must be the same as in the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> config parameter:
+                            <ul>
+                                <li>
+                                    <b>fileKey</b> - the unique document identifier used by the service to get a link to the file.
+                                    It must not be changed when the document is edited and saved (i.e. it is not equal to the <a href="<%= Url.Action("config/document") %>#key">document.key</a> parameter),
+                                    <br />
+                                    <b>type</b>: string,
+                                    <br />
+                                    <b>example</b>:  "BCFA2CED";
+                                </li>
+                                <li>
+                                    <b>instanceId</b> - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another,
+                                    then pasting by link will not be available and there will be no corresponding button in the context menu,
+                                    <br />
+                                    <b>type</b>: string,
+                                    <br />
+                                    <b>example</b>:  "https://example.com".
+                                </li>
+                            </ul>
+                        </td>
+                        <td>object</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr id="setReferenceData-token" class="tablerow">
+                        <td>token</td>
+                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setReferenceData">token</a>.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>url</td>
+                        <td>Defines the URL address to download the current file.</td>
+                        <td>string</td>
+                        <td>required</td>
                     </tr>
                 </tbody>
             </table>
@@ -726,10 +831,10 @@ docEditor.setRevisedFile({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -746,7 +851,7 @@ docEditor.setRevisedFile({
                         <td>string</td>
                         <td>必需的</td>
                     </tr>
-                    <tr class="tablerow">
+                    <tr id="setRevisedFile-token" class="tablerow">
                         <td>token</td>
                         <td>定义以 <a href="<%= Url.Action("signature/browser") %>#setRevisedFile">令牌</a>形式添加到参数的加密签名。</td>
                         <td>string</td>
@@ -786,10 +891,10 @@ docEditor.setSharingSettings({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -849,10 +954,10 @@ docEditor.setUsers({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -896,10 +1001,10 @@ docEditor.showMessage(message);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -924,9 +1029,6 @@ docEditor.showMessage(message);
             </note>
         </li>
     </ul>
-    <% if (connector)
-       { %>
     <span class="required-descr"><span class="required">*</span><em> - 仅对ONLYOFFICE 开发者版本可编辑。</em></span>
-    <% } %>
 
 </asp:Content>

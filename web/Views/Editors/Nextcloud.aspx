@@ -37,13 +37,13 @@
     <ul>
         <li>目前可以使用此应用程序打开和编辑以下文档格式：DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.</li>
         <li>以下格式仅供查看：PDF。</li>
+        <li>以下格式可以转换为OOXML：DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.</li>
         <li>
             该应用程序将在 <b>新建 (+)</b> 菜单中创建一个菜单项，这个菜单项用来创建 <b>文档</b>、 <b>电子表格</b>或 <b>演示文稿</b>。
             它还将在 Office 文档的文档库中创建一个新的 <b>在 ONLYOFFICE 中打开</b> 菜单选项。
             这允许多个用户实时协作并将这些更改保存到 Nextcloud中。
             在连接到一个文档服务器的多个联合 Nextcloud 实例之间也可以进行共同编辑。
         </li>
-        <li>以下格式可以转换为OOXML：DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.</li>
     </ul>
 
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
@@ -55,7 +55,7 @@
     <p>
         ONLYOFFICE Docs 和 Nextcloud 可以安装在不同的计算机上，也可以安装在同一台机器上。
         如果您选择后一种变体，您需要为 Document Server 设置自定义端口，因为默认情况下 ONLYOFFICE Docs 和 Nextcloud 都在端口 80 上工作。
-        或者您可以在代理后面使用 Document Server，请参阅 <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">本文</a> 了解如何配置它。
+        或者您可以在代理后面使用 Document Server，请参阅 <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx" target="_blank">本文</a> 了解如何配置它。
     </p>
     <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
     <p>您还可以使用我们的 <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud">Docker 安装</a>进行安装 ，通过几个命令来安装和配置 Document Server 和 Nextcloud。</p>
@@ -117,11 +117,8 @@ git submodule update --init --recursive</span>
 
     </p>
     <img alt="公共网络" src="<%= Url.Content("~/content/img/editor/nextcloud-public.jpg") %>" />
-    <p>
-        为了限制对 ONLYOFFICE Docs 的访问，出于安全原因和数据完整性，使用了加密签名。
-        在 Nextcloud 管理配置中指定 <b>Secret key</b>。
-        在 ONLYOFFICE Docs <a href="<%= Url.Action("signature") %>">配置文件</a> 中指定相同的secret key并启用验证。
-    </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> in the Nextcloud administrative configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
     <p>启用或禁用 <b>在同一选项卡中打开文件</b> 设置。</p>
 
@@ -141,6 +138,7 @@ git submodule update --init --recursive</span>
 
 
     <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
+    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
     <ol>
         <li>创建新文件时，用户导航到 Nextcloud 中的文档文件夹，然后单击 <b>新建 (+)</b>菜单中的 <b>文档</b> 、 <b>电子表格</b> 或 <b>演示文稿</b> 菜单项。</li>
         <li>
@@ -154,10 +152,8 @@ git submodule update --init --recursive</span>
             <ul>
                 <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL；</li>
                 <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>documentServerUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (can be set at the administrative settings page);</li>
                 <li><b>key</b> ： <em>UUID+Modified Timestamp</em> 指示 ONLYOFFICE Docs 是否再次下载文档；</li>
-                <li><b>title</b> - 文档标题（名称）；</li>
-                <li><b>id</b> - 用户标识；</li>
-                <li><b>name</b> - 用户名。</li>
             </ul>
         </li>
         <li>Nextcloud 获取这个对象并从 <em>templates/editor.php</em> 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>

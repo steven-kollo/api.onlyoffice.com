@@ -18,10 +18,9 @@
 
 <table class="table">
     <colgroup>
-            <col style="width: 200px;" />
-            <col />
-            <col style="width: 200px;" />
-        </colgroup>
+        <col class="table-name" />
+        <col />
+    </colgroup>
     <thead>
         <tr class="tablerow">
             <td>命令</td>
@@ -68,10 +67,10 @@
 <div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
-        <col style="width: 100px;" />
+        <col class="table-name" />
         <col />
-        <col style="width: 150px;" />
-        <col style="width: 100px;" />
+        <col class="table-type" />
+        <col class="table-example" />
     </colgroup>
     <thead>
         <tr class="tablerow">
@@ -97,7 +96,7 @@
 <div class="header-gray">可能的错误代码及其描述</div>
 <table class="error-table">
     <colgroup>
-        <col style="width: 105px;" />
+        <col class="table-name" />
         <col />
     </colgroup>
     <thead>

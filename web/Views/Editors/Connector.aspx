@@ -6,16 +6,16 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    连接器
+    Automation API
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">连接器</span>
+        <span class="hdr">Automation API</span>
     </h1>
 
     <p class="dscr"><b>连接器</b> 是一个类，允许与文本文档、电子表格、演示文稿和外部可填充表单进行交互。
-        要创建连接器，请使用 <b>文档编辑器</b> 对象的 <a href="<%= Url.Action("methods") %>?connector=true#createConnector">createConnector</a> 方法：</p>
+        要创建连接器，请使用 <b>文档编辑器</b> 对象的 <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> 方法：</p>
     <pre>
 var connector = docEditor.createConnector()
 </pre>
@@ -39,9 +39,9 @@ var connector = docEditor.createConnector()
             <div class="header-gray">参数</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -82,9 +82,9 @@ connector.attachEvent("onChangeContentControl", function()
             <div class="header-gray">参数</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -115,6 +115,7 @@ connector.attachEvent("onChangeContentControl", function()
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
             <p>此方法在与其他JavaScript数据隔离的上下文中执行。如果需要将某些参数或其他数据传递给此方法，请使用 <a href="<%= Url.Action("scope", "plugin") %>">Asc.scope</a> 对象。</p>
             <div class="header-gray">示例</div>
             <pre>
@@ -135,7 +136,7 @@ connector.callCommand(function() {
             <p><b id="connect" class="copy-link">connect</b> - 调用该函数将连接器连接到编辑器。</p>
             <note>请注意，只有在使用 <a href="#disconnect">disconnect</a> 方法断开连接器并需要再次将其连接到编辑器时，
                 才应调用此方法。创建连接器时，不需要使用 <em>connect</em> 方法，
-                因为它会与 <a href="<%= Url.Action("methods") %>?connector=true#createConnector">createConnector</a> 方法一起自动调用。</note>
+                因为它会与 <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> 方法一起自动调用。</note>
             <div class="header-gray">示例</div>
             <pre>
 connector.connect()
@@ -147,9 +148,9 @@ connector.connect()
             <div class="header-gray">参数</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -187,9 +188,9 @@ connector.disconnect()
             <div class="header-gray">参数</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">

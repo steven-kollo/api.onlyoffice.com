@@ -25,9 +25,13 @@
                 为此，请打开 <b>文件</b> 选项卡，单击 <b>高级设置…</b>，然后选中/取消选中 <b>显示其他用户的更改</b> 复选框。
                 默认情况下启用此模式：</p>
             <pre>
-"coEditing": {
-    "mode": "fast",
-    "change": true
+{
+    "editorConfig": {
+        "coEditing": {
+            "mode": "fast",
+            "change": true
+        }
+    }
 }
 </pre>
             <img alt="设置" src="<%= Url.Content("~/content/img/editor/show-changes-from-other-users.png") %>" />
@@ -39,28 +43,40 @@
         <li>
             <p>如果 <em>mode</em> 字段是 <em>fast</em>，而 <em>change</em> 字段为 <em>false</em>，则默认情况下会打开实时查看器，并且无法将模式切换到普通查看器：</p>
             <pre>
-"coEditing": {
-    "mode": "fast",
-    "change": false
-}        
+{
+    "editorConfig": {
+        "coEditing": {
+            "mode": "fast",
+            "change": false
+        }
+    }
+}      
 </pre>
         </li>
         <li>
             <p>如果 <em>mode</em> 字段是<em>strict</em>，且 <em>change</em> 字段为 <em>true</em>，则默认情况下会打开通用查看器，
                 但您可以在 <b>高级设置…</b>中将模式切换为实时查看器：</p>
             <pre>
-"coEditing": {
-    "mode": "strict",
-    "change": true
+{
+    "editorConfig": {
+        "coEditing": {
+            "mode": "strict",
+            "change": true
+        }
+    }
 }
 </pre>
         </li>
         <li>
             <p>如果 <em>mode</em> 字段是<em>strict</em>，且 <em>change</em> 字段为 <em>false</em>，则默认情况下会打开通用查看器，并且您无法将模式切换到实时查看器：</p>
             <pre>
-"coEditing": {
-    "mode": "strict",
-    "change": false
+{
+    "editorConfig": {
+        "coEditing": {
+            "mode": "strict",
+            "change": false
+        }
+    }
 }
 </pre>
             <img alt="查看器" src="<%= Url.Content("~/content/img/editor/viewer.png") %>" />

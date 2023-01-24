@@ -61,11 +61,12 @@
         该地址必须可供用户浏览器和 Jira 服务器访问。
         要正常工作,Jira 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问。
     </p>
-    <p>输入 <b>密钥</b> 以启用 JWT 保护您的文档免受未经授权的访问（可以在 <a href="<%= Url.Action("signature/") %>">此处</a>找到更多信息）。</p>
-    <p>有时您的网络配置可能不允许使用公共地址的 Jira 和 ONLYOFFICE 文档服务器之间的请求。
-        <b>高级服务器设置</b> 部分允许您为来自 Jira的内部请求设置 ONLYOFFICE 文档服务器地址，
-        为来自 ONLYOFFICE 文档服务器的内部请求设置返回的 Jira 地址。</p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Jira administration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
+    <p>Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Docs using the public addresses. 
+        The <b>Advanced server settings</b> section allows you to set the ONLYOFFICE Docs address for internal requests from Jira 
+        and the returning Jira address for internal requests from ONLYOFFICE Docs.</p>
 
     <h2 id="compiling" class="copy-link">编译 Jira ONLYOFFICE 集成应用</h2>
 
@@ -96,6 +97,7 @@ sudo apt-get install openjdk-8-jdk</span>
 
     <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
 
+    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
     <ol>
         <li>用户导航到 Jira 附件并选择 <b>在 ONLYOFFICE 中编辑</b> 操作。</li>
         <li>Jira 向 <b>OnlyOfficeEditorServlet</b> 发出请求（表单的 URL：<em>/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id</em>).</li>

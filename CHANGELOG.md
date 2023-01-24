@@ -1,5 +1,50 @@
 # Change Log
 
+## 3.0.0
+- editors: added the WOPI Conversion API
+- editors: added the UserCanNotWriteRelative property to the CheckFileInfo WOPI operation
+- editors: added the scheme for editing binary document formats
+- editors: added the convert action to the WOPI discovery
+- editors: added the PutRelativeFile WOPI operation
+- editors: added the Inserting external data page
+- editors: added the setReferenceData method
+- editors: added the events.onRequestReferenceData event
+- editors: added the document.referenceData parameter
+- editors: added the mode field to the editorConfig.customization.layout.leftMenu and editorConfig.customization.layout.rightMenu parameters
+- editors: added the editorConfig.customization.font parameter
+- editors: added the EnableInsertRemoteImage, CopyPasteRestrictions, SupportsLocks, and SupportsUpdate CheckFileInfo properties
+- editors: added the Action_InsertGraphic, Blur_Focus, Grab_Focus, and Host_PostmessageReady PostMessage messages
+- editors: added the information about the syncronous conversion timeout
+- editors: added the history.serverVersion parameter description
+- editors: added the conversion limitation for the spreadsheets
+- editors: added the information about hiding changes when the server version is updated
+- plugins: v7.3
+- plugins: changed the structure of the Plugins and Macros section
+- plugins: parsing documentation from source code
+- plugins: added the icons2 and store parameters to the plugin config
+- docbuilder: v7.3
+- portals: generate documentation without dll 
+
+## 2.11.0
+- editors: mobile edit, mobile view and embedded view buttons on try page
+- editors: test examples v1.4.0
+- editors: conversion djvu to pdf
+- macros: added the Remove shapes from slides macro
+- macros: added the Unhide all rows and columns macro
+
+## 2.10.0
+- editors: added the editorConfig.customization.integrationMode parameter
+- editors: added the integration with frontent frameworks
+- editors: JWT is enabled by default
+- plugins: added the onAddComment, onChangeCommentData and onRemoveComment events
+- plugins: added the AcceptReviewChanges, MoveToNextReviewChange and RejectReviewChanges methods
+- macros: added the Import CSV/text data macro
+- macros: added the Recalculate worksheet values macro sample
+- docbuilder: added global examples
+- docbuilder: added the onWorksheetChange event to Spreadsheet API
+- docbuilder: events documentation
+- docbuilder: global member properties
+
 ## 2.9.0
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation
 - editors: added the Connector class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside

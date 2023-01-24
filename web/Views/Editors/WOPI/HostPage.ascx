@@ -111,4 +111,5 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <p>可以在 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/hostpage" target="_blank">这里</a>找到有关构建主机页面的更多信息。</p>

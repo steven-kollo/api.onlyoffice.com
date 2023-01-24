@@ -29,6 +29,7 @@
     <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - 用户正在尝试单击文档版本历史记录中的特定文档版本。</li>
     <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - 用户尝试通过单击 <em>存储中的图像</em> 按钮来插入图像。</li>
     <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - 用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据。</li>
+    <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - the user is trying to refresh data inserted from the external file by clicking the <em>Update values</em> button in the <em>External</em> links dialog box of the <em>Data</em> tab.</li>
     <li><a href="#onRequestRename">onRequestRename</a> - 用户试图通过单击 <em>重命名...</em> 按钮来重命名文件。</li>
     <li><a href="#onRequestRestore">onRequestRestore</a> - 用户正在尝试通过单击版本历史记录中的 <em>恢复</em> 按钮来恢复文件版本。</li>
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - 用户试图通过单击 <em>另存为...</em> 按钮来保存文件。</li>
@@ -566,6 +567,51 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
         其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
         有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+    </li>
+
+    <li>
+        <p>
+            <b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - the function called when the user is trying to refresh data inserted from the external file
+            by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab.
+            To refresh data by a link to a file which is specified with the event parameters, you must call the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.
+            An object with the unique file data and the file path or name are sent in the <em>data</em> parameter. If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.
+        </p>
+        <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
+        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+        <div class="img-block-2">
+            <div>
+                <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
+            </div>
+            <div>
+                <img alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
+            </div>
+        </div>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestReferenceData = function () {
+    var referenceData =  event.data.referenceData;
+    var path = event.data.path;
+    ...
+
+    docEditor.setReferenceData({
+        "fileType": "xlsx",
+        "path": "sample.xlsx",
+        "referenceData": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com"
+        },
+        "url": "https://example.com/url-to-example-document.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestReferenceData": onRequestReferenceData,
+        ...
+    },
+    ...
+});
+</pre>
     </li>
 
     <li>

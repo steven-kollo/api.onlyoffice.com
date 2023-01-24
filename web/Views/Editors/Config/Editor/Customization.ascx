@@ -26,12 +26,17 @@
     <li><a href="#customer">customer</a></li>
     <li><a href="#features">features</a></li>
     <li><a href="#feedback">feedback</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#font">font</a></li>
+    <% } %>
     <li><a href="#forcesave">forcesave</a></li>
     <li><a href="#goback">goback</a></li>
     <li><a href="#help">help</a></li>
     <li><a href="#hideNotes">hideNotes</a></li>
     <li><a href="#hideRightMenu">hideRightMenu</a></li>
     <li><a href="#hideRulers">hideRulers</a></li>
+    <li><a href="#integrationMode">integrationMode</a></li>
     <% if (license)
        { %>
     <li><a href="#layout">layout</a></li>
@@ -348,6 +353,26 @@
             <td>boolean 或 object</td>
             <td>true</td>
         </tr>
+        <% if (license)
+           { %>
+        <tr class="tablerow">
+            <td id="font" class="copy-link">font<span class="required">**</span></td>
+            <td>
+                Defines the font for the interface elements (buttons, tabs, etc.):
+                <ul>
+                    <li>
+                        <b>name</b> - the font name,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Arial".
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <% } %>
         <tr>
             <td id="forcesave" class="copy-link">forcesave</td>
             <td>
@@ -469,6 +494,15 @@
                 <img width="832px" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="integrationMode" class="copy-link">integrationMode</td>
+            <td>
+                Defines the mode of embedding editors into the web page.
+                The <b>embed</b> value disables scrolling to the editor frame when it is loaded as the focus is not captured.
+            </td>
+            <td>string</td>
+            <td>embed</td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -502,6 +536,17 @@
                         默认值为 <b>true</b>，
                         <br />
                         <b>类型</b>：object或boolean，
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>leftMenu.mode</b> - defines the initial value of the left panel visibility - displayed or hidden.
+                        It is used for the <b>Left panel</b> menu option on the <b>View</b> tab.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>leftMenu.navigation</b> - 定义 <b>导航</b> 按钮是显示还是隐藏。默认值为 <b>true</b>。
@@ -520,9 +565,19 @@
                         <b>示例</b>：true；
                     </li>
                     <li>
-                        <b>rightMenu</b> -定义右菜单是显示还是隐藏。默认值为 <b>true</b>，
+                        <b>rightMenu</b> - defines the right menu settings. If this parameter is a boolean value, then it specifies whether the right menu will be displayed or hidden.
+                        The default value is <b>true</b>,
                         <br />
-                        <b>类型</b>：boolean，
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>rightMenu.mode</b> - defines the initial value of the right panel visibility - displayed or hidden.
+                        It is used for the <b>Right panel</b> menu option on the <b>View</b> tab.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
                         <br />
                         <b>示例</b>：true；
                     </li>
@@ -532,6 +587,8 @@
                         默认值为 <b>true</b>，
                         <br />
                         <b>类型</b>：object或boolean，
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>statusBar.actionStatus</b> - 定义动作状态是显示还是隐藏。默认值为 <b>true</b>，
@@ -561,7 +618,9 @@
                         如果此参数是布尔值，则指定是显示还是隐藏工具栏。
                         默认值为 <b>true</b>，
                         <br />
-                        <b>类型</b>object或boolean;
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>toolbar.collaboration</b> - 定义是显示还是隐藏 <b>协作</b> 选项卡。
@@ -1146,7 +1205,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "https://example.com",
                 "visible": true
             },
-            "forcesave": false,
+            <% if (license)
+               { %>"font": {
+                "name": "Arial"
+            },
+            <% } %>"forcesave": false,
             "goback": {
                 "blank": true,
                 "requestClose": false,
@@ -1157,6 +1220,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "hideNotes": false,
             "hideRightMenu": false,
             "hideRulers": false,
+            "integrationMode": "embed",
             <% if (license)
                { %>"layout": {
                 "header": {
@@ -1164,10 +1228,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                     "users": true
                 },
                 "leftMenu": {
+                    "mode": true,
                     "navigation": true,
                     "spellcheck": true
                 },
-                "rightMenu": true,
+                "rightMenu": {
+                    "mode": true
+                },
                 "statusBar": {
                     "actionStatus": true,
                     "docLang": true,

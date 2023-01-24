@@ -15,6 +15,7 @@
         <li><a href="<%= Url.Action("wopi/restapi/refreshlock") %>">RefreshLock</a> - 通过将文件的自动到期计时器重置为 30 分钟来刷新文件的锁定。</li>
         <li><a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a> - 允许文件编辑。</li>
         <li><a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> - 请求消息以更新 <em>HTTP://server/&lt;...&gt;/wopi*/files/&lt;id&gt;/contents</em> 操作的文件。</li>
+        <li><a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> - creates a new file on the host based on the current file.</li>
         <li><a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a> - 重命名文件。</li>
     </ul>
 
@@ -69,3 +70,4 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>

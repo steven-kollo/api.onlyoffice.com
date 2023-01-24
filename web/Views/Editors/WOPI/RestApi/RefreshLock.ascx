@@ -39,6 +39,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">查询参数</div>
     <table class="table">
@@ -62,6 +63,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">请求标头</div>
     <table class="table">
@@ -94,6 +96,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">响应标头</div>
     <table class="table">
@@ -127,3 +130,4 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>

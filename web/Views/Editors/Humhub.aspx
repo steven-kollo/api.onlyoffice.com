@@ -22,9 +22,9 @@
     <ul>
         <li>目前可以使用此插件打开和编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
         <li>以下格式仅供查看：ODT、ODS、ODP、DOC、XLS、PPT、TXT、PDF。</li>
+        <li>以下格式可以转换为OOXML：ODT、ODS、ODP、DOC、XLS、PPT、TXT、CSV。</li>
         <li>该插件将为 Office 文档创建一个新的 <b>编辑/查看</b> 菜单选项。
             这允许多个用户实时协作并将这些更改保存回 HumHub。</li>
-        <li>以下格式可以转换为OOXML：ODT、ODS、ODP、DOC、XLS、PPT、TXT、CSV。</li>
     </ul>
 
     <h2 id="installing-doc-serv" class="copy-link">安装 ONLYOFFICE 文档
@@ -51,10 +51,13 @@
         为了配置插件，您必须导航到 <b>Administation -> Modules</b>。
         找到 ONLYOFFICE 插件并点击 <b>配置</b>。
     </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>JWT Secret</b> on the HumHub configuration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
 
     <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
 
+    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
     <ol>
         <li>创建新文件时，将在 <b>创建文档 </b>菜单中为用户提供 <b>文档</b>、 <b>电子表格</b> 或 <b>演示文稿</b> 选项。</li>
         <li>浏览器调用 <em>/controllers/CreateController.php</em> 控制器中的 <em>index</em> 方法。</li>

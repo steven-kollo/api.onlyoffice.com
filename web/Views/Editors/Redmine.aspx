@@ -46,6 +46,11 @@
             <pre>
 git clone https://github.com/ONLYOFFICE/onlyoffice-redmine
 </pre>
+            <p>Go to the Redmine ONLYOFFICE integration plugin folder and get a submodule:</p>
+            <pre>
+cd onlyoffice-redmine
+git submodule update --init --recursive
+</pre>
         </li>
         <li>将 <b>onlyoffice_redmine</b> 插件目录放入 plugins 中。plugins 子目录必须命名为 <b>onlyoffice_redmine</b>。
             如有必要，将 <b>onlyoffice_redmine-x.y.z</b> 重命名为 <b>onlyoffice_redmine</b>。</li>
@@ -81,7 +86,8 @@ https://&lt;documentserver&gt;:&lt;port&gt;/
 </pre>
             <p>其中 <b>documentserver</b> 是服务器的名称， <b>port</b> 是安装了 <b>ONLYOFFICE Docs</b> 的端口号。</p>
         </li>
-        <li><b>秘钥</b>: 启用 JWT 保护您的文档免受未经授权的访问（可以在 <a href="<%= Url.Action("signature/") %>">此处</a>找到更多信息）。</li>
+        <li><b>Secret key</b>: Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+            Specify your own secret key on the Redmine configuration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
     </ul>
     <p>您还可以配置 <b>编辑器定制设置</b>：</p>
     <ul>
@@ -127,13 +133,14 @@ https://&lt;documentserver&gt;:&lt;port&gt;/
             <p>文件编辑适用于具有 <b>编辑新闻</b> 权限的用户角色。</p>
             <p>具有 <b>查看新闻</b> 权限的用户角色可以打开文件进行查看。</p>
         </li>
+        <li>
+            <p><b>Saving changes</b></p>
+            <p>All the changes made in the document are saved in the original file.</p>
+        </li>
     </ul>
 
     <br />
-    <p>对文档所做的所有更改都保存在原始文件中。</p>
 
-
-    <br />
     <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-redmine" target="_blank">此处</a>下载 Redmine ONLYOFFICE 集成插件。</p>
 
 </asp:Content>

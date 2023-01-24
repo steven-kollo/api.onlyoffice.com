@@ -54,31 +54,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <pre>
 docEditor.setActionLink(link);
 </pre>
-            <table class="table">
-                <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
-                </colgroup>
-                <thead>
-                    <tr class="tablerow">
-                        <td>参数</td>
-                        <td>描述</td>
-                        <td>类型</td>
-                        <td>出现</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tablerow">
-                        <td>link</td>
-                        <td>定义允许滚动到文档中书签位置的链接。</td>
-                        <td>string</td>
-                        <td>必需的</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="mobile-content"></div>
         </li>
     </ol>
 

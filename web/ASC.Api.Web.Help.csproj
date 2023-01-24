@@ -60,9 +60,6 @@
     <PackageReference Include="Antlr3.Runtime">
       <Version>3.5.1</Version>
     </PackageReference>
-    <PackageReference Include="Autofac">
-      <Version>6.3.0</Version>
-    </PackageReference>
     <PackageReference Include="JWT">
       <Version>8.9.0</Version>
     </PackageReference>
@@ -106,6 +103,7 @@
     <Compile Include="Controllers\CacheManifestController.cs" />
     <Compile Include="Controllers\EditorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extensions\XmlExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -166,6 +164,7 @@
     <Content Include="Content\img\Editor\compare-documents.png" />
     <Content Include="Content\img\Editor\compare.png" />
     <Content Include="Content\img\Editor\conversion.jpg" />
+    <Content Include="Content\img\Editor\convert-binary-files.jpg" />
     <Content Include="Content\img\Editor\create.png" />
     <Content Include="Content\img\Editor\customization.png" />
     <Content Include="Content\img\Editor\e-coedit.png" />
@@ -221,6 +220,7 @@
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
+    <Content Include="Content\img\Editor\paste-link.png" />
     <Content Include="Content\img\Editor\permissions.png" />
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
@@ -240,6 +240,7 @@
     <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarHideFileName.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
+    <Content Include="Content\img\Editor\update-values.png" />
     <Content Include="Content\img\Editor\viewer.png" />
     <Content Include="Content\img\get-docs\docker.png" />
     <Content Include="Content\img\get-docs\linux.svg" />
@@ -274,9 +275,6 @@
     <Content Include="Content\main-page.css" />
     <Content Include="Content\pushy.css" />
     <Content Include="Content\styles.css" />
-    <Content Include="externallistener\config.json" />
-    <Content Include="externallistener\index.html" />
-    <Content Include="externallistener\scripts\code.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="robots.txt" />
@@ -294,6 +292,7 @@
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
+    <Content Include="Views\Editors\Angular.aspx" />
     <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Basic.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />
@@ -351,11 +350,13 @@
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\Sharing.ascx" />
     <Content Include="Views\Editors\FAQ\UsingWOPI.ascx" />
+    <Content Include="Views\Editors\Frameworks.aspx" />
     <Content Include="Views\Editors\GetDocs.aspx" />
     <Content Include="Views\Editors\History.aspx" />
     <Content Include="Views\Editors\HowItWorks.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
+    <Content Include="Views\Editors\InsertingExternalData.aspx" />
     <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />
@@ -370,6 +371,7 @@
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\React.aspx" />
     <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
     <Content Include="Views\Editors\Review.aspx" />
@@ -385,10 +387,13 @@
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
+    <Content Include="Views\Editors\Vue.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
     <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
+    <Content Include="Views\Editors\WOPI\ConversionApi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
     <Content Include="Views\Editors\WOPI\Discovery.ascx" />
+    <Content Include="Views\Editors\WOPI\EditingBinary.ascx" />
     <Content Include="Views\Editors\WOPI\HostPage.ascx" />
     <Content Include="Views\Editors\WOPI\PostMessage.ascx" />
     <Content Include="Views\Editors\WOPI\ProofKeys.ascx" />
@@ -397,6 +402,7 @@
     <Content Include="Views\Editors\WOPI\RestApi\GetFile.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\Lock.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\PutFile.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\PutRelativeFile.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\RefreshLock.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\RenameFile.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\Unlock.ascx" />

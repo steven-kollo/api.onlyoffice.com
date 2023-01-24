@@ -23,9 +23,10 @@
     <h2>参数及其说明：</h2>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
-            <col />
-            <col style="width: 100px;" />
+            <col class="table-name" />
+			<col />
+			<col class="table-type" />
+			<col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -174,7 +175,7 @@
     <div class="header-gray">可能的错误代码及其描述</div>
     <table class="error-table">
         <colgroup>
-            <col style="width: 105px;" />
+            <col class="table-name" />
             <col />
         </colgroup>
         <thead>

@@ -39,7 +39,7 @@
     <h2 id="installing-plugin" class="copy-link">安装 Liferay ONLYOFFICE 连接器</h2>
 
     <p>
-        从 <a href="https://web.liferay.com/marketplace/-/mp/application/171169174">Liferay Marketplace</a>
+        从 <a href="https://web.liferay.com/marketplace/-/mp/application/171169174" target="_blank">Liferay Marketplace</a>
         安装它， 或者如果您自己构建连接器，只需将编译的 <b>.jar</b> 文件从 <em>build\libs</em> 文件夹放入 <em>/opt/liferay/deploy</em>。
         Liferay 会自动安装它。
     </p>
@@ -51,6 +51,8 @@
         为了配置连接器，您必须导航到 <b>系统设置</b> （<b>控制面板 -> 配置 -> 系统设置</b>）。
         在 <b>平台</b> 部分单击 <b>连接器</b> 类别并选择 <b>ONLYOFFICE</b>。
     </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Liferay <b>System Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
 
     <h2 id="compiling" class="copy-link">编译 Liferay ONLYOFFICE 连接器</h2>
@@ -63,6 +65,7 @@
 
     <h2 id="how-it-works" class="copy-link">这个怎么运作</h2>
 
+    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
     <ol>
         <li>用户导航到 Liferay 中的 <b>文档和媒体</b> 部分并选择 <b>在 ONLYOFFICE 中编辑</b> 操作。</li>
         <li>
