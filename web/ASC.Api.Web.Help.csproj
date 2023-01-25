@@ -2146,6 +2146,7 @@
     <Content Include="Content\img\java\upload-app.jpg" />
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\macros\add-new-chart.svg" />
+    <Content Include="Content\img\macros\assign_unique_id.svg" />
     <Content Include="Content\img\macros\cell-background-color.svg" />
     <Content Include="Content\img\macros\cell-font-bold.svg" />
     <Content Include="Content\img\macros\change-cell.svg" />
@@ -2157,11 +2158,10 @@
     <Content Include="Content\img\macros\insert-text.svg" />
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
-    <Content Include="Content\img\macros\assign_unique_id.svg" />
+    <Content Include="Content\img\macros\recalculate-values.svg" />
     <Content Include="Content\img\macros\replace-shapes-with-charts.svg" />
     <Content Include="Content\img\macros\unhide-all-rows-and-columns.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
-    <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\main-page\community_server.svg" />
     <Content Include="Content\img\main-page\desktop.svg" />
@@ -2246,8 +2246,8 @@
     <Content Include="Content\img\plugins\helloworld_icon.png" />
     <Content Include="Content\img\plugins\highlight_duplicates.png" />
     <Content Include="Content\img\plugins\import-csv-macro.png" />
-    <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\insert_id.png" />
+    <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\plugins\macro_window.png" />

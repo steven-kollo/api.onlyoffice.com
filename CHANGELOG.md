@@ -1,5 +1,7 @@
 # Change Log
+
 - macros: added the Insert unique id macro sample
+
 - editors: added the EnableInsertRemoteImage, CopyPasteRestrictions, SupportsLocks, and SupportsUpdate CheckFileInfo properties
 - editors: added the Action_InsertGraphic, Blur_Focus, Grab_Focus, and Host_PostmessageReady PostMessage messages
 - editors: added the information about the syncronous conversion timeout
