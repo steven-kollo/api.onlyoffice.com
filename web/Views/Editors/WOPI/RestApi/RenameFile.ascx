@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("wopi/restapi") %>"></a>
-    <span class="hdr">重命名文件</span>
+    <span class="hdr">RenameFile</span>
 </h1>
 
     <div class="header-gray"><b>POST /wopi/files/<i>(file_id)</i></b></div>

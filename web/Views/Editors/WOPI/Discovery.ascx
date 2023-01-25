@@ -1,25 +1,25 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">WOPI发现</span>
+    <span class="hdr">WOPI discovery</span>
 </h1>
 
     <p class="dscr">
-        <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery" target="_blank">WOPI 发现</a> 是通过从在online office请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。
+        <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery" target="_blank">WOPI discovery</a> 是通过从在online office请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。
         WOPI 主机使用discovery XML 来指定如何与online office进行交互。
         请求被发送到 <span class="fakelink">https://documentserver/hosting/discovery</span> 地址，其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称。
     </p>
 
 
-    <h2 id="actions" class="copy-link">WOPI 发现操作</h2>
+    <h2 id="actions" class="copy-link">WOPI discovery actions</h2>
 
-    <p>发现XML的<b>action</b>元素提供了在线办公室的重要特征。此元素表示：</p>
+    <p>Discovery XML的<b>action</b>元素提供了在线办公室的重要特征。此元素表示：</p>
      <ul>
         <li>online office中可用的文档操作，</li>
         <li>支持的文件格式（扩展名）。</li>
     </ul>
 
-    <div class="header-gray">WOPI 操作</div>
+    <div class="header-gray">WOPI actions</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -88,7 +88,7 @@
 ui=en-us&thm=1&"/&gt;
 </pre>
 
-    <p><b>发现查询参数</b> 是可以通过 <em>urlsrc</em> 属性中的文件存储公开的参数，以自定义编辑器行为。
+    <p><b>Discovery查询参数</b> 是可以通过 <em>urlsrc</em> 属性中的文件存储公开的参数，以自定义编辑器行为。
         例如，更改语言、主题或聊天。</p>
 
 

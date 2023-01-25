@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("wopi/restapi") %>"></a>
-    <span class="hdr">获取文件</span>
+    <span class="hdr">GetFile</span>
 </h1>
 
     <div class="header-gray"><b>GET /wopi/files/<i>(file_id)</i>/contents</b></div>
