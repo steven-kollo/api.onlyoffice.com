@@ -86,7 +86,7 @@ otherWindow.postMessage (msg, targetOrigin)
             <tr>
                 <td id="App_LoadingStatus" class="copy-link">App_LoadingStatus</td>
                 <td>此消息是在加载online office应用程序框架后被发布的。
-                    在主机收到此消息之前，它必须假定online office 框架无法对除 <em>Host_PostmessageReady</em>之外的任何传入消息做出反应。</td>
+                    在主机收到此消息之前，它必须假定online office 框架无法对除 <a href="#Host_PostmessageReady">Host_PostmessageReady</a>之外的任何传入消息做出反应。</td>
             </tr>
             <tr>
                 <td id="Blur_Focus" class="copy-link">Blur_Focus</td>
