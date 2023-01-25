@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Set the font color of the cell <b>B4</b> to red.</p>
+<p class="dscr">Sets the font color of the cell <b>B4</b> to red.</p>
 
 <pre>(function()
 {

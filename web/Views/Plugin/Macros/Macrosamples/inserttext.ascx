@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Insert text into the document at the current cursor position.</p>
+<p class="dscr">Inserts text into the document at the current cursor position.</p>
 
 <pre>(function()
 {

@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Set the background color of the cell <b>B3</b> to blue.</p>
+<p class="dscr">Sets the background color of the cell <b>B3</b> to blue.</p>
 
 <pre>(function()
 {

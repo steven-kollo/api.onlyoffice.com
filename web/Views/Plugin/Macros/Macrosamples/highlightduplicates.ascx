@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Highlight duplicates in the selected area with different colors to recognize duplicated values quickly.</p>
+<p class="dscr">Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.</p>
 
 <pre>(function () 
 {

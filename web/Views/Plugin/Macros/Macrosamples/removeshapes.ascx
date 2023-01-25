@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This macro removes shapes from slides in a presentation. </p>
+<p class="dscr">Removes shapes from slides in a presentation. </p>
 
 <pre>(function()
 {

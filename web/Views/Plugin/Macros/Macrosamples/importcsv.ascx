@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This macro imports data from remote CSV/TXT files into the spreadsheet.</p>
+<p class="dscr">Imports data from remote CSV/TXT files into the spreadsheet.</p>
 <note>This macro is operational only with the desktop versions of the ONLYOFFICE editors.</note>
 
 <pre>(function() 
