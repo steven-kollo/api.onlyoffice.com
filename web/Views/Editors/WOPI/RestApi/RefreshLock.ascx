@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("wopi/restapi") %>"></a>
-    <span class="hdr">刷新锁定</span>
+    <span class="hdr">RefreshLock</span>
 </h1>
 
     <div class="header-gray"><b>POST /wopi/files/<i>(file_id)</i></b></div>

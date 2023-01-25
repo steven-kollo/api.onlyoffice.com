@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("wopi/restapi") %>"></a>
-    <span class="hdr">解锁</span>
+    <span class="hdr">Unlock</span>
 </h1>
 
     <div class="header-gray"><b>POST /wopi/files/<i>(file_id)</i></b></div>
