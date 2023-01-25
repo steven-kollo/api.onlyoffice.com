@@ -222,7 +222,7 @@
         <a href="<%= Url.Action("wopi/") %>">概述</a>
     </li>
     <li>
-        <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>
+        <a href="<%= Url.Action("wopi/discovery") %>">WOPI发现</a>
     </li>
     <li>
         <a href="<%= Url.Action("wopi/hostpage") %>">主机页面</a>

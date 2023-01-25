@@ -5,14 +5,14 @@
 </h1>
 
     <p class="dscr">为了在您的应用程序中创建一个online office会话，主机必须创建一个 HTML 页面，该页面将在其中嵌入一个指向特定
-    <a href="<%= Url.Action("wopi/discovery") %>#actions">WOPI action URL</a>的 iframe 元素。</p>
+    <a href="<%= Url.Action("wopi/discovery") %>#actions">WOPI 操作 URL</a>的 iframe 元素。</p>
 
     <p>主机页面必须包含以下元素：</p>
     <ul>
         <li>出于安全目的，主机必须通过一个 <em>form</em> 元素将 <a href="#access_token">access_token</a> 和 <a href="#access_token_ttl">access_token_ttl</a> 参数 <em>POST</em> 到online office iframe。</li>
         <li>使用 <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>与online office iframe 交互的 JavaScript 代码。</li>
         <li>Body元素和online office的特定 CSS 样式，以避免视觉包。此外，
-        主机页面应使用 <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>中提供的网站图标 URL 为页面设置适当的网站图标。</li>
+        主机页面应使用 <a href="<%= Url.Action("wopi/discovery") %>">WOPI 发现</a>中提供的网站图标 URL 为页面设置适当的网站图标。</li>
         <li>用于避免移动端浏览器的视觉和功能问题的 <em>viewport</em> 元标签。</li>
     </ul>
 
