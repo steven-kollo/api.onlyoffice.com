@@ -2,7 +2,7 @@ builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oMyStyle = oDocument.CreateStyle("My document style");
 var oParaPr = oMyStyle.GetParaPr();
-oParaPr.SetTopBorder("single", 24, 0, 0, 255, 0);
+oParaPr.SetTopBorder("single", 24, 0, 255, 111, 61);
 var oParagraph = oDocument.GetElement(0);
 oParagraph.SetStyle(oMyStyle);
 oParagraph.AddText("This is the first paragraph. ");

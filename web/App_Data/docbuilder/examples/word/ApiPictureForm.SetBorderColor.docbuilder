@@ -4,6 +4,6 @@ var oPictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": 
 oPictureForm.SetImage("https://api.onlyoffice.com/content/img/editor/opening.jpg");
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddElement(oPictureForm);
-oPictureForm.SetBorderColor(255, 0, 0);
+oPictureForm.SetBorderColor(255, 111, 61);
 builder.SaveFile("docx", "SetBorderColor.docx");
 builder.CloseFile();

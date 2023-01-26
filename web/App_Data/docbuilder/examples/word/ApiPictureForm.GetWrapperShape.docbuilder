@@ -6,7 +6,7 @@ oParagraph.AddElement(oPictureForm);
 oPictureForm.SetImage("https://api.onlyoffice.com/content/img/editor/opening.jpg");
 oPictureForm.ToFixed(10 * 240, 10 * 240);
 var oShape = oPictureForm.GetWrapperShape();
-var oStroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0)));
+var oStroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 oShape.SetOutLine(oStroke);
 builder.SaveFile("docx", "GetWrapperShape.docx");
 builder.CloseFile();
