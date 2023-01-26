@@ -8,7 +8,7 @@ if (nElementCount == 1) {
     oElement.AddElement(oRun);
     var oTable = Api.CreateTable(3, 3);
     var oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
-    oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
+    oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered"));
     oTable.SetStyle(oTableStyle);
     oTable.SetWidth("percent", 100);
     oDocument.Push(oTable);
