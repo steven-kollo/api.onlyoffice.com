@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("This is just a sample text.");
 var oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
-oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
+oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered"));
 var oTable1 = Api.CreateTable(3, 3);
 oTable1.SetWidth("percent", 100);
 oTable1.SetStyle(oTableStyle);
