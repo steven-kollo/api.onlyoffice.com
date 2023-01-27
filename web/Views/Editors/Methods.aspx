@@ -196,7 +196,7 @@ docEditor.insertImage({
                         <td>fileType</td>
                         <td>
                             Defines a type of the image to be inserted into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpe</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
                             Deprecated since version 7.0, please use the <em>images.fileType</em> parameter instead.
                         </td>
                         <td>string</td>
@@ -214,7 +214,7 @@ docEditor.insertImage({
                         <td>images.fileType</td>
                         <td>
                             Defines a type of the image to be inserted into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpe</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -683,7 +683,7 @@ docEditor.setMailMergeRecipients({
                         <td>fileType</td>
                         <td>
                             Defines the type of spreadsheet for mail merge in the file.
-                            Can be: xlsx.
+                            Can be: <em>csv</em>, <em>fods</em>, <em>ods</em>, <em>ots</em>, <em>xls</em>, <em>xlsm</em>, <em>xlsx</em>, <em>xlt</em>, <em>xltm</em>, <em>xltx</em>.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -740,7 +740,10 @@ docEditor.setRevisedFile({
                 <tbody>
                     <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines the type of document for comparing.</td>
+                        <td>
+                            Defines the type of document for comparing.
+                            Can be: <em>doc</em>, <em>docm</em>, <em>docx</em>, <em>dot</em>, <em>dotm</em>, <em>dotx</em>, <em>epub</em>, <em>fodt</em>, <em>odt</em>, <em>ott</em>, <em>rtf</em>, <em>wps</em>.
+                        </td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
