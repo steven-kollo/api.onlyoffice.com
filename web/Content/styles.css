@@ -958,6 +958,7 @@ pre,
 .demo-block {
     border: 1px solid #ECEEF1;
     border-top: none;
+    height: 550px;
     margin-bottom: 18px;
     padding: 20px 9px 9px;
 }

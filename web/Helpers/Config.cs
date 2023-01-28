@@ -37,6 +37,7 @@ using System.Text.RegularExpressions;
 using System.Web.Configuration;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace ASC.Api.Web.Help.Helpers
 {
@@ -115,6 +116,51 @@ namespace ASC.Api.Web.Help.Helpers
             }
         }
 
+        public static string GenerateDemoConfig(System.Web.Mvc.UrlHelper url, string protocol, string documentType = "word", string ext = "docx")
+        {
+            return Serialize(
+                new Config
+                {
+                    Document = new DocumentConfig
+                    {
+                        FileType = ext,
+                        //Key = "apiwh" + Guid.NewGuid(),
+                        Title = "Example Title." + ext,
+                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + ext,
+                        Permissions = new DocumentConfig.PermissionsConfig
+                        {
+                            Download = false,
+                            Print = false
+                        }
+                    },
+                    DocumentType = documentType,
+                    EditorConfig = new EditorConfigConfiguration
+                    {
+                        CallbackUrl = url.Action("callback", null, null, protocol),
+                        Customization = new EditorConfigConfiguration.CustomizationConfig
+                        {
+                            Anonymous = new EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                            CompactHeader = true,
+                            CompactToolbar = true,
+                            Feedback = new EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                            HideRightMenu = true,
+                            HideRulers = true,
+                            IntegrationMode = "embed",
+                            ToolbarHideFileName = true,
+                            ToolbarNoTabs = true
+                        }
+                    },
+                    Height = "550px",
+                    Width = "100%"
+                });
+        }
+
 
         [DataMember(Name = "document", IsRequired = true, EmitDefaultValue = false)]
         public DocumentConfig Document;
@@ -147,7 +193,7 @@ namespace ASC.Api.Web.Help.Helpers
             [DataMember(Name = "info", EmitDefaultValue = false)]
             public InfoConfig Info;
 
-            [DataMember(Name = "key", IsRequired = true, EmitDefaultValue = false)]
+            [DataMember(Name = "key", EmitDefaultValue = false)]
             public string Key;
 
             [DataMember(Name = "permissions", EmitDefaultValue = false)]
