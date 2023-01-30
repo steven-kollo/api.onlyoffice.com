@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Go signature code example
 - portals: generate documentation without dll 
 - plugins: added the icons2 and store parameters to the plugin config
 - editors: added the EnableInsertRemoteImage, CopyPasteRestrictions, SupportsLocks, and SupportsUpdate CheckFileInfo properties
