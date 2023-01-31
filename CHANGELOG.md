@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: conversion to ppsm, ppsx
 - editors: added the Go signature code example
 - portals: generate documentation without dll 
 - plugins: added the icons2 and store parameters to the plugin config
