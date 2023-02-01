@@ -80,7 +80,7 @@
         <tbody>
             <% foreach (var method in section.Methods) { %>
                 <tr class="tablerow">
-                    <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a></td>
+                    <td><a href="<%= method.Value.Path %>"><%= method.Key %></a></td>
                     <td><%= method.Value.Description %></td>
                 </tr>
             <% } %>
@@ -100,7 +100,7 @@
         <tbody>
             <% foreach(var ev in section.Events) { %>
                 <tr class="tablerow">
-                    <td><a href="<%= Url.Action(string.Format("{0}/{1}/event-{2}", section.Path, section.Name.ToLower(), ev.Key.ToLower())) %>"><%= ev.Key %></a></td>
+                    <td><a href="<%= ev.Value.Path %>"><%= ev.Key %></a></td>
                     <td><%= ev.Value.Description %></td>
                 </tr>
             <% } %>
