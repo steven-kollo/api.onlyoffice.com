@@ -1,0 +1,1 @@
+window.Asc.plugin.executeMethod ("InstallPlugin", ["https://example.com/plugin/config.json"]);

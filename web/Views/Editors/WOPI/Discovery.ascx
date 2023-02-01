@@ -48,8 +48,13 @@
                 <td id="embedview" class="copy-link">embedview</td>
                 <td>Renders a non-editable view of a document that is optimized for embedding in a web page. This action is available starting from version 7.2.</td>
             </tr>
+            <tr>
+                <td id="convert" class="copy-link">convert</td>
+                <td>Converts a document in a <a href="<%= Url.Action("wopi/editingbinary") %>">binary format</a> (<em>doc, ppt, xls</em>) into a modern format (<em>docx, pptx, xlsx</em>) so that it can be edited in the online office.</td>
+            </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Attributes</div>
     <table class="table">
@@ -74,6 +79,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Example</div>
     <pre>
@@ -132,6 +138,7 @@ ui=en-us&thm=1&"/&gt;
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
 
     <h2 id="collabora-specific" class="copy-link">Collabora specific</h2>

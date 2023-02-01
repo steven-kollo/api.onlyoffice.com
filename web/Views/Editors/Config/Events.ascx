@@ -29,6 +29,7 @@
     <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - the user is trying to click the specific document version in the document version history.</li>
     <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - the user is trying to insert an image by clicking the <em>Image from Storage</em> button.</li>
     <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
+    <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - the user is trying to refresh data inserted from the external file by clicking the <em>Update values</em> button in the <em>External</em> links dialog box of the <em>Data</em> tab.</li>
     <li><a href="#onRequestRename">onRequestRename</a> - the user is trying to rename the file by clicking the <em>Rename...</em> button.</li>
     <li><a href="#onRequestRestore">onRequestRestore</a> - the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</li>
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
@@ -566,6 +567,51 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p>
+            <b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - the function called when the user is trying to refresh data inserted from the external file
+            by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab.
+            To refresh data by a link to a file which is specified with the event parameters, you must call the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.
+            An object with the unique file data and the file path or name are sent in the <em>data</em> parameter. If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.
+        </p>
+        <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
+        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+        <div class="img-block-2">
+            <div>
+                <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
+            </div>
+            <div>
+                <img alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
+            </div>
+        </div>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestReferenceData = function () {
+    var referenceData =  event.data.referenceData;
+    var path = event.data.path;
+    ...
+
+    docEditor.setReferenceData({
+        "fileType": "xlsx",
+        "path": "sample.xlsx",
+        "referenceData": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com"
+        },
+        "url": "https://example.com/url-to-example-document.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestReferenceData": onRequestReferenceData,
+        ...
+    },
+    ...
+});
+</pre>
     </li>
 
     <li>

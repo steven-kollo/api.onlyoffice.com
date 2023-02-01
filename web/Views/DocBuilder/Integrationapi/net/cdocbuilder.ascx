@@ -11,7 +11,7 @@
 <h2>Methods</h2>
 <table class="table">
     <colgroup>
-        <col style="width: 210px;" />
+        <col class="table-name" />
         <col />
     </colgroup>
     <thead>

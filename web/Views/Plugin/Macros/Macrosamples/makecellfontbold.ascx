@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Set the font of the cell <b>A2</b> to bold.</p>
+<p class="dscr">Sets the font of the cell <b>A2</b> to bold.</p>
 
 <pre>(function()
 {

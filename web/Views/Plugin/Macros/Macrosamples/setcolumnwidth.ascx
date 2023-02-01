@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Set the width for the column <b>B</b>.</p>
+<p class="dscr">Sets the width for the column <b>B</b>.</p>
 
 <pre>(function()
 {

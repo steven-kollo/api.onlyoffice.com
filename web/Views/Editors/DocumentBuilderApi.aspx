@@ -17,15 +17,16 @@
     <p class="dscr">
         For the interaction with the <b>web document builder service</b> the POST requests are used.
         The request parameters are entered in JSON format in the request body.
-        The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
     </p>
 
     <h2>Parameters and their description:</h2>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
-            <col />
-            <col style="width: 100px;" />
+            <col class="table-name" />
+			<col />
+			<col class="table-type" />
+			<col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -100,7 +101,7 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
+        Where <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
@@ -141,7 +142,7 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
+        Where <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
@@ -174,7 +175,7 @@
     <div class="header-gray">Possible error codes and their description</div>
     <table class="error-table">
         <colgroup>
-            <col style="width: 105px;" />
+            <col class="table-name" />
             <col />
         </colgroup>
         <thead>

@@ -20,6 +20,6 @@ oParagraph.AddLineBreak();
 var oPictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 oParagraph = oDocument.GetElement(0);
 oParagraph.AddElement(oPictureForm);
-oPictureForm.SetImage("https://api.onlyoffice.com/content/img/editor/opening.jpg");
+oPictureForm.SetImage("https://api.onlyoffice.com/content/img/editor/e-download.png");
 builder.SaveFile("docxf", "Api.docxf");
 builder.CloseFile();

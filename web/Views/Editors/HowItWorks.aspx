@@ -36,6 +36,7 @@
         <li><a href="<%= Url.Action("comparing") %>">Compare documents</a></li>
         <li><a href="<%= Url.Action("viewing") %>">Viewing</a></li>
         <li><a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a></li>
+        <li><a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a></li>
     </ul>
     
     <br />

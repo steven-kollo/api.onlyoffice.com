@@ -6,7 +6,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">Transforms a number into a word (a number written as a string).</p>
+<p class="dscr">Converts a number into a word (a number written as a string).</p>
 <p><b>Plugin type:</b> non-visual, non-system.</p>
 <p><b>Supported editors:</b> spreadsheets.</p>
 
@@ -24,7 +24,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <ol>
     <li>Select any number.</li>
     <li>Open the <b>Plugins</b> tab and press <b>num2word</b>.</li>
-    <li>The number will be transformed into a string in Russian and inserted to the cell below.</li>
+    <li>The number will be converted into a string in Russian and inserted into the cell below.</li>
 </ol>
 
 
@@ -32,7 +32,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/num2word" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/num2word</a>.</p>
 <ol>
-    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li><em>config.json</em>, <em>index.html</em>, and <em>num2word.js</em></li>
     <li>Icons</li>
 </ol>
 
@@ -69,8 +69,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <div class="header-gray">Methods and events</div>
 
 <ul>
-    <li><a href="<%= Url.Action("events") %>#button">button</a></li>
-    <li><a href="<%= Url.Action("events") %>#init">init</a></li>
+    <li><a href="<%= Url.Action("events/button") %>">button</a></li>
+    <li><a href="<%= Url.Action("events/init") %>">init</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("info") %>#recalculate">info.recalculate</a></li>
 </ul>

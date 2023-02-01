@@ -30,6 +30,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Query parameters</div>
     <table class="table">
@@ -53,6 +54,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Request headers</div>
     <table class="table">
@@ -60,6 +62,7 @@
             <col class="table-name" />
             <col />
             <col class="table-type" />
+            <col class="table-example" />
             <col />
         </colgroup>
         <thead>
@@ -79,6 +82,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Required response properties</div>
     <table class="table">
@@ -112,6 +116,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Breadcrumb properties</div>
     <table class="table">
@@ -162,6 +167,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">PostMessage properties</div>
     <table class="table">
@@ -223,6 +229,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">File URL properties</div>
     <table class="table">
@@ -267,6 +274,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Other miscellaneous properties</div>
     <table class="table">
@@ -285,6 +293,18 @@
             </tr>
         </thead>
         <tbody>
+            <tr>
+                <td id="CopyPasteRestrictions" class="copy-link">CopyPasteRestrictions</td>
+                <td>Specifies if the WOPI client must disable the <b>Copy and Paste</b> functionality within the application.
+                    By default, all <b>Copy and Paste</b> functionality is enabled, i.e. the setting has no effect. Possible property values:
+                    <ul>
+                        <li><b>BlockAll</b> - the <b>Copy and Paste</b> functionality is completely disabled within the application;</li>
+                        <li><b>CurrentDocumentOnly</b> - the <b>Copy and Paste</b> functionality is enabled but content can only be copied and pasted within the file currently open in the application.</li>
+                    </ul>
+                </td>
+                <td>string</td>
+                <td>"BlockAll"</td>
+            </tr>
             <tr>
                 <td id="DisablePrint" class="copy-link">DisablePrint</td>
                 <td>Specifies if the WOPI client must disable any print functionality under its control.</td>
@@ -312,6 +332,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">User metadata properties</div>
     <table class="table">
@@ -350,6 +371,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">User permissions properties</div>
     <table class="table">
@@ -375,6 +397,14 @@
                 <td>true</td>
             </tr>
             <tr>
+                <td id="UserCanNotWriteRelative" class="copy-link">UserCanNotWriteRelative</td>
+                <td>Specifies if the user has permissions to create new files on the WOPI server or not.
+                The <b>true</b> value means that the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> execution will fail for this user on the current file.
+                By default, this parameter is <b>false</b> and the <em>PutRelativeFile</em> operation is executed.</td>
+                <td>boolean</td>
+                <td>false</td>
+            </tr>
+            <tr>
                 <td id="UserCanRename" class="copy-link">UserCanRename</td>
                 <td>Specifies if the user has permissions to rename a file.</td>
                 <td>boolean</td>
@@ -394,6 +424,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">WOPI host capabilities properties</div>
     <table class="table">
@@ -413,6 +444,13 @@
         </thead>
         <tbody>
             <tr>
+                <td id="SupportsLocks" class="copy-link">SupportsLocks</td>
+                <td>Specifies if the WOPI server supports the <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>, <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>,
+                and <a href="<%= Url.Action("wopi/restapi/refreshlock") %>">RefreshLock</a> operations.</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+            <tr>
                 <td id="SupportsRename" class="copy-link">SupportsRename</td>
                 <td>Specifies if the WOPI server supports the renaming permission.</td>
                 <td>boolean</td>
@@ -424,8 +462,15 @@
                 <td>boolean</td>
                 <td>true</td>
             </tr>
+            <tr>
+                <td id="SupportsUpdate" class="copy-link">SupportsUpdate</td>
+                <td>Specifies if the WOPI server supports the <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> and <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> operations.</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Nextcloud/Collabora/Seafile properties</div>
     <table class="table">
@@ -445,6 +490,15 @@
         </thead>
         <tbody>
             <tr>
+                <td id="EnableInsertRemoteImage" class="copy-link">EnableInsertRemoteImage</td>
+                <td>Specifies whether to enable the menu entry and toolbar item which call the <a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">UI_InsertGraphic</a> message.
+                This property is used to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration.
+                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back
+                via the <a href="<%= Url.Action("wopi/postmessage") %>#Action_InsertGraphic">Action_InsertGraphic</a> message with <em>Values</em> set to the temporary URL.</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+            <tr>
                 <td id="HidePrintOption" class="copy-link">HidePrintOption</td>
                 <td>Specifies if the WOPI server hides the print option from the file menu bar in the UI.</td>
                 <td>boolean</td>
@@ -452,3 +506,4 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
