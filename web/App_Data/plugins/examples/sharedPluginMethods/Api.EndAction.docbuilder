@@ -1,0 +1,1 @@
+window.Asc.plugin.executeMethod("EndAction", [1, "Save to local storage..."]);

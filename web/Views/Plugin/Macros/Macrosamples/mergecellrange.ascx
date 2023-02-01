@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Merge selected cell range.</p>
+<p class="dscr">Merges the selected cell range.</p>
 
 <pre>(function()
 {

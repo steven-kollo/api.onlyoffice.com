@@ -98,6 +98,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "InsertingExternalData",
                 "Jira",
                 "Liferay",
                 "Mattermost",
@@ -129,7 +130,9 @@ namespace ASC.Api.Web.Help.Controllers
                 "Vue",
                 "WOPI",
                 "WOPI/ApiVsWopi",
+                "WOPI/ConversionApi",
                 "WOPI/Discovery",
+                "WOPI/EditingBinary",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
                 "WOPI/ProofKeys",
@@ -138,6 +141,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/RestApi/GetFile",
                 "WOPI/RestApi/Lock",
                 "WOPI/RestApi/PutFile",
+                "WOPI/RestApi/PutRelativeFile",
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
@@ -335,6 +339,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult InlineEditors()
+        {
+            return View();
+        }
+
+        public ActionResult InsertingExternalData()
         {
             return View();
         }

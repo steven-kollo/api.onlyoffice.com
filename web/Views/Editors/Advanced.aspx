@@ -96,6 +96,10 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a>": ["Group1", "Group2", ""],
             "<a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">userInfoGroups</a>": ["Group1", ""]
         },
+        "<a href="<%= Url.Action("config/document") %>#referenceData">referenceData</a>": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com"
+        },
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
         "<a href="<%= Url.Action("config/document") %>#url">url</a>": "https://example.com/url-to-example-document.docx"
     },
@@ -248,6 +252,7 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a>": onRequestHistoryData,
         "<a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a>": onRequestInsertImage,
         "<a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a>": onRequestMailMergeRecipients,
+        "<a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a>": onRequestReferenceData,
         "<a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a>": onRequestRename,
         "<a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a>": onRequestRestore,
         "<a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a>": onRequestSaveAs,
