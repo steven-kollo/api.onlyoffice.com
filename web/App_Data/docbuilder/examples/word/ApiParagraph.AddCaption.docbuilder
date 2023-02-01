@@ -1,18 +1,18 @@
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
-var oDrawing = Api.CreateChart("bar3D", [
-  [200, 240, 280],
-  [250, 260, 280]
-], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
-oDrawing.SetVerAxisTitle("USD In Hundred Thousands", 10);
-oDrawing.SetHorAxisTitle("Year", 11);
-oDrawing.SetLegendPos("bottom");
-oDrawing.SetShowDataLabels(false, false, true, false);
-oDrawing.SetTitle("Financial Overview", 13);
-oParagraph.AddDrawing(oDrawing);
-oParagraph.AddCaption(" - Financial Overview", "Figure", false, "Arabic", false, undefined, "hyphen");
-var oTofPr = {"ShowPageNums": true, "RightAlgn": true, "LeaderType": "dot", "FormatAsLinks": true, "BuildFrom": "Figure", "LabelNumber": true, "TofStyle": "distinctive"};
-oDocument.AddTableOfFigures(oTofPr);
+var oHStyle = oDocument.GetStyle('Reference table');
+oParagraph.AddText('Header 1');
+oParagraph.SetStyle(oHStyle);
+var oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
+oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered"));
+var oTable = Api.CreateTable(3, 1);
+oTable.SetWidth("percent", 100);
+oTable.SetStyle(oTableStyle);
+oDocument.Push(oTable);
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText('template');
+oDocument.Push(oParagraph);
+oParagraph.AddCaption(" - template table", "Table", false, "Arabic", false, undefined, "hyphen");
 builder.SaveFile("docx", "AddCaption.docx");
 builder.CloseFile();
