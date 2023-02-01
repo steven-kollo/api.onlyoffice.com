@@ -1,5 +1,8 @@
 # Change Log
 
+## 3.0.1
+- docbuilder: fix method links
+
 ## 3.0.0
 - editors: added the WOPI Conversion API
 - editors: added the UserCanNotWriteRelative property to the CheckFileInfo WOPI operation
