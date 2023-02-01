@@ -90,7 +90,7 @@
     <% var word = DocBuilderDocumentation.Instance.GetModule("word"); %>
     <% foreach (var section in word.Values) { %>
         <h5 class="builder_page_class">
-            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+            <a href="<%= section.Path %>"><%= section.Name %></a>
         </h5>
         <table class="table table-classlist">
             <thead>
@@ -102,7 +102,7 @@
             <tbody>
                 <% foreach (var method in section.Methods.Values) { %>
                     <tr class="tablerow">
-                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><a href="<%= method.Path %>"><%= method.Name %></a></td>    
                         <td><%= method.Description %></td>
                     </tr>
                 <% } %>
@@ -115,7 +115,7 @@
     <% var cell = DocBuilderDocumentation.Instance.GetModule("cell"); %>
     <% foreach (var section in cell.Values) { %>
         <h5 class="builder_page_class">
-            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+            <a href="<%= section.Path %>"><%= section.Name %></a>
         </h5>
         <table class="table table-classlist">
             <thead>
@@ -127,7 +127,7 @@
             <tbody>
                 <% foreach (var method in section.Methods.Values) { %>
                     <tr class="tablerow">
-                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><a href="<%= method.Path %>"><%= method.Name %></a></td>    
                         <td><%= method.Description %></td>
                     </tr>
                 <% } %>
@@ -140,7 +140,7 @@
     <% var slide = DocBuilderDocumentation.Instance.GetModule("slide"); %>
     <% foreach (var section in slide.Values) { %>
         <h5 class="builder_page_class">
-            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+            <a href="<%= section.Path %>"><%= section.Name %></a>
         </h5>
         <table class="table table-classlist">
             <thead>
@@ -152,7 +152,7 @@
             <tbody>
                 <% foreach (var method in section.Methods.Values) { %>
                     <tr class="tablerow">
-                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><a href="<%= method.Path %>"><%= method.Name %></a></td>    
                         <td><%= method.Description %></td>
                     </tr>
                 <% } %>
@@ -165,7 +165,7 @@
     <% var form = DocBuilderDocumentation.Instance.GetModule("form"); %>
     <% foreach (var section in form.Values) { %>
         <h5 class="builder_page_class">
-            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+            <a href="<%= section.Path %>"><%= section.Name %></a>
         </h5>
         <table class="table table-classlist">
             <thead>
@@ -177,7 +177,7 @@
             <tbody>
                 <% foreach (var method in section.Methods.Values) { %>
                     <tr class="tablerow">
-                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><a href="<%= method.Path %>"><%= method.Name %></a></td>    
                         <td><%= method.Description %></td>
                     </tr>
                 <% } %>
