@@ -10,6 +10,8 @@ oChart.SetSize(300 * 36000, 130 * 36000);
 oChart.SetPosition(608400, 1267200);
 oChart.RemoveSeria(1);
 oChart.SetTitle("The Estimated Costs series was removed from the current chart.");
+var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+oChart.SetSeriesFill(oFill, 0, false);
 oSlide.AddObject(oChart);
 builder.SaveFile("pptx", "RemoveSeria.pptx");
 builder.CloseFile();
