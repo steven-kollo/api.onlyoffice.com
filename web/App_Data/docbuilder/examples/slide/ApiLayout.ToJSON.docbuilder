@@ -7,7 +7,7 @@ var oLayout = oMaster.GetLayout(0);
 let json = oLayout.ToJSON(true, false);
 var oLayoutFromJSON = Api.FromJSON(json);
 oMaster.AddLayout(0, oLayoutFromJSON);
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));
+var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());
 var oShape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, oFill, oStroke);
 oShape.SetPosition(608400, 1267200);
