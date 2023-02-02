@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Return information about the exchange rates for the last several days and fill in the table with the received values.
+<p class="dscr">Returns information about the exchange rates for the last several days and fills in the table with the received values.
 A macro for the USD-EUR currency pair is presented here but you can get information about other exchange rates by modifying the <em>sCurPair</em> variable value ("EUR_USD", "BTC_USD", etc).</p>
 <note>In this macro, the third-party service <em>CurrencyConverterApi.com</em> is used to get information about the exchange rates.
 There is a limit on the number of requests per hour. If this limit is exceeded, the macro will not work.

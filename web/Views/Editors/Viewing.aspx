@@ -30,8 +30,10 @@
         "coEditing": {
             "mode": "fast",
             "change": true
-        }
-    }
+        },
+        "mode": "view"
+    },
+    ...
 }
 </pre>
             <img alt="Setting" src="<%= Url.Content("~/content/img/editor/show-changes-from-other-users.png") %>" />
@@ -62,8 +64,10 @@
         "coEditing": {
             "mode": "strict",
             "change": true
-        }
-    }
+        },
+        "mode": "view"
+    },
+    ...
 }
 </pre>
         </li>
@@ -75,8 +79,10 @@
         "coEditing": {
             "mode": "strict",
             "change": false
-        }
-    }
+        },
+        "mode": "view"
+    },
+    ...
 }
 </pre>
             <img alt="Viewer" src="<%= Url.Content("~/content/img/editor/viewer.png") %>" />

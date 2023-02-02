@@ -32,6 +32,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setFavorite">setFavorite</a> - change the <em>Favorite</em> icon state.</li>
         <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
         <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
+        <li><a href="#setReferenceData">setReferenceData</a> - refresh data by a link to a file.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
         <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
@@ -59,10 +60,10 @@ docEditor.denyEditingRights(message);
             
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -105,10 +106,10 @@ docEditor.downloadAs(format);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -159,7 +160,8 @@ docEditor.insertImage({
             "url": "https://example.com/url-to-example-image2.png"
         },
         ...
-    ]
+    ],
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UxLnBuZyJ9LHsiZmlsZVR5cGUiOiJwbmciLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWltYWdlMi5wbmcifV19.JfSa__qPeY3MjUgdkJDjdfJWBgvCmEdLfFzjd3WgeUA"
 });
 </pre>
             <p>
@@ -168,10 +170,10 @@ docEditor.insertImage({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -196,7 +198,7 @@ docEditor.insertImage({
                         <td>fileType</td>
                         <td>
                             Defines a type of the image to be inserted into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpe</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
                             Deprecated since version 7.0, please use the <em>images.fileType</em> parameter instead.
                         </td>
                         <td>string</td>
@@ -214,7 +216,7 @@ docEditor.insertImage({
                         <td>images.fileType</td>
                         <td>
                             Defines a type of the image to be inserted into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpe</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -330,7 +332,7 @@ docEditor.refreshHistory({
 </pre>
             <p>Where <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
             <p>Where <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
-            <p>Show the error message explaining why the version history can not be displayed.</p>
+            <p>Show an error message explaining why the version history cannot be displayed:</p>
             <pre>
 docEditor.refreshHistory({
     "error": "Exception",
@@ -338,10 +340,10 @@ docEditor.refreshHistory({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 160px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -447,10 +449,10 @@ docEditor.setActionLink(link);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -482,10 +484,10 @@ docEditor.setFavorite(favorite);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -516,6 +518,7 @@ docEditor.setFavorite(favorite);
 docEditor.setHistoryData({
     "fileType": "docx",
     "key": "Khirz6zTPdfd7",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });
@@ -538,6 +541,7 @@ docEditor.setHistoryData({
         "key": "af86C7e71Ca8",
         "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });
@@ -546,7 +550,7 @@ docEditor.setHistoryData({
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
-            <p>Send the error message explaining why the document version can not be displayed.</p>
+            <p>Send an error message explaining why the document version cannot be displayed:</p>
             <pre>
 docEditor.setHistoryData({
     "error": "Exception",
@@ -555,10 +559,10 @@ docEditor.setHistoryData({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -656,6 +660,7 @@ docEditor.setHistoryData({
             <pre>
 docEditor.setMailMergeRecipients({
     "fileType": "xlsx",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     "url": "https://example.com/url-to-example-recipients.xlsx"
 });
 </pre>
@@ -665,10 +670,10 @@ docEditor.setMailMergeRecipients({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -683,7 +688,7 @@ docEditor.setMailMergeRecipients({
                         <td>fileType</td>
                         <td>
                             Defines the type of spreadsheet for mail merge in the file.
-                            Can be: xlsx.
+                            Can be: <em>csv</em>, <em>fods</em>, <em>ods</em>, <em>ots</em>, <em>xls</em>, <em>xlsm</em>, <em>xlsx</em>, <em>xlt</em>, <em>xltm</em>, <em>xltx</em>.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -708,20 +713,31 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
-                <b id="setRevisedFile" class="copy-link">setRevisedFile<span class="required">*</span></b> - select a document for comparing.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.
-                <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em> or <em>path</em> parameters.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event.
             </p>
+            <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
             <pre>
-docEditor.setRevisedFile({
-    "fileType": "docx",
-    "url": "https://example.com/url-to-example-document.docx"
+docEditor.setReferenceData({
+    "fileType": "xlsx",
+    "path": "sample.xlsx",
+    "referenceData": {
+        "fileKey": "BCFA2CED",
+        "instanceId": "https://example.com"
+    },
+    "url": "https://example.com/url-to-example-document.xlsx"
 });
 </pre>
             <p>
-                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
+            <p>Show an error message explaining if any error occurred:</p>
+            <pre>
+docEditor.setReferenceData({
+    "error": "Exception",
+});
+</pre>
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -739,8 +755,107 @@ docEditor.setRevisedFile({
                 </thead>
                 <tbody>
                     <tr class="tablerow">
+                        <td>error</td>
+                        <td>Defines the error message text.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines the type of document for comparing.</td>
+                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>path</td>
+                        <td>Defines the file name or relative path for the formula editor.
+                            It is used to identify a file when the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is executed.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>referenceData</td>
+                        <td>
+                            Defines an object that is generated by the integrator to uniquely identify a file in its system.
+                            This data must be the same as in the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> config parameter:
+                            <ul>
+                                <li>
+                                    <b>fileKey</b> - the unique document identifier used by the service to get a link to the file.
+                                    It must not be changed when the document is edited and saved (i.e. it is not equal to the <a href="<%= Url.Action("config/document") %>#key">document.key</a> parameter),
+                                    <br />
+                                    <b>type</b>: string,
+                                    <br />
+                                    <b>example</b>:  "BCFA2CED";
+                                </li>
+                                <li>
+                                    <b>instanceId</b> - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another,
+                                    then pasting by link will not be available and there will be no corresponding button in the context menu,
+                                    <br />
+                                    <b>type</b>: string,
+                                    <br />
+                                    <b>example</b>:  "https://example.com".
+                                </li>
+                            </ul>
+                        </td>
+                        <td>object</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr id="setReferenceData-token" class="tablerow">
+                        <td>token</td>
+                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setReferenceData">token</a>.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>url</td>
+                        <td>Defines the URL address to download the current file.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+
+        <li>
+            <p>
+                <b id="setRevisedFile" class="copy-link">setRevisedFile<span class="required">*</span></b> - select a document for comparing.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.
+                <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+            </p>
+            <pre>
+docEditor.setRevisedFile({
+    "fileType": "docx",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
+    "url": "https://example.com/url-to-example-document.docx"
+});
+</pre>
+            <p>
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>
+                            Defines the type of document for comparing.
+                            Can be: <em>doc</em>, <em>docm</em>, <em>docx</em>, <em>dot</em>, <em>dotm</em>, <em>dotx</em>, <em>epub</em>, <em>fodt</em>, <em>odt</em>, <em>ott</em>, <em>rtf</em>, <em>wps</em>.
+                        </td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -784,10 +899,10 @@ docEditor.setSharingSettings({
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -847,10 +962,10 @@ docEditor.setUsers({
             </p>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -894,10 +1009,10 @@ docEditor.showMessage(message);
 </pre>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
-                    <col />
-                    <col style="width: 100px;" />
-                    <col style="width: 150px;" />
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">

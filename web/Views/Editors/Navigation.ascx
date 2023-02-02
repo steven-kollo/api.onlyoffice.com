@@ -160,6 +160,9 @@
             <li>
                 <a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a>
+            </li>
         </ul>
     </li>
 </ul>
@@ -249,12 +252,21 @@
                 <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a>
             </li>
             <li>
+                <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a>
             </li>
         </ul>
     </li>
     <li>
         <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/conversionapi") %>">Conversion API</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/editingbinary") %>">Editing binary documents</a>
     </li>
     <li>
         <a href="<%= Url.Action("wopi/apivswopi") %>">API vs WOPI</a>

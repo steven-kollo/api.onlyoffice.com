@@ -95,21 +95,21 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <div class="header-gray">Methods and events</div>
 
 <ul class="columns-2">
-    <li><a href="<%= Url.Action("events") %>#button">button</a></li>
-    <li><a href="<%= Url.Action("events") %>#init">init</a></li>
-    <li><a href="<%= Url.Action("events") %>#inputHelper_onSelectItem">inputHelper_onSelectItem</a></li>
-    <li><a href="<%= Url.Action("events") %>#onInputHelperClear">onInputHelperClear</a></li>
-    <li><a href="<%= Url.Action("events") %>#onInputHelperInput">onInputHelperInput</a></li>
+    <li><a href="<%= Url.Action("events/button") %>">button</a></li>
+    <li><a href="<%= Url.Action("events/init") %>">init</a></li>
+    <li><a href="<%= Url.Action("events/inputHelper_onSelectItem") %>">inputHelper_onSelectItem</a></li>
+    <li><a href="<%= Url.Action("events/onInputHelperClear") %>">onInputHelperClear</a></li>
+    <li><a href="<%= Url.Action("events/onInputHelperInput") %>">onInputHelperInput</a></li>
     <li><a href="<%= Url.Action("createinputhelper") %>">createInputHelper</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
-    <li><a href="<%= Url.Action("executemethod/inputtext") %>">executeMethod ("InputText")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/inputtext") %>">executeMethod ("InputText")</a></li>
     <li><a href="<%= Url.Action("getinputhelper") %>">getInputHelper</a></li>
-    <li><a href="<%= Url.Action("inputhelper") %>#createWindow">InputHelper.createWindow</a></li>
-    <li><a href="<%= Url.Action("inputhelper") %>#getItems">InputHelper.getItems</a></li>
-    <li><a href="<%= Url.Action("inputhelper") %>#getScrollSizes">InputHelper.getScrollSizes</a></li>
-    <li><a href="<%= Url.Action("inputhelper") %>#setItems">InputHelper.setItems</a></li>
-    <li><a href="<%= Url.Action("inputhelper") %>#show">InputHelper.show</a></li>
-    <li><a href="<%= Url.Action("inputhelper") %>#unShow">InputHelper.unShow</a></li>  
+    <li><a href="<%= Url.Action("inputhelper/createWindow") %>">InputHelper.createWindow</a></li>
+    <li><a href="<%= Url.Action("inputhelper/getItems") %>">InputHelper.getItems</a></li>
+    <li><a href="<%= Url.Action("inputhelper/getScrollSizes") %>">InputHelper.getScrollSizes</a></li>
+    <li><a href="<%= Url.Action("inputhelper/setItems") %>">InputHelper.setItems</a></li>
+    <li><a href="<%= Url.Action("inputhelper/show") %>">InputHelper.show</a></li>
+    <li><a href="<%= Url.Action("inputhelper/unShow") %>">InputHelper.unShow</a></li>  
 </ul>
 
 

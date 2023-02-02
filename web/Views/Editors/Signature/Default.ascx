@@ -26,10 +26,10 @@ supervisorctl restart all
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
-        <col style="width: 300px;" />
-        <col />
-        <col style="width: 100px;" />
-        <col style="width: 100px;" />
+        <col class="table-name" />
+		<col />
+		<col class="table-type" />
+		<col class="table-example" />
     </colgroup>
     <thead>
         <tr class="tablerow">
@@ -123,6 +123,7 @@ We advise you to use this code in your projects to generate signatures.</p>
         <li class="browser tab copy-link" id="php">PHP</li>
         <li class="browser tab copy-link" id="python">Python</li>
         <li class="browser tab copy-link" id="ruby">Ruby</li>
+        <li class="browser tab copy-link" id="go">Go</li>
     </ul>
     <div id="csharp" class="content active">
         <pre>
@@ -205,6 +206,26 @@ class << self
         return JWT.encode payload, @jwt_secret, 'HS256'
     end
 end
+</pre>
+    </div>
+    <div id="go" class="content">
+        <pre>
+type onlyofficeJwtManager struct {
+    key []byte
+}
+
+func (j onlyofficeJwtManager) Sign(payload interface {
+    Valid() error
+}) (string, error) {
+    token := jwt.NewWithClaims(jwt.SigningMethodHS256, payload)
+    ss, err := token.SignedString(j.key)
+
+    if err != nil {
+        return "", errors.New("could not generate a new jwt")
+    }
+
+    return ss, nil
+}
 </pre>
     </div>
 </div>
