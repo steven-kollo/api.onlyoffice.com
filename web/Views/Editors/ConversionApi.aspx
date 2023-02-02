@@ -25,10 +25,10 @@
     <h2 id="request" class="copy-link">Request parameters and their description</h2>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -895,6 +895,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
     <table class="table-conversion-matrix-spreadsheet">
@@ -1097,6 +1098,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <h2 id="presentation-matrix" class="copy-link">Presentation file formats</h2>
     <table class="table-conversion-matrix-presentation">
@@ -1104,7 +1106,7 @@
         <tbody>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="12">Output format</th>
+                <th colspan="14">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -1117,6 +1119,8 @@
                 <td>png</td>
                 <td>potm</td>
                 <td>potx</td>
+                <td>ppsm</td>
+                <td>ppsx</td>
                 <td>pptm</td>
                 <td>pptx</td>
             </tr>
@@ -1134,6 +1138,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>odp</td>
@@ -1141,6 +1147,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1157,6 +1165,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1179,6 +1189,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>potm</td>
@@ -1191,6 +1203,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1209,9 +1223,13 @@
                 <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pps</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1237,6 +1255,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
             </tr>
@@ -1252,6 +1272,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
             </tr>
@@ -1269,9 +1291,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptm</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1298,10 +1324,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div id="sample-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
     <pre>
@@ -1411,10 +1440,10 @@
     </p>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
+            <col class="table-name" />
             <col />
-            <col style="width: 100px;" />
-            <col style="width: 150px;" />
+            <col class="table-type" />
+            <col class="table-example" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -1457,6 +1486,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Sample of the response in XML format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
@@ -1515,7 +1545,7 @@
     <div id="error-codes" class="copy-link header-gray">Possible error codes and their description</div>
     <table class="error-table">
         <colgroup>
-            <col style="width: 105px;" />
+            <col class="table-name" />
             <col />
         </colgroup>
         <thead>

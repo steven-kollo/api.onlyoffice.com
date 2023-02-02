@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2021
+ * (c) Copyright Ascensio System SIA 2023
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -98,6 +98,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "InsertingExternalData",
                 "Jira",
                 "Liferay",
                 "Mattermost",
@@ -129,7 +130,9 @@ namespace ASC.Api.Web.Help.Controllers
                 "Vue",
                 "WOPI",
                 "WOPI/ApiVsWopi",
+                "WOPI/ConversionApi",
                 "WOPI/Discovery",
+                "WOPI/EditingBinary",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
                 "WOPI/ProofKeys",
@@ -138,6 +141,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/RestApi/GetFile",
                 "WOPI/RestApi/Lock",
                 "WOPI/RestApi/PutFile",
+                "WOPI/RestApi/PutRelativeFile",
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
@@ -335,6 +339,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult InlineEditors()
+        {
+            return View();
+        }
+
+        public ActionResult InsertingExternalData()
         {
             return View();
         }

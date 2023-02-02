@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Format the range of cells <b>A1:D10</b> as a table.</p>
+<p class="dscr">Formats the range of cells <b>A1:D10</b> as a table.</p>
 
 <pre>(function()
 {

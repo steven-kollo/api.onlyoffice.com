@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Write the data (the <em>Hello world</em> phrase) to the worksheet third column of the fourth row.</p>
+<p class="dscr">Writes the data (the <em>Hello world</em> phrase) to the worksheet third column of the fourth row.</p>
 
 <pre>(function()
 {

@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This macro repeatedly recalculates worksheet cell values within one-second intervals.</p>
+<p class="dscr">Repeatedly recalculates worksheet cell values within one-second intervals.</p>
 
 <pre>(function ()
 {

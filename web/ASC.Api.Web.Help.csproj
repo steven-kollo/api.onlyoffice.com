@@ -60,9 +60,6 @@
     <PackageReference Include="Antlr3.Runtime">
       <Version>3.5.1</Version>
     </PackageReference>
-    <PackageReference Include="Autofac">
-      <Version>6.3.0</Version>
-    </PackageReference>
     <PackageReference Include="JWT">
       <Version>8.9.0</Version>
     </PackageReference>
@@ -96,126 +93,6 @@
     <PackageReference Include="WebGrease">
       <Version>1.6.0</Version>
     </PackageReference>
-    <Reference Include="ASC.ActiveDirectory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.ActiveDirectory.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Calendar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Calendar.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Community, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Community.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.CRM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.CRM.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Documents, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Employee, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Employee.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Feed, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Feed.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Mail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Mail.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.MailServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.MailServer.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Portal, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Portal.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Projects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Projects.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Settings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.Settings.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Core.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Data.Reassigns, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Data.Reassigns.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Data.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Data.Storage.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.ElasticSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.ElasticSearch.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.IPSecurity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.IPSecurity.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Mail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Mail.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Specific, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Specific.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Thrdparty, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Thrdparty.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.VoipService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.VoipService.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Community, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Community.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.CRM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.CRM.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Files, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Files.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Projects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Projects.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Studio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Studio.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.6.0.1, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\HtmlAgilityPack.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Configuration" />
@@ -232,8 +109,11 @@
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
+    <Compile Include="DocumentGenerator\DocPluginsDocumentation.cs" />
     <Compile Include="DocumentGenerator\Documentation.cs" />
+    <Compile Include="DocumentGenerator\JsDocDocumentation.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
+    <Compile Include="Extensions\XmlExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -258,8 +138,8 @@
     <Content Include="500.aspx" />
     <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
     <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
-    <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\Angle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\AxisPos.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\BlipFillType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\bookmarkRefTo.docbuilder" />
@@ -272,6 +152,7 @@
     <Content Include="App_Data\docbuilder\examples\captionType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddDefName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddSheet.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.attachEvent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateBlipFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateBullet.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateColorByName.docbuilder" />
@@ -291,6 +172,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateSolidFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateStroke.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.detachEvent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Format.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetActiveSheet.docbuilder" />
@@ -303,6 +185,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetSheets.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetThemesColors.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Intersect.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.onWorksheetChange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.RecalculateAllFormulas.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.ReplaceTextSmart.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Save.docbuilder" />
@@ -1070,6 +953,7 @@
     <Content Include="App_Data\docbuilder\examples\word\Api.ReplaceDocumentContent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.ReplaceTextSmart.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.Save.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.AddElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.AddText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.docbuilder" />
@@ -1095,6 +979,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.Search.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.Select.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetAlias.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetBackgroundColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetLabel.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetLock.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetPlaceholderText.docbuilder" />
@@ -1196,11 +1081,41 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiComboBoxForm.SetTipText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComboBoxForm.ToFixed.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComboBoxForm.ToInline.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.AddReply.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.Delete.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetAutorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetQuoteText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetRepliesCount.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetReply.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetTimeUTC.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.IsSolved.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.RemoveReplies.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetAutorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetSolved.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetTimeUTC.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.SetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetAutorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.GetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetAutorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetUserId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AcceptAllRevisionChanges.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddEndnote.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddFootnote.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddTableOfContents.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddTableOfFigures.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.ClearAllFields.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.CreateNewHistoryPoint.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.CreateNumbering.docbuilder" />
@@ -1211,6 +1126,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllBookmarksNames.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllCaptionParagraphs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllCharts.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllComments.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllContentControls.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllDrawingObjects.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllForms.docbuilder" />
@@ -1238,6 +1154,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetReviewReport.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetSections.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetSelectedDrawings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetStatistics.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetTagsOfAllContentControls.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.InsertContent.docbuilder" />
@@ -1253,6 +1170,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.ReplaceDrawing.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.Search.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SearchAndReplace.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetControlsHighlight.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetEvenAndOddHdrFtr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetFormsHighlight.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetTrackRevisions.docbuilder" />
@@ -1353,6 +1271,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiImage.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiImage.GetNextImage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiImage.GetPrevImage.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.AddElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.AddText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.Copy.docbuilder" />
@@ -1403,6 +1322,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.SetApplicationId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.SetData.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.AddBookmarkCrossRef.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.AddCaption.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.AddCaptionCrossRef.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.AddColumnBreak.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.AddComment.docbuilder" />
@@ -1566,6 +1486,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiPresetColor.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPresetColor.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.AddBookmark.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiRange.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.AddHyperlink.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.AddText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.Delete.docbuilder" />
@@ -1574,6 +1495,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.GetAllParagraphs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.GetParagraph.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiRange.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.GetText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.IntersectWith.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRange.Select.docbuilder" />
@@ -1599,6 +1521,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiRGBColor.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRGBColor.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.AddColumnBreak.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiRun.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.AddDrawing.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.AddHyperlink.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.AddLineBreak.docbuilder" />
@@ -1685,6 +1608,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiStyle.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTable.AddColumn.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTable.AddColumns.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiTable.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTable.AddElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTable.AddRow.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTable.AddRows.docbuilder" />
@@ -1946,6 +1870,8 @@
     <Content Include="App_Data\docbuilder\references\word\ApiChart.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiCheckBoxForm.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiComboBoxForm.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiComment.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiCommentReply.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiComplexForm.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiDocument.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiDocumentContent.json" />
@@ -1996,7 +1922,205 @@
     <Content Include="App_Data\editor\PHP Example.zip" />
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
+    <Content Include="App_Data\plugins\examples\Button.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.RemoveComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\comment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\CommentData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControlCheckBoxProperties.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControlDatePickerProperties.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControlLock.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControlParentPr.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControlProperties.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControlPropertiesAndContent.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControlType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\editorType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\EventType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\fillForms.docbuilder" />
+    <Content Include="App_Data\plugins\examples\FontInfo.docbuilder" />
+    <Content Include="App_Data\plugins\examples\formPluginMethods\Api.GetAllForms.docbuilder" />
+    <Content Include="App_Data\plugins\examples\formPluginMethods\Api.GetFormsByTag.docbuilder" />
+    <Content Include="App_Data\plugins\examples\formPluginMethods\Api.GetFormValue.docbuilder" />
+    <Content Include="App_Data\plugins\examples\formPluginMethods\Api.SetFormValue.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ImageData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\initDataType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\InputHelperItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\localeTranslate.docbuilder" />
+    <Content Include="App_Data\plugins\examples\Macros.docbuilder" />
+    <Content Include="App_Data\plugins\examples\OLEObjectData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.createWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.getItems.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.getScrollSizes.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.setItems.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.show.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.unShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.button.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.callCommand.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.callModule.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.createInputHelper.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.executeCommand.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.executeMethod.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.getInputHelper.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.init.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.inputHelper_onSelectItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.loadModule.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onAddComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onBlurContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onChangeCommentData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onChangeContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onClick.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onCommandCallback.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onDocumentContentReady.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onEnableMouseEvent.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onExternalMouseUp.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onExternalPluginMessage.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onFocusContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onInputHelperClear.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onInputHelperInput.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onMethodReturn.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onRemoveComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onTargetPositionChanged.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onTranslate.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.resizeWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\PluginData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\SelectionType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddOleObject.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.CoAuthoringChatSendMessage.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ConvertDocument.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.EditOleObject.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.EndAction.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetFileToDownload.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetFontList.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetImageDataFromSelection.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetInstalledPlugins.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetMacros.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectedText.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectionType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVBAMacros.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVersion.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InputText.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InstallPlugin.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnEncryption.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnDropEvent.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteHtml.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteText.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PutImageDataToSelection.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.RemovePlugin.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ReplaceTextSmart.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.SetMacros.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.SetProperties.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ShowButton.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ShowInputHelper.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.StartAction.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.UnShowInputHelper.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.UpdatePlugin.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.AddComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.RemoveComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\watermark_on_draw.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AcceptReviewChanges.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddContentControlCheckBox.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddContentControlDatePicker.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddContentControlList.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddContentControlPicture.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.ChangeOleObject.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.ChangeOleObjects.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetAllComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetAllContentControls.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetAllOleObjects.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetCurrentContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetCurrentContentControlPr.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetFields.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetFileHTML.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.InsertAndReplaceContentControls.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.InsertOleObject.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.MoveCursorToContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.MoveCursorToEnd.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.MoveCursorToStart.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.MoveToComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.MoveToNextReviewChange.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.OpenFile.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RejectReviewChanges.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RemoveComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RemoveContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RemoveContentControls.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RemoveOleObject.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RemoveOleObjects.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RemoveSelectedContent.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SearchAndReplace.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectContentControl.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectOleObject.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SetDisplayModeInReview.docbuilder" />
+    <Content Include="App_Data\plugins\references\cellPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\cellPluginMethods\Globals.json" />
+    <Content Include="App_Data\plugins\references\formPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\formPluginMethods\Globals.json" />
+    <Content Include="App_Data\plugins\references\pluginBase\Globals.json" />
+    <Content Include="App_Data\plugins\references\pluginBase\InputHelper.json" />
+    <Content Include="App_Data\plugins\references\pluginBase\Plugin.json" />
+    <Content Include="App_Data\plugins\references\sharedPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\sharedPluginMethods\Globals.json" />
+    <Content Include="App_Data\plugins\references\slidePluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\slidePluginMethods\Globals.json" />
+    <Content Include="App_Data\plugins\references\wordPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\wordPluginMethods\Globals.json" />
     <Content Include="App_Data\portals\class_descriptions.xml" />
+    <Content Include="App_Data\portals\references\ASC.ActiveDirectory.xml" />
+    <Content Include="App_Data\portals\references\ASC.Api.Calendar.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Client.xml" />
+    <Content Include="App_Data\portals\references\ASC.Api.Community.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.CRM.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Documents.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Employee.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Feed.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Mail.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.MailServer.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Portal.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Projects.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Sample.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Security.xml" />
+    <Content Include="App_Data\portals\references\ASC.Api.Settings.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.xml" />
+    <Content Include="App_Data\portals\references\ASC.AuditTrail.xml" />
+    <Content Include="App_Data\portals\references\ASC.Common.xml" />
+    <Content Include="App_Data\portals\references\ASC.Core.Common.xml" />
+    <Content Include="App_Data\portals\references\ASC.Data.Backup.xml" />
+    <Content Include="App_Data\portals\references\ASC.Data.Encryption.xml" />
+    <Content Include="App_Data\portals\references\ASC.Data.Reassigns.xml" />
+    <Content Include="App_Data\portals\references\ASC.Data.Storage.Encryption.xml" />
+    <Content Include="App_Data\portals\references\ASC.Data.Storage.Migration.xml" />
+    <Content Include="App_Data\portals\references\ASC.Data.Storage.xml" />
+    <Content Include="App_Data\portals\references\ASC.ElasticSearch.xml" />
+    <Content Include="App_Data\portals\references\ASC.FederatedLogin.xml" />
+    <Content Include="App_Data\portals\references\ASC.Feed.Aggregator.xml" />
+    <Content Include="App_Data\portals\references\ASC.Feed.xml" />
+    <Content Include="App_Data\portals\references\ASC.Files.Thirdparty.xml" />
+    <Content Include="App_Data\portals\references\ASC.IPSecurity.xml" />
+    <Content Include="App_Data\portals\references\ASC.Mail.Server.xml" />
+    <Content Include="App_Data\portals\references\ASC.Mail.xml" />
+    <Content Include="App_Data\portals\references\ASC.MessagingSystem.xml" />
+    <Content Include="App_Data\portals\references\ASC.Notify.Textile.xml" />
+    <Content Include="App_Data\portals\references\ASC.Notify.xml" />
+    <Content Include="App_Data\portals\references\ASC.Resource.Data.xml" />
+    <Content Include="App_Data\portals\references\ASC.Specific.xml" />
+    <Content Include="App_Data\portals\references\ASC.Thrdparty.xml" />
+    <Content Include="App_Data\portals\references\ASC.VoipService.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Calendar.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Community.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Core.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.CRM.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Files.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Mail.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.People.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Projects.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Sample.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Studio.xml" />
+    <Content Include="App_Data\portals\references\ASC.Web.Talk.xml" />
     <Content Include="App_Data\products.json" />
     <Content Include="Content\get-docs.css" />
     <Content Include="Content\highlight.css" />
@@ -2060,6 +2184,7 @@
     <Content Include="Content\img\Editor\compare-documents.png" />
     <Content Include="Content\img\Editor\compare.png" />
     <Content Include="Content\img\Editor\conversion.jpg" />
+    <Content Include="Content\img\Editor\convert-binary-files.jpg" />
     <Content Include="Content\img\Editor\create.png" />
     <Content Include="Content\img\Editor\customization.png" />
     <Content Include="Content\img\Editor\e-coedit.png" />
@@ -2115,6 +2240,7 @@
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
+    <Content Include="Content\img\Editor\paste-link.png" />
     <Content Include="Content\img\Editor\permissions.png" />
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
@@ -2134,6 +2260,7 @@
     <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarHideFileName.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
+    <Content Include="Content\img\Editor\update-values.png" />
     <Content Include="Content\img\Editor\viewer.png" />
     <Content Include="Content\img\get-docs\docker.png" />
     <Content Include="Content\img\get-docs\linux.svg" />
@@ -2577,6 +2704,7 @@
     <Content Include="Views\Editors\HowItWorks.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
+    <Content Include="Views\Editors\InsertingExternalData.aspx" />
     <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />
@@ -2610,8 +2738,10 @@
     <Content Include="Views\Editors\Vue.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
     <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
+    <Content Include="Views\Editors\WOPI\ConversionApi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
     <Content Include="Views\Editors\WOPI\Discovery.ascx" />
+    <Content Include="Views\Editors\WOPI\EditingBinary.ascx" />
     <Content Include="Views\Editors\WOPI\HostPage.ascx" />
     <Content Include="Views\Editors\WOPI\PostMessage.ascx" />
     <Content Include="Views\Editors\WOPI\ProofKeys.ascx" />
@@ -2620,6 +2750,7 @@
     <Content Include="Views\Editors\WOPI\RestApi\GetFile.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\Lock.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\PutFile.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\PutRelativeFile.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\RefreshLock.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\RenameFile.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\Unlock.ascx" />
@@ -2627,12 +2758,10 @@
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\ProductBlock.ascx" />
     <Content Include="Views\Plugin\Basic.aspx" />
-    <Content Include="Views\Plugin\callCommand.aspx" />
-    <Content Include="Views\Plugin\callModule.aspx" />
     <Content Include="Views\Plugin\Changelog.aspx" />
     <Content Include="Views\Plugin\Code.aspx" />
     <Content Include="Views\Plugin\Config.aspx" />
-    <Content Include="Views\Plugin\createInputHelper.aspx" />
+    <Content Include="Views\Plugin\eventpartial.aspx" />
     <Content Include="Views\Plugin\Events.aspx" />
     <Content Include="Views\Plugin\example.aspx" />
     <Content Include="Views\Plugin\Example\addcommentincell.ascx" />
@@ -2670,91 +2799,18 @@
     <Content Include="Views\Plugin\Example\workwithcontentcontrolstags.ascx" />
     <Content Include="Views\Plugin\Example\youtube.ascx" />
     <Content Include="Views\Plugin\Example\zotero.ascx" />
-    <Content Include="Views\Plugin\ExecuteCommand.aspx" />
-    <Content Include="Views\Plugin\Executemethod.aspx" />
-    <Content Include="Views\Plugin\Executemethod\acceptreviewchanges.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontrolcheckbox.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontroldatepicker.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontrollist.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontrolpicture.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\changecomment.ascx" />
-    <Content Include="Views\Plugin\Executemethod\changeoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\changeoleobjects.ascx" />
-    <Content Include="Views\Plugin\Executemethod\coauthoringchatsendmessage.ascx" />
-    <Content Include="Views\Plugin\Executemethod\convertdocument.ascx" />
-    <Content Include="Views\Plugin\Executemethod\default.ascx" />
-    <Content Include="Views\Plugin\Executemethod\editoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\endaction.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getallcomments.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getallcontentcontrols.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getallforms.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getalloleobjects.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrolpr.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getfields.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getfilehtml.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getfiletodownload.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getfontlist.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getformsbytag.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getformvalue.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getimagedatafromselection.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getinstalledplugins.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getmacros.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getselectedtext.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getselectiontype.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getversion.ascx" />
-    <Content Include="Views\Plugin\Executemethod\inputtext.ascx" />
-    <Content Include="Views\Plugin\Executemethod\insertandreplacecontentcontrols.ascx" />
-    <Content Include="Views\Plugin\Executemethod\insertoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\installplugin.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movecursortocontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movecursortoend.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movecursortostart.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movetocomment.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movetonextreviewchange.ascx" />
-    <Content Include="Views\Plugin\Executemethod\onencryption.ascx" />
-    <Content Include="Views\Plugin\Executemethod\openfile.ascx" />
-    <Content Include="Views\Plugin\Executemethod\pastehtml.ascx" />
-    <Content Include="Views\Plugin\Executemethod\pastetext.ascx" />
-    <Content Include="Views\Plugin\Executemethod\putimagedatatoselection.ascx" />
-    <Content Include="Views\Plugin\Executemethod\rejectreviewchanges.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removecomments.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removecontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removecontentcontrols.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removeoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removeoleobjects.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removeplugin.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removeselectedcontent.ascx" />
-    <Content Include="Views\Plugin\Executemethod\replacetextsmart.ascx" />
-    <Content Include="Views\Plugin\Executemethod\searchandreplace.ascx" />
-    <Content Include="Views\Plugin\Executemethod\selectcontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\selectoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\setdisplaymodeinreview.ascx" />
-    <Content Include="Views\Plugin\Executemethod\setformvalue.ascx" />
-    <Content Include="Views\Plugin\Executemethod\setmacros.ascx" />
-    <Content Include="Views\Plugin\Executemethod\setproperties.ascx" />
-    <Content Include="Views\Plugin\Executemethod\showbutton.ascx" />
-    <Content Include="Views\Plugin\Executemethod\showinputhelper.ascx" />
-    <Content Include="Views\Plugin\Executemethod\startaction.ascx" />
-    <Content Include="Views\Plugin\Executemethod\unshowinputhelper.ascx" />
-    <Content Include="Views\Plugin\Executemethod\updateplugin.ascx" />
     <Content Include="Views\Plugin\FAQ.aspx" />
     <Content Include="Views\Plugin\FAQ\FAQShared\ExpandCollapse.ascx" />
-    <Content Include="Views\Plugin\getInputHelper.aspx" />
     <Content Include="Views\Plugin\GettingStarted.aspx" />
+    <Content Include="Views\Plugin\global.aspx" />
     <Content Include="Views\Plugin\Icons.aspx" />
     <Content Include="Views\Plugin\IndexHtml.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
-    <Content Include="Views\Plugin\inputHelper.aspx" />
     <Content Include="Views\Plugin\Installation.aspx" />
     <Content Include="Views\Plugin\Installation\cloud.ascx" />
     <Content Include="Views\Plugin\Installation\Default.ascx" />
     <Content Include="Views\Plugin\Installation\desktop.ascx" />
     <Content Include="Views\Plugin\Installation\onpremises.ascx" />
-    <Content Include="Views\Plugin\loadModule.aspx" />
     <Content Include="Views\Plugin\Localization.aspx" />
     <Content Include="Views\Plugin\Macros\ConvertingVBAMacros.aspx" />
     <Content Include="Views\Plugin\Macros\Debugging.aspx" />
@@ -2780,11 +2836,10 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
+    <Content Include="Views\Plugin\methodpartial.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
-    <Content Include="Views\Plugin\Objects.aspx" />
-    <Content Include="Views\Plugin\Plugin.aspx" />
-    <Content Include="Views\Plugin\resizeWindow.aspx" />
     <Content Include="Views\Plugin\scope.aspx" />
+    <Content Include="Views\Plugin\sectionpartial.aspx" />
     <Content Include="Views\Plugin\Structure.aspx" />
     <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Types.aspx" />
@@ -2808,12 +2863,6 @@
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Shared\TopNavigation.ascx" />
     <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Data\docbuilder\examples\cell\Api.detachEvent.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\Api.attachEvent.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\Api.onWorksheetChange.docbuilder" />
-    <Content Include="web.autofac.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.config">

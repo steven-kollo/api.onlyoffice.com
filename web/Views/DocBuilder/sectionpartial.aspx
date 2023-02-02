@@ -37,12 +37,13 @@
             <% foreach(var p in section.Params) { %>
                 <tr class="tablerow">
                     <td><em><%= p.Name %></em></td>
-                    <td><%= DocBuilderDocumentation.ParamTypeToHtml(p) %></td>
+                    <td><%= DocBuilderDocumentation.Instance.ParamTypeToHtml(p) %></td>
                     <td><%= p.Description %></td>
                 </tr>
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 
     <% if (section.Properties != null && section.Properties.Any()) { %>
@@ -65,6 +66,7 @@
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 
     <h2>Methods</h2>
@@ -78,12 +80,13 @@
         <tbody>
             <% foreach (var method in section.Methods) { %>
                 <tr class="tablerow">
-                    <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a></td>
+                    <td><a href="<%= method.Value.Path %>"><%= method.Key %></a></td>
                     <td><%= method.Value.Description %></td>
                 </tr>
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <% if (section.Events != null && section.Events.Any()) { %>
     <h2>Events</h2>
@@ -97,12 +100,13 @@
         <tbody>
             <% foreach(var ev in section.Events) { %>
                 <tr class="tablerow">
-                    <td><a href="<%= Url.Action(string.Format("{0}/{1}/event-{2}", section.Path, section.Name.ToLower(), ev.Key.ToLower())) %>"><%= ev.Key %></a></td>
+                    <td><a href="<%= ev.Value.Path %>"><%= ev.Key %></a></td>
                     <td><%= ev.Value.Description %></td>
                 </tr>
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 
     <% if (section.Example != null) { %>

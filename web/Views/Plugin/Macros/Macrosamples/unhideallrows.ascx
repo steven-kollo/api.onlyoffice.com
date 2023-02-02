@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This macro unhides all the rows and columns in the active spreadsheet.</p>
+<p class="dscr">Unhides all the rows and columns in the active spreadsheet.</p>
 
 <pre>(function()
 {
