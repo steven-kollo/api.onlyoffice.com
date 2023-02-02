@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: changed the color scheme of the builder examples
 - editors: conversion to ppsm, ppsx
 - editors: added the Go signature code example
 
