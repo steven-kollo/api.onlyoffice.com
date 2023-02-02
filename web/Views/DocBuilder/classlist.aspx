@@ -87,10 +87,10 @@
     <div class="mobile-content"></div>
 
     <h2 id="TextDocuments"><a href="<%= Url.Action("textdocumentapi") %>">Text documents API</a></h2>
-    <% var word = DocBuilderDocumentation.GetModule("word"); %>
+    <% var word = DocBuilderDocumentation.Instance.GetModule("word"); %>
     <% foreach (var section in word.Values) { %>
         <h5 class="builder_page_class">
-            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+            <a href="<%= section.Path %>"><%= section.Name %></a>
         </h5>
         <table class="table table-classlist">
             <thead>
@@ -102,7 +102,7 @@
             <tbody>
                 <% foreach (var method in section.Methods.Values) { %>
                     <tr class="tablerow">
-                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><a href="<%= method.Path %>"><%= method.Name %></a></td>    
                         <td><%= method.Description %></td>
                     </tr>
                 <% } %>
@@ -112,10 +112,10 @@
     <% } %>
 
     <h2 id="SpreadsheetDocuments"><a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a></h2>
-    <% var cell = DocBuilderDocumentation.GetModule("cell"); %>
+    <% var cell = DocBuilderDocumentation.Instance.GetModule("cell"); %>
     <% foreach (var section in cell.Values) { %>
         <h5 class="builder_page_class">
-            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+            <a href="<%= section.Path %>"><%= section.Name %></a>
         </h5>
         <table class="table table-classlist">
             <thead>
@@ -127,7 +127,7 @@
             <tbody>
                 <% foreach (var method in section.Methods.Values) { %>
                     <tr class="tablerow">
-                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><a href="<%= method.Path %>"><%= method.Name %></a></td>    
                         <td><%= method.Description %></td>
                     </tr>
                 <% } %>
@@ -137,10 +137,10 @@
     <% } %>
 
     <h2 id="PresentationDocuments"><a href="<%= Url.Action("presentationapi") %>">Presentation API</a></h2>
-    <% var slide = DocBuilderDocumentation.GetModule("slide"); %>
+    <% var slide = DocBuilderDocumentation.Instance.GetModule("slide"); %>
     <% foreach (var section in slide.Values) { %>
         <h5 class="builder_page_class">
-            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+            <a href="<%= section.Path %>"><%= section.Name %></a>
         </h5>
         <table class="table table-classlist">
             <thead>
@@ -152,7 +152,7 @@
             <tbody>
                 <% foreach (var method in section.Methods.Values) { %>
                     <tr class="tablerow">
-                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><a href="<%= method.Path %>"><%= method.Name %></a></td>    
                         <td><%= method.Description %></td>
                     </tr>
                 <% } %>
@@ -162,10 +162,10 @@
     <% } %>
 
     <h2 id="FormsDocuments"><a href="<%= Url.Action("formapi") %>">Form API</a></h2>
-    <% var form = DocBuilderDocumentation.GetModule("form"); %>
+    <% var form = DocBuilderDocumentation.Instance.GetModule("form"); %>
     <% foreach (var section in form.Values) { %>
         <h5 class="builder_page_class">
-            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+            <a href="<%= section.Path %>"><%= section.Name %></a>
         </h5>
         <table class="table table-classlist">
             <thead>
@@ -177,7 +177,7 @@
             <tbody>
                 <% foreach (var method in section.Methods.Values) { %>
                     <tr class="tablerow">
-                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><a href="<%= method.Path %>"><%= method.Name %></a></td>    
                         <td><%= method.Description %></td>
                     </tr>
                 <% } %>

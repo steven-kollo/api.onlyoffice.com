@@ -3,6 +3,9 @@
 - editors: conversion to ppsm, ppsx
 - editors: added the Go signature code example
 
+## 3.0.2
+- docbuilder: fix class links
+
 ## 3.0.1
 - docbuilder: fix method links
 
