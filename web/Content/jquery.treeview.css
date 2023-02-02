@@ -86,6 +86,7 @@ ul.side-nav,
     overflow: hidden;
     text-decoration: none;
     text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 .treeview a.selected {
