@@ -44,7 +44,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             { "CDE", "word" },
             { "CPE", "slide" },
-            { "CSE", "cell" }
+            { "CSE", "cell" },
+            { "CFE", "form" }
         };
 
         protected Dictionary<string, string> PathMapping { get; set; }
