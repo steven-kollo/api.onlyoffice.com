@@ -10,7 +10,7 @@ oParagraph.AddElement(oCheckBoxForm);
 oParagraph.AddText(" Single");
 var bRadioButton = oCheckBoxForm.IsRadioButton();
 oParagraph = Api.CreateParagraph();
-oParagraph.AddText("The second checkbox from this document is a radio button: " + bRadioButton);
+oParagraph.AddText("The second form from this document is a radio button: " + bRadioButton);
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "IsRadioButton.docx");
 builder.CloseFile();
