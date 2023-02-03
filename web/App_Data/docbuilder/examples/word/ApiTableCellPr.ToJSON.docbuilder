@@ -8,7 +8,7 @@ var oTableCellPr = oTableStyle.GetTableCellPr();
 oTableCellPr.SetCellBorderBottom("single", 32, 0, 0, 0, 255);
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
-let json = oTableCellPr.ToJSON();
+var json = oTableCellPr.ToJSON();
 var oTableCellPrFromJSON = Api.FromJSON(json);
 var sType = oTableCellPrFromJSON.GetClassType();
 var oParagraph = oDocument.GetElement(0);

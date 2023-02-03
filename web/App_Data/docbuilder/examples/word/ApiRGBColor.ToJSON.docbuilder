@@ -2,7 +2,7 @@ builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 var oRGBColor = Api.CreateRGBColor(255, 224, 204);
-let json = oRGBColor.ToJSON();
+var json = oRGBColor.ToJSON();
 var oRGBColorFromJSON = Api.FromJSON(json);
 var oGs1 = Api.CreateGradientStop(oRGBColorFromJSON, 0);
 var oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);

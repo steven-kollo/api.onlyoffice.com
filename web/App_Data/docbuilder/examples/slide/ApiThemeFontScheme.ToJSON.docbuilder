@@ -7,7 +7,7 @@ var oThemeMaster = oMaster.GetTheme();
 var oFontScheme = oThemeMaster.GetFontScheme();
 oFontScheme.SetFonts("Arial", "Noto Sans Simplified Chinese", "Arabic", "Times New Roman", "Noto Serif Simplified Chinese", "Arabic", "New font scheme");
 oFontScheme.SetSchemeName("New font scheme name");
-let json = oFontScheme.ToJSON();
+var json = oFontScheme.ToJSON();
 var oFontSchemeFromJSON = Api.FromJSON(json);
 var oTheme = oSlide.GetTheme();
 oTheme.SetFontScheme(oFontSchemeFromJSON);

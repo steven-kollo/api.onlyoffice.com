@@ -5,7 +5,7 @@ oSlide.RemoveAllObjects();
 var oMaster = oPresentation.GetMaster(0);
 var oClrScheme = Api.CreateThemeColorScheme([Api.CreateRGBColor(160, 82, 45), Api.CreateRGBColor(205, 133, 63), Api.CreateRGBColor(222, 184, 135), Api.CreateRGBColor(245, 222, 179), Api.CreateRGBColor(240, 128, 128), 
     Api.CreateRGBColor(255, 69, 0), Api.CreateRGBColor(0, 0, 0), Api.CreateRGBColor(79, 79, 79), Api.CreateRGBColor(65, 105, 225), Api.CreateRGBColor(176, 196, 222), Api.CreateRGBColor(255, 255, 255), Api.CreateRGBColor(255, 222, 173)], "New color scheme");
-let json = oClrScheme.ToJSON();
+var json = oClrScheme.ToJSON();
 var oClrSchemeFromJSON = Api.FromJSON(json);
 var oTheme = oSlide.GetTheme();
 oTheme.SetColorScheme(oClrSchemeFromJSON);
