@@ -67,12 +67,11 @@ namespace ASC.Api.Web.Help.Helpers
                     throw new Exception("Products list is not found");
                 }
                 var productsJson = File.ReadAllText(productsFile);
-
                 try
                 {
                     _allProducts = JsonConvert.DeserializeObject<List<Product>>(productsJson);
                 }
-                catch (Exception error)
+                catch (Exception)
                 {
                     _allProducts = new List<Product>();
                 }

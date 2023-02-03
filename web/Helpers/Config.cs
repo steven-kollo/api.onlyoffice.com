@@ -37,8 +37,6 @@ using Newtonsoft.Json;
 
 using System.Text.RegularExpressions;
 using System.Web.Configuration;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.Helpers
 {
