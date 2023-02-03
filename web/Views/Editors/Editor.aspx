@@ -29,7 +29,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -61,7 +61,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Form Template Title.docxf",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docxf"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docxf"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -93,7 +93,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -125,7 +125,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -413,7 +413,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.pdf",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pdf"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -445,7 +445,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -477,7 +477,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -509,7 +509,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -541,7 +541,7 @@
                                 Key = "apiwh" + Request["key"],
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -578,7 +578,7 @@
                                 Key = "apiwh" + Request["key"],
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -615,7 +615,7 @@
                                 Key = "apiwh" + Request["key"],
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -652,7 +652,7 @@
                                 Key = "apiwh" + Request["key"],
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -690,7 +690,7 @@
                                 Key = "apiwh" + Request["key"],
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -728,7 +728,7 @@
                                 Key = "apiwh" + Request["key"],
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -766,7 +766,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -812,7 +812,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -858,7 +858,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -903,7 +903,7 @@
                                 FileType = "docx",
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Edit = false,
@@ -978,7 +978,7 @@
                                 FileType = "oform",
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Form Title.oform",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.oform",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.oform",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Edit = false,
@@ -1015,7 +1015,7 @@
                                 FileType = "docx",
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Comment = true,
@@ -1052,7 +1052,7 @@
                                 FileType = "xlsx",
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Comment = true,
@@ -1089,7 +1089,7 @@
                                 FileType = "pptx",
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Comment = true,
@@ -1246,7 +1246,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -1278,7 +1278,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -1310,7 +1310,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -1342,7 +1342,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -1375,7 +1375,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -1408,7 +1408,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -1441,7 +1441,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
                         Height = "100%",
@@ -1462,7 +1462,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         DocumentType = "cell",
                         Height = "100%",
@@ -1483,7 +1483,7 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         DocumentType = "slide",
                         Height = "100%",

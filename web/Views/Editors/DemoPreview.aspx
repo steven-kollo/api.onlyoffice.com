@@ -134,7 +134,7 @@
                                 FileType = ext,
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Title." + ext,
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + ext,
+                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + ext,
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Download = false,
