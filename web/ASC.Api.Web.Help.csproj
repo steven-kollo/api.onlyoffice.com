@@ -148,7 +148,9 @@
     <Content Include="App_Data\docbuilder\examples\BulletType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\byte.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\CaptionLabel.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CaptionNumberingFormat.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\captionRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CaptionSep.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\captionType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddDefName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddSheet.docbuilder" />
@@ -275,6 +277,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiName.GetRefersToRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiName.SetName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiName.SetRefersTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.GetApplicationId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.GetData.docbuilder" />
@@ -680,6 +683,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.RemoveObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.SetTheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.ToJSON.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetApplicationId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetData.docbuilder" />
@@ -914,6 +918,13 @@
     <Content Include="App_Data\docbuilder\examples\TextTransform.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TickLabelPosition.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TickMark.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocBuildFromPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocLeader.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocStyleLvl.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TofPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TofStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\twips.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\VerticalTextAlign.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.AddComment.docbuilder" />
@@ -1316,6 +1327,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiNumberingLevel.SetStart.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiNumberingLevel.SetSuff.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiNumberingLevel.SetTemplateType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.GetApplicationId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.GetData.docbuilder" />
@@ -2867,18 +2879,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\CaptionNumberingFormat.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\CaptionSep.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\TocBuildFromPr.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\TocLeader.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\TocPr.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\TocStyle.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\TocStyleLvl.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\TofPr.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\TofStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllImages.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllOleObjects.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllImages.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllOleObjects.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.Copy.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.Copy.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetDefaultStyle.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
