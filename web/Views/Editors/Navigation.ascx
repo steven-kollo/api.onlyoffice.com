@@ -165,6 +165,14 @@
             </li>
         </ul>
     </li>
+    <li>
+        <a href="<%= Url.Action("examplesoutside") %>">Examples outside</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("comments") %>">Work with comments</a>
+            </li>
+        </ul>
+    </li>
 </ul>
 
 <div class="treeheader">Usage API</div>

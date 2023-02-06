@@ -902,6 +902,16 @@ pre,
         background-color: #ff642e;
     }
 
+    .button.active {
+        background: #FF6F3D;
+        border: 1px solid #FF6F3D;
+        color: #FFFFFF;
+    }
+
+    .button.disabled {
+        opacity: 0.5;
+    }
+
     .button:hover {
         text-decoration: none;
         background: #fff;
@@ -911,6 +921,18 @@ pre,
 
     .button.red:hover {
         background-color: #ff7a4b;
+    }
+
+    .button.active:hover {
+        background: #ff7a4b;
+        border: 1px solid #FF6F3D;
+        color: #FFFFFF;
+    }
+
+    .button.disabled:hover {
+        border: 1px solid #A3A9AE;
+        color: currentColor;
+        cursor: default;
     }
 
 .button-upper {
@@ -2591,3 +2613,61 @@ article {
     margin: 0;
     margin-top: 32px;
 }
+
+#replies {
+    margin-left: 50px;
+}
+
+.add-comment-area {
+    outline: none;
+    background: rgb(249, 249, 249);
+    border-radius: 3px;
+    padding: 15px 24px;
+    width: 95%;
+    height: 100px;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+}
+
+.add-reply-area {
+    outline: none;
+    background: rgb(249, 249, 249);
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-left: 50px;
+    width: 95%;
+    height: 40px;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+}
+
+
+.comment-author {
+    color: #666666;
+    display: inline-block;
+}
+
+.comment-date {
+    color: #666666;
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.comment-message {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.comment {
+    margin-bottom: 12px;
+}
+
+    .comment.reply {
+        background-image: url("img/Editor/reply.svg");
+        background-image: url(img/Editor/reply.svg);
+        background-repeat: no-repeat;
+        background-position-y: 4px;
+        padding-left: 38px;
+    }

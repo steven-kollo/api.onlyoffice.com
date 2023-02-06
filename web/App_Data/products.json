@@ -31,8 +31,12 @@
                "Item2":"plugins"
             },
             {
-               "Item1":"How it works",
-               "Item2":"howitworks"
+              "Item1": "How it works",
+              "Item2": "howitworks"
+            },
+            {
+              "Item1": "Examples outside",
+              "Item2": "examplesoutside"
             }
          ],
          "Usage API":[

@@ -55,6 +55,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Command/meta",
                 "Command/version",
                 "Commenting",
+                "Comments",
                 "Comparing",
                 "Config",
                 "Config/Document",
@@ -233,6 +234,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Commenting()
+        {
+            return View();
+        }
+
+        public ActionResult Comments()
         {
             return View();
         }

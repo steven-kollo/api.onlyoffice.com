@@ -2249,6 +2249,7 @@
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />
     <Content Include="Content\img\Editor\rename.png" />
+    <Content Include="Content\img\Editor\reply.svg" />
     <Content Include="Content\img\Editor\review.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
     <Content Include="Content\img\Editor\save-updates.png" />
@@ -2713,6 +2714,7 @@
     <Content Include="Views\Editors\Navigation.ascx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
+    <Content Include="Views\Editors\Comments.aspx" />
     <Content Include="Views\Editors\Open.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
