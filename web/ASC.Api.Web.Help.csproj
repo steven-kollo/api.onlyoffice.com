@@ -2870,6 +2870,15 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CaptionNumberingFormat.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CaptionSep.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocBuildFromPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocLeader.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocStyleLvl.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TofPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TofStyle.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
