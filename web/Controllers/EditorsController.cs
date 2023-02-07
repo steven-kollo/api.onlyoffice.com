@@ -93,6 +93,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Security",
                 "FAQ/Sharing",
                 "FAQ/UsingWOPI",
+                "FillingForm",
                 "Frameworks",
                 "GetDocs",
                 "History",
@@ -293,6 +294,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("FAQ", (object)catchall);
+        }
+
+        public ActionResult FillingForm()
+        {
+            return View();
         }
 
         public ActionResult GetDocs()

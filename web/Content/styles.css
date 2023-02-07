@@ -2671,3 +2671,35 @@ article {
         background-position-y: 4px;
         padding-left: 38px;
     }
+
+.left-half {
+    float: left;
+    width: 50%;
+}
+
+.right-half {
+    float: right;
+    width: 50%;
+}
+
+    .left-half label,
+    .right-half label {
+        display: inline-block;
+        color: #666666;
+        width: 33%;
+    }
+
+    .left-half input,
+    .right-half input {
+        border: 1px solid #D0D5DA;
+        border-radius: 2px;
+        box-sizing: border-box;
+        margin: 4px;
+        padding: 4px 8px;
+        height: 30px;
+        width: 57%;
+    }
+
+#controlsBlock {
+    display: flex;
+}

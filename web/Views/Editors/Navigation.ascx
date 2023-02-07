@@ -171,6 +171,9 @@
             <li>
                 <a href="<%= Url.Action("comments") %>">Work with comments</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("fillingform") %>">Filling out the form</a>
+            </li>
         </ul>
     </li>
 </ul>
