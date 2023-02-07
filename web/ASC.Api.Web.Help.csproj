@@ -2273,6 +2273,7 @@
     <Content Include="Content\img\java\upload-app.jpg" />
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\macros\add-new-chart.svg" />
+    <Content Include="Content\img\macros\assign_unique_id.svg" />
     <Content Include="Content\img\macros\cell-background-color.svg" />
     <Content Include="Content\img\macros\cell-font-bold.svg" />
     <Content Include="Content\img\macros\change-cell.svg" />
@@ -2372,6 +2373,7 @@
     <Content Include="Content\img\plugins\helloworld_icon.png" />
     <Content Include="Content\img\plugins\highlight_duplicates.png" />
     <Content Include="Content\img\plugins\import-csv-macro.png" />
+    <Content Include="Content\img\plugins\insert_id.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
@@ -2822,6 +2824,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\formatrangeasatable.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\highlightduplicates.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\importcsv.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\insertid.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\inserttext.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\makecellfontbold.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\mergecellrange.ascx" />
