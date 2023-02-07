@@ -392,7 +392,10 @@ docEditor.refreshHistory({
                     </tr>
                     <tr class="tablerow">
                         <td>history.serverVersion</td>
-                        <td>Defines the current server version number.</td>
+                        <td>
+                            Defines the current server version number.
+                            If the <em>changes</em> parameter is sent, then the <em>serverVersion</em> parameter is required to be sent as well.
+                        </td>
                         <td>integer</td>
                         <td>optional</td>
                     </tr>
