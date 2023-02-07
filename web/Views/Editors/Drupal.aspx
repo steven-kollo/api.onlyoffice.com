@@ -19,8 +19,8 @@
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>目前，可以编辑以下文档格式：DOCX, XLSX, PPTX。</li>
-        <li>以下格式可供查看：DJVU, DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, PPTX, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSM, XLSX, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.</li>
+        <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX。</li>
+        <li>以下格式可供查看：DJVU、DOC、DOCM、DOCX、DOT、DOTM、DOTX、EPUB、FB2、FODT、HTML、MHT、ODT、OTT、OXPS、PDF、PPTX、RTF、TXT、XPS、XML、CSV、FODS、ODS、OTS、XLS、XLSM、XLSX、XLT、XLTM、XLTX、FODP、ODP、OTP、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM。</li>
         <li>该模块还允许在公共页面上预览文件。</li>
         <li>该模块将在office文档的文档库中创建一个新的 <b>在ONLYOFFICE中编辑</b> 菜单选项。
             这允许多个用户实时协作，并将这些更改保存回Drupal。</li>
@@ -84,7 +84,7 @@ https://&lt;documentserver&gt;/
 </pre>
     <p>其中 <b>documentserver</b> 是安装了ONLYOFFICE 文档服务器的服务器的名称。必须可以从用户浏览器和Drupal服务器访问该地址。
         为了正确运行，Drupal服务器地址还必须可以从ONLYOFFICE 文档服务器访问。</p>
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
         在Drupal管理配置中指定 <b>密钥</b>。在ONLYOFFICE 文档服务器 <a href="<%= Url.Action("signature") %>">配置文件</a> 中，指定相同的密钥并启用验证。</p>
 
     <h2 id="usage" class="copy-link">使用Drupal ONLYOFFICE连接器模块</h2>

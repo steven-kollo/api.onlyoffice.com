@@ -29,7 +29,7 @@
     <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - 用户正在尝试单击文档版本历史记录中的特定文档版本。</li>
     <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - 用户尝试通过单击 <em>存储中的图像</em> 按钮来插入图像。</li>
     <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - 用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据。</li>
-    <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - the user is trying to refresh data inserted from the external file by clicking the <em>Update values</em> button in the <em>External</em> links dialog box of the <em>Data</em> tab.</li>
+    <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - 用户正尝试通过单击<em>数据</em> 选项卡的<em>外部</em> 链接对话框中的<em>更新值</em> 按钮来刷新从外部文件插入的数据。</li>
     <li><a href="#onRequestRename">onRequestRename</a> - 用户试图通过单击 <em>重命名...</em> 按钮来重命名文件。</li>
     <li><a href="#onRequestRestore">onRequestRestore</a> - 用户正在尝试通过单击版本历史记录中的 <em>恢复</em> 按钮来恢复文件版本。</li>
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - 用户试图通过单击 <em>另存为...</em> 按钮来保存文件。</li>
@@ -571,13 +571,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - the function called when the user is trying to refresh data inserted from the external file
-            by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab.
-            To refresh data by a link to a file which is specified with the event parameters, you must call the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.
-            An object with the unique file data and the file path or name are sent in the <em>data</em> parameter. If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.
+            <b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - 当用户通过单击<em>数据</em>选项卡<em>外部链接</em>对话框中的<em>更新值</em>
+             按钮而尝试刷新从外部文件插入的数据时，函数被调用。
+             要通过事件参数指定的文件链接刷新数据，您必须调用 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法。
+             具有唯一文件数据和文件路径或名称的对象在 <em>data</em> 参数中发送。 如果未声明该事件，则不会显示<em>粘贴链接</em> 和<em>更新值</em> 按钮。
         </p>
-        <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
-        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+       <note>要将数据发送给<em>setReferenceData</em>方法，建议先通过<em>referenceData</em>参数搜索文件。
+         如果没有这样的字段或找不到文件，则使用 <em>path</em> 参数。</note>
         <div class="img-block-2">
             <div>
                 <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />

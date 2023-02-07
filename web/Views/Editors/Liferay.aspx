@@ -20,7 +20,7 @@
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
         <li>目前可以使用此插件打开和编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
-        <li>以下格式仅供查看：ODT, ODS, ODP, DOC, XLS, PPT.</li>
+        <li>以下格式仅供查看：ODT、ODS、ODP、DOC、XLS、PPT。</li>
         <li>该插件将在 Office 文档的 <b>文档和媒体</b> 部分中创建一个新的 <b>ONLYOFFICE 编辑/查看</b> 菜单选项。
             这允许多个用户实时协作并将这些更改保存到 Liferay。</li>
     </ul>
@@ -51,8 +51,8 @@
         为了配置连接器，您必须导航到 <b>系统设置</b> （<b>控制面板 -> 配置 -> 系统设置</b>）。
         在 <b>平台</b> 部分单击 <b>连接器</b> 类别并选择 <b>ONLYOFFICE</b>。
     </p>
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-        Specify your own <b>Secret key</b> on the Liferay <b>System Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+        在 Liferay <b>系统设置</b> 页面上指定您自己的<b>密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
 
     <h2 id="compiling" class="copy-link">编译 Liferay ONLYOFFICE 连接器</h2>
@@ -65,7 +65,7 @@
 
     <h2 id="how-it-works" class="copy-link">这个怎么运作</h2>
 
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <p>ONLYOFFICE 集成遵循<a href="<%= Url.Action("basic") %>">此处</a>的 API文档。</p>
     <ol>
         <li>用户导航到 Liferay 中的 <b>文档和媒体</b> 部分并选择 <b>在 ONLYOFFICE 中编辑</b> 操作。</li>
         <li>

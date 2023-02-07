@@ -57,8 +57,8 @@
             </tr>
             <tr class="tablerow tablerow-note">
                 <td colspan="4">
-                    <div class="note">If the conversion is synchronous and the file takes a long time to be converted, a web request timeout error may occur.
-                        Although the conversion can be eventually completed, the result can only be obtained by sending the request again with the same key.</div>
+                    <div class="note">如果是同步转换，文件转换时间比较长，可能会出现web请求超时错误。
+                        虽然最终可以完成转换，但只有用相同的key再次发送请求才能得到结果。</div>
                 </td>
             </tr>
             <tr class="tablerow">
@@ -212,7 +212,7 @@
             </tr>
             <tr class="tablerow tablerow-note">
                 <td colspan="4">
-                    <div class="note">Please note that the maximum number of pages that can be returned at once after converting a spreadsheet into pdf or image formats is no more than 1500.</div>
+                    <div class="note">请注意，将电子表格转换为pdf或图像格式后，一次可以返回的最大页数不超过1500。</div>
                 </td>
             </tr>
             <tr class="tablerow">

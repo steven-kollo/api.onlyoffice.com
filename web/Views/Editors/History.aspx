@@ -112,8 +112,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         如果文档版本是使用 <b>文档编辑器</b>创建的，则在查看文档历史记录时可以显示文档更改。
         将编辑会话 <a href="<%= Url.Action("save") %>">保存</a> 在文档版本旁边时，必须将附加数据保存到 <b>文档存储服务</b> 来实现此目的。
         在 <b>文档编辑器</b> 中编辑后，有关编辑会话期间更改的信息将与更改的文档一起发送：</p>
-    <note>When the server version is updated, the <b>document editor</b> does not use the <em>changes</em> data to highlight changes in the history.
-        It only returns the changed document in the <em>changesurl</em> parameter.</note>
+        <note>当服务器版本更新时，<b>文档编辑器</b> 不会使用<em>changes</em> 数据来突出历史记录中的更改。
+            它仅在 <em>changesurl</em> 参数中返回更改的文档。</note>
     <ul>
         <li>
             <p>

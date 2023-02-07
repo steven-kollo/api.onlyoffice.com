@@ -22,7 +22,7 @@
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
         <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
-        <li>以下格式仅供查看：DOC, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP。</li>
+        <li>以下格式仅供查看：DOC、DOCM、DOT、DOTX、DOTM、ODT、FODT、OTT、RTF、TXT、HTML、HTM、MHT、XML、PDF、DJVU、FB2、EPUB、XPS、XLS、XLSM、XLT、XLTX、XLTM、ODS、FODS、OTS、CSV、PPS、PPSX、PPSM、PPT、PPTM、POT、POTX、POTM、ODP、FODP、OTP。</li>
         <li>该插件将在 Office 文档的文档库中创建一个新的菜单选项 <b>在ONLYOFFICE 中编辑</b>。这允许多个用户实时协作并将这些更改保存到Redmine中。</li>
     </ul>
 
@@ -46,7 +46,7 @@
             <pre>
 git clone https://github.com/ONLYOFFICE/onlyoffice-redmine
 </pre>
-            <p>Go to the Redmine ONLYOFFICE integration plugin folder and get a submodule:</p>
+            <p>转到 Redmine ONLYOFFICE 集成插件文件夹并获取子模块：</p>
             <pre>
 cd onlyoffice-redmine
 git submodule update --init --recursive
@@ -86,8 +86,8 @@ https://&lt;documentserver&gt;:&lt;port&gt;/
 </pre>
             <p>其中 <b>documentserver</b> 是服务器的名称， <b>port</b> 是安装了 <b>ONLYOFFICE Docs</b> 的端口号。</p>
         </li>
-        <li><b>Secret key</b>: Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-            Specify your own secret key on the Redmine configuration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
+        <li><b>密钥</b>：从7.2版本开始，默认启用JWT，并自动生成密钥以限制对ONLYOFFICE Docs的访问，这也是出于安全原因和数据完整性考虑。
+            在 Redmine 配置页面上指定您自己的密钥。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
     </ul>
     <p>您还可以配置 <b>编辑器定制设置</b>：</p>
     <ul>
@@ -134,8 +134,8 @@ https://&lt;documentserver&gt;:&lt;port&gt;/
             <p>具有 <b>查看新闻</b> 权限的用户角色可以打开文件进行查看。</p>
         </li>
         <li>
-            <p><b>Saving changes</b></p>
-            <p>All the changes made in the document are saved in the original file.</p>
+            <p><b>保存更改</b></p>
+            <p>在文档中所做的所有更改都保存在原始文件中。</p>
         </li>
     </ul>
 

@@ -295,11 +295,11 @@
         <tbody>
             <tr>
                 <td id="CopyPasteRestrictions" class="copy-link">CopyPasteRestrictions</td>
-                <td>Specifies if the WOPI client must disable the <b>Copy and Paste</b> functionality within the application.
-                    By default, all <b>Copy and Paste</b> functionality is enabled, i.e. the setting has no effect. Possible property values:
+                <td>指定 WOPI 客户端是否必须禁用应用程序中的<b>复制和粘贴</b>功能。
+                     默认情况下，所有<b>复制和粘贴</b>功能均已启用，即该设置无效。 可能的属性值：
                     <ul>
-                        <li><b>BlockAll</b> - the <b>Copy and Paste</b> functionality is completely disabled within the application;</li>
-                        <li><b>CurrentDocumentOnly</b> - the <b>Copy and Paste</b> functionality is enabled but content can only be copied and pasted within the file currently open in the application.</li>
+                        <li><b>BlockAll</b> - <b>复制和粘贴</b>功能在应用程序中被完全禁用；</li>
+                        <li><b>CurrentDocumentOnly</b> - <b>复制和粘贴</b>功能已启用，但只能在应用程序当前打开的文件中复制和粘贴内容。</li>
                     </ul>
                 </td>
                 <td>string</td>
@@ -398,9 +398,9 @@
             </tr>
             <tr>
                 <td id="UserCanNotWriteRelative" class="copy-link">UserCanNotWriteRelative</td>
-                <td>Specifies if the user has permissions to create new files on the WOPI server or not.
-                The <b>true</b> value means that the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> execution will fail for this user on the current file.
-                By default, this parameter is <b>false</b> and the <em>PutRelativeFile</em> operation is executed.</td>
+                <td>指定用户是否有权在 WOPI 服务器上创建新文件。
+                 <b>true</b> 值意味着 <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> 这个用户执行当前文件将失败。
+                 默认情况下，此参数为 <b>false</b> 并执行 <em>PutRelativeFile</em> 操作。</td>
                 <td>boolean</td>
                 <td>false</td>
             </tr>
@@ -445,8 +445,8 @@
         <tbody>
             <tr>
                 <td id="SupportsLocks" class="copy-link">SupportsLocks</td>
-                <td>Specifies if the WOPI server supports the <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>, <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>,
-                and <a href="<%= Url.Action("wopi/restapi/refreshlock") %>">RefreshLock</a> operations.</td>
+                <td>指定WOPI服务器是否支持<a href="<%= Url.Action("wopi/restapi/lock") %>">lock</a>, <a href="<%= Url.Action(" wopi/restapi/unlock") %>">unlock</a>,
+                 和 <a href="<%= Url.Action("wopi/restapi/refreshlock") %>">refreshlock</a> 操作。</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -464,7 +464,7 @@
             </tr>
             <tr>
                 <td id="SupportsUpdate" class="copy-link">SupportsUpdate</td>
-                <td>Specifies if the WOPI server supports the <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> and <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> operations.</td>
+                <td>指定 WOPI 服务器是否支持 <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> 和 <a href="<%= Url.Action(" wopi/restapi/putrelativefile") %>">PutRelativeFile</a> 操作。</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -491,10 +491,10 @@
         <tbody>
             <tr>
                 <td id="EnableInsertRemoteImage" class="copy-link">EnableInsertRemoteImage</td>
-                <td>Specifies whether to enable the menu entry and toolbar item which call the <a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">UI_InsertGraphic</a> message.
-                This property is used to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration.
-                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back
-                via the <a href="<%= Url.Action("wopi/postmessage") %>#Action_InsertGraphic">Action_InsertGraphic</a> message with <em>Values</em> set to the temporary URL.</td>
+                <td>指定是否启用调用<a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">UI_InsertGraphic</a> 消息的菜单项和工具栏项。
+                 此属性用于显示允许用户从集成中选择图像的用户界面元素（例如，对话框）。
+                 该集成应该提供一个可以下载一次的临时 URL，通过将
+                 <a href="<%= Url.Action("wopi/postmessage") %>#Action_InsertGraphic">Action_InsertGraphic</a> 消息的<em>Values</em> 设置为临时 URL，将其返回。</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>

@@ -112,5 +112,5 @@
     </table>
     <div class="mobile-content"></div>
 
-    <div class="header-gray">Response body</div>
-    <p>The response body must be the full binary contents of the file.</p>
+    <div class="header-gray">响应体</div>
+    <p>响应体必须是文件的完整二进制内容。</p>

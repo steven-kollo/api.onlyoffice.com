@@ -65,8 +65,8 @@
         该地址必须可从用户浏览器和 Confluence 服务器访问。
         为了正常工作，Confluence 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问。
     </p>
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-        Specify your own <b>Secret key</b> on the Confluence administration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+        在 Confluence 管理页面上指定您自己的 <b>Secret key</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
     <h2 id="compile" class="copy-link">编译 Confluence ONLYOFFICE 集成应用</h2>
     <p>如果您打算自己编译 Confluence ONLYOFFICE 集成应用程序（例如编辑源代码并在之后编译它），请按照以下步骤操作：</p>
@@ -89,9 +89,9 @@ sudo apt-get update sudo apt-get install openjdk-8-jdk</span>
     </ol>
 
     <h2 id="howitworks" class="copy-link">这是如何运作的</h2>
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <p>ONLYOFFICE 集成遵循<a href="<%= Url.Action("basic") %>">此处</a>的API文档。</p>
     <ol>
-        <li>用户导航到 Confluence 附件并选择 <b>Edit in ONLYOFFICE</b> 操作。</li>
+        <li>用户导航到 Confluence 附件并选择 <b>在ONLYOFFICE中编辑</b> 操作。</li>
         <li>Confluence 向 OnlyOfficeEditorServlet 发出请求（表单的 URL：<em>/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id</em>).</li>
         <li>Confluence 将文档发送到 ONLYOFFICE 文档存储服务并接收临时链接。</li>
         <li>
@@ -99,7 +99,7 @@ sudo apt-get update sudo apt-get install openjdk-8-jdk</span>
             <ul>
                 <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的临时链接；</li>
                 <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
-                <li><b>docserviceApiUrl</b> - the URL that the client needs to reply to ONLYOFFICE Docs (provided by the <em>files.docservice.url.api</em> property);</li>
+                <li><b>docserviceApiUrl</b> - 客户端需要回复 ONLYOFFICE Docs 的 URL（由 <em>files.docservice.url.api</em> 属性提供）；</li>
                 <li><b>key</b> - 指示 ONLYOFFICE Docs 是否再次下载文档的 UUID；</li>
                 <li><b>title</b> - 文档标题（名称）。</li>
             </ul>

@@ -22,7 +22,7 @@
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
         <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
-        <li>以下格式可供查看：DOC, DOCM, DOC, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLTZ , XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP.</li>
+        <li>以下格式可供查看：DOC、DOCM、DOC、DOTX、DOTM、ODT、FODT、OTT、RTF、TXT、HTML、HTM、MHT、PDF、DJVU、FB2、EPUB、XPS、XLS、XLSM、XLTZ、XLTX、XLTM、ODS、FODS、OTS、CSV、PPS、PPSX、PPSM、PPT、PPTM、POT、POTX、POTM、ODP、FODP、OTP。</li>
         <li>该插件将在 Office 文档的文档库中创建一个新的菜单选项- <b>在ONLYOFFICE 中编辑</b>。
             这允许多个用户实时协作并将更改保存回 Jira。</li>
     </ul>
@@ -61,12 +61,12 @@
         该地址必须可供用户浏览器和 Jira 服务器访问。
         要正常工作,Jira 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问。
     </p>
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-        Specify your own <b>Secret key</b> on the Jira administration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+        在 Jira 管理页面上指定您自己的<b>密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
-    <p>Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Docs using the public addresses. 
-        The <b>Advanced server settings</b> section allows you to set the ONLYOFFICE Docs address for internal requests from Jira 
-        and the returning Jira address for internal requests from ONLYOFFICE Docs.</p>
+    <p>有时您的网络配置可能不允许使用公共地址在 Jira 和 ONLYOFFICE Docs 之间进行请求。
+        <b>高级服务器设置</b>部分允许您为来自 Jira 的内部请求设置 ONLYOFFICE Docs 地址，
+        以及为来自 ONLYOFFICE Docs 的内部请求设置返回的 Jira 地址。</p>
 
     <h2 id="compiling" class="copy-link">编译 Jira ONLYOFFICE 集成应用</h2>
 
@@ -97,7 +97,7 @@ sudo apt-get install openjdk-8-jdk</span>
 
     <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
 
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <p>ONLYOFFICE 集成遵循<a href="<%= Url.Action("basic") %>">此处</a>的API文档。</p>
     <ol>
         <li>用户导航到 Jira 附件并选择 <b>在 ONLYOFFICE 中编辑</b> 操作。</li>
         <li>Jira 向 <b>OnlyOfficeEditorServlet</b> 发出请求（表单的 URL：<em>/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id</em>).</li>

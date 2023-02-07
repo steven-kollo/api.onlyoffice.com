@@ -15,8 +15,8 @@
         <li><a href="<%= Url.Action("wopi/proofkeys") %>">proof keys</a> - 用于检查是否从online office收到请求；</li>
         <li>支持的 <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a> 函数；</li>
         <li>可以通过 <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>发布的可用消息；</li>
-        <li>request parameters for <a href="<%= Url.Action("wopi/conversionapi") %>">converting</a> different file formats in the online office;</li>
-        <li>a scheme for <a href="<%= Url.Action("wopi/editingbinary") %>">editing binary document formats</a>;</li>
+        <li>在online office中<a href="<%= Url.Action("wopi/conversionapi") %>">转换</a>不同文件格式请求参数；</li>
+        <li><a href="<%= Url.Action("wopi/editingbinary") %>">编辑二进制文档格式</a>的方案；</li>
         <li>ONLYOFFICE Docs API 和 WOPI 之间的<a href="<%= Url.Action("wopi/apivswopi") %>">区别</a>。</li>
     </ul>
 

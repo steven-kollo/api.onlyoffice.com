@@ -19,8 +19,8 @@
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>目前，可以编辑以下文档格式：DOCX, XLSX, PPTX.</li>
-        <li>以下格式可供查看：XLS, XLSX, CSV, XLSM, XLT, XLTM, ODS, FODS, OTS, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP, DOC, DOCX, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF.</li>
+        <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX。</li>
+        <li>以下格式可供查看：XLS、XLSX、CSV、XLSM、XLT、XLTM、ODS、FODS、OTS、PPS、PPSX、PPSM、PPT、PPTX、PPTM、POT、POTX、POTM、ODP、FODP、OTP、DOC、DOCX、DOCM、DOT、DOTX、DOTM、ODT、FODT、OTT、RTF。</li>
         <li>该插件将在文档库中为office文档创建一个新的 <b>在 ONLYOFFICE 中打开</b> 的菜单选项。
             这允许多个用户实时协作并将这些更改保存回 Mattermost。</li>
     </ul>
@@ -45,9 +45,9 @@
         <li>克隆 <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">主分支</a>。</li>
         <li>转到项目根目录。</li>
         <li>
-            <p>Install the dependencies:</p>
+            <p>安装依赖：</p>
             <span class="commandline">npm install --legacy-peer-deps</span>
-            <note>Please note that you need to have Node.js v.15.14.0 installed on your machine to build the plugin.</note>
+            <note>请注意，您需要在计算机上安装 Node.js v.15.14.0 才能构建插件。</note>
         </li>
         <li>
             <p>运行以下命令：</p>
@@ -71,12 +71,12 @@
                 也必须可以从 <b>ONLYOFFICE Docs</b> 访问 Mattermost 服务器地址才能正确工作。
             </p>
         </li>
-        <li><b>Secret key</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-            Specify your own secret key in the Mattermost plugin configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
-        <li><b>JWT 头</b>.果启用了 JWT 保护，则必须指定自定义标头名称，因为 
+        <li><b>密钥</b>。 从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+            在 Mattermost 插件配置中指定您自己的密钥。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
+        <li><b>JWT 头</b>。果启用了 JWT 保护，则必须指定自定义标头名称，因为 
             Mattermost 安全策略会阻止外部 <b>授权</b> 标头此标头也应在 ONLYOFFICE Docs 签名设置中指定。
             更多关于签名的信息可以在 <a href="<%= Url.Action("signature/") %>">这里</a>找到。</li>
-        <li><b>JWT 前缀</b>.指定 ONLYOFFICE Docs 前缀。</li>
+        <li><b>JWT 前缀</b>。指定 ONLYOFFICE Docs 前缀。</li>
     </ul>
 
 
@@ -101,9 +101,9 @@
 
 
     <h2 id="howitworks" class="copy-link">这是如何运作的</h2>
-    <p>ONLYOFFICE 集成遵循 <a href="<%= Url.Action("basic") %>">此处</a>.的 API文档。</p>
+    <p>ONLYOFFICE 集成遵循 <a href="<%= Url.Action("basic") %>">此处</a>。的 API文档。</p>
 
     <br />
-    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">此处</a>.下载 Mattermost ONLYOFFICE 集成插件。</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">此处</a>。下载 Mattermost ONLYOFFICE 集成插件。</p>
 
 </asp:Content>

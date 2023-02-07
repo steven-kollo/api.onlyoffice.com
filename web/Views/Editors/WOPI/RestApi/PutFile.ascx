@@ -124,8 +124,8 @@
     </table>
     <div class="mobile-content"></div>
 
-    <div class="header-gray">Request body</div>
-    <p>The request body must be the full binary contents of the file.</p>
+    <div class="header-gray">请求正文</div>
+    <p>请求正文必须是文件的完整二进制内容。</p>
 
     <div class="header-gray">响应标头</div>
     <table class="table">

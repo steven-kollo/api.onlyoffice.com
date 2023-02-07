@@ -16,21 +16,21 @@
     </h1>
 
     <p class="dscr">ONLYOFFICE 文档服务器 API 的更改列表。</p>
-    <h2 id="73" class="copy-link">Version 7.3</h2>
-    <ul>
-        <li>Added the WOPI <a href="<%= Url.Action("wopi/conversionapi") %>">Conversion API</a>.</li>
-        <li>Added the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.</li>
-        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">events.onRequestReferenceData</a> event.</li>
-        <li>Added the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> parameter.</li>
-        <li>Added the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#UserCanNotWriteRelative">UserCanNotWriteRelative</a> property to the <em>CheckFileInfo</em> WOPI operation.</li>
-        <li>Added a scheme for <a href="<%= Url.Action("wopi/editingbinary") %>">editing binary document formats</a>.</li>
-        <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#convert">convert</a> action to the WOPI discovery.</li>
-        <li>Added the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> WOPI operation.</li>
-    </ul>
+    <h2 id="73" class="copy-link">版本 7.3</h2>
+     <ul>
+         <li>添加了 WOPI <a href="<%= Url.Action("wopi/conversionapi") %>">转换 API</a>。</li>
+         <li>添加了 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法。</li>
+         <li>添加了 <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">events.onRequestReferenceData</a> 事件。</li>
+         <li>添加了 <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> 参数。</li>
+         <li>向 <em>CheckFileInfo</em> WOPI 操作添加了 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#UserCanNotWriteRelative">UserCanNotWriteRelative</a> 属性。</li>
+         <li>添加了<a href="<%= Url.Action("wopi/editingbinary") %>">编辑二进制文档格式</a>的方案。</li>
+         <li>向 WOPI 发现添加了<a href="<%= Url.Action("wopi/discovery") %>#convert">convert</a> 操作。</li>
+         <li>添加了 <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>">PutRelativeFile</a> WOPI 操作。</li>
+     </ul>
 
     <h2 id="72" class="copy-link">7.2 版</h2>
     <ul>
-        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#integrationMode">editorConfig.customization.integrationMode</a> parameter.</li>
+        <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#integrationMode">editorConfig.customization.integrationMode</a> 参数。</li>
         <%--<li>添加了<a href="<%=Url.Action("connector") %>">连接器</a> 类，以与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。</li>--%>
         <li>将<em>theme-contrast-dark</em>主题id添加到<a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a>参数中。</li>
         <li>将<em>phone</em>字段添加到<a href="<%= Url.Action("config/editor/customization") %>#customer">editorConfig.customization.customer</a>参数中。</li>
@@ -53,7 +53,7 @@
         <li>在转换请求中添加了 <a href="<%= Url.Action("conversionapi") %>#documentRenderer">documentRenderer</a> 参数。</li>
         <li>添加了从 <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdf/xps/oxps</a> 格式到 <em>docx</em>的转换。</li>
         <li>添加了 <a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">document.permissions.userInfoGroups</a> 参数。</li>
-        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">djvu</a> format to <em>pdf</em>.</li>
+        <li>添加了从 <a href="<%= Url.Action("conversionapi") %>#text-matrix">djvu</a> 格式到 <em>pdf</em> 的转换。</li>
     </ul>
 
     <h2 id="70" class="copy-link">7.0 版</h2>

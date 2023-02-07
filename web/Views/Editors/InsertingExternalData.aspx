@@ -6,29 +6,30 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Inserting external data
+    插入外部数据
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Inserting external data</span>
+        <span class="hdr">插入外部数据</span>
     </h1>
-    <p class="dscr">The steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Document Server.</p>
+    <p class="dscr">下面的参考图和步骤解释了在 ONLYOFFICE 文档服务器中通过外部链接将数据插入电子表格的过程。</p>
+    <img alt="插入外部数据" src="<%= Url.Content("~/content/img/editor/inserting-external-data.png") %>" />
     <ol>
-        <li>The user copies the cell value to the clipboard from the <b>document editor</b> of the source spreadsheet. At the same time, the special data is also copied.</li>
-        <li>The user inserts the copied data into the <b>document editor</b> of the destination spreadsheet.</li>
-        <li>The <b>document editor</b> requests a link to the source file by sending the data to the <b>document manager</b>.</li>
-        <li>The <b>document manager</b> sends the source spreadsheet link to the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> sends a request to the <b>document editing service</b> for spreadsheet downloading.</li>
-        <li>The <b>document editing service</b> downloads the source spreadsheet from the <b>document storage service</b>.</li>
-        <li>The <b>document editing service</b> sends all the necessary data to display in the <b>document editor</b> of the destination spreadsheet.</li>
+        <li>用户将单元格值从源电子表格的 <b>文档编辑器</b> 复制到剪贴板。同时，特殊数据也被复制。</li>
+        <li>用户将复制的数据插入到目标电子表格的 <b>文档编辑器</b> 中。</li>
+        <li><b>文档编辑器</b> 通过将数据发送到 <b>文档管理器</b>来请求到源文件的链接。</li>
+        <li><b>文档管理器</b> 将源电子表格链接发送给 <b>文档编辑器</b>。</li>
+        <li><b>文档编辑器</b> 向 <b>文档编辑服务</b> 发送电子表格下载请求。</li>
+        <li><b>文档编辑服务</b> 从 <b>文档存储服务</b>下载源电子表格。</li>
+        <li><b>文档编辑服务</b> 发送所有必要的数据以显示在目标电子表格的 <b>文档编辑器</b> 中。</li>
     </ol>
 
-    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
     <ol>
-        <li>Create a source spreadsheet from where the data will be copied.</li>
+        <li>创建将从中复制数据的源电子表格。</li>
         <li>
-            <p>Specify the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> parameter in the initialization config of the source spreadsheet:</p>
+            <p>在源电子表格的初始化配置中指定 <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> 参数：</p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
@@ -43,17 +44,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
         </li>
         <li>
-            <p>When the user copies the data from the source spreadsheet, the clipboard receives a list of the following values:</p>
+            <p>当用户从源电子表格中复制数据时，剪贴板会收到以下值的列表：</p>
             <ul>
-                <li>the sheet name and the range from where the data was copied which will be used later to refresh the copied data;</li>
-                <li>the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> object which will be used to check the availability of insering data into the destination spreadsheet by the external link;</li>
-                <li>the file name which will be used to display a formula in the editor.</li>
+                <li>工作表名称和复制数据的范围，稍后将用于刷新复制的数据；</li>
+                <li><a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> 对象，用于检查通过外部链接将数据插入目标电子表格的可用性；</li>
+                <li>将用于在编辑器中显示公式的文件名。</li>
             </ul>
         </li>
-        <li>Create a destination spreadsheet where the external data will be inserted.</li>
+        <li>创建将插入外部数据的目标电子表格。</li>
         <li>
-            <p>Specify the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event handler in the initialization config of the destination spreadsheet
-                for the <em>Paste link</em> and <em>Update values</em> buttons to be displayed:
+            <p>在要显示的 <em>“粘贴链接”</em> 和 <em>“更新值”</em> 按钮的目标电子表格的初始化配置中指定 <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a>
+                事件处理程序：
             </p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -66,13 +67,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
         </li>
         <li>
-            <p>If the clipboard has the source spreadsheet data specified in step 3, and the destination spreadsheet has the <em>onRequestReferenceData</em> event handler
-                in the initialization config, then the <em>Paste link</em> button is displayed in the dialog box.</p>
-            <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
+            <p>如果剪贴板具有在步骤 3 中指定的源电子表格数据，并且目标电子表格在初始化配置中具有 <em>onRequestReferenceData</em> 事件处理程序，
+                则 <em>“粘贴链接”</em> 按钮将显示在对话框中。</p>
+            <img alt="粘贴链接" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
         </li>
         <li>
-            <p>When the user clicks the <em>Paste link</em> button, the formula is inserted into the current cell, and the <em>referenceData</em> object is saved to the destination file.
-                The inserted formula is displayed as follows:</p>
+            <p>当用户单击 <em>“粘贴链接”</em> 按钮时，公式将插入到当前单元格中，并将 <em>referenceData</em> 对象保存到目标文件中。
+                插入的公式显示如下：</p>
             <pre>
 ='[fileName]sheetName'!cell
 </pre>
@@ -85,56 +86,56 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Example</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>示例</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>cell</td>
-                        <td>The cell from where the data was copied.</td>
+                        <td>从中复制数据的单元格。</td>
                         <td>string</td>
                         <td>E5</td>
                     </tr>
                     <tr class="tablerow">
                         <td>fileName</td>
-                        <td>The file name from where the data was copied.</td>
+                        <td>从中复制数据的文件名。</td>
                         <td>string</td>
                         <td>new.xlsx</td>
                     </tr>
                     <tr class="tablerow">
                         <td>sheetName</td>
-                        <td>The sheet name from where the data was copied.</td>
+                        <td>从中复制数据的工作表名称。</td>
                         <td>string</td>
                         <td>Sheet1</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
-            <p>The data update request to the file will be sent to the file URL.</p>
-            <note>Please note that you can enter a formula of the specified format in the cell, and the data from the extrenal file will be inserted as well.
-                But in this case, the <em>onRequestReferenceData</em> event will be executed only with the <em>path</em> parameter.</note>
+            <p>对文件的数据更新请求将发送到文件URL。</p>
+            <note>请注意，您可以在单元格中输入指定格式的公式，来自外部文件的数据也会被插入。
+                但在这种情况下， <em>onRequestReferenceData</em> 事件将仅使用 <em>path</em> 参数执行。</note>
         </li>
         <li>
-            <p>When the user is trying to refresh data from the source file by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab,
-                the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is called. An object with the unique file data received
-                from the source file and the file path or name are sent in the <em>data</em> parameter.</p>
-            <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
-                If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+            <p>当用户尝试通过单击 <em>“数据”</em> 选项卡的 <em>“外部链接”</em> 对话框中的 <em>“更新值”</em> 按钮来刷新源文件中的数据时，
+                将调用 <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> 事件。一个的对象在
+                <em>data</em> 参数中被发送，这个对象包含从源文件接收的唯一文件数据和文件路径或名称。</p>
+            <note>要将数据发送到 <em>setReferenceData</em> 方法，建议先通过 <em>referenceData</em> 参数搜索文件。
+                如果没有这样的字段或找不到文件，则使用 <em>path</em> 参数。</note>
             <pre>
 var onRequestReferenceData = function (event) {
     var referenceData = event.data.referenceData;
     var path = event.data.path;
     ...
-};
+ };
 </pre>
-            <img alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
+            <img alt="更新值" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
         </li>
         <li>
-            <p>In order to refresh the data from the source file, the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method must be called:</p>
-            <note>Please note that this method is executed only when the user has permissions to the source file.</note>
+            <p>为了刷新源文件中的数据，必须调用 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法：</p>
+            <note>请注意，仅当用户对源文件具有权限时才会执行此方法。</note>
             <pre>
 docEditor.setReferenceData({
     "fileType": "xlsx",
@@ -147,8 +148,8 @@ docEditor.setReferenceData({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+                有关文档服务器服务“客户端-服务器交互”的更多信息，请参阅 “<a href="<%= Url.Action("howitworks") %>">它是如何工作的</a>” 部分。
             </p>
         </li>
     </ol>

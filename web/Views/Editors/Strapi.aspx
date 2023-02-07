@@ -19,8 +19,8 @@
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>目前，可以编辑以下文档格式：DOCX, XLSX, PPTX。</li>
-        <li>以下格式可供查看：DOC, DOCX, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, OXPS, XLS, XLSX, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP。</li>
+        <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX。</li>
+        <li>以下格式可供查看：DOC、DOCX、DOCM、DOT、DOTX、DOTM、ODT、FODT、OTT、RTF、TXT、HTML、HTM、MHT、XML、PDF、DJVU、FB2、EPUB、XPS、OXPS、XLS、XLSX、XLSM、XLT、XLTX、XLTM、ODS、FODS、OTS、CSV、PPS、PPSX、PPSM、PPT、PPTX、PPTM、POT、POTX、POTM、ODP、FODP、OTP。</li>
         <li>该插件将在office文档的文档库中创建一个新的<b>在ONLYOFFICE中编辑</b>菜单选项。
             这允许多个用户实时协作并将这些更改保存回 Strapi。</li>
     </ul>
@@ -79,8 +79,8 @@ npm run develop
     <p>您可以通过 Strapi <b>面板 -> 设置 -> 全局设置 -> ONLYOFFICE</b>配置 ONLYOFFICE 应用程序。在设置页面，输入：</p>
     <ul>
         <li><b>文档服务器地址</b>。安装的 ONLYOFFICE 文档服务器的 URL。</li>
-        <li><b>Document server JWT secret key</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-            Specify your own secret key on the Strapi settings page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
+        <li><b>文档服务器 JWT 密钥</b>。 从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+            在 Strapi 设置页面上指定您自己的密钥。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
     </ul>
 
 

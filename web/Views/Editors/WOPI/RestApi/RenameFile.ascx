@@ -147,7 +147,7 @@
     </table>
     <div class="mobile-content"></div>
 
-    <div class="header-gray">Response body</div>
+    <div class="header-gray">响应体</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -157,18 +157,18 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Presence</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
+                <td>出现</td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Name</td>
-                <td>The renamed file name without a path or file extension.</td>
+                <td>名称</td>
+                <td>没有路径或文件扩展名的重命名文件名。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
         </tbody>
     </table>

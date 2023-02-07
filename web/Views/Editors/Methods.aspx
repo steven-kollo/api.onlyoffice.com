@@ -32,7 +32,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setFavorite">setFavorite</a> - 更改 <em>收藏</em> 图标状态。</li>
         <li><a href="#setHistoryData">setHistoryData</a> - 发送文档链接以查看版本历史。</li>
         <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - 将邮件合并的收件人数据插入文件中。</li>
-        <li><a href="#setReferenceData">setReferenceData</a> - refresh data by a link to a file.</li>
+        <li><a href="#setReferenceData">setReferenceData</a> - 通过文件链接刷新数据。</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - 选择一个文档进行比较。</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
         <li><a href="#setUsers">setUsers</a> - 设置要在评论中提及的用户列表。</li>
@@ -391,9 +391,9 @@ docEditor.refreshHistory({
                     </tr>
                     <tr class="tablerow">
                         <td>history.serverVersion</td>
-                        <td>Defines the current server version number.</td>
+                        <td>定义当前服务器版本号。</td>
                         <td>integer</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user</td>
@@ -709,10 +709,10 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
-                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em> or <em>path</em> parameters.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event.
+                <b id="setReferenceData" class="copy-link">setReferenceData</b> - 通过指向由 <em>referenceData</em> 或 <em>path</em> 参数指定的文件链接来刷新数据。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> 事件之后调用。
             </p>
-            <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
+            <note>请注意，仅当用户有权访问要从中获取数据的文件时，才会执行此方法。</note>
             <pre>
 docEditor.setReferenceData({
     "fileType": "xlsx",
@@ -725,8 +725,8 @@ docEditor.setReferenceData({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中，<b>example.com</b> 是安装了<b>文档管理器</b> 和<b>文档存储服务</b> 的服务器的名称。
+                 请参阅<a href="<%= Url.Action("howitworks") %>">它是如何工作的</a>部分以了解有关文档服务器服务的客户端-服务器交互的更多信息。
             </p>
             <p>Show an error message explaining if any error occurred:</p>
             <pre>
@@ -743,70 +743,70 @@ docEditor.setReferenceData({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>error</td>
-                        <td>Defines the error message text.</td>
+                        <td>定义错误消息文本。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
+                        <td>定义用 <em>url</em> 参数指定的文档的扩展名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>path</td>
-                        <td>Defines the file name or relative path for the formula editor.
-                            It is used to identify a file when the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is executed.</td>
+                        <td>定义公式编辑器的文件名或相对路径。
+                            它用于在执行<a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> 事件时识别文件。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>referenceData</td>
                         <td>
-                            Defines an object that is generated by the integrator to uniquely identify a file in its system.
-                            This data must be the same as in the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> config parameter:
+                            定义由集成商生成的对象，用于唯一标识其系统中的文件。
+                             此数据必须与 <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> 配置参数中的相同：
                             <ul>
                                 <li>
-                                    <b>fileKey</b> - the unique document identifier used by the service to get a link to the file.
-                                    It must not be changed when the document is edited and saved (i.e. it is not equal to the <a href="<%= Url.Action("config/document") %>#key">document.key</a> parameter),
+                                    <b>fileKey</b> - 服务用来获取文件链接的唯一文档标识符。
+                                    在编辑和保存文档时不得更改它（即它不等于 <a href="<%= Url.Action("config/document") %>#key">document.key</a> 参数）,
                                     <br />
-                                    <b>type</b>: string,
+                                    <b>类型</b>: string,
                                     <br />
-                                    <b>example</b>:  "BCFA2CED";
+                                    <b>示例</b>:  "BCFA2CED";
                                 </li>
                                 <li>
-                                    <b>instanceId</b> - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another,
-                                    then pasting by link will not be available and there will be no corresponding button in the context menu,
+                                    <b>instanceId</b> - 唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，
+                                    那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，
                                     <br />
-                                    <b>type</b>: string,
+                                    <b>类型</b>: string,
                                     <br />
-                                    <b>example</b>:  "https://example.com".
+                                    <b>示例</b>:  "https://example.com".
                                 </li>
                             </ul>
                         </td>
                         <td>object</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr id="setReferenceData-token" class="tablerow">
                         <td>token</td>
-                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setReferenceData">token</a>.</td>
+                        <td>定义以 <a href="<%= Url.Action("signature/browser") %>#setReferenceData">token</a> 形式添加到参数的加密签名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the URL address to download the current file.</td>
+                        <td>定义下载当前文件的 URL 地址。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>

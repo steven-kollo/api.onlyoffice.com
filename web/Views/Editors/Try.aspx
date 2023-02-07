@@ -149,7 +149,7 @@
                 </td>
             </tr>
             <tr>
-                <th>Edit on mobile</th>
+                <th>在移动设备上编辑/th>
                 <td><a title="Open DOCX file for editing on mobile" href="<%= Url.Action("editor") %>?method=docxEditorMobile" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorMobileCode">&lt;/&gt;</a>
                 </td>
                 <td><a title="Open XLSX file for editing on mobile" href="<%= Url.Action("editor") %>?method=xlsxEditorMobile" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxEditorMobileCode">&lt;/&gt;</a>
@@ -158,7 +158,7 @@
                 </td>
             </tr>
             <tr>
-                <th>View on mobile</th>
+                <th>在移动设备上查看</th>
                 <td><a title="Open DOCX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=docxViewerMobile" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxViewerMobileCode">&lt;/&gt;</a>
                 </td>
                 <td><a title="Open XLSX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=xlsxViewerMobile" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxViewerMobileCode">&lt;/&gt;</a>
@@ -167,7 +167,7 @@
                 </td>
             </tr>
             <tr>
-                <th>Embedded view</th>
+                <th>嵌入式查看</th>
                 <td><a title="Open DOCX file for embedded viewing" href="<%= Url.Action("editor") %>?method=docxEmbed" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEmbedCode">&lt;/&gt;</a>
                 </td>
                 <td><a title="Open XLSX file for embedded viewing" href="<%= Url.Action("editor") %>?method=xlsxEmbed" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxEmbedCode">&lt;/&gt;</a>
@@ -1800,7 +1800,7 @@
             </div>
 
             <div id="docxEditorMobileCode">
-                <div class="popap-header">Open DOCX file for editing on mobile</div>
+                <div class="popap-header">打开 DOCX 文件以在移动设备上进行编辑</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1837,7 +1837,7 @@
             </div>
 
             <div id="xlsxEditorMobileCode">
-                <div class="popap-header">Open XLSX file for editing on mobile</div>
+                <div class="popap-header">打开 XLSX 文件以在移动设备上进行编辑</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1874,7 +1874,7 @@
             </div>
 
             <div id="pptxEditorMobileCode">
-                <div class="popap-header">Open PPTX file for editing on mobile</div>
+                <div class="popap-header">打开 PPTX 文件以在移动设备上进行编辑</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1911,7 +1911,7 @@
             </div>
 
             <div id="docxViewerMobileCode">
-                <div class="popap-header">Open DOCX file for viewing on mobile</div>
+                <div class="popap-header">打开 DOCX 文件以在移动设备上查看</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1949,7 +1949,7 @@
             </div>
 
             <div id="xlsxViewerMobileCode">
-                <div class="popap-header">Open XLSX file for viewing on mobile</div>
+                <div class="popap-header">打开 XLSX 文件以在移动设备上查看</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1987,7 +1987,7 @@
             </div>
 
             <div id="pptxViewerMobileCode">
-                <div class="popap-header">Open PPTX file for viewing on mobile</div>
+                <div class="popap-header">打开 PPTX 文件以在移动设备上查看</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -2025,7 +2025,7 @@
             </div>
 
             <div id="docxEmbedCode">
-                <div class="popap-header">Open DOCX file for embedded viewing</div>
+                <div class="popap-header">打开 DOCX 文件以进行嵌入式查看</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -2059,7 +2059,7 @@
             </div>
 
             <div id="xlsxEmbedCode">
-                <div class="popap-header">Open XLSX file for embedded viewing</div>
+                <div class="popap-header">打开 XLSX 文件以进行嵌入式查看</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -2093,7 +2093,7 @@
             </div>
 
             <div id="pptxEmbedCode">
-                <div class="popap-header">Open PPTX file for embedded viewing</div>
+                <div class="popap-header">打开 PPTX 文件以进行嵌入式查看</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;

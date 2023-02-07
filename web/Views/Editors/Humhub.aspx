@@ -51,13 +51,13 @@
         为了配置插件，您必须导航到 <b>Administation -> Modules</b>。
         找到 ONLYOFFICE 插件并点击 <b>配置</b>。
     </p>
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-        Specify your own <b>JWT Secret</b> on the HumHub configuration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+        在 HumHub 配置页面上指定您自己的 <b>JWT Secret</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
 
     <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
 
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <p>ONLYOFFICE 集成遵循<a href="<%= Url.Action("basic") %>">此处</a>的API文档。</p>
     <ol>
         <li>创建新文件时，将在 <b>创建文档 </b>菜单中为用户提供 <b>文档</b>、 <b>电子表格</b> 或 <b>演示文稿</b> 选项。</li>
         <li>浏览器调用 <em>/controllers/CreateController.php</em> 控制器中的 <em>index</em> 方法。</li>

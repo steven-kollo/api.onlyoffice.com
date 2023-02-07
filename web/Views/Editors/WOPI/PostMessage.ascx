@@ -90,9 +90,9 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
             <tr>
                 <td id="Blur_Focus" class="copy-link">Blur_Focus</td>
-                <td>This message is posted by the host to stop the online office application from aggressively grabbing focus.
-                    Hosts should send this message whenever the host application UI is drawn over the online office frame so that the online office application does not interfere with the host UI behavior.
-                    This message is used only for the edit modes. It does not affect view modes.</td>
+                <td>主机发布这条消息是为了阻止在线办公应用程序抢占焦点。
+                     每当在在线办公框架上绘制主机应用程序 UI 时，主机应发送此消息，以便在线办公应用程序不会干扰主机 UI 行为。每当在在线办公框架上绘制主机应用程序UI时，主机应发送此消息，以便在线办公应用程序不会干扰主机UI行为。
+                     此消息仅用于编辑模式。 它不影响视图模式。</td>
             </tr>
             <tr>
                 <td id="Edit_Notification" class="copy-link">Edit_Notification</td>
@@ -105,14 +105,14 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
             <tr>
                 <td id="Grab_Focus" class="copy-link">Grab_Focus</td>
-                <td>This message is posted by the host to resume aggressively grabbing focus by the online office application.
-                    Hosts should send this message whenever the host application UI that's drawn over the online office frame is closing. This lets the online office application resume functioning.
-                    This message is used only for the edit modes. It does not affect view modes.</td>
+                <td>此消息由主机发布，以恢复在线办公应用程序的积极抢占焦点。
+                     每当在线办公框架上绘制的主机应用程序 UI 关闭时，主机应发送此消息。 这使在线办公应用程序恢复运行。
+                     此消息仅用于编辑模式。 它不影响视图模式。</td>
             </tr>
             <tr>
                 <td id="Host_PostmessageReady" class="copy-link">Host_PostmessageReady</td>
-                <td>This message is posted by the host when it finishes loading. Then the online office frame receives <em>Host_PostmessageReady</em>,
-                finishes loading, and sends the <a href="#App_LoadingStatus">App_LoadingStatus</a> message to the host page. After that, all the other PostMessage messages become available.</td>
+                <td>此消息由主机在完成加载时发布。 然后在线办公框架收到<em>Host_PostmessageReady</em>，
+                 完成加载，并将 <a href="#App_LoadingStatus">App_LoadingStatus</a> 消息发送到主机页面。 之后，所有其他 PostMessage 消息都可用。</td>
             </tr>
             <tr>
                 <td id="UI_Close" class="copy-link">UI_Close</td>
@@ -157,13 +157,13 @@ otherWindow.postMessage (msg, targetOrigin)
         <tbody>
             <tr>
                 <td id="Action_InsertGraphic" class="copy-link">Action_InsertGraphic</td>
-                <td>This message is posted to download an image from the URL and insert it into the document.</td>
+                <td>发布此消息是为了从 URL 下载图像并将其插入到文档中。</td>
             </tr>
             <tr>
                 <td id="UI_InsertGraphic" class="copy-link">UI_InsertGraphic</td>
-                <td>This message is posted to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration.
-                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back
-                via the <a href="#Action_InsertGraphic">Action_InsertGraphic</a> message with <em>Values</em> set to the temporary URL.</td>
+                <td>发布此消息以显示用户界面元素（例如，对话框），允许用户从集成中选择图像。
+                该集成应该提供一个可以下载一次的临时 URL，通过
+                <a href="#Action_InsertGraphic">Action_InsertGraphic</a> 消息将 <em>Values</em> 设置为临时 URL，将其返回。</td>
             </tr>
         </tbody>
     </table>

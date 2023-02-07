@@ -40,7 +40,7 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("frameworks") %>">Frontend frameworks</a>
+        <a href="<%= Url.Action("frameworks") %>">前端框架</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("angular") %>">Angular</a>
@@ -161,7 +161,7 @@
                 <a href="<%= Url.Action("mobileintegration") %>">移动设备整合</a>
             </li>
             <li>
-                <a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a>
+                <a href="<%= Url.Action("insertingexternaldata") %>">插入外部数据</a>
             </li>
         </ul>
     </li>
@@ -209,7 +209,7 @@
         <a href="<%= Url.Action("methods") %>">方法</a>
     </li>
     <li>
-        <a href="<%= Url.Action("connector") %>">Automation API</a>
+        <a href="<%= Url.Action("connector") %>">自动化API</a>
     </li>
     <li>
         <a href="<%= Url.Action("callback") %>">回调处理程序</a>
@@ -263,10 +263,10 @@
         <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
     </li>
     <li>
-        <a href="<%= Url.Action("wopi/conversionapi") %>">Conversion API</a>
+        <a href="<%= Url.Action("wopi/conversionapi") %>">转换 API</a>
     </li>
     <li>
-        <a href="<%= Url.Action("wopi/editingbinary") %>">Editing binary documents</a>
+        <a href="<%= Url.Action("wopi/editingbinary") %>">编辑二进制文件</a>
     </li>
     <li>
         <a href="<%= Url.Action("wopi/apivswopi") %>">API 与 WOPI</a>

@@ -88,7 +88,7 @@
                         <li><b>0</b> - 为 <a href="<%= Url.Action("command/forcesave") %>">命令服务</a>执行强制保存请求，</li>
                         <li><b>1</b> - 每次保存完成时都会执行强制保存请求（例如单击 <b>保存</b> 按钮），这仅在 <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> 选项设置为 <em>true</em>时可用。</li>
                         <li><b>2</b> - 强制保存请求由计时器按服务器配置中的设置执行。</li>
-                        <%--<li><b>3</b> - the force saving request is performed each time the form is submitted (e.g. the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">Submit form</a> button is clicked).</li>--%>
+                        <%--<li><b>3</b> - 每次提交表单时都会执行强制保存请求（例如 <a href="<%= Url.Action("config/editor/customization") %>#submitForm">提交表单</a> 按钮被点击 ).</li>--%>
                     </ul>
                     该类型仅在 <em>status</em> 值等于 <b>6</b> 或 <b>7</b> 时出现。
                 </td>

@@ -14,7 +14,7 @@
         <span class="hdr">安全</span>
     </h1>
     <p class="dscr">为了防止在 ONLYOFFICE 文档服务器请求中替换重要参数，以 <b>令牌</b>的形式向其中添加了加密签名。</p>
-    <p>在初始化 <b>文档编辑器</b> 时以及在 <b>文档存储服务</b> 和 <b>文档编辑服务</b> 、 <b>文档命令服务</b>、 <b>文档转换服务</b>和 <b>文档构建器服务</b> 之间交换命令时，会在配置中添加 <b>令牌</b>。</p>
+    <p>在初始化 <b>文档编辑器</b> 时以及在 <b>文档存储服务</b> 和 <b>文档编辑服务</b>、 <b>文档命令服务</b>、 <b>文档转换服务</b>和 <b>文档构建器服务</b> 之间交换命令时，会在配置中添加 <b>令牌</b>。</p>
 
     <p>
         <b>令牌</b> 是使用 <em>JWT</em> （<a href="https://jwt.io/" target="_blank">JSON Web 令牌</a>）标准生成的。
@@ -41,10 +41,10 @@
             否则会出现错误。
         </p>
         <p>
-            Be sure to add a token when using local links in the following methods: <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a>, 
+            在以下方法中使用本地链接时一定要添加token: <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a>, 
             <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a>, <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a>,
-            <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a>, <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a>.
-            Moreover, it is necessary when defining the local url for <a href="<%= Url.Action("config/document") %>#url">opening</a> or <a href="<%= Url.Action("conversionapi") %>#url">conversion</a>.
+            <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a>, <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a>。
+            此外，当为<a href="<%= Url.Action("config/document") %>#url">打开</a> 或 <a href="<%= Url.Action("conversionapi") %>#url">转换</a>定义本地 url时，它 是有必要的。
         </p>
     </note>
 </asp:Content>

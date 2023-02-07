@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <td id="convert" class="copy-link">convert</td>
-                <td>Converts a document in a <a href="<%= Url.Action("wopi/editingbinary") %>">binary format</a> (<em>doc, ppt, xls</em>) into a modern format (<em>docx, pptx, xlsx</em>) so that it can be edited in the online office.</td>
+                <td>将<a href="<%= Url.Action("wopi/editingbinary") %>">二进制格式</a>（<em>doc、ppt、xls</em>）的文档转换为现代格式 (<em>docx、pptx、xlsx</em>)，以便在线办公编辑。</td>
             </tr>
         </tbody>
     </table>

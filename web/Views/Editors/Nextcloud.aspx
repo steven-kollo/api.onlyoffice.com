@@ -35,9 +35,9 @@
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>目前可以使用此应用程序打开和编辑以下文档格式：DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.</li>
+        <li>目前可以使用此应用程序打开和编辑以下文档格式：DOCX、XLSX、PPTX、CSV、TXT、DOCXF、OFORM。</li>
         <li>以下格式仅供查看：PDF。</li>
-        <li>以下格式可以转换为OOXML：DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.</li>
+        <li>以下格式可以转换为OOXML：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。</li>
         <li>
             该应用程序将在 <b>新建 (+)</b> 菜单中创建一个菜单项，这个菜单项用来创建 <b>文档</b>、 <b>电子表格</b>或 <b>演示文稿</b>。
             它还将在 Office 文档的文档库中创建一个新的 <b>在 ONLYOFFICE 中打开</b> 菜单选项。
@@ -117,8 +117,8 @@ git submodule update --init --recursive</span>
 
     </p>
     <img alt="公共网络" src="<%= Url.Content("~/content/img/editor/nextcloud-public.jpg") %>" />
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-        Specify your own <b>Secret key</b> in the Nextcloud administrative configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+        在 Nextcloud 管理配置中指定您自己的<b>密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
     <p>启用或禁用 <b>在同一选项卡中打开文件</b> 设置。</p>
 
@@ -138,7 +138,7 @@ git submodule update --init --recursive</span>
 
 
     <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <p>ONLYOFFICE 集成遵循<a href="<%= Url.Action("basic") %>">此处</a>的 API文档。</p>
     <ol>
         <li>创建新文件时，用户导航到 Nextcloud 中的文档文件夹，然后单击 <b>新建 (+)</b>菜单中的 <b>文档</b> 、 <b>电子表格</b> 或 <b>演示文稿</b> 菜单项。</li>
         <li>
@@ -152,7 +152,7 @@ git submodule update --init --recursive</span>
             <ul>
                 <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL；</li>
                 <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
-                <li><b>documentServerUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (can be set at the administrative settings page);</li>
+                <li><b>documentServerUrl</b> - 客户端需要响应ONLYOFFICE文档服务器的URL（可以在管理设置页面设置）；</li>
                 <li><b>key</b> ： <em>UUID+Modified Timestamp</em> 指示 ONLYOFFICE Docs 是否再次下载文档；</li>
             </ul>
         </li>

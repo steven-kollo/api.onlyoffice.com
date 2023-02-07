@@ -6,23 +6,23 @@
     </h1>
 
     <div class="header-gray"><b>POST /wopi/files/<i>(file_id)</i></b></div>
-    <p class="dscr">Creates a new file on the host based on the current file.</p>
-    <p>This operation works as follows:</p>
+    <p class="dscr">基于当前文件在主机上创建一个新文件。</p>
+    <p>此操作的工作原理如下：</p>
     <ol>
-        <li>The WOPI host checks if a file is currently locked or not.</li>
-        <li>If the file is currently <b>locked</b> and the <b>X-WOPI-Lock</b> value does not match the lock currently on the file,
-        the host must return <b>409 Conflict</b> (<em>"lock mismatch"</em>) and include the <b>X-WOPI-Lock</b> response header containing the value of the current lock on the file.
-        In the case where the file is unlocked, the host must set <b>X-WOPI-Lock</b> to the empty string.</li>
-        <li>If the file is <b>unlocked</b>, the host takes the file name from the <b>X-WOPI-SuggestedTarget</b> header and modifies it in order to make the request succeed:
+        <li>WOPI 主机检查文件当前是否被锁定。</li>
+        <li>如果文件当前 <b>被锁定</b> 并且 <b>X-WOPI-Lock</b> 值与文件上当前的锁不匹配，
+        则主机必须返回 <b>409 Conflict</b> (<em>"lock mismatch"</em>) 并包含 <b>X-WOPI-Lock</b> 响应标头，标头中包含文件当前锁的值。
+        在文件未被锁定的情况下，主机必须将 <b>X-WOPI-Lock</b> 设置为空字符串。</li>
+        <li>如果文件 <b>已解锁</b>，主机会从 <b>X-WOPI-SuggestedTarget</b> 标头中获取文件名并修改它以使请求成功：
             <ul>
-                <li>If the header contains only a file extension (starts with a period), then the resulting file name will consist of this extension and the initial file name without extension.</li>
-                <li>If the header contains a full file name, then it will be a name for the resulting file.</li>
+                <li>如果标头仅包含文件扩展名（以句点开头），则生成的文件名将包含此扩展名和不带扩展名的初始文件名。</li>
+                <li>如果标头包含完整的文件名，那么它将是结果文件的名称。</li>
             </ul>
         </li>
-        <li>Finally, the host creates a new file that has a legal name and does not overwrite any existing files, while preserving the file extension.</li>
+        <li>最后，主机创建一个具有合法名称且不覆盖任何现有文件的新文件，同时保留文件扩展名。</li>
     </ol>
 
-    <div class="header-gray">Parameters</div>
+    <div class="header-gray">参数</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -31,22 +31,22 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>file_id</td>
-                <td>The file ID that must be URL safe.</td>
+                <td>必须是 URL 安全的文件 ID。</td>
                 <td>string</td>
             </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
 
-    <div class="header-gray">Query parameters</div>
+    <div class="header-gray">查询参数</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -55,22 +55,22 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>access_token</td>
-                <td>An access token that the host will use to determine whether the request is authorized.</td>
+                <td>访问令牌——主机将用它确定请求是否被授权。</td>
                 <td>string</td>
             </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
 
-    <div class="header-gray">Request headers</div>
+    <div class="header-gray">请求标头</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -80,45 +80,45 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Presence</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
+                <td>出现</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>X-WOPI-Override</td>
-                <td>The requested operation from the WOPI server (<em>PUT_RELATIVE</em>).</td>
+                <td>来自 WOPI 服务器的请求操作 (<em>PUT_RELATIVE</em>)。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
             <tr>
                 <td>X-WOPI-SuggestedTarget</td>
-                <td>A file extension or a full file name, including the file extension in the format of the UTF-7 encoded string.</td>
+                <td>文件扩展名或完整文件名，包括 UTF-7 编码字符串格式的文件扩展名。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
             <tr>
                 <td>X-WOPI-Size</td>
-                <td>The size of the file in bytes.</td>
+                <td>文件的大小（以字节为单位）。</td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr>
                 <td>X-WOPI-FileConversion</td>
-                <td>Indicates that the request is being made in the context of <a href="<%= Url.Action("wopi/editingbinary") %>">binary document conversion</a>.</td>
+                <td>表明请求是在 <a href="<%= Url.Action("wopi/editingbinary") %>">二进制文档转换</a>的上下文中进行的。</td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
 
-    <div class="header-gray">Request body</div>
-    <p>The request body must contain the full file contents in the binary format.</p>
+    <div class="header-gray">请求正文</div>
+    <p>请求正文必须包含二进制格式的完整文件内容。</p>
 
-    <div class="header-gray">Response headers</div>
+    <div class="header-gray">响应标头</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -128,31 +128,31 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Presence</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
+                <td>出现</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>X-WOPI-Lock</td>
-                <td>The lock ID identifying the current lock on the file. This header must always be included when responding to the request with <b>409 Conflict</b>.
-                It should not be included when responding to the request with <b>200 OK</b>.</td>
+                <td>锁ID——标识文件上的当前锁。当使用 <b>409 Conflict</b>响应请求时，必须始终包含此标头。
+                用 <b>200 OK</b>响应请求时不应包含它。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr>
                 <td>X-WOPI-LockFailureReason</td>
-                <td>The cause of the lock failure. This header may be included when responding to the request with <b>409 Conflict</b>. It must only be used for logging purposes.</td>
+                <td>锁定失败的原因。当使用 <b>409 Conflict</b>响应请求时，可能会包含此标头。它只能用于记录目的。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
 
-    <div class="header-gray">Response body</div>
+    <div class="header-gray">响应体</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -162,36 +162,36 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Presence</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
+                <td>出现</td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Name</td>
-                <td>The file name, including extension, without a path.</td>
+                <td>名称</td>
+                <td>文件名，包括扩展名，没有路径。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
             <tr>
                 <td>Url</td>
-                <td>URI of the form <em>http://server/<...>/wopi/files/(file_id)?access_token=(access token)</em>, of the newly created file on the host.</td>
+                <td>URI，其形式为 <em>http://server/ <...>/wopi/files/(file_id)?access_token=(access token)</em></em>, 在主机上新创建的文件。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
             <tr>
                 <td>HostViewUrl</td>
-                <td>URI to a host page that loads the <a href="<%= Url.Action("wopi/discovery") %>#view">view</a> WOPI action for the newly created file.</td>
+                <td>主机页面的 URI，该页面为新创建文件加载 <a href="<%= Url.Action("wopi/discovery") %>#view">查看</a> WOPI 操作。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr>
                 <td>HostEditUrl</td>
-                <td>URI to a host page that loads <a href="<%= Url.Action("wopi/discovery") %>#edit">edit</a> action for the newly created file.</td>
+                <td>主机页面的 URI，该页面为新创建的文件加载 <a href="<%= Url.Action("wopi/discovery") %>#edit">编辑</a> 操作。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
         </tbody>
     </table>

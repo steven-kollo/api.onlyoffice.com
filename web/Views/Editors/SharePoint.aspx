@@ -81,12 +81,12 @@
         转到每个子站点设置并在正确的字段中输入文档服务器地址。
     </div>
 
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-        Specify your own <b>Secret key</b> in the SharePoint administrative settings. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+        在 SharePoint 管理设置中指定您自己的<b>密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
-    <p>If JWT protection is enabled, it is necessary to specify a custom header name 
-        since the SharePoint security policy blocks external <b>Authorization</b> headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. 
-        Further information about signature can be found <a href="<%= Url.Action("signature/") %>">here</a>.</p>
+    <p>如果启用了 JWT 保护，则需要指定一个自定义的 header 名称
+        因为 SharePoint 安全策略阻止了外部 <b>Authorization</b> 标头。 此标头也应在 ONLYOFFICE 文档签名设置中指定。
+        有关签名的更多信息，请参见<a href="<%= Url.Action("signature/") %>">此处</a>。</p>
 
     <h2>编译 ONLYOFFICE SharePoint 集成解决方案</h2>
     <p>ONLYOFFICE SharePoint 集成解决方案有两种编译方式：</p>
@@ -114,7 +114,7 @@
 
 
     <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <p>ONLYOFFICE 集成遵循<a href="<%= Url.Action("basic") %>">此处</a>的 API文档。</p>
     <ol>
         <li>用户导航到 SharePoint 中的文档并在上下文菜单或功能区上选择 <b>在 ONLYOFFICE 中编辑</b> 操作。</li>
         <li>SharePoint 向编辑器页面发出请求（表单的 URL：<em>/_layouts/15/Onlyoffice/editorPage.aspx?SPListItemId={SelectedItemId}&SPListId={ItemId}&SPListURLDir={ListUrlDir}&action=track</em>).</li>
@@ -123,7 +123,7 @@
             <ul>
                 <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL；</li>
                 <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
-                <li><b>DocumentSeverHost</b> - the URL that the client needs to reply to ONLYOFFICE Document Server (can be set at the settings page);</li>
+                <li><b>DocumentSeverHost</b> - 客户端需要回复ONLYOFFICE Document Server的URL（可在设置页面设置）；</li>
                 <li><b>Key</b> - 来自 SharePoint 的文件标识符；</li>
                 <li><b>FileName</b> - 文档标题（名称）；</li>
                 <li><b>CurrentUserId</b> - 用户标识；</li>

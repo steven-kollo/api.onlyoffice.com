@@ -6,21 +6,21 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Frontend frameworks
+    前端框架
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Frontend frameworks</span>
+        <span class="hdr">前端框架</span>
     </h1>
 
     <p class="dscr">
-        ONLYOFFICE Docs can be integrated with some of the existing frontend frameworks using components.
-        These components provide ready-to-use code modules, standardized frontend technologies, and reusable interface blocks making the process of building user interfaces faster and easier.
+        ONLYOFFICE Docs 可以使用组件与一些现有的前端框架集成。
+        这些组件提供随时可用的代码模块、标准化的前端技术和可重用的接口块，使构建用户界面的过程更快、更容易。
     </p>
 
-    <p>Currently, the following frameworks are available:</p>
+    <p>目前，可以使用以下框架：</p>
     <ul>
         <li><a href="<%= Url.Action("angular") %>">Angular</a></li>
         <li><a href="<%= Url.Action("react") %>">React</a></li>
@@ -28,6 +28,6 @@
     </ul>
 
     <br />
-    <p>If you have any further questions, please contact us at <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.</p>
+    <p>如果您有任何其他问题，请通过 <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com与我们联系</a>。</p>
 
 </asp:Content>

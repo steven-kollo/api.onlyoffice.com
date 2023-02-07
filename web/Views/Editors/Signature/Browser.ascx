@@ -136,11 +136,11 @@
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ</pre>
     </li>
     <li>
-        <p><b id="setReferenceData" class="copy-link">setReferenceData</b> - when calling the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method to insert data into the spreadsheet by an external link, the <a href="<%= Url.Action("methods") %>#setReferenceData-token">token</a> must be added to validate the parameters.</p>
+        <p><b id="setReferenceData" class="copy-link">setReferenceData</b> - 当调用 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法通过外部链接将数据插入电子表格时，必须添加<a href="<% = Url.Action("methods") %>#setReferenceData-token">令牌</a> 以验证参数。</p>
 
         <p>
-            The <em>payload</em> for the JWT token in the JSON format must have the same structure as the method parameter.
-            The parameter list to be signed is not strictly regulated, but we recommend that you specify all the parameter sent:
+            JSON 格式的 JWT 令牌的<em>有效负载</em>必须与方法参数具有相同的结构。
+             待签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
         </p>
 
         <pre>
@@ -155,11 +155,11 @@
 }
 </pre>
         <p>
-            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+           其中，<b>example.com</b> 是安装了<b>文档管理器</b> 和<b>文档存储服务</b> 的服务器的名称。
+             请参阅<a href="<%= Url.Action("howitworks") %>">它是如何工作的</a>部分以了解有关文档服务器服务客户端-服务器交互的更多信息。
         </p>
 
-        <div class="header-gray">Sample token</div>
+        <div class="header-gray">示例令牌</div>
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w</pre>
     </li>
     <li>
@@ -182,8 +182,8 @@
 }
 </pre>
         <p>
-            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            其中，<b>example.com</b> 是安装了<b>文档管理器</b> 和<b>文档存储服务</b> 的服务器的名称。
+             请参阅<a href="<%= Url.Action("howitworks") %>">它是如何工作的</a>部分以了解有关文档服务器服务的客户端-服务器交互的更多信息。
         </p>
 
         <div class="header-gray">Sample token</div>

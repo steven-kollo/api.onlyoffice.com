@@ -19,9 +19,9 @@
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>目前，可以编辑以下文档格式：DOCX, XLSX, PPTX, TXT, CSV.</li>
+        <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX、TXT、CSV。</li>
         <li>以下格式仅供查看：PDF.</li>
-        <li>目前，可以将以下文档格式转换为OOXML：ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM.</li>
+        <li>目前，可以将以下文档格式转换为OOXML：ODT、ODS、ODP、DOC、XLS、PPT、PPS、EPUB、RTF、HTML、HTM。</li>
         <li>该插件将创建一个新的 <b>ONLYOFFICE 文档</b> 活动，作为必要课程页面的编辑模式之一。
             这允许多个用户实时协作并将这些更改保存到 Moodle。</li>
     </ul>
@@ -54,8 +54,8 @@
                 Moodle 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问才能正常工作。
             </p>
         </li>
-        <li>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-            Specify your own <b>Document Server Secret</b> on the Moodle <b>Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
+        <li>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+            在 Moodle <b>设置</b> 页面上指定您自己的 <b>文档服务器密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
     </ul>
 
 

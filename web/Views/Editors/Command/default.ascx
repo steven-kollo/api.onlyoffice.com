@@ -91,7 +91,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<p><b>文档编辑服务</b> 将命令产生的结果通知 <b>文档存储服务</b> ，并通过 <a href="<%= Url.Action("callback") %>">回调处理程序</a>发送包含所有必要数据的响应。</p>
+<p><b>文档编辑服务</b> 将命令产生的结果通知 <b>文档存储服务</b>，并通过 <a href="<%= Url.Action("callback") %>">回调处理程序</a>发送包含所有必要数据的响应。</p>
 
 <div class="header-gray">可能的错误代码及其描述</div>
 <table class="error-table">
@@ -136,7 +136,7 @@
         </tr>
         <%--<tr class="tablerow">
             <td>7</td>
-            <td>Token signature is expired.</td>
+       <td>令牌签名已过期</td>
         </tr>--%>
     </tbody>
 </table>

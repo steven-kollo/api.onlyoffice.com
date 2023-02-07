@@ -21,7 +21,7 @@
 
     <ul>
         <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
-        <li>以下格式仅供查看：PDF, ODT, ODS, ODP, DOC, XLS, PPT.</li>
+        <li>以下格式仅供查看：PDF、ODT、ODS、ODP、DOC、XLS、PPT。</li>
         <li>该插件将在 Office 文档的文档库中创建一个新的菜单选项 <b>ONLYOFFICE 编辑</b>。
             这允许多个用户实时协作并将这些更改保存到Plone中。</li>
     </ul>
@@ -62,7 +62,7 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
     </span>
 
     <p>这两个选项都会自动从 <a target="_blank" href="https://pypi.org/project/onlyoffice.plone/">PyPi</a>安装插件。</p>
-    <note>Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name <em>onlyoffice.connector</em>), please remove it before installing the new version.</note>
+    <note>请注意，如果您安装了以前的插件版本（以前名称为 <em>onlyoffice.connector</em> 的早期插件版本），请在安装新版本之前将其删除。</note>
 
     <h2 id="configuration" class="copy-link">配置 Plone ONLYOFFICE 集成插件</h2>
 
@@ -71,8 +71,8 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
         向下滚动到 <b>附加组件配置</b> 部分，然后按 <b>ONLYOFFICE 配置</b> 按钮。
     </p>
 
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-        Specify your own <b>Secret key</b> on the Plone configuration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+        在 Plone 配置页面上指定您自己的 <b>密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
     <h2 id="developing" class="copy-link">开发 Plone ONLYOFFICE 插件</h2>
 
@@ -148,7 +148,7 @@ onlyoffice.plone = 1.0.1
 
 
     <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
-    <p>The ONLYOFFICE integration follows the API documented <a href="https://api.onlyoffice.com/editors/basic">here</a>.</p>
+    <p>ONLYOFFICE 集成遵循<a href="https://api.onlyoffice.com/editors/basic">此处</a>的 API文档。</p>
     <ol>
         <li>用户导航到 Plone 中的文档并选择 <b>ONLYOFFICE 编辑</b> 操作。</li>
         <li>

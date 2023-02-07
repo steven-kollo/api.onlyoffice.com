@@ -21,7 +21,7 @@
 
     <ul>
         <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
-        <li>以下格式仅供查看：PDF, ODT, ODS, ODP, DOC, XLS, PPT.</li>
+        <li>以下格式仅供查看：PDF、ODT、ODS、ODP、DOC、XLS、PPT。</li>
         <li>该插件允许多个用户实时协作并将这些更改保存到 Nuxeo。</li>
     </ul>
 
@@ -49,14 +49,14 @@
     <pre>onlyoffice.docserv.url=http://documentserver/</pre>
 
     <p>
-        where the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.
-        The address must be accessible from the user browser and from the Nuxeo server.
-        The Nuxeo server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
+        其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。
+         该地址必须可以从用户浏览器和 Nuxeo 服务器访问。
+         为了正常工作，Nuxeo 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问。
     </p>
 
-    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-        Specify your own secret key by adding the <b>onlyoffice.jwt.secret=yoursecret</b> line to the <em>nuxeo.conf</em> file.
-        In the ONLYOFFICE Docs <a href="/editors/signature/" target="_blank">config file</a>, specify the same secret key and enable the validation.</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+        通过将 <b>onlyoffice.jwt.secret=yoursecret</b> 行添加到 <em>nuxeo.conf</em> 文件来指定您自己的密钥。
+        在 ONLYOFFICE Docs <a href="/editors/signature/" target="_blank">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
     <h2 id="compiling-nuxeo-onlyoffice-plugin" class="copy-link">编译 Nuxeo ONLYOFFICE 插件</h2>
 
