@@ -20,16 +20,6 @@
         <div class="right-half"></div>
     </div>
 
-
-    <ul class="list-buttons doc-builder-list-buttons">
-        <li>
-            <a id="load" class="button disabled">LOAD</a>
-        </li>
-        <li>
-            <a id="delete" class="button disabled">DELETE</a>
-        </li>
-    </ul>
-
     <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 
     <div id="editorSpace">
@@ -88,9 +78,7 @@
                         connector.executeMethod("GetFormValue", [data[i]["InternalId"]], function (value) {
                             data[i].Value = value ? value : "";
                             if (data.length - 1 == i) {
-                                contentControls = data.filter(function (element) {
-                                    return element["Tag"] != "";
-                                });
+                                contentControls = preparingArrayContentControls(data);
 
                                 renderForm();
                             }
@@ -98,6 +86,8 @@
                     }
                 }, 0);
             });
+
+            connector.attachEvent("onChangeContentControl", onChangeContentControl);
         };
 
         config.events = {
@@ -119,42 +109,101 @@
 
                 if (contentControls.indexOf(element) >= contentControls.length / 2) { targetElement = controlsBlockRightHalf };
 
-                targetElement.append($("<label>", {
-                        "text": element["Tag"].replace(/([a-z])([A-Z])/g, '$1 $2')
-                    }))
-                    .append($("<input>", {
-                        "value": element["Value"]
-                    }));
+                switch (element.Type) {
+                    case "input":
+                        targetElement.append($("<label>", {
+                            "text": element["Tag"].replace(/([a-z])([A-Z])/g, "$1 $2")
+                        })).append($("<input>", {
+                            "id": element["InternalId"],
+                            "value": element["Value"],
+                            "class": "content-control-input"
+                        }));
+                        break;
+                    case "radio":
+                        targetElement.append($("<label>", {
+                            "text": element["Tag"].replace(/([a-z])([A-Z])/g, "$1 $2")
+                        }));
+
+                        for (const option of element["Value"]) {
+                            targetElement.append($("<input>", {
+                                "id": option["InternalId"],
+                                "type": "radio",
+                                "checked": option["checked"] == true,
+                                "name": element["Tag"],
+                                "class": "content-control-radio"
+                            })).append($("<label>", {
+                                "text": option["Tag"].replace(/([a-z])([A-Z])/g, "$1 $2"),
+                                "for": option["Tag"],
+                                "class": "label-radio"
+                            }));
+                        }
+                }
+                
             }
+
+            $(".content-control-input").keyup(updateContent);
+            $(".content-control-radio").change(updateContent);
         };
 
-        $("#load").on("click", function () {
-            if ($(this).hasClass("disabled")) { return; }
+        function updateContent(e) {
+            var id = e.target.id;
+            var value = e.target.value;
 
-            var values = Array.from($("#controlsBlock input"), input => input.value);
-
-            for (var i = 0; i < contentControls.length; i++) {
-                connector.executeMethod(
-                    "SetFormValue",
-                    [contentControls[i]["InternalId"], values[i]],
-                    null
-                );
+            if (e.target.classList.contains("content-control-radio")) {
+                value = true;
             }
-        });
 
-        $("#delete").on("click", function () {
-            if ($(this).hasClass("disabled")) { return; }
+            connector.executeMethod(
+                "SetFormValue",
+                [id, value],
+                null
+            );
+        };
 
-            $("#controlsBlock input").val("");
+        function onChangeContentControl(e) {
+            connector.executeMethod("GetFormValue", [e["InternalId"]], function (value) {
+                if ($("#" + e["InternalId"]).hasClass("content-control-radio")) {
+                    $("#" + e["InternalId"]).prop("checked", value);
+                } else {
+                    $("#" + e["InternalId"]).val(value || "");
+                }
+            });
+        }
 
-            for (var i = 0; i < contentControls.length; i++) {
-                connector.executeMethod(
-                    "SetFormValue",
-                    [contentControls[i]["InternalId"], ""],
-                    null
-                );
+        function preparingArrayContentControls(data) {
+            data = data.filter(function (element) {
+                return element["Tag"] != "";
+            });
+
+            let groupsRadioControls = data.filter(contentControl => contentControl["Tag"] != "" && contentControl["Type"] == "radio").reduce((r, a) => {
+                r[a["GroupKey"]] = r[a["GroupKey"]] || [];
+                r[a["GroupKey"]].push({ Tag: a["Tag"], checked: a["Value"], InternalId: a["InternalId"] });
+                return r;
+            }, {});
+
+            for (const [key, value] of Object.entries(groupsRadioControls)) {
+                let index = [];
+                let first = true;
+
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i]["GroupKey"] && data[i]["GroupKey"] == key) {
+                        index.push(i);
+                    }
+                }
+
+                for (var i = 0; i < index.length; i++) {
+                    if (first) {
+                        data[index[i]]["Tag"] = key;
+                        data[index[i]]["Value"] = value;
+                        first = false;
+                    } else {
+                        data.splice(index[i], 1);
+                    }
+                }
             }
-        });
+
+            return data;
+        };
     </script>
 
 </asp:Content>

@@ -2702,4 +2702,16 @@ article {
 
 #controlsBlock {
     display: flex;
+    margin-bottom: 25px;
+}
+
+.content-control-radio {
+    cursor: pointer;
+    width: 28px !important;
+    vertical-align: middle !important;
+}
+
+.label-radio {
+    margin-right: 30px;
+    width: auto !important;
 }
