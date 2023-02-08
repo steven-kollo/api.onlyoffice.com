@@ -658,6 +658,8 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.FollowMasterBackground.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllCharts.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllDrawings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllImages.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllOleObjects.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllShapes.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetMaster.docbuilder" />
@@ -674,6 +676,8 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.Duplicate.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllCharts.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllDrawings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllImages.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllOleObjects.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllShapes.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetLayout.docbuilder" />
@@ -887,10 +891,12 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiTheme.SetFontScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiTheme.SetFormatScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.ChangeColor.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.Copy.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.SetSchemeName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.ToJSON.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.Copy.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.SetFonts.docbuilder" />
@@ -1274,6 +1280,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.GetLinkedText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.GetScreenTipText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetDefaultStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetDisplayedText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetLink.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetScreenTipText.docbuilder" />
@@ -2879,13 +2886,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllImages.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllOleObjects.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllImages.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllOleObjects.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.Copy.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.Copy.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetDefaultStyle.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
