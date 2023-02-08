@@ -6,6 +6,6 @@ oParagraph.AddText("These sentences are used to add lines for demonstrative purp
 oParagraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 oParagraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 oParagraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
-oParagraph.SetShd("clear", 255, 0, 0, false);
+oParagraph.SetShd("clear", 255, 111, 61, false);
 builder.SaveFile("docx", "SetShd.docx");
 builder.CloseFile();

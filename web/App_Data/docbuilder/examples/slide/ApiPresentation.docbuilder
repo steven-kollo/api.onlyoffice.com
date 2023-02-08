@@ -3,7 +3,7 @@ var oPresentation = Api.GetPresentation();
 oPresentation.SetSizes(254 * 36000, 190 * 36000);
 var oSlide1 = oPresentation.GetCurrentSlide();
 oSlide1.RemoveAllObjects();
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
+var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());
 var oShape = Api.CreateShape("flowChartMagneticTape", 200 * 36000, 130 * 36000, oFill, oStroke);
 oShape.SetPosition(608400, 1267200);

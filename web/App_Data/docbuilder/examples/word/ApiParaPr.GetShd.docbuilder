@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("This is an example of setting a shade to a paragraph. ");
 var oParaPr = oParagraph.GetParaPr();
-oParaPr.SetShd("clear", 255, 0, 0, false);
+oParaPr.SetShd("clear", 255, 111, 61, false);
 var oShade = oParaPr.GetShd();
 oParagraph = Api.CreateParagraph();
 var oFill = Api.CreateSolidFill(oShade);

@@ -2,6 +2,7 @@ builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 oDocument.RemoveAllElements();
 var oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
+oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered"));
 var oTable = Api.CreateTable(2, 4);
 oTable.SetWidth("percent", 100);
 oTable.SetStyle(oTableStyle);

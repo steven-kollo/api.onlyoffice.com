@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("The table is aligned at the center of the page horizontally.");
 var oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
-oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
+oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered"));
 var oTable = Api.CreateTable(2, 2);
 oTable.SetWidth("percent", 50);
 oTable.SetStyle(oTableStyle);

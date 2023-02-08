@@ -8,7 +8,7 @@ var oParagraph = Api.CreateParagraph();
 var sClassType = oCell.GetClassType();
 oParagraph.AddText("Class type: " + sClassType);
 oContent.Push(oParagraph);
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(520, 64, 1));
+var oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
 oCell.SetCellBorderBottom(1, oFill);
 oCell.SetCellBorderTop(1, oFill);
 oCell.SetCellBorderLeft(1, oFill);

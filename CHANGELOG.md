@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: changed the color scheme of the builder examples
 - macros: added the Insert unique id macro sample
 - editors: conversion to ppsm, ppsx
 - editors: added the Go signature code example
