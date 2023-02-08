@@ -2655,6 +2655,7 @@
     <Content Include="Views\Editors\Command\meta.ascx" />
     <Content Include="Views\Editors\Command\version.ascx" />
     <Content Include="Views\Editors\Commenting.aspx" />
+    <Content Include="Views\Editors\ReviewWork.aspx" />
     <Content Include="Views\Editors\FillingForm.aspx" />
     <Content Include="Views\Editors\Comparing.aspx" />
     <Content Include="Views\Editors\Config.aspx" />

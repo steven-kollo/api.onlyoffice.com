@@ -118,6 +118,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Redmine",
                 "Rename",
                 "Review",
+                "ReviewWork",
                 "Save",
                 "Security",
                 "SharePoint",
@@ -441,6 +442,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Review()
+        {
+            return View();
+        }
+
+        public ActionResult ReviewWork()
         {
             return View();
         }
