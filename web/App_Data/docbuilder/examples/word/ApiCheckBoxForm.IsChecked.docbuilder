@@ -11,7 +11,7 @@ oParagraph.AddText(" Single");
 oCheckBoxForm.SetChecked(true);
 var bChecked = oCheckBoxForm.IsChecked();
 oParagraph = Api.CreateParagraph();
-oParagraph.AddText("The second checkbox from this document is checked: " + bChecked);
+oParagraph.AddText("The second radio button from this document is checked: " + bChecked);
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "IsChecked.docx");
 builder.CloseFile();

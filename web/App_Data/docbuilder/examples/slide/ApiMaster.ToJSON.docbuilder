@@ -2,7 +2,7 @@ builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);
-let json = oMaster.ToJSON(true);
+var json = oMaster.ToJSON(true);
 var oMasterFromJSON = Api.FromJSON(json);
 oSlide.RemoveAllObjects();
 var oFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));
