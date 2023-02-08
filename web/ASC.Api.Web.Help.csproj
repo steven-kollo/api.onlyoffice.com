@@ -125,6 +125,7 @@
     <Compile Include="Helpers\Highliter.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
+    <Compile Include="Helpers\Persons.cs" />
     <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\RedirectAttribute.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
@@ -2871,6 +2872,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\editor\wildcardData\persons.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

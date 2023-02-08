@@ -15,6 +15,15 @@
     </h1>
     <p class="dscr">Fill in empty cells</p>
 
+    <select id="persons" name="persons" required>
+        <option disabled selected value="">Choose Example</option>
+        <% var persons = Persons.GetPersons();
+        foreach (var person in persons)
+        { %>
+            <option value="<%= person.PostalCode %>"><%= person.FirstName %>  <%= person.LastName %></option>
+        <% } %>
+    </select>
+
     <div id="controlsBlock" name="controlsBlock" class="docbuilder-script">
         <div class="left-half"></div>
         <div class="right-half"></div>
@@ -95,6 +104,41 @@
         };
 
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        $("#persons").change(function (e) {
+            const postalCode = $(this).val();
+
+            $.getJSON("<%= Url.Content("~/app_data/editor/wildcarddata/persons.json") %>", function (persons) {
+                for (const person of persons) {
+                    if (person["PostalCode"] == postalCode) {
+                        for (key in person) {
+                            var value = person[key];
+
+                            if (key == "Sex") {
+                                key = value == "Male" ? "Male" : "Female";
+                                value = "true";
+                            }
+
+                            setFormValue(key, value);
+                        }
+                    }
+                }
+            })
+
+            var setFormValue = function (tag, value) {
+                connector.executeMethod(
+                    "GetFormsByTag",
+                    [tag],
+                    function (forms) {
+                        connector.executeMethod(
+                            "SetFormValue",
+                            [forms[0]["InternalId"], value],
+                            null
+                        );
+                    }
+                );
+            }
+        });
 
         var renderForm = function () {
             var controlsBlockLeftHalf = $("#controlsBlock .left-half");
