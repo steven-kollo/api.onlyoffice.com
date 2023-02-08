@@ -8,7 +8,7 @@ var oTableRowPr = oTableStyle.GetTableRowPr();
 oTableRowPr.SetHeight("atLeast", 720);
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
-let json = oTableRowPr.ToJSON();
+var json = oTableRowPr.ToJSON();
 var oTableRowPrFromJSON = Api.FromJSON(json);
 var sType = oTableRowPrFromJSON.GetClassType();
 var oParagraph = oDocument.GetElement(0);

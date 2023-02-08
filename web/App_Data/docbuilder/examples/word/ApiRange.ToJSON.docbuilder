@@ -4,7 +4,7 @@ var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("ONLYOFFICE Document Builder");
 var oRange = Api.CreateRange(oParagraph, 0, 9);
 oRange.SetBold(true);
-let json = oRange.ToJSON(false, true);
+var json = oRange.ToJSON(false, true);
 var oRangeFromJSON = Api.FromJSON(json);
 oDocument.Push(oRangeFromJSON[0]);
 builder.SaveFile("docx", "ToJSON.docx");

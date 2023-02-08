@@ -4,7 +4,7 @@ var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
 var oMaster = oPresentation.GetMaster(0);
 var oLayout = oMaster.GetLayout(0);
-let json = oLayout.ToJSON(true, false);
+var json = oLayout.ToJSON(true, false);
 var oLayoutFromJSON = Api.FromJSON(json);
 oMaster.AddLayout(0, oLayoutFromJSON);
 var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

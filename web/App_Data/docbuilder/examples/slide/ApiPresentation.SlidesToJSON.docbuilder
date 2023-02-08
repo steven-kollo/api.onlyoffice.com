@@ -2,7 +2,7 @@ builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
-let json = oPresentation.SlidesToJSON(0, 0, true, true, true, true);
+var json = oPresentation.SlidesToJSON(0, 0, true, true, true, true);
 var aSlidesFromJSON = Api.FromJSON(json);
 var oSlideFromJSON = aSlidesFromJSON[0];
 oPresentation.AddSlide(oSlideFromJSON);

@@ -1,9 +1,9 @@
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oNumbering = oDocument.CreateNumbering("bullet");
-let json = oNumbering.ToJSON();
+var json = oNumbering.ToJSON();
 var oNumberingFromJSON = Api.FromJSON(json);
-for (let nLvl = 0; nLvl < 2; ++nLvl) {
+for (var nLvl = 0; nLvl < 2; ++nLvl) {
   var oNumLvl = oNumberingFromJSON.GetLevel(nLvl);
   var oParagraph = Api.CreateParagraph();
   oParagraph.AddText("This is an example of the bulleted paragraph № " + (nLvl + 1));

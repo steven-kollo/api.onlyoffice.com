@@ -7,7 +7,7 @@ oTable.SetWidth("percent", 100);
 var oTableStylePr = oTableStyle.GetConditionalTableStyle();
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
-let json = oTableStylePr.ToJSON();
+var json = oTableStylePr.ToJSON();
 var oTableStylePrFromJSON = Api.FromJSON(json);
 var sType = oTableStylePrFromJSON.GetClassType();
 var oParagraph = oDocument.GetElement(0);
