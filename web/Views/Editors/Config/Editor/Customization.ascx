@@ -358,14 +358,14 @@
         <tr class="tablerow">
             <td id="font" class="copy-link">font<span class="required">**</span></td>
             <td>
-                Defines the font for the interface elements (buttons, tabs, etc.):
+               定义界面元素（按钮、选项卡等）的字体：
                 <ul>
                     <li>
-                        <b>name</b> - the font name,
+                        <b>name</b> - 字体名称,
                         <br />
-                        <b>type</b>: string,
+                        <b>类型</b>: string,
                         <br />
-                        <b>example</b>: "Arial".
+                        <b>示例</b>: "Arial".
                     </li>
                 </ul>
             </td>
@@ -497,8 +497,8 @@
         <tr class="tablerow">
             <td id="integrationMode" class="copy-link">integrationMode</td>
             <td>
-                Defines the mode of embedding editors into the web page.
-                The <b>embed</b> value disables scrolling to the editor frame when it is loaded as the focus is not captured.
+               定义将编辑器嵌入网页的模式。
+                 <b>embed</b> 值禁止在加载编辑器框架时滚动到编辑器框架，因为焦点未被捕获。
             </td>
             <td>string</td>
             <td>embed</td>
@@ -540,13 +540,13 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>leftMenu.mode</b> - defines the initial value of the left panel visibility - displayed or hidden.
-                        It is used for the <b>Left panel</b> menu option on the <b>View</b> tab.
-                        The default value is <b>true</b>,
+                        <b>leftMenu.mode</b> - 定义左侧面板可见性的初始值 - 显示或隐藏。
+                         它用于 <b>视图</b> 选项卡上的<b>左侧面板</b> 菜单选项。
+                         默认值为<b>真</b>，
                         <br />
-                        <b>type</b>: boolean,
+                        <b>类型</b>: boolean,
                         <br />
-                        <b>example</b>: true;
+                        <b>示例</b>: true;
                     </li>
                     <li>
                         <b>leftMenu.navigation</b> - 定义 <b>导航</b> 按钮是显示还是隐藏。默认值为 <b>true</b>。
@@ -565,19 +565,19 @@
                         <b>示例</b>：true；
                     </li>
                     <li>
-                        <b>rightMenu</b> - defines the right menu settings. If this parameter is a boolean value, then it specifies whether the right menu will be displayed or hidden.
-                        The default value is <b>true</b>,
+                        <b>rightMenu</b> - 定义右侧菜单设置。 如果此参数为布尔值，则指定是否显示或隐藏右侧菜单。
+                         默认值为 <b>true</b>,
                         <br />
-                        <b>type</b>: object or boolean,
+                        <b>类型</b>: object 或 boolean,
                         <br />
-                        <b>example</b>: true;
+                        <b>示例</b>: true;
                     </li>
                     <li>
-                        <b>rightMenu.mode</b> - defines the initial value of the right panel visibility - displayed or hidden.
-                        It is used for the <b>Right panel</b> menu option on the <b>View</b> tab.
-                        The default value is <b>true</b>,
+                        <b>rightMenu.mode</b> - 定义右侧面板可见性的初始值 - 显示或隐藏。
+                         它用于<b>视图</b> 选项卡上的<b>右侧面板</b> 菜单选项。
+                         默认值为 <b>true</b>,
                         <br />
-                        <b>type</b>: boolean,
+                        <b>类型</b>: boolean,
                         <br />
                         <b>示例</b>：true；
                     </li>
@@ -1023,9 +1023,9 @@
         <%--<tr>
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
-                Defines if the <b>Submit form</b> button is displayed or hidden.
-                Button will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b> and at least one of the <a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>, <a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a> or <a href="<%= Url.Action("config/document/permissions") %>#review">review</a> permissions is set to <b>true</b>.
-                The default value is <b>false</b>.
+                定义是显示还是隐藏<b>提交表单</b>按钮。
+                 仅当 <a href="<%= Url.Action("config/editor") %>#mode">mode</a> 参数设置为 <b>edit</b>， 且至少 <a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>, <a href="<%= Url. Action("config/document/permissions") %>#fillForms">fillForms</a> 或 <a href="<%= Url.Action("config/document/permissions") %>#review">review< /a>中一个权限设置为 <b>true</b>，按钮将对文档编辑器可用 。
+                 默认值为 <b>false</b>。
             </td>
             <td>boolean</td>
             <td>true</td>

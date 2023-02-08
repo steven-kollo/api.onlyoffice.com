@@ -728,7 +728,7 @@ docEditor.setReferenceData({
                 其中，<b>example.com</b> 是安装了<b>文档管理器</b> 和<b>文档存储服务</b> 的服务器的名称。
                  请参阅<a href="<%= Url.Action("howitworks") %>">它是如何工作的</a>部分以了解有关文档服务器服务的客户端-服务器交互的更多信息。
             </p>
-            <p>Show an error message explaining if any error occurred:</p>
+            <p>显示错误消息，说明是否有错误发生：</p>
             <pre>
 docEditor.setReferenceData({
     "error": "Exception",
@@ -777,7 +777,7 @@ docEditor.setReferenceData({
                             <ul>
                                 <li>
                                     <b>fileKey</b> - 服务用来获取文件链接的唯一文档标识符。
-                                    在编辑和保存文档时不得更改它（即它不等于 <a href="<%= Url.Action("config/document") %>#key">document.key</a> 参数）,
+                                    在编辑和保存文档时不得更改它（即它不等于 <a href="<%= Url.Action("config/document") %>#key">document.key</a > 参数）,
                                     <br />
                                     <b>类型</b>: string,
                                     <br />
