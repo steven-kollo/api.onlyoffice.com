@@ -1,5 +1,8 @@
 # Change Log
 
+## 3.0.3
+- docbuilder: fix class links for integration api
+
 ## 3.0.2
 - docbuilder: fix class links
 
