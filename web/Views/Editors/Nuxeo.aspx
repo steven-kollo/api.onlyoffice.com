@@ -15,7 +15,7 @@
         <span class="hdr">Nuxeo ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-nuxeo" target="_blank">插件</a> 使用户能够从 <a href="https://www.nuxeo.com/">Nuxeo</a> 中用 ONLYOFFICE Docs编辑办公文档。</p>
+    <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-nuxeo" target="_blank">插件</a> 使用户能够从 <a href="https://www.nuxeo.com/">Nuxeo</a> 中用 ONLYOFFICE 文档编辑办公文档。</p>
     
     <h2 id="features" class="copy-link">特性</h2>
 
@@ -28,11 +28,11 @@
     <h2 id="installing-onlyoffice-document-server" class="copy-link">安装 ONLYOFFICE 文档</h2>
 
     <p>
-        您将需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 Nuxeo 和任何终端客户端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
-        ONLYOFFICE Docs 还必须能够直接发布到 Nuxeo中。
+        您将需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例可从 Nuxeo 和任何终端客户端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        ONLYOFFICE 文档还必须能够直接发布到 Nuxeo中。
     </p>
-    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
     <h2 id="installing-nuxeo-onlyoffice-integration-plugin" class="copy-link">安装 Nuxeo ONLYOFFICE 集成插件</h2>
 
@@ -49,14 +49,14 @@
     <pre>onlyoffice.docserv.url=http://documentserver/</pre>
 
     <p>
-        其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。
+        其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE 文档</b> 的服务器的名称。
          该地址必须可以从用户浏览器和 Nuxeo 服务器访问。
-         为了正常工作，Nuxeo 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问。
+         为了正常工作，Nuxeo 服务器地址也必须可以从 <b>ONLYOFFICE 文档</b> 访问。
     </p>
 
-    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
         通过将 <b>onlyoffice.jwt.secret=yoursecret</b> 行添加到 <em>nuxeo.conf</em> 文件来指定您自己的密钥。
-        在 ONLYOFFICE Docs <a href="/editors/signature/" target="_blank">配置文件</a>中，指定相同的密钥并启用验证。</p>
+        在 ONLYOFFICE 文档 <a href="/editors/signature/" target="_blank">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
     <h2 id="compiling-nuxeo-onlyoffice-plugin" class="copy-link">编译 Nuxeo ONLYOFFICE 插件</h2>
 

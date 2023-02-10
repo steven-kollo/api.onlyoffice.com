@@ -15,7 +15,7 @@
         <span class="hdr">Mattermost ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">插件</a> 使用户能够从 <a href="https://mattermost.com/" target="_blank">Mattermost</a> 中使用 ONLYOFFICE Docs编辑办公文档。</p>
+    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">插件</a> 使用户能够从 <a href="https://mattermost.com/" target="_blank">Mattermost</a> 中使用 ONLYOFFICE 文档编辑办公文档。</p>
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
@@ -28,19 +28,19 @@
 
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        您需要一个可从 Mattermost 和任何最终客户端解析和连接的 ONLYOFFICE Docs（文档服务器）实例。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
-        ONLYOFFICE Docs 还必须能够直接发布到 Mattermost。
+        您需要一个可从 Mattermost 和任何最终客户端解析和连接的 ONLYOFFICE 文档（文档服务器）实例。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        ONLYOFFICE 文档还必须能够直接发布到 Mattermost。
     </p>
     <p>
-        ONLYOFFICE Docs 和 Mattermost 可以安装在不同的计算机上，也可以安装在同一台机器上。
-        如果您使用一台机器，请为 Document Server 设置自定义端口。
+        ONLYOFFICE 文档和 Mattermost 可以安装在不同的计算机上，也可以安装在同一台机器上。
+        如果您使用一台机器，请为 文档服务器设置自定义端口。
     </p>
-    <p>安装 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>安装 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="install" class="copy-link">安装 Mattermost ONLYOFFICE 集成插件</h2>
-    <p>要开始将 ONLYOFFICE Docs 与 Mattermost 一起使用，请执行以下步骤：</p>
+    <p>要开始将 ONLYOFFICE 文档与 Mattermost 一起使用，请执行以下步骤：</p>
     <ol>
         <li>克隆 <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">主分支</a>。</li>
         <li>转到项目根目录。</li>
@@ -63,20 +63,20 @@
     <ul>
         <li><b>启用插件。</b>通过将此参数设置为 <b>true</b>来启用 Mattermost ONLYOFFICE 集成插件。</li>
         <li>
-            <p><b>文件编辑服务地址</b>。要连接 ONLYOFFICE Docs，请输入以下地址：</p>
+            <p><b>文件编辑服务地址</b>。要连接 ONLYOFFICE 文档，请输入以下地址：</p>
             <span class="commandline">https://&lt;documentserver&gt;:&lt;port&gt;/</span>
             <p>
-                其中 <b>documentserver</b> 是服务器的名称， <b>port</b> 是安装了 <b>ONLYOFFICE Docs</b> 的端口号。
+                其中 <b>documentserver</b> 是服务器的名称， <b>port</b> 是安装了 <b>ONLYOFFICE 文档</b> 的端口号。
                 该地址必须可从用户浏览器和 Mattermost 服务器访问。
-                也必须可以从 <b>ONLYOFFICE Docs</b> 访问 Mattermost 服务器地址才能正确工作。
+                也必须可以从 <b>ONLYOFFICE 文档</b> 访问 Mattermost 服务器地址才能正确工作。
             </p>
         </li>
-        <li><b>密钥</b>。 从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
-            在 Mattermost 插件配置中指定您自己的密钥。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
+        <li><b>密钥</b>。 从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
+            在 Mattermost 插件配置中指定您自己的密钥。 在 ONLYOFFICE 文档<a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
         <li><b>JWT 头</b>。果启用了 JWT 保护，则必须指定自定义标头名称，因为 
-            Mattermost 安全策略会阻止外部 <b>授权</b> 标头此标头也应在 ONLYOFFICE Docs 签名设置中指定。
+            Mattermost 安全策略会阻止外部 <b>授权</b> 标头此标头也应在 ONLYOFFICE 文档签名设置中指定。
             更多关于签名的信息可以在 <a href="<%= Url.Action("signature/") %>">这里</a>找到。</li>
-        <li><b>JWT 前缀</b>。指定 ONLYOFFICE Docs 前缀。</li>
+        <li><b>JWT 前缀</b>。指定 ONLYOFFICE 文档前缀。</li>
     </ul>
 
 

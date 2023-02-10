@@ -27,11 +27,11 @@
 
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        您需要一个ONLYOFFICE Docs（文档服务器）实例，该实例可以从WordPress和任何终端客户端进行解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        您需要一个ONLYOFFICE 文档（文档服务器）实例，该实例可以从WordPress和任何终端客户端进行解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
         ONLYOFFICE文档还必须能够直接发布到Wordpress。
     </p>
-    <p>安装 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>安装 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="install" class="copy-link">安装WordPress ONLYOFFICE集成插件</h2>
@@ -55,8 +55,8 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
     <p>通过WordPress界面配置插件。转到 <b>WordPress管理仪表板->ONLYOFFICE->设置</b>，并指定以下参数：</p>
     <ul>
         <li><b>文件编辑服务地址</b>。安装的 ONLYOFFICE 文档服务器的 URL。</li>
-        <li><b>文档服务器 JWT 密钥</b>。 从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
-            在 WordPress 管理配置中指定您自己的密钥。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
+        <li><b>文档服务器 JWT 密钥</b>。 从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
+            在 WordPress 管理配置中指定您自己的密钥。 在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
     </ul>
 
 

@@ -6,20 +6,20 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ONLYOFFICE Docs Vue 组件
+    ONLYOFFICE 文档 Vue 组件
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">ONLYOFFICE Docs Vue 组件</span>
+        <span class="hdr">ONLYOFFICE 文档 Vue 组件</span>
     </h1>
 
-    <p>该 <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">组件</a> 使用户能够使用 <a href="https://vuejs.org/" target="_blank">Vue</a>构建 ONLYOFFICE Docs 用户界面。</p>
+    <p>该 <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">组件</a> 使用户能够使用 <a href="https://vuejs.org/" target="_blank">Vue</a>构建 ONLYOFFICE 文档 用户界面。</p>
 
 
-    <h2 id="install" class="copy-link">安装 ONLYOFFICE Docs Vue 组件</h2>
-    <p>在您的项目中从 <b>npm</b> 安装 ONLYOFFICE Docs Vue 组件。运行命令：</p>
+    <h2 id="install" class="copy-link">安装 ONLYOFFICE 文档 Vue 组件</h2>
+    <p>在您的项目中从 <b>npm</b> 安装 ONLYOFFICE 文档 Vue 组件。运行命令：</p>
     <pre>
 npm install --save @onlyoffice/document-editor-vue
 </pre>
@@ -29,7 +29,7 @@ yarn add @onlyoffice/document-editor-vue
 </pre>
 
 
-    <h2 id="use" class="copy-link">使用 ONLYOFFICE Docs Vue 组件</h2>
+    <h2 id="use" class="copy-link">使用 ONLYOFFICE 文档 Vue 组件</h2>
     <p>下面是组件使用示例：</p>
     <pre>
 &lt;template&gt;
@@ -74,10 +74,10 @@ export default defineComponent({
 });
 &lt;/script&gt;
 </pre>
-    <p>其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称，documentserver 是安装了 ONLYOFFICE Docs 的服务器的名称。</p>
+    <p>其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称，documentserver 是安装了 ONLYOFFICE 文档的服务器的名称。</p>
 
 
-    <h2 id="api" class="copy-link">ONLYOFFICE Docs Vue 组件 API</h2>
+    <h2 id="api" class="copy-link">ONLYOFFICE 文档 Vue 组件 API</h2>
     <div class="header-gray">属性</div>
     <table class="table">
         <colgroup>
@@ -278,7 +278,7 @@ export default defineComponent({
             <pre>
 "documentServerUrl": "http://documentserver/";
 </pre>
-            <p>其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。</p>
+            <p>其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE 文档</b> 的服务器的名称。</p>
         </li>
         <li>
             <p>使用以下命令生成Storybook：</p>
@@ -295,7 +295,7 @@ npm run storybook
     </ol>
 
 
-    <h2 id="development" class="copy-link">开发ONLYOFFICE Docs Vue组件</h2>
+    <h2 id="development" class="copy-link">开发ONLYOFFICE 文档 Vue组件</h2>
     <ol>
         <li>
             <p>从 GitHub 存储库克隆项目：</p>
@@ -331,7 +331,7 @@ npm pack
 
 
     <h2 id="feedback" class="copy-link">反馈和支持</h2>
-    <p>如果您对 ONLYOFFICE Docs Vue有任何问题、疑问或建议，请参阅 <a href="https://github.com/ONLYOFFICE/document-editor-vue/issues" target="_blank">问题</a> 部分。</p>
+    <p>如果您对 ONLYOFFICE 文档 Vue有任何问题、疑问或建议，请参阅 <a href="https://github.com/ONLYOFFICE/document-editor-vue/issues" target="_blank">问题</a> 部分。</p>
 
 
 </asp:Content>

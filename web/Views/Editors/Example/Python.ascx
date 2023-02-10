@@ -6,7 +6,7 @@
 
 <h2>概述</h2>
 <p class="dscr">
-    此示例将帮助您将 ONLYOFFICE Docs 集成到用 Python 编写的 Web 应用程序中。
+    此示例将帮助您将 ONLYOFFICE 文档集成到用 Python 编写的 Web 应用程序中。
 </p>
 
 <div class="note">
@@ -25,7 +25,7 @@
 </ul>
 
 <h2 id="linux-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
-<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> （打包为文档服务器）。</p>
+<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器）。</p>
 <p>请参阅详细指南以了解如何为 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_python_example">Windows</a>、 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_python_example">Linux</a>或 <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_python_example">Docker</a>安装文档服务器。</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">步骤 2.</span>安装先决条件并使用编辑器运行网站</h2>

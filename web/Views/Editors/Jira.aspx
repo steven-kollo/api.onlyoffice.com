@@ -15,7 +15,7 @@
         <span class="hdr">Jira ONLYOFFICE 集成应用</span>
     </h1>
 
-    <p>此 <a href="https://github.com/ONLYOFFICE/onlyoffice-jira" target="_blank">应用程序</a> 允许用户从 <a href="https://www.atlassian.com/zh/software/jira" target="_blank">Jira Software</a> 中使用 ONLYOFFICE Docs编辑办公文档。</p>
+    <p>此 <a href="https://github.com/ONLYOFFICE/onlyoffice-jira" target="_blank">应用程序</a> 允许用户从 <a href="https://www.atlassian.com/zh/software/jira" target="_blank">Jira Software</a> 中使用 ONLYOFFICE 文档编辑办公文档。</p>
 
     <p>该连接器可在官方 <a href="https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira" target="_blank">Atlassian Marketplace</a>.中获得。</p>
 
@@ -30,12 +30,12 @@
     <h2 id="installing-doc-serv" class="copy-link">安装 ONLYOFFICE 文档</h2>
 
     <p>
-        您将需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 Jira 和任何最终客户端解析和连接。
-        如果不是这种情况，请使用官方 <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
-        ONLYOFFICE Docs 还必须能够直接发布到 Jira。
+        您将需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例可从 Jira 和任何最终客户端解析和连接。
+        如果不是这种情况，请使用官方 <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        ONLYOFFICE 文档还必须能够直接发布到 Jira。
     </p>
 
-    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="installing" class="copy-link">安装 Jira ONLYOFFICE 集成应用</h2>
@@ -54,19 +54,19 @@
 
     <h2 id="configuring" class="copy-link">配置 Jira ONLYOFFICE 集成应用</h2>
 
-    <p>在 <b>管理应用</b> 页面上找到上传的应用。单击 <b>配置</b> 并输入安装了 ONLYOFFICE Docs 的服务器的名称：</p>
+    <p>在 <b>管理应用</b> 页面上找到上传的应用。单击 <b>配置</b> 并输入安装了 ONLYOFFICE 文档的服务器的名称：</p>
     <span class="commandline">http://documentserver/</span>
     <p>
-        其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。
+        其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE 文档</b> 的服务器的名称。
         该地址必须可供用户浏览器和 Jira 服务器访问。
-        要正常工作,Jira 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问。
+        要正常工作,Jira 服务器地址也必须可以从 <b>ONLYOFFICE 文档</b> 访问。
     </p>
-    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
-        在 Jira 管理页面上指定您自己的<b>密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
+        在 Jira 管理页面上指定您自己的<b>密钥</b>。 在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
-    <p>有时您的网络配置可能不允许使用公共地址在 Jira 和 ONLYOFFICE Docs 之间进行请求。
-        <b>高级服务器设置</b>部分允许您为来自 Jira 的内部请求设置 ONLYOFFICE Docs 地址，
-        以及为来自 ONLYOFFICE Docs 的内部请求设置返回的 Jira 地址。</p>
+    <p>有时您的网络配置可能不允许使用公共地址在 Jira 和 ONLYOFFICE 文档之间进行请求。
+        <b>高级服务器设置</b>部分允许您为来自 Jira 的内部请求设置 ONLYOFFICE 文档地址，
+        以及为来自 ONLYOFFICE 文档的内部请求设置返回的 Jira 地址。</p>
 
     <h2 id="compiling" class="copy-link">编译 Jira ONLYOFFICE 集成应用</h2>
 
@@ -105,18 +105,18 @@ sudo apt-get install openjdk-8-jdk</span>
         <li>
             <p>Jira 准备一个具有以下属性的 JSON 对象：该应用程序准备一个具有以下属性的 JSON 对象：</p>
             <ul>
-                <li><b>Url</b>：ONLYOFFICE Docs 用于下载文档的临时链接，</li>
-                <li><b>callbackUrl</b>：ONLYOFFICE Docs 通知文档编辑状态的 URL，</li>
-                <li><b>docserviceApiUrl</b>：客户端需要回复ONLYOFFICE Docs 的 URL（由 <em>files.docservice.url.api</em> 属性提供），</li>
-                <li><b>key</b>：指示 ONLYOFFICE Docs 是否再次下载文档的 UUID，</li>
+                <li><b>Url</b>：ONLYOFFICE 文档用于下载文档的临时链接，</li>
+                <li><b>callbackUrl</b>：ONLYOFFICE 文档通知文档编辑状态的 URL，</li>
+                <li><b>docserviceApiUrl</b>：客户端需要回复ONLYOFFICE 文档的 URL（由 <em>files.docservice.url.api</em> 属性提供），</li>
+                <li><b>key</b>：指示 ONLYOFFICE 文档是否再次下载文档的 UUID，</li>
                 <li><b>Title</b>：文档标题（名称）。</li>
             </ul>
         </li>
         <li>Jira 获取此对象并从 freemarker 模板构造一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
-        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送具有上述属性的 DocEditor 配置。</li>
-        <li>然后 ONLYOFFICE Docs 从文档存储中下载文档，用户开始编辑。</li>
+        <li>客户端浏览器从 ONLYOFFICE 文档向 JavaScript 库发出请求，并向 ONLYOFFICE 文档发送具有上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE 文档从文档存储中下载文档，用户开始编辑。</li>
         <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
-        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 会向回调 URL 发送一个 POST，让 Jira 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE 文档会向回调 URL 发送一个 POST，让 Jira 知道客户端已完成对文档的编辑并关闭它。</li>
         <li>包含所有更改的文档将保存为新附件，并在文件名中添加了后缀。</li>
     </ol>
 

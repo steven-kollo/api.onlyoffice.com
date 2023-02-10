@@ -41,7 +41,7 @@
 production.json
 local.json</pre>
         <p>所有主要设置都存储在 <em>default.json</em> 文件中，其中一些设置被 <em>production.json</em> 文件中的设置添加或覆盖，任何用户/开发人员设置被 <em>local.json</em> 配置文件中的设置覆盖。</p>
-        <div class="note">如果您更改 <em>default.json</em> 或 <em>production.json</em> 文件中的参数，所有更改将在 Document Server 更新或 Docker 容器重启后丢失（如果您使用 Docker 安装了 Document server）。</div>
+        <div class="note">如果您更改 <em>default.json</em> 或 <em>production.json</em> 文件中的参数，所有更改将在 文档服务器更新或 Docker 容器重启后丢失（如果您使用 Docker 安装了 文档服务器）。</div>
         <p>因此，我们强烈建议您 <b>不要</b> 更改 <em>default.json</em> 或 <em>production.json</em> 文件中的参数，而是使用 <em>local.json</em> 配置文件。此文件必须与 <em>default.json</em> 文件在同一文件夹中创建，并且 <b>必须保留</b> 必要参数的 <b>整个对象结构</b>。</p>
         <p><em>local.json</em> 的使用示例可以在以下部分中找到：</p>
         <ul>

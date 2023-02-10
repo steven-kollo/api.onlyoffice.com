@@ -9,7 +9,7 @@
 <dl class="faq_block" id="wopi_1">
     <dt>如何启用WOPI？</dt>
     <dd>
-        <p>要启用 WOPI，请将Document Server 配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>。</p>
+        <p>要启用 WOPI，请将文档服务器配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>。</p>
         <div class="header-gray">参数</div>
         <table class="table">
             <colgroup>
@@ -64,7 +64,7 @@
             <li>在线办公室中可用的文档操作，</li>
             <li>支持的文件格式（扩展名）。</li>
         </ul>
-        <p>请求被发送到 <span class="fakelink">https://documentserver/hosting/discovery</span> 地址，其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称。</p>
+        <p>请求被发送到 <span class="fakelink">https://documentserver/hosting/discovery</span> 地址，其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称。</p>
         <p>有关 WOPI discovery的更多信息，请参见 <a href="<%= Url.Action("wopi/discovery") %>">此处</a>。</p>
     </dd>
 </dl>
@@ -130,7 +130,7 @@ ui=en-us&thm=1&"/&gt;
     <dd>
         <p>要限制公众访问您的数据，必须配置在线办公室和集成商之间的安全请求交换。</p>
 
-        <p>集成商必须检查是否从 ONLYOFFICE Docs 收到请求。它为此目的使用 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys" target="_blank">证明密钥</a>。
+        <p>集成商必须检查是否从 ONLYOFFICE 文档收到请求。它为此目的使用 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys" target="_blank">证明密钥</a>。
         文档服务器使用私钥对请求进行签名。相应的公钥写在 <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery XML</a>的 proof-key 元素中。
         集成商使用公钥检查私钥。签名随 <b>X-WOPI-Proof</b> 和 <b>X-WOPI-ProofOld</b> HTTP 标头中的每个请求一起发送。</p>
         <p>有关证明密钥的更多信息，请参见 <a href="<%= Url.Action("wopi/proofkeys") %>">此页面</a>。</p>
@@ -143,9 +143,9 @@ ui=en-us&thm=1&"/&gt;
     </dd>
 </dl>
 <dl class="faq_block" id="wopi_8">
-    <dt>ONLYOFFICE Docs 支持哪些 WOPI REST API 操作？</dt>
+    <dt>ONLYOFFICE 文档支持哪些 WOPI REST API 操作？</dt>
     <dd>
-        <p>ONLYOFFICE Docs 使用以下 WOPI 操作：<a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a>,
+        <p>ONLYOFFICE 文档使用以下 WOPI 操作：<a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a>,
         <a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a>, <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>,
         <a href="<%= Url.Action("wopi/restapi/refreshlock") %>">RefreshLock</a>, <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>,
         <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a>, <a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a>。
@@ -155,7 +155,7 @@ ui=en-us&thm=1&"/&gt;
 <dl class="faq_block" id="wopi_9">
     <dt>如何通过WOPI限制访问ONLYOFFICE服务器的使用？</dt>
     <dd>
-        <p>您不能通过 WOPI 限制对 ONLYOFFICE 服务器的使用。编辑访问控制只能通过 ONLYOFFICE Docs API 并基于 JWT 签名。
+        <p>您不能通过 WOPI 限制对 ONLYOFFICE 服务器的使用。编辑访问控制只能通过 ONLYOFFICE 文档 API 并基于 JWT 签名。
         生成 <a href="<%= Url.Action("signature/browser") %>">文件打开请求</a>需要密钥。</p>
         <p>更多关于签名的信息可以在 <a href="<%= Url.Action("signature") %>">这里</a>找到。</p>
     </dd>
@@ -183,9 +183,9 @@ ui=en-us&thm=1&"/&gt;
     </dd>
 </dl>
 <dl class="faq_block" id="wopi_13">
-    <dt>ONLYOFFICE Docs API 和 WOPI 有什么区别？</dt>
+    <dt>ONLYOFFICE 文档 API 和 WOPI 有什么区别？</dt>
     <dd>
-        <p>您可以使用 API 或 WOPI 将 <a href="https://www.onlyoffice.com/zh/office-suite.aspx" target="_blank">ONLYOFFICE Docs</a> 与任何云服务集成。</p>
+        <p>您可以使用 API 或 WOPI 将 <a href="https://www.onlyoffice.com/zh/office-suite.aspx" target="_blank">ONLYOFFICE 文档</a> 与任何云服务集成。</p>
         <p><a href="<%= Url.Action("wopi/apivswopi") %>">此页面上</a> 的表格将帮助您找出这些选项之间的区别。</p>
     </dd>
 </dl>

@@ -42,7 +42,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/license") %>">license</a></td>
-            <td>此命令允许从Document Server请求许可证，并提供有关服务器和用户配额的信息。</td>
+            <td>此命令允许从文档服务器请求许可证，并提供有关服务器和用户配额的信息。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/meta") %>">meta</a></td>

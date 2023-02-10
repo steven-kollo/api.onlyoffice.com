@@ -15,7 +15,7 @@
         <span class="hdr">Redmine ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-redmine" target="_blank">插件</a> 使用户能够从 <a href="https://www.redmine.org/" target="_blank">Redmine</a> 中用 ONLYOFFICE Docs编辑office文档。</p>
+    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-redmine" target="_blank">插件</a> 使用户能够从 <a href="https://www.redmine.org/" target="_blank">Redmine</a> 中用 ONLYOFFICE 文档编辑office文档。</p>
 
     <p>该插件可以在官方 <a href="https://www.redmine.org/plugins/onlyoffice_redmine" target="_blank">Redmine插件目录</a>中获得。</p>
 
@@ -29,15 +29,15 @@
 
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        您需要一个可从 Redmine 和任何客户终端解析和连接的 ONLYOFFICE Docs（文档服务器）实例。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
-        ONLYOFFICE Docs 还必须能够直接发布到 Redmine。
+        您需要一个可从 Redmine 和任何客户终端解析和连接的 ONLYOFFICE 文档（文档服务器）实例。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        ONLYOFFICE 文档还必须能够直接发布到 Redmine。
     </p>
-    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="install" class="copy-link">安装 Redmine ONLYOFFICE 集成插件</h2>
-    <p>要开始使用带有 Redmine 的 ONLYOFFICE Docs，必须执行以下步骤：</p>
+    <p>要开始使用带有 Redmine 的 ONLYOFFICE 文档，必须执行以下步骤：</p>
     <ol>
         <li>如果您是 Redmine 的新手，请按照 <a href="https://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank">这些说明</a>进行安装。</li>
         <li>
@@ -80,14 +80,14 @@ RAILS_ENV=production bundle exec rake redmine:plugins:migrate NAME=onlyoffice_re
     <p>通过 Redmine 界面配置插件。转到 <b>管理 -> 插件 -> Onlyoffice Redmine 插件 -> 配置</b> 并指定以下参数：</p>
     <ul>
         <li>
-            <p><b>文件编辑服务地址</b>: 要连接 ONLYOFFICE Docs，请输入以下地址：</p>
+            <p><b>文件编辑服务地址</b>: 要连接 ONLYOFFICE 文档，请输入以下地址：</p>
             <pre>
 https://&lt;documentserver&gt;:&lt;port&gt;/
 </pre>
-            <p>其中 <b>documentserver</b> 是服务器的名称， <b>port</b> 是安装了 <b>ONLYOFFICE Docs</b> 的端口号。</p>
+            <p>其中 <b>documentserver</b> 是服务器的名称， <b>port</b> 是安装了 <b>ONLYOFFICE 文档</b> 的端口号。</p>
         </li>
-        <li><b>密钥</b>：从7.2版本开始，默认启用JWT，并自动生成密钥以限制对ONLYOFFICE Docs的访问，这也是出于安全原因和数据完整性考虑。
-            在 Redmine 配置页面上指定您自己的密钥。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
+        <li><b>密钥</b>：从7.2版本开始，默认启用JWT，并自动生成密钥以限制对ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
+            在 Redmine 配置页面上指定您自己的密钥。 在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
     </ul>
     <p>您还可以配置 <b>编辑器定制设置</b>：</p>
     <ul>

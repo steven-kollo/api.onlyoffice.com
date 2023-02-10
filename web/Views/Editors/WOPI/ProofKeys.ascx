@@ -6,7 +6,7 @@
 
     <p class="dscr">要限制公众访问您的数据，必须配置online office和集成商之间的安全请求交换。</p>
 
-    <p>集成商必须检查是否从 ONLYOFFICE Docs 收到请求。它为此目的使用 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys" target="_blank">证明密钥</a>。
+    <p>集成商必须检查是否从 ONLYOFFICE 文档收到请求。它为此目的使用 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys" target="_blank">证明密钥</a>。
         文档服务器使用私钥对请求进行签名。相应的公钥写在 <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery XML</a>的 proof-key 元素中。集成商使用公钥检查私钥。
         签名随 <b>X-WOPI-Proof</b> 和 <b>X-WOPI-ProofOld</b> HTTP 标头中的每个请求一起发送。
         私钥和公钥通过以下配置参数设置：</p>

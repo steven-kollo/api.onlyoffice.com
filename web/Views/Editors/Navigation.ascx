@@ -90,7 +90,7 @@
                 <a href="<%= Url.Action("nuxeo") %>">Nuxeo 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("owncloud") %>">own云集成</a>
+                <a href="<%= Url.Action("owncloud") %>">ownCloud云集成</a>
             </li>
             <li>
                 <a href="<%= Url.Action("plone") %>">Plone集成</a>

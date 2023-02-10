@@ -18,17 +18,17 @@
     <span class="pvl_product">ONLYOFFICE 文件服务器</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
 
     <p class="dscr">
-        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> 是一个开源办公套件，包括文本文档、电子表格、演示文稿和可填写表单的编辑器。
+        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE 文档</a> 是一个开源办公套件，包括文本文档、电子表格、演示文稿和可填写表单的编辑器。
         它提供以下功能：
     </p>
     <ul>
         <li>创建、编辑和查看文本文档、电子表格、演示文稿和可填写表单；</li>
         <li>与其他队友实时协作处理文件。</li>
     </ul>
-    <p>ONLYOFFICE Docs 还支持用于将您的应用程序与online office集成的 <b>WOPI 协议</b>。
+    <p>ONLYOFFICE 文档还支持用于将您的应用程序与online office集成的 <b>WOPI 协议</b>。
     有关 WOPI 的更多信息，请参见 <a href="<%= Url.Action("wopi") %>">此处</a>。</li>
 
-    <p><b>ONLYOFFICE Docs API</b> 用于让开发人员将 ONLYOFFICE 文档/电子表格/演示文稿编辑器集成到他们自己的网站中，并设置和管理编辑器。</p>
+    <p><b>ONLYOFFICE 文档 API</b> 用于让开发人员将 ONLYOFFICE 文档/电子表格/演示文稿编辑器集成到他们自己的网站中，并设置和管理编辑器。</p>
 
     <p>API JavaScript 文件通常可以在以下编辑器文件夹中找到：</p>
     <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>
@@ -79,7 +79,7 @@ config = {
 
     <h2>获得帮助</h2>
 
-    <p>如果您对 ONLYOFFICE Docs 有任何疑问，请先尝试在 <a href="<%= Url.Action("faq") %>">常问问题</a> 部分找到它们。</p>
+    <p>如果您对 ONLYOFFICE 文档有任何疑问，请先尝试在 <a href="<%= Url.Action("faq") %>">常问问题</a> 部分找到它们。</p>
     <p>您可以通过在 <a href="https://github.com/ONLYOFFICE/DocumentServer/issues" target="_blank">GitHub</a>上发布问题来申请特性或报告错误。</p>
     <p>您也可以在 <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE 论坛</a> 上询问我们的开发人员（需要注册）。</p>
 </asp:Content>

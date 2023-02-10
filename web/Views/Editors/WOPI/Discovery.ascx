@@ -7,7 +7,7 @@
     <p class="dscr">
         <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery" target="_blank">WOPI 发现</a> 是通过从在online office请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。
         WOPI 主机使用discovery XML 来指定如何与online office进行交互。
-        请求被发送到 <span class="fakelink">https://documentserver/hosting/discovery</span> 地址，其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称。
+        请求被发送到 <span class="fakelink">https://documentserver/hosting/discovery</span> 地址，其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称。
     </p>
 
 

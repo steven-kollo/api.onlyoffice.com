@@ -7,7 +7,7 @@
     <p class="dscr">
         <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/rest/" target="_blank">WOPI REST API</a> 指定一组操作，使客户端能够访问和更改存储在服务器上的文件。
     </p>
-    <p>ONLYOFFICE Docs 使用以下 WOPI 操作：</p>
+    <p>ONLYOFFICE 文档使用以下 WOPI 操作：</p>
     <ul>
         <li><a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a> - 返回有关文件属性、访问权限和编辑器设置的信息。</li>
         <li><a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a> - 请求消息以检索 <em>HTTP://server/&lt;...&gt;/wopi*/files/&lt;id&gt;/contents</em> 操作的文件。</li>

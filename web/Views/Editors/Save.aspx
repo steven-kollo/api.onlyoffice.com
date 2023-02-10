@@ -246,7 +246,7 @@ new DocsAPI.DocEditor("placeholder", {
 }
 </pre>
     <note>
-        请记住，此设置可能会使某些未经事先转换就打开文档的集成商崩溃（例如，无法在 ONLYOFFICE Docs中保存为 <em>.doc</em> 格式）。
+        请记住，此设置可能会使某些未经事先转换就打开文档的集成商崩溃（例如，无法在 ONLYOFFICE 文档中保存为 <em>.doc</em> 格式）。
         如有必要，禁用此设置。
     </note>
 

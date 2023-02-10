@@ -15,7 +15,7 @@
         <span class="hdr">Strapi ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-strapi" target="_blank">插件</a> 让用户能够从 <a href="https://strapi.io/" target="_blank">Strapi</a> 使用 ONLYOFFICE Docs编辑office文档。</p>
+    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-strapi" target="_blank">插件</a> 让用户能够从 <a href="https://strapi.io/" target="_blank">Strapi</a> 使用 ONLYOFFICE 文档编辑office文档。</p>
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
@@ -28,15 +28,15 @@
 
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        您需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 Strapi 和任何客户终端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
-        ONLYOFFICE Docs 还必须能够直接发布到 Strapi。
+        您需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例可从 Strapi 和任何客户终端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        ONLYOFFICE 文档还必须能够直接发布到 Strapi。
     </p>
-    <p>安装 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>安装 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="install" class="copy-link">安装 Strapi ONLYOFFICE 集成插件</h2>
-    <p>要开始将 ONLYOFFICE Docs 与 Strapi 一起使用，请执行以下步骤：</p>
+    <p>要开始将 ONLYOFFICE 文档与 Strapi 一起使用，请执行以下步骤：</p>
     <ol>
         <li>
             <p>更改 Strapi 中间件文件： <em>strapi/config/middlewares.js</em>。</p>
@@ -79,8 +79,8 @@ npm run develop
     <p>您可以通过 Strapi <b>面板 -> 设置 -> 全局设置 -> ONLYOFFICE</b>配置 ONLYOFFICE 应用程序。在设置页面，输入：</p>
     <ul>
         <li><b>文档服务器地址</b>。安装的 ONLYOFFICE 文档服务器的 URL。</li>
-        <li><b>文档服务器 JWT 密钥</b>。 从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
-            在 Strapi 设置页面上指定您自己的密钥。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
+        <li><b>文档服务器 JWT 密钥</b>。 从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
+            在 Strapi 设置页面上指定您自己的密钥。 在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
     </ul>
 
 

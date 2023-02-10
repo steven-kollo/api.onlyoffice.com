@@ -15,7 +15,7 @@
         <span class="hdr">HumHub ONLYOFFICE 连接器</span>
     </h1>
 
-    <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">插件</a> 使用户可以从 <a href="https://www.humhub.com/" target="_blank">HumHub</a> 中使用 ONLYOFFICE Docs编辑办公文档。</p>
+    <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">插件</a> 使用户可以从 <a href="https://www.humhub.com/" target="_blank">HumHub</a> 中使用 ONLYOFFICE 文档编辑办公文档。</p>
     <p>该插件可以在官方 <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a>中获得。</p>
 
     <h2 id="features" class="copy-link">特性</h2>
@@ -31,10 +31,10 @@
 </h2>
 
     <p>
-        您将需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 HumHub 和任何终端客户端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。ONLYOFFICE Docs 还必须能够直接发布到 HumHub。</p>
+        您将需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例可从 HumHub 和任何终端客户端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。ONLYOFFICE 文档还必须能够直接发布到 HumHub。</p>
 
-    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="installing-plugin" class="copy-link">安装 HumHub ONLYOFFICE 连接器</h2>
@@ -51,8 +51,8 @@
         为了配置插件，您必须导航到 <b>Administation -> Modules</b>。
         找到 ONLYOFFICE 插件并点击 <b>配置</b>。
     </p>
-    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
-        在 HumHub 配置页面上指定您自己的 <b>JWT Secret</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
+        在 HumHub 配置页面上指定您自己的 <b>JWT Secret</b>。 在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
 
     <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
@@ -66,20 +66,20 @@
         <li>
             <p>该应用程序准备一个具有以下属性的 JSON 对象：</p>
             <ul>
-                <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL；</li>
-                <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
-                <li><b>key</b> - 用于指示 ONLYOFFICE Docs 是否再次下载文档的随机 MD5 哈希值；</li>
+                <li><b>url</b> - ONLYOFFICE 文档用于下载文档的 URL；</li>
+                <li><b>callbackUrl</b> - ONLYOFFICE 文档通知文档编辑状态的 URL；</li>
+                <li><b>key</b> - 用于指示 ONLYOFFICE 文档是否再次下载文档的随机 MD5 哈希值；</li>
                 <li><b>title</b> - 文档标题（名称）；</li>
                 <li><b>id</b> - 用户标识；</li>
                 <li><b>name</b> - 用户名。</li>
             </ul>
         </li>
         <li>HumHub 接受这个对象并从 <em>views/open/index.php</em> 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
-        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送具有上述属性的 DocEditor 配置。</li>
-        <li>然后 ONLYOFFICE Docs 从 HumHub 下载文档，用户开始编辑。</li>
-        <li>ONLYOFFICE Docs 向 <em>callbackUrl</em> 发送 POST 请求，通知 HumHub 用户正在编辑文档。</li>
+        <li>客户端浏览器从 ONLYOFFICE 文档向 JavaScript 库发出请求，并向 ONLYOFFICE 文档发送具有上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE 文档从 HumHub 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE 文档向 <em>callbackUrl</em> 发送 POST 请求，通知 HumHub 用户正在编辑文档。</li>
         <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
-        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向 <em>callbackUrl</em> 发送一个 POST，让 HumHub 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE 文档向 <em>callbackUrl</em> 发送一个 POST，让 HumHub 知道客户端已完成对文档的编辑并关闭它。</li>
         <li>HumHub 下载文档的新版本，替换旧版本。</li>
     </ol>
 

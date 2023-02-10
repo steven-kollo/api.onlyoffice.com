@@ -113,10 +113,10 @@
     <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_5">如何在应用程序中创建在线办公会话？</a></li>
     <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_6">如何通过 WOPI 限制公众对数据的访问？</a></li>
     <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_7">我在哪里可以找到可能的 WOPI 错误代码及其描述？</a></li>
-    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_8">ONLYOFFICE Docs 支持哪些 WOPI REST API 操作？</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_8">ONLYOFFICE 文档支持哪些 WOPI REST API 操作？</a></li>
     <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_9">如何通过WOPI限制访问ONLYOFFICE服务器的使用？</a></li>
     <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_10">如何通过 WOPI 获取有关文件属性、访问权限和编辑器设置的信息？</a></li>
     <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_11">WOPI 支持哪些操作？</a></li>
     <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_12">我可以通过 WOPI 对文档设置哪些访问权限？</a></li>
-    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_13">ONLYOFFICE Docs API 和 WOPI 有什么区别？</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_13">ONLYOFFICE 文档 API 和 WOPI 有什么区别？</a></li>
 </ul>

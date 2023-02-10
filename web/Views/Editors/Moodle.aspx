@@ -15,7 +15,7 @@
         <span class="hdr">Moodle ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor" target="_blank">插件</a> 让用户可以在 <a href="https://moodle.org/?lang=zh_cn" target="_blank">从 Moodle</a> 中用 ONLYOFFICE Docs编辑office文档。</p>
+    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor" target="_blank">插件</a> 让用户可以在 <a href="https://moodle.org/?lang=zh_cn" target="_blank">从 Moodle</a> 中用 ONLYOFFICE 文档编辑office文档。</p>
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
@@ -29,11 +29,11 @@
 
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        您需要一个 ONLYOFFICE Docs (Document Server) 实例，该实例可从 Moodle 和任何终端客户端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
-        ONLYOFFICE Docs 还必须能够直接发布到 Moodle。
+        您需要一个 ONLYOFFICE 文档 (文档服务器) 实例，该实例可从 Moodle 和任何终端客户端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        ONLYOFFICE 文档还必须能够直接发布到 Moodle。
     </p>
-    <p>安装 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>安装 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="install" class="copy-link">安装 Moodle ONLYOFFICE 集成插件</h2>
@@ -46,16 +46,16 @@
     <p>安装插件后，将打开插件设置页面。或者，您可以在 <b>插件概览</b> 页面上找到上传的应用程序，然后单击 <b>设置</b>。</p>
     <ul>
         <li>
-            <p>在 <b>文档编辑服务地址</b> 字段中输入安装了 ONLYOFFICE Docs 的服务器名称：</p>
+            <p>在 <b>文档编辑服务地址</b> 字段中输入安装了 ONLYOFFICE 文档的服务器名称：</p>
             <span class="commandline">http://documentserver/</span>
             <p>
-                其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。
+                其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE 文档</b> 的服务器的名称。
                 该地址必须可以从用户浏览器和 Moodle 服务器访问。
-                Moodle 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问才能正常工作。
+                Moodle 服务器地址也必须可以从 <b>ONLYOFFICE 文档</b> 访问才能正常工作。
             </p>
         </li>
-        <li>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
-            在 Moodle <b>设置</b> 页面上指定您自己的 <b>文档服务器密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
+        <li>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
+            在 Moodle <b>设置</b> 页面上指定您自己的 <b>文档服务器密钥</b>。 在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
     </ul>
 
 

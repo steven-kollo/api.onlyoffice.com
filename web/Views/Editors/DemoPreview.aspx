@@ -15,16 +15,16 @@
         <span class="hdr">特定语言示例</span>
     </h1>
 
-    <p>使用 ONLYOFFICE Docs，任何协作解决方案都可以通过文档编辑和共同编辑来增强。
-        在本节中，您将学习如何将 ONLYOFFICE Docs 集成到您自己的网站中。</p>
+    <p>使用 ONLYOFFICE 文档，任何协作解决方案都可以通过文档编辑和共同编辑来增强。
+        在本节中，您将学习如何将 ONLYOFFICE 文档集成到您自己的网站中。</p>
 
 
-    <p>每个 ONLYOFFICE Docs 实例都包括用于文本文档、电子表格、演示文稿和可填写表单的在线编辑器，以及一个测试示例。</p>
+    <p>每个 ONLYOFFICE 文档实例都包括用于文本文档、电子表格、演示文稿和可填写表单的在线编辑器，以及一个测试示例。</p>
     <p>测试示例是简单的文档管理系统，可以内置到您的应用程序中进行测试。
         默认包含的测试示例是用 Node.js 编写的。默认情况下，它处于禁用状态。要启用它，请按照开始屏幕上的说明进行操作。</p>
 
     <div class="note">
-        集成示例用于演示文档编辑器功能以及将 <b>Document Server</b> 与您自己的应用程序相连接的方法。
+        集成示例用于演示文档编辑器功能以及将 <b>文档服务器</b> 与您自己的应用程序相连接的方法。
         <b>不要在没有正确修改代码</b> 的情况下在您自己的服务器上使用这些示例<b></b>！
         如果您启用了任何测试示例，请在发布产品之前将其禁用。
     </div>
@@ -42,7 +42,7 @@
 
     <ol>
         <li>
-            <p>下载 Document Server 安装文件并在您的本地服务器上进行设置：</p>
+            <p>下载 文档服务器安装文件并在您的本地服务器上进行设置：</p>
             <div class="list-buttons">
                 <a class="button" href="https://www.onlyoffice.com/zh/developer-edition-request.aspx?from=api.onlyoffice.com" target="_blank">获取ONLYOFFICE编辑器
                 </a>

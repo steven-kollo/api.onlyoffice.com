@@ -5,7 +5,7 @@
 </h1>
 
     <p class="dscr">
-        <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage" target="_blank">PostMessage</a> 是 <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web 消息传递</a> 协议，它允许在 iframe 存储和 ONLYOFFICE Docs 之间在浏览器中交换消息。
+        <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage" target="_blank">PostMessage</a> 是 <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web 消息传递</a> 协议，它允许在 iframe 存储和 ONLYOFFICE 文档之间在浏览器中交换消息。
         它允许online office框架与其父主机页面进行通信。
     </p>
 
@@ -69,7 +69,7 @@ otherWindow.postMessage (msg, targetOrigin)
     </table>
     <div class="mobile-content"></div>
 
-    <p>在这里，您可以找到可供 ONLYOFFICE Docs 发送到主机页面的消息。Online office接收消息的过程将在稍后提供。</p>
+    <p>在这里，您可以找到可供 ONLYOFFICE 文档发送到主机页面的消息。Online office接收消息的过程将在稍后提供。</p>
     <div class="header-gray">可用消息</div>
     <table class="table">
         <colgroup>

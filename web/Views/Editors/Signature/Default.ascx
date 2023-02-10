@@ -14,7 +14,7 @@
 <div class="note">
     默认值在 <em>default.json</em> 配置文件中可用，该文件位于上述文件夹中(适用于 Linux 和 Windows)。
     请不要直接编辑 <em>default.json</em> 文件的内容。
-    每次重新启动 Docker 容器或将 <b>Document Server</b> 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
+    每次重新启动 Docker 容器或将 <b>文档服务器</b> 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
 </div>
 
 <p>重新启动服务以使配置更改生效：</p>
@@ -42,7 +42,7 @@
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.browser.string</td>
-            <td>定义 <em>密钥</em> ，用以在客户端生成到ONLYOFFICE文档的 <a href="<%= Url.Action("signature/browser") %>">浏览器请求</a> 令牌。</td>
+            <td>定义 <em>密钥</em>，用以在客户端生成到ONLYOFFICE文档的 <a href="<%= Url.Action("signature/browser") %>">浏览器请求</a> 令牌。</td>
             <td>string</td>
             <td>secret</td>
         </tr>

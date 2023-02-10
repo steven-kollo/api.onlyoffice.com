@@ -8,7 +8,7 @@
 
 <h2 id="open" class="copy-link">打开文件</h2>
 
-<p id="config" class="copy-link">在 ONLYOFFICE Document Server 中 <a href="<%= Url.Action("open") %>">打开</a> 文件进行编辑时，必须将 <a href="<%= Url.Action("config/") %>#token">令牌</a> 添加到配置中以验证参数。</p>
+<p id="config" class="copy-link">在 ONLYOFFICE 文档服务器中 <a href="<%= Url.Action("open") %>">打开</a> 文件进行编辑时，必须将 <a href="<%= Url.Action("config/") %>#token">令牌</a> 添加到配置中以验证参数。</p>
 
 <p>
     JSON 格式的 JWT 令牌的 <em>有效负载</em> 必须与 <a href="<%= Url.Action("advanced") %>">config</a>具有相同的结构。

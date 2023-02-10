@@ -15,7 +15,7 @@
         <span class="hdr">Plone ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p>该 <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-plone">插件</a> 使用户能够从 <a target="_blank" href="https://plone.org/">Plone</a> 中用 ONLYOFFICE Docs编辑office文档。</p>
+    <p>该 <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-plone">插件</a> 使用户能够从 <a target="_blank" href="https://plone.org/">Plone</a> 中用 ONLYOFFICE 文档编辑office文档。</p>
 
     <h2 id="features" class="copy-link">特性</h2>
 
@@ -29,17 +29,17 @@
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
 
     <p>
-        您将需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 Plone 和任何客户终端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
-        ONLYOFFICE Docs 还必须能够直接发布到 Plone。
+        您将需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例可从 Plone 和任何客户终端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        ONLYOFFICE 文档还必须能够直接发布到 Plone。
     </p>
 
-    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="install" class="copy-link">安装 Plone ONLYOFFICE 集成插件</h2>
 
-    <p>要开始使用带有 Plone 的 ONLYOFFICE Docs，必须执行以下步骤：</p>
+    <p>要开始使用带有 Plone 的 ONLYOFFICE 文档，必须执行以下步骤：</p>
     <ol>
         <li>通过将插件添加到您的 <em>buildout.cfg</em>来安装插件：
             <span class="commandline">[buildout]
@@ -71,8 +71,8 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
         向下滚动到 <b>附加组件配置</b> 部分，然后按 <b>ONLYOFFICE 配置</b> 按钮。
     </p>
 
-    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
-        在 Plone 配置页面上指定您自己的 <b>密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
+        在 Plone 配置页面上指定您自己的 <b>密钥</b>。 在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
     <h2 id="developing" class="copy-link">开发 Plone ONLYOFFICE 插件</h2>
 
@@ -154,18 +154,18 @@ onlyoffice.plone = 1.0.1
         <li>
             <p>Plone 为文档服务器准备一个 JSON 对象，具有以下属性：</p>
             <ul>
-                <li><b>url</b>: ONLYOFFICE Docs 用于下载文档的 URL；</li>
-                <li><b>callbackUrl</b>: ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
-                <li><b>key</b>: <em>UUID+Modified Timestamp</em> 指示ONLYOFFICE Docs是否重新下载文档；</li>
+                <li><b>url</b>: ONLYOFFICE 文档用于下载文档的 URL；</li>
+                <li><b>callbackUrl</b>: ONLYOFFICE 文档通知文档编辑状态的 URL；</li>
+                <li><b>key</b>: <em>UUID+Modified Timestamp</em> 指示ONLYOFFICE 文档是否重新下载文档；</li>
                 <li><b>Title:</b>: 文档标题（名称）。</li>
             </ul>
         </li>
         <li>Plone 从 <em>.pt</em> 模板构造一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
-        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送包含上述属性的 DocEditor 配置。</li>
-        <li>然后 ONLYOFFICE Docs 从 Plone 下载文档，用户开始编辑。</li>
-        <li>ONLYOFFICE Docs 向 <em>回调</em> URL 发送 POST 请求，通知 Plone 用户正在编辑文档。</li>
+        <li>客户端浏览器从 ONLYOFFICE 文档向 JavaScript 库发出请求，并向 ONLYOFFICE 文档发送包含上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE 文档从 Plone 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE 文档向 <em>回调</em> URL 发送 POST 请求，通知 Plone 用户正在编辑文档。</li>
         <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
-        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向 <em>回调</em> URL 发送一个 POST，让 Plone 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE 文档向 <em>回调</em> URL 发送一个 POST，让 Plone 知道客户端已完成对文档的编辑并关闭它。</li>
         <li>Plone 下载文档的新版本，替换旧版本。</li>
     </ol>
 

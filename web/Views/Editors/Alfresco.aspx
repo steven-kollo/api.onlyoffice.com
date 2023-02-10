@@ -15,7 +15,7 @@
         <span class="hdr">ONLYOFFICE Alfresco 模块包</span>
     </h1>
 
-    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">插件</a> 让用户能够从 <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share 中用 ONLYOFFICE Docs编辑办公文档。</p>
+    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">插件</a> 让用户能够从 <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share 中用 ONLYOFFICE 文档编辑办公文档。</p>
 
     <p>该插件在官方 <a href="https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco" target="_blank">Alfresco Add-ons directory</a>中可用。</p>
 
@@ -38,16 +38,16 @@
 
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        您将需要一个 ONLYOFFICE Docs (文档服务器) 实例，该实例可从 Alfresco 和任何客户终端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
-        ONLYOFFICE Docs 还必须能够直接发布到 Alfresco上。</p>
+        您将需要一个 ONLYOFFICE 文档 (文档服务器) 实例，该实例可从 Alfresco 和任何客户终端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        ONLYOFFICE 文档还必须能够直接发布到 Alfresco上。</p>
     <p>
-        启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+        启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
     <h2 id="install" class="copy-link">安装ONLYOFFICE Alfresco 模块包</h2>
 
-    <p>要开始在 Alfresco 中使用 ONLYOFFICE Docs，必须在 Ubuntu 14.04 中执行以下步骤的操作：</p>
+    <p>要开始在 Alfresco 中使用 ONLYOFFICE 文档，必须在 Ubuntu 14.04 中执行以下步骤的操作：</p>
     <ol>
         <li>将已编译的 <b>*.jar</b> 包上传到相应的目录以供您安装 Alfresco：
             <ul>
@@ -80,9 +80,9 @@ sudo ./alfresco.sh start</span>
         您还可以将 <em>onlyoffice.url</em> 添加到 <b>alfresco-global.properties</b>。
         通过设置页面进行的配置将覆盖 <b>alfresco-global.properties</b>。
     </div>
-    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性考虑。
+    <p>从 7.2 版开始，默认情况下启用 JWT，并自动生成密钥以限制对 ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
         在 Alfresco 配置页面上或通过将 <em>onlyoffice.jwtsecret</em> 添加到 <b>alfresco-global.properties</b> 来指定您自己的<b>密钥</b>。
-        在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
+        在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
     <h2 id="compile" class="copy-link">编译 ONLYOFFICE Alfresco 模块包</h2>
 
@@ -119,20 +119,20 @@ mvn clean install</span>
         <li>
             <p>Alfresco Repo 端为具有以下属性的 Share 准备一个 JSON 对象：</p>
             <ul>
-                <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL（包括当前用户的 <em>alf_ticket</em> ）；</li>
-                <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
-                <li><b>onlyofficeUrl</b> - 客户端需要响应 ONLYOFFICE Docs 的 URL（由 <em>onlyoffice.url</em> 属性提供）；</li>
-                <li><b>key</b> ： <em>UUID+Modified Timestamp</em> 指示 ONLYOFFICE Docs 是否再次下载文档；</li>
+                <li><b>url</b> - ONLYOFFICE 文档用于下载文档的 URL（包括当前用户的 <em>alf_ticket</em> ）；</li>
+                <li><b>callbackUrl</b> - ONLYOFFICE 文档通知文档编辑状态的 URL；</li>
+                <li><b>onlyofficeUrl</b> - 客户端需要响应 ONLYOFFICE 文档的 URL（由 <em>onlyoffice.url</em> 属性提供）；</li>
+                <li><b>key</b> ： <em>UUID+Modified Timestamp</em> 指示 ONLYOFFICE 文档是否再次下载文档；</li>
                 <li><b>title</b> - 文档标题（名称）。</li>
             </ul>
         </li>
         <li>Alfresco Share 使用这个对象并从 freemarker 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
-        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送包含上述属性的 DocEditor 配置。</li>
-        <li>然后 ONLYOFFICE Docs 从 Alfresco 下载文档，用户开始编辑。</li>
-        <li>ONLYOFFICE Docs 向 <em>回调</em> URL 发送 POST 请求，以通知 Alfresco 用户正在编辑文档。</li>
-        <li>Alfresco 会锁定文档，但仍允许其他具有写入权限的用户通过保留 Action 与 ONLYOFFICE Docs 进行实时协作。</li>
+        <li>客户端浏览器从 ONLYOFFICE 文档向 JavaScript 库发出请求，并向 ONLYOFFICE 文档发送包含上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE 文档从 Alfresco 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE 文档向 <em>回调</em> URL 发送 POST 请求，以通知 Alfresco 用户正在编辑文档。</li>
+        <li>Alfresco 会锁定文档，但仍允许其他具有写入权限的用户通过保留 Action 与 ONLYOFFICE 文档进行实时协作。</li>
         <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
-        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向 <em>回调</em> URL 发送一个 POST，让 Alfresco 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE 文档向 <em>回调</em> URL 发送一个 POST，让 Alfresco 知道客户端已完成对文档的编辑并关闭它。</li>
         <li>Alfresco 下载文档的新版本，替换旧版本。</li>
     </ol>
 

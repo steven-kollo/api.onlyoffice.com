@@ -5,7 +5,7 @@
 </h1>
 
     <p class="dscr">
-        从 6.4 版开始，ONLYOFFICE Docs 提供 <b>对Web 应用程序开放平台接口协议 (WOPI)</b> 的支持 - 一种基于 REST 的协议，
+        从 6.4 版开始，ONLYOFFICE 文档提供 <b>对Web 应用程序开放平台接口协议 (WOPI)</b> 的支持 - 一种基于 REST 的协议，
         用于将您的应用程序与online office集成。WOPI 操作允许您打开存储在服务器上的文件、编辑和保存它们。
     </p>
     <p>本文档描述：</p>
@@ -17,7 +17,7 @@
         <li>可以通过 <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>发布的可用消息；</li>
         <li>在online office中<a href="<%= Url.Action("wopi/conversionapi") %>">转换</a>不同文件格式请求参数；</li>
         <li><a href="<%= Url.Action("wopi/editingbinary") %>">编辑二进制文档格式</a>的方案；</li>
-        <li>ONLYOFFICE Docs API 和 WOPI 之间的<a href="<%= Url.Action("wopi/apivswopi") %>">区别</a>。</li>
+        <li>ONLYOFFICE 文档 API 和 WOPI 之间的<a href="<%= Url.Action("wopi/apivswopi") %>">区别</a>。</li>
     </ul>
 
     <p>有关 WOPI 协议的更多信息，请阅读 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/" target="_blank">WOPI 文档</a>。</p>
@@ -29,11 +29,11 @@
     <div class="note">
         默认值在 <em>default.json</em> 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。
         请不要直接编辑 <em>default.json</em> 文件的内容。
-        每次重新启动 Docker 容器或将 <b>Document Server</b> 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
+        每次重新启动 Docker 容器或将 <b>文档服务器</b> 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
     </div>
 
     <h2 id="enable" class="copy-link">启用 WOPI</h2>
-    <p>要启用 WOPI，请将Document Server 配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>:</p>
+    <p>要启用 WOPI，请将文档服务器配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>:</p>
 
     <div class="header-gray">参数</div>
     <table class="table">
@@ -72,7 +72,7 @@
 </pre>
 
     <h2 id="ip-filter" class="copy-link">IP过滤器</h2>
-    <p>ONLYOFFICE Docs 只能接受来自受信任的集成商的 WOPI 请求。
+    <p>ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。
         此类集成商的 IP 地址必须包含在 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list" target="_blank">WOPI 域允许列表</a>中。
         同时，必须拒绝所有其他集成商的访问。</p>
     <note>默认情况下，所有 IP 地址都被认为是可信的。</note>

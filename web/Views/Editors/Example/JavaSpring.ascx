@@ -5,7 +5,7 @@
 </h1>
 
 <h2>概述</h2>
-<p class="dscr">此示例将帮助您将 ONLYOFFICE Docs 集成到用 Java with Spring Boot 编写的 Web 应用程序中。</p>
+<p class="dscr">此示例将帮助您将 ONLYOFFICE 文档集成到用 Java with Spring Boot 编写的 Web 应用程序中。</p>
 <p>Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自动配置和内置的 servlet 容器。</p>
 
 <div class="note">
@@ -25,7 +25,7 @@
 
 <h2 id="Windows" class="copy-link">对于 Windows</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
-<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> （打包为文档服务器 ）。</p>
+<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器 ）。</p>
 <p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example">Windows版文档服务器</a>。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的 Java 代码</h2>
@@ -38,7 +38,7 @@ server.port=port
 files.docservice.url.site=https://documentserver/
 </pre>
 
-<p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称， <b>port</b> 是任何可用的端口，而<b>files.storage</b> 是创建和存储文件的路径（默认在项目文件夹中）。
+<p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称， <b>port</b> 是任何可用的端口，而<b>files.storage</b> 是创建和存储文件的路径（默认在项目文件夹中）。
 您可以设置绝对路径。例如， <em>D:\\folder</em>。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。</p>
 <p>如果要试验编辑器配置，请修改 <em>\src\main\webapp\editor.jsp</em> 文件中的 <a href="<%= Url.Action("advanced") %>">参数</a>。</p>
 
@@ -126,7 +126,7 @@ http://server.address:server.port/
 
 <h2 id="Linux" class="copy-link">对于 Linux</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
-<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> （打包为文档服务器 ）。</p>
+<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器 ）。</p>
 <p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example">Linux版文档服务器</a>。</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">步骤 2.</span>安装先决条件并使用编辑器运行网站</h2>
@@ -164,7 +164,7 @@ sudo apt-get install oracle-java11-installer</span>
         </ul>
     </li>
     <li>编辑 <em>application.properties</em> 配置文件。
-        指定安装了 ONLYOFFICE Docs 的本地服务器的名称。
+        指定安装了 ONLYOFFICE 文档的本地服务器的名称。
         <div class="commandline">nano src/main/resources/application.properties</div>
         <p>编辑以下行：</p>
 
@@ -174,7 +174,7 @@ server.port=port
 files.docservice.url.site=https://documentserver/
 </pre>
 
-        <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称， <b>port</b> 是任何可用的端口，而 <b>files.storage</b> 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。</p>
+        <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称， <b>port</b> 是任何可用的端口，而 <b>files.storage</b> 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。</p>
     </li>
     <li>安装 <b>Maven</b>：
         <div class="commandline">sudo apt-get install maven</div>
@@ -205,7 +205,7 @@ files.docservice.url.site=https://documentserver/
 
 <ol>
     <li>编辑 <em>application.properties</em> 配置文件。
-        指定 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx">安装</a>了 ONLYOFFICE Docs 的本地服务器的名称。
+        指定 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx">安装</a>了 ONLYOFFICE 文档的本地服务器的名称。
         <div class="commandline">nano src/main/resources/application.properties</div>
         <p>编辑以下行：</p>
 
@@ -215,7 +215,7 @@ server.port=port
 files.docservice.url.site=https://documentserver/ 
 </pre>
 
-        <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称， <b>port</b> 是任何可用的端口，而 <b>files.storage</b> 是创建和存储文件的路径（默认在项目文件夹中）。
+        <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称， <b>port</b> 是任何可用的端口，而 <b>files.storage</b> 是创建和存储文件的路径（默认在项目文件夹中）。
 您可以设置绝对路径。</p>
     </li>
     <li>在 Java-Spring 示例目录中运行下一个命令：

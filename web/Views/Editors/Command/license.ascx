@@ -7,7 +7,7 @@
 
 <div class="header-gray">描述</div>
 
-<p class="dscr">从Document Server请求许可证，以及有关服务器和用户配额的信息。</p>
+<p class="dscr">从文档服务器请求许可证，以及有关服务器和用户配额的信息。</p>
 
 <div class="header-gray">请求示例</div>
 <pre>

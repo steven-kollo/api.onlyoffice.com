@@ -186,6 +186,6 @@
     ...
 });</pre>
         <p>其中 <em>editorConfig.plugins.autostart</em> 是您希望在 文档服务器启动时自动启动的插件的 GUID 数组（在插件 <a href="<%= Url.Action("config", "plugin") %>#guid">config.json</a> 文件中定义）， <em>editorConfig.plugins.pluginsData</em> 是您希望文档服务器用户可以使用的所有插件的 <b>config.json</b> 配置文件数组。</p>
-        <p>有关启用 Document Server 插件的更多信息，请参见 <a href="<%= Url.Action("config/editor/plugins") %>">此页面</a>。</p>
+        <p>有关启用 文档服务器插件的更多信息，请参见 <a href="<%= Url.Action("config/editor/plugins") %>">此页面</a>。</p>
     </dd>
 </dl>

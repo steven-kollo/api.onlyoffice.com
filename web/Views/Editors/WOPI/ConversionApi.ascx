@@ -62,7 +62,7 @@
     <pre>
 curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.docx
 </pre>
-    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称。</p>
+    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称。</p>
 
     <div id="sample-html" class="copy-link header-gray">HTML 格式的转换请求示例</div>
     <pre>
@@ -71,13 +71,13 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
     &lt;input type="submit" value="Convert to DOCX"&gt;
 &lt;/form&gt;
 </pre>
-    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称。</p>
+    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称。</p>
 
     <div id="sample-curl-format" class="copy-link header-gray">带有 <em>格式</em> 参数的转换请求示例</div>
     <pre>
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 </pre>
-    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称。</p>
+    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称。</p>
 
     <div id="sample-html-format" class="copy-link header-gray"><em>格式</em> 参数为 HTML 格式的转换请求示例</div>
     <pre>
@@ -87,4 +87,4 @@ curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserv
     &lt;input type="submit" value="Convert"&gt;
 &lt;/form&gt;
 </pre>
-    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE Docs 的服务器的名称。</p>
+    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档的服务器的名称。</p>

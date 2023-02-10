@@ -30,7 +30,7 @@
     <ol>
         <li>用户在计算机硬盘驱动器上选择要上传到 <b>文档管理器</b>的文件。</li>
         <li><b>文档管理器</b> 将所选文件上传到 <b>文档存储服务</b>。</li>
-        <li><b>文档存储服务</b> 将上传的文件发送到 ONLYOFFICE Document Server <b>文档转换服务</b>，以便使用 <a href="<%= Url.Action("conversionapi") %>">conversion API</a>将它转换为 Office Open XML 格式。</li>
+        <li><b>文档存储服务</b> 将上传的文件发送到 ONLYOFFICE 文档服务器 <b>文档转换服务</b>，以便使用 <a href="<%= Url.Action("conversionapi") %>">conversion API</a>将它转换为 Office Open XML 格式。</li>
         <li><b>文档转换服务</b> 将所选文件转换为 Office Open XML 格式。</li>
         <li><b>文档存储服务</b> 下载转换后的文档文件。</li>
     </ol>
