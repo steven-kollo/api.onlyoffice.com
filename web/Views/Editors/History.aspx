@@ -22,7 +22,7 @@
     </p>
 
     <p>The reference figure and the steps below explain the process of viewing the history in ONLYOFFICE Document Server.</p>
-    <img alt="Document history" src="<%= Url.Content("~/content/img/editor/viewing-history.png") %>" />
+    <img alt="Document history" src="<%= Url.Content("~/content/img/editor/viewing-history.svg") %>" />
     <ol>
         <li>The user clicks the <em>Version History</em> button while editing the document within the <b>document editor</b>.</li>
         <li>The <b>document editor</b> requests the list of the document versions from the <b>document storage service</b>.</li>
