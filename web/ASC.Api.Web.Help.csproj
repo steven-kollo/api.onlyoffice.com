@@ -2227,6 +2227,7 @@
     <Content Include="Content\img\Editor\history_open.png" />
     <Content Include="Content\img\Editor\info.png" />
     <Content Include="Content\img\Editor\inlineEditors.png" />
+    <Content Include="Content\img\Editor\insert-external-data.png" />
     <Content Include="Content\img\Editor\ios-api-config.png" />
     <Content Include="Content\img\Editor\ios-error.png" />
     <Content Include="Content\img\Editor\ios-managing.png" />
@@ -2256,7 +2257,7 @@
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
-    <Content Include="Content\img\Editor\opening.jpg" />
+    <Content Include="Content\img\Editor\opening.png" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\paste-link.png" />
@@ -2281,6 +2282,7 @@
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
     <Content Include="Content\img\Editor\update-values.png" />
     <Content Include="Content\img\Editor\viewer.png" />
+    <Content Include="Content\img\Editor\viewing-history.png" />
     <Content Include="Content\img\get-docs\docker.png" />
     <Content Include="Content\img\get-docs\linux.svg" />
     <Content Include="Content\img\get-docs\windows.svg" />
