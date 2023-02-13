@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Embedding forms into a web page page
 - docbuilder: changed the color scheme of the builder examples
 - macros: added the Insert unique id macro sample
 - editors: conversion to ppsm, ppsx
