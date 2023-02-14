@@ -19,7 +19,7 @@
     <li>由于不需要授权，因此无法保护存储免受未经授权的访问。</li>
     <li>没有检查链接中的参数替换，因为参数是由代码根据预先安排的脚本生成的。</li>
     <li>在编辑后保存文件的请求中没有数据检查，因为每个测试示例仅适用于来自 ONLYOFFICE 文档服务器的请求。</li>
-    <li>没有禁止使用来自其他站点的测试示例，因为它们用于与来自另一个域的 ONLYOFFICE 文档服务器进行交互。</li>
+    <li>没有禁止使用来自其他网站的测试示例，因为它们用于与来自另一个域的 ONLYOFFICE 文档服务器进行交互。</li>
 </ul>
 
 <h2 id="Windows" class="copy-link">对于 Windows</h2>
@@ -28,7 +28,7 @@
 <p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example">适用于Windows</a>的文档服务器。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的 Java 代码</h2>
-<p>从我们的站点下载 <a href="<%= Url.Action("demopreview") %>">Java 示例</a>。</p>
+<p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">Java 示例</a>。</p>
 <p>要将编辑器连接到您的网站，请在 <em>\src\main\resources\settings.properties</em> 文件中指定编辑器安装的路径和存储文件夹的路径：</p>
 
 <pre>

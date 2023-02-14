@@ -21,7 +21,7 @@
     <li>由于不需要授权，因此无法保护存储免受未经授权的访问。</li>
     <li>没有检查链接中的参数替换，因为参数是由代码根据预先安排的脚本生成的。</li>
     <li>在编辑后保存文件的请求中没有数据检查，因为每个测试示例仅适用于来自 ONLYOFFICE 文档服务器的请求。</li>
-    <li>没有禁止使用来自其他站点的测试示例，因为它们用于与来自另一个域的 ONLYOFFICE 文档服务器进行交互。</li>
+    <li>没有禁止使用来自其他网站的测试示例，因为它们用于与来自另一个域的 ONLYOFFICE 文档服务器进行交互。</li>
 </ul>
 
 <h2 id="Windows" class="copy-link">对于 Windows</h2>
@@ -30,7 +30,7 @@
 <p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example">Windows版文档服务器</a>。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的 PHP 代码</h2>
-<p>从我们的站点下载 <a href="<%= Url.Action("demopreview") %>">PHP 示例</a>。</p>
+<p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">PHP 示例</a>。</p>
 <p>要将编辑器连接到您的网站，请在 <em>config.php</em> 文件 中指定编辑器安装的路径和存储文件夹的路径：</p>
 <pre>
 $GLOBALS['STORAGE_PATH'] = "";
@@ -49,8 +49,8 @@ $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
 
 <ul>
     <li><b>IIS</b>：版本7或更高版本（参考 <a href="https://learn.microsoft.com/zh-cn/iis/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">微软官网</a> 了解如何安装IIS）；</li>
-    <li><b>PHP</b> （从 <a href="https://php.net/downloads.php">https://php.net</a> 站点下载）；</li>
-    <li><b>PHP Manager for IIS</b> （从 <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft 开源站点</a>下载）。</li>
+    <li><b>PHP</b> （从 <a href="https://php.net/downloads.php">https://php.net</a> 网站下载）；</li>
+    <li><b>PHP Manager for IIS</b> （从 <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft 开源网站</a>下载）。</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">步骤 4.</span>IIS 配置</h2>
@@ -110,7 +110,7 @@ $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
     </li>
     <li>
         <p>使用 IIS 管理器浏览您的网站：</p>
-        <p>右键单击站点 -> <b>Manage Website</b> -> <b>Browse</b></p>
+        <p>右键单击网站 -> <b>Manage Website</b> -> <b>Browse</b></p>
         <img alt="" src="<%= Url.Content("~/content/img/php/browse.png") %>" />
     </li>
 </ol>
@@ -154,7 +154,7 @@ $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";
         <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称，而 <b>STORAGE_PATH</b> 是创建和存储文件的路径。
         您可以设置绝对路径。</p>
     </li>
-    <li>设置站点权限：
+    <li>设置网站权限：
         <div class="commandline">chown -R www-data:www-data /var/www/html</div>
     </li>
     <li>重启apache：

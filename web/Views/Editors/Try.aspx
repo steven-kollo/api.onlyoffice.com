@@ -149,7 +149,7 @@
                 </td>
             </tr>
             <tr>
-                <th>在移动设备上编辑/th>
+                <th>在移动设备上编辑</th>
                 <td><a title="Open DOCX file for editing on mobile" href="<%= Url.Action("editor") %>?method=docxEditorMobile" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorMobileCode">&lt;/&gt;</a>
                 </td>
                 <td><a title="Open XLSX file for editing on mobile" href="<%= Url.Action("editor") %>?method=xlsxEditorMobile" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxEditorMobileCode">&lt;/&gt;</a>
