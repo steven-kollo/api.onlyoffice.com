@@ -365,7 +365,14 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Arial".
+                        <b>example</b>: "Arial";
+                    </li>
+                    <li>
+                        <b>size</b> - the font size,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "11px".
                     </li>
                 </ul>
             </td>
@@ -1207,7 +1214,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"font": {
-                "name": "Arial"
+                "name": "Arial",
+                "size": "11px"
             },
             <% } %>"forcesave": false,
             "goback": {
