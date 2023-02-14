@@ -720,7 +720,7 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
-                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em> or <em>path</em> parameters.
+                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em>, <em>path</em>, or <em>link</em> parameters.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event.
             </p>
             <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>

@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the link field to the data object which is sent to the events.onRequestReferenceData event
+
 - editors: added the 3 type for the forcesavetype parameter of the callback handler
 - editors: added the editorConfig.customization.submitForm parameter
 - editors: the setMailMergeRecipients method is deprecated, please use the setRequestedSpreadsheet method instead

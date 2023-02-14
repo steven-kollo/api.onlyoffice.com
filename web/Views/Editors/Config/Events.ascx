@@ -583,7 +583,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             When calling this method, the token must be added to validate the parameters.
             If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.</p>
         <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
-        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+        If there is no such a field or a file cannot be found, then the <em>path</em> or <em>link</em> parameters are used.</note>
         <div class="img-block-2">
             <div>
                 <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
@@ -595,6 +595,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onRequestReferenceData = function () {
+    var link = event.data.link;
     var referenceData =  event.data.referenceData;
     var path = event.data.path;
     ...
