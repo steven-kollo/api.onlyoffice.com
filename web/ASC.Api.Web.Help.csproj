@@ -2229,6 +2229,7 @@
     <Content Include="Content\img\Editor\history_open.png" />
     <Content Include="Content\img\Editor\info.png" />
     <Content Include="Content\img\Editor\inlineEditors.png" />
+    <Content Include="Content\img\Editor\insert-external-data.svg" />
     <Content Include="Content\img\Editor\ios-api-config.png" />
     <Content Include="Content\img\Editor\ios-error.png" />
     <Content Include="Content\img\Editor\ios-managing.png" />
@@ -2258,7 +2259,7 @@
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
-    <Content Include="Content\img\Editor\opening.jpg" />
+    <Content Include="Content\img\Editor\opening.svg" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\paste-link.png" />
@@ -2269,7 +2270,7 @@
     <Content Include="Content\img\Editor\rebranding\logo-big.png" />
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />
-    <Content Include="Content\img\Editor\rename.png" />
+    <Content Include="Content\img\Editor\rename.svg" />
     <Content Include="Content\img\Editor\review.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
     <Content Include="Content\img\Editor\save-updates.png" />
@@ -2283,6 +2284,7 @@
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
     <Content Include="Content\img\Editor\update-values.png" />
     <Content Include="Content\img\Editor\viewer.png" />
+    <Content Include="Content\img\Editor\viewing-history.svg" />
     <Content Include="Content\img\get-docs\docker.png" />
     <Content Include="Content\img\get-docs\linux.svg" />
     <Content Include="Content\img\get-docs\windows.svg" />
