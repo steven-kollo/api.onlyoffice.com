@@ -33,7 +33,7 @@
                 <li>
                     <p>Connect it to the Document Server API by specifying the path to the API JavaScript file:</p>
                     <pre>
-&lt;script type="text/javascript" src="http://0.0.0.0:8080/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 </pre>
                 </li>
                 <li>
@@ -59,7 +59,7 @@ if (this.docEditor) {
                 <li>
                     <p>Create the full URL address to the form template you need to open:</p>
                     <pre>
-const url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + "/" + filename + ".docxf";
+const url = "https://example.com/url-to-example-document.docxf";
 </pre>
                 </li>
                 <li>
@@ -79,14 +79,14 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         "title": "Form Template",
         "url": url
     },
-"documentType": "word"
+    "documentType": "word"
 });
 </pre>
                 </li>
             </ol>
             <p>The full code fragment looks like this:</p>
             <pre>
-&lt;script type="text/javascript" src="http://0.0.0.0:8080/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 &lt;button onclick="open_form_template()"&gt;Open Form Template&lt;/button&gt;
 &lt;div id="placeholder"&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -94,7 +94,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         if (this.docEditor) {
             this.docEditor.destroyEditor()
         }
-        const url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + "/" + filename + ".docxf";
+        const url = "https://example.com/url-to-example-document.docxf";
         const key = filename + ".docxf";
         this.docEditor = new DocsAPI.DocEditor("placeholder",
         {
@@ -120,7 +120,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
                 <li>
                     <p>Connect it to the Document Server API by specifying the path to the API JavaScript file:</p>
                     <pre>
-&lt;script type="text/javascript" src="http://0.0.0.0:8080/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 </pre>
                 </li>
                 <li>
@@ -146,7 +146,7 @@ if (this.docEditor) {
                 <li>
                     <p>Create the full URL address to the form template you need to open:</p>
                     <pre>
-const url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + "/" + filename + ".oform";
+const url = "https://example.com/url-to-example-document.oform";
 </pre>
                 </li>
                 <li>
@@ -168,14 +168,14 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         "title": "Form",
         "url": url
     },
-"documentType": "word"
+    "documentType": "word"
 });
 </pre>
                 </li>
             </ol>
             <p>The full code fragment looks like this:</p>
             <pre>
-&lt;script type="text/javascript" src="http://0.0.0.0:8080/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 &lt;button onclick="open_form()"&gt;Open Form&lt;/button&gt;
 &lt;div id="placeholder"&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -183,7 +183,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         if (this.docEditor) {
             this.docEditor.destroyEditor()
         }
-        const url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + "/" + filename + ".oform";
+        const url = "https://example.com/url-to-example-document.oform";
         const key = filename + ".oform";
         this.docEditor = new DocsAPI.DocEditor("placeholder",
         {
