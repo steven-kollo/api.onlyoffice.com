@@ -2214,6 +2214,8 @@
     <Content Include="Content\img\Editor\editor-samples.png" />
     <Content Include="Content\img\Editor\editor.png" />
     <Content Include="Content\img\Editor\embedded.png" />
+    <Content Include="Content\img\Editor\embed-docxf.png" />
+    <Content Include="Content\img\Editor\embed-oform.png" />
     <Content Include="Content\img\Editor\exit-button.png" />
     <Content Include="Content\img\Editor\export.jpg" />
     <Content Include="Content\img\Editor\fast-mode.png" />
@@ -2694,6 +2696,7 @@
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
     <Content Include="Views\Editors\Drupal.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
+    <Content Include="Views\Editors\EmbeddingForms.aspx" />
     <Content Include="Views\Editors\Example.aspx" />
     <Content Include="Views\Editors\Example\Csharp.ascx" />
     <Content Include="Views\Editors\Example\Java.ascx" />
