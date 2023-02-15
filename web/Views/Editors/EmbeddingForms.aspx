@@ -18,7 +18,7 @@
         The OFORM format is used for filling out the ready forms.</p>
     <p>These instructions help you add an online form to your website, making it available for filling in and downloading as PDF.</p>
     <note>Please note that these instructions will only work when JWT is disabled. Starting from version 7.2, JWT is enabled by default, so you need to disable it.
-        More information about token can be found <a href="<%= Url.Action("signature/default") %>#onRequestCompareFile">here</a>.</note>
+        More information about token can be found <a href="<%= Url.Action("signature/") %>">here</a>.</note>
 
     <div class="container">
         <ul class="browser">
