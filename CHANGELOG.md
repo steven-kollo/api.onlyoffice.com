@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the examples of interaction with the documents from the outside
 - editors: conversion to ppsm, ppsx
 - editors: added the Go signature code example
 

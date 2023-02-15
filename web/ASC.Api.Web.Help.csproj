@@ -2656,8 +2656,6 @@
     <Content Include="Views\Editors\Command\meta.ascx" />
     <Content Include="Views\Editors\Command\version.ascx" />
     <Content Include="Views\Editors\Commenting.aspx" />
-    <Content Include="Views\Editors\ReviewWork.aspx" />
-    <Content Include="Views\Editors\FillingForm.aspx" />
     <Content Include="Views\Editors\Comparing.aspx" />
     <Content Include="Views\Editors\Config.aspx" />
     <Content Include="Views\Editors\Config\Default.ascx" />
@@ -2707,6 +2705,11 @@
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
     <Content Include="Views\Editors\InsertingExternalData.aspx" />
+    <Content Include="Views\Editors\InteractingOutside.aspx" />
+    <Content Include="Views\Editors\InteractingOutside\Comments.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\Default.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\FillingForm.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\ReviewWork.ascx" />
     <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />
@@ -2717,7 +2720,6 @@
     <Content Include="Views\Editors\Navigation.ascx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
-    <Content Include="Views\Editors\Comments.aspx" />
     <Content Include="Views\Editors\Open.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />

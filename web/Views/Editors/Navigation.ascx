@@ -166,16 +166,16 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("examplesoutside") %>">Examples outside</a>
+        <a href="<%= Url.Action("interactingoutside/") %>">How to interact from the outside</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("comments") %>">Work with comments</a>
+                <a href="<%= Url.Action("interactingoutside/comments") %>">Working with comments</a>
             </li>
             <li>
-                <a href="<%= Url.Action("reviewwork") %>">Work with review</a>
+                <a href="<%= Url.Action("interactingoutside/reviewwork") %>">Working with review changes</a>
             </li>
             <li>
-                <a href="<%= Url.Action("fillingform") %>">Filling out the form</a>
+                <a href="<%= Url.Action("interactingoutside/fillingform") %>">Filling out the form</a>
             </li>
         </ul>
     </li>

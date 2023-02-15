@@ -55,7 +55,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Command/meta",
                 "Command/version",
                 "Commenting",
-                "Comments",
                 "Comparing",
                 "Config",
                 "Config/Document",
@@ -93,7 +92,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Security",
                 "FAQ/Sharing",
                 "FAQ/UsingWOPI",
-                "FillingForm",
                 "Frameworks",
                 "GetDocs",
                 "History",
@@ -101,6 +99,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "HumHub",
                 "InlineEditors",
                 "InsertingExternalData",
+                "InteractingOutside",
+                "InteractingOutside/Comments",
+                "InteractingOutside/FillingForm",
+                "InteractingOutside/ReviewWork",
                 "Jira",
                 "Liferay",
                 "Mattermost",
@@ -118,7 +120,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Redmine",
                 "Rename",
                 "Review",
-                "ReviewWork",
                 "Save",
                 "Security",
                 "SharePoint",
@@ -240,11 +241,6 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Comments()
-        {
-            return View();
-        }
-
         public ActionResult Comparing()
         {
             return View();
@@ -295,11 +291,6 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("FAQ", (object)catchall);
-        }
-
-        public ActionResult FillingForm()
-        {
-            return View();
         }
 
         public ActionResult GetDocs()
@@ -359,6 +350,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult InsertingExternalData()
         {
             return View();
+        }
+
+        public ActionResult InteractingOutside(string catchall)
+        {
+            if (!_actionMap.Contains("interactingoutside/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("InteractingOutside", (object)catchall);
         }
 
         public ActionResult Jira()
@@ -442,11 +442,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Review()
-        {
-            return View();
-        }
-
-        public ActionResult ReviewWork()
         {
             return View();
         }
