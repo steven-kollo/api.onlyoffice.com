@@ -1,5 +1,6 @@
 # Change Log
 
+## 3.0.4
 - editors: changed drupal description
 - editors: changed alfresco description
 - editors: changed the Alfresco installation instruction (moving from a Simple Module to AMP)
