@@ -19,7 +19,10 @@
     <pre>
 var connector = docEditor.createConnector()
 </pre>
-    <note>Please note that the connector is available only for <b>ONLYOFFICE Developer Edition</b>.</note>
+    <note>
+        <p>Please note that the connector is available only for <b>ONLYOFFICE Developer Edition</b>.</p>
+        <p>This class is an additional feature which is available at extra cost. If you have any questions, please contact our sales team at <a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a>.</p>
+    </note>
     <p>The connector has the same interface as plugins. Below you can find methods that are available for this class.</p>
 
     <ul>
