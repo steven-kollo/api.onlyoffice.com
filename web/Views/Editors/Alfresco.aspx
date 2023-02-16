@@ -49,12 +49,20 @@
 
     <p>要开始在 Alfresco 中使用 ONLYOFFICE 文档，必须在 Ubuntu 14.04 中执行以下步骤的操作：</p>
     <ol>
-        <li>将已编译的 <b>*.jar</b> 包上传到相应的目录以供您安装 Alfresco：
+        <li>将已编译的 <b>*.amp</b> 包上传到相应的目录以供您安装 Alfresco：
             <ul>
-                <li>对于Alfresco 存储库： 从 <em>onlyoffice-alfresco/repo/target/</em> 到 <em>/webapps/alfresco/WEB-INF/lib/</em>，</li>
-                <li>对于Alfresco Share： 从 <em>onlyoffice-alfresco/share/target/</em> 到 <em>/webapps/share/WEB-INF/lib/</em>。</li>
+                <li>对于Alfresco 存储库： 从 <em>onlyoffice-alfresco/repo/target/</em> 到 <em>/usr/local/tomcat/amps/</em>，</li>
+                <li>对于Alfresco Share： 从 <em>onlyoffice-alfresco/share/target/</em> 到 <em>/usr/local/tomcat/amps_share/</em>。</li>
             </ul>
             <div class="note">您可以在 <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">这里</a> 下载已经编译好的包文件并将它们放置到各自的目录中。</div>
+        </li>
+        <li>
+            <p>Use the <b>Module Management Tool (MMT)</b> to install modules, run this commands:</p>
+            <p><b>Alfresco</b></p>
+            <span class="commandline">java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps/onlyoffice-integration-repo.amp /usr/local/tomcat/webapps/alfresco</span>
+            <p><b>Share</b></p>
+            <span class="commandline">java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps_share/onlyoffice-integration-share.amp /usr/local/tomcat/webapps/share</span>
+            <p>More details about using MMT can be found at the following address - <em>https://docs.alfresco.com/content-services/latest/install/zip/amp/</em>.</p>
         </li>
         <li>确保文档服务器能够 POST 到 Alfresco 中。
             <p>您可能需要在 <b>alfresco-global.properties</b> 中更改这些行，或者您可以使用 <a href="#configuration">配置页面</a>进行设置：</p>

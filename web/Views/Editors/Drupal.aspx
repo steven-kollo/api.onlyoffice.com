@@ -53,7 +53,7 @@
     <p><b>选项2</b>：使用 <a href="https://www.drupal.org/docs/extending-drupal/installing-modules#s-add-a-module-with-composer" target="_blank">Composer</a>添加模块。</p>
     <p>在站点的根目录下输入以下命令：</p>
     <pre>
-composer require drupal/onlyoffice
+composer require onlyoffice/onlyoffice-drupal
 </pre>
 
     <p><b>第2步：启用模块</b></p>
