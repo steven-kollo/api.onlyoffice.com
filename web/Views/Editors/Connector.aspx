@@ -20,8 +20,8 @@
 var connector = docEditor.createConnector()
 </pre>
     <note>
-        <p>请注意，连接器仅适用于 <b>ONLYOFFICE 开发者版本</b>。</p>
-        <p>This class is an additional feature which is available at extra cost. If you have any questions, please contact our sales team at <a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a>.</p>
+        <p>请注意，该连接器仅适用于 <b>ONLYOFFICE 开发者版</b>。</p>
+        <p>该类是一个额外的功能，在支付额外的费用后才能使用。如果您有任何疑问，请联系我们的销售团队：<a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a>。</p>
     </note>
     <p>连接器与插件具有相同的接口。下面可以找到可用于此类的方法。</p>
 
