@@ -16,7 +16,7 @@
     </h1>
 
     <p class="dscr">ONLYOFFICE 文档服务器 API 的更改列表。</p>
-    <h2 id="73" class="copy-link">版本 7.3</h2>
+    <h2 id="73" class="copy-link">7.3 版</h2>
      <ul>
          <li>添加了 WOPI <a href="<%= Url.Action("wopi/conversionapi") %>">转换 API</a>。</li>
          <li>添加了 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法。</li>

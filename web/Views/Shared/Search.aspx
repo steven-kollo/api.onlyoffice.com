@@ -38,7 +38,7 @@
        { %>
     <div class="not-found">
         <h1>
-            <span class="search-box-result">No results matching your query could be found</span>
+            <span class="search-box-result">没有找到匹配的内容</span>
         </h1>
         <img alt="Not found" src="<%= Url.Content("~/content/img/not-found.svg") %>" />
         <% if (Html.IfController("Home"))
