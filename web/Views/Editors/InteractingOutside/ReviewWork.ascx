@@ -5,14 +5,14 @@
     <span class="hdr">Working with review changes</span>
 </h1>
 
-<p class="dscr">We need to pull all of the tracked changes form the document </p>
+<p class="dscr">Manages review process from the outside.</p>
 
 <ul class="list-buttons doc-builder-list-buttons">
     <li>
         <a id="accept" class="button disabled">ACCEPT</a>
     </li>
     <li>
-        <a id="reject" class="button disabled">REJECRT</a>
+        <a id="reject" class="button disabled">REJECT</a>
     </li>
     <li>
         <a id="prev" class="button disabled"><</a>
@@ -27,6 +27,65 @@
 <div id="editorSpace">
     <div id="placeholder"></div>
 </div>
+
+<br/ >
+<h1>How it works</h1>
+
+<ol>
+    <li>
+        <p>When the user clicks the <b>Accept / Reject</b> buttons in the custom interface,
+        the <a href="<%= Url.Action("executemethod/text/acceptreviewchanges", "plugin") %>">AcceptReviewChanges</a> / <a href="<%= Url.Action("executemethod/text/rejectreviewchanges", "plugin") %>">RejectReviewChanges</a> methods
+        are executed to accept / reject the selected change in the editor:</p>
+        <pre>
+var onDocumentReady = function () {
+    window.connector = docEditor.createConnector();
+
+    $(".list-buttons a").removeClass("disabled");
+};
+
+config.events = {
+    onDocumentReady: onDocumentReady,
+};
+
+window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+$("#accept").on("click", function () {
+    connector.executeMethod("AcceptReviewChanges");
+});
+$("#reject").on("click", function () {
+    connector.executeMethod("RejectReviewChanges");
+});
+</pre>
+    </li>
+    <li>
+        <p>When the user clicks the arrow buttons in the custom interface, the <a href="<%= Url.Action("executemethod/text/movetonextreviewchange", "plugin") %>">MoveToNextReviewChange</a>
+        method is executed to move between the next and previous review changes:</p>
+        <pre>
+var onDocumentReady = function () {
+    window.connector = docEditor.createConnector();
+
+    $(".list-buttons a").removeClass("disabled");
+};
+
+config.events = {
+    onDocumentReady: onDocumentReady,
+};
+
+window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+$("#prev").on("click", function () {
+    connector.executeMethod("MoveToNextReviewChange", [false]);
+});
+$("#next").on("click", function () {
+    connector.executeMethod("MoveToNextReviewChange");
+});
+</pre>
+    </li>
+</ol>
+
+<h1>Getting help</h1>
+
+<p>To get help, please create issues on <a href="https://github.com/ONLYOFFICE/api.onlyoffice.com/issues" target="_blank">GitHub</a>.</p>
 
 <script type="text/javascript">
     var contentControls = [];

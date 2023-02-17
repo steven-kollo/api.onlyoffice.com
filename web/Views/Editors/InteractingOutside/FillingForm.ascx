@@ -5,7 +5,11 @@
     <span class="hdr">Filling out the form</span>
 </h1>
 
-<p class="dscr">Fill in empty cells</p>
+<p class="dscr">Fills in the empty cells in the form.</p>
+<p>The user can choose a username from the list and all the fields in the form editor will be filled with the user contact information.
+At the same time, this data is displayed in the inputs of the custom interface.</p>
+<p>When the user edits the input data in the custom interface, it is automatically updated in the form editor as well.</p>
+<p>When the document is ready, it can be downloaded by clicking the <b>Download</b> button and printed.</p>
 
 <select id="persons" name="persons" required>
     <option disabled selected value="">Choose Example</option>
@@ -27,9 +31,116 @@
     <div id="placeholder"></div>
 </div>
 
+<br/ >
+<h1>How it works</h1>
+<ol>
+    <li>
+        <p>When the user opens a form document, the <a href="<%= Url.Action("executemethod/text/getallcontentcontrols", "plugin") %>">GetAllContentControls</a> method is executed
+        to collect all the content controls from the document. After that, the <a href="<%= Url.Action("executemethod/form/getformvalue", "plugin") %>">GetFormValue</a> method
+        is executed to get the content controls values and display them in the custom interface:</p>
+        <pre>
+var onDocumentReady = function () {
+    window.connector = docEditor.createConnector();
+
+    connector.executeMethod("GetAllContentControls", null, function (data) {
+        setTimeout(function () {
+            for (let i = 0; i < data.length; i++) {
+                switch (data[i].Tag) {
+                    case "Male":
+                        data[i].GroupKey = "Sex";
+                        data[i].Type = "radio";
+                        break;
+                    case "Female":
+                        data[i].GroupKey = "Sex";
+                        data[i].Type = "radio";
+                        break;
+                    default:
+                        data[i].Type = "input";
+                }
+
+                connector.executeMethod("GetFormValue", [data[i]["InternalId"]], function (value) {
+                    data[i].Value = value ? value : "";
+                    if (data.length - 1 == i) {
+                        contentControls = preparingArrayContentControls(data);
+
+                        renderForm();
+                    }
+                });
+            }
+        }, 0);
+    });
+
+    connector.attachEvent("onChangeContentControl", onChangeContentControl);
+};
+</pre>
+    </li>
+    <li>
+        <p>When the user chooses a username from the list, the <a href="<%= Url.Action("executemethod/form/getformsbytag", "plugin") %>">GetFormsByTag</a> method is executed
+        to collect all the forms by their tags and sets the corresponding values to them with the <a href="<%= Url.Action("executemethod/form/setformvalue", "plugin") %>">SetFormValue</a> method:</p>
+        <pre>
+$("#persons").change(function (e) {
+    const postalCode = $(this).val();
+
+    $.getJSON("<%= Url.Content("~/app_data/editor/wildcarddata/persons.json") %>", function (persons) {
+        for (const person of persons) {
+            if (person["PostalCode"] == postalCode) {
+                for (key in person) {
+                    var value = person[key];
+
+                    if (key == "Sex") {
+                        key = value == "Male" ? "Male" : "Female";
+                        value = "true";
+                    }
+
+                    setFormValue(key, value);
+                }
+            }
+        }
+    })
+
+    var setFormValue = function (tag, value) {
+        connector.executeMethod(
+            "GetFormsByTag",
+            [tag],
+            function (forms) {
+                connector.executeMethod(
+                    "SetFormValue",
+                    [forms[0]["InternalId"], value],
+                    null
+                );
+            }
+        );
+    }
+});
+</pre>
+    </li>
+    <li>
+        <p>When the user edits a form value, the <a href="<%= Url.Action("events/onchangecontentcontrol", "plugin") %>">onChangeContentControl</a> event is fired
+        and after that, the <a href="<%= Url.Action("executemethod/form/getformvalue", "plugin") %>">GetFormValue</a> method is executed to get an updated form value and
+        display it in the custom interface:</p>
+        <pre>
+var onDocumentReady = function () {
+    window.connector = docEditor.createConnector();
+
+    connector.attachEvent("onChangeContentControl", onChangeContentControl);
+};
+
+function onChangeContentControl(e) {
+    connector.executeMethod("GetFormValue", [e["InternalId"]], function (value) {
+        if ($("#" + e["InternalId"]).hasClass("content-control-radio")) {
+            $("#" + e["InternalId"]).prop("checked", value);
+        } else {
+            $("#" + e["InternalId"]).val(value || "");
+        }
+    });
+}
+</pre>
+    </li>
+</ol>
+
 <h1>Getting help</h1>
 
-<p>To get help, please create issues on GitHub.</p>
+<p>To get help, please create issues on <a href="https://github.com/ONLYOFFICE/api.onlyoffice.com/issues" target="_blank">GitHub</a>.</p>
 
 <script type="text/javascript">
     var contentControls = [];
