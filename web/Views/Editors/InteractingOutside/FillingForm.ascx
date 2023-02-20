@@ -140,7 +140,7 @@ function onChangeContentControl(e) {
 
 <h1>Getting help</h1>
 
-<p>To get help, please create issues on <a href="https://github.com/ONLYOFFICE/api.onlyoffice.com/issues" target="_blank">GitHub</a>.</p>
+<p>If you have any questions, ask our developers on <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 
 <script type="text/javascript">
     var contentControls = [];
