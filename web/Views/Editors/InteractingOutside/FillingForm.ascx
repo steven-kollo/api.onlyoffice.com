@@ -258,7 +258,7 @@ function onChangeContentControl(e) {
         for (const element of contentControls) {
             var targetElement = controlsBlockLeftHalf;
 
-            if (contentControls.indexOf(element) >= contentControls.length / 2) { targetElement = controlsBlockRightHalf };
+            if ((contentControls.indexOf(element) % 2) != 0) { targetElement = controlsBlockRightHalf };
 
             switch (element.Type) {
                 case "input":
