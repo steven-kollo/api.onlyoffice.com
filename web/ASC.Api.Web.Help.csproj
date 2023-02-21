@@ -3932,6 +3932,7 @@
     <Content Include="Views\Editors\Navigation.ascx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
+    <Content Include="Views\Editors\Odoo.aspx" />
     <Content Include="Views\Editors\Open.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
