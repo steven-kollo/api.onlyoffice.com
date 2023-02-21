@@ -2267,6 +2267,7 @@
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
     <Content Include="Content\img\Editor\progress-view.png" />
+    <Content Include="Content\img\Editor\protect.png" />
     <Content Include="Content\img\Editor\rebranding\logo-big.png" />
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />

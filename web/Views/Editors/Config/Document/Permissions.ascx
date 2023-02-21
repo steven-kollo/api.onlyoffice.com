@@ -209,7 +209,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/permissions.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="protect" class="copy-link">protect</td>
             <td>
                 Defines if the <b>Protection</b> tab on the toolbar and the <b>Protect</b> button in the left menu are displayed (<b>true</b>) or hidden (<b>false</b>).
@@ -217,6 +217,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/protect.png") %>" alt="" />
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="rename" class="copy-link">rename</td>
