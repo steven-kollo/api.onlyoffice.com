@@ -1,4 +1,4 @@
-window.Asc.plugin.executeMethod ("ChangeComment", ["ID",
+window.Asc.plugin.executeMethod ("ChangeComment", ["1_631",
     {
         "UserName": "John Smith",
         "Text": "comment",

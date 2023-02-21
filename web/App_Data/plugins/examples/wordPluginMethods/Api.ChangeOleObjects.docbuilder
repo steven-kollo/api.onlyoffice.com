@@ -1,4 +1,4 @@
-window.Asc.plugin.executeMethod("ChangeOleObjects", [
+window.Asc.plugin.executeMethod ("ChangeOleObjects", [
     [
         {
             "Data": "{data}",

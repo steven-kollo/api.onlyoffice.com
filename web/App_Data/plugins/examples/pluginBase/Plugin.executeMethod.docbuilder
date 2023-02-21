@@ -5,5 +5,5 @@ var arrDocuments = [{
         "Lock": 3
     },
     "Script": "var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);"
-}]
-window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [arrDocuments]);
+}];
+window.Asc.plugin.executeMethod ("InsertAndReplaceContentControls", [arrDocuments]);
