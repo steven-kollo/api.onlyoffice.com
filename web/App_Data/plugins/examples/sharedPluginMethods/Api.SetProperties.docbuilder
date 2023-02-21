@@ -1,7 +1,7 @@
 var initSettings = {
     "copyoutenabled" : false,
     "hideContentControlTrack" : false,
-    "watermark_on_draw" : JSON.stringify({
+    "watermark_on_draw" : JSON.stringify ( {
         "transparent" : 0.3,
         "type" : "rect",
         "width" : 100,
@@ -37,7 +37,7 @@ var initSettings = {
         ]
     }),
     "disableAutostartMacros" : true,
-    "fillForms" : JSON.stringify({
+    "fillForms" : JSON.stringify ( {
         "tags" : {
             "111" : {
                 "text" : "Text in form with tag 111",
@@ -56,4 +56,6 @@ var initSettings = {
         }
     })
 };
-window.Asc.plugin.executeMethod("SetProperties", [initSettings]);
+window.Asc.plugin.executeMethod ("SetProperties", [initSettings], function () {
+    window.Asc.plugin.executeCommand ("close", "");
+});
