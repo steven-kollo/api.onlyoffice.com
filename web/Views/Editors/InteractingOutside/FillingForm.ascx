@@ -39,38 +39,28 @@ At the same time, this data is displayed in the inputs of the custom interface.<
         to collect all the content controls from the document. After that, the <a href="<%= Url.Action("executemethod/form/getformvalue", "plugin") %>">GetFormValue</a> method
         is executed to get the content controls values and display them in the custom interface:</p>
         <pre>
+var contentControls = [];
+
 var onDocumentReady = function () {
     window.connector = docEditor.createConnector();
 
     connector.executeMethod("GetAllContentControls", null, function (data) {
         setTimeout(function () {
             for (let i = 0; i < data.length; i++) {
-                switch (data[i].Tag) {
-                    case "Male":
-                        data[i].GroupKey = "Sex";
-                        data[i].Type = "radio";
-                        break;
-                    case "Female":
-                        data[i].GroupKey = "Sex";
-                        data[i].Type = "radio";
-                        break;
-                    default:
-                        data[i].Type = "input";
-                }
+
+                ...
 
                 connector.executeMethod("GetFormValue", [data[i]["InternalId"]], function (value) {
                     data[i].Value = value ? value : "";
                     if (data.length - 1 == i) {
-                        contentControls = preparingArrayContentControls(data);
+                        contentControls = data;
 
-                        renderForm();
+                        ...
                     }
                 });
             }
         }, 0);
     });
-
-    connector.attachEvent("onChangeContentControl", onChangeContentControl);
 };
 </pre>
     </li>
@@ -87,10 +77,7 @@ $("#persons").change(function (e) {
                 for (key in person) {
                     var value = person[key];
 
-                    if (key == "Sex") {
-                        key = value == "Male" ? "Male" : "Female";
-                        value = "true";
-                    }
+                    ...
 
                     setFormValue(key, value);
                 }
@@ -120,18 +107,23 @@ $("#persons").change(function (e) {
         display it in the custom interface:</p>
         <pre>
 var onDocumentReady = function () {
-    window.connector = docEditor.createConnector();
+
+    ...
 
     connector.attachEvent("onChangeContentControl", onChangeContentControl);
+
+    ...
+
 };
 
 function onChangeContentControl(e) {
     connector.executeMethod("GetFormValue", [e["InternalId"]], function (value) {
-        if ($("#" + e["InternalId"]).hasClass("content-control-radio")) {
-            $("#" + e["InternalId"]).prop("checked", value);
-        } else {
-            $("#" + e["InternalId"]).val(value || "");
-        }
+
+        ...
+
+        $("#" + e["InternalId"]).val(value || "");
+
+        ...
     });
 }
 </pre>

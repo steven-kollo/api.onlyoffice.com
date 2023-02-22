@@ -52,13 +52,19 @@
         to collect all the comments from the document and display them in the custom interface.
         The following comment data is displayed: the comment author, the time when the comment was posted, the comment text, and the comment replies:</p>
         <pre>
+var comments = [];
+
 var onDocumentReady = function () {
     window.connector = docEditor.createConnector();
 
+    ...
+
     connector.executeMethod("GetAllComments", null, function (data) {
         comments = data;
-        renderComment();
     });
+
+    ...
+
 }
 </pre>
     </li>
@@ -68,48 +74,42 @@ var onDocumentReady = function () {
         is fired to add a new comment to an array with all the document comments:</p>
         <pre>
 var onDocumentReady = function () {
-    window.connector = docEditor.createConnector();
+
+    ...
 
     connector.attachEvent("onAddComment", function (val) {
-        var index = comments.findIndex((comment) => comment["Id"] === val["Id"])
+        var index = comments.findIndex((comment) => comment["Id"] === val["Id"]);
 
         if (index == -1) {
             comments = [val, ...comments];
         }
-
-        indexComment = 0;
-        renderComment();
     });
+
+    ...
 }
 
+...
+
 $("#addComment").on("click", function () {
-    if ($(this).hasClass("active")) {
-        var comment = $("#addCommentArea").val();
 
-        if (Boolean(comment)) {
-            var currentdate = Date.now();
-            var datetime = "" + currentdate;
+    ...
 
-            connector.executeMethod("AddComment", [{ Text: comment, UserName: "John Smith", Time: datetime }]);
-            $("#addCommentArea").val("");
-        }
+    var comment = $("#addCommentArea").val();
 
-        $(this).removeClass("active");
-        $("#commentsBlock").show();
-        $("#addCommentArea").hide();
-        $(".list-buttons a").removeClass("disabled");
-    } else {
-        $(this).addClass("active");
+    if (Boolean(comment)) {
+        var currentdate = Date.now();
+        var datetime = "" + currentdate;
 
-        $("#commentsBlock").hide();
-        $("#addReplyArea").hide();
-        $("#addCommentArea").show();
-
-        $(".list-buttons a").addClass("disabled");
-
-        $("#addReply").removeClass("active");
-        $(this).removeClass("disabled");
+        connector.executeMethod("AddComment", [{ 
+                Text: comment, 
+                UserName: "John Smith", 
+                Time: datetime 
+            }]
+        );
     }
+
+    ...
+
 });
 </pre>
     </li>
@@ -119,7 +119,8 @@ $("#addComment").on("click", function () {
         is fired to remove a comment from an array with all the document comments:</p>
         <pre>
 var onDocumentReady = function () {
-    window.connector = docEditor.createConnector();
+
+    ...
 
     connector.attachEvent("onRemoveComment", function (val) {
         const index = comments.findIndex((comment) => comment["Id"] === val["Id"]);
@@ -128,17 +129,21 @@ var onDocumentReady = function () {
             comments.splice(index, 1);
         }
 
-        if (indexComment >= comments.length && indexComment != 0) indexComment--;
+        ...
 
-        renderComment();
     });
+
+    ...
 }
 
 $("#deleteComment").on("click", function () {
-    if ($(this).hasClass("disabled")) { return; }
+
+    ...
 
     connector.executeMethod("RemoveComments", [[comments[indexComment]["Id"]]]);
-    renderComment();
+
+    ...
+
 });
 </pre>
     </li>
@@ -146,11 +151,13 @@ $("#deleteComment").on("click", function () {
         <p>When the user clicks the arrow buttons in the custom interface, the <a href="<%= Url.Action("executemethod/text/movetocomment", "plugin") %>">MoveToComment</a> method
         is executed to move between the comments in the document:</p>
         <pre>
-var onDocumentReady = function () {
-    window.connector = docEditor.createConnector();
-}
+
+...
 
 connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]]);
+
+...
+
 </pre>
     </li>
     <li>
@@ -159,41 +166,46 @@ connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]]);
         is fired to add a new comment reply to an array with all the document comments:</p>
         <pre>
 var onDocumentReady = function () {
-    window.connector = docEditor.createConnector();
+
+    ...
 
     connector.attachEvent("onChangeCommentData", function (val) {
         const index = comments.findIndex((comment) => comment["Id"] === val["Id"]);
 
         if (index !== -1) {
-            indexComment = index;
             comments[index]["Data"] = val["Data"];
-            renderComment();
         }
     });
+
+    ...
+
 }
 
 $("#addReply").on("click", function () {
-    if ($(this).hasClass("disabled")) { return; }
 
-    if ($(this).hasClass("active")) {
-        var reply = $("#addReplyArea").val();
+    ...
 
-        if (Boolean(reply)) {
-            var currentdate = Date.now();
-            var datetime = "" + currentdate;
+    var reply = $("#addReplyArea").val();
 
-            comments[indexComment]["Data"]["Replies"].push({ Text: reply, Time: datetime, UserName: "John Smith" });
+    if (Boolean(reply)) {
+        var currentdate = Date.now();
+        var datetime = "" + currentdate;
 
-            connector.executeMethod("ChangeComment", [comments[indexComment]["Id"], comments[indexComment]["Data"]]);
-            $("#addReplyArea").val("");
-        }
+        comments[indexComment]["Data"]["Replies"].push({
+            Text: reply
+            Time: datetime,
+            UserName: "John Smith"
+        });
 
-        $(this).removeClass("active");
-        $("#addReplyArea").hide();
-    } else {
-        $(this).addClass("active");
-        $("#addReplyArea").show();
+        connector.executeMethod(
+            "ChangeComment", 
+            [comments[indexComment]["Id"],
+            comments[indexComment]["Data"]]
+        );
     }
+
+    ...
+
 });
 </pre>
     </li>

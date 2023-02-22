@@ -37,21 +37,10 @@
         the <a href="<%= Url.Action("executemethod/text/acceptreviewchanges", "plugin") %>">AcceptReviewChanges</a> / <a href="<%= Url.Action("executemethod/text/rejectreviewchanges", "plugin") %>">RejectReviewChanges</a> methods
         are executed to accept / reject the selected change in the editor:</p>
         <pre>
-var onDocumentReady = function () {
-    window.connector = docEditor.createConnector();
-
-    $(".list-buttons a").removeClass("disabled");
-};
-
-config.events = {
-    onDocumentReady: onDocumentReady,
-};
-
-window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-
 $("#accept").on("click", function () {
     connector.executeMethod("AcceptReviewChanges");
 });
+
 $("#reject").on("click", function () {
     connector.executeMethod("RejectReviewChanges");
 });
@@ -61,21 +50,10 @@ $("#reject").on("click", function () {
         <p>When the user clicks the arrow buttons in the custom interface, the <a href="<%= Url.Action("executemethod/text/movetonextreviewchange", "plugin") %>">MoveToNextReviewChange</a>
         method is executed to move between the next and previous review changes:</p>
         <pre>
-var onDocumentReady = function () {
-    window.connector = docEditor.createConnector();
-
-    $(".list-buttons a").removeClass("disabled");
-};
-
-config.events = {
-    onDocumentReady: onDocumentReady,
-};
-
-window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-
 $("#prev").on("click", function () {
     connector.executeMethod("MoveToNextReviewChange", [false]);
 });
+
 $("#next").on("click", function () {
     connector.executeMethod("MoveToNextReviewChange");
 });
