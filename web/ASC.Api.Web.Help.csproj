@@ -1923,6 +1923,7 @@
     <Content Include="App_Data\editor\PHP Example.zip" />
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
+    <Content Include="App_Data\editor\wildcardData\persons.json" />
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
@@ -2874,7 +2875,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\editor\wildcardData\persons.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
