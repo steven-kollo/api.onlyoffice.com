@@ -7,7 +7,7 @@
 
 <p class="dscr">Collects all the comments from the document and displays them in the custom interface.</p>
 
-<div id="commentsBlock" name="commentsBlock" data-easy="true" class="docbuilder-script" spellcheck="false">
+<div id="commentsBlock" name="commentsBlock" data-easy="true" class="docbuilder-script" spellcheck="false" hidden>
     <div id="comment" class="comment">
         <div class="comment-author" title="Author"></div>
         <div class="comment-date" title="Date"></div>
@@ -303,8 +303,11 @@ $("#addReply").on("click", function () {
             $("#comment div").html("");
             $(".list-buttons a").addClass("disabled");
             $("#addComment").removeClass("disabled");
+            $("#comment").hide();
             $("#empty-comment").show();
         } else {
+            $("#commentsBlock").show();
+            $("#comment").show();
             $("#empty-comment").hide();
             $(".list-buttons a").removeClass("disabled");
 

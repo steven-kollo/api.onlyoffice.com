@@ -11,7 +11,7 @@ At the same time, this data is displayed in the inputs of the custom interface.<
 <p>When the user edits the input data in the custom interface, it is automatically updated in the form editor as well.</p>
 <p>When the document is ready, it can be downloaded by clicking the <b>Download</b> button and printed.</p>
 
-<select id="persons" name="persons" required>
+<select id="persons" name="persons" required disabled>
     <option disabled selected value="">Choose Example</option>
     <% var persons = Persons.GetPersons();
     foreach (var person in persons)
@@ -20,7 +20,7 @@ At the same time, this data is displayed in the inputs of the custom interface.<
     <% } %>
 </select>
 
-<div id="controlsBlock" name="controlsBlock" class="docbuilder-script">
+<div id="controlsBlock" name="controlsBlock" class="docbuilder-script" hidden>
     <div class="left-half"></div>
     <div class="right-half"></div>
 </div>
@@ -244,6 +244,8 @@ function onChangeContentControl(e) {
         var controlsBlockRightHalf = $("#controlsBlock .right-half");
 
         if (contentControls.length != 0) {
+            $("#controlsBlock").removeAttr("hidden");
+            $("#persons").removeAttr("disabled"); 
             $(".list-buttons a").removeClass("disabled");
         }
 
