@@ -13,4 +13,6 @@ window.Asc.plugin.executeMethod ("AddComment", [
             }
         ]
     }
-]);
+], function (comment) {
+    console.log (comment)
+});

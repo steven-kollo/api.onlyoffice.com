@@ -163,6 +163,9 @@
             <li>
                 <a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a>
+            </li>
         </ul>
     </li>
     <li>

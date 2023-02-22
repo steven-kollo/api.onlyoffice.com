@@ -72,6 +72,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "DemoPreview",
                 "DocumentBuilderApi",
                 "Drupal",
+                "EmbeddingForms",
                 "Example/Java",
                 "Example/JavaSpring",
                 "Example/Nodejs",
@@ -318,6 +319,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Editor()
+        {
+            return View();
+        }
+
+        public ActionResult EmbeddingForms()
         {
             return View();
         }

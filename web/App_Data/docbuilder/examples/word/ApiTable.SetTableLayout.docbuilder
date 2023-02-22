@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("We set the table cells to preserve their size:");
 var oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
-oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
+oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered"));
 var oTable = Api.CreateTable(3, 3);
 oTable.SetTableLayout("fixed");
 var oCell = oTable.GetRow(0).GetCell(0);
