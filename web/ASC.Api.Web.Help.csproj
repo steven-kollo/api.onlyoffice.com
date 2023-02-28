@@ -2153,6 +2153,9 @@
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\server-components.png" />
     <Content Include="Content\img\csharp\sitename.png" />
+    <Content Include="Content\img\connector\comments.svg" />
+    <Content Include="Content\img\connector\filling-form.svg" />
+    <Content Include="Content\img\connector\review-work.svg" />
     <Content Include="Content\img\desktop\adding_plugins.png" />
     <Content Include="Content\img\desktop\connection_list.png" />
     <Content Include="Content\img\desktop\debugging.png" />
@@ -2470,6 +2473,7 @@
     <Content Include="Content\img\Video\install-plugins.png" />
     <Content Include="Content\img\Video\nextcloud_integration.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
+    <Content Include="Content\connector.css" />
     <Content Include="Content\jquery.treeview.css" />
     <Content Include="Content\main-page.css" />
     <Content Include="Content\plugins-macros.css" />

@@ -5,6 +5,12 @@
     Inherits="System.Web.Mvc.ViewPage"
     ContentType="text/html" %>
 
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<asp:Content ID="IndexHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <%= Styles.Render("~/content/connector") %>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     How to interact from the outside
 </asp:Content>
