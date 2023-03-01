@@ -125,6 +125,7 @@
     <Compile Include="Helpers\Highliter.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
+    <Compile Include="Helpers\Persons.cs" />
     <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\RedirectAttribute.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
@@ -1941,6 +1942,7 @@
     <Content Include="App_Data\editor\PHP Example.zip" />
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
+    <Content Include="App_Data\editor\wildcardData\persons.json" />
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
@@ -2151,6 +2153,9 @@
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\server-components.png" />
     <Content Include="Content\img\csharp\sitename.png" />
+    <Content Include="Content\img\connector\comments.svg" />
+    <Content Include="Content\img\connector\filling-form.svg" />
+    <Content Include="Content\img\connector\review-work.svg" />
     <Content Include="Content\img\desktop\adding_plugins.png" />
     <Content Include="Content\img\desktop\connection_list.png" />
     <Content Include="Content\img\desktop\debugging.png" />
@@ -2272,6 +2277,7 @@
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />
     <Content Include="Content\img\Editor\rename.svg" />
+    <Content Include="Content\img\Editor\reply.svg" />
     <Content Include="Content\img\Editor\review.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
     <Content Include="Content\img\Editor\save-updates.png" />
@@ -2468,6 +2474,7 @@
     <Content Include="Content\img\Video\install-plugins.png" />
     <Content Include="Content\img\Video\nextcloud_integration.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
+    <Content Include="Content\connector.css" />
     <Content Include="Content\jquery.treeview.css" />
     <Content Include="Content\main-page.css" />
     <Content Include="Content\plugins-macros.css" />
@@ -2730,6 +2737,11 @@
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
     <Content Include="Views\Editors\InsertingExternalData.aspx" />
+    <Content Include="Views\Editors\InteractingOutside.aspx" />
+    <Content Include="Views\Editors\InteractingOutside\Comments.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\Default.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\FillingForm.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\ReviewWork.ascx" />
     <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />
