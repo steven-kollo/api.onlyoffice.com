@@ -66,6 +66,7 @@
             Get subscriptions
             </short>
             <category>Calendars and subscriptions</category>
+            <remarks>Please note that the list of events in the response will be empty.</remarks>
             <returns type="ASC.Api.Calendar.Wrappers.SubscriptionWrapper, ASC.Api.Calendar">List of subscriptions</returns>
             <collection>list</collection>
             <path>api/2.0/calendar/subscriptions</path>
@@ -94,6 +95,7 @@
             <path>api/2.0/calendar/{calendarId}</path>
             <httpMethod>GET</httpMethod>
             <param type="System.String, System" name="calendarId">Calendar ID</param>
+            <remarks>Please note that the list of events in the response will be empty.</remarks>
             <category>Calendars and subscriptions</category>
             <returns type="ASC.Api.Calendar.Wrappers.CalendarWrapper,ASC.Api.Calendar">Calendar</returns>
         </member>
@@ -113,6 +115,7 @@
             <param type="System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam}, System.Collections.Generic" name="sharingOptions">Calendar sharing options with other users</param>
             <param type="System.String, System" name="iCalUrl">iCal URL</param>
             <param type="System.Int32, System" name="isTodo">Defines if the to-dos are shown in the calendar</param>
+            <remarks>Please note that the list of events in the response will be empty.</remarks>
             <category>Calendars and subscriptions</category>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/calendar</path>
@@ -135,6 +138,7 @@
             <param type="System.Boolean, System" name="hideEvents">Display type: show or hide events in the calendar</param>
             <param type="System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam}, System.Collections.Generic" name="sharingOptions">New calendar sharing options with other users</param>
             <param type="System.String, System" name="iCalUrl">New iCal URL</param>
+            <remarks>Please note that the list of events in the response will be empty.</remarks>
             <category>Calendars and subscriptions</category>
             <returns type="ASC.Api.Calendar.Wrappers.CalendarWrapper, ASC.Api.Calendar">Updated calendar</returns>
             <path>api/2.0/calendar/{calendarId}</path>
@@ -154,6 +158,7 @@
             <param type="System.String, System" name="timeZone">New calendar time zone</param>
             <param type="ASC.Web.Core.Calendars.EventAlertType, ASC.Web.Core.Calendars" name="alertType">New event alert type, in case alert type is set by default</param>
             <param type="System.Boolean, System" name="hideEvents">Display type: show or hide events in the calendar</param>
+            <remarks>Please note that the list of events in the response will be empty.</remarks>
             <category>Calendars and subscriptions</category>
             <returns type="ASC.Api.Calendar.Wrappers.CalendarWrapper, ASC.Api.Calendar" >Updated calendar</returns>
             <path>api/2.0/calendar/{calendarId}/view</path>
@@ -312,6 +317,7 @@
             <param type="System.String, System" name="name">Calendar name</param>
             <param type="System.String, System" name="textColor">Event text color</param>
             <param type="System.String, System" name="backgroundColor">Event background name</param>
+            <remarks>Please note that the list of events in the response will be empty.</remarks>
             <category>Calendars and subscriptions</category>
             <path>api/2.0/calendar/calendarUrl</path>
             <httpMethod>POST</httpMethod>
