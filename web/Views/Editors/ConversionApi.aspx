@@ -684,6 +684,27 @@
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
+                <td>htm</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
                 <td>html</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -715,7 +736,28 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>mhtml</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -831,6 +873,48 @@
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
+                <td>stw</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>sxw</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
                 <td>txt</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -850,6 +934,48 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+            </tr>
+            <tr>
+                <td>wps</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>wpt</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xps</td>
@@ -937,6 +1063,38 @@
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
+                <td>et</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>ett</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
                 <td>fods</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -976,6 +1134,22 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>sxc</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1096,6 +1270,22 @@
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
             </tr>
+            <tr>
+                <td>xml</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
@@ -1123,6 +1313,40 @@
                 <td>ppsx</td>
                 <td>pptm</td>
                 <td>pptx</td>
+            </tr>
+            <tr>
+                <td>dps</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>dpt</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>fodp</td>
@@ -1327,6 +1551,23 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+            </tr>
+            <tr>
+                <td>sxi</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
         </tbody>
     </table>
