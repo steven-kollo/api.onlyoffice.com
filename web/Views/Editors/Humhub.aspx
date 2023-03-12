@@ -16,7 +16,7 @@
     </h1>
 
     <p>This <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.humhub.com/" target="_blank">HumHub</a> using ONLYOFFICE Docs.</p>
-    <p>The plugin is available in the official <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a>.</p>
+    <p>The plugin is available in the official <a href="https://marketplace.humhub.com/module/onlyoffice" target="_blank">HumHub Marketplace</a>.</p>
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
@@ -40,7 +40,7 @@
     <h2 id="installing-plugin" class="copy-link">Installing HumHub ONLYOFFICE connector</h2>
 
     <p>
-        Either install it from <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a> or simply clone the <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">repository</a> inside one of the folder specified by <em>moduleAutoloadPaths</em> parameter.
+        Either install it from <a href="https://marketplace.humhub.com/module/onlyoffice" target="_blank">HumHub Marketplace</a> or simply clone the <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">repository</a> inside one of the folder specified by <em>moduleAutoloadPaths</em> parameter.
         Please see <a href="https://docs.humhub.org/docs/develop/environment#module-loader-path" target="_blank">HumHub Documentation</a> for more information.
     </p>
 

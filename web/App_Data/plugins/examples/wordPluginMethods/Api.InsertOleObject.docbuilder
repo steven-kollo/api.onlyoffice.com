@@ -1,4 +1,4 @@
-window.Asc.plugin.executeMethod("InsertOleObject", [
+window.Asc.plugin.executeMethod ("InsertOleObject", [
     {
         "Data": "{data}",
         "ImageData": "data:image/png;base64,image-in-the-base64-format",

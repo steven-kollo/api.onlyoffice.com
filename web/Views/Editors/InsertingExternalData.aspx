@@ -14,6 +14,7 @@
         <span class="hdr">Inserting external data</span>
     </h1>
     <p class="dscr">The steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Document Server.</p>
+    <img alt="Inserting external data" src="<%= Url.Content("~/content/img/editor/insert-external-data.svg") %>" />
     <ol>
         <li>The user copies the cell value to the clipboard from the <b>document editor</b> of the source spreadsheet. At the same time, the special data is also copied.</li>
         <li>The user inserts the copied data into the <b>document editor</b> of the destination spreadsheet.</li>

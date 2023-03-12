@@ -48,9 +48,9 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
 </p>
 
 <ul>
-    <li><b>IIS</b>: version 7 or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install IIS);</li>
-    <li><b>PHP</b> (download it from the <a href="https://php.net/downloads.php">https://php.net</a> site);</li>
-    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site</a>).</li>
+    <li><b>IIS</b>: version 7 or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php" target="_blank">Microsoft official website</a> to learn how to install IIS);</li>
+    <li><b>PHP</b> (download it from the <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> site);</li>
+    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115" target="_blank">Microsoft open source site</a>).</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>IIS configuration</h2>
