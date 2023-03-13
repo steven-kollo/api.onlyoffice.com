@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added opening .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt format.
 - editors: added the size field to the editorConfig.customization.font parameter
 - editors: added conversion from dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xml format
 - editors: added the examples of interaction with the documents from the outside
