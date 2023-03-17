@@ -193,6 +193,22 @@ namespace ASC.Api.Web.Help
                             }
                         }
 
+                        if (enabledProducts.Contains("docspace", StringComparer.InvariantCultureIgnoreCase))
+                        {
+                            CacheManifest.AddCached(new Uri("/docspace/basic", UriKind.Relative));
+                            CacheManifest.AddOnline(new Uri("/docspace/search", UriKind.Relative));
+                            CacheManifest.AddFallback(new Uri("/docspace/search", UriKind.Relative), new Uri("/docspace/notfound", UriKind.Relative));
+
+                            try
+                            {
+                                DocSpaceDocumentation.Load();
+                            }
+                            catch (Exception error)
+                            {
+                                LogManager.GetLogger("ASC.Api").Error(error);
+                            }
+                        }
+
                         if (enabledProducts.Contains("docbuilder", StringComparer.InvariantCultureIgnoreCase))
                         {
                             try

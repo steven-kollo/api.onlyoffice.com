@@ -106,7 +106,9 @@
     <Compile Include="Controllers\EditorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
+    <Compile Include="Controllers\DocSpaceController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
+    <Compile Include="DocumentGenerator\DocSpaceDocumentation.cs" />
     <Compile Include="DocumentGenerator\CSharpDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocPluginsDocumentation.cs" />
@@ -2656,6 +2658,8 @@
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
     <Content Include="Views\DocBuilder\Try.aspx" />
+    <Content Include="Views\DocSpace\Basic.aspx" />
+    <Content Include="Views\DocSpace\Navigation.ascx" />
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />

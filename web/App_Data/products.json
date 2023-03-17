@@ -430,5 +430,57 @@
             }
          ]
       }
+   },
+   {
+      "id":"docspace",
+      "title":"DocSpace",
+      "description":"Create your own productivity platform based on ONLYOFFICE Groups. In this section you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.",
+      "version":"1.0",
+      "links":{
+         "Get started":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"basic"
+            }
+         ],
+         "Usage API":[
+            {
+               "Item1":"authentication",
+               "Item2":"section/authentication"
+            },
+            {
+               "Item1":"capabilities",
+               "Item2":"section/capabilities"
+            },
+            {
+               "Item1":"feed",
+               "Item2":"section/feed"
+            },
+            {
+               "Item1":"modules",
+               "Item2":"section/modules"
+            },
+            {
+               "Item1":"portal",
+               "Item2":"section/portal"
+            },
+            {
+               "Item1":"security",
+               "Item2":"section/security"
+            },
+            {
+               "Item1":"settings",
+               "Item2":"section/settings"
+            },
+            {
+               "Item1":"smtpsettings",
+               "Item2":"section/smtpsettings"
+            },
+            {
+               "Item1":"thirdparty",
+               "Item2":"section/thirdparty"
+            }
+         ]
+      }
    }
 ]
