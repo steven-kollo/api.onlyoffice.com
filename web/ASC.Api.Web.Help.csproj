@@ -1936,6 +1936,8 @@
     <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
+    <Content Include="App_Data\docspace\references\ASC.Files.xml" />
+    <Content Include="App_Data\docspace\references\ASC.Web.Api.xml" />
     <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
     <Content Include="App_Data\editor\DotNet %28Csharp%29 Example.zip" />
     <Content Include="App_Data\editor\Java Example.zip" />
@@ -2921,6 +2923,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
