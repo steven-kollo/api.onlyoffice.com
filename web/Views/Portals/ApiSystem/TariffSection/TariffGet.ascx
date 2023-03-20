@@ -1,59 +1,49 @@
-﻿<%@ Page
-    Title=""
-    Language="C#"
-    MasterPageFile="~/Views/Shared/Site.Master"
-    Inherits="System.Web.Mvc.ViewPage"
-    ContentType="text/html" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Get tariff
-</asp:Content>
+<h1>
+    <a class="up" href="<%= Url.Action("apisystem/tariffsection") %>"></a>
+    <span class="hdr">GET /api/tariff/get</span>
+    <span class="comment">This function requires authentication</span>
+</h1>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>
-        <a class="up" href="<%= Url.Action("section", new {section = "tariff"}) %>"></a>
-        <span class="hdr">GET /api/tariff/get</span>
-        <span class="comment">This function requires authentication</span>
-    </h1>
+<div class="header-gray">Description</div>
+<p class="dscr">Get the portal pricing plan.</p>
 
-    <div class="header-gray">Description</div>
-    <p class="dscr">Get the portal pricing plan.</p>
+<div class="header-gray">Parameters</div>
+<table class="table">
+    <colgroup>
+        <col class="table-name" />
+        <col />
+        <col class="table-type" />
+        <col class="table-example" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>portalName<span class="required">*</span>
+                <div class="infotext">sent in Query</div>
+            </td>
+            <td>portal name</td>
+            <td>string</td>
+            <td>example</td>
+        </tr>
+    </tbody>
+</table>
+<div class="mobile-content"></div>
+<span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-    <div class="header-gray">Parameters</div>
-    <table class="table">
-        <colgroup>
-            <col class="table-name" />
-            <col />
-            <col class="table-type" />
-            <col class="table-example" />
-        </colgroup>
-        <thead>
-            <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Example</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="tablerow">
-                <td>portalName<span class="required">*</span>
-                    <div class="infotext">sent in Query</div>
-                </td>
-                <td>portal name</td>
-                <td>string</td>
-                <td>example</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="mobile-content"></div>
-    <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
+<div class="header-gray">Returns</div>
+<p>Returns the description of the portal and the portal pricing plan.</p>
 
-    <div class="header-gray">Returns</div>
-    <p>Returns the description of the portal and the portal pricing plan.</p>
-
-    <div class="header-gray">Example Response</div>
-    <pre>
+<div class="header-gray">Example Response</div>
+<pre>
 {
     "tariff": {
         "activeUsers": 50,
@@ -74,5 +64,3 @@
     }
 }
 </pre>
-
-</asp:Content>
