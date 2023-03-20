@@ -36,6 +36,7 @@ namespace ASC.Api.Web.Help.Controllers
     [Redirect]
     public class PortalsController : AsyncController
     {
+
         private readonly BreadCrumbsBuilder _breadCrumbsBuilder;
 
         public PortalsController()
@@ -43,6 +44,34 @@ namespace ASC.Api.Web.Help.Controllers
             _breadCrumbsBuilder = new BreadCrumbsBuilder(this);
         }
 
+        private readonly string[] _actionMap = new[]
+            {
+                "Auth",
+                "Basic",
+                "Faq",
+                "Filters",
+                "Batch",
+                "ApiSystem",
+                "ApiSystem/Authentication",
+                "ApiSystem/PortalSection",
+                "ApiSystem/PortalSection/PortalGet",
+                "ApiSystem/PortalSection/PortalRegister",
+                "ApiSystem/PortalSection/PortalRemove",
+                "ApiSystem/PortalSection/PortalStatus",
+                "ApiSystem/PortalSection/ValidatePortalName",
+                "ApiSystem/TariffSection",
+                "ApiSystem/TariffSection/TariffGet",
+                "ApiSystem/TariffSection/TariffSet",
+            };
+
+        public ActionResult ApiSystem(string catchall)
+        {
+            if (!_actionMap.Contains("apisystem/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("ApiSystem", (object)catchall);
+        }
 
         public ActionResult Index()
         {
@@ -78,7 +107,6 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View();
         }
-
 
         [ValidateInput(false)]
         public ActionResult Search(string query)
