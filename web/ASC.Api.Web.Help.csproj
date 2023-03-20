@@ -2324,6 +2324,7 @@
     <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\main-page\community_server.svg" />
     <Content Include="Content\img\main-page\desktop.svg" />
+    <Content Include="Content\img\main-page\docspace.svg" />
     <Content Include="Content\img\main-page\document_builder.svg" />
     <Content Include="Content\img\main-page\document_server.svg" />
     <Content Include="Content\img\main-page\plugins_and_macros.svg" />

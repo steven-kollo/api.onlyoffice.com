@@ -1,5 +1,6 @@
 # Change Log
 
+- docspace: added the DocSpace section
 - portals: moved the Hosted solution section to the Community server section
 - editors: added conversion from dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xml format
 - editors: added the examples of interaction with the documents from the outside
