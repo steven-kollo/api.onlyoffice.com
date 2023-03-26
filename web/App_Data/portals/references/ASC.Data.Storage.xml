@@ -72,7 +72,7 @@
             <param name="path"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Data.Storage.IDataStore.GetReadStream(System.String,System.String,System.Int32)">
+        <member name="M:ASC.Data.Storage.IDataStore.GetReadStream(System.String,System.String,System.Int64)">
             <summary>
              A stream of read-only. In the case of the C3 stream NetworkStream general, and with him we have to work
              Very carefully as a Jedi cutter groin lightsaber.
@@ -107,6 +107,17 @@
             </summary>
             <param name="domain"></param>
             <param name="path"></param>
+            <param name="stream"></param>
+            <param name="attachmentFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Data.Storage.IDataStore.Save(System.String,System.String,System.Guid,System.IO.Stream,System.String)">
+            <summary>
+            Saves the contents of the stream in the repository.
+            </summary>
+            <param name="domain"></param>
+            <param name="path"></param>
+            <param name="ownerId"></param>
             <param name="stream"></param>
             <param name="attachmentFileName"></param>
             <returns></returns>

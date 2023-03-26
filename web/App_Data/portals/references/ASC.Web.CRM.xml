@@ -2981,6 +2981,11 @@
               Looks up a localized string similar to Algerian Dinar.
             </summary>
         </member>
+        <member name="P:ASC.Web.CRM.Resources.CRMCommonResource.Currency_AngolanKwanza">
+            <summary>
+              Looks up a localized string similar to Angolan Kwanza.
+            </summary>
+        </member>
         <member name="P:ASC.Web.CRM.Resources.CRMCommonResource.Currency_ArgentinianPeso">
             <summary>
               Looks up a localized string similar to Argentinian Peso.
@@ -3334,6 +3339,11 @@
         <member name="P:ASC.Web.CRM.Resources.CRMCommonResource.Currency_VenezuelanBolivar">
             <summary>
               Looks up a localized string similar to Venezuelan Bolivar.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.CRM.Resources.CRMCommonResource.Currency_VenezuelanBolivarSoberano">
+            <summary>
+              Looks up a localized string similar to Venezuelan Bolivar Soberano.
             </summary>
         </member>
         <member name="P:ASC.Web.CRM.Resources.CRMCommonResource.Currency_VietnameseDong">

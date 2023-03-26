@@ -293,17 +293,37 @@
             <path>api/2.0/settings/quota</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.RecalculateQuota">
-            <summary>
-            Starts the process of recalculating quota.
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveUserQuotaSettings(System.Boolean,System.Int64)">
+             <summary>
+             Save user quota limit
             </summary>
             <short>
-            Recalculate quota 
+             Save user quota limit
             </short>
-            <category>Quota</category>
-            <path>api/2.0/settings/recalculatequota</path>
-            <httpMethod>GET</httpMethod>
-            <returns></returns>
+            <category>User quota</category>
+            <returns>Operation result</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetTenantQuotaSettings(System.Int32,System.Boolean)">
+            <summary>
+             Set tenant quota settings
+            </summary>
+            <short>
+             Set tenant quota settings
+            </short>
+            <category>Tenant quota</category>
+            <returns>Operation result</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RecalculateQuota">
+            <summary>
+             Starts the process of recalculating quota.
+             </summary>
+             <short>
+             Recalculate quota 
+             </short>
+             <category>Quota</category>
+             <path>api/2.0/settings/recalculatequota</path>
+             <httpMethod>GET</httpMethod>
+             <returns></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CheckRecalculateQuota">
             <summary>
@@ -316,6 +336,37 @@
             <returns>Boolean value: true - quota recalculation process is enabled, false - quota recalculation process is disabled</returns>
             <path>api/2.0/settings/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateUserQuota(System.Collections.Generic.IEnumerable{System.Guid},System.Int64)">
+            <summary>
+            Changes a quota limit for the users with the IDs specified in the request.
+            </summary>
+            <short>
+            Change a user quota limit
+            </short>
+            <category>User quota</category>
+            <param name="userIds">List of user IDs</param>
+            <param name="quota">User quota</param>
+            <returns>List of users</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RecalculateUserQuota">
+            <summary>
+             Starts the process of recalculating users quota.
+            </summary>
+            <short>
+             Recalculates quota 
+            </short>
+            <category>Quota</category>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CheckRecalculateUserQuota">
+            <summary>
+             Checks the process of recalculating users quota.
+            </summary>
+            <short>
+             Check users quota recalculating
+            </short>
+            <category>Quota</category>
+            <returns>Boolean value: True - quota recalculating process is running, False - quota recalculating process is stopped</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetBuildVersions">
             <summary>

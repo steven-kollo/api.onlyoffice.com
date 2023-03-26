@@ -250,34 +250,6 @@
             <path>api/2.0/people</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Api.Employee.EmployeeApi.AddMemberAsActivated(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String,System.Nullable{System.Guid})">
-            <summary>
-            Adds a new activated portal user with the first name, last name, email address, and several optional parameters specified in the request.
-            </summary>
-            <short>
-            Add an activated user
-            </short>
-            <category>Profiles</category>
-            <param type="System.Boolean, System" name="isVisitor">Specifies if this is a guest (true) or user (false)</param>
-            <param type="System.String, System" name="email">User email</param>
-            <param type="System.String, System" name="firstname">User first name</param>
-            <param type="System.String, System" name="lastname">User last name</param>
-            <param type="System.Guid[], System" name="department" optional="true">User department</param>
-            <param type="System.String, System" name="title" optional="true">User title</param>
-            <param type="System.String, System" name="location" optional="true">User location</param>
-            <param type="System.String, System" name="sex" optional="true">User sex (male or female)</param>
-            <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="birthday" optional="true">User birthday</param>
-            <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="worksfrom" optional="true">User registration date. If it is not specified, then the current date will be set</param>
-            <param type="System.String, System" name="comment" optional="true">User comment</param>
-            <param type="System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact}, System.Collections.Generic" name="contacts">Contact list</param>
-            <param type="System.String, System" name="files">Avatar photo URL</param>
-            <param type="System.String, System" name="password" optional="true">User password</param>
-            <param type="System.Nullable{System.Guid}, System" name="lead">User lead</param>
-            <returns>Newly added user</returns>
-            <visible>false</visible>
-            <path>api/2.0/people/active</path>
-            <httpMethod>POST</httpMethod>
-        </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.UpdateMember(System.Boolean,System.String,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.Nullable{System.Boolean},System.Nullable{System.Guid})">
             <summary>
             Updates the data for the selected portal user with the first name, last name, email address, and/or optional parameters specified in the request.

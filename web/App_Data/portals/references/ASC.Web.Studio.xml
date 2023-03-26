@@ -2332,6 +2332,24 @@
               Looks up a localized string similar to You’re invited to join ${__VirtualRootPath}.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.StorageSize">
+            <example type="int" name="storageSize">1073741824</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxFileSize">
+            <example type="int" name="maxFileSize">26214400</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsedSize">
+            <example type="int" name="usedSize">262144000</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxUsersCount">
+            <example type="int" name="maxUsersCount">0</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsersCount">
+            <example type="int" name="usersCount">0</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.AvailableSize">
+            <example type="int" name="availableSize">0</example>
+        </member>
         <member name="P:ASC.Web.Studio.Core.EmailActivationSettings.Show">
             <example>true</example>
         </member>
@@ -2355,24 +2373,6 @@
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.ShowOnHomePage">
             <example>true</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.StorageSize">
-            <example type="int" name="storageSize">1073741824</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxFileSize">
-            <example type="int" name="maxFileSize">26214400</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsedSize">
-            <example type="int" name="usedSize">262144000</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxUsersCount">
-            <example type="int" name="maxUsersCount">0</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsersCount">
-            <example type="int" name="usersCount">0</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.AvailableSize">
-            <example type="int" name="availableSize">0</example>
         </member>
         <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule.StorageType">
             <example type="int">1</example>
@@ -9414,6 +9414,11 @@
               Looks up a localized string similar to Last Name.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.LastUpdate">
+            <summary>
+              Looks up a localized string similar to Last update:.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.LdapAdvancedSettings">
             <summary>
               Looks up a localized string similar to Advanced Settings.
@@ -10947,6 +10952,76 @@
               Looks up a localized string similar to Publish.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaGreaterPortalError">
+            <summary>
+              Looks up a localized string similar to Failed to set the memory quota - the memory quota you set is greater than portals quota..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaGroupError">
+            <summary>
+              Looks up a localized string similar to Failed to set the memory quota - some users cannot use this quota..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaLessUsedMemoryError">
+            <summary>
+              Looks up a localized string similar to Failed to set the memory quota - the memory quota you set is less than used memory..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsDescription">
+            <summary>
+              Looks up a localized string similar to The base quota is the quota that will be set by default for all new users.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsDeselectAll">
+            <summary>
+              Looks up a localized string similar to Deselect all.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsEditQuota">
+            <summary>
+              Looks up a localized string similar to Edit quota.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsHeader">
+            <summary>
+              Looks up a localized string similar to Base quota.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsNoQuota">
+            <summary>
+              Looks up a localized string similar to No quota.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsShowOnPage">
+            <summary>
+              Looks up a localized string similar to Show on page.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsTooManyOperations">
+            <summary>
+              Looks up a localized string similar to Too many quota recalculate operations..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsTotalCount">
+            <summary>
+              Looks up a localized string similar to Total count.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsWithQuota">
+            <summary>
+              Looks up a localized string similar to With a quota.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaUsed">
+            <summary>
+              Looks up a localized string similar to Used.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaUsedOutOf">
+            <summary>
+              Looks up a localized string similar to out of.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.RadicaleCardDavDeleteMessage">
             <summary>
               Looks up a localized string similar to Deleting the address book was successful.
@@ -10970,6 +11045,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.ReassignDataRemoveUserError">
             <summary>
               Looks up a localized string similar to Data reassign process for {0} is not complete..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.RecalculateButton">
+            <summary>
+              Looks up a localized string similar to Recalculate.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.RecaptchaInvalid">
@@ -11177,6 +11257,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.SeeAllVideos">
             <summary>
               Looks up a localized string similar to Watch all videos.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SelectAll">
+            <summary>
+              Looks up a localized string similar to Select all.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.SelectDataSource">
@@ -12576,6 +12661,11 @@
               Looks up a localized string similar to Unsubscribe.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.UpdatingStatistics">
+            <summary>
+              Looks up a localized string similar to Updating statistics can take a long time.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.UpgradePlan">
             <summary>
               Looks up a localized string similar to Upgrade pricing plan.
@@ -13342,6 +13432,21 @@
               Looks up a localized string similar to Last Name.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LblActive">
+            <summary>
+              Looks up a localized string similar to Active.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LblOther">
+            <summary>
+              Looks up a localized string similar to Other.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LblPending">
+            <summary>
+              Looks up a localized string similar to Pending.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LdapAttributeOrigin">
             <summary>
               Looks up a localized string similar to LDAP Attribute Name.
@@ -13832,6 +13937,11 @@
               Looks up a localized string similar to Error while executing the operation..
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.OperationStartedMsg">
+            <summary>
+              Looks up a localized string similar to Operation has been successfully started..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.OperationSuccededMsg">
             <summary>
               Looks up a localized string similar to Operation has been successfully completed..
@@ -13885,6 +13995,16 @@
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.ProjectSelectorNotPersonError">
             <summary>
               Looks up a localized string similar to No such person.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.QuotaDisabled">
+            <summary>
+              Looks up a localized string similar to Memory quota has been successfully disabled..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.QuotaEnabled">
+            <summary>
+              Looks up a localized string similar to Memory quota has been successfully enabled..
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.ReadingConfirmedLabel">

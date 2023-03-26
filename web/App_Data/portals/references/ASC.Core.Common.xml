@@ -140,6 +140,9 @@
         <member name="P:ASC.Core.Users.UserInfo.Sid">
             <example>Sid</example>
         </member>
+        <member name="P:ASC.Core.Users.UserInfo.LdapQouta">
+            <example>LdapQouta</example>
+        </member>
         <member name="P:ASC.Core.Users.UserInfo.SsoNameId">
             <example>SsoNameId</example>
         </member>
@@ -148,6 +151,9 @@
         </member>
         <member name="P:ASC.Core.Users.UserInfo.CreateDate">
             <example>2019-07-26T00:00:00</example>
+        </member>
+        <member name="P:ASC.Core.Users.UserInfo.UsedSpace">
+            <example>UsedSpace</example>
         </member>
         <member name="M:ASC.Core.Notify.RecipientProviderImpl.FilterRecipientAddresses(ASC.Notify.Recipients.IDirectRecipient)">
             <summary>
