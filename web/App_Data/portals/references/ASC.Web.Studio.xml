@@ -2332,6 +2332,24 @@
               Looks up a localized string similar to You’re invited to join ${__VirtualRootPath}.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.StorageSize">
+            <example type="int" name="storageSize">1073741824</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxFileSize">
+            <example type="int" name="maxFileSize">26214400</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsedSize">
+            <example type="int" name="usedSize">262144000</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxUsersCount">
+            <example type="int" name="maxUsersCount">0</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsersCount">
+            <example type="int" name="usersCount">0</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.AvailableSize">
+            <example type="int" name="availableSize">0</example>
+        </member>
         <member name="P:ASC.Web.Studio.Core.EmailActivationSettings.Show">
             <example>true</example>
         </member>
@@ -2355,24 +2373,6 @@
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.ShowOnHomePage">
             <example>true</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.StorageSize">
-            <example type="int" name="storageSize">1073741824</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxFileSize">
-            <example type="int" name="maxFileSize">26214400</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsedSize">
-            <example type="int" name="usedSize">262144000</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxUsersCount">
-            <example type="int" name="maxUsersCount">0</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsersCount">
-            <example type="int" name="usersCount">0</example>
-        </member>
-        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.AvailableSize">
-            <example type="int" name="availableSize">0</example>
         </member>
         <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule.StorageType">
             <example type="int">1</example>
@@ -2533,6 +2533,11 @@
               Looks up a localized string similar to User.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.Core.Users.NamingPeopleResource.CommonUserLead">
+            <summary>
+              Looks up a localized string similar to Lead.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.Core.Users.NamingPeopleResource.CommonUsers">
             <summary>
               Looks up a localized string similar to Users.
@@ -2586,6 +2591,11 @@
         <member name="P:ASC.Web.Studio.Core.Users.NamingPeopleResource.DefaultUser">
             <summary>
               Looks up a localized string similar to Employee.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Users.NamingPeopleResource.DefaultUserLead">
+            <summary>
+              Looks up a localized string similar to Lead.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.Core.Users.NamingPeopleResource.DefaultUsers">
@@ -2643,6 +2653,11 @@
               Looks up a localized string similar to Teacher/Student.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.Core.Users.NamingPeopleResource.EducationUserLead">
+            <summary>
+              Looks up a localized string similar to Curator.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.Core.Users.NamingPeopleResource.EducationUsers">
             <summary>
               Looks up a localized string similar to Teachers/Students.
@@ -2669,8 +2684,8 @@
                   &lt;grouphead&gt;CommonGroupHead&lt;/grouphead&gt;
                   &lt;regdate&gt;CommonRegDate&lt;/regdate&gt;
                   &lt;addusers&gt;CommonAddUsers&lt;/addusers&gt;
-                  &lt;guest&gt;CommonGuest&lt;/guest&gt;
-                  &lt;guests&gt;CommonGuests&lt; [rest of string was truncated]&quot;;.
+                  &lt;userlead&gt;CommonUserLead&lt;/userlead&gt;
+                  &lt;guest&gt;CommonGu [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Studio.Core.SetupInfo.MaxUploadSize">
@@ -6080,6 +6095,11 @@
               Looks up a localized string similar to Add allowed IP address.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.AddLeadButton">
+            <summary>
+              Looks up a localized string similar to Add {!Userlead}.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.AddNewCommentButton">
             <summary>
               Looks up a localized string similar to Add Comment.
@@ -6278,6 +6298,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.AuthTermsService">
             <summary>
               Looks up a localized string similar to Terms of Service.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.AuthViaNTLM">
+            <summary>
+              Looks up a localized string similar to Auth via NTLM.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.AutoBackupOff">
@@ -6585,6 +6610,16 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.ConfirmDnsUpdateTitle">
             <summary>
               Looks up a localized string similar to Are you sure you want to change the portal address to {0}?.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConfirmImpersonateHelper">
+            <summary>
+              Looks up a localized string similar to This option allows you to log in to the portal on behalf of another user. In order to return, you need to log out..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConfirmImpersonateUserTitle">
+            <summary>
+              Looks up a localized string similar to Login under a different name.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.ConfirmOwnerPortalSuccessMessage">
@@ -7092,6 +7127,61 @@
               Looks up a localized string similar to Connect Amazon AWS S3 to backup and store data from your portal..
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionCMK">
+            <summary>
+              Looks up a localized string similar to Managed CMK.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionCMKCustom">
+            <summary>
+              Looks up a localized string similar to Customer manager CMK.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionCMKDefault">
+            <summary>
+              Looks up a localized string similar to Default AWS managed CMK.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionCSE">
+            <summary>
+              Looks up a localized string similar to Client-Side Encryption.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionKey">
+            <summary>
+              Looks up a localized string similar to KMS Key Id.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionNone">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionSSE">
+            <summary>
+              Looks up a localized string similar to Server-Side Encryption.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionSSEKMS">
+            <summary>
+              Looks up a localized string similar to SSE-KMS.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionSSEKMSHelp">
+            <summary>
+              Looks up a localized string similar to Server-Side Encryption with AWS KMS keys (SSE-KMS) protects your assets with a versatile encryption mechanism. Like SSE-S3, It relies on strong AES-256 encryption method, but provides more complex and flexible model, offering separate permissions for a KMS key, audit trail feature, and ability to create unique custom keys..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionSSES3">
+            <summary>
+              Looks up a localized string similar to SSE-S3.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3EncryprionSSES3Help">
+            <summary>
+              Looks up a localized string similar to With Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3), your assets will be encrypted with strong AES-256 GCM keys, one separate key for each object. The keys themselves are encrypted with a rotating root key for additional protection..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.ConsumersS3forcepathstyle">
             <summary>
               Looks up a localized string similar to Force Path Style.
@@ -7592,6 +7682,11 @@
               Looks up a localized string similar to http://example.com.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.DarkTheme">
+            <summary>
+              Looks up a localized string similar to Dark Theme.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.DataBackup">
             <summary>
               Looks up a localized string similar to Data Backup.
@@ -7662,6 +7757,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.DeepLinkDescription">
             <summary>
               Looks up a localized string similar to You can open the document on the portal or in the mobile application..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.DeepLinkGoToPortalBtn">
+            <summary>
+              Looks up a localized string similar to Go to Portal.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.DeepLinkRemember">
@@ -7793,6 +7893,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.DisabledEmployeeTitle">
             <summary>
               Looks up a localized string similar to Disabled.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.DisableImpersonateSettings">
+            <summary>
+              Looks up a localized string similar to Disable.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.DisableUserButton">
@@ -8180,6 +8285,21 @@
               Looks up a localized string similar to There is no data taking the storage space.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.EnableImpersonateSettingsForAllAdmins">
+            <summary>
+              Looks up a localized string similar to Enable for all full admins.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.EnableImpersonateSettingsWithLimits">
+            <summary>
+              Looks up a localized string similar to Limit to a list of admins.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.EnableImpersonation">
+            <summary>
+              Looks up a localized string similar to Enable Impersonation.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.EnableLDAPAuthentication">
             <summary>
               Looks up a localized string similar to Enable LDAP Authentication.
@@ -8248,6 +8368,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.ErrorAccessRestricted">
             <summary>
               Looks up a localized string similar to The access to the portal is restricted..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ErrorArgumentException">
+            <summary>
+              Looks up a localized string similar to Value does not fall within the expected range.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.ErrorBadKeys">
@@ -8750,6 +8875,11 @@
               Looks up a localized string similar to {1}Language and Time Zone Settings{2} is a way to change the language of the whole portal for all portal users and to configure the time zone so that all the events of the ONLYOFFICE™ portal will be shown with the correct date and time.{0}To make the parameters you set take effect click the {1}Save{2} button at the bottom of the section..
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.HelpAnswerLoginSettings">
+            <summary>
+              Looks up a localized string similar to To protect the portal against brute-force attacks, you can set up the limits of unsuccessful login attempts by the user. When the specified limit is reached, attempts coming from the associated IP address will be banned for the chosen period of time..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.HelpAnswerLogoSettings">
             <summary>
               Looks up a localized string similar to {1}Logo Settings{2} is a way to change the default logo to be displayed on the {1}Welcome Page{2} of your portal.{0} To replace the portal logo click the {1}Change Logo{2} link to the right and select the image stored on your computer to load it to your portal.{0}Please, keep in mind that you can upload an image no larger than {1}250x100 pixels{2}, otherwise resizing will take place. The maximum image size cannot exceed {1}1 MB{2}..
@@ -8760,9 +8890,9 @@
               Looks up a localized string similar to {1}Trusted Mail Domain Settings{2} is a way to specify the mail servers used for user self-registration.{0}You can either check the {1}Custom domains{2} option and enter the trusted mail server in the field below so that a person who has an account at it will be able to register him(her)self by clicking the Join link on the {1}Sign In{2} page or disable this option.{0}To make the parameters you set take effect, click the {1}Save{2} button at the bottom of the section..
             </summary>
         </member>
-        <member name="P:ASC.Web.Studio.PublicResources.Resource.HelpAnswerPasswordSettings">
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.HelpAnswerPasswordStrengthSettings">
             <summary>
-              Looks up a localized string similar to {1}Password Strength Settings{2} is a way to determine the effectiveness of a password in resisting guessing and brute-force attacks.{0}Use the {1}Minimum Password Length{2} bar to determine how long the password should be. Check the appropriate boxes below to determine the character set that must be used in the password.{0}To make the parameters you set take effect click the {1}Save{2} button at the bottom of the section..
+              Looks up a localized string similar to {1}Password Strength Settings{2} is a way to determine the effectiveness of a password in resisting guessing and brute-force attacks.{0}Use the {1}Password Length Range{2} bar to determine how long the password should be. Check the appropriate boxes below to determine the character set that must be used in the password.{0}To make the parameters you set take effect click the {1}Save{2} button at the bottom of the section..
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.HelpAnswerPortalAccessSettings">
@@ -8924,6 +9054,53 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.HowManyCanImportUsers">
             <summary>
               Looks up a localized string similar to Your current pricing plan allows you to add {0}:{1}..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonateCancelButton">
+            <summary>
+              Looks up a localized string similar to No, cancel.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonateSettingsEnableHelp">
+            <summary>
+              Looks up a localized string similar to Feature is available only to the owner of the portal by default. Grant admin access using settings below..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonateYesButton">
+            <summary>
+              Looks up a localized string similar to Yes.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonationAccessForAdmins">
+            <summary>
+              Looks up a localized string similar to Access for admins:.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonationDescription">
+             <summary>
+               Looks up a localized string similar to {0}Impersonation{1} allows the owner and the administrators to execute login to the portal on behalf of any user.
+            Note: It is not possible
+            to access the private room section while logging in as a user. The owner can impersonate any user or admin, but admins cannot impersonate other admins..
+             </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonationOnlyForOwnGroupsChb">
+            <summary>
+              Looks up a localized string similar to Allow Impersonation only within full admin’s own group.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonationRestrictAccess">
+            <summary>
+              Looks up a localized string similar to Restrict access:.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonationRestrictUsersChb">
+            <summary>
+              Looks up a localized string similar to Restrict access to user and groups.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.ImpersonationSettings">
+            <summary>
+              Looks up a localized string similar to Impersonation Settings.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.ImportButtonManually">
@@ -9116,6 +9293,11 @@
               Looks up a localized string similar to In.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.InterfaceTheme">
+            <summary>
+              Looks up a localized string similar to Interface Theme.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.InvalidUsernameOrPassword">
             <summary>
               Looks up a localized string similar to Invalid username or password..
@@ -9171,6 +9353,12 @@
               Looks up a localized string similar to Invite users to portal.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.IpSecurityDescription">
+             <summary>
+               Looks up a localized string similar to {0}IP Security{1} is used to restrict login to the portal from all IP addresses except certain addresses. You can set the allowed IP addresses using either exact IP addresses in the IPv4 format (#.#.#.#, where # is a numeric value from 0 to 255), IP range (in the #.#.#.#-#.#.#.# format), or CIDR masking (in the #.#.#.#/# format). The IP security does not work for portal owners, they can access the portal from any IP address.
+            Rules set in the For all users section apply to full access administrators as well [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.IPSecurityDisable">
             <summary>
               Looks up a localized string similar to Disable.
@@ -9181,9 +9369,14 @@
               Looks up a localized string similar to Enable.
             </summary>
         </member>
-        <member name="P:ASC.Web.Studio.PublicResources.Resource.IpSecurityHelp">
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.IpSecurityHeaderForAdmins">
             <summary>
-              Looks up a localized string similar to {0}IP Security{1} is used to restrict login to the portal from all IP addresses except certain addresses. You can set the allowed IP addresses using either exact IP addresses in the IPv4 format (#.#.#.#, where # is a numeric value from 0 to 255) or IP range (in the #.#.#.#-#.#.#.# format). The IP security does not work for portal owners, they can access the portal from any IP address..
+              Looks up a localized string similar to For full access administrators only.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.IpSecurityHeaderForAllUsers">
+            <summary>
+              Looks up a localized string similar to For all users.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.IpSecurityNav">
@@ -9219,6 +9412,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.LastName">
             <summary>
               Looks up a localized string similar to Last Name.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.LastUpdate">
+            <summary>
+              Looks up a localized string similar to Last update:.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.LdapAdvancedSettings">
@@ -9804,6 +10002,11 @@
               Looks up a localized string similar to Uploaded successfully. {0}Support are not available for this license since {2}.{1}.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.LightTheme">
+            <summary>
+              Looks up a localized string similar to Light Theme.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.LiveChat">
             <summary>
               Looks up a localized string similar to Live Chat.
@@ -9829,9 +10032,24 @@
               Looks up a localized string similar to Login.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.LoginAttemptsCount">
+            <summary>
+              Looks up a localized string similar to Number of attempts.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.LoginBlockTime">
+            <summary>
+              Looks up a localized string similar to Blocking time (sec).
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.LoginButton">
             <summary>
               Looks up a localized string similar to Sign In.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.LoginCheckPeriod">
+            <summary>
+              Looks up a localized string similar to Check period (sec).
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.LoginFailIPSecurityMsg">
@@ -9852,6 +10070,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.LoginSettingsDescription">
             <summary>
               Looks up a localized string similar to {0}Two-factor authentication{1} via code generating application was enabled for all users by cloud service administrator..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.LoginSettingsTitle">
+            <summary>
+              Looks up a localized string similar to Login Settings.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.LoginSocialNetworks">
@@ -10169,6 +10392,11 @@
               Looks up a localized string similar to Send the password change instructions to the {0} email address.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.MessageSendPasswordRecoveryInfo">
+            <summary>
+              Looks up a localized string similar to Password recovery via email is impossible for users with LDAP/SSO login. Contact your administrator in case of password loss..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.MessageSendPasswordRecoveryInstructionsOnEmail">
             <summary>
               Looks up a localized string similar to Please enter the email you used while registering on the portal. The password recovery instructions will be sent to that email address..
@@ -10434,14 +10662,14 @@
               Looks up a localized string similar to Passwords do not match.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.PasswordLengthRange">
+            <summary>
+              Looks up a localized string similar to Password length range.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.PasswordMatch">
             <summary>
               Looks up a localized string similar to Passwords match.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Studio.PublicResources.Resource.PasswordMinLength">
-            <summary>
-              Looks up a localized string similar to Minimal password length.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.PasswordRecoveryTitle">
@@ -10724,6 +10952,76 @@
               Looks up a localized string similar to Publish.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaGreaterPortalError">
+            <summary>
+              Looks up a localized string similar to Failed to set the memory quota - the memory quota you set is greater than portals quota..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaGroupError">
+            <summary>
+              Looks up a localized string similar to Failed to set the memory quota - some users cannot use this quota..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaLessUsedMemoryError">
+            <summary>
+              Looks up a localized string similar to Failed to set the memory quota - the memory quota you set is less than used memory..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsDescription">
+            <summary>
+              Looks up a localized string similar to The base quota is the quota that will be set by default for all new users.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsDeselectAll">
+            <summary>
+              Looks up a localized string similar to Deselect all.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsEditQuota">
+            <summary>
+              Looks up a localized string similar to Edit quota.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsHeader">
+            <summary>
+              Looks up a localized string similar to Base quota.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsNoQuota">
+            <summary>
+              Looks up a localized string similar to No quota.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsShowOnPage">
+            <summary>
+              Looks up a localized string similar to Show on page.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsTooManyOperations">
+            <summary>
+              Looks up a localized string similar to Too many quota recalculate operations..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsTotalCount">
+            <summary>
+              Looks up a localized string similar to Total count.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaSettingsWithQuota">
+            <summary>
+              Looks up a localized string similar to With a quota.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaUsed">
+            <summary>
+              Looks up a localized string similar to Used.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.QuotaUsedOutOf">
+            <summary>
+              Looks up a localized string similar to out of.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.RadicaleCardDavDeleteMessage">
             <summary>
               Looks up a localized string similar to Deleting the address book was successful.
@@ -10747,6 +11045,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.ReassignDataRemoveUserError">
             <summary>
               Looks up a localized string similar to Data reassign process for {0} is not complete..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.RecalculateButton">
+            <summary>
+              Looks up a localized string similar to Recalculate.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.RecaptchaInvalid">
@@ -10954,6 +11257,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.SeeAllVideos">
             <summary>
               Looks up a localized string similar to Watch all videos.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SelectAll">
+            <summary>
+              Looks up a localized string similar to Select all.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.SelectDataSource">
@@ -11275,6 +11583,41 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.SmsTooMuchError">
             <summary>
               Looks up a localized string similar to You have sent too many text messages. Please try again later..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SmsValidationAddTrustedIP">
+            <summary>
+              Looks up a localized string similar to Add trusted IP.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SmsValidationEmptyUserList">
+            <summary>
+              Looks up a localized string similar to The user list is empty.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SmsValidationHideAdvancedSettings">
+            <summary>
+              Looks up a localized string similar to Hide Advanced Settings.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SmsValidationMandatoryBlockHeader">
+            <summary>
+              Looks up a localized string similar to Mandatory Two-factor authentication.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SmsValidationShowAdvancedSettings">
+            <summary>
+              Looks up a localized string similar to Show Advanced Settings.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SmsValidationTrustedBlockDescription">
+            <summary>
+              Looks up a localized string similar to Using IPv4, IP range or CIDR masking.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SmsValidationTrustedBlockHeader">
+            <summary>
+              Looks up a localized string similar to Trusted Networks.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.SmtpCustomSettings">
@@ -11882,6 +12225,11 @@
               Looks up a localized string similar to Invitations have been successfully re-sent.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.SystemTheme">
+            <summary>
+              Looks up a localized string similar to Use system theme.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.TariffButtonBuy">
             <summary>
               Looks up a localized string similar to Buy now.
@@ -12313,6 +12661,11 @@
               Looks up a localized string similar to Unsubscribe.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.UpdatingStatistics">
+            <summary>
+              Looks up a localized string similar to Updating statistics can take a long time.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.UpgradePlan">
             <summary>
               Looks up a localized string similar to Upgrade pricing plan.
@@ -12336,6 +12689,16 @@
         <member name="P:ASC.Web.Studio.PublicResources.Resource.UserForum">
             <summary>
               Looks up a localized string similar to User Forum.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.UserLead">
+            <summary>
+              Looks up a localized string similar to {!Userlead}.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.UserLeadCaption">
+            <summary>
+              Looks up a localized string similar to Lead.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.UserPost">
@@ -13014,6 +13377,21 @@
               Looks up a localized string similar to Hide.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.ImpersonateLoginMessage">
+            <summary>
+              Looks up a localized string similar to Logged in as {0}.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.ImpersonateUser">
+            <summary>
+              Looks up a localized string similar to Login as User.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.ImpersonateUserConfirmationInfo">
+            <summary>
+              Looks up a localized string similar to You are going to log in to the portal on behalf of {0}.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.ImportOf">
             <summary>
               Looks up a localized string similar to of.
@@ -13052,6 +13430,21 @@
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LastName">
             <summary>
               Looks up a localized string similar to Last Name.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LblActive">
+            <summary>
+              Looks up a localized string similar to Active.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LblOther">
+            <summary>
+              Looks up a localized string similar to Other.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LblPending">
+            <summary>
+              Looks up a localized string similar to Pending.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LdapAttributeOrigin">
@@ -13122,6 +13515,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LicenseKeyError">
             <summary>
               Looks up a localized string similar to License is not correct.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.Lifetime">
+            <summary>
+              Looks up a localized string similar to Lifetime.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.LinkCopySuccess">
@@ -13539,9 +13937,19 @@
               Looks up a localized string similar to Error while executing the operation..
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.OperationStartedMsg">
+            <summary>
+              Looks up a localized string similar to Operation has been successfully started..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.OperationSuccededMsg">
             <summary>
               Looks up a localized string similar to Operation has been successfully completed..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.PasswordProtection">
+            <summary>
+              Looks up a localized string similar to Password protection.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.PortalRenameConfirmationPopup">
@@ -13589,6 +13997,16 @@
               Looks up a localized string similar to No such person.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.QuotaDisabled">
+            <summary>
+              Looks up a localized string similar to Memory quota has been successfully disabled..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.QuotaEnabled">
+            <summary>
+              Looks up a localized string similar to Memory quota has been successfully enabled..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.ReadingConfirmedLabel">
             <summary>
               Looks up a localized string similar to Reading confirmed.
@@ -13602,6 +14020,11 @@
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.ReceiptUserLabel">
             <summary>
               Looks up a localized string similar to confirmed receiving «{0}» message..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.RemoveButton">
+            <summary>
+              Looks up a localized string similar to Remove.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.ResourceJS.RestoreConsumerPath">
@@ -14355,6 +14778,11 @@
               Looks up a localized string similar to No calls matching your filter can be displayed in this section..
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.UserControlsCommonResource.FolderShareLinkPasswordLabel">
+            <summary>
+              Looks up a localized string similar to Enter the password to access the folder.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.UserControlsCommonResource.GetPortalLink">
             <summary>
               Looks up a localized string similar to Link for portal users.
@@ -14850,6 +15278,11 @@
               Looks up a localized string similar to Please, disable LDAP..
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.UserControlsCommonResource.SaasTariffErrorMailServerDomain">
+            <summary>
+              Looks up a localized string similar to Please, disconnect all mail domains..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.UserControlsCommonResource.SaasTariffErrorMinMax">
             <summary>
               Looks up a localized string similar to Please select the number of active users from {0} to {1}..
@@ -15108,6 +15541,16 @@
         <member name="P:ASC.Web.Studio.PublicResources.UserControlsCommonResource.SendShareNotify">
             <summary>
               Looks up a localized string similar to Send notification.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.UserControlsCommonResource.ShareLinkPasswordHeader">
+            <summary>
+              Looks up a localized string similar to This share is password-protected.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.UserControlsCommonResource.ShareLinkPasswordLabel">
+            <summary>
+              Looks up a localized string similar to Enter the password to access the file.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.UserControlsCommonResource.SharingSettingsEmpty">
@@ -15642,9 +16085,14 @@
               Looks up a localized string similar to {0}Portal Logo Settings{1} feature is available for paid portals only..
             </summary>
         </member>
-        <member name="P:ASC.Web.Studio.PublicResources.WhiteLabelResource.LogoDark2">
+        <member name="P:ASC.Web.Studio.PublicResources.WhiteLabelResource.LoginPageLogoDark">
             <summary>
-              Looks up a localized string similar to Logo for the Login page.
+              Looks up a localized string similar to Logo for the Login page - dark theme.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.WhiteLabelResource.LoginPageLogoLight">
+            <summary>
+              Looks up a localized string similar to Logo for the Login page - light theme.
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.PublicResources.WhiteLabelResource.LogoDocsEditor">
@@ -15996,6 +16444,15 @@
         <member name="F:ASC.Web.Studio.UserControls.Management.Backup.RestoreHolder">
             <summary>
             RestoreHolder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.Studio.UserControls.Management.ImpersonateUser.ImpersonateUserConfirmationPanel._confirmationImpersonateUserPanel">
+            <summary>
+            _confirmationImpersonateUserPanel control.
             </summary>
             <remarks>
             Auto-generated field.
@@ -16741,6 +17198,15 @@
         <member name="F:ASC.Web.Studio.UserControls.Users.UserProfileActions._phConfirmationDeleteUser">
             <summary>
             _phConfirmationDeleteUser control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.Studio.UserControls.Users.UserProfileActions._confirmationImpersonateUser">
+            <summary>
+            _confirmationImpersonateUser control.
             </summary>
             <remarks>
             Auto-generated field.

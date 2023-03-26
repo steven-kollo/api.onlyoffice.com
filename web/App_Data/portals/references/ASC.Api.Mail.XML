@@ -63,8 +63,8 @@
             Checks the results of a filter specified in the request.
             </summary>
             <param type="ASC.Mail.Data.Contracts.MailSieveFilterData, ASC.Mail.Data.Contracts" method="url" name="filter">Filter parameters: ID, name, position, enabled, conditions, actions, options</param>
-            <param type="System.Int32, System" method="url" optional="true" name="page">Page number</param>
-            <param type="System.Int32, System" method="url" optional="true" name="pageSize">Number of messages on the page</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="page">Page number</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="pageSize">Number of messages on the page</param>
             <returns type="ASC.Mail.Data.Contracts.MailMessageData, ASC.Mail">List of messages</returns>
             <short>Check filter results</short> 
             <category>Filters</category>
@@ -447,8 +447,8 @@
             Creates a sample message with the parameters specified in the request. [Tests]
             </summary>
             <short>Create a sample message</short>
-            <param type="System.Int32, System" name="folderId">Folder ID</param>
-            <param type="System.Int32, System" name="mailboxId">Mailbox ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="folderId">Folder ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="mailboxId">Mailbox ID</param>
             <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="to">List of mail addresses to which a letter will be sent. <![CDATA[Format: Name<name@domain>]]></param>
             <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="cc">List of Cc (carbon copy) mail addresses. <![CDATA[Format: Name<name@domain>]]></param>
             <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="bcc">List of Bcc (blind carbon copy) mail addresses. <![CDATA[Format: Name<name@domain>]]></param>
@@ -467,7 +467,7 @@
             Appends an attachment to the sample message with the ID specified in the request. [Tests]
             </summary>
             <short>Append an attachment to a sample message</short>
-            <param type="System.Int32, System" name="messageId">Message ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="messageId">Message ID</param>
             <param type="System.String, System" name="filename">File name</param>
             <param type="System.IO.Stream, System.IO" name="stream">File stream</param>
             <param type="System.String, System" name="contentType">File content type</param>
@@ -482,9 +482,9 @@
             Loads a sample message with the parameters specified in the request as EML. [Tests]
             </summary>
             <short>Load a sample message</short>
-            <param type="System.Int32, System" name="folderId">Folder ID</param>
-            <param type="System.UInt32, System" name="userFolderId">User folder ID</param>
-            <param type="System.Int32, System" name="mailboxId">Mailbox ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="folderId">Folder ID</param>
+            <param type="System.Nullable{System.UInt32}, System" name="userFolderId">User folder ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="mailboxId">Mailbox ID</param>
             <param type="System.Boolean, System" name="unread">Message status: unread (true), read (false), or all (null) messages</param>
             <param type="System.IO.Stream, System.IO" name="emlStream">EML stream</param>
             <returns>Message ID</returns>
@@ -737,8 +737,8 @@
             Returns a list of filtered mail contacts by the search query specified in the request.
             </summary>
             <param type="System.String, System" method="url" optional="true" name="search">Text to search in contact names or emails</param>
-            <param type="System.Int32, System" method="url" optional="true" name="contactType">Contact type</param>
-            <param type="System.Int32, System" method="url" optional="true" name="pageSize">Number of contacts on the page</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="contactType">Contact type</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="pageSize">Number of contacts on the page</param>
             <param type="System.Int32, System" method="url" optional="true" name="fromIndex">Page number</param>
             <param type="System.String, System" method="url" name="sortorder">Sort order by name. String parameter: "ascending" or "descending"</param>
             <returns type="ASC.Mail.Data.Contracts.MailContactData, ASC.Mail">List of filtered contacts</returns>
@@ -754,7 +754,7 @@
             </summary>
             <param type="ASC.Mail.Enums.ContactInfoType, ASC.Mail.Enums" method="url" optional="false" name="infoType">Information type</param>
             <param type="System.String, System" method="url" optional="false" name="data">Contact data</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="isPrimary">Contact importance: primary or not</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="isPrimary">Contact importance: primary or not</param>
             <returns type="ASC.Mail.Data.Contracts.MailContactData, ASC.Mail">List of filtered contacts</returns>
             <short>Get contacts by contact information</short> 
             <category>Contacts</category>
@@ -820,24 +820,24 @@
             <summary>
             Returns the conversations with the parameters specified in the request.
             </summary>
-            <param type="System.Int32, System" method="url" optional="true" name="folder">Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="unread">Conversation status: unread (true), read (false), or all (null) messages</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="attachments">Defines if a conversation has attachments or not: with attachments (true), without attachments (false), or all (null) messages</param>
-            <param type="System.Int64, System" method="url" optional="true" name="period_from">Start search period date</param>
-            <param type="System.Int64, System" method="url" optional="true" name="period_to">End search period date</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="important">Specifies if only important conversations will be displayed or not</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="folder">Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="unread">Conversation status: unread (true), read (false), or all (null) messages</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="attachments">Defines if a conversation has attachments or not: with attachments (true), without attachments (false), or all (null) messages</param>
+            <param type="System.Nullable{System.Int64}, System" method="url" optional="true" name="period_from">Start search period date</param>
+            <param type="System.Nullable{System.Int64}, System" method="url" optional="true" name="period_to">End search period date</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="important">Specifies if only important conversations will be displayed or not</param>
             <param type="System.String, System" method="url" optional="true" name="from_address">Mail address from which the conversation messages were received</param>
             <param type="System.String, System" method="url" optional="true" name="to_address">Mail address to which the conversation messages were sent</param>
-            <param type="System.Int32, System" method="url" optional="true" name="mailbox_id">Recipient mailbox ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="mailbox_id">Recipient mailbox ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" method="url" optional="true" name="tags">IDs of tags linked to the target conversation</param>
             <param type="System.String, System" method="url" optional="true" name="search">Text to search in the conversation bodies and subjects</param>
-            <param type="System.Int32, System" method="url" optional="true" name="page_size">Number of conversations on the page</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="page_size">Number of conversations on the page</param>
             <param type="System.String, System" method="url" name="sortorder">Sort order by date: "ascending" or "descending"</param> 
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" optional="true" name="from_date">Start date of conversation search</param>
-            <param type="System.Int32, System" method="url" optional="true" name="from_message">Message from which the conversations are searched</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="with_calendar">Specifies if the conversations have a calendar or not</param>
-            <param type="System.Int32, System" method="url" optional="true" name="user_folder_id">User folder ID</param>
-            <param type="System.Boolean, System" method="url" name="prev_flag">Direction sort of the conversation list: true for previous, false for next</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="from_message">Message from which the conversations are searched</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="with_calendar">Specifies if the conversations have a calendar or not</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="user_folder_id">User folder ID</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" name="prev_flag">Direction sort of the conversation list: true for previous, false for next</param>
             <returns type="ASC.Mail.Data.Contracts.MailMessageData, ASC.Mail">List of filtered conversations</returns>
             <short>Get filtered conversations</short>
             <category>Conversations</category>
@@ -851,9 +851,9 @@
             </summary>
             <short>Get a conversation</short>
             <param type="System.Int32, System" method="url" name="id">ID of any message from the conversation</param>
-            <param type="System.Boolean, System" method="url" name="loadAll">Loads the content of all messages</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="markRead">Specifies if a conversation will be marked as read or not</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="needSanitize">Specifies if HTML needs to be prepared for the FCK editor or not</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" name="loadAll">Loads the content of all messages</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="markRead">Specifies if a conversation will be marked as read or not</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="needSanitize">Specifies if HTML needs to be prepared for the FCK editor or not</param>
             <returns type="ASC.Mail.Data.Contracts.MailMessageData, ASC.Mail">List of messages linked in one chain</returns>
             <category>Conversations</category>
             <exception cref="T:System.ArgumentException">An exception occurs when the parameters are invalid. The text description contains the parameter name and the text description.</exception>
@@ -868,21 +868,21 @@
             <short>Get the previous or next conversation ID</short>
             <param type="System.Int32, System" method="url" name="id">Head message ID of the current conversation</param>
             <param type="System.String, System" method="url" name="direction">Defines if the previous or next conversation is needed: "prev" for previous, "next" for next</param>
-            <param type="System.Int32, System" method="url" optional="true" name="folder">Folder type: 1 - inbox, 2 - sent, 5 - spam</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="unread">Conversation status: unread (true), read (false), or all (null) conversations</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="attachments">Defines if a conversation has attachments or not: with attachments (true), without attachments (false) or all (null) messages</param>
-            <param type="System.Int64, System" method="url" optional="true" name="period_from">Start search period date</param>
-            <param type="System.Int64, System" method="url" optional="true" name="period_to">End search period date</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="important">Specifies if only important conversations will be displayed or not</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="folder">Folder type: 1 - inbox, 2 - sent, 5 - spam</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="unread">Conversation status: unread (true), read (false), or all (null) conversations</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="attachments">Defines if a conversation has attachments or not: with attachments (true), without attachments (false) or all (null) messages</param>
+            <param type="System.Nullable{System.Int64}, System" method="url" optional="true" name="period_from">Start search period date</param>
+            <param type="System.Nullable{System.Int64}, System" method="url" optional="true" name="period_to">End search period date</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="important">Specifies if only important conversations will be displayed or not</param>
             <param type="System.String, System" method="url" optional="true" name="from_address">Mail address from which the conversation messages were received</param>
             <param type="System.String, System" method="url" optional="true" name="to_address">Mail address to which the conversation messages were sent</param>
-            <param type="System.Int32, System" method="url" optional="true" name="mailbox_id">Recipient mailbox ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="mailbox_id">Recipient mailbox ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" method="url" optional="true" name="tags">IDs of tags linked to the target conversation</param>
             <param type="System.String, System" method="url" optional="true" name="search">Text to search in the conversation bodies and subjects</param>
-            <param type="System.Int32, System" method="url" optional="true" name="page_size">Number of conversations on the page</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="page_size">Number of conversations on the page</param>
             <param type="System.String, System" method="url" name="sortorder">Sort order by date: "ascending" or "descending"</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="with_calendar">Specifies if the conversations have a calendar or not</param> 
-            <param type="System.Int32, System" method="url" optional="true" name="user_folder_id">User folder ID</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="with_calendar">Specifies if the conversations have a calendar or not</param> 
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="user_folder_id">User folder ID</param>
             <returns>Head message ID of the previous or next conversation</returns>
             <category>Conversations</category>
             <path>api/2.0/mail/conversation/{id}/{direction}</path>
@@ -894,7 +894,7 @@
             </summary>
             <param type="System.Collections.Generic.List{System.Int32}, System.Collections.Generic" name="ids">List of message IDs from the conversations</param>
             <param type="System.Int32, System" name="folder">Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam</param>
-            <param type="System.UInt32, System" optional="true" name="userFolderId">User folder ID</param>
+            <param type="System.Nullable{System.UInt32}, System" optional="true" name="userFolderId">User folder ID</param>
             <returns>List of message IDs from the conversations</returns>
             <short>Move conversations</short>
             <category>Conversations</category>
@@ -1061,7 +1061,7 @@
             Returns a list of user folders with the IDs specified in the request.
             </summary>
             <param type="System.Collections.Generic.List{System.UInt32}, System.Collections.Generic" method="url" name="ids" optional="true">List of folder IDs</param>
-            <param type="System.UInt32, System" method="url" name="parentId" optional="true">Parent folder ID (root level is equal to 0)</param>
+            <param type="System.Nullable{System.UInt32}, System" method="url" name="parentId" optional="true">Parent folder ID (root level is equal to 0)</param>
             <returns type="ASC.Mail.Data.Contracts.MailUserFolderData, ASC.Mail">List of folders</returns>
             <short>Get the user folders</short> 
             <category>Folders</category>
@@ -1088,7 +1088,7 @@
             </summary>
             <param type="System.UInt32, System" method="url" name="id">Folder ID</param>
             <param type="System.String, System" name="name">New folder name</param>
-            <param type="System.UInt32, System" name="parentId">New parent folder ID (root level is equal to 0)</param>
+            <param type="System.Nullable{System.UInt32}, System" name="parentId">New parent folder ID (root level is equal to 0)</param>
             <returns type="ASC.Mail.Data.Contracts.MailUserFolderData, ASC.Mail">Folder information</returns>
             <short>Update a folder</short> 
             <category>Folders</category>
@@ -1158,21 +1158,21 @@
             <summary>
             Returns the messages with the parameters specified in the request.
             </summary>
-            <param type="System.Int32, System" method="url" optional="true" name="folder">Folder ID</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="unread">Message status: unread (true), read (false), or all (null) messages</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="attachments">Defines if a message has attachments or not: with attachments (true), without attachments (false), or all (null) messages</param>
-            <param type="System.Int64, System" method="url" optional="true" name="period_from">Start search period date</param>
-            <param type="System.Int64, System" method="url" optional="true" name="period_to">End search period date</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="important">Specifies if only important messages will be displayed or not</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="folder">Folder ID</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="unread">Message status: unread (true), read (false), or all (null) messages</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="attachments">Defines if a message has attachments or not: with attachments (true), without attachments (false), or all (null) messages</param>
+            <param type="System.Nullable{System.Int64}, System" method="url" optional="true" name="period_from">Start search period date</param>
+            <param type="System.Nullable{System.Int64}, System" method="url" optional="true" name="period_to">End search period date</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="important">Specifies if only important messages will be displayed or not</param>
             <param type="System.String, System" method="url" optional="true" name="from_address">Mail address from which a letter was received</param>
             <param type="System.String, System" method="url" optional="true" name="to_address">Mail address to which a letter was sent</param>
-            <param type="System.Int32, System" method="url" optional="true" name="mailbox_id">Recipient mailbox ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="mailbox_id">Recipient mailbox ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" method="url" optional="true" name="tags">IDs of tags linked to the target messages</param>
             <param type="System.String, System" method="url" optional="true" name="search">Text to search in the message bodies and subjects</param>
-            <param type="System.Int32, System" method="url" optional="true" name="page">Page number</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="with_calendar">Specifies if the messages have a calendar or not</param>
-            <param type="System.Int32, System" method="url" optional="true" name="page_size">Number of messages on the page</param>
-            <param type="System.Int32, System" method="url" optional="true" name="user_folder_id">User folder ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="page">Page number</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="with_calendar">Specifies if the messages have a calendar or not</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="page_size">Number of messages on the page</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="user_folder_id">User folder ID</param>
             <param type="System.String, System" method="url" name="sortorder">Sort order by date: "ascending" or "descending"</param>
             <returns type="ASC.Mail.Data.Contracts.MailMessageData, ASC.Mail">List of filtered messages</returns>
             <short>Get filtered messages</short> 
@@ -1186,9 +1186,9 @@
             Returns the detailed information about a message with the ID specified in the request.
             </summary>
             <param type="System.Int32, System" method="url" name="id">Message ID</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="loadImages">Specifies whether to display images sent in a message or not</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="needSanitize">Specifies if HTML needs to be prepared for the FCK editor or not</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="markRead">Specifies if a message will be marked as read or not</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="loadImages">Specifies whether to display images sent in a message or not</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="needSanitize">Specifies if HTML needs to be prepared for the FCK editor or not</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="markRead">Specifies if a message will be marked as read or not</param>
             <returns type="ASC.Mail.Data.Contracts.MailMessageData, ASC.Mail">Message information</returns>
             <short>Get a message</short>
             <category>Messages</category>
@@ -1215,21 +1215,21 @@
             </summary>
             <param type="System.Int32, System" method="url" name="id">Head message ID of the current conversation</param>
             <param type="System.String, System" method="url" name="direction">Defines if the previous or next message is needed: "prev" for previous, "next" for next</param>
-            <param type="System.Int32, System" method="url" optional="true" name="folder">Folder type: 1 - inbox, 2 - sent, 5 - spam</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="unread">Message status: unread (true), read (false), or all (null) messages</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="attachments">Defines if a message has attachments or not: with attachments (true), without attachments (false), or all (null) messages</param>
-            <param type="System.Int64, System" method="url" optional="true" name="period_from">Start search period date</param>
-            <param type="System.Int64, System" method="url" optional="true" name="period_to">End search period date</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="important">Specifies if only important messages will be displayed or not</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="folder">Folder type: 1 - inbox, 2 - sent, 5 - spam</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="unread">Message status: unread (true), read (false), or all (null) messages</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="attachments">Defines if a message has attachments or not: with attachments (true), without attachments (false), or all (null) messages</param>
+            <param type="System.Nullable{System.Int64}, System" method="url" optional="true" name="period_from">Start search period date</param>
+            <param type="System.Nullable{System.Int64}, System" method="url" optional="true" name="period_to">End search period date</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="important">Specifies if only important messages will be displayed or not</param>
             <param type="System.String, System" method="url" optional="true" name="from_address">Mail address from which a letter was received</param>
             <param type="System.String, System" method="url" optional="true" name="to_address">Mail address to which a letter was sent</param>
-            <param type="System.Int32, System" method="url" optional="true" name="mailbox_id">Recipient mailbox ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="mailbox_id">Recipient mailbox ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" method="url" optional="true" name="tags">IDs of tags linked to the target message</param>
             <param type="System.String, System" method="url" optional="true" name="search">Text to search in the message bodies and subjects</param>
-            <param type="System.Int32, System" method="url" optional="true" name="page_size">Number of messages on the page</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="page_size">Number of messages on the page</param>
             <param type="System.String, System" method="url" optional="true" name="sortorder">Sort order by date: "ascending" or "descending"</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="with_calendar">Specifies if the messages have a calendar or not</param>
-            <param type="System.Int32, System" method="url" optional="true" name="user_folder_id">User folder ID</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="with_calendar">Specifies if the messages have a calendar or not</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="user_folder_id">User folder ID</param>
             <returns>Previous or next message ID</returns>
             <short>Get the previous or next message ID</short> 
             <category>Messages</category>
