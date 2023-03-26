@@ -16,7 +16,7 @@ var oContent = oCell.GetContent();
 var oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The first column was removed. The fourth row was removed. And the cells of the first row were merged.");
 oContent.Push(oParagraph);
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(520, 64, 1));
+var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 oTable.SetShd(oFill);
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

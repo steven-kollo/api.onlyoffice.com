@@ -6,7 +6,7 @@ var nCountBefore = oPresentation.GetMastersCount();
 var oCopyMaster = oMaster.Copy();
 oPresentation.AddMaster(1, oCopyMaster);
 var nCountAfter = oPresentation.GetMastersCount();
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));
+var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());
 var oShape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, oFill, oStroke);
 oShape.SetPosition(608400, 1267200);

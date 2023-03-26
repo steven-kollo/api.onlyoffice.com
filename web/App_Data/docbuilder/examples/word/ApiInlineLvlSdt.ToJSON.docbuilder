@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 var oInlineLvlSdt = Api.CreateInlineLvlSdt();
 oInlineLvlSdt.SetAlias("№1");
-let json = oInlineLvlSdt.ToJSON(true);
+var json = oInlineLvlSdt.ToJSON(true);
 var oInlineLvlSdtFromJSON = Api.FromJSON(json);
 oParagraph.AddInlineLvlSdt(oInlineLvlSdtFromJSON);
 var oRun = Api.CreateRun();

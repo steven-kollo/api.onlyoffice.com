@@ -1,6 +1,6 @@
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
-var oTableStyle = oDocument.GetStyle("Bordered - Accent 5");
+var oTableStyle = oDocument.GetStyle("Bordered");
 var oTable = Api.CreateTable(3, 3);
 oTable.SetWidth("percent", 50);
 oTable.SetStyle(oTableStyle);

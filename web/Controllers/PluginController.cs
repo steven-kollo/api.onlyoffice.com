@@ -101,6 +101,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/formatrangeasatable",
                 "macros/macrosamples/highlightduplicates",
                 "macros/macrosamples/importcsv",
+                "macros/macrosamples/insertid",
                 "macros/macrosamples/inserttext",
                 "macros/macrosamples/makecellfontbold",
                 "macros/macrosamples/mergecellrange",

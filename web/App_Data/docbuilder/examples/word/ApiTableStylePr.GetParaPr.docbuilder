@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("We create a 3x3 table and set the text alignment to center for row #1:");
 var oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
-oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
+oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered"));
 var oTable = Api.CreateTable(3, 3);
 oTable.SetWidth("percent", 100);
 var oTableStylePr = oTableStyle.GetConditionalTableStyle("firstRow");

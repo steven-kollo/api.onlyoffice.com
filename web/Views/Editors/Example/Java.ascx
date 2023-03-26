@@ -43,8 +43,8 @@ For example, <em>D:\\folder</em>. Please note that on Windows OS the double back
 <p>To run the Java example code, install the Java version appropriate for your OS and web server <b>Apache Tomcat</b>:</p>
 
 <ul>
-    <li><b>Java</b> (download from  <a href="https://www.java.com/en/download/manual.jsp">the Oracle official website</a>);</li>
-    <li><b>Apache Tomcat</b>: version 9.0.x (download from <a href="https://tomcat.apache.org/download-90.cgi">the official website</a>).</li>
+    <li><b>Java</b> (download from  <a href="https://www.java.com/en/download/manual.jsp" target="_blank">the Oracle official website</a>);</li>
+    <li><b>Apache Tomcat</b>: version 9.0.x (download from <a href="https://tomcat.apache.org/download-90.cgi" target="_blank">the official website</a>).</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Run Apache Tomcat</h2>

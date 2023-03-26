@@ -46,8 +46,8 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
 <p>To run the Java-Spring example code, install the Java version 11 appropriate for your OS and framework <b>Apache Maven</b>:</p>
 
 <ul>
-    <li><b>Java</b> (download from  <a href="https://www.oracle.com/java/technologies/downloads/#java11">the Oracle official website</a>);</li>
-    <li><b>Apache Maven</b> (download from <a href="https://maven.apache.org/download.cgi">the official website</a>).</li>
+    <li><b>Java</b> (download from  <a href="https://www.oracle.com/java/technologies/downloads/#java11" target="_blank">the Oracle official website</a>);</li>
+    <li><b>Apache Maven</b> (download from <a href="https://maven.apache.org/download.cgi" target="_blank">the official website</a>).</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Set environment variables</h2>

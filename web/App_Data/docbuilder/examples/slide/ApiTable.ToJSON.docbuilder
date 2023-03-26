@@ -3,7 +3,7 @@ var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
 var oTable = Api.CreateTable(2, 4);
-let json = oTable.ToJSON(true);
+var json = oTable.ToJSON(true);
 var oTableFromJSON = Api.FromJSON(json);
 var sType = oTableFromJSON.GetClassType();
 var oRow = oTableFromJSON.GetRow(0);

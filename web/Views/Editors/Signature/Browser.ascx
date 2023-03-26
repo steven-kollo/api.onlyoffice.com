@@ -73,8 +73,13 @@
 
         <pre>
 {
-    "fileType": "png",
-    "url": "https://example.com/url-to-example-image.png"
+    "c": "add",
+    "images": [
+        {
+            "fileType": "png",
+            "url": "https://example.com/url-to-example-image.png"
+        }
+    ]
 }
 </pre>
         <p>
@@ -83,7 +88,7 @@
         </p>
 
         <div class="header-gray">Sample token</div>
-        <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UucG5nIn0.FXuC3GUvPq3japwyzo4i-utUe3g1rfSDt1ytuK_VyCc</pre>
+        <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UucG5nIn1dfQ._tPxpJrPbom_f83qgX4_AB9v1cfK2LSQsfomfl7zJ58</pre>
     </li>
     <li>
         <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - when calling the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to view the document <a href="<%= Url.Action("history") %>">history</a> version in ONLYOFFICE Document Server, the <a href="<%= Url.Action("methods") %>#setHistoryData-token">token</a> must be added to validate the parameters.</p>
