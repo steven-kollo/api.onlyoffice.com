@@ -53,7 +53,7 @@
     <p><b>Option 2</b>. Add a module with <a href="https://www.drupal.org/docs/extending-drupal/installing-modules#s-add-a-module-with-composer" target="_blank">Composer</a>.</p>
     <p>Enter the following command at the root of your site:</p>
     <pre>
-composer require drupal/onlyoffice
+composer require onlyoffice/onlyoffice-drupal
 </pre>
 
     <p><b>Step 2: Enable the module</b></p>

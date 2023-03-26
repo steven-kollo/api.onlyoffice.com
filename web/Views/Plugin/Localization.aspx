@@ -130,7 +130,7 @@ pluginCode.js</pre>
 
     <pre>&lt;button id="button_new"&gt;New&lt;/button&gt;</pre>
 
-    <p>After that add the <a href="<%= Url.Action("events") %>#onTranslate">window.Asc.plugin.onTranslate</a> function to the <a href="<%= Url.Action("code") %>">pluginCode.js</a> file:</p>
+    <p>After that add the <a href="<%= Url.Action("events/onTranslate") %>">window.Asc.plugin.onTranslate</a> function to the <a href="<%= Url.Action("code") %>">pluginCode.js</a> file:</p>
 
     <pre>window.Asc.plugin.onTranslate = function()
     {

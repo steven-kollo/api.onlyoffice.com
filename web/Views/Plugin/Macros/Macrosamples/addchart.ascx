@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Add new chart to the selected cell range.</p>
+<p class="dscr">Adds a new chart to the selected cell range.</p>
 
 <pre>(function()
 {

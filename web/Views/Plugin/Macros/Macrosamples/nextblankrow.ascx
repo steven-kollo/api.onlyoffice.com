@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Find the next available blank row in a worksheet. This macro allows you to get the blank at the very end of your data (not between it).</p>
+<p class="dscr">Finds the next available blank row in a worksheet. This macro allows you to get the blank at the very end of your data (not between it).</p>
 
 <pre>(function () 
 {

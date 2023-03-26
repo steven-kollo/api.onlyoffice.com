@@ -26,6 +26,10 @@
     <li><a href="#customer">customer</a></li>
     <li><a href="#features">features</a></li>
     <li><a href="#feedback">feedback</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#font">font</a></li>
+    <% } %>
     <li><a href="#forcesave">forcesave</a></li>
     <li><a href="#goback">goback</a></li>
     <li><a href="#help">help</a></li>
@@ -349,6 +353,26 @@
             <td>boolean or object</td>
             <td>true</td>
         </tr>
+        <% if (license)
+           { %>
+        <tr class="tablerow">
+            <td id="font" class="copy-link">font<span class="required">**</span></td>
+            <td>
+                Defines the font for the interface elements (buttons, tabs, etc.):
+                <ul>
+                    <li>
+                        <b>name</b> - the font name,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Arial".
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <% } %>
         <tr>
             <td id="forcesave" class="copy-link">forcesave</td>
             <td>
@@ -512,6 +536,17 @@
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>leftMenu.mode</b> - defines the initial value of the left panel visibility - displayed or hidden.
+                        It is used for the <b>Left panel</b> menu option on the <b>View</b> tab.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>leftMenu.navigation</b> - defines if the <b>Navigation</b> button is displayed or hidden. The default value is <b>true</b>.
@@ -530,7 +565,17 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>rightMenu</b> - defines if the right menu is displayed or hidden. The default value is <b>true</b>,
+                        <b>rightMenu</b> - defines the right menu settings. If this parameter is a boolean value, then it specifies whether the right menu will be displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>rightMenu.mode</b> - defines the initial value of the right panel visibility - displayed or hidden.
+                        It is used for the <b>Right panel</b> menu option on the <b>View</b> tab.
+                        The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -542,6 +587,8 @@
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>statusBar.actionStatus</b> - defines if an action status is displayed or hidden. The default value is <b>true</b>,
@@ -571,7 +618,9 @@
                         If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden.
                         The default value is <b>true</b>,
                         <br />
-                        <b>type</b>: object or boolean;
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>toolbar.collaboration</b> - defines if the <b>Collaboration</b> tab is displayed or hidden.
@@ -1156,7 +1205,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "https://example.com",
                 "visible": true
             },
-            "forcesave": false,
+            <% if (license)
+               { %>"font": {
+                "name": "Arial"
+            },
+            <% } %>"forcesave": false,
             "goback": {
                 "blank": true,
                 "requestClose": false,
@@ -1175,10 +1228,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                     "users": true
                 },
                 "leftMenu": {
+                    "mode": true,
                     "navigation": true,
                     "spellcheck": true
                 },
-                "rightMenu": true,
+                "rightMenu": {
+                    "mode": true
+                },
                 "statusBar": {
                     "actionStatus": true,
                     "docLang": true,

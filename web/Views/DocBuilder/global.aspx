@@ -26,7 +26,7 @@
             <h5>Type:</h5>
             <ul>
                 <li>
-                    <%= DocBuilderDocumentation.TypesToHtml(type.Value.Types, type.Value.Module) %>
+                    <%= DocBuilderDocumentation.Instance.TypesToHtml(type.Value.Types, type.Value.Module) %>
                 </li>
             </ul>
                 <% if (type.Value.Properties != null && type.Value.Properties.Any()) { %>
@@ -49,6 +49,7 @@
                             <% } %>
                         </tbody>
                     </table>
+                    <div class="mobile-content"></div>
                 <% } %>
             </div>
 

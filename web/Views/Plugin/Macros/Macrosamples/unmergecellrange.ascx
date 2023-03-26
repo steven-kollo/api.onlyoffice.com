@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Unmerge selected cell range.</p>
+<p class="dscr">Unmerges the selected cell range.</p>
 
 <pre>(function()
 {

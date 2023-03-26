@@ -19,7 +19,10 @@
     <pre>
 var connector = docEditor.createConnector()
 </pre>
-    <note>Please note that the connector is available only for <b>ONLYOFFICE Developer Edition</b>.</note>
+    <note>
+        <p>Please note that the connector is available only for <b>ONLYOFFICE Developer Edition</b>.</p>
+        <p>This class is an additional feature which is available at extra cost. If you have any questions, please contact our sales team at <a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a>.</p>
+    </note>
     <p>The connector has the same interface as plugins. Below you can find methods that are available for this class.</p>
 
     <ul>
@@ -39,9 +42,9 @@ var connector = docEditor.createConnector()
             <div class="header-gray">Parameters</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -82,9 +85,9 @@ connector.attachEvent("onChangeContentControl", function()
             <div class="header-gray">Parameters</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -115,6 +118,7 @@ connector.attachEvent("onChangeContentControl", function()
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
             <p>This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope", "plugin") %>">Asc.scope</a> object.</p>
             <div class="header-gray">Example</div>
             <pre>
@@ -147,9 +151,9 @@ connector.connect()
             <div class="header-gray">Parameters</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
@@ -187,9 +191,9 @@ connector.disconnect()
             <div class="header-gray">Parameters</div>
             <table class="table">
                 <colgroup>
-                    <col style="width: 100px;" />
+                    <col class="table-name" />
                     <col />
-                    <col style="width: 100px;" />
+                    <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">

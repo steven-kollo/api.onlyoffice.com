@@ -49,12 +49,20 @@
 
     <p>To start using ONLYOFFICE Docs with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
     <ol>
-        <li>Upload the compiled <b>*.jar</b> packages to directories accordingly for your Alfresco installation:
+        <li>Upload the compiled <b>*.amp</b> packages to directories accordingly for your Alfresco installation:
             <ul>
-                <li>from <em>onlyoffice-alfresco/repo/target/</em> to <em>/webapps/alfresco/WEB-INF/lib/</em> for Alfresco repository,</li>
-                <li>from <em>onlyoffice-alfresco/share/target/</em> to <em>/webapps/share/WEB-INF/lib/</em> for Share.</li>
+                <li>from <em>onlyoffice-alfresco/repo/target/</em> to <em>/usr/local/tomcat/amps/</em> for Alfresco repository,</li>
+                <li>from <em>onlyoffice-alfresco/share/target/</em> to <em>/usr/local/tomcat/amps_share/</em> for Share.</li>
             </ul>
             <div class="note">You can download the already compiled package files <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a> and place them to the respective directories.</div>
+        </li>
+        <li>
+            <p>Use the <b>Module Management Tool (MMT)</b> to install modules, run this commands:</p>
+            <p><b>Alfresco</b></p>
+            <span class="commandline">java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps/onlyoffice-integration-repo.amp /usr/local/tomcat/webapps/alfresco</span>
+            <p><b>Share</b></p>
+            <span class="commandline">java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps_share/onlyoffice-integration-share.amp /usr/local/tomcat/webapps/share</span>
+            <p>More details about using MMT can be found at the following address - <em>https://docs.alfresco.com/content-services/latest/install/zip/amp/</em>.</p>
         </li>
         <li>Make sure that Document Server will be able to POST to Alfresco.
             <p>You may need to change these lines in <b>alfresco-global.properties</b> or you can set it using <a href="#configuration">configuration page</a>:</p>

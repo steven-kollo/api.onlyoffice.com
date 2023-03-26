@@ -3,7 +3,7 @@
       "id":"editors",
       "title":"Document Server",
       "description":"Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
-      "version":"7.2",
+      "version":"7.3",
       "links":{
          "Get Started":[
             {
@@ -21,6 +21,10 @@
             {
                "Item1":"Language-specific examples",
                "Item2":"demopreview"
+            },
+            {
+               "Item1":"Frontend frameworks",
+               "Item2":"frameworks"
             },
             {
                "Item1":"Ready-to-use connectors",
@@ -79,6 +83,14 @@
                "Item2":"wopi/postmessage"
             },
             {
+               "Item1":"Conversion API",
+               "Item2":"wopi/conversionapi"
+            },
+            {
+               "Item1":"Editing binary documents",
+               "Item2":"wopi/editingbinary"
+            },
+            {
                "Item1":"API vs WOPI",
                "Item2":"wopi/apivswopi"
             }
@@ -121,7 +133,7 @@
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"Extend the ONLYOFFICE Docs functionality. In this section you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"7.2",
+      "version":"7.3",
       "links":{
          "Get started":[
             {
@@ -135,12 +147,24 @@
             {
                "Item1":"Plugin types",
                "Item2":"types"
+            },
+            {
+               "Item1":"Plugin structure",
+               "Item2":"structure"
             }
          ],
          "Plugins":[
             {
-               "Item1":"Plugin structure",
-               "Item2":"structure"
+               "Item1":"Configuring plugin",
+               "Item2":"config"
+            },
+            {
+               "Item1":"Creating entry point",
+               "Item2":"indexhtml"
+            },
+            {
+               "Item1":"Coding plugin",
+               "Item2":"code"
             },
             {
                "Item1":"Adding plugins",
@@ -169,6 +193,10 @@
                "Item2":"writingmacros"
             },
             {
+               "Item1":"Debugging",
+               "Item2":"debugging"
+            },
+            {
                "Item1":"Converting macros",
                "Item2":"convertingvbamacros"
             },
@@ -183,7 +211,7 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "7.2",
+      "version": "7.3",
       "links":{
          "Get started":[
             {
@@ -193,6 +221,10 @@
             {
                "Item1":"Getting started",
                "Item2":"gettingstarted"
+            },
+            {
+               "Item1":"Try now",
+               "Item2":"try"
             },
             {
                "Item1":"Integrating Builder",
@@ -245,7 +277,7 @@
       "id":"desktop",
       "title":"Desktop Editors",
       "description":"Extend the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.",
-      "version":"7.2",
+      "version":"7.3",
       "links":{
          "Get Started":[
             {
@@ -351,6 +383,10 @@
             {
                "Item1":"project",
                "Item2":"section/project"
+            },
+            {
+               "Item1":"security",
+               "Item2":"section/security"
             },
             {
                "Item1":"settings",
