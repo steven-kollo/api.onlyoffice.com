@@ -80,7 +80,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Navigation()
         {
-            return View(Documentation.GetAll());
+            return View(CommunityServerDocumentation.GetAll());
         }
 
         public ActionResult Auth()
@@ -118,14 +118,14 @@ namespace ASC.Api.Web.Help.Controllers
         {
             if (string.IsNullOrEmpty(section))
             {
-                var firstPoint = Documentation.GetAll().OrderBy(x => x.Name).ToList().FirstOrDefault();
+                var firstPoint = CommunityServerDocumentation.GetAll().OrderBy(x => x.Name).ToList().FirstOrDefault();
 
                 if (firstPoint == null) return View("sectionnotfound");
 
                 return Redirect(Url.Action("section", new { section = firstPoint.Name }));
             }
 
-            var docsSection = Documentation.GetDocs(section);
+            var docsSection = CommunityServerDocumentation.GetDocs(section);
             if (docsSection == null || !docsSection.Methods.Any())
                 return View("sectionnotfound");
 
@@ -159,7 +159,7 @@ namespace ASC.Api.Web.Help.Controllers
             if (string.IsNullOrEmpty(section))
                 return View("sectionnotfound");
 
-            var docsSection = Documentation.GetDocs(section);
+            var docsSection = CommunityServerDocumentation.GetDocs(section);
             if (docsSection == null)
                 return View("sectionnotfound");
 
