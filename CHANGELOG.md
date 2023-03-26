@@ -7,6 +7,7 @@
 - macros: added the Insert unique id macro sample
 - editors: conversion to ppsm, ppsx
 - editors: added the Go signature code example
+- portals: api v12.5
 
 ## 3.0.4
 - editors: changed drupal description
