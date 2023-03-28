@@ -838,6 +838,102 @@
           "defaultValue": true
         }
       ]
+    },
+    "GetAllAddinFields": {
+      "memberof": "Api",
+      "name": "GetAllAddinFields",
+      "description": "<p>Get all addin fields from the current document</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "UpdateAddinFields": {
+      "memberof": "Api",
+      "name": "UpdateAddinFields",
+      "description": "<p>Update addin fields with the specified data</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<AddinFieldData>",
+          "name": "arrData",
+          "description": "<p>An array of addin field data</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddAddinField": {
+      "memberof": "Api",
+      "name": "AddAddinField",
+      "description": "<p>Create new addin field</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "AddinFieldData",
+          "name": "data",
+          "description": "<p>addin field data</p>",
+          "optional": false
+        }
+      ]
+    },
+    "RemoveFieldWrapper": {
+      "memberof": "Api",
+      "name": "RemoveFieldWrapper",
+      "description": "<p>Remove field wrapper, leave only the content of the field</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "fieldId",
+          "description": "<p>remove wrapper for specified field, if not specified then remove from current field</p>",
+          "optional": true
+        }
+      ]
+    },
+    "SetEditingRestrictions": {
+      "memberof": "Api",
+      "name": "SetEditingRestrictions",
+      "description": "<p>Set document editing restrictions</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "DocumentEditingRestrictions",
+          "name": "restrictions",
+          "optional": false
+        }
+      ]
     }
   },
   "events": {},

@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: v7.3.3
 - editors: test examples v1.5.1
 - portals: moved the Hosted solution section to the Community server section
 - editors: added conversion from dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xml format
