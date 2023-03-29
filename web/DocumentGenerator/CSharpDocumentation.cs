@@ -24,7 +24,6 @@
 */
 
 
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -47,7 +46,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public void Load()
         {
-            _logger = LogManager.GetLogger("ASC.MsDocDocumentGenerator");
+            _logger = LogManager.GetLogger("ASC." + _path);
             _logger.Debug("Generate documentations");
             //Load documentation
             _points = GenerateDocs();

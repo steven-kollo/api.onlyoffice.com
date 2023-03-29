@@ -24,13 +24,7 @@
 */
 
 
-
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web.Hosting;
-using log4net;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
 {
