@@ -1,17 +1,18 @@
 # Change Log
 
-- docbuilder: v7.3.3
-- plugins: v7.3.3
+## 3.1.0
 - editors: test examples v1.5.1
-- portals: moved the Hosted solution section to the Community server section
 - editors: added conversion from dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xml format
 - editors: added the examples of interaction with the documents from the outside
 - editors: added the Embedding forms into a web page page
-- docbuilder: changed the color scheme of the builder examples
-- macros: added the Insert unique id macro sample
 - editors: conversion to ppsm, ppsx
 - editors: added the Go signature code example
+- plugins: v7.3.3
+- macros: added the Insert unique id macro sample
+- docbuilder: v7.3.3
+- docbuilder: changed the color scheme of the builder examples
 - portals: api v12.5
+- portals: moved the Hosted solution section to the Community server section
 
 ## 3.0.4
 - editors: changed drupal description
