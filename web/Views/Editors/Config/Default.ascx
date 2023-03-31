@@ -54,7 +54,7 @@
             <td id="token" class="copy-link">token</td>
             <td>以 <a href="<%= Url.Action("signature/browser") %>#config">令牌</a>的形式定义添加到 <b>文档服务器</b> 配置的加密签名。</td>
             <td>string</td>
-            <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M"</td>
+            <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"</td>
         </tr>
         <tr class="tablerow">
             <td id="type" class="copy-link">type</td>
@@ -84,7 +84,7 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "documentType": "word",
     "height": "100%",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     "type": "desktop",
     "width": "100%",
     ...

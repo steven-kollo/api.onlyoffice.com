@@ -262,7 +262,7 @@
         "<a href="<%= Url.Action("config/events") %>#onWarning">onWarning</a>": onWarning
     },
     "<a href="<%= Url.Action("config/") %>#height">height</a>": "100%",
-    "<a href="<%= Url.Action("config/") %>#token">token</a>": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M",
+    "<a href="<%= Url.Action("config/") %>#token">token</a>": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     "<a href="<%= Url.Action("config/") %>#type">type</a>": "desktop",
     "<a href="<%= Url.Action("config/") %>#width">width</a>": "100%"
 };

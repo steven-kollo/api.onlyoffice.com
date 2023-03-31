@@ -46,8 +46,8 @@ files.docservice.url.site=https://documentserver/
 <p>要运行 Java-Spring 示例代码，请安装适用于您的操作系统和框架 <b>Apache Maven</b>的 Java 版本 11：</p>
 
 <ul>
-    <li><b>Java</b> （从 <a href="https://www.oracle.com/java/technologies/downloads/#java11">Oracle官网</a>下载）；</li>
-    <li><b>Apache Maven</b> （从 <a href="https://maven.apache.org/download.cgi">官网</a>下载）。</li>
+    <li><b>Java</b> （从 <a href="https://www.oracle.com/java/technologies/downloads/#java11" target="_blank">Oracle官网</a>下载）；</li>
+    <li><b>Apache Maven</b> （从 <a href="https://maven.apache.org/download.cgi" target="_blank">官网</a>下载）。</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">步骤 4.</span>设置环境变量</h2>

@@ -209,7 +209,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/permissions.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="protect" class="copy-link">protect</td>
             <td>
                 定义工具栏上的 <b>保护</b> 选项卡和左侧菜单中的 <b>保护</b> 按钮是显示 (<b>true</b>) 还是隐藏 (<b>false</b>)。
@@ -217,6 +217,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/protect.png") %>" alt="" />
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="rename" class="copy-link">rename</td>

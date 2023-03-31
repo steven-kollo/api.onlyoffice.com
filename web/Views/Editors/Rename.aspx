@@ -14,7 +14,7 @@
         <span class="hdr">重命名文件</span>
     </h1>
     <p class="dscr">参考图和以下步骤说明了在 ONLYOFFICE 文档服务器中重命名文档的过程。</p>
-    <img alt="重命名文件" src="<%= Url.Content("~/content/img/editor/rename.png") %>" />
+    <img alt="重命名文件" src="<%= Url.Content("~/content/img/editor/rename.svg") %>" />
     <ol>
         <li>用户在 <b>文档编辑器</b>中为文档指定一个新名称。</li>
         <li><b>文档编辑器</b> 将文档的新名称通知给 <b>文档管理器</b>。</li>

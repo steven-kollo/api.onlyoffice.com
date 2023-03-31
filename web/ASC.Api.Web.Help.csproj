@@ -112,6 +112,7 @@
     <Compile Include="Helpers\Highliter.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
+    <Compile Include="Helpers\Persons.cs" />
     <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\RedirectAttribute.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
@@ -128,6 +129,7 @@
     <Content Include="App_Data\editor\PHP Example.zip" />
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
+    <Content Include="App_Data\editor\wildcardData\persons.json" />
     <Content Include="App_Data\products.json" />
     <Content Include="Content\get-docs.css" />
     <Content Include="Content\highlight.css" />
@@ -139,6 +141,9 @@
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\server-components.png" />
     <Content Include="Content\img\csharp\sitename.png" />
+    <Content Include="Content\img\connector\comments.svg" />
+    <Content Include="Content\img\connector\filling-form.svg" />
+    <Content Include="Content\img\connector\review-work.svg" />
     <Content Include="Content\img\Editor\accept_reject.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
     <Content Include="Content\img\Editor\actionLink-open.png" />
@@ -175,6 +180,8 @@
     <Content Include="Content\img\Editor\editor-samples.png" />
     <Content Include="Content\img\Editor\editor.png" />
     <Content Include="Content\img\Editor\embedded.png" />
+    <Content Include="Content\img\Editor\embed-docxf.png" />
+    <Content Include="Content\img\Editor\embed-oform.png" />
     <Content Include="Content\img\Editor\exit-button.png" />
     <Content Include="Content\img\Editor\export.jpg" />
     <Content Include="Content\img\Editor\fast-mode.png" />
@@ -188,6 +195,7 @@
     <Content Include="Content\img\Editor\history_open.png" />
     <Content Include="Content\img\Editor\info.png" />
     <Content Include="Content\img\Editor\inlineEditors.png" />
+    <Content Include="Content\img\Editor\insert-external-data.svg" />
     <Content Include="Content\img\Editor\ios-api-config.png" />
     <Content Include="Content\img\Editor\ios-error.png" />
     <Content Include="Content\img\Editor\ios-managing.png" />
@@ -217,7 +225,7 @@
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
-    <Content Include="Content\img\Editor\opening.jpg" />
+    <Content Include="Content\img\Editor\opening.svg" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\paste-link.png" />
@@ -225,10 +233,12 @@
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
     <Content Include="Content\img\Editor\progress-view.png" />
+    <Content Include="Content\img\Editor\protect.png" />
     <Content Include="Content\img\Editor\rebranding\logo-big.png" />
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />
-    <Content Include="Content\img\Editor\rename.png" />
+    <Content Include="Content\img\Editor\rename.svg" />
+    <Content Include="Content\img\Editor\reply.svg" />
     <Content Include="Content\img\Editor\review.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
     <Content Include="Content\img\Editor\save-updates.png" />
@@ -242,6 +252,7 @@
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
     <Content Include="Content\img\Editor\update-values.png" />
     <Content Include="Content\img\Editor\viewer.png" />
+    <Content Include="Content\img\Editor\viewing-history.svg" />
     <Content Include="Content\img\get-docs\docker.png" />
     <Content Include="Content\img\get-docs\linux.svg" />
     <Content Include="Content\img\get-docs\windows.svg" />
@@ -252,12 +263,9 @@
     <Content Include="Content\img\java\tomcat-cmd.jpg" />
     <Content Include="Content\img\java\upload-app.jpg" />
     <Content Include="Content\img\java\war-file.jpg" />
-    <Content Include="Content\img\main-page\community_server.svg" />
-    <Content Include="Content\img\main-page\desktop.svg" />
-    <Content Include="Content\img\main-page\document_builder.svg" />
+
     <Content Include="Content\img\main-page\document_server.svg" />
-    <Content Include="Content\img\main-page\hosted_solution.svg" />
-    <Content Include="Content\img\main-page\plugins_and_macros.svg" />
+
     <Content Include="Content\img\not-found.svg" />
     <Content Include="Content\img\orange-arrow.svg" />
     <Content Include="Content\img\php\browse.png" />
@@ -271,6 +279,7 @@
     <Content Include="Content\img\Video\install-plugins.png" />
     <Content Include="Content\img\Video\nextcloud_integration.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
+    <Content Include="Content\connector.css" />
     <Content Include="Content\jquery.treeview.css" />
     <Content Include="Content\main-page.css" />
     <Content Include="Content\pushy.css" />
@@ -327,6 +336,7 @@
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
     <Content Include="Views\Editors\Drupal.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
+    <Content Include="Views\Editors\EmbeddingForms.aspx" />
     <Content Include="Views\Editors\Example.aspx" />
     <Content Include="Views\Editors\Example\Csharp.ascx" />
     <Content Include="Views\Editors\Example\Java.ascx" />
@@ -357,6 +367,11 @@
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
     <Content Include="Views\Editors\InsertingExternalData.aspx" />
+    <Content Include="Views\Editors\InteractingOutside.aspx" />
+    <Content Include="Views\Editors\InteractingOutside\Comments.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\Default.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\FillingForm.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\ReviewWork.ascx" />
     <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />

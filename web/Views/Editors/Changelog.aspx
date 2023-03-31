@@ -44,7 +44,7 @@
         <li>用于启用 <a href="<%= Url.Action("signature/body") %>">正文中令牌</a> 的 <em>services.CoAuthoring.token.inbox.inBody</em> 和 <em>services.CoAuthoring.token.outbox.inBody</em> 参数已经弃用。</li>
         <li>在 <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> WOPI 操作中添加了 <em>X-LOOL-WOPI-IsModifiedByUser</em>、 <em>X-LOOL-WOPI-IsAutosave</em> 和 <em>X-LOOL-WOPI-IsExitSave</em> 请求标头，以区分文档保存的类型。</li>
         <li><a href="<%= Url.Action("config/editor/customization") %>#chat">editorConfig.customization.chat</a> 参数已弃用，请改用 <a href="<%= Url.Action("config/document/permissions") %>#chat">document.permissions.chat</a> 参数。</li>
-        <li>添加了从 <a href="<%= Url.Action("conversionapi") %>#spreadsheet-matrix">xlsb</a> 格式转换的功能。</li>
+        <li>添加了从 <a href="<%= Url.Action("conversionapi") %>#text-matrix">dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xlsb, xml</a> 格式转换的功能。</li>
         <li>添加了打开 <a href="<%= Url.Action("config/") %>#documentType">xlsb</a> 格式的功能。</li>
         <li>初始化配置 <a href="<%= Url.Action("signature/browser") %>#open">signature</a> 中的参数列表已得到严格规范。</li>
         <li><a href="<%= Url.Action("config/editor/customization") %>#spellcheck">editorConfig.customization.spellcheck</a> 字段已弃用，请改用 <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features.spellcheck</a> 字段。</li>
@@ -54,6 +54,7 @@
         <li>添加了从 <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdf/xps/oxps</a> 格式到 <em>docx</em>的转换。</li>
         <li>添加了 <a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">document.permissions.userInfoGroups</a> 参数。</li>
         <li>添加了从 <a href="<%= Url.Action("conversionapi") %>#text-matrix">djvu</a> 格式到 <em>pdf</em> 的转换。</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">ppsm, ppsx</a> formats.</li>
     </ul>
 
     <h2 id="70" class="copy-link">7.0 版</h2>

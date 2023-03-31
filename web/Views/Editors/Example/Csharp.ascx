@@ -41,7 +41,7 @@
 <h2 id="win-3" class="copy-link"><span class="style_step">步骤 3.</span>安装先决条件</h2>
 <p>检查您的系统是否满足要求：</p>
 <ul>
-    <li><b>Microsoft .NET Framework</b>：4.5版（从 <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=30653">微软官方网站</a>下载）；</li>
+    <li><b>Microsoft .NET Framework</b>：4.5版（从 <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=30653" target="_blank">微软官方网站</a>下载）；</li>
     <li><b>Internet Information Services</b>：版本 7 或更高版本。</li>
 </ul>
 <p>配置 IIS 组件以使服务器正常工作：</p>

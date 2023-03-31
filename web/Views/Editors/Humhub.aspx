@@ -16,7 +16,7 @@
     </h1>
 
     <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">插件</a> 使用户可以从 <a href="https://www.humhub.com/" target="_blank">HumHub</a> 中使用 ONLYOFFICE 文档编辑办公文档。</p>
-    <p>该插件可以在官方 <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a>中获得。</p>
+    <p>该插件可以在官方 <a href="https://marketplace.humhub.com/module/onlyoffice" target="_blank">HumHub Marketplace</a>中获得。</p>
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
@@ -40,7 +40,7 @@
     <h2 id="installing-plugin" class="copy-link">安装 HumHub ONLYOFFICE 连接器</h2>
 
     <p>
-        从 <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a> 安装它，或者简单地将存储库克隆到 <em>moduleAutoloadPaths</em> 参数指定的文件夹之一中。
+        从 <a href="https://marketplace.humhub.com/module/onlyoffice" target="_blank">HumHub Marketplace</a> 安装它，或者简单地将存储库克隆到 <em>moduleAutoloadPaths</em> 参数指定的文件夹之一中。
         请参阅 <a href="https://docs.humhub.org/docs/develop/environment#module-loader-path" target="_blank">HumHub 文档</a> 了解更多信息。
     </p>
 

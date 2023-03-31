@@ -73,8 +73,13 @@
 
         <pre>
 {
-    "fileType": "png",
-    "url": "https://example.com/url-to-example-image.png"
+    "c": "add",
+    "images": [
+        {
+            "fileType": "png",
+            "url": "https://example.com/url-to-example-image.png"
+        }
+    ]
 }
 </pre>
         <p>
@@ -83,7 +88,7 @@
         </p>
 
         <div class="header-gray">示例令牌</div>
-        <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UucG5nIn0.FXuC3GUvPq3japwyzo4i-utUe3g1rfSDt1ytuK_VyCc</pre>
+        <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UucG5nIn1dfQ._tPxpJrPbom_f83qgX4_AB9v1cfK2LSQsfomfl7zJ58</pre>
     </li>
     <li>
         <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - 在 ONLYOFFICE 文档服务器中调用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法查看文档 <a href="<%= Url.Action("history") %>">历史</a> 版本时，必须添加 <a href="<%= Url.Action("methods") %>#setHistoryData-token">令牌</a> 以验证参数。</p>

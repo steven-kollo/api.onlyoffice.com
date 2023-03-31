@@ -20,6 +20,9 @@
         <b>文档编辑器</b> 将文档历史记录显示在左侧面板的版本列表中。
         当您从列表中选择文档版本时，文档将被显示出来以供预览。
     </p>
+
+    <p>The reference figure and the steps below explain the process of viewing the history in ONLYOFFICE Document Server.</p>
+    <img alt="Document history" src="<%= Url.Content("~/content/img/editor/viewing-history.svg") %>" />
     <ol>
         <li>用户在 <b>文档编辑器</b>中编辑文档时单击 <em>版本历史</em> 按钮。</li>
         <li><b>文档编辑器</b> 从 <b>文档存储服务</b>请求文档版本列表。</li>

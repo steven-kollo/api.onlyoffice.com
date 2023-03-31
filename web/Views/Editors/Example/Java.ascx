@@ -43,8 +43,8 @@ files.docservice.url.site=https://documentserver/</pre>
 <p>要运行 Java 示例代码，请安装适用于您的操作系统和 Web 服务器 <b>Apache Tomcat</b>的 Java 版本：</p>
 
 <ul>
-    <li><b>Java</b> （从 <a href="https://www.java.com/zh-CN/download/manual.jsp">Oracle官网</a>下载）；</li>
-    <li><b>Apache Tomcat</b>：9.0.x 版（从 <a href="https://tomcat.apache.org/download-90.cgi">官网</a>下载）。</li>
+    <li><b>Java</b> （从 <a href="https://www.java.com/zh-CN/download/manual.jsp" target="_blank">Oracle官网</a>下载）；</li>
+    <li><b>Apache Tomcat</b>：9.0.x 版（从 <a href="https://tomcat.apache.org/download-90.cgi" target="_blank">官网</a>下载）。</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">步骤 4.</span>运行 Apache Tomcat</h2>

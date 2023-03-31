@@ -32,7 +32,7 @@
 <ol>
     <li>
         <b>Python</b> 预装在大多数 Linux 发行版上，并且在所有其他发行版上都以包的形式提供。需要 Python 3.9。
-        如果您有任何问题， 请继续阅读 <a href="https://docs.python.org/zh-cn/3/using/unix.html">官方文档</a>。
+        如果您有任何问题， 请继续阅读 <a href="https://docs.python.org/zh-cn/3/using/unix.html" target="_blank">官方文档</a>。
     </li>
     <li>下载包含 Python 示例的存档并解压缩存档：
         <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Python%20Example.zip"</div>

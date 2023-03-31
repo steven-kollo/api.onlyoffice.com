@@ -47,7 +47,7 @@
 <h2 id="win-3" class="copy-link"><span class="style_step">步骤 3.</span>安装 Node.js 环境</h2>
 <p>
     安装将用于运行 Node.js 项目的 <b>node.js</b> 环境。
-    请按照 <a href="https://nodejs.org/zh-cn/download/">官方网站</a> 上的链接为您的 Windows 操作系统（32 位或 64 位）选择正确的版本。
+    请按照 <a href="https://nodejs.org/zh-cn/download/" target="_blank">官方网站</a> 上的链接为您的 Windows 操作系统（32 位或 64 位）选择正确的版本。
 </p>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">步骤 4.</span>运行 Node.js 代码</h2>

@@ -14,7 +14,7 @@
         <span class="hdr">打开文件</span>
     </h1>
     <p class="dscr">参考图和以下步骤说明了在 ONLYOFFICE 文档服务器中打开文档的过程。
-    </p><img alt="打开文件" src="<%= Url.Content("~/content/img/editor/opening.jpg") %>" />
+    </p><img alt="打开文件" src="<%= Url.Content("~/content/img/editor/opening.svg") %>" />
     <ol>
         <li>用户使用 <b>文档管理器</b> （在他/她的浏览器中找到）打开文档进行查看或编辑。
             <div class="note">浏览器 <b>文档管理器</b> 从 <b>文档存储服务</b>接收用户可用的所有文档的列表。</div>

@@ -48,9 +48,9 @@ $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
 </p>
 
 <ul>
-    <li><b>IIS</b>：版本7或更高版本（参考 <a href="https://learn.microsoft.com/zh-cn/iis/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">微软官网</a> 了解如何安装IIS）；</li>
-    <li><b>PHP</b> （从 <a href="https://php.net/downloads.php">https://php.net</a> 网站下载）；</li>
-    <li><b>PHP Manager for IIS</b> （从 <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft 开源网站</a>下载）。</li>
+    <li><b>IIS</b>：版本7或更高版本（参考 <a href="https://learn.microsoft.com/zh-cn/iis/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php" target="_blank">微软官网</a> 了解如何安装IIS）；</li>
+    <li><b>PHP</b> （从 <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> 网站下载）；</li>
+    <li><b>PHP Manager for IIS</b> （从 <a href="https://phpmanager.codeplex.com/releases/view/69115" target="_blank">Microsoft 开源网站</a>下载）。</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">步骤 4.</span>IIS 配置</h2>

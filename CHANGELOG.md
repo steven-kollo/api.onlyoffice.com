@@ -1,5 +1,19 @@
 # Change Log
 
+## 3.1.0
+- editors: test examples v1.5.1
+- editors: added conversion from dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xml format
+- editors: added the examples of interaction with the documents from the outside
+- editors: added the Embedding forms into a web page page
+- editors: conversion to ppsm, ppsx
+- editors: added the Go signature code example
+- plugins: v7.3.3
+- macros: added the Insert unique id macro sample
+- docbuilder: v7.3.3
+- docbuilder: changed the color scheme of the builder examples
+- portals: api v12.5
+- portals: moved the Hosted solution section to the Community server section
+
 ## 3.0.4
 - editors: changed drupal description
 - editors: changed alfresco description
@@ -37,7 +51,7 @@
 - plugins: parsing documentation from source code
 - plugins: added the icons2 and store parameters to the plugin config
 - docbuilder: v7.3
-- portals: generate documentation without dll 
+- portals: generate documentation without dll
 
 ## 2.11.0
 - editors: mobile edit, mobile view and embedded view buttons on try page
