@@ -10,8 +10,11 @@
         <member name="P:ASC.IPSecurity.IPRestriction.TenantId">
             <example type="int">1</example>
         </member>
-        <member name="P:ASC.IPSecurity.IPRestriction.Ip">
+        <member name="P:ASC.IPSecurity.IPRestrictionBase.Ip">
             <example>Ip</example>
+        </member>
+        <member name="P:ASC.IPSecurity.IPRestrictionBase.ForAdmin">
+            <example>false</example>
         </member>
     </members>
 </doc>

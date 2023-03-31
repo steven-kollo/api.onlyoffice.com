@@ -100,7 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CacheManifest.cs" />
-    <Compile Include="Controllers\ApiSystemController.cs" />
     <Compile Include="Controllers\CacheManifestController.cs" />
     <Compile Include="Controllers\DesktopController.cs" />
     <Compile Include="Controllers\DocBuilderController.cs" />
@@ -108,9 +107,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
+    <Compile Include="DocumentGenerator\CSharpDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocPluginsDocumentation.cs" />
-    <Compile Include="DocumentGenerator\Documentation.cs" />
+    <Compile Include="DocumentGenerator\CommunityServerDocumentation.cs" />
     <Compile Include="DocumentGenerator\JsDocDocumentation.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
     <Compile Include="Extensions\XmlExtensions.cs" />
@@ -125,6 +125,7 @@
     <Compile Include="Helpers\Highliter.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
+    <Compile Include="Helpers\Persons.cs" />
     <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\RedirectAttribute.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
@@ -148,7 +149,9 @@
     <Content Include="App_Data\docbuilder\examples\BulletType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\byte.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\CaptionLabel.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CaptionNumberingFormat.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\captionRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CaptionSep.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\captionType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddDefName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddSheet.docbuilder" />
@@ -275,6 +278,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiName.GetRefersToRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiName.SetName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiName.SetRefersTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.GetApplicationId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiOleObject.GetData.docbuilder" />
@@ -655,6 +659,8 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.FollowMasterBackground.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllCharts.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllDrawings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllImages.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllOleObjects.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetAllShapes.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.GetMaster.docbuilder" />
@@ -671,6 +677,8 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.Duplicate.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllCharts.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllDrawings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllImages.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllOleObjects.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetAllShapes.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.GetLayout.docbuilder" />
@@ -680,6 +688,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.RemoveObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.SetTheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.ToJSON.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetApplicationId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetData.docbuilder" />
@@ -883,10 +892,12 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiTheme.SetFontScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiTheme.SetFormatScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.ChangeColor.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.Copy.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.SetSchemeName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.ToJSON.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.Copy.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.SetFonts.docbuilder" />
@@ -914,6 +925,13 @@
     <Content Include="App_Data\docbuilder\examples\TextTransform.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TickLabelPosition.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TickMark.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocBuildFromPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocLeader.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TocStyleLvl.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TofPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TofStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\twips.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\VerticalTextAlign.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.AddComment.docbuilder" />
@@ -1263,6 +1281,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.GetLinkedText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.GetScreenTipText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetDefaultStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetDisplayedText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetLink.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiHyperlink.SetScreenTipText.docbuilder" />
@@ -1316,6 +1335,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiNumberingLevel.SetStart.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiNumberingLevel.SetSuff.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiNumberingLevel.SetTemplateType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.GetApplicationId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiOleObject.GetData.docbuilder" />
@@ -1922,6 +1942,7 @@
     <Content Include="App_Data\editor\PHP Example.zip" />
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
+    <Content Include="App_Data\editor\wildcardData\persons.json" />
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
@@ -2132,6 +2153,9 @@
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\server-components.png" />
     <Content Include="Content\img\csharp\sitename.png" />
+    <Content Include="Content\img\connector\comments.svg" />
+    <Content Include="Content\img\connector\filling-form.svg" />
+    <Content Include="Content\img\connector\review-work.svg" />
     <Content Include="Content\img\desktop\adding_plugins.png" />
     <Content Include="Content\img\desktop\connection_list.png" />
     <Content Include="Content\img\desktop\debugging.png" />
@@ -2154,7 +2178,9 @@
     <Content Include="Content\img\docbuilder\download.png" />
     <Content Include="Content\img\docbuilder\examples\coordinate_aspects.png" />
     <Content Include="Content\img\docbuilder\examples\icon_DocumentEditors.png" />
+    <Content Include="Content\img\docbuilder\examples\ole-object-image.png" />
     <Content Include="Content\img\docbuilder\examples\step2_1.png" />
+    <Content Include="Content\img\docbuilder\examples\user-profile.png" />
     <Content Include="Content\img\docbuilder\file_docx.png" />
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
@@ -2195,6 +2221,8 @@
     <Content Include="Content\img\Editor\editor-samples.png" />
     <Content Include="Content\img\Editor\editor.png" />
     <Content Include="Content\img\Editor\embedded.png" />
+    <Content Include="Content\img\Editor\embed-docxf.png" />
+    <Content Include="Content\img\Editor\embed-oform.png" />
     <Content Include="Content\img\Editor\exit-button.png" />
     <Content Include="Content\img\Editor\export.jpg" />
     <Content Include="Content\img\Editor\fast-mode.png" />
@@ -2208,6 +2236,7 @@
     <Content Include="Content\img\Editor\history_open.png" />
     <Content Include="Content\img\Editor\info.png" />
     <Content Include="Content\img\Editor\inlineEditors.png" />
+    <Content Include="Content\img\Editor\insert-external-data.svg" />
     <Content Include="Content\img\Editor\ios-api-config.png" />
     <Content Include="Content\img\Editor\ios-error.png" />
     <Content Include="Content\img\Editor\ios-managing.png" />
@@ -2237,7 +2266,7 @@
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
-    <Content Include="Content\img\Editor\opening.jpg" />
+    <Content Include="Content\img\Editor\opening.svg" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\paste-link.png" />
@@ -2245,10 +2274,12 @@
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
     <Content Include="Content\img\Editor\progress-view.png" />
+    <Content Include="Content\img\Editor\protect.png" />
     <Content Include="Content\img\Editor\rebranding\logo-big.png" />
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />
-    <Content Include="Content\img\Editor\rename.png" />
+    <Content Include="Content\img\Editor\rename.svg" />
+    <Content Include="Content\img\Editor\reply.svg" />
     <Content Include="Content\img\Editor\review.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
     <Content Include="Content\img\Editor\save-updates.png" />
@@ -2262,6 +2293,7 @@
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
     <Content Include="Content\img\Editor\update-values.png" />
     <Content Include="Content\img\Editor\viewer.png" />
+    <Content Include="Content\img\Editor\viewing-history.svg" />
     <Content Include="Content\img\get-docs\docker.png" />
     <Content Include="Content\img\get-docs\linux.svg" />
     <Content Include="Content\img\get-docs\windows.svg" />
@@ -2273,6 +2305,7 @@
     <Content Include="Content\img\java\upload-app.jpg" />
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\macros\add-new-chart.svg" />
+    <Content Include="Content\img\macros\assign_unique_id.svg" />
     <Content Include="Content\img\macros\cell-background-color.svg" />
     <Content Include="Content\img\macros\cell-font-bold.svg" />
     <Content Include="Content\img\macros\change-cell.svg" />
@@ -2293,7 +2326,6 @@
     <Content Include="Content\img\main-page\desktop.svg" />
     <Content Include="Content\img\main-page\document_builder.svg" />
     <Content Include="Content\img\main-page\document_server.svg" />
-    <Content Include="Content\img\main-page\hosted_solution.svg" />
     <Content Include="Content\img\main-page\plugins_and_macros.svg" />
     <Content Include="Content\img\not-found.svg" />
     <Content Include="Content\img\orange-arrow.svg" />
@@ -2372,6 +2404,7 @@
     <Content Include="Content\img\plugins\helloworld_icon.png" />
     <Content Include="Content\img\plugins\highlight_duplicates.png" />
     <Content Include="Content\img\plugins\import-csv-macro.png" />
+    <Content Include="Content\img\plugins\insert_id.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
@@ -2442,6 +2475,7 @@
     <Content Include="Content\img\Video\install-plugins.png" />
     <Content Include="Content\img\Video\nextcloud_integration.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
+    <Content Include="Content\connector.css" />
     <Content Include="Content\jquery.treeview.css" />
     <Content Include="Content\main-page.css" />
     <Content Include="Content\plugins-macros.css" />
@@ -2462,17 +2496,6 @@
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="version.txt" />
-    <Content Include="Views\ApiSystem\Authentication.aspx" />
-    <Content Include="Views\ApiSystem\Basic.aspx" />
-    <Content Include="Views\ApiSystem\Navigation.ascx" />
-    <Content Include="Views\ApiSystem\PortalGet.aspx" />
-    <Content Include="Views\ApiSystem\PortalRegister.aspx" />
-    <Content Include="Views\ApiSystem\PortalRemove.aspx" />
-    <Content Include="Views\ApiSystem\PortalStatus.aspx" />
-    <Content Include="Views\ApiSystem\Section.aspx" />
-    <Content Include="Views\ApiSystem\TariffGet.aspx" />
-    <Content Include="Views\ApiSystem\TariffSet.aspx" />
-    <Content Include="Views\ApiSystem\ValidatePortalName.aspx" />
     <Content Include="Views\Desktop\AddingDMS.aspx" />
     <Content Include="Views\Desktop\AddingDMS\Configuring.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Default.ascx" />
@@ -2673,6 +2696,7 @@
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
     <Content Include="Views\Editors\Drupal.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
+    <Content Include="Views\Editors\EmbeddingForms.aspx" />
     <Content Include="Views\Editors\Example.aspx" />
     <Content Include="Views\Editors\Example\Csharp.ascx" />
     <Content Include="Views\Editors\Example\Java.ascx" />
@@ -2703,6 +2727,11 @@
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
     <Content Include="Views\Editors\InsertingExternalData.aspx" />
+    <Content Include="Views\Editors\InteractingOutside.aspx" />
+    <Content Include="Views\Editors\InteractingOutside\Comments.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\Default.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\FillingForm.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\ReviewWork.ascx" />
     <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />
@@ -2822,6 +2851,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\formatrangeasatable.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\highlightduplicates.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\importcsv.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\insertid.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\inserttext.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\makecellfontbold.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\mergecellrange.ascx" />
@@ -2841,6 +2871,18 @@
     <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Types.aspx" />
     <Content Include="Views\Plugin\Variations.aspx" />
+    <Content Include="Views\Portals\ApiSystem.aspx" />
+    <Content Include="Views\Portals\ApiSystem\Authentication.ascx" />
+    <Content Include="Views\Portals\ApiSystem\Default.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\PortalGet.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\PortalRegister.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\PortalRemove.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\PortalStatus.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\ValidatePortalName.ascx" />
+    <Content Include="Views\Portals\ApiSystem\TariffSection.ascx" />
+    <Content Include="Views\Portals\ApiSystem\TariffSection\TariffGet.ascx" />
+    <Content Include="Views\Portals\ApiSystem\TariffSection\TariffSet.ascx" />
     <Content Include="Views\Portals\Auth.aspx" />
     <Content Include="Views\Portals\Basic.aspx" />
     <Content Include="Views\Portals\Batch.aspx" />

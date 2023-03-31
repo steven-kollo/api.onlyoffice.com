@@ -32,7 +32,7 @@
 <ol>
     <li>
         <b>Python</b> comes preinstalled on most Linux distributions, and is available as a package on all others.
-        Python 3.9 is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html">official documentation</a> if you have any troubles.
+        Python 3.9 is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html" target="_blank">official documentation</a> if you have any troubles.
     </li>
     <li>Download the archive with the Python example and unpack the archive:
         <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Python%20Example.zip"</div>

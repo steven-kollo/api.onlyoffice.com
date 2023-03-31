@@ -1,7 +1,7 @@
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
-var oTableStyle = oDocument.GetStyle("Bordered - Accent 5");
-let json = oStyle.ToJSON(false);
+var oTableStyle = oDocument.GetStyle("Bordered");
+var json = oTableStyle.ToJSON(false);
 var oStyleFromJSON = Api.FromJSON(json);
 oStyleFromJSON.SetName("My Custom Style");
 var oTable = Api.CreateTable(2, 2);

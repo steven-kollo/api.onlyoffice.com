@@ -1,8 +1,8 @@
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
-var oSchemeColor = Api.CreateSchemeColor("accent6");
-let json = oSchemeColor.ToJSON();
+var oSchemeColor = Api.CreateSchemeColor("dk1");
+var json = oSchemeColor.ToJSON();
 var oSchemeColorFromJSON = Api.FromJSON(json);
 var oFill = Api.CreateSolidFill(oSchemeColorFromJSON);
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());

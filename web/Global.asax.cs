@@ -134,6 +134,10 @@ namespace ASC.Api.Web.Help
             bundles.Add(new Bundle("~/content/get-docs", new CssMinify())
                 .Include(
                     "~/content/get-docs.css"));
+
+            bundles.Add(new Bundle("~/content/connector", new CssMinify())
+                .Include(
+                    "~/content/connector.css"));
         }
 
         protected void Application_Start()
@@ -181,7 +185,7 @@ namespace ASC.Api.Web.Help
 
                             try
                             {
-                                Documentation.Load();
+                                CommunityServerDocumentation.Load();
                             }
                             catch (Exception error)
                             {

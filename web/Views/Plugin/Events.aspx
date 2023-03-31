@@ -17,6 +17,7 @@
     </h1>
 
     <p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
+    <note>Please note that to use events in your plugin code, you must subscribe to them first by specifying each event in the <a href="<%= Url.Action("config") %>#events">events</a> parameter of the plugin config.</note>
 
     <h2>Events and their description:</h2>
     <table class="table table-classlist">

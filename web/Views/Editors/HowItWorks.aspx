@@ -37,6 +37,7 @@
         <li><a href="<%= Url.Action("viewing") %>">Viewing</a></li>
         <li><a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a></li>
         <li><a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a></li>
+        <li><a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a></li>
     </ul>
     
     <br />

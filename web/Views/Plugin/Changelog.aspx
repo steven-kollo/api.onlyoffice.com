@@ -24,7 +24,8 @@
         <li>Added the <a href="<%= Url.Action("executemethod/common/ondropevent") %>">OnDropEvent</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/cell") %>">Spreadsheet Api</a> methods to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/slide") %>">Presentation Api</a> methods to <em>window.Asc.plugin.executeMethod</em>.</li>
-    
+    </ul>
+
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("events/onAddComment") %>">onAddComment</a> event.</li>

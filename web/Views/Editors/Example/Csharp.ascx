@@ -41,7 +41,7 @@
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>Check that your system meets the requirements:</p>
 <ul>
-    <li><b>Microsoft .NET Framework</b>: version 4.5 (download it from the <a href="https://www.microsoft.com/en-US/download/details.aspx?id=30653">official Microsoft website</a>);</li>
+    <li><b>Microsoft .NET Framework</b>: version 4.5 (download it from the <a href="https://www.microsoft.com/en-US/download/details.aspx?id=30653" target="_blank">official Microsoft website</a>);</li>
     <li><b>Internet Information Services</b>: version 7 or later.</li>
 </ul>
 <p>Configure the IIS components for the server to work correctly:</p>

@@ -1,1 +1,1 @@
-window.Asc.plugin.executeMethod("InputText", ["ONLYOFFICE Plugins", "ONLYOFFICE for developers"]);
+window.Asc.plugin.executeMethod ("InputText", ["ONLYOFFICE Plugins", "ONLYOFFICE for developers"]);

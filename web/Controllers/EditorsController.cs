@@ -72,6 +72,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "DemoPreview",
                 "DocumentBuilderApi",
                 "Drupal",
+                "EmbeddingForms",
                 "Example/Java",
                 "Example/JavaSpring",
                 "Example/Nodejs",
@@ -99,6 +100,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "HumHub",
                 "InlineEditors",
                 "InsertingExternalData",
+                "InteractingOutside",
+                "InteractingOutside/Comments",
+                "InteractingOutside/FillingForm",
+                "InteractingOutside/ReviewWork",
                 "Jira",
                 "Liferay",
                 "Mattermost",
@@ -318,6 +323,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult EmbeddingForms()
+        {
+            return View();
+        }
+
         public ActionResult Frameworks()
         {
             return View();
@@ -346,6 +356,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult InsertingExternalData()
         {
             return View();
+        }
+
+        public ActionResult InteractingOutside(string catchall)
+        {
+            if (!_actionMap.Contains("interactingoutside/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("InteractingOutside", (object)catchall);
         }
 
         public ActionResult Jira()

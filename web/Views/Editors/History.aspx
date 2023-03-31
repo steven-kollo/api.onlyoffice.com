@@ -20,6 +20,9 @@
         The <b>document editor</b> displays the document history as a version list at the left-side panel.
         When you select a document version from the list it will be displayed for preview.
     </p>
+
+    <p>The reference figure and the steps below explain the process of viewing the history in ONLYOFFICE Document Server.</p>
+    <img alt="Document history" src="<%= Url.Content("~/content/img/editor/viewing-history.svg") %>" />
     <ol>
         <li>The user clicks the <em>Version History</em> button while editing the document within the <b>document editor</b>.</li>
         <li>The <b>document editor</b> requests the list of the document versions from the <b>document storage service</b>.</li>

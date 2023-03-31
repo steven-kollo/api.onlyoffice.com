@@ -44,7 +44,7 @@
         <li>The <em>services.CoAuthoring.token.inbox.inBody</em> and <em>services.CoAuthoring.token.outbox.inBody</em> parameters for enabling <a href="<%= Url.Action("signature/body") %>">token in body</a> are deprecated.</li>
         <li>Added the <em>X-LOOL-WOPI-IsModifiedByUser</em>, <em>X-LOOL-WOPI-IsAutosave</em> and <em>X-LOOL-WOPI-IsExitSave</em> request headers to the <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> WOPI operation to distinguish between the type of document saving.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#chat">editorConfig.customization.chat</a> parameter is deprecated, please use the <a href="<%= Url.Action("config/document/permissions") %>#chat">document.permissions.chat</a> parameter instead.</li>
-        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#spreadsheet-matrix">xlsb</a> format.</li>
+        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xlsb, xml</a> format.</li>
         <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">xlsb</a> format.</li>
         <li>The parameter list in the initialization config <a href="<%= Url.Action("signature/browser") %>#open">signature</a> has become strictly regulated.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#spellcheck">editorConfig.customization.spellcheck</a> field is deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features.spellcheck</a> field instead.</li>
@@ -54,6 +54,7 @@
         <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdf/xps/oxps</a> formats to <em>docx</em>.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">document.permissions.userInfoGroups</a> parameter.</li>
         <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">djvu</a> format to <em>pdf</em>.</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">ppsm, ppsx</a> formats.</li>
     </ul>
 
     <h2 id="70" class="copy-link">Version 7.0</h2>

@@ -47,7 +47,7 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install Node.js environment</h2>
 <p>
     Install the <b>node.js</b> environment which is going to be used to run the Node.js project.
-    Please follow the link at the <a href="https://nodejs.org/en/download/">official website</a> choosing the correct version for your Windows OS (32-bit or 64-bit).
+    Please follow the link at the <a href="https://nodejs.org/en/download/" target="_blank">official website</a> choosing the correct version for your Windows OS (32-bit or 64-bit).
 </p>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Run the Node.js code</h2>

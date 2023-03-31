@@ -1110,6 +1110,16 @@
               Looks up a localized string similar to History Event Categories [{0}]. Icon Updated.
             </summary>
         </member>
+        <member name="P:ASC.AuditTrail.AuditReportResource.ImpersonateUserLogin">
+            <summary>
+              Looks up a localized string similar to User Impersonation, Login:  {0}.
+            </summary>
+        </member>
+        <member name="P:ASC.AuditTrail.AuditReportResource.ImpersonateUserLogout">
+            <summary>
+              Looks up a localized string similar to User Impersonation, Logout: {0}.
+            </summary>
+        </member>
         <member name="P:ASC.AuditTrail.AuditReportResource.ImportActionType">
             <summary>
               Looks up a localized string similar to Import.

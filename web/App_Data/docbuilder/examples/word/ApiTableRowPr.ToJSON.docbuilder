@@ -1,14 +1,14 @@
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
-oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
+oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered"));
 var oTable = Api.CreateTable(3, 3);
 oTable.SetWidth("percent", 100);
 var oTableRowPr = oTableStyle.GetTableRowPr();
 oTableRowPr.SetHeight("atLeast", 720);
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
-let json = oTableRowPr.ToJSON();
+var json = oTableRowPr.ToJSON();
 var oTableRowPrFromJSON = Api.FromJSON(json);
 var sType = oTableRowPrFromJSON.GetClassType();
 var oParagraph = oDocument.GetElement(0);
