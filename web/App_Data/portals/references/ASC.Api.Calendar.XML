@@ -480,6 +480,19 @@
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/calendar/caldavprojcal</path>
         </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.RefreshCalDavCalendar(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Refreshes the caldav calendar with the id specified in the request.
+            </summary>
+            <short>
+            Refresh CalDav calendar
+            </short>
+            <param type="System.String, System" name="calendarId">Calendar ID</param>
+            <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="team">User list</param>
+            <category>Tasks</category>
+            <httpMethod>UPDATE</httpMethod>
+            <path>api/2.0/calendar/refreshcaldavcalendar</path>
+        </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.DeleteCaldavEvent(System.String,System.String,System.Collections.Generic.List{System.String})">
             <summary>
             Deletes the CalDav event from the calendar with the ID specified in the request.

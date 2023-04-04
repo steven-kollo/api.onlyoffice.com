@@ -22,6 +22,7 @@
             <short>
             Get the current portal
             </short>
+            <category>Settings</category>
             <returns type="ASC.Core.Tenants.Tenant, ASC.Core.Common">Portal</returns>
              <path>api/2.0/portal</path>
             <httpMethod>GET</httpMethod>
@@ -58,12 +59,12 @@
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetShortenLink(System.String)">
             <summary>
-            Returns a shortened invitation link for joining the portal.
+            Returns a link specified in the request in the shortened format.
             </summary>
-            <short>Get a shortened invitation link</short>
-            <param type="System.String, System" name="link">Invitation link</param>
-            <category>Users</category>
-            <returns>Shortened invitation link</returns>
+            <short>Get a shortened link</short>
+            <param type="System.String, System" name="link">Link</param>
+            <category>Settings</category>
+            <returns>Shortened link</returns>
             <path>api/2.0/portal/getshortenlink</path>
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
@@ -347,7 +348,7 @@
             <summary>
             Creates the backup schedule for the current portal with the parameters specified in the request.
             </summary>
-            <short>Create the backup scheduleCreate the backup schedule</short>
+            <short>Create the backup schedule</short>
             <param type="ASC.Core.Common.Contracts.BackupStorageType, ASC.Core.Common.Contracts" name="storageType">Storage type ("Documents", "ThridpartyDocuments", "CustomCloud", "Local", "DataStore", or "ThirdPartyConsumer")</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.String}}, System.Collections.Generic" name="storageParams">Storage parameters</param>
             <param type="System.Int32, System" name="backupsStored">Maximum number of backup stored copies</param>

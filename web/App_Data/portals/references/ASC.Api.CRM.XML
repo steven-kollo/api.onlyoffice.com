@@ -648,7 +648,7 @@
             </summary>
             <short>Create a case</short> 
             <param type="System.String, System" name="title" optional="false">Case title</param>
-            <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="members" optional="true">Case participants</param>
+            <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="members" optional="true">List of contact IDs of the case participants</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32, System.String}}, System.Collections.Generic" name="customFieldList" optional="true">List of case custom fields</param>
             <param type="System.Boolean, System" name="isPrivate" optional="true">Case privacy: private or not</param>
             <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="accessList" optional="true">List of users with access to the case</param>
@@ -679,7 +679,7 @@
             <short>Update a case</short> 
             <param type="System.Int32, System" method="url" name="caseid" optional="false">Case ID</param>
             <param type="System.String, System" name="title" optional="false">New case title</param>
-            <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="members" optional="true">New case participants</param>
+            <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="members" optional="true">List of contact IDs of the case participants</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32, System.String}}, System.Collections.Generic" name="customFieldList" optional="true">New list of case custom fields</param>
             <param type="System.Boolean, System" name="isPrivate" optional="true">Case privacy: private or not</param>
             <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="accessList" optional="true">New list of users with access to the case</param>
@@ -1336,7 +1336,7 @@
             <summary>
             Deletes the selected person from the company with the ID specified in the request.
             </summary>
-            <param type="System.Int32, System" method="url" optional="true"  name="companyid">Company ID</param>
+            <param type="System.Int32, System" method="url" name="companyid">Company ID</param>
             <param type="System.Int32, System" optional="true" name="personid">Person ID</param>
             <short>Delete a person from the company</short> 
             <category>Contacts</category>
@@ -1691,6 +1691,7 @@
             <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="isPrimary">Contact importance: primary or not</param>
             <short>Get contacts by contact information</short>
             <category>Contacts</category>
+            <remarks>Please note that if the contact data from the "data" parameter refers to one of the contact information types, then the "infoType" parameter must be specified. For example, the "Paris" contact information is related to the "Address" information type.</remarks>
             <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
             List of contacts
             </returns>
@@ -3735,10 +3736,10 @@
             Returns a summary table with the rates for the currency specified in the request.
             </summary>
             <param type="System.String, System" method="url" name="currency" remark="Allowed values: EUR, RUB etc. You can get the whole list of available currencies by API">Currency (abbreviation)</param>
-            <short>Get currency rates</short> 
+            <short>Get currency summary table</short> 
             <category>Currencies</category>
             <returns type = "ASC.Api.CRM.CurrencyRateInfoWrapper, ASC.Api.CRM">
-            Dictionary of currency rates
+            Dictionary of currency rates for the specified currency
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/settings/currency/summarytable</path>

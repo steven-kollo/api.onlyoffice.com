@@ -127,7 +127,7 @@
             Get the SSO settings constants
             </short>
             <category>SSO</category>
-            <returns>The SSO settings Constants</returns>
+            <returns>The SSO settings constants</returns>
             <path>api/2.0/settings/ssov2/constants</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -467,6 +467,11 @@
             Set the password settings
             </short>
             <category>Security</category>
+            <param type="System.Int32, System" method="url" name="maxLength">Maximum length</param>
+            <param type="System.Int32, System" method="url" name="minLength">Minimum length</param>
+            <param type="System.Boolean, System" method="url" name="upperCase">Specifies whether to include uppercase letters or not</param>
+            <param type="System.Boolean, System" method="url" name="digits">Specifies whether to include digits or not</param>
+            <param type="System.Boolean, System" method="url" name="specSymbols">Specifies whether to include special symbols or not</param>
             <returns>Password settings</returns>
             <path>api/2.0/settings/security/password</path>
             <httpMethod>PUT</httpMethod>
@@ -707,7 +712,7 @@
             </summary>
             <short>Update the tip subscription</short>
             <category>Tips</category>
-            <returns>Updated tip subscription</returns>
+            <returns>Boolean value: true if the user is subscribed to the tips</returns>
             <path>api/2.0/settings/tips/change/subscription</path>
             <httpMethod>PUT</httpMethod>
         </member>
