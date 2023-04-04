@@ -6,10 +6,10 @@
     <span class="comment">This function requires authentication</span>
 </h1>
 
-<div class="header-gray">Description</div>
+<div id="methodDesc" class="header-gray">Description</div>
 <p class="dscr">Portal activation status change.</p>
 
-<div class="header-gray">Parameters</div>
+<div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -47,10 +47,10 @@
 <div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-<div class="header-gray">Returns</div>
+<div id="methodReturns" class="header-gray">Returns</div>
 <p>Returns the portal description.</p>
 
-<div class="header-gray">Example Response</div>
+<div id="methodResponse" class="header-gray">Example Response</div>
 <pre>
 {
     "tenant": {
