@@ -1,0 +1,1047 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.People</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.People.Api.ApiControllerBase">
+            <summary>
+            People API.
+            </summary>
+            <name>people</name>
+        </member>
+        <member name="M:ASC.People.Api.ContactsController.DeleteMemberContacts(System.String,ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+            <summary>
+            Deletes the contacts of the user with the ID specified in the request from the portal.
+            </summary>
+            <short>
+            Delete user contacts
+            </short>
+            <category>Contacts</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user contacts: <![CDATA[Contacts (IEnumerable&lt;Contact&gt;) - list of user contacts]]></param>
+            <returns>Deleted user profile with the detailed information</returns>
+            <path>api/2.0/people/{userid}/contacts</path>
+            <httpMethod>DELETE</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.ContactsController.SetMemberContacts(System.String,ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+            <summary>
+            Sets the contacts of the user with the ID specified in the request replacing the current portal data with the new data.
+            </summary>
+            <short>
+            Set user contacts
+            </short>
+            <category>Contacts</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user contacts: <![CDATA[Contacts (IEnumerable&lt;Contact&gt;) - list of user contacts]]></param>
+            <returns>Updated user profile with the detailed information</returns>
+            <path>api/2.0/people/{userid}/contacts</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.ContactsController.UpdateMemberContacts(System.String,ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+            <summary>
+            Updates the contact information of the user with the ID specified in the request merging the new data into the current portal data.
+            </summary>
+            <short>
+            Update user contacts
+            </short>
+            <category>Contacts</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user contacts: <![CDATA[Contacts (IEnumerable&lt;Contact&gt;) - list of user contacts]]></param>
+            <returns>Updated user profile with the detailed information</returns>
+            <path>api/2.0/people/{userid}/contacts</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.NotificationController.SendNotificationToChange(ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+            <summary>
+            Sends a notification to the user with the ID specified in the request to change their phone number.
+            </summary>
+            <short>
+            Send a notification to change a phone
+            </short>
+            <category>Profiles</category>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user contacts: UserId (string) - user ID</param>
+            <returns>Notification</returns>
+            <path>api/2.0/people/phone</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.PhotoController.CreateMemberPhotoThumbnails(System.String,ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto)">
+            <summary>
+            Creates photo thumbnails by coordinates of the original image specified in the request.
+            </summary>
+            <short>
+            Create photo thumbnails
+            </short>
+            <category>Photos</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Thumbnail request parameters: <![CDATA[
+            <ul>
+                <li><b>TmpFile</b> (string) - path to the temporary file,</li>
+                <li><b>X</b> (integer) - horizontal coordinate,</li>
+                <li><b>Y</b> (integer) - vertical coordinate,</li>
+                <li><b>Width</b> (integer) - thumbnail width,</li>
+                <li><b>Height</b> (integer) - thumbnail height.</li>
+            </ul>
+            ]]></param>
+            <path>api/2.0/people/{userid}/photo/thumbnails</path>
+            <httpMethod>POST</httpMethod>
+            <returns>Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+        </member>
+        <member name="M:ASC.People.Api.PhotoController.DeleteMemberPhoto(System.String)">
+            <summary>
+            Deletes a photo of the user with the ID specified in the request.
+            </summary>
+            <short>
+            Delete a user photo
+            </short>
+            <category>Photos</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <returns>Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+            <path>api/2.0/people/{userid}/photo</path>
+            <httpMethod>DELETE</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.PhotoController.GetMemberPhoto(System.String)">
+            <summary>
+            Returns a photo of the user with the ID specified in the request.
+            </summary>
+            <short>
+            Get a user photo
+            </short>
+            <category>Photos</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <returns>Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+            <path>api/2.0/people/{userid}/photo</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.PhotoController.UpdateMemberPhoto(System.String,ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+            <summary>
+            Updates a photo of the user with the ID specified in the request.
+            </summary>
+            <short>
+            Update a user photo
+            </short>
+            <category>Photos</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user photo: Files (string) - new avatar photo URL</param>
+            <returns>Updated thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+            <path>api/2.0/people/{userid}/photo</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.PhotoController.UploadMemberPhoto(System.String,Microsoft.AspNetCore.Http.IFormCollection)">
+            <summary>
+            Uploads a photo of the user with the ID specified in the request.
+            </summary>
+            <short>
+            Upload a user photo
+            </short>
+            <category>Photos</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <param type="Microsoft.AspNetCore.Http.IFormCollection, Microsoft.AspNetCore.Http" name="formCollection">Image data</param>
+            <path>api/2.0/people/{userid}/photo</path>
+            <httpMethod>POST</httpMethod>
+            <returns>Result of file uploading: success or not, data, message</returns>
+        </member>
+        <member name="M:ASC.People.Api.ReassignController.GetReassignProgress(System.Guid)">
+            <summary>
+            Returns the progress of the started data reassignment for the user with the ID specified in the request.
+            </summary>
+            <short>Get the reassignment progress</short>
+            <param type="System.Guid, System" name="userId">User ID whose data is reassigned</param>
+            <category>User data</category>
+            <returns>Reassignment progress: reassignment item progress ID, status, exception, percentage, completed or not, the user whose data is reassigned, the user to whom this data is reassigned</returns>
+            <path>api/2.0/people/reassign/progress</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.ReassignController.StartReassign(ASC.People.ApiModels.RequestDto.StartReassignRequestDto)">
+            <summary>
+            Starts the data reassignment for the user with the ID specified in the request.
+            </summary>
+            <short>Start the data reassignment</short>
+            <param type="ASC.People.ApiModels.RequestDto.StartReassignRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for starting the reassignment process: <![CDATA[
+            <ul>
+                <li><b>FromUserId</b> (Guid) - user ID whose data will be reassigned to another user,</li>
+                <li><b>ToUserId</b> (Guid) - user ID to whom all the data will be reassigned,</li>
+                <li><b>DeleteProfile</b> (bool) - specifies whether to delete a profile when the data reassignment will be finished or not.</li>
+            </ul>
+            ]]></param>
+            <category>User data</category>
+            <returns>Reassignment progress: reassignment item progress ID, status, exception, percentage, completed or not, the user whose data is reassigned, the user to whom this data is reassigned</returns>
+            <path>api/2.0/people/reassign/start</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.ReassignController.TerminateReassign(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
+            <summary>
+            Terminates the data reassignment for the user with the ID specified in the request.
+            </summary>
+            <short>Terminate the data reassignment</short>
+            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for terminating the reassignment process: UserId (Guid) - user ID whose data is reassigned</param>
+            <category>User data</category>
+            <path>api/2.0/people/reassign/terminate</path>
+            <httpMethod>PUT</httpMethod>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.People.Api.RemoveUserDataController.GetRemoveProgress(System.Guid)">
+            <summary>
+            Returns the progress of the started data deletion for the user with the ID specified in the request.
+            </summary>
+            <short>Get the deletion progress</short>
+            <param type="System.Guid, System" name="userId">User ID</param>
+            <category>User data</category>
+            <returns>Deletion progress: deletion item progress ID, status, exception, percentage, completed or not, the user whose data is deleted</returns>
+            <path>api/2.0/people/remove/progress</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.RemoveUserDataController.SendInstructionsToDelete">
+            <summary>
+            Sends instructions for deleting a user profile.
+            </summary>
+            <short>
+            Send the deletion instructions
+            </short>
+            <category>Profiles</category>
+            <returns>Information message</returns>
+            <path>api/2.0/people/self/delete</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.RemoveUserDataController.StartRemove(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
+            <summary>
+            Starts the data deletion for the user with the ID specified in the request.
+            </summary>
+            <short>Start the data deletion</short>
+            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for starting the deletion process: UserId (Guid) - user ID whose data is deleted</param>
+            <category>User data</category>
+            <returns>Deletion progress: deletion item progress ID, status, exception, percentage, completed or not, the user whose data is deleted</returns>
+            <path>api/2.0/people/remove/start</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.RemoveUserDataController.TerminateRemove(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
+            <summary>
+            Terminates the data deletion for the user with the ID specified in the request.
+            </summary>
+            <short>Terminate the data deletion</short>
+            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for terminating the deletion process: UserId (Guid) - user ID whose data is deleted</param>
+            <category>User data</category>
+            <path>api/2.0/people/remove/terminate</path>
+            <httpMethod>PUT</httpMethod>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.People.Api.ThirdpartyController.GetAuthProviders(System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+            Returns a list of the available third-party accounts.
+            </summary>
+            <short>Get third-party accounts</short>
+            <category>Third-party accounts</category>
+            <param type="System.Boolean, System" name="inviteView">Specifies whether to return providers that are available for invitation links, i.e. the user can login or register through these providers</param>
+            <param type="System.Boolean, System" name="settingsView">Specifies whether to return URLs in the format that is used on the Settings page</param>
+            <param type="System.String, System" name="clientCallback">Method that is called after authorization</param>
+            <param type="System.String, System" name="fromOnly">Provider name if the response only from this provider is needed</param>
+            <returns>List of third-party accounts: provider, URL, linked or not</returns>
+            <path>api/2.0/people/thirdparty/providers</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
+        </member>
+        <member name="M:ASC.People.Api.ThirdpartyController.LinkAccount(ASC.People.ApiModels.RequestDto.LinkAccountRequestDto)">
+            <summary>
+            Links a third-party account specified in the request to the user profile.
+            </summary>
+            <short>
+            Link a third-pary account
+            </short>
+            <category>Third-party accounts</category>
+            <param type="ASC.People.ApiModels.RequestDto.LinkAccountRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for linking accounts: SerializedProfile (string) - third-party profile in the serialized format</param>
+            <path>api/2.0/people/thirdparty/linkaccount</path>
+            <httpMethod>PUT</httpMethod>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.People.Api.ThirdpartyController.SignupAccount(ASC.People.ApiModels.RequestDto.SignupAccountRequestDto)">
+            <summary>
+            Creates a third-party account with the parameters specified in the request.
+            </summary>
+            <short>
+            Create a third-pary account
+            </short>
+            <category>Third-party accounts</category>
+            <param type="ASC.People.ApiModels.RequestDto.SignupAccountRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for creating a third-party account: <![CDATA[
+            <ul>
+                <li><b>EmplType</b> (EmployeeType?) - employee type (All, RoomAdmin, User, DocSpaceAdmin, Collaborator),</li>
+                <li><b>FirstName</b> (string) - first name,</li>
+                <li><b>LastName</b> (string) - last name,</li>
+                <li><b>Email</b> (string) - email address,</li>
+                <li><b>PasswordHash</b> (string) - password hash,</li>
+                <li><b>SerializedProfile</b> (string) - third-party profile in the serialized format.</li>
+            </ul>
+            ]]></param>
+            <path>api/2.0/people/thirdparty/signup</path>
+            <httpMethod>POST</httpMethod>
+            <returns>Task awaiter</returns>
+            <requiresAuthorization>false</requiresAuthorization>
+        </member>
+        <member name="M:ASC.People.Api.ThirdpartyController.UnlinkAccount(System.String)">
+            <summary>
+            Unlinks a third-party account specified in the request from the user profile.
+            </summary>
+            <short>
+            Unlink a third-pary account
+            </short>
+            <category>Third-party accounts</category>
+            <param type="System.String, System" name="provider">Provider name</param>
+            <path>api/2.0/people/thirdparty/unlinkaccount</path>
+            <httpMethod>DELETE</httpMethod>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.People.Api.UserController.AddMemberAsActivated(ASC.People.ApiModels.RequestDto.MemberRequestDto)">
+            <summary>
+            Adds an activated portal user with the first name, last name, email address, and several optional parameters specified in the request.
+            </summary>
+            <short>
+            Add an activated user
+            </short>
+            <category>Profiles</category>
+            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Member request parameters: <![CDATA[
+            <ul>
+                <li><b>Type</b> (EmployeeType) - employee type (All, RoomAdmin, User, DocSpaceAdmin, Collaborator),</li>
+                <li><b>Email</b> (string) - email,</li>
+                <li><b>Firstname</b> (string) - first name,</li>
+                <li><b>Lastname</b> (string) - last name,</li>
+                <li><b>Department</b> (Guid[]) - list of user departments,</li>
+                <li><b>Title</b> (string) - title,</li>
+                <li><b>Location</b> (string) - location,</li>
+                <li><b>Sex</b> (string) - sex (male or female),</li>
+                <li><b>Birthday</b> (ApiDateTime) - birthday,</li>
+                <li><b>Worksfrom</b> (ApiDateTime) - registration date (if it is not specified, then the current date will be set),</li>
+                <li><b>Comment</b> (string) - comment,</li>
+                <li><b>Contacts</b> (IEnumerable&lt;Contact&gt;) - list of user contacts,</li>
+                <li><b>Files</b> (string) - avatar photo URL,</li>
+                <li><b>Password</b> (string) - user password,</li>
+                <li><b>PasswordHash</b> (string) - password hash.</li>
+            </ul>
+            ]]></param>
+            <returns>Newly added user with the detailed information</returns>
+            <path>api/2.0/people/active</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.AddMember(ASC.People.ApiModels.RequestDto.MemberRequestDto)">
+            <summary>
+            Adds a new portal user with the first name, last name, email address, and several optional parameters specified in the request.
+            </summary>
+            <short>
+            Add a user
+            </short>
+            <category>Profiles</category>
+            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Member request parameters: <![CDATA[
+            <ul>
+                <li><b>Type</b> (EmployeeType) - employee type (All, RoomAdmin, User, DocSpaceAdmin, Collaborator),</li>
+                <li><b>IsUser</b> (bool) - specifies if this is a guest or a user,</li>
+                <li><b>Email</b> (string) - email,</li>
+                <li><b>Firstname</b> (string) - first name,</li>
+                <li><b>Lastname</b> (string) - last name,</li>
+                <li><b>Department</b> (Guid[]) - list of user departments,</li>
+                <li><b>Title</b> (string) - title,</li>
+                <li><b>Location</b> (string) - location,</li>
+                <li><b>Sex</b> (string) - sex (male or female),</li>
+                <li><b>Birthday</b> (ApiDateTime) - birthday,</li>
+                <li><b>Worksfrom</b> (ApiDateTime) - registration date (if it is not specified, then the current date will be set),</li>
+                <li><b>Comment</b> (string) - comment,</li>
+                <li><b>Contacts</b> (IEnumerable&lt;Contact&gt;) - list of user contacts,</li>
+                <li><b>Files</b> (string) - avatar photo URL,</li>
+                <li><b>Password</b> (string) - password,</li>
+                <li><b>PasswordHash</b> (string) - password hash,</li>
+                <li><b>FromInviteLink</b> (bool) - specifies if the user is added via the invitation link or not,</li>
+                <li><b>Key</b> (string) - key,</li>
+                <li><b>CultureName</b> (string) - language.</li>
+            </ul>
+            ]]></param>
+            <returns>Newly added user with the detailed information</returns>
+            <path>api/2.0/people</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.InviteUsersAsync(ASC.People.ApiModels.RequestDto.InviteUsersRequestDto)">
+            <summary>
+            Invites users specified in the request to the current portal.
+            </summary>
+            <short>
+            Invite users
+            </short>
+            <category>Profiles</category>
+            <param type="ASC.People.ApiModels.RequestDto.InviteUsersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for inviting users: <![CDATA[
+            <ul>
+                <li><b>Invitations</b> (IEnumerable&lt;UserInvitation&gt;) - list of user invitations:</li>
+                <ul>
+                    <li><b>Email</b> (string) - email address,</li>
+                    <li><b>Type</b> (EmployeeType) - employee type (All, RoomAdmin, User, DocSpaceAdmin, Collaborator).</li>
+                </ul>
+            </ul>
+            ]]></param>
+            <returns>List of users</returns>
+            <path>api/2.0/people/invite</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.ChangeUserPassword(System.Guid,ASC.People.ApiModels.RequestDto.MemberRequestDto)">
+            <summary>
+            Sets a new password to the user with the ID specified in the request.
+            </summary>
+            <short>Change a user password</short>
+            <category>Password</category>
+            <param type="System.Guid, System" name="userid">User ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for setting new password: <![CDATA[
+            <ul>
+                <li><b>Email</b> (string) - email address,</li>
+                <li><b>Password</b> (string) - password,</li>
+                <li><b>PasswordHash</b> (string) - password hash.</li>
+            </ul>
+            ]]></param>
+            <returns>Detailed user information</returns>
+            <path>api/2.0/people/{userid}/password</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.DeleteMember(System.String)">
+            <summary>
+            Deletes a user with the ID specified in the request from the portal.
+            </summary>
+            <short>
+            Delete a user
+            </short>
+            <category>Profiles</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <returns>Deleted user detailed information</returns>
+            <path>api/2.0/people/{userid}</path>
+            <httpMethod>DELETE</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.DeleteProfile">
+            <summary>
+            Deletes the current user profile.
+            </summary>
+            <short>
+            Delete my profile
+            </short>
+            <category>Profiles</category>
+            <returns>Detailed information about my profile</returns>
+            <path>api/2.0/people/@self</path>
+            <httpMethod>DELETE</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetAdvanced(ASC.Core.Users.EmployeeStatus,System.String)">
+            <summary>
+            Returns a list of users matching the status filter and search query.
+            </summary>
+            <short>
+            Search users by status filter
+            </short>
+            <category>Search</category>
+            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Users" name="status">User status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default")</param>
+            <param type="System.String, System" name="query">Search query</param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/status/{status}/search</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetAll">
+            <summary>
+            Returns a list of profiles for all the portal users.
+            </summary>
+            <short>
+            Get profiles
+            </short>
+            <category>Profiles</category>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetByEmail(System.String)">
+            <summary>
+            Returns the detailed information about a profile of the user with the email specified in the request.
+            </summary>
+            <short>
+            Get a profile by user email
+            </short>
+            <category>Profiles</category>
+            <param type="System.String, System" name="email">User email address</param>
+            <returns>Detailed profile information</returns>
+            <path>api/2.0/people/email</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetById(System.String)">
+            <summary>
+            Returns the detailed information about a profile of the user with the name specified in the request.
+            </summary>
+            <short>
+            Get a profile by user name
+            </short>
+            <category>Profiles</category>
+            <param type="System.String, System" name="username">User name</param>
+            <returns>Detailed profile information</returns>
+            <path>api/2.0/people/{username}</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetByStatus(ASC.Core.Users.EmployeeStatus)">
+            <summary>
+            Returns a list of profiles filtered by user status.
+            </summary>
+            <short>
+            Get profiles by status
+            </short>
+            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Users" name="status">User status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default")</param>
+            <returns>List of users with the detailed information</returns>
+            <category>User status</category>
+            <path>api/2.0/people/status/{status}</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetFullByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments})">
+            <summary>
+            Returns a list of users with full information about them matching the parameters specified in the request.
+            </summary>
+            <short>
+            Search users and their information by extended filter
+            </short>
+            <category>Search</category>
+            <param type="System.Nullable{ASC.Core.Users.EmployeeStatus}, System" name="employeeStatus">User status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default")</param>
+            <param type="System.Nullable{System.Guid}, System" name="groupId">Group ID</param>
+            <param type="System.Nullable{ASC.Core.Users.EmployeeActivationStatus}, System" name="activationStatus">Activation status ("NotActivated", "Activated", "Pending", or "AutoGenerated")</param>
+            <param type="System.Nullable{ASC.Core.Users.EmployeeType}, System" name="employeeType">User type ("All", "RoomAdmin", "User", "DocSpaceAdmin", or "Collaborator")</param>
+            <param type="System.Nullable{System.Boolean}, System" name="isAdministrator">Specifies if the user is an administrator or not</param>
+            <param type="System.Nullable{ASC.Core.Payments}, System" name="payments">User payment status (Paid, Free)</param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/filter</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetModule">
+            <summary>
+            Returns the information about the People module.
+            </summary>
+            <short>Get the People information</short>
+            <category>Module</category>
+            <returns>Module information: ID, product class name, title, description, icon URL, large icon URL, start URL, primary or nor, help URL</returns>
+            <path>api/2.0/people/info</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetPeopleSearch(System.String)">
+            <summary>
+            Returns a list of users matching the search query. This method uses the query parameters.
+            </summary>
+            <short>Search users (using query parameters)</short>
+            <category>Search</category>
+            <param type="System.String, System" name="query">Search query</param>
+            <returns>List of users</returns>
+            <path>api/2.0/people/search</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetSearch(System.String)">
+            <summary>
+            Returns a list of users matching the search query.
+            </summary>
+            <short>Search users</short>
+            <category>Search</category>
+            <param type="System.String, System" name="query">Search query</param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/@search/{query}</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetSimpleByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments})">
+            <summary>
+            Returns a list of users matching the parameters specified in the request.
+            </summary>
+            <short>
+            Search users by extended filter
+            </short>
+            <category>Search</category>
+            <param type="System.Nullable{ASC.Core.Users.EmployeeStatus}, System" name="employeeStatus">User status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default")</param>
+            <param type="System.Nullable{System.Guid}, System" name="groupId">Group ID</param>
+            <param type="System.Nullable{ASC.Core.Users.EmployeeActivationStatus}, System" name="activationStatus">Activation status ("NotActivated", "Activated", "Pending", or "AutoGenerated")</param>
+            <param type="System.Nullable{ASC.Core.Users.EmployeeType}, System" name="employeeType">User type ("All", "RoomAdmin", "User", "DocSpaceAdmin", or "Collaborator")</param>
+            <param type="System.Nullable{System.Boolean}, System" name="isAdministrator">Specifies if the user is an administrator or not</param>
+            <param type="System.Nullable{ASC.Core.Payments}, System" name="payments">User payment status (Paid, Free)</param>
+            <returns>List of users</returns>
+            <path>api/2.0/people/simple/filter</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.RegisterUserOnPersonalAsync(ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto)">
+            <summary>
+            Registers a user on the Personal portal.
+            </summary>
+            <short>
+            Register a Personal account
+            </short>
+            <category>Profiles</category>
+            <param type="ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for registering a Personal account: <![CDATA[
+            <ul>
+                <li><b>Email</b> (string) - email address,</li>
+                <li><b>Lang</b> (string) - language,</li>
+                <li><b>Spam</b> (bool) - specifies if the user wants to subscribe to the ONLYOFFICE newsletter or not,</li>
+                <li><b>RecaptchaResponse</b> (string) - ReCAPTCHA response.</li>
+            </ul>
+            ]]></param>
+            <returns>Error message or empty string</returns>
+            <path>api/2.0/people/register</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
+        </member>
+        <member name="M:ASC.People.Api.UserController.RemoveUsers(ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto)">
+            <summary>
+            Deletes a list of the users with the IDs specified in the request.
+            </summary>
+            <short>
+            Delete users
+            </short>
+            <category>Profiles</category>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating portal users: <![CDATA[UserIds (IEnumerable&lt;Guid&gt;) - list of user IDs]]></param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/delete</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.ResendUserInvites(ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto)">
+            <summary>
+            Resends emails to the users who have not activated their emails.
+            </summary>
+            <short>
+            Resend activation emails
+            </short>
+            <category>Profiles</category>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating portal users: <![CDATA[
+            <ul>
+                <li><b>UserIds</b> (IEnumerable&lt;Guid&lt;) - list of user IDs,</li>
+                <li><b>ResendAll</b> (bool) - specifies whether to resend invitation letters to all the users or not.</li>
+            </ul>
+            ]]></param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/invite</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.GetTheme">
+            <summary>
+            Returns a theme which is set to the current portal.
+            </summary>
+            <short>
+            Get portal theme
+            </short>
+            <category>Theme</category>
+            <returns>Theme</returns>
+            <path>api/2.0/people/theme</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.ChangeTheme(ASC.People.ApiModels.RequestDto.DarkThemeSettingsRequestDto)">
+            <summary>
+            Changes the current portal theme.
+            </summary>
+            <short>
+            Change portal theme
+            </short>
+            <category>Theme</category>
+            <param type="ASC.People.ApiModels.RequestDto.DarkThemeSettingsRequestDto, ASC.People.ApiModels.RequestDto" name="model">Theme settings request parameters: Theme (DarkThemeSettingsEnum) - portal theme (Base, System, or Dark)</param>
+            <returns>Theme</returns>
+            <path>api/2.0/people/theme</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.Self">
+            <summary>
+            Returns the detailed information about the current user profile.
+            </summary>
+            <short>
+            Get my profile
+            </short>
+            <category>Profiles</category>
+            <returns>Detailed information about my profile</returns>
+            <path>api/2.0/people/@self</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.SendEmailChangeInstructions(ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+            <summary>
+            Sends a message to the user email with the instructions to change the email address connected to the portal.
+            </summary>
+            <short>
+            Send instructions to change email
+            </short>
+            <category>Profiles</category>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information: <![CDATA[
+            <ul>
+                <li><b>UserId</b> (string) - user ID,</li>
+                <li><b>Email</b> (string) - email address.</li>
+            </ul>
+            ]]></param>
+            <returns>Message text</returns>
+            <path>api/2.0/people/email</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.SendUserPassword(ASC.People.ApiModels.RequestDto.MemberRequestDto)">
+            <summary>
+            Reminds a password to the user using the email address specified in the request.
+            </summary>
+            <short>
+            Remind a user password
+            </short>
+            <category>Password</category>
+            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Member request parameters: Email (string) - user email</param>
+            <returns>Email with the password</returns>
+            <path>api/2.0/people/password</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
+        </member>
+        <member name="M:ASC.People.Api.UserController.UpdateEmployeeActivationStatus(ASC.Core.Users.EmployeeActivationStatus,ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto)">
+            <summary>
+            Sets the required activation status to the list of users with the IDs specified in the request.
+            </summary>
+            <short>
+            Set an activation status to the users
+            </short>
+            <category>User status</category>
+            <param type="ASC.Core.Users.EmployeeActivationStatus, ASC.Core.Users" name="activationstatus">Activation status ("NotActivated", "Activated", "Pending", or "AutoGenerated")</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information: <![CDATA[UserIds (IEnumerable&lt;Guid&gt;) - list of user IDs]]></param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/activationstatus/{activationstatus}</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.UpdateMemberCulture(System.String,ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+            <summary>
+            Updates the user language with the parameter specified in the request.
+            </summary>
+            <short>
+            Update user language
+            </short>
+            <category>Profiles</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information: CultureName (string) - language</param>
+            <returns>Detailed user information</returns>
+            <path>api/2.0/people/{userid}/culture</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.UpdateMember(System.String,ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+            <summary>
+            Updates the data for the selected portal user with the first name, last name, email address, and/or optional parameters specified in the request.
+            </summary>
+            <short>
+            Update a user
+            </short>
+            <category>Profiles</category>
+            <param type="System.String, System" name="userid">User ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Member request parameters: <![CDATA[
+            <ul>
+                <li><b>IsUser</b> (bool) - specifies if this is a guest or user,</li>
+                <li><b>Firstname</b> (string) - first name,</li>
+                <li><b>Lastname</b> (string) - last name,</li>
+                <li><b>Department</b> (Guid[]) - list of user departments,</li>
+                <li><b>Title</b> (string) - title,</li>
+                <li><b>Location</b> (string) - location,</li>
+                <li><b>Sex</b> (string) - sex (male or female),</li>
+                <li><b>Birthday</b> (ApiDateTime) - birthday,</li>
+                <li><b>Worksfrom</b> (ApiDateTime) - registration date (if it is not specified, then the current date will be set),</li>
+                <li><b>Comment</b> (string) - comment,</li>
+                <li><b>Contacts</b> (IEnumerable&lt;Contact&gt;) - list of user contacts,</li>
+                <li><b>Files</b> (string) - avatar photo URL,</li>
+                <li><b>Disable</b> (bool?) - specifies whether to disable a user or not.</li>
+            </ul>
+            ]]></param>
+            <returns>Updated user with the detailed information</returns>
+            <path>api/2.0/people/{userid}</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.UpdateUserStatus(ASC.Core.Users.EmployeeStatus,ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto)">
+            <summary>
+            Changes a status for the users with the IDs specified in the request.
+            </summary>
+            <short>
+            Change a user status
+            </short>
+            <category>User status</category>
+            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Users" name="status">New user status ("Active", "Terminated", "LeaveOfAbsence", "All", or "Default"</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information: <![CDATA[UserIds (IEnumerable&lt;Guid&gt;) - list of user IDs]]></param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/status/{status}</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.UpdateUserTypeAsync(ASC.Core.Users.EmployeeType,ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto)">
+            <summary>
+            Changes a type for the users with the IDs specified in the request.
+            </summary>
+            <short>
+            Change a user type
+            </short>
+            <category>User type</category>
+            <param type="ASC.Core.Users.EmployeeType, ASC.Core.Users" name="type">New user type ("All", "RoomAdmin", "User", "DocSpaceAdmin", or "Collaborator")</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information: <![CDATA[UserIds (IEnumerable&lt;Guid&gt;) - list of user IDs]]></param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/type/{type}</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.RecalculateQuota">
+            <summary>
+             Starts the process of recalculating quota.
+             </summary>
+             <short>
+             Recalculate quota 
+             </short>
+             <category>Quota</category>
+             <path>api/2.0/people/recalculatequota</path>
+             <httpMethod>GET</httpMethod>
+             <returns></returns>
+        </member>
+        <member name="M:ASC.People.Api.UserController.CheckRecalculateQuota">
+            <summary>
+            Checks the process of recalculating quota.
+            </summary>
+            <short>
+            Check quota recalculation
+            </short>
+            <category>Quota</category>
+            <returns>Task progress</returns>
+            <path>api/2.0/people/checkrecalculatequota</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.UserController.UpdateUserQuota(ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto)">
+            <summary>
+            Changes a quota limit for the users with the IDs specified in the request.
+            </summary>
+            <short>
+            Change a user quota limit
+            </short>
+            <category>Quota</category>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information: <![CDATA[
+            <ul>
+                <li><b>UserIds</b> (IEnumerable&lt;Guid&gt;) - list of user IDs,</li>
+                <li><b>Quota</b> (long) - user quota.</li>
+            </ul>
+            ]]></param>
+            <returns>List of users with the detailed information</returns>
+            <path>api/2.0/people/quota</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="T:ASC.People.Resources.PeopleResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ErrorEmptyUploadFileSelected">
+            <summary>
+              Looks up a localized string similar to The uploaded file could not be found.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ErrorImageSizetLimit">
+            <summary>
+              Looks up a localized string similar to Image size is too large.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ErrorImageWeightLimit">
+            <summary>
+              Looks up a localized string similar to Image file size is too large.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ErrorUnknownFileImageType">
+            <summary>
+              Looks up a localized string similar to Unknown image file type.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ProductAdminOpportunities">
+            <summary>
+              Looks up a localized string similar to Do the same as a user|Create profiles and groups|Import profiles|Invite users.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ProductDescription">
+            <summary>
+              Looks up a localized string similar to Add new users, invite or import them. Manage users and view their detailed information..
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ProductName">
+            <summary>
+              Looks up a localized string similar to People.
+            </summary>
+        </member>
+        <member name="P:ASC.People.Resources.PeopleResource.ProductUserOpportunities">
+            <summary>
+              Looks up a localized string similar to View profiles and groups.
+            </summary>
+        </member>
+        <member name="T:ASC.Employee.Core.Controllers.GroupController">
+            <summary>
+             Groups API.
+            </summary>
+            <name>group</name>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetAll">
+            <summary>
+            Returns the general information about all the groups, such as group ID and group manager.
+            </summary>
+            <short>
+            Get groups
+            </short>
+            <returns>List of groups: ID, name, manager</returns>
+            <remarks>
+            This method returns partial group information.
+            </remarks>
+            <path>api/2.0/group</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetAllWithMembers">
+            <summary>
+            Returns the detailed information about all the groups.
+            </summary>
+            <short>
+            Get groups information
+            </short>
+            <returns>List of groups with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <remarks>
+            This method returns full group information.
+            </remarks>
+            <path>api/2.0/group/full</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetTagsByName(System.String)">
+            <summary>
+            Returns a list of all the groups by the group name specified in the request.
+            </summary>
+            <short>
+            Get groups by a group name
+            </short>
+            <param type="System.String, System" name="groupName">Group name</param>
+            <returns>List of groups: ID, name, manager</returns>
+            <path>api/2.0/group/search</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetById(System.Guid)">
+            <summary>
+            Returns the detailed information about the selected group.
+            </summary>
+            <short>
+            Get a group
+            </short>
+            <param type="System.Guid, System" name="groupid">Group ID</param>
+            <returns>Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <remarks>
+            This method returns full group information.
+            </remarks>
+            <path>api/2.0/group/{groupid}</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetByUserId(System.Guid)">
+            <summary>
+            Returns a list of groups for the user with the ID specified in the request.
+            </summary>
+            <short>
+            Get user groups
+            </short>
+            <param type="System.Guid, System" name="userid">User ID</param>
+            <returns>List of groups: ID, name, manager</returns>
+            <path>api/2.0/group/user/{userid}</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.AddGroup(ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Adds a new group with the group manager, name, and members specified in the request.
+            </summary>
+            <short>
+            Add a new group
+            </short>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters: <![CDATA[
+            <ul>
+                <li><b>GroupManager</b> (Guid) - group manager ID,</li>
+                <li><b>GroupName</b> (string) - group name,</li>
+                <li><b>Members</b> (IEnumerable&lt;Guid&gt;) - list of group member IDs.</li>
+            </ul>
+            ]]></param>
+            <returns>Newly created group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <path>api/2.0/group</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.UpdateGroup(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Updates the existing group changing the group manager, name, and/or members.
+            </summary>
+            <short>
+            Update a group
+            </short>
+            <param type="System.Guid, System" name="groupid">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters: <![CDATA[
+            <ul>
+                <li><b>GroupManager</b> (Guid) - group manager ID,</li>
+                <li><b>GroupName</b> (string) - group name,</li>
+                <li><b>Members</b> (IEnumerable&lt;Guid&gt;) - list of group member IDs.</li>
+            </ul>
+            ]]></param>
+            <returns>Updated group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <path>api/2.0/group/{groupid}</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.DeleteGroup(System.Guid)">
+            <summary>
+            Deletes a group with the ID specified in the request from the list of groups on the portal.
+            </summary>
+            <short>
+            Delete a group
+            </short>
+            <param type="System.Guid, System" name="groupid">Group ID</param>
+            <returns>Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <path>api/2.0/group/{groupid}</path>
+            <httpMethod>DELETE</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.TransferMembersTo(System.Guid,System.Guid)">
+            <summary>
+            Moves all the members from the selected group to another one specified in the request.
+            </summary>
+            <short>
+            Move group members
+            </short>
+            <param type="System.Guid, System" name="groupid">Group ID to move from</param>
+            <param type="System.Guid, System" name="newgroupid">Group ID to move to</param>
+            <returns>Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <path>api/2.0/group/{groupid}/members/{newgroupid}</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.SetMembersTo(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Replaces the group members with those specified in the request.
+            </summary>
+            <short>
+            Replace group members
+            </short>
+            <param type="System.Guid, System" name="groupid">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters: <![CDATA[Members (IEnumerable&lt;Guid&gt;) - list of group member IDs]]></param>
+            <returns>Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <path>api/2.0/group/{groupid}/members</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.AddMembersTo(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Adds new group members to the group with the ID specified in the request.
+            </summary>
+            <short>
+            Add group members
+            </short>
+            <param type="System.Guid, System" name="groupid">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters: <![CDATA[Members (IEnumerable&lt;Guid&gt;) - list of group member IDs]]></param>
+            <returns>Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <path>api/2.0/group/{groupid}/members</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.SetManager(System.Guid,ASC.People.ApiModels.RequestDto.SetManagerRequestDto)">
+            <summary>
+            Sets a user with the ID specified in the request as a group manager.
+            </summary>
+            <short>
+            Set a group manager
+            </short>
+            <param type="System.Guid, System" name="groupid">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.SetManagerRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for setting a group manager: UserId (Guid) - user ID</param>
+            <returns>Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <path>api/2.0/group/{groupid}/manager</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.RemoveMembersFrom(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Removes the group members specified in the request from the selected group.
+            </summary>
+            <short>
+            Remove group members
+            </short>
+            <param type="System.Guid, System" name="groupid">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters: <![CDATA[Members (IEnumerable&lt;Guid&gt;) - list of group members IDs]]></param>
+            <path>api/2.0/group/{groupid}/members</path>
+            <httpMethod>DELETE</httpMethod>
+        </member>
+    </members>
+</doc>

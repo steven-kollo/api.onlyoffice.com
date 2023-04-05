@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Data.Backup</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Data.Backup.Controllers.BackupController">
+            <summary>
+            Backup API.
+            </summary>
+            <name>backup</name>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetBackupSchedule">
+            <summary>
+            Returns the backup schedule of the current portal.
+            </summary>
+            <short>Get the backup schedule</short>
+            <returns>Backup schedule: storage type, storage parameters, cron parameters, maximum number of the stored backup copies, last backup creation time</returns>
+            <httpMethod>GET</httpMethod>
+            <path>api/2.0/backup/getbackupschedule</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.CreateBackupSchedule(ASC.Data.Backup.ApiModels.BackupScheduleDto)">
+            <summary>
+            Creates the backup schedule of the current portal with the parameters specified in the request.
+            </summary>
+            <short>Create the backup schedule</short>
+            <param type="ASC.Data.Backup.ApiModels.BackupScheduleDto, ASC.Data.Backup.ApiModels" name="backupSchedule">Backup schedule parameters: <![CDATA[
+            <ul>
+                <li><b>StorageType</b> (string) - storage type,</li>
+                <li><b>StorageParams</b> (IEnumerable&lt;ItemKeyValuePair&lt;object, object&gt;&gt;) - storage parameters,</li>
+                <li><b>BackupsStored</b> (string) - maximum number of the stored backup copies,</li>
+                <li><b>CronParams</b> (Cron) - cron parameters:</li>
+                <ul>
+                    <li><b>Period</b> (string) - period,</li>
+                    <li><b>Hour</b> (string) - hour,</li>
+                    <li><b>Day</b> (string) - day.</li>
+                </ul>
+            </ul>
+            ]]></param>
+            <returns>Boolean value: true if the operation is successful</returns>
+            <httpMethod>POST</httpMethod>
+            <path>api/2.0/backup/createbackupschedule</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.DeleteBackupSchedule">
+            <summary>
+            Deletes the backup schedule of the current portal.
+            </summary>
+            <short>Delete the backup schedule</short>
+            <returns>Boolean value: true if the operation is successful</returns>
+            <httpMethod>DELETE</httpMethod>
+            <path>api/2.0/backup/deletebackupschedule</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.StartBackup(ASC.Data.Backup.ApiModels.BackupDto)">
+            <summary>
+            Starts the backup of the current portal with the parameters specified in the request.
+            </summary>
+            <short>Start the backup</short>
+            <param type="ASC.Data.Backup.ApiModels.BackupDto, ASC.Data.Backup.ApiModels" name="backup">Backup parameters: <![CDATA[
+            <ul>
+                <li><b>StorageType</b> (string) - storage type,</li>
+                <li><b>StorageParams</b> (IEnumerable&lt;ItemKeyValuePair&lt;object, object&gt;&gt;) - storage parameters.</li>
+            </ul>
+            ]]></param>
+            <returns>Backup progress: completed or not, progress percentage, error, tenant ID, backup progress item (Backup, Restore, Transfer), link</returns>
+            <httpMethod>POST</httpMethod>
+            <path>api/2.0/backup/startbackup</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetBackupProgress">
+            <summary>
+            Returns the progress of the started backup.
+            </summary>
+            <short>Get the backup progress</short>
+            <returns>Backup progress: completed or not, progress percentage, error, tenant ID, backup progress item (Backup, Restore, Transfer), link</returns>
+            <httpMethod>GET</httpMethod>
+            <path>api/2.0/backup/getbackupprogress</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetBackupHistory">
+            <summary>
+            Returns the history of the started backup.
+            </summary>
+            <short>Get the backup history</short>
+            <returns>List of backup history records: backup ID, file name, storage type, creation date, expiration date</returns>
+            <httpMethod>GET</httpMethod>
+            <path>api/2.0/backup/getbackuphistory</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.DeleteBackup(System.Guid)">
+            <summary>
+            Deletes the backup with the ID specified in the request.
+            </summary>
+            <short>Delete the backup</short>
+            <param type="System.Guid, System" name="id">Backup ID</param>
+            <returns>Boolean value: true if the operation is successful</returns>
+            <httpMethod>DELETE</httpMethod>
+            <path>api/2.0/backup/deletebackup/{id}</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.DeleteBackupHistory">
+            <summary>
+            Deletes the backup history of the current portal.
+            </summary>
+            <short>Delete the backup history</short>
+            <returns>Boolean value: true if the operation is successful</returns>
+            <httpMethod>DELETE</httpMethod>
+            <path>api/2.0/backup/deletebackuphistory</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.StartBackupRestore(ASC.Data.Backup.ApiModels.BackupRestoreDto)">
+            <summary>
+            Starts the data restoring process of the current portal with the parameters specified in the request.
+            </summary>
+            <short>Start the restoring process</short>
+            <param type="ASC.Data.Backup.ApiModels.BackupRestoreDto, ASC.Data.Backup.ApiModels" name="backupRestore">Restoring parameters: <![CDATA[
+            <ul>
+                <li><b>BackupId</b> (string) - backup ID,</li>
+                <li><b>StorageType</b> (object) - storage type,</li>
+                <li><b>StorageParams</b> (IEnumerable&lt;ItemKeyValuePair&lt;object, object&gt;&gt;) - storage parameters,</li>
+                <li><b>Notify</b> (bool) - notifies users about portal restoring process or not.</li>
+            </ul>
+            ]]></param>
+            <returns>Backup progress: completed or not, progress percentage, error, tenant ID, backup progress item (Backup, Restore, Transfer), link</returns>
+            <httpMethod>POST</httpMethod>
+            <path>api/2.0/backup/startrestore</path>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetRestoreProgress">
+            <summary>
+            Returns the progress of the started restoring process.
+            </summary>
+            <short>Get the restoring progress</short>
+            <returns>Backup progress: completed or not, progress percentage, error, tenant ID, backup progress item (Backup, Restore, Transfer), link</returns>
+            <httpMethod>GET</httpMethod>
+            <path>api/2.0/backup/getrestoreprogress</path>
+            <requiresAuthorization>false</requiresAuthorization>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetTempPath">
+             <summary>
+             Returns a path to the temporary folder with the stored backup.
+             </summary>
+             <short>Get the temporary backup folder</short>
+             <returns>Path to the temporary folder with the stored backup</returns>
+             <httpMethod>GET</httpMethod>
+             <path>api/2.0/backup/backuptmp</path>
+            <visible>false</visible>
+        </member>
+    </members>
+</doc>
