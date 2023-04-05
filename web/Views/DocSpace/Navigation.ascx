@@ -16,7 +16,7 @@
 
 <% if (entryPoints != null && entryPoints.Any())
    { %>
-<div class="treeheader">Usage API</div>
+<div class="treeheader">API backend</div>
 <ul class="side-nav root">
     <% foreach (var entryPoint in entryPoints.OrderBy(x => x.Name).ToList())
        { %>
@@ -58,3 +58,51 @@
     <% } %>
 </ul>
 <% } %>
+
+<div class="treeheader">API system</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("apisystem/") %>">Basic concepts</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("apisystem/authentication") %>">Authentication</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("apisystem/portalsection") %>">Portals</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("apisystem/portalsection/portalget") %>">Get portals</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("apisystem/portalsection/portalregister") %>">Register portal</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("apisystem/portalsection/portalremove") %>">Portal deletion</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("apisystem/portalsection/portalstatus") %>">Portal status</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("apisystem/portalsection/validateportalname") %>">Validate portal name</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="<%= Url.Action("apisystem/tariffsection") %>">Billing</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("apisystem/tariffsection/tariffget") %>">Get tariff</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("apisystem/tariffsection/tariffset") %>">Set tariff</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<div class="treeheader">More information</div>
+<ul class="side-nav root">
+    <li>
+        <a href="http://personal-test.teamlab.info/storybook/" target="_blank">Storybook</a>
+    </li>
+</ul>
