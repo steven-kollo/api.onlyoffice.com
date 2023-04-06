@@ -638,6 +638,16 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private bool IsMember(XElement mem, string type)
         {
             var member = mem.Attribute("name").ValueOrNull();
+            if (member.Contains('`'))
+            {
+                var split = member.Split('`');
+                member = member.Split('`')[0];
+                var dotPos = split[1].IndexOf('.');
+                if (dotPos > 0)
+                {
+                    member += split[1].Substring(dotPos);
+                }
+            }
             if (member.Contains("P:" + type + ".") || member.Contains("F:" + type + ".")) 
             {
                 return member.Split('.').Length == type.Split('.').Length + 1;
