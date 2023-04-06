@@ -55,7 +55,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private List<MsDocEntryPoint> GenerateDocs()
         {
             var lookupDir = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\{_path}\references");
-            var generator = new MsDocDocumentGenerator();
+            var generator = new MsDocDocumentGenerator(lookupDir);
             foreach (var file in Directory.GetFiles(lookupDir))
             {
                 generator.GenerateDocForEntryPoint(file);

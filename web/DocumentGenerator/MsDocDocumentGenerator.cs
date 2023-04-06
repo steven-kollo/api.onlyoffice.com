@@ -311,12 +311,14 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         internal const string SystemIEnumerable = "System.Collections.Generic.IEnumerable{";
         internal const string SystemList = "System.Collections.Generic.List{";
 
+        private readonly string _basePath;
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
 
         private static ILog _logger;
 
-        public MsDocDocumentGenerator()
+        public MsDocDocumentGenerator(string basePath)
         {
+            _basePath = basePath;
             GetLogger();
         }
 
@@ -500,7 +502,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private Dictionary<string, object> GetResponse(string type, string file)
         {
-            var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", file + ".xml");
+            var xml = Path.Combine(_basePath, file + ".xml");
             if (!File.Exists(xml)) return null;
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
@@ -583,7 +585,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 {
                     var name = member.Element("type").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("type").Attribute("name").ValueOrNull();
                     var split = member.Element("type").ValueOrNull().Split(',');
-                    var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", split[1].Trim() + ".xml");
+                    var xml = Path.Combine(_basePath, split[1].Trim() + ".xml");
                     var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
                     var newMembers = members.Where(mem => IsMember(mem, split[0])).ToList();
                     var inherited = members.Where(mem => IsInherited(mem, split[0])).SingleOrDefault();
@@ -653,7 +655,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private List<XElement> GetInherited(string type, string file, List<XElement> needMembers)
         {
-            var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", file + ".xml");
+            var xml = Path.Combine(_basePath, file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers1 = members.Where(mem => IsMember(mem, type)).ToList();
             var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
