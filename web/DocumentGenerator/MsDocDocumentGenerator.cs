@@ -79,7 +79,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             writer.WriteElementString("status", "0");
 
-            if (response.GetType().Name == dic.GetType().Name) 
+            if (response.GetType().Name == dic.GetType().Name)
             {
                 writer.WriteStartElement("response");
                 foreach (KeyValuePair<string, object> keyValue in (Dictionary<string, object>)response)
@@ -241,7 +241,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != typeof (MsDocEntryPointMethod)) return false;
+            if (obj.GetType() != typeof(MsDocEntryPointMethod)) return false;
             return Equals((MsDocEntryPointMethod)obj);
         }
 
@@ -261,7 +261,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             unchecked
             {
-                return ((Path != null ? Path.GetHashCode() : 0)*397) ^ (HttpMethod != null ? HttpMethod.GetHashCode() : 0);
+                return ((Path != null ? Path.GetHashCode() : 0) * 397) ^ (HttpMethod != null ? HttpMethod.GetHashCode() : 0);
             }
         }
 
@@ -337,7 +337,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             get { return _points; }
         }
-        
+
         private void SaveMembers(XElement entryPointDoc, List<XElement> memberdesc)
         {
             var root = new MsDocEntryPoint
@@ -404,7 +404,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
             }
             if (!root.Methods.Any()) return;
-            foreach(var point in Points)
+            foreach (var point in Points)
             {
                 if (point.Name == root.Name)
                 {
@@ -422,7 +422,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             List<XElement> memberdesc = new List<XElement>();
             foreach (var member in members)
             {
-                if (member.Element("name") != null) 
+                if (member.Element("name") != null)
                 {
                     if (entryPointDoc == null)
                     {
@@ -493,8 +493,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             }
             return response;
         }
-        
-        private Dictionary<string, object> Sorted(Dictionary<string,object> response, Dictionary<string, int> orders)
+
+        private Dictionary<string, object> Sorted(Dictionary<string, object> response, Dictionary<string, int> orders)
         {
             Dictionary<string, object> SortedResponse = new Dictionary<string, object>();
             foreach (var pair in orders.OrderBy(pair => pair.Value))
@@ -528,64 +528,64 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return responseParam;
         }
 
-        private void Parse (List<XElement> needMembers, Dictionary<string, object> responseParam, Dictionary<string, int> orders)
+        private void Parse(List<XElement> needMembers, Dictionary<string, object> responseParam, Dictionary<string, int> orders)
         {
             needMembers.ForEach(member =>
             {
                 object result;
                 var defaultName = "";
-                if (member.Attribute("name").ValueOrNull()!="") 
+                if (member.Attribute("name").ValueOrNull() != "")
                 {
                     defaultName = member.Attribute("name").ValueOrNull().Split('.').Last();
                 }
                 if (member.Element("example") != null)
                 {
-                    
-                var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
-                if (Boolean.TryParse(member.Element("example").ValueOrNull(), out bool resultBool))
-                {
-                    result = resultBool;
-                }
-                else if (member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out int resultInt))
-                {
-                    result = resultInt;
-                }
-                else if (member.Element("example").Attribute("type").ValueOrNull() == "double" && Double.TryParse(member.Element("example").ValueOrNull().Replace('.',','), out double resultdouble))
-                {
-                    result = resultdouble;
-                }
-                else
-                {
-                    result = member.Element("example").ValueOrNull().Replace("            ","");
-                        
-                    if (result.Equals("null"))
+
+                    var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
+                    if (Boolean.TryParse(member.Element("example").ValueOrNull(), out bool resultBool))
                     {
-                        result = null;
+                        result = resultBool;
                     }
-                }
-                if(member.Element("collection").ValueOrNull() == "list")
-                {
-                    var list = new List<object>();
-                       
-                    if (member.Element("collection").Attribute("split").ValueOrNull() != "")
+                    else if (member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out int resultInt))
                     {
-                        var split = member.Element("collection").Attribute("split").ValueOrNull()[0];
-                        list = result.ToString().Split(split).ToList<object>();
+                        result = resultInt;
+                    }
+                    else if (member.Element("example").Attribute("type").ValueOrNull() == "double" && Double.TryParse(member.Element("example").ValueOrNull().Replace('.', ','), out double resultdouble))
+                    {
+                        result = resultdouble;
                     }
                     else
                     {
-                        list.Add(result);
+                        result = member.Element("example").ValueOrNull().Replace("            ", "");
+
+                        if (result.Equals("null"))
+                        {
+                            result = null;
+                        }
                     }
-                    responseParam.Add(name, list);
+                    if (member.Element("collection").ValueOrNull() == "list")
+                    {
+                        var list = new List<object>();
+
+                        if (member.Element("collection").Attribute("split").ValueOrNull() != "")
+                        {
+                            var split = member.Element("collection").Attribute("split").ValueOrNull()[0];
+                            list = result.ToString().Split(split).ToList<object>();
+                        }
+                        else
+                        {
+                            list.Add(result);
+                        }
+                        responseParam.Add(name, list);
+                    }
+                    else
+                    {
+                        responseParam.Add(name, result);
+                    }
+                    var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                    orders.Add(name, order);
                 }
-                else
-                {
-                    responseParam.Add(name, result);
-                }
-                var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
-                orders.Add(name, order);
-                }
-                else if(member.Element("type") != null)
+                else if (member.Element("type") != null)
                 {
                     var name = member.Element("type").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("type").Attribute("name").ValueOrNull();
                     var split = member.Element("type").ValueOrNull().Split(',');
@@ -636,7 +636,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
                     orders.Add(name, order);
                 }
-                });
+            });
         }
 
         private bool IsMember(XElement mem, string type)
@@ -652,7 +652,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     member += split[1].Substring(dotPos);
                 }
             }
-            if (member.Contains("P:" + type + ".") || member.Contains("F:" + type + ".")) 
+            if (member.Contains("P:" + type + ".") || member.Contains("F:" + type + "."))
             {
                 return member.Split('.').Length == type.Split('.').Length + 1;
             }
@@ -754,7 +754,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var bodyParams = visible.Except(urlParams).ToList();
             var path = method.Path.ToLowerInvariant();
             var query = false;
-            urlParams.ForEach(p => {
+            urlParams.ForEach(p =>
+            {
                 if (p.Value.JsonParam == null)
                 {
                     return;
@@ -778,7 +779,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 .AppendLine("Content-Type: application/json")
                 .Append("Accept: application/json");
 
-            if (args.Any()) {
+            if (args.Any())
+            {
                 sb.AppendLine().AppendLine()
                    .Append(JsonConvert.SerializeObject(args, Newtonsoft.Json.Formatting.Indented));
             }
@@ -813,7 +815,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var name = GetOnlyName(typeName);
 
             typeDescription = ClassNamePluralizer.ToHumanName(name);
-            if (typeDescription !=null && typeDescription.JsonParam != null && !typeName.StartsWith(SystemNullable))
+            if (typeDescription != null && typeDescription.JsonParam != null && !typeName.StartsWith(SystemNullable))
             {
                 var list = new List<object>();
                 list.Add(typeDescription.JsonParam);
