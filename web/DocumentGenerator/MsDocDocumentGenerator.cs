@@ -303,6 +303,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [DataMember(Name = "file")]
         public string File { get; set; }
+
+        [DataMember(Name = "assembly")]
+        public string Assembly { get; set; }
     }
 
     public class MsDocDocumentGenerator
@@ -380,7 +383,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 Visible = !string.Equals(methodParams[j].Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
                                 Type = GetType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()),
                                 Method = methodParams[j].Attribute("method") != null ? methodParams[j].Attribute("method").ValueOrNull() : "body",
-                                File = methodParams[j].Attribute("file").ValueOrNull()
+                                File = methodParams[j].Attribute("file").ValueOrNull(),
+                                Assembly = GetAssembly(methodParams[j].Attribute("type").ValueOrNull())
                             };
                             pointMethod.Params.Add(param);
                         }
@@ -692,38 +696,59 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return types[number];
         }
 
+        private string GetAssembly(string type)
+        {
+            if (type == null) return null;
+            if (string.IsNullOrWhiteSpace(type)) return null;
+
+            var split = type.Split(',');
+            if (split.Length > 1)
+            {
+                var assembly = split[1].Trim();
+                if (assembly != "System") return assembly;
+            }
+
+            return null;
+        }
+
         public void GenerateRequestExample(MsDocEntryPointMethod method)
         {
             var sb = new StringBuilder();
             var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p =>
             {
-                if (p.File == "")
+                var humanName = ClassNamePluralizer.ToHumanName(p.Type);
+                if (humanName.JsonParam == null)
                 {
-                    var humanName = ClassNamePluralizer.ToHumanName(p.Type);
-                    if (humanName.JsonParam == null)
+                    var jsonParam = GetJsonParam(p.Type);
+                    if (jsonParam != null)
                     {
-                        var jsonParam = GetJsonParam(p.Type);
-                        if (jsonParam != null)
-                        {
-                            humanName.JsonParam = jsonParam;
-                        }
+                        humanName.JsonParam = jsonParam;
                     }
-                    return humanName;
                 }
-                else
+
+                if (!string.IsNullOrWhiteSpace(p.File) || !string.IsNullOrWhiteSpace(p.Assembly))
                 {
+                    var assembly = string.IsNullOrWhiteSpace(p.File) ? p.Assembly : p.File;
+
                     var responseParam = new Dictionary<string, object>();
                     var orders = new Dictionary<string, int>();
-                    var humanName = new TypeDescription(p.Type, "");
-                    humanName.JsonParam = GetResponse(GetOnlyName(p.Type), p.File);
+                    var humanNameAssembly = new TypeDescription(p.Type, "");
+                    humanNameAssembly.JsonParam = GetResponse(GetOnlyName(p.Type), assembly);
                     if (p.Type.StartsWith(SystemIEnumerable) || p.Type.StartsWith(SystemList))
                     {
                         var list = new List<object>();
-                        list.Add(humanName.JsonParam);
-                        humanName.JsonParam = list;
+                        list.Add(humanNameAssembly.JsonParam);
+                        humanNameAssembly.JsonParam = list;
                     }
-                    return humanName;
+
+                    if ((string.IsNullOrWhiteSpace(humanName.ExampleJson) && !string.IsNullOrWhiteSpace(humanNameAssembly.ExampleJson))
+                        || humanName.JsonParam == null && humanNameAssembly.JsonParam != null)
+                    {
+                        humanName = humanNameAssembly;
+                    }
                 }
+
+                return humanName;
             });
             var urlParams = visible.Where(p => p.Key.Method == "url").ToList();
             var bodyParams = visible.Except(urlParams).ToList();
