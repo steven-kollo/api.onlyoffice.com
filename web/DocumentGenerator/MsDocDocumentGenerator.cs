@@ -779,6 +779,16 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 .AppendLine("Content-Type: application/json")
                 .Append("Accept: application/json");
 
+            if (args.ContainsKey("inDto"))
+            {
+                var dto = args["inDto"] as Dictionary<string, object>;
+                args.Remove("inDto");
+                foreach (var kv in dto)
+                {
+                    args.Add(kv.Key, kv.Value);
+                }
+            }
+
             if (args.Any())
             {
                 sb.AppendLine().AppendLine()
