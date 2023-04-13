@@ -6,7 +6,7 @@
 
 <p class="dscr">
     An http header is required to pass the authentication when performing the API request.
-    The authentication requires the token to be used in the <em>Authorization</em> header of the http request.
+    The authentication requires the token to be used in the <b>Authorization</b> header of the http request.
 </p>
 <p><b>Authentication Token</b> is a string sequence in the following format: "ASC <em>pkey</em>:<em>datetime</em>:<em>hash</em>", where</p>
 <ul>

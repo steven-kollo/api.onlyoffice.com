@@ -45,7 +45,11 @@ namespace ASC.Api.Web.Help.Controllers
 
         private readonly string[] _actionMap = new[]
             {
+                "Auth",
                 "Basic",
+                "Faq",
+                "Filters",
+                "Batch",
                 "ApiSystem",
                 "ApiSystem/Authentication",
                 "ApiSystem/PortalSection",
@@ -78,7 +82,27 @@ namespace ASC.Api.Web.Help.Controllers
             return View(DocSpaceDocumentation.GetAll());
         }
 
+        public ActionResult Auth()
+        {
+            return View();
+        }
+
         public ActionResult Basic()
+        {
+            return View();
+        }
+
+        public ActionResult Faq()
+        {
+            return View();
+        }
+
+        public ActionResult Filters()
+        {
+            return View();
+        }
+
+        public ActionResult Batch()
         {
             return View();
         }

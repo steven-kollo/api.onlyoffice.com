@@ -12,6 +12,9 @@
     <li>
         <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("auth") %>">Passing authentication</a>
+    </li>
 </ul>
 
 <% if (entryPoints != null && entryPoints.Any())
@@ -103,6 +106,15 @@
 <div class="treeheader">More information</div>
 <ul class="side-nav root">
     <li>
-        <a href="http://personal-test.teamlab.info/storybook/" target="_blank">Storybook</a>
+        <a href="https://storybook.onlyoffice.io/" target="_blank">Storybook</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("faq") %>">FAQ</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("filters") %>">Filtering</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("batch") %>">Batching</a>
     </li>
 </ul>

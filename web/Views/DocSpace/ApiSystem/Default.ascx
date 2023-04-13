@@ -14,13 +14,13 @@
 </p>
 <h2>Making requests</h2>
 <p>
-    To identify the request and response format please make sure that both the <b>Content-Type</b> and <b>Accept</b> headers are set to <em>application/json</em>.
-    The API methods are called without stating the format for the response and are returned in JSON format.
+    To identify the request and response format, please make sure that both the <b>Content-Type</b> and <b>Accept</b> headers are set to <em>application/json</em>.
+    The API methods are called without specifying the format for the response and are returned in JSON format.
 </p>
 <h2>Responses</h2>
 <p>
     <b>If a request succeeds, it will return a status code in the 200 range</b> and a JSON-formatted response.
-    Note that, in general, if a request causes a new record to be created, the response will use the <em>201 Created</em> status. Any other successful operation will return a <em>200</em> status code.
+    Note that, in general, if a request causes a new record to be created, the response will use the <b>201 Created</b> status. Any other successful operation will return a 200 status code.
 </p>
 <p>
     <b>If a request fails, a non-200 status code will be returned</b> in JSON format, containing the error code and additional error information (if available) as the response content.
