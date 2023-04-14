@@ -22,16 +22,16 @@
     <p>
         To enable this, the ONLYOFFICE API supports request batching which allows you to pass instructions
         for several operations in a single HTTP request. You can also specify dependencies
-        between related operations (described in the <b>Batch requests containing multiple methods</b> section below). ONLYOFFICE will process
+        between related operations (described in the <a href="#multiple-methods-batch">Batch requests containing multiple methods</a> section below). ONLYOFFICE will process
         each of your independent operations in parallel and will process your dependent
         operations sequentially. Once all operations have been completed, a consolidated
         response will be passed back to you and the HTTP connection will be closed.
     </p>
 
-    <h2>Making a simple batched request</h2>
+    <h2 id="simple-batch" class="copy-link">Making a simple batched request</h2>
 
     <p>
-        The batch API takes in an array of logical HTTP requests represented as JSON arrays
+        The batch API takes an array of logical HTTP requests represented as JSON arrays
         - each request has a <b>method</b> (corresponding to HTTP method GET/PUT/POST/DELETE etc),
         a <b>relativeUrl</b> (the portion of the URL after <b>yourportal.onlyoffice.com</b>), optional headers
         array (corresponding to HTTP headers) and an optional <b>body</b> (for POST and PUT requests).
@@ -91,7 +91,7 @@ batch = [
 }
 </pre>
 
-    <h2>Batch requests containing multiple methods</h2>
+    <h2 id="multiple-methods-batch" class="copy-link">Batch requests containing multiple methods</h2>
 
     <p>
         It is possible to combine operations that would normally use different HTTP methods

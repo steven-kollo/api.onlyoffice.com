@@ -5,14 +5,14 @@
 </h1>
 
 <p class="dscr">
-    An http header is required to pass the authentication when performing the API request.
-    The authentication requires the token to be used in the <b>Authorization</b> header of the http request.
+    An HTTP header is required to pass the authentication when performing the API request.
+    The authentication requires a token to be used in the <b>Authorization</b> header of the HTTP request.
 </p>
 <p><b>Authentication Token</b> is a string sequence in the following format: "ASC <em>pkey</em>:<em>datetime</em>:<em>hash</em>", where</p>
 <ul>
     <li><b>pkey</b> - random string,</li>
     <li><b>datetime</b> - current UTC date and time in the "<em>yyyyMMddHHmmss</em>" format,</li>
-    <li><b>hash</b> - hash value for the string in "<em>datetime</em>\n<em>pkey</em>" format.</li>
+    <li><b>hash</b> - hash value for the string in the "<em>datetime</em>\n<em>pkey</em>" format.</li>
 </ul>
 <p>The hash value is calculated using the HMAC-SHA1 function with the key from the <em>core.machinekey</em> value of the Hosted Solution site <em>appSettings</em> configuration.</p>
 

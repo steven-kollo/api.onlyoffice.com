@@ -43,52 +43,52 @@
         <tr class="tablerow">
             <td>400</td>
             <td>portalNameEmpty</td>
-            <td>The required parameter portalName which must be present in the request is not specified</td>
+            <td>The required parameter <b>portalName</b>, which must be present in the request, is not specified.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>tooShortError</td>
-            <td>The portalName specified in the request is too short</td>
+            <td>The <b>portalName</b> specified in the request is too short.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>portalNameIncorrect</td>
-            <td>Unallowable symbols in portalName</td>
+            <td>Invalid characters in the <b>portalName</b> parameter.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>portalNameNotFound</td>
-            <td>No portal with the portalName specified in the request has been registered</td>
+            <td>No portal with the portal name specified in the request has been registered.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>portalNameExist</td>
-            <td>Portal with the portalName specified in the request has already been registered</td>
+            <td>Portal with the portal name specified in the request has already been registered.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>portalsCountTooMuch</td>
-            <td>The limit for the number of portals has been reached</td>
+            <td>The limit for the number of portals has been reached.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>tooMuchAttempts</td>
-            <td>The limit for the number of request attempts has been reached</td>
+            <td>The limit for the number of request attempts has been reached.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>passPolicyError</td>
-            <td>The password specified in the request does not meet the requirements</td>
+            <td>The password specified in the request does not meet the requirements.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>recaptchaInvalid</td>
-            <td>The recaptcha value which has been entered is wrong</td>
+            <td>Invalid reCAPTCHA value has been entered.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>params</td>
-            <td>An error has been made in the method parameters specified in the request</td>
+            <td>An error has been made in the method parameters specified in the request.</td>
         </tr>
         <tr class="tablerow">
             <td>403</td>
@@ -98,17 +98,17 @@
         <tr class="tablerow">
             <td>500</td>
             <td>authorization</td>
-            <td>Internal server error when decoding the authorization key</td>
+            <td>Internal server error when decoding the authorization key.</td>
         </tr>
         <tr class="tablerow">
             <td>500</td>
             <td>registerNewTenantError</td>
-            <td>Internal server error when registering a new portal</td>
+            <td>Internal server error when registering a new portal.</td>
         </tr>
         <tr class="tablerow">
             <td>500</td>
             <td>error</td>
-            <td>Internal server error</td>
+            <td>Internal server error.</td>
         </tr>
     </tbody>
 </table>

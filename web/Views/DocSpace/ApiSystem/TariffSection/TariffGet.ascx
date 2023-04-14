@@ -7,7 +7,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">Get the portal pricing plan.</p>
+<p class="dscr">Returns a pricing plan of a portal with a name specified in the request.</p>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -30,9 +30,9 @@
             <td>portalName<span class="required">*</span>
                 <div class="infotext">sent in Query</div>
             </td>
-            <td>portal name</td>
+            <td>Portal name</td>
             <td>string</td>
-            <td>example</td>
+            <td>"example"</td>
         </tr>
     </tbody>
 </table>
@@ -40,7 +40,7 @@
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
 <div class="header-gray">Returns</div>
-<p>Returns the description of the portal and the portal pricing plan.</p>
+<p>The description of the portal and the portal pricing plan</p>
 
 <div class="header-gray">Example Response</div>
 <pre>
