@@ -1936,6 +1936,7 @@
     <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
+    <Content Include="App_Data\docspace\references\class_descriptions.xml" />
     <Content Include="App_Data\docspace\references\ASC.Files.xml" />
     <Content Include="App_Data\docspace\references\ASC.Web.Api.xml" />
     <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
