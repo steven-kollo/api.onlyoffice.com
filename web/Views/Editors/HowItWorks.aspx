@@ -37,7 +37,7 @@
         <li><a href="<%= Url.Action("viewing") %>">查看</a></li>
         <li><a href="<%= Url.Action("mobileintegration") %>">移动设备整合</a></li>
         <li><a href="<%= Url.Action("insertingexternaldata") %>">插入外部数据</a></li>
-        <li><a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a></li>
+        <li><a href="<%= Url.Action("embeddingforms") %>">将表单嵌入网页</a></li>
     </ul>
     
     <br />

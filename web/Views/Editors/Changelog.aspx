@@ -54,7 +54,7 @@
         <li>添加了从 <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdf/xps/oxps</a> 格式到 <em>docx</em>的转换。</li>
         <li>添加了 <a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">document.permissions.userInfoGroups</a> 参数。</li>
         <li>添加了从 <a href="<%= Url.Action("conversionapi") %>#text-matrix">djvu</a> 格式到 <em>pdf</em> 的转换。</li>
-        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">ppsm, ppsx</a> formats.</li>
+        <li>添加了对 <a href="<%=Url.Action("conversionapi") %>#presentation-matrix">ppsm、ppsx</a>格式的转换。</li>
     </ul>
 
     <h2 id="70" class="copy-link">7.0 版</h2>
@@ -101,8 +101,8 @@
     <ul>
         <li>添加了 <a href="<%= Url.Action("command/license") %>">license</a> 命令。</li>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#hideRulers">editorConfig.customization.hideRulers</a> 字段。</li>
-        <%--<li>Added the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">editorConfig.customization.submitForm</a> field.</li>--%>
-        <%--<li>Added a new <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a> (<em>forcesavetype = 3</em>).</li>--%>
+        <%--<li>添加了 <a href="<%=Url.Action("config/editor/customization")%>#submitForm">editorConfig.customing.submitForm</a>字段。</li>--%>
+        <%--<li>添加了一个新的 <a href="<%=Url.Action("callback")%>#used callbackUrl”>forcesavetype</a>（<em>forcesavetype=3</em>）。</li>--%>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> 字段。</li>
         <li><a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> 字段已弃用，请使用 <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">document.permissions.editCommentAuthorOnly</a> 和 <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">document.permissions.deleteCommentAuthorOnly</a> 字段。</li>
         <li>添加了 <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> 方法。</li>

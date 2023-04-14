@@ -2,21 +2,21 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("interactingoutside/") %>"></a>
-    <span class="hdr">Filling out the form</span>
+    <span class="hdr">填写表单</span>
 </h1>
 
-<p class="dscr">Fills in the empty cells in the form.</p>
-<p>The user can choose a username from the list and all the fields in the form editor will be filled with the user contact information.
-At the same time, this data is displayed in the inputs of the custom interface.</p>
-<p>When the user edits the input data in the custom interface, it is automatically updated in the form editor as well.</p>
-<p>When the document is ready, it can be downloaded by clicking the <b>Download</b> button and printed.</p>
+<p class="dscr">填充表单中的空单元格。</p>
+<p>用户可以从列表中选择用户名，表单编辑器中的所有字段都将填充用户联系信息。
+同时，这些数据显示在自定义界面的输入框中。</p>
+<p>当用户在自定义界面中编辑输入数据时，它也会在表单编辑器中自动更新。</p>
+<p>文档准备好后，可以通过单击 <b>下载</b> 按钮下载并打印。</p>
 
 <select id="persons" name="persons" required disabled>
-    <option disabled selected value="">Choose Example</option>
+    <option disabled selected value="">选择示例</option>
     <% var persons = Persons.GetPersons();
     foreach (var person in persons)
     { %>
-        <option value="<%= person.PostalCode %>"><%= person.FirstName %>  <%= person.LastName %></option>
+        <option value="<%= person.PostalCode %>"><%= person.FirstName %> <%= person.LastName %></option>
     <% } %>
 </select>
 
@@ -32,12 +32,12 @@ At the same time, this data is displayed in the inputs of the custom interface.<
 </div>
 
 <br/ >
-<h1>How it works</h1>
+<h1>它是如何工作的</h1>
 <ol>
     <li>
-        <p>When the user opens a form document, the <a href="<%= Url.Action("executemethod/text/getallcontentcontrols", "plugin") %>">GetAllContentControls</a> method is executed
-        to collect all the content controls from the document. After that, the <a href="<%= Url.Action("executemethod/form/getformvalue", "plugin") %>">GetFormValue</a> method
-        is executed to get the content controls values and display them in the custom interface:</p>
+        <p>当用户打开表单文档时，将执行 <a href="<%= Url.Action("executemethod/text/getallcontentcontrols", "plugin") %>">GetAllContentControls</a>
+        方法以从文档中收集所有内容控件。之后，执行 <a href="<%= Url.Action("executemethod/form/getformvalue", "plugin") %>">GetFormValue</a>
+        方法来获取内容控件的值，并将其显示在自定义界面中：</p>
         <pre>
 var contentControls = [];
 
@@ -45,8 +45,8 @@ var onDocumentReady = function () {
     window.connector = docEditor.createConnector();
 
     connector.executeMethod("GetAllContentControls", null, function (data) {
-        setTimeout(function () {
-            for (let i = 0; i < data.length; i++) {
+            ]setTimeout(function () {
+                for (let i = 0; i< data.length; i++) {
 
                 ...
 
@@ -65,8 +65,8 @@ var onDocumentReady = function () {
 </pre>
     </li>
     <li>
-        <p>When the user chooses a username from the list, the <a href="<%= Url.Action("executemethod/form/getformsbytag", "plugin") %>">GetFormsByTag</a> method is executed
-        to collect all the forms by their tags and sets the corresponding values to them with the <a href="<%= Url.Action("executemethod/form/setformvalue", "plugin") %>">SetFormValue</a> method:</p>
+        <p>当用户从列表中选择用户名时，将执行 <a href="<%= Url.Action("executemethod/form/getformsbytag", "plugin") %>">GetFormsByTag</a> 方法，
+        通过其标签收集所有表单，并使用 <a href="<%= Url.Action("executemethod/form/setformvalue", "plugin") %>">SetFormValue</a> 方法为其设置相应的值：</p>
         <pre>
 $("#persons").change(function (e) {
     const postalCode = $(this).val();
@@ -102,9 +102,9 @@ $("#persons").change(function (e) {
 </pre>
     </li>
     <li>
-        <p>When the user edits a form value, the <a href="<%= Url.Action("events/onchangecontentcontrol", "plugin") %>">onChangeContentControl</a> event is fired
-        and after that, the <a href="<%= Url.Action("executemethod/form/getformvalue", "plugin") %>">GetFormValue</a> method is executed to get an updated form value and
-        display it in the custom interface:</p>
+        <p>当用户编辑表单值时，会触发 <a href="<%= Url.Action("events/onchangecontentcontrol", "plugin") %>">onChangeContentControl</a> 事件，
+        然后执行 <a href="<%= Url.Action("executemethod/form/getformvalue", "plugin") %>">GetFormValue</a>
+        方法以获取更新的表单值并将其显示在自定义界面中：</p>
         <pre>
 var onDocumentReady = function () {
 
@@ -130,9 +130,9 @@ function onChangeContentControl(e) {
     </li>
 </ol>
 
-<h1>Getting help</h1>
+<h1>获得帮助</h1>
 
-<p>If you have any questions, ask our developers on <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
+<p>如果您有任何问题，请在 <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE论坛</a> 上询问我们的开发人员（需要注册）。</p>
 
 <script type="text/javascript">
     var contentControls = [];

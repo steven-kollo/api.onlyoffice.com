@@ -394,7 +394,7 @@ docEditor.refreshHistory({
                         <td>history.serverVersion</td>
                         <td>
                             定义当前服务器版本号。
-                            If the <em>changes</em> parameter is sent, then the <em>serverVersion</em> parameter is required to be sent as well.
+                            如果发送<em>changes</em>参数，则还需要发送<em>serverVersion</em>参数。
                         </td>
                         <td>integer</td>
                         <td>可选的</td>

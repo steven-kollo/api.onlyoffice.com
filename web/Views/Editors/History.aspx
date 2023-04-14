@@ -21,7 +21,7 @@
         当您从列表中选择文档版本时，文档将被显示出来以供预览。
     </p>
 
-    <p>The reference figure and the steps below explain the process of viewing the history in ONLYOFFICE Document Server.</p>
+    <p>参考图和下面的步骤解释了在ONLYOFFICE 文档服务器中查看历史记录的过程。</p>
     <img alt="Document history" src="<%= Url.Content("~/content/img/editor/viewing-history.svg") %>" />
     <ol>
         <li>用户在 <b>文档编辑器</b>中编辑文档时单击 <em>版本历史</em> 按钮。</li>

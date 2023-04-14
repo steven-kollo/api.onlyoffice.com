@@ -2,33 +2,33 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("interactingoutside/") %>"></a>
-    <span class="hdr">Working with comments</span>
+    <span class="hdr">处理评论</span>
 </h1>
 
-<p class="dscr">Collects all the comments from the document and displays them in the custom interface.</p>
+<p class="dscr">从文档中收集所有评论，并将其显示在自定义界面中。</p>
 
 <div id="commentsBlock" name="commentsBlock" data-easy="true" class="docbuilder-script" spellcheck="false" hidden>
     <div id="comment" class="comment">
-        <div class="comment-author" title="Author"></div>
-        <div class="comment-date" title="Date"></div>
-        <div class="comment-message" title="Message"></div>
+        <div class="comment-author" title="作者"></div>
+        <div class="comment-date" title="日期"></div>
+        <div class="comment-message" title="消息"></div>
     </div>
     <div id="replies"></div>
     <textarea id="addReplyArea" name="addReplyArea" class="add-reply-area" placeholder="Enter your reply here" hidden></textarea>
-    <div id="empty-comment" hidden>There are no comments in the document.</div>
+    <div id="empty-comment" hidden>文档中没有评论。</div>
 </div>
 
 <textarea id="addCommentArea" name="addCommentArea" class="add-comment-area" placeholder="Enter your comment here" hidden></textarea>
 
 <ul class="list-buttons doc-builder-list-buttons">
     <li>
-        <a id="addReply" class="button disabled">ADD REPLY</a>
+        <a id="addReply" class="button disabled">添加回复</a>
     </li>
     <li>
-        <a id="deleteComment" class="button disabled">DELETE</a>
+        <a id="deleteComment" class="button disabled">删除</a>
     </li>
     <li>
-        <a id="addComment" class="button disabled">ADD COMMENT</a>
+        <a id="addComment" class="button disabled">添加评论</a>
     </li>
     <li>
         <a id="prevComment" class="button disabled"><</a>
@@ -45,12 +45,12 @@
 </div>
 
 <br/ >
-<h1>How it works</h1>
+<h1>它是如何工作的</h1>
 <ol>
     <li>
-        <p>When the user opens a document, the <a href="<%= Url.Action("executemethod/text/getallcomments", "plugin") %>">GetAllComments</a> method is executed
-        to collect all the comments from the document and display them in the custom interface.
-        The following comment data is displayed: the comment author, the time when the comment was posted, the comment text, and the comment replies:</p>
+        <p>当用户打开文档时，会执行 <a href="<%= Url.Action("executemethod/text/getallcomments", "plugin") %>">GetAllComments</a> 方法来收集文档中的所有评论，
+        并将其显示在自定义界面中。
+        将显示以下评论数据：评论作者、发布评论的时间、评论文本和评论回复：</p>
         <pre>
 var comments = [];
 
@@ -69,9 +69,9 @@ var onDocumentReady = function () {
 </pre>
     </li>
     <li>
-        <p>When the user clicks the <b>Add comment</b> button in the custom interface, the <a href="<%= Url.Action("executemethod/text/addcomment", "plugin") %>">AddComment</a> method
-        is executed to add a new comment to the document. After this method is called, the <a href="<%= Url.Action("events/onaddcomment", "plugin") %>">onAddComment</a> event
-        is fired to add a new comment to an array with all the document comments:</p>
+        <p>当用户单击自定义界面中的 <b>添加评论</b> 按钮时，将执行 <a href="<%= Url.Action("executemethod/text/addcomment", "plugin") %>">AddComment</a>
+        方法向文档添加新评论。调用此方法后，会触发 <a href="<%= Url.Action("events/onaddcomment", "plugin") %>">onAddComment</a> 事件，
+        将新评论添加到包含所有文档评论的数组中：</p>
         <pre>
 var onDocumentReady = function () {
 
@@ -114,9 +114,9 @@ $("#addComment").on("click", function () {
 </pre>
     </li>
     <li>
-        <p>When the user clicks the <b>Remove comment</b> button in the custom interface, the <a href="<%= Url.Action("executemethod/text/removecomments", "plugin") %>">RemoveComments</a> method
-        is executed to remove a comment from the document. After this method is called, the <a href="<%= Url.Action("events/onremovecomment", "plugin") %>">onRemoveComment</a> event
-        is fired to remove a comment from an array with all the document comments:</p>
+        <p>当用户单击自定义界面中的 <b>删除评论</b> 按钮时，将执行 <a href="<%= Url.Action("executemethod/text/removecomments", "plugin") %>">RemoveComments</a>
+        方法从文档中删除评论。调用此方法后，将触发 <a href="<%= Url.Action("events/onremovecomment", "plugin") %>">onRemoveComment</a> 事件，
+        以从包含所有文档评论的数组中删除评论：</p>
         <pre>
 var onDocumentReady = function () {
 
@@ -148,8 +148,8 @@ $("#deleteComment").on("click", function () {
 </pre>
     </li>
     <li>
-        <p>When the user clicks the arrow buttons in the custom interface, the <a href="<%= Url.Action("executemethod/text/movetocomment", "plugin") %>">MoveToComment</a> method
-        is executed to move between the comments in the document:</p>
+        <p>当用户单击自定义界面中的箭头按钮时，将执行<a href="<%= Url.Action("executemethod/text/movetocomment", "plugin") %>">MoveToComment</a>
+        方法在文档中的评论之间移动：</p>
         <pre>
 
 ...
@@ -161,9 +161,9 @@ connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]]);
 </pre>
     </li>
     <li>
-    <p>When the user clicks the <b>Add reply</b> button in the custom interface, the <a href="<%= Url.Action("executemethod/text/changecomment", "plugin") %>">ChangeComment</a> method
-        is executed to add a reply to the existing comment by changing the <em>CommentData</em> object. After this method is called, the <a href="<%= Url.Action("events/onchangecommentdata", "plugin") %>">onChangeCommentData</a> event
-        is fired to add a new comment reply to an array with all the document comments:</p>
+    <p>当用户单击自定义界面中的 <b>添加回复</b> 按钮时，将执行 <a href="<%= Url.Action("executemethod/text/changecomment", "plugin") %>">ChangeComment</a> 方法，
+        通过更改 <em>CommentData</em> 对象向现有评论添加回复。调用此方法后，会触发 <a href="<%= Url.Action("events/onchangecommentdata", "plugin") %>">onChangeCommentData</a> 事件，
+        将新的评论回复添加到包含所有文档评论的数组中：</p>
         <pre>
 var onDocumentReady = function () {
 
@@ -211,9 +211,9 @@ $("#addReply").on("click", function () {
     </li>
 </ol>
 
-<h1>Getting help</h1>
+<h1>获得帮助</h1>
 
-<p>If you have any questions, ask our developers on <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
+<p>如果您有任何问题，请在 <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE论坛</a> 上询问我们的开发人员（需要注册）。</p>
 
 <script type="text/javascript">
     var comments = [];

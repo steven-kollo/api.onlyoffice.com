@@ -164,21 +164,21 @@
                 <a href="<%= Url.Action("insertingexternaldata") %>">插入外部数据</a>
             </li>
             <li>
-                <a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a>
+                <a href="<%= Url.Action("embeddingforms") %>">将表单嵌入网页</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("interactingoutside/") %>">How to interact from the outside</a>
+        <a href="<%= Url.Action("interactingoutside/") %>">如何与外界交互</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("interactingoutside/comments") %>">Working with comments</a>
+                <a href="<%= Url.Action("interactingoutside/comments") %>">处理评论</a>
             </li>
             <li>
-                <a href="<%= Url.Action("interactingoutside/reviewwork") %>">Working with review changes</a>
+                <a href="<%= Url.Action("interactingoutside/reviewwork") %>">处理评审更改</a>
             </li>
             <li>
-                <a href="<%= Url.Action("interactingoutside/fillingform") %>">Filling out the form</a>
+                <a href="<%= Url.Action("interactingoutside/fillingform") %>">填写表单</a>
             </li>
         </ul>
     </li>

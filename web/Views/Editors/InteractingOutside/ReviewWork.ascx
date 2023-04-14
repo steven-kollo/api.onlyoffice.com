@@ -2,17 +2,17 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("interactingoutside/") %>"></a>
-    <span class="hdr">Working with review changes</span>
+    <span class="hdr">处理评审更改</span>
 </h1>
 
-<p class="dscr">Manages review process from the outside.</p>
+<p class="dscr">管理外部评审过程。</p>
 
 <ul class="list-buttons doc-builder-list-buttons">
     <li>
-        <a id="accept" class="button disabled">ACCEPT</a>
+        <a id="accept" class="button disabled">接受</a>
     </li>
     <li>
-        <a id="reject" class="button disabled">REJECT</a>
+        <a id="reject" class="button disabled">拒绝</a>
     </li>
     <li>
         <a id="prev" class="button disabled"><</a>
@@ -29,13 +29,13 @@
 </div>
 
 <br/ >
-<h1>How it works</h1>
+<h1>它是如何工作的</h1>
 
 <ol>
     <li>
-        <p>When the user clicks the <b>Accept / Reject</b> buttons in the custom interface,
-        the <a href="<%= Url.Action("executemethod/text/acceptreviewchanges", "plugin") %>">AcceptReviewChanges</a> / <a href="<%= Url.Action("executemethod/text/rejectreviewchanges", "plugin") %>">RejectReviewChanges</a> methods
-        are executed to accept / reject the selected change in the editor:</p>
+        <p>当用户单击自定义界面中的 <b>接受/拒绝</b> 按钮时，
+        将执行 <a href="<%= Url.Action("executemethod/text/acceptreviewchanges", "plugin") %>">AcceptReviewChanges</a> / <a href="<%= Url.Action("executemethod/text/rejectreviewchanges", "plugin") %>">RejectReviewChanges</a>
+        方法来接受/拒绝编辑器中的选定更改：</p>
         <pre>
 $("#accept").on("click", function () {
     connector.executeMethod("AcceptReviewChanges");
@@ -47,8 +47,8 @@ $("#reject").on("click", function () {
 </pre>
     </li>
     <li>
-        <p>When the user clicks the arrow buttons in the custom interface, the <a href="<%= Url.Action("executemethod/text/movetonextreviewchange", "plugin") %>">MoveToNextReviewChange</a>
-        method is executed to move between the next and previous review changes:</p>
+        <p>当用户单击自定义界面中的箭头按钮时，将执行 <a href="<%= Url.Action("executemethod/text/movetonextreviewchange", "plugin") %>">MoveToNextReviewChange</a>
+        方法，在下一次和上一次审阅更改之间移动：</p>
         <pre>
 $("#prev").on("click", function () {
     connector.executeMethod("MoveToNextReviewChange", [false]);
@@ -61,9 +61,9 @@ $("#next").on("click", function () {
     </li>
 </ol>
 
-<h1>Getting help</h1>
+<h1>获得帮助</h1>
 
-<p>If you have any questions, ask our developers on <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
+<p>如果您有任何问题，请在 <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE论坛</a> 上询问我们的开发人员（需要注册）。</p>
 
 <script type="text/javascript">
     var contentControls = [];

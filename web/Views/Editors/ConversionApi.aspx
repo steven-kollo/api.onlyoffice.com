@@ -1830,7 +1830,7 @@
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>
-                <td>Token signature is expired.</td>
+                <td>令牌签名已过期。</td>
             </tr>--%>
         </tbody>
     </table>
