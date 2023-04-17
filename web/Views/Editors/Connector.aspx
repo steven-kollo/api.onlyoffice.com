@@ -14,8 +14,10 @@
         <span class="hdr">Automation API</span>
     </h1>
 
-    <p class="dscr"><b>Connector</b> is a class that allows interaction with text documents, spreadsheets, presentations, and fillable forms from the outside.
-        To create the connector, use the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method of the <b>document editor</b> object:</p>
+    <p class="dscr"><b>Connector</b> is a class that allows editing text documents, spreadsheets, presentations, and fillable forms from an external source.
+        The examples of using Automation API can be found <a href="<%= Url.Action("interactingoutside") %>">here</a>.
+    </p>
+    <p>To create the connector, use the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method of the <b>document editor</b> object:</p>
     <pre>
 var connector = docEditor.createConnector()
 </pre>

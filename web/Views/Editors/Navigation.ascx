@@ -169,7 +169,7 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("interactingoutside/") %>">How to interact from the outside</a>
+        <a href="<%= Url.Action("interactingoutside/") %>">External access to the document editing</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("interactingoutside/comments") %>">Working with comments</a>
