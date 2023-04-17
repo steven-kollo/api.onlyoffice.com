@@ -1258,7 +1258,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         TypeString = "mobile",
@@ -1289,7 +1290,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         DocumentType = "cell",
                         Height = "100%",
@@ -1321,7 +1323,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         DocumentType = "slide",
                         Height = "100%",
@@ -1355,6 +1358,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -1387,6 +1391,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "view"
                             },
                         DocumentType = "cell",
@@ -1420,6 +1425,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "view"
                             },
                         DocumentType = "slide",
@@ -1444,6 +1450,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docx"
                             },
                         DocumentType = "word",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                        {
+                            Lang = "zh"
+                        },
                         Height = "100%",
                         TypeString = "embedded",
                         Width = "100%"
@@ -1465,6 +1475,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.xlsx"
                             },
                         DocumentType = "cell",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                        {
+                            Lang = "zh"
+                        },
                         Height = "100%",
                         TypeString = "embedded",
                         Width = "100%"
@@ -1486,6 +1500,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.pptx"
                             },
                         DocumentType = "slide",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                        {
+                            Lang = "zh"
+                        },
                         Height = "100%",
                         TypeString = "embedded",
                         Width = "100%"
