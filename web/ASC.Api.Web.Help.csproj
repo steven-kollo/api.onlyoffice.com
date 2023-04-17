@@ -1936,7 +1936,7 @@
     <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
-    <Content Include="App_Data\docspace\references\class_descriptions.xml" />
+    <Content Include="App_Data\docspace\class_descriptions.xml" />
     <Content Include="App_Data\docspace\references\ASC.Files.xml" />
     <Content Include="App_Data\docspace\references\ASC.Web.Api.xml" />
     <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
@@ -2680,6 +2680,7 @@
     <Content Include="Views\DocSpace\Faq.aspx" />
     <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\Filters.aspx" />
+    <Content Include="Views\DocSpace\Method.aspx" />
     <Content Include="Views\DocSpace\Navigation.ascx" />
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
@@ -2916,7 +2917,7 @@
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
     <Content Include="Views\Shared\EventNotFound.aspx" />
-    <Content Include="Views\Shared\Method.aspx" />
+    <Content Include="Views\Portals\Method.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />
     <Content Include="Views\Shared\Search.aspx" />
     <Content Include="Views\Shared\SearchForm.ascx" />

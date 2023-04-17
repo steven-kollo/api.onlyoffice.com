@@ -317,12 +317,16 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private readonly string _basePath;
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
 
+        private readonly ClassNamePluralizer _classPluralizer;
+
         private static ILog _logger;
 
-        public MsDocDocumentGenerator(string basePath)
+        public MsDocDocumentGenerator(string basePath, ClassNamePluralizer classPluralizer)
         {
             _basePath = basePath;
             GetLogger();
+
+            _classPluralizer = classPluralizer;
         }
 
         private void GetLogger()
@@ -716,7 +720,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var sb = new StringBuilder();
             var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p =>
             {
-                var humanName = ClassNamePluralizer.ToHumanName(p.Type);
+                var humanName = _classPluralizer.ToHumanName(p.Type);
                 if (humanName.JsonParam == null)
                 {
                     var jsonParam = GetJsonParam(p.Type);
@@ -783,9 +787,16 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 var dto = args["inDto"] as Dictionary<string, object>;
                 args.Remove("inDto");
-                foreach (var kv in dto)
+                if (dto == null)
                 {
-                    args.Add(kv.Key, kv.Value);
+                    args.Add("inDto", null);
+                }
+                else
+                {
+                    foreach (var kv in dto)
+                    {
+                        args.Add(kv.Key, kv.Value);
+                    }
                 }
             }
 
@@ -824,7 +835,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             TypeDescription typeDescription = null;
             var name = GetOnlyName(typeName);
 
-            typeDescription = ClassNamePluralizer.ToHumanName(name);
+            typeDescription = _classPluralizer.ToHumanName(name);
             if (typeDescription != null && typeDescription.JsonParam != null && !typeName.StartsWith(SystemNullable))
             {
                 var list = new List<object>();

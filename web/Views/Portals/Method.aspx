@@ -1,4 +1,5 @@
 ﻿<%@ Import Namespace="ASC.Api.Web.Help.Models" %>
+<%@ Import Namespace="ASC.Api.Web.Help.DocumentGenerator" %>
 <%@ 
     Page
     Title=""
@@ -55,7 +56,7 @@
             <tbody>
             <% foreach (var param in method.Params.OrderByDescending(x => x.Method).Where(x => x.Visible))
                {
-                   var paramModel = ClassNamePluralizer.ToHumanName(param.Type); %>
+                   var paramModel = CommunityServerDocumentation.GetPluralizer().ToHumanName(param.Type); %>
                 <tr class="tablerow">
                     <td>
                         <%= param.Name %>
@@ -65,12 +66,12 @@
                         <%= param.Description %>
                         <% if (!string.IsNullOrEmpty(param.Remarks)) { %>
                         <div class="infotext"><%= param.Remarks %></div><% } %>
-                        <% if (ClassNamePluralizer.IsOptional(param.Type) || param.IsOptional) { %>
+                        <% if (CommunityServerDocumentation.GetPluralizer().IsOptional(param.Type) || param.IsOptional) { %>
                         <div class="infotext">optional</div><% } %>
                     </td>
                     <td>
                         <%= paramModel.Description %>
-                        <% if (ClassNamePluralizer.IsCollection(param.Type) || paramModel.IsCollection) { %>
+                        <% if (CommunityServerDocumentation.GetPluralizer().IsCollection(param.Type) || paramModel.IsCollection) { %>
                         <div class="infotext">collection</div><% } %>
                     </td>
                     <td>
