@@ -223,7 +223,7 @@
     <entry>
       <key>ASC.Files.Core.FilterType</key>
       <value>
-      <Description>None, FilesOnly, FoldersOnly, DocumentsOnly, PresentationsOnly, SpreadsheetsOnly, ImagesOnly, ByUser, ByDepartment, ArchiveOnly, ByExtension, MediaOnly, FillingFormsRooms, EditingRooms, ReviewRooms, ReadOnlyRooms, CustomRooms, OFormTemplateOnly, OFormOnly</Description>
+      <Description>None, FilesOnly, FoldersOnly, DocumentsOnly, PresentationsOnly, SpreadsheetsOnly, ImagesOnly, ByUser, ByDepartment, ArchiveOnly, ByExtension, MediaOnly, EditingRooms, CustomRooms, OFormTemplateOnly, OFormOnly</Description>
         <Example>None</Example>
         <ExampleJson>"None"</ExampleJson>
       </value>
@@ -299,17 +299,17 @@
     <entry>
       <key>ASC.Files.Core.ApiModels.RequestDto.RoomType</key>
       <value>
-      <Description>FillingFormsRoom, EditingRoom, ReviewRoom, ReadOnlyRoom, CustomRoom</Description>
-        <Example>FillingFormsRoom</Example>
-        <ExampleJson>"FillingFormsRoom"</ExampleJson>
+      <Description>EditingRoom, CustomRoom</Description>
+        <Example>EditingRoom</Example>
+        <ExampleJson>"EditingRoom"</ExampleJson>
       </value>
     </entry>
     <entry>
       <key>ASC.Files.Core.ApiModels.RequestDto.RoomFilterType</key>
       <value>
-      <Description>FillingFormsRoomOnly, EditingRoomOnly, ReviewRoomOnly, ReadOnlyRoomOnly, CustomRoomOnly, FoldersOnly</Description>
-        <Example>FillingFormsRoomOnly</Example>
-        <ExampleJson>"FillingFormsRoomOnly"</ExampleJson>
+      <Description>EditingRoomOnly, CustomRoomOnly, FoldersOnly</Description>
+        <Example>EditingRoomOnly</Example>
+        <ExampleJson>"EditingRoomOnly"</ExampleJson>
       </value>
     </entry>
     <entry>
