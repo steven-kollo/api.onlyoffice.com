@@ -158,7 +158,8 @@ function onChangeContentControl(e) {
                                 HideRightMenu = true,
                                 HideRulers = true,
                                 IntegrationMode = "embed",
-                            }
+                            },
+                        Lang = "zh"
                     },
                 Height = "550px",
                 Width = "100%"
