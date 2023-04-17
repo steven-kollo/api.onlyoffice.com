@@ -110,6 +110,12 @@
         <li>Change the <em>"allowed"</em> rule that can be <b>true</b> or <b>false</b>.</li>
         <li>
             <p>Restart the services for the config changes to take effect:</p>
+            <p><b>For RPM/DEB packages:</b></p>
+            <pre>
+systemctl restart ds-*
+</pre>
+
+            <p><b>For Docker:</b></p>
             <pre>
 supervisorctl restart all
 </pre>
