@@ -19,6 +19,12 @@
 
 <p>Restart the services for the config changes to take effect:</p>
 
+<p><b>For RPM/DEB packages:</b></p>
+<pre>
+systemctl restart ds-*
+</pre>
+
+<p><b>For Docker:</b></p>
 <pre>
 supervisorctl restart all
 </pre>
@@ -41,12 +47,6 @@ supervisorctl restart all
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>services.CoAuthoring.secret.browser.string</td>
-            <td>Defines the <em>secret key</em> to generate a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> to ONLYOFFICE Docs.</td>
-            <td>string</td>
-            <td>secret</td>
-        </tr>
-        <tr class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
             <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> with the commands from the <b>document storage service</b> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
             <td>string</td>
@@ -55,6 +55,12 @@ supervisorctl restart all
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.outbox.string</td>
             <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#outgoing">outgoing HTTP requests</a> to the <em>callbackUrl</em> address by <b>document editing service</b>.</td>
+            <td>string</td>
+            <td>secret</td>
+        </tr>
+        <tr class="tablerow">
+            <td>services.CoAuthoring.secret.session.string</td>
+            <td>Defines the <em>secret key</em> to generate the session token.</td>
             <td>string</td>
             <td>secret</td>
         </tr>
@@ -87,15 +93,15 @@ supervisorctl restart all
     "services": {
         "CoAuthoring": {
             "secret": {
-                "browser": {
-                    "string": "secret"
-                },
                 "inbox": {
                     "string": "secret"
                 },
                 "outbox": {
                     "string": "secret"
                 },
+                "session": {
+                    "string": "secret"
+                }
             },
             "token": {
                 "enable": {
