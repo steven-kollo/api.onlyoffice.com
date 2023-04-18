@@ -46,7 +46,7 @@
             <td></td>
         </tr>
         <tr class="tablerow">
-            <td id="callbackUrl" class="copy-link">callbackUrl<span class="required">*</span></td>
+            <td id="callbackUrl" class="copy-link">callbackUrl<a href="#requiredDescr" class="required">*</a></td>
             <td>Specifies absolute URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server).</td>
             <td>string</td>
             <td>"https://example.com/url-to-callback.ashx"</td>
@@ -282,7 +282,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<span class="required-descr"><span class="required">*</span><em> - required field</em></span>
+<span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - required field</em></span>
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {

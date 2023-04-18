@@ -43,7 +43,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
     <ul>
         <li>
             <p>
-                <b id="createConnector" class="copy-link">createConnector</b><span class="required">*</span> - create the <a href="<%= Url.Action("connector") %>">connector</a> to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+                <b id="createConnector" class="copy-link">createConnector</b><a href="#requiredDescr" class="required">*</a> - create the <a href="<%= Url.Action("connector") %>">connector</a> to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
             </p>
             <pre>
 docEditor.createConnector();
@@ -822,9 +822,8 @@ docEditor.setReferenceData({
 
         <li>
             <p>
-                <b id="setRevisedFile" class="copy-link">setRevisedFile<span class="required">*</span></b> - select a document for comparing.
+                <b id="setRevisedFile" class="copy-link">setRevisedFile<a href="#requiredDescr2" class="required">**</a></b> - select a document for comparing.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.
-                <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
             </p>
             <pre>
 docEditor.setRevisedFile({
@@ -1040,6 +1039,7 @@ docEditor.showMessage(message);
             </note>
         </li>
     </ul>
-    <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
+    <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
+    <span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
 
 </asp:Content>

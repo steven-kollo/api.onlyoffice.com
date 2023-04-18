@@ -993,8 +993,10 @@ pre,
         margin: 8px;
     }
 
-.required {
+.required,
+a.required {
     color: #C00;
+    text-decoration: none;
 }
 
 .required-descr {
