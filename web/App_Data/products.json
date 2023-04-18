@@ -1,5 +1,105 @@
 [
    {
+      "id":"docspace",
+      "title":"DocSpace",
+      "description":"Create your own productivity platform based on ONLYOFFICE DocSpace. In this section, you will learn how to make GET, POST, PUT and DELETE requests to collaborate on documents with teams, clients, partners, etc., based on the concept of rooms – special spaces with predefined permissions.",
+      "version":"1.0",
+      "links":{
+         "Get started":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"basic"
+            },
+            {
+               "Item1":"Passing authentication",
+               "Item2":"auth"
+            }
+         ],
+         "API Backend":[
+            {
+               "Item1":"authentication",
+               "Item2":"section/authentication"
+            },
+            {
+               "Item1":"backup",
+               "Item2":"section/backup"
+            },
+            {
+               "Item1":"capabilities",
+               "Item2":"section/capabilities"
+            },
+            {
+               "Item1":"feed",
+               "Item2":"section/feed"
+            },
+            {
+               "Item1":"files",
+               "Item2":"section/files"
+            },
+            {
+               "Item1":"group",
+               "Item2":"section/group"
+            },
+            {
+               "Item1":"people",
+               "Item2":"section/people"
+            },
+            {
+               "Item1":"portal",
+               "Item2":"section/portal"
+            },
+            {
+               "Item1":"security",
+               "Item2":"section/security"
+            },
+            {
+               "Item1":"settings",
+               "Item2":"section/settings"
+            },
+            {
+               "Item1":"thirdparty",
+               "Item2":"section/thirdparty"
+            }
+         ],
+         "API System":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"apisystem/"
+            },
+            {
+               "Item1":"Authentication",
+               "Item2":"apisystem/authentication"
+            },
+            {
+               "Item1":"Portals",
+               "Item2":"apisystem/portalsection"
+            },
+            {
+               "Item1":"Billing",
+               "Item2":"apisystem/tariffsection"
+            }
+         ],
+         "More information":[
+            {
+               "Item1":"Storybook",
+               "Item2":"https://storybook.onlyoffice.io/"
+            },
+            {
+               "Item1":"FAQ",
+               "Item2":"faq"
+            },
+            {
+               "Item1":"Filtering",
+               "Item2":"filters"
+            },
+            {
+               "Item1":"Batching",
+               "Item2":"batch"
+            }
+         ]
+      }
+   },
+   {
       "id":"editors",
       "title":"Document Server",
       "description":"Bring document editing and co-authoring to your web app users. In this section, you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
@@ -416,106 +516,6 @@
             }
          ],
          "More information":[
-            {
-               "Item1":"FAQ",
-               "Item2":"faq"
-            },
-            {
-               "Item1":"Filtering",
-               "Item2":"filters"
-            },
-            {
-               "Item1":"Batching",
-               "Item2":"batch"
-            }
-         ]
-      }
-   },
-   {
-      "id":"docspace",
-      "title":"DocSpace",
-      "description":"Create your own productivity platform based on ONLYOFFICE DocSpace. In this section, you will learn how to make GET, POST, PUT and DELETE requests to collaborate on documents with teams, clients, partners, etc., based on the concept of rooms – special spaces with predefined permissions.",
-      "version":"1.0",
-      "links":{
-         "Get started":[
-            {
-               "Item1":"Basic concepts",
-               "Item2":"basic"
-            },
-            {
-               "Item1":"Passing authentication",
-               "Item2":"auth"
-            }
-         ],
-         "API Backend":[
-            {
-               "Item1":"authentication",
-               "Item2":"section/authentication"
-            },
-            {
-               "Item1":"backup",
-               "Item2":"section/backup"
-            },
-            {
-               "Item1":"capabilities",
-               "Item2":"section/capabilities"
-            },
-            {
-               "Item1":"feed",
-               "Item2":"section/feed"
-            },
-            {
-               "Item1":"files",
-               "Item2":"section/files"
-            },
-            {
-               "Item1":"group",
-               "Item2":"section/group"
-            },
-            {
-               "Item1":"people",
-               "Item2":"section/people"
-            },
-            {
-               "Item1":"portal",
-               "Item2":"section/portal"
-            },
-            {
-               "Item1":"security",
-               "Item2":"section/security"
-            },
-            {
-               "Item1":"settings",
-               "Item2":"section/settings"
-            },
-            {
-               "Item1":"thirdparty",
-               "Item2":"section/thirdparty"
-            }
-         ],
-         "API System":[
-            {
-               "Item1":"Basic concepts",
-               "Item2":"apisystem/"
-            },
-            {
-               "Item1":"Authentication",
-               "Item2":"apisystem/authentication"
-            },
-            {
-               "Item1":"Portals",
-               "Item2":"apisystem/portalsection"
-            },
-            {
-               "Item1":"Billing",
-               "Item2":"apisystem/tariffsection"
-            }
-         ],
-         "More information":[
-            {
-               "Item1":"Storybook",
-               "Item2":"https://storybook.onlyoffice.io/"
-            },
             {
                "Item1":"FAQ",
                "Item2":"faq"
