@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: services.CoAuthoring.secret.browser.string is deprecated
+
 ## 3.1.0
 - editors: test examples v1.5.1
 - editors: added conversion from dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xml format
