@@ -1,10 +1,10 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">How to interact from the outside</span>
+    <span class="hdr">External access to the document editing</span>
 </h1>
 
-<p class="dscr">The following examples will show you how to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+<p class="dscr">The following examples will show you how to edit text documents, spreadsheets, presentations, and fillable forms from an external source.
 To achieve this, use our <a href="<%= Url.Action("connector") %>">Automation API</a>.</p>
 
 <ul class="connector-block">
@@ -17,7 +17,7 @@ To achieve this, use our <a href="<%= Url.Action("connector") %>">Automation API
     <li class="connector-example">
         <div class="connector-info"><a href="<%= Url.Action("interactingoutside/reviewwork") %>"><div class="example-img review-work"></div></a>
         <p class="name-example-connector"><a href="<%= Url.Action("interactingoutside/reviewwork") %>">Working with review changes</a></p>
-        <p>Manages review process from the outside.</p></div>
+        <p>Manages review process from an external source.</p></div>
         <p class="block_more"><a href="<%= Url.Action("interactingoutside/reviewwork") %>">More</a></p>
     </li>
     <li class="connector-example">
