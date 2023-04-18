@@ -46,15 +46,18 @@ supervisorctl restart all
         </tr>
     </thead>
     <tbody>
-        <tr class="tablerow">
+        <tr id="services.CoAuthoring.secret.browser.string" class="tablerow">
             <td>services.CoAuthoring.secret.browser.string</td>
-            <td>Defines the <em>secret key</em> to generate a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> to ONLYOFFICE Docs.</td>
+            <td>
+                Defines the <em>secret key</em> to generate a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> to ONLYOFFICE Docs.
+                Deprecated since version 7.2, please use <a href="#services.CoAuthoring.secret.inbox.string">services.CoAuthoring.secret.inbox.string</a> instead.
+            </td>
             <td>string</td>
             <td>secret</td>
         </tr>
-        <tr class="tablerow">
+        <tr id="services.CoAuthoring.secret.inbox.string" class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
-            <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> with the commands from the <b>document storage service</b> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
+            <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> with the commands from the <b>document storage service</b> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b> and a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> to ONLYOFFICE Docs since version 7.2.</td>
             <td>string</td>
             <td>secret</td>
         </tr>
@@ -93,9 +96,6 @@ supervisorctl restart all
     "services": {
         "CoAuthoring": {
             "secret": {
-                "browser": {
-                    "string": "secret"
-                },
                 "inbox": {
                     "string": "secret"
                 },
