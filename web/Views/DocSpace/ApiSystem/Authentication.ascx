@@ -20,7 +20,7 @@
     Please note, that the token is valid for <b>5</b> minutes only, starting with the <b>datetime</b>.
 </div>
 
-<p>Example Authentication Token will look like this: "<em>ASC abc:20100707140603:E7lwEXOplYS-0lbnV1XQnDSbi3w</em>"</p>
+<p>Authentication Token example will look like this: "<em>ASC abc:20100707140603:E7lwEXOplYS-0lbnV1XQnDSbi3w</em>"</p>
 
 <div id="csharp" class="header-gray copy-link">.Net(C#) generating token example</div>
 <pre>
