@@ -105,9 +105,12 @@
 
 <div class="treeheader">More information</div>
 <ul class="side-nav root">
+    <% if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["docspace.storybook"]))
+       { %>
     <li>
-        <a href="https://storybook.onlyoffice.io/" target="_blank">Storybook</a>
+        <a href="<%= ConfigurationManager.AppSettings["docspace.storybook"] %>" target="_blank">Storybook</a>
     </li>
+    <% } %>
     <li>
         <a href="<%= Url.Action("faq") %>">FAQ</a>
     </li>
