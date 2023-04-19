@@ -593,32 +593,37 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 {
                     var name = member.Element("type").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("type").Attribute("name").ValueOrNull();
                     var split = member.Element("type").ValueOrNull().Split(',');
-                    var xml = Path.Combine(_basePath, split[1].Trim() + ".xml");
-                    var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
-                    var newMembers = members.Where(mem => IsMember(mem, split[0])).ToList();
-                    var inherited = members.Where(mem => IsInherited(mem, split[0])).SingleOrDefault();
+                    var newMembers = GetResponse(split[0], split[1].Trim());
 
-                    if (inherited != null && inherited.Element("inherited") != null)
+                    if (newMembers != null)
                     {
-                        var split1 = inherited.Element("inherited").ValueOrNull().Split(',');
-                        newMembers = GetInherited(split1[0].Trim(), split1[1].Trim(), newMembers);
-                    }
-                    var responseParam1 = new Dictionary<string, object>();
-                    var orders1 = new Dictionary<string, int>();
-                    Parse(newMembers, responseParam1, orders1);
-                    responseParam1 = Sorted(responseParam1, orders1);
-                    if (member.Element("collection").ValueOrNull() == "list")
-                    {
-                        var list = new List<object>();
-                        list.Add(responseParam1);
-                        responseParam.Add(name, list);
+                        if (member.Element("collection").ValueOrNull() == "list")
+                        {
+                            var list = new List<object>
+                            {
+                                newMembers
+                            };
+                            responseParam.Add(name, list);
+                        }
+                        else
+                        {
+                            responseParam.Add(name, newMembers);
+                        }
+
+                        var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                        orders.Add(name, order);
                     }
                     else
                     {
-                        responseParam.Add(name, responseParam1);
+                        var type = _classPluralizer.ToHumanName(split[0]);
+                        if (type.ExampleJson != null)
+                        {
+                            responseParam.Add(name, type.ExampleJson);
+
+                            var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                            orders.Add(name, order);
+                        }
                     }
-                    var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
-                    orders.Add(name, order);
                 }
                 else if (member.Element("object") != null)
                 {
