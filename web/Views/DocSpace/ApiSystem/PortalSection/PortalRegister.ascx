@@ -5,10 +5,10 @@
     <span class="hdr">POST /api/portal/register</span>
 </h1>
 
-<div class="header-gray">Description</div>
+<div id="methodDesc" class="header-gray">Description</div>
 <p class="dscr">Registers a new portal with the parameters specified in the request.</p>
 
-<div class="header-gray">Parameters</div>
+<div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -94,10 +94,10 @@
 <div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-<div class="header-gray">Returns</div>
+<div id="methodReturns" class="header-gray">Returns</div>
 <p>The link for portal activation and portal description</p>
 
-<div class="header-gray">Example Response</div>
+<div id="methodResponse" class="header-gray">Example Response</div>
 <pre>
 {
     "reference": "https://example.com/confirm.aspx",

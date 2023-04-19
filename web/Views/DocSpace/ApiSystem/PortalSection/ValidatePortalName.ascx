@@ -5,10 +5,10 @@
     <span class="hdr">POST /api/portal/validateportalname</span>
 </h1>
 
-<div class="header-gray">Description</div>
+<div id="methodDesc" class="header-gray">Description</div>
 <p class="dscr">Checks if the specified name is available to create a portal.</p>
 
-<div class="header-gray">Parameters</div>
+<div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -38,7 +38,7 @@
 <div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-<div class="header-gray">Returns</div>
+<div id="methodReturns" class="header-gray">Returns</div>
 <p>The response will contain the following information:</p>
 
 <table class="table">
@@ -87,7 +87,7 @@
     </tbody>
 </table>
 <div class="mobile-content"></div>
-<div class="header-gray">Example successful response</div>
+<div id="methodResponse" class="header-gray">Example successful response</div>
 <pre>
 {
     message = "portalNameReadyToRegister"

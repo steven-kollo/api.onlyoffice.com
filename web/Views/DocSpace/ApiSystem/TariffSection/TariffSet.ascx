@@ -6,10 +6,10 @@
     <span class="comment">This function requires authentication</span>
 </h1>
 
-<div class="header-gray">Description</div>
+<div id="methodDesc" class="header-gray">Description</div>
 <p class="dscr">Changes the portal pricing plan with the parameters specified in the request.</p>
 
-<div class="header-gray">Parameters</div>
+<div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -80,10 +80,10 @@
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 <span class="required-descr">**<em> - Please keep in mind that the sent value will be converted into megabytes and stored that way. So it is not recommended to use values not multiple of 1048576 (1 megabyte) as they will be truncated to the integer resulting from the division by 1048576, or values less than 1048576 bytes as zero value will be returned in that case both in response to this and the <a href="<%= Url.Action("apisystem/tariffsection/tariffget") %>"><em>Get tariff</em></a> requests.</em></span>
 
-<div class="header-gray">Returns</div>
+<div id="methodReturns" class="header-gray">Returns</div>
 <p>The description of the portal and the portal pricing plan</p>
 
-<div class="header-gray">Example Response</div>
+<div id="methodResponse" class="header-gray">Example Response</div>
 <pre>
 {
     "tariff": {
