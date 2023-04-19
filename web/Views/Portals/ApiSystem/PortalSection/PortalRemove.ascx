@@ -7,7 +7,7 @@
 </h1>
 
 <div id="methodDesc" class="header-gray">Description</div>
-<p class="dscr">Portal deletion.</p>
+<p class="dscr">Deletes a portal with a name specified in the request.</p>
 
 <div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
@@ -30,9 +30,9 @@
             <td>portalName<span class="required">*</span>
                 <div class="infotext">sent in Query</div>
             </td>
-            <td>the name of a portal</td>
+            <td>Portal name</td>
             <td>string</td>
-            <td>example</td>
+            <td>"example"</td>
         </tr>
     </tbody>
 </table>
@@ -40,7 +40,7 @@
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
 <div id="methodReturns" class="header-gray">Returns</div>
-<p>Returns the description of the portal to be deleted.</p>
+<p>The description of the portal to be deleted</p>
 
 <div id="methodResponse" class="header-gray">Example Response</div>
 <pre>

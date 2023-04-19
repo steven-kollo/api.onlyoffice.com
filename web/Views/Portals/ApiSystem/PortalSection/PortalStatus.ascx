@@ -7,7 +7,7 @@
 </h1>
 
 <div id="methodDesc" class="header-gray">Description</div>
-<p class="dscr">Portal activation status change.</p>
+<p class="dscr">Changes a portal activation status with a value specified in the request.</p>
 
 <div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
@@ -30,17 +30,17 @@
             <td>portalName<span class="required">*</span>
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>the name of a portal</td>
+            <td>Portal name</td>
             <td>string</td>
-            <td>example</td>
+            <td>"example"</td>
         </tr>
         <tr class="tablerow">
             <td>status<span class="required">*</span>
                 <div class="infotext">sent in Query</div>
             </td>
-            <td>portal status, can be <b>Active</b> (0) to set the active status to the portal, and <b>Suspended</b> (1) to suspend the portal</td>
+            <td>New portal status: <b>Active</b> - 0, <b>Suspended</b> - 1</td>
             <td>string</td>
-            <td>Suspended</td>
+            <td>"Suspended"</td>
         </tr>
     </tbody>
 </table>
@@ -48,7 +48,7 @@
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
 <div id="methodReturns" class="header-gray">Returns</div>
-<p>Returns the portal description.</p>
+<p>The portal description</p>
 
 <div id="methodResponse" class="header-gray">Example Response</div>
 <pre>

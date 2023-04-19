@@ -7,7 +7,7 @@
 </h1>
 
 <div id="methodDesc" class="header-gray">Description</div>
-<p class="dscr">Portal pricing plan change.</p>
+<p class="dscr">Changes the portal pricing plan with the parameters specified in the request.</p>
 
 <div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
@@ -30,7 +30,7 @@
             <td>activeUsers
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>number of active users</td>
+            <td>Number of active users</td>
             <td>integer</td>
             <td>50</td>
         </tr>
@@ -38,7 +38,7 @@
             <td>dueDate
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal pricing plan end date</td>
+            <td>End date of portal pricing plan</td>
             <td>Date</td>
             <td>2016-07-13</td>
         </tr>
@@ -46,15 +46,15 @@
             <td>features
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>available functions list</td>
+            <td>List of available features</td>
             <td>string</td>
-            <td>whitelabel</td>
+            <td>"whitelabel"</td>
         </tr>
         <tr class="tablerow">
             <td>maxTotalSize
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>maximal size of available disk space measured in bytes**</td>
+            <td>Maximum size of the available disk space measured in bytes**</td>
             <td>long</td>
             <td>1073741824</td>
         </tr>
@@ -62,7 +62,7 @@
             <td>maxFileSize
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>maximal size of the uploaded files measured in bytes**</td>
+            <td>Maximum size of the uploaded files measured in bytes**</td>
             <td>long</td>
             <td>104857600</td>
         </tr>
@@ -70,18 +70,18 @@
             <td>portalName<span class="required">*</span>
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal name</td>
+            <td>Portal name</td>
             <td>string</td>
-            <td>example</td>
+            <td>"example"</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
-<span class="required-descr">**<em> - please keep in mind that the sent value will be converted into megabytes and stored that way, so it is not recommended to use values not multiple of 1048576 (1 megabyte) as they will be truncated to the integer resulting from the division by 1048576, or values less than 1048576 bytes as zero value will be returned in that case both in response to this and <a href="<%= Url.Action("apisystem/tariffsection/tariffget") %>"><em>get tariff</em></a> requests.</em></span>
+<span class="required-descr">**<em> - Please keep in mind that the sent value will be converted into megabytes and stored that way. So it is not recommended to use values not multiple of 1048576 (1 megabyte) as they will be truncated to the integer resulting from the division by 1048576, or values less than 1048576 bytes as zero value will be returned in that case both in response to this and the <a href="<%= Url.Action("apisystem/tariffsection/tariffget") %>"><em>Get tariff</em></a> requests.</em></span>
 
 <div id="methodReturns" class="header-gray">Returns</div>
-<p>Returns the description of the portal and the portal pricing plan.</p>
+<p>The description of the portal and the portal pricing plan</p>
 
 <div id="methodResponse" class="header-gray">Example Response</div>
 <pre>
