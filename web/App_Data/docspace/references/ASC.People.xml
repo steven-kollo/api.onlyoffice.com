@@ -244,8 +244,8 @@
             </short>
             <category>Contacts</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user contacts</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Deleted user profile with the detailed information</returns>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Request parameters for updating user contacts</param>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Deleted user profile with the detailed information</returns>
             <path>api/2.0/people/{userid}/contacts</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -258,8 +258,8 @@
             </short>
             <category>Contacts</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user contacts</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Updated user profile with the detailed information</returns>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Request parameters for updating user contacts</param>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Updated user profile with the detailed information</returns>
             <path>api/2.0/people/{userid}/contacts</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -272,8 +272,8 @@
             </short>
             <category>Contacts</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user contacts</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Updated user profile with the detailed information</returns>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Request parameters for updating user contacts</param>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Updated user profile with the detailed information</returns>
             <path>api/2.0/people/{userid}/contacts</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -285,7 +285,7 @@
             Send a notification to change a phone
             </short>
             <category>Profiles</category>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user contacts</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Request parameters for updating user contacts</param>
             <returns type="System.Object, System">Notification</returns>
             <path>api/2.0/people/phone</path>
             <httpMethod>POST</httpMethod>
@@ -299,10 +299,10 @@
             </short>
             <category>Photos</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Thumbnail request parameters</param>
+            <param type="ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto, ASC.People" name="inDto">Thumbnail request parameters</param>
             <path>api/2.0/people/{userid}/photo/thumbnails</path>
             <httpMethod>POST</httpMethod>
-            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People.ApiModels.ResponseDto">Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People">Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
         </member>
         <member name="M:ASC.People.Api.PhotoController.DeleteMemberPhoto(System.String)">
             <summary>
@@ -313,7 +313,7 @@
             </short>
             <category>Photos</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People.ApiModels.ResponseDto">Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People">Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
             <path>api/2.0/people/{userid}/photo</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -326,7 +326,7 @@
             </short>
             <category>Photos</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People.ApiModels.ResponseDto">Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People">Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
             <path>api/2.0/people/{userid}/photo</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -339,8 +339,8 @@
             </short>
             <category>Photos</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user photo</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People.ApiModels.ResponseDto">Updated thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Request parameters for updating user photo</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People">Updated thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
             <path>api/2.0/people/{userid}/photo</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -356,7 +356,7 @@
             <param type="Microsoft.AspNetCore.Http.IFormCollection, Microsoft.AspNetCore.Http" name="formCollection">Image data</param>
             <path>api/2.0/people/{userid}/photo</path>
             <httpMethod>POST</httpMethod>
-            <returns type="ASC.People.ApiModels.ResponseDto.FileUploadResultDto, ASC.People.ApiModels.ResponseDto">Result of file uploading: success or not, data, message</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.FileUploadResultDto, ASC.People">Result of file uploading: success or not, data, message</returns>
         </member>
         <member name="M:ASC.People.Api.ReassignController.GetReassignProgress(System.Guid)">
             <summary>
@@ -374,7 +374,7 @@
             Starts the data reassignment for the user with the ID specified in the request.
             </summary>
             <short>Start the data reassignment</short>
-            <param type="ASC.People.ApiModels.RequestDto.StartReassignRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for starting the reassignment process</param>
+            <param type="ASC.People.ApiModels.RequestDto.StartReassignRequestDto, ASC.People" name="inDto">Request parameters for starting the reassignment process</param>
             <category>User data</category>
             <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassignment progress: reassignment item progress ID, status, exception, percentage, completed or not, the user whose data is reassigned, the user to whom this data is reassigned</returns>
             <path>api/2.0/people/reassign/start</path>
@@ -385,7 +385,7 @@
             Terminates the data reassignment for the user with the ID specified in the request.
             </summary>
             <short>Terminate the data reassignment</short>
-            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for terminating the reassignment process</param>
+            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People" name="inDto">Request parameters for terminating the reassignment process</param>
             <category>User data</category>
             <path>api/2.0/people/reassign/terminate</path>
             <httpMethod>PUT</httpMethod>
@@ -419,7 +419,7 @@
             Starts the data deletion for the user with the ID specified in the request.
             </summary>
             <short>Start the data deletion</short>
-            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for starting the deletion process</param>
+            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People" name="inDto">Request parameters for starting the deletion process</param>
             <category>User data</category>
             <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Deletion progress: deletion item progress ID, status, exception, percentage, completed or not, the user whose data is deleted</returns>
             <path>api/2.0/people/remove/start</path>
@@ -430,7 +430,7 @@
             Terminates the data deletion for the user with the ID specified in the request.
             </summary>
             <short>Terminate the data deletion</short>
-            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for terminating the deletion process</param>
+            <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People" name="inDto">Request parameters for terminating the deletion process</param>
             <category>User data</category>
             <path>api/2.0/people/remove/terminate</path>
             <httpMethod>PUT</httpMethod>
@@ -460,7 +460,7 @@
             Link a third-pary account
             </short>
             <category>Third-party accounts</category>
-            <param type="ASC.People.ApiModels.RequestDto.LinkAccountRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for linking accounts</param>
+            <param type="ASC.People.ApiModels.RequestDto.LinkAccountRequestDto, ASC.People" name="inDto">Request parameters for linking accounts</param>
             <path>api/2.0/people/thirdparty/linkaccount</path>
             <httpMethod>PUT</httpMethod>
             <returns></returns>
@@ -473,7 +473,7 @@
             Create a third-pary account
             </short>
             <category>Third-party accounts</category>
-            <param type="ASC.People.ApiModels.RequestDto.SignupAccountRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for creating a third-party account</param>
+            <param type="ASC.People.ApiModels.RequestDto.SignupAccountRequestDto, ASC.People" name="inDto">Request parameters for creating a third-party account</param>
             <path>api/2.0/people/thirdparty/signup</path>
             <httpMethod>POST</httpMethod>
             <returns></returns>
@@ -500,8 +500,8 @@
             Add an activated user
             </short>
             <category>Profiles</category>
-            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Member request parameters</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Newly added user with the detailed information</returns>
+            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People" name="inDto">Member request parameters</param>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Newly added user with the detailed information</returns>
             <path>api/2.0/people/active</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -513,8 +513,8 @@
             Add a user
             </short>
             <category>Profiles</category>
-            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Member request parameters</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Newly added user with the detailed information</returns>
+            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People" name="inDto">Member request parameters</param>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Newly added user with the detailed information</returns>
             <path>api/2.0/people</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -526,7 +526,7 @@
             Invite users
             </short>
             <category>Profiles</category>
-            <param type="ASC.People.ApiModels.RequestDto.InviteUsersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for inviting users</param>
+            <param type="ASC.People.ApiModels.RequestDto.InviteUsersRequestDto, ASC.People" name="inDto">Request parameters for inviting users</param>
             <returns type="System.Collections.Generic.List{ASC.Web.Api.Models.EmployeeDto}, System.Collections.Generic">List of users</returns>
             <path>api/2.0/people/invite</path>
             <httpMethod>POST</httpMethod>
@@ -539,8 +539,8 @@
             <short>Change a user password</short>
             <category>Password</category>
             <param type="System.Guid, System" method="url" name="userid">User ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for setting new password</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Detailed user information</returns>
+            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People" name="inDto">Request parameters for setting new password</param>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed user information</returns>
             <path>api/2.0/people/{userid}/password</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -553,7 +553,7 @@
             </short>
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Deleted user detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Deleted user detailed information</returns>
             <path>api/2.0/people/{userid}</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -565,7 +565,7 @@
             Delete my profile
             </short>
             <category>Profiles</category>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Detailed information about my profile</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed information about my profile</returns>
             <path>api/2.0/people/@self</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -577,7 +577,7 @@
             Search users by status filter
             </short>
             <category>Search</category>
-            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Users" method="url" name="status">User status</param>
+            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Common" method="url" name="status">User status</param>
             <param type="System.String, System" name="query">Search query</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
             <path>api/2.0/people/status/{status}/search</path>
@@ -606,7 +606,7 @@
             </short>
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="email">User email address</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Detailed profile information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed profile information</returns>
             <path>api/2.0/people/email</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -619,7 +619,7 @@
             </short>
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="username">User name</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Detailed profile information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed profile information</returns>
             <path>api/2.0/people/{username}</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -630,7 +630,7 @@
             <short>
             Get profiles by status
             </short>
-            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Users" method="url" name="status">User status</param>
+            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Common" method="url" name="status">User status</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
             <category>User status</category>
             <path>api/2.0/people/status/{status}</path>
@@ -717,7 +717,7 @@
             Register a Personal account
             </short>
             <category>Profiles</category>
-            <param type="ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for registering a Personal account</param>
+            <param type="ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto, ASC.People" name="inDto">Request parameters for registering a Personal account</param>
             <returns type="System.String, System">Error message or empty string</returns>
             <path>api/2.0/people/register</path>
             <httpMethod>POST</httpMethod>
@@ -731,7 +731,7 @@
             Delete users
             </short>
             <category>Profiles</category>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating portal users</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating portal users</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
             <path>api/2.0/people/delete</path>
             <httpMethod>PUT</httpMethod>
@@ -745,7 +745,7 @@
             Resend activation emails
             </short>
             <category>Profiles</category>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating portal users</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating portal users</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
             <path>api/2.0/people/invite</path>
             <httpMethod>PUT</httpMethod>
@@ -759,7 +759,7 @@
             Get portal theme
             </short>
             <category>Theme</category>
-            <returns type="ASC.Web.Core.Users.DarkThemeSettings, ASC.Web.Core.Users">Theme</returns>
+            <returns type="ASC.Web.Core.Users.DarkThemeSettings, ASC.Web.Core">Theme</returns>
             <path>api/2.0/people/theme</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -771,8 +771,8 @@
             Change portal theme
             </short>
             <category>Theme</category>
-            <param type="ASC.People.ApiModels.RequestDto.DarkThemeSettingsRequestDto, ASC.People.ApiModels.RequestDto" name="model">Theme settings request parameters</param>
-            <returns type="ASC.Web.Core.Users.DarkThemeSettings, ASC.Web.Core.Users">Theme</returns>
+            <param type="ASC.People.ApiModels.RequestDto.DarkThemeSettingsRequestDto, ASC.People" name="inDto">Theme settings request parameters</param>
+            <returns type="ASC.Web.Core.Users.DarkThemeSettings, ASC.Web.Core">Theme</returns>
             <path>api/2.0/people/theme</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -784,7 +784,7 @@
             Get my profile
             </short>
             <category>Profiles</category>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Detailed information about my profile</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed information about my profile</returns>
             <path>api/2.0/people/@self</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -796,7 +796,7 @@
             Send instructions to change email
             </short>
             <category>Profiles</category>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
             <returns type="System.Object, System">Message text</returns>
             <path>api/2.0/people/email</path>
             <httpMethod>POST</httpMethod>
@@ -809,7 +809,7 @@
             Remind a user password
             </short>
             <category>Password</category>
-            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Member request parameters</param>
+            <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People" name="inDto">Member request parameters</param>
             <returns type="System.Object, System">Email with the password</returns>
             <path>api/2.0/people/password</path>
             <httpMethod>POST</httpMethod>
@@ -823,8 +823,8 @@
             Set an activation status to the users
             </short>
             <category>User status</category>
-            <param type="ASC.Core.Users.EmployeeActivationStatus, ASC.Core.Users" method="url" name="activationstatus">Activation status</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information</param>
+            <param type="ASC.Core.Users.EmployeeActivationStatus, ASC.Core.Common" method="url" name="activationstatus">Activation status</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
             <path>api/2.0/people/activationstatus/{activationstatus}</path>
             <httpMethod>PUT</httpMethod>
@@ -839,8 +839,8 @@
             </short>
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Detailed user information</returns>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed user information</returns>
             <path>api/2.0/people/{userid}/culture</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -853,8 +853,8 @@
             </short>
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Member request parameters</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api.Models">Updated user with the detailed information</returns>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Member request parameters</param>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Updated user with the detailed information</returns>
             <path>api/2.0/people/{userid}</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -866,8 +866,8 @@
             Change a user status
             </short>
             <category>User status</category>
-            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Users" method="url" name="status">New user status</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information</param>
+            <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Common" method="url" name="status">New user status</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
             <path>api/2.0/people/status/{status}</path>
             <httpMethod>PUT</httpMethod>
@@ -881,8 +881,8 @@
             Change a user type
             </short>
             <category>User type</category>
-            <param type="ASC.Core.Users.EmployeeType, ASC.Core.Users" method="url" name="type">New user type</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information</param>
+            <param type="ASC.Core.Users.EmployeeType, ASC.Core.Common" method="url" name="type">New user type</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
             <path>api/2.0/people/type/{type}</path>
             <httpMethod>PUT</httpMethod>
@@ -920,7 +920,7 @@
             Change a user quota limit
             </short>
             <category>Quota</category>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for updating user information</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
             <path>api/2.0/people/quota</path>
             <httpMethod>PUT</httpMethod>
@@ -1039,7 +1039,7 @@
             Get a group
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <remarks>
             This method returns full group information.
             </remarks>
@@ -1066,8 +1066,8 @@
             <short>
             Add a new group
             </short>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Newly created group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Newly created group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <path>api/2.0/group</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1079,8 +1079,8 @@
             Update a group
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Updated group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Updated group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <path>api/2.0/group/{groupid}</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1092,7 +1092,7 @@
             Delete a group
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <path>api/2.0/group/{groupid}</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -1105,7 +1105,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID to move from</param>
             <param type="System.Guid, System" method="url" name="newgroupid">Group ID to move to</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <path>api/2.0/group/{groupid}/members/{newgroupid}</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1117,8 +1117,8 @@
             Replace group members
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <path>api/2.0/group/{groupid}/members</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1130,8 +1130,8 @@
             Add group members
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <path>api/2.0/group/{groupid}/members</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1143,8 +1143,8 @@
             Set a group manager
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.SetManagerRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Request parameters for setting a group manager</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <param type="ASC.People.ApiModels.RequestDto.SetManagerRequestDto, ASC.People" name="inDto">Request parameters for setting a group manager</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <path>api/2.0/group/{groupid}/manager</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1156,8 +1156,8 @@
             Remove group members
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People.ApiModels.RequestDto" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People.ApiModels.ResponseDto">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
             <path>api/2.0/group/{groupid}/members</path>
             <httpMethod>DELETE</httpMethod>
         </member>
