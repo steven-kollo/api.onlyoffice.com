@@ -4,30 +4,634 @@
         <name>ASC.Web.Api</name>
     </assembly>
     <members>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.UserName">
+            <summary>Username / email</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.Password">
+            <summary>Password</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.PasswordHash">
+            <summary>Password hash</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.Provider">
+            <summary>Provider type</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.AccessToken">
+            <summary>Provider access token</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.SerializedProfile">
+            <summary>Serialized user profile</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.Code">
+            <summary>Two-factor authentication code</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.CodeOAuth">
+            <summary>Code for getting a token</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.Session">
+            <summary>Session based authentication or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.ConfirmData">
+            <summary>Confirmation data</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto.MobilePhone">
+            <summary>Mobile phone</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.Email">
+            <summary>Email address</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.Module">
+            <summary>Module</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.First">
+            <summary>Access an account for the first time or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.Sms">
+            <summary>Sends SMS code or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.Key">
+            <summary>Key</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto.Name">
+            <summary>Name</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto.Title">
+            <summary>Title</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto.Description">
+            <summary>Description</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto.Instruction">
+            <summary>Instruction</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto.CanSet">
+            <summary>Can be set or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto.Props">
+            <summary>List of authorization keys.</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.GreetingSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.GreetingSettingsRequestsDto.Title">
+            <summary>Tenant name</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto.IpRestrictions">
+            <summary>List of IP addresses</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto.Enable">
+            <summary>Enables IP restrictions or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto.Type">
+            <summary>Trusted domain type</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto.Domains">
+            <summary>List of trusted domains</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto.InviteAsUsers">
+            <summary>Invites as a user or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto.Email">
+            <summary>Email</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto.Message">
+            <summary>Message</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto.TurnOn">
+            <summary>Specifies if the administrator messages are enabled or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.MailWhiteLabelSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MailWhiteLabelSettingsRequestsDto.FooterEnabled">
+            <summary>Specifies if the mail footer will be enabled or note</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.MobileAppRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MobileAppRequestsDto.Type">
+            <summary>Mobile app type (IosProjects, AndroidProjects, IosDocuments, AndroidDocuments, or DesktopEditor)</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.Id">
+            <summary>Team template ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.Name">
+            <summary>Team template name</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.UserCaption">
+            <summary>User caption</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.UsersCaption">
+            <summary>Users caption</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.GroupCaption">
+            <summary>Group caption</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.GroupsCaption">
+            <summary>Groups caption</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.UserPostCaption">
+            <summary>User status caption</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.RegDateCaption">
+            <summary>Registration date caption</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.GroupHeadCaption">
+            <summary>Group lead caption</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.GuestCaption">
+            <summary>Guest caption</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto.GuestsCaption">
+            <summary>Guests caption</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto.ProductId">
+            <summary>Product ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto.UserId">
+            <summary>User ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto.Administrator">
+            <summary>Administrator or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto.DefaultProductID">
+            <summary>Default product ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto.Lng">
+            <summary>Language</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto.TimeZoneID">
+            <summary>Time zone ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto.Theme">
+            <summary>Theme</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto.Show">
+            <summary>Specifies whether to show tips for the user or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto.VersionId">
+            <summary>Version ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto.OwnerId">
+            <summary>Owner ID</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.ShortenLinkRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ShortenLinkRequestsDto.Link">
+            <summary>Link</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.SsoSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.SsoSettingsRequestsDto.SerializeSettings">
+            <summary>Serialized SSO settings</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto.NotifyUsers">
+            <summary>Specifies if the users will be notified about the encryption process or note</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto.Module">
+            <summary>Storage name</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto.Props">
+            <summary>Storage properties</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.Type">
+            <summary>TFA type (None, Sms, or App)</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.Id">
+            <summary>User ID</summary>
+            <example>"9924256A-739C-462b-AF15-E652A3B1B6EB"</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.TrustedIps">
+            <summary>List of trusted IP addresses</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.MandatoryUsers">
+            <summary>List of users who must use the TFA verification</summary>
+            <example>["9924256A-739C-462b-AF15-E652A3B1B6EB"]</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.MandatoryGroups">
+            <summary>List of groups who must use the TFA verification</summary>
+            <example>["9924256A-739C-462b-AF15-E652A3B1B6EB"]</example>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto.Code">
+            <summary>TFA code</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.UploadLicenseRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.UploadLicenseRequestsDto.Files">
+            <summary>License attachments</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto.EnableUserQuota">
+            <summary>Specifies if the quota settings are enabled or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto.DefaultUserQuota">
+            <summary>Default user quota</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto.Id">
+            <summary>Module ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto.Enabled">
+            <summary>Specifies if the module security settings are enabled or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto.Subjects">
+            <summary>List of user/group IDs with the access to the module</summary>
+            <example>["9924256A-739C-462b-AF15-E652A3B1B6EB"]</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto.Items">
+            <summary>Products with security information</summary>
+            <example>[{"Key": "one", "Value": true}]</example>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto.LogoText">
+            <summary>Logo text</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto.Logo">
+            <summary>Tenant IDs with their logos (light or dark)</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto.IsDark">
+            <summary>Specifies if the logo is for a dark theme or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto.Email">
+            <summary>Email</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto.PasswordHash">
+            <summary>Password hash</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto.Lng">
+            <summary>Language</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto.TimeZone">
+            <summary>Time zone</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto.AmiId">
+            <summary>AMI ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto.SubscribeFromSite">
+            <summary>Subscribed from the site or not</summary>
+        </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.CapabilitiesDto.SsoUrl">
             <summary>
             if empty sso is disabled
             </summary>
         </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.Host">
+            <summary>Host</summary>
+            <example>"mail.example.com"</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.Port">
+            <summary>Port</summary>
+            <example>25</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.SenderAddress">
+            <summary>Sender address</summary>
+            <example>"notify@example.com"</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.SenderDisplayName">
+            <summary>Sender display name</summary>
+            <example>"Postman"</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.CredentialsUserName">
+            <summary>Credentials username</summary>
+            <example>"notify@example.com"</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.CredentialsUserPassword">
+            <summary>Credentials user password</summary>
+            <example>"{password}"</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.EnableSSL">
+            <summary>Enables SSL or not</summary>
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.EnableAuth">
+            <summary>Enables authentication or not</summary>
+            <example>false</example>
+        </member>
+        <member name="T:ASC.Web.Api.Models.CookieSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.Models.CookieSettingsRequestsDto.LifeTime">
+            <summary>Lifetime value in minutes</summary>
+        </member>
+        <member name="T:ASC.Web.Api.Models.DnsSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.Models.DnsSettingsRequestsDto.DnsName">
+            <summary>DNS</summary>
+        </member>
+        <member name="P:ASC.Web.Api.Models.DnsSettingsRequestsDto.Enable">
+            <summary>Enabled or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.Models.PasswordSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
         <member name="P:ASC.Web.Api.Models.PasswordSettingsRequestsDto.MinLength">
             <summary>
-            Minimal length password has
+            Minimum password length
             </summary>
         </member>
         <member name="P:ASC.Web.Api.Models.PasswordSettingsRequestsDto.UpperCase">
             <summary>
-            Password must contains upper case
+            Includes uppercase letters or not
             </summary>
         </member>
         <member name="P:ASC.Web.Api.Models.PasswordSettingsRequestsDto.Digits">
             <summary>
-            Password must contains digits
+            Includes digits or not
             </summary>
         </member>
         <member name="P:ASC.Web.Api.Models.PasswordSettingsRequestsDto.SpecSymbols">
             <summary>
-            Password must contains special symbols
+            Includes special symbols or not
             </summary>
+        </member>
+        <member name="T:ASC.Web.Api.Models.PaymentUrlRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.Models.PaymentUrlRequestsDto.Quantity">
+            <summary>The quantity of payment</summary>
+        </member>
+        <member name="P:ASC.Web.Api.Models.PaymentUrlRequestsDto.BackUrl">
+            <summary>Back URL</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.CustomColorThemesSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.CustomColorThemesSettingsRequestsDto.Theme">
+            <summary>Custom color theme settings</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.CustomColorThemesSettingsRequestsDto.Selected">
+            <summary>Selected or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto.FirebaseDeviceToken">
+            <summary>Firebase device token</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto.IsSubscribed">
+            <summary>Specifies if the user is subscribed to the push notification or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.LdapCronRequestDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapCronRequestDto.Cron">
+            <summary>Cron expression</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.EnableLdapAuthentication">
+            <summary>Enables LDAP authentication or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.StartTls">
+            <summary>Enables StartTLS or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.Ssl">
+            <summary>Enables SSL or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.SendWelcomeEmail">
+            <summary>Sends invitations by email to all new users or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.Server">
+            <summary>LDAP server URL address</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.UserDN">
+            <summary>Absolute path to the top level directory containing users for the import</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.PortNumber">
+            <summary>Port number</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.UserFilter">
+            <summary>User filter value to import the users who correspond to the specified search criteria. The default filter value (uid=*) allows importing all users</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.LoginAttribute">
+            <summary>Attribute in a user record that corresponds to the login that LDAP server users will use to log in to ONLYOFFICE</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.LdapMapping">
+            <summary>Correspondence between the user data fields on the portal and the attributes in the LDAP server user record</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.AccessRights">
+            <summary>Group access rights</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.GroupMembership">
+            <summary>Adds groups from LDAP server to the portal or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.GroupDN">
+            <summary>The absolute path to the top level directory containing groups for the import</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.UserAttribute">
+            <summary>Attribute that determines whether this user is a member of the groups</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.GroupFilter">
+            <summary>Group filter value to import the groups who correspond to the specified search criteria. The default filter value (objectClass=posixGroup) allows importing all users</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.GroupAttribute">
+            <summary>Attribute that specifies the users that the group includes</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.GroupNameAttribute">
+            <summary>Attribute that corresponds to a name of the group where the user is included</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.Authentication">
+            <summary>Specifies if the user has rights to read data from LDAP server or not</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.Login">
+            <summary>Login</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.Password">
+            <summary>Password</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto.AcceptCertificate">
+            <summary>Specifies if the certificate is accepted or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto.AttemptCount">
+            <summary>Maximum number of the user attempts to log in</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto.BlockTime">
+            <summary>The duration of the account suspension for unsuccessful login attempts</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto.CheckPeriod">
+            <summary>Expected server response time</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto.Type">
+            <summary>Notification type (Badges, RoomsActivity, DailyFeed, UsefullTips)</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto.IsEnabled">
+            <summary>Specifies if the notification type is enabled or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.PortalRenameRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.PortalRenameRequestsDto.Alias">
+            <summary>Portal name</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.RoomsNotificationsSettingsRequestDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.RoomsNotificationsSettingsRequestDto.RoomsId">
+            <summary>Room ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.RoomsNotificationsSettingsRequestDto.Mute">
+            <summary>Specifies if the room notifications are disabled or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.SalesRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.SalesRequestsDto.UserName">
+            <summary>Username</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.SalesRequestsDto.Email">
+            <summary>Email address</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.SalesRequestsDto.Message">
+            <summary>Message</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto.Userid">
+            <summary>Uer ID,e</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto.Key">
+            <summary>Email key</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.WebhookRetryRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhookRetryRequestsDto.Ids">
+            <summary>List of webhook IDs</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto.Id">
+            <summary>ID</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto.Uri">
+            <summary>URI</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto.SecretKey">
+            <summary>Secret key</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto.Enabled">
+            <summary>Enabled or not</summary>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.Delivery">
+            <summary>Time when a webhook was delivered</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.HookUri">
+            <summary>Hook URI</summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.WebhookId">
+            <summary>Webhook ID</summary>
         </member>
         <member name="T:ASC.Web.Api.Controllers.AuthenticationController">
             <summary>
@@ -42,7 +646,7 @@
             <short>Check authentication</short>
             <httpMethod>GET</httpMethod>
             <path>api/2.0/authentication</path>
-            <returns>Boolean value: true if the current user is authenticated</returns>
+            <returns type="System.Boolean, System">Boolean value: true if the current user is authenticated</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.AuthenticateMeFromBodyWithCode(ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto)">
             <summary>
@@ -51,30 +655,10 @@
             <short>
             Authenticate a user by code
             </short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Authentication request parameters: <![CDATA[
-            <ul>
-                <li><b>UserName</b> (string) - username / email,</li>
-                <li><b>Password</b> (string) - password,</li>
-                <li><b>PasswordHash</b> (string) - password hash,</li>
-                <li><b>Provider</b> (string) - provider type,</li>
-                <li><b>AccessToken</b> (string) - provider access token,</li>
-                <li><b>SerializedProfile</b> (string) - serialized user profile,</li>
-                <li><b>Code</b> (string) - two-factor authentication code,</li>
-                <li><b>CodeOAuth</b> (string) - code for getting a token,</li>
-                <li><b>Session</b> (bool) - session based authentication or not,</li>
-                <li><b>ConfirmData</b> (ConfirmData) - confirmation data:</li>
-                <ul>
-                    <li><b>Email</b> (string) - email address,</li>
-                    <li><b>Module</b> (string) - module,</li>
-                    <li><b>First</b> (bool) - access an account for the first time or not,</li>
-                    <li><b>Sms</b> (bool) - sends SMS code or not,</li>
-                    <li><b>Key</b> (string) - key.</li>
-                </ul>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Authentication request parameters</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/{code}</path>
-            <returns>Authentication data: authentication token and its expiration time, authentication by SMS or two-factor authentication app, phone number</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api.ApiModel.ResponseDto">Authentication data: authentication token and its expiration time, authentication by SMS or two-factor authentication app, phone number</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.AuthenticateMeAsync(ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto)">
             <summary>
@@ -83,30 +667,10 @@
             <short>
             Authenticate a user
             </short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Authentication request parameters: <![CDATA[
-            <ul>
-                <li><b>UserName</b> (string) - username / email,</li>
-                <li><b>Password</b> (string) - password,</li>
-                <li><b>PasswordHash</b> (string) - password hash,</li>
-                <li><b>Provider</b> (string) - provider type,</li>
-                <li><b>AccessToken</b> (string) - provider access token,</li>
-                <li><b>SerializedProfile</b> (string) - serialized user profile,</li>
-                <li><b>Code</b> (string) - two-factor authentication code,</li>
-                <li><b>CodeOAuth</b> (string) - code for getting a token,</li>
-                <li><b>Session</b> (bool) - session based authentication or not,</li>
-                <li><b>ConfirmData</b> (ConfirmData) - confirmation data:</li>
-                <ul>
-                    <li><b>Email</b> (string) - email address,</li>
-                    <li><b>Module</b> (string) - module,</li>
-                    <li><b>First</b> (bool) - access an account for the first time or not,</li>
-                    <li><b>Sms</b> (bool) - sends SMS code or not,</li>
-                    <li><b>Key</b> (string) - key.</li>
-                </ul>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Authentication request parameters</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication</path>
-            <returns>Authentication data: authentication token and its expiration time, authentication by SMS or two-factor authentication app, phone number, two-factor authentication key, confirmation email URL</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api.ApiModel.ResponseDto">Authentication data: authentication token and its expiration time, authentication by SMS or two-factor authentication app, phone number, two-factor authentication key, confirmation email URL</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.Logout">
             <summary>
@@ -117,7 +681,7 @@
             </short>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/logout</path>
-            <returns>Task awaiter</returns>
+            <returns></returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.CheckConfirm(ASC.Security.Cryptography.EmailValidationKeyModel)">
             <summary>
@@ -126,18 +690,10 @@
             <short>
             Open confirmation email URL
             </short>
-            <param type="ASC.Security.Cryptography.EmailValidationKeyModel, ASC.Security.Cryptography" name="inDto">Confirmation email parameters: <![CDATA[
-            <ul>
-                <li><b>Key</b> (string) - key,</li>
-                <li><b>EmplType</b> (EmployeeType?) - employee type (All, RoomAdmin, User, DocSpaceAdmin),</li>
-                <li><b>Email</b> (string) - email,</li>
-                <li><b>UiD</b> (Guid?) - user ID,</li>
-                <li><b>Type</b> (ConfirmType?) - confirmation email type (EmpInvite, LinkInvite, PortalSuspend, PortalContinue, PortalRemove, DnsChange, PortalOwnerChange, Activation, EmailChange, EmailActivation, PasswordChange, ProfileRemove, PhoneActivation, PhoneAuth, Auth, TfaActivation, TfaAuth, Wizard,).</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.Security.Cryptography.EmailValidationKeyModel, ASC.Security.Cryptography" name="inDto">Confirmation email parameters</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/confirm</path>
-            <returns>Validation result: Ok, Invalid, or Expired</returns>
+            <returns type="ASC.Security.Cryptography.EmailValidationKeyProvider.ValidationResult, ASC.Security.Cryptography">Validation result: Ok, Invalid, or Expired</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.SaveMobilePhoneAsync(ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto)">
             <summary>
@@ -146,10 +702,10 @@
             <short>
             Set a mobile phone
             </short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Mobile phone request parameters: MobilePhone (string) - mobile phone.</param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Mobile phone request parameters</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/setphone</path>
-            <returns>Authentication data: authentication by SMS or not, phone number, SMS expiration time</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api.ApiModel.ResponseDto">Authentication data: authentication by SMS or not, phone number, SMS expiration time</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.SendSmsCodeAsync(ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto)">
             <summary>
@@ -158,30 +714,10 @@
             <short>
             Send SMS code
             </short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Authentication request parameters: <![CDATA[
-            <ul>
-                <li><b>UserName</b> (string) - username / email,</li>
-                <li><b>Password</b> (string) - password,</li>
-                <li><b>PasswordHash</b> (string) - password hash,</li>
-                <li><b>Provider</b> (string) - provider type,</li>
-                <li><b>AccessToken</b> (string) - provider access token,</li>
-                <li><b>SerializedProfile</b> (string) - serialized user profile,</li>
-                <li><b>Code</b> (string) - two-factor authentication code,</li>
-                <li><b>CodeOAuth</b> (string) - code for getting a token,</li>
-                <li><b>Session</b> (bool) - session based authentication or not,</li>
-                <li><b>ConfirmData</b> (ConfirmData) - confirmation data:</li>
-                <ul>
-                    <li><b>Email</b> (string) - email address,</li>
-                    <li><b>Module</b> (string) - module,</li>
-                    <li><b>First</b> (bool) - access an account for the first time or not,</li>
-                    <li><b>Sms</b> (bool) - sends SMS code or not,</li>
-                    <li><b>Key</b> (string) - key.</li>
-                </ul>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Authentication request parameters</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/sendsms</path>
-            <returns>Authentication data: authentication by SMS or not, phone number, SMS expiration time</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api.ApiModel.ResponseDto">Authentication data: authentication by SMS or not, phone number, SMS expiration time</returns>
         </member>
         <member name="T:ASC.Web.Api.Controllers.CapabilitiesController">
             <summary>
@@ -196,7 +732,7 @@
             <short>
             Get portal capabilities
             </short>
-            <returns>Portal capabilities: LDAP enabled or not, OAuth enabled or not, list of providers, SP login label, SSO URL</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.CapabilitiesDto, ASC.Web.Api.ApiModel.ResponseDto">Portal capabilities: LDAP enabled or not, OAuth enabled or not, list of providers, SP login label, SSO URL</returns>
             <path>api/2.0/capabilities</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -233,7 +769,7 @@
             <param type="System.Nullable{System.Boolean}, System" name="onlyNew">Displays only fresh feeds</param>
             <param type="System.Nullable{System.Boolean}, System" name="withRelated">Includes the associated feeds related to the entity with the specified ID</param>
             <param type="ASC.Api.Core.ApiDateTime, ASC.Api.Core" name="timeReaded">Time when the feeds were read</param>
-            <returns>List of filtered feeds with the dates when they were read</returns>
+            <returns type="System.Object, System">List of filtered feeds with the dates when they were read</returns>
             <path>api/2.0/feed/filter</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -244,7 +780,7 @@
             <short>
             Count fresh feeds
             </short>
-            <returns>Number of fresh feeds</returns>
+            <returns type="System.Object, System">Number of fresh feeds</returns>
             <path>api/2.0/feed/newfeedscount</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -260,9 +796,10 @@
             <short>
             Get modules
             </short>
-            <returns>List of modules</returns>
+            <returns type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic">List of modules</returns>
             <path>api/2.0/modules</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.ModulesController.GetAllWithInfo">
             <summary>
@@ -271,9 +808,10 @@
             <short>
             Get modules information
             </short>
-            <returns>List of modules with their information: ID, product class name, title, description, icon URL, large icon URL, start URL, primary or nor, help URL</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Api.Core.Module}, System.Collections.Generic">List of modules with their information: ID, product class name, title, description, icon URL, large icon URL, start URL, primary or nor, help URL</returns>
             <path>api/2.0/modules/info</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="T:ASC.Web.Api.Controllers.PaymentController">
             <summary>
@@ -289,13 +827,8 @@
             Get the payment page URL
             </short>
             <category>Payment</category>
-            <param type="ASC.Web.Api.Models.PaymentUrlRequestsDto, ASC.Web.Api.Models" name="inDto">Payment URL request parameters: <![CDATA[
-            <ul>
-                <li><b>Quantity</b> (Dictionary&lt;string, int&gt;) - the quantity of payment,</li>
-                <li><b>BackUrl</b> (string) - back URL.</li>
-            </ul>
-            ]]></param>
-            <returns>The URL to the payment page</returns>
+            <param type="ASC.Web.Api.Models.PaymentUrlRequestsDto, ASC.Web.Api.Models" name="inDto">Payment URL request parameters</param>
+            <returns type="System.Uri, System">The URL to the payment page</returns>
             <path>api/2.0/portal/payment/url</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -307,8 +840,8 @@
             Update the payment quantity
             </short>
             <category>Payment</category>
-            <param type="ASC.Web.Api.Models.PaymentUrlRequestsDto, ASC.Web.Api.Models" name="inDto">Payment URL request parameters: <![CDATA[Quantity (Dictionary&lt;string, int&gt;) - the quantity of payment]]></param>
-            <returns>Boolean value: true if the operation is successful</returns>
+            <param type="ASC.Web.Api.Models.PaymentUrlRequestsDto, ASC.Web.Api.Models" name="inDto">Payment URL request parameters</param>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/portal/payment/update</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -321,7 +854,7 @@
             </short>
             <category>Payment</category>
             <param type="System.String, System" name="backUrl">Back URL</param>
-            <returns>The URL to the payment account</returns>
+            <returns type="System.Uri, System">The URL to the payment account</returns>
             <path>api/2.0/portal/payment/account</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -333,7 +866,7 @@
             Get prices
             </short>
             <category>Payment</category>
-            <returns>List of available portal prices</returns>
+            <returns type="System.Object, System">List of available portal prices</returns>
             <path>api/2.0/portal/payment/prices</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -345,9 +878,10 @@
             Get currencies
             </short>
             <category>Payment</category>
-            <returns>List of available portal currencies</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModels.ResponseDto.CurrenciesDto}, System.Collections.Generic">List of available portal currencies</returns>
             <path>api/2.0/portal/payment/currencies</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.PaymentController.GetQuotas">
             <summary>
@@ -357,11 +891,12 @@
             Get quotas
             </short>
             <category>Quota</category>
-            <returns>List of available portal quotas</returns>
+            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.ApiModels.ResponseDto.QuotaDto}, System.Collections.Generic">List of available portal quotas</returns>
             <path>api/2.0/portal/payment/quotas</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetQuota">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetQuota(System.Boolean)">
             <summary>
             Returns the payment information about the current portal quota.
             </summary>
@@ -369,7 +904,7 @@
             Get quota payment information
             </short>
             <category>Payment</category>
-            <returns>Payment information about the current portal quota: ID, title, price, nonprofit or not, free or not, trial or not, tenant quota features</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.QuotaDto, ASC.Web.Api.ApiModels.ResponseDto">Payment information about the current portal quota: ID, title, price, nonprofit or not, free or not, trial or not, tenant quota features</returns>
             <path>api/2.0/portal/payment/quota</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -381,13 +916,7 @@
             Send a payment request
             </short>
             <category>Payment</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.SalesRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Portal payment request parameters: <![CDATA[
-            <ul>
-                <li><b>UserName</b> (string) - username,</li>
-                <li><b>Email</b> (string) - email,</li>
-                <li><b>Message</b> (string) - message.</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.SalesRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Portal payment request parameters</param>
             <returns></returns>
             <path>api/2.0/portal/payment/request</path>
             <httpMethod>POST</httpMethod>
@@ -406,7 +935,7 @@
             Get a portal
             </short>
             <category>Settings</category>
-            <returns>Current portal information</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.TenantDto, ASC.Web.Api.ApiModels.ResponseDto">Current portal information</returns>
             <path>api/2.0/portal</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -418,8 +947,8 @@
             Get a user by ID
             </short>
             <category>Users</category>
-            <param type="System.Guid, System" name="userID">User ID</param>
-            <returns>User information</returns>
+            <param type="System.Guid, System" method="url" name="userID">User ID</param>
+            <returns type="ASC.Core.Users.UserInfo, ASC.Core.Users">User information</returns>
             <path>api/2.0/portal/users/{userID}</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -430,9 +959,9 @@
             <short>
             Get an invitation link
             </short>
-            <param type="ASC.Core.Users.EmployeeType, ASC.Core.Users" name="employeeType">Employee type (All, RoomAdmin, User, DocSpaceAdmin)</param>
+            <param type="ASC.Core.Users.EmployeeType, ASC.Core.Users" method="url" name="employeeType">Employee type (All, RoomAdmin, User, DocSpaceAdmin)</param>
             <category>Users</category>
-            <returns>Invitation link</returns>
+            <returns type="System.Object, System">Invitation link</returns>
             <path>api/2.0/portal/users/invite/{employeeType}</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -442,8 +971,8 @@
             </summary>
             <short>Get a shortened link</short>
             <category>Settings</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.ShortenLinkRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Shortened link request parameters: Link (string) - link</param>
-            <returns>Shortened link</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.ShortenLinkRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Shortened link request parameters</param>
+            <returns type="System.Object, System">Shortened link</returns>
             <path>api/2.0/portal/getshortenlink</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -455,7 +984,7 @@
             Get an extra tenant license
             </short>
             <category>Quota</category>
-            <returns>Extra tenant license information</returns>
+            <returns type="System.Object, System">Extra tenant license information</returns>
             <path>api/2.0/portal/tenantextra</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -467,7 +996,7 @@
             Get the used portal space
             </short>
             <category>Quota</category>
-            <returns>Used portal space</returns>
+            <returns type="System.Double, System">Used portal space</returns>
             <path>api/2.0/portal/usedspace</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -479,7 +1008,7 @@
             Get a number of portal users
             </short>
             <category>Users</category>
-            <returns>Number of portal users</returns>
+            <returns type="System.Int64, System">Number of portal users</returns>
             <path>api/2.0/portal/userscount</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -491,7 +1020,7 @@
             Get a portal tariff
             </short>
             <category>Quota</category>
-            <returns>Current portal tariff</returns>
+            <returns type="ASC.Core.Billing.Tariff, ASC.Core.Billing">Current portal tariff</returns>
             <path>api/2.0/portal/tariff</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -503,7 +1032,7 @@
             Get a portal quota
             </short>
             <category>Quota</category>
-            <returns>Current portal quota: tenant, name, price, product ID, visible or not, tenant quota features</returns>
+            <returns type="ASC.Core.Tenants.TenantQuota, ASC.Core.Tenants">Current portal quota: tenant, name, price, product ID, visible or not, tenant quota features</returns>
             <path>api/2.0/portal/quota</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -515,7 +1044,7 @@
             Get the recommended quota
             </short>
             <category>Quota</category>
-            <returns>Recommended portal quota</returns>
+            <returns type="ASC.Core.Tenants.TenantQuota, ASC.Core.Tenants">Recommended portal quota</returns>
             <path>api/2.0/portal/quota/right</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -528,7 +1057,7 @@
             </short>
             <category>Settings</category>
             <param type="System.String, System" name="virtualPath">Portal virtual path</param>
-            <returns>Portal path</returns>
+            <returns type="System.Object, System">Portal path</returns>
             <path>api/2.0/portal/path</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -541,7 +1070,7 @@
             </short>
             <category>Settings</category>
             <param type="System.String, System" name="url">Bookmark URL</param>
-            <returns>Thumbnail</returns>
+            <returns type="Microsoft.AspNetCore.Mvc.FileResult, Microsoft.AspNetCore.Mvc">Thumbnail</returns>
             <path>api/2.0/portal/thumb</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -565,7 +1094,7 @@
             Register the mobile app installation
             </short>
             <category>Settings</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.MobileAppRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Mobile app request parameters: Type (MobileAppType) - mobile app type (IosProjects, AndroidProjects, IosDocuments, AndroidDocuments, or DesktopEditor)</param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.MobileAppRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Mobile app request parameters</param>
             <returns></returns>
             <path>api/2.0/portal/mobile/registration</path>
             <httpMethod>POST</httpMethod>
@@ -590,8 +1119,8 @@
             </summary>
             <short>Update a portal name</short>
             <category>Settings</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.PortalRenameRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">Request parameters for portal renaming: Alias (string) - new portal name</param>
-            <returns>Confirmation email about authentication to the portal with a new name</returns>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.PortalRenameRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">Request parameters for portal renaming</param>
+            <returns type="System.Object, System">Confirmation email about authentication to the portal with a new name</returns>
             <path>api/2.0/portal/portalrename</path>
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
@@ -602,7 +1131,7 @@
             </summary>
             <short>Delete a portal immediately</short>
             <category>Settings</category>
-            <returns>Task awaiter</returns>
+            <returns></returns>
             <path>api/2.0/portal/deleteportalimmediately</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -652,7 +1181,7 @@
             </summary>
             <short>Delete a portal</short>
             <category>Settings</category>
-            <returns>URL to the feedback form about removing a portal</returns>
+            <returns type="System.Object, System">URL to the feedback form about removing a portal</returns>
             <path>api/2.0/portal/delete</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -662,12 +1191,7 @@
             </summary>
             <short>Send congratulations</short>
             <category>Users</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Congratulations request parameters: <![CDATA[
-            <ul>
-                <li><b>Userid</b> (Guid) - user ID,</li>
-                <li><b>Key</b> (string) - email key.</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Congratulations request parameters</param>
             <returns></returns>
             <path>api/2.0/portal/sendcongratulations</path>
             <httpMethod>POST</httpMethod>
@@ -686,9 +1210,10 @@
             Get login history
             </short>
             <category>Login history</category>
-            <returns>List of login events</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModel.ResponseDto.LoginEventDto}, System.Collections.Generic">List of login events</returns>
             <path>api/2.0/security/audit/login/last</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.SecurityController.GetLastAuditEvents">
             <summary>
@@ -698,9 +1223,10 @@
             Get audit trail data
             </short>
             <category>Audit trail data</category>
-            <returns>List of audit trail data</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModel.ResponseDto.AuditEventDto}, System.Collections.Generic">List of audit trail data</returns>
             <path>api/2.0/security/audit/events/last</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.SecurityController.GetLoginEventsByFilter(System.Guid,ASC.MessagingSystem.Core.MessageAction,ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
             <summary>
@@ -714,9 +1240,10 @@
             <param type="ASC.MessagingSystem.Core.MessageAction, ASC.MessagingSystem.Core" name="action">Action</param>
             <param type="ASC.Api.Core.ApiDateTime, ASC.Api.Core" name="from">Start date</param>
             <param type="ASC.Api.Core.ApiDateTime, ASC.Api.Core" name="to">End date</param>
-            <returns>List of filtered login events</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModel.ResponseDto.LoginEventDto}, System.Collections.Generic">List of filtered login events</returns>
             <path>api/2.0/security/audit/login/filter</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.SecurityController.GetAuditEventsByFilter(System.Guid,ASC.AuditTrail.Types.ProductType,ASC.AuditTrail.Types.ModuleType,ASC.AuditTrail.Types.ActionType,ASC.MessagingSystem.Core.MessageAction,ASC.AuditTrail.Types.EntryType,System.String,ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
             <summary>
@@ -727,17 +1254,18 @@
             </short>
             <category>Audit trail data</category>
             <param type="System.Guid, System" name="userId">User ID</param>
-            <param type="ASC.AuditTrail.Types.ProductType, ASC.AuditTrail.Types" name="productType">Product (None, CRM, Documents, Login, Others, People, Projects, Settings)</param>
-            <param type="ASC.AuditTrail.Types.ModuleType, ASC.AuditTrail.Types" name="moduleType">Module (None, Files, Folders, DocumentsSettings, Companies, Persons, Contacts, CrmTasks, Opportunities, Invoices, Cases, CommonCrmSettings, ContactsSettings, ContactTypes, InvoiceSettings, OtherCrmSettings, Users, Groups, Projects, Milestones, Tasks, Discussions, TimeTracking, Reports, ProjectsSettings, General, Products, Rooms)</param>
-            <param type="ASC.AuditTrail.Types.ActionType, ASC.AuditTrail.Types" name="actionType">Action type (None, Create, Update, Delete, Link, Unlink, Attach, Detach, Send, Import, Export, UpdateAccess, Download, Upload, Copy, Move, Reassigns, Follow, Unfollow, Logout)</param>
+            <param type="ASC.AuditTrail.Types.ProductType, ASC.AuditTrail.Types" name="productType">Product</param>
+            <param type="ASC.AuditTrail.Types.ModuleType, ASC.AuditTrail.Types" name="moduleType">Module</param>
+            <param type="ASC.AuditTrail.Types.ActionType, ASC.AuditTrail.Types" name="actionType">Action type</param>
             <param type="ASC.MessagingSystem.Core.MessageAction, ASC.MessagingSystem.Core" name="action">Action</param>
-            <param type="ASC.AuditTrail.Types.EntryType, ASC.AuditTrail.Types" name="entryType">Entry (None, File, Folder, Project, Contact, Milestone, Task, Comment, SubTask, Message, TimeSpend, ReportTemplate, Template, Relationship, CRMTask, Opportunity, Invoice, Case, ListItem, InvoiceItem, InvoiceTax, FieldDescription, OpportunityMilestone, User, Group, Room, Tag)</param>
+            <param type="ASC.AuditTrail.Types.EntryType, ASC.AuditTrail.Types" name="entryType">Entry</param>
             <param type="System.String, System" name="target">Target</param>
             <param type="ASC.Api.Core.ApiDateTime, ASC.Api.Core" name="from">Start date</param>
             <param type="ASC.Api.Core.ApiDateTime, ASC.Api.Core" name="to">End date</param>
-            <returns>List of filtered audit trail data</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModel.ResponseDto.AuditEventDto}, System.Collections.Generic">List of filtered audit trail data</returns>
             <path>api/2.0/security/audit/events/filter</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.SecurityController.GetTypes">
             <summary>
@@ -747,7 +1275,7 @@
             Get audit trail types
             </short>
             <category>Audit trail data</category>
-            <returns>Audit trail types</returns>
+            <returns type="System.Object, System">Audit trail types</returns>
             <path>api/2.0/security/audit/types</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
@@ -762,7 +1290,7 @@
             <category>Audit trail data</category>
             <param type="System.Nullable{ASC.AuditTrail.Types.ProductType}, System" name="productType">Product</param>
             <param type="System.Nullable{ASC.AuditTrail.Types.ModuleType}, System" name="moduleType">Module</param>
-            <returns>Audit trail mappers</returns>
+            <returns type="System.Object, System">Audit trail mappers</returns>
             <path>api/2.0/security/audit/mappers</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
@@ -775,7 +1303,7 @@
             Generate the login history report
             </short>
             <category>Login history</category>
-            <returns>URL to the xlsx report file</returns>
+            <returns type="System.Object, System">URL to the xlsx report file</returns>
             <path>api/2.0/security/audit/login/report</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -787,7 +1315,7 @@
             Generate the audit trail report
             </short>
             <category>Audit trail data</category>
-            <returns>URL to the xlsx report file</returns>
+            <returns type="System.Object, System">URL to the xlsx report file</returns>
             <path>api/2.0/security/audit/events/report</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -799,7 +1327,7 @@
             Get the audit trail settings
             </short>
             <category>Audit trail data</category>
-            <returns>Audit settings</returns>
+            <returns type="ASC.Core.Tenants.TenantAuditSettings, ASC.Core.Tenants">Audit settings</returns>
             <path>api/2.0/security/audit/settings/lifetime</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -811,16 +1339,8 @@
             Set the audit trail settings
             </short>
             <category>Audit trail data</category>
-            <param type="ASC.Core.Tenants.TenantAuditSettingsWrapper, ASC.Core.Tenants" name="wrapper">Audit trail settings: <![CDATA[
-            <ul>
-                <li><b>Settings</b> (TenantAuditSettings) - audit trail settings:</li>
-                <ul>
-                    <li><b>LoginHistoryLifeTime</b> (integer) - login history lifetime,</li>
-                    <li><b>AuditTrailLifeTime</b> (integer) - audit trail lifetime.</li>
-                </ul>
-            </ul>
-            ]]></param>
-            <returns>Audit trail settings</returns>
+            <param type="ASC.Core.Tenants.TenantAuditSettingsWrapper, ASC.Core.Tenants" name="wrapper">Audit trail settings</param>
+            <returns type="ASC.Core.Tenants.TenantAuditSettings, ASC.Core.Tenants">Audit trail settings</returns>
             <path>api/2.0/security/audit/settings/lifetime</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -836,9 +1356,10 @@
             </summary>
             <short>Get the custom navigation items</short>
             <category>Custom navigation</category>
-            <returns>List of the custom navigation items</returns>
+            <returns type="System.Collections.Generic.List{ASC.Web.Studio.Core.CustomNavigationItem}, System.Collections.Generic">List of the custom navigation items</returns>
             <path>api/2.0/settings/customnavigation/getall</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.CustomNavigationController.GetCustomNavigationItemSample">
             <summary>
@@ -846,7 +1367,7 @@
             </summary>
             <short>Get a custom navigation item sample</short>
             <category>Custom navigation</category>
-            <returns>Custom navigation item</returns>
+            <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio.Core">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/getsample</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -856,8 +1377,8 @@
             </summary>
             <short>Get a custom navigation item by ID</short>
             <category>Custom navigation</category>
-            <param type="System.Guid, System" name="id">Custom navigation item ID</param>
-            <returns>Custom navigation item</returns>
+            <param type="System.Guid, System" method="url" name="id">Custom navigation item ID</param>
+            <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio.Core">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/get/{id}</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -867,18 +1388,8 @@
             </summary>
             <short>Add a custom navigation item</short>
             <category>Custom navigation</category>
-            <param type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio.Core" name="item">Custom navigation parameters: <![CDATA[
-            <ul>
-                <li><b>Id</b> (Guid) - ID,</li>
-                <li><b>Label</b> (string) - label,</li>
-                <li><b>Url</b> (string) - URL,</li>
-                <li><b>BigImg</b> (string) - big image,</li>
-                <li><b>SmallImg</b> (string) - small image,</li>
-                <li><b>ShowInMenu</b> (bool) - show in menu or not,</li>
-                <li><b>ShowOnHomePage</b> (bool) - show on home page or not.</li>
-            </ul>
-            ]]></param>
-            <returns>Custom navigation item</returns>
+            <param type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio.Core" name="item">Custom navigation parameters</param>
+            <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio.Core">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/create</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -888,10 +1399,10 @@
             </summary>
             <short>Delete a custom navigation item</short>
             <category>Custom navigation</category>
-            <param type="System.Guid, System" name="id">Custom navigation item ID</param>
+            <param type="System.Guid, System" method="url" name="id">Custom navigation item ID</param>
             <path>api/2.0/settings/customnavigation/delete/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <returns>Task awaiter</returns>
+            <returns></returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.PeopleSchemas">
             <summary>
@@ -899,9 +1410,10 @@
             </summary>
             <short>Get team templates</short>
             <category>Team templates</category>
-            <returns>List of team templates with the following parameters: ID, name, user caption, users caption, group caption, groups caption, user status caption, registration date caption, group lead caption, guest caption, guests caption</returns>
+            <returns type="System.Collections.Generic.List{ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto}, System.Collections.Generic">List of team templates with the following parameters: ID, name, user caption, users caption, group caption, groups caption, user status caption, registration date caption, group lead caption, guest caption, guests caption</returns>
             <path>api/2.0/settings/customschemas</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.SaveNamingSettings(ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto)">
             <summary>
@@ -909,8 +1421,8 @@
             </summary>
             <short>Save the naming settings</short>
             <category>Team templates</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Team template parameters: Id (string) - team template ID</param>
-            <returns>Team template with the following parameters: ID, name, user caption, users caption, group caption, groups caption, user status caption, registration date caption, group lead caption, guest caption, guests caption</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Team template parameters</param>
+            <returns type="ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto">Team template with the following parameters: ID, name, user caption, users caption, group caption, groups caption, user status caption, registration date caption, group lead caption, guest caption, guests caption</returns>
             <path>api/2.0/settings/customschemas</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -920,20 +1432,8 @@
             </summary>
             <short>Create a custom team template</short>
             <category>Team templates</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Team template parameters: <![CDATA[
-            <ul>
-                <li><b>UserCaption</b> (string) - user caption,</li>
-                <li><b>UsersCaption</b> (string) - users caption,</li>
-                <li><b>GroupCaption</b> (string) - group caption,</li>
-                <li><b>GroupsCaption</b> (string) - groups caption,</li>
-                <li><b>UserPostCaption</b> (string) - user status caption,</li>
-                <li><b>RegDateCaption</b> (string) - registration date caption,</li>
-                <li><b>GroupHeadCaption</b> (string) - group lead caption,</li>
-                <li><b>GuestCaption</b> (string) - guest caption,</li>
-                <li><b>GuestsCaption</b> (string) - guests caption.</li>
-            </ul>
-            ]]></param>
-            <returns>Custom team template with the following parameters: ID, name, user caption, users caption, group caption, groups caption, user status caption, registration date caption, group lead caption, guest caption, guests caption</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Team template parameters</param>
+            <returns type="ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto">Custom team template with the following parameters: ID, name, user caption, users caption, group caption, groups caption, user status caption, registration date caption, group lead caption, guest caption, guests caption</returns>
             <path>api/2.0/settings/customschemas</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -943,8 +1443,8 @@
             </summary>
             <short>Get a team template by ID</short>
             <category>Team templates</category>
-            <param type="System.String, System" name="id">Team template ID</param>
-            <returns>Team template with the following parameters: ID, name, user caption, users caption, group caption, groups caption, user status caption, registration date caption, group lead caption, guest caption, guests caption</returns>
+            <param type="System.String, System" method="url" name="id">Team template ID</param>
+            <returns type="ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto">Team template with the following parameters: ID, name, user caption, users caption, group caption, groups caption, user status caption, registration date caption, group lead caption, guest caption, guests caption</returns>
             <path>api/2.0/settings/customschemas/{id}</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -954,7 +1454,7 @@
             </summary>
             <short>Get greeting settings</short>
             <category>Greeting settings</category>
-            <returns>Greeting settings: tenant name</returns>
+            <returns type="System.Object, System">Greeting settings: tenant name</returns>
             <path>api/2.0/settings/greetingsettings</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -964,7 +1464,7 @@
             </summary>
             <short>Check the default greeting settings</short>
             <category>Greeting settings</category>
-            <returns>Boolean value: true if the greeting settings of the current portal are set to default</returns>
+            <returns type="System.Boolean, System">Boolean value: true if the greeting settings of the current portal are set to default</returns>
             <path>api/2.0/settings/greetingsettings/isdefault</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -974,8 +1474,8 @@
             </summary>
             <short>Save the greeting settings</short>
             <category>Greeting settings</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.GreetingSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Greeting settings: Title (string) - tenant name</param>
-            <returns>Message about saving greeting settings successfully</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.GreetingSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Greeting settings</param>
+            <returns type="System.Object, System">Message about saving greeting settings successfully</returns>
             <path>api/2.0/settings/greetingsettings</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -985,7 +1485,7 @@
             </summary>
             <short>Restore the greeting settings</short>
             <category>Greeting settings</category>
-            <returns>Greeting settings: tenant name</returns>
+            <returns type="System.Object, System">Greeting settings: tenant name</returns>
             <path>api/2.0/settings/greetingsettings/restore</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -995,9 +1495,10 @@
             </summary>
             <short>Get the IP portal restrictions</short>
             <category>IP restrictions</category>
-            <returns>List of IP restrictions parameters: restriction IDs, tenant IDs</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.IPSecurity.IPRestriction}, System.Collections.Generic">List of IP restrictions parameters: restriction IDs, tenant IDs</returns>
             <path>api/2.0/settings/iprestrictions</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.SaveIpRestrictions(ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto)">
             <summary>
@@ -1005,10 +1506,11 @@
             </summary>
             <short>Save the IP restrictions</short>
             <category>IP restrictions</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">IP restrictions request parameters: <![CDATA[IpRestrictions (IEnumerable&lt;IpRestrictionBase&gt;) - list of IP addresses]]></param>
-            <returns>List of updated IP restrictions: IP addresses, for admin users only or not</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">IP restrictions request parameters</param>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.IPSecurity.IpRestrictionBase}, System.Collections.Generic">List of updated IP restrictions: IP addresses, for admin users only or not</returns>
             <path>api/2.0/settings/iprestrictions</path>
             <httpMethod>PUT</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.ReadIpRestrictionsSettings">
             <summary>
@@ -1016,7 +1518,7 @@
             </summary>
             <short>Get the IP restriction settings</short>
             <category>IP restrictions</category>
-            <returns>IP restriction settings: IP restrictions are enabled or not</returns>
+            <returns type="ASC.IPSecurity.IPRestrictionsSettings, ASC.IPSecurity">IP restriction settings: IP restrictions are enabled or not</returns>
             <path>api/2.0/settings/iprestrictions/settings</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1026,8 +1528,8 @@
             </summary>
             <short>Update the IP restriction settings</short>
             <category>IP restrictions</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">New IP restriction settings: Enable (bool) - enable IP restrictions or not</param>
-            <returns>Updated IP restriction settings: IP restrictions are enabled or not</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">New IP restriction settings</param>
+            <returns type="ASC.IPSecurity.IPRestrictionsSettings, ASC.IPSecurity">Updated IP restriction settings: IP restrictions are enabled or not</returns>
             <path>api/2.0/settings/iprestrictions/settings</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1039,7 +1541,7 @@
             Get the LDAP settings
             </short>
             <category>LDAP</category>
-            <returns>LDAP settings: enable LDAP authentication or not, start TLS or not, enable SSL or not, send welcome email or not, server name, user name, port number, user filter, login attribute, LDAP settings mapping, access rights, user is a group member or not, group name, user attribute, group filter, group attribute, group name attribute, authentication is enabled or not, login, password, accept certificate or not</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">LDAP settings: enable LDAP authentication or not, start TLS or not, enable SSL or not, send welcome email or not, server name, user name, port number, user filter, login attribute, LDAP settings mapping, access rights, user is a group member or not, group name, user attribute, group filter, group attribute, group name attribute, authentication is enabled or not, login, password, accept certificate or not</returns>
             <path>api/2.0/settings/ldap</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1051,7 +1553,7 @@
             Get the LDAP cron expression
             </short>
             <category>LDAP</category>
-            <returns>LDAP cron settings: cron expression</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapCronSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">LDAP cron settings: cron expression</returns>
             <path>api/2.0/settings/ldap/cron</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1064,7 +1566,7 @@
             </short>
             <category>LDAP</category>
             <path>api/2.0/settings/ldap/cron</path>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.LdapCronRequestDto, ASC.Web.Api.ApiModels.RequestsDto" name="ldapCronRequest">LDAP cron request parameters: Cron (string) - cron expression</param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.LdapCronRequestDto, ASC.Web.Api.ApiModels.RequestsDto" name="ldapCronRequest">LDAP cron request parameters</param>
             <httpMethod>POST</httpMethod>
             <returns></returns>
         </member>
@@ -1078,7 +1580,7 @@
             <category>LDAP</category>
             <path>api/2.0/settings/ldap/sync</path>
             <httpMethod>GET</httpMethod>
-            <returns>LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api.ApiModels.ResponseDto">LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.TestLdapSync">
             <summary>
@@ -1090,7 +1592,7 @@
             <category>LDAP</category>
             <path>api/2.0/settings/ldap/sync/test</path>
             <httpMethod>GET</httpMethod>
-            <returns>LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api.ApiModels.ResponseDto">LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.SaveLdapSettings(ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto)">
             <summary>
@@ -1100,8 +1602,8 @@
             Save the LDAP settings
             </short>
             <category>LDAP</category>
-            <param name="ldapRequestsDto">LDAP settings</param>
-            <returns>LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="ldapRequestsDto">LDAP settings</param>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api.ApiModels.ResponseDto">LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
             <path>api/2.0/settings/ldap</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1113,15 +1615,10 @@
             Test the LDAP saving process
             </short>
             <category>LDAP</category>
-            <param type="ASC.ActiveDirectory.Base.Settings.LdapSettings, ASC.ActiveDirectory.Base.Settings" name="ldapSettings">LDAP settings: <![CDATA[
-            <ul>
-                <li><b>LdapMapping</b> (Dictionary&lt;MappingFields, string&gt;) - LDAP settings mapping (FirstNameAttribute, SecondNameAttribute, BirthDayAttribute, GenderAttribute, MobilePhoneAttribute, MailAttribute, TitleAttribute, LocationAttribute, AvatarAttribute, AdditionalPhone, AdditionalMobilePhone, AdditionalMail, Skype, UserQuotaLimit),</li>
-                <li><b>AccessRights</b> (Dictionary&lt;AccessRight, string&gt;) - accecss rights (FullAccess, Documents, Projects, CRM, Community, People, Mail).</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.ActiveDirectory.Base.Settings.LdapSettings, ASC.ActiveDirectory.Base.Settings" name="ldapSettings">LDAP settings</param>
             <path>api/2.0/settings/ldap/save/test</path>
             <httpMethod>POST</httpMethod>
-            <returns>LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api.ApiModels.ResponseDto">LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapOperationStatus">
             <summary>
@@ -1131,7 +1628,7 @@
             Get the LDAP synchronization process status
             </short>
             <category>LDAP</category>
-            <returns>LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api.ApiModels.ResponseDto">LDAP operation status: completed or not, ID, status, error, warning, percentage of completion, certificate confirmation request, source, operation type</returns>
             <path>api/2.0/settings/ldap/status</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1143,7 +1640,7 @@
             Get the LDAP default settings
             </short>
             <category>LDAP</category>
-            <returns>LDAP default settings: enable LDAP authentication or not, start TLS or not, enable SSL or not, send welcome email or not, server name, user name, port number, user filter, login attribute, LDAP settings mapping, access rights, user is a group member or not, group name, user attribute, group filter, group attribute, group name attribute, authentication is enabled or not, login, password, accept certificate or not</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">LDAP default settings: enable LDAP authentication or not, start TLS or not, enable SSL or not, send welcome email or not, server name, user name, port number, user filter, login attribute, LDAP settings mapping, access rights, user is a group member or not, group name, user attribute, group filter, group attribute, group name attribute, authentication is enabled or not, login, password, accept certificate or not</returns>
             <path>api/2.0/settings/ldap/default</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1153,7 +1650,7 @@
             </summary>
             <short>Refresh the license</short>
             <category>License</category>
-            <returns>Boolean value: true if the operation is successful</returns>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/settings/license/refresh</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1165,7 +1662,7 @@
             Activate a license
             </short>
             <category>License</category>
-            <returns>Message about the result of activating license</returns>
+            <returns type="System.Object, System">Message about the result of activating license</returns>
             <path>api/2.0/settings/license/accept</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1177,7 +1674,7 @@
              Activate a trial license
              </short>
              <category>License</category>
-             <returns>Boolean value: true if the operation is successful</returns>
+             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
              <path>api/2.0/settings/license/trial</path>
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
@@ -1190,7 +1687,7 @@
             Request a license
             </short>
             <category>License</category>
-            <returns>Boolean value: true if the license is required</returns>
+            <returns type="System.Boolean, System">Boolean value: true if the license is required</returns>
             <path>api/2.0/settings/license/required</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
@@ -1202,9 +1699,9 @@
             <short>
             Upload a license
             </short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.UploadLicenseRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters to upload a license: <![CDATA[Files (IEnumerable&lt;IFormFile&gt;) - license attachments]]></param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.UploadLicenseRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters to upload a license</param>
             <category>License</category>
-            <returns>License</returns>
+            <returns type="System.Object, System">License</returns>
             <path>api/2.0/settings/license</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1215,9 +1712,9 @@
             <short>
             Enable the administrator message settings
             </short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for administrator message settings: TurnOn (bool) - specifies if the administrator messages are enabled or not</param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for administrator message settings</param>
             <category>Messages</category>
-            <returns>Message about the result of saving new settings</returns>
+            <returns type="System.Object, System">Message about the result of saving new settings</returns>
             <path>api/2.0/settings/messagesettings</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1229,7 +1726,7 @@
             Get cookies lifetime
             </short>
             <category>Cookies</category>
-            <returns>Lifetime value in minutes</returns>
+            <returns type="System.Int32, System">Lifetime value in minutes</returns>
             <path>api/2.0/settings/cookiesettings</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1241,8 +1738,8 @@
             Update cookies lifetime
             </short>
             <category>Cookies</category>
-            <param type="ASC.Web.Api.Models.CookieSettingsRequestsDto, ASC.Web.Api.Models" name="model">Cookies settings request parameters: LifeTime (integer) - new lifetime value in minutes</param>
-            <returns>Message about the result of saving new settings</returns>
+            <param type="ASC.Web.Api.Models.CookieSettingsRequestsDto, ASC.Web.Api.Models" name="model">Cookies settings request parameters</param>
+            <returns type="System.Object, System">Message about the result of saving new settings</returns>
             <path>api/2.0/settings/cookiesettings</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1253,14 +1750,9 @@
             <short>
             Send a message to the administrator
             </short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for administrator message settings: <![CDATA[
-            <ul>
-                <li><b>Email</b> (string) - email,</li>
-                <li><b>Message</b> (string) - message.</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for administrator message settings</param>
             <category>Messages</category>
-            <returns>Message about the result of sending a message</returns>
+            <returns type="System.Object, System">Message about the result of sending a message</returns>
             <path>api/2.0/settings/sendadmmail</path>
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
@@ -1272,12 +1764,55 @@
             <short>
             Sends an invitation email
             </short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for administrator message settings: Email (string) - email</param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for administrator message settings</param>
             <category>Messages</category>
-            <returns>Message about sending a link to confirm joining the DocSpace</returns>
+            <returns type="System.Object, System">Message about sending a link to confirm joining the DocSpace</returns>
             <path>api/2.0/settings/sendjoininvite</path>
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.NotificationController.GetSettings(ASC.Web.Core.Notify.NotificationType)">
+            <summary>
+            Checks if the notification type specified in the request is enabled or not.
+            </summary>
+            <category>Notifications</category>
+            <short>Check notification availability</short>
+            <param type="ASC.Web.Core.Notify.NotificationType, ASC.Web.Core.Notify" method="url" name="type">Notification type (Badges, RoomsActivity, DailyFeed, UsefullTips)</param>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Notification settings: notification type, enabled or not</returns>
+            <path>api/2.0/settings/notification/{type}</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.NotificationController.SetSettings(ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto)">
+            <summary>
+            Enables the notification type specified in the request.
+            </summary>
+            <category>Notifications</category>
+            <short>Enable notifications</short>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">Notification settings request parameters</param>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Notification settings: notification type, enabled or not</returns>
+            <path>api/2.0/settings/notification</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.NotificationController.GetRoomsNotificationSettings">
+            <summary>
+            Returns a list of rooms with the disabled notifications
+            </summary>
+            <category>Notifications</category>
+            <short>Get room notification settings</short>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificayionSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Room notification settings: list of rooms with the disabled notifications</returns>
+            <path>api/2.0/settings/notification/rooms</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.NotificationController.SetRoomsNotificationStatus(ASC.Web.Api.ApiModels.RequestsDto.RoomsNotificationsSettingsRequestDto)">
+            <summary>
+            Sets a notification status for a room with the ID specified in the request.
+            </summary>
+            <category>Notifications</category>
+            <short>Set room notification status</short>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.RoomsNotificationsSettingsRequestDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">Request parameters for the room notification settings</param>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificayionSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Room notification settings: list of rooms with the disabled notifications</returns>
+            <path>api/2.0/settings/notification/rooms</path>
+            <httpMethod>POST</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.OwnerController.SendOwnerChangeInstructions(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
             <summary>
@@ -1287,8 +1822,8 @@
             Send the owner change instructions
             </short>
             <category>Owner</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters: OwnerId (Guid) - new owner ID</param>
-            <returns>Message about changing the portal owner</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters</param>
+            <returns type="System.Object, System">Message about changing the portal owner</returns>
             <path>api/2.0/settings/owner</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1300,7 +1835,7 @@
             Update the portal owner
             </short>
             <category>Owner</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters: OwnerId (Guid) - new owner ID</param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters</param>
             <returns></returns>
             <path>api/2.0/settings/owner</path>
             <httpMethod>PUT</httpMethod>
@@ -1313,7 +1848,7 @@
             Get a link to the CardDav address book
             </short>
             <category>CardDav address book</category>
-            <returns>CardDav response: completed or not, link to the CardDav address book</returns>
+            <returns type="ASC.Common.Radicale.DavResponse, ASC.Common.Radicale">CardDav response: completed or not, link to the CardDav address book</returns>
             <path>api/2.0/settings/carddavurl</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1325,7 +1860,7 @@
             Delete a CardDav address book
             </short>
             <category>CardDav address book</category>
-            <returns>CardDav response: completed or not, error</returns>
+            <returns type="ASC.Common.Radicale.DavResponse, ASC.Common.Radicale">CardDav response: completed or not, error</returns>
             <path>api/2.0/settings/deletebook</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -1338,9 +1873,10 @@
             </short>
             <category>Security</category>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" name="ids">List of module IDs</param>
-            <returns>Security settings: module ID, list of users with the access to the module, list of groups with the access to the module, security settings are enabled or not, subitem or not</returns>
+            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.ApiModel.ResponseDto.SecurityDto}, System.Collections.Generic">Security settings: module ID, list of users with the access to the module, list of groups with the access to the module, security settings are enabled or not, subitem or not</returns>
             <path>api/2.0/settings/security</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.GetWebItemSecurityInfo(System.Guid)">
             <summary>
@@ -1350,8 +1886,8 @@
             Get the module availability
             </short>
             <category>Security</category>
-            <param type="System.Guid, System" name="id">Module ID</param>
-            <returns>Boolean value: true - module is enabled, false - module is disabled</returns>
+            <param type="System.Guid, System" method="url" name="id">Module ID</param>
+            <returns type="System.Boolean, System">Boolean value: true - module is enabled, false - module is disabled</returns>
             <path>api/2.0/settings/security/{id}</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1363,7 +1899,7 @@
             Get the enabled modules
             </short>
             <category>Security</category>
-            <returns>List of enabled modules</returns>
+            <returns type="System.Object, System">List of enabled modules</returns>
             <path>api/2.0/settings/security/modules</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1375,7 +1911,7 @@
             Get the password settings
             </short>
             <category>Security</category>
-            <returns>Password settings: minimum length, includes uppercase letters, digits and special symbols or not</returns>
+            <returns type="ASC.Web.Core.Utility.PasswordSettings, ASC.Web.Core.Utility">Password settings: minimum length, includes uppercase letters, digits and special symbols or not</returns>
             <path>api/2.0/settings/security/password</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1387,15 +1923,8 @@
             Set the password settings
             </short>
             <category>Security</category>
-            <param type="ASC.Web.Api.Models.PasswordSettingsRequestsDto, ASC.Web.Api.Models" name="model">Password settings: <![CDATA[
-            <ul>
-                <li><b>MinLength</b> (integer) - minimum length,</li>
-                <li><b>UpperCase</b> (bool) - includes uppercase letters or not,</li>
-                <li><b>Digits</b> (bool) - includes digits or not,.</li>
-                <li><b>SpecSymbols</b> (bool) - includes special symbols or not.</li>
-            </ul>
-            ]]></param>
-            <returns>Password settings: minimum length, includes uppercase letters, digits and special symbols or not</returns>
+            <param type="ASC.Web.Api.Models.PasswordSettingsRequestsDto, ASC.Web.Api.Models" name="model">Password settings</param>
+            <returns type="ASC.Web.Core.Utility.PasswordSettings, ASC.Web.Core.Utility">Password settings: minimum length, includes uppercase letters, digits and special symbols or not</returns>
             <path>api/2.0/settings/security/password</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1407,16 +1936,11 @@
             Set the module security settings
             </short>
             <category>Security</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Module request parameters: <![CDATA[
-            <ul>
-                <li><b>Id</b> (string) - module ID,</li>
-                <li><b>Enabled</b> (bool) - specifies if the module security settings are enabled or not,</li>
-                <li><b>Subjects</b> (IEnumerable&lt;Guid&gt;) - list of user/group IDs with the access to the module.</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Module request parameters</param>
             <path>api/2.0/settings/security</path>
             <httpMethod>PUT</httpMethod>
-            <returns>Security settings: module ID, list of users with the access to the module, list of groups with the access to the module, security settings are enabled or not, subitem or not</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModel.ResponseDto.SecurityDto}, System.Collections.Generic">Security settings: module ID, list of users with the access to the module, list of groups with the access to the module, security settings are enabled or not, subitem or not</returns>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.SetAccessToWebItems(ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto)">
             <summary>
@@ -1426,10 +1950,11 @@
             Set the access settings to products
             </short>
             <category>Security</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Module request parameters: <![CDATA[Items (IEnumerable&lt;ItemKeyValuePair&lt;string, bool&gt;&gt;) - products with security information]]></param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Module request parameters</param>
             <path>api/2.0/settings/security/access</path>
             <httpMethod>PUT</httpMethod>
-            <returns>Security settings: module ID, list of users with the access to the module, list of groups with the access to the module, security settings are enabled or not, subitem or not</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModel.ResponseDto.SecurityDto}, System.Collections.Generic">Security settings: module ID, list of users with the access to the module, list of groups with the access to the module, security settings are enabled or not, subitem or not</returns>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.GetProductAdministrators(System.Guid)">
             <summary>
@@ -1439,10 +1964,11 @@
             Get the product administrators
             </short>
             <category>Security</category>
-            <param type="System.Guid, System" name="productid">Product ID</param>
-            <returns>List of product administrators with the followinf parameters: ID, display name, title, small avatar, profile URL, has an avatar or not</returns>
+            <param type="System.Guid, System" method="url" name="productid">Product ID</param>
+            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeDto}, System.Collections.Generic">List of product administrators with the followinf parameters: ID, display name, title, small avatar, profile URL, has an avatar or not</returns>
             <path>api/2.0/settings/security/administrator/{productid}</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.IsProductAdministrator(System.Guid,System.Guid)">
             <summary>
@@ -1454,7 +1980,7 @@
             <category>Security</category>
             <param type="System.Guid, System" name="productid">Product ID</param>
             <param type="System.Guid, System" name="userid">User ID</param>
-            <returns>Object with the user security information: product ID, user ID, administrator or not</returns>
+            <returns type="System.Object, System">Object with the user security information: product ID, user ID, administrator or not</returns>
             <path>api/2.0/settings/security/administrator</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1466,14 +1992,8 @@
             Set a product administrator
             </short>
             <category>Security</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Security request parameters: <![CDATA[
-            <ul>
-                <li><b>ProductId</b> (Guid) - product ID,</li>
-                <li><b>UserId</b> (Guid) - user ID,</li>
-                <li><b>Administrator</b> (bool) - administrator or not.</li>
-            </ul>
-            ]]></param>
-            <returns>Object with the user security information: product ID, user ID, administrator or not</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Security request parameters</param>
+            <returns type="System.Object, System">Object with the user security information: product ID, user ID, administrator or not</returns>
             <path>api/2.0/settings/security/administrator</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1485,14 +2005,8 @@
             Update login settings
             </short>
             <category>Login settings</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto, ASC.Web.Api.ApiModels.RequestsDto" name="loginSettingsRequestDto">Login settings request parameters: <![CDATA[
-            <ul>
-                <li><b>AttemptCount</b> (integer) - maximum number of the user attempts to log in,</li>
-                <li><b>BlockTime</b> (integer) - the duration of the account suspension for unsuccessful login attempts,</li>
-                <li><b>CheckPeriod</b> (integer) - expected server response time.</li>
-            </ul>
-            ]]></param>
-            <returns>Updated login settings: maximum number of the user attempts to log in, the time for which the user will be blocked after unsuccessful login attempts, the time to wait for a response from the server</returns>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto, ASC.Web.Api.ApiModels.RequestsDto" name="loginSettingsRequestDto">Login settings request parameters</param>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Updated login settings: maximum number of the user attempts to log in, the time for which the user will be blocked after unsuccessful login attempts, the time to wait for a response from the server</returns>
             <path>api/2.0/settings/security/loginsettings</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1504,7 +2018,7 @@
             Get login settings
             </short>
             <category>Login settings</category>
-            <returns>Login settings: maximum number of the user attempts to log in, the time for which the user will be blocked after unsuccessful login attempts, the time to wait for a response from the server</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Login settings: maximum number of the user attempts to log in, the time for which the user will be blocked after unsuccessful login attempts, the time to wait for a response from the server</returns>
             <path>api/2.0/settings/security/loginsettings</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1517,7 +2031,7 @@
             </short>
             <category>Common settings</category>
             <param type="System.Boolean, System" name="withpassword">Specifies if the password hasher settings will be returned or not</param>
-            <returns>Settings: time zone, trusted domains, trusted domains type, language, UTC offset, greeting settings, owner ID, team template ID, enabled to join or not, enabled to send a message to the administrator or not, enabled to connect third-party providers r not, Personal or DocSpace portal, standalone or not, Wizard token, password hash, Firebase parameters, version, ReCAPTCHA public key, send debug information or not, socket URL, tenant status, tenant alias, link to the help, domain validator, plugins</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.SettingsDto, ASC.Web.Api.ApiModel.ResponseDto">Settings: time zone, trusted domains, trusted domains type, language, UTC offset, greeting settings, owner ID, team template ID, enabled to join or not, enabled to send a message to the administrator or not, enabled to connect third-party providers r not, Personal or DocSpace portal, standalone or not, Wizard token, password hash, Firebase parameters, version, ReCAPTCHA public key, send debug information or not, socket URL, tenant status, tenant alias, link to the help, domain validator, plugins</returns>
             <path>api/2.0/settings</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
@@ -1530,14 +2044,8 @@
             Save the mail domain settings
             </short>
             <category>Common settings</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for mail domain settings: <![CDATA[
-            <ul>
-                <li><b>Type</b> (TenantTrustedDomainsType) - trusted domain type (None, Custom, All),</li>
-                <li><b>Domains</b> (List&lt;string&gt;) - list of trusted domains,</li>
-                <li><b>InviteAsUsers</b> (bool) - invites as a user or not.</li>
-            </ul>
-            ]]></param>
-            <returns>Message about the result of saving the mail domain settings</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for mail domain settings</param>
+            <returns type="System.Object, System">Message about the result of saving the mail domain settings</returns>
             <path>api/2.0/settings/maildomainsettings</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1549,7 +2057,7 @@
             Get the space usage
             </short>
             <category>Quota</category>
-            <returns>Space usage and limits for upload: storage size, maximum file size, used size, maximum number of room admins, number of room admins, available size, available number of users, storage usage, user storage size, user used size, user available size, maximum number of users, number of users</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.QuotaUsageDto, ASC.Web.Api.ApiModel.ResponseDto">Space usage and limits for upload: storage size, maximum file size, used size, maximum number of room admins, number of room admins, available size, available number of users, storage usage, user storage size, user used size, user available size, maximum number of users, number of users</returns>
             <path>api/2.0/settings/quota</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1561,13 +2069,8 @@
             Save the user quota settings
             </short>
             <category>Quota</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for the user quota settings: <![CDATA[
-            <ul>
-                <li><b>EnableUserQuota</b> (bool) - specifies if the quota settings are enabled or not,</li>
-                <li><b>DefaultUserQuota</b> (long) - default user quota.</li>
-            </ul>
-            ]]></param>
-            <returns>Message about the result of saving the user quota settings</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for the user quota settings</param>
+            <returns type="System.Object, System">Message about the result of saving the user quota settings</returns>
             <path>api/2.0/settings/userquotasettings</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1577,10 +2080,11 @@
             </summary>
             <short>Get supporrted languages</short>
             <category>Common settings</category>
-            <returns>List of all the available portal languages</returns>
+            <returns type="System.Collections.Generic.IEnumerable{System.Object}, System.Collections.Generic">List of all the available portal languages</returns>
             <path>api/2.0/settings/cultures</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetTimeZones">
             <summary>
@@ -1588,9 +2092,10 @@
             </summary>
             <short>Get time zones</short>
             <category>Common settings</category>
-            <returns>List of all the available time zones with their IDs and display names</returns>
+            <returns type="System.Collections.Generic.List{ASC.Web.Api.ApiModel.RequestsDto.TimezonesRequestsDto}, System.Collections.Generic">List of all the available time zones with their IDs and display names</returns>
             <path>api/2.0/settings/timezones</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetMachineName">
             <summary>
@@ -1598,7 +2103,7 @@
             </summary>
             <short>Get hostname</short>
             <category>Common settings</category>
-            <returns>Portal hostname</returns>
+            <returns type="System.Object, System">Portal hostname</returns>
             <path>api/2.0/settings/machine</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1608,13 +2113,8 @@
             </summary>
             <short>Save the DNS settings</short>
             <category>Common settings</category>
-            <param type="ASC.Web.Api.Models.DnsSettingsRequestsDto, ASC.Web.Api.Models" name="model">DNS settings request parameters: <![CDATA[
-            <ul>
-                <li><b>DnsName</b> (string) - DNS,</li>
-                <li><b>Enable</b> (bool) - enabled or not.</li>
-            </ul>
-            ]]></param>
-            <returns>Message about changing DNS</returns>
+            <param type="ASC.Web.Api.Models.DnsSettingsRequestsDto, ASC.Web.Api.Models" name="model">DNS settings request parameters</param>
+            <returns type="System.Object, System">Message about changing DNS</returns>
             <path>api/2.0/settings/dns</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1638,7 +2138,7 @@
             Check quota recalculation
             </short>
             <category>Quota</category>
-            <returns>Boolean value: true - quota recalculation process is enabled, false - quota recalculation process is disabled</returns>
+            <returns type="System.Boolean, System">Boolean value: true - quota recalculation process is enabled, false - quota recalculation process is disabled</returns>
             <path>api/2.0/settings/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1650,7 +2150,7 @@
             Get a portal logo
             </short>
             <category>Common settings</category>
-            <returns>Portal logo image URL</returns>
+            <returns type="System.Object, System">Portal logo image URL</returns>
             <path>api/2.0/settings/logo</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1660,17 +2160,8 @@
             </summary>
             <short>Complete the Wizard settings</short>
             <category>Common settings</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Wizard settings request parameters: <![CDATA[
-            <ul>
-                <li><b>Email</b> (string) - email,</li>
-                <li><b>PasswordHash</b> (string) - password hash,</li>
-                <li><b>Lng</b> (string) - language,</li>
-                <li><b>TimeZone</b> (string) - time zone,</li>
-                <li><b>AmiId</b> (string) - AMI ID,</li>
-                <li><b>SubscribeFromSite</b> (bool) - subscribed from the site or not.</li>
-            </ul>
-            ]]></param>
-            <returns>Wizard settings: completed or not</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Wizard settings request parameters</param>
+            <returns type="ASC.Web.Core.Utility.Settings.WizardSettings, ASC.Web.Core.Utility.Settings">Wizard settings: completed or not</returns>
             <path>api/2.0/settings/wizard/complete</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1691,7 +2182,7 @@
             </summary>
             <short>Get a color theme</short>
             <category>Common settings</category>
-            <returns>Settings of the portal themes</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Settings of the portal themes</returns>
             <path>api/2.0/settings/colortheme</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
@@ -1702,8 +2193,8 @@
             </summary>
             <short>Save a color theme</short>
             <category>Common settings</category>
-            <param name="inDto">Portal theme settings</param>
-            <returns>Portal theme settings: custom color theme settings, selected or not, limit</returns>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.CustomColorThemesSettingsRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Portal theme settings</param>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Portal theme settings: custom color theme settings, selected or not, limit</returns>
             <path>api/2.0/settings/colortheme</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1714,7 +2205,7 @@
             <short>Delete a color theme</short>
             <category>Common settings</category>
             <param ype="System.Int32, System" name="id">Portal theme ID</param>
-            <returns>Portal theme settings: custom color theme settings, selected or not, limit</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Portal theme settings: custom color theme settings, selected or not, limit</returns>
             <path>api/2.0/settings/colortheme</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -1734,13 +2225,8 @@
              </summary>
              <short>Set time zone and language</short>
              <category>Common settings</category>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters: <![CDATA[
-             <ul>
-                 <li><b>Lng</b> (string) - language,</li>
-                 <li><b>TimeZoneID</b> (string) - time zone ID.</li>
-             </ul>
-             ]]></param>
-             <returns>Message about saving settings successfully</returns>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters</param>
+             <returns type="System.Object, System">Message about saving settings successfully</returns>
              <path>api/2.0/settings/timeandlanguage</path>
              <httpMethod>PUT</httpMethod>
             <visible>false</visible>
@@ -1751,8 +2237,8 @@
              </summary>
              <short>Set the default product page</short>
              <category>Common settings</category>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters: DefaultProductID (Guid) - default product ID</param>
-             <returns>Message about saving settings successfully</returns>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters</param>
+             <returns type="System.Object, System">Message about saving settings successfully</returns>
              <path>api/2.0/settings/defaultpage</path>
              <httpMethod>PUT</httpMethod>
             <visible>false</visible>
@@ -1763,8 +2249,8 @@
             </summary>
             <short>Update the email activation settings</short>
             <category>Common settings</category>
-            <param type="ASC.Web.Studio.Core.EmailActivationSettings, ASC.Web.Studio.Core" name="settings">Email activation settings: Show (bool) - shown or hidden</param>
-            <returns>Updated email activation settings: shown or hidden</returns>
+            <param type="ASC.Web.Studio.Core.EmailActivationSettings, ASC.Web.Studio.Core" name="settings">Email activation settings</param>
+            <returns type="ASC.Web.Studio.Core.EmailActivationSettings, ASC.Web.Studio.Core">Updated email activation settings: shown or hidden</returns>
             <path>api/2.0/settings/emailactivation</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1774,10 +2260,11 @@
             </summary>
             <category>Statistics</category>
             <short>Get the space usage statistics</short>
-            <param ype="System.Guid, System" name="id">Module ID</param>
-            <returns>Module space usage statistics: name, icon, disabled or not, size, URL</returns>
+            <param ype="System.Guid, System" method="url" name="id">Module ID</param>
+            <returns type="System.Collections.Generic.List{ASC.Web.Api.ApiModel.ResponseDto.UsageSpaceStatItemDto}, System.Collections.Generic">Module space usage statistics: name, icon, disabled or not, size, URL</returns>
             <path>api/2.0/settings/statistics/spaceusage/{id}</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetVisitStatistics(ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
             <summary>
@@ -1787,9 +2274,10 @@
             <short>Get the visit statistics</short>
             <param type="ASC.Api.Core.ApiDateTime, ASC.Api.Core" name="fromDate">Start period date</param>
             <param type="ASC.Api.Core.ApiDateTime, ASC.Api.Core" name="toDate">End period date</param>
-            <returns>List of point charts: display data, date, hosts, hits</returns>
+            <returns type="System.Collections.Generic.List{ASC.Web.Api.ApiModel.ResponseDto.ChartPointDto}, System.Collections.Generic">List of point charts: display data, date, hosts, hits</returns>
             <path>api/2.0/settings/statistics/visit</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetSocketSettings">
             <summary>
@@ -1799,7 +2287,7 @@
             <short>Get the socket settings</short>
             <path>api/2.0/settings/socket</path>
             <httpMethod>GET</httpMethod>
-            <returns>Socket settings: hub URL</returns>
+            <returns type="System.Object, System">Socket settings: hub URL</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetAuthServices">
             <summary>
@@ -1809,7 +2297,8 @@
             <short>Get the authorization services</short>
             <path>api/2.0/settings/authservice</path>
             <httpMethod>GET</httpMethod>
-            <returns>Authorization services: name, title, description, instruction, service can be set or not, list of authorization keys</returns>
+            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto}, System.Collections.Generic">Authorization services: name, title, description, instruction, service can be set or not, list of authorization keys</returns>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveAuthKeys(ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto)">
             <summary>
@@ -1817,15 +2306,10 @@
             </summary>
             <category>Authorization</category>
             <short>Save the authorization keys</short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for authorization service: <![CDATA[
-            <ul>
-                <li><b>Name</b> (string) - name,</li>
-                <li><b>Props</b> (List&lt;AuthKey&gt;) - list of authorization keys.</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for authorization service</param>
             <path>api/2.0/settings/authservice</path>
             <httpMethod>POST</httpMethod>
-            <returns>Boolean value: true if the authorization keys are changed</returns>
+            <returns type="System.Boolean, System">Boolean value: true if the authorization keys are changed</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.PaymentSettings">
             <summary>
@@ -1835,7 +2319,7 @@
             <short>Get the payment settings</short>
             <path>api/2.0/settings/payment</path>
             <httpMethod>GET</httpMethod>
-            <returns>Payment settings: sales email, feedback and support URL, link to pay for a portal, Standalone or not, current license, maximum quota quantity</returns>
+            <returns type="System.Object, System">Payment settings: sales email, feedback and support URL, link to pay for a portal, Standalone or not, current license, maximum quota quantity</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TelegramLink">
             <summary>
@@ -1845,7 +2329,7 @@
             <short>Get the Telegram link</short>
             <path>api/2.0/settings/telegramlink</path>
             <httpMethod>GET</httpMethod>
-            <returns>Telegram link</returns>
+            <returns type="System.Object, System">Telegram link</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TelegramIsConnected">
@@ -1856,7 +2340,7 @@
             <short>Check the Telegram connection</short>
             <path>api/2.0/settings/telegramisconnected</path>
             <httpMethod>GET</httpMethod>
-            <returns>Operation result: 0 - not connected, 1 - connected, 2 - awaiting confirmation</returns>
+            <returns type="System.Object, System">Operation result: 0 - not connected, 1 - connected, 2 - awaiting confirmation</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TelegramDisconnect">
             <summary>
@@ -1876,7 +2360,7 @@
             Get the SSO settings
             </short>
             <category>SSO</category>
-            <returns>SSO settings: SSO is enabled or not, IDP settings, IDP certificates, IDP advanced certificate, SP certificates, SP advanced certificate, field mapping, SP login label, hide authentication page or not</returns>
+            <returns type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Studio.UserControls.Management.SingleSignOnSettings">SSO settings: SSO is enabled or not, IDP settings, IDP certificates, IDP advanced certificate, SP certificates, SP advanced certificate, field mapping, SP login label, hide authentication page or not</returns>
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1888,7 +2372,7 @@
             Get the default SSO settings
             </short>
             <category>SSO</category>
-            <returns>Default SSO settings: SSO is enabled or not, IDP settings, IDP certificates, IDP advanced certificate, SP certificates, SP advanced certificate, field mapping, SP login label, hide authentication page or not</returns>
+            <returns type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Studio.UserControls.Management.SingleSignOnSettings">Default SSO settings: SSO is enabled or not, IDP settings, IDP certificates, IDP advanced certificate, SP certificates, SP advanced certificate, field mapping, SP login label, hide authentication page or not</returns>
             <path>api/2.0/settings/ssov2/default</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1900,7 +2384,7 @@
             Get the SSO settings constants
             </short>
             <category>SSO</category>
-            <returns>The SSO settings constants: SSO name ID format type, SSO binding type, SSO signing algorithm type, SSO SP certificate action type, SSO IDP certificate action type</returns>
+            <returns type="System.Object, System">The SSO settings constants: SSO name ID format type, SSO binding type, SSO signing algorithm type, SSO SP certificate action type, SSO IDP certificate action type</returns>
             <path>api/2.0/settings/ssov2/constants</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1912,8 +2396,8 @@
             Save the SSO settings
             </short>
             <category>SSO</category>
-            <param name="model">SSO settings request parameters: SerializeSettings (string) - serialized SSO settings</param>
-            <returns>SSO settings: SSO is enabled or not, IDP settings, IDP certificates, IDP advanced certificate, SP certificates, SP advanced certificate, field mapping, SP login label, hide authentication page or not</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.SsoSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="model">SSO settings request parameters</param>
+            <returns type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Studio.UserControls.Management.SingleSignOnSettings">SSO settings: SSO is enabled or not, IDP settings, IDP certificates, IDP advanced certificate, SP certificates, SP advanced certificate, field mapping, SP login label, hide authentication page or not</returns>
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1925,7 +2409,7 @@
             Reset the SSO settings
             </short>
             <category>SSO</category>
-            <returns>Default SSO settings: SSO is enabled or not, IDP settings, IDP certificates, IDP advanced certificate, SP certificates, SP advanced certificate, field mapping, SP login label, hide authentication page or not</returns>
+            <returns type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Studio.UserControls.Management.SingleSignOnSettings">Default SSO settings: SSO is enabled or not, IDP settings, IDP certificates, IDP advanced certificate, SP certificates, SP advanced certificate, field mapping, SP login label, hide authentication page or not</returns>
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -1935,9 +2419,10 @@
             </summary>
             <category>Storage</category>
             <short>Get storages</short>
-            <returns>List of storages with the following parameters: ID, title, list of authentication keys, current storage or not, storage can be set or not</returns>
+            <returns type="System.Collections.Generic.List{ASC.Web.Api.ApiModel.ResponseDto.StorageDto}, System.Collections.Generic">List of storages with the following parameters: ID, title, list of authentication keys, current storage or not, storage can be set or not</returns>
             <path>api/2.0/settings/storage</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetStorageProgress">
             <summary>
@@ -1945,7 +2430,7 @@
             </summary>
             <category>Storage</category>
             <short>Get the storage progress</short>
-            <returns>Storage progress</returns>
+            <returns type="System.Double, System">Storage progress</returns>
             <path>api/2.0/settings/storage/progress</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1955,8 +2440,8 @@
             </summary>
             <short>Start the storage encryption process</short>
             <category>Encryption</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Storage encryption request parameters: NotifyUsers (bool) - specifies if the users will be notified about the encryption process or not</param>
-            <returns>Boolean value: true if the operation is successful</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Storage encryption request parameters</param>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/settings/encryption/start</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1966,7 +2451,7 @@
             </summary>
             <short>Get the storage encryption settings</short>
             <category>Encryption</category>
-            <returns>Storage encryption settings: password, status, notify users or not</returns>
+            <returns type="ASC.Core.Encryption.EncryptionSettings, ASC.Core.Encryption">Storage encryption settings: password, status, notify users or not</returns>
             <path>api/2.0/settings/encryption/settings</path>
             <httpMethod>GET</httpMethod>
             <visible>false</visible>
@@ -1977,7 +2462,7 @@
             </summary>
             <short>Get the storage encryption progress</short>
             <category>Encryption</category>
-            <returns>Storage encryption progress</returns>
+            <returns type="System.Nullable{System.Double}, System">Storage encryption progress</returns>
             <path>api/2.0/settings/encryption/progress</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1987,13 +2472,8 @@
             </summary>
             <category>Storage</category>
             <short>Update a storage</short>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto, AASC.Web.Api.ApiModel.RequestsDto" name="inDto">Storage settings request parameters: <![CDATA[
-            <ul>
-                <li><b>Module</b> (string) - storage name,</li>
-                <li><b>Props</b> (IEnumerable&lt;ItemKeyValuePair&lt;string, string&gt;&gt;) - new storage properties.</li>
-            </ul>
-            ]]></param>
-            <returns>Updated storage settings: module, properties</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto, AASC.Web.Api.ApiModel.RequestsDto" name="inDto">Storage settings request parameters</param>
+            <returns type="ASC.Data.Storage.Configuration.StorageSettings, ASC.Data.Storage.Configuration">Updated storage settings: module, properties</returns>
             <path>api/2.0/settings/storage</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2013,9 +2493,10 @@
             </summary>
             <category>Storage</category>
             <short>Get the CDN storages</short>
-            <returns>List of the CDN storages with the following parameters: ID, title, list of authentication keys, current storage or not, storage can be set or not</returns>
+            <returns type="System.Collections.Generic.List{ASC.Web.Api.ApiModel.ResponseDto.StorageDto}, System.Collections.Generic">List of the CDN storages with the following parameters: ID, title, list of authentication keys, current storage or not, storage can be set or not</returns>
             <path>api/2.0/settings/storage/cdn</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.UpdateCdn(ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto)">
             <summary>
@@ -2023,13 +2504,8 @@
             </summary>
             <category>Storage</category>
             <short>Update the CDN storage</short>
-            <returns>Updated CDN storage: module, properties</returns>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto, AASC.Web.Api.ApiModel.RequestsDto" name="inDto">CDN storage settings request parameters: <![CDATA[
-            <ul>
-                <li><b>Module</b> (string) - CDN storage name,</li>
-                <li><b>Props</b> (IEnumerable&lt;ItemKeyValuePair&lt;string, string&gt;&gt;) - new CDN storage properties.</li>
-            </ul>
-            ]]></param>
+            <returns type="ASC.Data.Storage.Configuration.CdnStorageSettings, ASC.Data.Storage.Configuration">Updated CDN storage: module, properties</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto, AASC.Web.Api.ApiModel.RequestsDto" name="inDto">CDN storage settings request parameters</param>
             <path>api/2.0/settings/storage/cdn</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2049,9 +2525,10 @@
             </summary>
             <category>Storage</category>
             <short>Get the backup storages</short>
-            <returns>List of the backup storages with the following parameters: ID, title, list of authentication keys, current storage or not, storage can be set or not</returns>
+            <returns type="System.Collections.Generic.List{ASC.Web.Api.ApiModel.ResponseDto.StorageDto}, System.Collections.Generic">List of the backup storages with the following parameters: ID, title, list of authentication keys, current storage or not, storage can be set or not</returns>
             <path>api/2.0/settings/storage/backup</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetAmazonS3Regions">
             <summary>
@@ -2059,7 +2536,7 @@
             </summary>
             <category>Storage</category>
             <short>Get Amazon regions</short>
-            <returns>List of the Amazon regions</returns>
+            <returns type="System.Object, System">List of the Amazon regions</returns>
             <path>api/2.0/settings/storage/s3/regions</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2069,9 +2546,10 @@
              </summary>
              <short>Get the TFA settings</short>
              <category>TFA settings</category>
-             <returns>TFA settings: ID, title, enabled or not, available or not, list of trusted IP addresses, list of users who must use the TFA verification, list of groups who must use the TFA verification</returns>
+             <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModel.RequestsDto.TfaSettingsDto}, System.Collections.Generic">TFA settings: ID, title, enabled or not, available or not, list of trusted IP addresses, list of users who must use the TFA verification, list of groups who must use the TFA verification</returns>
             <path>api/2.0/settings/tfaapp</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaValidateAuthCode(ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto)">
              <summary>
@@ -2079,8 +2557,8 @@
              </summary>
              <short>Validate the TFA code</short>
              <category>TFA settings</category>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">TFA validation request parameters: Code (string) - TFA code</param>
-             <returns>True if the code is valid</returns>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">TFA validation request parameters</param>
+             <returns type="System.Boolean, System">True if the code is valid</returns>
             <path>api/2.0/settings/tfaapp/validate</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -2090,7 +2568,7 @@
              </summary>
              <short>Get confirmation email</short>
              <category>TFA settings</category>
-             <returns>Confirmation email URL</returns>
+             <returns type="System.Object, System">Confirmation email URL</returns>
             <path>api/2.0/settings/tfaapp/confirm</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2100,15 +2578,8 @@
              </summary>
              <short>Update the TFA settings</short>
              <category>TFA settings</category>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">TFA settings request parameters: <![CDATA[
-             <ul>
-                 <li><b>Type</b> (string) - TFA type (None, Sms, or App),</li>
-                 <li><b>TrustedIps</b> (List&lt;string&gt;) - list of trusted IP addresses,</li>
-                 <li><b>MandatoryUsers</b> (List&lt;Guid&gt;) - list of users who must use the TFA verification,</li>
-                 <li><b>MandatoryGroups</b> (List&lt;Guid&gt;) - list of groups who must use the TFA verification.</li>
-             </ul>
-             ]]></param>
-             <returns>True if the operation is successful</returns>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">TFA settings request parameters</param>
+             <returns type="System.Boolean, System">True if the operation is successful</returns>
             <path>api/2.0/settings/tfaapp</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2118,15 +2589,8 @@
             </summary>
             <short>Get confirmation email for updating TFA settings</short>
             <category>TFA settings</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">TFA settings request parameters: <![CDATA[
-            <ul>
-                <li><b>Type</b> (string) - TFA type (None, Sms, or App),</li>
-                <li><b>TrustedIps</b> (List&lt;string&gt;) - list of trusted IP addresses,</li>
-                <li><b>MandatoryUsers</b> (List&lt;Guid&gt;) - list of users who must use the TFA verification,</li>
-                <li><b>MandatoryGroups</b> (List&lt;Guid&gt;) - list of groups who must use the TFA verification.</li>
-            </ul>
-            ]]></param>
-            <returns>Confirmation email URL</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">TFA settings request parameters</param>
+            <returns type="System.Object, System">Confirmation email URL</returns>
             <path>api/2.0/settings/tfaappwithlink</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2136,7 +2600,7 @@
             </summary>
             <short>Generate setup code</short>
             <category>TFA settings</category>
-            <returns>Setup code</returns>
+            <returns type="Google.Authenticator.SetupCode, Google.Authenticator">Setup code</returns>
             <path>api/2.0/settings/tfaapp/setup</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2146,9 +2610,10 @@
             </summary>
             <short>Get the TFA codes</short>
             <category>TFA settings</category>
-            <returns>List of TFA application codes</returns>
+            <returns type="System.Collections.Generic.IEnumerable{System.Object}, System.Collections.Generic">List of TFA application codes</returns>
             <path>api/2.0/settings/tfaappcodes</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppRequestNewCodes">
             <summary>
@@ -2156,9 +2621,10 @@
             </summary>
             <short>Update the TFA codes</short>
             <category>TFA settings</category>
-            <returns>New backup codes</returns>
+            <returns type="System.Collections.Generic.IEnumerable{System.Object}, System.Collections.Generic">New backup codes</returns>
             <path>api/2.0/settings/tfaappnewcodes</path>
             <httpMethod>PUT</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppNewApp(ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto)">
             <summary>
@@ -2166,8 +2632,8 @@
             </summary>
             <short>Unlink the TFA application</short>
             <category>TFA settings</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">TFA settings request parameters: Id (Guid?) - user ID</param>
-            <returns>Login URL</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">TFA settings request parameters</param>
+            <returns type="System.Object, System">Login URL</returns>
             <path>api/2.0/settings/tfaappnewapp</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2177,8 +2643,8 @@
             </summary>
             <short>Update the tip settings</short>
             <category>Tips</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters: Show (bool) - specifies whether to show tips for the user or not</param>
-            <returns>Updated tip settings</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters</param>
+            <returns type="ASC.Web.Studio.Core.TipsSettings, ASC.Web.Studio.Core">Updated tip settings</returns>
             <path>api/2.0/settings/tips</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2188,7 +2654,7 @@
             </summary>
             <short>Update the tip subscription</short>
             <category>Tips</category>
-            <returns>Boolean value: true if the user is subscribed to the tips</returns>
+            <returns type="System.Boolean, System">Boolean value: true if the user is subscribed to the tips</returns>
             <path>api/2.0/settings/tips/change/subscription</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2198,7 +2664,7 @@
             </summary>
             <short>Check the tip subscription</short>
             <category>Tips</category>
-            <returns>Boolean value: true if the user is subscribed to the tips</returns>
+            <returns type="System.Boolean, System">Boolean value: true if the user is subscribed to the tips</returns>
             <path>api/2.0/settings/tips/subscription</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2211,7 +2677,7 @@
             <path>api/2.0/settings/version/build</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
-            <returns>Current DocSpace, Community Server, Document Server, Mail Server, XMPP server versions</returns>
+            <returns type="ASC.Api.Settings.BuildVersion, ASC.Api.Settings">Current DocSpace, Community Server, Document Server, Mail Server, XMPP server versions</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.GetVersions">
             <summary>
@@ -2223,7 +2689,7 @@
             <category>Versions</category>
             <path>api/2.0/settings/version</path>
             <httpMethod>GET</httpMethod>
-            <returns>List of availibe portal versions including the current version</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.TenantVersionDto, ASC.Web.Api.ApiModel.ResponseDto">List of availibe portal versions including the current version</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.SetVersion(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
             <summary>
@@ -2233,10 +2699,10 @@
             Change the portal version
             </short>
             <category>Versions</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters: VersionId (integer) - version ID</param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Settings request parameters</param>
             <path>api/2.0/settings/version</path>
             <httpMethod>PUT</httpMethod>
-            <returns>List of availibe portal versions including the current version</returns>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.TenantVersionDto, ASC.Web.Api.ApiModel.ResponseDto">List of availibe portal versions including the current version</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.GetTenantWebhooks">
             <summary>
@@ -2248,7 +2714,8 @@
             <category>Webhooks</category>
             <path>api/2.0/settings/webhook</path>
             <httpMethod>GET</httpMethod>
-            <returns>List of tenant webhooks with their config parameters (URI, secret key, enabled or not)</returns>
+            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto}, System.Collections.Generic">List of tenant webhooks with their config parameters (URI, secret key, enabled or not)</returns>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.CreateWebhook(ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto)">
             <summary>
@@ -2258,16 +2725,10 @@
             Create a webhook
             </short>
             <category>Webhooks</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">Webhook request parameters: <![CDATA[
-            <ul>
-                <li><b>Name</b> (string) - name,</li>
-                <li><b>Uri</b> (string) - URI,</li>
-                <li><b>SecretKey</b> (string) - secret key.</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">Webhook request parameters</param>
             <path>api/2.0/settings/webhook</path>
             <httpMethod>POST</httpMethod>
-            <returns>Tenant webhook with its config parameters (URI, secret key, enabled or not)</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto, ASC.Web.Api.ApiModels.ResponseDto">Tenant webhook with its config parameters (URI, secret key, enabled or not)</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.UpdateWebhook(ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto)">
             <summary>
@@ -2277,18 +2738,10 @@
             Update a webhook
             </short>
             <category>Webhooks</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">New webhook request parameters: <![CDATA[
-            <ul>
-                <li><b>Id</b> (integer) - ID,</li>    
-                <li><b>Name</b> (string) - name,</li>
-                <li><b>Uri</b> (string) - URI,</li>
-                <li><b>Enabled</b> (bool?) - enabled or not,</li>
-                <li><b>SecretKey</b> (string) - secret key.</li>
-            </ul>
-            ]]></param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">New webhook request parameters</param>
             <path>api/2.0/settings/webhook</path>
             <httpMethod>PUT</httpMethod>
-            <returns>Updated tenant webhook with its config parameters (URI, secret key, enabled or not)</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto, ASC.Web.Api.ApiModels.ResponseDto">Updated tenant webhook with its config parameters (URI, secret key, enabled or not)</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.RemoveWebhook(System.Int32)">
             <summary>
@@ -2298,10 +2751,10 @@
             Remove a webhook
             </short>
             <category>Webhooks</category>
-            <param type="System.Int32, System" name="id">Webhook ID</param>
+            <param type="System.Int32, System" method="url" name="id">Webhook ID</param>
             <path>api/2.0/settings/webhook</path>
             <httpMethod>DELETE</httpMethod>
-            <returns>Tenant webhook with its config parameters (URI, secret key, enabled or not)</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto, ASC.Web.Api.ApiModels.ResponseDto">Tenant webhook with its config parameters (URI, secret key, enabled or not)</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.GetJournal(ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest)">
             <summary>
@@ -2311,10 +2764,11 @@
             Get webhook logs
             </short>
             <category>Webhooks</category>
-            <param type="System.Nullable{System.DateTime}, System" name="model">Time when a webhook was delivered, Hook name, Webhook route</param>
+            <param type="System.Nullable{System.DateTime}, System" name="model">Webhook log request parameters</param>
             <path>api/2.0/settings/webhooks/log</path>
             <httpMethod>GET</httpMethod>
-            <returns>Logs of the webhook activities: ID, config name, creation time, method, route, request headers, request payload, response headers, response payload, status, delivery time</returns>
+            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto}, System.Collections.Generic">Logs of the webhook activities: ID, config name, creation time, method, route, request headers, request payload, response headers, response payload, status, delivery time</returns>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.RetryWebhook(System.Int32)">
             <summary>
@@ -2324,10 +2778,10 @@
             Retry a webhook
             </short>
             <category>Webhooks</category>
-            <param type="System.Int32, System" name="id">Webhook ID</param>
+            <param type="System.Int32, System" method="url" name="id">Webhook ID</param>
             <path>api/2.0/settings/webhook/{id}/retry</path>
             <httpMethod>PUT</httpMethod>
-            <returns>Logs of the webhook activities: ID, config name, creation time, method, route, request headers, request payload, response headers, response payload, status, delivery time</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto, ASC.Web.Api.ApiModels.ResponseDto">Logs of the webhook activities: ID, config name, creation time, method, route, request headers, request payload, response headers, response payload, status, delivery time</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.RetryWebhooks(ASC.Web.Api.ApiModels.RequestsDto.WebhookRetryRequestsDto)">
             <summary>
@@ -2337,10 +2791,62 @@
             Retry webhooks
             </short>
             <category>Webhooks</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.WebhookRetryRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">Request parameters to retry webhooks: <![CDATA[Ids (List&lt;int&gt;) - list of webhook IDs]]></param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.WebhookRetryRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="model">Request parameters to retry webhooks</param>
             <path>api/2.0/settings/webhook/retry</path>
             <httpMethod>PUT</httpMethod>
-            <returns>Logs of the webhook activities: ID, config name, creation time, method, route, request headers, request payload, response headers, response payload, status, delivery time</returns>
+            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto}, System.Collections.Generic">Logs of the webhook activities: ID, config name, creation time, method, route, request headers, request payload, response headers, response payload, status, delivery time</returns>
+            <collection>list</collection>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.GetSslSettings">
+            <summary>
+            Returns the webhook SSL settings.
+            </summary>
+            <short>
+            Get webhook SSL settings
+            </short>
+            <category>Webhooks</category>
+            <path>api/2.0/settings/webhook/ssl</path>
+            <httpMethod>GET</httpMethod>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksSslSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Webhook SSL settings: SSL certificate is enabled or not</returns>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.SetSslSettings(System.Boolean)">
+            <summary>
+            Sets the webhook SSL settings.
+            </summary>
+            <short>
+            Set webhook SSL settings
+            </short>
+            <category>Webhooks</category>
+            <param type="System.Boolean, System" method="url" name="isEnabled">Specifies if the SSL certificate is enabled or not</param>
+            <path>api/2.0/settings/webhook/ssl/{isEnabled}</path>
+            <httpMethod>POST</httpMethod>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksSslSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Webhook SSL settings: SSL certificate is enabled or not</returns>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.Settings">
+            <summary>
+            Returns settings of all webhooks.
+            </summary>
+            <short>
+            Get webhook settings
+            </short>
+            <category>Webhooks</category>
+            <path>api/2.0/settings/webhooks</path>
+            <httpMethod>GET</httpMethod>
+            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Webhooks.Core.Webhook}, System.Collections.Generic">List of webhook settings: ID, route, method, disabled or not, name, description, endpoint</returns>
+            <collection>list</collection>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.DisableWebHook(System.Int32)">
+            <summary>
+            Disables a webhook with the ID specified in the request.
+            </summary>
+            <short>
+            Disable a webhook
+            </short>
+            <category>Webhooks</category>
+            <param type="System.Int32, System" method="url" name="id">Webhook ID</param>
+            <path>api/2.0/settings/webhook/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <returns type="ASC.Webhooks.Core.Webhook, ASC.Webhooks.Core">Webhook settings: ID, route, method, disabled or not, name, description, endpoint</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettings(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto)">
              <summary>
@@ -2350,13 +2856,8 @@
              Save the white label settings
              </short>
              <category>Rebranding</category>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for white label settings: <![CDATA[
-             <ul>
-                 <li><b>LogoText</b> (string) - logo text,</li>
-                 <li><b>Logo</b> (IEnumerable&lt;ItemKeyValuePair&lt;string, LogoRequestsDto&gt;&gt;) - tenant IDs with their logos (light or dark).</li>
-             </ul>
-             ]]></param>
-             <returns>Boolean value: true if the operation is sucessful</returns>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for white label settings</param>
+             <returns type="System.Boolean, System">Boolean value: true if the operation is sucessful</returns>
              <path>api/2.0/settings/whitelabel/save</path>
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
@@ -2369,7 +2870,7 @@
              Save the white label settings from files
              </short>
              <category>Rebranding</category>
-             <returns>Boolean value: true if the operation is successful</returns>
+             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
              <path>api/2.0/settings/whitelabel/savefromfiles</path>
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
@@ -2382,11 +2883,12 @@
             Get the white label logos
             </short>
             <category>Rebranding</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">White label request parameters: IsDark (bool?) - specifies if the logo is for a dark theme or not</param>
-            <returns>White label logos: file name, size, path</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">White label request parameters</param>
+            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.ApiModels.ResponseDto.WhiteLabelItemDto}, System.Collections.Generic">White label logos: file name, size, path</returns>
             <path>api/2.0/settings/whitelabel/logos</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogoText">
@@ -2397,7 +2899,7 @@
              Get the white label logo text
              </short>
              <category>Rebranding</category>
-             <returns>Logo text</returns>
+             <returns type="System.Object, System">Logo text</returns>
              <path>api/2.0/settings/whitelabel/logotext</path>
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
@@ -2410,7 +2912,7 @@
             Restore the white label options
             </short>
             <category>Rebranding</category>
-            <returns>Boolean value: true if the operation is successful</returns>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/settings/whitelabel/restore</path>
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
@@ -2421,9 +2923,10 @@
             </summary>
             <short>Get the licensor data</short>
             <category>Rebranding</category>
-            <returns>List of company white label settings: company name, site, email, address, phone, licensor or not</returns>
+            <returns type="System.Collections.Generic.List{ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings}, System.Collections.Generic">List of company white label settings: company name, site, email, address, phone, licensor or not</returns>
             <path>api/2.0/settings/companywhitelabel</path>
             <httpMethod>GET</httpMethod>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveCompanyWhiteLabelSettings(ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper)">
@@ -2432,20 +2935,8 @@
             </summary>
             <category>Rebranding</category>
             <short>Save the company white label settings</short>
-            <param type="ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper, ASC.Web.Core.WhiteLabel" name="companyWhiteLabelSettingsWrapper">Company white label settings: <![CDATA[
-            <ul>
-                <li><b>Settings</b> (CompanyWhiteLabelSettings) - company white label settings:</li>
-                <ul>
-                    <li><b>CompanyName</b> (string) - company name,</li>
-                    <li><b>Site</b> (string) - site,</li>
-                    <li><b>Email</b> (bool) - email,</li>
-                    <li><b>Address</b> (bool) - address,</li>
-                    <li><b>Phone</b> (string) - phone,</li>
-                    <li><b>IsLicensor</b> (bool) - licensor or not.</li>
-                </ul>
-            </ul>
-            ]]></param>
-            <returns>Boolean value: true if the operation is successful</returns>
+            <param type="ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper, ASC.Web.Core.WhiteLabel" name="companyWhiteLabelSettingsWrapper">Company white label settings</param>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/settings/rebranding/company</path>
             <httpMethod>POST</httpMethod>
             <visible>false</visible>
@@ -2456,7 +2947,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Get the company white label settings</short>
-             <returns>Company white label settings: company name, site, email, address, phone, licensor or not, default setings or not</returns>
+             <returns type="ASC.Web.Api.ApiModels.ResponseDto.CompanyWhiteLabelSettingsDtov, ASC.Web.Api.ApiModels.ResponseDto">Company white label settings: company name, site, email, address, phone, licensor or not, default setings or not</returns>
              <path>api/2.0/settings/rebranding/company</path>
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
@@ -2467,7 +2958,7 @@
             </summary>
             <category>Rebranding</category>
             <short>Delete the company white label settings</short>
-            <returns>Default company white label settings: company name, site, email, address, phone, licensor or not</returns>
+            <returns type="ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings, ASC.Web.Core.WhiteLabel">Default company white label settings: company name, site, email, address, phone, licensor or not</returns>
             <path>api/2.0/settings/rebranding/company</path>
             <httpMethod>DELETE</httpMethod>
             <visible>false</visible>
@@ -2478,26 +2969,8 @@
              </summary>
              <category>Rebranding</category>
              <short>Save the additional white label settings</short>
-             <param type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper, ASC.Web.Core.WhiteLabel" name="wrapper">Additional white label settings: <![CDATA[
-             <ul>
-                 <li><b>Settings</b> (AdditionalWhiteLabelSettings) - additional white label settings:</li>
-                 <ul>
-                     <li><b>StartDocsEnabled</b> (bool) - specifies if the start document is enabled or not,</li>
-                     <li><b>HelpCenterEnabled</b> (bool) - specifies if the help center is enabled or not,</li>
-                     <li><b>FeedbackAndSupportEnabled</b> (bool) - specifies if feedback and support are available or not,</li>
-                     <li><b>FeedbackAndSupportUrl</b> (string) - feedback and support URL,</li>
-                     <li><b>UserForumEnabled</b> (bool) - specifies if the user forum is enabled or not,</li>
-                     <li><b>UserForumUrl</b> (string) - user forum URL,</li>
-                     <li><b>VideoGuidesEnabled</b> (bool) - specifies if the video guides are enabled or not,</li>
-                     <li><b>VideoGuidesUrl</b> (string) - video guides URL,</li>
-                     <li><b>SalesEmail</b> (string) - sales email,</li>
-                     <li><b>BuyUrl</b> (string) - URL to pay for the portal,</li>
-                     <li><b>LicenseAgreementsEnabled</b> (bool) - specifies if the license agreements are enabled or not,</li>
-                     <li><b>LicenseAgreementsUrl</b> (string) - license agreements URL.</li>
-                 </ul>
-             </ul>
-             ]]></param>
-             <returns>Boolean value: true if the operation is successful</returns>
+             <param type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper, ASC.Web.Core.WhiteLabel" name="wrapper">Additional white label settings</param>
+             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
              <path>api/2.0/settings/rebranding/additional</path>
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
@@ -2508,7 +2981,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Get the additional white label settings</short>
-             <returns>Additional white label settings: start document is enabled or not, the help center is enabled or not, feedback and support are available or not, feedback and support URL, the user forum is enabled or not, user forum URL, the video guides are enabled or not, video guides URL, sales email, URL to pay for the portal, the license agreements are enabled or not, license agreements URL, default settings or not</returns>
+             <returns type="ASC.Web.Api.ApiModels.ResponseDto.AdditionalWhiteLabelSettingsDto, ASC.Web.Api.ApiModels.ResponseDto">Additional white label settings: start document is enabled or not, the help center is enabled or not, feedback and support are available or not, feedback and support URL, the user forum is enabled or not, user forum URL, the video guides are enabled or not, video guides URL, sales email, URL to pay for the portal, the license agreements are enabled or not, license agreements URL, default settings or not</returns>
              <path>api/2.0/settings/rebranding/additional</path>
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
@@ -2519,7 +2992,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Delete the additional white label settings</short>
-             <returns>Default additional white label settings: start document is enabled or not, the help center is enabled or not, feedback and support are available or not, feedback and support URL, the user forum is enabled or not, user forum URL, the video guides are enabled or not, video guides URL, sales email, URL to pay for the portal, the license agreements are enabled or not, license agreements URL</returns>
+             <returns type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core.WhiteLabel">Default additional white label settings: start document is enabled or not, the help center is enabled or not, feedback and support are available or not, feedback and support URL, the user forum is enabled or not, user forum URL, the video guides are enabled or not, video guides URL, sales email, URL to pay for the portal, the license agreements are enabled or not, license agreements URL</returns>
              <path>api/2.0/settings/rebranding/additional</path>
              <httpMethod>DELETE</httpMethod>
             <visible>false</visible>
@@ -2530,21 +3003,8 @@
              </summary>
              <category>Rebranding</category>
              <short>Save the mail white label settings</short>
-             <param type="ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Mail white label settings: <![CDATA[
-             <ul>
-                 <li><b>Settings</b> (AdditionalWhiteLabelSettings) - additional white label settings:</li>
-                 <ul>
-                     <li><b>FooterEnabled</b> (bool) - specifies if the mail footer is enabled or not,</li>
-                     <li><b>FooterSocialEnabled</b> (bool) - specifies if the footer with social media contacts is enabled or not,</li>
-                     <li><b>SupportUrl</b> (string) - support URL,</li>
-                     <li><b>SupportEmail</b> (string) - support email,</li>
-                     <li><b>SalesEmail</b> (string) - sales email,</li>
-                     <li><b>DemoUrl</b> (string) - demo URL,</li>
-                     <li><b>SiteUrl</b> (string) - site URL.</li>
-                 </ul>
-             </ul>
-             ]]></param>
-             <returns>Boolean value: true if the operation is successful</returns>
+             <param type="ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Mail white label settings</param>
+             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
              <path>api/2.0/settings/rebranding/mail</path>
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
@@ -2555,8 +3015,8 @@
              </summary>
              <category>Rebranding</category>
              <short>Update the mail white label settings</short>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.MailWhiteLabelSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for mail white label settings: FooterEnabled (bool) - specifies if the mail footer will be enabled or not</param>
-             <returns>Boolean value: true if the operation is successful</returns>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.MailWhiteLabelSettingsRequestsDto, ASC.Web.Api.ApiModel.RequestsDto" name="inDto">Request parameters for mail white label settings</param>
+             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
              <path>api/2.0/settings/rebranding/mail</path>
              <httpMethod>PUT</httpMethod>
             <visible>false</visible>
@@ -2567,7 +3027,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Get the mail white label settings</short>
-             <returns>Mail white label settings: the mail footer is enabled or not, the footer with social media contacts is enabled or not, support URL, support email, sales email, demo URL, site URL</returns>
+             <returns type="ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings, ASC.Web.Core.WhiteLabel">Mail white label settings: the mail footer is enabled or not, the footer with social media contacts is enabled or not, support URL, support email, sales email, demo URL, site URL</returns>
              <path>api/2.0/settings/rebranding/mail</path>
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
@@ -2578,7 +3038,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Delete the mail white label settings</short>
-             <returns>Default mail white label settings: the mail footer is enabled or not, the footer with social media contacts is enabled or not, support URL, support email, sales email, demo URL, site URL</returns>
+             <returns type="ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings, ASC.Web.Core.WhiteLabel">Default mail white label settings: the mail footer is enabled or not, the footer with social media contacts is enabled or not, support URL, support email, sales email, demo URL, site URL</returns>
              <path>api/2.0/settings/rebranding/mail</path>
              <httpMethod>DELETE</httpMethod>
             <visible>false</visible>
@@ -2589,7 +3049,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Check the white label availability</short>
-             <returns>Boolean value: true if the white label is enabled</returns>
+             <returns type="System.Boolean, System">Boolean value: true if the white label is enabled</returns>
              <path>api/2.0/settings/enableWhitelabel</path>
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
@@ -2605,8 +3065,8 @@
             Returns a request to get the confirmation code from URL.
             </summary>
             <short>Get the code request</short>
-            <param type="ASC.FederatedLogin.LoginProviders.LoginProviderEnum, ASC.FederatedLogin.LoginProviders" name="provider">Provider</param>
-            <returns>Code request</returns>
+            <param type="ASC.FederatedLogin.LoginProviders.LoginProviderEnum, ASC.FederatedLogin.LoginProviders" method="url" name="provider">Provider</param>
+            <returns type="System.Object, System">Code request</returns>
             <remarks>List of providers: Google, Dropbox, Docusign, Box, OneDrive, Wordpress.</remarks>
             <path>api/2.0/thirdparty/{provider}</path>
             <httpMethod>GET</httpMethod>
@@ -2617,9 +3077,9 @@
             </summary>
             <short>Get the confirmation code</short>
             <param type="System.String, System" name="redirect">URL where the user will be redirected to after they have granted the application access</param>
-            <param type="System.String, System" name="code">Confirmation code that can be exchanged for an OAuth token</param>
+            <param type="System.String, System" method="url" name="code">Confirmation code that can be exchanged for an OAuth token</param>
             <param type="System.String, System" name="error">Error</param>
-            <returns>Confirmation code</returns>
+            <returns type="System.Object, System">Confirmation code</returns>
             <path>api/2.0/thirdparty/{provider}/code</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2637,7 +3097,7 @@
             Get active connections
             </short>
             <category>Active connections</category>
-            <returns>Active portal connections</returns>
+            <returns type="System.Object, System">Active portal connections</returns>
             <path>api/2.0/security/activeconnections</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2649,7 +3109,7 @@
             Log out and change password
             </short>
             <category>Active connections</category>
-            <returns>URL to the confirmation message for changing a password</returns>
+            <returns type="System.Object, System">URL to the confirmation message for changing a password</returns>
             <path>api/2.0/security/activeconnections/logoutallchangepassword</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2661,10 +3121,10 @@
             Log out for the user by ID
             </short>
             <category>Active connections</category>
-            <param type="System.Guid, System" name="userId">User ID</param>
+            <param type="System.Guid, System" method="url" name="userId">User ID</param>
             <path>api/2.0/security/activeconnections/logoutall/{userId}</path>
             <httpMethod>PUT</httpMethod>
-            <returns>Task awaiter</returns>
+            <returns></returns>
         </member>
         <member name="M:ASC.Web.Api.ConnectionsController.LogOutAllExceptThisConnection">
             <summary>
@@ -2674,7 +3134,7 @@
             Log out from all connections
             </short>
             <category>Active connections</category>
-            <returns>Current user name</returns>
+            <returns type="System.Object, System">Current user name</returns>
             <path>api/2.0/security/activeconnections/logoutallexceptthis</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2686,8 +3146,8 @@
             Log out from the connection
             </short>
             <category>Active connections</category>
-            <param type="System.Int32, System" name="loginEventId">Login event ID</param>
-            <returns>Boolean value: true if the operation is successful</returns>
+            <param type="System.Int32, System" method="url" name="loginEventId">Login event ID</param>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/security/activeconnections/logout/{loginEventId}</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2697,13 +3157,8 @@
             </summary>
             <short>Save the Documents Firebase device token</short>
             <category>Firebase</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Firebase request parameters: <![CDATA[
-            <ul>
-                <li><b>FirebaseDeviceToken</b> (string) - Firebase device token,</li>
-                <li><b>IsSubscribed</b> (bool) - specifies if the user is subscribed to the push notification or not.</li>
-            </ul>
-            ]]></param>
-            <returns>FireBase user: ID, user ID, tenant ID, Firebase device token, application, subscribed to the push notification or not</returns>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Firebase request parameters</param>
+            <returns type="ASC.Core.Common.EF.FireBaseUser, ASC.Core.Common.EF">FireBase user: ID, user ID, tenant ID, Firebase device token, application, subscribed to the push notification or not</returns>
             <path>api/2.0/settings/push/docregisterdevice</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -2713,13 +3168,8 @@
             </summary>
             <short>Subscribe to Documents push notification</short>
             <category>Firebase</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Firebase request parameters: <![CDATA[
-            <ul>
-                <li><b>FirebaseDeviceToken</b> (string) - Firebase device token,</li>
-                <li><b>IsSubscribed</b> (bool) - specifies if the user is subscribed to the push notification or not.</li>
-            </ul>
-            ]]></param>
-            <returns>Firebase user: ID, user ID, tenant ID, Firebase device token, application, subscribed to the push notification or not</returns>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto, ASC.Web.Api.ApiModels.RequestsDto" name="inDto">Firebase request parameters</param>
+            <returns type="ASC.Core.Common.EF.FireBaseUser, ASC.Core.Common.EF">Firebase user: ID, user ID, tenant ID, Firebase device token, application, subscribed to the push notification or not</returns>
             <path>api/2.0/settings/push/docsubscribe</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -2756,7 +3206,8 @@
             <short>
             Get the SMTP settings
             </short>
-            <returns>SMTP settings</returns>
+            <category>SMTP settings</category>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto, ASC.Web.Api.ApiModel.ResponseDto">SMTP settings</returns>
             <path>api/2.0/smtpsettings/smtp</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2767,19 +3218,9 @@
             <short>
             Save the SMTP settings
             </short>
-            <param type="ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto, ASC.Web.Api.ApiModel.ResponseDto" name="inDto">SMTP settings: <![CDATA[
-            <ul>
-                <li><b>Host</b> (string) - host,</li>
-                <li><b>Port</b> (int?) - port,</li>
-                <li><b>SenderAddress</b> (string) - sender address,</li>
-                <li><b>SenderDisplayName</b> (string) - sender display name,</li>
-                <li><b>CredentialsUserName</b> (string) - credentials username,</li>
-                <li><b>CredentialsUserPassword</b> (string) - credentials user password,</li>
-                <li><b>EnableSSL</b> (bool) - enable SSL or not,</li>
-                <li><b>EnableAuth</b> (bool) - enable authentication or not.</li>
-            </ul>
-            ]]></param>
-            <returns>SMTP settings</returns>
+            <category>SMTP settings</category>
+            <param type="ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto, ASC.Web.Api.ApiModel.ResponseDto" name="inDto">SMTP settings</param>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto, ASC.Web.Api.ApiModel.ResponseDto">SMTP settings</returns>
             <path>api/2.0/smtpsettings/smtp</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -2790,7 +3231,8 @@
             <short>
             Reset the SMTP settings
             </short>
-            <returns>Default SMTP settings</returns>
+            <category>SMTP settings</category>
+            <returns type="ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto, ASC.Web.Api.ApiModel.ResponseDto">Default SMTP settings</returns>
             <path>api/2.0/smtpsettings/smtp</path>
             <httpMethod>DELETE</httpMethod>
         </member>
