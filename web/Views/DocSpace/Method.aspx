@@ -54,9 +54,15 @@
                 </tr>
             </thead>
             <tbody>
+            <% MsDocEntryPointMethodParams inDto = null; %>
             <% foreach (var param in method.Params.OrderByDescending(x => x.Method).Where(x => x.Visible))
-               {
-                   var paramModel = DocSpaceDocumentation.GetPluralizer().ToHumanName(param.Type); %>
+                {
+                    if (param.Name == "inDto")
+                    {
+                        inDto = param;
+                        continue;
+                    }
+                    var paramModel = DocSpaceDocumentation.GetPluralizer().ToHumanName(param.Type); %>
                 <tr class="tablerow">
                     <td>
                         <%= param.Name %>
@@ -81,6 +87,24 @@
                     </td>
                 </tr>
             <% } %>
+                <% if (inDto != null && inDto.Dto != null && inDto.Dto.Any()) { 
+                        foreach(var prop in inDto.Dto)
+                    { %>
+                <tr class="tablerow">
+                    <td>
+                        <%= prop.Key %>
+                        <div class="infotext">sent in body</div>
+                    </td>
+                    <td>
+                        <%= prop.Value %>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                   <% }
+                 } %>
             </tbody>
         </table>
         <div class="mobile-content"></div>

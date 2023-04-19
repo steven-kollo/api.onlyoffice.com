@@ -306,6 +306,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [DataMember(Name = "assembly")]
         public string Assembly { get; set; }
+
+        public Dictionary<string, string> Dto { get; set; }
     }
 
     public class MsDocDocumentGenerator
@@ -451,6 +453,32 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 SaveMembers(entryPointDoc, memberdesc);
             }
+        }
+
+        private Dictionary<string, string> ExpandDto(string type, string file)
+        {
+            var xml = Path.Combine(_basePath, file + ".xml");
+            if (!File.Exists(xml)) return null;
+            var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
+
+            var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
+            var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            if (inherited != null && inherited.Element("inherited") != null)
+            {
+                var split = inherited.Element("inherited").ValueOrNull().Split(',');
+                needMembers = GetInherited(split[0].Trim(), split[1].Trim(), needMembers);
+            }
+
+            foreach(var member in needMembers)
+            {
+                var name = member.Attribute("name").ValueOrNull();
+                if (!string.IsNullOrWhiteSpace(name)) {
+                    result.Add(name.Split('.').Last(), member.Element("summary").ValueOrNull());
+                }
+            }
+
+            return result;
         }
 
         private List<MsDocFunctionResponse> GetResponse(XElement element, string collection)
@@ -754,6 +782,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         || humanName.JsonParam == null && humanNameAssembly.JsonParam != null)
                     {
                         humanName = humanNameAssembly;
+                    }
+
+                    if (p.Name == "inDto" && p.Dto == null)
+                    {
+                        p.Dto = ExpandDto(GetOnlyName(p.Type), assembly);
                     }
                 }
 
