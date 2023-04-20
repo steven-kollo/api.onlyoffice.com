@@ -385,7 +385,7 @@
             <summary>External link name</summary>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto.Access">
-            <summary>Sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing)</summary>
+            <summary>Sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing, Collaborator)</summary>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.LockFileRequestDto">
             <summary>

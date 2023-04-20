@@ -19,7 +19,7 @@
             </short>
             <category>Third-party integration</category>
             <param type="System.String, System" method="url" name="fileId">File ID</param>
-            <returns type="ASC.Web.Files.Services.DocumentService.Configuration, ASC.Web.Files.Services.DocumentService">Configuration parameters: document config, document type, editor config, editor type, editor URL, token, platform type</returns>
+            <returns type="ASC.Web.Files.Services.DocumentService.Configuration, ASC.Files.Core">Configuration parameters: document config, document type, editor config, editor type, editor URL, token, platform type</returns>
             <path>api/2.0/files/file/app-{fileId}/openedit</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
@@ -108,7 +108,7 @@
             <short>Get reference data</short>
             <category>Files</category>
             <param type="ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto, ASC.Files.Core" name="inDto">Request parameters for getting reference data</param>
-            <returns type="ASC.Web.Files.Services.DocumentService.FileReference, ASC.Web.Files.Services.DocumentService">File reference data: error, path, URL, file type, token</returns>
+            <returns type="ASC.Web.Files.Services.DocumentService.FileReference, ASC.Files.Core">File reference data: error, path, URL, file type, token</returns>
             <path>api/2.0/files/file/referencedata</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -517,7 +517,7 @@
             <category>Folders</category>
             <param type="System.Int32, System" method="url" name="folderId">Folder ID</param>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Int32, System" name="roomId">Room ID</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
@@ -594,7 +594,7 @@
             <short>Get the "Common" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "Common" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -608,7 +608,7 @@
             <short>Get the "Favorites" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "Favorites" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -622,7 +622,7 @@
             <short>Get the "My documents" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "My documents" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -636,7 +636,7 @@
             <short>Get the "Private Room" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "Private Room" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -650,7 +650,7 @@
             <short>Get the "In projects" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "In projects" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -664,7 +664,7 @@
             <short>Get the "Recent" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "Recent" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -677,7 +677,7 @@
             </summary>
             <short>Get filtered sections</short>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <param type="System.Nullable{System.Boolean}, System" name="withoutTrash">Specifies whether to return the "Trash" section or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
@@ -695,7 +695,7 @@
             <short>Get the "Shared with me" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "Shared with me" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -709,7 +709,7 @@
             <short>Get the "Templates" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "Templates" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -723,7 +723,7 @@
             <short>Get the "Trash" section</short>
             <category>Folders</category>
             <param type="System.Nullable{System.Guid}, System" name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), FillingFormsRooms (13), EditingRooms (14), ReviewRooms (15), ReadOnlyRooms (16), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
+            <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "Trash" section contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
@@ -938,7 +938,7 @@
             Sends a message to the users who are mentioned in the file with the ID specified in the request.
             </summary>
             <param type="System.Int32, System" method="url" name="fileId">File ID</param>
-            <param type="ASC.Web.Files.Services.WCFService.MentionMessageWrapper, ASC.Web.Files.Services.WCFService" name="mentionMessage">Mention message request parameters</param>
+            <param type="ASC.Web.Files.Services.WCFService.MentionMessageWrapper, ASC.Files.Core" name="mentionMessage">Mention message request parameters</param>
             <short>Send the mention message</short>
             <category>Sharing</category>
             <returns type="System.Collections.Generic.List{ASC.Web.Files.Services.WCFService.AceShortWrapper}, System.Collections.Generic">List of access rights information: user, their access rights to the file, the external link is available or not</returns>
@@ -1022,7 +1022,7 @@
             <short>Change the archive format (using body parameters)</short>
             <param type="ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto, ASC.Files.Core" name="inDto">Settings request parameters</param>
             <category>Settings</category>
-            <returns type="ASC.Web.Files.Core.Compress.ICompress, ASC.Web.Files.Core.Compress">Archive</returns>
+            <returns type="ASC.Web.Files.Core.Compress.ICompress, ASC.Files.Core">Archive</returns>
             <path>api/2.0/files/settings/downloadtargz</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1033,7 +1033,7 @@
             <short>Change the archive format (using form parameters)</short>
             <param type="ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto, ASC.Files.Core" name="inDto">Settings request parameters</param>
             <category>Settings</category>
-            <returns type="ASC.Web.Files.Core.Compress.ICompress, ASC.Web.Files.Core.Compress">Archive</returns>
+            <returns type="ASC.Web.Files.Core.Compress.ICompress, ASC.Files.Core">Archive</returns>
             <path>api/2.0/files/settings/downloadtargz</path>
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
@@ -1110,7 +1110,7 @@
             </summary>
             <short>Get file settings</short>
             <category>Settings</category>
-            <returns type="ASC.Web.Files.Classes.FilesSettingsHelper, ASC.Web.Files.Classes">File settings</returns>
+            <returns type="ASC.Web.Files.Classes.FilesSettingsHelper, ASC.Files.Core">File settings</returns>
             <path>api/2.0/files/settings</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1216,9 +1216,9 @@
             Changes the default access rights in the sharing settings.
             </summary>
             <short>Change the default access rights</short>
-            <param type="System.Collections.Generic.List{ASC.Files.Core.Security.FileShare}, System.Collections.Generic" name="value">Sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing)</param>
+            <param type="System.Collections.Generic.List{ASC.Files.Core.Security.FileShare}, System.Collections.Generic" name="value">Sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing, Collaborator)</param>
             <category>Settings</category>
-            <returns type="System.Collections.Generic.List{SC.Files.Core.Security.FileShare}, System.Collections.Generic">Updated sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing)</returns>
+            <returns type="System.Collections.Generic.List{SC.Files.Core.Security.FileShare}, System.Collections.Generic">Updated sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing, Collaborator)</returns>
             <path>api/2.0/files/settings/dafaultaccessrights</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
@@ -1640,10 +1640,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsInternalController.CreateRoomAsync(ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto)">
             <summary>
-            Creates a room in the "Virtual rooms" section.
+            Creates a room in the "Rooms" section.
             </summary>
             <short>Create a room</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for creating a room</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
             <path>api/2.0/files/rooms</path>
@@ -1651,10 +1651,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsThirdPartyController.CreateRoomAsync(System.String,ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto)">
             <summary>
-            Creates a room in the "Virtual rooms" section stored in a third-party storage.
+            Creates a room in the "Rooms" section stored in a third-party storage.
             </summary>
             <short>Create a third-party room</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.String, System" method="url" name="id">ID of the folder in the third-party storage in which the contents of the room will be stored</param>
             <param type="ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for creating a room</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
@@ -1663,10 +1663,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.GetRoomInfoAsync(`0)">
             <summary>
-            Returns the virtual room information.
+            Returns the room information.
             </summary>
             <short>Get room information</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
             <path>api/2.0/files/rooms/{id}</path>
@@ -1674,58 +1674,58 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.UpdateRoomAsync(`0,ASC.Files.Core.ApiModels.RequestDto.UpdateRoomRequestDto)">
             <summary>
-            Renames a virtual room with the ID specified in  the request.
+            Renames a room with the ID specified in  the request.
             </summary>
             <short>Rename a room</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
-            <param type="ASC.Files.Core.ApiModels.RequestDto.UpdateRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for updating a virtual room</param>
+            <param type="ASC.Files.Core.ApiModels.RequestDto.UpdateRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for updating a room</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Updated room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
             <path>api/2.0/files/rooms/{id}</path>
             <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.DeleteRoomAsync(`0,ASC.Files.Core.ApiModels.RequestDto.DeleteRoomRequestDto)">
             <summary>
-            Removes a virtual room with the ID specified in the request.
+            Removes a room with the ID specified in the request.
             </summary>
             <short>Remove a room</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
-            <param type="ASC.Files.Core.ApiModels.RequestDto.DeleteRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for deleting a virtual room</param>
+            <param type="ASC.Files.Core.ApiModels.RequestDto.DeleteRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for deleting a room</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto, ASC.Files.Core">File operation: operation ID, operation type, operation progress, error, processing status, finished or not, URL, list of files, list of folders</returns>
             <path>api/2.0/files/rooms/{id}</path>
             <httpMethod>DELETE</httpMethod>
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.ArchiveRoomAsync(`0,ASC.Files.Core.ApiModels.RequestDto.ArchiveRoomRequestDto)">
             <summary>
-            Moves a virtual room with the ID specified in the request to the "Archive" section.
+            Moves a room with the ID specified in the request to the "Archive" section.
             </summary>
             <short>Archive a room</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
-            <param type="ASC.Files.Core.ApiModels.RequestDto.ArchiveRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for archiving a virtual room</param>
+            <param type="ASC.Files.Core.ApiModels.RequestDto.ArchiveRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for archiving a room</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto, ASC.Files.Core">File operation: operation ID, operation type, operation progress, error, processing status, finished or not, URL, list of files, list of folders</returns>
             <path>api/2.0/files/rooms/{id}/archive</path>
             <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.UnarchiveRoomAsync(`0,ASC.Files.Core.ApiModels.RequestDto.ArchiveRoomRequestDto)">
             <summary>
-            Moves a virtual room with the ID specified in the request from the "Archive" section to the "Virtual room" section.
+            Moves a room with the ID specified in the request from the "Archive" section to the "Rooms" section.
             </summary>
             <short>Unarchive a room</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
-            <param type="ASC.Files.Core.ApiModels.RequestDto.ArchiveRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for unarchiving a virtual room</param>
+            <param type="ASC.Files.Core.ApiModels.RequestDto.ArchiveRoomRequestDto, ASC.Files.Core" name="inDto">Request parameters for unarchiving a room</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto, ASC.Files.Core">File operation: operation ID, operation type, operation progress, error, processing status, finished or not, URL, list of files, list of folders</returns>
             <path>api/2.0/files/rooms/{id}/unarchive</path>
             <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.SetRoomSecurityAsync(`0,ASC.Files.Core.ApiModels.RequestDto.RoomInvitationRequestDto)">
             <summary>
-            Sets the access rights to a virtual room with the ID specified in the request.
+            Sets the access rights to a room with the ID specified in the request.
             </summary>
             <short>Set room access rights</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <param type="ASC.Files.Core.ApiModels.RequestDto.RoomInvitationRequestDto, ASC.Files.Core" name="inDto">Request parameters for inviting users to a room</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.RoomSecurityDto, ASC.Files.Core">Room security information: room members, warning</returns>
@@ -1734,10 +1734,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.GetRoomSecurityInfoAsync(`0)">
             <summary>
-            Returns the access rights of a virtual room with the ID specified in the request.
+            Returns the access rights of a room with the ID specified in the request.
             </summary>
             <short>Get room access rights</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Files.Core.ApiModels.ResponseDto.FileShareDto}, System.Collections.Generic">Security information of room files: sharing rights, a user who has the access to the specified file, the file is locked by this user or not, this user is an owner of the specified file or not, this user can edit the access to the specified file or not</returns>
             <path>api/2.0/files/rooms/{id}/share</path>
@@ -1746,10 +1746,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.SetInvintationLinkAsync(`0,ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto)">
             <summary>
-            Sets an external link to invite the users to a virtual room with the ID specified in the request.
+            Sets an external link to invite the users to a room with the ID specified in the request.
             </summary>
             <short>Set an external invitation link</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <param type="ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto, ASC.Files.Core" name="inDto">Invitation link request parameters</param>
             <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Files.Core.ApiModels.ResponseDto.FileShareDto}, System.Collections.Generic">Security information of room files: sharing rights, a user who has the access to the specified file, the file is locked by this user or not, this user is an owner of the specified file or not, this user can edit the access to the specified file or not</returns>
@@ -1759,10 +1759,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.AddTagsAsync(`0,ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto)">
             <summary>
-            Adds the tags to a virtual room with the ID specified in the request.
+            Adds the tags to a room with the ID specified in the request.
             </summary>
             <short>Add room tags</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <param type="ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto, ASC.Files.Core" name="inDto">Request parameters for adding tags</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
@@ -1771,10 +1771,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.DeleteTagsAsync(`0,ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto)">
             <summary>
-            Removes the tags from a virtual room with the ID specified in the request.
+            Removes the tags from a room with the ID specified in the request.
             </summary>
             <short>Remove room tags</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <param type="ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto, ASC.Files.Core" name="inDto">Request parameters for removing tags</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
@@ -1783,10 +1783,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.CreateRoomLogoAsync(`0,ASC.Files.Core.ApiModels.RequestDto.LogoRequestDto)">
             <summary>
-            Creates a logo for a virtual room with the ID specified in the request.
+            Creates a logo for a room with the ID specified in the request.
             </summary>
             <short>Create a room logo</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <param type="ASC.Files.Core.ApiModels.RequestDto.LogoRequestDto, ASC.Files.Core" name="inDto">Logo request parameters</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
@@ -1795,10 +1795,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.DeleteRoomLogoAsync(`0)">
             <summary>
-            Removes a logo from a virtual room with the ID specified in the request.
+            Removes a logo from a room with the ID specified in the request.
             </summary>
             <short>Remove a room logo</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
             <path>api/2.0/files/rooms/{id}/logo</path>
@@ -1806,10 +1806,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.PinRoomAsync(`0)">
             <summary>
-            Pins a virtual room with the ID specified in the request to the top of the list.
+            Pins a room with the ID specified in the request to the top of the list.
             </summary>
             <short>Pin a room</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
             <path>api/2.0/files/rooms/{id}/pin</path>
@@ -1817,10 +1817,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.UnpinRoomAsync(`0)">
             <summary>
-            Unpins a virtual room with the ID specified in the request from the top of the list.
+            Unpins a room with the ID specified in the request from the top of the list.
             </summary>
             <short>Unpin a room</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core">Room information: parent folder ID, number of files, number of folders, shareable or not, favorite or not, number for a new folder, list of tags, logo, pinned or not, room type, private or not</returns>
             <path>api/2.0/files/rooms/{id}/unpin</path>
@@ -1828,10 +1828,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.ResendEmailInvitationsAsync(`0,ASC.Files.Core.ApiModels.RequestDto.UserInvintationRequestDto)">
             <summary>
-            Resends the email invitations to a virtual room with the ID specified in the request to the selected users.
+            Resends the email invitations to a room with the ID specified in the request to the selected users.
             </summary>
             <short>Resend room invitations</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
             <param type="ASC.Files.Core.ApiModels.RequestDto.UserInvintationRequestDto, ASC.Files.Core" name="inDto">User invitation request parameters</param>
             <returns></returns>
@@ -1840,10 +1840,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsCommonController.GetRoomsFolderAsync(System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomFilterType},System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.VirtualRooms.SearchArea},System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.ProviderFilter},System.Nullable{ASC.Files.Core.Core.SubjectFilter})">
             <summary>
-            Returns the contents of the "Virtual rooms" section by the parameters specified in the request.
+            Returns the contents of the "Rooms" section by the parameters specified in the request.
             </summary>
             <short>Get rooms</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomFilterType}, System" name="type">Filter by room type</param>
             <param type="System.String, System" name="subjectId">Filter by user ID</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
@@ -1854,7 +1854,7 @@
             <param type="System.Nullable{System.Boolean}, System" name="excludeSubject">Specifies whether to exclude a subject or not</param>
             <param type="System.Nullable{ASC.Files.Core.ProviderFilter}, System" name="provider">Filter by provider name (None, Box, DropBox, GoogleDrive, kDrive, OneDrive, SharePoint, WebDav, Yandex)</param>
             <param type="System.Nullable{ASC.Files.Core.Core.SubjectFilter}, System" name="subjectFilter">Filter by subject (Owner - 1, Member - 1)</param>
-            <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">Virtual rooms contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
+            <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">Rooms contents: list of files, list of folders, current folder information, folder path, folder start index, number of folder elements, total number of elements in the folder, new element index</returns>
             <path>api/2.0/files/rooms</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -1863,7 +1863,7 @@
             Creates a custom tag with the parameters specified in the request.
             </summary>
             <short>Create a tag</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="ASC.Files.Core.ApiModels.RequestDto.CreateTagRequestDto, ASC.Files.Core" name="inDto">Request parameters for creating a tag</param>
             <returns type="System.Object, System">New tag name</returns>
             <path>api/2.0/files/tags</path>
@@ -1874,7 +1874,7 @@
             Returns a list of custom tags.
             </summary>
             <short>Get tags</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <returns type="System.Collections.Generic.IAsyncEnumerable{System.Object}, System.Collections.Generic">List of tag names</returns>
             <path>api/2.0/files/tags</path>
             <httpMethod>GET</httpMethod>
@@ -1885,7 +1885,7 @@
             Deletes a bunch of custom tags specified in the request.
             </summary>
             <short>Delete tags</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto, ASC.Files.Core" name="inDto">Batch tags request parameters</param>
             <returns></returns>
             <path>api/2.0/files/tags</path>
@@ -1893,10 +1893,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsCommonController.UploadRoomLogo(Microsoft.AspNetCore.Http.IFormCollection)">
             <summary>
-            Uploads a temporary image to create a virtual room logo.
+            Uploads a temporary image to create a room logo.
             </summary>
             <short>Upload an image for room logo</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="Microsoft.AspNetCore.Http.IFormCollection, Microsoft.AspNetCore.Http" name="formCollection">Image data</param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto, ASC.Files.Core">Upload result: success or not, data, message</returns>
             <path>api/2.0/files/logos</path>
@@ -1904,10 +1904,10 @@
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsCommonController.SetSecurityByLink(ASC.Files.Core.ApiModels.RequestDto.AcceptInvitationDto)">
             <summary>
-            Accepts an invitation to a virtual room via an external link.
+            Accepts an invitation to a room via an external link.
             </summary>
             <short>Accept an invitation</short>
-            <category>Virtual rooms</category>
+            <category>Rooms</category>
             <param type="ASC.Files.Core.ApiModels.RequestDto.AcceptInvitationDto, ASC.Files.Core" name="inDto">Request parameters for accepting invitations</param>
             <returns></returns>
             <path>api/2.0/files/rooms/accept</path>
@@ -1936,7 +1936,7 @@
             Returns a key pair for the current user.
             </summary>
             <short>Get encryption keys</short>
-            <returns type="ASC.Web.Files.Core.Entries.EncryptionKeyPairDto, ASC.Web.Files.Core.Entries">Encryption key pair: private key, public key, user ID</returns>
+            <returns type="ASC.Web.Files.Core.Entries.EncryptionKeyPairDto, ASC.Files.Core">Encryption key pair: private key, public key, user ID</returns>
             <path>api/2.0/privacyroom/keys</path>
             <httpMethod>GET</httpMethod>
             <visible>false</visible>
