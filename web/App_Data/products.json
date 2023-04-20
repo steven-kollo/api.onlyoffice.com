@@ -81,6 +81,10 @@
          ],
          "More information":[
             {
+               "Item1":"Storybook",
+               "Item2":"docspace-storybook"
+            },
+            {
                "Item1":"FAQ",
                "Item2":"faq"
             },
