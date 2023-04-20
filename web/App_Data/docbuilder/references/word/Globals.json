@@ -1139,5 +1139,49 @@
       "\"none\"",
       "\"out\""
     ]
+  },
+  "ReviewReportRecordType": {
+    "name": "ReviewReportRecordType",
+    "description": "<p>Review record type</p>",
+    "type": [
+      "\"TextAdd\"",
+      "\"TextRem\"",
+      "\"ParaAdd\"",
+      "\"ParaRem\"",
+      "\"TextPr\"",
+      "\"ParaPr\"",
+      "\"Unknown\""
+    ]
+  },
+  "ReviewReportRecord": {
+    "name": "ReviewReportRecord",
+    "description": "<p>Record of one review change</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "ReviewReportRecordType",
+        "name": "Type",
+        "description": "<p>change type</p>"
+      },
+      {
+        "type": "string",
+        "name": "Value",
+        "description": "<p>value is set for types &quot;TextAdd&quot; and &quot;TextRem&quot; only</p>"
+      },
+      {
+        "type": "number",
+        "name": "Date",
+        "description": "<p>date-time when this change was made</p>"
+      }
+    ]
+  },
+  "ReviewReport": {
+    "name": "ReviewReport",
+    "description": "<p>Report on all review changes\nThis is a dictionary where the keys are usernames</p>",
+    "type": [
+      "Object.<string, Array.<ReviewReportRecord>>"
+    ]
   }
 }

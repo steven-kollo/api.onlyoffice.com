@@ -6,10 +6,10 @@
     <span class="comment">This function requires authentication</span>
 </h1>
 
-<div class="header-gray">Description</div>
-<p class="dscr">Get the list of all the portals registered to the user with the email address specified in the request.</p>
+<div id="methodDesc" class="header-gray">Description</div>
+<p class="dscr">Returns a list of all the portals registered for the user with the email address specified in the request.</p>
 
-<div class="header-gray">Parameters</div>
+<div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -30,18 +30,18 @@
             <td>email
                 <div class="infotext">sent in Query</div>
             </td>
-            <td>portal owner email address</td>
+            <td>Portal owner email address</td>
             <td>string</td>
-            <td>test@example.com</td>
+            <td>"test@example.com"</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Returns</div>
-<p>Returns the list of all the portals registered to the user with the email address specified in the request.</p>
+<div id="methodReturns" class="header-gray">Returns</div>
+<p>A list of all the portals registered for the user with the email address specified in the request</p>
 
-<div class="header-gray">Example Response</div>
+<div id="methodResponse" class="header-gray">Example Response</div>
 <pre>
 {
     "tenants": [

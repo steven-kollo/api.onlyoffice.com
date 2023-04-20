@@ -70,7 +70,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 <note>
     <ul>
         <li><p>In the <em>index.html</em> file there is always a default link to 
-        the <a href="https://raw.githubusercontent.com/ONLYOFFICE/sdkjs-plugins/feature/desktop_build/pluginBase.js" target="_blank">pluginBase.js</a> file. 
+        the <a href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js" target="_blank">plugins.js</a> file. 
         Don&#8217;t forget to add it to the plugin folder.</p></li>
         <li><p>If the plugins placed into the folder and the plugins specified in the config coincide, the latter will be used.</p></li>
         <li>

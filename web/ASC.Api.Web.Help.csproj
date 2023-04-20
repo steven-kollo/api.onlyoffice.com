@@ -2183,7 +2183,9 @@
     <Content Include="Content\img\docbuilder\download.png" />
     <Content Include="Content\img\docbuilder\examples\coordinate_aspects.png" />
     <Content Include="Content\img\docbuilder\examples\icon_DocumentEditors.png" />
+    <Content Include="Content\img\docbuilder\examples\ole-object-image.png" />
     <Content Include="Content\img\docbuilder\examples\step2_1.png" />
+    <Content Include="Content\img\docbuilder\examples\user-profile.png" />
     <Content Include="Content\img\docbuilder\file_docx.png" />
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />

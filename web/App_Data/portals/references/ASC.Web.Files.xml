@@ -958,7 +958,7 @@
             <type name="permissions">ASC.Web.Files.Services.DocumentService.Configuration.DocumentConfig.PermissionsConfig, ASC.Web.Files</type>
         </member>
         <member name="F:ASC.Web.Files.Services.DocumentService.Configuration.DocumentConfig.ReferenceData">
-            <type name="permissions">ASC.Web.Files.Services.DocumentService.Configuration.DocumentConfig.ReferenceDataConfig, ASC.Web.Files</type>
+            <type name="referenceData">ASC.Web.Files.Services.DocumentService.Configuration.DocumentConfig.ReferenceDataConfig, ASC.Web.Files</type>
         </member>
         <member name="P:ASC.Web.Files.Services.DocumentService.Configuration.DocumentConfig.Title">
             <example type="title">title</example>

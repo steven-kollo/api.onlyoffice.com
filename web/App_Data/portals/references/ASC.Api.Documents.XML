@@ -314,7 +314,7 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.StartEdit(System.String,System.Boolean,System.String)">
             <summary>
-            Informs about opening a file with the ID specified in the request for editing, locking it from being deleted or movemed (this method is called by the mobile editors).
+            Informs about opening a file with the ID specified in the request for editing, locking it from being deleted or moved (this method is called by the mobile editors).
             </summary>
             <short>Start file editing</short>
             <param type="System.String, System" method="url" name="fileId">File ID</param>
@@ -342,7 +342,7 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.OpenEdit(System.String,System.Int32,System.String)">
             <summary>
-            Returns the initialization configuration of a file to open it the editor.
+            Returns the initialization configuration of a file to open it in the editor.
             </summary>
             <short>Open a file</short>
             <param type="System.String, System" method="url" name="fileId">File ID</param>
@@ -1307,7 +1307,7 @@
             <param type="System.String, System" name="content">Post content</param>
             <param type="System.Int32, System" name="status">Operation status</param>
             <category>WordPress</category>
-            <returns>WordPress post</returns>
+            <returns>Boolean value: true if the operation is successful</returns>
             <path>api/2.0/files/wordpress</path>
             <httpMethod>POST</httpMethod>
             <visible>false</visible>
