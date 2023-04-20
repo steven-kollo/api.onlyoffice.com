@@ -14,13 +14,13 @@
 </p>
 <h2>Making requests</h2>
 <p>
-    To identify the request and response format please make sure that both the <b>Content-Type</b> and <b>Accept</b> headers are set to <em>application/json</em>.
-    The API methods are called without stating the format for the response and are returned in JSON format.
+    To identify the request and response format, please make sure that both the <b>Content-Type</b> and <b>Accept</b> headers are set to <em>application/json</em>.
+    The API methods are called without specifying the format for the response and are returned in JSON format.
 </p>
 <h2>Responses</h2>
 <p>
     <b>If a request succeeds, it will return a status code in the 200 range</b> and a JSON-formatted response.
-    Note that, in general, if a request causes a new record to be created, the response will use the <em>201 Created</em> status. Any other successful operation will return a <em>200</em> status code.
+    Note that, in general, if a request causes a new record to be created, the response will use the <b>201 Created</b> status. Any other successful operation will return a <em>200</em> status code.
 </p>
 <p>
     <b>If a request fails, a non-200 status code will be returned</b> in JSON format, containing the error code and additional error information (if available) as the response content.
@@ -43,52 +43,52 @@
         <tr class="tablerow">
             <td>400</td>
             <td>portalNameEmpty</td>
-            <td>The required parameter portalName which must be present in the request is not specified</td>
+            <td>The required parameter <b>portalName</b>, which must be present in the request, is not specified.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>tooShortError</td>
-            <td>The portalName specified in the request is too short</td>
+            <td>The <b>portalName</b> specified in the request is too short.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>portalNameIncorrect</td>
-            <td>Unallowable symbols in portalName</td>
+            <td>Invalid characters in the <b>portalName</b> parameter.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>portalNameNotFound</td>
-            <td>No portal with the portalName specified in the request has been registered</td>
+            <td>No portal with the portal name specified in the request has been registered.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>portalNameExist</td>
-            <td>Portal with the portalName specified in the request has already been registered</td>
+            <td>Portal with the portal name specified in the request has already been registered.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>portalsCountTooMuch</td>
-            <td>The limit for the number of portals has been reached</td>
+            <td>The limit for the number of portals has been reached.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>tooMuchAttempts</td>
-            <td>The limit for the number of request attempts has been reached</td>
+            <td>The limit for the number of request attempts has been reached.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>passPolicyError</td>
-            <td>The password specified in the request does not meet the requirements</td>
+            <td>The password specified in the request does not meet the requirements.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>recaptchaInvalid</td>
-            <td>The recaptcha value which has been entered is wrong</td>
+            <td>Invalid reCAPTCHA value has been entered.</td>
         </tr>
         <tr class="tablerow">
             <td>400</td>
             <td>params</td>
-            <td>An error has been made in the method parameters specified in the request</td>
+            <td>An error has been made in the method parameters specified in the request.</td>
         </tr>
         <tr class="tablerow">
             <td>403</td>
@@ -98,17 +98,17 @@
         <tr class="tablerow">
             <td>500</td>
             <td>authorization</td>
-            <td>Internal server error when decoding the authorization key</td>
+            <td>Internal server error when decoding the authorization key.</td>
         </tr>
         <tr class="tablerow">
             <td>500</td>
             <td>registerNewTenantError</td>
-            <td>Internal server error when registering a new portal</td>
+            <td>Internal server error when registering a new portal.</td>
         </tr>
         <tr class="tablerow">
             <td>500</td>
             <td>error</td>
-            <td>Internal server error</td>
+            <td>Internal server error.</td>
         </tr>
     </tbody>
 </table>
