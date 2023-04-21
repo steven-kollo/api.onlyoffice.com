@@ -146,6 +146,15 @@
       "'readOnly'"
     ]
   },
+  "TextPartType": {
+    "name": "TextPartType",
+    "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not:</p>\n<ul>\n<li><b>entirely</b> - replace all text with the specified one</li>\n<li><b>beforeCursor</b> - replace only the part of the word that is before cursor</li>\n<li><b>beforeCursor</b> - replace only the part of the word that is after cursor</li>\n</ul>",
+    "type": [
+      "\"entirely\"",
+      "\"beforeCursor\"",
+      "\"afterCursor\""
+    ]
+  },
   "ContentControlParentPr": {
     "name": "ContentControlParentPr",
     "description": "<p>The content control parent properties.</p>",

@@ -1014,6 +1014,268 @@
           "optional": false
         }
       ]
+    },
+    "GetDocumentLang": {
+      "memberof": "Api",
+      "name": "GetDocumentLang",
+      "description": "<p>Gets the document language.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddContextMenuItem": {
+      "memberof": "Api",
+      "name": "AddContextMenuItem",
+      "description": "<p>Add item to context menu</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ContextMenuItem>",
+          "name": "items",
+          "description": "<p>Array of items</p>",
+          "optional": false
+        }
+      ]
+    },
+    "UpdateContextMenuItem": {
+      "memberof": "Api",
+      "name": "UpdateContextMenuItem",
+      "description": "<p>Update items in context menu</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ContextMenuItem>",
+          "name": "items",
+          "description": "<p>Array of items</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ShowWindow": {
+      "memberof": "Api",
+      "name": "ShowWindow",
+      "description": "<p>Shows modal window.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "frameId",
+          "description": "<p>The frame ID.</p>",
+          "optional": false
+        },
+        {
+          "type": "variation",
+          "name": "variation",
+          "description": "<p>The plugin variation.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CloseWindow": {
+      "memberof": "Api",
+      "name": "CloseWindow",
+      "description": "<p>Close modal window.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "frameId",
+          "description": "<p>The frame ID.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SendToWindow": {
+      "memberof": "Api",
+      "name": "SendToWindow",
+      "description": "<p>Send message to window.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "windowID",
+          "description": "<p>The frame ID.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "name",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        },
+        {
+          "type": "object",
+          "name": "data",
+          "description": "<p>The even data.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ResizeWindow": {
+      "memberof": "Api",
+      "name": "ResizeWindow",
+      "description": "<p>Resize modal window.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "frameId",
+          "description": "<p>The frame ID.</p>",
+          "optional": true
+        },
+        {
+          "type": "number",
+          "name": "size",
+          "description": "<p>The frame size.</p>",
+          "optional": true
+        },
+        {
+          "type": "number",
+          "name": "minSize",
+          "description": "<p>The frame min size.</p>",
+          "optional": true
+        },
+        {
+          "type": "number",
+          "name": "maxSize",
+          "description": "<p>The frame max size.</p>",
+          "optional": true
+        }
+      ]
+    },
+    "MouseUpWindow": {
+      "memberof": "Api",
+      "name": "MouseUpWindow",
+      "description": "<p>Mouse up modal window.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "frameId",
+          "description": "<p>The frame ID.</p>",
+          "optional": true
+        },
+        {
+          "type": "number",
+          "name": "x",
+          "description": "<p>coordinate.</p>",
+          "optional": true
+        },
+        {
+          "type": "number",
+          "name": "y",
+          "description": "<p>coordinate.</p>",
+          "optional": true
+        }
+      ]
+    },
+    "MouseMoveWindow": {
+      "memberof": "Api",
+      "name": "MouseMoveWindow",
+      "description": "<p>Mouse move modal window.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "frameId",
+          "description": "<p>The frame ID.</p>",
+          "optional": true
+        },
+        {
+          "type": "number",
+          "name": "x",
+          "description": "<p>coordinate.</p>",
+          "optional": true
+        },
+        {
+          "type": "number",
+          "name": "y",
+          "description": "<p>coordinate.</p>",
+          "optional": true
+        }
+      ]
     }
   },
   "events": {},

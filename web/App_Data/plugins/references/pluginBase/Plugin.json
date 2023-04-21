@@ -139,7 +139,7 @@
         {
           "type": "function",
           "name": "callback",
-          "description": "<p>The result that the method returns.</p>",
+          "description": "<p>The result that the method returns (only js standart types available (any objects will be replaced by undefined)).</p>",
           "optional": false
         }
       ]
@@ -209,6 +209,19 @@
       "memberof": "Plugin",
       "name": "getInputHelper",
       "description": "<p>Defines the method used to get the {@link inputhelper InputHelper object}.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "InputHelper"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "sendToPlugin": {
+      "memberof": "Plugin",
+      "name": "sendToPlugin",
+      "description": "<p>Send message from window to plugin</p>",
       "tags": {},
       "returns": [
         [
@@ -413,6 +426,36 @@
           "type": "ContentControl",
           "name": "control",
           "description": "<p>Defines the content control that has been changed.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "onContextMenuShow": {
+      "memberof": "Plugin",
+      "name": "onContextMenuShow",
+      "description": "<p>The function called when context menu will be shown</p>",
+      "tags": {},
+      "see": null,
+      "params": [
+        {
+          "type": "Object",
+          "name": "options",
+          "description": "<p>Defines the options for current selection.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "onContextMenuClick": {
+      "memberof": "Plugin",
+      "name": "onContextMenuClick",
+      "description": "<p>The function called when context menu item was clicked</p>",
+      "tags": {},
+      "see": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "id",
+          "description": "<p>Item id.</p>",
           "optional": false
         }
       ]

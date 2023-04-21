@@ -934,6 +934,100 @@
           "optional": false
         }
       ]
+    },
+    "GetCurrentWord": {
+      "memberof": "Api",
+      "name": "GetCurrentWord",
+      "description": "<p>Get the current word</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TextPartType",
+          "name": "type",
+          "optional": true,
+          "defaultValue": "\"entirely\""
+        }
+      ]
+    },
+    "ReplaceCurrentWord": {
+      "memberof": "Api",
+      "name": "ReplaceCurrentWord",
+      "description": "<p>Get the current word</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "replaceString",
+          "optional": false
+        },
+        {
+          "type": "TextPartType",
+          "name": "type",
+          "optional": true,
+          "defaultValue": "\"entirely\""
+        }
+      ]
+    },
+    "GetCurrentSentence": {
+      "memberof": "Api",
+      "name": "GetCurrentSentence",
+      "description": "<p>Get the current sentence</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TextPartType",
+          "name": "type",
+          "optional": true,
+          "defaultValue": "\"entirely\""
+        }
+      ]
+    },
+    "ReplaceCurrentSentence": {
+      "memberof": "Api",
+      "name": "ReplaceCurrentSentence",
+      "description": "<p>Get the current sentence</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "replaceString",
+          "optional": false
+        },
+        {
+          "type": "TextPartType",
+          "name": "type",
+          "optional": true,
+          "defaultValue": "\"entirely\""
+        }
+      ]
     }
   },
   "events": {},
