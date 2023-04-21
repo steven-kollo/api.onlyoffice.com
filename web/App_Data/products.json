@@ -215,7 +215,7 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "7.3",
+      "version": "7.4",
       "links":{
          "Get started":[
             {
