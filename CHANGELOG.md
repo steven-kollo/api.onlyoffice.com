@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: v7.4.0
 - editors: added opening .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt format.
 - editors: added the size field to the editorConfig.customization.font parameter
 - editors: services.CoAuthoring.secret.browser.string is deprecated
