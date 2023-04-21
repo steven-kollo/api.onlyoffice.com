@@ -127,7 +127,7 @@
             Get the SSO settings constants
             </short>
             <category>SSO</category>
-            <returns>The SSO settings Constants</returns>
+            <returns>The SSO settings constants</returns>
             <path>api/2.0/settings/ssov2/constants</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -293,17 +293,37 @@
             <path>api/2.0/settings/quota</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.RecalculateQuota">
-            <summary>
-            Starts the process of recalculating quota.
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveUserQuotaSettings(System.Boolean,System.Int64)">
+             <summary>
+             Save user quota limit
             </summary>
             <short>
-            Recalculate quota 
+             Save user quota limit
             </short>
-            <category>Quota</category>
-            <path>api/2.0/settings/recalculatequota</path>
-            <httpMethod>GET</httpMethod>
-            <returns></returns>
+            <category>User quota</category>
+            <returns>Operation result</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetTenantQuotaSettings(System.Int32,System.Boolean)">
+            <summary>
+             Set tenant quota settings
+            </summary>
+            <short>
+             Set tenant quota settings
+            </short>
+            <category>Tenant quota</category>
+            <returns>Operation result</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RecalculateQuota">
+            <summary>
+             Starts the process of recalculating quota.
+             </summary>
+             <short>
+             Recalculate quota 
+             </short>
+             <category>Quota</category>
+             <path>api/2.0/settings/recalculatequota</path>
+             <httpMethod>GET</httpMethod>
+             <returns></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CheckRecalculateQuota">
             <summary>
@@ -316,6 +336,37 @@
             <returns>Boolean value: true - quota recalculation process is enabled, false - quota recalculation process is disabled</returns>
             <path>api/2.0/settings/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateUserQuota(System.Collections.Generic.IEnumerable{System.Guid},System.Int64)">
+            <summary>
+            Changes a quota limit for the users with the IDs specified in the request.
+            </summary>
+            <short>
+            Change a user quota limit
+            </short>
+            <category>User quota</category>
+            <param name="userIds">List of user IDs</param>
+            <param name="quota">User quota</param>
+            <returns>List of users</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RecalculateUserQuota">
+            <summary>
+             Starts the process of recalculating users quota.
+            </summary>
+            <short>
+             Recalculates quota 
+            </short>
+            <category>Quota</category>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CheckRecalculateUserQuota">
+            <summary>
+             Checks the process of recalculating users quota.
+            </summary>
+            <short>
+             Check users quota recalculating
+            </short>
+            <category>Quota</category>
+            <returns>Boolean value: True - quota recalculating process is running, False - quota recalculating process is stopped</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetBuildVersions">
             <summary>
@@ -408,6 +459,23 @@
             <path>api/2.0/settings/security/password</path>
             <httpMethod>GET</httpMethod>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetPasswordSettings(System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Sets the portal password settings.
+            </summary>
+            <short>
+            Set the password settings
+            </short>
+            <category>Security</category>
+            <param type="System.Int32, System" method="url" name="maxLength">Maximum length</param>
+            <param type="System.Int32, System" method="url" name="minLength">Minimum length</param>
+            <param type="System.Boolean, System" method="url" name="upperCase">Specifies whether to include uppercase letters or not</param>
+            <param type="System.Boolean, System" method="url" name="digits">Specifies whether to include digits or not</param>
+            <param type="System.Boolean, System" method="url" name="specSymbols">Specifies whether to include special symbols or not</param>
+            <returns>Password settings</returns>
+            <path>api/2.0/settings/security/password</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetWebItemSecurity(System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
             Sets the security settings to the module with the ID specified in the request.
@@ -481,7 +549,7 @@
             <path>api/2.0/settings/security/administrator</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetLogo">
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLogo(System.Boolean)">
             <summary>
             Returns the portal logo image URL.
             </summary>
@@ -489,6 +557,7 @@
             Get a portal logo
             </short>
             <category>Common settings</category>
+            <param type="System.Boolean, System" name="dark">Specifies if the portal logo will be used for the dark theme or not</param>
             <returns>Portal logo image URL</returns>
             <path>api/2.0/settings/logo</path>
             <httpMethod>GET</httpMethod>
@@ -577,6 +646,21 @@
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelLogos(System.Collections.Generic.List{ASC.Web.Core.WhiteLabel.WhiteLabelLogoTypeEnum},System.Boolean,System.Boolean)">
+            <summary>
+            Restores the white label logos.
+            </summary>
+            <short>
+            Restore the white label logos
+            </short>
+            <category>Rebranding</category>
+            <param type="System.Collections.Generic.List{ASC.Web.Core.WhiteLabel.WhiteLabelLogoTypeEnum}, System.Collections.Generic" name="logoTypes">Logo types</param>
+            <param type="System.Boolean, System" name="restoreLogoText">Specifies if the logo text will be saved or not</param>
+            <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <path>api/2.0/settings/whitelabel/restorelogos</path>
+            <httpMethod>PUT</httpMethod>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetIpRestrictions">
             <summary>
             Returns the IP portal restrictions.
@@ -588,13 +672,13 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.SaveIpRestrictions(System.Collections.Generic.IEnumerable{System.String})">
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveIpRestrictions(System.Collections.Generic.IEnumerable{ASC.IPSecurity.IPRestrictionBase})">
             <summary>
             Saves the new portal IP restrictions specified in the request.
             </summary>
             <short>Save the IP restrictions</short>
             <category>IP restrictions</category>
-            <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" name="ips">New IP restrictions</param>
+            <param type="System.Collections.Generic.IEnumerable{ASC.IPSecurity.IPRestrictionBase}, System.Collections.Generic" name="ips">New IP restrictions</param>
             <returns>New IP restrictions</returns>
             <path>api/2.0/settings/iprestrictions</path>
             <httpMethod>PUT</httpMethod>
@@ -628,7 +712,7 @@
             </summary>
             <short>Update the tip subscription</short>
             <category>Tips</category>
-            <returns>Updated tip subscription</returns>
+            <returns>Boolean value: true if the user is subscribed to the tips</returns>
             <path>api/2.0/settings/tips/change/subscription</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -643,13 +727,16 @@
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.TfaSettings(System.String)">
+        <member name="M:ASC.Api.Settings.SettingsApi.TfaSettings(ASC.Api.Settings.TfaSettingsType,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.Guid})">
              <summary>
              Updates the two-factor authentication settings with the type specified in the request.
              </summary>
              <short>Update the TFA settings</short>
              <category>TFA settings</category>
-             <param type="System.String, System" name="type">TFA type: sms, app, or none</param>
+             <param type="ASC.Api.Settings.TfaSettingsType, ASC.Api.Settings" name="type">TFA type (None, Sms, or App)</param>
+             <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="trustedIps">List of trusted IP addresses</param>
+             <param type="System.Collections.Generic.List{System.Guid}, System.Collections.Generic" name="mandatoryUsers">List of users required for the TFA verification</param>
+             <param type="System.Collections.Generic.List{System.Guid}, System.Collections.Generic" name="mandatoryGroups">List of groups required for the TFA verification</param>
              <returns>True if an operation is successful</returns>
             <path>api/2.0/settings/tfaapp</path>
             <httpMethod>PUT</httpMethod>
@@ -687,6 +774,16 @@
             <returns>Login URL</returns>
             <path>api/2.0/settings/tfaappnewapp</path>
             <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetTfaSettings">
+            <summary>
+            Returns the current two-factor authentication settings.
+            </summary>
+            <short>Get TFA settings</short>
+            <category>TFA settings</category>
+            <returns>TFA settings</returns>
+            <path>api/2.0/settings/tfaapp</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DocRegisterPusnNotificationDevice(System.String)">
             <summary>
@@ -793,6 +890,18 @@
             <category>Common settings</category>
             <param type="System.String, System" name="theme">Portal theme</param>
             <path>api/2.0/settings/colortheme</path>
+            <httpMethod>PUT</httpMethod>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveModeTheme(ASC.Web.Core.Utility.ModeTheme,System.Boolean)">
+            <summary>
+            Saves a portal mode theme specified in the request.
+            </summary>
+            <short>Save a mode theme</short>
+            <category>Common settings</category>
+            <param type="ASC.Web.Core.Utility.ModeTheme, ASC.Web.Core.Utility" name="theme">Portal mode theme (light or dark)</param>
+            <param type="System.Boolean, System" name="auto_mode">Specifies whether the interface theme  will be detected automatically or not</param>
+            <path>api/2.0/settings/modetheme</path>
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
@@ -1020,6 +1129,16 @@
             <path>api/2.0/settings/storage/backup</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetAmazonS3Regions">
+            <summary>
+            Returns a list of all Amazon regions.
+            </summary>
+            <category>Storage</category>
+            <short>Get Amazon regions</short>
+            <returns>List of the Amazon regions</returns>
+            <path>api/2.0/settings/storage/s3/regions</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSocketSettings">
             <summary>

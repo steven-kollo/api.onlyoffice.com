@@ -151,7 +151,7 @@
             <summary>
             Returns a list of invoices matching the parameters specified in the request.
             </summary>
-            <param type="ASC.CRM.Core.InvoiceStatus, ASC.CRM.Core" method="url" name="status">Invoice status</param>
+            <param type="System.Nullable{ASC.CRM.Core.InvoiceStatus}, System" method="url" name="status">Invoice status</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="issueDateFrom">Invoice start issue date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="issueDateTo">Invoice end issue date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="dueDateFrom">Invoice start due date</param>
@@ -378,7 +378,7 @@
             Returns a list of invoice items matching the parameters specified in the request.
             </summary>
             <param type="System.Int32, System" method="url" name="status">Invoice status</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="inventoryStock">Specifies if the inventory is tracked or not</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="inventoryStock">Specifies if the inventory is tracked or not</param>
             <short>Get filtered invoice items</short> 
             <category>Invoices</category>
             <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">List of invoice items</returns>
@@ -648,7 +648,7 @@
             </summary>
             <short>Create a case</short> 
             <param type="System.String, System" name="title" optional="false">Case title</param>
-            <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="members" optional="true">Case participants</param>
+            <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="members" optional="true">List of contact IDs of the case participants</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32, System.String}}, System.Collections.Generic" name="customFieldList" optional="true">List of case custom fields</param>
             <param type="System.Boolean, System" name="isPrivate" optional="true">Case privacy: private or not</param>
             <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="accessList" optional="true">List of users with access to the case</param>
@@ -679,7 +679,7 @@
             <short>Update a case</short> 
             <param type="System.Int32, System" method="url" name="caseid" optional="false">Case ID</param>
             <param type="System.String, System" name="title" optional="false">New case title</param>
-            <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="members" optional="true">New case participants</param>
+            <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="members" optional="true">List of contact IDs of the case participants</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32, System.String}}, System.Collections.Generic" name="customFieldList" optional="true">New list of case custom fields</param>
             <param type="System.Boolean, System" name="isPrivate" optional="true">Case privacy: private or not</param>
             <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="accessList" optional="true">New list of users with access to the case</param>
@@ -745,7 +745,7 @@
              Sets access rights to the list of all the cases matching the parameters specified in the request.
              </summary>
              <param type="System.Int32, System" optional="true" name="contactid">Contact ID</param>
-             <param type="System.Boolean, System" optional="true" name="isClosed">Case status: closed or not</param>
+             <param type="System.Nullable{System.Boolean}, System" optional="true" name="isClosed">Case status: closed or not</param>
              <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" optional="true" name="tags">Case tags</param>
              <param type="System.Boolean, System" name="isPrivate">Case privacy: private or not</param>
              <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="accessList">List of users with access</param>
@@ -779,7 +779,7 @@
             </summary>
             <short>Get cases</short> 
             <param type="System.Int32, System" method="url" optional="true" name="contactid">Contact ID</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="isClosed">Case status: closed or not</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="isClosed">Case status: closed or not</param>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" method="url" optional="true" name="tags">Case tags</param>
             <category>Cases</category>
             <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
@@ -825,7 +825,7 @@
             Deletes a list of all the cases matching the parameters specified in the request.
             </summary>
             <param type="System.Int32, System" optional="true" name="contactid">Contact ID</param>
-            <param type="System.Boolean, System" optional="true" name="isClosed">Case status: closed or not</param>
+            <param type="System.Nullable{System.Boolean}, System" optional="true" name="isClosed">Case status: closed or not</param>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" optional="true" name="tags">Case tags</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1017,9 +1017,9 @@
              </summary>
             <param type="System.Int32, System" method="url" name="id">Contact information record ID</param>
             <param type="System.Int32, System" method="url" name="contactid">Contact ID</param>
-            <param type="ASC.CRM.Core.ContactInfoType, ASC.CRM.Core" optional="true" name="infoType">New contact information type</param>
+            <param type="System.Nullable{ASC.CRM.Core.ContactInfoType}, System" optional="true" name="infoType">New contact information type</param>
             <param type="System.String, System" name="data">New data</param>
-            <param type="System.Boolean, System" optional="true" name="isPrimary">New contact information importance: primary or not</param>
+            <param type="System.Nullable{System.Boolean}, System" optional="true" name="isPrimary">New contact information importance: primary or not</param>
             <param type="System.String, System" optional="true" name="category">New contact information category</param>
             <short>Update contact information</short> 
             <category>Contacts</category>
@@ -1209,11 +1209,11 @@
             Returns a list of all the contacts in the CRM module matching the parameters specified in the request.
             </summary>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" method="url" optional="true" name="tags">Contact tag</param>
-            <param type="System.Int32, System" method="url" optional="true" name="contactStage">Contact stage ID (warmth)</param>
-            <param type="System.Int32, System" method="url" optional="true" name="contactType">Contact type ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="contactStage">Contact stage ID (warmth)</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="contactType">Contact type ID</param>
             <param type="ASC.CRM.Core.ContactListViewType, ASC.CRM.Core" method="url" optional="true" name="contactListView" remark="Allowed values: Company, Person, WithOpportunity">Contact list view</param>
-            <param type="System.Guid, System" method="url" optional="true" name="responsibleid">Responsible ID</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="isShared">Contact privacy: private or not</param>
+            <param type="System.Nullable{System.Guid}, System" method="url" optional="true" name="responsibleid">Responsible ID</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="isShared">Contact privacy: private or not</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" optional="true" name="fromDate">Start date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" optional="true" name="toDate">End date</param>
             <short>Get filtered contacts</short> 
@@ -1246,11 +1246,11 @@
             Returns a list of all the contacts with their tasks in the CRM module matching the parameters specified in the request.
             </summary>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" optional="true" name="tags">Contact tags</param>
-            <param type="System.Int32, System" optional="true" name="contactStage">Contact stage ID (warmth)</param>
-            <param type="System.Int32, System" optional="true" name="contactType">Contact type ID</param>
+            <param type="System.Nullable{System.Int32}, System" optional="true" name="contactStage">Contact stage ID (warmth)</param>
+            <param type="System.Nullable{System.Int32}, System" optional="true" name="contactType">Contact type ID</param>
             <param type="ASC.CRM.Core.ContactListViewType, ASC.CRM.Core" optional="true" name="contactListView" remark="Allowed values: Company, Person, WithOpportunity">Contact list view</param>
-            <param type="System.Guid, System" optional="true" name="responsibleid">Responsible ID</param>
-            <param type="System.Boolean, System" optional="true" name="isShared">Contact privacy: private or not</param>
+            <param type="System.Nullable{System.Guid}, System" optional="true" name="responsibleid">Responsible ID</param>
+            <param type="System.Nullable{System.Boolean}, System" optional="true" name="isShared">Contact privacy: private or not</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="fromDate">Start date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="toDate">End date</param>
             <short>Get filtered contacts with tasks</short> 
@@ -1336,7 +1336,7 @@
             <summary>
             Deletes the selected person from the company with the ID specified in the request.
             </summary>
-            <param type="System.Int32, System" method="url" optional="true"  name="companyid">Company ID</param>
+            <param type="System.Int32, System" method="url" name="companyid">Company ID</param>
             <param type="System.Int32, System" optional="true" name="personid">Person ID</param>
             <short>Delete a person from the company</short> 
             <category>Contacts</category>
@@ -1614,8 +1614,8 @@
             Sets access rights to the list of contacts with the parameters specified in the request.
             </summary>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" optional="true" name="tags">Contact tags</param>
-            <param type="System.Int32, System" optional="true" name="contactStage">Contact stage ID (warmth)</param>
-            <param type="System.Int32, System" optional="true" name="contactType">Contact type ID</param>
+            <param type="System.Nullable{System.Int32}, System" optional="true" name="contactStage">Contact stage ID (warmth)</param>
+            <param type="System.Nullable{System.Int32}, System" optional="true" name="contactType">Contact type ID</param>
             <param type="ASC.CRM.Core.ContactListViewType, ASC.CRM.Core" optional="true" name="contactListView" remark="Allowed values: Company, Person, WithOpportunity">Contact list view</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="fromDate">Start date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="toDate">End date</param>
@@ -1685,12 +1685,13 @@
             <summary>
             Returns a list of contacts from the CRM module with the contact information specified in the request.
             </summary>
-            <param type="ASC.CRM.Core.ContactInfoType, ASC.CRM.Core" method="url" optional="false" name="infoType">Contact information type</param>
+            <param type="System.Nullable{ASC.CRM.Core.ContactInfoType}, System" method="url" optional="false" name="infoType">Contact information type</param>
             <param type="System.String, System" method="url" optional="false" name="data">Contact data</param>
-            <param type="System.Int32, System" method="url" optional="true" name="category">Contact category</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="isPrimary">Contact importance: primary or not</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" optional="true" name="category">Contact category</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="isPrimary">Contact importance: primary or not</param>
             <short>Get contacts by contact information</short>
             <category>Contacts</category>
+            <remarks>Please note that if the contact data from the "data" parameter refers to one of the contact information types, then the "infoType" parameter must be specified. For example, the "Paris" contact information is related to the "Address" information type.</remarks>
             <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
             List of contacts
             </returns>
@@ -2118,8 +2119,8 @@
             <param type="System.Int32, System" optional="true" name="opportunityStagesid">Opportunity stage ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" optional="true" name="tags">Opportunity tags</param>
             <param type="System.Int32, System" optional="true" name="contactid">Contact ID</param>
-            <param type="ASC.CRM.Core.DealMilestoneStatus, ASC.CRM.Core" optional="true" name="stageType" remark="Allowed values: 0 (Open), 1 (ClosedAndWon), 2 (ClosedAndLost)">Opportunity stage type</param>
-            <param type="System.Boolean, System" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
+            <param type="System.Nullable{ASC.CRM.Core.DealMilestoneStatus}, System" optional="true" name="stageType" remark="Allowed values: 0 (Open), 1 (ClosedAndWon), 2 (ClosedAndLost)">Opportunity stage type</param>
+            <param type="System.Nullable{System.Boolean}, System" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="fromDate">Start date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="toDate">End date</param>
             <param type="System.Boolean, System" name="isPrivate">Opportunity privacy: private or not</param>
@@ -2177,8 +2178,8 @@
             <param type="System.Int32, System" optional="true" name="opportunityStagesid">Opportunity stage ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" optional="true" name="tags">Opportunity tags</param>
             <param type="System.Int32, System" optional="true" name="contactid">Contact ID</param>
-            <param type="ASC.CRM.Core.DealMilestoneStatus, ASC.CRM.Core" optional="true" name="stageType" remark="Allowed values: 0 (Open), 1 (ClosedAndWon), 2 (ClosedAndLost)">Opportunity stage type</param>
-            <param type="System.Boolean, System" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
+            <param type="System.Nullable{ASC.CRM.Core.DealMilestoneStatus}, System" optional="true" name="stageType" remark="Allowed values: 0 (Open), 1 (ClosedAndWon), 2 (ClosedAndLost)">Opportunity stage type</param>
+            <param type="System.Nullable{System.Boolean}, System" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="fromDate">Start date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="toDate">End date</param>
             <exception cref="T:System.ArgumentException"></exception>
@@ -2200,8 +2201,8 @@
             <param type="System.Int32, System" method="url" optional="true" name="opportunityStagesid">Opportunity stage ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" method="url" optional="true" name="tags">Opportunity tags</param>
             <param type="System.Int32, System" method="url" optional="true" name="contactid">Contact ID</param>
-            <param type="ASC.CRM.Core.DealMilestoneStatus, ASC.CRM.Core" method="url" optional="true" name="stageType" remark="Allowed values: 0 (Open), 1 (ClosedAndWon), 2 (ClosedAndLost)">Opportunity stage type</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
+            <param type="System.Nullable{ASC.CRM.Core.DealMilestoneStatus}, System" method="url" optional="true" name="stageType" remark="Allowed values: 0 (Open), 1 (ClosedAndWon), 2 (ClosedAndLost)">Opportunity stage type</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" optional="true" name="fromDate">Start date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" optional="true" name="toDate">End date</param>
             <short>Get filtered opportunities</short> 
@@ -3243,8 +3244,8 @@
             <param type="System.Int32, System" optional="true" name="opportunityStagesid">Opportunity stage ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" optional="true" name="tags">Opportunity tags</param>
             <param type="System.Int32, System" optional="true" name="contactid">Contact ID</param>
-            <param type="ASC.CRM.Core.DealMilestoneStatus, ASC.CRM.Core" optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
-            <param type="System.Boolean, System" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
+            <param type="System.Nullable{ASC.CRM.Core.DealMilestoneStatus}, System" optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
+            <param type="System.Nullable{System.Boolean}, System" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="fromDate">Start date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="toDate">End date</param>
             <param type="System.String, System" name="tagName">Tag name</param>
@@ -3262,7 +3263,7 @@
             <short>Add a tag to cases</short> 
             <category>Tags</category>
             <param type="System.Int32, System" optional="true" name="contactid">Contact ID</param>
-            <param type="System.Boolean, System" optional="true" name="isClosed">Case status: closed or not</param>
+            <param type="System.Nullable{System.Boolean}, System" optional="true" name="isClosed">Case status: closed or not</param>
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" optional="true" name="tags">Case tags</param>
             <param type="System.String, System" name="tagName">Tag name</param>
             <exception cref="T:System.ArgumentException"></exception>
@@ -3387,7 +3388,7 @@
             </summary>
             <param type="System.Guid, System" method="url" optional="true" name="responsibleid">Task responsible ID</param>
             <param type="System.Int32, System" method="url" optional="true" name="categoryid">Task category ID</param>
-            <param type="System.Boolean, System" method="url" optional="true" name="isClosed">Task status</param>
+            <param type="System.Nullable{System.Boolean}, System" method="url" optional="true" name="isClosed">Task status</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" optional="true" name="fromDate">Earliest task due date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" optional="true" name="toDate">Latest task due date</param>
             <param type="System.String, System" method="url" name="entityType" remark="Allowed values: opportunity, contact, or case">Related entity type</param>
@@ -3735,10 +3736,10 @@
             Returns a summary table with the rates for the currency specified in the request.
             </summary>
             <param type="System.String, System" method="url" name="currency" remark="Allowed values: EUR, RUB etc. You can get the whole list of available currencies by API">Currency (abbreviation)</param>
-            <short>Get currency rates</short> 
+            <short>Get currency summary table</short> 
             <category>Currencies</category>
             <returns type = "ASC.Api.CRM.CurrencyRateInfoWrapper, ASC.Api.CRM">
-            Dictionary of currency rates
+            Dictionary of currency rates for the specified currency
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/crm/settings/currency/summarytable</path>
@@ -3749,7 +3750,7 @@
             <summary>
             Updates the contact status setting with the parameter specified in the request.  
             </summary>
-            <param type="System.Boolean, System" name="changeContactStatusGroupAuto" remark="true, false or null">Defines if the contact status setting is changed automatically or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="changeContactStatusGroupAuto" remark="true, false or null">Defines if the contact status setting is changed automatically or not</param>
             <short>Update the contact status setting</short> 
             <category>Contacts</category>
             <returns>
@@ -3777,7 +3778,7 @@
             <summary>
             Updates the setting for adding tags to the contact with the parameter specified in the request.    
             </summary>
-            <param type="System.Boolean, System" name="addTagToContactGroupAuto" remark="true, false or null">Defines if a tag is added to the contact automatically or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="addTagToContactGroupAuto" remark="true, false or null">Defines if a tag is added to the contact automatically or not</param>
             <short>Update the setting for adding tags to the contact</short> 
             <category>Contacts</category>
             <returns>
@@ -3791,8 +3792,8 @@
             <summary>
             Sets the tenant settings specified in the request to the portal.
             </summary>
-            <param type="System.Boolean, System" name="configured">Defines if the portal is configured or not</param>
-            <param type="System.Guid, System" name="webFormKey">Website contact form key</param>
+            <param type="System.Nullable{System.Boolean}, System" name="configured">Defines if the portal is configured or not</param>
+            <param type="System.Nullable{System.Guid}, System" name="webFormKey">Website contact form key</param>
             <short>Set the tenant settings</short> 
             <category>Contacts</category>
             <returns>
@@ -4115,8 +4116,8 @@
             <param type="System.String, System" name="wait">New URL to which the customer is redirected to the voice mail service when the waiting timeout is exceeded</param>
             <param type="System.String, System" name="voiceMail">New message that callers hear when the waiting queue length or max waiting time is exceeded and the callers are able to leave a voicemail message</param>
             <param type="ASC.VoipService.WorkingHours, ASC.VoipService" file="ASC.VoipService" name="workingHours">New phone number working hours</param>
-            <param type="System.Boolean, System" name="allowOutgoingCalls">Defines if a phone number allows making the outgoing calls or not</param>
-            <param type="System.Boolean, System" name="record">Defines if the phone number allows recording the calls or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="allowOutgoingCalls">Defines if a phone number allows making the outgoing calls or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="record">Defines if the phone number allows recording the calls or not</param>
             <param type="System.String, System" name="alias">New phone number alias</param>
             <short>Update the phone number settings</short>
             <category>VoIP</category>
@@ -4220,10 +4221,10 @@
              Updates a phone number operator with the parameters specified in the request.
             </summary>
             <param type="System.Guid, System" method="url" name="operatorId">Phone number operator ID</param>
-            <param type="ASC.VoipService.AgentStatus, ASC.VoipService" name="status">New operator status</param>
-            <param type="System.Boolean, System" name="allowOutgoingCalls">Defines if an operator allows making the outgoing calls or not</param>
-            <param type="System.Boolean, System" name="record">Defines if an operator allows recording calls or not</param>
-            <param type="ASC.VoipService.AnswerType, ASC.VoipService" name="answerType">New operator answer type</param>
+            <param type="System.Nullable{ASC.VoipService.AgentStatus}, System" name="status">New operator status</param>
+            <param type="System.Nullable{System.Boolean}, System" name="allowOutgoingCalls">Defines if an operator allows making the outgoing calls or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="record">Defines if an operator allows recording calls or not</param>
+            <param type="System.Nullable{ASC.VoipService.AnswerType}, System" name="answerType">New operator answer type</param>
             <param type="System.String, System" name="redirectToNumber">New redirect phone number</param>
             <short>Update an operator</short>
             <category>VoIP</category>
@@ -4287,9 +4288,9 @@
             <param type="System.String, System" name="from">Phone number that is calling</param>
             <param type="System.String, System" name="to">Phone number to call</param>
             <param type="System.Guid, System" name="answeredBy">Phone number ID that answered a call</param>
-            <param type="ASC.VoipService.VoipCallStatus, ASC.VoipService" name="status">Phone call status</param>
+            <param type="System.Nullable{ASC.VoipService.VoipCallStatus}, System" name="status">Phone call status</param>
             <param type="System.String, System" name="contactId">Contact ID</param>
-            <param type="System.Decimal, System" name="price">Phone call price</param>
+            <param type="System.Nullable{System.Decimal}, System" name="price">Phone call price</param>
             <short>Save a call</short>
             <category>VoIP</category>
             <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM">Phone call information</returns>
@@ -4314,9 +4315,9 @@
             <param type="System.String, System" name="callType">Phone call type</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="from">Start date</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="to">End date</param>
-            <param type="System.Guid, System" name="agent">Call agent</param>
-            <param type="System.Int32, System" name="client">Call client</param>
-            <param type="System.Int32, System" name="contactID">Contact ID</param>
+            <param type="System.Nullable{System.Guid}, System" name="agent">Call agent</param>
+            <param type="System.Nullable{System.Int32}, System" name="client">Call client</param>
+            <param type="System.Nullable{System.Int32}, System" name="contactID">Contact ID</param>
             <short>Get calls</short>
             <category>VoIP</category>
             <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM">List of calls</returns>

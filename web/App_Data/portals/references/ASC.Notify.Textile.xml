@@ -20,7 +20,7 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="P:ASC.Notify.Textile.Resources.NotifyTemplateResource.FooterCommonV10">
+        <member name="P:ASC.Notify.Textile.Resources.NotifyTemplateResource.FooterCommonV121">
             <summary>
               Looks up a localized string similar to &lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td colspan=&quot;3&quot; style=&quot;height: 10px; line-height: 10px; background: #fff; padding: 0; margin: 0;&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
                    &lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
@@ -28,7 +28,7 @@
                          &lt;img src=&quot;%IMAGEPATH%/tech-100.png&quot; style=&quot;width:  [rest of string was truncated]&quot;;.
             </summary>
         </member>
-        <member name="P:ASC.Notify.Textile.Resources.NotifyTemplateResource.FooterOpensourceV10">
+        <member name="P:ASC.Notify.Textile.Resources.NotifyTemplateResource.FooterOpensourceV121">
             <summary>
               Looks up a localized string similar to &lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td colspan=&quot;3&quot; style=&quot;height: 10px; line-height: 10px; background: #fff; padding: 0; margin: 0;&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
                    &lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
@@ -54,7 +54,7 @@
                     &lt;tr border=&quot;0 [rest of string was truncated]&quot;;.
              </summary>
         </member>
-        <member name="P:ASC.Notify.Textile.Resources.NotifyTemplateResource.SocialNetworksFooterV10">
+        <member name="P:ASC.Notify.Textile.Resources.NotifyTemplateResource.SocialNetworksFooterV121">
             <summary>
               Looks up a localized string similar to &lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
                      &lt;td style=&quot;width: 40px; vertical-align: top; margin: 0; padding: 22px 5px 0 155px;&quot;&gt;

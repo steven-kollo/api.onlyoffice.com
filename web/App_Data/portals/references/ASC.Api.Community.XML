@@ -1068,7 +1068,7 @@
             <short>Get a page</short>
             <section>Pages</section>
             <param type="System.String, System" method="url" name="name">Page name</param>
-            <param type="System.Int32, System" method="url" name="version">Page version</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" name="version">Page version</param>
             <returns type="ASC.Api.Wiki.Wrappers.PageWrapper, ASC.Api.Community">Page information</returns>
             <category>Wiki</category>
             <path>api/2.0/community/wiki/{name}</path>

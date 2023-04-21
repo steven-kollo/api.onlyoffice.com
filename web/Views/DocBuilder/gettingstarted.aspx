@@ -19,12 +19,7 @@
     <p><b>ONLYOFFICE Document Builder</b> is a C++ library used to create and edit Office Open XML format files (documents, spreadsheets and presentations) and save them to DOCX, XSLX, PPTX and PDF formats.</p>
     <p>There are two ways to use <b>ONLYOFFICE Document Builder</b> in your own project:</p>
     <ol>
-        <li><p>Integrate this library into your own application. Use the buttons below to download these libraries:</p>
-            <ul class="list-buttons">
-                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.tar.gz">Linux x64</a></li>
-                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.zip">Windows x64</a></li>
-                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x86.zip">Windows x86</a></li>
-            </ul>
+        <li><p>Integrate this library into your own application. You can download <b>ONLYOFFICE Document Builder</b> <a target="blank" href="https://www.onlyoffice.com/download-builder.aspx?utm_source=api">here</a>.</p>
             <p>After you download and unpack the files, the library is ready for <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">integration</a>.</p>
         </li>
         <li>Use the provided executive binary wrapper for an easy start. The latest versions of executable files can always be downloaded <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx">here</a>. After the file download, run it and see the examples of how <b>ONLYOFFICE Document Builder</b> can be used without the need to write any application.</li>

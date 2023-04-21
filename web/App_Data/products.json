@@ -35,8 +35,8 @@
                "Item2":"howitworks"
             },
             {
-               "Item1":"Examples outside",
-               "Item2":"examplesoutside"
+               "Item1":"External access to the document editing",
+               "Item2":"interactingoutside/"
             }
          ],
          "Usage API":[
@@ -323,7 +323,7 @@
       "id":"portals",
       "title":"Community Server",
       "description":"Create your own productivity platform based on ONLYOFFICE Groups. In this section you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.",
-      "version":"12.1",
+      "version":"12.5",
       "links":{
          "Get started":[
             {
@@ -397,6 +397,24 @@
                "Item2":"section/settings"
             }
          ],
+         "Hosted solution":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"apisystem/"
+            },
+            {
+               "Item1":"Authentication",
+               "Item2":"apisystem/authentication"
+            },
+            {
+               "Item1":"Portals",
+               "Item2":"apisystem/portalsection"
+            },
+            {
+               "Item1":"Billing",
+               "Item2":"apisystem/tariffsection"
+            }
+         ],
          "More information":[
             {
                "Item1":"FAQ",
@@ -409,34 +427,6 @@
             {
                "Item1":"Batching",
                "Item2":"batch"
-            }
-         ]
-      }
-   },
-   {
-      "id":"apisystem",
-      "title":"Hosted Solution",
-      "description":"Host ONLYOFFICE Groups to make your collaboration platform online. In this section you will learn how to make GET and POST requests to manage portals, set tariff plans and pass authentication.",
-      "version":"12.1",
-      "links":{
-         "Get started":[
-            {
-               "Item1":"Basic concepts",
-               "Item2":"basic"
-            },
-            {
-               "Item1":"Authentication",
-               "Item2":"authentication"
-            }
-         ],
-         "Usage API":[
-            {
-               "Item1":"Portals",
-               "Item2":"section/portal"
-            },
-            {
-               "Item1":"Billing",
-               "Item2":"section/tariff"
             }
          ]
       }

@@ -109,6 +109,20 @@
             <exception cref="T:System.FormatException">if ipAddress is invalid</exception>
             <returns>true if exists and vice versa</returns>
         </member>
+        <member name="M:ASC.Common.Utils.IpAddressParser.ParseAddress(System.String)">
+            <summary>
+            Parse the address into an array
+            </summary>
+            <param name="value">Comma-separated string value (e.g. X-Forwarded-For request header)</param>
+            <returns>Address array</returns>
+        </member>
+        <member name="M:ASC.Common.Utils.IpAddressParser.GetIpWithoutPort(System.String)">
+            <summary>
+            Returns IP address without port
+            </summary>
+            <param name="ip">IPv4 or IPv6 address with port (e.g. [::1]:80, 127.0.0.1:80)</param>
+            <returns>IP address without port</returns>
+        </member>
         <member name="M:ASC.Common.Utils.StringUtils.NormalizeStringForMySql(System.String)">
             <summary>
             Removes control characters and other non-UTF-8 characters

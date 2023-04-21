@@ -90,7 +90,7 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="about" class="copy-link">about<span class="required">**</span></td>
+            <td id="about" class="copy-link">about<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 Defines if the <b>About</b> menu button is displayed or hidden.
                 The default value is <b>true</b>.
@@ -216,7 +216,7 @@
             <td>false</td>
         </tr>
         <tr class="tablerow">
-            <td id="customer" class="copy-link">customer<span class="required">*</span></td>
+            <td id="customer" class="copy-link">customer<a href="#requiredDescr" class="required">*</a></td>
             <td>
                 Contains the information which will be displayed in the editor <b>About</b> section and visible to all the editor users.
                 The object has the following parameters:
@@ -309,7 +309,7 @@
                     <% if (license)
                        { %>
                     <li>
-                        <b>spellcheck.change<span class="required">**</span></b> - defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types,
+                        <b>spellcheck.change<a href="#requiredDescr2" class="required">**</a></b> - defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -356,7 +356,7 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="font" class="copy-link">font<span class="required">**</span></td>
+            <td id="font" class="copy-link">font<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 Defines the font for the interface elements (buttons, tabs, etc.):
                 <ul>
@@ -513,7 +513,7 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="layout" class="copy-link">layout<span class="required">**</span></td>
+            <td id="layout" class="copy-link">layout<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 Defines the parameters that the user can use to hide the interface elements but not to disable features completely
                 (for example, if this functionality is available from other elements such as context menu, or via hotkeys):
@@ -744,7 +744,7 @@
             <td>object</td>
         </tr>
         <tr>
-            <td id="leftMenu" class="copy-link">leftMenu<span class="required">**</span></td>
+            <td id="leftMenu" class="copy-link">leftMenu<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 Defines if the left menu panel is displayed or hidden.
                 The default value is <b>true</b>.
@@ -758,7 +758,7 @@
             </td>
         </tr>
         <tr class="tablerow">
-            <td id="loaderLogo" class="copy-link">loaderLogo<span class="required">**</span></td>
+            <td id="loaderLogo" class="copy-link">loaderLogo<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
                 The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
@@ -767,14 +767,14 @@
             <td>"https://example.com/loader-logo.png"</td>
         </tr>
         <tr class="tablerow">
-            <td id="loaderName" class="copy-link">loaderName<span class="required">**</span></td>
+            <td id="loaderName" class="copy-link">loaderName<a href="#requiredDescr2" class="required">**</a></td>
             <td>Defines the text which will be displayed while the document is being loaded.</td>
             <td>string</td>
             <td>"The document is loading, please wait..."</td>
         </tr>
         <% } %>
         <tr class="tablerow">
-            <td id="logo" class="copy-link">logo<span class="required">*</span></td>
+            <td id="logo" class="copy-link">logo<a href="#requiredDescr" class="required">*</a></td>
             <td>
                 Changes the image file at the top left corner of the editor header.
                 The recommended image height is 20 pixels.
@@ -966,7 +966,7 @@
         <% if (license)
            { %>
         <tr>
-            <td id="rightMenu" class="copy-link">rightMenu<span class="required">**</span></td>
+            <td id="rightMenu" class="copy-link">rightMenu<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 Defines if the right menu panel is displayed or hidden.
                 The default value is <b>true</b>.
@@ -1013,7 +1013,7 @@
         <% if (license)
            { %>
         <tr>
-            <td id="statusBar" class="copy-link">statusBar<span class="required">**</span></td>
+            <td id="statusBar" class="copy-link">statusBar<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 Defines if the status bar is displayed or hidden.
                 The default value is <b>true</b>.
@@ -1045,7 +1045,7 @@
         <% if (license)
             { %>
         <tr>
-            <td id="toolbar" class="copy-link">toolbar<span class="required">**</span></td>
+            <td id="toolbar" class="copy-link">toolbar<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 Defines if the top toolbar is displayed or hidden.
                 The default value is <b>true</b>.
@@ -1170,10 +1170,10 @@
     </tbody>
 </table>
 <div class="mobile-content"></div>
-<span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
+<span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
 <% if (license)
    { %>
-<span class="required-descr"><span class="required">**</span><em> - extended white label option for Developer Edition</em></span>
+<span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - extended white label option for Developer Edition</em></span>
 <% } %>
 
 <div class="header-gray">Example</div>

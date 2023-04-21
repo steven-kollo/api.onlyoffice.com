@@ -185,7 +185,7 @@ namespace ASC.Api.Web.Help
 
                             try
                             {
-                                Documentation.Load();
+                                CommunityServerDocumentation.Load();
                             }
                             catch (Exception error)
                             {

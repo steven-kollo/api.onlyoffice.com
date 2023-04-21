@@ -58,6 +58,21 @@
             <path>api/2.0/calendar/calendars/{startDate}/{endDate}</path>
             <returns type="ASC.Api.Calendar.Wrappers.CalendarWrapper, ASC.Api.Calendar">List of calendars with events</returns>
         </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.GetCalendarEvents(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
+            <summary>
+            Returns a calendar with the events for the current user in the selected period.
+            </summary>
+            <short>
+            Get calendar events
+            </short>
+            <param type="System.String, System" name="calendarId">Calendar ID</param>
+            <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="startDate">Period start date</param>
+            <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="endDate">Period end date</param>
+            <category>Calendars and subscriptions</category>
+            <httpMethod>GET</httpMethod>
+            <path>api/2.0/calendar/calendar/{calendarId}/{startDate}/{endDate}</path>
+            <returns type="ASC.Api.Calendar.Wrappers.CalendarWrapper, ASC.Api.Calendar">Calendar with events</returns>
+        </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.LoadSubscriptions">
             <summary>
             Returns a list of all the subscriptions available to the current user.
@@ -464,6 +479,19 @@
             <category>Calendars and subscriptions</category>
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/calendar/caldavprojcal</path>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.RefreshCalDavCalendar(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Refreshes the caldav calendar with the id specified in the request.
+            </summary>
+            <short>
+            Refresh CalDav calendar
+            </short>
+            <param type="System.String, System" name="calendarId">Calendar ID</param>
+            <param type="System.Collections.Generic.List{System.String}, System.Collections.Generic" name="team">User list</param>
+            <category>Tasks</category>
+            <httpMethod>UPDATE</httpMethod>
+            <path>api/2.0/calendar/refreshcaldavcalendar</path>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.DeleteCaldavEvent(System.String,System.String,System.Collections.Generic.List{System.String})">
             <summary>

@@ -42,6 +42,7 @@
         <li>Added the <a href="<%= Url.Action("command/license") %>#license">connections_view</a>, <a href="<%= Url.Action("command/license") %>#license">users_view_count</a> and <a href="<%= Url.Action("command/license") %>#quota">users_view</a> parameters to the license response.</li>
         <li>Added the <a href="<%= Url.Action("viewing") %>">live viewer</a> mode to the text document, spreadsheet and presentation editors.</li>
         <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#embedview">embedview</a> action to the WOPI discovery.</li>
+        <li>The <a href="<%= Url.Action("signature/") %>#services.CoAuthoring.secret.browser.string">services.CoAuthoring.secret.browser.string</a> parameter is deprecated, please use the <a href="<%= Url.Action("signature/") %>#services.CoAuthoring.secret.inbox.string">services.CoAuthoring.secret.inbox.string</a> parameter instead.</li>
     </ul>
 
     <h2 id="71" class="copy-link">Version 7.1</h2>

@@ -349,7 +349,7 @@
       <value>
       <Description>All, Company, Person, WithOpportunity</Description>
         <Example></Example>
-        <ExampleJson>"da"</ExampleJson>
+        <ExampleJson>"company"</ExampleJson>
       </value>
     </entry>
         <entry>

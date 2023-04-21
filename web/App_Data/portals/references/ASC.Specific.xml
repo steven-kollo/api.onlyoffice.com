@@ -17,9 +17,9 @@
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            Returns an authentication token for use in API authorization.
+            Authenticates the current user by SMS, authenticator app, or without two-factor authentication.
             </summary>
-            <short>Get an authentication token</short>
+            <short>Authenticate a user</short>
             <param type="System.String, System" name="userName">User name or email</param>
             <param type="System.String, System" name="password">Password</param>
             <param type="System.String, System" name="provider">Social media provider type</param>
@@ -43,7 +43,7 @@
             <param type="System.String, System" name="mobilePhone">New mobile phone</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/setphone</path>
-            <returns type="ASC.Specific.AuthorizationApi.AuthenticationTokenData, ASC.Specific">Mobile phone</returns>
+            <returns type="ASC.Specific.AuthorizationApi.AuthenticationTokenData, ASC.Specific">Authentication data: authentication by SMS or not, phone number, SMS expiration time</returns>
             <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.SendSmsCode(System.String,System.String,System.String,System.String)">
@@ -57,15 +57,15 @@
             <param type="System.String, System" name="accessToken">Provider token</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/sendsms</path>
-            <returns type="ASC.Specific.AuthorizationApi.AuthenticationTokenData, ASC.Specific">Mobile phone</returns>
+            <returns type="ASC.Specific.AuthorizationApi.AuthenticationTokenData, ASC.Specific">Authentication data: authentication by SMS or not, phone number, SMS expiration time</returns>
             <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            Returns a two-factor authentication token for use in API authorization.
+            Authenticates the current user by SMS or two-factor authentication code.
             </summary>
             <short>
-            Get a two-factor authentication token
+            Authenticate a user by code
             </short>
             <param type="System.String, System" name="userName">User name or email</param>
             <param type="System.String, System" name="password">Password</param>

@@ -156,7 +156,7 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td id="filetype" class="copy-link">filetype<span class="required">*</span></td>
+                <td id="filetype" class="copy-link">filetype<a href="#requiredDescr" class="required">*</a></td>
                 <td>Defines the type of the document file to be converted.</td>
                 <td>string</td>
                 <td>required</td>
@@ -168,7 +168,7 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
+                <td id="outputtype" class="copy-link">outputtype<a href="#requiredDescr" class="required">*</a></td>
                 <td>
                     Defines the resulting converted document type.
                     Starting from version 7.0, file formats can be specified instead of extensions.
@@ -422,7 +422,7 @@
         </tbody>
     </table>
     <div class="mobile-content"></div>
-    <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
+    <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
 
     <h2 id="text-matrix" class="copy-link">Text document file formats</h2>
     <table class="table-conversion-matrix-text">

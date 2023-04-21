@@ -231,8 +231,8 @@
             <param type="System.Net.Mime.ContentType, System.Net.Mime" name="contentType" visible="false">Content-Type header</param>
             <param type="System.Net.Mime.ContentDisposition, System.Net.Mime" name="contentDisposition" visible="false">Content-Disposition header</param>
             <param type="System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase}, System.Collections.Generic" name="files" visible="false">List of files when specified as multipart/form-data</param>
-            <param type="System.Boolean, System" name="createNewIfExist" visible="false">Specifies whether to create a new file if it already exists or not</param>
-            <param type="System.Boolean, System" name="storeOriginalFileFlag" visible="false">Specifies whether to upload documents in the original formats as well or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="createNewIfExist" visible="false">Specifies whether to create a new file if it already exists or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="storeOriginalFileFlag" visible="false">Specifies whether to upload documents in the original formats as well or not</param>
             <param type="System.Boolean, System" name="keepConvertStatus" visible="false">Specifies whether to keep the file converting status or not</param>
             <returns>Uploaded file(s)</returns>
             <path>api/2.0/files/{folderId}/upload</path>
@@ -245,7 +245,7 @@
             <short>Insert a file to the "My documents" section</short>
             <param type="System.IO.Stream, System.IO" name="file" visible="false">Request input stream</param>
             <param type="System.String, System" name="title">File name</param>
-            <param type="System.Boolean, System" name="createNewIfExist" visible="false">Specifies whether to create a new file if it already exists or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="createNewIfExist" visible="false">Specifies whether to create a new file if it already exists or not</param>
             <param type="System.Boolean, System" name="keepConvertStatus" visible="false">Specifies whether to keep the file converting status or not</param>
             <category>Folders</category>
             <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">Inserted file</returns>
@@ -259,7 +259,7 @@
             <short>Insert a file to the "Common" section</short>
             <param type="System.IO.Stream, System.IO" name="file" visible="false">Request input stream</param>
             <param type="System.String, System" name="title">File name</param>
-            <param type="System.Boolean, System" name="createNewIfExist" visible="false">Specifies whether to create a new file if it already exists or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="createNewIfExist" visible="false">Specifies whether to create a new file if it already exists or not</param>
             <param type="System.Boolean, System" name="keepConvertStatus" visible="false">Specifies whether to keep the file converting status or not</param>
             <category>Folders</category>
             <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">Inserted file</returns>
@@ -274,7 +274,7 @@
             <param type="System.String, System" method="url" name="folderId">Folder ID</param>
             <param type="System.IO.Stream, System.IO" name="file" visible="false">Request input stream</param>
             <param type="System.String, System" name="title">File name</param>
-            <param type="System.Boolean, System" name="createNewIfExist" visible="false">Specifies whether to create a new file if it already exists or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="createNewIfExist" visible="false">Specifies whether to create a new file if it already exists or not</param>
             <param type="System.Boolean, System" name="keepConvertStatus" visible="false">Specifies whether to keep the file converting status or not</param>
             <category>Folders</category>
             <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">Inserted file</returns>
@@ -314,7 +314,7 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.StartEdit(System.String,System.Boolean,System.String)">
             <summary>
-            Informs about opening a file with the ID specified in the request for editing, locking it from being deleted or movemed (this method is called by the mobile editors).
+            Informs about opening a file with the ID specified in the request for editing, locking it from being deleted or moved (this method is called by the mobile editors).
             </summary>
             <short>Start file editing</short>
             <param type="System.String, System" method="url" name="fileId">File ID</param>
@@ -342,7 +342,7 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.OpenEdit(System.String,System.Int32,System.String)">
             <summary>
-            Returns the initialization configuration of a file to open it the editor.
+            Returns the initialization configuration of a file to open it in the editor.
             </summary>
             <short>Open a file</short>
             <param type="System.String, System" method="url" name="fileId">File ID</param>
@@ -389,6 +389,7 @@
             </returns>
             <path>api/2.0/files/{folderId}/upload/create_session</path>
             <httpMethod>POST</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateEditSession(System.Object,System.Int64)">
             <summary>
@@ -497,6 +498,20 @@
             <path>api/2.0/files/folder/{folderId}</path>
             <httpMethod>POST</httpMethod>
         </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.CreateFolders(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new folder structure specified in the request in a folder with a specific ID.
+            </summary>
+            <short>
+            Create a folder structure
+            </short>
+            <category>Folders</category>
+            <param type="System.String, System" name="folderId">Parent folder ID</param>
+            <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" name="relativePaths">Relative paths to create a folder structure</param>
+            <returns>Main folder contents</returns>
+            <path>api/2.0/files/folders/{folderId}</path>
+            <httpMethod>POST</httpMethod>
+        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateFile(System.String)">
             <summary>
             Creates a new file in the "My documents" section with the title specified in the request.
@@ -585,6 +600,7 @@
             <returns>Copied file</returns>
             <path>api/2.0/files/file/{fileId}/copyas</path>
             <httpMethod>POST</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UpdateFile(System.String,System.String,System.Int32)">
             <summary>
@@ -834,7 +850,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.SetFileSecurityInfo(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Documents.FileShareParams},System.Boolean,System.String)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.SetFileSecurityInfo(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Documents.FileShareParams},System.Boolean,System.String,ASC.Web.Files.Services.WCFService.AceAdvancedSettingsWrapper)">
             <summary>
             Sets the sharing settings to a file with the ID specified in the request.
             </summary>
@@ -842,6 +858,7 @@
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Documents.FileShareParams}, System.Collections.Generic" file="ASC.Api.Documents" name="share">Collection of sharing parameters</param>
             <param type="System.Boolean, System" name="notify">Notifies users about the shared file or not</param>
             <param type="System.String, System" name="sharingMessage">Message to send when notifying about the shared file</param>
+            <param type="ASC.Web.Files.Services.WCFService.AceAdvancedSettingsWrapper, ASC.Web.Files.Services.WCFService" name="advancedSettings">Advanced settings which prohibit printing, downloading, copying the file, and changing sharing settings</param>
             <short>Share a file</short>
             <category>Sharing</category>
             <remarks>
@@ -894,6 +911,47 @@
             <path>api/2.0/files/{fileId}/sharedlink</path>
             <httpMethod>PUT</httpMethod>
         </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.ApplyShareLinkPassword(System.String,System.String,System.Boolean)">
+            <summary>
+            Sets a cookie after verifying the password for a password-protected external link and returns a link to the shared file.
+            </summary>
+            <short>Set a cookie for a password-protected external link</short>
+            <param type="System.String, System" name="key">Link signature</param>
+            <param type="System.String, System" name="passwordHash">Password hash</param>
+            <param type="System.Boolean, System" name="isFolder">Specifies if a link is to the shared folder or not</param>
+            <category>Sharing</category>
+            <returns>Shared file link</returns>
+            <path>api/2.0/files/sharedlink/password</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetTokenForSharedLink(System.String,System.Guid,System.String,System.String)">
+            <summary>
+            Returns a token after verifying the password or password hash for a password-protected external link.
+            </summary>
+            <short>Get a token for a password-protected external link</short>
+            <param type="System.String, System" name="fileId">File ID</param>
+            <param type="System.Guid, System" name="linkId">Link ID</param>
+            <param type="System.String, System" name="password">Password</param>
+            <param type="System.String, System" name="passwordHash">Password hash</param>
+            <category>Sharing</category>
+            <returns>Token for a password-protected external link</returns>
+            <remarks>The token is used in the cookies with the 'sharelink[linkId]' name when calling API methods.</remarks>
+            <path>api/2.0/files/{fileId}/sharedlink/{linkId}/password</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetShareLinkTemplate(System.String,System.Boolean)">
+            <summary>
+            Returns a new unsaved link object to the file with the ID specified in the request.
+            </summary>
+            <short>Get the shared link template</short>
+            <param type="System.String, System" name="fileId">File ID</param>
+            <param type="System.Boolean, System" name="isFolder">Specifies if a link is to the shared folder or not</param>
+            <category>Sharing</category>
+            <returns>Shared link template</returns>
+            <path>api/2.0/files/{fileId}/sharedlink/template</path>
+            <httpMethod>GET</httpMethod>
+        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetProperties(System.String)">
             <summary>
             Returns file properties of the specified file.
@@ -945,7 +1003,7 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.SaveThirdParty(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
             <summary>
-            Saves the third-party storage service account.
+            Saves the third-party storage service account. For WebDav, Yandex, kDrive and SharePoint, the login and password are used for authentication. For other providers, the authentication is performed using a token received via OAuth 2.0.
             </summary>
             <short>Save a third-party account</short>
             <param type="System.String, System" name="url">Connection URL for the sharepoint</param>
@@ -1249,7 +1307,7 @@
             <param type="System.String, System" name="content">Post content</param>
             <param type="System.Int32, System" name="status">Operation status</param>
             <category>WordPress</category>
-            <returns>WordPress post</returns>
+            <returns>Boolean value: true if the operation is successful</returns>
             <path>api/2.0/files/wordpress</path>
             <httpMethod>POST</httpMethod>
             <visible>false</visible>
@@ -1631,6 +1689,10 @@
             <summary>
             </summary>
             <example type="int">4</example>
+        </member>
+        <member name="P:ASC.Api.Documents.FolderContentWrapper.New">
+            <summary>
+            </summary>
         </member>
         <member name="M:ASC.Api.Documents.FolderContentWrapper.#ctor(ASC.Web.Files.Services.WCFService.DataWrapper,System.Int32)">
             <summary>

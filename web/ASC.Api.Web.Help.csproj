@@ -100,7 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CacheManifest.cs" />
-    <Compile Include="Controllers\ApiSystemController.cs" />
     <Compile Include="Controllers\CacheManifestController.cs" />
     <Compile Include="Controllers\DesktopController.cs" />
     <Compile Include="Controllers\DocBuilderController.cs" />
@@ -108,9 +107,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
+    <Compile Include="DocumentGenerator\CSharpDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocPluginsDocumentation.cs" />
-    <Compile Include="DocumentGenerator\Documentation.cs" />
+    <Compile Include="DocumentGenerator\CommunityServerDocumentation.cs" />
     <Compile Include="DocumentGenerator\JsDocDocumentation.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
     <Compile Include="Extensions\XmlExtensions.cs" />
@@ -2178,7 +2178,9 @@
     <Content Include="Content\img\docbuilder\download.png" />
     <Content Include="Content\img\docbuilder\examples\coordinate_aspects.png" />
     <Content Include="Content\img\docbuilder\examples\icon_DocumentEditors.png" />
+    <Content Include="Content\img\docbuilder\examples\ole-object-image.png" />
     <Content Include="Content\img\docbuilder\examples\step2_1.png" />
+    <Content Include="Content\img\docbuilder\examples\user-profile.png" />
     <Content Include="Content\img\docbuilder\file_docx.png" />
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
@@ -2324,7 +2326,6 @@
     <Content Include="Content\img\main-page\desktop.svg" />
     <Content Include="Content\img\main-page\document_builder.svg" />
     <Content Include="Content\img\main-page\document_server.svg" />
-    <Content Include="Content\img\main-page\hosted_solution.svg" />
     <Content Include="Content\img\main-page\plugins_and_macros.svg" />
     <Content Include="Content\img\not-found.svg" />
     <Content Include="Content\img\orange-arrow.svg" />
@@ -2495,17 +2496,6 @@
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="version.txt" />
-    <Content Include="Views\ApiSystem\Authentication.aspx" />
-    <Content Include="Views\ApiSystem\Basic.aspx" />
-    <Content Include="Views\ApiSystem\Navigation.ascx" />
-    <Content Include="Views\ApiSystem\PortalGet.aspx" />
-    <Content Include="Views\ApiSystem\PortalRegister.aspx" />
-    <Content Include="Views\ApiSystem\PortalRemove.aspx" />
-    <Content Include="Views\ApiSystem\PortalStatus.aspx" />
-    <Content Include="Views\ApiSystem\Section.aspx" />
-    <Content Include="Views\ApiSystem\TariffGet.aspx" />
-    <Content Include="Views\ApiSystem\TariffSet.aspx" />
-    <Content Include="Views\ApiSystem\ValidatePortalName.aspx" />
     <Content Include="Views\Desktop\AddingDMS.aspx" />
     <Content Include="Views\Desktop\AddingDMS\Configuring.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Default.ascx" />
@@ -2881,6 +2871,18 @@
     <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Types.aspx" />
     <Content Include="Views\Plugin\Variations.aspx" />
+    <Content Include="Views\Portals\ApiSystem.aspx" />
+    <Content Include="Views\Portals\ApiSystem\Authentication.ascx" />
+    <Content Include="Views\Portals\ApiSystem\Default.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\PortalGet.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\PortalRegister.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\PortalRemove.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\PortalStatus.ascx" />
+    <Content Include="Views\Portals\ApiSystem\PortalSection\ValidatePortalName.ascx" />
+    <Content Include="Views\Portals\ApiSystem\TariffSection.ascx" />
+    <Content Include="Views\Portals\ApiSystem\TariffSection\TariffGet.ascx" />
+    <Content Include="Views\Portals\ApiSystem\TariffSection\TariffSet.ascx" />
     <Content Include="Views\Portals\Auth.aspx" />
     <Content Include="Views\Portals\Basic.aspx" />
     <Content Include="Views\Portals\Batch.aspx" />

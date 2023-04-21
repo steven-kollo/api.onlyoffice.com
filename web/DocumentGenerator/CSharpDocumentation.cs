@@ -34,13 +34,18 @@ using log4net;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
 {
-    internal static class Documentation
+    internal class CSharpDocumentation
     {
-        private static List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
+        private readonly string _path;
+        private List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
+        private ILog _logger;
 
-        private static ILog _logger;
+        public CSharpDocumentation(string path)
+        {
+            _path = path;
+        }
 
-        public static void Load()
+        public void Load()
         {
             _logger = LogManager.GetLogger("ASC.MsDocDocumentGenerator");
             _logger.Debug("Generate documentations");
@@ -48,9 +53,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             _points = GenerateDocs();
         }
 
-        private static List<MsDocEntryPoint> GenerateDocs()
+        private List<MsDocEntryPoint> GenerateDocs()
         {
-            var lookupDir = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references");
+            var lookupDir = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\{_path}\references");
             var generator = new MsDocDocumentGenerator();
             foreach (var file in Directory.GetFiles(lookupDir))
             {
@@ -67,7 +72,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         generator.GenerateRequestExample(method);
                         _logger.Debug("Generated example " + method.Path);
                     }
-                    catch(Exception e) {
+                    catch (Exception e)
+                    {
                         _logger.Error("Error " + method, e);
                     }
                 }
@@ -76,12 +82,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return generator.Points;
         }
 
-        public static MsDocEntryPoint GetDocs(string name)
+        public MsDocEntryPoint GetDocs(string name)
         {
             return _points.SingleOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
 
-        public static IEnumerable<MsDocEntryPoint> GetAll()
+        public IEnumerable<MsDocEntryPoint> GetAll()
         {
             return _points;
         }

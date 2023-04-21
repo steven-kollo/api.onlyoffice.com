@@ -525,9 +525,9 @@
             Update the project settings
             </short>
             <category>Settings</category>
-            <param type="System.Boolean, System" name="everebodyCanCreate">Specifies if all the portal users can create projects or not</param>
-            <param type="System.Boolean, System" name="hideEntitiesInPausedProjects">Specifies if the entities will be hidden in the paused projects or not</param>
-            <param type="ASC.Web.Projects.StartModuleType, ASC.Web.Projects" name="startModule">Module type: Projects, Tasks, Discussions, TimeTracking</param>
+            <param type="System.Nullable{System.Boolean}, System" name="everebodyCanCreate">Specifies if all the portal users can create projects or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="hideEntitiesInPausedProjects">Specifies if the entities will be hidden in the paused projects or not</param>
+            <param type="System.Nullable{ASC.Web.Projects.StartModuleType}, System" name="startModule">Module type: Projects, Tasks, Discussions, TimeTracking</param>
             <param type="System.Object, System" name="folderId">Folder ID</param>
             <returns type="ASC.Web.Projects.ProjectsCommonSettings, ASC.Web.Projects">Updated project settings</returns>
             <path>api/2.0/project/settings</path>
@@ -628,7 +628,7 @@
             <param type="System.Int32, System" method="url" name="lastId">Last message ID</param>
             <param type="System.Boolean, System" method="url" name="myProjects">Specifies whether to return messages only from my projects or not</param>
             <param type="System.Boolean, System" method="url" name="follow">Specifies whether to return messages only from followed discussions or not</param>
-            <param type="ASC.Projects.Core.Domain.MessageStatus, ASC.Projects.Core.Domain" method="url" name="status">Message status ("Open" or "Archived")</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.MessageStatus}, System" method="url" name="status">Message status ("Open" or "Archived")</param>
             <returns type="ASC.Api.Projects.Wrappers.MessageWrapper, ASC.Api.Projects">List of messages</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/project/message/filter</path>
@@ -662,7 +662,7 @@
             <param type="System.String, System" name="title">Discussion title</param>
             <param type="System.String, System" name="content">Message text</param>
             <param type="System.String, System" name="participants">User IDs (GUIDs) separated with ','</param>
-            <param type="System.Boolean, System" name="notify">Specifies whether to notify participants about a message or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="notify">Specifies whether to notify participants about a message or not</param>
             <returns type="ASC.Api.Projects.Wrappers.MessageWrapper, ASC.Api.Projects">Message</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -682,7 +682,7 @@
             <param type="System.String, System" name="title">Discussion title</param>
             <param type="System.String, System" name="content">New message text</param>
             <param type="System.String, System" name="participants">New user IDs (GUIDs) separated with ','</param>
-            <param type="System.Boolean, System" name="notify">Specifies whether to notify participants about a message or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="notify">Specifies whether to notify participants about a message or not</param>
             <returns type="ASC.Api.Projects.Wrappers.MessageWrapperFull, ASC.Api.Projects">Updated message</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -949,7 +949,7 @@
             <param type="ASC.Projects.Core.Domain.Reports.ReportType, ASC.Projects.Core.Domain.Reports" name="reportType" optional="true">Report type</param>
             <param type="System.Int32, System" name="tag" optional="true">Report tag</param>
             <param type="System.Int32, System" name="project" optional="true">Report project</param>
-            <param type="ASC.Projects.Core.Domain.TaskStatus, ASC.Projects.Core.Domain" name="status" optional="true">Task status</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.TaskStatus}, System" name="status" optional="true">Task status</param>
             <param type="System.Guid, System" name="departament" optional="true">Department/Group GUID</param>
             <param type="System.Guid, System" name="userId" optional="true">User GUID</param>
             <param type="ASC.Projects.Core.Domain.Reports.ReportTimeInterval, ASC.Projects.Core.Domain.Reports" name="reportTimeInterval" optional="true">Report time interval</param>
@@ -981,7 +981,7 @@
              <param type="ASC.Projects.Core.Domain.Reports.ReportType, ASC.Projects.Core.Domain.Reports" name="reportType" optional="true">New report type</param>
              <param type="System.Int32, System" name="tag" optional="true">New report tag</param>
              <param type="System.Int32, System" name="project" optional="true">New report project</param>
-             <param type="ASC.Projects.Core.Domain.TaskStatus, ASC.Projects.Core.Domain" name="status" optional="true">New task status</param>
+             <param type="System.Nullable{ASC.Projects.Core.Domain.TaskStatus}, System" name="status" optional="true">New task status</param>
              <param type="System.Guid, System" name="departament" optional="true">New department/group GUID</param>
              <param type="System.Guid, System" name="userId" optional="true">New user GUID</param>
              <param type="ASC.Projects.Core.Domain.Reports.ReportTimeInterval, ASC.Projects.Core.Domain.Reports" name="reportTimeInterval" optional="true">New report time interval</param>
@@ -1121,7 +1121,7 @@
             </short>
             <category>Projects</category>
             <param type="System.Int32, System" method="url" name="tag" optional="true">Project tag</param>
-            <param type="ASC.Projects.Core.Domain.ProjectStatus, ASC.Projects.Core.Domain" method="url" optional="true" name="status">Project status ("Open", "Paused", or "Closed")</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.ProjectStatus}, System" method="url" optional="true" name="status">Project status ("Open", "Paused", or "Closed")</param>
             <param type="System.Guid, System" method="url" name="participant" optional="true">Project participant GUID</param>
             <param type="System.Guid, System" method="url" name="manager" optional="true">Project manager GUID</param>
             <param type="System.Guid, System" method="url" name="departament">Project department</param>
@@ -1176,10 +1176,10 @@
             <param type="System.String, System" name="tags">Project tags</param>
             <param type="System.Boolean, System" name="private">Specifies if this project is private or not</param>
             <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="participants" optional="true">Project participants</param>
-            <param type="System.Boolean, System" name="notify" optional="true">Specifies whether to notify a project manager about the project actions or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="notify" optional="true">Specifies whether to notify a project manager about the project actions or not</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Projects.Core.Domain.Task}, System.Collections.Generic" file="ASC.Web.Projects" name="tasks">Project tasks</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Projects.Core.Domain.Milestone}, System.Collections.Generic" file="ASC.Web.Projects" name="milestones">Project milestones</param>
-            <param type="System.Boolean, System" name="notifyResponsibles">Specifies whether to notify responsibles about the project actions or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="notifyResponsibles">Specifies whether to notify responsibles about the project actions or not</param>
             <returns type="ASC.Api.Projects.Wrappers.ProjectWrapperFull, ASC.Api.Projects">Newly created project</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <path>api/2.0/project</path>
@@ -1199,10 +1199,10 @@
             <param type="System.String, System" name="tags">Project tags</param>
             <param type="System.Boolean, System" name="private">Specifies if this project is private or not</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Projects.Core.Domain.Participant}, System.Collections.Generic" file="ASC.Web.Projects" name="participants" optional="true">Project participants with the information about their security rights</param>
-            <param type="System.Boolean, System" name="notify" optional="true">Specifies whether to notify a project manager about the project actions or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="notify" optional="true">Specifies whether to notify a project manager about the project actions or not</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Projects.Core.Domain.Task}, System.Collections.Generic" file="ASC.Web.Projects" name="tasks">Project tasks</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Projects.Core.Domain.Milestone}, System.Collections.Generic" file="ASC.Web.Projects" name="milestones">Project milestones</param>
-            <param type="System.Boolean, System" name="notifyResponsibles">Specifies whether to notify responsibles about the project actions or not</param>
+            <param type="System.Nullable{System.Boolean}, System" name="notifyResponsibles">Specifies whether to notify responsibles about the project actions or not</param>
             <returns type="ASC.Api.Projects.Wrappers.ProjectWrapperFull, ASC.Api.Projects">Newly created project</returns>
             <path>api/2.0/project/withSecurity</path>
             <httpMethod>POST</httpMethod>
@@ -1221,8 +1221,8 @@
             <param type="System.Guid, System" name="responsibleId">New project responsible ID</param>
             <param type="System.String, System" name="tags">New project tags</param>
             <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="participants">New project participants</param>
-            <param type="ASC.Projects.Core.Domain.ProjectStatus, ASC.Projects.Core.Domain" name="status">New project status ("Open", "Paused", or "Closed")</param>
-            <param type="System.Boolean, System" name="private">Specifies if this project is private or not</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.ProjectStatus}, System" name="status">New project status ("Open", "Paused", or "Closed")</param>
+            <param type="System.Nullable{System.Boolean}, System" name="private">Specifies if this project is private or not</param>
             <param type="System.Boolean, System" name="notify">Specifies whether to notify a project manager about the project actions or not</param>
             <returns type="ASC.Api.Projects.Wrappers.ProjectWrapperFull, ASC.Api.Projects">Updated project</returns>
             <exception cref="T:System.ArgumentException"></exception>
@@ -1244,8 +1244,8 @@
             <param type="System.Guid, System" name="responsibleId">New project responsible ID</param>
             <param type="System.String, System" name="tags">New project tags</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Projects.Core.Domain.Participant}, System.Collections.Generic" file="ASC.Web.Projects" name="participants">New project participants with the information about their security rights</param>
-            <param type="ASC.Projects.Core.Domain.ProjectStatus, ASC.Projects.Core.Domain" name="status">New project status ("Open", "Paused", or "Closed")</param>
-            <param type="System.Boolean, System" name="private">Specifies if this project is private or not</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.ProjectStatus}, System" name="status">New project status ("Open", "Paused", or "Closed")</param>
+            <param type="System.Nullable{System.Boolean}, System" name="private">Specifies if this project is private or not</param>
             <param type="System.Boolean, System" name="notify">Specifies whether to notify a project manager about the project actions or not</param>
             <returns type="ASC.Api.Projects.Wrappers.ProjectWrapperFull, ASC.Api.Projects">Updated project</returns>
             <path>api/2.0/project/{id}/withSecurityInfo</path>
@@ -1952,15 +1952,15 @@
             <category>Tasks</category>
             <param type="System.Int32, System" method="url" name="projectid" optional="true"> Project ID</param>
             <param type="System.Boolean, System" method="url" name="myProjects">Specifies whether to return tasks only from my projects or not</param>
-            <param type="System.Int32, System" method="url" name="milestone" optional="true">Milestone ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" name="milestone" optional="true">Milestone ID</param>
             <param type="System.Boolean, System" method="url" name="myMilestones">Specifies whether to return tasks only from my milestones or not</param>
             <param type="System.Boolean, System" method="url" name="nomilestone">Specifies whether to return tasks only without milestones or not</param>
             <param type="System.Int32, System" method="url" name="tag" optional="true">Project tag</param>
-            <param type="ASC.Projects.Core.Domain.TaskStatus, ASC.Projects.Core.Domain" method="url" name="status" optional="true">Task status</param>
-            <param type="System.Int32, System" method="url" name="substatus" optional="true">Custom task status</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.TaskStatus}, System" method="url" name="status" optional="true">Task status</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" name="substatus" optional="true">Custom task status</param>
             <param type="System.Boolean, System" method="url" name="follow">Specifies whether to return only followed tasks or not</param>
             <param type="System.Guid, System" method="url" name="departament" optional="true">Departament GUID</param>
-            <param type="System.Guid, System" method="url" name="participant" optional="true">Participant GUID</param>
+            <param type="System.Nullable{System.Guid}, System" method="url" name="participant" optional="true">Participant GUID</param>
             <param type="System.Guid, System" method="url" name="creator">Creator GUID</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="deadlineStart" optional="true">Minimum value of task deadline</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="deadlineStop" optional="true">Maximum value of task deadline</param>
@@ -1981,13 +1981,13 @@
             <category>Tasks</category>
             <param type="System.Int32, System" name="projectid" optional="true"> Project ID</param>
             <param type="System.Boolean, System" name="myProjects">Specifies whether to return tasks only from my projects or not</param>
-            <param type="System.Int32, System" name="milestone" optional="true">Milestone ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="milestone" optional="true">Milestone ID</param>
             <param type="System.Boolean, System" name="myMilestones">Specifies whether to return tasks only from my milestones or not</param>
             <param type="System.Int32, System" name="tag" optional="true">Project tag</param>
-            <param type="ASC.Projects.Core.Domain.TaskStatus, ASC.Projects.Core.Domain" name="status" optional="true">Task status</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.TaskStatus}, System" name="status" optional="true">Task status</param>
             <param type="System.Boolean, System" name="follow">Specifies whether to return only followed tasks or not</param>
             <param type="System.Guid, System" name="departament" optional="true">Departament GUID</param>
-            <param type="System.Guid, System" name="participant" optional="true">Participant GUID</param>
+            <param type="System.Nullable{System.Guid}, System" name="participant" optional="true">Participant GUID</param>
             <param type="System.Guid, System" name="creator">Creator GUID</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="deadlineStart" optional="true">Minimum value of task deadline</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="deadlineStop" optional="true">Maximum value of task deadline</param>
@@ -2162,14 +2162,14 @@
             <param type="System.String, System" name="description">New task description</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="deadline">New task deadline time</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="startDate">New task start date</param>
-            <param type="ASC.Projects.Core.Domain.TaskPriority, ASC.Projects.Core.Domain" name="priority">New task priority</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.TaskPriority}, System" name="priority">New task priority</param>
             <param type="System.String, System" name="title">New task title</param>
             <param type="System.Int32, System" name="milestoneid">New task milestone ID</param>
             <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="responsibles">New list of task responsibles</param>
-            <param type="System.Int32, System" name="projectID">New task project ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="projectID">New task project ID</param>
             <param type="System.Boolean, System" name="notify">Specifies whether to notify responsibles about the task actions or not</param>
-            <param type="ASC.Projects.Core.Domain.TaskStatus, ASC.Projects.Core.Domain" name="status" optional="true">New task status</param>
-            <param type="System.Int32, System" name="progress" optional="true">New task progress</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.TaskStatus}, System" name="status" optional="true">New task status</param>
+            <param type="System.Nullable{System.Int32}, System" name="progress" optional="true">New task progress</param>
             <returns type="ASC.Api.Projects.Wrappers.TaskWrapperFull, ASC.Api.Projects">Updated task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/project/task/{taskid}</path>
@@ -2557,10 +2557,10 @@
             <category>Milestones</category>
             <param type="System.Int32, System" method="url" name="projectid" optional="true">Project ID</param>
             <param type="System.Int32, System" method="url" name="tag" optional="true">Milestone tag</param>
-            <param type="ASC.Projects.Core.Domain.MilestoneStatus, ASC.Projects.Core.Domain" method="url" name="status" optional="true">Milestone status ("Open" or "Closed")</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.MilestoneStatus}, System" method="url" name="status" optional="true">Milestone status ("Open" or "Closed")</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="deadlineStart" optional="true">Minimum value of milestone deadline</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="deadlineStop" optional="true">Maximum value of milestone deadline</param>
-            <param type="System.Guid, System" method="url" name="taskResponsible" optional="true">Milestone responsible GUID</param>
+            <param type="System.Nullable{System.Guid}, System" method="url" name="taskResponsible" optional="true">Milestone responsible GUID</param>
             <param type="System.Int32, System" method="url" name="lastId">Last milestone ID</param>
             <param type="System.Boolean, System" method="url" name="myProjects">Specifies whether to return milestones only from my projects or not</param>
             <param type="System.Guid, System" method="url" name="milestoneResponsible">Milestone responsible GUID</param>
@@ -2654,9 +2654,9 @@
              <param type="System.Int32, System" method="url" name="id">Milestone ID</param>
              <param type="System.String, System" name="title">New milestone title</param>
              <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="deadline">New milestone deadline</param>
-             <param type="System.Boolean, System" name="isKey">Specifies if this is a key milestone or not</param>
+             <param type="System.Nullable{System.Boolean}, System" name="isKey">Specifies if this is a key milestone or not</param>
              <param type="ASC.Projects.Core.Domain.MilestoneStatus, ASC.Projects.Core.Domain" name="status">New milestone status ("Open" or "Closed")</param>
-             <param type="System.Boolean, System" name="isNotify">Specifies whether to remind me 48 hours before the milestone due date or not</param>
+             <param type="System.Nullable{System.Boolean}, System" name="isNotify">Specifies whether to remind me 48 hours before the milestone due date or not</param>
              <param type="System.String, System" name="description">New milestone description</param>
              <param type="System.Int32, System" name="projectID">New project ID</param>
              <param type="System.Guid, System" name="responsible">New milestone responsible</param>
@@ -2743,7 +2743,7 @@
             <category>Time</category>
             <param type="System.Int32, System" method="url" name="projectid" optional="true"> Project ID</param>
             <param type="System.Boolean, System" method="url" name="myProjects">Specifies whether to return task time only for my projects or not</param>
-            <param type="System.Int32, System" method="url" name="milestone" optional="true">Milestone ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" name="milestone" optional="true">Milestone ID</param>
             <param type="System.Boolean, System" method="url" name="myMilestones">Specifies whether to return task time only for my milestones or not</param>
             <param type="System.Int32, System" method="url" name="tag" optional="true">Project tag</param>
             <param type="System.Guid, System" method="url" name="departament" optional="true">Departament GUID</param>
@@ -2751,7 +2751,7 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="createdStart" optional="true">The earliest date of task creation</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="createdStop" optional="true">The latest date of task creation</param>
             <param type="System.Int32, System" method="url" name="lastId">Last spent time ID</param>
-            <param type="ASC.Projects.Core.Domain.PaymentStatus, ASC.Projects.Core.Domain" method="url" name="status" optional="true">Payment status ("NotChargeable", "NotBilled", or "Billed")</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.PaymentStatus}, System" method="url" name="status" optional="true">Payment status ("NotChargeable", "NotBilled", or "Billed")</param>
             <returns type="ASC.Api.Projects.Wrappers.TimeWrapper, ASC.Api.Projects">List of spent time</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/project/time/filter</path>
@@ -2768,7 +2768,7 @@
             <category>Time</category>
             <param type="System.Int32, System" method="url" name="projectid" optional="true"> Project ID</param>
             <param type="System.Boolean, System" method="url" name="myProjects">Specifies whether to return task time only for my projects or not</param>
-            <param type="System.Int32, System" method="url" name="milestone" optional="true">Milestone ID</param>
+            <param type="System.Nullable{System.Int32}, System" method="url" name="milestone" optional="true">Milestone ID</param>
             <param type="System.Boolean, System" method="url" name="myMilestones">Specifies whether to return task time only for my milestones or not</param>
             <param type="System.Int32, System" method="url" name="tag" optional="true">Project tag</param>
             <param type="System.Guid, System" method="url" name="departament" optional="true">Departament GUID</param>
@@ -2776,7 +2776,7 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="createdStart" optional="true">The earliest date of task creation</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="createdStop" optional="true">The latest date of task creation</param>
             <param type="System.Int32, System" method="url" name="lastId">Last spent time ID</param>
-            <param type="ASC.Projects.Core.Domain.PaymentStatus, ASC.Projects.Core.Domain" method="url" name="status" optional="true">Payment status ("NotChargeable", "NotBilled", or "Billed")</param>
+            <param type="System.Nullable{ASC.Projects.Core.Domain.PaymentStatus}, System" method="url" name="status" optional="true">Payment status ("NotChargeable", "NotBilled", or "Billed")</param>
             <returns>Total spent time</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/project/time/filter/total</path>
