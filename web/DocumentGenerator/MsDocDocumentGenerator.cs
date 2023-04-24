@@ -865,6 +865,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 return typeName.Substring(0, typeName.Length - 2);
             }
+            if (typeName.EndsWith("{`0}"))
+            {
+                return typeName.Substring(0, typeName.Length - 4);
+            }
             return typeName;
         }
 
