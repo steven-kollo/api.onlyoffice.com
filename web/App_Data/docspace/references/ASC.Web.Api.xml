@@ -1978,7 +1978,7 @@
             <short>
             Open confirmation email URL
             </short>
-            <param type="ASC.Security.Cryptography.EmailValidationKeyModel, ASC.Security.Cryptography" name="inDto">Confirmation email parameters</param>
+            <param type="ASC.Security.Cryptography.EmailValidationKeyModel, ASC.Core.Common" name="inDto">Confirmation email parameters</param>
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/confirm</path>
             <returns type="ASC.Security.Cryptography.EmailValidationKeyProvider.ValidationResult, ASC.Security.Cryptography">Validation result: Ok, Invalid, or Expired</returns>
@@ -2627,7 +2627,7 @@
             Set the audit trail settings
             </short>
             <category>Audit trail data</category>
-            <param type="ASC.Core.Tenants.TenantAuditSettingsWrapper, ASC.Core.Common" name="wrapper">Audit trail settings</param>
+            <param type="ASC.Core.Tenants.TenantAuditSettingsWrapper, ASC.Core.Common" name="inDto">Audit trail settings</param>
             <returns type="ASC.Core.Tenants.TenantAuditSettings, ASC.Core.Common">Audit trail settings</returns>
             <path>api/2.0/security/audit/settings/lifetime</path>
             <httpMethod>POST</httpMethod>
@@ -2676,7 +2676,7 @@
             </summary>
             <short>Add a custom navigation item</short>
             <category>Custom navigation</category>
-            <param type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Core" name="item">Custom navigation parameters</param>
+            <param type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Core" name="inDto">Custom navigation parameters</param>
             <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Core">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/create</path>
             <httpMethod>POST</httpMethod>
@@ -2854,7 +2854,7 @@
             </short>
             <category>LDAP</category>
             <path>api/2.0/settings/ldap/cron</path>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.LdapCronRequestDto, ASC.Web.Api" name="ldapCronRequest">LDAP cron request parameters</param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.LdapCronRequestDto, ASC.Web.Api" name="inDto">LDAP cron request parameters</param>
             <httpMethod>POST</httpMethod>
             <returns></returns>
         </member>
@@ -2890,7 +2890,7 @@
             Save the LDAP settings
             </short>
             <category>LDAP</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto, ASC.Web.Api" name="ldapRequestsDto">LDAP settings</param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto, ASC.Web.Api" name="inDto">LDAP settings</param>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api">LDAP operation status</returns>
             <path>api/2.0/settings/ldap</path>
             <httpMethod>POST</httpMethod>
@@ -2903,7 +2903,7 @@
             Test the LDAP saving process
             </short>
             <category>LDAP</category>
-            <param type="ASC.ActiveDirectory.Base.Settings.LdapSettings, ASC.ActiveDirectory.Base.Settings" name="ldapSettings">LDAP settings</param>
+            <param type="ASC.ActiveDirectory.Base.Settings.LdapSettings, ASC.ActiveDirectory.Base.Settings" name="inDto">LDAP settings</param>
             <path>api/2.0/settings/ldap/save/test</path>
             <httpMethod>POST</httpMethod>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api">LDAP operation status</returns>
@@ -3293,7 +3293,7 @@
             Update login settings
             </short>
             <category>Login settings</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto, ASC.Web.Api" name="loginSettingsRequestDto">Login settings request parameters</param>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto, ASC.Web.Api" name="inDto">Login settings request parameters</param>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto, ASC.Web.Api">Updated login settings</returns>
             <path>api/2.0/settings/security/loginsettings</path>
             <httpMethod>PUT</httpMethod>
@@ -3537,7 +3537,7 @@
             </summary>
             <short>Update the email activation settings</short>
             <category>Common settings</category>
-            <param type="ASC.Web.Studio.Core.EmailActivationSettings, ASC.Web.Studio.Core" name="settings">Email activation settings</param>
+            <param type="ASC.Web.Studio.Core.EmailActivationSettings, ASC.Web.Studio.Core" name="inDto">Email activation settings</param>
             <returns type="ASC.Web.Studio.Core.EmailActivationSettings, ASC.Web.Studio.Core">Updated email activation settings</returns>
             <path>api/2.0/settings/emailactivation</path>
             <httpMethod>PUT</httpMethod>
