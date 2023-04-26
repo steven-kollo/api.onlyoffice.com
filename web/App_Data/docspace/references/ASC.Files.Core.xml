@@ -23,6 +23,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.AcceptInvitationDto.Key">
             <summary>Link key</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.ArchiveRoomRequestDto">
             <summary>
@@ -30,6 +31,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ArchiveRoomRequestDto.DeleteAfter">
             <summary>Specifies whether to archive a room after the editing session is finished or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.AutoCleanupRequestDto">
             <summary>
@@ -37,9 +39,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.AutoCleanupRequestDto.Set">
             <summary>Enables the auto-clearing or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.AutoCleanupRequestDto.Gap">
             <summary>A time interval when the auto-clearing will be performed</summary>
+            <type>ASC.Files.Core.DateToAutoCleanUp, ASC.Files.Core</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto">
             <summary>
@@ -47,9 +51,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto.FolderIds">
             <summary>List of folder IDs</summary>
+            <type>System.Collections.Generic.IEnumerable{System.Text.Json.JsonElement}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto.FileIds">
             <summary>List of file IDs</summary>
+            <type>System.Collections.Generic.IEnumerable{System.Text.Json.JsonElement}, System.Collections.Generic</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.DownloadRequestDto">
             <summary>
@@ -57,6 +63,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DownloadRequestDto.FileConvertIds">
             <summary>List of file IDs which will be converted</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Text.Json.JsonElement, System.String}}, System.Collections.Generic</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.DeleteBatchRequestDto">
             <summary>
@@ -64,9 +71,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DeleteBatchRequestDto.DeleteAfter">
             <summary>Specifies whether to delete a file after the editing session is finished or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DeleteBatchRequestDto.Immediately">
             <summary>Specifies whether to move a file to the "Trash" folder or delete it immediately</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.DeleteRequestDto">
             <summary>
@@ -74,9 +83,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DeleteRequestDto.DeleteAfter">
             <summary>Specifies whether to delete a file after the editing session is finished or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DeleteRequestDto.Immediately">
             <summary>Specifies whether to move a file to the "Trash" folder or delete it immediately</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto">
             <summary>
@@ -84,12 +95,15 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto.DestFolderId">
             <summary>Destination folder ID</summary>
+            <type>System.Text.Json.JsonElement, System.Text.Json</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto.ConflictResolveType">
             <summary>Overwriting behavior</summary>
+            <type>ASC.Web.Files.Services.WCFService.FileOperations.FileConflictResolveType, ASC.Files.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto.DeleteAfter">
             <summary>Specifies whether to delete a folder after the editing session is finished or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto">
             <summary>
@@ -97,6 +111,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto.Names">
             <summary>Tag names</summary>
+            <type>System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.ChangeHistoryRequestDto">
             <summary>
@@ -104,9 +119,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ChangeHistoryRequestDto.Version">
             <summary>File version</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ChangeHistoryRequestDto.ContinueVersion">
             <summary>Marks as a version or revision</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.ChangeOwnerRequestDto">
             <summary>
@@ -114,6 +131,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ChangeOwnerRequestDto.UserId">
             <summary>New file owner ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CheckConversionRequestDto`1">
             <summary>
@@ -121,18 +139,23 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckConversionRequestDto`1.FileId">
             <summary>File ID</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckConversionRequestDto`1.Sync">
             <summary>Specifies if the conversion process is synchronous or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckConversionRequestDto`1.StartConvert">
             <summary>Specifies whether to start a conversion process or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckConversionRequestDto`1.Version">
             <summary>File version</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckConversionRequestDto`1.Password">
             <summary>Password</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CheckDocServiceUrlRequestDto">
             <summary>
@@ -140,12 +163,15 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckDocServiceUrlRequestDto.DocServiceUrl">
             <summary>The Document Server address</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckDocServiceUrlRequestDto.DocServiceUrlInternal">
             <summary>The Document Server address in the local private network</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckDocServiceUrlRequestDto.DocServiceUrlPortal">
             <summary>The Community Server address</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraftRequestDto">
             <summary>
@@ -153,18 +179,23 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraftRequestDto.Version">
             <summary>File version</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraftRequestDto.Doc">
             <summary>Shared token</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraftRequestDto.Action">
             <summary>Action with a form</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraftRequestDto.RequestView">
             <summary>Specifies whether to request a form for viewing or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraftRequestDto.RequestEmbedded">
             <summary>Specifies whether to request an embedded form or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CopyAsRequestDto`1">
             <summary>
@@ -172,15 +203,19 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CopyAsRequestDto`1.DestTitle">
             <summary>Destination file title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CopyAsRequestDto`1.DestFolderId">
             <summary>Destination folder ID</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CopyAsRequestDto`1.EnableExternalExt">
             <summary>Specifies whether to allow the creation of external extension files or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CopyAsRequestDto`1.Password">
             <summary>Password</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CreateFileRequestDto`1">
             <summary>
@@ -188,15 +223,19 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateFileRequestDto`1.Title">
             <summary>File title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateFileRequestDto`1.TemplateId">
             <summary>Template file ID</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateFileRequestDto`1.EnableExternalExt">
             <summary>Specifies whether to allow the creation of external extension files or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateFileRequestDto`1.FormId">
             <summary>Form ID</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CreateFolderRequestDto">
             <summary>
@@ -204,6 +243,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateFolderRequestDto.Title">
             <summary>Folder title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.RoomType">
             <summary>
@@ -219,21 +259,27 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.Title">
             <summary>Room name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.RoomType">
             <summary>Room type</summary>
+            <type>ASC.Files.Core.ApiModels.RequestDto.RoomType, ASC.Files.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.Private">
             <summary>Private room or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.Share">
             <summary>Collection of sharing parameters</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.Files.Core.ApiModels.FileShareParams}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.Notify">
             <summary>Notifies users about the shared room or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.SharingMessage">
             <summary>Message to send when notifying about the shared room</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CreateTagRequestDto">
             <summary>
@@ -241,6 +287,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateTagRequestDto.Name">
             <summary>Tag name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CreateTextOrHtmlFileRequestDto">
             <summary>
@@ -248,9 +295,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateTextOrHtmlFileRequestDto.Title">
             <summary>File title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateTextOrHtmlFileRequestDto.Content">
             <summary>File contents</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CreateWordpressPostRequestDto">
             <summary>
@@ -258,12 +307,15 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateWordpressPostRequestDto.Title">
             <summary>Post title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateWordpressPostRequestDto.Content">
             <summary>Post contents</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateWordpressPostRequestDto.Status">
             <summary>Operation status</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.DeleteFolderDto">
             <summary>
@@ -271,9 +323,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DeleteFolderDto.DeleteAfter">
             <summary>Specifies whether to delete a folder after the editing session is finished or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DeleteFolderDto.Immediately">
             <summary>Specifies whether to move a folder to the "Trash" folder or delete it immediately</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.DeleteRoomRequestDto">
             <summary>
@@ -281,6 +335,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DeleteRoomRequestDto.DeleteAfter">
             <summary>Specifies whether to delete a room after the editing session is finished or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto">
             <summary>
@@ -288,6 +343,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto.Set">
             <summary>Specifies whether to set the specified settings or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.EntryPropertiesRequestDto">
             <summary>
@@ -295,6 +351,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.EntryPropertiesRequestDto.FormFilling">
             <summary>Form filling request parameters</summary>
+            <type>ASC.Files.Core.ApiModels.RequestDto.FormFillingPropertiesRequestDto, ASC.Files.Core</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.FormFillingPropertiesRequestDto">
             <summary>
@@ -302,18 +359,23 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FormFillingPropertiesRequestDto.CollectFillForm">
             <summary>Specifies if the data will be collected from the filled forms or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FormFillingPropertiesRequestDto.ToFolderId">
             <summary>Folder ID where a file will be saved</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FormFillingPropertiesRequestDto.ToFolderPath">
             <summary>Folder path where a file will be saved</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FormFillingPropertiesRequestDto.CreateFolderTitle">
             <summary>New folder title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FormFillingPropertiesRequestDto.CreateFileMask">
             <summary>File name mask</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.BatchEntryPropertiesRequestDto">
             <summary>
@@ -321,12 +383,15 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BatchEntryPropertiesRequestDto.FilesId">
             <summary>List of file IDs</summary>
+            <type>System.Text.Json.JsonElement[], System.Text.Json</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BatchEntryPropertiesRequestDto.CreateSubfolder">
             <summary>Specifies whether to create a subfolder or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.BatchEntryPropertiesRequestDto.FileProperties">
             <summary>File properties that are represented as the EntryPropertiesRequestDto object</summary>
+            <type>ASC.Files.Core.ApiModels.RequestDto.EntryPropertiesRequestDto, ASC.Files.Core</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto">
             <summary>
@@ -334,15 +399,19 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto.File">
             <summary>Request input stream</summary>
+            <type>Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto.Encrypted">
             <summary>Specifies whether to encrypt a file or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto.Forcesave">
             <summary>Specifies whether to force save a file or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto.FileExtension">
             <summary>File extension</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.GenerateSharedLinkRequestDto">
             <summary>
@@ -350,6 +419,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.GenerateSharedLinkRequestDto.Share">
             <summary>Sharing rights</summary>
+            <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto`1">
             <summary>
@@ -357,15 +427,19 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto`1.FileKey">
             <summary>The unique document identifier used by the service to get a link to the file</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto`1.InstanceId">
             <summary>The unique system identifier</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto`1.SourceFileId">
             <summary>Source file ID</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto`1.Path">
             <summary>The file name or relative path for the formula editor</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.HideConfirmConvertRequestDto">
             <summary>
@@ -373,6 +447,31 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.HideConfirmConvertRequestDto.Save">
             <summary>Specifies whether to set the specified settings or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.RequestDto.InsertFileRequestDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.InsertFileRequestDto.File">
+            <summary>File</summary>
+            <type>Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.InsertFileRequestDto.Title">
+            <summary>File name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.InsertFileRequestDto.CreateNewIfExist">
+            <summary>Specifies whether to create a new file if it already exists or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.InsertFileRequestDto.KeepConvertStatus">
+            <summary>Specifies whether to keep the file converting status or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.InsertFileRequestDto.Stream">
+            <summary>Request input stream</summary>
+            <type>System.IO.Stream, System.IO</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto">
             <summary>
@@ -380,12 +479,15 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto.LinkId">
             <summary>Link ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto.Title">
             <summary>External link name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto.Access">
-            <summary>Sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing, Collaborator)</summary>
+            <summary>Sharing rights</summary>
+            <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.LockFileRequestDto">
             <summary>
@@ -393,6 +495,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LockFileRequestDto.LockFile">
             <summary>Specifies whether to lock a file or not</summary>
+            <type>System.Boolea, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.LogoRequestDto">
             <summary>
@@ -400,18 +503,23 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LogoRequestDto.TmpFile">
             <summary>The path to the temporary image file</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LogoRequestDto.X">
             <summary>The X coordinate of the rectangle starting point</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LogoRequestDto.Y">
             <summary>The Y coordinate of the rectangle starting point</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LogoRequestDto.Width">
             <summary>The rectangle width</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LogoRequestDto.Height">
             <summary>The rectangle height</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto">
             <summary>
@@ -419,15 +527,19 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto.PublicKey">
             <summary>Public key</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto.PrivateKeyEnc">
             <summary>Private key</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto.Enable">
             <summary>Specifies whether to enable the Private Room settings or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto.Update">
             <summary>Encryption keys need to be updated or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.RoomInvitation">
             <summary>
@@ -448,12 +560,15 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.RoomInvitationRequestDto.Invitations">
             <summary>Collection of invitation parameters</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.Files.Core.ApiModels.RequestDto.RoomInvitation}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.RoomInvitationRequestDto.Notify">
             <summary>Notifies users about the shared room or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.RoomInvitationRequestDto.Message">
             <summary>Message to send when notifying about the shared room</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto">
             <summary>
@@ -461,18 +576,23 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto.FileExtension">
             <summary>File extension</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto.DownloadUri">
             <summary>URI to download a file</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto.File">
             <summary>Request file stream</summary>
+            <type>Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto.Doc">
             <summary>Shared token</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto.Forcesave">
             <summary>Specifies whether to force save a file or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto">
             <summary>
@@ -480,12 +600,39 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto.Share">
             <summary>Collection of sharing parameters</summary>
+            <type>System.Collections.Generic.IAsyncEnumIEnumerableerable{ASC.Files.Core.ApiModels.FileShareParams}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto.Notify">
             <summary>Notifies users about the shared file or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto.SharingMessage">
             <summary>Message to send when notifying about the shared file</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.RequestDto.SessionRequestDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.SessionRequestDto.FileName">
+            <summary>File name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.SessionRequestDto.FileSize">
+            <summary>File length in bytes</summary>
+            <type>System.Int64, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.SessionRequestDto.RelativePath">
+            <summary>Relative path to the folder</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.SessionRequestDto.CreateOn">
+            <summary>Creation time</summary>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.SessionRequestDto.Encrypted">
+            <summary>Specifies whether to encrypt a file or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto">
             <summary>
@@ -493,6 +640,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto.Set">
             <summary>Specifies whether to set the specified settings or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.StartEditRequestDto">
             <summary>
@@ -500,9 +648,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.StartEditRequestDto.EditingAlone">
             <summary>Specifies whether to share a file with other users for editing or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.StartEditRequestDto.Doc">
             <summary>Shared token</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.TemplatesRequestDto">
             <summary>
@@ -510,6 +660,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.TemplatesRequestDto.FileIds">
             <summary>List of file IDs</summary>
+            <type>System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyBackupRequestDto">
             <summary>
@@ -517,21 +668,27 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyBackupRequestDto.Url">
             <summary>Connection URL for the sharepoint</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyBackupRequestDto.Login">
             <summary>Login</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyBackupRequestDto.Password">
             <summary>Password</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyBackupRequestDto.Token">
             <summary>Authentication token</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyBackupRequestDto.CustomerTitle">
             <summary>Customer title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyBackupRequestDto.ProviderKey">
             <summary>Provider key</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto">
             <summary>
@@ -539,30 +696,39 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.Url">
             <summary>Connection URL for the sharepoint</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.Login">
             <summary>Login</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.Password">
             <summary>Password</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.Token">
             <summary>Authentication token</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.IsCorporate">
             <summary>Specifies if this is a corporate account or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.IsRoomsStorage">
             <summary>Specifies if this is a room storage or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.CustomerTitle">
             <summary>Customer title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.ProviderKey">
             <summary>Provider key</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.ProviderId">
             <summary>Provider ID</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.UpdateCommentRequestDto">
             <summary>
@@ -570,9 +736,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.UpdateCommentRequestDto.Version">
             <summary>File version</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.UpdateCommentRequestDto.Comment">
             <summary>Comment text</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.UpdateFileRequestDto">
             <summary>
@@ -580,9 +748,11 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.UpdateFileRequestDto.Title">
             <summary>File title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.UpdateFileRequestDto.LastVersion">
             <summary>Number of the latest file version</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.UpdateRoomRequestDto">
             <summary>
@@ -590,6 +760,43 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.UpdateRoomRequestDto.Title">
             <summary>New room name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.File">
+            <summary>File</summary>
+            <type>Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.ContentType">
+            <summary>Content-Type header</summary>
+            <type>System.Net.Mime.ContentType, System.Net.Mime</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.ContentDisposition">
+            <summary>Content-Disposition header</summary>
+            <type>System.Net.Mime.ContentDisposition, System.Net.Mime</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.Files">
+            <summary>List of files when specified as multipart/form-data</summary>
+            <type>System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Http.IFormFile}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.CreateNewIfExist">
+            <summary>Specifies whether to create a new file if it already exists or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.StoreOriginalFileFlag">
+            <summary>Specifies whether to upload documents in the original formats as well or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.KeepConvertStatus">
+            <summary>Specifies whether to keep the file converting status or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.Stream">
+            <summary>Request input stream</summary>
+            <type>System.IO.Stream, System.IO</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.UserInvintationRequestDto">
             <summary>
@@ -597,6 +804,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.UserInvintationRequestDto.UsersIds">
             <summary>List of user IDs</summary>
+            <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.WordpressSaveRequestDto">
             <summary>
@@ -604,6 +812,43 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.WordpressSaveRequestDto.Code">
             <summary>Authorization code</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.Document">
+            <summary>Document config</summary>
+            <type>ASC.Web.Files.Services.DocumentService.DocumentConfig, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.DocumentType">
+            <summary>Document type</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.EditorConfig">
+            <summary>Editor config</summary>
+            <type>ASC.Web.Files.Services.DocumentService.EditorConfiguration, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.EditorType">
+            <summary>Editor type</summary>
+            <type>ASC.Web.Files.Services.DocumentService.EditorType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.EditorUrl">
+            <summary>Editor URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.Token">
+            <summary>Token</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.Type">
+            <summary>Platform type</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.File">
+            <summary>File parameters</summary>
+            <type>ASC.Files.Core.ApiModels.ResponseDto.FileDto, ASC.Files.Core</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1">
             <summary>
@@ -612,38 +857,401 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Id">
             <summary>
-            Operation Id.
+            Operation ID
             </summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.OperationType">
             <summary>
-            Operation type.
+            Operation type
             </summary>
+            <type>ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType, ASC.Files.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Progress">
             <summary>
-            Operation progress.
+            Operation progress
             </summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Source">
             <summary>
-            Source files for operation.
+            Source file
             </summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.File">
             <summary>
-            Result file of operation.
+            Resulting file
             </summary>
+            <type>System.Object, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Error">
             <summary>
-            Error during conversation.
+            Error
             </summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Processed">
             <summary>
-            Is operation processed.
+            Specifies if the operation is processed or not
             </summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.ID">
+            <summary>File ID</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.Key">
+            <summary>Key</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.Version">
+            <summary>File version</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.VersionGroup">
+            <summary>Version group</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.User">
+            <summary>A user who updated a file</summary>
+            <type>ASC.Files.Core.EditHistoryAuthor, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.Created">
+            <summary>Creation time</summary>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.ChangesHistory">
+            <summary>History changes in the string format</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.Changes">
+            <summary>List of history changes</summary>
+            <type>System.Collections.Generic.List{ASC.Files.Core.ApiModels.ResponseDto.EditHistoryChangesWrapper}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.ServerVersion">
+            <summary>Server version</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.FolderId">
+            <summary>Folder ID</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.Version">
+            <summary>Version</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.VersionGroup">
+            <summary>Version group</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ContentLength">
+            <summary>Content length</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.PureContentLength">
+            <summary>Pure content length</summary>
+            <type>System.Nullable{System.Int64}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.FileStatus">
+            <summary>File status</summary>
+            <type>ASC.Files.Core.FileStatus, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.Mute">
+            <summary>Muted or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ViewUrl">
+            <summary>URL to view a file</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.WebUrl">
+            <summary>Web URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.FileType">
+            <summary>File type</summary>
+            <type>ASC.Web.Core.Files.FileType, ASC.Web.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.FileExst">
+            <summary>File extension</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.Comment">
+            <summary>Comment</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.Encrypted">
+            <summary>Encrypted or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ThumbnailUrl">
+            <summary>Thumbnail URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ThumbnailStatus">
+            <summary>Thumbnail status</summary>
+            <type>ASC.Files.Core.Thumbnail, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.Locked">
+            <summary>Locked or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.LockedBy">
+            <summary>User ID who locked a file</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.DenyDownload">
+            <summary>Denies file downloading or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.DenySharing">
+            <summary>Denies file sharing or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ViewAccessability">
+            <summary>File accessibility</summary>
+            <type>System.Collections.IDictionary{ASC.Files.Core.Helpers.Accessability, System.Boolean}, System.Collections</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.Title">
+            <summary>Title</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.Access">
+            <summary>Access rights</summary>
+            <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.Shared">
+            <summary>Specifies if the file is shared or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.Created">
+            <summary>Creation time</summary>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.CreatedBy">
+            <summary>Author</summary>
+            <type>ASC.Web.Api.Models.EmployeeDto, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.Updated">
+            <summary>Time of the last file update</summary>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.AutoDelete">
+            <summary>Time when the file will be automatically deleted</summary>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.RootFolderType">
+            <summary>Root folder type</summary>
+            <type>ASC.Files.Core.FolderType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.UpdatedBy">
+            <summary>A user who updated a file</summary>
+            <type>ASC.Web.Api.Models.EmployeeDto, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.ProviderItem">
+            <summary>Provider is specified or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.ProviderKey">
+            <summary>Provider key</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.ProviderId">
+            <summary>Provider ID</summary>
+            <type>System.Nullable{System.Int32}, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.Id">
+            <summary>Operation ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.OperationType">
+            <summary>Operation type</summary>
+            <type>ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.Progress">
+            <summary>Operation progress</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.Error">
+            <summary>Error</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.Processed">
+            <summary>Processing status</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.Finished">
+            <summary>Specifies if the operation is finished or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.Url">
+            <summary>URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.Files">
+            <summary>List of files</summary>
+            <type>System.Collections.Generic.List{ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto.Folders">
+            <summary>List of folders</summary>
+            <type>System.Collections.Generic.List{ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto}, System.Collections.Generic</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileShareDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileShareDto.Access">
+            <summary>Sharing rights</summary>
+            <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileShareDto.SharedTo">
+            <summary>A user who has the access to the specified file</summary>
+            <type>System.Object, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileShareDto.IsLocked">
+            <summary>Specifies if the file is locked by this user or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileShareDto.IsOwner">
+            <summary>Specifies if this user is an owner of the specified file or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileShareDto.CanEditAccess">
+            <summary>Spceifies if this user can edit the access to the specified file or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1.Files">
+            <summary>List of files</summary>
+            <type>System.Collections.Generic.List{ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1.Folders">
+            <summary>List of folders</summary>
+            <type>System.Collections.Generic.List{ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1.Current">
+            <summary>Current folder information</summary>
+            <type>ASC.Files.Core.ApiModels.ResponseDto.FolderDto, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1.PathParts">
+            <summary>Folder path</summary>
+            <type>System.Object, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1.StartIndex">
+            <summary>Folder start index</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1.Count">
+            <summary>Number of folder elements</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1.Total">
+            <summary>Total number of elements in the folder</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1.New">
+            <summary>New element index</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.ParentId">
+            <summary>Parent folder ID</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.FilesCount">
+            <summary>Number of files</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.FoldersCount">
+            <summary>Number of folders</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.IsShareable">
+            <summary>Specifies if a folder is shareable or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.IsFavorite">
+            <summary>Specifies if a folder is favorite or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.New">
+            <summary>Number for a new folder</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.Mute">
+            <summary>Specifies if a folder is muted or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.Tags">
+            <summary>List of tags</summary>
+            <type>System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.Logo">
+            <summary>Logo</summary>
+            <type>ASC.Files.Core.VirtualRooms.Logo, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.Pinned">
+            <summary>Specifies if a folder is pinned or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.RoomType">
+            <summary>Room type</summary>
+            <type>System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomType}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.Private">
+            <summary>Specifies if a folder is private or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.RoomSecurityDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.RoomSecurityDto.Members">
+            <summary>List of room members</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.Files.Core.ApiModels.ResponseDto.FileShareDto}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.RoomSecurityDto.Warning">
+            <summary>Warning</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto.Success">
+            <summary>Specifies if the operation is successful or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto.Data">
+            <summary>Data</summary>
+            <type>System.Object, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto.Message">
+            <summary>Message</summary>
+            <type>System.String, System</type>
         </member>
         <member name="M:ASC.Files.Core.IFileDao`1.InvalidateCacheAsync(`0)">
             <summary>
@@ -1196,6 +1804,70 @@
             </summary>
             <param name="entry"></param>
             <returns></returns>
+        </member>
+        <member name="T:ASC.Files.Core.EditHistoryDataDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.EditHistoryDataDto.ChangesUrl">
+            <summary>URL to the file changes</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.EditHistoryDataDto.Key">
+            <summary>Key</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.EditHistoryDataDto.Previous">
+            <summary>Previous version</summary>
+            <type>ASC.Files.Core.EditHistoryUrl, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.EditHistoryDataDto.Token">
+            <summary>Token</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.EditHistoryDataDto.Url">
+            <summary>File URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.EditHistoryDataDto.Version">
+            <summary>File version</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.EditHistoryDataDto.FileType">
+            <summary>File type</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.EntryProperties">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.EntryProperties.FormFilling">
+            <summary>Form filling properties</summary>
+            <type>ASC.Files.Core.FormFillingProperties, ASC.Files.Core</type>
+        </member>
+        <member name="T:ASC.Files.Core.FormFillingProperties">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.FormFillingProperties.CollectFillForm">
+            <summary>Specifies whether to collect the data from the filled forms or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.FormFillingProperties.ToFolderId">
+            <summary>Folder ID where a file will be saved</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.FormFillingProperties.ToFolderPath">
+            <summary>Folder path where a file will be savedt</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.FormFillingProperties.CreateFolderTitle">
+            <summary>New folder title</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.FormFillingProperties.CreateFileMask">
+            <summary>File name mask</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.Security.FileShare">
             <summary>
@@ -2437,18 +3109,105 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:ASC.Web.Files.Core.Entries.EncryptionKeyPairDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Core.Entries.EncryptionKeyPairDto.PrivateKeyEnc">
+            <summary>Private key</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Core.Entries.EncryptionKeyPairDto.PublicKey">
+            <summary>Public key</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Core.Entries.EncryptionKeyPairDto.UserId">
+            <summary>User ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Files.Services.WCFService.AceShortWrapper">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.User">
+            <summary>User</summary>
+            <type>System.String</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.Permissions">
+            <summary>User access rights to the file</summary>
+            <type>System.String</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.IsLink">
+            <summary>Specifies if the external link is available or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="T:ASC.Web.Files.Services.WCFService.MentionWrapper">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.User">
+            <summary>User information</summary>
+            <type>ASC.Core.Users.UserInfo, ASC.Core.Common</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.Email">
+            <summary>User email</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.Id">
+            <summary>User ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.HasAccess">
+            <summary>Specifies if the user has the access to the file or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.Name">
+            <summary>User display name</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="T:ASC.Web.Files.Services.WCFService.MentionMessageWrapper">
             <summary>
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.MentionMessageWrapper.ActionLink">
             <summary>The config parameter which contains the information about the comment in the document that will be scrolled to</summary>
+            <type>ASC.Web.Files.Services.DocumentService.ActionLinkConfig, ASC.Files.Core</type>
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.MentionMessageWrapper.Emails">
             <summary>A list of emails which will receive the mention message</summary>
+            <type>System.Collections.Generic.List{System.String}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.MentionMessageWrapper.Message">
             <summary>The comment message</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Files.Services.WCFService.ThirdPartyParams">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.AuthData">
+            <summary>Authentication data</summary>
+            <type>ASC.Files.Core.AuthData, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.Corporate">
+            <summary>Specifies if this is a corporate account or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.RoomsStorage">
+            <summary>Specifies if this is a room storage or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.CustomerTitle">
+            <summary>Customer title</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.ProviderId">
+            <summary>Provider ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.ProviderKey">
+            <summary>Provider key</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Web.Files.Services.DocumentService.ActionLinkConfig">
             <summary>
@@ -2466,6 +3225,78 @@
         </member>
         <member name="P:ASC.Web.Files.Services.DocumentService.ActionLinkConfig.ActionConfig.Type">
             <summary>Action type</summary>
+        </member>
+        <member name="T:ASC.Web.Files.Services.DocumentService.Configuration`1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.Document">
+            <summary>Document config</summary>
+            <type>ASC.Web.Files.Services.DocumentService.DocumentConfig, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.DocumentType">
+            <summary>Document type</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.EditorConfig">
+            <summary>Editor config</summary>
+            <type>ASC.Web.Files.Services.DocumentService.EditorConfiguration, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.EditorType">
+            <summary>Editor type</summary>
+            <type>ASC.Web.Files.Services.DocumentService.EditorType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.EditorUrl">
+            <summary>Editor URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.Token">
+            <summary>Token</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.Type">
+            <summary>Platform type</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Files.Services.DocumentService.FileReference`1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.ReferenceData">
+            <summary>File reference data</summary>
+            <type>ASC.Web.Files.Services.DocumentService.FileReferenceData, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.Error">
+            <summary>Error</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.Path">
+            <summary>Path</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.Url">
+            <summary>URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.FileType">
+            <summary>File type</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.Token">
+            <summary>Token</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Files.Services.DocumentService.FileReferenceData`1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReferenceData`1.FileKey">
+            <summary>File key</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReferenceData`1.InstanceId">
+            <summary>Instance ID</summary>
+            <type>System.String, System</type>
         </member>
     </members>
 </doc>

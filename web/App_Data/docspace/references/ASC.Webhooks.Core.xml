@@ -30,6 +30,38 @@
               Looks up a localized string similar to Start Edit Description.
             </summary>
         </member>
+        <member name="T:ASC.Webhooks.Core.Webhook">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Webhooks.Core.Webhook.Id">
+            <summary>ID</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Webhooks.Core.Webhook.Route">
+            <summary>Route</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Webhooks.Core.Webhook.Method">
+            <summary>Method</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Webhooks.Core.Webhook.Disable">
+            <summary>Specifies if a webhook is disabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Webhooks.Core.Webhook.Name">
+            <summary>Name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Webhooks.Core.Webhook.Description">
+            <summary>Description</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Webhooks.Core.Webhook.Endpoint">
+            <summary>Endpoint</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="T:ASC.Web.Webhooks.WebhookRequestReflection">
             <summary>Holder for reflection information generated from proto/webhook_request.proto</summary>
         </member>

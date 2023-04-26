@@ -10,6 +10,7 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.DarkThemeSettingsRequestDto.Theme">
             <summary>Portal theme (Base, System, or Dark)</summary>
+            <type>ASC.Web.Core.Users.DarkThemeSettingsEnum, ASC.Core.Common</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.GroupRequestDto">
             <summary>
@@ -17,12 +18,15 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.GroupRequestDto.GroupManager">
             <summary>Group manager ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.GroupRequestDto.GroupName">
             <summary>Group name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.GroupRequestDto.Members">
             <summary>List of group member IDs</summary>
+            <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.InviteUsersRequestDto">
             <summary>
@@ -30,6 +34,7 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.InviteUsersRequestDto.Invitations">
             <summary>List of user invitations</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.People.ApiModels.RequestDto.UserInvitation}, System.Collections.Generic</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.UserInvitation">
             <summary>
@@ -37,9 +42,11 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UserInvitation.Email">
             <summary>Email address</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UserInvitation.Type">
-            <summary>Employee type (All, RoomAdmin, User, DocSpaceAdmin, Collaborator)</summary>
+            <summary>Employee type</summary>
+            <type>ASC.Core.Users.EmployeeType, ASC.Core.Common</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.LinkAccountRequestDto">
             <summary>
@@ -47,6 +54,7 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.LinkAccountRequestDto.SerializedProfile">
             <summary>Third-party profile in the serialized format</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.SignupAccountRequestDto">
             <summary>
@@ -54,18 +62,23 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.SignupAccountRequestDto.EmployeeType">
             <summary>Employee type (All, RoomAdmin, User, DocSpaceAdmin, Collaborator)</summary>
+            <type>System.Nullable{ASC.Core.Users.EmployeeType}, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.SignupAccountRequestDto.FirstName">
             <summary>First name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.SignupAccountRequestDto.LastName">
             <summary>Last name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.SignupAccountRequestDto.Email">
             <summary>Email address</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.SignupAccountRequestDto.PasswordHash">
             <summary>Password hash</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.MemberRequestDto">
             <summary>
@@ -73,63 +86,83 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Type">
             <summary>Employee type (All, RoomAdmin, User, DocSpaceAdmin, Collaborator)</summary>
+            <type>ASC.Core.Users.EmployeeType, ASC.Core.Common</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.IsUser">
             <summary>Specifies if this is a guest or a user</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Email">
             <summary>Email</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Firstname">
             <summary>First name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Lastname">
             <summary>Last name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Department">
             <summary>List of user departments</summary>
+            <type>System.Guid[], System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Title">
             <summary>Title</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Location">
             <summary>Location</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Sex">
             <summary>Sex (male or female)</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Birthday">
             <summary>Birthday</summary>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Worksfrom">
             <summary>Registration date (if it is not specified, then the current date will be set)</summary>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Comment">
             <summary>Comment</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Contacts">
             <summary>List of user contacts</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.Web.Api.Models.Contact}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Files">
             <summary>Avatar photo URL</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Password">
             <summary>Password</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.PasswordHash">
             <summary>Password hash</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.FromInviteLink">
             <summary>Specifies if the user is added via the invitation link or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Key">
             <summary>Key</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.CultureName">
             <summary>Language</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.MemberRequestDto.Target">
             <summary>Target</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto">
             <summary>
@@ -137,9 +170,11 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto.UserId">
             <summary>User ID</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto.Disable">
             <summary>Specifies whether to disable a user or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto">
             <summary>
@@ -147,15 +182,19 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto.Email">
             <summary>Email address</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto.Lang">
             <summary>Language</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto.Spam">
             <summary>Specifies if the user wants to subscribe to the ONLYOFFICE newsletter or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.RegisterPersonalUserRequestDto.RecaptchaResponse">
             <summary>ReCAPTCHA response</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.SetManagerRequestDto">
             <summary>
@@ -163,6 +202,7 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.SetManagerRequestDto.UserId">
             <summary>User ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.StartReassignRequestDto">
             <summary>
@@ -170,14 +210,17 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.StartReassignRequestDto.FromUserId">
             <summary>User ID whose data will be reassigned to another user</summary>
+            <type>System.Guid, System</type>
             <example>"9924256A-739C-462b-AF15-E652A3B1B6EB"</example>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.StartReassignRequestDto.ToUserId">
             <summary>User ID to whom all the data will be reassigned</summary>
+            <type>System.Guid, System</type>
             <example>"9924256A-739C-462b-AF15-E652A3B1B6EB"</example>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.StartReassignRequestDto.DeleteProfile">
             <summary>Specifies whether to delete a profile when the data reassignment will be finished or not</summary>
+            <type>System.Boolean, System</type>
             <example>true</example>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.TerminateRequestDto">
@@ -186,6 +229,7 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.TerminateRequestDto.UserId">
             <summary>User ID whose data is reassigned/removed</summary>
+            <type>System.Guid, System</type>
             <example>"9924256A-739C-462b-AF15-E652A3B1B6EB"</example>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto">
@@ -194,18 +238,23 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto.TmpFile">
             <summary>Path to the temporary file</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto.X">
             <summary>Horizontal coordinate</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto.Y">
             <summary>Vertical coordinate</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto.Width">
             <summary>Thumbnail width</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto.Height">
             <summary>Thumbnail height</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto">
             <summary>
@@ -213,9 +262,11 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto.UserIds">
             <summary>List of user IDs</summary>
+            <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto.Quota">
             <summary>User quota</summary>
+            <type>System.Int64, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto">
             <summary>
@@ -223,11 +274,109 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto.UserIds">
             <summary>List of user IDs</summary>
+            <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
             <example>["9924256A-739C-462b-AF15-E652A3B1B6EB"]</example>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto.ResendAll">
             <summary>Specifies whether to resend invitation letters to all the users or not</summary>
+            <type>System.Boolean, System</type>
             <example>true</example>
+        </member>
+        <member name="T:ASC.People.ApiModels.ResponseDto.AccountInfoDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.AccountInfoDto.Provider">
+            <summary>Provider</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.AccountInfoDto.Url">
+            <summary>URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.AccountInfoDto.Linked">
+            <summary>Specifies if an account is linked or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.AccountInfoDto.Class">
+            <summary>Class</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.People.ApiModels.ResponseDto.FileUploadResultDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.FileUploadResultDto.Success">
+            <summary>Specifies if the operation is successful or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.FileUploadResultDto.Data">
+            <summary>Data</summary>
+            <type>System.Object, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.FileUploadResultDto.Message">
+            <summary>Message</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.People.ApiModels.ResponseDto.GroupDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.GroupDto.Description">
+            <summary>Description</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.GroupDto.Name">
+            <summary>Name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.GroupDto.Parent">
+            <summary>Parent</summary>
+            <type>System.Nullable{System.Guid}, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.GroupDto.Category">
+            <summary>Category</summary>
+            <type>System.Guid, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.GroupDto.Id">
+            <summary>ID</summary>
+            <type>System.Guid, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.GroupDto.Manager">
+            <summary>Manager</summary>
+            <type>ASC.Web.Api.Models.EmployeeDto, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.GroupDto.Members">
+            <summary>List of members</summary>
+            <type>System.Collections.Generic.List{ASC.Web.Api.Models.EmployeeDto,}, System.Collections.Generic</type>
+        </member>
+        <member name="T:ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto.Original">
+            <summary>Original photo</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto.Retina">
+            <summary>Retina</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto.Max">
+            <summary>Maximum size</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto.Big">
+            <summary>Big</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto.Medium">
+            <summary>Medium</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto.Small">
+            <summary>Small</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.People.Api.ApiControllerBase">
             <summary>
@@ -302,7 +451,7 @@
             <param type="ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto, ASC.People" name="inDto">Thumbnail request parameters</param>
             <path>api/2.0/people/{userid}/photo/thumbnails</path>
             <httpMethod>POST</httpMethod>
-            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People">Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People">Thumbnail parameters</returns>
         </member>
         <member name="M:ASC.People.Api.PhotoController.DeleteMemberPhoto(System.String)">
             <summary>
@@ -356,7 +505,7 @@
             <param type="Microsoft.AspNetCore.Http.IFormCollection, Microsoft.AspNetCore.Http" name="formCollection">Image data</param>
             <path>api/2.0/people/{userid}/photo</path>
             <httpMethod>POST</httpMethod>
-            <returns type="ASC.People.ApiModels.ResponseDto.FileUploadResultDto, ASC.People">Result of file uploading: success or not, data, message</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.FileUploadResultDto, ASC.People">Result of file uploading</returns>
         </member>
         <member name="M:ASC.People.Api.ReassignController.GetReassignProgress(System.Guid)">
             <summary>
@@ -365,7 +514,7 @@
             <short>Get the reassignment progress</short>
             <param type="System.Guid, System" name="userId">User ID whose data is reassigned</param>
             <category>User data</category>
-            <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassignment progress: reassignment item progress ID, status, exception, percentage, completed or not, the user whose data is reassigned, the user to whom this data is reassigned</returns>
+            <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassignment progress</returns>
             <path>api/2.0/people/reassign/progress</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -376,7 +525,7 @@
             <short>Start the data reassignment</short>
             <param type="ASC.People.ApiModels.RequestDto.StartReassignRequestDto, ASC.People" name="inDto">Request parameters for starting the reassignment process</param>
             <category>User data</category>
-            <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassignment progress: reassignment item progress ID, status, exception, percentage, completed or not, the user whose data is reassigned, the user to whom this data is reassigned</returns>
+            <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassignment progress</returns>
             <path>api/2.0/people/reassign/start</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -398,7 +547,7 @@
             <short>Get the deletion progress</short>
             <param type="System.Guid, System" name="userId">User ID</param>
             <category>User data</category>
-            <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Deletion progress: deletion item progress ID, status, exception, percentage, completed or not, the user whose data is deleted</returns>
+            <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Deletion progress</returns>
             <path>api/2.0/people/remove/progress</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -421,7 +570,7 @@
             <short>Start the data deletion</short>
             <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People" name="inDto">Request parameters for starting the deletion process</param>
             <category>User data</category>
-            <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Deletion progress: deletion item progress ID, status, exception, percentage, completed or not, the user whose data is deleted</returns>
+            <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Deletion progress</returns>
             <path>api/2.0/people/remove/start</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -446,7 +595,7 @@
             <param type="System.Boolean, System" name="settingsView">Specifies whether to return URLs in the format that is used on the Settings page</param>
             <param type="System.String, System" name="clientCallback">Method that is called after authorization</param>
             <param type="System.String, System" name="fromOnly">Provider name if the response only from this provider is needed</param>
-            <returns type="System.Collections.Generic.ICollection{ASC.People.ApiModels.ResponseDto.AccountInfoDto}, System.Collections.Generic">List of third-party accounts: provider, URL, linked or not</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.AccountInfoDto, ASC.People">List of third-party accounts</returns>
             <path>api/2.0/people/thirdparty/providers</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
@@ -501,7 +650,7 @@
             </short>
             <category>Profiles</category>
             <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People" name="inDto">Member request parameters</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Newly added user with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Newly added user with the detailed information</returns>
             <path>api/2.0/people/active</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -514,7 +663,7 @@
             </short>
             <category>Profiles</category>
             <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People" name="inDto">Member request parameters</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Newly added user with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Newly added user with the detailed information</returns>
             <path>api/2.0/people</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -527,7 +676,7 @@
             </short>
             <category>Profiles</category>
             <param type="ASC.People.ApiModels.RequestDto.InviteUsersRequestDto, ASC.People" name="inDto">Request parameters for inviting users</param>
-            <returns type="System.Collections.Generic.List{ASC.Web.Api.Models.EmployeeDto}, System.Collections.Generic">List of users</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeDto, ASC.Api.Core">List of users</returns>
             <path>api/2.0/people/invite</path>
             <httpMethod>POST</httpMethod>
             <collection>list</collection>
@@ -540,7 +689,7 @@
             <category>Password</category>
             <param type="System.Guid, System" method="url" name="userid">User ID</param>
             <param type="ASC.People.ApiModels.RequestDto.MemberRequestDto, ASC.People" name="inDto">Request parameters for setting new password</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed user information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Detailed user information</returns>
             <path>api/2.0/people/{userid}/password</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -553,7 +702,7 @@
             </short>
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Deleted user detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Deleted user detailed information</returns>
             <path>api/2.0/people/{userid}</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -565,7 +714,7 @@
             Delete my profile
             </short>
             <category>Profiles</category>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed information about my profile</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Detailed information about my profile</returns>
             <path>api/2.0/people/@self</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -579,7 +728,7 @@
             <category>Search</category>
             <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Common" method="url" name="status">User status</param>
             <param type="System.String, System" name="query">Search query</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/status/{status}/search</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -592,7 +741,7 @@
             Get profiles
             </short>
             <category>Profiles</category>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -606,7 +755,7 @@
             </short>
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="email">User email address</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed profile information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Detailed profile information</returns>
             <path>api/2.0/people/email</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -619,7 +768,7 @@
             </short>
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="username">User name</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed profile information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Detailed profile information</returns>
             <path>api/2.0/people/{username}</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -631,7 +780,7 @@
             Get profiles by status
             </short>
             <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Common" method="url" name="status">User status</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <category>User status</category>
             <path>api/2.0/people/status/{status}</path>
             <httpMethod>GET</httpMethod>
@@ -651,7 +800,7 @@
             <param type="System.Nullable{ASC.Core.Users.EmployeeType}, System" name="employeeType">User type</param>
             <param type="System.Nullable{System.Boolean}, System" name="isAdministrator">Specifies if the user is an administrator or not</param>
             <param type="System.Nullable{ASC.Core.Payments}, System" name="payments">User payment status</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/filter</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -662,7 +811,7 @@
             </summary>
             <short>Get the People information</short>
             <category>Module</category>
-            <returns type="ASC.Api.Core.Module, ASC.Api.Core">Module information: ID, product class name, title, description, icon URL, large icon URL, start URL, primary or nor, help URL</returns>
+            <returns type="ASC.Api.Core.Module, ASC.Api.Core">Module information</returns>
             <path>api/2.0/people/info</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -673,7 +822,7 @@
             <short>Search users (using query parameters)</short>
             <category>Search</category>
             <param type="System.String, System" name="query">Search query</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeDto}, System.Collections.Generic">List of users</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeDto, ASC.Api.Core">List of users</returns>
             <path>api/2.0/people/search</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -685,7 +834,7 @@
             <short>Search users</short>
             <category>Search</category>
             <param type="System.String, System" method="url" name="query">Search query</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/@search/{query}</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -704,7 +853,7 @@
             <param type="System.Nullable{ASC.Core.Users.EmployeeType}, System" name="employeeType">User type</param>
             <param type="System.Nullable{System.Boolean}, System" name="isAdministrator">Specifies if the user is an administrator or not</param>
             <param type="System.Nullable{ASC.Core.Payments}, System" name="payments">User payment status</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeDto}, System.Collections.Generic">List of users</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeDto, ASC.Api.Core">List of users</returns>
             <path>api/2.0/people/simple/filter</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -732,7 +881,7 @@
             </short>
             <category>Profiles</category>
             <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating portal users</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/delete</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
@@ -746,7 +895,7 @@
             </short>
             <category>Profiles</category>
             <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating portal users</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/invite</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
@@ -784,7 +933,7 @@
             Get my profile
             </short>
             <category>Profiles</category>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed information about my profile</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Detailed information about my profile</returns>
             <path>api/2.0/people/@self</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -825,7 +974,7 @@
             <category>User status</category>
             <param type="ASC.Core.Users.EmployeeActivationStatus, ASC.Core.Common" method="url" name="activationstatus">Activation status</param>
             <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/activationstatus/{activationstatus}</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
@@ -840,7 +989,7 @@
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
             <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Detailed user information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Detailed user information</returns>
             <path>api/2.0/people/{userid}/culture</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -854,7 +1003,7 @@
             <category>Profiles</category>
             <param type="System.String, System" method="url" name="userid">User ID</param>
             <param type="ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto, ASC.People" name="inDto">Member request parameters</param>
-            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Web.Api">Updated user with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Updated user with the detailed information</returns>
             <path>api/2.0/people/{userid}</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -868,7 +1017,7 @@
             <category>User status</category>
             <param type="ASC.Core.Users.EmployeeStatus, ASC.Core.Common" method="url" name="status">New user status</param>
             <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/status/{status}</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
@@ -883,7 +1032,7 @@
             <category>User type</category>
             <param type="ASC.Core.Users.EmployeeType, ASC.Core.Common" method="url" name="type">New user type</param>
             <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/type/{type}</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
@@ -921,7 +1070,7 @@
             </short>
             <category>Quota</category>
             <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.Web.Api.Models.EmployeeFullDto}, System.Collections.Generic">List of users with the detailed information</returns>
+            <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/quota</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
@@ -995,7 +1144,7 @@
             <short>
             Get groups
             </short>
-            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.Models.GroupSummaryDto}, System.Collections.Generic">List of groups: ID, name, manager</returns>
+            <returns type="ASC.Web.Api.Models.GroupSummaryDto, ASC.Api.Core">List of groups</returns>
             <remarks>
             This method returns partial group information.
             </remarks>
@@ -1010,7 +1159,7 @@
             <short>
             Get groups information
             </short>
-            <returns type="System.Collections.Generic.IAsyncEnumerable{ASC.People.ApiModels.ResponseDto.GroupDto}, System.Collections.Generic">List of groups with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">List of groups with the following parameters</returns>
             <remarks>
             This method returns full group information.
             </remarks>
@@ -1026,7 +1175,7 @@
             Get groups by a group name
             </short>
             <param type="System.String, System" name="groupName">Group name</param>
-            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.Models.GroupSummaryDto}, System.Collections.Generic">List of groups: ID, name, manager</returns>
+            <returns type="ASC.Web.Api.Models.GroupSummaryDto, ASC.Api.Core">List of groups</returns>
             <path>api/2.0/group/search</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -1039,7 +1188,7 @@
             Get a group
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
             <remarks>
             This method returns full group information.
             </remarks>
@@ -1054,7 +1203,7 @@
             Get user groups
             </short>
             <param type="System.Guid, System" method="url" name="userid">User ID</param>
-            <returns type="System.Collections.Generic.IEnumerable{ASC.Web.Api.Models.GroupSummaryDto}, System.Collections.Generic">List of groups: ID, name, manager</returns>
+            <returns type="ASC.Web.Api.Models.GroupSummaryDto, ASC.Api.Core">List of groups</returns>
             <path>api/2.0/group/user/{userid}</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -1067,7 +1216,7 @@
             Add a new group
             </short>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Newly created group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Newly created group with the following parameters</returns>
             <path>api/2.0/group</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1080,7 +1229,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Updated group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Updated group with the following parameters</returns>
             <path>api/2.0/group/{groupid}</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1092,7 +1241,7 @@
             Delete a group
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
             <path>api/2.0/group/{groupid}</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -1105,7 +1254,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID to move from</param>
             <param type="System.Guid, System" method="url" name="newgroupid">Group ID to move to</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
             <path>api/2.0/group/{groupid}/members/{newgroupid}</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1118,7 +1267,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
             <path>api/2.0/group/{groupid}/members</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -1131,7 +1280,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
             <path>api/2.0/group/{groupid}/members</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1144,7 +1293,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.SetManagerRequestDto, ASC.People" name="inDto">Request parameters for setting a group manager</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
             <path>api/2.0/group/{groupid}/manager</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -1157,7 +1306,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="groupid">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters: description, name, category, parent, ID, manager, members</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
             <path>api/2.0/group/{groupid}/members</path>
             <httpMethod>DELETE</httpMethod>
         </member>

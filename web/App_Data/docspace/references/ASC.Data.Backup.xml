@@ -10,10 +10,12 @@
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupDto.StorageType">
             <summary>Storage type</summary>
+            <type>System.String, System</type>
             <example>"Documents"</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupDto.StorageParams">
             <summary>Storage parameters</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Object, System.Object}}, System.Collections.Generic</type>
             <example>[{"Key": "some text", "Value": "some text"}]</example>
         </member>
         <member name="T:ASC.Data.Backup.ApiModels.BackupRestoreDto">
@@ -22,17 +24,21 @@
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupRestoreDto.BackupId">
             <summary>Backup ID</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupRestoreDto.StorageType">
             <summary>Storage type</summary>
+            <type>System.Object, System</type>
             <example>"Documents"</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupRestoreDto.StorageParams">
             <summary>Storage parameters</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Object, System.Object}}, System.Collections.Generic</type>
             <example>[{"Key": "some text", "Value": "some text"}]</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupRestoreDto.Notify">
             <summary>Notifies users about portal restoring process or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Data.Backup.ApiModels.BackupScheduleDto">
             <summary>
@@ -40,17 +46,21 @@
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.StorageType">
             <summary>Storage type</summary>
+            <type>System.String, System</type>
             <example>"Documents"</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.StorageParams">
             <summary>Storage parameters</summary>
+            <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Object, System.Object}}, System.Collections.Generic</type>
             <example>[{"Key": "some text", "Value": "some text"}]</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.BackupsStored">
             <summary>Maximum number of the stored backup copies</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.CronParams">
             <summary>Cron parameters</summary>
+            <type>ASC.Data.Backup.ApiModels.Cron, ASC.Data.Backup</type>
         </member>
         <member name="T:ASC.Data.Backup.ApiModels.Cron">
             <summary>
@@ -58,15 +68,18 @@
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.Cron.Period">
             <summary>Period</summary>
-            <example>0</example>
+            <type>System.String, System</type>
+            <example>"0"</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.Cron.Hour">
             <summary>Hour</summary>
-            <example>0</example>
+            <type>System.String, System</type>
+            <example>"0"</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.Cron.Day">
             <summary>Day</summary>
-            <example>0</example>
+            <type>System.String, System</type>
+            <example>"0"</example>
         </member>
         <member name="T:ASC.Data.Backup.Controllers.BackupController">
             <summary>
@@ -79,7 +92,7 @@
             Returns the backup schedule of the current portal.
             </summary>
             <short>Get the backup schedule</short>
-            <returns type="ASC.Data.Backup.BackupAjaxHandler.Schedule, ASC.Data.Backup">Backup schedule: storage type, storage parameters, cron parameters, maximum number of the stored backup copies, last backup creation time</returns>
+            <returns type="ASC.Data.Backup.BackupAjaxHandler.Schedule, ASC.Data.Backup">Backup schedule</returns>
             <httpMethod>GET</httpMethod>
             <path>api/2.0/backup/getbackupschedule</path>
         </member>
@@ -126,7 +139,7 @@
             Returns the history of the started backup.
             </summary>
             <short>Get the backup history</short>
-            <returns type="System.Collections.Generic.List{ASC.Data.Backup.Contracts.BackupHistoryRecord}, System.Collections.Generic">List of backup history records: backup ID, file name, storage type, creation date, expiration date</returns>
+            <returns type="ASC.Data.Backup.Contracts.BackupHistoryRecord, ASC.Data.Backup.Core">List of backup history records</returns>
             <httpMethod>GET</httpMethod>
             <path>api/2.0/backup/getbackuphistory</path>
             <collection>list</collection>

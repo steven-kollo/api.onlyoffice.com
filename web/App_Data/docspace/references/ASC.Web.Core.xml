@@ -1953,7 +1953,7 @@
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.TariffsFeature_used_manager">
             <summary>
-              Looks up a localized string similar to Admins added:.
+              Looks up a localized string similar to Number of admins/power users:.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.TariffsFeature_used_room">
@@ -2562,14 +2562,12 @@
             
             Your current tariff plan is STARTUP. It is absolutely free and includes:
             
-            * 1 manager
+            * 1 admin, 2 power users
             * Up to 12 rooms
-            * Up to 3 users in each room
+            * Unlimited number of users in each room
             * 2 GB disk space
             
-            Enjoy a new way of document collaboration!
-            
-            Truly  [rest of string was truncated]&quot;;.
+            Enjoy a new way of document [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_admin_user_apps_tips_v1">
@@ -2677,14 +2675,12 @@
             
             Your current tariff plan is STARTUP. It is absolutely free and includes:
             
-            * 1 manager
+            * 1 admin, 2 power users
             * Up to 12 rooms
-            * Up to 3 users in each room
+            * Unlimited number of users in each room
             * 2 GB disk space
             
-            Enjoy a new way of document collaboration!
-            
-            Truly  [rest of string was truncated]&quot;;.
+            Enjoy a new way of document [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_whitelabel_admin_welcome_v1">
@@ -2915,14 +2911,12 @@
             
             Your current tariff plan is STARTUP. It is absolutely free and includes:
             
-            * 1 manager
+            * 1 admin, 2 power users
             * Up to 12 rooms
-            * Up to 3 users in each room
+            * Unlimited number of users in each room
             * 2 GB disk space
             
-            Enjoy a new way of document collaboration!
-            
-            Truly  [rest of string was truncated]&quot;;.
+            Enjoy a new way of document [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_opensource_admin_docs_tips_v1">
@@ -3402,14 +3396,12 @@
             
             Your current tariff plan is STARTUP. It is absolutely free and includes:
             
-            * 1 manager
+            * 1 admin, 2 power users
             * Up to 12 rooms
-            * Up to 3 users in each room
+            * Unlimited number of users in each room
             * 2 GB disk space
             
-            Enjoy a new way of document collaboration!
-            
-            Truly  [rest of string was truncated]&quot;;.
+            Enjoy a new way of document [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_saas_admin_modules_v1">
@@ -4211,25 +4203,41 @@
         <member name="F:ASC.Web.Core.Users.UserPhotoManagerCacheItem.TenantIdFieldNumber">
             <summary>Field number for the "tenant_id" field.</summary>
         </member>
-        <member name="P:ASC.Web.Core.Utility.PasswordSettings.MinLength">
+        <member name="T:ASC.Web.Core.Utility.PasswordSettings">
             <summary>
-            Minimal length password has
             </summary>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.PasswordSettings.MinLength">
+            <summary>Minimum password length</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.PasswordSettings.AllowedCharactersRegexStr">
+            <summary>Allowed characters for the password in the regex string format</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.Utility.PasswordSettings.UpperCase">
-            <summary>
-            Password must contains upper case
-            </summary>
+            <summary>Specifies if the password must include the uppercase letters or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Core.Utility.PasswordSettings.Digits">
-            <summary>
-            Password must contains digits
-            </summary>
+            <summary>Specifies if the password must include the digits or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.PasswordSettings.DigitsRegexStr">
+            <summary>Allowed digits for the password in the regex string format</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.PasswordSettings.UpperCaseRegexStr">
+            <summary>Allowed uppercase letters for the password in the regex string format</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.Utility.PasswordSettings.SpecSymbols">
-            <summary>
-            Password must contains special symbols
-            </summary>
+            <summary>Specifies if the password must include the special symbols or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.PasswordSettings.SpecSymbolsRegexStr">
+            <summary>Allowed special symbols for the password in the regex string format</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsItem">
             <summary>
@@ -4237,15 +4245,19 @@
         </member>
         <member name="P:ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsItem.Id">
             <summary>Theme ID</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsItem.Name">
             <summary>Theme name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsItem.Main">
             <summary>Main colors</summary>
+            <type>ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem, ASC.Web.Core</type>
         </member>
         <member name="P:ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsItem.Text">
             <summary>Text colors</summary>
+            <type>ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem, ASC.Web.Core</type>
         </member>
         <member name="T:ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem">
             <summary>
@@ -4253,9 +4265,19 @@
         </member>
         <member name="P:ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem.Accent">
             <summary>Accent color</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem.Buttons">
             <summary>Button color</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Core.Utility.Settings.WizardSettings">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.Settings.WizardSettings.Completed">
+            <summary>Specifies if the Wizard settings are completed or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper">
             <summary>
@@ -4263,6 +4285,7 @@
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper.Settings">
             <summary>Additional white label settings</summary>
+            <type>ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core</type>
         </member>
         <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings">
             <summary>
@@ -4270,42 +4293,83 @@
         </member>
         <member name="F:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.AdditionalWhiteLabelSettingsHelper">
             <summary>Additional white label settings helper</summary>
+            <type>ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit, ASC.Web.Core</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.StartDocsEnabled">
             <summary>Specifies if the start document is enabled or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.HelpCenterEnabled">
             <summary>Specifies if the help center is enabled or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.FeedbackAndSupportEnabled">
             <summary>Specifies if feedback and support are available or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.FeedbackAndSupportUrl">
             <summary>Feedback and support URL</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.UserForumEnabled">
             <summary>Specifies if the user forum is enabled or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.UserForumUrl">
             <summary>User forum URL</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.VideoGuidesEnabled">
             <summary>Specifies if the video guides are enabled or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.VideoGuidesUrl">
             <summary>Video guides URL</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.SalesEmail">
             <summary>Sales email</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.BuyUrl">
             <summary>URL to pay for the portal</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.LicenseAgreementsEnabled">
             <summary>Specifies if the license agreements are enabled or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.LicenseAgreementsUrl">
             <summary>License agreements URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultHelpCenterUrl">
+            <summary>Default help center URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultFeedbackAndSupportUrl">
+            <summary>Default feedback and support URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultUserForumUrl">
+            <summary>Default user forum URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultVideoGuidesUrl">
+            <summary>Default video guides URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultMailSalesEmail">
+            <summary>Mail sales URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultBuyUrl">
+            <summary>Default URL to pay for the portal</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper">
             <summary>
@@ -4313,6 +4377,7 @@
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper.Settings">
             <summary>Company white label settings</summary>
+            <type>ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings, ASC.Web.Core</type>
         </member>
         <member name="T:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings">
             <summary>
@@ -4320,24 +4385,31 @@
         </member>
         <member name="F:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.CoreSettings">
             <summary>Core settings</summary>
+            <type>ASC.Core.CoreSettings, ASC.Core.Common</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.CompanyName">
             <summary>Company name</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Site">
             <summary>Site</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Email">
             <summary>Email address</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Address">
             <summary>Address</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Phone">
             <summary>Phone</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.IsLicensor">
-            <summary>Licensor or not</summary>
+            <summary>Specifies if a company is a licensor or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="M:ASC.Web.Core.WhiteLabel.TenantInfoSettingsHelper.GetStorageLogoData(ASC.Web.Core.WhiteLabel.TenantInfoSettings)">
             <summary>
@@ -4390,36 +4462,203 @@
         <member name="F:ASC.Web.Core.WebItemSecurityNotifier.TenantFieldNumber">
             <summary>Field number for the "tenant" field.</summary>
         </member>
+        <member name="T:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.EnableSso">
+            <summary>Specifies if SSO is enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.IdpSettings">
+            <summary>IDP settings</summary>
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings, ASC.Web.Core</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.IdpCertificates">
+            <summary>List of IDP certificates</summary>
+            <type>System.Collections.Generic.List{ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.IdpCertificateAdvanced">
+            <summary>IDP advanced certificate</summary>
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced, ASC.Web.Core</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.SpLoginLabel">
+            <summary>SP login label</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.SpCertificates">
+            <summary>List of SP certificates</summary>
+            <type>System.Collections.Generic.List{ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.SpCertificateAdvanced">
+            <summary>SP advanced certificate</summary>
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced, ASC.Web.Core</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.FieldMapping">
+            <summary>Field mapping</summary>
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoFieldMapping, ASC.Web.Core</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.HideAuthPage">
+            <summary>Specifies if the authentication page will be hidden or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="T:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.EntityId">
+            <summary>Entity ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.SsoUrl">
+            <summary>SSO URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.SsoBinding">
+            <summary>SSO binding</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.SloUrl">
+            <summary>SLO URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.SloBinding">
+            <summary>SLO binding</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.NameIdFormat">
+            <summary>Name ID format</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.SelfSigned">
+            <summary>Specifies if a certificate is self-signed or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.Crt">
+            <summary>Certificate</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.Key">
+            <summary>Key</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.Action">
+            <summary>Action</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.DomainName">
+            <summary>Domain name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.StartDate">
+            <summary>Start date</summary>
+            <type>System.DateTime, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.ExpiredDate">
+            <summary>Expiration date</summary>
+            <type>System.DateTime, System</type>
+        </member>
+        <member name="T:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.VerifyAlgorithm">
+            <summary>Verification algorithm</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.VerifyAuthResponsesSign">
+            <summary>Specifies if the signatures of the SAML authentication responses sent to SP will be verified or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.VerifyLogoutRequestsSign">
+            <summary>Specifies if the signatures of the SAML logout requests sent to SP will be verified or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.VerifyLogoutResponsesSign">
+            <summary>Specifies if the signatures of the SAML logout responses sent to SP will be verified or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.DecryptAlgorithm">
+            <summary>Decryption algorithm</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.DecryptAssertions">
+            <summary>Specifies if the assertions will be decrypted or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="T:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.SigningAlgorithm">
+            <summary>Signing algorithm</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.SignAuthRequests">
+            <summary>Specifies if SP will sign the SAML authentication requests sent to IdP or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.SignLogoutRequests">
+            <summary>Specifies if SP will sign the SAML logout requests sent to IdP or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.SignLogoutResponses">
+            <summary>Specifies if sign the SAML logout responses sent to IdP or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.EncryptAlgorithm">
+            <summary>Encryption algorithm</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.DecryptAlgorithm">
+            <summary>Decryption algorithm</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.EncryptAssertions">
+            <summary>Specifies if the assertions will be encrypted or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
         <member name="T:ASC.Web.Studio.Core.CustomNavigationItem">
             <summary>
             </summary>
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.Id">
             <summary>ID</summary>
+            <type>System.Guid, System</type>
             <exammple>"00000000-0000-0000-0000-000000000000"</exammple>
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.Label">
             <summary>Label</summary>
+            <type>System.String, System</type>
             <exammple>"Label"</exammple>
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.Url">
             <summary>URL</summary>
+            <type>System.String, System</type>
             <exammple>"Url"</exammple>
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.BigImg">
             <summary>Big image</summary>
+            <type>System.String, System</type>
             <exammple>"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAADFBMVEUAAADJycnJycnJycmiuNtHAAAAA3RSTlMAf4C\\/aSLHAAAAyElEQVR4Xu3NsQ3CMBSE4YubFB4ilHQegdGSjWACvEpGoEyBYiL05AdnXUGHolx10lf82MmOpfLeo5UoJUhBlpKkRCnhUy7b9XCWkqQMUkYlXVHSf8kTvkHKqKQrSnopg5SRxTMklLmS1MwaSWpmCSQ1MyOzWGZCYrEMEFksA4QqlAFuJJYBcCKxjM3FMySeIfEMC2dMOONCGZZgmdr1ly3TSrJMK9EyJBaaGrHQikYstAiJZRYSyiQEdyg5S8Evckih\\/YPscsdej0H6dc0TYw4AAAAASUVORK5CYII="</exammple>
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.SmallImg">
             <summary>Small image</summary>
+            <type>System.String, System</type>
             <exammple>"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\\/9hAAAAUUlEQVR4AWMY\\/KC5o\\/cAEP9HxxgKcSpCGELYADyu2E6mAQjNxBlAWPNxkHdwGkBIM3KYYDUAr2ZCAE+oH8eujrAXDsA0k2EAAtDXAGLx4MpsADUgvkRKUlqfAAAAAElFTkSuQmCC"</exammple>
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.ShowInMenu">
             <summary>Show in menu or not</summary>
+            <type>System.Boolean, System</type>
             <exammple>true</exammple>
         </member>
         <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.ShowOnHomePage">
             <summary>Show on home page or not</summary>
+            <type>System.Boolean, System</type>
             <exammple>true</exammple>
         </member>
         <member name="T:ASC.Web.Studio.Core.EmailActivationSettings">
@@ -4428,6 +4667,7 @@
         </member>
         <member name="P:ASC.Web.Studio.Core.EmailActivationSettings.Show">
             <summary>Shown or hidden</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Studio.Core.FileSizeComment.FileSizeException">
             <summary>
@@ -4479,6 +4719,14 @@
             <summary>
             Max possible file size for not chunked upload. Less or equal than 100 mb.
             </summary>
+        </member>
+        <member name="T:ASC.Web.Studio.Core.TipsSettings">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.TipsSettings.Show">
+            <summary>Specifies if the tips will be shown or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Studio.Utility.TenantExtra.MaxUploadSize">
             <summary>

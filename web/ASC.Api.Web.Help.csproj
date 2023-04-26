@@ -1937,8 +1937,15 @@
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
     <Content Include="App_Data\docspace\class_descriptions.xml" />
+    <Content Include="App_Data\docspace\references\ASC.Core.Common.xml" />
+    <Content Include="App_Data\docspace\references\ASC.Data.Backup.xml" />
+    <Content Include="App_Data\docspace\references\ASC.Data.Reassigns.xml" />
+    <Content Include="App_Data\docspace\references\ASC.Files.Core.xml" />
     <Content Include="App_Data\docspace\references\ASC.Files.xml" />
+    <Content Include="App_Data\docspace\references\ASC.People.xml" />
     <Content Include="App_Data\docspace\references\ASC.Web.Api.xml" />
+    <Content Include="App_Data\docspace\references\ASC.Web.Core.xml" />
+    <Content Include="App_Data\docspace\references\ASC.Webhooks.Core.xml" />
     <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
     <Content Include="App_Data\editor\DotNet %28Csharp%29 Example.zip" />
     <Content Include="App_Data\editor\Java Example.zip" />
