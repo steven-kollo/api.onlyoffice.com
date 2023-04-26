@@ -307,7 +307,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [DataMember(Name = "assembly")]
         public string Assembly { get; set; }
 
-        public Dictionary<string, string> Dto { get; set; }
+        public List<MsDocEntryPointMethodParams> Dto { get; set; }
     }
 
     public class MsDocDocumentGenerator
@@ -455,7 +455,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             }
         }
 
-        private Dictionary<string, string> ExpandDto(string type, string file)
+        private List<MsDocEntryPointMethodParams> ExpandDto(string type, string file)
         {
             var xml = Path.Combine(_basePath, file + ".xml");
             if (!File.Exists(xml)) return null;
@@ -463,7 +463,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
             var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
-            Dictionary<string, string> result = new Dictionary<string, string>();
+            var result = new List<MsDocEntryPointMethodParams>();
             if (inherited != null && inherited.Element("inherited") != null)
             {
                 var split = inherited.Element("inherited").ValueOrNull().Split(',');
@@ -474,7 +474,18 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 var name = member.Attribute("name").ValueOrNull();
                 if (!string.IsNullOrWhiteSpace(name)) {
-                    result.Add(name.Split('.').Last(), member.Element("summary").ValueOrNull());
+                    var param = new MsDocEntryPointMethodParams()
+                    {
+                        Name = name.Split('.').Last(),
+                        Description = member.Element("summary").ValueOrNull(),
+                        Type = member.Element("type").ValueOrNull(),
+                        Visible = true
+                    };
+                    if (!string.IsNullOrWhiteSpace(param.Type))
+                    {
+                        param.Type = param.Type.Split(',').First();
+                    }
+                    result.Add(param);
                 }
             }
 
