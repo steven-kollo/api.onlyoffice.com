@@ -211,12 +211,12 @@
         <member name="P:ASC.People.ApiModels.RequestDto.StartReassignRequestDto.FromUserId">
             <summary>User ID whose data will be reassigned to another user</summary>
             <type>System.Guid, System</type>
-            <example>"9924256A-739C-462b-AF15-E652A3B1B6EB"</example>
+            <example>9924256A-739C-462b-AF15-E652A3B1B6EB</example>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.StartReassignRequestDto.ToUserId">
             <summary>User ID to whom all the data will be reassigned</summary>
             <type>System.Guid, System</type>
-            <example>"9924256A-739C-462b-AF15-E652A3B1B6EB"</example>
+            <example>9924256A-739C-462b-AF15-E652A3B1B6EB</example>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.StartReassignRequestDto.DeleteProfile">
             <summary>Specifies whether to delete a profile when the data reassignment will be finished or not</summary>
@@ -230,7 +230,7 @@
         <member name="P:ASC.People.ApiModels.RequestDto.TerminateRequestDto.UserId">
             <summary>User ID whose data is reassigned/removed</summary>
             <type>System.Guid, System</type>
-            <example>"9924256A-739C-462b-AF15-E652A3B1B6EB"</example>
+            <example>9924256A-739C-462b-AF15-E652A3B1B6EB</example>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.ThumbnailsRequestDto">
             <summary>
@@ -275,7 +275,8 @@
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto.UserIds">
             <summary>List of user IDs</summary>
             <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
-            <example>["9924256A-739C-462b-AF15-E652A3B1B6EB"]</example>
+            <example>9924256A-739C-462b-AF15-E652A3B1B6EB</example>
+            <collection>list</collection>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto.ResendAll">
             <summary>Specifies whether to resend invitation letters to all the users or not</summary>

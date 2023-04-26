@@ -319,7 +319,7 @@
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.Id">
             <summary>User ID</summary>
             <type>System.Nullable{System.Guid}, System</type>
-            <example>"9924256A-739C-462b-AF15-E652A3B1B6EB"</example>
+            <example>9924256A-739C-462b-AF15-E652A3B1B6EB</example>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.TrustedIps">
             <summary>List of trusted IP addresses</summary>
@@ -328,12 +328,14 @@
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.MandatoryUsers">
             <summary>List of users who must use the TFA verification</summary>
             <type>System.Collections.Generic.List{System.Guid}, System.Collections.Generic</type>
-            <example>["9924256A-739C-462b-AF15-E652A3B1B6EB"]</example>
+            <example>9924256A-739C-462b-AF15-E652A3B1B6EB</example>
+            <collection>list</collection>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto.MandatoryGroups">
             <summary>List of groups who must use the TFA verification</summary>
             <type>System.Collections.Generic.List{System.Guid}, System.Collections.Generic</type>
-            <example>["9924256A-739C-462b-AF15-E652A3B1B6EB"]</example>
+            <example>9924256A-739C-462b-AF15-E652A3B1B6EB</example>
+            <collection>list</collection>
         </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto">
             <summary>
@@ -422,12 +424,12 @@
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto.Subjects">
             <summary>List of user/group IDs with the access to the module</summary>
             <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
-            <example>["9924256A-739C-462b-AF15-E652A3B1B6EB"]</example>
+            <example>9924256A-739C-462b-AF15-E652A3B1B6EB</example>
+            <collection>list</collection>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto.Items">
             <summary>Products with security information</summary>
             <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.Boolean}}, System.Collections.Generic</type>
-            <example>[{"Key": "one", "Value": true}]</example>
         </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto">
             <summary>
@@ -936,7 +938,7 @@
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.Host">
             <summary>Host</summary>
             <type>System.String, System</type>
-            <example>"mail.example.com"</example>
+            <example>mail.example.com</example>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.Port">
             <summary>Port</summary>
@@ -946,22 +948,22 @@
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.SenderAddress">
             <summary>Sender address</summary>
             <type>System.String, System</type>
-            <example>"notify@example.com"</example>
+            <example>notify@example.com</example>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.SenderDisplayName">
             <summary>Sender display name</summary>
             <type>System.String, System</type>
-            <example>"Postman"</example>
+            <example>Postman</example>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.CredentialsUserName">
             <summary>Credentials username</summary>
             <type>System.String, System</type>
-            <example>"notify@example.com"</example>
+            <example>notify@example.com</example>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.CredentialsUserPassword">
             <summary>Credentials user password</summary>
             <type>System.String, System</type>
-            <example>"{password}"</example>
+            <example>{password}</example>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.EnableSSL">
             <summary>Enables SSL or not</summary>

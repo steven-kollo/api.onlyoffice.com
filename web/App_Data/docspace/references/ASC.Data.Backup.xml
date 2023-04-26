@@ -11,12 +11,11 @@
         <member name="P:ASC.Data.Backup.ApiModels.BackupDto.StorageType">
             <summary>Storage type</summary>
             <type>System.String, System</type>
-            <example>"Documents"</example>
+            <example>Documents</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupDto.StorageParams">
             <summary>Storage parameters</summary>
             <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Object, System.Object}}, System.Collections.Generic</type>
-            <example>[{"Key": "some text", "Value": "some text"}]</example>
         </member>
         <member name="T:ASC.Data.Backup.ApiModels.BackupRestoreDto">
             <summary>
@@ -29,12 +28,11 @@
         <member name="P:ASC.Data.Backup.ApiModels.BackupRestoreDto.StorageType">
             <summary>Storage type</summary>
             <type>System.Object, System</type>
-            <example>"Documents"</example>
+            <example>Documents</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupRestoreDto.StorageParams">
             <summary>Storage parameters</summary>
             <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Object, System.Object}}, System.Collections.Generic</type>
-            <example>[{"Key": "some text", "Value": "some text"}]</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupRestoreDto.Notify">
             <summary>Notifies users about portal restoring process or not</summary>
@@ -47,12 +45,11 @@
         <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.StorageType">
             <summary>Storage type</summary>
             <type>System.String, System</type>
-            <example>"Documents"</example>
+            <example>Documents</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.StorageParams">
             <summary>Storage parameters</summary>
             <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Object, System.Object}}, System.Collections.Generic</type>
-            <example>[{"Key": "some text", "Value": "some text"}]</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.BackupsStored">
             <summary>Maximum number of the stored backup copies</summary>
@@ -69,17 +66,17 @@
         <member name="P:ASC.Data.Backup.ApiModels.Cron.Period">
             <summary>Period</summary>
             <type>System.String, System</type>
-            <example>"0"</example>
+            <example>0</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.Cron.Hour">
             <summary>Hour</summary>
             <type>System.String, System</type>
-            <example>"0"</example>
+            <example>0</example>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.Cron.Day">
             <summary>Day</summary>
             <type>System.String, System</type>
-            <example>"0"</example>
+            <example>0</example>
         </member>
         <member name="T:ASC.Data.Backup.Controllers.BackupController">
             <summary>
