@@ -644,9 +644,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     else
                     {
                         var type = _classPluralizer.ToHumanName(split[0]);
-                        if (type.ExampleJson != null)
+                        if (type.JsonParam != null)
                         {
-                            responseParam.Add(name, type.ExampleJson);
+                            responseParam.Add(name, type.JsonParam);
 
                             var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
                             orders.Add(name, order);
