@@ -1,5 +1,7 @@
 # Change Log
 
+- docspace: added the DocSpace section
+- portals: moved the Hosted solution section to the Community server section
 - editors: services.CoAuthoring.secret.browser.string is deprecated
 
 ## 3.1.0

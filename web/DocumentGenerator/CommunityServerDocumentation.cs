@@ -24,17 +24,12 @@
 */
 
 
-
-using System;
+using ASC.Api.Web.Help.Helpers;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web.Hosting;
-using log4net;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
 {
-    internal static class CommunityServerDocumentation
+    public static class CommunityServerDocumentation
     {
         private static readonly CSharpDocumentation docs;
 
@@ -46,6 +41,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public static void Load() => docs.Load();
 
         public static MsDocEntryPoint GetDocs(string name) => docs.GetDocs(name);
+
+        public static ClassNamePluralizer GetPluralizer() => docs.GetPluralizer();
 
         public static IEnumerable<MsDocEntryPoint> GetAll() => docs.GetAll();
     }
