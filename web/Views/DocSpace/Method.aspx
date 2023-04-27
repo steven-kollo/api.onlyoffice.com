@@ -92,13 +92,14 @@
                     { %>
                 <tr class="tablerow">
                     <td>
-                        <%= prop.Key %>
+                        <%= prop.Name %>
                         <div class="infotext">sent in body</div>
                     </td>
                     <td>
-                        <%= prop.Value %>
-                    </td>
+                        <%= prop.Description %>
+                    </td> 
                     <td>
+                        <%= prop.Type %>
                     </td>
                     <td>
                     </td>
