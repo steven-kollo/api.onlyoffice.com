@@ -16,6 +16,78 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <h2 id="74" class="copy-link">Version 7.4</h2>
+    <p><b>Characters methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters") %>">ApiCharacters</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/delete") %>">ApiCharacters/Delete</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/getcaption") %>">ApiCharacters/GetCaption</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/getcount") %>">ApiCharacters/GetCount</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/getfont") %>">ApiCharacters/GetFont</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/getparent") %>">ApiCharacters/GetParent</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/gettext") %>">ApiCharacters/GetText</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/insert") %>">ApiCharacters/Insert</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/setcaption") %>">ApiCharacters/SetCaption</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicharacters/settext") %>">ApiCharacters/SetText</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>Font methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont") %>">ApiFont</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getbold") %>">ApiFont/GetBold</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getcolor") %>">ApiFont/GetColor</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getitalic") %>">ApiFont/GetItalic</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getname") %>">ApiFont/GetName</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getparent") %>">ApiFont/GetParent</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getsize") %>">ApiFont/GetSize</a> method to Spreadsheet API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getstrikethrough") %>">ApiFont/GetStrikethrough</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getsubscript") %>">ApiFont/GetSubscript</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getsuperscript") %>">ApiFont/GetSuperscript</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/getunderline") %>">ApiFont/GetUnderline</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setbold") %>">ApiFont/SetBold</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setcolor") %>">ApiFont/SetColor</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setitalic") %>">ApiFont/SetItalic</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setname") %>">ApiFont/SetName</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setsize") %>">ApiFont/SetSize</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setstrikethrough") %>">ApiFont/SetStrikethrough</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setsubscript") %>">ApiFont/SetSubscript</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setsuperscript") %>">ApiFont/SetSuperscript</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifont/setunderline") %>">ApiFont/SetUnderline</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>Range methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/find") %>">ApiRange/Find</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/findnext") %>">ApiRange/FindNext</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/findprevious") %>">ApiRange/FindPrevious</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/getcharacters") %>">ApiRange/GetCharacters</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/replace") %>">ApiRange/Replace</a> class to Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>Other methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getid") %>">ApiComment/GetId</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getsection") %>">ApiParagraph/GetSection</a> method to Text document API.</li>
+        <li>Added the resulting string display properties to the <a href="<%= Url.Action("textdocumentapi/apiparagraph/gettext") %>">ApiParagraph/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/setsection") %>">ApiParagraph/SetSection</a> method to Text document API.</li>
+        <li>Added the resulting string display properties to the <a href="<%= Url.Action("textdocumentapi/apirange/gettext") %>">ApiRange/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/gettext") %>">ApiRun/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/addcaption") %>">ApiTable/AddCaption</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/addcaption") %>">ApiBlockLvlSdt/AddCaption</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/getfullname") %>">Api/GetFullName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getfullname") %>">Api/GetFullName</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/move") %>">ApiWorksheet/Move</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/api/getfullname") %>">Api/GetFullName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apidocument/inserttextform") %>">ApiDocument/InsertTextForm</a> method to Form API.</li>
+    </ul>
+
+
     <h2 id="73" class="copy-link">Version 7.3</h2>
     <p><b>Comment methods</b></p>
     <ul>
