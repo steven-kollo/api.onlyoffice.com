@@ -84,7 +84,7 @@
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getfullname") %>">Api/GetFullName</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/move") %>">ApiWorksheet/Move</a> class to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/api/getfullname") %>">Api/GetFullName</a> method to Presentation API.</li>
-        <li>Added the <a href="<%= Url.Action("presentationapi/apidocument/inserttextform") %>">ApiDocument/InsertTextForm</a> method to Form API.</li>
+        <li>Added the <a href="<%= Url.Action("formapi/apidocument/inserttextform") %>">ApiDocument/InsertTextForm</a> method to Form API.</li>
     </ul>
 
 
