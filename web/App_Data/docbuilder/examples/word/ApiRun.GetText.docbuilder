@@ -1,10 +1,12 @@
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
-oParagraph.AddText("\tThis is just a sample text.");
-var sText = oParagraph.GetText({"Numbering": true, "Math": true, "NewLineSeparator": "\r", "TabSymbol": "\t"});
+var oRun = Api.CreateRun();
+oRun.AddText("\tThis is a text run");
+oParagraph.AddElement(oRun);
+var sText = oRun.GetText({"NewLineSeparator": "\r", "TabSymbol": "\t"});
 oParagraph = Api.CreateParagraph();
-oParagraph.AddText("The text of the first paragraph: " + sText);
+oParagraph.AddText("The text of the specified run: " + sText);
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "GetText.docx");
 builder.CloseFile();
