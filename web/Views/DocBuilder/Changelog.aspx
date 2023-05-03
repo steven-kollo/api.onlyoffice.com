@@ -82,6 +82,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/addcaption") %>">ApiBlockLvlSdt/AddCaption</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/getfullname") %>">Api/GetFullName</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getfullname") %>">Api/GetFullName</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/getnumberformat") %>">ApiRange/GetNumberFormat</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/move") %>">ApiWorksheet/Move</a> class to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/api/getfullname") %>">Api/GetFullName</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("formapi/apidocument/inserttextform") %>">ApiDocument/InsertTextForm</a> method to Form API.</li>
@@ -144,6 +145,7 @@
     <p><b>Other methods</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/setbackgroundcolor") %>">ApiBlockLvlSdt/SetBackgroundColor</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getpagecount") %>">ApiDocument/GetPageCount</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getstatistics") %>">ApiDocument/GetStatistics</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/setcontrolshighlight") %>">ApiDocument/SetControlsHighlight</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apirange/getrange") %>">ApiRange/GetRange</a> method to Text document API.</li>
