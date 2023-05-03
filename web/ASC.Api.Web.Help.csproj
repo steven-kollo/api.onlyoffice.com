@@ -396,6 +396,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.GetFillColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.GetFormula.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.GetHidden.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiRange.GetNumberFormat.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.GetOrientation.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.GetRow.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.GetRowHeight.docbuilder" />
@@ -513,6 +514,8 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetLeftMargin.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetPageOrientation.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetPrintGridlines.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetPrintHeadings.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetRangeByNumber.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetRightMargin.docbuilder" />
@@ -531,6 +534,8 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetLeftMargin.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetPageOrientation.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetPrintGridlines.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetPrintHeadings.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetRightMargin.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetRowHeight.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetTopMargin.docbuilder" />
@@ -1212,6 +1217,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetEndNotesFirstParagraphs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetFinalSection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetFootnotesFirstParagraphs.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetPageCount.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetRangeBySelect.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetReviewReport.docbuilder" />
@@ -2956,12 +2962,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\cell\ApiRange.GetNumberFormat.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetPrintGridlines.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetPrintHeadings.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetPrintGridlines.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetPrintHeadings.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetPageCount.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ReviewReport.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ReviewReportRecord.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ReviewReportRecordType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TextFormInsertPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlFindLookIn.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlLookAt.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlSearchDirection.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlSearchOrder.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlUnderlineStyle.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
