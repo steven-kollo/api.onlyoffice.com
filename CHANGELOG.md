@@ -1,5 +1,10 @@
 # Change Log
 
+## 4.0.0
+- docspace: added the DocSpace section
+- portals: moved the Hosted solution section to the Community server section
+- editors: services.CoAuthoring.secret.browser.string is deprecated
+
 ## 3.1.0
 - editors: test examples v1.5.1
 - editors: added conversion from dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xml format

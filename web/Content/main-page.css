@@ -84,6 +84,10 @@
     background-image: url("img/main-page/desktop.svg");
 }
 
+.img-title-docspace {
+    background-image: url("img/main-page/docspace.svg");
+}
+
 .block-img {
     width: 115px;
     height: 100px;

@@ -5,10 +5,10 @@
     <span class="hdr">POST /api/portal/register</span>
 </h1>
 
-<div class="header-gray">Description</div>
-<p class="dscr">New portal registration.</p>
+<div id="methodDesc" class="header-gray">Description</div>
+<p class="dscr">Registers a new portal with the parameters specified in the request.</p>
 
-<div class="header-gray">Parameters</div>
+<div id="methodParams" class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -29,75 +29,75 @@
             <td>firstName<span class="required">*</span>
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal owner first name</td>
+            <td>Portal owner first name</td>
             <td>string</td>
-            <td>John</td>
+            <td>"John"</td>
         </tr>
         <tr class="tablerow">
             <td>email<span class="required">*</span>
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal owner email address</td>
+            <td>Portal owner email address</td>
             <td>string</td>
-            <td>test@example.com</td>
+            <td>"test@example.com"</td>
         </tr>
         <tr class="tablerow">
             <td>language
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal language</td>
+            <td>Portal  language</td>
             <td>string</td>
-            <td>en</td>
+            <td>"en"</td>
         </tr>
         <tr class="tablerow">
             <td>lastName<span class="required">*</span>
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal owner last name</td>
+            <td>Portal owner last name</td>
             <td>string</td>
-            <td>Smith</td>
+            <td>"Smith"</td>
         </tr>
         <tr class="tablerow">
             <td>password
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal owner password</td>
+            <td>Portal owner password</td>
             <td>string</td>
-            <td>123456</td>
+            <td>"123456"</td>
         </tr>
         <tr class="tablerow">
             <td>phone
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal owner phone number</td>
+            <td>Portal owner phone number</td>
             <td>string</td>
-            <td>+123456789</td>
+            <td>"+123456789"</td>
         </tr>
         <tr class="tablerow">
             <td>portalName<span class="required">*</span>
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal name</td>
+            <td>Portal  name</td>
             <td>string</td>
-            <td>example</td>
+            <td>"example"</td>
         </tr>
         <tr class="tablerow">
             <td>timeZoneName
                 <div class="infotext">sent in Body</div>
             </td>
-            <td>portal time zone</td>
+            <td>Portal time zone</td>
             <td>string</td>
-            <td>UTC</td>
+            <td>"UTC"</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-<div class="header-gray">Returns</div>
-<p>Returns the link for portal activation and portal description.</p>
+<div id="methodReturns" class="header-gray">Returns</div>
+<p>The link for portal activation and portal description</p>
 
-<div class="header-gray">Example Response</div>
+<div id="methodResponse" class="header-gray">Example Response</div>
 <pre>
 {
     "reference": "https://example.com/confirm.aspx",
