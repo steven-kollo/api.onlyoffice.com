@@ -2023,8 +2023,8 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVersion.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InputText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InstallPlugin.docbuilder" />
-    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnEncryption.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnDropEvent.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnEncryption.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteHtml.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PutImageDataToSelection.docbuilder" />
@@ -2909,6 +2909,25 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\plugins\examples\ContextMenuItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onContextMenuClick.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onContextMenuShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.sendToPlugin.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddContextMenuItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.CloseWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetDocumentLang.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InstallDeveloperPlugin.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.MouseMoveWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.MouseUpWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ResizeWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.SendToWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ShowWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.UpdateContextMenuItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\TextPartType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetCurrentSentence.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetCurrentWord.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.ReplaceCurrentSentence.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.ReplaceCurrentWord.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
