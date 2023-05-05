@@ -122,11 +122,11 @@ namespace ASC.Api.Web.Help.Helpers
         }
     }
 
-    public static class ClassNamePluralizer
+    public class ClassNamePluralizer
     {
-        private static TypeDescriptor _descriptor;
+        private TypeDescriptor _descriptor;
 
-        public static void LoadClassNames(Stream data)
+        public void LoadClassNames(Stream data)
         {
             var xdoc = XDocument.Load(data);
             var descriptor = new TypeDescriptor()
@@ -153,21 +153,21 @@ namespace ASC.Api.Web.Help.Helpers
             _descriptor = descriptor;
         }
 
-        public static bool IsOptional(string typeName)
+        public bool IsOptional(string typeName)
         {
             if (!string.IsNullOrEmpty(typeName))
                 return typeName.StartsWith(TypeDescriptor.SystemNullable);
             return false;
         }
 
-        public static bool IsCollection(string typeName)
+        public bool IsCollection(string typeName)
         {
             if (!string.IsNullOrEmpty(typeName))
                 return typeName.StartsWith(TypeDescriptor.SystemIEnumerable);
             return false;
         }
 
-        public static TypeDescription ToHumanName(string typeName)
+        public TypeDescription ToHumanName(string typeName)
         {
             var desc = _descriptor == null ? new TypeDescription(typeName, "") : _descriptor.Get(typeName);
             if (desc.JsonParam == null && !string.IsNullOrEmpty(desc.ExampleJson))
@@ -188,7 +188,7 @@ namespace ASC.Api.Web.Help.Helpers
             return desc;
         }
 
-        public static void LoadAndWatch(string path)
+        public void LoadAndWatch(string path)
         {
             if (!string.IsNullOrEmpty(path))
             {
@@ -201,7 +201,7 @@ namespace ASC.Api.Web.Help.Helpers
             }
         }
 
-        private static void OnRemove(string key, object value, CacheItemRemovedReason reason)
+        private void OnRemove(string key, object value, CacheItemRemovedReason reason)
         {
             if (reason == CacheItemRemovedReason.DependencyChanged)
             {
