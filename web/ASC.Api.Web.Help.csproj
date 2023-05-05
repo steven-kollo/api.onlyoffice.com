@@ -2035,8 +2035,8 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVersion.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InputText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.InstallPlugin.docbuilder" />
-    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnEncryption.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnDropEvent.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.OnEncryption.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteHtml.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PasteText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PutImageDataToSelection.docbuilder" />
@@ -4099,6 +4099,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\plugins\examples\AddinFieldData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\DocumentEditingRestrictions.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddAddinField.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.GetAllAddinFields.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RemoveFieldWrapper.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SetEditingRestrictions.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.UpdateAddinFields.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
