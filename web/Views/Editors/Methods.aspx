@@ -35,7 +35,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setReferenceData">setReferenceData</a> - refresh data by a link to a file.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
-        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or prevent these users from editing the specific sheet ranges.</li>
         <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
     </ul>
 
@@ -940,7 +940,7 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments.
+                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments or prevent these users from editing the specific sheet ranges.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> events.
             </p>
             <pre>
@@ -948,10 +948,12 @@ docEditor.setUsers({
     "users": [
         {
             "email": "john@example.com",
+            "id": "78e1e841",
             "name": "John Smith"
         },
         {
             "email": "kate@example.com",
+            "id": "F89d8069ba2b",
             "name": "Kate Cage"
         },
         ...
@@ -987,6 +989,12 @@ docEditor.setUsers({
                     <tr class="tablerow">
                         <td>users.email</td>
                         <td>Defines the email address of the user.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>users.id</td>
+                        <td>Defines the identification of the user. This field is used only for protecting the sheet ranges when granting editing rights to the specified user.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>

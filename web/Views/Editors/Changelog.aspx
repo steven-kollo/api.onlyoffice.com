@@ -19,6 +19,7 @@
     <h2 id="74" class="copy-link">Version 7.4</h2>
     <ul>
         <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">dps, dpt, et, ett, mhtml, stw, sxc, sxi, sxw, wps, wpt</a> format.</li>
+        <li>Added the <em>users.id</em> field to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</li>
     </ul>
 
     <h2 id="73" class="copy-link">Version 7.3</h2>
