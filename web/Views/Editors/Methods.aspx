@@ -35,7 +35,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setReferenceData">setReferenceData</a> - refresh data by a link to a file.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
-        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or prevent these users from editing the specific sheet ranges.</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
         <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
     </ul>
 
@@ -940,7 +940,7 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments or prevent these users from editing the specific sheet ranges.
+                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> events.
             </p>
             <pre>
