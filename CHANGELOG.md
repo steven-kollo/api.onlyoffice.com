@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the c parameter to the setUsers method and onRequestUsers event
+- editors: added the users.id field to the setUsers method
 - editors: added opening .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt format.
 - editors: added the size field to the editorConfig.customization.font parameter
 

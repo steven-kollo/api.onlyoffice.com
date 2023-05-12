@@ -945,6 +945,7 @@ docEditor.setSharingSettings({
             </p>
             <pre>
 docEditor.setUsers({
+    "c": "protect",
     "users": [
         {
             "email": "john@example.com",
@@ -980,6 +981,16 @@ docEditor.setUsers({
                     </tr>
                 </thead>
                 <tbody>
+                    <tr class="tablerow">
+                        <td>c</td>
+                        <td>
+                            Defines the operation type from the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event.
+                            It can take one of the following values - <em>mention</em> or <em>protect</em>.
+                            The default value is <em>mention</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
                     <tr class="tablerow">
                         <td>users</td>
                         <td>Defines the list of the users.</td>
