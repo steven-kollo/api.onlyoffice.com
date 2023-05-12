@@ -2382,7 +2382,6 @@
     <Content Include="Content\img\plugins\gifs\add-comment-in-cell.gif" />
     <Content Include="Content\img\plugins\gifs\add-custom-fields.gif" />
     <Content Include="Content\img\plugins\gifs\autocomplete.gif" />
-    <Content Include="Content\img\plugins\gifs\cbr.gif" />
     <Content Include="Content\img\plugins\gifs\chess.gif" />
     <Content Include="Content\img\plugins\gifs\clippy.gif" />
     <Content Include="Content\img\plugins\gifs\count-words-and-characters.gif" />
@@ -2394,7 +2393,6 @@
     <Content Include="Content\img\plugins\gifs\language-tool.gif" />
     <Content Include="Content\img\plugins\gifs\load-custom-fields.gif" />
     <Content Include="Content\img\plugins\gifs\move-cursor.gif" />
-    <Content Include="Content\img\plugins\gifs\num2word.gif" />
     <Content Include="Content\img\plugins\gifs\ocr.gif" />
     <Content Include="Content\img\plugins\gifs\photo-editor.gif" />
     <Content Include="Content\img\plugins\gifs\search-and-change-background-text.gif" />
@@ -2451,7 +2449,6 @@
     <Content Include="Content\img\plugin\add-custom.svg" />
     <Content Include="Content\img\plugin\arrow.svg" />
     <Content Include="Content\img\plugin\autocomplect.svg" />
-    <Content Include="Content\img\plugin\cbr.svg" />
     <Content Include="Content\img\plugin\chess.svg" />
     <Content Include="Content\img\plugin\clippy.svg" />
     <Content Include="Content\img\plugin\comment.svg" />
@@ -2468,7 +2465,6 @@
     <Content Include="Content\img\plugin\language-tool.svg" />
     <Content Include="Content\img\plugin\load-custom.svg" />
     <Content Include="Content\img\plugin\move-cursor.svg" />
-    <Content Include="Content\img\plugin\num2word.svg" />
     <Content Include="Content\img\plugin\ocr.svg" />
     <Content Include="Content\img\plugin\photoeditor.svg" />
     <Content Include="Content\img\plugin\replace-start.svg" />
@@ -3984,7 +3980,6 @@
     <Content Include="Views\Plugin\Example\addcommentincell.ascx" />
     <Content Include="Views\Plugin\Example\addcustomfields.ascx" />
     <Content Include="Views\Plugin\Example\autocomplete.ascx" />
-    <Content Include="Views\Plugin\Example\cbr.ascx" />
     <Content Include="Views\Plugin\Example\chess.ascx" />
     <Content Include="Views\Plugin\Example\clippy.ascx" />
     <Content Include="Views\Plugin\Example\countwordsandcharacters.ascx" />
@@ -3997,7 +3992,6 @@
     <Content Include="Views\Plugin\Example\languagetool.ascx" />
     <Content Include="Views\Plugin\Example\loadcustomfields.ascx" />
     <Content Include="Views\Plugin\Example\movecursor.ascx" />
-    <Content Include="Views\Plugin\Example\num2word.ascx" />
     <Content Include="Views\Plugin\Example\ocr.ascx" />
     <Content Include="Views\Plugin\Example\photoeditor.ascx" />
     <Content Include="Views\Plugin\Example\searchandchangetextbackgroundcolor.ascx" />
