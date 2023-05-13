@@ -51,7 +51,6 @@
 {
     "name": "HTML",
     "nameLocale": {
-        "ru": "HTML",
         "fr": "HTML",
         "es": "HTML",
         "de": "HTML"
@@ -63,7 +62,6 @@
         {
             "description": "Get your document content as HTML code, modify it, and paste back to the document.",
             "descriptionLocale": {
-                "ru": "&#1055;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1077; &#1089;&#1086;&#1076;&#1077;&#1088;&#1078;&#1080;&#1084;&#1086;&#1077; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1072; &#1074; &#1074;&#1080;&#1076;&#1077; HTML-&#1082;&#1086;&#1076;&#1072; &#1089; &#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1089;&#1090;&#1100;&#1102; &#1086;&#1090;&#1088;&#1077;&#1076;&#1072;&#1082;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100; &#1087;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1085;&#1099;&#1081; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;.",
                 "fr": "Obtenez le contenu de votre document sous forme de code HTML, modifiez-le et collez-le dans le document.",
                 "es": "Obtenga el contenido de su documento como c&#243;digo HTML, modif&#237;quelo y p&#233;guelo de nuevo en el documento.",
                 "de": "Erhalten Sie den Inhalt Ihres Dokuments als HTML-Code, modifizieren und f&#252;gen Sie ihn wieder ins Dokument ein."
