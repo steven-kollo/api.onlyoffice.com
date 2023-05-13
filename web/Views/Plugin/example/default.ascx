@@ -1,7 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <a class="up" href="<%= Url.Action("example") %>"></a>
     <span class="hdr">Plugin example</span>
 </h1>
 

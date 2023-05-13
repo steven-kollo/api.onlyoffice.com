@@ -1,7 +1,6 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <a class="up" href="<%= Url.Action("macros") %>"></a>
     <span class="hdr">Macro samples</span>
 </h1>
 
