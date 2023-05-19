@@ -80,7 +80,12 @@
                 <p>A <em>GET</em> request is sent, after which <em>HTTP_STATUS_CODE = 200</em> is expected. The response must be returned in the JSON format.</p>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "url": "status",
+    "headers": {
+        "X-CUSTOM-HEADER": true
+    }
+}</td>
         </tr>
         <tr class="tablerow">
             <td id="entryPage" class="copy-link">entryPage</td>
@@ -132,7 +137,12 @@
                 <p>You can add icons for each UI theme type (light and dark) by specifying the <em>themeLight</em> and <em>themeDark</em> objects with the corresponding icons.</p>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "themeLight": {
+        "connectionsList": "./assets/listicon.svg",
+        "buttonLogo": "./assets/buttonlogo.svg"
+    }
+}</td>
         </tr>
     </tbody>
 </table>
