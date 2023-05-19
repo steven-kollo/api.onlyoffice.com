@@ -871,7 +871,7 @@
             <td>{
     "image": "https://example.com/logo.png",
     "imageDark": "https://example.com/dark-logo.png",
-    "url": "https://www.onlyoffice.com"
+    "url": "https://example.com"
 }</td>
         </tr>
         <tr class="tablerow">
@@ -1335,7 +1335,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://www.onlyoffice.com"
+                "url": "https://example.com"
             },
             "macros": true,
             "macrosMode": "warn",
