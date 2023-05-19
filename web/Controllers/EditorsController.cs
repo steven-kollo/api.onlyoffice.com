@@ -130,6 +130,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Signature/Browser",
                 "Signature/Request",
                 "Strapi",
+                "SuiteCRM",
                 "Troubleshooting",
                 "Try",
                 "Viewing",
@@ -483,6 +484,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Strapi()
+        {
+            return View();
+        }
+
+        public ActionResult SuiteCRM()
         {
             return View();
         }

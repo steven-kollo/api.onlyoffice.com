@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the SuiteCRM plugin
 - editors: added the Odoo app
 
 ## 4.0.0

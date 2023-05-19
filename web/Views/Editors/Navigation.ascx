@@ -108,6 +108,9 @@
                 <a href="<%= Url.Action("strapi") %>">Strapi integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("suitecrm") %>">SuiteCRM integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("wordpress") %>">WordPress integration</a>
             </li>
         </ul>
