@@ -79,7 +79,7 @@
             <p>Edit the following lines:</p>
 
             <pre>
-"builderPath": "/usr/bin/documentbuilder"
+"builderPath": "/usr/bin/docbuilder"
 </pre>
         </li>
         <li>Run the project with Node.js:
