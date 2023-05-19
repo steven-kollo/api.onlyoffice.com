@@ -69,7 +69,7 @@
                     <li>
                         <p><b>url</b> - the URL used in the request,</p>
                         <p><b>type</b>: string,</p>
-                        <p><b>example</b>: "status.php";</p>
+                        <p><b>example</b>: "status";</p>
                     </li>
                     <li>
                         <p><b>headers</b> - the headers added to the <em>ajax</em> request,</p>
@@ -144,9 +144,9 @@
     "provider": "onlyoffice",
     "name" : "ONLYOFFICE",
     "check": {
-        "url": "status.php",
+        "url": "status",
         "headers": {
-            "OCS-APIREQUEST": true
+            "X-CUSTOM-HEADER": true
         }
     },
     "entryPage" : "https://url-to-connect-provider.com",
