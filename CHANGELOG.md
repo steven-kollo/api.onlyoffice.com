@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the userdata parameter to the info command
 - editors: added the Odoo app
 
 ## 4.0.0
