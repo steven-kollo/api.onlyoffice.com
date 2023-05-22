@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the onRequestHistoryClose event to the Document History page
 - editors: added the userdata parameter to the info command
 - editors: added the Odoo app
 
