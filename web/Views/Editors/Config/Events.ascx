@@ -146,7 +146,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs.
-            The error message is sent in the <em>data</em> parameter.
+            The error message is sent in the <em>data</em> parameter. A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
         </p>
         <div class="header-gray">Example</div>
         <pre>
@@ -832,7 +832,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onWarning" class="copy-link">onWarning</b> - the function called when a warning occurs.
-            The warning message is sent in the <em>data</em> parameter.
+            The warning message is sent in the <em>data</em> parameter. A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
         </p>
         <div class="header-gray">Example</div>
         <pre>

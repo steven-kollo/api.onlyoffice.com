@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added a link to the list of error codes
 - editors: added the draw field to the editorConfig.customization.layout.toolbar parameter
 - editors: added opening .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt format.
 - editors: added the size field to the editorConfig.customization.font parameter
