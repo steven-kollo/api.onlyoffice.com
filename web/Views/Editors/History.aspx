@@ -31,6 +31,7 @@
         <li>The <b>document storage service</b> sends the link to the selected version of the document.</li>
         <li>The <b>document editor</b> displays the selected document version.</li>
         <li>When the user clicks another version in the document version list, the <b>document editor</b> requests the information about the version to be displayed anew.</li>
+        <li>The user clicks the <em>Close History</em> button and the <b>document editor</b> hides the list of the document versions.</li>
     </ol>
 
     <h2 id="apply" class="copy-link">How this can be done in practice</h2>
@@ -82,7 +83,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In the configuration script for Document Editor initialization specify the event handler which will select the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">version from history</a>.
+                In the configuration script for Document Editor initialization, specify the event handler which will select the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">version from history</a>.
                 When the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> event is called, the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method must be executed.
                 This method contains the absolute URL to the file of the corresponding version.
             </p>
@@ -108,6 +109,28 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>Open your <em>html</em> file in the browser.</li>
         <li>Open the <em>Version History</em> option in the Document Editor menu.</li>
+        <li>
+            <p>
+                Specify the event handler for the <em>Close History</em> button to be displayed in the configuration script for Document Editor initialization.
+                When the user is trying to go back to the document from viewing the document version history by clicking the <em>Close History</em> button,
+                the <a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a> event is called and the version history list is hidden.
+                When the function is called, the editor must be initialized again, in the editing mode.
+            </p>
+            <pre>
+var onRequestHistoryClose = function () {
+    document.location.reload();
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestHistoryClose": onRequestHistoryClose,
+        ...
+    },
+    ...
+});
+</pre>
+<img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
+        </li>
     </ol>
     
     <h2 id="apply-changes" class="copy-link">Opening the document history with changes highlighting</h2>
