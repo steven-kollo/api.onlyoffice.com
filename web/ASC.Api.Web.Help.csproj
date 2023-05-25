@@ -2341,7 +2341,6 @@
     <Content Include="Content\img\plugins\alternate-raws.png" />
     <Content Include="Content\img\plugins\assign-macro.png" />
     <Content Include="Content\img\plugins\background_color.png" />
-    <Content Include="Content\img\plugins\breakpoint.png" />
     <Content Include="Content\img\plugins\button-1.png" />
     <Content Include="Content\img\plugins\button-2.png" />
     <Content Include="Content\img\plugins\button-3.png" />
@@ -2352,10 +2351,8 @@
     <Content Include="Content\img\plugins\chrome-removing-extension.png" />
     <Content Include="Content\img\plugins\column_width.png" />
     <Content Include="Content\img\plugins\combobox_example.png" />
-    <Content Include="Content\img\plugins\console-log.png" />
     <Content Include="Content\img\plugins\controls.png" />
     <Content Include="Content\img\plugins\currencies-usd-eur.png" />
-    <Content Include="Content\img\plugins\debug-console.png" />
     <Content Include="Content\img\plugins\debugger.png" />
     <Content Include="Content\img\plugins\edge-developer-mode.png" />
     <Content Include="Content\img\plugins\edge-extension-folder.png" />
