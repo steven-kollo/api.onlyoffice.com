@@ -2222,12 +2222,14 @@
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
     <Content Include="Content\img\desktop\windows-shortcut.png" />
     <Content Include="Content\img\desktop\windows-terminal.png" />
+    <Content Include="Content\img\docbuilder\builder-debugger.png" />
     <Content Include="Content\img\docbuilder\compare-documents.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
     <Content Include="Content\img\docbuilder\csharp\net46.png" />
     <Content Include="Content\img\docbuilder\csharp\platform.png" />
     <Content Include="Content\img\docbuilder\csharp\sitename.png" />
+    <Content Include="Content\img\docbuilder\devtools.png" />
     <Content Include="Content\img\docbuilder\download.png" />
     <Content Include="Content\img\docbuilder\examples\coordinate_aspects.png" />
     <Content Include="Content\img\docbuilder\examples\icon_DocumentEditors.png" />
@@ -2238,6 +2240,7 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+<Content Include="Content\img\docbuilder\terminal.png" />
     <Content Include="Content\img\Editor\accept_reject.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
     <Content Include="Content\img\Editor\actionLink-open.png" />
@@ -2573,6 +2576,7 @@
     <Content Include="Views\DocBuilder\Changelog.aspx" />
     <Content Include="Views\DocBuilder\classlist.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
+    <Content Include="Views\DocBuilder\Debugging.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
     <Content Include="Views\DocBuilder\eventpartial.aspx" />
     <Content Include="Views\DocBuilder\formapi.aspx" />
