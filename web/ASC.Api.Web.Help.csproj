@@ -3937,6 +3937,7 @@
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\ProtectingRanges.aspx" />
     <Content Include="Views\Editors\React.aspx" />
     <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
