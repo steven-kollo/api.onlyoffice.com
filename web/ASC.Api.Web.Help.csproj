@@ -580,6 +580,9 @@
     <Content Include="App_Data\docbuilder\examples\pt_8.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\RelFromH.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\RelFromV.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ReviewReport.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ReviewReportRecord.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ReviewReportRecordType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ScaleFlag.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\SchemeColorId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\SdtLock.docbuilder" />
@@ -968,6 +971,7 @@
     <Content Include="App_Data\docbuilder\examples\TabJc.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TableStyleOverrideType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TableWidth.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TextFormInsertPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TextFormPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TextFormPrBase.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TextTransform.docbuilder" />
@@ -1900,6 +1904,11 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiUniColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiUniColor.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiUniColor.ToJSON.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlFindLookIn.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlLookAt.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlSearchDirection.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlSearchOrder.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\XlUnderlineStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\Node.js Example.zip" />
     <Content Include="App_Data\docbuilder\PHP Example.zip" />
     <Content Include="App_Data\docbuilder\references\cell\Api.json" />
@@ -2240,7 +2249,7 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
-<Content Include="Content\img\docbuilder\terminal.png" />
+    <Content Include="Content\img\docbuilder\terminal.png" />
     <Content Include="Content\img\Editor\accept_reject.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
     <Content Include="Content\img\Editor\actionLink-open.png" />
@@ -2966,15 +2975,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\ReviewReport.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\ReviewReportRecord.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\ReviewReportRecordType.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\TextFormInsertPr.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\XlFindLookIn.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\XlLookAt.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\XlSearchDirection.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\XlSearchOrder.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\XlUnderlineStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllStyles.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

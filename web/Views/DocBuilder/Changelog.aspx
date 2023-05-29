@@ -73,6 +73,7 @@
     <p><b>Other methods</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getid") %>">ApiComment/GetId</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getallstyles") %>">ApiDocument/GetAllStyles</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getsection") %>">ApiParagraph/GetSection</a> method to Text document API.</li>
         <li>Added the resulting string display properties to the <a href="<%= Url.Action("textdocumentapi/apiparagraph/gettext") %>">ApiParagraph/GetText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/setsection") %>">ApiParagraph/SetSection</a> method to Text document API.</li>
