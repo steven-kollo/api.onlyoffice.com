@@ -43,6 +43,7 @@
         <li><a href="#isDisplayedInViewer">isDisplayedInViewer</a></li>
         <li><a href="#isInsideMode">isInsideMode</a></li>
         <li><a href="#isModal">isModal</a></li>
+        <li><a href="#isNeedNumbering">isNeedNumbering</a></li>
         <li><a href="#isSystem">isSystem</a></li>
         <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
         <li><a href="#isViewer">isViewer</a></li>
@@ -50,6 +51,7 @@
         <li><a href="#size">size</a></li>
         <li><a href="#store">store</a></li>
         <li><a href="#store-background">store.background</a></li>
+        <li><a href="#store-categories">store.categories</a></li>
         <li><a href="#store-icons">store.icons</a></li>
         <li><a href="#store-screenshots">store.screenshots</a></li>
         <li><a href="#url">url</a></li>
@@ -242,6 +244,12 @@
                 <td>true</td>
             </tr>
             <tr class="tablerow">
+                <td id="isNeedNumbering" class="copy-link">variations.isNeedNumbering</td>
+                <td>Specifies if the selected text in the editor will be sent to the plugin with or without numbering.</td>
+                <td>boolean</td>
+                <td>false</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="isSystem" class="copy-link">variations.isSystem</td>
                 <td>Specifies if the plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with the other plugins, so that they can work simultaneously.</td>
                 <td>boolean</td>
@@ -302,6 +310,23 @@
                 <td>{
     "light" : "#F5F5F5"
 }</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="store-categories" class="copy-link">variations.store.categories</td>
+                <td>
+                    Plugin categories in <b>ONLYOFFICE Plugin Marketplace</b>:
+                    <ul>
+                        <li>"all" - All,</li>
+                        <li>"recommended" - Recommended,</li>
+                        <li>"devTools" - Developer tools,</li>
+                        <li>"work" - Work,</li>
+                        <li>"entertainment" - Entertainment,</li>
+                        <li>"communication" - Communication,</li>
+                        <li>"specAbilities" - Special abilities.</li>
+                    </ul>
+                </td>
+                <td>array of strings</td>
+                <td>["specAbilities", "work"]</td>
             </tr>
             <tr class="tablerow">
                 <td id="store-icons" class="copy-link">variations.store.icons</td>
@@ -409,6 +434,7 @@
                 "isDisplayedInViewer": true,
                 "isInsideMode": false,
                 "isModal": true,
+                "isNeedNumbering": false,
                 "isSystem": false,
                 "isUpdateOleOnResize": true,
                 "isViewer": true,
@@ -419,6 +445,7 @@
                         "light": "#F5F5F5",
                         "dark": "#444444"
                     },
+                    "categories": ["specAbilities", "work"],
                     "icons": {
                         "light": "resources/store/icons",
                         "dark" : "resources/store/icons"
