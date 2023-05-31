@@ -148,7 +148,6 @@ namespace ASC.Api.Web.Help
                 AreaRegistration.RegisterAllAreas();
                 RegisterRoutes(RouteTable.Routes);
                 RegisterBundles(BundleTable.Bundles);
-                ClassNamePluralizer.LoadAndWatch(HttpContext.Current.Server.MapPath("~/App_Data/portals/class_descriptions.xml"));
 
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             }
@@ -186,6 +185,22 @@ namespace ASC.Api.Web.Help
                             try
                             {
                                 CommunityServerDocumentation.Load();
+                            }
+                            catch (Exception error)
+                            {
+                                LogManager.GetLogger("ASC.Api").Error(error);
+                            }
+                        }
+
+                        if (enabledProducts.Contains("docspace", StringComparer.InvariantCultureIgnoreCase))
+                        {
+                            CacheManifest.AddCached(new Uri("/docspace/basic", UriKind.Relative));
+                            CacheManifest.AddOnline(new Uri("/docspace/search", UriKind.Relative));
+                            CacheManifest.AddFallback(new Uri("/docspace/search", UriKind.Relative), new Uri("/docspace/notfound", UriKind.Relative));
+
+                            try
+                            {
+                                DocSpaceDocumentation.Load();
                             }
                             catch (Exception error)
                             {

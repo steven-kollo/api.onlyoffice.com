@@ -24,12 +24,13 @@
 */
 
 
-
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Web;
 using System.Web.Hosting;
+using ASC.Api.Web.Help.Helpers;
 using log4net;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
@@ -40,15 +41,20 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
         private ILog _logger;
 
+        protected readonly ClassNamePluralizer _classPluralizer;
+
         public CSharpDocumentation(string path)
         {
             _path = path;
+            _classPluralizer = new ClassNamePluralizer();
         }
 
         public void Load()
         {
-            _logger = LogManager.GetLogger("ASC.MsDocDocumentGenerator");
+            _logger = LogManager.GetLogger("ASC." + _path);
             _logger.Debug("Generate documentations");
+            //Load descriptions
+            _classPluralizer.LoadAndWatch(Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\{_path}\class_descriptions.xml"));
             //Load documentation
             _points = GenerateDocs();
         }
@@ -56,7 +62,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private List<MsDocEntryPoint> GenerateDocs()
         {
             var lookupDir = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\{_path}\references");
-            var generator = new MsDocDocumentGenerator();
+            var generator = new MsDocDocumentGenerator(lookupDir, _classPluralizer);
             foreach (var file in Directory.GetFiles(lookupDir))
             {
                 generator.GenerateDocForEntryPoint(file);
@@ -80,6 +86,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             }
 
             return generator.Points;
+        }
+
+        public ClassNamePluralizer GetPluralizer()
+        {
+            return _classPluralizer;
         }
 
         public MsDocEntryPoint GetDocs(string name)

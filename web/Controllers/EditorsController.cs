@@ -113,6 +113,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Moodle",
                 "Nextcloud",
                 "Nuxeo",
+                "Odoo",
                 "Open",
                 "OwnCloud",
                 "Plone",
@@ -408,6 +409,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Nuxeo()
+        {
+            return View();
+        }
+
+        public ActionResult Odoo()
         {
             return View();
         }

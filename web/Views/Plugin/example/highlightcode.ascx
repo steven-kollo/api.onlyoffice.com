@@ -67,8 +67,7 @@
     "nameLocale": {
         "de": "Code hervorheben",
         "es": "Resaltar el c&#243;digo",
-        "fr": "Code en surbrillance",
-        "ru": "&#1055;&#1086;&#1076;&#1089;&#1074;&#1077;&#1090;&#1082;&#1072; &#1082;&#1086;&#1076;&#1072;"
+        "fr": "Code en surbrillance"
     },
     "variations": [
         {
@@ -88,8 +87,7 @@
                     "textLocale": {
                         "de": "Abbrechen",
                         "es": "Cancelar",
-                        "fr": "Annuler",
-                        "ru": "&#1054;&#1090;&#1084;&#1077;&#1085;&#1072;"
+                        "fr": "Annuler"
                     }
                 }
             ],
@@ -97,8 +95,7 @@
             "descriptionLocale": {
                 "de": "Heben Sie die Codesyntax hervor, indem Sie die gew&#252;nschte Sprache, den Stil und die Hintergrundfarbe ausw&#228;hlen.",
                 "es": "Resalte la sintaxis del c&#243;digo seleccionando el idioma, el estilo y el color de fondo necesarios.",
-                "fr": "Mettez en &#233;vidence la syntaxe du code en s&#233;lectionnant la langue, le style et la couleur de l'arri&#232;re-plan.",
-                "ru": "&#1054;&#1092;&#1086;&#1088;&#1084;&#1080;&#1090;&#1077; &#1089;&#1080;&#1085;&#1090;&#1072;&#1082;&#1089;&#1080;&#1089; &#1082;&#1086;&#1076;&#1072;, &#1074;&#1099;&#1073;&#1088;&#1072;&#1074; &#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1099;&#1081; &#1103;&#1079;&#1099;&#1082;, &#1089;&#1090;&#1080;&#1083;&#1100; &#1080; &#1094;&#1074;&#1077;&#1090; &#1092;&#1086;&#1085;&#1072;."
+                "fr": "Mettez en &#233;vidence la syntaxe du code en s&#233;lectionnant la langue, le style et la couleur de l'arri&#232;re-plan."
             },
             "icons": [
                 "resources/light/icon.png",

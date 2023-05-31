@@ -48,7 +48,6 @@
 {
     "name": "YouTube",
     "nameLocale": {
-        "ru": "YouTube",
         "fr": "YouTube",
         "es": "YouTube",
         "de": "YouTube"
@@ -60,7 +59,6 @@
         {
             "description": "Easily embed YouTube videos into your documents.",
             "descriptionLocale": {
-                "ru": "&#1051;&#1077;&#1075;&#1082;&#1086; &#1074;&#1089;&#1090;&#1088;&#1072;&#1080;&#1074;&#1072;&#1081;&#1090;&#1077; YouTube-&#1074;&#1080;&#1076;&#1077;&#1086; &#1074; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1099;.",
                 "fr": "Ins&#233;rez facilement des vid&#233;os YouTube dans vos documents.",
                 "es": "Inserte f&#225;cilmente v&#237;deos de YouTube en sus documentos.",
                 "de": "Betten Sie ganz einfach YouTube-Videos in Ihre Dokumente ein."
@@ -96,7 +94,6 @@
                     "primary": false,
                     "isViewer": false,
                     "textLocale": {
-                        "ru": "&#1054;&#1090;&#1084;&#1077;&#1085;&#1072;",
                         "fr": "Annuler",
                         "es": "Cancelar",
                         "de": "Abbrechen"

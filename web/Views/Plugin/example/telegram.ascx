@@ -51,7 +51,6 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 {
     "name" : "Telegram",
     "nameLocale": {
-        "ru": "Telegram",
         "fr": "Telegram",
         "es": "Telegram",
         "de": "Telegram"
@@ -63,7 +62,6 @@ The plugin has no access to the camera and microphone, so you will be unable to 
         {
             "description" : "Chat with co-authors in real time using integrated Telegram client.",
             "descriptionLocale": {
-                "ru": "&#1054;&#1073;&#1097;&#1072;&#1081;&#1090;&#1077;&#1089;&#1100; &#1089; &#1076;&#1088;&#1091;&#1075;&#1080;&#1084;&#1080; &#1072;&#1074;&#1090;&#1086;&#1088;&#1072;&#1084;&#1080; &#1074; &#1088;&#1077;&#1078;&#1080;&#1084;&#1077; &#1088;&#1077;&#1072;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1080; &#1074; Telegram.",
                 "fr": "Chattez avec vos co-auteurs en temps r&#233;el gr&#226;ce au client Telegram int&#233;gr&#233;.",
                 "es": "Chatee con los coautores en tiempo real utilizando el cliente integrado de Telegram.",
                 "de": "Unterhalten Sie sich mit Mitautoren in Echtzeit &#252;ber den integrierten Telegram-Client."
