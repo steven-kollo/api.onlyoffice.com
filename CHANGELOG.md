@@ -1,6 +1,6 @@
 # Change Log
 
-- plugins: added the isNeedNumbering and store.categories config parameters
+- plugins: added the store.categories config parameter
 - editors: added the onRequestHistoryClose event to the Document History page
 - editors: added the userdata parameter to the info command
 - editors: added the Odoo app

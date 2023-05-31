@@ -43,7 +43,6 @@
         <li><a href="#isDisplayedInViewer">isDisplayedInViewer</a></li>
         <li><a href="#isInsideMode">isInsideMode</a></li>
         <li><a href="#isModal">isModal</a></li>
-        <li><a href="#isNeedNumbering">isNeedNumbering</a></li>
         <li><a href="#isSystem">isSystem</a></li>
         <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
         <li><a href="#isViewer">isViewer</a></li>
@@ -244,12 +243,6 @@
                 <td>true</td>
             </tr>
             <tr class="tablerow">
-                <td id="isNeedNumbering" class="copy-link">variations.isNeedNumbering</td>
-                <td>Specifies if the selected text in the editor will be sent to the plugin with or without numbering. This parameter is always equal to <b>false</b>.</td>
-                <td>boolean</td>
-                <td>false</td>
-            </tr>
-            <tr class="tablerow">
                 <td id="isSystem" class="copy-link">variations.isSystem</td>
                 <td>Specifies if the plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with the other plugins, so that they can work simultaneously.</td>
                 <td>boolean</td>
@@ -434,7 +427,6 @@
                 "isDisplayedInViewer": true,
                 "isInsideMode": false,
                 "isModal": true,
-                "isNeedNumbering": false,
                 "isSystem": false,
                 "isUpdateOleOnResize": true,
                 "isViewer": true,
