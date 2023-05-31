@@ -3,7 +3,7 @@
     "InsertTextForm": {
       "memberof": "ApiDocument",
       "name": "InsertTextForm",
-      "description": "<p>Insert a text box with the specified text box properties over of the selected text.</p>",
+      "description": "<p>Inserts a text box with the specified text box properties over the selected text.</p>",
       "tags": {},
       "returns": [
         [
@@ -14,23 +14,23 @@
       "inherits": null,
       "params": [
         {
-          "type": "TextFormPr",
+          "type": "TextFormInsertPr",
           "name": "oFormPr",
-          "description": "<p>Text field properties.</p>",
+          "description": "<p>Properties for inserting a text field.</p>",
           "optional": false
         }
       ]
     }
   },
   "events": {},
-  "comment": "/**\n\t * Insert a text box with the specified text box properties over of the selected text.\n\t * @memberof ApiDocument\n\t * @param {TextFormPr} oFormPr - Text field properties.\n\t * @returns {ApiTextForm}\n\t */",
-  "description": "<p>Insert a text box with the specified text box properties over of the selected text.</p>",
+  "comment": "/**\n\t * Inserts a text box with the specified text box properties over the selected text.\n\t * @memberof ApiDocument\n\t * @param {TextFormInsertPr} oFormPr - Properties for inserting a text field.\n\t * @returns {ApiTextForm}\n\t */",
+  "description": "<p>Inserts a text box with the specified text box properties over the selected text.</p>",
   "scope": "instance",
   "params": [
     {
-      "type": "TextFormPr",
+      "type": "TextFormInsertPr",
       "name": "oFormPr",
-      "description": "<p>Text field properties.</p>",
+      "description": "<p>Properties for inserting a text field.</p>",
       "optional": false
     }
   ]

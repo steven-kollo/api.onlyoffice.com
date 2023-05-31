@@ -80,12 +80,12 @@
       {
         "type": "boolean",
         "name": "placeholderFromSelection",
-        "description": "<p>Specifies if the currently selected text should be saved as placeholder for the inserted form.</p>"
+        "description": "<p>Specifies if the currently selected text should be saved as a placeholder of the inserted form.</p>"
       },
       {
         "type": "boolean",
         "name": "keepSelectedTextInForm",
-        "description": "<p>Specifies if the currently selected text should be saved as content for the inserted form.</p>"
+        "description": "<p>Specifies if the currently selected text should be saved as the content of the inserted form.</p>"
       }
     ]
   },
