@@ -79,7 +79,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             writer.WriteElementString("status", "0");
 
-            if (response.GetType().Name == dic.GetType().Name) 
+            if (response.GetType().Name == dic.GetType().Name)
             {
                 writer.WriteStartElement("response");
                 foreach (KeyValuePair<string, object> keyValue in (Dictionary<string, object>)response)
@@ -241,7 +241,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != typeof (MsDocEntryPointMethod)) return false;
+            if (obj.GetType() != typeof(MsDocEntryPointMethod)) return false;
             return Equals((MsDocEntryPointMethod)obj);
         }
 
@@ -261,7 +261,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             unchecked
             {
-                return ((Path != null ? Path.GetHashCode() : 0)*397) ^ (HttpMethod != null ? HttpMethod.GetHashCode() : 0);
+                return ((Path != null ? Path.GetHashCode() : 0) * 397) ^ (HttpMethod != null ? HttpMethod.GetHashCode() : 0);
             }
         }
 
@@ -303,6 +303,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [DataMember(Name = "file")]
         public string File { get; set; }
+
+        [DataMember(Name = "assembly")]
+        public string Assembly { get; set; }
+
+        public List<MsDocEntryPointMethodParams> Dto { get; set; }
     }
 
     public class MsDocDocumentGenerator
@@ -311,13 +316,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         internal const string SystemIEnumerable = "System.Collections.Generic.IEnumerable{";
         internal const string SystemList = "System.Collections.Generic.List{";
 
+        private readonly string _basePath;
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
+
+        private readonly ClassNamePluralizer _classPluralizer;
 
         private static ILog _logger;
 
-        public MsDocDocumentGenerator()
+        public MsDocDocumentGenerator(string basePath, ClassNamePluralizer classPluralizer)
         {
+            _basePath = basePath;
             GetLogger();
+
+            _classPluralizer = classPluralizer;
         }
 
         private void GetLogger()
@@ -332,7 +343,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             get { return _points; }
         }
-        
+
         private void SaveMembers(XElement entryPointDoc, List<XElement> memberdesc)
         {
             var root = new MsDocEntryPoint
@@ -378,7 +389,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 Visible = !string.Equals(methodParams[j].Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
                                 Type = GetType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()),
                                 Method = methodParams[j].Attribute("method") != null ? methodParams[j].Attribute("method").ValueOrNull() : "body",
-                                File = methodParams[j].Attribute("file").ValueOrNull()
+                                File = methodParams[j].Attribute("file").ValueOrNull(),
+                                Assembly = GetAssembly(methodParams[j].Attribute("type").ValueOrNull())
                             };
                             pointMethod.Params.Add(param);
                         }
@@ -398,7 +410,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
             }
             if (!root.Methods.Any()) return;
-            foreach(var point in Points)
+            foreach (var point in Points)
             {
                 if (point.Name == root.Name)
                 {
@@ -416,7 +428,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             List<XElement> memberdesc = new List<XElement>();
             foreach (var member in members)
             {
-                if (member.Element("name") != null) 
+                if (member.Element("name") != null)
                 {
                     if (entryPointDoc == null)
                     {
@@ -441,6 +453,43 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 SaveMembers(entryPointDoc, memberdesc);
             }
+        }
+
+        private List<MsDocEntryPointMethodParams> ExpandDto(string type, string file)
+        {
+            var xml = Path.Combine(_basePath, file + ".xml");
+            if (!File.Exists(xml)) return null;
+            var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
+
+            var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
+            var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
+            var result = new List<MsDocEntryPointMethodParams>();
+            if (inherited != null && inherited.Element("inherited") != null)
+            {
+                var split = inherited.Element("inherited").ValueOrNull().Split(',');
+                needMembers = GetInherited(split[0].Trim(), split[1].Trim(), needMembers);
+            }
+
+            foreach(var member in needMembers)
+            {
+                var name = member.Attribute("name").ValueOrNull();
+                if (!string.IsNullOrWhiteSpace(name)) {
+                    var param = new MsDocEntryPointMethodParams()
+                    {
+                        Name = name.Split('.').Last(),
+                        Description = member.Element("summary").ValueOrNull(),
+                        Type = member.Element("type").ValueOrNull(),
+                        Visible = true
+                    };
+                    if (!string.IsNullOrWhiteSpace(param.Type))
+                    {
+                        param.Type = param.Type.Split(',').First();
+                    }
+                    result.Add(param);
+                }
+            }
+
+            return result;
         }
 
         private List<MsDocFunctionResponse> GetResponse(XElement element, string collection)
@@ -487,8 +536,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             }
             return response;
         }
-        
-        private Dictionary<string, object> Sorted(Dictionary<string,object> response, Dictionary<string, int> orders)
+
+        private Dictionary<string, object> Sorted(Dictionary<string, object> response, Dictionary<string, int> orders)
         {
             Dictionary<string, object> SortedResponse = new Dictionary<string, object>();
             foreach (var pair in orders.OrderBy(pair => pair.Value))
@@ -500,7 +549,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private Dictionary<string, object> GetResponse(string type, string file)
         {
-            var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", file + ".xml");
+            var xml = Path.Combine(_basePath, file + ".xml");
             if (!File.Exists(xml)) return null;
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
@@ -522,93 +571,98 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return responseParam;
         }
 
-        private void Parse (List<XElement> needMembers, Dictionary<string, object> responseParam, Dictionary<string, int> orders)
+        private void Parse(List<XElement> needMembers, Dictionary<string, object> responseParam, Dictionary<string, int> orders)
         {
             needMembers.ForEach(member =>
             {
                 object result;
                 var defaultName = "";
-                if (member.Attribute("name").ValueOrNull()!="") 
+                if (member.Attribute("name").ValueOrNull() != "")
                 {
                     defaultName = member.Attribute("name").ValueOrNull().Split('.').Last();
                 }
                 if (member.Element("example") != null)
                 {
-                    
-                var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
-                if (Boolean.TryParse(member.Element("example").ValueOrNull(), out bool resultBool))
-                {
-                    result = resultBool;
-                }
-                else if (member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out int resultInt))
-                {
-                    result = resultInt;
-                }
-                else if (member.Element("example").Attribute("type").ValueOrNull() == "double" && Double.TryParse(member.Element("example").ValueOrNull().Replace('.',','), out double resultdouble))
-                {
-                    result = resultdouble;
-                }
-                else
-                {
-                    result = member.Element("example").ValueOrNull().Replace("            ","");
-                        
-                    if (result.Equals("null"))
+
+                    var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
+                    if (Boolean.TryParse(member.Element("example").ValueOrNull(), out bool resultBool))
                     {
-                        result = null;
+                        result = resultBool;
                     }
-                }
-                if(member.Element("collection").ValueOrNull() == "list")
-                {
-                    var list = new List<object>();
-                       
-                    if (member.Element("collection").Attribute("split").ValueOrNull() != "")
+                    else if (member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out int resultInt))
                     {
-                        var split = member.Element("collection").Attribute("split").ValueOrNull()[0];
-                        list = result.ToString().Split(split).ToList<object>();
+                        result = resultInt;
+                    }
+                    else if (member.Element("example").Attribute("type").ValueOrNull() == "double" && Double.TryParse(member.Element("example").ValueOrNull().Replace('.', ','), out double resultdouble))
+                    {
+                        result = resultdouble;
                     }
                     else
                     {
-                        list.Add(result);
-                    }
-                    responseParam.Add(name, list);
-                }
-                else
-                {
-                    responseParam.Add(name, result);
-                }
-                var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
-                orders.Add(name, order);
-                }
-                else if(member.Element("type") != null)
-                {
-                    var name = member.Element("type").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("type").Attribute("name").ValueOrNull();
-                    var split = member.Element("type").ValueOrNull().Split(',');
-                    var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", split[1].Trim() + ".xml");
-                    var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
-                    var newMembers = members.Where(mem => IsMember(mem, split[0])).ToList();
-                    var inherited = members.Where(mem => IsInherited(mem, split[0])).SingleOrDefault();
+                        result = member.Element("example").ValueOrNull().Replace("            ", "");
 
-                    if (inherited != null && inherited.Element("inherited") != null)
-                    {
-                        var split1 = inherited.Element("inherited").ValueOrNull().Split(',');
-                        newMembers = GetInherited(split1[0].Trim(), split1[1].Trim(), newMembers);
+                        if (result.Equals("null"))
+                        {
+                            result = null;
+                        }
                     }
-                    var responseParam1 = new Dictionary<string, object>();
-                    var orders1 = new Dictionary<string, int>();
-                    Parse(newMembers, responseParam1, orders1);
-                    responseParam1 = Sorted(responseParam1, orders1);
                     if (member.Element("collection").ValueOrNull() == "list")
                     {
                         var list = new List<object>();
-                        list.Add(responseParam1);
+
+                        if (member.Element("collection").Attribute("split").ValueOrNull() != "")
+                        {
+                            var split = member.Element("collection").Attribute("split").ValueOrNull()[0];
+                            list = result.ToString().Split(split).ToList<object>();
+                        }
+                        else
+                        {
+                            list.Add(result);
+                        }
                         responseParam.Add(name, list);
                     }
                     else
                     {
-                        responseParam.Add(name, responseParam1);
+                        responseParam.Add(name, result);
                     }
                     var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
                     orders.Add(name, order);
+                }
+                else if (member.Element("type") != null)
+                {
+                    var name = member.Element("type").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("type").Attribute("name").ValueOrNull();
+                    var split = member.Element("type").ValueOrNull().Split(',');
+                    var newMembers = GetResponse(split[0], split[1].Trim());
+
+                    if (newMembers != null)
+                    {
+                        if (member.Element("collection").ValueOrNull() == "list")
+                        {
+                            var list = new List<object>
+                            {
+                                newMembers
+                            };
+                            responseParam.Add(name, list);
+                        }
+                        else
+                        {
+                            responseParam.Add(name, newMembers);
+                        }
+
+                        var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                        orders.Add(name, order);
+                    }
+                    else
+                    {
+                        var type = _classPluralizer.ToHumanName(split[0]);
+                        if (type.JsonParam != null)
+                        {
+                            responseParam.Add(name, type.JsonParam);
+
+                            var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                            orders.Add(name, order);
+                        }
+                    }
                 }
                 else if (member.Element("object") != null)
                 {
@@ -630,13 +684,23 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
                     orders.Add(name, order);
                 }
-                });
+            });
         }
 
         private bool IsMember(XElement mem, string type)
         {
             var member = mem.Attribute("name").ValueOrNull();
-            if (member.Contains("P:" + type + ".") || member.Contains("F:" + type + ".")) 
+            if (member.Contains('`'))
+            {
+                var split = member.Split('`');
+                member = member.Split('`')[0];
+                var dotPos = split[1].IndexOf('.');
+                if (dotPos > 0)
+                {
+                    member += split[1].Substring(dotPos);
+                }
+            }
+            if (member.Contains("P:" + type + ".") || member.Contains("F:" + type + "."))
             {
                 return member.Split('.').Length == type.Split('.').Length + 1;
             }
@@ -653,7 +717,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private List<XElement> GetInherited(string type, string file, List<XElement> needMembers)
         {
-            var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", file + ".xml");
+            var xml = Path.Combine(_basePath, file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers1 = members.Where(mem => IsMember(mem, type)).ToList();
             var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
@@ -680,44 +744,71 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return types[number];
         }
 
+        private string GetAssembly(string type)
+        {
+            if (type == null) return null;
+            if (string.IsNullOrWhiteSpace(type)) return null;
+
+            var split = type.Split(',');
+            if (split.Length > 1)
+            {
+                var assembly = split[1].Trim();
+                if (assembly != "System") return assembly;
+            }
+
+            return null;
+        }
+
         public void GenerateRequestExample(MsDocEntryPointMethod method)
         {
             var sb = new StringBuilder();
             var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p =>
             {
-                if (p.File == "")
+                var humanName = _classPluralizer.ToHumanName(p.Type);
+                if (humanName.JsonParam == null)
                 {
-                    var humanName = ClassNamePluralizer.ToHumanName(p.Type);
-                    if (humanName.JsonParam == null)
+                    var jsonParam = GetJsonParam(p.Type);
+                    if (jsonParam != null)
                     {
-                        var jsonParam = GetJsonParam(p.Type);
-                        if (jsonParam != null)
-                        {
-                            humanName.JsonParam = jsonParam;
-                        }
+                        humanName.JsonParam = jsonParam;
                     }
-                    return humanName;
                 }
-                else
+
+                if (!string.IsNullOrWhiteSpace(p.File) || !string.IsNullOrWhiteSpace(p.Assembly))
                 {
+                    var assembly = string.IsNullOrWhiteSpace(p.File) ? p.Assembly : p.File;
+
                     var responseParam = new Dictionary<string, object>();
                     var orders = new Dictionary<string, int>();
-                    var humanName = new TypeDescription(p.Type, "");
-                    humanName.JsonParam = GetResponse(GetOnlyName(p.Type), p.File);
+                    var humanNameAssembly = new TypeDescription(p.Type, "");
+                    humanNameAssembly.JsonParam = GetResponse(GetOnlyName(p.Type), assembly);
                     if (p.Type.StartsWith(SystemIEnumerable) || p.Type.StartsWith(SystemList))
                     {
                         var list = new List<object>();
-                        list.Add(humanName.JsonParam);
-                        humanName.JsonParam = list;
+                        list.Add(humanNameAssembly.JsonParam);
+                        humanNameAssembly.JsonParam = list;
                     }
-                    return humanName;
+
+                    if ((string.IsNullOrWhiteSpace(humanName.ExampleJson) && !string.IsNullOrWhiteSpace(humanNameAssembly.ExampleJson))
+                        || humanName.JsonParam == null && humanNameAssembly.JsonParam != null)
+                    {
+                        humanName = humanNameAssembly;
+                    }
+
+                    if (p.Name == "inDto" && p.Dto == null)
+                    {
+                        p.Dto = ExpandDto(GetOnlyName(p.Type), assembly);
+                    }
                 }
+
+                return humanName;
             });
             var urlParams = visible.Where(p => p.Key.Method == "url").ToList();
             var bodyParams = visible.Except(urlParams).ToList();
             var path = method.Path.ToLowerInvariant();
             var query = false;
-            urlParams.ForEach(p => {
+            urlParams.ForEach(p =>
+            {
                 if (p.Value.JsonParam == null)
                 {
                     return;
@@ -741,7 +832,25 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 .AppendLine("Content-Type: application/json")
                 .Append("Accept: application/json");
 
-            if (args.Any()) {
+            if (args.ContainsKey("inDto"))
+            {
+                var dto = args["inDto"] as Dictionary<string, object>;
+                args.Remove("inDto");
+                if (dto == null)
+                {
+                    args.Add("inDto", null);
+                }
+                else
+                {
+                    foreach (var kv in dto)
+                    {
+                        args.Add(kv.Key, kv.Value);
+                    }
+                }
+            }
+
+            if (args.Any())
+            {
                 sb.AppendLine().AppendLine()
                    .Append(JsonConvert.SerializeObject(args, Newtonsoft.Json.Formatting.Indented));
             }
@@ -767,6 +876,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 return typeName.Substring(0, typeName.Length - 2);
             }
+            if (typeName.EndsWith("{`0}"))
+            {
+                return typeName.Substring(0, typeName.Length - 4);
+            }
             return typeName;
         }
 
@@ -775,8 +888,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             TypeDescription typeDescription = null;
             var name = GetOnlyName(typeName);
 
-            typeDescription = ClassNamePluralizer.ToHumanName(name);
-            if (typeDescription !=null && typeDescription.JsonParam != null && !typeName.StartsWith(SystemNullable))
+            typeDescription = _classPluralizer.ToHumanName(name);
+            if (typeDescription != null && typeDescription.JsonParam != null && !typeName.StartsWith(SystemNullable))
             {
                 var list = new List<object>();
                 list.Add(typeDescription.JsonParam);

@@ -53,7 +53,6 @@
 {
     "name": "OCR",
     "nameLocale": {
-        "ru": "&#1056;&#1072;&#1089;&#1087;&#1086;&#1079;&#1085;&#1072;&#1074;&#1072;&#1085;&#1080;&#1077; &#1090;&#1077;&#1082;&#1089;&#1090;&#1072;",
         "fr": "Reconnaissance optique de caract&#232;res",
         "es": "Reconocimiento &#243;ptico de caracteres",
         "de": "OCR"
@@ -65,7 +64,6 @@
         {
             "description": "Recognize text from pictures and screenshots and insert it into your documents.",
             "descriptionLocale": {
-                "ru": "&#1056;&#1072;&#1089;&#1087;&#1086;&#1079;&#1085;&#1072;&#1074;&#1072;&#1081;&#1090;&#1077; &#1090;&#1077;&#1082;&#1089;&#1090; &#1089; &#1092;&#1086;&#1090;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1081; &#1080; &#1089;&#1082;&#1088;&#1080;&#1085;&#1096;&#1086;&#1090;&#1086;&#1074; &#1080; &#1074;&#1089;&#1090;&#1072;&#1074;&#1083;&#1103;&#1081;&#1090;&#1077; &#1077;&#1075;&#1086; &#1074; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1099;.",
                 "fr": "Reconnaissez le texte des images et des captures d'&#233;cran et ins&#233;rez-le dans vos documents.",
                 "es": "Reconozca el texto de im&#225;genes y capturas de pantalla e ins&#233;rtelo en sus documentos.",
                 "de": "Erkennen Sie Text auf Bildern und Screenshots und f&#252;gen Sie ihn in Ihre Dokumente ein."
@@ -126,7 +124,6 @@
                     "text": "Insert Text",
                     "primary": true,
                     "textLocale": {
-                        "ru": "&#1042;&#1089;&#1090;&#1072;&#1074;&#1080;&#1090;&#1100; &#1090;&#1077;&#1082;&#1089;&#1090;",
                         "fr": "Ins&#233;rer le texte",
                         "es": "Insertar texto",
                         "de": "Text einf&#252;gen"
@@ -136,7 +133,6 @@
                     "text": "Cancel",
                     "primary": false,
                     "textLocale": {
-                        "ru": "&#1054;&#1090;&#1084;&#1077;&#1085;&#1072;",
                         "fr": "Annuler",
                         "es": "Cancelar",
                         "de": "Abbrechen"
@@ -160,7 +156,6 @@
         {
             "description": "About",
             "descriptionLocale": {
-                "ru": "&#1057;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072;",
                 "fr": "&#192; propos",
                 "es": "Sobre programa",
                 "de": "&#220;ber"

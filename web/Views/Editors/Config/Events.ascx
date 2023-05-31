@@ -440,7 +440,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.
+            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history by clicking the <em>Close History</em> button.
             When the function is called, the editor must be initialized again, in editing mode.
             If the method is not declared the <em>Close History</em> button will not be displayed.
         </p>

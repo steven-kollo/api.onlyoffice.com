@@ -52,7 +52,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 {
     "name": "Symbol Table",
     "nameLocale": {
-        "ru": "&#1058;&#1072;&#1073;&#1083;&#1080;&#1094;&#1072; &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;",
         "fr": "Table des symboles",
         "es": "Tabla de si&#769;mbolos",
         "de": "Symboltabelle"
@@ -64,7 +63,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
         {
             "description": "Symbol Table",
             "descriptionLocale": {
-                "ru": "&#1058;&#1072;&#1073;&#1083;&#1080;&#1094;&#1072; &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;",
                 "fr": "Table des symboles",
                 "es": "Tabla de si&#769;mbolos",
                 "de": "Symboltabelle"
@@ -87,7 +85,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
                     "text": "Insert",
                     "primary": true,
                     "textLocale": {
-                        "ru": "&#1042;&#1089;&#1090;&#1072;&#1074;&#1080;&#1090;&#x044C;",
                         "fr": "Inse&#769;rer",
                         "es": "Insertar",
                         "de": "Einf&#252;gen"
@@ -97,7 +94,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
                     "text": "Cancel",
                     "primary": false,
                     "textLocale": {
-                        "ru": "&#1054;&#1090;&#1084;&#1077;&#1085;&#1072;",
                         "fr": "Annuler",
                         "es": "Cancelar",
                         "de": "Abbrechen"

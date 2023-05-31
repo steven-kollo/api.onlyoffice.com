@@ -90,6 +90,9 @@
                 <a href="<%= Url.Action("nuxeo") %>">Nuxeo integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("odoo") %>">Odoo integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("owncloud") %>">ownCloud integration</a>
             </li>
             <li>

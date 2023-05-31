@@ -19,7 +19,7 @@
 
 <% if (entryPoints != null && entryPoints.Any())
    { %>
-<div class="treeheader">Usage API</div>
+<div class="treeheader">API backend</div>
 <ul class="side-nav root">
     <% foreach (var entryPoint in entryPoints.OrderBy(x => x.Name).ToList())
        { %>
@@ -62,7 +62,7 @@
 </ul>
 <% } %>
 
-<div class="treeheader">Hosted solution</div>
+<div class="treeheader">API system</div>
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("apisystem/") %>">Basic concepts</a>

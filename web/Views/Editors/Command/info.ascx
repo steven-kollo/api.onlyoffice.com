@@ -14,7 +14,8 @@ The response will be sent to the <a href="<%= Url.Action("callback") %>">callbac
 <pre>
 {
     "c": "info",
-    "key": "Khirz6zTPdfd7"
+    "key": "Khirz6zTPdfd7",
+    "userdata": "sample userdata"
 }
 </pre>
 <div class="header-gray">Parameters</div>
@@ -45,6 +46,12 @@ The response will be sent to the <a href="<%= Url.Action("callback") %>">callbac
             <td>Defines the document identifier used to unambiguously identify the document file.</td>
             <td>string</td>
             <td>required</td>
+        </tr>
+        <tr class="tablerow">
+            <td>userdata</td>
+            <td>Defines some custom identifier which will help distinguish the specific request in case there were more than one.</td>
+            <td>string</td>
+            <td>optional</td>
         </tr>
     </tbody>
 </table>

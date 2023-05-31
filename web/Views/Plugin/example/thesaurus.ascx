@@ -51,7 +51,6 @@
 {
     "name": "Thesaurus",
     "nameLocale": {
-        "ru": "&#1057;&#1080;&#1085;&#1086;&#1085;&#1080;&#1084;&#1099;",
         "fr": "Th&#233;saurus",
         "es": "Tesauro",
         "de": "Thesaurus"
@@ -63,7 +62,6 @@
         {
             "description": "Search for synonyms and antonyms of a word and replace it with the selected one.",
             "descriptionLocale": {
-                "ru": "&#1053;&#1072;&#1093;&#1086;&#1076;&#1080;&#1090;&#1077; &#1089;&#1080;&#1085;&#1086;&#1085;&#1080;&#1084;&#1099; &#1080; &#1072;&#1085;&#1090;&#1086;&#1085;&#1080;&#1084;&#1099; &#1076;&#1083;&#1103; &#1074;&#1099;&#1073;&#1088;&#1072;&#1085;&#1085;&#1086;&#1075;&#1086; &#1089;&#1083;&#1086;&#1074;&#1072;.",
                 "fr": "Recherchez les synonymes et les antonymes d'un mot et remplacez-le par le mot s&#233;lectionn&#233;.",
                 "es": "Busque sin&#243;nimos y ant&#243;nimos de una palabra y sustit&#250;yala por la seleccionada.",
                 "de": "Finden Sie Synonyme und Antonyme eines Wortes und ersetzen Sie es durch die ausgew&#228;hlte Variante."
