@@ -268,7 +268,7 @@
             },
             {
                "Item1":"Adding plugins",
-               "Item2":"installation"
+               "Item2":"installation/"
             },
             {
                "Item1":"Plugin localization",
@@ -280,7 +280,7 @@
             },
             {
                "Item1":"Plugin examples",
-               "Item2":"example"
+               "Item2":"example/"
             }
          ],
          "Macros":[
@@ -386,7 +386,7 @@
             },
             {
                "Item1":"How it works",
-               "Item2":"howitworks"
+               "Item2":"howitworks/"
             }
          ],
          "Usage API":[

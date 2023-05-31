@@ -3,6 +3,9 @@
 - editors: added the draw field to the editorConfig.customization.layout.toolbar parameter
 - editors: added opening .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt format.
 - editors: added the size field to the editorConfig.customization.font parameter
+- editors: added the onRequestHistoryClose event to the Document History page
+- editors: added the userdata parameter to the info command
+- editors: added the Odoo app
 
 ## 4.0.0
 - docspace: added the DocSpace section

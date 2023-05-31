@@ -107,7 +107,9 @@
                 <td id="nameLocale" class="copy-link">nameLocale</td>
                 <td>Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.</td>
                 <td><a href="<%= Url.Action("global") %>#localeTranslate">localeTranslate</a></td>
-                <td></td>
+                <td>{
+    "fr": "french plugin name"
+}</td>
             </tr>
             <tr class="tablerow">
                 <td id="variations" class="copy-link">variations</td>
@@ -119,7 +121,17 @@
                 <td id="buttons" class="copy-link">variations.buttons</td>
                 <td>The list of skinnable plugin buttons used in the plugin interface (used for visual plugins with their own window only, i.e. <em>isVisual == true &amp;&amp; isInsideMode == false</em>).</td>
                 <td>Array.&lt;<a href="<%= Url.Action("global") %>#Button">Button</a>&gt;</td>
-                <td></td>
+                <td>[
+    { 
+        "text": "Cancel",
+        "primary": false,
+        "isviewer": false,
+        "textLocale": {
+            "fr": "Annuler",
+            "es": "Cancelar"
+        }
+    }
+]</td>
             </tr>
             <tr class="tablerow">
                 <td id="cryptoDisabledForExternalCloud" class="copy-link">variations.cryptoDisabledForExternalCloud</td>
@@ -155,31 +167,37 @@
                 <td id="descriptionLocale" class="copy-link">variations.descriptionLocale</td>
                 <td>Translations for the description field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin description translation for each language.</td>
                 <td><a href="<%= Url.Action("global") %>#localeTranslate">localeTranslate</a></td>
-                <td></td>
+                <td>{
+    "fr": "french plugin description"
+}</td>
             </tr>
             <tr class="tablerow">
                 <td id="EditorsSupport" class="copy-link">variations.EditorsSupport</td>
                 <td>The editors which the plugin is available for (<b>word</b>, <b>cell</b>, or <b>slide</b>).</td>
                 <td>Array.&lt;<a href="<%= Url.Action("global") %>#editorType">editorType</a>&gt;</td>
-                <td></td>
+                <td>["word"]</td>
             </tr>
             <tr class="tablerow">
                 <td id="events" class="copy-link">variations.events</td>
                 <td>Plugin events.</td>
                 <td>Array.&lt;<a href="<%= Url.Action("global") %>#EventType">EventType</a>&gt;</td>
-                <td></td>
+                <td>["onClick"]</td>
             </tr>
             <tr class="tablerow">
                 <td id="icons" class="copy-link">variations.icons</td>
                 <td>Plugin icon image files used in the editors.</td>
                 <td>Array.&lt;string&gt;</td>
-                <td></td>
+                <td>["icon.png"]</td>
             </tr>
             <tr class="tablerow">
                 <td id="icons2" class="copy-link">variations.icons2</td>
                 <td>Scalable icons for plugin extensions. More information can be found <a href="<%= Url.Action("icons") %>">here</a>.</td>
                 <td>Array.&lt;object&gt;</td>
-                <td></td>
+                <td>[
+    {
+        "100%": { "normal": "icon.png" }
+    }
+]</td>
             </tr>
             <tr class="tablerow">
                 <td id="initData" class="copy-link">variations.initData</td>
@@ -251,7 +269,7 @@
                 <td id="size" class="copy-link">variations.size</td>
                 <td>Plugin window size.</td>
                 <td>Array.&lt;number&gt;</td>
-                <td></td>
+                <td>[600]</td>
             </tr>
             <tr class="tablerow">
                 <td id="store" class="copy-link">variations.store</td>
@@ -281,7 +299,9 @@
                     </ul>
                 </td>
                 <td>object</td>
-                <td></td>
+                <td>{
+    "light" : "#F5F5F5"
+}</td>
             </tr>
             <tr class="tablerow">
                 <td id="store-icons" class="copy-link">variations.store.icons</td>
@@ -305,13 +325,15 @@
                     </ul>
                 </td>
                 <td>object</td>
-                <td></td>
+                <td>{
+    "light": "resources/store/icons"
+}</td>
             </tr>
             <tr class="tablerow">
                 <td id="store-screenshots" class="copy-link">variations.store.screenshots</td>
                 <td>Images that are used for the plugin description in <b>ONLYOFFICE Plugin Marketplace</b>.</td>
                 <td>Array.&lt;string&gt;</td>
-                <td></td>
+                <td>["resources/store/screenshots/screen_1.png"]</td>
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">variations.url</td>
@@ -377,7 +399,7 @@
                         "200%": { "normal": "icon@2x.png" }
                     },
                     {
-                        "style" : "dark"
+                        "style": "dark"
                     }
                 ],
                 "initData": "",
@@ -394,14 +416,14 @@
                 "size": [600, 700],
                 "store": {
                     "background": {
-                        "light" : "#F5F5F5",
-                        "dark" : "#444444"
+                        "light": "#F5F5F5",
+                        "dark": "#444444"
                     },
-                    "icons"       : {
-                        "light" : "resources/store/icons",
-                        "dark"  : "resources/store/icons"
+                    "icons": {
+                        "light": "resources/store/icons",
+                        "dark" : "resources/store/icons"
                     },
-                    "screenshots" : ["resources/store/screenshots/screen_1.png"]
+                    "screenshots": ["resources/store/screenshots/screen_1.png"]
                 },
                 "url": "index.html"
             }
