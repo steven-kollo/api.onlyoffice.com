@@ -245,7 +245,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="isNeedNumbering" class="copy-link">variations.isNeedNumbering</td>
-                <td>Specifies if the selected text in the editor will be sent to the plugin with or without numbering.</td>
+                <td>Specifies if the selected text in the editor will be sent to the plugin with or without numbering. This parameter is always equal to <b>false</b>.</td>
                 <td>boolean</td>
                 <td>false</td>
             </tr>
