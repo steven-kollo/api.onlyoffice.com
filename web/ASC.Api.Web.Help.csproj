@@ -1209,6 +1209,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllNumberedParagraphs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllOleObjects.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllShapes.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllStyles.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllTablesOnPage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetBookmarkRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetClassType.docbuilder" />
@@ -4160,7 +4161,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllStyles.docbuilder" />
     <Content Include="App_Data\plugins\examples\AddinFieldData.docbuilder" />
     <Content Include="App_Data\plugins\examples\DocumentEditingRestrictions.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddAddinField.docbuilder" />
