@@ -370,7 +370,7 @@
   },
   "ReplaceImageMode": {
     "name": "ReplaceImageMode",
-    "description": "<p>The current selection type (&quot;none&quot;, &quot;text&quot;, &quot;drawing&quot;, or &quot;slide&quot;).</p>",
+    "description": "<p>Specifies how to adjust the image object in case of replacing the selected image.</p>",
     "type": [
       "\"fill\"",
       "\"fit\"",
@@ -403,7 +403,7 @@
       {
         "type": "ReplaceImageMode",
         "name": "replaceMode",
-        "description": "<p>If presents, defines how to adjust image object in case of replacing selected image</p>"
+        "description": "<p>Specifies how to adjust the image object in case of replacing the selected image.</p>"
       }
     ]
   },
@@ -438,7 +438,7 @@
   },
   "ContextMenuItem": {
     "name": "ContextMenuItem",
-    "description": "<p>The context menu item</p>",
+    "description": "<p>The context menu item.</p>",
     "type": [
       "Object"
     ],
@@ -446,7 +446,7 @@
       {
         "type": "string",
         "name": "id",
-        "description": "<p>The item id.</p>"
+        "description": "<p>The item ID.</p>"
       },
       {
         "type": "localeTranslate",
@@ -456,12 +456,12 @@
       {
         "type": "boolean",
         "name": "disabled",
-        "description": "<p>Is disabled item.</p>"
+        "description": "<p>Specifies if the current item is disabled or not.</p>"
       },
       {
         "type": "Array.<ContextMenuItem>",
         "name": "items",
-        "description": "<p>An array containing the items for current item.</p>"
+        "description": "<p>An array containing the context menu items for the current item.</p>"
       }
     ]
   }

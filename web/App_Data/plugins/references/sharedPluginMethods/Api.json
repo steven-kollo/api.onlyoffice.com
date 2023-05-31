@@ -352,13 +352,19 @@
         {
           "type": "number",
           "name": "type",
-          "description": "<p>A value which defines an action type which can take <b>0</b> if this is the <em>Information</em> action or <b>1</b> if this is the <em>BlockInteraction</em> action.</p>",
+          "description": "<p>A value which defines an action type which can take <b>&quot;Block&quot;</b> if this is the <em>BlockInteraction</em> action or <b>&quot;Information</b> if this is the <em>Information</em> action.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "description",
           "description": "<p>A string value that specifies the description text for the operation end action.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "status",
+          "description": "<p>The error status code. If no error occurs, then an empty string is passed.</p>",
           "optional": false
         }
       ]
@@ -387,7 +393,7 @@
         {
           "type": "string",
           "name": "obj.type",
-          "description": "<p>The type of encrypting operation:</p>\n<ul>\n<li><b>generatePassword</b> - generates a password for the document,</li>\n<li><b>getPasswordByFile</b> - sends the password when opening the document,</li>\n<li><b>setPasswordByFile</b> - sets a password to the document,</li>\n<li><b>encryptData</b> - encrypts changes when co-editing,</li>\n<li><b>decryptData</b> - decrypts changes when co-editing.</li>\n</ul>",
+          "description": "<p>The type of encrypting operation:</p>\n<ul>\n<li><b>generatePassword</b> - generates a password for the document,</li>\n<li><b>getPasswordByFile</b> - sends the password when opening the document,</li>\n<li><b>encryptData</b> - encrypts changes when co-editing,</li>\n<li><b>decryptData</b> - decrypts changes when co-editing.</li>\n</ul>",
           "optional": false
         },
         {
@@ -668,56 +674,62 @@
       "params": [
         {
           "type": "object",
-          "name": "numbering",
+          "name": "prop",
           "description": "<p>The resulting string display properties.</p>",
           "optional": false
         },
         {
           "type": "boolean",
-          "name": "numbering.NewLine",
-          "description": "<p>Defines if the resulting string will include line boundaries or not.</p>",
+          "name": "prop.NewLine",
+          "description": "<p>Defines if the resulting string will include line boundaries or not (they will be replaced with '\\r').</p>",
           "optional": false
         },
         {
           "type": "boolean",
-          "name": "numbering.NewLineParagraph",
+          "name": "prop.NewLineParagraph",
           "description": "<p>Defines if the resulting string will include paragraph line boundaries or not.</p>",
           "optional": false
         },
         {
           "type": "boolean",
-          "name": "numbering.Numbering",
+          "name": "prop.Numbering",
           "description": "<p>Defines if the resulting string will include numbering or not.</p>",
           "optional": false
         },
         {
           "type": "boolean",
-          "name": "numbering.Math",
+          "name": "prop.Math",
           "description": "<p>Defines if the resulting string will include mathematical expressions or not.</p>",
           "optional": false
         },
         {
           "type": "string",
-          "name": "numbering.TableCellSeparator",
+          "name": "prop.TableCellSeparator",
           "description": "<p>Defines how the table cell separator will be specified in the resulting string.</p>",
           "optional": false
         },
         {
           "type": "string",
-          "name": "numbering.TableRowSeparator",
+          "name": "prop.TableRowSeparator",
           "description": "<p>Defines how the table row separator will be specified in the resulting string.</p>",
           "optional": false
         },
         {
           "type": "string",
-          "name": "numbering.ParaSeparator",
+          "name": "prop.ParaSeparator",
           "description": "<p>Defines how the paragraph separator will be specified in the resulting string.</p>",
           "optional": false
         },
         {
           "type": "string",
-          "name": "numbering.TabSymbol",
+          "name": "prop.TabSymbol",
           "description": "<p>Defines how the tab will be specified in the resulting string.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "prop.NewLineSeparator",
+          "description": "<p>Defines how the line separator will be specified in the resulting string (this property has the priority over <em>NewLine</em>).</p>",
           "optional": false
         }
       ]
@@ -876,6 +888,12 @@
           "name": "guid",
           "description": "<p>The plugin identifier. It must be of the <em>asc.{UUID}</em> type.</p>",
           "optional": true
+        },
+        {
+          "type": "string",
+          "name": "backup",
+          "description": "<p>The plugin backup. This parameter is used when working with the desktop editors.</p>",
+          "optional": true
         }
       ]
     },
@@ -933,6 +951,33 @@
         }
       ]
     },
+    "InstallDeveloperPlugin": {
+      "memberof": "Api",
+      "name": "InstallDeveloperPlugin",
+      "description": "<p>Installs a plugin by the URL to the plugin config.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "configUrl",
+          "description": "<p>The URL to the plugin <em>config.json</em> for installing.</p>",
+          "optional": false
+        }
+      ]
+    },
     "ShowButton": {
       "memberof": "Api",
       "name": "ShowButton",
@@ -952,13 +997,13 @@
           "type": "string",
           "name": "id",
           "description": "<p>The button ID.</p>",
-          "optional": true
+          "optional": false
         },
         {
           "type": "boolean",
           "name": "bShow",
           "description": "<p>The flag specifies whether the button is shown (<strong>true</strong>) or hidden (<strong>false</strong>).</p>",
-          "optional": true
+          "optional": false
         }
       ]
     },
@@ -1018,7 +1063,7 @@
     "GetDocumentLang": {
       "memberof": "Api",
       "name": "GetDocumentLang",
-      "description": "<p>Gets the document language.</p>",
+      "description": "<p>Returns the document language.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1036,7 +1081,7 @@
     "AddContextMenuItem": {
       "memberof": "Api",
       "name": "AddContextMenuItem",
-      "description": "<p>Add item to context menu</p>",
+      "description": "<p>Adds an item to the context menu.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1051,7 +1096,7 @@
         {
           "type": "Array.<ContextMenuItem>",
           "name": "items",
-          "description": "<p>Array of items</p>",
+          "description": "<p>An array containing the context menu items for the current item.</p>",
           "optional": false
         }
       ]
@@ -1059,7 +1104,7 @@
     "UpdateContextMenuItem": {
       "memberof": "Api",
       "name": "UpdateContextMenuItem",
-      "description": "<p>Update items in context menu</p>",
+      "description": "<p>Updates an item in the context menu with the specified items.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1074,7 +1119,7 @@
         {
           "type": "Array.<ContextMenuItem>",
           "name": "items",
-          "description": "<p>Array of items</p>",
+          "description": "<p>An array containing the context menu items for the current item.</p>",
           "optional": false
         }
       ]
@@ -1082,7 +1127,7 @@
     "ShowWindow": {
       "memberof": "Api",
       "name": "ShowWindow",
-      "description": "<p>Shows modal window.</p>",
+      "description": "<p>Shows the plugin modal window.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1111,7 +1156,7 @@
     "CloseWindow": {
       "memberof": "Api",
       "name": "CloseWindow",
-      "description": "<p>Close modal window.</p>",
+      "description": "<p>Closes the plugin modal window.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1134,7 +1179,7 @@
     "SendToWindow": {
       "memberof": "Api",
       "name": "SendToWindow",
-      "description": "<p>Send message to window.</p>",
+      "description": "<p>Sends a message to the plugin modal window.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1169,7 +1214,7 @@
     "ResizeWindow": {
       "memberof": "Api",
       "name": "ResizeWindow",
-      "description": "<p>Resize modal window.</p>",
+      "description": "<p>Resizes the plugin modal window.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1185,32 +1230,32 @@
           "type": "string",
           "name": "frameId",
           "description": "<p>The frame ID.</p>",
-          "optional": true
+          "optional": false
         },
         {
           "type": "number",
           "name": "size",
           "description": "<p>The frame size.</p>",
-          "optional": true
+          "optional": false
         },
         {
           "type": "number",
           "name": "minSize",
-          "description": "<p>The frame min size.</p>",
-          "optional": true
+          "description": "<p>The frame minimum size.</p>",
+          "optional": false
         },
         {
           "type": "number",
           "name": "maxSize",
-          "description": "<p>The frame max size.</p>",
-          "optional": true
+          "description": "<p>The frame maximum size.</p>",
+          "optional": false
         }
       ]
     },
     "MouseUpWindow": {
       "memberof": "Api",
       "name": "MouseUpWindow",
-      "description": "<p>Mouse up modal window.</p>",
+      "description": "<p>Sends an event to the plugin when the mouse button is released inside the plugin iframe.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1226,26 +1271,26 @@
           "type": "string",
           "name": "frameId",
           "description": "<p>The frame ID.</p>",
-          "optional": true
+          "optional": false
         },
         {
           "type": "number",
           "name": "x",
-          "description": "<p>coordinate.</p>",
-          "optional": true
+          "description": "<p>The X coordinate.</p>",
+          "optional": false
         },
         {
           "type": "number",
           "name": "y",
-          "description": "<p>coordinate.</p>",
-          "optional": true
+          "description": "<p>The Y coordinate.</p>",
+          "optional": false
         }
       ]
     },
     "MouseMoveWindow": {
       "memberof": "Api",
       "name": "MouseMoveWindow",
-      "description": "<p>Mouse move modal window.</p>",
+      "description": "<p>Sends an event to the plugin when the mouse button is moved inside the plugin iframe.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1261,19 +1306,19 @@
           "type": "string",
           "name": "frameId",
           "description": "<p>The frame ID.</p>",
-          "optional": true
+          "optional": false
         },
         {
           "type": "number",
           "name": "x",
-          "description": "<p>coordinate.</p>",
-          "optional": true
+          "description": "<p>The X coordinate.</p>",
+          "optional": false
         },
         {
           "type": "number",
           "name": "y",
-          "description": "<p>coordinate.</p>",
-          "optional": true
+          "description": "<p>The Y coordinate.</p>",
+          "optional": false
         }
       ]
     }
