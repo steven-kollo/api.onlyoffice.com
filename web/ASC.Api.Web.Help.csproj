@@ -3690,6 +3690,7 @@
     <Content Include="Views\DocBuilder\eventpartial.aspx" />
     <Content Include="Views\DocBuilder\formapi.aspx" />
     <Content Include="Views\DocBuilder\Formapi\default.ascx" />
+    <Content Include="Views\DocBuilder\Framework.aspx" />
     <Content Include="Views\DocBuilder\gettingstarted.aspx" />
     <Content Include="Views\DocBuilder\global.aspx" />
     <Content Include="Views\DocBuilder\howitworks.aspx" />

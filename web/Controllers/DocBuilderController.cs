@@ -46,6 +46,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "classlist",
                 "csharpexample",
                 "formapi",
+                "framework",
                 "gettingstarted",
                 "global",
                 "nodejsexample",
@@ -192,6 +193,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Changelog()
+        {
+            return View();
+        }
+
+        public ActionResult Framework()
         {
             return View();
         }

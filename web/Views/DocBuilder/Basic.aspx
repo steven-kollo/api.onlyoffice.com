@@ -21,6 +21,16 @@
          It also allows the developers to automate document building using the templates you create or inserting the data from some database of yours into a document or a set of documents. It has all the features of a common document editor but is lightweight and can be easily integrated into your document management system, CRM system, etc. using its JavaScript API.
     </p>
 
+    <p><b>ONLYOFFICE Document Builder</b> consists of four components:</p>
+    <ul>
+        <li><b>Builder.API</b> is the JavaScript API to work with the document editor. It contains classes and methods for every document type: <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>,
+            <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>, and <a href="<%= Url.Action("formapi") %>">Form API</a>.</li>
+        <li><b>Builder.Framework</b> is a software tool that contains a collection of libraries, classes, and functions that are used to develop applications.
+        Currently, the following frameworks are available: <a href="<%= Url.Action("integrationapi/c") %>">C++</a>, <a href="<%= Url.Action("integrationapi/net") %>">.Net</a>, COM.</li>
+        <li><b>Builder.App</b> is the <em>docbuilder.exe</em> executable file which can be run from your application with the <em>.docbuilder</em> script file as a parameter to it.</li>
+        <li><b>Builder.Server</b> is the code for the sample of ONLYOFFICE Document Builder integration into your application.</li>
+    </ul>
+
     <%
         Html.RenderPartial("DocBuilderShared/DocBuilderAction");
     %>
