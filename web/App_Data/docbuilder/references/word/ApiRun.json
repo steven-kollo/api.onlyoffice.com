@@ -972,9 +972,48 @@
         },
         {
           "type": "string",
-          "name": "sAutor",
+          "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
+        }
+      ]
+    },
+    "GetText": {
+      "memberof": "ApiRun",
+      "name": "GetText",
+      "description": "<p>Returns a text from the text run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "object",
+          "name": "oPr",
+          "description": "<p>The resulting string display properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "oPr.NewLineSeparator",
+          "description": "<p>Defines how the line separator will be specified in the resulting string.</p>",
+          "optional": true,
+          "defaultValue": "'\\r'"
+        },
+        {
+          "type": "string",
+          "name": "oPr.TabSymbol",
+          "description": "<p>Defines how the tab will be specified in the resulting string.</p>",
+          "optional": true,
+          "defaultValue": "'\\t'"
         }
       ]
     },
