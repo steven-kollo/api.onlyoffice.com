@@ -2520,7 +2520,6 @@
     <Content Include="Content\img\plugins\plugin-manager.png" />
     <Content Include="Content\img\plugins\plugins-structure.png" />
     <Content Include="Content\img\plugins\plugins_folder.png" />
-    <Content Include="Content\img\plugins\plugins_tab.png" />
     <Content Include="Content\img\plugins\plugin_archive.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
     <Content Include="Content\img\plugins\recalculate-cell-values.png" />
