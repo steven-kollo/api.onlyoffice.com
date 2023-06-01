@@ -2288,6 +2288,7 @@
     <Content Include="Content\img\Editor\progress-view.png" />
     <Content Include="Content\img\Editor\protect.png" />
     <Content Include="Content\img\Editor\protect-range.png" />
+    <Content Include="Content\img\Editor\protect-ranges-scheme.svg" />
     <Content Include="Content\img\Editor\rebranding\logo-big.png" />
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />

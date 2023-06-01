@@ -14,7 +14,7 @@
         <span class="hdr">Protecting ranges</span>
     </h1>
     <p class="dscr">The reference figure and the steps below explain the process of protecting ranges in spreadsheets in ONLYOFFICE Document Server.</p>
-    <img alt="Protect ranges" src="<%= Url.Content("~/content/img/editor/mentions-create.png") %>" />
+    <img alt="Protect ranges" src="<%= Url.Content("~/content/img/editor/protect-ranges-scheme.svg") %>" />
     <ol>
         <li>The user opens <em>Protection -> Protect Range</em> in the <b>document editor</b>, clicks <em>New</em>, and starts typing the user name in the <em>Who can edit</em> field.</li>
         <li>The <b>document editor</b> sends a request to the <b>document manager</b> for a list of users to allow editing the specified sheet range.</li>
