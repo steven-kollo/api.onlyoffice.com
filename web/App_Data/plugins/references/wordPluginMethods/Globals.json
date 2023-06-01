@@ -148,7 +148,7 @@
   },
   "TextPartType": {
     "name": "TextPartType",
-    "description": "<p>Specifies if the whole text or only its part will be returned or replaced:</p>\n<ul>\n<li><b>entirely</b> - replaces the whole text with the specified one,</li>\n<li><b>beforeCursor</b> - replaces only the part of the text before the cursor,</li>\n<li><b>afterCursor</b> - replaces only the part of the text after the cursor.</li>\n</ul>",
+    "description": "<p>Specifies if the whole text or only its part will be returned or replaced:</p>\n<ul>\n<li><b>entirely</b> - replaces/returns the whole text,</li>\n<li><b>beforeCursor</b> - replaces/returns only the part of the text before the cursor,</li>\n<li><b>afterCursor</b> - replaces/returns only the part of the text after the cursor.</li>\n</ul>",
     "type": [
       "\"entirely\"",
       "\"beforeCursor\"",
