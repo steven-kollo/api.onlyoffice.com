@@ -549,6 +549,7 @@
     <Content Include="App_Data\docbuilder\examples\EMU.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\endnoteRefTo.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\footnoteRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\FormInsertPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\FormPrBase.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\FormType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateCheckBoxForm.docbuilder" />
@@ -1916,10 +1917,12 @@
     <Content Include="App_Data\docbuilder\PHP Example.zip" />
     <Content Include="App_Data\docbuilder\references\cell\Api.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiAreas.json" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiCharacters.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiChart.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiColor.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiComment.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiDrawing.json" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiFont.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiImage.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiName.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiOleObject.json" />
@@ -1928,6 +1931,7 @@
     <Content Include="App_Data\docbuilder\references\cell\ApiWorksheet.json" />
     <Content Include="App_Data\docbuilder\references\cell\Globals.json" />
     <Content Include="App_Data\docbuilder\references\form\Api.json" />
+    <Content Include="App_Data\docbuilder\references\form\ApiDocument.json" />
     <Content Include="App_Data\docbuilder\references\form\Globals.json" />
     <Content Include="App_Data\docbuilder\references\slide\Api.json" />
     <Content Include="App_Data\docbuilder\references\slide\ApiChart.json" />
@@ -2000,6 +2004,7 @@
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
     <Content Include="App_Data\docspace\class_descriptions.xml" />
+    <Content Include="App_Data\docspace\references\ASC.Api.Core.xml" />
     <Content Include="App_Data\docspace\references\ASC.Core.Common.xml" />
     <Content Include="App_Data\docspace\references\ASC.Data.Backup.xml" />
     <Content Include="App_Data\docspace\references\ASC.Data.Reassigns.xml" />
@@ -2202,6 +2207,7 @@
     <Content Include="App_Data\portals\references\ASC.Api.Feed.XML" />
     <Content Include="App_Data\portals\references\ASC.Api.Mail.XML" />
     <Content Include="App_Data\portals\references\ASC.Api.MailServer.XML" />
+    <Content Include="App_Data\portals\references\ASC.Api.Migration.xml" />
     <Content Include="App_Data\portals\references\ASC.Api.Portal.XML" />
     <Content Include="App_Data\portals\references\ASC.Api.Projects.XML" />
     <Content Include="App_Data\portals\references\ASC.Api.Sample.XML" />
@@ -4184,7 +4190,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\FormInsertPr.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
