@@ -8,7 +8,7 @@
 - docbuilder: v7.4.0
 - plugins: added the ability to download ready-to-use plugins from ONLYOFFICE Plugin Marketplace in ONLYOFFICE Desktop Editors
 - plugins: v7.4.0
-- editors: added opening .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt format.
+- editors: added opening for .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt formats
 - editors: added the size field to the editorConfig.customization.font parameter
 - plugins: added the store.categories config parameter
 - editors: added the onRequestHistoryClose event to the Document History page
