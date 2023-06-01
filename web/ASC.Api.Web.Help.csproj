@@ -261,7 +261,6 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiComment.Delete.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetClassType.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiDocument.GetCommentById.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiDocumentContent.AddElement.docbuilder" />
@@ -335,7 +334,6 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.GetNext.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.GetParaPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.GetPrevious.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.GetSection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.GetSpacingAfter.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.GetSpacingBefore.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.GetSpacingLineRule.docbuilder" />
@@ -347,7 +345,6 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.SetIndLeft.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.SetIndRight.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.SetJc.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.SetSection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.SetSpacingAfter.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.SetSpacingBefore.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiParagraph.SetSpacingLine.docbuilder" />
@@ -1160,6 +1157,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetAutorName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetQuoteText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetRepliesCount.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiComment.GetReply.docbuilder" />
@@ -1445,6 +1443,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.GetPosInParent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.GetPrevious.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.GetRange.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.GetSection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.GetShd.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.GetSpacingAfter.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.GetSpacingBefore.docbuilder" />
@@ -1485,6 +1484,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.SetPageBreakBefore.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.SetPosition.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.SetRightBorder.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.SetSection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.SetShd.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.SetSmallCaps.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiParagraph.SetSpacing.docbuilder" />
@@ -4168,6 +4168,7 @@
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.RemoveFieldWrapper.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SetEditingRestrictions.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.UpdateAddinFields.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\FormInsertPr.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
