@@ -391,5 +391,48 @@
       "\"xlToRight\"",
       "\"xlToLeft\""
     ]
+  },
+  "XlFindLookIn": {
+    "name": "XlFindLookIn",
+    "description": "<p>Search data type (formulas or values).</p>",
+    "type": [
+      "\"xlFormulas\"",
+      "\"xlValues\""
+    ]
+  },
+  "XlLookAt": {
+    "name": "XlLookAt",
+    "description": "<p>Specifies whether the whole search text or any part of the search text is matched.</p>",
+    "type": [
+      "\"xlWhole\"",
+      "\"xlPart\""
+    ]
+  },
+  "XlSearchOrder": {
+    "name": "XlSearchOrder",
+    "description": "<p>Range search order - by rows or by columns.</p>",
+    "type": [
+      "\"xlByRows\"",
+      "\"xlByColumns\""
+    ]
+  },
+  "XlSearchDirection": {
+    "name": "XlSearchDirection",
+    "description": "<p>Range search direction - next match or previous match.</p>",
+    "type": [
+      "\"xlNext\"",
+      "\"xlPrevious\""
+    ]
+  },
+  "XlUnderlineStyle": {
+    "name": "XlUnderlineStyle",
+    "description": "<p>Underline type.</p>",
+    "type": [
+      "\"xlUnderlineStyleDouble\"",
+      "\"xlUnderlineStyleDoubleAccounting\"",
+      "\"xlUnderlineStyleNone\"",
+      "\"xlUnderlineStyleSingle\"",
+      "\"xlUnderlineStyleSingleAccounting\""
+    ]
   }
 }

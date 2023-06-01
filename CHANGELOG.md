@@ -3,8 +3,17 @@
 - editors: added the Protecting ranges page
 - editors: added the c parameter to the setUsers method and onRequestUsers event
 - editors: added the users.id field to the setUsers method
+- editors: added the draw field to the editorConfig.customization.layout.toolbar parameter
+- docbuilder: added the JS debugging in the Chrome/Chromium browser
+- docbuilder: v7.4.0
+- plugins: added the ability to download ready-to-use plugins from ONLYOFFICE Plugin Marketplace in ONLYOFFICE Desktop Editors
+- plugins: v7.4.0
 - editors: added opening .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt format.
 - editors: added the size field to the editorConfig.customization.font parameter
+- plugins: added the store.categories config parameter
+- editors: added the onRequestHistoryClose event to the Document History page
+- editors: added the userdata parameter to the info command
+- editors: added the Odoo app
 
 ## 4.0.0
 - docspace: added the DocSpace section

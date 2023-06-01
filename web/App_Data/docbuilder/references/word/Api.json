@@ -956,7 +956,7 @@
         },
         {
           "type": "string",
-          "name": "sAutor",
+          "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
         }
@@ -1194,6 +1194,23 @@
           "defaultValue": 1828800
         }
       ]
+    },
+    "GetFullName": {
+      "memberof": "Api",
+      "name": "GetFullName",
+      "description": "<p>Returns the full name of the currently opened file.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE, CPE, CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "events": {},

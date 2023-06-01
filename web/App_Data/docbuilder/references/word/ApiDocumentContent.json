@@ -334,7 +334,7 @@
     "GetAllParagraphs": {
       "memberof": "ApiDocumentContent",
       "name": "GetAllParagraphs",
-      "description": "<p>Returns an array of all paragraphs from the current document content</p>",
+      "description": "<p>Returns an array of all paragraphs from the current document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -351,7 +351,7 @@
     "GetAllTables": {
       "memberof": "ApiDocumentContent",
       "name": "GetAllTables",
-      "description": "<p>Returns an array of all tables from the current document content</p>",
+      "description": "<p>Returns an array of all tables from the current document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
