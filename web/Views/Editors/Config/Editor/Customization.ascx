@@ -396,7 +396,7 @@
             </td>
             <td>object</td>
             <td>{
-    "name": "Arial"
+    "name": "Arial", "size": "11px"
 }</td>
         </tr>
         <% } %>
@@ -790,6 +790,7 @@
     },
     "toolbar": {
         "collaboration": true,
+        "draw": true,
         "file": {
             "close": true,
             "info": true,
