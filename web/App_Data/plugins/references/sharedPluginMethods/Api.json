@@ -887,13 +887,13 @@
           "type": "string",
           "name": "guid",
           "description": "<p>The plugin identifier. It must be of the <em>asc.{UUID}</em> type.</p>",
-          "optional": true
+          "optional": false
         },
         {
           "type": "string",
           "name": "backup",
           "description": "<p>The plugin backup. This parameter is used when working with the desktop editors.</p>",
-          "optional": true
+          "optional": false
         }
       ]
     },
@@ -1206,7 +1206,7 @@
         {
           "type": "object",
           "name": "data",
-          "description": "<p>The even data.</p>",
+          "description": "<p>The event data.</p>",
           "optional": false
         }
       ]
