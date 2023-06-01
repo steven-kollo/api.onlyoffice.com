@@ -2378,6 +2378,8 @@
     <Content Include="Content\img\Editor\plugins.png" />
     <Content Include="Content\img\Editor\progress-view.png" />
     <Content Include="Content\img\Editor\protect.png" />
+    <Content Include="Content\img\Editor\protect-range.png" />
+    <Content Include="Content\img\Editor\protect-ranges-scheme.svg" />
     <Content Include="Content\img\Editor\rebranding\logo-big.png" />
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />
@@ -4020,6 +4022,7 @@
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\ProtectingRanges.aspx" />
     <Content Include="Views\Editors\React.aspx" />
     <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />

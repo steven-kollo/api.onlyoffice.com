@@ -1,5 +1,8 @@
 # Change Log
 
+- editors: added the Protecting ranges page
+- editors: added the c parameter to the setUsers method and onRequestUsers event
+- editors: added the users.id field to the setUsers method
 - editors: added the draw field to the editorConfig.customization.layout.toolbar parameter
 - docbuilder: added the JS debugging in the Chrome/Chromium browser
 - docbuilder: v7.4.0
