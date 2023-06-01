@@ -1,5 +1,22 @@
 {
   "methods": {
+    "GetParent": {
+      "memberof": "ApiFont",
+      "name": "GetParent",
+      "description": "<p>Returns the parent ApiCharacters object of the specified font.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiCharacters"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetBold": {
       "memberof": "ApiFont",
       "name": "GetBold",

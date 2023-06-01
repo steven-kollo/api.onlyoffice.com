@@ -1201,7 +1201,9 @@
       "description": "<p>Returns the full name of the currently opened file.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE, CPE, CSE"
+          "CDE",
+          "CPE",
+          "CSE"
         ]
       },
       "returns": [
