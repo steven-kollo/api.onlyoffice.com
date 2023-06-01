@@ -2201,7 +2201,6 @@
     <Content Include="Content\img\desktop\extended_comments.png" />
     <Content Include="Content\img\desktop\macos-terminal.png" />
     <Content Include="Content\img\desktop\plugins_folder.png" />
-    <Content Include="Content\img\desktop\plugins_tab.png" />
     <Content Include="Content\img\desktop\plugin_settings.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
@@ -2375,7 +2374,6 @@
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
     <Content Include="Content\img\plugins\about-variation.png" />
-    <Content Include="Content\img\plugins\adding_plugins.png" />
     <Content Include="Content\img\plugins\add_chart.png" />
     <Content Include="Content\img\plugins\alternate-raws.png" />
     <Content Include="Content\img\plugins\assign-macro.png" />
@@ -2393,6 +2391,7 @@
     <Content Include="Content\img\plugins\controls.png" />
     <Content Include="Content\img\plugins\currencies-usd-eur.png" />
     <Content Include="Content\img\plugins\debugger.png" />
+    <Content Include="Content\img\plugins\desktop-plugin-manager.png" />
     <Content Include="Content\img\plugins\edge-developer-mode.png" />
     <Content Include="Content\img\plugins\edge-extension-folder.png" />
     <Content Include="Content\img\plugins\edge-extension.png" />
@@ -2457,7 +2456,6 @@
     <Content Include="Content\img\plugins\plugins_folder.png" />
     <Content Include="Content\img\plugins\plugins_tab.png" />
     <Content Include="Content\img\plugins\plugin_archive.png" />
-    <Content Include="Content\img\plugins\plugin_settings.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
     <Content Include="Content\img\plugins\recalculate-cell-values.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
