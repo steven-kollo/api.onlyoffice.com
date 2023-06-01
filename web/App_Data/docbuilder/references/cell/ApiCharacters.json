@@ -1,0 +1,35 @@
+{
+  "methods": {},
+  "events": {},
+  "comment": "/**\n\t * Class representing characters in an object that contains text.\n\t * @constructor\n\t * @property {number} Count - The number of characters in the collection.\n\t * @property {ApiRange} Parent - The parent object of the specified characters.\n\t * @property {string} Caption - The text of the specified range of characters.\n\t * @property {string} Text - The string value representing the text of the specified range of characters.\n\t * @property {ApiFont} Font - The font of the specified characters.\n\t */",
+  "description": "<p>Class representing characters in an object that contains text.</p>",
+  "scope": "global",
+  "params": [],
+  "properties": [
+    {
+      "type": "number",
+      "name": "Count",
+      "description": "<p>The number of characters in the collection.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Parent",
+      "description": "<p>The parent object of the specified characters.</p>"
+    },
+    {
+      "type": "string",
+      "name": "Caption",
+      "description": "<p>The text of the specified range of characters.</p>"
+    },
+    {
+      "type": "string",
+      "name": "Text",
+      "description": "<p>The string value representing the text of the specified range of characters.</p>"
+    },
+    {
+      "type": "ApiFont",
+      "name": "Font",
+      "description": "<p>The font of the specified characters.</p>"
+    }
+  ]
+}
