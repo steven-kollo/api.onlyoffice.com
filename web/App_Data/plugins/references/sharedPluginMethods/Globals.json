@@ -368,6 +368,16 @@
       "\"slide\""
     ]
   },
+  "ReplaceImageMode": {
+    "name": "ReplaceImageMode",
+    "description": "<p>Specifies how to adjust the image object in case of replacing the selected image.</p>",
+    "type": [
+      "\"fill\"",
+      "\"fit\"",
+      "\"original\"",
+      "\"stretch\""
+    ]
+  },
   "ImageData": {
     "name": "ImageData",
     "description": "<p>An object containing the information about the base64 encoded <em>png</em> image.</p>",
@@ -389,6 +399,11 @@
         "type": "number",
         "name": "height",
         "description": "<p>The image height in pixels.</p>"
+      },
+      {
+        "type": "ReplaceImageMode",
+        "name": "replaceMode",
+        "description": "<p>Specifies how to adjust the image object in case of replacing the selected image.</p>"
       }
     ]
   },
@@ -418,6 +433,35 @@
         "type": "object",
         "name": "obj",
         "description": "<p>The {@link /plugin/config config} of the installed plugin. The version is taken from the config and compared with the current one to check for updates.</p>"
+      }
+    ]
+  },
+  "ContextMenuItem": {
+    "name": "ContextMenuItem",
+    "description": "<p>The context menu item.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "id",
+        "description": "<p>The item ID.</p>"
+      },
+      {
+        "type": "localeTranslate",
+        "name": "text",
+        "description": "<p>The item text.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "disabled",
+        "description": "<p>Specifies if the current item is disabled or not.</p>"
+      },
+      {
+        "type": "Array.<ContextMenuItem>",
+        "name": "items",
+        "description": "<p>An array containing the context menu items for the current item.</p>"
       }
     ]
   }
