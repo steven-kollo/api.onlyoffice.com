@@ -118,6 +118,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "ProtectingRanges",
                 "React",
                 "Redmine",
                 "Rename",
@@ -434,6 +435,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult ProtectingRanges()
         {
             return View();
         }
