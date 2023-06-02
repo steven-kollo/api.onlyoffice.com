@@ -253,6 +253,11 @@ namespace ASC.Api.Web.Help.Controllers
             return RenderBaseMethod("resizeWindow");
         }
 
+        public ActionResult sendToPlugin()
+        {
+            return RenderBaseMethod("sendToPlugin");
+        }
+
         public ActionResult GettingStarted()
         {
             return View();
