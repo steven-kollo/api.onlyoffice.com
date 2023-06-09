@@ -84,13 +84,13 @@
     <table class="demo-tab-panel">
         <tr>
             <td>
-                <a class="<%= Request["type"] != "spreadsheet" && Request["type"] != "presentation"  ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=text#DemoPreview">Demo Document editor</a>
+                <a class="doc-editor-link active" data-documentType="word">Demo Document editor</a>
             </td>
             <td>
-                <a class="<%= Request["type"] == "spreadsheet" ? "active" : "" %> demo-tab-center" href="<%= Url.Action("demopreview") %>?type=spreadsheet#DemoPreview">Demo Spreadsheet editor</a>
+                <a class="doc-editor-link" data-documentType="cell">Demo Spreadsheet editor</a>
             </td>
             <td>
-                <a class="<%= Request["type"] == "presentation" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=presentation#DemoPreview">Demo Presentation editor</a>
+                <a class="doc-editor-link" data-documentType="slide">Demo Presentation editor</a>
             </td>
         </tr>
     </table>
@@ -110,64 +110,30 @@
 
     <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 
-    <%
-        var documentType = "word";
-        var ext = "docx";
-        if (Request["type"] == "spreadsheet")
-        {
-            documentType = "cell";
-            ext = "xlsx";
-        }
-        else if (Request["type"] == "presentation")
-        {
-            documentType = "slide";
-            ext = "pptx";
-        }
-    %>
     <script type="text/javascript">
-        window.docEditor = new DocsAPI.DocEditor("placeholder",
-            <%= Config.Serialize(
-                new Config
-                    {
-                        Document = new Config.DocumentConfig
-                            {
-                                FileType = ext,
-                                Key = "apiwh" + Guid.NewGuid(),
-                                Title = "Example Title." + ext,
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + ext,
-                                Permissions = new Config.DocumentConfig.PermissionsConfig
-                                    {
-                                        Download = false,
-                                        Print = false
-                                    }
-                            },
-                        DocumentType = documentType,
-                        EditorConfig = new Config.EditorConfigConfiguration
-                            {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
-                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
-                                    {
-                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
-                                            {
-                                                Request = false
-                                            },
-                                        CompactHeader = true,
-                                        CompactToolbar = true,
-                                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
-                                            {
-                                                Visible = true
-                                            },
-                                        HideRightMenu = true,
-                                        HideRulers = true,
-                                        IntegrationMode = "embed",
-                                        ToolbarHideFileName = true,
-                                        ToolbarNoTabs = true
-                                    }
-                            },
-                        Height = "550px",
-                        Width = "100%"
-                    }) %>
-            );
+        const initDocEditor = function (documentType) {
+            $.ajax({
+                type: "POST",
+                url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
+                data: JSON.stringify({ documentType: documentType }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (window.docEditor) {
+                        window.docEditor.destroyEditor();
+                    }
+                    window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
+                }
+            });
+        }
+
+        $(".doc-editor-link").on("click", function (event) {
+            $(".demo-tab-panel").find("a").removeClass("active");
+            event.target.classList.add("active");
+            initDocEditor(event.target.dataset.documenttype);
+        })
+
+        initDocEditor("word");
     </script>
 
 </asp:Content>

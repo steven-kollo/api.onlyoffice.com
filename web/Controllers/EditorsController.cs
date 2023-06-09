@@ -25,6 +25,7 @@
 
 
 using System;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
@@ -255,6 +256,66 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Config", (object) catchall);
+        }
+
+        [HttpPost]
+        public JsonResult ConfigCreate(string documentType)
+        {
+            string extension = "docx";
+
+            if (documentType.Equals("cell")) {
+                extension = "xlsx";
+            }
+            else if (documentType.Equals("slide"))
+            {
+                extension = "pptx";
+            } 
+            else
+            {
+                documentType = "word";
+            }
+
+            return Json(Helpers.Config.Serialize(
+                new Config
+                {
+                    Document = new Config.DocumentConfig
+                    {
+                        FileType = extension,
+                        Key = "apiwh" + Guid.NewGuid(),
+                        Title = "Example Title." + extension,
+                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + extension,
+                        Permissions = new Config.DocumentConfig.PermissionsConfig
+                        {
+                            Download = false,
+                            Print = false
+                        }
+                    },
+                    DocumentType = documentType,
+                    EditorConfig = new Config.EditorConfigConfiguration
+                    {
+                        CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                        Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                        {
+                            Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                            CompactHeader = true,
+                            CompactToolbar = true,
+                            Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                            HideRightMenu = true,
+                            HideRulers = true,
+                            IntegrationMode = "embed",
+                            ToolbarHideFileName = true,
+                            ToolbarNoTabs = true
+                        }
+                    },
+                    Height = "550px",
+                    Width = "100%"
+                }));
         }
 
         public ActionResult Confluence()

@@ -971,6 +971,7 @@ pre,
 .demo-tab-panel a {
     background: #ECEEF1;
     border: 1px solid #ECEEF1;
+    cursor: pointer;
     display: inline-block;
     font-size: 13px;
     font-weight: 700;
