@@ -2305,6 +2305,7 @@
     <Content Include="Content\img\Editor\android-test-sample.png" />
     <Content Include="Content\img\Editor\anonymous-user.png" />
     <Content Include="Content\img\Editor\anonymous.png" />
+    <Content Include="Content\img\Editor\anonymous-warning.jpg" />
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
