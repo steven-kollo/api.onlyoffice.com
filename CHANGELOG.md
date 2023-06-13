@@ -1,5 +1,5 @@
 # Change Log
-
+- macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
 - editors: added the onRequestHistoryClose event to the Document History page
 - editors: added the userdata parameter to the info command

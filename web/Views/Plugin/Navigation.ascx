@@ -326,6 +326,9 @@
              <li>
                 <a href="<%= Url.Action("macrosamples/insertid") %>">Insert unique id</a>
             </li>
+             <li>
+                <a href="<%= Url.Action("macrosamples/completeaddressinformation") %>">Complete address information</a>
+            </li>
         </ul>
     </li>
 </ul>

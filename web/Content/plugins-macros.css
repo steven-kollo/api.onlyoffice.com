@@ -122,6 +122,11 @@
     background-repeat: no-repeat;
 }
 
+.complete_address_information {
+    background-image: url("img/macros/complete_address_information.svg");
+    background-repeat: no-repeat;
+}
+
 .example-plug-img {
     height: 120px;
     margin: auto;
