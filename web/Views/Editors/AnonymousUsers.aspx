@@ -62,7 +62,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
 
     <h2 id="restricting-access" class="copy-link">Restricting access to the editor or live viewer</h2>
-    <p>To restrict anonymous users access to the editor or live viewer, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#isAnonymousSupport" target="_blank">services.CoAuthoring.server.isAnonymousSupport</a> parameter in the configuration file to <b>false</b>.
+    <p>To restrict anonymous users access to the editor or live viewer, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport" target="_blank">services.CoAuthoring.server.isAnonymousSupport</a> parameter in the configuration file to <b>false</b>.
         In this case, when the anonymous user tries to open the editor, a warning will occur.</p>
     <img alt="Anonymous user warning" src="<%= Url.Content("~/content/img/editor/anonymous-warning.jpg") %>" />
     <p>The live viewer will switch to the offline viewer without warnings.</p>
