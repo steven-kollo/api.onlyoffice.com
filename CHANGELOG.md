@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added a link to the list of error codes
 - editors: added the Protecting ranges page
 - editors: added the c parameter to the setUsers method and onRequestUsers event
 - editors: added the users.id field to the setUsers method
