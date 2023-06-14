@@ -262,7 +262,6 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetText.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiDocument.GetCommentById.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiDocumentContent.AddElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiDocumentContent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiDocumentContent.GetClassType.docbuilder" />
@@ -1207,11 +1206,14 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllImages.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllNumberedParagraphs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllOleObjects.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllParagraphs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllShapes.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllStyles.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllTables.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetAllTablesOnPage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetBookmarkRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetCommentById.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetCommentsReport.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetContent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetContentControlsByTag.docbuilder" />
@@ -1260,7 +1262,9 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetAllDrawingObjects.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetAllImages.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetAllOleObjects.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetAllParagraphs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetAllShapes.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetAllTables.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetContent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocumentContent.GetElement.docbuilder" />
