@@ -507,7 +507,7 @@ li.copy-link[id]:hover:before {
     height: 71px;
     margin: 0;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto;
     text-align: center;
     padding: 0;
 }
@@ -993,8 +993,10 @@ pre,
         margin: 8px;
     }
 
-.required {
+.required,
+a.required {
     color: #C00;
+    text-decoration: none;
 }
 
 .required-descr {

@@ -155,6 +155,7 @@
     <Content Include="Content\img\Editor\android-test-sample.png" />
     <Content Include="Content\img\Editor\anonymous-user.png" />
     <Content Include="Content\img\Editor\anonymous.png" />
+    <Content Include="Content\img\Editor\anonymous-warning.jpg" />
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
@@ -234,6 +235,8 @@
     <Content Include="Content\img\Editor\plugins.png" />
     <Content Include="Content\img\Editor\progress-view.png" />
     <Content Include="Content\img\Editor\protect.png" />
+    <Content Include="Content\img\Editor\protect-range.png" />
+    <Content Include="Content\img\Editor\protect-ranges-scheme.svg" />
     <Content Include="Content\img\Editor\rebranding\logo-big.png" />
     <Content Include="Content\img\Editor\rebranding\logo.png" />
     <Content Include="Content\img\Editor\recent.png" />
@@ -382,10 +385,12 @@
     <Content Include="Views\Editors\Navigation.ascx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
+    <Content Include="Views\Editors\Odoo.aspx" />
     <Content Include="Views\Editors\Open.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\ProtectingRanges.aspx" />
     <Content Include="Views\Editors\React.aspx" />
     <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
@@ -426,7 +431,6 @@
     <Content Include="Views\Home\ProductBlock.ascx" />
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
-    <Content Include="Views\Shared\Method.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />
     <Content Include="Views\Shared\Search.aspx" />
     <Content Include="Views\Shared\SearchForm.ascx" />

@@ -68,22 +68,6 @@
     background-image: url("img/main-page/document_server.svg");
 }
 
-.img-title-docbuilder {
-    background-image: url("img/main-page/document_builder.svg");
-}
-
-.img-title-plugin {
-    background-image: url("img/main-page/plugins_and_macros.svg");
-}
-
-.img-title-portals {
-    background-image: url("img/main-page/community_server.svg");
-}
-
-.img-title-desktop {
-    background-image: url("img/main-page/desktop.svg");
-}
-
 .block-img {
     width: 115px;
     height: 100px;

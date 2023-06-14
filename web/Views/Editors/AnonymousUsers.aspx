@@ -16,7 +16,10 @@
     <p class="dscr">参考图和以下步骤说明了在 ONLYOFFICE 文档服务器中为匿名用户设置名称的过程。</p>
     <img alt="匿名" src="<%= Url.Content("~/content/img/editor/anonymous-user.png") %>" />
     <ol>
-        <li>匿名用户使用 <b>文档管理器</b> 打开文档进行查看或编辑。</li>
+        <li>
+            <p>匿名用户使用 <b>文档管理器</b> 打开文档进行查看或编辑。</p>
+            <note>Anonymous user is a user with an empty <a href="<%= Url.Action("config/editor") %>#user">user id</a>.</note>
+        </li>
         <li><b>文档存储服务</b> 使用 <a href="<%= Url.Action("basic") %>">JavaScript API</a> 将初始化配置发送到 <b>文档编辑器</b>，但未在那里指定用户名。</li>
         <li><b>文档编辑器</b> 请求用户名。</li>
         <li><b>文档编辑器</b> 将接收到的名称发送到 <b>文档编辑服务</b>。</li>
@@ -56,5 +59,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <li>要更改此名称，请在顶部工具栏上单击它并在打开的窗口中输入一个新名称。</li>
         <li>所有共同作者都会看到新名称。</li>
     </ol>
+
+
+    <h2 id="restricting-access" class="copy-link">Restricting access to the editor or live viewer</h2>
+    <p>To restrict anonymous users access to the editor or live viewer, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport" target="_blank">services.CoAuthoring.server.isAnonymousSupport</a> parameter in the configuration file to <b>false</b>.
+        In this case, when the anonymous user tries to open the editor, a warning will occur.</p>
+    <img alt="Anonymous user warning" src="<%= Url.Content("~/content/img/editor/anonymous-warning.jpg") %>" />
+    <p>The live viewer will switch to the offline viewer without warnings.</p>
 
 </asp:Content>

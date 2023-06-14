@@ -5,7 +5,7 @@
     <span class="hdr">处理评审更改</span>
 </h1>
 
-<p class="dscr">管理外部评审过程。</p>
+<p class="dscr">Manages review process from an external source.</p>
 
 <ul class="list-buttons doc-builder-list-buttons">
     <li>
@@ -60,10 +60,10 @@ $("#next").on("click", function () {
 </pre>
     </li>
 </ol>
-
-<h1>获得帮助</h1>
-
-<p>如果您有任何问题，请在 <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE论坛</a> 上询问我们的开发人员（需要注册）。</p>
+<note>
+    <p>Please note that the connector is available only for <b>ONLYOFFICE Developer Edition</b>.</p>
+    <p>This class is an additional feature which is available at extra cost. If you have any questions, please contact our sales team at <a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a>.</p>
+</note>
 
 <script type="text/javascript">
     var contentControls = [];

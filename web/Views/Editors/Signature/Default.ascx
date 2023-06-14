@@ -19,8 +19,14 @@
 
 <p>重新启动服务以使配置更改生效：</p>
 
+<p><b>For RPM/DEB packages:</b></p>
 <pre>
-    supervisorctl restart all
+systemctl restart ds-*
+</pre>
+
+<p><b>For Docker:</b></p>
+<pre>
+supervisorctl restart all
 </pre>
 
 <div class="header-gray">参数</div>
@@ -40,15 +46,18 @@
         </tr>
     </thead>
     <tbody>
-        <tr class="tablerow">
+        <tr id="services.CoAuthoring.secret.browser.string" class="tablerow">
             <td>services.CoAuthoring.secret.browser.string</td>
-            <td>定义 <em>密钥</em>，用以在客户端生成到ONLYOFFICE文档的 <a href="<%= Url.Action("signature/browser") %>">浏览器请求</a> 令牌。</td>
+            <td>
+                定义 <em>密钥</em>，用以在客户端生成到ONLYOFFICE文档的 <a href="<%= Url.Action("signature/browser") %>">浏览器请求</a> 令牌。
+                Deprecated since version 7.2, please use <a href="#services.CoAuthoring.secret.inbox.string">services.CoAuthoring.secret.inbox.string</a> instead.
+            </td>
             <td>string</td>
             <td>secret</td>
         </tr>
-        <tr class="tablerow">
+        <tr id="services.CoAuthoring.secret.inbox.string" class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
-              <td>定义<em>密钥</em>，用以在<a href="<%=Url.Action("signature/request") %>#incoming">传入HTTP请求</a>中使用<b>从文档存储服务</b>到<b>文档命令服务</b>、<b>文档转换服务</b>和<b>文档生成服务</b>的命令生成令牌。</td>
+            <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> with the commands from the <b>document storage service</b> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b> and a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> to ONLYOFFICE Docs since version 7.2.</td>
             <td>string</td>
             <td>secret</td>
         </tr>
@@ -87,9 +96,6 @@
     "services": {
         "CoAuthoring": {
             "secret": {
-                "browser": {
-                    "string": "secret"
-                },
                 "inbox": {
                     "string": "secret"
                 },

@@ -32,6 +32,7 @@
             <li><a href="<%= Url.Action("moodle") %>">Moodle</a></li>
             <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud</a></li>
             <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo</a></li>
+            <li><a href="<%= Url.Action("odoo") %>">Odoo</a></li>
             <li><a href="<%= Url.Action("owncloud") %>">ownCloud</a></li>
             <li><a href="<%= Url.Action("plone") %>">Plone</a></li>
             <li><a href="<%= Url.Action("redmine") %>">Redmine</a></li>

@@ -138,7 +138,8 @@
             </tr>
             <tr class="tablerow">
                 <td id="userdata" class="copy-link">userdata</td>
-                <td>定义发送到 <a href="<%= Url.Action("command/forcesave") %>">命令服务</a> 的自定义信息（如果它出现在请求中）。</td>
+                <td>Defines the custom information sent to the command service for the <a href="<%= Url.Action("command/forcesave") %>">forcesave</a>
+                    and <a href="<%= Url.Action("command/info") %>">info</a> commands in case it was present in the request.</td>
                 <td>string</td>
                 <td>可选的</td>
             </tr>

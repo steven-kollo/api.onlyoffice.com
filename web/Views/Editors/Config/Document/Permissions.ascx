@@ -98,7 +98,11 @@
                 如果 <em>edit</em>, <em>remove</em> 和 <em>view</em> 参数为 <em>""</em> 或未指定，则用户可以查看/编辑/删除任何用户的评论。
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "edit": ["Group2", ""],
+    "remove": [""],
+    "view": ""
+}</td>
         </tr>
         <tr class="tablerow">
             <td id="copy" class="copy-link">copy</td>

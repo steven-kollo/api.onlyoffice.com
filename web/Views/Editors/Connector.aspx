@@ -14,8 +14,10 @@
         <span class="hdr">Automation API</span>
     </h1>
 
-    <p class="dscr"><b>连接器</b> 是一个类，允许与文本文档、电子表格、演示文稿和外部可填充表单进行交互。
-        要创建连接器，请使用 <b>文档编辑器</b> 对象的 <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> 方法：</p>
+    <p class="dscr"><b>Connector</b> is a class that allows editing text documents, spreadsheets, presentations, and fillable forms from an external source.
+        The examples of using Automation API can be found <a href="<%= Url.Action("interactingoutside") %>">here</a>.
+    </p>
+    <p>To create the connector, use the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method of the <b>document editor</b> object:</p>
     <pre>
 var connector = docEditor.createConnector()
 </pre>

@@ -16,6 +16,13 @@
     </h1>
 
     <p class="dscr">ONLYOFFICE 文档服务器 API 的更改列表。</p>
+    <h2 id="74" class="copy-link">Version 7.4</h2>
+    <ul>
+        <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">dps, dpt, et, ett, mhtml, stw, sxc, sxi, sxw, wps, wpt</a> formats.</li>
+        <li>Added the <em>users.id</em> field to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</li>
+        <li>Added the <em>c</em> parameter to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method and <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event.</li>
+    </ul>
+
     <h2 id="73" class="copy-link">7.3 版</h2>
      <ul>
          <li>添加了 WOPI <a href="<%= Url.Action("wopi/conversionapi") %>">转换 API</a>。</li>
@@ -37,6 +44,7 @@
         <li>向许可证响应添加<a href="<%= Url.Action("command/license") %>#license">connections_view</a>、<a href="<%= Url.Action("command/license") %>#license">users_view_count</a>和<a href="<%= Url.Action("command/license") %>#quota">users_view</a>。</li>
         <li>在文本文档、电子表格和演示文稿编辑器中添加了<a href="<%= Url.Action("viewing") %>">实时查看器</a>模式。</li>
         <li>将<a href="<%= Url.Action("wopi/discovery") %>#embedview">embedview</a>操作添加到wopi发现中。</li>
+        <li>The <a href="<%= Url.Action("signature/") %>#services.CoAuthoring.secret.browser.string">services.CoAuthoring.secret.browser.string</a> parameter is deprecated, please use the <a href="<%= Url.Action("signature/") %>#services.CoAuthoring.secret.inbox.string">services.CoAuthoring.secret.inbox.string</a> parameter instead.</li>
     </ul>
 
     <h2 id="71" class="copy-link">7.1 版</h2>

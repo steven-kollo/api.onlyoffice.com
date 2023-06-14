@@ -35,7 +35,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setReferenceData">setReferenceData</a> - 通过文件链接刷新数据。</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - 选择一个文档进行比较。</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
-        <li><a href="#setUsers">setUsers</a> - 设置要在评论中提及的用户列表。</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
         <li><a href="#showMessage">showMessage</a> - 显示带有消息的工具提示。</li>
     </ul>
 
@@ -43,7 +43,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
     <ul>
         <li>
             <p>
-                <b id="createConnector" class="copy-link">createConnector</b><span class="required">*</span> - 创建 <a href="<%= Url.Action("connector") %>">连接器</a>与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。
+                <b id="createConnector" class="copy-link">createConnector</b><a href="#requiredDescr" class="required">*</a> - 创建 <a href="<%= Url.Action("connector") %>">连接器</a>与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。
             </p>
             <pre>
 docEditor.createConnector();
@@ -822,9 +822,8 @@ docEditor.setReferenceData({
 
         <li>
             <p>
-                <b id="setRevisedFile" class="copy-link">setRevisedFile<span class="required">*</span></b> - 选择一个文档进行比较。
+                <b id="setRevisedFile" class="copy-link">setRevisedFile<a href="#requiredDescr2" class="required">**</a></b> - 选择一个文档进行比较。
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> 事件之后调用。
-                <span class="required-descr"><span class="required">*</span><em> - 仅适用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版</em></span>
             </p>
             <pre>
 docEditor.setRevisedFile({
@@ -941,18 +940,21 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - 设置要在评论中提及的用户列表。
+                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件之后调用。
             </p>
             <pre>
 docEditor.setUsers({
+    "c": "protect",
     "users": [
         {
             "email": "john@example.com",
+            "id": "78e1e841",
             "name": "John Smith"
         },
         {
             "email": "kate@example.com",
+            "id": "F89d8069ba2b",
             "name": "Kate Cage"
         },
         ...
@@ -980,6 +982,16 @@ docEditor.setUsers({
                 </thead>
                 <tbody>
                     <tr class="tablerow">
+                        <td>c</td>
+                        <td>
+                            Defines the operation type from the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event.
+                            It can take one of the following values - <em>mention</em> or <em>protect</em>.
+                            The default value is <em>mention</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>users</td>
                         <td>定义用户列表。</td>
                         <td>字符串数组</td>
@@ -990,6 +1002,12 @@ docEditor.setUsers({
                         <td>定义用户的电子邮件地址。</td>
                         <td>string</td>
                         <td>必需的</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>users.id</td>
+                        <td>Defines the identification of the user. This field is used only for protecting the sheet ranges when granting editing rights to the specified user.</td>
+                        <td>string</td>
+                        <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>
@@ -1040,6 +1058,7 @@ docEditor.showMessage(message);
             </note>
         </li>
     </ul>
-    <span class="required-descr"><span class="required">*</span><em> - 仅对ONLYOFFICE 开发者版本可编辑。</em></span>
+    <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - 仅对ONLYOFFICE 开发者版本可编辑。</em></span>
+    <span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
 
 </asp:Content>

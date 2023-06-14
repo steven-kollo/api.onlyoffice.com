@@ -90,7 +90,7 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="about" class="copy-link">about<span class="required">**</span></td>
+            <td id="about" class="copy-link">about<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 定义 <b>关于</b> 菜单按钮显示还是隐藏。
                 默认值为 <b>true</b>。
@@ -123,7 +123,10 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "request": true,
+    "label": "Guest"
+}</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -216,7 +219,7 @@
             <td>false</td>
         </tr>
         <tr class="tablerow">
-            <td id="customer" class="copy-link">customer<span class="required">*</span></td>
+            <td id="customer" class="copy-link">customer<a href="#requiredDescr" class="required">*</a></td>
             <td>
                 包含将在编辑器 <b>关于</b> 部分中显示的信息，并对所有编辑器用户可见。
                 该对象具有以下参数：
@@ -282,7 +285,16 @@
                 </ul>
             </td>
             <td>对象</td>
-            <td></td>
+            <td>{
+    "address": "My City, 123a-45",
+    "info": "Some additional information",
+    "logo": "https://example.com/logo-big.png",
+    "logoDark": "https://example.com/dark-logo-big.png",
+    "mail": "john@example.com",
+    "name": "John Smith and Co.",
+    "phone": "123456789",
+    "www": "example.com"
+}</td>
         </tr>
         <tr>
             <td id="features" class="copy-link">features</td>
@@ -309,7 +321,7 @@
                     <% if (license)
                        { %>
                     <li>
-                        <b>spellcheck.change<span class="required">**</span></b> - 定义拼写检查器设置是否显示拼写检查器设置在所有编辑器中可用,
+                        <b>spellcheck.change<a href="#requiredDescr2" class="required">**</a></b> - 定义拼写检查器设置是否显示拼写检查器设置在所有编辑器中可用,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -319,7 +331,13 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "spellcheck": {
+        "mode": true<% if (license)
+        { %>,
+        "change": true<% } %>
+    }
+}</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -356,7 +374,7 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="font" class="copy-link">font<span class="required">**</span></td>
+            <td id="font" class="copy-link">font<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                定义界面元素（按钮、选项卡等）的字体：
                 <ul>
@@ -365,12 +383,21 @@
                         <br />
                         <b>类型</b>: string,
                         <br />
-                        <b>示例</b>: "Arial".
+                        <b>示例</b>: "Arial";
+                    </li>
+                    <li>
+                        <b>size</b> - the font size,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "11px".
                     </li>
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "name": "Arial", "size": "11px"
+}</td>
         </tr>
         <% } %>
         <tr>
@@ -506,7 +533,7 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="layout" class="copy-link">layout<span class="required">**</span></td>
+            <td id="layout" class="copy-link">layout<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 定义用户可用于隐藏界面元素但不完全禁用功能的参数（
                 例如，如果此功能可从其他元素（如关联菜单）或通过热键获得）：
@@ -631,6 +658,14 @@
                         <b>示例</b>：true；
                     </li>
                     <li>
+                        <b>toolbar.draw</b> - defines if the <b>Draw</b> tab is displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
                         <b>toolbar.file</b> - 定义 <b>文件</b> 选项卡设置。如果此参数是布尔值，
                         则指定是显示还是隐藏 <b>文件</b> 选项卡。默认值为 <b>true</b>，
                         <br />
@@ -735,9 +770,49 @@
                 </ul>
             </td>
             <td>object</td>
+            <td>{
+    "header": {
+        "save": true,
+        "users": true
+    },
+    "leftMenu": {
+        "mode": true,
+        "navigation": true,
+        "spellcheck": true
+    },
+    "rightMenu": {
+        "mode": true
+    },
+    "statusBar": {
+        "actionStatus": true,
+        "docLang": true,
+        "textLang": true
+    },
+    "toolbar": {
+        "collaboration": true,
+        "draw": true,
+        "file": {
+            "close": true,
+            "info": true,
+            "save": true,
+            "settings": true
+        },
+        "home": {
+            "mailmerge": true
+        },
+        "layout": true,
+        "plugins": true,
+        "protect": true,
+        "references": true,
+        "save": true,
+        "view": {
+            "navigation": true
+        }
+    }
+}</td>
         </tr>
         <tr>
-            <td id="leftMenu" class="copy-link">leftMenu<span class="required">**</span></td>
+            <td id="leftMenu" class="copy-link">leftMenu<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 定义左侧菜单面板是显示还是隐藏。
                 默认值为 <b>true</b>。
@@ -751,7 +826,7 @@
             </td>
         </tr>
         <tr class="tablerow">
-            <td id="loaderLogo" class="copy-link">loaderLogo<span class="required">**</span></td>
+            <td id="loaderLogo" class="copy-link">loaderLogo<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 定义加载文档时将显示的图像徽标的路径（对于此文件没有特别的建议，但最好使用透明背景的.png格式）。
                 当在编辑器中显示时，图像将按比例调整到160像素的高度。
@@ -760,14 +835,14 @@
             <td>"https://example.com/loader-logo.png"</td>
         </tr>
         <tr class="tablerow">
-            <td id="loaderName" class="copy-link">loaderName<span class="required">**</span></td>
+            <td id="loaderName" class="copy-link">loaderName<a href="#requiredDescr2" class="required">**</a></td>
             <td>定义加载文档时将显示的文本。</td>
             <td>string</td>
             <td>"正在加载文档，请稍候…"</td>
         </tr>
         <% } %>
         <tr class="tablerow">
-            <td id="logo" class="copy-link">logo<span class="required">*</span></td>
+            <td id="logo" class="copy-link">logo<a href="#requiredDescr" class="required">*</a></td>
             <td>
                 更改编辑器标题左上角的图像文件。
                 推荐的图像高度为 20 像素。
@@ -809,7 +884,11 @@
                 </ul>
             </td>
             <td>对象</td>
-            <td></td>
+            <td>{
+    "image": "https://example.com/logo.png",
+    "imageDark": "https://example.com/dark-logo.png",
+    "url": "https://example.com"
+}</td>
         </tr>
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
@@ -922,7 +1001,13 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "hideReviewDisplay": false,
+    "showReviewChanges": false,
+    "reviewDisplay": "original",
+    "trackChanges": true,
+    "hoverMode": false
+}</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
@@ -959,7 +1044,7 @@
         <% if (license)
            { %>
         <tr>
-            <td id="rightMenu" class="copy-link">rightMenu<span class="required">**</span></td>
+            <td id="rightMenu" class="copy-link">rightMenu<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 定义右菜单面板是显示还是隐藏。
                 默认值为 <b>true</b>。
@@ -1006,7 +1091,7 @@
         <% if (license)
            { %>
         <tr>
-            <td id="statusBar" class="copy-link">statusBar<span class="required">**</span></td>
+            <td id="statusBar" class="copy-link">statusBar<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 定义状态栏是显示还是隐藏。
                 默认值为 <b>true</b>。
@@ -1038,7 +1123,7 @@
         <% if (license)
             { %>
         <tr>
-            <td id="toolbar" class="copy-link">toolbar<span class="required">**</span></td>
+            <td id="toolbar" class="copy-link">toolbar<a href="#requiredDescr2" class="required">**</a></td>
             <td>
                 定义顶部工具栏是显示还是隐藏。
                 默认值为 <b>true</b>。
@@ -1163,10 +1248,10 @@
     </tbody>
 </table>
 <div class="mobile-content"></div>
-<span class="required-descr"><span class="required">*</span><em> - 仅适用于 ONLYOFFICE 开发者版的编辑</em></span>
+<span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - 仅适用于 ONLYOFFICE 开发者版的编辑</em></span>
 <% if (license)
    { %>
-<span class="required-descr"><span class="required">**</span><em> - 开发者版的扩展白标选项</em></span>
+<span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - 开发者版的扩展白标选项</em></span>
 <% } %>
 
 <div class="header-gray">示例</div>
@@ -1196,10 +1281,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             "features": {
                 "spellcheck": {
-                    "mode": true,
-                <% if (license)
-                    { %>    "change": true
-                <% } %>}
+                    "mode": true<% if (license)
+                    { %>,
+                    "change": true<% } %>
+                }
             },
             "feedback": {
                 "url": "https://example.com",
@@ -1207,7 +1292,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"font": {
-                "name": "Arial"
+                "name": "Arial",
+                "size": "11px"
             },
             <% } %>"forcesave": false,
             "goback": {
@@ -1242,6 +1328,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 },
                 "toolbar": {
                     "collaboration": true,
+                    "draw": true,
                     "file": {
                         "close": true,
                         "info": true,
@@ -1266,7 +1353,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://www.onlyoffice.com/zh/"
+                "url": "https://example.com"
             },
             "macros": true,
             "macrosMode": "warn",

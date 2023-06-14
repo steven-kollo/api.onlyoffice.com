@@ -31,6 +31,7 @@
         <li><b>文档存储服务</b> 将链接发送到所选文档版本。</li>
         <li><b>文档编辑器</b> 显示选定的文档版本。</li>
         <li>当用户单击文档版本列表中的另一个版本时， <b>文档编辑器</b> 请求重新显示有关该版本的信息。</li>
+        <li>The user clicks the <em>Close History</em> button and the <b>document editor</b> hides the list of the document versions.</li>
     </ol>
 
     <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
@@ -108,6 +109,28 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>在浏览器中打开您的 <em>html</em> 文件。</li>
         <li>在文档编辑器菜单中打开 <em>版本历史</em> 选项。</li>
+        <li>
+            <p>
+                Specify the event handler for the <em>Close History</em> button to be displayed in the configuration script for Document Editor initialization.
+                When the user is trying to go back to the document from viewing the document version history by clicking the <em>Close History</em> button,
+                the <a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a> event is called and the version history list is hidden.
+                When the function is called, the editor must be initialized again, in the editing mode.
+            </p>
+            <pre>
+var onRequestHistoryClose = function () {
+    document.location.reload();
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestHistoryClose": onRequestHistoryClose,
+        ...
+    },
+    ...
+});
+</pre>
+<img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
+        </li>
     </ol>
     
     <h2 id="apply-changes" class="copy-link">打开带有更改突出显示的文档历史记录</h2>

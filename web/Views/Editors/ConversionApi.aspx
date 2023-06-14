@@ -156,7 +156,7 @@
                 <td>可选的</td>
             </tr>
             <tr class="tablerow">
-                <td id="filetype" class="copy-link">filetype<span class="required">*</span></td>
+                <td id="filetype" class="copy-link">filetype<a href="#requiredDescr" class="required">*</a></td>
                 <td>定义要转换的文档文件的类型。</td>
                 <td>string</td>
                 <td>必需的</td>
@@ -168,7 +168,7 @@
                 <td>必需的</td>
             </tr>
             <tr class="tablerow">
-                <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
+                <td id="outputtype" class="copy-link">outputtype<a href="#requiredDescr" class="required">*</a></td>
                 <td>
                     定义生成的转换文档类型。
                     从 7.0 版开始，可以指定文件格式而不是扩展名。
@@ -422,7 +422,7 @@
         </tbody>
     </table>
     <div class="mobile-content"></div>
-    <span class="required-descr"><span class="required">*</span><em> - 在下表中，您可以看到将文档转换为最知名的文件格式的可能性，其中 <b>输入格式</b> 列对应于 <b>filetype</b> 参数的值， <b>输出格式</b> 列对应于 <b>outputtype</b> 参数的值。</em></span>
+    <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - 在下表中，您可以看到将文档转换为最知名的文件格式的可能性，其中 <b>输入格式</b> 列对应于 <b>filetype</b> 参数的值， <b>输出格式</b> 列对应于 <b>outputtype</b> 参数的值。</em></span>
 
     <h2 id="text-matrix" class="copy-link">文本文档文件格式</h2>
     <table class="table-conversion-matrix-text">
@@ -694,7 +694,7 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -978,7 +978,7 @@
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
-                <td>xps</td>
+                <td>xml</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -999,7 +999,7 @@
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
-                <td>xml</td>
+                <td>xps</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>

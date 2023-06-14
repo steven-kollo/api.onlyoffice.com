@@ -28,9 +28,9 @@
             <td id="documentType" class="copy-link">documentType</td>
             <td>定义要打开的文档类型：
                 <ul>
-                    <li><b>word</b> - 文本文档 （<em>.doc、.docm、.docx、.docxf、.dot、.dotm、.dotx、.epub、.fodt、.fb2、.htm、.html、.mht、.odt、.oform、 .ott、.oxps、.pdf、.rtf、.txt、.djvu、.xml、.xps</em>），</li>
-                    <li><b>cell</b> - 电子表格 (<em>.csv、.fods、.ods、.ots、.xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx</em>），</li>
-                    <li><b>slide</b> - 演示文稿（<em>.fodp、.odp、.otp、.pot、.potm、.potx、.pps、.ppsm、.ppsx、.ppt、.pptm、.pptx</em>）。</li>
+                    <li><b>word</b> - 文本文档 （<em>.djvu、.doc、.docm、.docx、.docxf、.dot、.dotm、.dotx、.epub、.fb2、.fodt、.htm、.html、.mht、.mhtml、.odt、.oform、.ott、.oxps、.pdf、.rtf、.stw、.sxw、.txt、.wps、.wpt、.xml、.xps</em>），</li>
+                    <li><b>cell</b> - 电子表格 (<em>.csv、.et、.ett、.fods、.ods、.ots、.sxc、.xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx、.xml</em>），</li>
+                    <li><b>slide</b> - 演示文稿 （<em>.dps、.dpt、.fodp、.odp、.otp、.pot、.potm、.potx、.pps、.ppsm、.ppsx、.ppt、.pptm、.pptx、.sxi</em>）。</li>
                 </ul>
             </td>
             <td>string</td>

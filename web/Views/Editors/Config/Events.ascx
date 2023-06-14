@@ -147,6 +147,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onError" class="copy-link">onError</b> - 发生错误或其他特定事件时调用的函数。
             错误消息在 <em>data</em> 参数中发送。
+            A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
         </p>
         <div class="header-gray">示例</div>
         <pre>
@@ -796,22 +797,34 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestUsers" class="copy-link">onRequestUsers</b> - 当评论者可以选择其他用户在评论中提及时调用的函数。
-            要设置用户列表，您必须调用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法。
-        </p>
-        <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</p>
+        <p>Starting from version 7.4, the operation type can be specified in the <em>data.c</em> parameter. It can take two values - <em>mention</em> or <em>protect</em>.
+        Prior to version 7.4, only the mention operation was available with this event.</p>
+        <p>To set a list of users, you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method which can take different lists of users depending on the specified operation type.
+            The <em>onRequestUsers</em> event is called once for each <em>c</em> type when the corresponding operation is performed.
+            If the <em>setUsers</em> is called with an empty list, then the <em>onRequestUsers</em> event will fire again.</p>
+        <div class="img-block-2">
+            <div>
+                <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+            </div>
+            <div>
+                <img alt="Protect range" src="<%= Url.Content("~/content/img/editor/protect-range.png") %>"/>
+            </div>
+        </div>
         <div class="header-gray">示例</div>
         <pre>
-var onRequestUsers = function () {
+var onRequestUsers = function (event) {
     docEditor.setUsers({
+        "c": event.data.c,
         "users": [
             {
                 "email": "john@example.com",
+                "id": "78e1e841",
                 "name": "John Smith"
             },
             {
                 "email": "kate@example.com",
+                "id": "F89d8069ba2b",
                 "name": "Kate Cage"
             },
             ...
@@ -833,6 +846,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onWarning" class="copy-link">onWarning</b> - 发生警告时调用的函数。
             警告消息在 <em>data</em> 参数中发送。
+            A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
         </p>
         <div class="header-gray">示例</div>
         <pre>

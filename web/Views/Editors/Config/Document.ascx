@@ -75,7 +75,10 @@
                     </li>
                 </ul>
             <td>object</td>
-            <td></td>
+            <td>{
+    "fileKey": "BCFA2CED",
+    "instanceId": "https://example.com"
+}</td>
         </tr>
         <tr class="tablerow">
             <td id="title" class="copy-link">title<span class="required">*</span></td>

@@ -90,6 +90,9 @@
                 <a href="<%= Url.Action("nuxeo") %>">Nuxeo 集成</a>
             </li>
             <li>
+                <a href="<%= Url.Action("odoo") %>">Odoo integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("owncloud") %>">ownCloud云集成</a>
             </li>
             <li>
@@ -166,10 +169,13 @@
             <li>
                 <a href="<%= Url.Action("embeddingforms") %>">将表单嵌入网页</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("protectingranges") %>">Protecting ranges</a>
+            </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("interactingoutside/") %>">如何与外界交互</a>
+        <a href="<%= Url.Action("interactingoutside/") %>">External access to the document editing</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("interactingoutside/comments") %>">处理评论</a>

@@ -92,7 +92,7 @@
             "allowed": false
         }
     ],
-    "useforrequest": true,
+    "useforrequest": false,
     "errorcode": 403
 }
 </pre>
@@ -110,6 +110,12 @@
         <li>更改 <em>"允许"</em> 规则,可以为 <b>true</b> 或 <b>false</b>的。</li>
         <li>
             <p>重新启动服务以使配置更改生效：</p>
+            <p><b>For RPM/DEB packages:</b></p>
+            <pre>
+systemctl restart ds-*
+</pre>
+
+            <p><b>For Docker:</b></p>
             <pre>
 supervisorctl restart all
 </pre>

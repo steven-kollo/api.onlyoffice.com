@@ -1,10 +1,10 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">如何与外界交互</span>
+    <span class="hdr">External access to the document editing</span>
 </h1>
 
-<p class="dscr">以下示例将向您展示如何从外部与文本文档、电子表格、演示文稿和可填充表单进行交互。
+<p class="dscr">The following examples will show you how to edit text documents, spreadsheets, presentations, and fillable forms from an external source.
 要实现这一点，请使用我们的 <a href="<%= Url.Action("connector") %>">Automation API</a>。</p>
 
 <ul class="connector-block">

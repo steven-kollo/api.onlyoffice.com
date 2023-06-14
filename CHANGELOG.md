@@ -1,5 +1,28 @@
 # Change Log
 
+## 4.1.0
+- editors: added a link to the list of error codes
+- editors: added the Protecting ranges page
+- editors: added the c parameter to the setUsers method and onRequestUsers event
+- editors: added the users.id field to the setUsers method
+- editors: added the draw field to the editorConfig.customization.layout.toolbar parameter
+- editors: added opening for .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt formats
+- editors: added the size field to the editorConfig.customization.font parameter
+- editors: added the onRequestHistoryClose event to the Document History page
+- editors: added the userdata parameter to the info command
+- editors: added the Odoo app
+- plugins: v7.4.0
+- plugins: added the ability to download ready-to-use plugins from ONLYOFFICE Plugin Marketplace in ONLYOFFICE Desktop Editors
+- plugins: added the pluginsmanager utility
+- plugins: added the store.categories config parameter
+- docbuilder: v7.4.0
+- docbuilder: added the JS debugging in the Chrome/Chromium browser
+
+## 4.0.0
+- docspace: added the DocSpace section
+- portals: moved the Hosted solution section to the Community server section
+- editors: services.CoAuthoring.secret.browser.string is deprecated
+
 ## 3.1.0
 - editors: test examples v1.5.1
 - editors: added conversion from dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xml format

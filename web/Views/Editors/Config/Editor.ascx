@@ -43,10 +43,10 @@
             <td id="actionLink" class="copy-link">actionLink</td>
             <td>使用 <em>data.actionLink</em> 参数中的 <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> 事件或 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件指定从 <b>文档编辑服务</b> 接收的数据，其中包含有关将滚动到的文档中的操作的信息。</td>
             <td>object</td>
-            <td></td>
+            <td>ACTION_DATA</td>
         </tr>
         <tr class="tablerow">
-            <td id="callbackUrl" class="copy-link">callbackUrl<span class="required">*</span></td>
+            <td id="callbackUrl" class="copy-link">callbackUrl<a href="#requiredDescr" class="required">*</a></td>
             <td>指定 <b>文档存储服务</b> 的绝对 URL （必须由在自己的服务器上使用 ONLYOFFICE 文档服务器的软件集成商 <a href="<%= Url.Action("callback") %>">实现</a>）。</td>
             <td>string</td>
             <td>"https://example.com/url-to-callback.ashx"</td>
@@ -75,7 +75,10 @@
                 <p>此参数用于应用<a href="<%= Url.Action("coedit") %>#modes">共同编辑</a>和<a href="<%= Url.Action("viewing") %>">查看</a>模式</p>
              </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "mode": "fast",
+    "change": true
+}</td>
         </tr>
         <tr class="tablerow-note">
             <td colspan="4">
@@ -172,7 +175,13 @@
                 </ul>
             </td>
             <td>object数组</td>
-            <td></td>
+            <td>[
+    {
+        "folder": "Example Files",
+        "title": "exampledocument1.docx",
+        "url": "https://example.com/exampledocument1.docx"
+    }
+]</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -217,7 +226,13 @@
                 </ul>
             </td>
             <td>object数组</td>
-            <td></td>
+            <td>[
+    {
+        "image": "https://example.com/exampletemplate1.png",
+        "title": "exampletemplate1.docx",
+        "url": "https://example.com/url-to-create-template1"
+    }
+]</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -276,13 +291,17 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "group": "Group1",
+    "id": "78e1e841",
+    "name": "John Smith"
+}</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
 
-<span class="required-descr"><span class="required">*</span><em> - 必填字段</em></span>
+<span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - 必填字段</em></span>
 <div class="header-gray">示例</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {

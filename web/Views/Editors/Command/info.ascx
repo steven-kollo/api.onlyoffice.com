@@ -14,7 +14,8 @@
 <pre>
 {
     "c": "info",
-    "key": "Khirz6zTPdfd7"
+    "key": "Khirz6zTPdfd7",
+    "userdata": "sample userdata"
 }
 </pre>
 <div class="header-gray">参数</div>
@@ -45,6 +46,12 @@
             <td>定义文档标识符，用于明确标识文档文件。</td>
             <td>string</td>
             <td>必需的</td>
+        </tr>
+        <tr class="tablerow">
+            <td>userdata</td>
+            <td>Defines some custom identifier which will help distinguish the specific request in case there were more than one.</td>
+            <td>string</td>
+            <td>optional</td>
         </tr>
     </tbody>
 </table>

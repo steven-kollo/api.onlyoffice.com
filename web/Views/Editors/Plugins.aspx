@@ -33,6 +33,7 @@
         <li><a href="<%= Url.Action("moodle") %>">Moodle ONLYOFFICE 集成插件</a></li>
         <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE 集成应用</a></li>
         <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo ONLYOFFICE 集成插件</a></li>
+        <li><a href="<%= Url.Action("odoo") %>">Odoo ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("owncloud") %>">ownCloud ONLYOFFICE 集成应用</a></li>
         <li><a href="<%= Url.Action("plone") %>">Plone ONLYOFFICE 集成插件</a></li>
         <li><a href="<%= Url.Action("redmine") %>">Redmine ONLYOFFICE 集成插件</a></li>
