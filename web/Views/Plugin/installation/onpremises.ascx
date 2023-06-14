@@ -88,7 +88,6 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 <h2 id="plugin-manager" class="copy-link">Adding plugins through the plugin manager</h2>
 
 <p>Starting from version 7.2, you can download ready-to-use plugins from <b>ONLYOFFICE Plugin Marketplace</b>.</p>
-<note>The plugin marketplace is now available only for <b>ONLYOFFICE Docs on-premises</b> and local test examples.</note>
 
 <p>Follow the steps below to add the plugins to the editor using plugin manager:</p>
 <ol>
@@ -98,6 +97,12 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 </ol>
 <img alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/plugin-manager.png") %>" />
 <p>The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the <b>Plugins</b> tab.</p>
+<p>Starting from version 7.4, the <b>pluginsmanager</b> utility can be used to manage the plugins in ONLYOFFICE Docs on-premises.
+The commands for installing, removing, restoring, updating, etc. are available. For example:</p>
+<pre>
+pluginsmanager --install zotero
+</pre>
+<p>A full list of server commands can be found <a href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/Editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands" target="_blank">here</a>.</p>
 
 
 <h2 id="remove" class="copy-link">Removing plugins from ONLYOFFICE Docs on-premises</h2>

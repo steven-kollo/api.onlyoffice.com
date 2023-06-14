@@ -383,13 +383,20 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Arial".
+                        <b>example</b>: "Arial";
+                    </li>
+                    <li>
+                        <b>size</b> - the font size,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "11px".
                     </li>
                 </ul>
             </td>
             <td>object</td>
             <td>{
-    "name": "Arial"
+    "name": "Arial", "size": "11px"
 }</td>
         </tr>
         <% } %>
@@ -651,6 +658,14 @@
                         <b>example</b>: true;
                     </li>
                     <li>
+                        <b>toolbar.draw</b> - defines if the <b>Draw</b> tab is displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
                         <b>toolbar.file</b> - defines the <b>File</b> tab settings. If this parameter is a boolean value, then it specifies
                         whether the <b>File</b> tab will be displayed or hidden. The default value is <b>true</b>,
                         <br />
@@ -775,6 +790,7 @@
     },
     "toolbar": {
         "collaboration": true,
+        "draw": true,
         "file": {
             "close": true,
             "info": true,
@@ -1276,7 +1292,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"font": {
-                "name": "Arial"
+                "name": "Arial",
+                "size": "11px"
             },
             <% } %>"forcesave": false,
             "goback": {
@@ -1311,6 +1328,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 },
                 "toolbar": {
                     "collaboration": true,
+                    "draw": true,
                     "file": {
                         "close": true,
                         "info": true,

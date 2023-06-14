@@ -28,13 +28,27 @@
         <li>Create an empty <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
         <li>
             <p>
-                Specify the event handler for the hint about mentioning users in the comments to be displayed in the configuration script for Document Editor initialization.
+                In the configuration script for Document Editor initialization, specify the event handler for the hint about mentioning users in the comments to be displayed.
                 When the user types the <b>+</b> sign, the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event is called and the commenter can select other users for mentioning in the comments.
+                The <em>data.c</em> parameter with the <em>mention</em> operation type is passed in this event.
             </p>
             <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>" />
             <pre>
-var onRequestUsers = function() {
-    ...
+var onRequestUsers = function(event) {
+    docEditor.setUsers({
+        "c": event.data.c,
+        "users": [
+            {
+                "email": "john@example.com",
+                "name": "John Smith"
+            },
+            {
+                "email": "kate@example.com",
+                "name": "Kate Cage"
+            },
+            ...
+        ]
+    });
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -52,6 +66,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             </p>
             <pre>
 docEditor.setUsers({
+    "c": "mention",
     "users": [
         {
             "email": "john@example.com",
