@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: added the pluginsmanager utility
 - editors: added a link to the list of error codes
 - editors: added the Protecting ranges page
 - editors: added the c parameter to the setUsers method and onRequestUsers event
