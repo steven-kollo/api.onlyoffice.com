@@ -88,7 +88,6 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 <h2 id="plugin-manager" class="copy-link">Adding plugins through the plugin manager</h2>
 
 <p>Starting from version 7.2, you can download ready-to-use plugins from <b>ONLYOFFICE Plugin Marketplace</b>.</p>
-<note>The plugin marketplace is now available only for <b>ONLYOFFICE Docs on-premises</b> and local test examples.</note>
 
 <p>Follow the steps below to add the plugins to the editor using plugin manager:</p>
 <ol>

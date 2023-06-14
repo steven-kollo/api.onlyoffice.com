@@ -166,9 +166,6 @@
                 <a href="<%= Url.Action("example/autocomplete") %>">Autocomplete</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/cbr") %>">CBR</a>
-            </li>
-            <li>
                 <a href="<%= Url.Action("example/chess") %>">Chess</a>
             </li>
             <li>
@@ -200,9 +197,6 @@
             </li>
             <li>
                 <a href="<%= Url.Action("example/movecursor") %>">Move cursor</a>
-            </li>
-            <li>
-                <a href="<%= Url.Action("example/num2word") %>">Num2word</a>
             </li>
             <li>
                 <a href="<%= Url.Action("example/ocr") %>">OCR</a>

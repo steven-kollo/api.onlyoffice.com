@@ -19,6 +19,7 @@
 
     <h2 id="74" class="copy-link">Version 7.4</h2>
     <ul>
+        <li>Added the ability to download ready-to-use plugins from <a href="<%= Url.Action("installation/desktop") %>#plugin-manager">ONLYOFFICE Plugin Marketplace</a> in ONLYOFFICE Desktop Editors.</li>
         <li>Added the <a href="<%= Url.Action("sendtoplugin") %>">sendToPlugin</a> method to the <em>Plugin</em> object.</li>
         <li>Added the <a href="<%= Url.Action("events/oncontextmenuclick") %>">onContextMenuClick</a> event.</li>
         <li>Added the <a href="<%= Url.Action("events/oncontextmenushow") %>">onContextMenuShow</a> event.</li>
@@ -44,8 +45,13 @@
     <h2 id="73" class="copy-link">Version 7.3</h2>
     <ul>
         <li>Added the <em>sign</em> type to the <a href="<%= Url.Action("config") %>#initDataType">initDataType</a> config parameter.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/addaddinfield") %>">AddAddinField</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/getalladdinfields") %>">GetAllAddinFields</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/common/getvbamacros") %>">GetVBAMacros</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/common/ondropevent") %>">OnDropEvent</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/removefieldwrapper") %>">RemoveFieldWrapper</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/seteditingrestrictions") %>">SetEditingRestrictions</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/updateaddinfields") %>">UpdateAddinFields</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/cell") %>">Spreadsheet Api</a> methods to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/slide") %>">Presentation Api</a> methods to <em>window.Asc.plugin.executeMethod</em>.</li>
     </ul>

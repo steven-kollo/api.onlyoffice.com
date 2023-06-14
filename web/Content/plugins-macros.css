@@ -244,11 +244,6 @@
     background-repeat: no-repeat;
 }
 
-.num2word {
-    background-image: url("img/plugin/num2word.svg");
-    background-repeat: no-repeat;
-}
-
 .replace-on-start {
     background-image: url("img/plugin/replace-start.svg");
     background-repeat: no-repeat;
@@ -296,11 +291,6 @@
 
 .example-add {
     background-image: url("img/plugin/example.svg");
-    background-repeat: no-repeat;
-}
-
-.cbr {
-    background-image: url("img/plugin/cbr.svg");
     background-repeat: no-repeat;
 }
 

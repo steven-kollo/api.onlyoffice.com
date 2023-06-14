@@ -46,7 +46,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "example/addcommentincell",
                 "example/addcustomfields",
                 "example/autocomplete",
-                "example/cbr",
                 "example/chess",
                 "example/clippy",
                 "example/countwordsandcharacters",
@@ -60,7 +59,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "example/loadcustomfields",
                 "example/customfields",
                 "example/movecursor",
-                "example/num2word",
                 "example/ocr",
                 "example/photoeditor",
                 "example/searchandchangetextbackgroundcolor",
@@ -253,6 +251,11 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult resizeWindow()
         {
             return RenderBaseMethod("resizeWindow");
+        }
+
+        public ActionResult sendToPlugin()
+        {
+            return RenderBaseMethod("sendToPlugin");
         }
 
         public ActionResult GettingStarted()

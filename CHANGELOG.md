@@ -1,9 +1,17 @@
 # Change Log
 
 - plugins: added the pluginsmanager utility
+- plugins: added the ability to download ready-to-use plugins from ONLYOFFICE Plugin Marketplace in ONLYOFFICE Desktop Editors
 - plugins: v7.4.0
 - editors: added opening .dps, .dpt, .et, .ett, .mhtml, .stw, .sxc, .sxi, .sxw, .wps, .wpt format.
 - editors: added the size field to the editorConfig.customization.font parameter
+- editors: added the onRequestHistoryClose event to the Document History page
+- editors: added the userdata parameter to the info command
+- editors: added the Odoo app
+
+## 4.0.0
+- docspace: added the DocSpace section
+- portals: moved the Hosted solution section to the Community server section
 - editors: services.CoAuthoring.secret.browser.string is deprecated
 
 ## 3.1.0

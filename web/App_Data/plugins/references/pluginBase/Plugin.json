@@ -139,7 +139,7 @@
         {
           "type": "function",
           "name": "callback",
-          "description": "<p>The result that the method returns (only js standart types available (any objects will be replaced by undefined)).</p>",
+          "description": "<p>The result that the method returns. Only the js standart types are available (any objects will be replaced with <em>undefined</em>).</p>",
           "optional": false
         }
       ]
@@ -221,15 +221,29 @@
     "sendToPlugin": {
       "memberof": "Plugin",
       "name": "sendToPlugin",
-      "description": "<p>Send message from window to plugin</p>",
+      "description": "<p>Sends a message from the modal window to the plugin.</p>",
       "tags": {},
       "returns": [
         [
-          "InputHelper"
+          "boolean"
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "name",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        },
+        {
+          "type": "object",
+          "name": "data",
+          "description": "<p>The event data.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "events": {
@@ -433,14 +447,14 @@
     "onContextMenuShow": {
       "memberof": "Plugin",
       "name": "onContextMenuShow",
-      "description": "<p>The function called when context menu will be shown</p>",
+      "description": "<p>The function called when the context menu has been shown.</p>",
       "tags": {},
       "see": null,
       "params": [
         {
           "type": "Object",
           "name": "options",
-          "description": "<p>Defines the options for current selection.</p>",
+          "description": "<p>Defines the options for the current selection.</p>",
           "optional": false
         }
       ]
@@ -448,14 +462,14 @@
     "onContextMenuClick": {
       "memberof": "Plugin",
       "name": "onContextMenuClick",
-      "description": "<p>The function called when context menu item was clicked</p>",
+      "description": "<p>The function called when the context menu item has been clicked.</p>",
       "tags": {},
       "see": null,
       "params": [
         {
           "type": "string",
           "name": "id",
-          "description": "<p>Item id.</p>",
+          "description": "<p>Item ID.</p>",
           "optional": false
         }
       ]

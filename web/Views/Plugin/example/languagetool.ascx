@@ -56,7 +56,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 {
     "name": "LanguageTool",
 	 "nameLocale": {
-        "ru": "LanguageTool",
         "fr": "LanguageTool",
         "es": "LanguageTool",
         "de": "LanguageTool"
@@ -68,7 +67,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
         {
             "description": "Improve spelling, grammar, and style in your texts.",
 			"descriptionLocale": {
-                "ru": "&#1048;&#1089;&#1087;&#1088;&#1072;&#1074;&#1083;&#1103;&#1081;&#1090;&#1077; &#1086;&#1088;&#1092;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;, &#1075;&#1088;&#1072;&#1084;&#1084;&#1072;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1080; &#1089;&#1090;&#1080;&#1083;&#1080;&#1089;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1086;&#1096;&#1080;&#1073;&#1082;&#1080; &#1074; &#1074;&#1072;&#1096;&#1080;&#1093; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1072;&#1093;.",
                 "fr": "Am&#233;liorez l'orthographe, la grammaire et le style de vos textes.",
                 "es": "Mejore la ortograf&#237;a, la gram&#225;tica y el estilo de sus textos.",
                 "de": "Verbessern Sie Rechtschreibung, Grammatik und Stil in Ihren Texten."
@@ -145,7 +143,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
         {
             "description": "About",
             "descriptionLocale": {
-                "ru": "&#1057;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072;",
                 "fr": "&#192; propos",
                 "es": "Sobre programa",
                 "de": "&#220;ber"

@@ -52,7 +52,6 @@
 {
     "name": "Translator",
     "nameLocale": {
-        "ru": "&#1055;&#1077;&#1088;&#1077;&#1074;&#1086;&#1076;&#1095;&#1080;&#1082;",
         "fr": "Traducteur",
         "es": "Traductor",
         "de": "&#220;bersetzer"
@@ -64,7 +63,6 @@
         {
             "description": "Translate the selected text into other languages with Google Translate.",
             "descriptionLocale": {
-                "ru": "&#1055;&#1077;&#1088;&#1077;&#1074;&#1086;&#1076;&#1080;&#1090;&#1077; &#1089;&#1083;&#1086;&#1074;&#1072;, &#1087;&#1088;&#1077;&#1076;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103; &#1080; &#1072;&#1073;&#1079;&#1072;&#1094;&#1099; &#1085;&#1072; &#1076;&#1088;&#1091;&#1075;&#1080;&#1077; &#1103;&#1079;&#1099;&#1082;&#1080; &#1089; &#1087;&#1086;&#1084;&#1086;&#1097;&#1100;&#1102; Google Translate.",
                 "fr": "Traduisez le texte s&#233;lectionn&#233; dans d'autres langues avec Google Translate.",
                 "es": "Traduzca el texto seleccionado a otros idiomas con el Traductor de Google.",
                 "de": "&#220;bersetzen Sie den ausgew&#228;hlten Text in andere Sprachen mit Google Translate."

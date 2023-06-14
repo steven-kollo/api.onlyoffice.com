@@ -24,18 +24,16 @@
     
     <h2>Adding plugins through the plugin manager</h2>
 
-    <p><b>Step 1.</b> Archive all the <a href="<%= Url.Action("structure", "plugin") %>">plugin files</a> and change the archive extension to <em>.plugin</em>.</p>
-    <note>If you download a plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">GitHub</a>, 
-        unpack the plugin folder first and then archive its elements only.</note>
+    <p>Starting from version 7.4, you can download ready-to-use plugins from <b>ONLYOFFICE Plugin Marketplace</b>.</p>
 
-    <p><b>Step 2.</b> Click the <b>Settings</b> button on the <b>Plugins</b> tab.</p>
-    <img alt="Plugin settings" src="<%= Url.Content("~/content/img/desktop/plugin_settings.png") %>" />
-
-    <p><b>Step 3.</b> In the plugin <b>Settings</b> window, click the <b>Add plugin</b> button to load your created archive:</p>
-    <img alt="Adding plugin" src="<%= Url.Content("~/content/img/desktop/adding_plugins.png") %>" />
-
+    <p>Follow the steps below to add the plugins to the editor using plugin manager:</p>
+    <ol>
+        <li>Open the <b>Plugins</b> tab.</li>
+        <li>Click <b>Plugin Manager</b>.</li>
+        <li>Find the plugin you need and click <b>Install</b>.</li>
+    </ol>
+    <img alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/desktop-plugin-manager.png") %>" />
     <p>The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the <b>Plugins</b> tab.</p>
-    <img alt="Plugins tab" src="<%= Url.Content("~/content/img/desktop/plugins_tab.png") %>" />
 
 
     <h2>Adding plugins through the plugin folder </h2>

@@ -138,7 +138,7 @@
   },
   "DocumentEditingRestrictions": {
     "name": "DocumentEditingRestrictions",
-    "description": "<p>A value that specifies editing restriction of the document:</p>\n<ul>\n<li><b>none</b> - no editing restrictions</li>\n<li><b>comments</b> - allow editing of comments</li>\n<li><b>forms</b> - allow editing of form fields</li>\n<li><b>readOnly</b> - allow no editing</li>\n</ul>",
+    "description": "<p>The document editing restrictions:</p>\n<ul>\n<li><b>none</b> - no editing restrictions,</li>\n<li><b>comments</b> - allows editing comments,</li>\n<li><b>forms</b> - allows editing form fields,</li>\n<li><b>readOnly</b> - does not allow editing.</li>\n</ul>",
     "type": [
       "'none'",
       "'comments'",
@@ -148,7 +148,7 @@
   },
   "TextPartType": {
     "name": "TextPartType",
-    "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not:</p>\n<ul>\n<li><b>entirely</b> - replace all text with the specified one</li>\n<li><b>beforeCursor</b> - replace only the part of the word that is before cursor</li>\n<li><b>beforeCursor</b> - replace only the part of the word that is after cursor</li>\n</ul>",
+    "description": "<p>Specifies if the whole text or only its part will be returned or replaced:</p>\n<ul>\n<li><b>entirely</b> - replaces/returns the whole text,</li>\n<li><b>beforeCursor</b> - replaces/returns only the part of the text before the cursor,</li>\n<li><b>afterCursor</b> - replaces/returns only the part of the text after the cursor.</li>\n</ul>",
     "type": [
       "\"entirely\"",
       "\"beforeCursor\"",
@@ -339,17 +339,17 @@
       {
         "type": "string",
         "name": "FieldId",
-        "description": "<p>An identifier of the field</p>"
+        "description": "<p>Field identifier.</p>"
       },
       {
         "type": "string",
         "name": "Value",
-        "description": "<p>The value of the field.</p>"
+        "description": "<p>Field value.</p>"
       },
       {
         "type": "string",
         "name": "Content",
-        "description": "<p>The text content of the field.</p>"
+        "description": "<p>Field text content.</p>"
       }
     ]
   }

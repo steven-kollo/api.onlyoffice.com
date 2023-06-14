@@ -123,7 +123,10 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "request": true,
+    "label": "Guest"
+}</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -282,7 +285,16 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "address": "My City, 123a-45",
+    "info": "Some additional information",
+    "logo": "https://example.com/logo-big.png",
+    "logoDark": "https://example.com/dark-logo-big.png",
+    "mail": "john@example.com",
+    "name": "John Smith and Co.",
+    "phone": "123456789",
+    "www": "example.com"
+}</td>
         </tr>
         <tr>
             <td id="features" class="copy-link">features</td>
@@ -319,7 +331,13 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "spellcheck": {
+        "mode": true<% if (license)
+        { %>,
+        "change": true<% } %>
+    }
+}</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -377,7 +395,9 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "name": "Arial"
+}</td>
         </tr>
         <% } %>
         <tr>
@@ -742,6 +762,45 @@
                 </ul>
             </td>
             <td>object</td>
+            <td>{
+    "header": {
+        "save": true,
+        "users": true
+    },
+    "leftMenu": {
+        "mode": true,
+        "navigation": true,
+        "spellcheck": true
+    },
+    "rightMenu": {
+        "mode": true
+    },
+    "statusBar": {
+        "actionStatus": true,
+        "docLang": true,
+        "textLang": true
+    },
+    "toolbar": {
+        "collaboration": true,
+        "file": {
+            "close": true,
+            "info": true,
+            "save": true,
+            "settings": true
+        },
+        "home": {
+            "mailmerge": true
+        },
+        "layout": true,
+        "plugins": true,
+        "protect": true,
+        "references": true,
+        "save": true,
+        "view": {
+            "navigation": true
+        }
+    }
+}</td>
         </tr>
         <tr>
             <td id="leftMenu" class="copy-link">leftMenu<a href="#requiredDescr2" class="required">**</a></td>
@@ -816,7 +875,11 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "image": "https://example.com/logo.png",
+    "imageDark": "https://example.com/dark-logo.png",
+    "url": "https://example.com"
+}</td>
         </tr>
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
@@ -929,7 +992,13 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "hideReviewDisplay": false,
+    "showReviewChanges": false,
+    "reviewDisplay": "original",
+    "trackChanges": true,
+    "hoverMode": false
+}</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
@@ -1203,10 +1272,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             "features": {
                 "spellcheck": {
-                    "mode": true,
-                <% if (license)
-                    { %>    "change": true
-                <% } %>}
+                    "mode": true<% if (license)
+                    { %>,
+                    "change": true<% } %>
+                }
             },
             "feedback": {
                 "url": "https://example.com",
@@ -1274,7 +1343,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://www.onlyoffice.com"
+                "url": "https://example.com"
             },
             "macros": true,
             "macrosMode": "warn",
