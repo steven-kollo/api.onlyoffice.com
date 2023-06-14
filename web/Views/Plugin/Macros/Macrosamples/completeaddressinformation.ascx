@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Completes the basic address data with detailed address information and inserts it ino a spreadsheet.</p>
+<p class="dscr">Completes the basic address data with detailed address information and inserts it into a spreadsheet.</p>
 
 <pre>// Macros structure:
 // Read Address (Cell A2) ->
