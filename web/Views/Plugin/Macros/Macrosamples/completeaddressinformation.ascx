@@ -23,8 +23,7 @@
     const oWorksheet = Api.GetActiveSheet()
     let row = 2
     makeRequest(oWorksheet.GetRange(`A${row}`).GetText())
-    
-    
+
     // REQUEST
     function makeRequest(ADDRESS) {
         if (ADDRESS === '') return
@@ -37,8 +36,7 @@
     function addressToRequest (address) {
         return address.replaceAll(' ', '%20').replaceAll(',', '%2C')
     }
-    
-    
+
     // RESPONSE
     function successFunction(response) {
         const data = createAddressDetailsObject(response)
@@ -67,8 +65,7 @@
         })
         return data
     }
-    
-    
+
     // PASTE
     function pasteAddressDetails(data) {
         const oRange = oWorksheet.GetRange(`B${row}:F${row}`)
@@ -87,7 +84,6 @@
         row++
         makeRequest(oWorksheet.GetRange(`A${row}:A${row}`).GetText())
     }
-    
     // Sheet has to be reloaded on changes
     function reload() {
         let reload = setInterval(function(){
@@ -102,7 +98,7 @@
 <a href="<%= Url.Action("spreadsheetapi/apirange/setvalue", "docbuilder") %>">SetValue</a>,
 <a href="<%= Url.Action("spreadsheetapi/apirange/gettext", "docbuilder") %>">GetText</a>
 </p>
-   <note>For the macros to function, replace <em>yourAPIkey</em> with the API key obtained from <a href="https://www.geoapify.com/">Geoapify</a>.</note>
+<note>For the macros to function, replace <em>yourAPIkey</em> with the API key obtained from <a href="https://www.geoapify.com/" target="_blank">Geoapify</a>.</note>
 
 <div class="header-gray">Result</div>
 </br >

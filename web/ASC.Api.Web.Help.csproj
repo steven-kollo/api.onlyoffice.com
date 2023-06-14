@@ -2437,8 +2437,8 @@
     <Content Include="Content\img\plugins\plugin_archive.png" />
     <Content Include="Content\img\plugins\plugin_settings.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
+    <Content Include="Content\img\plugins\recalculate-cell-values.png" />
     <Content Include="Content\img\plugins\complete_address_information.png" />
-    <Content Include="Content\img\plugins\write_data_to_cell.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
     <Content Include="Content\img\plugins\remove-shapes.png" />
     <Content Include="Content\img\plugins\text_area.png" />
