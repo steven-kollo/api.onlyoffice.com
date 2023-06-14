@@ -76,8 +76,7 @@ sudo supervisorctl restart ds:docservice
 <pre>
 {
     "name": "Zotero",
-	"nameLocale": {
-        "ru": "Zotero",
+    "nameLocale": {
         "fr": "Zotero",
         "es": "Zotero",
         "de": "Zotero"
@@ -89,7 +88,6 @@ sudo supervisorctl restart ds:docservice
         {
             "description": "Create bibliographies in the required style using Zotero service.",
             "descriptionLocale": {
-                    "ru": "&#1054;&#1092;&#1086;&#1088;&#1084;&#1083;&#1103;&#1081;&#1090;&#1077; &#1073;&#1080;&#1073;&#1083;&#1080;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1089;&#1087;&#1080;&#1089;&#1082;&#1080; &#1074; &#1085;&#1091;&#1078;&#1085;&#1086;&#1084; &#1089;&#1090;&#1080;&#1083;&#1077; &#1089; &#1087;&#1086;&#1084;&#1086;&#1097;&#1100;&#1102; Zotero.",
                     "fr": "Cr&#233;ez des bibliographies dans le style n&#233;cessaire avec Zotero.",
                     "es": "Cree bibliograf&#237;as en el estilo requerido utilizando el servicio Zotero.",
                     "de": "Erstellen Sie Literaturverzeichnisse im gew&#252;nschten Stil mittels Zotero."

@@ -17,6 +17,23 @@
       "see": null,
       "inherits": null
     },
+    "GetId": {
+      "memberof": "ApiComment",
+      "name": "GetId",
+      "description": "<p>Returns the current comment ID. If the comment doesn't have an ID, null is returned.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetText": {
       "memberof": "ApiComment",
       "name": "GetText",
@@ -59,9 +76,9 @@
         }
       ]
     },
-    "GetAutorName": {
+    "GetAuthorName": {
       "memberof": "ApiComment",
-      "name": "GetAutorName",
+      "name": "GetAuthorName",
       "description": "<p>Returns the comment author's name.</p>",
       "tags": {
         "typeofeditors": [
@@ -76,9 +93,9 @@
       "see": null,
       "inherits": null
     },
-    "SetAutorName": {
+    "SetAuthorName": {
       "memberof": "ApiComment",
-      "name": "SetAutorName",
+      "name": "SetAuthorName",
       "description": "<p>Sets the comment author's name.</p>",
       "tags": {
         "typeofeditors": [
@@ -95,7 +112,7 @@
       "params": [
         {
           "type": "string",
-          "name": "sAutorName",
+          "name": "sAuthorName",
           "description": "<p>The comment author's name.</p>",
           "optional": false
         }
@@ -354,7 +371,7 @@
         },
         {
           "type": "String",
-          "name": "sAutorName",
+          "name": "sAuthorName",
           "description": "<p>The name of the comment reply author (optional).</p>",
           "optional": false
         },

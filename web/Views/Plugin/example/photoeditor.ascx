@@ -52,7 +52,6 @@
 {
     "name": "Photo Editor",
     "nameLocale": {
-        "ru": "&#1060;&#1086;&#1090;&#1086;&#1088;&#1077;&#1076;&#1072;&#1082;&#1090;&#1086;&#1088;",
         "fr": "Photo Editor",
         "es": "Editor de Fotos",
         "de": "Foto-Editor"
@@ -65,7 +64,6 @@
         {
             "description": "Edit images, screenshots, and photos right in your documents: crop, resize, apply effects.",
             "descriptionLocale": {
-                "ru": "&#1054;&#1073;&#1088;&#1072;&#1073;&#1072;&#1090;&#1099;&#1074;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1088;&#1090;&#1080;&#1085;&#1082;&#1080;, &#1089;&#1082;&#1088;&#1080;&#1085;&#1096;&#1086;&#1090;&#1099; &#1080; &#1092;&#1086;&#1090;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1080; &#1087;&#1088;&#1103;&#1084;&#1086; &#1074; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1077;: &#1086;&#1073;&#1088;&#1077;&#1079;&#1072;&#1081;&#1090;&#1077;, &#1080;&#1079;&#1084;&#1077;&#1085;&#1103;&#1081;&#1090;&#1077; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;, &#1087;&#1088;&#1080;&#1084;&#1077;&#1085;&#1103;&#1081;&#1090;&#1077; &#1088;&#1072;&#1079;&#1083;&#1080;&#1095;&#1085;&#1099;&#1077; &#1101;&#1092;&#1092;&#1077;&#1082;&#1090;&#1099;.",
                 "fr": "Modifiez des images, des captures d'&#233;cran et des photos directement dans vos documents: coupez, ajustez, appliquez des effets.",
                 "es": "Edite im&#225;genes, capturas de pantalla y fotos directamente en sus documentos: recorte, cambie el tama&#241;o y aplique efectos.",
                 "de": "Bearbeiten Sie Bilder, Screenshots und Fotos direkt in Dokumenten: Zuschneiden, Gr&#246;&#223;e &#228;ndern, Effekte anwenden."
@@ -133,7 +131,6 @@
                     "primary": false,
                     "isViewer": false,
                     "textLocale": {
-                        "ru": "&#1054;&#1090;&#1084;&#1077;&#1085;&#1072;",
                         "fr": "Annuler",
                         "es": "Cancelar",
                         "de": "Abbrechen"
@@ -157,7 +154,6 @@
         {
             "description": "About",
             "descriptionLocale": {
-                "ru": "&#1057;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072;",
                 "fr": "&#192; propos",
                 "es": "Sobre programa",
                 "de": "&#220;ber"

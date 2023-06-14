@@ -33,6 +33,7 @@
         <li><a href="<%= Url.Action("moodle") %>">Moodle ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo ONLYOFFICE integration plugin</a></li>
+        <li><a href="<%= Url.Action("odoo") %>">Odoo ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("owncloud") %>">ownCloud ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("plone") %>">Plone ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("redmine") %>">Redmine ONLYOFFICE integration plugin</a></li>

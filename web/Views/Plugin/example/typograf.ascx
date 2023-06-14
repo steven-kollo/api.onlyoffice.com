@@ -70,7 +70,6 @@
 {
     "name": "Typograf",
     "nameLocale": {
-        "ru": "&#1058;&#1080;&#1087;&#1086;&#1075;&#1088;&#1072;&#1092;",
         "fr": "Typograf",
         "es": "Typograf",
         "de": "Typograf"
@@ -82,7 +81,6 @@
         {
             "description": "Prepare your texts for publishing by correcting typography.",
             "descriptionLocale": {
-                "ru": "&#1055;&#1086;&#1076;&#1075;&#1086;&#1090;&#1086;&#1074;&#1100;&#1090;&#1077; &#1089;&#1074;&#1086;&#1080; &#1090;&#1077;&#1082;&#1089;&#1090;&#1099; &#1082; &#1087;&#1091;&#1073;&#1083;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;, &#1080;&#1089;&#1087;&#1088;&#1072;&#1074;&#1080;&#1074; &#1090;&#1080;&#1087;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1086;&#1096;&#1080;&#1073;&#1082;&#1080;.",
                 "fr": "Pr&#233;parez vos textes pour la publication en corrigeant la typographie.",
                 "es": "Prepare sus textos para la publicaci&#243;n corrigiendo la tipograf&#237;a.",
                 "de": "Bereiten Sie Ihre Texte f&#252;r die Ver&#246;ffentlichung vor, indem Sie Typografie korrigieren."

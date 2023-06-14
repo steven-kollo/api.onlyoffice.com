@@ -98,7 +98,11 @@
                 If the <em>edit</em>, <em>remove</em> and <em>view</em> parameters are <em>""</em> or not specified, then the user can view/edit/remove comments made by any user.
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "edit": ["Group2", ""],
+    "remove": [""],
+    "view": ""
+}</td>
         </tr>
         <tr class="tablerow">
             <td id="copy" class="copy-link">copy</td>

@@ -51,7 +51,6 @@
 {
     "name": "Word counter",
     "nameLocale": {
-        "ru": "&#1055;&#1086;&#1076;&#1089;&#1095;&#1105;&#1090; &#1089;&#1083;&#1086;&#1074;",
         "fr": "Compteur de mots",
         "es": "Recuento de palabras",
         "de": "Wortanzahl"
@@ -63,7 +62,6 @@
         {
             "description": "Count words, characters (with/without spaces), and paragraphs in the selected part of your document.",
             "descriptionLocale": {
-                "ru": "&#1055;&#1086;&#1076;&#1089;&#1095;&#1080;&#1090;&#1072;&#1081;&#1090;&#1077; &#1089;&#1083;&#1086;&#1074;&#1072;, &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1099; &#1089; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1072;&#1084;&#1080; &#1080; &#1073;&#1077;&#1079;, &#1072; &#1090;&#1072;&#1082;&#1078;&#1077; &#1072;&#1073;&#1079;&#1072;&#1094;&#1099; &#1074; &#1083;&#1102;&#1073;&#1086;&#1081; &#1095;&#1072;&#1089;&#1090;&#1080; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1072;.",
                 "fr": "Comptez les mots, les caract&#232;res (avec/sans espaces) et les paragraphes dans la partie s&#233;lectionn&#233;e de votre document.",
                 "es": "Cuente las palabras, los caracteres (con/sin espacios) y los p&#225;rrafos en la parte seleccionada de su documento.",
                 "de": "Z&#228;hlen Sie W&#246;rter, Zeichen (mit/ohne Leerzeichen) und Abs&#228;tze im ausgew&#228;hlten Teil Ihres Dokuments."

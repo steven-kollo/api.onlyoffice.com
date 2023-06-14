@@ -233,7 +233,7 @@
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"Extend the ONLYOFFICE Docs functionality. In this section, you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"7.3",
+      "version":"7.4",
       "links":{
          "Get started":[
             {
@@ -268,7 +268,7 @@
             },
             {
                "Item1":"Adding plugins",
-               "Item2":"installation"
+               "Item2":"installation/"
             },
             {
                "Item1":"Plugin localization",
@@ -280,7 +280,7 @@
             },
             {
                "Item1":"Plugin examples",
-               "Item2":"example"
+               "Item2":"example/"
             }
          ],
          "Macros":[
@@ -311,7 +311,7 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section, you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "7.3",
+      "version": "7.4",
       "links":{
          "Get started":[
             {
@@ -386,7 +386,7 @@
             },
             {
                "Item1":"How it works",
-               "Item2":"howitworks"
+               "Item2":"howitworks/"
             }
          ],
          "Usage API":[

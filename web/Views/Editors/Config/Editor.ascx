@@ -43,7 +43,7 @@
             <td id="actionLink" class="copy-link">actionLink</td>
             <td>Specifies the data received from the <b>document editing service</b> using the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event or the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event in <em>data.actionLink</em> parameter, which contains the information about the action in the document that will be scrolled to.</td>
             <td>object</td>
-            <td></td>
+            <td>ACTION_DATA</td>
         </tr>
         <tr class="tablerow">
             <td id="callbackUrl" class="copy-link">callbackUrl<a href="#requiredDescr" class="required">*</a></td>
@@ -75,7 +75,10 @@
                 <p>This parameter is used to apply the <a href="<%= Url.Action("coedit") %>#modes">co-editing</a> and <a href="<%= Url.Action("viewing") %>">viewing</a> modes.</p>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "mode": "fast",
+    "change": true
+}</td>
         </tr>
         <tr class="tablerow-note">
             <td colspan="4">
@@ -172,7 +175,13 @@
                 </ul>
             </td>
             <td>array of object</td>
-            <td></td>
+            <td>[
+    {
+        "folder": "Example Files",
+        "title": "exampledocument1.docx",
+        "url": "https://example.com/exampledocument1.docx"
+    }
+]</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -217,7 +226,13 @@
                 </ul>
             </td>
             <td>array of object</td>
-            <td></td>
+            <td>[
+    {
+        "image": "https://example.com/exampletemplate1.png",
+        "title": "exampletemplate1.docx",
+        "url": "https://example.com/url-to-create-template1"
+    }
+]</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -276,7 +291,11 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "group": "Group1",
+    "id": "78e1e841",
+    "name": "John Smith"
+}</td>
         </tr>
     </tbody>
 </table>

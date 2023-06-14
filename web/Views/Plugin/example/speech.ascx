@@ -59,7 +59,6 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
 {
     "name": "Speech",
     "nameLocale": {
-        "ru": "&#1056;&#1077;&#1095;&#1100;",
         "cs": "&#344;e&#269;",
         "de": "Rede",
         "es": "Habla",
@@ -77,7 +76,6 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
         {
             "description": "Convert the selected text into speech.",
             "descriptionLocale": {
-                "ru": "&#1055;&#1088;&#1077;&#1086;&#1073;&#1088;&#1072;&#1079;&#1091;&#1081;&#1090;&#1077; &#1074;&#1099;&#1076;&#1077;&#1083;&#1077;&#1085;&#1085;&#1099;&#1081; &#1090;&#1077;&#1082;&#1089;&#1090; &#1074; &#1088;&#1077;&#1095;&#1100;.",
                 "fr": "Convertissez le texte s&#233;lectionn&#233; en parole.",
                 "es": "Convierta el texto seleccionado en voz.",
                 "de": "Konvertieren Sie den ausgew&#228;hlten Text in die Rede."
@@ -146,7 +144,6 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
         {
             "description": "Settings",
             "descriptionLocale": {
-                "ru": "&#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1080;",
                 "cs": "Nastaven&#237;",
                 "de": "Einstellungen",
                 "es": "Configuraci&#243;n",
