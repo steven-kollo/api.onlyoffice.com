@@ -113,10 +113,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "Moodle",
                 "Nextcloud",
                 "Nuxeo",
+                "Odoo",
                 "Open",
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "ProtectingRanges",
                 "React",
                 "Redmine",
                 "Rename",
@@ -412,6 +414,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Odoo()
+        {
+            return View();
+        }
+
         public ActionResult Open()
         {
             return View();
@@ -428,6 +435,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult ProtectingRanges()
         {
             return View();
         }

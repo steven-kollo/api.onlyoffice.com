@@ -614,7 +614,7 @@
         },
         {
           "type": "string",
-          "name": "sAutor",
+          "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
         }

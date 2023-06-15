@@ -123,7 +123,10 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "request": true,
+    "label": "Guest"
+}</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -282,7 +285,16 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "address": "My City, 123a-45",
+    "info": "Some additional information",
+    "logo": "https://example.com/logo-big.png",
+    "logoDark": "https://example.com/dark-logo-big.png",
+    "mail": "john@example.com",
+    "name": "John Smith and Co.",
+    "phone": "123456789",
+    "www": "example.com"
+}</td>
         </tr>
         <tr>
             <td id="features" class="copy-link">features</td>
@@ -319,7 +331,13 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "spellcheck": {
+        "mode": true<% if (license)
+        { %>,
+        "change": true<% } %>
+    }
+}</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -365,12 +383,21 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Arial".
+                        <b>example</b>: "Arial";
+                    </li>
+                    <li>
+                        <b>size</b> - the font size,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "11px".
                     </li>
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "name": "Arial", "size": "11px"
+}</td>
         </tr>
         <% } %>
         <tr>
@@ -631,6 +658,14 @@
                         <b>example</b>: true;
                     </li>
                     <li>
+                        <b>toolbar.draw</b> - defines if the <b>Draw</b> tab is displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
                         <b>toolbar.file</b> - defines the <b>File</b> tab settings. If this parameter is a boolean value, then it specifies
                         whether the <b>File</b> tab will be displayed or hidden. The default value is <b>true</b>,
                         <br />
@@ -735,6 +770,46 @@
                 </ul>
             </td>
             <td>object</td>
+            <td>{
+    "header": {
+        "save": true,
+        "users": true
+    },
+    "leftMenu": {
+        "mode": true,
+        "navigation": true,
+        "spellcheck": true
+    },
+    "rightMenu": {
+        "mode": true
+    },
+    "statusBar": {
+        "actionStatus": true,
+        "docLang": true,
+        "textLang": true
+    },
+    "toolbar": {
+        "collaboration": true,
+        "draw": true,
+        "file": {
+            "close": true,
+            "info": true,
+            "save": true,
+            "settings": true
+        },
+        "home": {
+            "mailmerge": true
+        },
+        "layout": true,
+        "plugins": true,
+        "protect": true,
+        "references": true,
+        "save": true,
+        "view": {
+            "navigation": true
+        }
+    }
+}</td>
         </tr>
         <tr>
             <td id="leftMenu" class="copy-link">leftMenu<a href="#requiredDescr2" class="required">**</a></td>
@@ -809,7 +884,11 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "image": "https://example.com/logo.png",
+    "imageDark": "https://example.com/dark-logo.png",
+    "url": "https://example.com"
+}</td>
         </tr>
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
@@ -922,7 +1001,13 @@
                 </ul>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "hideReviewDisplay": false,
+    "showReviewChanges": false,
+    "reviewDisplay": "original",
+    "trackChanges": true,
+    "hoverMode": false
+}</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
@@ -1196,10 +1281,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             "features": {
                 "spellcheck": {
-                    "mode": true,
-                <% if (license)
-                    { %>    "change": true
-                <% } %>}
+                    "mode": true<% if (license)
+                    { %>,
+                    "change": true<% } %>
+                }
             },
             "feedback": {
                 "url": "https://example.com",
@@ -1207,7 +1292,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"font": {
-                "name": "Arial"
+                "name": "Arial",
+                "size": "11px"
             },
             <% } %>"forcesave": false,
             "goback": {
@@ -1242,6 +1328,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 },
                 "toolbar": {
                     "collaboration": true,
+                    "draw": true,
                     "file": {
                         "close": true,
                         "info": true,
@@ -1266,7 +1353,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://www.onlyoffice.com"
+                "url": "https://example.com"
             },
             "macros": true,
             "macrosMode": "warn",

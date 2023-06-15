@@ -90,6 +90,9 @@
                 <a href="<%= Url.Action("nuxeo") %>">Nuxeo integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("odoo") %>">Odoo integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("owncloud") %>">ownCloud integration</a>
             </li>
             <li>
@@ -165,6 +168,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("protectingranges") %>">Protecting ranges</a>
             </li>
         </ul>
     </li>

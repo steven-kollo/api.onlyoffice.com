@@ -99,7 +99,12 @@
                 </ul>
             </td>
             <td>array of object</td>
-            <td></td>
+            <td>[
+    {
+        "permissions": "Full Access",
+        "user": "John Smith"
+    }
+]</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">

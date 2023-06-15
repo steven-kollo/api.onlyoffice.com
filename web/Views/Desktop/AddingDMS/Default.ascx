@@ -69,7 +69,7 @@
                     <li>
                         <p><b>url</b> - the URL used in the request,</p>
                         <p><b>type</b>: string,</p>
-                        <p><b>example</b>: "status.php";</p>
+                        <p><b>example</b>: "status";</p>
                     </li>
                     <li>
                         <p><b>headers</b> - the headers added to the <em>ajax</em> request,</p>
@@ -80,7 +80,12 @@
                 <p>A <em>GET</em> request is sent, after which <em>HTTP_STATUS_CODE = 200</em> is expected. The response must be returned in the JSON format.</p>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "url": "status",
+    "headers": {
+        "X-CUSTOM-HEADER": true
+    }
+}</td>
         </tr>
         <tr class="tablerow">
             <td id="entryPage" class="copy-link">entryPage</td>
@@ -132,7 +137,12 @@
                 <p>You can add icons for each UI theme type (light and dark) by specifying the <em>themeLight</em> and <em>themeDark</em> objects with the corresponding icons.</p>
             </td>
             <td>object</td>
-            <td></td>
+            <td>{
+    "themeLight": {
+        "connectionsList": "./assets/listicon.svg",
+        "buttonLogo": "./assets/buttonlogo.svg"
+    }
+}</td>
         </tr>
     </tbody>
 </table>
@@ -144,9 +154,9 @@
     "provider": "onlyoffice",
     "name" : "ONLYOFFICE",
     "check": {
-        "url": "status.php",
+        "url": "status",
         "headers": {
-            "OCS-APIREQUEST": true
+            "X-CUSTOM-HEADER": true
         }
     },
     "entryPage" : "https://url-to-connect-provider.com",

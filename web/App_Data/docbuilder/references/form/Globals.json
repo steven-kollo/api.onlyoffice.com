@@ -30,7 +30,7 @@
   },
   "TextFormPrBase": {
     "name": "TextFormPrBase",
-    "description": "<p>Specific text form properties.</p>",
+    "description": "<p>Specific text field properties.</p>",
     "type": [
       "Object"
     ],
@@ -38,12 +38,12 @@
       {
         "type": "boolean",
         "name": "comb",
-        "description": "<p>Specifies if the text form should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.</p>"
+        "description": "<p>Specifies if the text field should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.</p>"
       },
       {
         "type": "number",
         "name": "maxCharacters",
-        "description": "<p>The maximum number of characters in the text form.</p>"
+        "description": "<p>The maximum number of characters in the text field.</p>"
       },
       {
         "type": "number",
@@ -53,26 +53,54 @@
       {
         "type": "boolean",
         "name": "multiLine",
-        "description": "<p>Specifies if the current fixed size text form is multiline or not.</p>"
+        "description": "<p>Specifies if the current fixed size text field is multiline or not.</p>"
       },
       {
         "type": "boolean",
         "name": "autoFit",
-        "description": "<p>Specifies if the text form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>"
+        "description": "<p>Specifies if the text field content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>"
       }
     ]
   },
   "TextFormPr": {
     "name": "TextFormPr",
-    "description": "<p>Text form properties.</p>",
+    "description": "<p>Text field properties.</p>",
     "type": [
       "FormPrBase",
       "TextFormPrBase"
     ]
   },
+  "FormInsertPr": {
+    "name": "FormInsertPr",
+    "description": "<p>Form insertion specific properties.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "boolean",
+        "name": "placeholderFromSelection",
+        "description": "<p>Specifies if the currently selected text should be saved as a placeholder of the inserted form.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "keepSelectedTextInForm",
+        "description": "<p>Specifies if the currently selected text should be saved as the content of the inserted form.</p>"
+      }
+    ]
+  },
+  "TextFormInsertPr": {
+    "name": "TextFormInsertPr",
+    "description": "<p>Properties for inserting a text field.</p>",
+    "type": [
+      "FormPrBase",
+      "TextFormPrBase",
+      "FormInsertPr"
+    ]
+  },
   "CheckBoxFormPrBase": {
     "name": "CheckBoxFormPrBase",
-    "description": "<p>Specific checkbox properties.</p>",
+    "description": "<p>Specific checkbox / radio button properties.</p>",
     "type": [
       "Object"
     ],
@@ -86,7 +114,7 @@
   },
   "CheckBoxFormPr": {
     "name": "CheckBoxFormPr",
-    "description": "<p>Checkbox form properties.</p>",
+    "description": "<p>Checkbox / radio button properties.</p>",
     "type": [
       "FormPrBase",
       "CheckBoxFormPrBase"
@@ -94,7 +122,7 @@
   },
   "ComboBoxFormPrBase": {
     "name": "ComboBoxFormPrBase",
-    "description": "<p>Specific combo box properties.</p>",
+    "description": "<p>Specific combo box / dropdown list properties.</p>",
     "type": [
       "Object"
     ],
@@ -118,7 +146,7 @@
   },
   "ComboBoxFormPr": {
     "name": "ComboBoxFormPr",
-    "description": "<p>Combo box form properties.</p>",
+    "description": "<p>Combo box / dropdown list properties.</p>",
     "type": [
       "FormPrBase",
       "ComboBoxFormPrBase"

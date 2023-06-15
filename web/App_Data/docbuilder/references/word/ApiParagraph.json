@@ -496,7 +496,7 @@
         },
         {
           "type": "string",
-          "name": "sAutor",
+          "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
         }
@@ -1183,7 +1183,43 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "object",
+          "name": "oPr",
+          "description": "<p>The resulting string display properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "oPr.Numbering",
+          "description": "<p>Defines if the resulting string will include numbering or not.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "boolean",
+          "name": "oPr.Math",
+          "description": "<p>Defines if the resulting string will include mathematical expressions or not.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "string",
+          "name": "oPr.NewLineSeparator",
+          "description": "<p>Defines how the line separator will be specified in the resulting string.</p>",
+          "optional": true,
+          "defaultValue": "'\\r'"
+        },
+        {
+          "type": "string",
+          "name": "oPr.TabSymbol",
+          "description": "<p>Defines how the tab will be specified in the resulting string (does not apply to numbering).</p>",
+          "optional": true,
+          "defaultValue": "'\\t'"
+        }
+      ]
     },
     "GetTextPr": {
       "memberof": "ApiParagraph",
@@ -1778,6 +1814,48 @@
           "description": "<p>The caption separator (used if you want to specify the chapter number).</p>",
           "optional": true,
           "defaultValue": "\"hyphen\""
+        }
+      ]
+    },
+    "GetSection": {
+      "memberof": "ApiParagraph",
+      "name": "GetSection",
+      "description": "<p>Returns the paragraph section.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiSection"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSection": {
+      "memberof": "ApiParagraph",
+      "name": "SetSection",
+      "description": "<p>Sets the specified section to the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiSection",
+          "name": "oSection",
+          "description": "<p>The section which will be set to the paragraph.</p>",
+          "optional": false
         }
       ]
     },

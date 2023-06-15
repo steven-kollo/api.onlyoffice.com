@@ -35,7 +35,7 @@
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
-    <li><a href="#onRequestUsers">onRequestUsers</a> - the commenter can select other users for mention in the comments.</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
 </ul>
 
@@ -146,7 +146,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs.
-            The error message is sent in the <em>data</em> parameter.
+            The error message is sent in the <em>data</em> parameter. A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
         </p>
         <div class="header-gray">Example</div>
         <pre>
@@ -440,7 +440,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.
+            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history by clicking the <em>Close History</em> button.
             When the function is called, the editor must be initialized again, in editing mode.
             If the method is not declared the <em>Close History</em> button will not be displayed.
         </p>
@@ -796,22 +796,34 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the commenter can select other users for mention in the comments.
-            To set the users list you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
-        </p>
-        <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</p>
+        <p>Starting from version 7.4, the operation type can be specified in the <em>data.c</em> parameter. It can take two values - <em>mention</em> or <em>protect</em>.
+        Prior to version 7.4, only the mention operation was available with this event.</p>
+        <p>To set a list of users, you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method which can take different lists of users depending on the specified operation type.
+            The <em>onRequestUsers</em> event is called once for each <em>c</em> type when the corresponding operation is performed.
+            If the <em>setUsers</em> is called with an empty list, then the <em>onRequestUsers</em> event will fire again.</p>
+        <div class="img-block-2">
+            <div>
+                <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+            </div>
+            <div>
+                <img alt="Protect range" src="<%= Url.Content("~/content/img/editor/protect-range.png") %>"/>
+            </div>
+        </div>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestUsers = function () {
+var onRequestUsers = function (event) {
     docEditor.setUsers({
+        "c": event.data.c,
         "users": [
             {
                 "email": "john@example.com",
+                "id": "78e1e841",
                 "name": "John Smith"
             },
             {
                 "email": "kate@example.com",
+                "id": "F89d8069ba2b",
                 "name": "Kate Cage"
             },
             ...
@@ -832,7 +844,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onWarning" class="copy-link">onWarning</b> - the function called when a warning occurs.
-            The warning message is sent in the <em>data</em> parameter.
+            The warning message is sent in the <em>data</em> parameter. A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
         </p>
         <div class="header-gray">Example</div>
         <pre>
