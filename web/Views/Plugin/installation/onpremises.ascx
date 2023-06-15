@@ -220,5 +220,5 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 <ol>
     <li>Open the <b>Plugins</b> tab.</li>
     <li>Go to the <b>Plugin Manager</b>.</li>
-    <li>Click the <b>Remove</b> button near the corresponding plugin.</li>
+    <li>Click the <b>Remove</b> button under the corresponding plugin.</li>
 </ol>
