@@ -2313,6 +2313,7 @@
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
+    <Content Include="Content\img\Editor\chat.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
     <Content Include="Content\img\Editor\coedit.jpg" />
     <Content Include="Content\img\Editor\coediting-mode.png" />
@@ -2326,6 +2327,7 @@
     <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\Editor\convert-binary-files.jpg" />
     <Content Include="Content\img\Editor\create.png" />
+    <Content Include="Content\img\Editor\customer.png" />
     <Content Include="Content\img\Editor\customization.png" />
     <Content Include="Content\img\Editor\download.png" />
     <Content Include="Content\img\Editor\e-coedit.png" />
@@ -2343,6 +2345,7 @@
     <Content Include="Content\img\Editor\export.jpg" />
     <Content Include="Content\img\Editor\fast-mode.png" />
     <Content Include="Content\img\Editor\favorite.png" />
+    <Content Include="Content\img\Editor\feedback.png" />
     <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\goback.png" />
     <Content Include="Content\img\Editor\help.png" />
