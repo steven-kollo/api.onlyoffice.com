@@ -601,7 +601,7 @@
         },
         {
           "type": "string",
-          "name": "sAutor",
+          "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
         }
@@ -1429,7 +1429,7 @@
     "GetPageCount": {
       "memberof": "ApiDocument",
       "name": "GetPageCount",
-      "description": "<p>Returns the number of pages in a document\n<note>This method can be slow for large documents, because it runs the document calculation\nprocess before the full recalculation.</note></p>",
+      "description": "<p>Returns a number of pages in the current document.\n<note>This method can be slow for large documents because it runs the document calculation\nprocess before the full recalculation.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1438,6 +1438,23 @@
       "returns": [
         [
           "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllStyles": {
+      "memberof": "ApiDocument",
+      "name": "GetAllStyles",
+      "description": "<p>Returns all styles of the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiStyle>"
         ]
       ],
       "see": null,
@@ -1696,7 +1713,7 @@
     "GetAllParagraphs": {
       "memberof": "ApiDocument",
       "name": "GetAllParagraphs",
-      "description": "<p>Returns an array of all paragraphs from the current document content</p>",
+      "description": "<p>Returns an array of all paragraphs from the current document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1713,7 +1730,7 @@
     "GetAllTables": {
       "memberof": "ApiDocument",
       "name": "GetAllTables",
-      "description": "<p>Returns an array of all tables from the current document content</p>",
+      "description": "<p>Returns an array of all tables from the current document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

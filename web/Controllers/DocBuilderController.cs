@@ -45,6 +45,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "changelog",
                 "classlist",
                 "csharpexample",
+                "debugging",
                 "formapi",
                 "gettingstarted",
                 "global",
@@ -192,6 +193,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Changelog()
+        {
+            return View();
+        }
+
+        public ActionResult Debugging()
         {
             return View();
         }
