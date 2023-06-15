@@ -67,8 +67,8 @@
     <p>To uninstall the newly added plugins, proceed in the following way:</p>
     <ol>
         <li>Open the <b>Plugins</b> tab.</li>
-        <li>Go to the plugin <b>Settings</b>.</li>
-        <li>Click the <img alt="Remove plugin button" src="<%= Url.Content("~/content/img/desktop/remove-plugin-button.png") %>" /> <b>Remove</b> button near the corresponding plugin.</li>
+        <li>Go to <b>Plugin Manager</b>.</li>
+        <li>Click the <b>Remove</b> button under the corresponding plugin.</li>
     </ol>
     <note>This option is not available for the default plugins and the plugins added via the plugin folder.</note>
 
