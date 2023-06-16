@@ -107,6 +107,57 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
             <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
         </li>
+        <li>
+            <p>
+                In the configuration script for Document Editor initialization, specify the event handler which will <a href="<%= Url.Action("config/events") %>#onRequestRestore">restore</a> the file version when the user clicks the <em>Restore</em> button in the version history.
+                When the <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> event is called, the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method must be executed to initialize version history again.
+                This method contains document history for each document version, if the history parameter has been present for each version.
+            </p>
+            <pre>
+var onRequestRestore = function (event) {
+    var fileType = event.data.fileType;
+    var url = event.data.url;
+    var version = event.data.version;
+    ...
+    docEditor.refreshHistory({
+        "currentVersion": 2,
+        "history": [
+            {
+                "changes": changes,
+                "created": "2010-07-06 10:13 AM",
+                "key": "af86C7e71Ca8",
+                "serverVersion": serverVersion,
+                "user": {
+                    "id": "F89d8069ba2b",
+                    "name": "Kate Cage"
+                },
+                "version": 1
+            },
+            {
+                "changes": changes,
+                "created": "2010-07-07 3:46 PM",
+                "key": "Khirz6zTPdfd7",
+                "user": {
+                    "id": "78e1e841",
+                    "name": "John Smith"
+                },
+                "version": 2
+            },
+            ...
+        ]
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestHistoryData": onRequestHistoryData,
+        ...
+    },
+    ...
+});
+</pre>
+                <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
+        </li>
         <li>Open your <em>html</em> file in the browser.</li>
         <li>Open the <em>Version History</em> option in the Document Editor menu.</li>
         <li>
