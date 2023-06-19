@@ -2313,6 +2313,7 @@
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
+    <Content Include="Content\img\Editor\chat.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
     <Content Include="Content\img\Editor\coedit.jpg" />
     <Content Include="Content\img\Editor\coediting-mode.png" />
@@ -2326,13 +2327,16 @@
     <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\Editor\convert-binary-files.jpg" />
     <Content Include="Content\img\Editor\create.png" />
+    <Content Include="Content\img\Editor\customer.png" />
     <Content Include="Content\img\Editor\customization.png" />
+    <Content Include="Content\img\Editor\download.png" />
     <Content Include="Content\img\Editor\e-coedit.png" />
     <Content Include="Content\img\Editor\e-download.png" />
     <Content Include="Content\img\Editor\e-error0.png" />
     <Content Include="Content\img\Editor\e-key.png" />
     <Content Include="Content\img\Editor\e-token.png" />
     <Content Include="Content\img\Editor\editor-samples.png" />
+    <Content Include="Content\img\Editor\edit.png" />
     <Content Include="Content\img\Editor\editor.png" />
     <Content Include="Content\img\Editor\embedded.png" />
     <Content Include="Content\img\Editor\embed-docxf.png" />
@@ -2341,6 +2345,7 @@
     <Content Include="Content\img\Editor\export.jpg" />
     <Content Include="Content\img\Editor\fast-mode.png" />
     <Content Include="Content\img\Editor\favorite.png" />
+    <Content Include="Content\img\Editor\feedback.png" />
     <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\goback.png" />
     <Content Include="Content\img\Editor\help.png" />
@@ -2384,9 +2389,9 @@
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\paste-link.png" />
-    <Content Include="Content\img\Editor\permissions.png" />
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
+    <Content Include="Content\img\Editor\print.png" />
     <Content Include="Content\img\Editor\progress-view.png" />
     <Content Include="Content\img\Editor\protect.png" />
     <Content Include="Content\img\Editor\protect-range.png" />
