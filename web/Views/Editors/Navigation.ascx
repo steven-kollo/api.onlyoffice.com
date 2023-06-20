@@ -15,6 +15,9 @@
             <a href="<%= Url.Action("try") %>">Try now</a>
         </li>
         <li>
+            <a href="<%= Url.Action("editorconstructor") %>">Editor Constructor</a>
+        </li>
+        <li>
             <a href="<%= Url.Action("demopreview") %>">Language-specific examples</a>
             <ul>
                 <li>

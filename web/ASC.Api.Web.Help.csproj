@@ -3947,6 +3947,7 @@
     <Content Include="Views\Editors\Signature\Request.ascx" />
     <Content Include="Views\Editors\Strapi.aspx" />
     <Content Include="Views\Editors\Troubleshooting.aspx" />
+    <Content Include="Views\Editors\EditorConstructor.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
     <Content Include="Views\Editors\Vue.aspx" />
