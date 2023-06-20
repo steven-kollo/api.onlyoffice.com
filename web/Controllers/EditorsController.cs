@@ -29,7 +29,9 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
+using System.Web.WebPages;
 using ASC.Api.Web.Help.Helpers;
+using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -73,6 +75,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "DemoPreview",
                 "DocumentBuilderApi",
                 "Drupal",
+                "EditorConstructor",
                 "EmbeddingForms",
                 "Example/Java",
                 "Example/JavaSpring",
@@ -259,63 +262,64 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         [HttpPost]
-        public JsonResult ConfigCreate(string documentType)
+        public JsonResult ConfigCreate(
+            string jsonConfig
+        )
         {
-            string extension = "docx";
+            Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
 
-            if (documentType.Equals("cell")) {
-                extension = "xlsx";
-            }
-            else if (documentType.Equals("slide"))
+            if (config.Document == null)
             {
-                extension = "pptx";
-            } 
-            else
-            {
-                documentType = "word";
+                config.Document = new Config.DocumentConfig();
             }
 
-            return Json(Helpers.Config.Serialize(
-                new Config
+            if (config.DocumentType.IsEmpty())
+            {
+                config.DocumentType = "word";
+                config.Document.FileType = "docx";
+            }
+
+            if (config.TypeString.IsEmpty())
+            {
+                config.TypeString = "desktop";
+            }
+
+            config.Document.Key = !config.Document.Key.IsEmpty() ? config.Document.Key : "apiwh" + Guid.NewGuid();
+            config.Document.Title = !config.Document.Title.IsEmpty() ? config.Document.Title + "," + config.Document.FileType : "Example Title." + config.Document.FileType;
+            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + config.Document.FileType;
+
+            if (config.EditorConfig == null)
+            {
+                config.EditorConfig = new Config.EditorConfigConfiguration
                 {
-                    Document = new Config.DocumentConfig
+                    Mode = "edit",
+                    Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                     {
-                        FileType = extension,
-                        Key = "apiwh" + Guid.NewGuid(),
-                        Title = "Example Title." + extension,
-                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + extension,
-                        Permissions = new Config.DocumentConfig.PermissionsConfig
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
                         {
-                            Download = false,
-                            Print = false
-                        }
-                    },
-                    DocumentType = documentType,
-                    EditorConfig = new Config.EditorConfigConfiguration
-                    {
-                        CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
-                        Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                            Request = false
+                        },
+                        CompactHeader = true,
+                        CompactToolbar = true,
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
                         {
-                            Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
-                            {
-                                Request = false
-                            },
-                            CompactHeader = true,
-                            CompactToolbar = true,
-                            Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
-                            {
-                                Visible = true
-                            },
-                            HideRightMenu = true,
-                            HideRulers = true,
-                            IntegrationMode = "embed",
-                            ToolbarHideFileName = true,
-                            ToolbarNoTabs = true
-                        }
-                    },
-                    Height = "550px",
-                    Width = "100%"
-                }));
+                            Visible = true
+                        },
+                        HideRightMenu = true,
+                        HideRulers = true,
+                        IntegrationMode = "embed",
+                        ToolbarHideFileName = true,
+                        ToolbarNoTabs = true
+                    }
+                };
+
+            }
+            if (config.EditorConfig.Mode == "edit")
+            {
+                config.EditorConfig.CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme);
+            }
+
+            return Json(Helpers.Config.Serialize(config));
         }
 
         public ActionResult Confluence()
@@ -381,6 +385,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Editor()
+        {
+            return View();
+        }
+
+        public ActionResult EditorConstructor()
         {
             return View();
         }

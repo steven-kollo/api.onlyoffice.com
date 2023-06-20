@@ -115,7 +115,13 @@
             $.ajax({
                 type: "POST",
                 url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
-                data: JSON.stringify({ documentType: documentType }),
+                data: JSON.stringify({
+                    jsonConfig: JSON.stringify({
+                        documentType: documentType,
+                        width: "100%",
+                        height: "550px"
+                    })
+                }),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {

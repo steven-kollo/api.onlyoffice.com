@@ -116,7 +116,7 @@ namespace ASC.Api.Web.Help.Helpers
         }
 
 
-        [DataMember(Name = "document", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "document", EmitDefaultValue = false)]
         public DocumentConfig Document;
 
         [DataMember(Name = "documentType", IsRequired = true, EmitDefaultValue = false)]
@@ -141,22 +141,22 @@ namespace ASC.Api.Web.Help.Helpers
         [DataContract(Name = "document", Namespace = "")]
         public class DocumentConfig
         {
-            [DataMember(Name = "fileType", IsRequired = true, EmitDefaultValue = false)]
+            [DataMember(Name = "fileType", EmitDefaultValue = false)]
             public string FileType;
 
             [DataMember(Name = "info", EmitDefaultValue = false)]
             public InfoConfig Info;
 
-            [DataMember(Name = "key", IsRequired = true, EmitDefaultValue = false)]
+            [DataMember(Name = "key", EmitDefaultValue = false)]
             public string Key;
 
             [DataMember(Name = "permissions", EmitDefaultValue = false)]
             public PermissionsConfig Permissions;
 
-            [DataMember(Name = "title", IsRequired = true, EmitDefaultValue = false)]
+            [DataMember(Name = "title", EmitDefaultValue = false)]
             public string Title;
 
-            [DataMember(Name = "url", IsRequired = true, EmitDefaultValue = false)]
+            [DataMember(Name = "url", EmitDefaultValue = false)]
             public string Url;
 
 
@@ -171,6 +171,12 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "folder", EmitDefaultValue = false)]
                 public string Folder;
+
+                [DataMember(Name = "owner", EmitDefaultValue = false)]
+                public string Owner;
+
+                [DataMember(Name = "uploaded", EmitDefaultValue = false)]
+                public string Uploaded;
 
                 [DataMember(Name = "sharingSettings", EmitDefaultValue = false)]
                 public List<SharingSettingsItem> SharingSettings;
@@ -189,32 +195,47 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "permissions", Namespace = "")]
             public class PermissionsConfig
             {
+                [DataMember(Name = "chat", EmitDefaultValue = false)]
+                public Boolean? Chat;
+
                 [DataMember(Name = "comment", EmitDefaultValue = false)]
-                public bool? Comment;
+                public Boolean? Comment;
+
+                [DataMember(Name = "copy", EmitDefaultValue = false)]
+                public Boolean? Copy;
 
                 [DataMember(Name = "commentGroups", EmitDefaultValue = false)]
                 public CommentGroupsConfig CommentGroups;
 
+                [DataMember(Name = "deleteCommentAuthorOnly", EmitDefaultValue = false)]
+                public Boolean? DeleteCommentAuthorOnly; 
+
                 [DataMember(Name = "download", EmitDefaultValue = false)]
-                public bool? Download;
+                public Boolean? Download;
 
                 [DataMember(Name = "edit", EmitDefaultValue = false)]
-                public bool? Edit;
+                public Boolean? Edit;
+
+                [DataMember(Name = "editCommentAuthorOnly", EmitDefaultValue = false)]
+                public Boolean? EditCommentAuthorOnly;
 
                 [DataMember(Name = "fillForms", EmitDefaultValue = false)]
-                public bool? FillForms;
+                public Boolean? FillForms;
 
                 [DataMember(Name = "modifyContentControl", EmitDefaultValue = false)]
-                public bool? ModifyContentControl;
+                public Boolean? ModifyContentControl;
 
                 [DataMember(Name = "modifyFilter", EmitDefaultValue = false)]
-                public bool? ModifyFilter;
+                public Boolean? ModifyFilter;
 
                 [DataMember(Name = "print", EmitDefaultValue = false)]
-                public bool? Print;
+                public Boolean? Print;
+
+                [DataMember(Name = "protect", EmitDefaultValue = false)]
+                public Boolean? Protect;
 
                 [DataMember(Name = "review", EmitDefaultValue = false)]
-                public bool? Review;
+                public Boolean? Review;
 
                 [DataMember(Name = "reviewGroups", EmitDefaultValue = false)]
                 public string[] ReviewGroups;
