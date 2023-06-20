@@ -103,7 +103,7 @@
                     <label for="document_permissions_editCommentAuthorOnly"><input type="checkbox" id="document_permissions_editCommentAuthorOnly" name="document_permissions_editCommentAuthorOnly" />Edit Comment Author Only</label>
                     <label for="document_permissions_fillForms"><input type="checkbox" id="document_permissions_fillForms" name="document_permissions_fillForms" checked />Fill Forms</label>
                     <label for="document_permissions_modifyContentControl"><input type="checkbox" id="document_permissions_modifyContentControl" name="document_permissions_modifyContentControl" checked />Modify Content Control</label>
-                    <label for="document_permissions_modifyFilter"><input type="checkbox" id="document_modifyFilter" name="document_modifyFilter" checked />Modify Filter</label>
+                    <label for="document_permissions_modifyFilter"><input type="checkbox" id="document_permissions_modifyFilter" name="document_permissions_modifyFilter" checked />Modify Filter</label>
                     <label for="document_permissions_permissions_print"><input type="checkbox" id="document_permissions_print" name="document_permissions_print" checked />Print</label>
                     <label for="document_permissions_protect"><input type="checkbox" id="document_permissions_protect" name="document_permissions_protect" checked />Protect</label>
                     <label for="document_permissions_review"><input type="checkbox" id="document_permissions_review" name="document_permissions_review" checked />Review</label>
@@ -112,8 +112,9 @@
         </div>
 
         <div id="co-edit" class="control-panel hidden">
-            <div class="line">
+            <div id="co-edit-settings">
             </div>
+            <button id="addButton">+</button>
         </div>
     </div>
 
@@ -137,6 +138,7 @@
         $(document).ready(function () {
             completeFileType();
             $("#document_key").val(uuidv4());
+            addSharingSettings();
             updateConfig();
         });
 
@@ -156,6 +158,35 @@
             $(".control-panel").addClass("hidden");
             $("#" + view).removeClass("hidden");
         })
+
+        $("#addButton").on("click", function () {
+            addSharingSettings();
+            updateConfig();
+        })
+
+        function addSharingSettings() {
+            var index = $(".sharing-settings").length;
+            $("#co-edit-settings").append(
+                `<div class="sharing-settings">
+                    <div class="line">
+                        <label for="document_info_sharingSettings_[${index}]_permissions">Sharing Settings</label>
+                        <select id="document_info_sharingSettings_[${index}]_permissions" name="document_info_sharingSettings_[${index}]_permissions">
+                            <option value="Full Access">Full Access</option>
+                            <option value="Read Only">Read Only</option>
+                            <option value="Deny Access">Deny Access</option>
+                        </select>
+                    </div>
+                    <div class="line">
+                        <label for="document_info_sharingSettings_[${index}]_user">User:</label>
+                        <input type="text" id="document_info_sharingSettings_[${index}]_user" name="document_info_sharingSettings_[${index}]_user" value="John Smith">
+                    </div>
+                </div>`
+            );
+
+            $("#controlFields").find("select[name='document_info_sharingSettings_[" + index + "]_permissions'],input[name='document_info_sharingSettings_[" + index + "]_user']").change(function () {
+                updateConfig();
+            });
+        }
 
         function completeFileType() {
             var documentType = $("#documentType").val();
@@ -184,13 +215,31 @@
 
                     var prev = data;
                     for (var i = 0; i < names.length; i++) {
+                        var name = names[i];
+
                         if (names.length - 1 <= i) {
-                            prev[names[i]] = value;
+                            if (Array.isArray(prev)) {
+                                var index = parseInt(names[i-1].match(/\[(.+?)\]/)[1]);
+
+                                if (prev[index]) {
+                                    prev[index][name] = value;
+                                } else {
+                                    prev.push({});
+                                    prev[index][name] = value;
+                                }
+                            } else { 
+                                prev[name] = value;
+                            }
                         } else {
-                            prev[names[i]] = prev[names[i]] || {};
+                            if (/\[(.+?)\]/.test(names[i + 1])) {
+                                prev[name] = prev[name] || [];
+                                i++;
+                            } else {
+                                prev[name] = prev[name] || {};
+                            }
                         }
 
-                        prev = prev[names[i]];
+                        prev = prev[name];
                     }
                 }
             }

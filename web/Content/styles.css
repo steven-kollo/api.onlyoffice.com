@@ -2852,6 +2852,16 @@ select {
         display: none;
     }
 
+    #controlFields #addButton {
+        width: 23px;
+        height: 23px;
+        border-radius: 3px;
+        font-size: 28px;
+        line-height: 1px;
+        font-weight: 100;
+        cursor: pointer;
+    }
+
 #configArea {
     width: 55%;
     display: inline-block;
