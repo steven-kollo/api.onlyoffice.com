@@ -116,6 +116,69 @@
             </div>
             <button id="addButton">+</button>
         </div>
+
+        <div id="customization" class="control-panel hidden">
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_autosave" name="editorConfig_customization_autosave" checked>
+                <label for="editorConfig_customization_autosave">Autosave</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_comments" name="editorConfig_customization_comments" checked>
+                <label for="editorConfig_customization_comments">Comments</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_compactHeader" name="editorConfig_customization_compactHeader">
+                <label for="editorConfig_customization_compactHeader">Compact Header</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_compactToolbar" name="editorConfig_customization_compactToolbar">
+                <label for="editorConfig_customization_compactToolbar">Compact Toolbar</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_compatibleFeatures" name="editorConfig_customization_compatibleFeatures">
+                <label for="editorConfig_customization_compatibleFeatures">Compatible Features</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_forcesave" name="editorConfig_customization_forcesave">
+                <label for="editorConfig_customization_forcesave">Force Save</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_help" name="editorConfig_customization_help" checked>
+                <label for="editorConfig_customization_help">Help</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_hideNotes" name="editorConfig_customization_hideNotes">
+                <label for="editorConfig_customization_hideNotes">Hide Notes</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu">
+                <label for="editorConfig_customization_hideRightMenu">Hide Right Menu</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_hideRulers" name="editorConfig_customization_hideRulers">
+                <label for="editorConfig_customization_hideRulers">Hide Rulers</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_macros" name="editorConfig_customization_macros" checked>
+                <label for="editorConfig_customization_macros">Macros</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_plugins" name="editorConfig_customization_plugins" checked>
+                <label for="editorConfig_customization_plugins">Plugins</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_showReviewChanges" name="editorConfig_customization_showReviewChanges">
+                <label for="editorConfig_customization_showReviewChanges">Show Review Changes</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_toolbarHideFileName" name="editorConfig_customization_toolbarHideFileName">
+                <label for="editorConfig_customization_toolbarHideFileName">Toolbar Hide File Name</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs">
+                <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
+            </div>
+        </div>  
     </div>
 
     <div id="configArea">
@@ -209,8 +272,8 @@
             var checkboxInputArray = $("#controlFields").find("input[type=checkbox]");
             var selectInputArray = $("#controlFields").find("select");
 
-            function collect(name, value) {
-                if (name && value) {
+            function collect(name, value, checkbox = false) {
+                if (name && (value || checkbox)) {
                     var names = name.split("_");
 
                     var prev = data;
@@ -253,7 +316,7 @@
             }
 
             for (checkboxInput of checkboxInputArray) {
-                collect(checkboxInput.name, checkboxInput.checked);
+                collect(checkboxInput.name, checkboxInput.checked, true);
             }
 
             for (selectInput of selectInputArray) {

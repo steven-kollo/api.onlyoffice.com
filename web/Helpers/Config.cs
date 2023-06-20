@@ -313,11 +313,17 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "chat", EmitDefaultValue = false)]
                 public bool? Chat;
 
+                [DataMember(Name = "comments", EmitDefaultValue = false)]
+                public bool? Comments;
+
                 [DataMember(Name = "compactHeader", EmitDefaultValue = false)]
                 public bool? CompactHeader;
 
                 [DataMember(Name = "compactToolbar", EmitDefaultValue = false)]
                 public bool? CompactToolbar;
+
+                [DataMember(Name = "compatibleFeatures", EmitDefaultValue = false)]
+                public bool? CompatibleFeatures;
 
                 [DataMember(Name = "customer", EmitDefaultValue = false)]
                 public CustomerConfig Customer;
@@ -331,6 +337,12 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "goback", EmitDefaultValue = false)]
                 public GobackConfig Goback;
 
+                [DataMember(Name = "help", EmitDefaultValue = false)]
+                public bool? Help;
+
+                [DataMember(Name = "hideNotes", EmitDefaultValue = false)]
+                public bool? HideNotes;
+
                 [DataMember(Name = "hideRightMenu", EmitDefaultValue = false)]
                 public bool? HideRightMenu;
 
@@ -342,6 +354,12 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "logo", EmitDefaultValue = false)]
                 public LogoConfig Logo;
+
+                [DataMember(Name = "macros", EmitDefaultValue = false)]
+                public bool? Macros;
+
+                [DataMember(Name = "plugins", EmitDefaultValue = false)]
+                public bool? Plugins;
 
                 [DataMember(Name = "showReviewChanges", EmitDefaultValue = false)]
                 public bool? ShowReviewChanges;
