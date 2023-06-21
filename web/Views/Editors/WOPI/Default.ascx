@@ -92,7 +92,7 @@
             "allowed": false
         }
     ],
-    "useforrequest": true,
+    "useforrequest": false,
     "errorcode": 403
 }
 </pre>

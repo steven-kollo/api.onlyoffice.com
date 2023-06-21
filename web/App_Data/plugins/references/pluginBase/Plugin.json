@@ -139,7 +139,7 @@
         {
           "type": "function",
           "name": "callback",
-          "description": "<p>The result that the method returns.</p>",
+          "description": "<p>The result that the method returns. Only the js standart types are available (any objects will be replaced with <em>undefined</em>).</p>",
           "optional": false
         }
       ]
@@ -217,6 +217,33 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "sendToPlugin": {
+      "memberof": "Plugin",
+      "name": "sendToPlugin",
+      "description": "<p>Sends a message from the modal window to the plugin.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "name",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        },
+        {
+          "type": "object",
+          "name": "data",
+          "description": "<p>The event data.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "events": {
@@ -413,6 +440,36 @@
           "type": "ContentControl",
           "name": "control",
           "description": "<p>Defines the content control that has been changed.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "onContextMenuShow": {
+      "memberof": "Plugin",
+      "name": "onContextMenuShow",
+      "description": "<p>The function called when the context menu has been shown.</p>",
+      "tags": {},
+      "see": null,
+      "params": [
+        {
+          "type": "Object",
+          "name": "options",
+          "description": "<p>Defines the options for the current selection.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "onContextMenuClick": {
+      "memberof": "Plugin",
+      "name": "onContextMenuClick",
+      "description": "<p>The function called when the context menu item has been clicked.</p>",
+      "tags": {},
+      "see": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "id",
+          "description": "<p>Item ID.</p>",
           "optional": false
         }
       ]

@@ -143,7 +143,71 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "object",
+          "name": "oPr",
+          "description": "<p>The resulting string display properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "oPr.NewLineParagraph",
+          "description": "<p>Defines if the resulting string will include paragraph line boundaries or not.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "boolean",
+          "name": "oPr.Numbering",
+          "description": "<p>Defines if the resulting string will include numbering or not.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "boolean",
+          "name": "oPr.Math",
+          "description": "<p>Defines if the resulting string will include mathematical expressions or not.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "string",
+          "name": "oPr.NewLineSeparator",
+          "description": "<p>Defines how the line separator will be specified in the resulting string.</p>",
+          "optional": true,
+          "defaultValue": "'\\r'"
+        },
+        {
+          "type": "string",
+          "name": "oPr.TableCellSeparator",
+          "description": "<p>Defines how the table cell separator will be specified in the resulting string.</p>",
+          "optional": true,
+          "defaultValue": "'\\t'"
+        },
+        {
+          "type": "string",
+          "name": "oPr.TableRowSeparator",
+          "description": "<p>Defines how the table row separator will be specified in the resulting string.</p>",
+          "optional": true,
+          "defaultValue": "'\\r\\n'"
+        },
+        {
+          "type": "string",
+          "name": "oPr.ParaSeparator",
+          "description": "<p>Defines how the paragraph separator will be specified in the resulting string.</p>",
+          "optional": true,
+          "defaultValue": "'\\r\\n'"
+        },
+        {
+          "type": "string",
+          "name": "oPr.TabSymbol",
+          "description": "<p>Defines how the tab will be specified in the resulting string (does not apply to numbering)</p>",
+          "optional": true,
+          "defaultValue": "'\\t'"
+        }
+      ]
     },
     "GetAllParagraphs": {
       "memberof": "ApiRange",
@@ -779,7 +843,7 @@
         },
         {
           "type": "string",
-          "name": "sAutor",
+          "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
         }

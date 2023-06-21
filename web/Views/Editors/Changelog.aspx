@@ -16,6 +16,13 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="74" class="copy-link">Version 7.4</h2>
+    <ul>
+        <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">dps, dpt, et, ett, mhtml, stw, sxc, sxi, sxw, wps, wpt</a> formats.</li>
+        <li>Added the <em>users.id</em> field to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</li>
+        <li>Added the <em>c</em> parameter to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method and <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event.</li>
+    </ul>
+
     <h2 id="73" class="copy-link">Version 7.3</h2>
     <ul>
         <li>Added the WOPI <a href="<%= Url.Action("wopi/conversionapi") %>">Conversion API</a>.</li>
