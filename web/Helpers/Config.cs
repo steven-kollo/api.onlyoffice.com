@@ -394,11 +394,17 @@ namespace ASC.Api.Web.Help.Helpers
                     [DataMember(Name = "logo", EmitDefaultValue = false)]
                     public string Logo;
 
+                    [DataMember(Name = "logoDark", EmitDefaultValue = false)]
+                    public string LogoDark;
+
                     [DataMember(Name = "mail", EmitDefaultValue = false)]
                     public string Mail;
 
                     [DataMember(Name = "name", EmitDefaultValue = false)]
                     public string Name;
+
+                    [DataMember(Name = "phone", EmitDefaultValue = false)]
+                    public string Phone;
 
                     [DataMember(Name = "www", EmitDefaultValue = false)]
                     public string Www;

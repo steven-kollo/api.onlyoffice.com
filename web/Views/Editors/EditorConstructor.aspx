@@ -178,7 +178,43 @@
                 <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs">
                 <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
             </div>
-        </div>  
+        </div>
+
+        <div id="rebranding" class="control-panel hidden">
+            <div class="line">
+                <label for="editorConfig_customization_customer_address">Address</label>
+                <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_info">Info</label>
+                <input type="text" id="editorConfig_customization_customer_info" name="editorConfig_customization_customer_info" value="Some additional information">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_logo">Logo</label>
+                <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_logoDark">LogoDark</label>
+                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_mail">Mail</label>
+                <input type="text" id="editorConfig_customization_customer_mail" name="editorConfig_customization_customer_mail" value="john@example.com">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_name">Name</label>
+                <input type="text" id="editorConfig_customization_customer_name" name="editorConfig_customization_customer_name" value="John Smith and Co.">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_phone">Phone</label>
+                <input type="text" id="editorConfig_customization_customer_phone" name="editorConfig_customization_customer_phone" value="123456789">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_www">www</label>
+                <input type="text" id="editorConfig_customization_customer_www" name="editorConfig_customization_customer_www" value="example.com">
+            </div>
+        </div>
+
     </div>
 
     <div id="configArea">
@@ -347,10 +383,10 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                var config = JSON.parse(data);
+                    var config = JSON.parse(data);
 
-            $("#editor-page-html").html(
-`&lt;!DOCTYPE html&gt;
+                    $("#editor-page-html").html(
+                        `&lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
     &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
@@ -366,7 +402,7 @@
     &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;`
-            );
+                    );
                 }
             });
         }
