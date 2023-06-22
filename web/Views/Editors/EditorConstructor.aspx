@@ -215,10 +215,120 @@
             </div>
         </div>
 
+        <div id="events" class="control-panel hidden">
+            <div class="line">
+                <input type="checkbox" id="events_onAppReady" name="events_onAppReady" checked>
+                <label for="events_onAppReady">onAppReady</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onCollaborativeChanges" name="events_onCollaborativeChanges">
+                <label for="events_onCollaborativeChanges">onCollaborativeChanges</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onDocumentReady" name="events_onDocumentReady" checked>
+                <label for="events_onDocumentReady">onDocumentReady</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onDocumentStateChange" name="events_onDocumentStateChange">
+                <label for="events_onDocumentStateChange">onDocumentStateChange</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onDownloadAs" name="events_onDownloadAs">
+                <label for="events_onDownloadAs">onDownloadAs</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onError" name="events_onError" checked>
+                <label for="events_onError">onError</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onInfo" name="events_onInfo" checked>
+                <label for="events_onInfo">onInfo</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onMetaChange" name="events_onMetaChange">
+                <label for="events_onMetaChange">onMetaChange</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onMakeActionLink" name="events_onMakeActionLink">
+                <label for="events_onMakeActionLink">onMakeActionLink</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onOutdatedVersion" name="events_onOutdatedVersion">
+                <label for="events_onOutdatedVersion">onOutdatedVersion</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestClose" name="events_onRequestClose">
+                <label for="events_onRequestClose">onRequestClose</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestCompareFile" name="events_onRequestCompareFile">
+                <label for="events_onRequestCompareFile">onRequestCompareFile</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestCreateNew" name="events_onRequestCreateNew">
+                <label for="events_onRequestCreateNew">onRequestCreateNew</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestEditRights" name="events_onRequestEditRights">
+                <label for="events_onRequestEditRights">onRequestEditRights</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestHistory" name="events_onRequestHistory">
+                <label for="events_onRequestHistory">onRequestHistory</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestHistoryClose" name="events_onRequestHistoryClose">
+                <label for="events_onRequestHistoryClose">onRequestHistoryClose</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestHistoryData" name="events_onRequestHistoryData">
+                <label for="events_onRequestHistoryData">onRequestHistoryData</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestInsertImage" name="events_onRequestInsertImage">
+                <label for="events_onRequestInsertImage">onRequestInsertImage</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestMailMergeRecipients" name="events_onRequestMailMergeRecipients">
+                <label for="events_onRequestMailMergeRecipients">onRequestMailMergeRecipients</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestReferenceData" name="events_onRequestReferenceData">
+                <label for="events_onRequestReferenceData">onRequestReferenceData</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestRename" name="events_onRequestRename">
+                <label for="events_onRequestRename">onRequestRename</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestRestore" name="events_onRequestRestore">
+                <label for="events_onRequestRestore">onRequestRestore</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestSaveAs" name="events_onRequestSaveAs">
+                <label for="events_onRequestSaveAs">onRequestSaveAs</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestSendNotify" name="events_onRequestSendNotify">
+                <label for="events_onRequestSendNotify">onRequestSendNotify</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestSharingSettings" name="events_onRequestSharingSettings">
+                <label for="events_onRequestSharingSettings">onRequestSharingSettings</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onRequestUsers" name="events_onRequestUsers">
+                <label for="events_onRequestUsers">onRequestUsers</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="events_onWarning" name="events_onWarning" checked>
+                <label for="events_onWarning">onWarning</label>
+            </div>
+        </div>
     </div>
 
     <div id="configArea">
-        <pre id="editor-page-html" class=" hljs cs">
+        <pre id="editor-page-html" class="hljs cs">
         </pre>
     </div>
 
@@ -376,6 +486,314 @@
         function updateConfig() {
             var data = collectData("configCommon");
 
+            var eventsMethods = "";
+            var events = "";
+
+            if ($("#events_onAppReady").is(':checked')) {
+                eventsMethods += `
+var onAppReady = function () {
+    console.log("ONLYOFFICE Document Editor is ready");
+};`
+                events += `onAppReady: onAppReady,\n`
+            }
+
+            if ($("#events_onCollaborativeChanges").is(':checked')) {
+                eventsMethods += `
+var onCollaborativeChanges = function () {
+    console.log("The document changed by collaborative user");
+};`
+                events += `onCollaborativeChanges: onCollaborativeChanges,\n`
+            }
+
+            if ($("#events_onDocumentReady").is(':checked')) {
+                eventsMethods += `
+var onDocumentReady = function () {
+    console.log("Document is loaded");
+};`
+                events += `onDocumentReady: onDocumentReady,\n`
+            }
+
+            if ($("#events_onDocumentStateChange").is(':checked')) {
+                eventsMethods += `
+var onDocumentStateChange = function (event) {
+    if (event.data) {
+        console.log("The document changed");
+    } else {
+        console.log("Changes are collected on document editing service");
+    }
+};`
+                events += `onDocumentStateChange: onDocumentStateChange,\n`
+            }
+
+            if ($("#events_onDownloadAs").is(':checked')) {
+                eventsMethods += `
+var onDownloadAs = function (event) {
+    var fileType = event.data.fileType;
+    var url = event.data.url;
+    console.log("ONLYOFFICE Document Editor create file: " + url);
+};`
+                events += `onDownloadAs: onDownloadAs,\n`
+            }
+
+            if ($("#events_onError").is(':checked')) {
+                eventsMethods += `
+var onError = function (event) {
+    console.log("ONLYOFFICE Document Editor reports an error: code " + event.data.errorCode + ", description " + event.data.errorDescription);
+};`
+                events += `onError: onError,\n`
+            }
+
+            if ($("#events_onInfo").is(':checked')) {
+                eventsMethods += `
+var onInfo = function (event) {
+    console.log("ONLYOFFICE Document Editor is opened in mode " + event.data.mode);
+};`
+                events += `onInfo: onInfo,\n`
+            }
+
+            if ($("#events_onMetaChange").is(':checked')) {
+                eventsMethods += `
+var onMetaChange = function (event) {
+    if (event.data.hasOwnProperty("favorite")) {
+        var favorite = !!event.data.favorite;  
+        docEditor.setFavorite(favorite);
+    }
+    console.log("Document metadata changed: " + JSON.stringify(event.data));
+};`
+                events += `onMetaChange: onMetaChange,\n`
+            }
+
+            if ($("#events_onMakeActionLink").is(':checked')) {
+                eventsMethods += `
+var onMakeActionLink = function (event) {
+    var actionData = event.data;
+    var linkParam = JSON.stringify(actionData);
+    var actionLink;
+    var actionIndex = location.href.indexOf("&actionLink=");
+    if (actionIndex != -1) {
+        var endIndex = location.href.indexOf("&", actionIndex + "&actionLink=".length);
+        if (endIndex != -1) {
+            actionLink = location.href.substring(0, actionIndex) + location.href.substring(endIndex) + "&actionLink=" + encodeURIComponent(linkParam);
+        } else {
+            actionLink = location.href.substring(0, actionIndex) + "&actionLink=" + encodeURIComponent(linkParam);
+        }
+    } else {
+        actionLink = location.href + "&actionLink=" + encodeURIComponent(linkParam);
+    }
+
+    docEditor.setActionLink(actionLink);
+
+    console.log("User is trying to get link for opening the document which contains a bookmark: " + linkParam);
+};`
+                events += `onMakeActionLink: onMakeActionLink,\n`
+            }
+
+            if ($("#events_onOutdatedVersion").is(':checked')) {
+                eventsMethods += `
+var onOutdatedVersion = function () {
+    console.log("Document is opened for editing with the old document.key value");
+};`
+                events += `onOutdatedVersion: onOutdatedVersion,\n`
+            }
+
+            if ($("#events_onPluginsReady").is(':checked')) {
+                eventsMethods += `
+var onPluginsReady = function () {
+    console.log("All plugins are loaded and can be used");
+};`
+                events += `onPluginsReady: onPluginsReady,\n`
+            }
+
+            if ($("#events_onRequestClose").is(':checked')) {
+                eventsMethods += `
+var onRequestClose = function () {
+    console.log("Work with the editor must be ended and the editor must be closed.");
+};`
+                events += `onRequestClose: onRequestClose,\n`
+            }
+
+            if ($("#events_onRequestCompareFile").is(':checked')) {
+                eventsMethods += `
+var onRequestCompareFile = function () {
+    console.log("User is trying to select document for comparing by clicking the Document from Storage button");
+};`
+                events += `onRequestCompareFile: onRequestCompareFile,\n`
+            }
+
+            if ($("#events_onRequestCreateNew").is(':checked')) {
+                eventsMethods += `
+var onRequestCreateNew = function () {
+    console.log("User is trying to create document by clicking the Create New button");
+};`
+                events += `onRequestCreateNew: onRequestCreateNew,\n`
+            }
+
+            if ($("#events_onRequestEditRights").is(':checked')) {
+                eventsMethods += `
+var onRequestEditRights = function () {
+    console.log("ONLYOFFICE Document Editor requests editing rights");
+};`
+                events += `onRequestEditRights: onRequestEditRights,\n`
+            }
+
+            if ($("#events_onRequestHistory").is(':checked')) {
+                eventsMethods += `
+var onRequestHistory = function () {
+    docEditor.refreshHistory({
+        "currentVersion": 2,
+        "history": [
+            {
+                "created": "2010-07-06 10:13 AM",
+                "key": "F89d8069ba2b",
+                "user": {
+                    "id": "F89d8069ba2b",
+                    "name": "Kate Cage"
+                },
+                "version": 1
+            },
+            {
+                "created": "2010-07-07 3:46 PM",
+                "key": "Khirz6zTPdfd7",
+                "user": {
+                    "id": "78e1e841",
+                    "name": "John Smith"
+                },
+                "version": 2
+            },
+        ]
+    });
+
+    console.log("User is trying to show the document version history by clicking the Version History button");
+};`
+                events += `onRequestHistory: onRequestHistory,\n`
+            }
+
+            if ($("#events_onRequestHistoryClose").is(':checked')) {
+                eventsMethods += `
+var onRequestHistoryClose = function () {
+    document.location.reload();
+    console.log("User is trying to go back to the document from viewing the document version history by clicking the Close History button");
+};`
+                events += `onRequestHistoryClose: onRequestHistoryClose,\n`
+            }
+
+            if ($("#events_onRequestHistoryData").is(':checked')) {
+                eventsMethods += `
+var onRequestHistoryData = function (event) {
+    console.log("User is trying to click the specific document version in the document version history: " + event.data);
+};`
+                events += `onRequestHistoryData: onRequestHistoryData,\n`
+            }
+
+            if ($("#events_onRequestInsertImage").is(':checked')) {
+                eventsMethods += `
+var onRequestInsertImage = function (event) {
+    console.log("User is trying to insert an image by clicking the Image from Storage button: " + JSON.stringify(event.data));
+};`
+                events += `onRequestInsertImage: onRequestInsertImage,\n`
+            }
+
+            if ($("#events_onRequestMailMergeRecipients").is(':checked')) {
+                eventsMethods += `
+var onRequestMailMergeRecipients = function () {
+    console.log("User is trying to select recipients data by clicking the Mail merge button");
+};`
+                events += `onRequestMailMergeRecipients: onRequestMailMergeRecipients,\n`
+            }
+
+            if ($("#events_onRequestReferenceData").is(':checked')) {
+                eventsMethods += `
+var onRequestReferenceData = function () {
+    console.log("User is trying to refresh data inserted from the external file by clicking the Update values button in the External links dialog box of the Data tab");
+};`
+                events += `onRequestReferenceData: onRequestReferenceData,\n`
+            }
+
+            if ($("#events_onRequestRename").is(':checked')) {
+                eventsMethods += `
+var onRequestRename = function (event) {
+    console.log("User is trying to rename the file by clicking the Rename... button: " + event.data);
+};`
+                events += `onRequestRename: onRequestRename,\n`
+            }
+
+            if ($("#events_onRequestRestore").is(':checked')) {
+                eventsMethods += `
+var onRequestRestore = function (event) {
+    console.log("User is trying to restore the file version by clicking the Restore button in the version history: " + JSON.stringify(event.data));
+};`
+                events += `onRequestRestore: onRequestRestore,\n`
+            }
+
+            if ($("#events_onRequestSaveAs").is(':checked')) {
+                eventsMethods += `
+var onRequestSaveAs = function (event) {
+    console.log("User is trying to save file by clicking Save Copy as... button: " + JSON.stringify(event.data));
+};`
+                events += `onRequestSaveAs: onRequestSaveAs,\n`
+            }
+
+            if ($("#events_onRequestSendNotify").is(':checked')) {
+                eventsMethods += `
+var onRequestSendNotify = function (event) {
+    console.log("User is mentioned in a comment: " + JSON.stringify(event.data));
+};`
+                events += `onRequestSendNotify: onRequestSendNotify,\n`
+            }
+
+            if ($("#events_onRequestSharingSettings").is(':checked')) {
+                eventsMethods += `
+var onRequestSharingSettings = function () {
+    docEditor.setSharingSettings({
+        "sharingSettings": [
+            {
+                "permissions": "Full Access",
+                "user": "John Smith"
+            },
+            {
+                "isLink": true,
+                "permissions": "Read Only",
+                "user": "External link"
+            }
+        ]
+    });
+    console.log("User is trying to manage document access rights by clicking Change access rights button");
+};`
+                events += `onRequestSharingSettings: onRequestSharingSettings,\n`
+            }
+
+            if ($("#events_onRequestUsers").is(':checked')) {
+                eventsMethods += `
+var onRequestUsers = function () {
+    docEditor.setUsers({
+        "c": event.data.c,
+        "users": [
+            {
+                "email": "john@example.com",
+                "id": "78e1e841",
+                "name": "John Smith"
+            },
+            {
+                "email": "kate@example.com",
+                "id": "F89d8069ba2b",
+                "name": "Kate Cage"
+            },
+        ]
+    });
+
+    console.log("User can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges");
+};`
+                events += `onRequestUsers : onRequestUsers,\n`
+            }
+
+            if ($("#events_onWarning ").is(':checked')) {
+                eventsMethods += `
+var onWarning = function () {
+    console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
+};`
+                events += `onWarning : onWarning ,\n`
+            }
+
             $.ajax({
                 type: "POST",
                 url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
@@ -396,8 +814,15 @@
     &lt;script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
+        ${eventsMethods}
 
-        window.docEditor = new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config, null, '\t')});
+        window.docEditor = new DocsAPI.DocEditor("placeholder", Object.assign(${JSON.stringify(config, null, '\t')},
+        {
+            events: {
+${events}
+            }
+        }
+        ));
 
     &lt;/script&gt;
 &lt;/body&gt;

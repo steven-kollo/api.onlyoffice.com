@@ -285,7 +285,7 @@ namespace ASC.Api.Web.Help.Controllers
             }
 
             config.Document.Key = !config.Document.Key.IsEmpty() ? config.Document.Key : "apiwh" + Guid.NewGuid();
-            config.Document.Title = !config.Document.Title.IsEmpty() ? config.Document.Title + "," + config.Document.FileType : "Example Title." + config.Document.FileType;
+            config.Document.Title = !config.Document.Title.IsEmpty() ? config.Document.Title + "." + config.Document.FileType : "Example Title." + config.Document.FileType;
             config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + config.Document.FileType;
 
             if (config.EditorConfig == null)
