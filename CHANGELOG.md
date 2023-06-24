@@ -1,5 +1,7 @@
 # Change Log
 
+- docspace: added the DocSpace frame SDK
+
 ## 4.1.0
 - editors: added a link to the list of error codes
 - editors: added the Protecting ranges page

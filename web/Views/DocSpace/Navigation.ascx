@@ -103,6 +103,41 @@
     </li>
 </ul>
 
+
+<div class="treeheader">Frame SDK</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("framesdk/") %>">Basic concepts</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("framesdk/initmethods") %>">Initialization methods</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("framesdk/initmethods/initeditor") %>">initEditor</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("framesdk/initmethods/initeditorviewer") %>">initEditorViewer</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("framesdk/initmethods/initfileselector") %>">initFileSelector</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("framesdk/initmethods/initmanager") %>">initManager</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("framesdk/initmethods/initroomselector") %>">initRoomSelector</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("framesdk/initmethods/initsystem") %>">initSystem</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="<%= Url.Action("framesdk/config") %>">Config</a>
+    </li>
+</ul>
+
+
 <div class="treeheader">More information</div>
 <ul class="side-nav root">
     <li>

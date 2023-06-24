@@ -61,6 +61,15 @@ namespace ASC.Api.Web.Help.Controllers
                 "ApiSystem/TariffSection",
                 "ApiSystem/TariffSection/TariffGet",
                 "ApiSystem/TariffSection/TariffSet",
+                "FrameSdk",
+                "FrameSdk/InitMethods",
+                "FrameSdk/InitMethods/initEditor",
+                "FrameSdk/InitMethods/initEditorViewer",
+                "FrameSdk/InitMethods/initFileSelector",
+                "FrameSdk/InitMethods/initManager",
+                "FrameSdk/InitMethods/initRoomSelector",
+                "FrameSdk/InitMethods/initSystem",
+                "FrameSdk/Config",
             };
 
         public ActionResult ApiSystem(string catchall)
@@ -100,6 +109,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Filters()
         {
             return View();
+        }
+
+        public ActionResult FrameSdk(string catchall)
+        {
+            if (!_actionMap.Contains("framesdk/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("FrameSdk", (object)catchall);
         }
 
         public ActionResult Batch()

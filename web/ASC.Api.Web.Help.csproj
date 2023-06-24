@@ -3947,6 +3947,16 @@
     <Content Include="Views\DocSpace\Faq.aspx" />
     <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\Filters.aspx" />
+    <Content Include="Views\DocSpace\FrameSdk.aspx" />
+    <Content Include="Views\DocSpace\FrameSdk\Config.ascx" />
+    <Content Include="Views\DocSpace\FrameSdk\Default.ascx" />
+    <Content Include="Views\DocSpace\FrameSdk\InitMethods.ascx" />
+    <Content Include="Views\DocSpace\FrameSdk\InitMethods\initEditor.ascx" />
+    <Content Include="Views\DocSpace\FrameSdk\InitMethods\initEditorViewer.ascx" />
+    <Content Include="Views\DocSpace\FrameSdk\InitMethods\initFileSelector.ascx" />
+    <Content Include="Views\DocSpace\FrameSdk\InitMethods\initManager.ascx" />
+    <Content Include="Views\DocSpace\FrameSdk\InitMethods\initRoomSelector.ascx" />
+    <Content Include="Views\DocSpace\FrameSdk\InitMethods\initSystem.ascx" />
     <Content Include="Views\DocSpace\Method.aspx" />
     <Content Include="Views\DocSpace\Navigation.ascx" />
     <Content Include="Views\Editors\ActionLink.aspx" />
