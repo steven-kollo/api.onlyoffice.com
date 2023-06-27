@@ -6,18 +6,18 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Automation API
+    自动化API
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Automation API</span>
+        <span class="hdr">自动化API</span>
     </h1>
 
-    <p class="dscr"><b>Connector</b> is a class that allows editing text documents, spreadsheets, presentations, and fillable forms from an external source.
-        The examples of using Automation API can be found <a href="<%= Url.Action("interactingoutside") %>">here</a>.
+    <p class="dscr"><b>连接器</b> 是一个允许从外部源编辑文本文档、电子表格、演示文稿和可填写表单的类。
+        使用"自动化API" 的示例可以在<a href="<%= Url.Action("interactingoutside") %>">此处</a>找到。
     </p>
-    <p>To create the connector, use the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method of the <b>document editor</b> object:</p>
+    <p>要创建连接器，请使用<b>文档编辑器</b>对象的<a href="<%= Url.Action("methods") %>#createConnector">createConnector</a>方法 ：</p>
     <pre>
 var connector = docEditor.createConnector()
 </pre>

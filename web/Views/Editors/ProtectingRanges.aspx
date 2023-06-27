@@ -6,33 +6,33 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Protecting ranges
+    保护范围
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Protecting ranges</span>
+        <span class="hdr">保护范围</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of protecting ranges in spreadsheets in ONLYOFFICE Document Server.</p>
-    <img alt="Protect ranges" src="<%= Url.Content("~/content/img/editor/protect-ranges-scheme.svg") %>" />
+    <p class="dscr">参考图和以下步骤说明了在 ONLYOFFICE Document Server 中保护电子表格范围的过程。</p>
+    <img alt="保护范围" src="<%= Url.Content("~/content/img/editor/protect-ranges-scheme.svg") %>" />
     <ol>
-        <li>The user opens <em>Protection -> Protect Range</em> in the <b>document editor</b>, clicks <em>New</em>, and starts typing the user name in the <em>Who can edit</em> field.</li>
-        <li>The <b>document editor</b> sends a request to the <b>document manager</b> for a list of users to allow editing the specified sheet range.</li>
-        <li>The <b>document manager</b> sends the list of users to the <b>document editor</b> where this list will be displayed under the <em>Who can edit</em> field.</li>
-        <li>The user specifies the range title and address in the corresponding fields of the <em>New Range</em> window in the <b>document editor</b> and clicks <em>OK</em> to add this range to the list of protected ranges.</li>
+        <li>用户在<b>文档编辑器</b>中打开<em>保护 -> 保护范围</em>，单击<em>新建</em>，然后开始在<em>中输入用户名 >谁可以编辑</em>字段。</li>
+        <li><b>文档编辑器</b>向<b>文档管理器</b>发送请求，以获取允许编辑指定工作表范围的用户列表。</li>
+        <li><b>文档管理器</b>将用户列表发送到<b>文档编辑器</b>，该列表将显示在<em>谁可以编辑</em>字段下。</li>
+        <li>用户在<b>文档编辑器</b>的<em>新建范围</em>窗口的相应字段中指定范围标题和地址，然后单击<em>确定</em>添加 将此范围添加到受保护范围列表。</li>
     </ol>
 
-    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
-    <ol>
-        <li>Create an empty <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
-        <li>
-            <p>
-                In the configuration script for Document Editor initialization, specify the event handler to display the list of users for granting the access rights
-                to edit the specified sheet range. When the user opens <em>Protection -> Protect Range</em>, clicks <em>New</em>, and starts typing in the <em>Who can edit</em> field,
-                the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event is called and the user can select other users to allow them to edit this range.
-                The <em>data.c</em> parameter with the <em>protect</em> operation type is passed in this event.
-            </p>
-            <img alt="Grant access" src="<%= Url.Content("~/content/img/editor/protect-range.png") %>" />
+    <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
+     <ol>
+         <li>创建一个空的 <em>html</em> 文件来<a href="<%= Url.Action("open") %>#apply">打开文档</a>。</li>
+         <li>
+             <p>
+                 在文档编辑器初始化的配置脚本中，指定事件处理程序以显示授予访问权限的用户列表
+                 编辑指定的电子表格范围。 当用户打开“保护”->“保护范围”时，单击“新建”，并开始在“谁可以编辑”字段中输入内容，
+                 调用 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件，用户可以选择其他用户以允许他们编辑此范围。
+                 具有 <em>protect</em> 操作类型的 <em>data.c</em> 参数在此事件中传递。
+             </p>
+             <img alt="授予访问权限" src="<%= Url.Content("~/content/img/editor/protect-range.png") %>" />
             <pre>
 var onRequestUsers = function(event) {
     docEditor.setUsers({
@@ -64,7 +64,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In order to set the users list under the <em>Who can edit</em> field, the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method must be called:
+                为了设置“谁可以编辑”字段下的用户列表，必须调用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法：
             </p>
             <pre>
 docEditor.setUsers({
@@ -85,8 +85,8 @@ docEditor.setUsers({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+                 请参阅<a href="<%= Url.Action("howitworks") %>">工作原理</a>部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
             </p>
         </li>
     </ol>

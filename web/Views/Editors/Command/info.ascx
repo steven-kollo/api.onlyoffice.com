@@ -49,9 +49,9 @@
         </tr>
         <tr class="tablerow">
             <td>userdata</td>
-            <td>Defines some custom identifier which will help distinguish the specific request in case there were more than one.</td>
+            <td>定义一些自定义标识符，这将有助于在存在多个特定请求的情况下区分特定请求。</td>
             <td>string</td>
-            <td>optional</td>
+            <td>可选的</td>
         </tr>
     </tbody>
 </table>

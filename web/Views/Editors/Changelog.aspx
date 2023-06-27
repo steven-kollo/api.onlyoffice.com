@@ -16,12 +16,12 @@
     </h1>
 
     <p class="dscr">ONLYOFFICE 文档服务器 API 的更改列表。</p>
-    <h2 id="74" class="copy-link">Version 7.4</h2>
-    <ul>
-        <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">dps, dpt, et, ett, mhtml, stw, sxc, sxi, sxw, wps, wpt</a> formats.</li>
-        <li>Added the <em>users.id</em> field to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</li>
-        <li>Added the <em>c</em> parameter to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method and <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event.</li>
-    </ul>
+    <h2 id="74" class="copy-link">版本 7.4</h2>
+     <ul>
+         <li>添加了打开 <a href="<%= Url.Action("config/") %>#documentType">dps、dpt、et、ett、mhtml、stw、sxc、sxi、sxw、wps、wpt </a> 格式的功能。</li>
+         <li>在 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法中添加了 <em>users.id</em> 字段。</li >
+         <li>在 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法和<a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> 事件中添加了 <em>c</em> 参数。</li>
+     </ul>
 
     <h2 id="73" class="copy-link">7.3 版</h2>
      <ul>

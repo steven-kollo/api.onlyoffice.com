@@ -170,12 +170,12 @@
                 <a href="<%= Url.Action("embeddingforms") %>">将表单嵌入网页</a>
             </li>
             <li>
-                <a href="<%= Url.Action("protectingranges") %>">Protecting ranges</a>
+                <a href="<%= Url.Action("protectingranges") %>">保护范围</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("interactingoutside/") %>">External access to the document editing</a>
+        <a href="<%= Url.Action("interactingoutside/") %>">对文档编辑的外部访问</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("interactingoutside/comments") %>">处理评论</a>

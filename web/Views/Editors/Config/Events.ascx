@@ -147,7 +147,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onError" class="copy-link">onError</b> - 发生错误或其他特定事件时调用的函数。
             错误消息在 <em>data</em> 参数中发送。
-            A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
+           可以在<a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">此处</a>找到错误代码列表。
         </p>
         <div class="header-gray">示例</div>
         <pre>
@@ -587,7 +587,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 <img alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
             </div>
         </div>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestReferenceData = function () {
     var referenceData =  event.data.referenceData;
@@ -797,12 +797,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</p>
-        <p>Starting from version 7.4, the operation type can be specified in the <em>data.c</em> parameter. It can take two values - <em>mention</em> or <em>protect</em>.
-        Prior to version 7.4, only the mention operation was available with this event.</p>
-        <p>To set a list of users, you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method which can take different lists of users depending on the specified operation type.
-            The <em>onRequestUsers</em> event is called once for each <em>c</em> type when the corresponding operation is performed.
-            If the <em>setUsers</em> is called with an empty list, then the <em>onRequestUsers</em> event will fire again.</p>
+        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - 当用户可以选择其他用户在评论中提及或授予编辑特定工作表范围的访问权限时调用的函数。</p>
+        <p>从7.4版本开始，可以在<em>data.c</em>参数中指定操作类型。 它可以采用两个值 - <em>mention</em>或<em>protect</em>。
+         在版本 7.4 之前，此事件仅支持mention操作。</p>
+        <p>要设置用户列表，您必须调用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。
+             当执行相应的操作时，每个 <em>c</em> 类型都会调用一次 <em>onRequestUsers</em> 事件。
+             如果使用空列表调用<em>setUsers</em>，则<em>onRequestUsers</em>事件将再次触发。</p>
         <div class="img-block-2">
             <div>
                 <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
@@ -846,7 +846,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onWarning" class="copy-link">onWarning</b> - 发生警告时调用的函数。
             警告消息在 <em>data</em> 参数中发送。
-            A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
+         可以在<a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">此处</a>找到错误代码列表。
         </p>
         <div class="header-gray">示例</div>
         <pre>

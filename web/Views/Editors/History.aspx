@@ -31,7 +31,7 @@
         <li><b>文档存储服务</b> 将链接发送到所选文档版本。</li>
         <li><b>文档编辑器</b> 显示选定的文档版本。</li>
         <li>当用户单击文档版本列表中的另一个版本时， <b>文档编辑器</b> 请求重新显示有关该版本的信息。</li>
-        <li>The user clicks the <em>Close History</em> button and the <b>document editor</b> hides the list of the document versions.</li>
+        <li>用户单击<em>关闭历史记录</em>按钮，<b>文档编辑器</b>将隐藏文档版本列表。</li>
     </ol>
 
     <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
@@ -111,10 +111,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <li>在文档编辑器菜单中打开 <em>版本历史</em> 选项。</li>
         <li>
             <p>
-                Specify the event handler for the <em>Close History</em> button to be displayed in the configuration script for Document Editor initialization.
-                When the user is trying to go back to the document from viewing the document version history by clicking the <em>Close History</em> button,
-                the <a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a> event is called and the version history list is hidden.
-                When the function is called, the editor must be initialized again, in the editing mode.
+                指定<em>关闭历史记录</em>按钮的事件处理程序，该按钮要在文档编辑器初始化的配置脚本中显示。
+                当用户尝试通过单击“关闭历史记录”按钮，而从查看文档版本历史记录返回到文档时，
+                调用 <a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a> 事件并隐藏版本历史列表。
+                当该函数被调用时，编辑器必须在编辑模式下再次初始化。
             </p>
             <pre>
 var onRequestHistoryClose = function () {

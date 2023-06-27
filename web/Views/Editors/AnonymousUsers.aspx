@@ -18,7 +18,7 @@
     <ol>
         <li>
             <p>匿名用户使用 <b>文档管理器</b> 打开文档进行查看或编辑。</p>
-            <note>Anonymous user is a user with an empty <a href="<%= Url.Action("config/editor") %>#user">user id</a>.</note>
+            <note>匿名用户是没有 <a href="<%= Url.Action("config/editor") %>#user">用户ID</a>的用户.</note>
         </li>
         <li><b>文档存储服务</b> 使用 <a href="<%= Url.Action("basic") %>">JavaScript API</a> 将初始化配置发送到 <b>文档编辑器</b>，但未在那里指定用户名。</li>
         <li><b>文档编辑器</b> 请求用户名。</li>
@@ -61,10 +61,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </ol>
 
 
-    <h2 id="restricting-access" class="copy-link">Restricting access to the editor or live viewer</h2>
-    <p>To restrict anonymous users access to the editor or live viewer, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport" target="_blank">services.CoAuthoring.server.isAnonymousSupport</a> parameter in the configuration file to <b>false</b>.
-        In this case, when the anonymous user tries to open the editor, a warning will occur.</p>
-    <img alt="Anonymous user warning" src="<%= Url.Content("~/content/img/editor/anonymous-warning.jpg") %>" />
-    <p>The live viewer will switch to the offline viewer without warnings.</p>
+    <h2 id="restricting-access" class="copy-link">限制对编辑器或实时查看器的访问</h2>
+    <p>若要限制匿名用户访问编辑器或实时查看器，请设置配置文件中的参数<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring server isAnonymousSupport" target="_blank">services.CoAuthoring.server.isAnymousSupport</a>的值为<b>false</b>。
+    在这种情况下，当匿名用户试图打开编辑器时，将出现警告</p>
+    <img alt="匿名用户警告" src="<%=Url.Content("~/Content/img/editor/noymous-warning.jpg")%>" />
+    <p>实时查看器将在没有警告的情况下切换到脱机查看器</p>
 
 </asp:Content>

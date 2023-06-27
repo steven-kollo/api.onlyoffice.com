@@ -5,7 +5,7 @@
     <span class="hdr">处理评审更改</span>
 </h1>
 
-<p class="dscr">Manages review process from an external source.</p>
+<p class="dscr">管理来自外部来源的审核流程。</p>
 
 <ul class="list-buttons doc-builder-list-buttons">
     <li>
@@ -61,8 +61,8 @@ $("#next").on("click", function () {
     </li>
 </ol>
 <note>
-    <p>Please note that the connector is available only for <b>ONLYOFFICE Developer Edition</b>.</p>
-    <p>This class is an additional feature which is available at extra cost. If you have any questions, please contact our sales team at <a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a>.</p>
+    <p>请注意，该连接器仅适用于 <b>ONLYOFFICE 开发者版本</b>。</p>
+    <p>此类是一项附加功能，需要额外付费。 如果您有任何疑问，请通过 <a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a> 联系我们的销售团队。</p>
 </note>
 
 <script type="text/javascript">

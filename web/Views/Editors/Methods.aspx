@@ -35,7 +35,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setReferenceData">setReferenceData</a> - 通过文件链接刷新数据。</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - 选择一个文档进行比较。</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
-        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
+        <li><a href="#setUsers">setUsers</a> - 设置要在评论中提及的用户列表或授予编辑特定工作表范围的访问权限。</li>
         <li><a href="#showMessage">showMessage</a> - 显示带有消息的工具提示。</li>
     </ul>
 
@@ -940,7 +940,7 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.
+                <b id="setUsers" class="copy-link">setUsers</b> - 设置要在评论中提及的用户列表或授予编辑特定工作表范围的访问权限。
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件之后调用。
             </p>
             <pre>
@@ -984,12 +984,12 @@ docEditor.setUsers({
                     <tr class="tablerow">
                         <td>c</td>
                         <td>
-                            Defines the operation type from the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event.
-                            It can take one of the following values - <em>mention</em> or <em>protect</em>.
-                            The default value is <em>mention</em>.
+                           定义 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件的操作类型。
+                             它可以采用以下值之一 - <em>mention</em>或<em>protect</em>。
+                             默认值为<em>mention</em>。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users</td>
@@ -1005,9 +1005,9 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.id</td>
-                        <td>Defines the identification of the user. This field is used only for protecting the sheet ranges when granting editing rights to the specified user.</td>
+                        <td>定义用户的身份。 该字段仅用于在向指定用户授予编辑权限时保护工作表范围。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>
@@ -1059,6 +1059,6 @@ docEditor.showMessage(message);
         </li>
     </ul>
     <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - 仅对ONLYOFFICE 开发者版本可编辑。</em></span>
-    <span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+    <span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - 仅适用于ONLYOFFICE企业版和ONLYOFFICE开发者版</em></span>
 
 </asp:Content>

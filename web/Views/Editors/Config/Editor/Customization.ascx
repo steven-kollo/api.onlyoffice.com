@@ -386,11 +386,11 @@
                         <b>示例</b>: "Arial";
                     </li>
                     <li>
-                        <b>size</b> - the font size,
+                        <b>size</b> - 字体大小,
                         <br />
-                        <b>type</b>: string,
+                        <b>类型</b>: string,
                         <br />
-                        <b>example</b>: "11px".
+                        <b>示例</b>: "11px".
                     </li>
                 </ul>
             </td>
@@ -658,8 +658,8 @@
                         <b>示例</b>：true；
                     </li>
                     <li>
-                        <b>toolbar.draw</b> - defines if the <b>Draw</b> tab is displayed or hidden.
-                        The default value is <b>true</b>,
+                        <b>toolbar.draw</b> - 定义是否显示或隐藏<b>绘图</b>选项卡。
+                         默认值为<b>true</b>，
                         <br />
                         <b>type</b>: boolean,
                         <br />

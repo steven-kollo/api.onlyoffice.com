@@ -28,9 +28,9 @@
         <li>创建一个空的 <em>html</em> 文件以 <a href="<%= Url.Action("open") %>#apply">打开文档</a>。</li>
         <li>
             <p>
-                In the configuration script for Document Editor initialization, specify the event handler for the hint about mentioning users in the comments to be displayed.
+                在文档编辑器初始化的配置脚本中，为注释（要显示的)中提及用户的提示指定事件处理程序。
                 当用户输入 <b>+</b> 号时， <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件被调用，评论者可以选择其他用户在评论中提及。
-                The <em>data.c</em> parameter with the <em>mention</em> operation type is passed in this event.
+                此事件中传递具有<em>mention</em>操作类型的<em>data.c</em>参数。
             </p>
             <img alt="提及" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>" />
             <pre>

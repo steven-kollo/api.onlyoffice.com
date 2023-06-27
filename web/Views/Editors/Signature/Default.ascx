@@ -19,12 +19,12 @@
 
 <p>重新启动服务以使配置更改生效：</p>
 
-<p><b>For RPM/DEB packages:</b></p>
+<p><b>对于 RPM/DEB 软件包：</b></p>
 <pre>
 systemctl restart ds-*
 </pre>
 
-<p><b>For Docker:</b></p>
+<p><b>对于 Docker:</b></p>
 <pre>
 supervisorctl restart all
 </pre>
@@ -50,14 +50,14 @@ supervisorctl restart all
             <td>services.CoAuthoring.secret.browser.string</td>
             <td>
                 定义 <em>密钥</em>，用以在客户端生成到ONLYOFFICE文档的 <a href="<%= Url.Action("signature/browser") %>">浏览器请求</a> 令牌。
-                Deprecated since version 7.2, please use <a href="#services.CoAuthoring.secret.inbox.string">services.CoAuthoring.secret.inbox.string</a> instead.
+                自版本 7.2 起已弃用，请改用 <a href="#services.CoAuthoring.secret.inbox.string">services.CoAuthoring.secret.inbox.string</a>。
             </td>
             <td>string</td>
             <td>secret</td>
         </tr>
         <tr id="services.CoAuthoring.secret.inbox.string" class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
-            <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> with the commands from the <b>document storage service</b> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b> and a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> to ONLYOFFICE Docs since version 7.2.</td>
+            <td>定义<em>密钥</em>以在<a href="<%= Url.Action("signature/request") %>#incoming">传入 HTTP 请求（从<b>文档存储服务</b>到<b>文档命令服务</b>、<b>文档转换服务</b>和<b>文档生成器服务</b>）的命令</a>中生成令牌， 以及在客户端<a href="<%= Url.Action("signature/browser") %>">浏览器请求</a>中向 ONLYOFFICE Docs 发送请求（自版本 7.2 起）时生成令牌。</td>
             <td>string</td>
             <td>secret</td>
         </tr>

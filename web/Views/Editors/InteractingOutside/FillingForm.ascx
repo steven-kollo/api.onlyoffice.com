@@ -131,8 +131,8 @@ function onChangeContentControl(e) {
     </li>
 </ol>
 <note>
-    <p>Please note that the connector is available only for <b>ONLYOFFICE Developer Edition</b>.</p>
-    <p>This class is an additional feature which is available at extra cost. If you have any questions, please contact our sales team at <a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a>.</p>
+    <p>请注意，该连接器仅适用于 <b>ONLYOFFICE 开发者版本</b>。</p>
+    <p>此类是一项附加功能，需要额外付费。 如果您有任何疑问，请通过 <a href="mailto:sales@onlyoffice.com" target="_blank">sales@onlyoffice.com</a> 联系我们的销售团队。</p>
 </note>
 
 <script type="text/javascript">
@@ -170,7 +170,7 @@ function onChangeContentControl(e) {
         window.connector = docEditor.createConnector();
 
         connector.executeMethod("GetAllContentControls", null, function (data) {
-            setTimeout(function () { // without setTimeout, the first time the loop is executed, an array of content controls is returned
+            setTimeout(function () { // 没有setTimeout，第一次执行循环时，返回内容控件数组
                 for (let i = 0; i < data.length; i++) {
                     switch (data[i].Tag) {
                         case "Male":
