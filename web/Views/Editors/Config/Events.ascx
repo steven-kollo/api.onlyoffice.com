@@ -689,7 +689,7 @@ var onRequestRestore = function (event) {
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
-        "onRequestHistoryData": onRequestHistoryData,
+        "onRequestRestore": onRequestRestore,
         ...
     },
     ...
