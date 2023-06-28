@@ -466,7 +466,10 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "PluginsConfig", Namespace = "")]
             public class PluginsConfig
             {
-                [DataMember(Name = "pluginsData", IsRequired = true, EmitDefaultValue = false)]
+                [DataMember(Name = "autostart", EmitDefaultValue = false)]
+                public List<string> Autostart;
+
+                [DataMember(Name = "pluginsData", EmitDefaultValue = false)]
                 public List<string> PluginsData;
             }
 

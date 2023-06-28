@@ -19,7 +19,6 @@
         <ul class="page-navigation">
             <li class="nav-item active" data-view="viewedit">VIEW & EDIT</li>
             <li class="nav-item" data-view="co-edit">CO-EDIT</li>
-            <li class="nav-item" data-view="forms">FORMS</li>
             <li class="nav-item" data-view="customization">CUSTOMIZATION</li>
             <li class="nav-item" data-view="rebranding">REBRANDING</li>
             <li class="nav-item" data-view="plugins">PLUGINS</li>
@@ -215,6 +214,17 @@
             </div>
         </div>
 
+        <div id="plugins" class="control-panel hidden">
+            <div class="line">
+                <label for="editorConfig_plugins_autostart">Autostart</label>
+                <input type="text" id="editorConfig_plugins_autostart_[0]" name="editorConfig_plugins_autostart_[0]" value="asc.{c9d216a5-4f1a-49f2-9ff0-67c510a73523}">
+            </div>
+            <div class="line">
+                <label for="editorConfig_plugins_pluginsData">PluginsData</label>
+                <input type="text" id="editorConfig_plugins_pluginsData_[0]" name="editorConfig_plugins_pluginsData_[0]" value="https://nct.onlyoffice.com/ThirdParty/plugin/easybib/config.json">
+            </div>
+        </div>
+
         <div id="events" class="control-panel hidden">
             <div class="line">
                 <input type="checkbox" id="events_onAppReady" name="events_onAppReady" checked>
@@ -330,6 +340,7 @@
     <div id="configArea">
         <pre id="editor-page-html" class="hljs cs">
         </pre>
+        <a class="button copy-code">Copy code</a>
     </div>
 
 </asp:Content>
@@ -443,6 +454,9 @@
                             if (/\[(.+?)\]/.test(names[i + 1])) {
                                 prev[name] = prev[name] || [];
                                 i++;
+                                if (names.length - 1 <= i) {
+                                    prev[name].push(value);
+                                }
                             } else {
                                 prev[name] = prev[name] || {};
                             }
@@ -791,7 +805,7 @@ var onRequestUsers = function () {
 var onWarning = function () {
     console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
 };`
-                events += `onWarning : onWarning ,\n`
+                events += `onWarning : onWarning,`
             }
 
             $.ajax({
@@ -833,10 +847,10 @@ ${events}
         }
 
         function uuidv4() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+            return "apiwh" + "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx"
                 .replace(/[xy]/g, function (c) {
                     const r = Math.random() * 16 | 0,
-                        v = c == 'x' ? r : (r & 0x3 | 0x8);
+                        v = c == "x" ? r : (r & 0x3 | 0x8);
                     return v.toString(16);
                 });
         }
