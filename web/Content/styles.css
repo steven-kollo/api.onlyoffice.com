@@ -2851,6 +2851,7 @@ select {
     #controlFields #events label {
         cursor: pointer;
         text-transform: none;
+        font-size: 14px;
     }
 
     #controlFields .hidden {
@@ -2872,3 +2873,8 @@ select {
     display: inline-block;
     float: right;
 }
+    #configArea .hljs {
+        max-height: calc(100vh - 236px);
+        margin: 8px 0;
+        white-space: pre;
+    }
