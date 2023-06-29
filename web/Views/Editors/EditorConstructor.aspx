@@ -57,6 +57,14 @@
                 </select>
             </div>
             <div class="half-line">
+                <label for="editorConfig_lang">Language</label>
+                <input type="text" id="editorConfig_lang" name="editorConfig_lang" value="en" />
+            </div>
+            <div class="half-line">
+                <label for="editorConfig_region">Region</label>
+                <input type="text" id="editorConfig_region" name="editorConfig_region" value="en-US" />
+            </div>
+            <div class="half-line">
                 <label for="width">Width</label>
                 <input type="text" id="width" name="width" value="100%" />
             </div>

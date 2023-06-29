@@ -294,6 +294,9 @@ namespace ASC.Api.Web.Help.Helpers
             [DataMember(Name = "recent", EmitDefaultValue = false)]
             public List<RecentItem> Recent;
 
+            [DataMember(Name = "region", EmitDefaultValue = false)]
+            public string Region;
+
             [DataMember(Name = "templates", EmitDefaultValue = false)]
             public List<TemplatesConfig> Templates;
 
