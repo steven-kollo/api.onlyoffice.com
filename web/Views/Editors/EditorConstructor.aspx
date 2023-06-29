@@ -220,6 +220,19 @@
                 <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs">
                 <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
             </div>
+
+            <div class="line">
+                <label for="editorConfig_customization_goback_url">Goback Url</label>
+                <input type="text" id="editorConfig_customization_goback_url" name="editorConfig_customization_goback_url">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_logo_image">Logo Image</label>
+                <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_logo_url">Logo Url</label>
+                <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url">
+            </div>
         </div>
 
         <div id="rebranding" class="control-panel hidden">
