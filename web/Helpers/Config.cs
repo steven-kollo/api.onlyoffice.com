@@ -389,6 +389,9 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "toolbarNoTabs", EmitDefaultValue = false)]
                 public bool? ToolbarNoTabs;
 
+                [DataMember(Name = "uiTheme", EmitDefaultValue = false)]
+                public string UiTheme;
+
                 [DataMember(Name = "zoom", EmitDefaultValue = false)]
                 public int Zoom;
 

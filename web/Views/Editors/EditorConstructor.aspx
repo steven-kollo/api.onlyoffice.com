@@ -240,6 +240,15 @@
                     <option value="enable">Enable</option>
                 </select>
             </div>
+            <div class="line">
+                <label for="editorConfig_customization_uiTheme">UiTheme</label>
+                <select id="editorConfig_customization_uiTheme" name="editorConfig_customization_uiTheme">
+                    <option value="theme-classic-light">theme-classic-light</option>
+                    <option value="theme-light">theme-light</option>
+                    <option value="theme-dark">theme-dark</option>
+                    <option value="theme-contrast-dark">theme-contrast-dark</option>
+                </select>
+            </div>
         </div>
 
         <div id="rebranding" class="control-panel hidden">
