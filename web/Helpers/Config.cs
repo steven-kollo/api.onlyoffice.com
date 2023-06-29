@@ -374,6 +374,9 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "macros", EmitDefaultValue = false)]
                 public bool? Macros;
 
+                [DataMember(Name = "macrosMode", EmitDefaultValue = false)]
+                public string MacrosMode;
+
                 [DataMember(Name = "plugins", EmitDefaultValue = false)]
                 public bool? Plugins;
 

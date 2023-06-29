@@ -119,7 +119,7 @@
             </div>
         </div>
 
-        <div id="user" class="control-panel">
+        <div id="user" class="control-panel hidden">
             <div class="line">
                 <label for="editorConfig_user_id">Id:</label>
                 <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
@@ -220,7 +220,6 @@
                 <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs">
                 <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
             </div>
-
             <div class="line">
                 <label for="editorConfig_customization_goback_url">Goback Url</label>
                 <input type="text" id="editorConfig_customization_goback_url" name="editorConfig_customization_goback_url">
@@ -232,6 +231,14 @@
             <div class="line">
                 <label for="editorConfig_customization_logo_url">Logo Url</label>
                 <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_macrosMode">MacrosMode</label>
+                <select id="editorConfig_customization_macrosMode" name="editorConfig_customization_macrosMode">
+                    <option value="warn">Warn</option>
+                    <option value="disable">Disable</option>
+                    <option value="enable">Enable</option>
+                </select>
             </div>
         </div>
 
