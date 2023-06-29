@@ -42,8 +42,9 @@
         <li>
             <p>
                 Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
-                Each editor has its own initialization script:
+                Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. Otherwise, an error will occur.
             </p>
+            <p>Each editor has its own initialization script:</p>
             <pre>
 var documentEditor = new DocsAPI.DocEditor("placeholder1", {
     "document": {
@@ -52,7 +53,8 @@ var documentEditor = new DocsAPI.DocEditor("placeholder1", {
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "word"
+    "documentType": "word",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
 });
 
 var spreadsheetEditor = new DocsAPI.DocEditor("placeholder2", {
@@ -62,7 +64,8 @@ var spreadsheetEditor = new DocsAPI.DocEditor("placeholder2", {
         "title": "Example Spreadsheet Title.xlsx",
         "url": "https://example.com/url-to-example-spreadsheet.xlsx"
     },
-    "documentType": "cell"
+    "documentType": "cell",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
 });
 
 var presentationEditor = new DocsAPI.DocEditor("placeholder3", {
@@ -72,7 +75,8 @@ var presentationEditor = new DocsAPI.DocEditor("placeholder3", {
         "title": "Example Presentation Title.pptx",
         "url": "https://example.com/url-to-example-presentation.pptx"
     },
-    "documentType": "slide"
+    "documentType": "slide",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
 });
 ...
 </pre>

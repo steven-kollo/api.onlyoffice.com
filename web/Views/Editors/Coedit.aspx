@@ -35,6 +35,7 @@
             Where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
+            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. Otherwise, an error will occur.
             <pre>
 new DocsAPI.DocEditor("placeholder", {
     "document": {
@@ -49,7 +50,8 @@ new DocsAPI.DocEditor("placeholder", {
             "id": "78e1e841",
             "name": "John Smith"
         }
-    }
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
 });
 </pre>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
@@ -71,7 +73,8 @@ new DocsAPI.DocEditor("placeholder", {
             "id": "F89d8069ba2b",
             "name": "Kate Cage"
         }
-    }
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
 });
 </pre>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
@@ -111,6 +114,7 @@ new DocsAPI.DocEditor("placeholder", {
                 Add the script initializing the <b>Document Editor</b> with <em>key 1</em>.
                 The key is unknown and the URL for opening the file is specified.
             </p>
+            <p>Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. Otherwise, an error will occur.</p>
             <p>
                 Close the <b>Document Editor</b>.
             </p>
@@ -123,6 +127,7 @@ new DocsAPI.DocEditor("placeholder", {
         "url": "https://example.com/url-to-example-document.docx"
     },
     "documentType": "word",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     ...
 });
 </pre>
@@ -144,6 +149,7 @@ new DocsAPI.DocEditor("placeholder", {
         "url": "https://example.com/url-to-example-document2.docx"
     },
     "documentType": "word",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     ...
 });
 </pre>
@@ -169,6 +175,7 @@ new DocsAPI.DocEditor("placeholder", {
         "url": "https://example.com/url-to-example-document.docx"
     },
     "documentType": "word",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     ...
 });
 </pre>
@@ -200,6 +207,7 @@ new DocsAPI.DocEditor("placeholder", {
             "forcesave": true 
         }
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     ...
 });
 </pre>
@@ -230,6 +238,7 @@ new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "callbackUrl": "https://example.com/url-to-callback.ashx"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     ...
 });
 </pre>
@@ -254,6 +263,7 @@ new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "mode": "view"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     ...
 });
 </pre>
@@ -282,6 +292,7 @@ new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "mode": "edit"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
     ...
 });
 </pre>

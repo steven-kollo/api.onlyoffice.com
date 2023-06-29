@@ -728,6 +728,7 @@ docEditor.setReferenceData({
         "fileKey": "BCFA2CED",
         "instanceId": "https://example.com"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
     "url": "https://example.com/url-to-example-document.xlsx"
 });
 </pre>
