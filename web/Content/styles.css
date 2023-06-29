@@ -2858,7 +2858,7 @@ select {
         display: none;
     }
 
-    #controlFields #addButton {
+    #controlFields .add-button {
         width: 23px;
         height: 23px;
         border-radius: 3px;

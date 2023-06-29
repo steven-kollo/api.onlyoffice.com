@@ -113,7 +113,7 @@
         <div id="co-edit" class="control-panel hidden">
             <div id="co-edit-settings">
             </div>
-            <button id="addButton">+</button>
+            <button id="addButton_coedit" class="add-button">+</button>
         </div>
 
         <div id="customization" class="control-panel hidden">
@@ -217,11 +217,17 @@
         <div id="plugins" class="control-panel hidden">
             <div class="line">
                 <label for="editorConfig_plugins_autostart">Autostart</label>
-                <input type="text" id="editorConfig_plugins_autostart_[0]" name="editorConfig_plugins_autostart_[0]" value="asc.{c9d216a5-4f1a-49f2-9ff0-67c510a73523}">
+                <div id="plugins_autostart" class="line">
+                    <input type="text" id="editorConfig_plugins_autostart_[0]" name="editorConfig_plugins_autostart_[0]" value="asc.{c9d216a5-4f1a-49f2-9ff0-67c510a73523}">
+                </div>
+                <button id="addButton_plugins_autostart" class="add-button">+</button>
             </div>
             <div class="line">
                 <label for="editorConfig_plugins_pluginsData">PluginsData</label>
-                <input type="text" id="editorConfig_plugins_pluginsData_[0]" name="editorConfig_plugins_pluginsData_[0]" value="https://nct.onlyoffice.com/ThirdParty/plugin/easybib/config.json">
+                <div id="plugins_pluginsData" class="line">
+                    <input type="text" id="editorConfig_plugins_pluginsData_[0]" name="editorConfig_plugins_pluginsData_[0]" value="https://nct.onlyoffice.com/ThirdParty/plugin/easybib/config.json">
+                </div>
+                <button id="addButton_plugins_pluginsData" class="add-button">+</button>
             </div>
         </div>
 
@@ -379,8 +385,25 @@
             $("#" + view).removeClass("hidden");
         })
 
-        $("#addButton").on("click", function () {
+        $("#addButton_сoedit").on("click", function () {
             addSharingSettings();
+            updateConfig();
+        })
+
+        $("[id^='addButton_plugins_']").on("click", function () {
+            var parameter = this.id.split("_").pop();
+            var clone = $("#plugins_" + parameter).find("input[name='editorConfig_plugins_" + parameter + "_[0]']").clone();
+            var index = $("#plugins_" + parameter).find("input").length;
+
+            clone.attr('id', clone.attr('id').replace('0', index));
+            clone.attr('name', clone.attr('name').replace('0', index));
+            clone.appendTo("#plugins_" + parameter);
+            clone.wrap("<div class='line'></div>");
+
+            $("#controlFields").find("input[name='editorConfig_plugins_" + parameter + "_[" + index + "]']").change(function () {
+                updateConfig();
+            });
+
             updateConfig();
         })
 
