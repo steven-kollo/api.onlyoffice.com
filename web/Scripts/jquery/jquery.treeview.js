@@ -215,12 +215,9 @@
 				if ( current.length ) {
 					// TODO update the open/closed classes
 					var items = current.addClass("selected").parents("ul, li").add(current.next()).show();
-					var parent = current.addClass("selected").parents("ul").get(-1);
-					var header = parent.previousElementSibling;
-					if (header && header.classList.contains("treeheader")) {
-						parent = header;
-					}
-					document.getElementsByClassName("nav-list")[0].scrollTop = parent.offsetTop - 103;
+
+					var firstTreeheader = document.getElementsByClassName("treeheader")[0].offsetTop;
+					document.getElementsByClassName("nav-list")[0].scrollTop = current[0].offsetTop - (firstTreeheader.offsetTop - firstTreeheader.clientHeight);
 					if (settings.prerendered) {
 						// if prerendered is on, replicate the basic class swapping
 						items.filter("li")
