@@ -2752,3 +2752,8 @@ select {
     select:invalid {
         color: #CCCCCC;
     }
+
+.screenshot {
+    outline: 1px solid #EFEFEF;
+    outline-offset: -1px;
+}

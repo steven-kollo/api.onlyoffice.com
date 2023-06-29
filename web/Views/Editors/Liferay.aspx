@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Liferay ONLYOFFICE connector
+    ONLYOFFICE Connector for Liferay
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Liferay ONLYOFFICE connector</span>
+        <span class="hdr">ONLYOFFICE Connector for Liferay</span>
     </h1>
 
     <p>This <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.liferay.com/" target="_blank">Liferay</a> using ONLYOFFICE Docs.</p>
@@ -36,7 +36,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2 id="installing-plugin" class="copy-link">Installing Liferay ONLYOFFICE connector</h2>
+    <h2 id="installing-plugin" class="copy-link">Installing ONLYOFFICE Connector for Liferay</h2>
 
     <p>
         Either install it from <a href="https://web.liferay.com/marketplace/-/mp/application/171169174" target="_blank">Liferay Marketplace</a> 
@@ -45,7 +45,7 @@
     </p>
 
 
-    <h2 id="configuring" class="copy-link">Configuring Liferay ONLYOFFICE connector</h2>
+    <h2 id="configuring" class="copy-link">Configuring ONLYOFFICE Connector for Liferay</h2>
 
     <p>
         In order to configure connector, you must navigate to <b>System Settings</b> (<b>Control Panel -> Configuration -> System Settings</b>).
@@ -55,7 +55,7 @@
         Specify your own <b>Secret key</b> on the Liferay <b>System Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
 
-    <h2 id="compiling" class="copy-link">Compiling Liferay ONLYOFFICE connector</h2>
+    <h2 id="compiling" class="copy-link">Compiling ONLYOFFICE Connector for Liferay</h2>
 
     <p>
         Simply run <i>gradle build</i>.
@@ -88,6 +88,6 @@
 
 
     <br />
-    <p>Download the Liferay ONLYOFFICE connector <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">here</a>.</p>
+    <p>Download the ONLYOFFICE Connector for Liferay <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">here</a>.</p>
 
 </asp:Content>

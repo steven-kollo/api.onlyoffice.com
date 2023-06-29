@@ -130,7 +130,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -148,7 +148,7 @@
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.autosave</em> parameter.</div>
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="chat" class="copy-link">chat</td>
             <td>
                 Defines if the <b>Chat</b> menu button is displayed or hidden.
@@ -160,6 +160,11 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/chat.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="commentAuthorOnly" class="copy-link">commentAuthorOnly</td>
             <td>
                 Defines if the user can edit and delete only his comments.
@@ -169,7 +174,7 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="comments" class="copy-link">comments</td>
             <td>
                 Defines if the <b>Comments</b> menu button is displayed or hidden.
@@ -178,6 +183,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
+            </td>
         </tr>
         <tr>
             <td id="compactHeader" class="copy-link">compactHeader</td>
@@ -190,7 +200,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -205,7 +215,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.compactToolbar</em> parameter.</div>
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -218,7 +228,7 @@
             <td>boolean</td>
             <td>false</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="customer" class="copy-link">customer<a href="#requiredDescr" class="required">*</a></td>
             <td>
                 Contains the information which will be displayed in the editor <b>About</b> section and visible to all the editor users.
@@ -296,6 +306,11 @@
     "www": "example.com"
 }</td>
         </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/customer.png") %>" alt="" />
+            </td>
+        </tr>
         <tr>
             <td id="features" class="copy-link">features</td>
             <td>
@@ -344,7 +359,7 @@
                 <div class="note">Please note that in case <em>spellcheck</em> setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.features.spellcheck</em> parameter.</div>
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="feedback" class="copy-link">feedback</td>
             <td>
                 Defines settings for the <b>Feedback &amp; Support</b> menu button.
@@ -371,6 +386,11 @@
             <td>boolean or object</td>
             <td>true</td>
         </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/feedback.png") %>" alt="" />
+            </td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -383,13 +403,20 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Arial".
+                        <b>example</b>: "Arial";
+                    </li>
+                    <li>
+                        <b>size</b> - the font size,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "11px".
                     </li>
                 </ul>
             </td>
             <td>object</td>
             <td>{
-    "name": "Arial"
+    "name": "Arial", "size": "11px"
 }</td>
         </tr>
         <% } %>
@@ -450,7 +477,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -464,7 +491,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -483,7 +510,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -511,7 +538,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -651,6 +678,14 @@
                         <b>example</b>: true;
                     </li>
                     <li>
+                        <b>toolbar.draw</b> - defines if the <b>Draw</b> tab is displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
                         <b>toolbar.file</b> - defines the <b>File</b> tab settings. If this parameter is a boolean value, then it specifies
                         whether the <b>File</b> tab will be displayed or hidden. The default value is <b>true</b>,
                         <br />
@@ -775,6 +810,7 @@
     },
     "toolbar": {
         "collaboration": true,
+        "draw": true,
         "file": {
             "close": true,
             "info": true,
@@ -917,7 +953,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that it will only be available for the comments if the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is set.</div>
-                <img src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -1000,7 +1036,7 @@
                     Please use the <em>review</em> parameter instead.
                 </div>
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.review.hoverMode</em> and the <em>editorConfig.customization.review.reviewDisplay</em> parameters.</div>
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -1133,7 +1169,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -1147,7 +1183,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -1226,7 +1262,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/customization.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/customization.png") %>" alt="" />
             </td>
         </tr>
     </tbody>
@@ -1276,7 +1312,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"font": {
-                "name": "Arial"
+                "name": "Arial",
+                "size": "11px"
             },
             <% } %>"forcesave": false,
             "goback": {
@@ -1311,6 +1348,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 },
                 "toolbar": {
                     "collaboration": true,
+                    "draw": true,
                     "file": {
                         "close": true,
                         "info": true,
