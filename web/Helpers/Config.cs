@@ -261,6 +261,9 @@ namespace ASC.Api.Web.Help.Helpers
             [DataMember(Name = "callbackUrl", EmitDefaultValue = false)]
             public string CallbackUrl;
 
+            [DataMember(Name = "coEditing", EmitDefaultValue = false)]
+            public CoEditingConfig CoEditing;
+
             [DataMember(Name = "createUrl", EmitDefaultValue = false)]
             public string CreateUrl;
 
@@ -297,6 +300,16 @@ namespace ASC.Api.Web.Help.Helpers
             [DataMember(Name = "user", EmitDefaultValue = false)]
             public UserConfig User;
 
+
+            [DataContract(Name = "coEditing", Namespace = "")]
+            public class CoEditingConfig
+            {
+                [DataMember(Name = "mode", EmitDefaultValue = false)]
+                public string Mode;
+
+                [DataMember(Name = "change", EmitDefaultValue = false)]
+                public bool? Change;
+            }
 
             [DataContract(Name = "customization", Namespace = "")]
             public class CustomizationConfig

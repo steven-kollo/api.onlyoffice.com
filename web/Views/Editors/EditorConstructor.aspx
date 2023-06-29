@@ -111,6 +111,17 @@
         </div>
 
         <div id="co-edit" class="control-panel hidden">
+            <div class="line">
+                <label for="editorConfig_coEditing_mode">Mode</label>
+                <select id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
+                    <option value="fast">Fast</option>
+                    <option value="strict">Strict</option>
+                </select>
+            </div>
+            <div class="line">
+                <label for="editorConfig_coEditing_change">Change</label>
+                <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" checked>
+            </div>
             <div id="co-edit-settings">
             </div>
             <button id="addButton_coedit" class="add-button">+</button>
@@ -385,7 +396,7 @@
             $("#" + view).removeClass("hidden");
         })
 
-        $("#addButton_сoedit").on("click", function () {
+        $("#addButton_coedit").on("click", function () {
             addSharingSettings();
             updateConfig();
         })
