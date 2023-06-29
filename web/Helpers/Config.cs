@@ -393,6 +393,9 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataContract(Name = "anonymous", Namespace = "")]
                 public class AnonymousConfig
                 {
+                    [DataMember(Name = "label")]
+                    public string Label;
+
                     [DataMember(Name = "request")]
                     public bool Request;
                 }
@@ -523,6 +526,9 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "name", EmitDefaultValue = false)]
                 public string Name;
+
+                [DataMember(Name = "group", EmitDefaultValue = false)]
+                public string Group;
             }
         }
     }

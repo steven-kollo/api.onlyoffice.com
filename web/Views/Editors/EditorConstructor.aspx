@@ -18,6 +18,7 @@
     <div >
         <ul class="page-navigation">
             <li class="nav-item active" data-view="viewedit">VIEW & EDIT</li>
+            <li class="nav-item" data-view="user">USER</li>
             <li class="nav-item" data-view="co-edit">CO-EDIT</li>
             <li class="nav-item" data-view="customization">CUSTOMIZATION</li>
             <li class="nav-item" data-view="rebranding">REBRANDING</li>
@@ -115,6 +116,29 @@
                     <label for="document_permissions_protect"><input type="checkbox" id="document_permissions_protect" name="document_permissions_protect" checked />Protect</label>
                     <label for="document_permissions_review"><input type="checkbox" id="document_permissions_review" name="document_permissions_review" checked />Review</label>
                 </div>
+            </div>
+        </div>
+
+        <div id="user" class="control-panel">
+            <div class="line">
+                <label for="editorConfig_user_id">Id:</label>
+                <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
+            </div>
+            <div class="line">
+                <label for="editorConfig_user_name">Name:</label>
+                <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
+            </div>
+            <div class="line">
+                <label for="editorConfig_user_group">Group:</label>
+                <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_anonymous_request">Anonymous Request:</label>
+                <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" checked />
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_anonymous_label">Anonymous Label:</label>
+                <input type="text" id="editorConfig_customization_anonymous_label" name="editorConfig_customization_anonymous_label" value="Guest">
             </div>
         </div>
 
