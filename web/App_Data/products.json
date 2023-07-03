@@ -79,6 +79,28 @@
                "Item2":"apisystem/tariffsection"
             }
          ],
+         "JavaScript SDK":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"jssdk/"
+            },
+            {
+               "Item1":"Initialization modes",
+               "Item2":"jssdk/initmodes"
+            },
+            {
+               "Item1":"Config",
+               "Item2":"jssdk/config"
+            },
+            {
+               "Item1":"Methods",
+               "Item2":"jssdk/methods"
+            },
+            {
+               "Item1":"Events",
+               "Item2":"jssdk/events"
+            }
+         ],
          "More information":[
             {
                "Item1":"FAQ",
