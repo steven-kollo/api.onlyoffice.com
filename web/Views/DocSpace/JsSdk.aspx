@@ -10,5 +10,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%= Html.Partial("FrameSdk/"+ (Model ?? "Default")) %>
+    <%= Html.Partial("JsSdk/"+ (Model ?? "Default")) %>
 </asp:Content>

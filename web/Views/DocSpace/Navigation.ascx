@@ -104,36 +104,42 @@
 </ul>
 
 
-<div class="treeheader">Frame SDK</div>
+<div class="treeheader">JavaScript SDK</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("framesdk/") %>">Basic concepts</a>
+        <a href="<%= Url.Action("jssdk/") %>">Basic concepts</a>
     </li>
     <li>
-        <a href="<%= Url.Action("framesdk/initmethods") %>">Initialization methods</a>
+        <a href="<%= Url.Action("jssdk/initmodes") %>">Initialization modes</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("framesdk/initmethods/initeditor") %>">initEditor</a>
+                <a href="<%= Url.Action("jssdk/initmodes/manager") %>">Manager</a>
             </li>
             <li>
-                <a href="<%= Url.Action("framesdk/initmethods/initeditorviewer") %>">initEditorViewer</a>
+                <a href="<%= Url.Action("jssdk/initmodes/roomselector") %>">Room-selector</a>
             </li>
             <li>
-                <a href="<%= Url.Action("framesdk/initmethods/initfileselector") %>">initFileSelector</a>
+                <a href="<%= Url.Action("jssdk/initmodes/fileselector") %>">File-selector</a>
             </li>
             <li>
-                <a href="<%= Url.Action("framesdk/initmethods/initmanager") %>">initManager</a>
+                <a href="<%= Url.Action("jssdk/initmodes/editor") %>">Editor</a>
             </li>
             <li>
-                <a href="<%= Url.Action("framesdk/initmethods/initroomselector") %>">initRoomSelector</a>
+                <a href="<%= Url.Action("jssdk/initmodes/viewer") %>">Viewer</a>
             </li>
             <li>
-                <a href="<%= Url.Action("framesdk/initmethods/initsystem") %>">initSystem</a>
+                <a href="<%= Url.Action("jssdk/initmodes/system") %>">System</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("framesdk/config") %>">Config</a>
+        <a href="<%= Url.Action("jssdk/config") %>">Config</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("jssdk/methods") %>">Methods</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("jssdk/events") %>">Events</a>
     </li>
 </ul>
 

@@ -61,15 +61,17 @@ namespace ASC.Api.Web.Help.Controllers
                 "ApiSystem/TariffSection",
                 "ApiSystem/TariffSection/TariffGet",
                 "ApiSystem/TariffSection/TariffSet",
-                "FrameSdk",
-                "FrameSdk/InitMethods",
-                "FrameSdk/InitMethods/initEditor",
-                "FrameSdk/InitMethods/initEditorViewer",
-                "FrameSdk/InitMethods/initFileSelector",
-                "FrameSdk/InitMethods/initManager",
-                "FrameSdk/InitMethods/initRoomSelector",
-                "FrameSdk/InitMethods/initSystem",
-                "FrameSdk/Config",
+                "JsSdk",
+                "JsSdk/InitModes",
+                "JsSdk/InitModes/Manager",
+                "JsSdk/InitModes/RoomSelector",
+                "JsSdk/InitModes/FileSelector",
+                "JsSdk/InitModes/Editor",
+                "JsSdk/InitModes/Viewer",
+                "JsSdk/InitModes/System",
+                "JsSdk/Config",
+                "JsSdk/Methods",
+                "JsSdk/Events",
             };
 
         public ActionResult ApiSystem(string catchall)
@@ -111,13 +113,13 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult FrameSdk(string catchall)
+        public ActionResult JsSdk(string catchall)
         {
-            if (!_actionMap.Contains("framesdk/" + catchall, StringComparer.OrdinalIgnoreCase))
+            if (!_actionMap.Contains("jssdk/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
             }
-            return View("FrameSdk", (object)catchall);
+            return View("JsSdk", (object)catchall);
         }
 
         public ActionResult Batch()
