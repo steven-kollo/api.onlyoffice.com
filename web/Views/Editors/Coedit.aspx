@@ -51,7 +51,7 @@ new DocsAPI.DocEditor("placeholder", {
             "name": "John Smith"
         }
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiNzhlMWU4NDEiLCJuYW1lIjoiSm9obiBTbWl0aCJ9fX0.6AcBUCbys9kQ7S982Qm4w1romVg86kZ4ECNsxDff5zU"
 });
 </pre>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
@@ -74,7 +74,7 @@ new DocsAPI.DocEditor("placeholder", {
             "name": "Kate Cage"
         }
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiRjg5ZDgwNjliYTJiIiwibmFtZSI6IkthdGUgQ2FnZSJ9fX0.rdmhKLzXwXXVTABioKy3R2-HGMBY5u4pbZ_TVhW2rJs"
 });
 </pre>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
@@ -127,7 +127,7 @@ new DocsAPI.DocEditor("placeholder", {
         "url": "https://example.com/url-to-example-document.docx"
     },
     "documentType": "word",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifX0.GcpcY8sLCUDqbgqCLvPs6Z0xfBtayOy-GHEXYiZCpfs",
     ...
 });
 </pre>
@@ -149,7 +149,7 @@ new DocsAPI.DocEditor("placeholder", {
         "url": "https://example.com/url-to-example-document2.docx"
     },
     "documentType": "word",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IDIuZG9jeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQyLmRvY3gifX0.aegFVaZpkqc5bEYmF-PQYf3MMFg7QvAfWeOnfDJeuTg",
     ...
 });
 </pre>
@@ -175,7 +175,7 @@ new DocsAPI.DocEditor("placeholder", {
         "url": "https://example.com/url-to-example-document.docx"
     },
     "documentType": "word",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJNZ2V0bDNkWVVwcGYyIiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.5YvlbNVbXFddzKBdz_qPpqgUX_JrUHBWCGRQ5YgVp_w",
     ...
 });
 </pre>
@@ -207,7 +207,7 @@ new DocsAPI.DocEditor("placeholder", {
             "forcesave": true 
         }
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjdXN0b21pemF0aW9uIjp7ImZvcmNlc2F2ZSI6dHJ1ZX19fQ.dlIJqq6tH9ncQmXQV-gCi4Zc7sqYhGS5RwvpiIZGZXA",
     ...
 });
 </pre>
@@ -238,7 +238,7 @@ new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "callbackUrl": "https://example.com/url-to-callback.ashx"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.L53bCRlJyvIf-C7bcKYM2WMfmk4FeZIoeDaEpc5IxXA",
     ...
 });
 </pre>
@@ -263,7 +263,7 @@ new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "mode": "view"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJtb2RlIjoidmlldyJ9fQ.wpEk-zrrGq5hKHCm6sAhl_tb51n56th-q-K52Oeq1a4",
     ...
 });
 </pre>
@@ -292,7 +292,7 @@ new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "mode": "edit"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJtb2RlIjoiZWRpdCJ9fQ.rSc0yYe3_2u7N_uaxZcDQ6vC_d5ZWU5LFkkGSow5UDY",
     ...
 });
 </pre>
