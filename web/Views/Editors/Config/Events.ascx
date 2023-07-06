@@ -35,7 +35,7 @@
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
-    <li><a href="#onRequestUsers">onRequestUsers</a> - the commenter can select other users for mention in the comments.</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
 </ul>
 
@@ -146,7 +146,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs.
-            The error message is sent in the <em>data</em> parameter.
+            The error message is sent in the <em>data</em> parameter. A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
         </p>
         <div class="header-gray">Example</div>
         <pre>
@@ -219,7 +219,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The bookmark data is received in the <em>data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
             If the method is not declared the <em>Get Link</em> button will not be displayed.
         </p>
-        <img alt="onMakeActionLink" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>"/>
+        <img class="screenshot" alt="onMakeActionLink" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onMakeActionLink = function (event){
@@ -316,7 +316,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             If the method is not declared the <em>Document from Storage</em> button will not be displayed.
             <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
         </p>
-        <img alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
+        <img class="screenshot" alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestCompareFile = function () {
@@ -369,7 +369,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="note">
             <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.
         </div>
-        <img alt="onRequestEditRights" src="<%= Url.Content("~/content/img/editor/onRequestEditRights.png") %>"/>
+        <img class="screenshot" alt="onRequestEditRights" src="<%= Url.Content("~/content/img/editor/onRequestEditRights.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestEditRights = function () {
@@ -393,7 +393,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
             If the method and the <a href="#onRequestHistoryData">onRequestHistoryData</a> method is not declared the <em>Version History</em> button will not be displayed.
         </p>
-        <img alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
+        <img class="screenshot" alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistory = function () {
@@ -444,7 +444,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             When the function is called, the editor must be initialized again, in editing mode.
             If the method is not declared the <em>Close History</em> button will not be displayed.
         </p>
-        <img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
+        <img class="screenshot" alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryClose = function () {
@@ -468,7 +468,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The document version number is sent in the <em>data</em> parameter.
             If the method and the <a href="#onRequestHistory">onRequestHistory</a> method is not declared the <em>Version History</em> button will not be displayed.
         </p>
-        <img alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
+        <img class="screenshot" alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryData = function (event) {
@@ -509,7 +509,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method with the specified command.
             If the method is not declared the <em>Image from Storage</em> button will not be displayed.
         </p>
-        <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
+        <img class="screenshot" alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestInsertImage = function (event) {
@@ -547,7 +547,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
             If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.
         </p>
-        <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
+        <img class="screenshot" alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestMailMergeRecipients = function () {
@@ -619,7 +619,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <b id="onRequestRename" class="copy-link">onRequestRename</b> - the function called when the user is trying to rename the file by clicking the <em>Rename...</em> button.
         </p>
         <div class="note">Until version 6.0 the <em>Rename...</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> is set to <b>true</b>.</div>
-        <img alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
+        <img class="screenshot" alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestRename = function (event) {
@@ -650,7 +650,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The <em>Restore</em> button is displayed for the previous document versions only and hidden for the current one.
             Until version 5.5 the <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b>.
         </div>
-        <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
+        <img class="screenshot" alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestRestore = function (event) {
@@ -709,7 +709,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The title of the document, its type and the absolute URL to the document to be downloaded are sent in the <em>data</em> parameter.
             If the method is not declared the <em>Save Copy as...</em> button will not be displayed.
         </p>
-        <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
+        <img class="screenshot" alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestSaveAs = function (event) {
@@ -765,7 +765,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             When the access rights is changed, you must call the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method to update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
             If the method is not declared the <em>Change access rights</em> button will not be displayed.
         </p>
-        <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
+        <img class="screenshot" alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestSharingSettings = function () {
@@ -796,22 +796,34 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the commenter can select other users for mention in the comments.
-            To set the users list you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
-        </p>
-        <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</p>
+        <p>Starting from version 7.4, the operation type can be specified in the <em>data.c</em> parameter. It can take two values - <em>mention</em> or <em>protect</em>.
+        Prior to version 7.4, only the mention operation was available with this event.</p>
+        <p>To set a list of users, you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method which can take different lists of users depending on the specified operation type.
+            The <em>onRequestUsers</em> event is called once for each <em>c</em> type when the corresponding operation is performed.
+            If the <em>setUsers</em> is called with an empty list, then the <em>onRequestUsers</em> event will fire again.</p>
+        <div class="img-block-2">
+            <div>
+                <img class="screenshot" alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+            </div>
+            <div>
+                <img alt="Protect range" src="<%= Url.Content("~/content/img/editor/protect-range.png") %>"/>
+            </div>
+        </div>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestUsers = function () {
+var onRequestUsers = function (event) {
     docEditor.setUsers({
+        "c": event.data.c,
         "users": [
             {
                 "email": "john@example.com",
+                "id": "78e1e841",
                 "name": "John Smith"
             },
             {
                 "email": "kate@example.com",
+                "id": "F89d8069ba2b",
                 "name": "Kate Cage"
             },
             ...
@@ -832,7 +844,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onWarning" class="copy-link">onWarning</b> - the function called when a warning occurs.
-            The warning message is sent in the <em>data</em> parameter.
+            The warning message is sent in the <em>data</em> parameter. A list of error codes can be found <a href="https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js" target="_blank">here</a>.
         </p>
         <div class="header-gray">Example</div>
         <pre>
