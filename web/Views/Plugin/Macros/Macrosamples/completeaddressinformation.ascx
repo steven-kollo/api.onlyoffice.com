@@ -23,7 +23,7 @@
     const oWorksheet = Api.GetActiveSheet()
     let row = 2
     makeRequest(oWorksheet.GetRange(`A${row}`).GetText())
-
+    
     // REQUEST
     function makeRequest(ADDRESS) {
         if (ADDRESS === '') return
@@ -36,7 +36,7 @@
     function addressToRequest (address) {
         return address.replaceAll(' ', '%20').replaceAll(',', '%2C')
     }
-
+    
     // RESPONSE
     function successFunction(response) {
         const data = createAddressDetailsObject(response)
@@ -48,6 +48,7 @@
         if (response.features.length === 0) {
             return { error: 'Address not found' }
         }
+        console.log(response)
         let data = {
             country: response.features[0].properties.country,
             county: response.features[0].properties.county,
@@ -65,7 +66,7 @@
         })
         return data
     }
-
+    
     // PASTE
     function pasteAddressDetails(data) {
         const oRange = oWorksheet.GetRange(`B${row}:F${row}`)
@@ -73,12 +74,14 @@
             oRange.SetValue([[data.error]])
         } else {
             oRange.SetValue([
-                [data.country],
-                [data.county],
-                [data.city],
-                [data.post_code],
-                [data.full_address_line]
-            ])
+                [
+                    data.country,
+                    data.county,
+                    data.city,
+                    data.post_code,
+                    data.full_address_line
+                ]
+            ]);
         }
         // Execute recursively until "Address" value is empty
         row++
@@ -102,4 +105,4 @@
 
 <div class="header-gray">Result</div>
 </br >
-<img alt="Write data" src="<%= Url.Content("~/content/img/plugins/complete_address_information.png") %>" />
+<img class="screenshot" alt="Write data" src="<%= Url.Content("~/content/img/plugins/complete_address_information.png") %>" />
