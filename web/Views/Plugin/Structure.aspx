@@ -20,10 +20,10 @@
 
     <ul>
         <li>
-            <a href="<%= Url.Action("config") %>">config.json</a> - plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
+            <a href="<%= Url.Action("indexhtml") %>">index.html</a> - an HTML page that contains all the plugin code and connects the <em>config.json</em> and <em>plugin.js</em> (the base file needed for work with plugins) files.
         </li>
         <li>
-            <a href="<%= Url.Action("indexhtml") %>">index.html</a> - plugin entry point, connecting the <em>config.json</em> and <em>plugin.js</em> (the base file needed for work with plugins) files.
+            <a href="<%= Url.Action("config") %>">config.json</a> - plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
         </li>
         <li>
             <a href="<%= Url.Action("code") %>">plugin code (.js file)</a> - the plugin code file itself containing the JavaScript code of the plugin you want to connect to the editors.

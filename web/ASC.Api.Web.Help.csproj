@@ -3976,6 +3976,7 @@
     <Content Include="Views\Plugin\Changelog.aspx" />
     <Content Include="Views\Plugin\Code.aspx" />
     <Content Include="Views\Plugin\Config.aspx" />
+    <Content Include="Views\Plugin\Developing.aspx" />
     <Content Include="Views\Plugin\eventpartial.aspx" />
     <Content Include="Views\Plugin\Events.aspx" />
     <Content Include="Views\Plugin\example.aspx" />
@@ -4051,6 +4052,7 @@
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
     <Content Include="Views\Plugin\methodpartial.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
+    <Content Include="Views\Plugin\Publishing.aspx" />
     <Content Include="Views\Plugin\scope.aspx" />
     <Content Include="Views\Plugin\sectionpartial.aspx" />
     <Content Include="Views\Plugin\Structure.aspx" />

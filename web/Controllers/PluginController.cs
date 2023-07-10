@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Code",
                 "Config",
                 "changelog",
+                "developing",
                 "events",
                 "example",
                 "example/addcommentincell",
@@ -110,6 +111,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/unhideallrows",
                 "macros/macrosamples/unmergecellrange",
                 "macros/macrosamples/writedatatoworksheetcell",
+                "publishing",
                 "scope",
                 "Structure",
                 "Styles",
@@ -166,6 +168,11 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult createInputHelper()
         {
             return RenderBaseMethod("createInputHelper");
+        }
+
+        public ActionResult Developing()
+        {
+            return View();
         }
 
         public ActionResult Events(string catchall)
@@ -300,6 +307,11 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Plugin(string catchall)
         {
             return RenderBaseMethod(catchall);
+        }
+
+        public ActionResult Publishing()
+        {
+            return View();
         }
 
         public ActionResult scope()

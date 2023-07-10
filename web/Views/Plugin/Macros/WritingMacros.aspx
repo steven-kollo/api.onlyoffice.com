@@ -28,7 +28,7 @@
     // ... your code goes here ...
 })();</pre>
         </li>
-        <li>Let's consult the <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API documentation</a> to see what we need to complete our task:
+        <li>Let's consult the <a href="<%= Url.Action("spreadsheetapi", "docbuilder") %>">Builder.API documentation</a> to see what we need to complete our task:
             <ul>
                 <li>First, get the current worksheet using the <a href="<%= Url.Action("spreadsheetapi/api/getactivesheet", "docbuilder") %>">GetActiveSheet</a> method:
                     <pre>var oWorksheet = Api.GetActiveSheet();</pre>

@@ -19,10 +19,10 @@
     </li>
 </ul>
 
-<div class="treeheader">Plugins</div>
+<div class="treeheader">Usage API</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("config") %>">Configuring plugin</a>
+        <a href="<%= Url.Action("config") %>">Config</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("variations") %>">Plugin variations</a>
@@ -33,10 +33,10 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("indexhtml") %>">Creating plugin entry point</a>
+        <a href="<%= Url.Action("indexhtml") %>">index.html</a>
     </li>
     <li>
-        <a href="<%= Url.Action("code") %>">Coding plugin</a>
+        <a href="<%= Url.Action("code") %>">Plugin object</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("plugin") %>">Methods</a>
@@ -112,28 +112,34 @@
                     <% } %>
                 </ul>
             </li>
-            <li>
-                <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
-            </li>
-            <li>
-                <a href="<%= Url.Action("info") %>">info object</a>
-            </li>
-            <li>
-                <a href="<%= Url.Action("inputhelper") %>">InputHelper</a>
-                <ul>
-                    <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["inputHelper"].Methods) { %>
-                        <li>
-                            <a href="<%= Url.Action(string.Format("inputHelper/{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
-                        </li>
-                    <% } %>
-                </ul>
-            </li>
-            <li>
-                <a href="<%= Url.Action("global") %>">Global</a>
-            </li>
         </ul>
     </li>
+    <li>
+        <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("info") %>">info object</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("inputhelper") %>">InputHelper</a>
+        <ul>
+            <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["inputHelper"].Methods) { %>
+                <li>
+                    <a href="<%= Url.Action(string.Format("inputHelper/{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
+                </li>
+            <% } %>
+        </ul>
+    </li>
+    <li>
+        <a href="<%= Url.Action("global") %>">Global</a>
+    </li>
+</ul>
 
+<div class="treeheader">Plugins</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("developing") %>">Developing plugins</a>
+    </li>
     <li>
         <a href="<%= Url.Action("installation/") %>">Adding plugins</a>
         <ul>
@@ -152,6 +158,9 @@
     </li>
     <li>
         <a href="<%= Url.Action("styles") %>">Plugin styles</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("publishing") %>">Publishing plugins</a>
     </li>
     <li>
         <a href="<%= Url.Action("example/") %>">Plugin examples</a>
@@ -267,7 +276,7 @@
         <a href="<%= Url.Action("debugging") %>">Debugging</a>
     </li>
     <li>
-        <a href="<%= Url.Action("convertingvbamacros") %>">Converting macros</a>
+        <a href="<%= Url.Action("convertingvbamacros") %>">Converting VBA macros</a>
     </li>
     <li>
         <a href="<%= Url.Action("macrosamples/") %>">Macro samples</a>

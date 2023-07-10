@@ -19,6 +19,7 @@
     <p>
         ONLYOFFICE <a href="https://www.onlyoffice.com/office-suite.aspx" target="_blank">Docs</a> and <a href="https://www.onlyoffice.com/desktop.aspx" target="_blank">Desktop Editors</a> offer support for plugins allowing developers to add specific features to the editors that are not directly related to the OOXML format.
     </p>
+    <p>Plugin is an HTML page that is embedded in the editor and uses API to work with it.</p>
     <p>
         This documentation describes:
     </p>
@@ -46,6 +47,7 @@
     </ul>
     <p>Code samples are available at <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>.</p>
     <p>If you are looking for ready-to-use plugins, please visit <a href="https://www.onlyoffice.com/en/app-directory" target="_blank">ONLYOFFICE App Directory</a>.</p>
+    <p>To quickly install and update plugins, you can use <a href="<%= Url.Action("installation/onpremises") %>#plugin-manager">ONLYOFFICE Plugin Marketplace</a>.</p>
 
 
     <h2>How to create plugins</h2>
