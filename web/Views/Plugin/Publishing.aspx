@@ -18,8 +18,11 @@
     <ol>
         <li>Create a fork of the <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io" target="_blank">https://github.com/ONLYOFFICE/onlyoffice.github.io</a> repository.</li>
         <li>Add your plugin to this fork.</li>
-        <li>Create a <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io/pulls" target="_blank">pull request</a> from your fork to <em>https://github.com/ONLYOFFICE/onlyoffice.github.io</em>.
-            You can use the <b>Submit your own plugin</b> button in the Plugin Manager window.</li>
+        <li>
+            <p>Create a <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io/pulls" target="_blank">pull request</a> from your fork to <em>https://github.com/ONLYOFFICE/onlyoffice.github.io</em>.
+            You can use the <b>Submit your own plugin</b> button in the Plugin Manager window.</p>
+            <img alt="Submit plugin" class="screenshot" src="<%= Url.Content("~/content/img/plugins/submit-plugin.png") %>" />
+        </li>
         <li>If your plugin works properly, your pull request will be approved and the plugin will appear in the marketplace.</li>
     </ol>
 

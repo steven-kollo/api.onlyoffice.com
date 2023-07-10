@@ -33,6 +33,19 @@
         <li>Find the plugin you need and click <b>Install</b>.</li>
     </ol>
     <img alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/desktop-plugin-manager.png") %>" />
+
+    <p>If you want to add your own plugin, you can do it manually:</p>
+    <ol>
+        <li>
+            <p>Pack all the <a href="<%= Url.Action("structure", "plugin") %>">plugin files</a> within the plugin folder into a <b>zip</b> archive and change its extension to <em>.plugin</em>
+        (all the plugin files and subfolders must be at the archive root).</p>
+            <note>If you download a plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">GitHub</a>, unpack the plugin folder first and then archive its elements only.</note>
+        </li>
+        <li>Open the <b>Plugin Manager</b> on the <b>Plugins</b> tab.</li>
+        <li>Go to the <b>My plugins</b> tab and click the <b>Install plugin manually</b> button.</li>
+        <li>Choose your created archive and click <b>Open</b>.</li>
+    </ol>
+    <img alt="Install plugin manually" class="screenshot" src="<%= Url.Content("~/content/img/plugins/install-manually.png") %>" />
     <p>The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the <b>Plugins</b> tab.</p>
 
 
@@ -40,7 +53,7 @@
     <p><b>Step 1.</b> Create a new folder in the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
     <ul style="list-style: none;">
         <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
-        <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\</em></li>
+        <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\</em></li>
         <li>For Mac OS - <em>/Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/</em></li>
     </ul>
 

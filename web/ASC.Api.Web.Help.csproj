@@ -2477,6 +2477,7 @@
     <Content Include="Content\img\plugins\currencies-usd-eur.png" />
     <Content Include="Content\img\plugins\debugger.png" />
     <Content Include="Content\img\plugins\desktop-plugin-manager.png" />
+    <Content Include="Content\img\plugins\developer-console.png" />
     <Content Include="Content\img\plugins\edge-developer-mode.png" />
     <Content Include="Content\img\plugins\edge-extension-folder.png" />
     <Content Include="Content\img\plugins\edge-extension.png" />
@@ -2524,6 +2525,7 @@
     <Content Include="Content\img\plugins\import-csv-macro.png" />
     <Content Include="Content\img\plugins\insert_id.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
+    <Content Include="Content\img\plugins\install-manually.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\plugins\macro_window.png" />
@@ -2545,6 +2547,8 @@
     <Content Include="Content\img\plugins\complete_address_information.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
     <Content Include="Content\img\plugins\remove-shapes.png" />
+    <Content Include="Content\img\plugins\sdkjs-plugins-folder.png" />
+    <Content Include="Content\img\plugins\submit-plugin.png" />
     <Content Include="Content\img\plugins\text_area.png" />
     <Content Include="Content\img\plugins\text_field.png" />
     <Content Include="Content\img\plugins\unhide_all_rows.png" />

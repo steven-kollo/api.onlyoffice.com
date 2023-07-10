@@ -40,6 +40,7 @@ http-server -p &lt;port&gt; --cors
 Asc.editor.installDeveloperPlugin("https://&lt;documentserver&gt;:&lt;port&gt;/config.json");
 </pre>
                     <p>where <b>documentserver</b> is the name of the server, and <b>port</b> is the port number with the ONLYOFFICE Docs installed.</p>
+                    <img alt="Developer console" class="screenshot" src="<%= Url.Content("~/content/img/plugins/developer-console.png") %>" />
                     <p>The plugin will be displayed within the <b>Plugins</b> tab. You can edit the plugin and reload it to see the changes.</p>
                 </li>
             </ol>
@@ -55,10 +56,11 @@ Asc.editor.installDeveloperPlugin("https://&lt;documentserver&gt;:&lt;port&gt;/c
                     <p>The plugin will appear in the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
                     <ul>
                         <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
-                        <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\</em></li>
+                        <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\</em></li>
                         <li>For Mac OS - <em>/Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/</em></li>
                     </ul>
-                    <p>A plugin <b>GUID</b> will be used as the folder name. For example, <em>{91EAC419-EF8B-440C-A960-B451C7DF3A37}</em>.</p>
+                    <p>A plugin <b>GUID</b> will be used as the folder name. For example, <em>{07FD8DFA-DFE0-4089-AL24-0730933CC80A}</em>.</p>
+                    <img alt="Sdkjs-plugins folder" class="screenshot" src="<%= Url.Content("~/content/img/plugins/sdkjs-plugins-folder.png") %>" />
                     <p>You can edit the plugin and reload it to see the changes.</p>
                 </li>
             </ol>
