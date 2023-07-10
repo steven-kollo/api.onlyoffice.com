@@ -59,9 +59,9 @@
         }
       ]
     },
-    "GetAutorName": {
+    "GetAuthorName": {
       "memberof": "ApiCommentReply",
-      "name": "GetAutorName",
+      "name": "GetAuthorName",
       "description": "<p>Returns the comment reply author's name.</p>",
       "tags": {
         "typeofeditors": [
@@ -76,9 +76,9 @@
       "see": null,
       "inherits": null
     },
-    "SetAutorName": {
+    "SetAuthorName": {
       "memberof": "ApiCommentReply",
-      "name": "SetAutorName",
+      "name": "SetAuthorName",
       "description": "<p>Sets the comment reply author's name.</p>",
       "tags": {
         "typeofeditors": [
@@ -95,7 +95,7 @@
       "params": [
         {
           "type": "string",
-          "name": "sAutorName",
+          "name": "sAuthorName",
           "description": "<p>The comment reply author's name.</p>",
           "optional": false
         }

@@ -842,20 +842,24 @@
     "GetAllAddinFields": {
       "memberof": "Api",
       "name": "GetAllAddinFields",
-      "description": "<p>Get all addin fields from the current document</p>",
+      "description": "<p>Returns all addin fields from the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "Array.<AddinFieldData>"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
     "UpdateAddinFields": {
       "memberof": "Api",
       "name": "UpdateAddinFields",
-      "description": "<p>Update addin fields with the specified data</p>",
+      "description": "<p>Updates the addin fields with the specified data.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -868,7 +872,7 @@
         {
           "type": "Array.<AddinFieldData>",
           "name": "arrData",
-          "description": "<p>An array of addin field data</p>",
+          "description": "<p>An array of addin field data.</p>",
           "optional": false
         }
       ]
@@ -876,7 +880,7 @@
     "AddAddinField": {
       "memberof": "Api",
       "name": "AddAddinField",
-      "description": "<p>Create new addin field</p>",
+      "description": "<p>Creates a new addin field with the data specified in the request.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -889,7 +893,7 @@
         {
           "type": "AddinFieldData",
           "name": "data",
-          "description": "<p>addin field data</p>",
+          "description": "<p>Addin field data.</p>",
           "optional": false
         }
       ]
@@ -897,7 +901,7 @@
     "RemoveFieldWrapper": {
       "memberof": "Api",
       "name": "RemoveFieldWrapper",
-      "description": "<p>Remove field wrapper, leave only the content of the field</p>",
+      "description": "<p>Removes a field wrapper, leaving only the field content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -910,7 +914,7 @@
         {
           "type": "string",
           "name": "fieldId",
-          "description": "<p>remove wrapper for specified field, if not specified then remove from current field</p>",
+          "description": "<p>Field ID. If it is not specified, then the wrapper of the current field is removed.</p>",
           "optional": true
         }
       ]
@@ -918,7 +922,7 @@
     "SetEditingRestrictions": {
       "memberof": "Api",
       "name": "SetEditingRestrictions",
-      "description": "<p>Set document editing restrictions</p>",
+      "description": "<p>Sets the document editing restrictions.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -931,7 +935,116 @@
         {
           "type": "DocumentEditingRestrictions",
           "name": "restrictions",
+          "description": "<p>The document editing restrictions.</p>",
           "optional": false
+        }
+      ]
+    },
+    "GetCurrentWord": {
+      "memberof": "Api",
+      "name": "GetCurrentWord",
+      "description": "<p>Returns the current word.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TextPartType",
+          "name": "type",
+          "description": "<p>Specifies if the whole word or only its part will be returned.</p>",
+          "optional": true,
+          "defaultValue": "\"entirely\""
+        }
+      ]
+    },
+    "ReplaceCurrentWord": {
+      "memberof": "Api",
+      "name": "ReplaceCurrentWord",
+      "description": "<p>Replaces the current word with the specified string.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "replaceString",
+          "description": "<p>Replacement string.</p>",
+          "optional": false
+        },
+        {
+          "type": "TextPartType",
+          "name": "type",
+          "description": "<p>Specifies if the whole word or only its part will be replaced.</p>",
+          "optional": true,
+          "defaultValue": "\"entirely\""
+        }
+      ]
+    },
+    "GetCurrentSentence": {
+      "memberof": "Api",
+      "name": "GetCurrentSentence",
+      "description": "<p>Returns the current sentence.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TextPartType",
+          "name": "type",
+          "description": "<p>Specifies if the whole sentence or only its part will be returned.</p>",
+          "optional": true,
+          "defaultValue": "\"entirely\""
+        }
+      ]
+    },
+    "ReplaceCurrentSentence": {
+      "memberof": "Api",
+      "name": "ReplaceCurrentSentence",
+      "description": "<p>Replaces the current sentence with the specified string.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "replaceString",
+          "description": "<p>Replacement string.</p>",
+          "optional": false
+        },
+        {
+          "type": "TextPartType",
+          "name": "type",
+          "description": "<p>Specifies if the whole sentence or only its part will be replaced.</p>",
+          "optional": true,
+          "defaultValue": "\"entirely\""
         }
       ]
     }

@@ -10,7 +10,7 @@ const downloadFiles = true;
 const parseDocs = true;
 
 const files = {
-    "sdkjs/master": {
+    "sdkjs/release/v7.4.0": {
         "word.js": "word/apiBuilder.js",
         "cell.js": "cell/apiBuilder.js",
         "slide.js": "slide/apiBuilder.js",
@@ -20,7 +20,7 @@ const files = {
         "sharedPluginMethods.js": "common/apiBase_plugins.js",
         "pluginBase.js": "common/plugins/plugin_base_api.js"
     },
-    "sdkjs-forms/master": {
+    "sdkjs-forms/release/v7.4.0": {
         "form.js": "apiBuilder.js",
         "formPluginMethods.js": "apiPlugins.js"
     }

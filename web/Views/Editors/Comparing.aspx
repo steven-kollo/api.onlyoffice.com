@@ -39,6 +39,7 @@
 var onRequestCompareFile = function() {
     docEditor.setRevisedFile({
         "fileType": "docx",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
         "url": "https://example.com/url-to-example-document.docx"
     });
 };
@@ -54,11 +55,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In order to select a document for comparing, the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method must be called:
+                In order to select a document for comparing, the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method must be called.
+                When calling this method, the token must be added to validate the parameters.
             </p>
             <pre>
 docEditor.setRevisedFile({
     "fileType": "docx",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
     "url": "https://example.com/url-to-example-document.docx"
 });                     
 </pre>

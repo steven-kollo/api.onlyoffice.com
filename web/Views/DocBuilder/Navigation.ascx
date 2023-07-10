@@ -123,6 +123,9 @@
     <li>
         <a href="<%= Url.Action("classlist") %>">List of classes</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("debugging") %>">Debugging</a>
+    </li>
 </ul>
 
 <div class="treeheader">Builder.Framework</div>

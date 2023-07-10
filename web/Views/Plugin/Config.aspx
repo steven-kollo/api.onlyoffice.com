@@ -50,6 +50,7 @@
         <li><a href="#size">size</a></li>
         <li><a href="#store">store</a></li>
         <li><a href="#store-background">store.background</a></li>
+        <li><a href="#store-categories">store.categories</a></li>
         <li><a href="#store-icons">store.icons</a></li>
         <li><a href="#store-screenshots">store.screenshots</a></li>
         <li><a href="#url">url</a></li>
@@ -304,6 +305,23 @@
 }</td>
             </tr>
             <tr class="tablerow">
+                <td id="store-categories" class="copy-link">variations.store.categories</td>
+                <td>
+                    Plugin categories in <b>ONLYOFFICE Plugin Marketplace</b>:
+                    <ul>
+                        <li>"all" - All,</li>
+                        <li>"recommended" - Recommended,</li>
+                        <li>"devTools" - Developer tools,</li>
+                        <li>"work" - Work,</li>
+                        <li>"entertainment" - Entertainment,</li>
+                        <li>"communication" - Communication,</li>
+                        <li>"specAbilities" - Special abilities.</li>
+                    </ul>
+                </td>
+                <td>array of strings</td>
+                <td>["specAbilities", "work"]</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="store-icons" class="copy-link">variations.store.icons</td>
                 <td>
                     Plugin icon image files used in <b>ONLYOFFICE Plugin Marketplace</b>:
@@ -419,6 +437,7 @@
                         "light": "#F5F5F5",
                         "dark": "#444444"
                     },
+                    "categories": ["specAbilities", "work"],
                     "icons": {
                         "light": "resources/store/icons",
                         "dark" : "resources/store/icons"
