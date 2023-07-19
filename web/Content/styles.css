@@ -168,9 +168,10 @@ body {
 .layout-table-header {
     border-bottom: 1px solid #333;
     height: 71px;
-    /*min-width: 952px;*/
     width: 100%;
     background-color: #333;
+    position: fixed;
+    z-index: 1000;
 }
 
 .main-page .layout-table-header {
@@ -208,6 +209,7 @@ body {
 .background-body {
     width: 100%;
     background: linear-gradient( 90deg, #f5f5f5 50%, #fff 0%);
+    padding-top: 72px;
 }
 
 .mainBody {
@@ -220,7 +222,7 @@ body {
     position: sticky;
     padding: 28px 0px;
     padding-right: 11px;
-    top: 0;
+    top: 72px;
     max-height: 100vh;
 }
 
@@ -2066,10 +2068,6 @@ article {
 
     .top-nav a:hover {
         border-bottom: 0px;
-    }
-
-    .layout-table-header {
-        position: relative;
     }
 
     .bottommenu {
