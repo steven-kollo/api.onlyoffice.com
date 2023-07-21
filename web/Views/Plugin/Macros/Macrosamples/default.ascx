@@ -116,6 +116,12 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
         <p>In this example we are inserting a unique id into the OFORM.</p></div>
         <p class="block_more"><a href="<%= Url.Action("macrosamples/insertid") %>">More</a></p>
     </li>
+     <li class="macro-example">
+        <div class="macro-info"><a href="<%= Url.Action("macrosamples/completeaddressinformation") %>"><div class="example-img complete_address_information"></div></a>
+        <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/completeaddressinformation") %>">Complete address information</a></h2>
+        <p>In this example we are completing address information in the spreadsheet.</p></div>
+        <p class="block_more"><a href="<%= Url.Action("macrosamples/completeaddressinformation") %>">More</a></p>
+    </li>
 </ul>
 
 <h2>Support</h2>

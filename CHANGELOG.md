@@ -1,5 +1,8 @@
 # Change Log
 
+- macros: added the Complete address information macro 
+- plugins: added the store.categories config parameter
+
 ## 4.1.0
 - editors: added a link to the list of error codes
 - editors: added the Protecting ranges page
