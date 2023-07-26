@@ -6,12 +6,12 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Integrating ONLYOFFICE Document Builder into your own application
+    Overview
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Integrating ONLYOFFICE Document Builder into your own application</span>
+        <span class="hdr">Overview</span>
     </h1>
 
     <p class="dscr">To start integrating <b>ONLYOFFICE Document Builder</b> into your own application you need to do the following:</p>
@@ -41,7 +41,7 @@
             <p>Run the example on your computer to get acquainted with the basic <b>ONLYOFFICE Document Builder</b> features before you start creating your own application. If everything is alright you will see the example website page with the form elements like the ones below.</p>
         </li>
     </ol>
-    <p>Or you can try and write the application yourself using the <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">integration API documentation</a>.</p>
+    <p>Or you can try and write the application yourself using the <a href="<%= Url.Action("framework") %>">Builder.Framework</a>.</p>
 
     <%
         Html.RenderPartial("DocBuilderShared/DocBuilderAction");

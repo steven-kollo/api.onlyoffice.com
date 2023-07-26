@@ -26,7 +26,7 @@
         <li><b>Builder.API</b> is the JavaScript API to work with the document editor. It contains classes and methods for every document type: <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>,
             <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>, and <a href="<%= Url.Action("formapi") %>">Form API</a>.</li>
         <li><b>Builder.Framework</b> is a software tool that contains a collection of libraries, classes, and functions that are used to develop applications.
-        Currently, the following frameworks are available: <a href="<%= Url.Action("integrationapi/c") %>">C++</a>, <a href="<%= Url.Action("integrationapi/net") %>">.Net</a>, COM.</li>
+        Currently, the following frameworks are available: <a href="<%= Url.Action("integrationapi/c") %>">C++</a>, <a href="<%= Url.Action("integrationapi/com") %>">COM</a>, <a href="<%= Url.Action("integrationapi/net") %>">.Net</a>.</li>
         <li><b>Builder.App</b> is the <em>docbuilder.exe</em> executable file which can be run from your application with the <em>.docbuilder</em> script file as a parameter to it.</li>
         <li><b>Builder.Server</b> is the code for the sample of ONLYOFFICE Document Builder integration into your application.</li>
     </ul>
@@ -36,7 +36,7 @@
     %>
 
     <h2>Want to learn how it works?</h2>
-    <p><a href="<%= Url.Action("gettingstarted") %>">Get started here</a> and find out the main principles of <b>ONLYOFFICE Document Builder</b> work, or read the <a href="<%= Url.Action("integrationapi") %>">Integration API</a>, <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>, <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a> or <a href="<%= Url.Action("formapi") %>">Form API</a> articles to find out how to automate your document creation using <b>ONLYOFFICE Document Builder</b>.</p>
+    <p><a href="<%= Url.Action("gettingstarted") %>">Get started here</a> and find out the main principles of <b>ONLYOFFICE Document Builder</b> work, or read the <a href="<%= Url.Action("framework") %>">Builder.Framework</a>, <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>, <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a> or <a href="<%= Url.Action("formapi") %>">Form API</a> articles to find out how to automate your document creation using <b>ONLYOFFICE Document Builder</b>.</p>
 
     <h2>Get help</h2>
 

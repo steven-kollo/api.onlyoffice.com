@@ -23,7 +23,7 @@
         and some other OLE object parameters).</p>
     
     <p>This object is used to change the object data and to send additional parameters when executing the 
-        <a href="<%= Url.Action("executecommand") %>">window.Asc.plugin.executeCommand</a> method. For example, if the document content is changed and recalculation is needed, 
+        <a href="<%= Url.Action("callcommand") %>">window.Asc.plugin.callcommand</a> method. For example, if the document content is changed and recalculation is needed, 
         the parameter <a href="#recalculate">recalculate</a> must be set to <em>true</em>. 
         This action is necessary because the recalculation process is asynchronous. Moreover, some other data might need to be uploaded (e.g. a font or something else).</p>
     
@@ -123,7 +123,7 @@ window.Asc.plugin.button = function (id) {
     _info.imgSrc = window.g_board.getResult(_info.widthPix, _info.heightPix).image;
     _info.data = window.g_board.getData();
     var _code = "Api." + _method + "(" + JSON.stringify(_info) + ");";
-    this.executeCommand("close", _code);
+    this.callCommand("close", _code);
 };
 </pre>
 
@@ -165,7 +165,7 @@ window.Asc.plugin.init = function () {
     sScript += 'oParagraph.AddText(\'Hello word!\');';
     sScript += 'oDocument.InsertContent([oParagraph]);';
     window.Asc.plugin.info.recalculate = true;
-    this.executeCommand("close", sScript);
+    this.callCommand("close", sScript);
 };
 </pre>
 

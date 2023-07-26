@@ -24,7 +24,7 @@
         This documentation describes:
     </p>
     <ul>
-        <li>How to <a href="<%= Url.Action("structure") %>">build</a>, <a href="<%= Url.Action("localization") %>">localize</a>, run, test and publish a plugin</li>
+        <li>How to <a href="<%= Url.Action("structure") %>">build</a>, <a href="<%= Url.Action("localization") %>">localize</a>, run, <a href="<%= Url.Action("developing") %>">test</a> and <a href="<%= Url.Action("publishing") %>">publish</a> a plugin</li>
         <li>How to <a href="<%= Url.Action("writingmacros") %>">write</a>, <a href="<%= Url.Action("debugging") %>">debug</a> and run a macro 
             or <a href="<%= Url.Action("convertingvbamacros") %>">convert</a> VBA macros to use in ONLYOFFICE</li>
         <li>How to use ONLYOFFICE <a href="<%= Url.Action("plugin") %>">methods</a> and <a href="<%= Url.Action("events") %>">events</a></li>
@@ -56,9 +56,9 @@
     <ol>
         <li>Learn the fundamental concepts for building plugins on the <a href="<%= Url.Action("gettingstarted") %>">Getting started with plugins</a> page 
             and write code that defines the plugin appearance and behavior.</li>
-        <li>After building the plugin, test it thoroughly and make sure the plugin looks and works as you expected. 
+        <li>After building the plugin, <a href="<%= Url.Action("developing") %>">test</a> it thoroughly and make sure the plugin looks and works as you expected. 
             Try to anticipate the problems that might occur and suggest your solutions to them.</li>
-        <li>Now you can use the plugin on your own or suggest it for publishing by contacting us at <a href="mailto:marketing@onlyoffice.com" target="_blank">marketing@onlyoffice.com</a>.</li>
+        <li>Now you can use the plugin on your own or suggest it for <a href="<%= Url.Action("publishing") %>">publishing</a> by creating a pull request to the <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io" target="_blank">plugin marketplace repository</a>.</li>
     </ol>
 
 

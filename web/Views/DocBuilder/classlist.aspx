@@ -15,7 +15,7 @@
         <span class="hdr">List of all ONLYOFFICE Document Builder classes and methods</span>
     </h1>
 
-    <h2 id="Integration"><a href="<%= Url.Action("integrationapi/c") %>">Integration API (C++ wrapper)</a></h2>
+    <h2 id="Integration"><a href="<%= Url.Action("integrationapi/c") %>">Integration API (C++)</a></h2>
     <h5 class="builder_page_class">
         <a href="<%= Url.Action("integrationapi/c/cdocbuilder") %>">CDocBuilder</a>
     </h5>
@@ -284,7 +284,263 @@
     </table>
     <div class="mobile-content"></div>
 
-    <h2 id="Integration"><a href="<%= Url.Action("integrationapi/net") %>">Integration API (.Net wrapper)</a></h2>
+    <h2 id="Integration"><a href="<%= Url.Action("integrationapi/com") %>">Integration API (COM)</a></h2>
+    <h5 class="builder_page_class">
+        <a href="<%= Url.Action("integrationapi/com/cdocbuilder") %>">CDocBuilder</a>
+    </h5>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/closefile") %>">CloseFile</a></td>
+                <td>Closes the file to stop working with it.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/createfile") %>">CreateFile</a></td>
+                <td>Creates a new file.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/createinstance") %>">CreateInstance</a></td>
+                <td>Creates an instance of the <em>CDocBuilder</em> class.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/dispose") %>">Dispose</a></td>
+                <td>Unloads the <b>ONLYOFFICE Document Builder</b> from the application memory when it is no longer needed.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/execute") %>">Execute</a></td>
+                <td>Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF).
+                    The command returns the <em>I_DOCBUILDER_VALUE**</em> value.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/executecommand") %>">ExecuteCommand</a></td>
+                <td>Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF).
+                    The command returns the <em>VARIANT_BOOL*</em> value.
+                </td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/getcontext") %>">GetContext</a></td>
+                <td>Returns the current JS <a href="<%= Url.Action("integrationapi/com/cdocbuildercontext") %>">context</a>.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/initialize") %>">Initialize</a></td>
+                <td>Initializes the <b>ONLYOFFICE Document Builder</b> as a library for the application to be able to work with it.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/issavewithdoctrenderermode") %>">IsSaveWithDoctrendererMode</a></td>
+                <td>Specifies if the doctrenderer mode is used when building a document or getting content from the editor when saving a file.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/openfile") %>">OpenFile</a></td>
+                <td>Opens the document file which will be edited and saved afterwards.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/run") %>">Run</a></td>
+                <td>Runs the <b>ONLYOFFICE Document Builder</b> executable.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/runtext") %>">RunText</a></td>
+                <td>Runs all the commands for the document creation using a single command.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/savefile") %>">SaveFile</a></td>
+                <td>Saves the file after all the changes are made.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/setproperty") %>">SetProperty</a></td>
+                <td>Sets an argument to the builder class which can be trasferred to the program outside the <a href="<%= Url.Action("integrationapi/com/cdocbuilder/executecommand") %>">CDocBuilder.ExecuteCommand</a> method.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/settmpfolder") %>">SetTmpFolder</a></td>
+                <td>Sets the path to the folder where the program will temporarily save files needed for the program correct work.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuilder/writedata") %>">WriteData</a></td>
+                <td>Writes data to the log file.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mobile-content"></div>
+
+    <h5 class="builder_page_class">
+        <a href="<%= Url.Action("integrationapi/com/cdocbuildercontext") %>">CDocBuilderContext</a>
+    </h5>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontext/createarray") %>">CreateArray</a></td>
+                <td>Creates an array, an analogue of <em>new Array (length)</em> in JS.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontext/createnull") %>">CreateNull</a></td>
+                <td>Creates a null value, an analogue of <em>null</em> in JS.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontext/createobject") %>">CreateObject</a></td>
+                <td>Creates an empty object, an analogue of <em>{}</em> in JS.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontext/createscope") %>">CreateScope</a></td>
+                <td>Creates a context scope.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontext/createtypedarray") %>">CreateTypedArray</a></td>
+                <td>Creates a Uint8Array value, an analogue of <em>Uint8Array</em> in JS.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontext/createundefined") %>">CreateUndefined</a></td>
+                <td>Creates an undefined value, an analogue of <em>undefined</em> in JS.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontext/getglobal") %>">GetGlobal</a></td>
+                <td>Returns the global object for the current context.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontext/iserror") %>">IsError</a></td>
+                <td>Checks for errors in JS.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mobile-content"></div>
+
+    <h5 class="builder_page_class">
+        <a href="<%= Url.Action("integrationapi/com/cdocbuildercontextscope") %>">CDocBuilderContextScope</a>
+    </h5>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildercontextscope/close") %>">Close</a></td>
+                <td>Closes the current scope.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mobile-content"></div>
+
+    <h5 class="builder_page_class">
+        <a href="<%= Url.Action("integrationapi/com/cdocbuildervalue") %>">CDocBuilderValue</a>
+    </h5>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/call") %>">Call</a></td>
+                <td>Calls the specified Document Builder method.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/clear") %>">Clear</a></td>
+                <td>Clears the object.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/createinstance") %>">CreateInstance</a></td>
+                <td>Creates an instance of the <em>CDocBuilderValue</em> class.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/get") %>">Get</a></td>
+                <td>Returns an array value by its index.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/getlength") %>">GetLength</a></td>
+                <td>Returns the length if this object is an array/typed array.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/getproperty") %>">GetProperty</a></td>
+                <td>Returns a property of this object.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isarray") %>">IsArray</a></td>
+                <td>Returns true if this object is an array.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isbool") %>">IsBool</a></td>
+                <td>Returns true if this object is a boolean value.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isdouble") %>">IsDouble</a></td>
+                <td>Returns true if this object is a double value.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isempty") %>">IsEmpty</a></td>
+                <td>Returns true if this object is empty.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isfunction") %>">IsFunction</a></td>
+                <td>Returns true if this object is a function.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isint") %>">IsInt</a></td>
+                <td>Returns true if this object is an integer.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isnull") %>">IsNull</a></td>
+                <td>Returns true if this object is null.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isobject") %>">IsObject</a></td>
+                <td>Returns true if this object is an object.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isstring") %>">IsString</a></td>
+                <td>Returns true if this object is a string.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/istypedarray") %>">IsTypedArray</a></td>
+                <td>Returns true if this object is a typed array.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/isundefined") %>">IsUndefined</a></td>
+                <td>Returns true if this object is undefined.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/set") %>">Set</a></td>
+                <td>Sets an array value by its index.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/setproperty") %>">SetProperty</a></td>
+                <td>Sets a property to this object.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/tobool") %>">ToBool</a></td>
+                <td>Converts this object to a boolean value.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/todouble") %>">ToDouble</a></td>
+                <td>Converts this object to a double value.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/toint") %>">ToInt</a></td>
+                <td>Converts this object to an integer.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/com/cdocbuildervalue/tostring") %>">ToString</a></td>
+                <td>Converts this object to a string.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mobile-content"></div>
+
+    <h2 id="Integration"><a href="<%= Url.Action("integrationapi/net") %>">Integration API (.Net)</a></h2>
     <h5 class="builder_page_class">
         <a href="<%= Url.Action("integrationapi/net/cdocbuilder") %>">CDocBuilder</a>
     </h5>

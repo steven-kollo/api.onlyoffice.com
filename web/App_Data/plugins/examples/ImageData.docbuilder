@@ -9,5 +9,5 @@ window.saveImage = function () {
         "height": nHeight
     };
     window.Asc.plugin.executeMethod ("PutImageDataToSelection", [oImageData]);
-    window.Asc.plugin.executeCommand("close", "");
+    window.Asc.plugin.callCommand("close", "");
 };

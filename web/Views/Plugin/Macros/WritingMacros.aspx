@@ -64,6 +64,17 @@
     <p>Paste the code above to the macros window and click <b>Run</b>. The table rows from 1 to 200 will be colored alternately in less than a second.</p>
     <img alt="Alternate raws" src="<%= Url.Content("~/content/img/plugins/alternate-raws.png") %>" />
 
+    <h2 id="events" class="copy-link">Subscribing to events</h2>
+    <p>To subscribe to the specified event and call the callback function when the event fires, use the <a href="<%= Url.Action("textdocumentapi/api/attachevent", "docbuilder") %>">attachEvent</a> method.</p>
+    <p>For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:</p>
+    <pre>
+Api.attachEvent("asc_onHyperlinkClick", function(){
+    console.log("HYPERLINK!!!");
+});
+</pre>
+    <p>When you click any hyperlink in a document, the <b>asc_onHyperlinkClick</b> event will be executed and the <em>"HYPERLINK!!!"</em> message will appear in the console.</p>
+    <img alt="Click hyperlink" class="screenshot" src="<%= Url.Content("~/content/img/plugins/click-hyperlink.png") %>" />
+
     <h2 id="assign-macro" class="copy-link">Assigning macros</h2>
     <p>In the spreadsheet editor, you can assign a macro to the graphic object:</p>
     <ol>

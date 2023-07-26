@@ -146,6 +146,10 @@ CDocBuilder.SaveFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX, file_path);
                     <td>"png"</td>
                     <td>AVS_OFFICESTUDIO_FILE_IMAGE</td>
                 </tr>
+                <tr class="tablerow">
+                    <td>"html"</td>
+                    <td>AVS_OFFICESTUDIO_FILE_DOCUMENT_HTML_IN_CONTAINER</td>
+                </tr>
             </tbody>
         </table>
         <div class="mobile-content"></div>

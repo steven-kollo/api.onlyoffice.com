@@ -26,19 +26,17 @@
 "nameLocale": {
     "de": "Code hervorheben",
     "es": "Resaltar el código",
-    "fr": "Code en surbrillance",
-    "ru": "Подсветка кода"
+    "fr": "Code en surbrillance"
 }</pre>
 
-    <p>The complete translations in the <a href="<%= Url.Action("config") %>">config.json</a> for the <a target="_blank" href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/scripts/code.js">highlighting plugin code</a> will look the following way:</p>
+    <p>The complete translations in the <a href="<%= Url.Action("config") %>">config.json</a> for the <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode">highlighting plugin code</a> will look the following way:</p>
 
     <pre>{
     "name": "Highlight code",
     "nameLocale": {
         "de": "Code hervorheben",
         "es": "Resaltar el código",
-        "fr": "Code en surbrillance",
-        "ru": "Подсветка кода"
+        "fr": "Code en surbrillance"
     },
     ...,
     "variations": [
@@ -47,8 +45,7 @@
             "descriptionLocale": {
                 "de": "Code hervorheben",
                 "es": "Resaltar el código",
-                "fr": "Code en surbrillance",
-                "ru": "Подсветка кода"
+                "fr": "Code en surbrillance"
             },
             ...,
             "buttons": [
@@ -57,8 +54,7 @@
                     "textLocale": {
                         "de": "Abbrechen",
                         "es": "Cancelar",
-                        "fr": "Annuler",
-                        "ru": "Отмена"
+                        "fr": "Annuler"
                     },
                     ...
                 }
@@ -93,8 +89,7 @@ pluginCode.js</pre>
     "cs-CZ",
     "de-DE",
     "es-ES",
-    "fr-FR",
-    "ru-RU"
+    "fr-FR"
 ]
 </pre>
 
@@ -113,7 +108,6 @@ pluginCode.js</pre>
     es-ES.json
     fr-FR.json
     langs.json
-    ru-RU.json
 config.json
 index.html
 pluginCode.js</pre>

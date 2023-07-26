@@ -49,6 +49,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "example/autocomplete",
                 "example/chess",
                 "example/clippy",
+                "example/contextmenuandevents",
                 "example/countwordsandcharacters",
                 "example/default",
                 "example/extendedcomments",
@@ -239,6 +240,16 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult FormMethods(string catchall)
         {
             return RenderSectionOrMethod("formPluginMethods", "api", catchall);
+        }
+
+        public ActionResult attachContextMenuClickEvent()
+        {
+            return RenderBaseMethod("attachContextMenuClickEvent");
+        }
+
+        public ActionResult attachEvent()
+        {
+            return RenderBaseMethod("attachEvent");
         }
 
         public ActionResult getInputHelper()

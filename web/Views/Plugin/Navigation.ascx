@@ -181,6 +181,9 @@
                 <a href="<%= Url.Action("example/clippy") %>">Clippy</a>
             </li>
             <li>
+                <a href="<%= Url.Action("example/contextmenuandevents") %>">Context menu and events</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("example/countwordsandcharacters") %>">Count words and characters</a>
             </li>
             <li>

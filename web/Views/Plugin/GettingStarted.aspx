@@ -47,7 +47,7 @@
 
     <h2>Step 2. Coding</h2>
 
-    <p>Develop a plugin. Follow the plugin structure described <a href="<%= Url.Action("structure") %>">here</a>.
+    <p><a href="<%= Url.Action("developing") %>">Develop</a> a plugin. Follow the plugin structure described <a href="<%= Url.Action("structure") %>">here</a>.
         The plugin folder must contain three files required for the plugin to work: <a href="<%= Url.Action("config") %>">config.json</a>,
         <a href="<%= Url.Action("indexhtml") %>">index.html</a>, <a href="<%= Url.Action("code") %>">pluginCode.js</a>.</p>
     <img alt="Structure" src="<%= Url.Content("~/content/img/plugins/plugins-structure.png") %>" />
@@ -104,6 +104,7 @@ var URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-
 </pre>
             <p>The <em>onlyoffice.github.io/store/plugin-dev/extension</em> folder is a new extension. Upload it to the <a href="<%= Url.Action("installation/cloud") %>#upload-extensions">browser</a>,
                 run your ONLYOFFICE Document Server and find the plugin in the <a href="<%= Url.Action("installation/onpremises") %>#plugin-manager">Plugin Manager</a>.</p>
+            <p>To debug ONLYOFFICE plugins in the web editors, follow the instructions <a href="<%= Url.Action("developing") %>#web">here</a>.</p>
             <note>Please note that this is important to open your plugin in the <b>Plugin Manager</b> and check how it looks like in the <b>My Plugins</b> tab both in the light and dark themes.
                 Improve the plugin display if necessary.</note>
             <img alt="Plugin manager" src="<%= Url.Content("~/content/img/plugins/plugin-manager.png") %>" />

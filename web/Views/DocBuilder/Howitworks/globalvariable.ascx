@@ -5,7 +5,7 @@
 </h1>
 
 <p class="dscr">There is always a chance that you will need to exchange the data among the documents. For example, you might need to open some document, copy style from it, or some data values, close the document, create a new one and paste the copied data to it or use it to form some report.</p>
-<p>But once you close the file (using the <a href="<%= Url.Action("integrationapi/cdocbuilder/closefile") %>">CDocBuilder.CloseFile</a> method), all the variable data you worked with will be void and cleared, and you will not be able to use it with any other file.</p>
+<p>But once you close the file (using the <a href="<%= Url.Action("integrationapi/c/cdocbuilder/closefile") %>">CDocBuilder.CloseFile</a> method), all the variable data you worked with will be void and cleared, and you will not be able to use it with any other file.</p>
 <p>To exchange the data between the files <em>GlobalVariable</em> is introduced.</p>
 <p>What you need, is to create a variable in the first opened or created file using the <em>GlobalVariable</em> method, e.g.:</p>
 <pre>

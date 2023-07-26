@@ -1687,6 +1687,10 @@ ul.buider_page_methods_list,
     display: none;
 }
 
+pre.spoiler_code {
+    display: none;
+}
+
 .spoiler_heading {
     color: #808080;
     cursor: pointer;
@@ -1698,6 +1702,10 @@ ul.buider_page_methods_list,
 }
     .spoiler_changelog {
         background-position-x: 35px;
+    }
+
+    .spoiler_plugin {
+        background-position-x: 75px;
     }
 
 span.yes, span.no {
