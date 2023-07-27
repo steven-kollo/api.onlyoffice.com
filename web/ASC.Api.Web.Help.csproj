@@ -2274,7 +2274,6 @@
     <Content Include="Content\img\desktop\debugging.png" />
     <Content Include="Content\img\desktop\encryption-enabled.png" />
     <Content Include="Content\img\desktop\extended_comments.png" />
-    <Content Include="Content\img\desktop\macos-terminal.png" />
     <Content Include="Content\img\desktop\plugins_folder.png" />
     <Content Include="Content\img\desktop\plugin_settings.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
