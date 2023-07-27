@@ -68,8 +68,7 @@
             <ol>
                 <li>Press <b>Command+Space</b>.</li>
                 <li>
-                    <p>In the appeared <b>Spotlight</b> window, type <em>Terminal</em> in the search line:</p>
-                    <p><img alt="MacOS terminal" src="<%= Url.Content("~/content/img/desktop/macos-terminal.png") %>" /></p>
+                    <p>In the appeared <b>Spotlight</b> window, type <em>Terminal</em> in the search line.</p>
                 </li>
                 <li>Choose the <b>Terminal</b> option. The terminal will be opened.</li>
                 <li>
