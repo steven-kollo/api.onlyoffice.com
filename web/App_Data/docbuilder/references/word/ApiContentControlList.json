@@ -1,0 +1,154 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiContentControlList",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiContentControlList class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "\"contentControlList\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllItems": {
+      "memberof": "ApiContentControlList",
+      "name": "GetAllItems",
+      "description": "<p>Returns a collection of the ApiContentControlListEntry of a list.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiContentControlListEntry>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetElementsCount": {
+      "memberof": "ApiContentControlList",
+      "name": "GetElementsCount",
+      "description": "<p>Gets items count of the list of values of combobox/listbox.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParent": {
+      "memberof": "ApiContentControlList",
+      "name": "GetParent",
+      "description": "<p>Gets parent content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiInlineLvlSdt",
+          "ApiBlockLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Add": {
+      "memberof": "ApiContentControlList",
+      "name": "Add",
+      "description": "<p>Adds the new value to list of values of combobox/dropdown list.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>Specifies the display text for the list item..</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sValue",
+          "description": "<p>Specifies the value of the list item.</p>",
+          "optional": true,
+          "defaultValue": "sText"
+        },
+        {
+          "type": "number",
+          "name": "nIndex",
+          "description": "<p>position to add.</p>",
+          "optional": true,
+          "defaultValue": "this.GetElementsCount()"
+        }
+      ]
+    },
+    "Clear": {
+      "memberof": "ApiContentControlList",
+      "name": "Clear",
+      "description": "<p>Clears the list of values of combobox/dropdown list.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetItem": {
+      "memberof": "ApiContentControlList",
+      "name": "GetItem",
+      "description": "<p>Gets the item of values of combobox/dropdown list.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiContentControlListEntry"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nIndex",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "events": {},
+  "comment": "/**\n\t * Class representing a list values of combobox/dropdown list content control.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing a list values of combobox/dropdown list content control.</p>",
+  "scope": "global",
+  "params": []
+}

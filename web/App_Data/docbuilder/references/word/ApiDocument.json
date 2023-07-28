@@ -170,7 +170,8 @@
       },
       "returns": [
         [
-          "ApiSection"
+          "ApiSection",
+          "null"
         ]
       ],
       "see": null,
@@ -280,7 +281,7 @@
       },
       "returns": [
         [
-          "object"
+          "CommentReport"
         ]
       ],
       "see": null,

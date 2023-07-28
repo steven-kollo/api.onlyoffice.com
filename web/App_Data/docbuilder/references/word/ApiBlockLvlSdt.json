@@ -753,6 +753,23 @@
         }
       ]
     },
+    "GetDropdownList": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetDropdownList",
+      "description": "<p>Checks if the content control is a form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiContentControlList"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "ToJSON": {
       "memberof": "ApiBlockLvlSdt",
       "name": "ToJSON",

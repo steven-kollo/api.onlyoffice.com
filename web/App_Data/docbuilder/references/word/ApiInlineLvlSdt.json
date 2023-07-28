@@ -619,6 +619,23 @@
           "optional": false
         }
       ]
+    },
+    "GetDropdownList": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetDropdownList",
+      "description": "<p>Checks if the content control is a form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiContentControlList"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "events": {},

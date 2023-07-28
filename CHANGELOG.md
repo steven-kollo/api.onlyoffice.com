@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: v7.5.0
 - macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
 
