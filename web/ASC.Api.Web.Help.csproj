@@ -3908,7 +3908,7 @@
     <Content Include="Views\DocBuilder\Integrationapi\com\cdocbuildervalue\tobool.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\com\cdocbuildervalue\todouble.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\com\cdocbuildervalue\toint.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\comc\cdocbuildervalue\tostring.ascx" />
+    <Content Include="Views\DocBuilder\Integrationapi\com\cdocbuildervalue\tostring.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\com\cdocbuilder\closefile.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\com\cdocbuilder\createfile.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\com\cdocbuilder\createinstance.ascx" />
