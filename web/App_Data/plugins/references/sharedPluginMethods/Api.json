@@ -1004,6 +1004,12 @@
           "name": "bShow",
           "description": "<p>The flag specifies whether the button is shown (<strong>true</strong>) or hidden (<strong>false</strong>).</p>",
           "optional": false
+        },
+        {
+          "type": "string",
+          "name": "align",
+          "description": "<p>The parameter indicates whether the button will be displayed on the right side of the window or on the left (<em>left</em> by default).</p>",
+          "optional": false
         }
       ]
     },
