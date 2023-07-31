@@ -2382,6 +2382,7 @@
     <Content Include="Content\img\Editor\onRequestRename.png" />
     <Content Include="Content\img\Editor\onRequestRestore.png" />
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
+    <Content Include="Content\img\Editor\onRequestSelectDocument.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
     <Content Include="Content\img\Editor\opening.svg" />
