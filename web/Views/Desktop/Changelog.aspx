@@ -19,7 +19,7 @@
 
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
-        <li></li>
+        <li>Added the <a href="<%= Url.Action("addingdms/loginlogout") %>#uiTheme">uiTheme</a> parameter to the <em>portal:login</em> command.</li>
     </ul>
 
     <h2 id="71" class="copy-link">Version 7.1</h2>
