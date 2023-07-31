@@ -18,7 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
-        <li></li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestOpen">events.onRequestOpen</a> event.</li>
     </ul>
 
     <h2 id="74" class="copy-link">Version 7.4</h2>
