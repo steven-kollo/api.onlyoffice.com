@@ -50,11 +50,12 @@ AscDesktopEditor.execCommand (command, parameters)
     Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
 <pre>
 {
-"displayName": "user name", 
-"email": "user@email.addr",
-"domain": "domain name",
-"provider": "provider",
-"userId": "user id"
+    "displayName": "user name", 
+    "email": "user@email.addr",
+    "domain": "domain name",
+    "provider": "provider",
+    "uiTheme": "theme",
+    "userId": "user id"
 }
 </pre>
 
@@ -108,6 +109,25 @@ AscDesktopEditor.execCommand (command, parameters)
             <td>"onlyoffice"</td>
         </tr>
         <tr class="tablerow">
+            <td id="uiTheme" class="copy-link">uiTheme</td>
+            <td>
+                Defines the editor theme settings.
+                It can be set in two ways:
+                <ul>
+                    <li><b>theme id</b> - the user sets the theme parameter by its id (<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>, <b>theme-contrast-dark</b>),</li>
+                    <li>
+                        <b>default theme</b> - the default dark or light theme value will be set (<b>default-dark</b>, <b>default-light</b>).
+                        The default light theme is <b>theme-classic-light</b>.
+                    </li>
+                </ul>
+                The first option has higher priority.
+                <p></p>
+                Apart from the available editor themes, the user can also customize their own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">color themes</a> for the application interface.
+            </td>
+            <td>string</td>
+            <td>"theme-dark"</td>
+        </tr>
+        <tr class="tablerow">
             <td id="userId" class="copy-link">userId<span class="required">*</span></td>
             <td>
                 Defines the user id.
@@ -128,6 +148,7 @@ const params = {
     "email": "john@example.com",
     "domain": "https://exampledomain.com",
     "provider": "onlyoffice",
+    "uiTheme": "theme-dark",
     "userId": "78e1e841"
 }
 AscDesktopEditor.execCommand ("portal:login", JSON.stringify(params))

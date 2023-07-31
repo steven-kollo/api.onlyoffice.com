@@ -1,5 +1,6 @@
 # Change Log
 
+- desktop: added the uiTheme parameter to the portal:login command
 - desktop: v7.5
 - macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
