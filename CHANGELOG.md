@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: the setRevisedFile method is deprecated, please use the setRequestedDocument method instead
+- editors: the events.onRequestCompareFile event is deprecated, please use the events.onRequestSelectDocument event instead
 - macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
 
