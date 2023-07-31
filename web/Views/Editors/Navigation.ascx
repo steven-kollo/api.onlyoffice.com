@@ -302,10 +302,19 @@
         <a href="<%= Url.Action("command/") %>">Command service</a>
         <ul>
             <li>
+                <a href="<%= Url.Action("command/deleteforgotten") %>">deleteForgotten</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("command/drop") %>">drop</a>
             </li>
             <li>
                 <a href="<%= Url.Action("command/forcesave") %>">forcesave</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/getforgotten") %>">getForgotten</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/getforgottenlist") %>">getForgottenList</a>
             </li>
             <li>
                 <a href="<%= Url.Action("command/info") %>">info</a>

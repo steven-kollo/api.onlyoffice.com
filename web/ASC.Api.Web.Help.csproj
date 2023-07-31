@@ -3963,8 +3963,11 @@
     <Content Include="Views\Editors\Coedit.aspx" />
     <Content Include="Views\Editors\Command.aspx" />
     <Content Include="Views\Editors\Command\default.ascx" />
+    <Content Include="Views\Editors\Command\deleteForgotten.ascx" />
     <Content Include="Views\Editors\Command\drop.ascx" />
     <Content Include="Views\Editors\Command\forcesave.ascx" />
+    <Content Include="Views\Editors\Command\getForgotten.ascx" />
+    <Content Include="Views\Editors\Command\getForgottenList.ascx" />
     <Content Include="Views\Editors\Command\info.ascx" />
     <Content Include="Views\Editors\Command\license.ascx" />
     <Content Include="Views\Editors\Command\meta.ascx" />

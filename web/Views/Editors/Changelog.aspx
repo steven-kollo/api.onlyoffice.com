@@ -21,6 +21,7 @@
         <li>The <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">events.onRequestCompareFile</a> event is deprecated, please use the <a href="<%= Url.Action("config/events") %>#onRequestSelectDocument">events.onRequestSelectDocument</a> event instead.</li>
         <li>The <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method is deprecated, please use the <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a> method instead.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestOpen">events.onRequestOpen</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("command/deleteForgotten") %>">deleteForgotten</a>, <a href="<%= Url.Action("command/getForgotten") %>">getForgotten</a>, and <a href="<%= Url.Action("command/getForgottenlist") %>">getForgottenList</a> commands.</li>
     </ul>
 
     <h2 id="74" class="copy-link">Version 7.4</h2>
