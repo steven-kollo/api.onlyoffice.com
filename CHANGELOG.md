@@ -1,5 +1,6 @@
 # Change Log
 
+- desktop: v7.5
 - macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
 

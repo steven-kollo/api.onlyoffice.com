@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Desktop Editors API.</p>
 
+    <h2 id="75" class="copy-link">Version 7.5</h2>
+    <ul>
+        <li></li>
+    </ul>
+
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <ul>
         <li>Added the <em>--ascdesktop-support-debug-info-keep</em> flag to <a href="<%= Url.Action("debugging") %>#running">run</a> the application.</li>
