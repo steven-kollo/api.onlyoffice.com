@@ -1,5 +1,6 @@
 # Change Log
 
+- editor: added the deleteForgotten, getForgotten, and getForgottenList commands
 - macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
 
