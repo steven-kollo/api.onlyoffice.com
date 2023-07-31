@@ -29,6 +29,7 @@
     <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - the user is trying to click the specific document version in the document version history.</li>
     <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - the user is trying to insert an image by clicking the <em>Image from Storage</em> button.</li>
     <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
+    <li><a href="#onRequestOpen">onRequestOpen</a> - the user is trying to open an external link.</li>
     <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - the user is trying to refresh data inserted from the external file by clicking the <em>Update values</em> button in the <em>External</em> links dialog box of the <em>Data</em> tab.</li>
     <li><a href="#onRequestRename">onRequestRename</a> - the user is trying to rename the file by clicking the <em>Rename...</em> button.</li>
     <li><a href="#onRequestRestore">onRequestRestore</a> - the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</li>
@@ -555,6 +556,35 @@ var onRequestMailMergeRecipients = function () {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestMailMergeRecipients": onRequestMailMergeRecipients,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p><b id="onRequestOpen" class="copy-link">onRequestOpen</b> - the function called when the user is trying to open an external link.</p>
+        <p>To open the editor with the external file referenced by the <em>path</em> or <em>referenceData</em> parameters in a new tab,
+        you must pass a link to this tab by calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a> method with the <em>path</em> and <em>windowName</em> parameters.</p>
+        <p>An object with the unique file data, the file path, and a new browser tab name are sent in the <em>data</em> parameter.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestOpen = function (event) {
+    var path  = event.data.path;
+    var referenceData = event.data.referenceData;
+    var windowName  = event.data.windowName;
+    window.open({
+        "path": "https://example.com/external-url.docx",
+        "windowName": event.data.windowName
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestOpen": onRequestOpen,
         ...
     },
     ...
