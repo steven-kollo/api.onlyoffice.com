@@ -33,6 +33,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
         <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
         <li><a href="#setReferenceData">setReferenceData</a> - refresh data by a link to a file.</li>
+        <li><a href="#setRequestedDocument">setRequestedDocument</a> - select a document for comparing or combining.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
         <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
@@ -823,8 +824,77 @@ docEditor.setReferenceData({
 
         <li>
             <p>
+                <b id="setRequestedDocument" class="copy-link">setRequestedDocument<a href="#requiredDescr2" class="required">**</a></b> - select a document for comparing or combining.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestSelectDocument">onRequestSelectDocument</a> event.
+            </p>
+            <pre>
+docEditor.setRequestedDocument({
+    "c": "compare",
+    "fileType": "docx",
+    "url": "https://example.com/url-to-example-document.docx",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8"
+});
+</pre>
+            <p>
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="tablerow">
+                        <td>c</td>
+                        <td>
+                            Defines a type of document selection from the event. Can be: <em>compare</em>, <em>combine</em>. The default value is "compare".
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr><tr class="tablerow">
+                        <td>fileType</td>
+                        <td>
+                            Defines a type of the document to be selected.
+                            Can be: <em>doc</em>, <em>docm</em>, <em>docx</em>, <em>dot</em>, <em>dotm</em>, <em>dotx</em>, <em>epub</em>, <em>fodt</em>, <em>odt</em>, <em>ott</em>, <em>rtf</em>, <em>wps</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr id="setRequestedDocument-token" class="tablerow">
+                        <td>token</td>
+                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setRequestedDocument">token</a>.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>url</td>
+                        <td>Defines the absolute URL where the source document is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                            Otherwise, an error will occur.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+
+        <li>
+            <p>
                 <b id="setRevisedFile" class="copy-link">setRevisedFile<a href="#requiredDescr2" class="required">**</a></b> - select a document for comparing.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.
+                Deprecated since version 7.5, please use <a href="#setRequestedDocument">setRequestedDocument</a> instead.
             </p>
             <pre>
 docEditor.setRevisedFile({
