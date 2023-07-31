@@ -221,7 +221,7 @@ body {
     box-sizing: border-box;
     position: sticky;
     padding: 28px 0px;
-    padding-right: 11px;
+    padding-right: 16px;
     top: 72px;
     max-height: 100vh;
 }
