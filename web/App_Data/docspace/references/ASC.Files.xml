@@ -836,6 +836,9 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
+        <member name="M:ASC.Files.Api.OperationController.MoveOrCopyBatchCheckFullAsync(ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Files.Api.OperationController.TerminateTasks">
             <summary>
             Finishes all the active operations.
@@ -1093,13 +1096,12 @@
             <path>api/2.0/files/settings/externalsocialmedia</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.SettingsController.Forcesave(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
+        <member name="M:ASC.Files.Api.SettingsController.Forcesave">
             <summary>
             Changes the ability to force save a file.
             </summary>
             <short>Change the forcasaving ability</short>
             <category>Settings</category>
-            <param type="ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto, ASC.Files.Core" name="inDto">Settings request parameters</param>
             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/files/forcesave</path>
             <httpMethod>PUT</httpMethod>
@@ -1146,13 +1148,12 @@
             <path>api/2.0/files/@privacy/available</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.SettingsController.StoreForcesave(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
+        <member name="M:ASC.Files.Api.SettingsController.StoreForcesave">
             <summary>
             Changes the ability to store the forcesaved file versions.
             </summary>
             <short>Change the ability to store the forcesaved files</short>
             <category>Settings</category>
-            <param type="ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto, ASC.Files.Core" name="inDto">Settings request parameters</param>
             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/files/storeforcesave</path>
             <httpMethod>PUT</httpMethod>

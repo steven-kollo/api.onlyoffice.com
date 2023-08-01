@@ -647,6 +647,10 @@
             <summary>Measurement ID</summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.FirebaseDto.DatabaseURL">
+            <summary>Database URL</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="T:ASC.Web.Api.ApiModel.ResponseDto.LoginEventDto">
             <summary>
             </summary>
@@ -907,6 +911,10 @@
             <summary>Link to the help</summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.ApiDocsLink">
+            <summary>Api docs link</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.DomainValidator">
             <summary>Domain validator</summary>
             <type>ASC.Core.Tenants.TenantDomainValidator, ASC.Core.Common</type>
@@ -926,6 +934,10 @@
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.LegalTerms">
             <summary>Legal terms</summary>
             <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.CookieSettingsEnabled">
+            <summary>Cookie settings enabled</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.Plugins">
             <summary>Plugins</summary>
@@ -972,6 +984,16 @@
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.EnableAuth">
             <summary>Enables authentication or not</summary>
+            <type>System.Boolean, System</type>
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.UseNtlm">
+            <summary>Use ntlm or not</summary>
+            <type>System.Boolean, System</type>
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.IsDefaultSettings">
+            <summary>Is default or not</summary>
             <type>System.Boolean, System</type>
             <example>false</example>
         </member>
@@ -1062,6 +1084,10 @@
         <member name="P:ASC.Web.Api.Models.CookieSettingsRequestsDto.LifeTime">
             <summary>Lifetime value in minutes</summary>
             <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.Models.CookieSettingsRequestsDto.Enabled">
+            <summary>Enabled or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Api.Models.DnsSettingsRequestsDto">
             <summary>
@@ -1434,6 +1460,18 @@
             <summary>Specifies if these settings are default or not</summary>
             <type>System.Boolean, System</type>
         </member>
+        <member name="T:ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto.LifeTime">
+            <summary>Lifetime value in minutes</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto.Enabled">
+            <summary>Enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.CurrenciesDto">
             <summary>
             </summary>
@@ -1534,7 +1572,10 @@
             <summary>Attribute that determines whether this user is a member of the groups</summary>
             <type>System.String, System</type>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:ASC.Web.Api.ApiModels.ResponseDto.LdapSettingsDto.GroupFilter" -->
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.LdapSettingsDto.GroupFilter">
+            <summary>Group filter value to import the groups who correspond to the specified search criteria. The default filter value (objectClass=posixGroup) allows importing all users</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.LdapSettingsDto.GroupAttribute">
             <summary>Attribute that specifies the users that the group includes</summary>
             <type>System.String, System</type>
@@ -1818,6 +1859,50 @@
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantDto.VersionChanged">
             <summary>The date and time when the tenant version was changed</summary>
             <type>System.DateTime, System</type>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.CustomMode">
+            <summary></summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.Opensource">
+            <summary></summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.Enterprise">
+            <summary></summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.Tariff">
+            <summary></summary>
+            <type>ASC.Core.Billing.Tariff, ASC.Core.Common</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.Quota">
+            <summary></summary>
+            <type>ASC.Web.Api.ApiModels.ResponseDto.QuotaDto, ASC.Web.Api</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.NotPaid">
+            <summary></summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.LicenseAccept">
+            <summary></summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.EnableTariffPage">
+            <summary></summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.DocServerUserQuota">
+            <summary></summary>
+            <type>System.Collections.Generic.Dictionary{System.String, System.DateTime}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.DocServerLicense">
+            <summary></summary>
+            <type>ASC.Core.Billing.License, ASC.Core.Common</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto">
             <summary>
@@ -2144,7 +2229,7 @@
             </short>
             <category>Payment</category>
             <param type="System.String, System" name="backUrl">Back URL</param>
-            <returns type="System.Uri, System">The URL to the payment account</returns>
+            <returns type="System.Object, System">The URL to the payment account</returns>
             <path>api/2.0/portal/payment/account</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2266,7 +2351,7 @@
             <path>api/2.0/portal/getshortenlink</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GetTenantExtraAsync">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GetTenantExtra(System.Boolean)">
             <summary>
             Returns an extra tenant license for the portal.
             </summary>
@@ -2274,7 +2359,8 @@
             Get an extra tenant license
             </short>
             <category>Quota</category>
-            <returns type="System.Object, System">Extra tenant license information</returns>
+            <param type="System.Boolean, System" name="refresh"></param>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto, ASC.Web.Api">Extra tenant license information</returns>
             <path>api/2.0/portal/tenantextra</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -2302,7 +2388,7 @@
             <path>api/2.0/portal/userscount</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GetTariff">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GetTariff(System.Boolean)">
             <summary>
             Returns the current portal tariff.
             </summary>
@@ -2310,6 +2396,7 @@
             Get a portal tariff
             </short>
             <category>Quota</category>
+            <param type="System.Boolean, System" name="refresh"></param>
             <returns type="ASC.Core.Billing.Tariff, ASC.Core.Common">Current portal tariff</returns>
             <path>api/2.0/portal/tariff</path>
             <httpMethod>GET</httpMethod>
@@ -3016,7 +3103,7 @@
             Get cookies lifetime
             </short>
             <category>Cookies</category>
-            <returns type="System.Int32, System">Lifetime value in minutes</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto, ASC.Web.Api">Lifetime value in minutes</returns>
             <path>api/2.0/settings/cookiesettings</path>
             <httpMethod>GET</httpMethod>
         </member>
@@ -4483,6 +4570,30 @@
             <summary>
               Looks up a localized string similar to Email is not specified.
             </summary>
+        </member>
+        <member name="T:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Completed">
+            <summary></summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Id">
+            <summary></summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Error">
+            <summary></summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Status">
+            <summary></summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Percents">
+            <summary></summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="T:ASC.Api.Settings.SmtpSettingsController">
             <summary>
