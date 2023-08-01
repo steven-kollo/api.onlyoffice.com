@@ -323,18 +323,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static ILog _logger;
 
-        public MsDocDocumentGenerator(string basePath, ClassNamePluralizer classPluralizer)
+        public MsDocDocumentGenerator(string basePath, ClassNamePluralizer classPluralizer, ILog logger)
         {
             _basePath = basePath;
-            GetLogger();
+            _logger = logger;
 
             _classPluralizer = classPluralizer;
-        }
-
-        private void GetLogger()
-        {
-            _logger = LogManager.GetLogger("ASC.MsDocDocumentGenerator");
-            _logger.Debug("Generate community documentations");
         }
 
         #region IApiDocumentGenerator Members
