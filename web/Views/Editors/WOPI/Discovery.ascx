@@ -158,8 +158,9 @@ ui=en-us&thm=1&"/&gt;
         <tbody>
             <tr>
                 <td id="lang" class="copy-link">lang</td>
-                <td>Indicates that the Nextcloud WOPI server includes the preferred UI language in the format described in <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a>.</td>
-                <td>ru-ru</td>
+                <td>Indicates that the Nextcloud WOPI server includes the document language in the format described in <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a>.
+                This language is used when creating a new document with the <a href="#editnew">editnew</a> action.</td>
+                <td>en-us</td>
             </tr>
         </tbody>
     </table>
