@@ -8,7 +8,46 @@
 <% var entryPoints = Model as List<MsDocEntryPoint>; %>
 
 <div class="nav-list">
-    <div class="treeheader">Get Started</div>
+    <div class="treeheader">JavaScript SDK</div>
+    <ul class="side-nav root">
+        <li>
+            <a href="<%= Url.Action("jssdk/") %>">Basic concepts</a>
+        </li>
+        <li>
+            <a href="<%= Url.Action("jssdk/initmodes") %>">Initialization modes</a>
+            <ul>
+                <li>
+                    <a href="<%= Url.Action("jssdk/initmodes/manager") %>">Manager</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("jssdk/initmodes/roomselector") %>">Room-selector</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("jssdk/initmodes/fileselector") %>">File-selector</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("jssdk/initmodes/editor") %>">Editor</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("jssdk/initmodes/viewer") %>">Viewer</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("jssdk/initmodes/system") %>">System</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="<%= Url.Action("jssdk/config") %>">Config</a>
+        </li>
+        <li>
+            <a href="<%= Url.Action("jssdk/methods") %>">Methods</a>
+        </li>
+        <li>
+            <a href="<%= Url.Action("jssdk/events") %>">Events</a>
+        </li>
+    </ul>
+
+    <div class="treeheader">API backend</div>
     <ul class="side-nav root">
         <li>
             <a href="<%= Url.Action("basic") %>">Basic concepts</a>
@@ -16,12 +55,8 @@
         <li>
             <a href="<%= Url.Action("auth") %>">Passing authentication</a>
         </li>
-    </ul>
-
-    <% if (entryPoints != null && entryPoints.Any())
-       { %>
-    <div class="treeheader">API backend</div>
-    <ul class="side-nav root">
+        <% if (entryPoints != null && entryPoints.Any())
+           { %>
         <% foreach (var entryPoint in entryPoints.OrderBy(x => x.Name).ToList())
            { %>
         <li>
@@ -60,8 +95,8 @@
             <% } %>
         </li>
         <% } %>
+        <% } %>
     </ul>
-    <% } %>
 
     <div class="treeheader">API system</div>
     <ul class="side-nav root">

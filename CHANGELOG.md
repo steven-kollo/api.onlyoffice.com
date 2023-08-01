@@ -1,5 +1,6 @@
 # Change Log
 
+- docspace: added the DocSpace frame SDK
 - editors: added the lang parameter to the WOPI discovery
 - macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
