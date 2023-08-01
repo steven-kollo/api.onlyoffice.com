@@ -44,7 +44,7 @@
                 This method contains document history for each document version, if the history parameter has been present for each version.
             </p>
             <pre>
-var onRequestHistory = function() {
+var onRequestHistory = function () {
     docEditor.refreshHistory({
         "currentVersion": 2,
         "history": [
@@ -67,7 +67,7 @@ var onRequestHistory = function() {
                 "version": 2
             },
             ...
-        ]
+        ],
     });
 };
 
@@ -87,14 +87,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 When the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> event is called, the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method must be executed.
                 This method contains the absolute URL to the file of the corresponding version.
             </p>
+            <p>When calling the <em>setHistoryData</em> method to view the document history version, the token must be added to validate the parameters.</p>
             <pre>
-var onRequestHistoryData = function(event) {
+var onRequestHistoryData = function (event) {
     var version = event.data;
     docEditor.setHistoryData({
+        "fileType": "docx",
         "key": "Khirz6zTPdfd7",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
         "url": "https://example.com/url-to-example-document.docx",
-        "version": version
-    })
+        "version": 2
+    });
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -150,7 +153,7 @@ var onRequestRestore = function (event) {
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
-        "onRequestHistoryData": onRequestHistoryData,
+        "onRequestRestore": onRequestRestore,
         ...
     },
     ...
@@ -239,14 +242,18 @@ docEditor.refreshHistory({
                 The file must be saved and its address must be sent as changesUrl parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
                 The link to the previous document version (<em>previous.url</em>) must be added into the object.
             </p>
+            <p>When calling the <em>setHistoryData</em> method to view the document history version, the token must be added to validate the parameters.</p>
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "https://example.com/url-to-changes.zip",
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "previous": {
+        "fileType": "docx",
         "key": "af86C7e71Ca8",
         "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });

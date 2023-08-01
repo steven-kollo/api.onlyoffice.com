@@ -11052,6 +11052,16 @@
               Looks up a localized string similar to Recalculate.
             </summary>
         </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.RecalculateQuotaDescription">
+            <summary>
+              Looks up a localized string similar to For the quota settings to work correctly, it is necessary to recalculate. When the calculation is done, you will be able to set up a quota for users..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Studio.PublicResources.Resource.RecalculateQuotaTitle">
+            <summary>
+              Looks up a localized string similar to Setting up a quota.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Studio.PublicResources.Resource.RecaptchaInvalid">
             <summary>
               Looks up a localized string similar to Invalid Recaptcha.

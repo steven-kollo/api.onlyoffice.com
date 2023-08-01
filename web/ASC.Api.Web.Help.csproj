@@ -2272,7 +2272,6 @@
     <Content Include="Content\img\desktop\debugging.png" />
     <Content Include="Content\img\desktop\encryption-enabled.png" />
     <Content Include="Content\img\desktop\extended_comments.png" />
-    <Content Include="Content\img\desktop\macos-terminal.png" />
     <Content Include="Content\img\desktop\plugins_folder.png" />
     <Content Include="Content\img\desktop\plugin_settings.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
@@ -2435,6 +2434,7 @@
     <Content Include="Content\img\macros\cell-font-bold.svg" />
     <Content Include="Content\img\macros\change-cell.svg" />
     <Content Include="Content\img\macros\column-width.svg" />
+    <Content Include="Content\img\macros\complete_address_information.svg" />
     <Content Include="Content\img\macros\currency-exchange-rates.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
@@ -2545,6 +2545,7 @@
     <Content Include="Content\img\plugins\plugin_archive.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
     <Content Include="Content\img\plugins\recalculate-cell-values.png" />
+    <Content Include="Content\img\plugins\complete_address_information.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
     <Content Include="Content\img\plugins\remove-shapes.png" />
     <Content Include="Content\img\plugins\text_area.png" />
@@ -4169,6 +4170,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\unhideallrows.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\completeaddressinformation.ascx" />
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
     <Content Include="Views\Plugin\methodpartial.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />

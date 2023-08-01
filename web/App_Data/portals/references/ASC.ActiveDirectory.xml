@@ -526,7 +526,7 @@
             Add nested Criteria
             </summary>
             <param name="nested"></param>
-            <returns>себя</returns>
+            <returns>Self</returns>
         </member>
         <member name="M:ASC.ActiveDirectory.Base.Expressions.Criteria.ToString">
             <summary>

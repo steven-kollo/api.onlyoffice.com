@@ -50,7 +50,7 @@
             <td>users</td>
             <td>Defines the list of the user identifiers.</td>
             <td>array of strings</td>
-            <td>optional</td>
+            <td>required</td>
         </tr>
     </tbody>
 </table>
