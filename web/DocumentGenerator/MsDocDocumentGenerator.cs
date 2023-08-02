@@ -386,6 +386,15 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 File = methodParams[j].Attribute("file").ValueOrNull(),
                                 Assembly = GetAssembly(methodParams[j].Attribute("type").ValueOrNull())
                             };
+
+                            if (param.Type.StartsWith("`"))
+                            {
+                                var xmlType = GetTypeFromXml(methodParams[j].Attribute("type").ValueOrNull());
+                                if (xmlType != null)
+                                {
+                                    param.Type = xmlType;
+                                }
+                            }
                             pointMethod.Params.Add(param);
                         }
                         catch (Exception ex)
@@ -736,6 +745,17 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
             }
             return types[number];
+        }
+
+        private string GetTypeFromXml(string type)
+        {
+            if (type == null) return null;
+            if (string.IsNullOrWhiteSpace(type)) return null;
+
+            var split = type.Split(',');
+            var assembly = split[0].Trim();
+
+            return assembly;
         }
 
         private string GetAssembly(string type)
