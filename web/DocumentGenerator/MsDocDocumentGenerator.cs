@@ -874,6 +874,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 return typeName.Substring(0, typeName.Length - 4);
             }
+            if (typeName.EndsWith("{System.Text.Json.JsonElement}"))
+            {
+                return typeName.Substring(0, typeName.Length - "{System.Text.Json.JsonElement}".Length);
+            }
             return typeName;
         }
 
