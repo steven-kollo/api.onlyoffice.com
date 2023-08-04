@@ -912,7 +912,7 @@
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.ApiDocsLink">
-            <summary>Api docs link</summary>
+            <summary>API documentation link</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.DomainValidator">
@@ -936,7 +936,7 @@
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.CookieSettingsEnabled">
-            <summary>Cookie settings enabled</summary>
+            <summary>Specifies whether the cookie settings are enabled</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.Plugins">
@@ -988,12 +988,12 @@
             <example>false</example>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.UseNtlm">
-            <summary>Use ntlm or not</summary>
+            <summary>Specifies whether to use NTLM or not</summary>
             <type>System.Boolean, System</type>
             <example>false</example>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto.IsDefaultSettings">
-            <summary>Is default or not</summary>
+            <summary>Specifies if the current settings are default or not</summary>
             <type>System.Boolean, System</type>
             <example>false</example>
         </member>
@@ -1086,7 +1086,7 @@
             <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Web.Api.Models.CookieSettingsRequestsDto.Enabled">
-            <summary>Enabled or not</summary>
+            <summary>Specifies if the cookie settings are enabled or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Api.Models.DnsSettingsRequestsDto">
@@ -1469,7 +1469,7 @@
             <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto.Enabled">
-            <summary>Enabled or not</summary>
+            <summary>Specifies if the cookie settings are enabled or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.CurrenciesDto">
@@ -1865,43 +1865,43 @@
             </summary>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.CustomMode">
-            <summary></summary>
+            <summary>Specifies if the extra tenant license is customizable or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.Opensource">
-            <summary></summary>
+            <summary>Specifies if the extra tenant license is Opensource or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.Enterprise">
-            <summary></summary>
+            <summary>Specifies if the extra tenant license is Enterprise or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.Tariff">
-            <summary></summary>
+            <summary>License tariff</summary>
             <type>ASC.Core.Billing.Tariff, ASC.Core.Common</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.Quota">
-            <summary></summary>
+            <summary>License quota</summary>
             <type>ASC.Web.Api.ApiModels.ResponseDto.QuotaDto, ASC.Web.Api</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.NotPaid">
-            <summary></summary>
+            <summary>Specifies if the license is paid or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.LicenseAccept">
-            <summary></summary>
+            <summary>The time when the license was accepted</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.EnableTariffPage">
-            <summary></summary>
+            <summary>Specifies if the tariff page is enabled or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.DocServerUserQuota">
-            <summary></summary>
+            <summary>Document server user quotas</summary>
             <type>System.Collections.Generic.Dictionary{System.String, System.DateTime}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.TenantExtraDto.DocServerLicense">
-            <summary></summary>
+            <summary>Document server license</summary>
             <type>ASC.Core.Billing.License, ASC.Core.Common</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto">
@@ -2359,7 +2359,7 @@
             Get an extra tenant license
             </short>
             <category>Quota</category>
-            <param type="System.Boolean, System" name="refresh"></param>
+            <param type="System.Boolean, System" name="refresh">Specifies whether the tariff will be refreshed</param>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto, ASC.Web.Api">Extra tenant license information</returns>
             <path>api/2.0/portal/tenantextra</path>
             <httpMethod>GET</httpMethod>
@@ -2396,7 +2396,7 @@
             Get a portal tariff
             </short>
             <category>Quota</category>
-            <param type="System.Boolean, System" name="refresh"></param>
+            <param type="System.Boolean, System" name="refresh">Specifies whether the tariff will be refreshed</param>
             <returns type="ASC.Core.Billing.Tariff, ASC.Core.Common">Current portal tariff</returns>
             <path>api/2.0/portal/tariff</path>
             <httpMethod>GET</httpMethod>
@@ -4576,23 +4576,23 @@
             </summary>
         </member>
         <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Completed">
-            <summary></summary>
+            <summary>Specifies if the SMTP operation is completed or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Id">
-            <summary></summary>
+            <summary>SMTP operation ID</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Error">
-            <summary></summary>
+            <summary>SMTP operation error</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Status">
-            <summary></summary>
+            <summary>SMTP operation status</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto.Percents">
-            <summary></summary>
+            <summary>Percentage of SMTP operation completion</summary>
             <type>System.Int32, System</type>
         </member>
         <member name="T:ASC.Api.Settings.SmtpSettingsController">

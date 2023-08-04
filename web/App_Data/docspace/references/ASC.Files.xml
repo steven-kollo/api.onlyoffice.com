@@ -836,9 +836,6 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.OperationController.MoveOrCopyBatchCheckFullAsync(ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto)">
-            <visible>false</visible>
-        </member>
         <member name="M:ASC.Files.Api.OperationController.TerminateTasks">
             <summary>
             Finishes all the active operations.

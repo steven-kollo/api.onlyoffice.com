@@ -851,7 +851,7 @@
             <type>ASC.Files.Core.ApiModels.ResponseDto.FileDto, ASC.Files.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.ErrorMessage">
-            <summary></summary>
+            <summary>Error message</summary>
             <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1">
@@ -1229,18 +1229,6 @@
             <summary>Specifies if a folder is private or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.MoveDto">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.MoveDto.EntryFrom">
-            <summary>Document config</summary>
-            <type>ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto, ASC.Files.Core</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.MoveDto.EntryTo">
-            <summary>Document config</summary>
-            <type>ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto, ASC.Files.Core</type>
-        </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.RoomSecurityDto">
             <summary>
             </summary>
@@ -1617,7 +1605,7 @@
             <returns> 
             </returns>
         </member>
-        <member name="M:ASC.Files.Core.IFolderDao`1.CanMoveOrCopyAsync``1(`0[],`0)">
+        <member name="M:ASC.Files.Core.IFolderDao`1.CanMoveOrCopyAsync(`0[],`0)">
             <summary>
             Validate the transfer operation directory to another directory.
             </summary>
