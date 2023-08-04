@@ -45,8 +45,9 @@ namespace ASC.Api.Web.Help.Controllers
 
         private readonly string[] _actionMap = new[]
             {
-                "Auth",
-                "Basic",
+                "Backend",
+                "Backend/Auth",
+                "Backend/Basic",
                 "Faq",
                 "Filters",
                 "Batch",
@@ -72,6 +73,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "JsSdk/Config",
                 "JsSdk/Methods",
                 "JsSdk/Events",
+                "Basic",
             };
 
         public ActionResult ApiSystem(string catchall)
@@ -93,14 +95,13 @@ namespace ASC.Api.Web.Help.Controllers
             return View(DocSpaceDocumentation.GetAll());
         }
 
-        public ActionResult Auth()
+        public ActionResult Backend(string catchall)
         {
-            return View();
-        }
-
-        public ActionResult Basic()
-        {
-            return View();
+            if (!_actionMap.Contains("backend/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Backend", (object)catchall);
         }
 
         public ActionResult Faq()
@@ -123,6 +124,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Batch()
+        {
+            return View();
+        }
+
+        public ActionResult Basic()
         {
             return View();
         }

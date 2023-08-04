@@ -3946,8 +3946,9 @@
     <Content Include="Views\DocSpace\ApiSystem\TariffSection.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\TariffSection\TariffGet.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\TariffSection\TariffSet.ascx" />
-    <Content Include="Views\DocSpace\Auth.aspx" />
-    <Content Include="Views\DocSpace\Basic.aspx" />
+    <Content Include="Views\DocSpace\Backend.aspx" />
+    <Content Include="Views\DocSpace\Backend\Auth.ascx" />
+    <Content Include="Views\DocSpace\Backend\Basic.ascx" />
     <Content Include="Views\DocSpace\Batch.aspx" />
     <Content Include="Views\DocSpace\Faq.aspx" />
     <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
@@ -3966,6 +3967,7 @@
     <Content Include="Views\DocSpace\JsSdk\Methods.ascx" />
     <Content Include="Views\DocSpace\Method.aspx" />
     <Content Include="Views\DocSpace\Navigation.ascx" />
+    <Content Include="Views\DocSpace\Basic.aspx" />
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
