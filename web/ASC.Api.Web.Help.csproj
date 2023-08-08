@@ -2280,6 +2280,10 @@
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
     <Content Include="Content\img\desktop\windows-shortcut.png" />
     <Content Include="Content\img\desktop\windows-terminal.png" />
+    <Content Include="Content\img\docbuilder\examples\api-cell.png" />
+    <Content Include="Content\img\docbuilder\examples\api-slide-1.jpg" />
+    <Content Include="Content\img\docbuilder\examples\api-slide-2.jpg" />
+    <Content Include="Content\img\docbuilder\examples\api-word.jpg" />
     <Content Include="Content\img\docbuilder\builder-debugger.png" />
     <Content Include="Content\img\docbuilder\compare-documents.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
@@ -3806,6 +3810,7 @@
     <Content Include="Views\DocBuilder\formapi.aspx" />
     <Content Include="Views\DocBuilder\Formapi\default.ascx" />
     <Content Include="Views\DocBuilder\Framework.aspx" />
+    <Content Include="Views\DocBuilder\GetBuilder.aspx" />
     <Content Include="Views\DocBuilder\gettingstarted.aspx" />
     <Content Include="Views\DocBuilder\global.aspx" />
     <Content Include="Views\DocBuilder\howitworks.aspx" />

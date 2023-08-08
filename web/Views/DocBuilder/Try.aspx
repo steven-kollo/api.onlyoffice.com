@@ -21,7 +21,7 @@
 
     <div>
         <ul class="doc-builder-file-types top-nav">
-            <li class="<%= Request["type"] != "cell" && Request["type"] != "slide" ? "active" : "" %>">
+            <li class="<%= Request["type"] != "cell" && Request["type"] != "slide" && Request["type"] != "form" ? "active" : "" %>">
                 <a href="<%= Url.Action("try") %>">Document Editor</a>
             </li>
             <li class="<%= Request["type"] == "cell" ? "active" : "" %>">
@@ -29,6 +29,9 @@
             </li>
             <li class="<%= Request["type"] == "slide" ? "active" : "" %>">
                 <a href="<%= Url.Action("try") %>?type=slide">Presentation Editor</a>
+            </li>
+            <li class="<%= Request["type"] == "form" ? "active" : "" %>">
+                <a href="<%= Url.Action("try") %>?type=form">Form Editor</a>
             </li>
         </ul>
     </div>
@@ -80,6 +83,12 @@
                 documentType = "slide";
                 ext = "pptx";
             }
+            else if (Request["type"] == "form")
+            {
+                documentType = "form";
+                ext = "docx";
+            }
+
         %>
 
         var documentType = "<%= documentType %>";
@@ -105,7 +114,7 @@
             }
         }
 
-        <% var defaultMethod = DocBuilderDocumentation.Instance.GetMethod(documentType, "api", "save"); %>
+        <% var defaultMethod = DocBuilderDocumentation.Instance.GetSection(documentType, "api"); %>
         $("#builderScript").val("<%= Regex.Replace(defaultMethod.Example.Script.Replace("\"", "\\\""), @"\r\n|\n", "") %>".replaceAll(";", ";\n"));
 
         var postScript = function () {

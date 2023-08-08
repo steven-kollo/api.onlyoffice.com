@@ -6,36 +6,26 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Getting started
+    Overview
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Getting started</span>
+        <span class="hdr">Overview</span>
     </h1>
 
-    <h2>How it works?</h2>
-    <p class="dscr">As any document is a composite object consisting of a tree of larger nodes (paragraphs and tables), where it is possible to insert smaller document elements (text runs, images, charts, shapes), <b>ONLYOFFICE Document Builder</b> allows to insert the content and format it to your liking quickly and easily.</p>
-    <p><b>ONLYOFFICE Document Builder</b> is a C++ library used to create and edit Office Open XML format files (documents, spreadsheets and presentations) and save them to DOCX, XSLX, PPTX and PDF formats.</p>
-    <p>There are two ways to use <b>ONLYOFFICE Document Builder</b> in your own project:</p>
-    <ol>
-        <li><p>Integrate this library into your own application. You can download <b>ONLYOFFICE Document Builder</b> <a target="blank" href="https://www.onlyoffice.com/download-builder.aspx?utm_source=api">here</a>.</p>
-            <p>After you download and unpack the files, the library is ready for <a href="<%= Url.Action("framework") %>">integration</a>.</p>
-        </li>
-        <li>Use <a href="<%= Url.Action("integrationapi/default") %>">Builder.App</a>, the provided executive binary wrapper for an easy start. The latest versions of executable files can always be downloaded <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx">here</a>. After the file download, run it and see the examples of how <b>ONLYOFFICE Document Builder</b> can be used without the need to write any application.</li>
-    </ol>
-    <div class="note">The Linux OS versions of <b>ONLYOFFICE Document Builder</b> require the following dependencies to be installed:
-        <p><b>Debian/Ubuntu:</b></p>
-        <pre>sudo apt-get install libstdc++6 libcurl3-gnutls libc6 libxml2 libcurl3 fonts-dejavu fonts-opensymbol
-sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-carlito</pre>
-        <p><b>RedHat/CentOS:</b></p>
-        <pre>sudo yum install glibc libcurl libxml2 dejavu-lgc-sans-fonts dejavu-lgc-sans-mono-fonts dejavu-lgc-serif-fonts dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts libreoffice-opensymbol-fonts</pre>
-    </div>
-    <p>To launch <b>ONLYOFFICE Document Builder</b> run the following command:</p>
-    <pre>docbuilder mydocument.docbuilder</pre>
-    <p>Here <b>docbuilder</b> is the name of <b>ONLYOFFICE Document Builder</b> (together with the path, if the command is run from the folder different from where the executive is placed) executive file (it will look like <b>docbuilder.exe</b> for Windows version, <b>documentbuilder</b> for Linux and Mac OS), and the <b>mydocument.docbuilder</b> parameter is the name (again, together with the path, if needed) of the script file that will form the document contents.</p>
-    <p>Read the <a href="<%= Url.Action("framework") %>">Builder.Framework</a> section for more information on how to integrate <b>ONLYOFFICE Document Builder</b> into your own application.</p>
-    <h2>Where to start?</h2>
+    <p class="dscr">As any document is a composite object consisting of a tree of larger nodes (paragraphs and tables) where it is possible to insert smaller document elements (text runs, images, charts, shapes),
+        <b>ONLYOFFICE Document Builder</b> allows to insert the content and format it to your liking quickly and easily.
+    </p>
+    <p>
+        To do this, <b>Builder.API</b> is used - the JavaScript API to work with the document editor.
+        It contains classes and methods for every document type: <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>,
+        <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>, and <a href="<%= Url.Action("formapi") %>">Form API</a>.
+    </p>
+    <p>To start using Builder.API, you need to integrate <b>ONLYOFFICE Document Builder</b> into your own application first.
+        Visit <a href="<%= Url.Action("basic") %>">this page</a> to find more information on it.</p>
+
+    <h2>Where to start</h2>
     <p>If you are not sure where to start, you can use the list of most common tasks below to find where to go and start creating your document:</p>
     
     <div class="buider_page_methods_list">

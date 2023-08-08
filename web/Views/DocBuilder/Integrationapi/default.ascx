@@ -5,7 +5,7 @@
 </h1>
 
 <p class="dscr"><b>Builder.App</b> is the <em>docbuilder.exe</em> executable file which can be run from your application with the <em>.docbuilder</em> script file as a parameter to it.</p>
-<p>If you are going to use <b>ONLYOFFICE Document Builder</b> with an application written in any programming language, run <b>ONLYOFFICE Document Builder</b> executable
+<p>If you are going to use <b>ONLYOFFICE Document Builder</b> with an application written in any programming language, run Document Builder executable
 from your application and use the <b>.docbuilder</b> script file for the document to be created as a parameter to it. It is much more flexible and allows
 to change the document script files (especially if there are more than one of them) independently of your application in future. You will only need to recompile your application
 if you need to add more document script files to it.</p>
@@ -13,6 +13,10 @@ if you need to add more document script files to it.</p>
 <pre>
 docbuilder.exe mydocument.docbuilder
 </pre>
+        <p>Here <b>docbuilder</b> is the name of <b>ONLYOFFICE Document Builder</b> executive file.
+        It must be used together with the path if the command is run from the folder different from the one where the executive is placed.
+        The command will look like <b>docbuilder.exe</b> for Windows version and <b>documentbuilder</b> for Linux and Mac OS.
+        The <b>mydocument.docbuilder</b> parameter is the name of the script file that will form the document contents (use it with the path if needed).</p>
         <p>Visit the <a href="<%= Url.Action("integrationapi/usingdocbuilderfile") %>">.docbuilder</a> file section for more information about the file structure and rules used when creating it.</p>
     </li>
 </ol>

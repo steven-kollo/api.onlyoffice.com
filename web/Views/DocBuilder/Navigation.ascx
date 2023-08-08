@@ -9,7 +9,7 @@
         <a href="<%= Url.Action("basic") %>">Overview</a>
     </li>
     <li>
-        <a href="<%= Url.Action("gettingstarted") %>">Getting started</a>
+        <a href="<%= Url.Action("getbuilder") %>">Get Document Builder</a>
     </li>
     <li>
         <a href="<%= Url.Action("try") %>">Try now</a>
@@ -18,6 +18,9 @@
 
 <div class="treeheader">Builder.API</div>
 <ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("gettingstarted") %>">Overview</a>
+    </li>
     <li>
         <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>
         <ul>

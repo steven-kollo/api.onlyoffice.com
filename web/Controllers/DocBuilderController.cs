@@ -48,6 +48,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "debugging",
                 "formapi",
                 "framework",
+                "getbuilder",
                 "gettingstarted",
                 "global",
                 "nodejsexample",
@@ -257,6 +258,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Framework()
+        {
+            return View();
+        }
+
+        public ActionResult GetBuilder()
         {
             return View();
         }
