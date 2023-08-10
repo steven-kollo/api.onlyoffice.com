@@ -16,6 +16,52 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <h2 id="75" class="copy-link">Version 7.5</h2>
+    <p><b>Methods of combobox/dropdown list content control</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/getdropdownlist") %>">ApiBlockLvlSdt/GetDropdownList</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist") %>">ApiContentControlList</a> class to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist/add") %>">ApiContentControlList/Add</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist/clear") %>">ApiContentControlList/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist/getallitems") %>">ApiContentControlList/GetAllItems</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist/getclasstype") %>">ApiContentControlList/GetClassType</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist/getelementscount") %>">ApiContentControlList/GetElementsCount</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist/getitem") %>">ApiContentControlList/GetItem</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist/getparent") %>">ApiContentControlList/GetParent</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry") %>">ApiContentControlListEntry</a> class to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/delete") %>">ApiContentControlListEntry/Delete</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/getclasstype") %>">ApiContentControlListEntry/GetClassType</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/getindex") %>">ApiContentControlListEntry/GetIndex</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/getparent") %>">ApiContentControlListEntry/GetParent</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/gettext") %>">ApiContentControlListEntry/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/getvalue") %>">ApiContentControlListEntry/GetValue</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/movedown") %>">ApiContentControlListEntry/MoveDown</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/moveup") %>">ApiContentControlListEntry/MoveUp</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/select") %>">ApiContentControlListEntry/Select</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/setindex") %>">ApiContentControlListEntry/SetIndex</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/settext") %>">ApiContentControlListEntry/SetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollistentry/setvalue") %>">ApiContentControlListEntry/SetValue</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/getdropdownlist") %>">ApiInlineLvlSdt/GetDropdownList</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Global</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("global") %>#SearchData">SearchData</a> object to Global type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ReplaceData">ReplaceData</a> object to Global type definitions.</li>
+    </ul>
+    <br />
+
+    <p><b>Slide methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apislide/getvisible") %>">ApiSlide/GetVisible</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apislide/setvisible") %>">ApiSlide/SetVisible</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
     <h2 id="74" class="copy-link">Version 7.4</h2>
     <p><b>Characters methods</b></p>
     <ul>
@@ -84,7 +130,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/getfullname") %>">Api/GetFullName</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getfullname") %>">Api/GetFullName</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/getnumberformat") %>">ApiRange/GetNumberFormat</a> method to Spreadsheet API.</li>
-        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/move") %>">ApiWorksheet/Move</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/move") %>">ApiWorksheet/Move</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/api/getfullname") %>">Api/GetFullName</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("formapi/apidocument/inserttextform") %>">ApiDocument/InsertTextForm</a> method to Form API.</li>
     </ul>
