@@ -43,7 +43,4 @@
     </ol>
     <p>Or you can try and write the application yourself using the <a href="<%= Url.Action("framework") %>">Builder.Framework</a>.</p>
 
-    <%
-        Html.RenderPartial("DocBuilderShared/DocBuilderAction");
-    %>
 </asp:Content>

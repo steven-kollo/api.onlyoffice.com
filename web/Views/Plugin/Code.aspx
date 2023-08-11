@@ -44,7 +44,7 @@
 })(window, undefined);
 </pre>
 
-    <p>When the plugin object is being initialized (<em>window.Asc.plugin.init = function () {...}</em>), the editor forms a paragraph with the <em>Hello World</em> phrase and then uses <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("textdocumentapi", "docbuilder") %>">API</a> to create the document with this text in it (with the help of the <a href="<%= Url.Action("callcommand") %>">window.Asc.plugin.callCommand</a> method - <em>this.callCommand(function() {...})</em>).</p>
+    <p>When the plugin object is being initialized (<em>window.Asc.plugin.init = function () {...}</em>), the editor forms a paragraph with the <em>Hello World</em> phrase and then uses <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("gettingstarted", "docbuilder") %>">API</a> to create the document with this text in it (with the help of the <a href="<%= Url.Action("callcommand") %>">window.Asc.plugin.callCommand</a> method - <em>this.callCommand(function() {...})</em>).</p>
 
     <div class="note">Please note, that all <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> features are already included into all the versions (including the open source one) of ONLYOFFICE document editors, this is how the plugins interact with the editors. The standalone <b>ONLYOFFICE Document Builder</b> version is required, however, in case you want to create documents without any document editors.</div>
 

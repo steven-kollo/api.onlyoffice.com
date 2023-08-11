@@ -15,7 +15,7 @@ docbuilder.exe mydocument.docbuilder
 </pre>
         <p>Here <b>docbuilder</b> is the name of <b>ONLYOFFICE Document Builder</b> executive file.
         It must be used together with the path if the command is run from the folder different from the one where the executive is placed.
-        The command will look like <b>docbuilder.exe</b> for Windows version and <b>documentbuilder</b> for Linux and Mac OS.
+        The command will look like <b>docbuilder.exe</b> for Windows version and <b>documentbuilder</b> for Linux.
         The <b>mydocument.docbuilder</b> parameter is the name of the script file that will form the document contents (use it with the path if needed).</p>
         <p>Visit the <a href="<%= Url.Action("integrationapi/usingdocbuilderfile") %>">.docbuilder</a> file section for more information about the file structure and rules used when creating it.</p>
     </li>
