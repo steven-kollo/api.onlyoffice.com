@@ -585,6 +585,7 @@
     <Content Include="App_Data\docbuilder\examples\ScaleFlag.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\SchemeColorId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\SdtLock.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\SearchData.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ShapeType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ShdType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateBlipFill.docbuilder" />
@@ -1181,6 +1182,27 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetAutorName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiCommentReply.SetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlList.Add.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlList.Clear.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlList.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlList.GetAllItems.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlList.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlList.GetElementsCount.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlList.GetItem.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlList.GetParent.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.Delete.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.GetIndex.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.GetParent.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.GetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.GetValue.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.MoveDown.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.MoveUp.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.Select.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.SetIndex.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.SetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.SetValue.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AcceptAllRevisionChanges.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddElement.docbuilder" />
@@ -1359,6 +1381,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.GetAlias.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.GetDropdownList.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.GetElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.GetElementsCount.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.GetLabel.docbuilder" />
@@ -4202,6 +4225,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\docbuilder\examples\ReplaceData.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
