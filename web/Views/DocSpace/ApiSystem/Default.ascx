@@ -113,7 +113,3 @@
     </tbody>
 </table>
 <div class="mobile-content"></div>
-
-<h2>Get help</h2>
-
-<p>If you have any questions or feature requests about ONLYOFFICE Hosted Solution, please visit <a href="https://forum.onlyoffice.com/c/cloud/31" target="_blank">ONLYOFFICE forum</a> (registration required).</p>

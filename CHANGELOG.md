@@ -1,5 +1,9 @@
 # Change Log
 
+- editor: added the argument parameter to the Web Document Builder API
+- docspace: v1.1.1
+- docspace: added the DocSpace frame SDK
+- editors: added the lang parameter to the WOPI discovery
 - macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
 

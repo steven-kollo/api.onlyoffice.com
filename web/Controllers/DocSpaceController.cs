@@ -45,8 +45,9 @@ namespace ASC.Api.Web.Help.Controllers
 
         private readonly string[] _actionMap = new[]
             {
-                "Auth",
-                "Basic",
+                "Backend",
+                "Backend/Auth",
+                "Backend/Basic",
                 "Faq",
                 "Filters",
                 "Batch",
@@ -61,6 +62,18 @@ namespace ASC.Api.Web.Help.Controllers
                 "ApiSystem/TariffSection",
                 "ApiSystem/TariffSection/TariffGet",
                 "ApiSystem/TariffSection/TariffSet",
+                "JsSdk",
+                "JsSdk/InitModes",
+                "JsSdk/InitModes/Manager",
+                "JsSdk/InitModes/RoomSelector",
+                "JsSdk/InitModes/FileSelector",
+                "JsSdk/InitModes/Editor",
+                "JsSdk/InitModes/Viewer",
+                "JsSdk/InitModes/System",
+                "JsSdk/Config",
+                "JsSdk/Methods",
+                "JsSdk/Events",
+                "Basic",
             };
 
         public ActionResult ApiSystem(string catchall)
@@ -82,14 +95,13 @@ namespace ASC.Api.Web.Help.Controllers
             return View(DocSpaceDocumentation.GetAll());
         }
 
-        public ActionResult Auth()
+        public ActionResult Backend(string catchall)
         {
-            return View();
-        }
-
-        public ActionResult Basic()
-        {
-            return View();
+            if (!_actionMap.Contains("backend/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Backend", (object)catchall);
         }
 
         public ActionResult Faq()
@@ -102,7 +114,21 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult JsSdk(string catchall)
+        {
+            if (!_actionMap.Contains("jssdk/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("JsSdk", (object)catchall);
+        }
+
         public ActionResult Batch()
+        {
+            return View();
+        }
+
+        public ActionResult Basic()
         {
             return View();
         }

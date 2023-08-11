@@ -26,7 +26,7 @@
         <li>collaborating on files with other teammates in real time.</li>
     </ul>
     <p>ONLYOFFICE Docs also supports the <b>WOPI protocol</b> that is used to integrate your application with an online office. 
-    Further information about WOPI can be found <a href="<%= Url.Action("wopi") %>">here</a>.</li>
+    Further information about WOPI can be found <a href="<%= Url.Action("wopi") %>">here</a>.</p>
 
     <p><b>ONLYOFFICE Docs API</b> is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
 
