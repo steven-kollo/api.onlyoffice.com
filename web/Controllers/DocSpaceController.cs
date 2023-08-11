@@ -47,7 +47,6 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Backend",
                 "Backend/Auth",
-                "Backend/Basic",
                 "Faq",
                 "Filters",
                 "Batch",
