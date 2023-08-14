@@ -1,6 +1,7 @@
 # Change Log
 
 - editor: added the -9 error code to the Conversion API
+- editor: added the key field to the document.referenceData parameter
 - editor: added the deleteForgotten, getForgotten, and getForgottenList commands
 - editor: added the events.onRequestOpen event
 - editors: the setRevisedFile method is deprecated, please use the setRequestedDocument method instead
