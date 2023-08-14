@@ -98,7 +98,8 @@
         },
         "<a href="<%= Url.Action("config/document") %>#referenceData">referenceData</a>": {
             "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com"
+            "instanceId": "https://example.com",
+            "key": "Khirz6zTPdfd7"
         },
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
         "<a href="<%= Url.Action("config/document") %>#url">url</a>": "https://example.com/url-to-example-document.docx"

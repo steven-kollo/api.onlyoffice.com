@@ -154,7 +154,8 @@
     "path": "sample.xlsx",
     "referenceData": {
         "fileKey": "BCFA2CED",
-        "instanceId": "https://example.com"
+        "instanceId": "https://example.com",
+        "key": "Khirz6zTPdfd7"
     },
     "url": "https://example.com/url-to-example-document.xlsx"
 }
