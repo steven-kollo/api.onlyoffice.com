@@ -132,7 +132,7 @@
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("global") %>">Global</a>
+            <a href="<%= Url.Action("global") %>">Simple types</a>
         </li>
     </ul>
 

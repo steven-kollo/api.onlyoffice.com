@@ -7,13 +7,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Global type definitions
+    Simple types
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% var globals = (SortedDictionary<string, DBGlobal>)Model; %>
     <h1>
-        <span class="hdr">Global type definitions</span>
+        <span class="hdr">Simple types</span>
     </h1>
 
     <% foreach(var type in globals) { %>

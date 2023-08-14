@@ -377,12 +377,8 @@
                "Item2":"formapi"
             },
             {
-               "Item1":"Global",
+               "Item1":"Simple types",
                "Item2":"global"
-            },
-            {
-               "Item1":"List of classes",
-               "Item2":"classlist"
             }
          ],
          "More information":[

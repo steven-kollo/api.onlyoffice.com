@@ -111,10 +111,7 @@
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("global") %>">Global</a>
-        </li>
-        <li>
-            <a href="<%= Url.Action("classlist") %>">List of classes</a>
+            <a href="<%= Url.Action("global") %>">Simple types</a>
         </li>
         <li>
             <a href="<%= Url.Action("debugging") %>">Debugging</a>

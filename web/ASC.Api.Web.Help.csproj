@@ -3806,7 +3806,6 @@
     <Content Include="Views\Desktop\Plugins.aspx" />
     <Content Include="Views\DocBuilder\Basic.aspx" />
     <Content Include="Views\DocBuilder\Changelog.aspx" />
-    <Content Include="Views\DocBuilder\classlist.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
     <Content Include="Views\DocBuilder\Debugging.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />

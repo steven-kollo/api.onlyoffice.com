@@ -43,7 +43,6 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Basic",
                 "changelog",
-                "classlist",
                 "csharpexample",
                 "debugging",
                 "formapi",
@@ -360,11 +359,6 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Global()
         {
             return View(DocBuilderDocumentation.Instance.GetGlobals());
-        }
-
-        public ActionResult Classlist()
-        {
-            return View();
         }
 
         public FileResult DownloadScript(string fileId)
