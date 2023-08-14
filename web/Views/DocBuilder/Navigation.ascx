@@ -15,6 +15,9 @@
         <li>
             <a href="<%= Url.Action("try") %>">Try now</a>
         </li>
+        <li>
+            <a href="<%= Url.Action("debugging") %>">Debugging</a>
+        </li>
     </ul>
 
     <div class="treeheader">Builder.API</div>
@@ -112,9 +115,6 @@
         </li>
         <li>
             <a href="<%= Url.Action("global") %>">Simple types</a>
-        </li>
-        <li>
-            <a href="<%= Url.Action("debugging") %>">Debugging</a>
         </li>
     </ul>
 

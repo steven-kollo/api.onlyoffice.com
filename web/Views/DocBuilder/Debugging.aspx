@@ -38,7 +38,7 @@ oParagraph.AddText("Hello world!");
     <p>The <b>debugger</b> command works as a breakpoint and pauses the execution at the script point where this command is inserted.</p>
 
     <h2 id="v8-inspector" class="copy-link">Executing from Builder.Framework or Builder.App</h2>
-    <note>This instruction can also be used for any <a href="<%= Url.Action("framework") %>">Builder.Framework</a> version - C++, COM, .Net.</note>
+    <note>This instruction can also be used for any <a href="<%= Url.Action("framework") %>">Builder.Framework</a> version: C++, COM, .Net.</note>
     <ol>
         <li>Open a terminal in the <em>DocumentBuilder</em> folder.</li>
         <li>
