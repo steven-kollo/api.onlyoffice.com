@@ -727,7 +727,8 @@ docEditor.setReferenceData({
     "path": "sample.xlsx",
     "referenceData": {
         "fileKey": "BCFA2CED",
-        "instanceId": "https://example.com"
+        "instanceId": "https://example.com",
+        "key": "Khirz6zTPdfd7"
     },
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     "url": "https://example.com/url-to-example-document.xlsx"
@@ -798,7 +799,17 @@ docEditor.setReferenceData({
                                     <br />
                                     <b>type</b>: string,
                                     <br />
-                                    <b>example</b>:  "https://example.com".
+                                    <b>example</b>:  "https://example.com";
+                                </li>
+                                <li>
+                                    <b>key</b> - defines the unique document identifier used by the service to take the data from the co-editing session.
+                                    In case the known key is sent, the document will be taken from the cache.
+                                    Every time the document is edited and saved, the key must be generated anew.
+                                    The document url can be used as the <b>key</b> but without the special characters and the length is limited to 128 symbols.
+                                    <br />
+                                    <b>type</b>: string,
+                                    <br />
+                                    <b>example</b>:  "Khirz6zTPdfd7".
                                 </li>
                             </ul>
                         </td>
