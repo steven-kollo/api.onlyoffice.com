@@ -32,7 +32,7 @@
             After the file download, run it and see the examples of how ONLYOFFICE Document Builder can be used without the need to write any application.</li>
     </ol>
 
-    <h2>Document Builder components</h2>
+    <h2 id="builder-components" class="copy-link">Document Builder components</h2>
     <p>ONLYOFFICE Document Builder consists of four components:</p>
     <table class="table table-classlist">
         <thead>
