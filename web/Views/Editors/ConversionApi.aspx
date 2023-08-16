@@ -1830,8 +1830,8 @@
             </tr>
             <tr class="tablerow">
                 <td>-9</td>
-                <td>Error when the converter cannot automatically determine the output file format and a dialog box is displayed to select the editor type
-                    (text document or spreadsheet). It is used to convert XML to OOXML in case the XML type is unknown.</td>
+                <td>Error when the converter cannot automatically determine the output file format. This error means that the client must explicitly specify
+                    in which format the file should be converted (text document or spreadsheet). It is used to convert XML to OOXML in case the XML type is unknown.</td>
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>
