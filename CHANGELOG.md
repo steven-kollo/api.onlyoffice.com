@@ -6,6 +6,10 @@
 - editor: added the events.onRequestOpen event
 - editors: the setRevisedFile method is deprecated, please use the setRequestedDocument method instead
 - editors: the events.onRequestCompareFile event is deprecated, please use the events.onRequestSelectDocument event instead
+- editor: added the argument parameter to the Web Document Builder API
+- docspace: v1.1.1
+- docspace: added the DocSpace frame SDK
+- editors: added the lang parameter to the WOPI discovery
 - macros: added the Complete address information macro 
 - plugins: added the store.categories config parameter
 
