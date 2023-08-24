@@ -27,7 +27,12 @@ var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("Hello world!");
 </pre>
         </li>
-        <li>Open the developer console by pressing the <b>F12</b> button.</li>
+         <li>
+            <div class="header-gray">For Document Server</div>
+            Open the developer console by pressing the <b>F12</b> button.
+            <div class="header-gray">For Desktop Editors</div>
+            Use <a href="<%= Url.Action("debugging", "desktop") %>">this instruction</a> to run in <b>debug mode</b>
+        </li>
         <li>
             <p>Press the <b>Run</b> button to run your script.</p>
             <note>Please note that the <b>debugger</b> command will only work if the development tools are open. Otherwise, the browser will ignore it.</note>
