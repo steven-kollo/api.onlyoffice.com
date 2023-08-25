@@ -139,8 +139,6 @@
   <ItemGroup>
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
-    <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
-    <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\docbuilder\examples\Angle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\AxisPos.docbuilder" />
@@ -1917,8 +1915,6 @@
     <Content Include="App_Data\docbuilder\examples\XlSearchDirection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\XlSearchOrder.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\XlUnderlineStyle.docbuilder" />
-    <Content Include="App_Data\docbuilder\Node.js Example.zip" />
-    <Content Include="App_Data\docbuilder\PHP Example.zip" />
     <Content Include="App_Data\docbuilder\references\cell\Api.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiAreas.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiCharacters.json" />
@@ -2003,7 +1999,6 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\CMarkdownConverter.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
-    <Content Include="App_Data\docbuilder\Ruby Example.zip" />
     <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
