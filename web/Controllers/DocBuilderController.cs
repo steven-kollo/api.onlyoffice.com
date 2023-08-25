@@ -45,6 +45,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "changelog",
                 "classlist",
                 "csharpexample",
+                "debugging",
                 "formapi",
                 "gettingstarted",
                 "global",
@@ -196,6 +197,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Debugging()
+        {
+            return View();
+        }
+
         public ActionResult Gettingstarted()
         {
             return View();
@@ -223,11 +229,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Integratingdocumentbuilder()
         {
-            var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/docbuilder"));
-
-            var examples = directoryInfo.GetFiles("*.zip", SearchOption.TopDirectoryOnly).Select(fileInfo => fileInfo.Name).ToList();
-
-            return View(examples);
+            return View();
         }
 
         public ActionResult Integrationapi(string catchall)

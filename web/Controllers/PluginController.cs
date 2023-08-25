@@ -95,6 +95,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/addchart",
                 "macros/macrosamples/changecellbackgroundcolor",
                 "macros/macrosamples/changecellfontcolor",
+                "macros/macrosamples/completeaddressinformation",
                 "macros/macrosamples/currencyexchangerates",
                 "macros/macrosamples/formatrangeasatable",
                 "macros/macrosamples/highlightduplicates",
@@ -251,6 +252,11 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult resizeWindow()
         {
             return RenderBaseMethod("resizeWindow");
+        }
+
+        public ActionResult sendToPlugin()
+        {
+            return RenderBaseMethod("sendToPlugin");
         }
 
         public ActionResult GettingStarted()

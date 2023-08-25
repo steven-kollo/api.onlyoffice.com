@@ -31,6 +31,7 @@
         <li>The <b>document storage service</b> sends the link to the selected version of the document.</li>
         <li>The <b>document editor</b> displays the selected document version.</li>
         <li>When the user clicks another version in the document version list, the <b>document editor</b> requests the information about the version to be displayed anew.</li>
+        <li>The user clicks the <em>Close History</em> button and the <b>document editor</b> hides the list of the document versions.</li>
     </ol>
 
     <h2 id="apply" class="copy-link">How this can be done in practice</h2>
@@ -43,7 +44,7 @@
                 This method contains document history for each document version, if the history parameter has been present for each version.
             </p>
             <pre>
-var onRequestHistory = function() {
+var onRequestHistory = function () {
     docEditor.refreshHistory({
         "currentVersion": 2,
         "history": [
@@ -66,7 +67,7 @@ var onRequestHistory = function() {
                 "version": 2
             },
             ...
-        ]
+        ],
     });
 };
 
@@ -82,18 +83,21 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In the configuration script for Document Editor initialization specify the event handler which will select the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">version from history</a>.
+                In the configuration script for Document Editor initialization, specify the event handler which will select the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">version from history</a>.
                 When the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> event is called, the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method must be executed.
                 This method contains the absolute URL to the file of the corresponding version.
             </p>
+            <p>When calling the <em>setHistoryData</em> method to view the document history version, the token must be added to validate the parameters.</p>
             <pre>
-var onRequestHistoryData = function(event) {
+var onRequestHistoryData = function (event) {
     var version = event.data;
     docEditor.setHistoryData({
+        "fileType": "docx",
         "key": "Khirz6zTPdfd7",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
         "url": "https://example.com/url-to-example-document.docx",
-        "version": version
-    })
+        "version": 2
+    });
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -106,8 +110,81 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
             <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
         </li>
+        <li>
+            <p>
+                In the configuration script for Document Editor initialization, specify the event handler which will <a href="<%= Url.Action("config/events") %>#onRequestRestore">restore</a> the file version when the user clicks the <em>Restore</em> button in the version history.
+                When the <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> event is called, the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method must be executed to initialize version history again.
+                This method contains document history for each document version, if the history parameter has been present for each version.
+            </p>
+            <pre>
+var onRequestRestore = function (event) {
+    var fileType = event.data.fileType;
+    var url = event.data.url;
+    var version = event.data.version;
+    ...
+    docEditor.refreshHistory({
+        "currentVersion": 2,
+        "history": [
+            {
+                "changes": changes,
+                "created": "2010-07-06 10:13 AM",
+                "key": "af86C7e71Ca8",
+                "serverVersion": serverVersion,
+                "user": {
+                    "id": "F89d8069ba2b",
+                    "name": "Kate Cage"
+                },
+                "version": 1
+            },
+            {
+                "changes": changes,
+                "created": "2010-07-07 3:46 PM",
+                "key": "Khirz6zTPdfd7",
+                "user": {
+                    "id": "78e1e841",
+                    "name": "John Smith"
+                },
+                "version": 2
+            },
+            ...
+        ]
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestRestore": onRequestRestore,
+        ...
+    },
+    ...
+});
+</pre>
+                <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
+        </li>
         <li>Open your <em>html</em> file in the browser.</li>
         <li>Open the <em>Version History</em> option in the Document Editor menu.</li>
+        <li>
+            <p>
+                Specify the event handler for the <em>Close History</em> button to be displayed in the configuration script for Document Editor initialization.
+                When the user is trying to go back to the document from viewing the document version history by clicking the <em>Close History</em> button,
+                the <a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a> event is called and the version history list is hidden.
+                When the function is called, the editor must be initialized again, in the editing mode.
+            </p>
+            <pre>
+var onRequestHistoryClose = function () {
+    document.location.reload();
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestHistoryClose": onRequestHistoryClose,
+        ...
+    },
+    ...
+});
+</pre>
+<img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
+        </li>
     </ol>
     
     <h2 id="apply-changes" class="copy-link">Opening the document history with changes highlighting</h2>
@@ -165,14 +242,18 @@ docEditor.refreshHistory({
                 The file must be saved and its address must be sent as changesUrl parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
                 The link to the previous document version (<em>previous.url</em>) must be added into the object.
             </p>
+            <p>When calling the <em>setHistoryData</em> method to view the document history version, the token must be added to validate the parameters.</p>
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "https://example.com/url-to-changes.zip",
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "previous": {
+        "fileType": "docx",
         "key": "af86C7e71Ca8",
         "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });

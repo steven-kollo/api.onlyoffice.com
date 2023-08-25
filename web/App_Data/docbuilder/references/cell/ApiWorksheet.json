@@ -96,7 +96,8 @@
       },
       "returns": [
         [
-          "ApiRange"
+          "ApiRange",
+          "Error"
         ]
       ],
       "see": null,
@@ -1348,6 +1349,33 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "Move": {
+      "memberof": "ApiWorksheet",
+      "name": "Move",
+      "description": "<p>Moves the current sheet to another location in the workbook.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiWorksheet",
+          "name": "before",
+          "description": "<p>The sheet before which the current sheet will be placed. You cannot specify &quot;before&quot; if you specify &quot;after&quot;.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiWorksheet",
+          "name": "after",
+          "description": "<p>The sheet after which the current sheet will be placed. You cannot specify &quot;after&quot; if you specify &quot;before&quot;.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "events": {},

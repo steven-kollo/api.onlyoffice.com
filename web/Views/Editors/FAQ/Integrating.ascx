@@ -11,7 +11,7 @@
     <dd>
         <p>The examples of integration of Document Server with your own website can be found <a href="<%= Url.Action("demopreview") %>">here</a>. You can choose among different web development programming languages:</p>
         <ul class="columns-2">
-            <li><a href="<%= Url.Action("example/csharp") %>">.Net (C#)</a></li>
+            <li><a href="<%= Url.Action("example/csharp") %>">.Net (C#) / .Net (C# MVC)</a></li>
             <li><a href="<%= Url.Action("example/java") %>">Java</a></li>
             <li><a href="<%= Url.Action("example/javaspring") %>">Java Spring</a></li>
             <li><a href="<%= Url.Action("example/nodejs") %>">Node.js</a></li>

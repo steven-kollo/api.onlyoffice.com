@@ -22,7 +22,7 @@ oParagraph.AddText(" The language of the document was set to English (Canada).")
 oDocContent.Push(oParagraph);
 oParagraph = Api.CreateParagraph();
 oParagraph.SetBullet(oBullet);
-oParagraph.AddText(" A green shape was created with numbered paragraphs in it.");
+oParagraph.AddText("An orange shape was created with numbered paragraphs in it.");
 oDocContent.Push(oParagraph);
 builder.SaveFile("xlsx", "Api.xlsx");
 builder.CloseFile();

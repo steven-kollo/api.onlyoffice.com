@@ -323,18 +323,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static ILog _logger;
 
-        public MsDocDocumentGenerator(string basePath, ClassNamePluralizer classPluralizer)
+        public MsDocDocumentGenerator(string basePath, ClassNamePluralizer classPluralizer, ILog logger)
         {
             _basePath = basePath;
-            GetLogger();
+            _logger = logger;
 
             _classPluralizer = classPluralizer;
-        }
-
-        private void GetLogger()
-        {
-            _logger = LogManager.GetLogger("ASC.MsDocDocumentGenerator");
-            _logger.Debug("Generate community documentations");
         }
 
         #region IApiDocumentGenerator Members
@@ -392,6 +386,15 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 File = methodParams[j].Attribute("file").ValueOrNull(),
                                 Assembly = GetAssembly(methodParams[j].Attribute("type").ValueOrNull())
                             };
+
+                            if (param.Type.StartsWith("`"))
+                            {
+                                var xmlType = GetTypeFromXml(methodParams[j].Attribute("type").ValueOrNull());
+                                if (xmlType != null)
+                                {
+                                    param.Type = xmlType;
+                                }
+                            }
                             pointMethod.Params.Add(param);
                         }
                         catch (Exception ex)
@@ -744,6 +747,17 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return types[number];
         }
 
+        private string GetTypeFromXml(string type)
+        {
+            if (type == null) return null;
+            if (string.IsNullOrWhiteSpace(type)) return null;
+
+            var split = type.Split(',');
+            var assembly = split[0].Trim();
+
+            return assembly;
+        }
+
         private string GetAssembly(string type)
         {
             if (type == null) return null;
@@ -879,6 +893,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             if (typeName.EndsWith("{`0}"))
             {
                 return typeName.Substring(0, typeName.Length - 4);
+            }
+            if (typeName.EndsWith("{System.Text.Json.JsonElement}"))
+            {
+                return typeName.Substring(0, typeName.Length - "{System.Text.Json.JsonElement}".Length);
             }
             return typeName;
         }

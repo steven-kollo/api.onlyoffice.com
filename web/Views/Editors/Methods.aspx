@@ -35,7 +35,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setReferenceData">setReferenceData</a> - refresh data by a link to a file.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
-        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
         <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
     </ul>
 
@@ -728,6 +728,7 @@ docEditor.setReferenceData({
         "fileKey": "BCFA2CED",
         "instanceId": "https://example.com"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     "url": "https://example.com/url-to-example-document.xlsx"
 });
 </pre>
@@ -940,18 +941,21 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments.
+                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> events.
             </p>
             <pre>
 docEditor.setUsers({
+    "c": "protect",
     "users": [
         {
             "email": "john@example.com",
+            "id": "78e1e841",
             "name": "John Smith"
         },
         {
             "email": "kate@example.com",
+            "id": "F89d8069ba2b",
             "name": "Kate Cage"
         },
         ...
@@ -979,6 +983,16 @@ docEditor.setUsers({
                 </thead>
                 <tbody>
                     <tr class="tablerow">
+                        <td>c</td>
+                        <td>
+                            Defines the operation type from the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event.
+                            It can take one of the following values - <em>mention</em> or <em>protect</em>.
+                            The default value is <em>mention</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>users</td>
                         <td>Defines the list of the users.</td>
                         <td>array of strings</td>
@@ -987,6 +1001,12 @@ docEditor.setUsers({
                     <tr class="tablerow">
                         <td>users.email</td>
                         <td>Defines the email address of the user.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>users.id</td>
+                        <td>Defines the identification of the user. This field is used only for protecting the sheet ranges when granting editing rights to the specified user.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>

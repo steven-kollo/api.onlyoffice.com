@@ -1,3 +1,8 @@
-window.Asc.plugin.executeMethod ("RemovePlugin", ["asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"], function (result) {
-    postMessage (JSON.stringify (result));
-});
+function removePlugin(backup) {
+    if (removeGuid)
+        window.Asc.plugin.executeMethod('RemovePlugin', [removeGuid, backup], function(result) {
+            postMessage(result);
+        });
+
+    removeGuid = null;
+};

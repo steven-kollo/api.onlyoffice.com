@@ -90,7 +90,7 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
         <div class="commandline">sudo apt-get install -y nodejs</div>
     </li>
     <li>Download the archive with the Node.js example and unpack the archive:
-        <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/Node.js%20Example.zip</div>
+        <div class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip</div>
         <div class="commandline">unzip Node.js\ Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:

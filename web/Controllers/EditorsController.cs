@@ -118,6 +118,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "ProtectingRanges",
                 "React",
                 "Redmine",
                 "Rename",
@@ -303,11 +304,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult DemoPreview()
         {
-            var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/editor"));
-
-            var examples = directoryInfo.GetFiles("*.zip", SearchOption.TopDirectoryOnly).Select(fileInfo => fileInfo.Name).ToList();
-
-            return View(examples);
+            return View();
         }
 
         public ActionResult DocumentBuilderApi()
@@ -435,6 +432,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult ProtectingRanges()
         {
             return View();
         }
