@@ -148,7 +148,7 @@ php composer.phar install
     </li>
     <li>Download the archive with the PHP example and unpack the archive:
         <div class="commandline">cd /var/www/html</div>
-        <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/PHP%20Example.zip</div>
+        <div class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip</div>
         <div class="commandline">unzip PHP\ Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:

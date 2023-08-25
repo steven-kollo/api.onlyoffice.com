@@ -2018,14 +2018,6 @@
     <Content Include="App_Data\docspace\references\ASC.Web.Api.xml" />
     <Content Include="App_Data\docspace\references\ASC.Web.Core.xml" />
     <Content Include="App_Data\docspace\references\ASC.Webhooks.Core.xml" />
-    <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
-    <Content Include="App_Data\editor\DotNet %28Csharp%29 Example.zip" />
-    <Content Include="App_Data\editor\Java Example.zip" />
-    <Content Include="App_Data\editor\Java Spring Example.zip" />
-    <Content Include="App_Data\editor\Node.js Example.zip" />
-    <Content Include="App_Data\editor\PHP Example.zip" />
-    <Content Include="App_Data\editor\Python Example.zip" />
-    <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\editor\wildcardData\persons.json" />
     <Content Include="App_Data\plugins\examples\AddinFieldData.docbuilder" />
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
