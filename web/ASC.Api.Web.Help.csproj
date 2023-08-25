@@ -4058,6 +4058,7 @@
     <Content Include="Views\Editors\Signature\Default.ascx" />
     <Content Include="Views\Editors\Signature\Request.ascx" />
     <Content Include="Views\Editors\Strapi.aspx" />
+    <Content Include="Views\Editors\SuiteCRM.aspx" />
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
