@@ -2,6 +2,7 @@ const http = require('https');
 const fs = require('fs/promises');
 const path = require('path');
 const { exec } = require("child_process");
+const jsdoc2md = require('jsdoc-to-markdown');
 
 const baseUrl = "https://raw.githubusercontent.com/ONLYOFFICE"
 const inputPath = "sdkjs";
@@ -94,13 +95,12 @@ async function reformatScripts(folder) {
         let content = (await fs.readFile(filePath)).toString();
         let matches = content.match(reg);
         if (matches != null) {
-            fs.writeFile(filePath, matches[1]);
+           await fs.writeFile(filePath, matches[1]);
         }
     }
 }
 
 async function generateJsDocs(outputFolder) {
-    let outFolder = path.join(__dirname, "out");
     let tmpFolder = path.join(__dirname, "tmp");
 
     await fs.mkdir(outputFolder);
@@ -108,13 +108,39 @@ async function generateJsDocs(outputFolder) {
     let files = await fs.readdir(tmpFolder);
     for (let file of files) {
         console.log(`processing ${file}`);
-        try {
-            await fs.rm(outFolder, { recursive: true });
-        } catch { }
-        await fs.mkdir(outFolder);
+        const templateData = jsdoc2md.getTemplateDataSync({ files: [`tmp/${file}`] });
+        const fileFolder = path.join(outputFolder, file.slice(0, file.lastIndexOf(".")));
 
-        await execute(`node node_modules/jsdoc/jsdoc.js tmp/${file}  -t . -c ./conf.json`);
-        await fs.rename("out", path.join(outputFolder, file.slice(0, file.lastIndexOf("."))));
+        const classNames = templateData.reduce((classNames, identifier) => {
+            if (identifier.kind === 'class') classNames.push(identifier.name)
+            return classNames
+        }, []);
+
+        if (classNames.length > 0) {
+            await fs.mkdir(fileFolder);
+        }
+
+        for (const className of classNames) {
+            console.log(`generating md for ${file}->${className}`);
+            var classFolder = path.join(fileFolder, className);
+
+            const functionNames = templateData.reduce((functionNames, identifier) => {
+                if ((identifier.kind === 'function' || identifier.kind === 'member')
+                    && identifier.memberof === className
+                    && !identifier.name.startsWith('private_')) functionNames.push(identifier.name)
+                return functionNames
+            }, []);
+
+            if (functionNames.length > 0) {
+                await fs.mkdir(classFolder);
+            }
+
+            for (const functionName of functionNames) {
+                const template = `{{#function name="${functionName}"}}{{>docs}}{{/function}}`;
+                const output = jsdoc2md.renderSync({ data: templateData, template: template });
+                await fs.writeFile(path.join(classFolder, `${functionName}.md`), output);
+            }
+        }
     }
 }
 

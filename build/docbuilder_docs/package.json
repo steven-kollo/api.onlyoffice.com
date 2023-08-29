@@ -4,7 +4,8 @@
   "description": "It is a json generator of documentation",
   "main": "example.js",
   "dependencies": {
-    "jsdoc": "3.6.3"
+    "jsdoc": "3.6.3",
+    "jsdoc-to-markdown": "8.0.0"
   },
   "devDependencies": {},
   "scripts": {
