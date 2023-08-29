@@ -2284,6 +2284,7 @@
     <Content Include="Content\img\docbuilder\examples\api-slide-1.jpg" />
     <Content Include="Content\img\docbuilder\examples\api-slide-2.jpg" />
     <Content Include="Content\img\docbuilder\examples\api-word.jpg" />
+    <Content Include="Content\img\docbuilder\examples\form-template.png" />
     <Content Include="Content\img\docbuilder\builder-debugger.png" />
     <Content Include="Content\img\docbuilder\compare-documents.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />

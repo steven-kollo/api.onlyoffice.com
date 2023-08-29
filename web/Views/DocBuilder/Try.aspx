@@ -85,7 +85,7 @@
             }
             else if (Request["type"] == "form")
             {
-                documentType = "form";
+                documentType = "word";
                 ext = "docx";
             }
 
