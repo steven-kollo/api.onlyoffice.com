@@ -28,10 +28,11 @@ oParagraph.AddText("Hello world!");
 </pre>
         </li>
          <li>
+            <p>To run your script in debug mode:</p>
             <div class="header-gray">For Document Server</div>
-            Open the developer console by pressing the <b>F12</b> button.
+            <p>Open the developer console by pressing the <b>F12</b> button.</p>
             <div class="header-gray">For Desktop Editors</div>
-            Use <a href="<%= Url.Action("debugging", "desktop") %>">this instruction</a> to run in <b>debug mode</b>
+            <p>Use the <a href="<%= Url.Action("debugging", "desktop") %>">instruction</a> for debugging in ONLYOFFICE Desktop Editors.</p>
         </li>
         <li>
             <p>Press the <b>Run</b> button to run your script.</p>
