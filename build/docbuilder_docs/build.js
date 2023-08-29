@@ -30,21 +30,21 @@ const files = {
 (async () => {
     let inputFolder = path.join(__dirname, inputPath);
 
-    if (downloadFiles) {
-        try {
-            await fs.rm(inputFolder, { recursive: true });
-        } catch { }
+    // if (downloadFiles) {
+    //     try {
+    //         await fs.rm(inputFolder, { recursive: true });
+    //     } catch { }
 
-        await fs.mkdir(inputFolder);
+    //     await fs.mkdir(inputFolder);
 
-        console.log("downloading files..");
-        for (let repo in files) {
-            for (let file in files[repo]) {
-                console.log(`downloading ${repo}/${files[repo][file]} -> ${file}`);
-                await downloadFile(`${baseUrl}/${repo}/${files[repo][file]}`, path.join(inputFolder, file));
-            }
-        }
-    }
+    //     console.log("downloading files..");
+    //     for (let repo in files) {
+    //         for (let file in files[repo]) {
+    //             console.log(`downloading ${repo}/${files[repo][file]} -> ${file}`);
+    //             await downloadFile(`${baseUrl}/${repo}/${files[repo][file]}`, path.join(inputFolder, file));
+    //         }
+    //     }
+    // }
 
     if (parseDocs) {
         let tmpFolder = path.join(__dirname, "tmp");
@@ -107,14 +107,38 @@ async function generateJsDocs(outputFolder) {
 
     let files = await fs.readdir(tmpFolder);
     for (let file of files) {
+
         console.log(`processing ${file}`);
         const templateData = jsdoc2md.getTemplateDataSync({ files: [`tmp/${file}`] });
         const fileFolder = path.join(outputFolder, file.slice(0, file.lastIndexOf(".")));
+        const fileGlobalFolder = path.join(fileFolder, 'Global');
 
         const classNames = templateData.reduce((classNames, identifier) => {
             if (identifier.kind === 'class') classNames.push(identifier.name)
             return classNames
         }, []);
+
+        // ToDo: fix api docs (https://github.com/ONLYOFFICE/sdkjs-forms/blob/master/apiBuilder.js#L348), missing lines:
+        ///**
+        // * Base class.
+        // * @global
+        // * @class
+        // * @name ApiDocument
+        // */
+        if (file === 'form.js') {
+            classNames.push('ApiDocument');
+        }
+
+        // ToDo: fix api docs (https://github.com/ONLYOFFICE/sdkjs-forms/blob/master/apiPlugins.js#L37), missing lines:
+        ///**
+        // * Base class.
+        // * @global
+        // * @class
+        // * @name Api
+        // */
+        if (file === 'formPluginMethods.js') {
+            classNames.push('Api');
+        }
 
         if (classNames.length > 0) {
             await fs.mkdir(fileFolder);
@@ -127,8 +151,8 @@ async function generateJsDocs(outputFolder) {
             const functionNames = templateData.reduce((functionNames, identifier) => {
                 if ((identifier.kind === 'function' || identifier.kind === 'member')
                     && identifier.memberof === className
-                    && !identifier.name.startsWith('private_')) functionNames.push(identifier.name)
-                return functionNames
+                    && !identifier.name.startsWith('private_')) functionNames.push(identifier.name);
+                return functionNames;
             }, []);
 
             if (functionNames.length > 0) {
@@ -140,6 +164,23 @@ async function generateJsDocs(outputFolder) {
                 const output = jsdoc2md.renderSync({ data: templateData, template: template });
                 await fs.writeFile(path.join(classFolder, `${functionName}.md`), output);
             }
+        }
+
+        console.log(`generating md for ${file}->Global`);
+        const globalTypeNames = templateData.reduce((globalTypeNames, identifier) => {
+            if (identifier.scope === 'global' && identifier.kind === 'typedef') globalTypeNames.push(identifier.name);
+            return globalTypeNames;
+        }, []);
+
+        if (globalTypeNames.length > 0) {
+            await fs.mkdir(fileGlobalFolder);
+        }
+
+        let globalOutput = '';
+        for (const globalTypeName of globalTypeNames) {
+            const template = `{{#globals name="${globalTypeName}"}}{{>docs}}{{/globals}}`;
+            const output = jsdoc2md.renderSync({ data: templateData, template: template });
+            await fs.writeFile(path.join(fileGlobalFolder, `${globalTypeName}.md`), output);
         }
     }
 }
