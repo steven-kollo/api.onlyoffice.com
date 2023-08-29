@@ -2575,6 +2575,7 @@
     <Content Include="Content\img\plugin\clippy.svg" />
     <Content Include="Content\img\plugin\comment.svg" />
     <Content Include="Content\img\plugin\content-controls.svg" />
+    <Content Include="Content\img\plugin\context-menu-and-events.svg" />
     <Content Include="Content\img\plugin\controls-navigation.svg" />
     <Content Include="Content\img\plugin\controls-tags.svg" />
     <Content Include="Content\img\plugin\counter.svg" />
