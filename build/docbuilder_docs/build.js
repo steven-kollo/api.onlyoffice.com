@@ -147,6 +147,8 @@ async function generateJsDocs(outputFolder) {
         for (const className of classNames) {
             console.log(`generating md for ${file}->${className}`);
             var classFolder = path.join(fileFolder, className);
+            const classMethodsFolder = path.join(classFolder, 'Methods');
+            const classEventsFolder = path.join(classFolder, 'Events');
 
             const functionNames = templateData.reduce((functionNames, identifier) => {
                 if ((identifier.kind === 'function' || identifier.kind === 'member')
@@ -157,12 +159,32 @@ async function generateJsDocs(outputFolder) {
 
             if (functionNames.length > 0) {
                 await fs.mkdir(classFolder);
+                await fs.mkdir(classMethodsFolder);
             }
 
             for (const functionName of functionNames) {
                 const template = `{{#function name="${functionName}"}}{{>docs}}{{/function}}`;
                 const output = jsdoc2md.renderSync({ data: templateData, template: template });
-                await fs.writeFile(path.join(classFolder, `${functionName}.md`), output);
+                await fs.writeFile(path.join(classMethodsFolder, `${functionName}.md`), output);
+            }
+
+            const eventNames = templateData.reduce((eventNames, identifier) => {
+                if (identifier.kind === 'event'&& identifier.memberof === className) eventNames.push(identifier.name);
+                return eventNames;
+            }, []);
+
+            if (eventNames.length > 0) {
+                try {
+                    await fs.mkdir(classFolder);
+                } catch { }
+
+                await fs.mkdir(classEventsFolder);
+            }
+
+            for (const eventName of eventNames) {
+                const template = `{{#identifier name="${eventName}"}}{{>docs}}{{/identifier}}`;
+                const output = jsdoc2md.renderSync({ data: templateData, template: template });
+                await fs.writeFile(path.join(classEventsFolder, `${eventName}.md`), output);
             }
         }
 
