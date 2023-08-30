@@ -151,7 +151,7 @@ async function generateJsDocs(outputFolder) {
             const classEventsFolder = path.join(classFolder, 'Events');
 
             const functionNames = templateData.reduce((functionNames, identifier) => {
-                if ((identifier.kind === 'function' || identifier.kind === 'member')
+                if (identifier.kind === 'function'
                     && identifier.memberof === className
                     && !identifier.name.startsWith('private_')) functionNames.push(identifier.name);
                 return functionNames;
@@ -163,7 +163,7 @@ async function generateJsDocs(outputFolder) {
             }
 
             for (const functionName of functionNames) {
-                const template = `{{#function name="${functionName}"}}{{>docs}}{{/function}}`;
+                const template = `{{#function name="${functionName}" memberof="${className}"}}{{>docs}}{{/function}}`;
                 const output = jsdoc2md.renderSync({ data: templateData, template: template });
                 await fs.writeFile(path.join(classMethodsFolder, `${functionName}.md`), output);
             }
@@ -182,7 +182,7 @@ async function generateJsDocs(outputFolder) {
             }
 
             for (const eventName of eventNames) {
-                const template = `{{#identifier name="${eventName}"}}{{>docs}}{{/identifier}}`;
+                const template = `{{#identifier name="${eventName}" memberof="${className}"}}{{>docs}}{{/identifier}}`;
                 const output = jsdoc2md.renderSync({ data: templateData, template: template });
                 await fs.writeFile(path.join(classEventsFolder, `${eventName}.md`), output);
             }
@@ -198,7 +198,6 @@ async function generateJsDocs(outputFolder) {
             await fs.mkdir(fileGlobalFolder);
         }
 
-        let globalOutput = '';
         for (const globalTypeName of globalTypeNames) {
             const template = `{{#globals name="${globalTypeName}"}}{{>docs}}{{/globals}}`;
             const output = jsdoc2md.renderSync({ data: templateData, template: template });
