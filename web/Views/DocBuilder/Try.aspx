@@ -85,7 +85,7 @@
             }
             else if (Request["type"] == "form")
             {
-                documentType = "word";
+                documentType = "form";
                 ext = "docx";
             }
 
@@ -143,6 +143,16 @@
             $("#builderScript").val("");
         });
 
+        <%
+            var zoom = 100;
+            if (Request["type"] == "form")
+            {
+                documentType = "word";
+                ext = "docx";
+                zoom = 50;
+            }
+        %>
+
         var config = <%= Config.Serialize(
             new Config {
                 Document = new Config.DocumentConfig
@@ -173,7 +183,8 @@
                                 HideRulers = true,
                                 IntegrationMode = "embed",
                                 ToolbarHideFileName = true,
-                                ToolbarNoTabs = true
+                                ToolbarNoTabs = true,
+                                Zoom = zoom
                             }
                     },
                 Height = "550px",
