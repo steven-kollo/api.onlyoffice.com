@@ -6,66 +6,54 @@ const jsdoc2md = require('jsdoc-to-markdown');
 const resources = require('./resources.json');
 
 const baseUrl = "https://raw.githubusercontent.com/ONLYOFFICE"
-const inputPath = "resources";
-const outPath = "jsdoc";
+const resourcesPath = "resources";
+const documentationPath = "documentation";
 const downloadFiles = true;
 const parseDocs = true;
 
-const files = {
-    "sdkjs/master": {
-        "word.js": "word/apiBuilder.js",
-        "cell.js": "cell/apiBuilder.js",
-        "slide.js": "slide/apiBuilder.js",
-        "wordPluginMethods.js": "word/api_plugins.js",
-        "cellPluginMethods.js": "cell/api_plugins.js",
-        "slidePluginMethods.js": "slide/api_plugins.js",
-        "sharedPluginMethods.js": "common/apiBase_plugins.js",
-        "pluginBase.js": "common/plugins/plugin_base_api.js"
-    },
-    "sdkjs-forms/master": {
-        "form.js": "apiBuilder.js",
-        "formPluginMethods.js": "apiPlugins.js"
-    }
-};
-
 (async () => {
-    let inputFolder = path.join(__dirname, inputPath);
+    let resourcesFolder = path.join(__dirname, resourcesPath);
 
     if (downloadFiles) {
-        await downloadResources(inputFolder, resources);
+        console.log("downloading files..");
+        await downloadResources(resourcesFolder, resources);
     }
 
-    // if (parseDocs) {
-    //     let tmpFolder = path.join(__dirname, "tmp");
-    //     let jsdocFolder = path.join(__dirname, outPath);
+    let tmpFolder = path.join(__dirname, "tmp"); 
 
-    //     try {
-    //         await fs.rm(tmpFolder, { recursive: true });
-    //         await fs.rm(jsdocFolder, { recursive: true });
-    //     } catch { }
-
-    //     await fs.cp(inputFolder, tmpFolder, { recursive: true });
-
-    //     console.log("removing anonymous functions..");
-    //     await reformatScripts(tmpFolder);
-
-    //     console.log("generating docs..");
-    //     await generateJsDocs(jsdocFolder);
-    // }
-
-})();
-
-async function downloadResources(inputFolder, resources) {
     try {
-        await fs.rm(inputFolder, { recursive: true });
+        await fs.rm(tmpFolder, { recursive: true });
     } catch { }
 
-    await fs.mkdir(inputFolder);
+    //cloning resources to tmp folder
+    await fs.cp(resourcesFolder, tmpFolder, { recursive: true });
 
-    console.log("downloading files..");
+    if (parseDocs) {
+        console.log("removing anonymous functions..");
+        for (let resource of resources) {
+            console.log(`removing anonymous functions in sources module (${resource.module})`);
+            await reformatScripts(path.join(tmpFolder, resource.module, 'sources'));
+        }
+    }
+
+    console.log("generating docs..");
+    await generateDocs(resources, tmpFolder);
+    
+    try {
+        await fs.rm(tmpFolder, { recursive: true });
+    } catch { }
+})();
+
+async function downloadResources(resourcesFolder, resources) {
+    try {
+        await fs.rm(resourcesFolder, { recursive: true });
+    } catch { }
+
+    await fs.mkdir(resourcesFolder);
+
     for (let resource of resources) {
         console.log(`downloading: resources for module: ${resource.module}`);
-        const moduleFolder = path.join(inputFolder, resource.module);
+        const moduleFolder = path.join(resourcesFolder, resource.module);
 
         await fs.mkdir(moduleFolder);
 
@@ -119,122 +107,144 @@ async function downloadFile(url, pathToSave) {
 async function reformatScripts(folder) {
     const reg = /\(function\s?\(window\,\s?builder\)\s*?{([\s\S]*)}/m;
 
-    let files = await fs.readdir(folder);
+    let files = await fs.readdir(folder, {recursive: true});
 
     for (let file of files) {
-        console.log(`processing ${file}`);
         let filePath = path.join(folder, file);
-        let content = (await fs.readFile(filePath)).toString();
-        let matches = content.match(reg);
-        if (matches != null) {
-           await fs.writeFile(filePath, matches[1]);
+        let stat = await fs.stat(filePath);
+        if  (stat.isDirectory()) {
+            await reformatScripts(filePath);
+        } else {
+            console.log(`processing ${filePath}`);
+            let content = (await fs.readFile(filePath)).toString();
+            let matches = content.match(reg);
+            if (matches != null) {
+                await fs.writeFile(filePath, matches[1]);
+            }
         }
     }
 }
 
-async function generateJsDocs(outputFolder) {
-    let tmpFolder = path.join(__dirname, "tmp");
+async function generateDocs(resources, targetFolder) {
+    let documentationFolder = path.join(__dirname, documentationPath);
+    try {
+        await fs.rm(documentationFolder, { recursive: true });
+    } catch { }
+    await fs.mkdir(documentationFolder);
 
-    await fs.mkdir(outputFolder);
+    for (let resource of resources) {
+        console.log(`generating documentation for module (${resource.module})`);
+        const moduleFolder = path.join(documentationFolder, resource.module);
+        await fs.mkdir(moduleFolder);
 
-    let files = await fs.readdir(tmpFolder);
-    for (let file of files) {
+        for (let source of resource.sources) {
+            for(let file of source.files) {
+                const fileName = file.path.replace(/^.*[\\\/]/, '');
+                const sourceFile = path.join(targetFolder, resource.module, 'sources', file.folder, fileName);
+                const outputFolder = path.join(moduleFolder, file.folder);
 
-        console.log(`processing ${file}`);
-        const templateData = jsdoc2md.getTemplateDataSync({ files: [`tmp/${file}`] });
-        const fileFolder = path.join(outputFolder, file.slice(0, file.lastIndexOf(".")));
-        const fileGlobalFolder = path.join(fileFolder, 'Global');
+                await generateMD(sourceFile, outputFolder);
+            }
+        }
+    }
+}
 
-        const classNames = templateData.reduce((classNames, identifier) => {
-            if (identifier.kind === 'class') classNames.push(identifier.name)
-            return classNames
+async function generateMD(sourceFile, outputFolder) {
+    console.log(`processing ${sourceFile}`);
+    const fileName = sourceFile.replace(/^.*[\\\/]/, '');
+    const templateData = jsdoc2md.getTemplateDataSync({ files: [sourceFile] });
+
+    const fileGlobalFolder = path.join(outputFolder, 'Global');
+
+    const classNames = templateData.reduce((classNames, identifier) => {
+        if (identifier.kind === 'class') classNames.push(identifier.name)
+        return classNames
+    }, []);
+
+    // ToDo: fix api docs (https://github.com/ONLYOFFICE/sdkjs-forms/blob/master/apiBuilder.js#L348), missing lines:
+    ///**
+    // * Base class.
+    // * @global
+    // * @class
+    // * @name ApiDocument
+    // */
+    if (outputFolder.split('\\').pop() === 'form' && fileName === 'apiBuilder.js') {
+        classNames.push('ApiDocument');
+    }
+
+    // ToDo: fix api docs (https://github.com/ONLYOFFICE/sdkjs-forms/blob/master/apiPlugins.js#L37), missing lines:
+    ///**
+    // * Base class.
+    // * @global
+    // * @class
+    // * @name Api
+    // */
+    if (outputFolder.split('\\').pop() === 'form' && fileName === 'apiPlugins.js') {
+        classNames.push('Api');
+    }
+
+    if (classNames.length > 0) {
+        await fs.mkdir(outputFolder);
+    }
+
+    for (const className of classNames) {
+        console.log(`generating md for ${fileName}->${className}`);
+        var classFolder = path.join(outputFolder, className);
+        const classMethodsFolder = path.join(classFolder, 'Methods');
+        const classEventsFolder = path.join(classFolder, 'Events');
+
+        const functionNames = templateData.reduce((functionNames, identifier) => {
+            if (identifier.kind === 'function'
+                && identifier.memberof === className
+                && !identifier.name.startsWith('private_')) functionNames.push(identifier.name);
+            return functionNames;
         }, []);
 
-        // ToDo: fix api docs (https://github.com/ONLYOFFICE/sdkjs-forms/blob/master/apiBuilder.js#L348), missing lines:
-        ///**
-        // * Base class.
-        // * @global
-        // * @class
-        // * @name ApiDocument
-        // */
-        if (file === 'form.js') {
-            classNames.push('ApiDocument');
+        if (functionNames.length > 0) {
+            await fs.mkdir(classFolder);
+            await fs.mkdir(classMethodsFolder);
         }
 
-        // ToDo: fix api docs (https://github.com/ONLYOFFICE/sdkjs-forms/blob/master/apiPlugins.js#L37), missing lines:
-        ///**
-        // * Base class.
-        // * @global
-        // * @class
-        // * @name Api
-        // */
-        if (file === 'formPluginMethods.js') {
-            classNames.push('Api');
-        }
-
-        if (classNames.length > 0) {
-            await fs.mkdir(fileFolder);
-        }
-
-        for (const className of classNames) {
-            console.log(`generating md for ${file}->${className}`);
-            var classFolder = path.join(fileFolder, className);
-            const classMethodsFolder = path.join(classFolder, 'Methods');
-            const classEventsFolder = path.join(classFolder, 'Events');
-
-            const functionNames = templateData.reduce((functionNames, identifier) => {
-                if (identifier.kind === 'function'
-                    && identifier.memberof === className
-                    && !identifier.name.startsWith('private_')) functionNames.push(identifier.name);
-                return functionNames;
-            }, []);
-
-            if (functionNames.length > 0) {
-                await fs.mkdir(classFolder);
-                await fs.mkdir(classMethodsFolder);
-            }
-
-            for (const functionName of functionNames) {
-                const template = `{{#function name="${functionName}" memberof="${className}"}}{{>docs}}{{/function}}`;
-                const output = jsdoc2md.renderSync({ data: templateData, template: template });
-                await fs.writeFile(path.join(classMethodsFolder, `${functionName}.md`), output);
-            }
-
-            const eventNames = templateData.reduce((eventNames, identifier) => {
-                if (identifier.kind === 'event'&& identifier.memberof === className) eventNames.push(identifier.name);
-                return eventNames;
-            }, []);
-
-            if (eventNames.length > 0) {
-                try {
-                    await fs.mkdir(classFolder);
-                } catch { }
-
-                await fs.mkdir(classEventsFolder);
-            }
-
-            for (const eventName of eventNames) {
-                const template = `{{#identifier name="${eventName}" memberof="${className}"}}{{>docs}}{{/identifier}}`;
-                const output = jsdoc2md.renderSync({ data: templateData, template: template });
-                await fs.writeFile(path.join(classEventsFolder, `${eventName}.md`), output);
-            }
-        }
-
-        console.log(`generating md for ${file}->Global`);
-        const globalTypeNames = templateData.reduce((globalTypeNames, identifier) => {
-            if (identifier.scope === 'global' && identifier.kind === 'typedef') globalTypeNames.push(identifier.name);
-            return globalTypeNames;
-        }, []);
-
-        if (globalTypeNames.length > 0) {
-            await fs.mkdir(fileGlobalFolder);
-        }
-
-        for (const globalTypeName of globalTypeNames) {
-            const template = `{{#globals name="${globalTypeName}"}}{{>docs}}{{/globals}}`;
+        for (const functionName of functionNames) {
+            const template = `{{#function name="${functionName}" memberof="${className}"}}{{>docs}}{{/function}}`;
             const output = jsdoc2md.renderSync({ data: templateData, template: template });
-            await fs.writeFile(path.join(fileGlobalFolder, `${globalTypeName}.md`), output);
+            await fs.writeFile(path.join(classMethodsFolder, `${functionName}.md`), output);
         }
+
+        const eventNames = templateData.reduce((eventNames, identifier) => {
+            if (identifier.kind === 'event'&& identifier.memberof === className) eventNames.push(identifier.name);
+            return eventNames;
+        }, []);
+
+        if (eventNames.length > 0) {
+            try {
+                await fs.mkdir(classFolder);
+            } catch { }
+
+            await fs.mkdir(classEventsFolder);
+        }
+
+        for (const eventName of eventNames) {
+            const template = `{{#identifier name="${eventName}" memberof="${className}"}}{{>docs}}{{/identifier}}`;
+            const output = jsdoc2md.renderSync({ data: templateData, template: template });
+            await fs.writeFile(path.join(classEventsFolder, `${eventName}.md`), output);
+        }
+    }
+
+    console.log(`generating md for ${fileName}->Global`);
+    const globalTypeNames = templateData.reduce((globalTypeNames, identifier) => {
+        if (identifier.scope === 'global' && identifier.kind === 'typedef') globalTypeNames.push(identifier.name);
+        return globalTypeNames;
+    }, []);
+
+    if (globalTypeNames.length > 0) {
+        await fs.mkdir(fileGlobalFolder);
+    }
+
+    for (const globalTypeName of globalTypeNames) {
+        const template = `{{#globals name="${globalTypeName}"}}{{>docs}}{{/globals}}`;
+        const output = jsdoc2md.renderSync({ data: templateData, template: template });
+        await fs.writeFile(path.join(fileGlobalFolder, `${globalTypeName}.md`), output);
     }
 }
 

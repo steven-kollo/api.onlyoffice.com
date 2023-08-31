@@ -16,4 +16,5 @@ build/docbuilder_docs/tmp
 build/docbuilder_docs/out
 build/docbuilder_docs/package-lock.json
 build/docbuilder_docs/resources
+build/docbuilder_docs/documentation
 /.vs/ASC.Api.Web.Help/config
