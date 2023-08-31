@@ -3,9 +3,10 @@ const fs = require('fs/promises');
 const path = require('path');
 const { exec } = require("child_process");
 const jsdoc2md = require('jsdoc-to-markdown');
+const resources = require('./resources.json');
 
 const baseUrl = "https://raw.githubusercontent.com/ONLYOFFICE"
-const inputPath = "sdkjs";
+const inputPath = "resources";
 const outPath = "jsdoc";
 const downloadFiles = true;
 const parseDocs = true;
@@ -30,41 +31,72 @@ const files = {
 (async () => {
     let inputFolder = path.join(__dirname, inputPath);
 
-    // if (downloadFiles) {
-    //     try {
-    //         await fs.rm(inputFolder, { recursive: true });
-    //     } catch { }
-
-    //     await fs.mkdir(inputFolder);
-
-    //     console.log("downloading files..");
-    //     for (let repo in files) {
-    //         for (let file in files[repo]) {
-    //             console.log(`downloading ${repo}/${files[repo][file]} -> ${file}`);
-    //             await downloadFile(`${baseUrl}/${repo}/${files[repo][file]}`, path.join(inputFolder, file));
-    //         }
-    //     }
-    // }
-
-    if (parseDocs) {
-        let tmpFolder = path.join(__dirname, "tmp");
-        let jsdocFolder = path.join(__dirname, outPath);
-
-        try {
-            await fs.rm(tmpFolder, { recursive: true });
-            await fs.rm(jsdocFolder, { recursive: true });
-        } catch { }
-
-        await fs.cp(inputFolder, tmpFolder, { recursive: true });
-
-        console.log("removing anonymous functions..");
-        await reformatScripts(tmpFolder);
-
-        console.log("generating docs..");
-        await generateJsDocs(jsdocFolder);
+    if (downloadFiles) {
+        await downloadResources(inputFolder, resources);
     }
 
+    // if (parseDocs) {
+    //     let tmpFolder = path.join(__dirname, "tmp");
+    //     let jsdocFolder = path.join(__dirname, outPath);
+
+    //     try {
+    //         await fs.rm(tmpFolder, { recursive: true });
+    //         await fs.rm(jsdocFolder, { recursive: true });
+    //     } catch { }
+
+    //     await fs.cp(inputFolder, tmpFolder, { recursive: true });
+
+    //     console.log("removing anonymous functions..");
+    //     await reformatScripts(tmpFolder);
+
+    //     console.log("generating docs..");
+    //     await generateJsDocs(jsdocFolder);
+    // }
+
 })();
+
+async function downloadResources(inputFolder, resources) {
+    try {
+        await fs.rm(inputFolder, { recursive: true });
+    } catch { }
+
+    await fs.mkdir(inputFolder);
+
+    console.log("downloading files..");
+    for (let resource of resources) {
+        console.log(`downloading: resources for module: ${resource.module}`);
+        const moduleFolder = path.join(inputFolder, resource.module);
+
+        await fs.mkdir(moduleFolder);
+
+        console.log(`downloading: sources for module: ${resource.module}`);
+        const sourcesFolder = path.join(moduleFolder, 'sources');
+
+        await fs.mkdir(sourcesFolder);
+
+        for (let source of resource.sources) {
+            console.log(`downloading: source (${source.name}) from branch (${source.branch})`);
+            for (let file of source.files) {
+                const pathToFile = `${source.name}/${source.branch}/${file.path}`
+                const fileName = pathToFile.replace(/^.*[\\\/]/, '');
+                const outputFolder = path.join(sourcesFolder, file.folder);
+                const outputFile =  path.join(outputFolder, fileName);
+                console.log(`downloading: ${pathToFile} -> ${outputFile}`);
+
+                try {
+                    await fs.mkdir(outputFolder);
+                } catch { }
+
+                await downloadFile(`${baseUrl}/${pathToFile}`, outputFile);
+            }
+        }
+
+        console.log(`downloading: examples for module: ${resource.module}`);
+        const examplesFolder = path.join(moduleFolder, 'examples');
+        //ToDo: change after creating repo with examples
+        await fs.cp(path.join(__dirname, '../..', 'web', 'App_Data', resource.module, 'examples'), examplesFolder, {recursive: true});
+    }
+}
 
 async function downloadFile(url, pathToSave) {
     return new Promise((resolve, reject) => {

@@ -1,0 +1,76 @@
+[
+  {
+    "module": "docbuilder",
+    "sources": [
+      {
+          "name": "sdkjs",
+          "branch": "master",
+          "files": [
+            {
+              "folder": "word",
+              "path": "word/apiBuilder.js"
+            },
+            {
+              "folder": "cell",
+              "path": "cell/apiBuilder.js"
+            },
+            {
+              "folder": "slide",
+              "path": "slide/apiBuilder.js"
+            }
+          ]
+      },
+      {
+        "name": "sdkjs-forms",
+        "branch": "master",
+        "files": [
+          {
+            "folder": "form",
+            "path": "apiBuilder.js"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "module": "plugins",
+    "sources": [
+      {
+        "name": "sdkjs",
+        "branch": "master",
+        "files": [
+          { 
+            "folder": "word",
+            "path": "word/api_plugins.js"
+          },
+          {
+            "folder": "cell",
+            "path": "cell/api_plugins.js"
+          },
+          {
+            "folder": "slide",
+            "path": "slide/api_plugins.js"
+          },
+          {
+            "folder": "shared",
+            "path": "common/apiBase_plugins.js"
+          },
+          {
+            "folder": "plugin",
+            "path": "common/plugins/plugin_base_api.js"
+          }
+        ]
+      },
+      {
+        "name": "sdkjs-forms",
+        "branch": "master",
+        "files": [
+          {
+            "folder": "form",
+            "path":"apiPlugins.js"
+          }
+        ]
+      }
+    ]
+  }
+]
