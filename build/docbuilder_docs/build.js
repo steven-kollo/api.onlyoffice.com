@@ -10,6 +10,7 @@ const resourcesPath = "resources";
 const documentationPath = "documentation";
 const downloadFiles = true;
 const parseDocs = true;
+const sleep = ms => new Promise(res => setTimeout(res, ms));
 
 (async () => {
     let resourcesFolder = path.join(__dirname, resourcesPath);
@@ -141,15 +142,16 @@ async function generateDocs(resources, targetFolder) {
             for(let file of source.files) {
                 const fileName = file.path.replace(/^.*[\\\/]/, '');
                 const sourceFile = path.join(targetFolder, resource.module, 'sources', file.folder, fileName);
+                const examplesFolder = path.join(targetFolder, resource.module, 'examples', file.folder);
                 const outputFolder = path.join(moduleFolder, file.folder);
 
-                await generateMD(sourceFile, outputFolder);
+                await generateMD(sourceFile, examplesFolder, outputFolder);
             }
         }
     }
 }
 
-async function generateMD(sourceFile, outputFolder) {
+async function generateMD(sourceFile, examplesFolder, outputFolder) {
     console.log(`processing ${sourceFile}`);
     const fileName = sourceFile.replace(/^.*[\\\/]/, '');
     const templateData = jsdoc2md.getTemplateDataSync({ files: [sourceFile] });
@@ -193,10 +195,20 @@ async function generateMD(sourceFile, outputFolder) {
         const classMethodsFolder = path.join(classFolder, 'Methods');
         const classEventsFolder = path.join(classFolder, 'Events');
 
-        const functionNames = templateData.reduce((functionNames, identifier) => {
+        const functionNames = await templateData.reduce(async (functionNames, identifier) => {
+            await sleep(10);
             if (identifier.kind === 'function'
                 && identifier.memberof === className
-                && !identifier.name.startsWith('private_')) functionNames.push(identifier.name);
+                && !identifier.name.startsWith('private_')) {
+                (await functionNames).push(identifier.name);
+                try {
+                    identifier.examples = [(await fs.readFile(path.join(
+                        examplesFolder,
+                        `${className}.${identifier.name}.docbuilder`
+                    ))).toString().replace(/^\s*[\r\n]/gm, '')];
+                } catch { }
+            }
+
             return functionNames;
         }, []);
 
@@ -211,8 +223,17 @@ async function generateMD(sourceFile, outputFolder) {
             await fs.writeFile(path.join(classMethodsFolder, `${functionName}.md`), output);
         }
 
-        const eventNames = templateData.reduce((eventNames, identifier) => {
-            if (identifier.kind === 'event'&& identifier.memberof === className) eventNames.push(identifier.name);
+        const eventNames = await templateData.reduce(async (eventNames, identifier) => {
+            await sleep(10);
+            if (identifier.kind === 'event' && identifier.memberof === className) {
+                (await eventNames).push(identifier.name);
+                try {
+                    identifier.examples = [(await fs.readFile(path.join(
+                        examplesFolder,
+                        `${className}.${identifier.name}.docbuilder`
+                    ))).toString().replace(/^\s*[\r\n]/gm, '')];
+                } catch { }
+            }
             return eventNames;
         }, []);
 
