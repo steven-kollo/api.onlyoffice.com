@@ -2315,6 +2315,7 @@
     <Content Include="Content\img\Editor\anonymous-warning.jpg" />
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
+    <Content Include="Content\img\Editor\change-source.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\chat.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />

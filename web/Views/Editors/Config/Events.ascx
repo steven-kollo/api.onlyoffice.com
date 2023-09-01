@@ -31,6 +31,7 @@
     <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
     <li><a href="#onRequestOpen">onRequestOpen</a> - the user is trying to open an external link.</li>
     <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - the user is trying to refresh data inserted from the external file by clicking the <em>Update values</em> button in the <em>External</em> links dialog box of the <em>Data</em> tab.</li>
+    <li><a href="#onRequestReferenceSource">onRequestReferenceSource</a> - the user is trying to change an external link by clicking the <em>Change source</em> button.</li>
     <li><a href="#onRequestRename">onRequestRename</a> - the user is trying to rename the file by clicking the <em>Rename...</em> button.</li>
     <li><a href="#onRequestRestore">onRequestRestore</a> - the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</li>
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
@@ -634,6 +635,46 @@ var onRequestReferenceData = function () {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestReferenceData": onRequestReferenceData,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onRequestReferenceSource" class="copy-link">onRequestReferenceSource</b> - the function called when the user is trying to change a source of the external data
+        by clicking the <em>Change source</em> button.</p>
+        <p>An object with the unique file data and the file path or name are sent in the <em>data</em> parameter.</p>
+        <p>When the button is clicked, you must call the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method to change a source of the external data.
+            When calling this method, the token must be added to validate the parameters.
+            If the event is not declared, the <em>Change source</em> button will not be displayed.</p>
+        <note>To send the data to the <em>setReferenceSource</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
+        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+        <img alt="Change source" class="screenshot" src="<%= Url.Content("~/content/img/editor/change-source.png") %>" />
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestReferenceSource = function () {
+    var referenceData =  event.data.referenceData;
+    var path = event.data.path;
+    ...
+
+    docEditor.setReferenceSource({
+        "fileType": "xlsx",
+        "path": "sample.xlsx",
+        "referenceData": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com",
+            "key": "Khirz6zTPdfd7"
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+        "url": "https://example.com/url-to-example-document.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestReferenceSource": onRequestReferenceSource,
         ...
     },
     ...
