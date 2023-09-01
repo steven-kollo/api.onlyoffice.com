@@ -34,6 +34,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
         <li><a href="#setReferenceData">setReferenceData</a> - refresh data by a link to a file.</li>
         <li><a href="#setRequestedDocument">setRequestedDocument</a> - select a document for comparing or combining.</li>
+        <li><a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> - insert recipient data for mail merge into the file.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
         <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
@@ -659,7 +660,8 @@ docEditor.setHistoryData({
         <li>
             <p>
                 <b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - insert recipient data for mail merge into the file.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> events.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> event.
+                Deprecated since version 7.5, please use <a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> instead.
             </p>
             <pre>
 docEditor.setMailMergeRecipients({
@@ -892,6 +894,65 @@ docEditor.setRequestedDocument({
                     <tr class="tablerow">
                         <td>url</td>
                         <td>Defines the absolute URL where the source document is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                            Otherwise, an error will occur.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+
+        <li>
+            <p>
+                <b id="setRequestedSpreadsheet" class="copy-link">setRequestedSpreadsheet</b> - insert recipient data for mail merge into the file.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> event.
+            </p>
+            <pre>
+docEditor.setRequestedSpreadsheet({
+    "fileType": "xlsx",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
+    "url": "https://example.com/url-to-example-recipients.xlsx"
+});
+</pre>
+            <p>
+                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+					<col />
+					<col class="table-type" />
+					<col class="table-example" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>
+                            Defines the type of spreadsheet for mail merge in the file.
+                            Can be: <em>csv</em>, <em>fods</em>, <em>ods</em>, <em>ots</em>, <em>xls</em>, <em>xlsm</em>, <em>xlsx</em>, <em>xlt</em>, <em>xltm</em>, <em>xltx</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr id="setRequestedSpreadsheet-token" class="tablerow">
+                        <td>token</td>
+                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setRequestedSpreadsheet">token</a>.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>url</td>
+                        <td>Defines the absolute URL where the source data is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
                             Otherwise, an error will occur.</td>
                         <td>string</td>
                         <td>required</td>

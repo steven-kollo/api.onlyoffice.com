@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: the setMailMergeRecipients method is deprecated, please use the setRequestedSpreadsheet method instead
+- editors: the events.onRequestMailMergeRecipients event is deprecated, please use the events.onRequestSelectSpreadsheet event instead
 - editor: added the -9 error code to the Conversion API
 - editor: added the key field to the document.referenceData parameter
 - editor: added the deleteForgotten, getForgotten, and getForgottenList commands
