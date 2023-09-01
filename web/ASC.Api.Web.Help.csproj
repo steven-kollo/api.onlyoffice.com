@@ -2390,6 +2390,7 @@
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
     <Content Include="Content\img\Editor\opening.svg" />
+    <Content Include="Content\img\Editor\open-source.png" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\paste-link.png" />
