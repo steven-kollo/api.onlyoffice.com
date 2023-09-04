@@ -1,5 +1,7 @@
 # Change Log
 
+- editor: added the 3 type for the forcesavetype parameter of the callback handler
+- editor: added the editorConfig.customization.submitForm parameter
 - editor: added the -9 error code to the Conversion API
 - editor: added the key field to the document.referenceData parameter
 - editor: added the deleteForgotten, getForgotten, and getForgottenList commands
