@@ -147,7 +147,7 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer</span>
     </li>
     <li>下载包含 Java 示例的存档并解压缩存档：
-        <span class="commandline">wget https://api.onlyoffice.com/app_data/editor/Java%20Example.zip</span>
+        <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
         <span class="commandline">unzip Java\ Example.zip</span>
     </li>
     <li>将当前目录更改为项目目录：

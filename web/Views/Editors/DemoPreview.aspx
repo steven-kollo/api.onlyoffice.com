@@ -2,7 +2,7 @@
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
-    Inherits="System.Web.Mvc.ViewPage<List<string>>"
+    Inherits="System.Web.Mvc.ViewPage"
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
@@ -51,22 +51,35 @@
 
         <li>
             <p>选择编程语言并将在线编辑器集成示例的代码下载到您的网站：
-                <% if (Model != null && Model.Count > 0)
-           { %>
             </p>
             <ul class="list-buttons">
-                <% foreach (var example in Model)
-                   { %>
                 <li>
-                    <a class="button" href="<%= Url.Content("~/app_data/editor/" + example.Replace("#", "%23")) %>" target="_blank">
-                        <%= example.TrimEnd(".zip".ToCharArray()) %>
-                    </a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip" target="_blank">DotNet (Csharp MVC) Example</a>
                 </li>
-                <% } %>
+                <li>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip" target="_blank">DotNet (Csharp) Example</a>
+                </li>
+                <li>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip" target="_blank">Java Example</a>
+                </li>
+                <li>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip" target="_blank">Java Spring Example</a>
+                </li>
+                <li>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip" target="_blank">Node.js Example</a>
+                </li>
+                <li>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip" target="_blank">PHP Example</a>
+                </li>
+                <li>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip" target="_blank">Python Example</a>
+                </li>
+                <li>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip" target="_blank">Ruby Example</a>
+                </li>
             </ul>
             <p>
                 或查找源代码
-        <% } %>
                 <a href="https://github.com/ONLYOFFICE/document-server-integration" target="_blank">集成示例</a>。
             </p>
         </li>

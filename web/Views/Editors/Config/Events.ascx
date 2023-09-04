@@ -188,13 +188,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onMetaChange" class="copy-link">onMetaChange</b> - 通过 <a href="<%= Url.Action("command/meta") %>">meta</a> 命令更改文档的元信息时调用的函数。
-            文档的名称在 <em>data.title</em> 参数中发送。
-            <em>收藏</em> 图标高亮状态在 <em>data.favorite</em> 参数中发送。
-            当用户点击 <em>收藏</em> 图标时， 调用<a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a>方法更新 <em>收藏</em> 图标高亮状态<a href="<%= Url.Action("config/document/info") %>#favorite">信息</a>。
-            如果未声明该方法，则<em>收藏</em> 图标不会更改。
-        </p>
+        <p><b id="onMetaChange" class="copy-link">onMetaChange</b> - 通过 <a href="<%= Url.Action("command/meta") %>">meta</a> 命令更改文档的元信息时调用的函数。</p>
+        <p>文档的名称在 <em>data.title</em> 参数中发送。 <em>收藏</em> 图标高亮状态在 <em>data.favorite</em> 参数中发送。</p>
+        <p>当用户点击 <em>收藏</em> 图标时， 调用<a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a>方法更新 <em>收藏</em> 图标高亮状态<a href="<%= Url.Action("config/document/info") %>#favorite">信息</a>。
+            如果未声明该方法，则<em>收藏</em> 图标不会更改。</p>
         <div class="header-gray">示例</div>
         <pre>
 var onMetaChange = function (event) {
@@ -214,13 +211,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - 当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。
-            要设置书签链接，您必须调用 <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> 方法。
+        <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - 当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。</p>
+        <p>要设置书签链接，您必须调用 <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> 方法。
             书签数据在 <em>data</em> 参数中接收，然后必须在配置中用作 <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> 参数的值。
-            如果未声明该方法，则不会显示 <em>获取链接</em> 按钮。
-        </p>
-        <img alt="onMakeActionLink" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>"/>
+            如果未声明该方法，则不会显示 <em>获取链接</em> 按钮。</p>
+        <img class="screenshot" alt="onMakeActionLink" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onMakeActionLink = function (event){
@@ -311,18 +306,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - 当用户通过单击 <em>存储中的文档</em> 按钮尝试选择要比较的文档时调用的函数。
-            要选择一个文档进行比较，您必须调用 <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> 方法。
+        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - 当用户通过单击 <em>存储中的文档</em> 按钮尝试选择要比较的文档时调用的函数。</p>
+        <p>要选择一个文档进行比较，您必须调用 <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> 方法。
             如果未声明该方法，则不会显示 <em>存储中的文档</em> 按钮。
-            <span class="required-descr"><span class="required">*</span><em> - 仅适用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版</em></span>
-        </p>
-        <img alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
+            <span class="required-descr"><span class="required">*</span><em> - 仅适用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版</em></span></p>
+        <img class="screenshot" alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestCompareFile = function () {
     docEditor.setRevisedFile({
         "fileType": "docx",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
         "url": "https://example.com/url-to-example-document.docx"
     });
 };
@@ -370,7 +364,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="note">
             当 <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>模式</em> 参数设置为<b>view</b> 并且 <em>编辑</em> 文档的 <em>权限</em> （<a href="<%= Url.Action("config/document/permissions") %>#edit">文档权限</a>）设置为 <b>true</b> 时， <b>onRequestEditRights</b> 参数是强制性的，以便用户可以切换到编辑模式。
         </div>
-        <img alt="onRequestEditRights" src="<%= Url.Content("~/content/img/editor/onRequestEditRights.png") %>"/>
+        <img class="screenshot" alt="onRequestEditRights" src="<%= Url.Content("~/content/img/editor/onRequestEditRights.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestEditRights = function () {
@@ -389,12 +383,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestHistory" class="copy-link">onRequestHistory</b> - 当用户试图通过单击 <em>版本历史</em> 按钮来显示文档版本历史时调用的函数。
-            要显示文档版本历史记录，您必须调用 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法。
-            如果未声明该方法和 <a href="#onRequestHistoryData">onRequestHistoryData</a> 方法，则不会显示 <em>版本历史</em> 按钮。
-        </p>
-        <img alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
+        <p><b id="onRequestHistory" class="copy-link">onRequestHistory</b> - 当用户试图通过单击 <em>版本历史</em> 按钮来显示文档版本历史时调用的函数。</p>
+        <p>要显示文档版本历史记录，您必须调用 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法。
+            如果未声明该方法和 <a href="#onRequestHistoryData">onRequestHistoryData</a> 方法，则不会显示 <em>版本历史</em> 按钮。</p>
+        <img class="screenshot" alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestHistory = function () {
@@ -445,7 +437,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             调用该函数时，编辑器必须再次初始化，处于编辑模式。
             如果未声明该方法，则不会显示 <em>关闭历史记录</em> 按钮。
         </p>
-        <img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
+        <img class="screenshot" alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestHistoryClose = function () {
@@ -463,13 +455,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - 当用户试图点击文档版本历史中的特定文档版本时调用的函数。
-            要显示与特定文档版本相对应的更改，您必须调用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法。
-            文档版本号在 <em>data</em> 参数中发送。
-            如果未声明该方法和 <a href="#onRequestHistory">onRequestHistory</a> 方法，则不会显示 <em>版本历史</em> 按钮。
-        </p>
-        <img alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
+        <p><b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history.</p>
+        <p>The document version number is sent in the <em>data</em> parameter.</p>
+        <p>To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
+            When calling this method, the token must be added to validate the parameters.
+            If the method and the <a href="#onRequestHistory">onRequestHistory</a> method is not declared the <em>Version History</em> button will not be displayed.</p>
+        <img class="screenshot" alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestHistoryData = function (event) {
@@ -483,6 +474,7 @@ var onRequestHistoryData = function (event) {
             "key": "af86C7e71Ca8",
             "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
         },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4In0.pfPJs9XvCmAnPiUnZYRm0rZGPYHzqfEP7AFRjKg1af4",
         "url": "https://example.com/url-to-example-document.docx",
         "version": version
     })
@@ -504,13 +496,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - 当用户尝试通过单击 <em>存储中的图像</em> 按钮插入图像时调用的函数。
-            图像插入的类型在参数 <em>data.c</em>中指定。
-            要将图像插入文件，您必须使用指定的命令调用 <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> 方法。
-            如果未声明该方法，则不会显示 <em>Image from Storage</em> 按钮。
-        </p>
-        <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
+        <p><b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - 当用户尝试通过单击 <em>存储中的图像</em> 按钮插入图像时调用的函数。<p>
+        <p>图像插入的类型在参数 <em>data.c</em>中指定。</p>
+        <p>要将图像插入文件，您必须使用指定的命令调用 <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> 方法。
+            如果未声明该方法，则不会显示 <em>Image from Storage</em> 按钮。</p>
+        <img class="screenshot" alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestInsertImage = function (event) {
@@ -526,7 +516,8 @@ var onRequestInsertImage = function (event) {
                 "url": "https://example.com/url-to-example-image2.png"
             },
             ...
-        ]
+        ],
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZXMiOlt7ImZpbGVUeXBlIjoicG5nIiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1pbWFnZTEucG5nIn0seyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UyLnBuZyJ9XX0.ly1O8-6u4Y7WJlgp9O-bJMeffHe0GtaXzyvY2UUFJTg"
     });
 };
 
@@ -543,17 +534,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - 当用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据时调用的函数。
-            要选择收件人数据，您必须调用 <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> 方法。
-            如果未声明该方法， <em>邮件合并</em> 按钮将变淡且不可点击。
-        </p>
-        <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
+        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - 当用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据时调用的函数。</p>
+        <p>要选择收件人数据，您必须调用 <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> 方法。
+            如果未声明该方法， <em>邮件合并</em> 按钮将变淡且不可点击。</p>
+        <img class="screenshot" alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestMailMergeRecipients = function () {
     docEditor.setMailMergeRecipients({
         "fileType": "xlsx",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
         "url": "https://example.com/url-to-example-recipients.xlsx"
     });
 };
@@ -601,6 +591,7 @@ var onRequestReferenceData = function () {
             "fileKey": "BCFA2CED",
             "instanceId": "https://example.com"
         },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
         "url": "https://example.com/url-to-example-document.xlsx"
     });
 };
@@ -620,7 +611,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <b id="onRequestRename" class="copy-link">onRequestRename</b> - 当用户试图通过单击 <em>重命名...</em> 按钮重命名文件时调用的函数。
         </p>
         <div class="note">在 6.0 版之前， <em>重命名...</em> 按钮仅在 <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> 设置为 <b>true</b>时可用。</div>
-        <img alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
+        <img class="screenshot" alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestRename = function (event) {
@@ -639,19 +630,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestRestore" class="copy-link">onRequestRestore</b> - 当用户试图通过单击版本历史记录中的 <em>恢复</em> 按钮来恢复文件版本时调用的函数。
-            调用该函数时，必须再次调用 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法来初始化版本历史。
-            如果从历史记录中调用文档版本，则在 <em>data.version</em> 参数中发送文档版本号。
-            此外，如果从 <a href="<%= Url.Action("callback") %>#history">历史对象</a>中调用文档更改，则会在 <em>data.url</em> 参数中发送文档链接。
-            使用此链接指定的文档类型在 <em>data.fileType</em> 中发送范围。
-            如果未声明该方法，则不会显示 <em>恢复</em> 按钮。
-        </p>
+        <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</p>
+        <p>The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
+            Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">history object</a>.
+            The type of the document which is specified with this link is sent in the <em>data.fileType</em> parameter.</p>
+        <p>When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again.
+            If the method is not declared the <em>Restore</em> button will not be displayed.</p>
         <div class="note">
             <em>恢复</em> 按钮仅对以前的文档版本显示，对当前版本隐藏。
             在 5.5 版之前，仅当 <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> 设置为 <b>true</b>时， <em>恢复</em> 按钮才可用。
         </div>
-        <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
+        <img class="screenshot" alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestRestore = function (event) {
@@ -690,7 +679,7 @@ var onRequestRestore = function (event) {
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
-        "onRequestHistoryData": onRequestHistoryData,
+        "onRequestRestore": onRequestRestore,
         ...
     },
     ...
@@ -710,7 +699,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             文档的标题、其类型和要下载的文档的绝对 URL 在 <em>data</em> 参数中发送。
             如果未声明该方法，将不会显示 <em>另存为...</em> 按钮。
         </p>
-        <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
+        <img class="screenshot" alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestSaveAs = function (event) {
@@ -731,12 +720,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - 当评论中提到用户时调用的函数。
-            要提及的用户列表应通过 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法完成。
-            消息和电子邮件列表在 <em>data</em> 参数中发送。
-            注释数据在 <em>data.actionLink</em> 参数中接收，然后必须在配置中用作 <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> 参数的值。
-        </p>
+        <p><b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - the function called when the user is mentioned in a comment.</p>
+        <p>The message and the list of emails is sent in the <em>data</em> parameter.
+            The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.</p>
+        <p>The list of users to be mentioned should be completed by <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</p>
         <div class="note">
             在 5.4 版本中，只有在设置了 <a href="#onRequestUsers">onRequestUsers</a> 事件时才能使用 <b>onRequestSendNotify</b> 事件。
             从 5.5 版开始， <b>onRequestSendNotify</b> 和 <b>onRequestUsers</b> 之间没有这种依赖关系两者都可以独立设置。
@@ -761,12 +748,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - 当用户试图通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限时调用的函数。
-            当访问权限发生变化时，您必须调用 <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> 方法来更新有关允许与其他用户共享文档的设置的 <a href="<%= Url.Action("config/document/info") %>#sharingSettings">信息</a>。
-            如果未声明该方法，则不会显示 <em>更改访问权限</em> 按钮。
-        </p>
-        <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
+        <p><b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - 当用户试图通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限时调用的函数。</p>
+        <p>当访问权限发生变化时，您必须调用 <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> 方法来更新有关允许与其他用户共享文档的设置的 <a href="<%= Url.Action("config/document/info") %>#sharingSettings">信息</a>。
+            如果未声明该方法，则不会显示 <em>更改访问权限</em> 按钮。</p>
+        <img class="screenshot" alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestSharingSettings = function () {
@@ -805,7 +790,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
              如果使用空列表调用<em>setUsers</em>，则<em>onRequestUsers</em>事件将再次触发。</p>
         <div class="img-block-2">
             <div>
-                <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+                <img class="screenshot" alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
             </div>
             <div>
                 <img alt="Protect range" src="<%= Url.Content("~/content/img/editor/protect-range.png") %>"/>

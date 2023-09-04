@@ -90,7 +90,7 @@
         <div class="commandline">sudo apt-get install -y nodejs</div>
     </li>
     <li>下载包含 Node.js 示例的存档并解压缩存档：
-        <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/Node.js%20Example.zip</div>
+        <div class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip</div>
         <div class="commandline">unzip Node.js\ Example.zip</div>
     </li>
     <li>将当前目录更改为项目目录：

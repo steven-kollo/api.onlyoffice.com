@@ -87,7 +87,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/coediting-mode.png") %>" width="832px" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/coediting-mode.png") %>" width="832px" alt="" />
             </td>
         </tr>
         <tr>
@@ -102,7 +102,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/create.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/create.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -185,7 +185,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/recent.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/recent.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -236,7 +236,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/templates.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/templates.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">

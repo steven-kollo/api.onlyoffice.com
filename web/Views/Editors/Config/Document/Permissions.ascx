@@ -62,7 +62,7 @@
                     如果 <em>edit</em> 设置为 <b>"false"</b> 并且 <em>comment</em> 设置为 <b>"true"</b>，该文档将仅用于评论。
                     如果 <em>edit</em> 设置为 <b>"false"</b>， <em>review</em> 设置为 <b>"false"</b>， <em>comments</em> 设置为 <b>"true"</b>，则不考虑 <em>fillForms</em> 值并且无法填写表单。
                 </div>
-                <img src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -123,7 +123,7 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="download" class="copy-link">download</td>
             <td>
                 定义文档是可以下载还是只能在线查看或编辑。
@@ -134,6 +134,11 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/download.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
             <td id="edit" class="copy-link">edit</td>
             <td>
                 定义文档是可以编辑还是只能查看。
@@ -142,6 +147,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/edit.png") %>" alt="" />
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="editCommentAuthorOnly" class="copy-link">editCommentAuthorOnly</td>
@@ -170,7 +180,7 @@
                     如果 <em>edit</em> 设置为 <b>"false"</b> 并且 <em>review</em> 设置为 <b>"false"</b> 而且 <em>fillForms</em> 设置为 <b>"true"</b>，不考虑 <em>comments</em> 值并且评论不可用。
                     仅填写表单模式目前仅适用于 <b>文档编辑器</b>。
                 </div>
-                <img src="<%= Url.Content("~/content/img/editor/fill-forms.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/fill-forms.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -210,7 +220,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/permissions.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/print.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -224,7 +234,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/protect.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/protect.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -254,7 +264,7 @@
                     如果 <em>edit</em> 设置为 <b>"true"</b> 并且 <em>review</em> 设置为 <b>"false"</b>，用户将只能进行编辑。
                     如果 <em>edit</em> 设置为 <b>"false"</b> 并且 <em>review</em> 设置为 <b>"true"</b>，文档将仅在审阅模式下可用。
                 </div>
-                <img src="<%= Url.Content("~/content/img/editor/review.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/review.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">

@@ -130,7 +130,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -148,7 +148,7 @@
                 <div class="note">请注意，如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 <em>editorConfig.customization.autosave</em> 参数发送的任何值。</div>
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="chat" class="copy-link">chat</td>
             <td>
                 定义 <b>聊天</b> 菜单按钮是显示还是隐藏。
@@ -160,6 +160,11 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/chat.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="commentAuthorOnly" class="copy-link">commentAuthorOnly</td>
             <td>
                 定义用户是否只能编辑和删除他的评论。
@@ -169,7 +174,7 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="comments" class="copy-link">comments</td>
             <td>
                 定义 <b>注释</b> 菜单按钮是显示还是隐藏。
@@ -178,6 +183,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
+            </td>
         </tr>
         <tr>
             <td id="compactHeader" class="copy-link">compactHeader</td>
@@ -190,7 +200,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -205,7 +215,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">请注意，如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 <em>editorConfig.customization.compactToolbar</em> 参数发送的任何值。</div>
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -218,7 +228,7 @@
             <td>boolean</td>
             <td>false</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="customer" class="copy-link">customer<a href="#requiredDescr" class="required">*</a></td>
             <td>
                 包含将在编辑器 <b>关于</b> 部分中显示的信息，并对所有编辑器用户可见。
@@ -296,6 +306,11 @@
     "www": "example.com"
 }</td>
         </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/customer.png") %>" alt="" />
+            </td>
+        </tr>
         <tr>
             <td id="features" class="copy-link">features</td>
             <td>
@@ -344,7 +359,7 @@
                 <div class="note">请注意，如果在编辑器界面中更改 <em>拼写检查</em> 设置，它将存储在浏览器本地存储中，并将覆盖作为 <em>editorConfig.customization.features.spellcheck</em> 参数发送的任何值。</div>
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="feedback" class="copy-link">feedback</td>
             <td>
                 定义 <b>反馈和支持</b> 菜单按钮的设置。
@@ -370,6 +385,11 @@
             </td>
             <td>boolean 或 object</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/feedback.png") %>" alt="" />
+            </td>
         </tr>
         <% if (license)
            { %>
@@ -457,7 +477,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -471,7 +491,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -490,7 +510,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -518,7 +538,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -933,7 +953,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">请注意，如果设置了 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件 ，它将仅可用于评论。</div>
-                <img src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -1016,7 +1036,7 @@
                     请改用 <em>review</em> 参数。
                 </div>
                 <div class="note">请注意，如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 <em>editorConfig.customization.review.hoverMode</em> 和 <em>editorConfig.customization.review.reviewDisplay</em> 参数发送的任何值。</div>
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -1149,7 +1169,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">请注意，当 <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> 和 <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> 参数设置为 <b>true</b>时使用此设置。</div>
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -1163,7 +1183,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -1242,7 +1262,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/customization.png") %>" alt="" />
+                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/customization.png") %>" alt="" />
             </td>
         </tr>
     </tbody>

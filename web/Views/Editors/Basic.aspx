@@ -26,7 +26,7 @@
         <li>与其他队友实时协作处理文件。</li>
     </ul>
     <p>ONLYOFFICE 文档还支持用于将您的应用程序与online office集成的 <b>WOPI 协议</b>。
-    有关 WOPI 的更多信息，请参见 <a href="<%= Url.Action("wopi") %>">此处</a>。</li>
+    有关 WOPI 的更多信息，请参见 <a href="<%= Url.Action("wopi") %>">此处</a>。</p>
 
     <p><b>ONLYOFFICE 文档 API</b> 用于让开发人员将 ONLYOFFICE 文档/电子表格/演示文稿编辑器集成到他们自己的网站中，并设置和管理编辑器。</p>
 

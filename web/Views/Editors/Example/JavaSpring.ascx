@@ -141,7 +141,7 @@ sudo apt-get install oracle-java11-installer</span>
         <ul>
             <li>
                 <p>下载包含 Java-Spring 示例的压缩文件并解压缩：</p>
-                <span class="commandline">wget https://api.onlyoffice.com/app_data/editor/Java%20Spring%20Example.zip</span>
+                <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip</span>
                 <span class="commandline">unzip Java\ Spring\ Example.zip</span>
             </li>
             <li>

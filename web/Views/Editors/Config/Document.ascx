@@ -49,7 +49,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">可以使用的关键字符：<b>0-9</b>、 <b>az</b>、 <b>AZ</b>、 <b>-._=</b>。
-                最大密钥长度为 <b>20</b> 个字符。</div>
+                最大密钥长度为 <b>128</b> 个字符。</div>
             </td>
         </tr>
         <tr class="tablerow">

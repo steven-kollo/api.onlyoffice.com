@@ -33,10 +33,10 @@
 <p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">PHP 示例</a>。</p>
 <p>要将编辑器连接到您的网站，请在 <em>config.php</em> 文件 中指定编辑器安装的路径和存储文件夹的路径：</p>
 <pre>
-$GLOBALS['STORAGE_PATH'] = "";
-$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
+"storagePath" = "";
+"docServSiteUrl" = "https://documentserver/";</pre>
 
-<p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称，而 <b>STORAGE_PATH</b> 是创建和存储文件的路径。
+<p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称，而 <b>storagePath</b> 是创建和存储文件的路径。
 您可以设置绝对路径。例如， <em>D:\\folder</em>。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。</p>
 <p>如果要试验编辑器配置，请修改 <em>doceditor.php</em> 文件中的 <a href="<%= Url.Action("advanced") %>">参数</a>。</p>
 
@@ -49,8 +49,9 @@ $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
 
 <ul>
     <li><b>IIS</b>：版本7或更高版本（参考 <a href="https://learn.microsoft.com/zh-cn/iis/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php" target="_blank">微软官网</a> 了解如何安装IIS）；</li>
-    <li><b>PHP</b> （从 <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> 网站下载）；</li>
+    <li><b>PHP</b>: version 8 or later (download it from the <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> site);</li>
     <li><b>PHP Manager for IIS</b> （从 <a href="https://phpmanager.codeplex.com/releases/view/69115" target="_blank">Microsoft 开源网站</a>下载）。</li>
+    <li><b>Composer</b> (download it from the <a href="https://getcomposer.org/download/" target="_blank">Composer official website</a>).</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">步骤 4.</span>IIS 配置</h2>
@@ -95,7 +96,13 @@ $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
 </ol>
 <p>IIS 管理器配置完成后，一切准备就绪，可以运行 PHP 示例。</p>
 
-<h2 id="win-5" class="copy-link"><span class="style_step">步骤 5.</span>使用编辑器运行您的网站</h2>
+<h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Run Composer</h2>
+<p>Install Composer using the following command:</p>
+<pre>
+php composer.phar install
+</pre>
+
+<h2 id="win-6" class="copy-link"><span class="style_step">Step 6. </span>Run your website with the editors</h2>
 <ol>
     <li>
         <p>在 IIS 管理器中添加您的网站。</p>
@@ -115,7 +122,7 @@ $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
     </li>
 </ol>
 
-<h2 id="win-6" class="copy-link"><span class="style_step">步骤 6.</span>检查可访问性</h2>
+<h2 id="win-7" class="copy-link"><span class="style_step">步骤 7.</span>检查可访问性</h2>
 <p>
     如果示例和文档服务器安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的文档服务器，而不是配置文件中的 <b>documentserver</b>。
     确保文档服务器能够访问安装了示例的服务器，该示例使用您指定的地址而不是配置文件中的 <b>example.com</b>。
@@ -134,30 +141,38 @@ $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
     <li>安装 <b>Apache</b> 和 <b>PHP</b>：
         <div class="commandline">apt-get install -y apache2 php7.0 libapache2-mod-php7.0</div>
     </li>
+    <li>Install <b>Composer</b>.
+        <p>To install Composer globally, use the following command which will download and install Composer as a system-wide command named <em>composer</em>, under <em>/usr/local/bin</em>:</p>
+        <div class="commandline">curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php</div>
+        <div class="commandline">sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer</div>
+    </li>
     <li>下载包含 PHP 示例的存档并解压缩存档：
         <div class="commandline">cd /var/www/html</div>
-        <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/PHP%20Example.zip</div>
+        <div class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip</div>
         <div class="commandline">unzip PHP\ Example.zip</div>
     </li>
     <li>将当前目录更改为项目目录：
         <div class="commandline">cd PHP\ Example/</div>
     </li>
-    <li>编辑 <em>config.php</em> 配置文件。指定安装了 ONLYOFFICE 文档服务器的本地服务器的名称。
-        <div class="commandline">nano config.php</div>
+    <li>编辑 <em>config.json</em> 配置文件。指定安装了 ONLYOFFICE 文档服务器的本地服务器的名称。
+        <div class="commandline">nano config.json</div>
         <p>编辑以下行：</p>
 
         <pre>
-$GLOBALS['STORAGE_PATH'] = "";
-$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";
+"storagePath" = "";
+"docServSiteUrl" = "https://documentserver/";
 </pre>
 
-        <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称，而 <b>STORAGE_PATH</b> 是创建和存储文件的路径。
+        <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称，而 <b>storagePath</b> 是创建和存储文件的路径。
         您可以设置绝对路径。</p>
+    </li>
+    <li>Run Composer:
+        <div class="commandline">php composer.phar install</div>
     </li>
     <li>设置网站权限：
         <div class="commandline">chown -R www-data:www-data /var/www/html</div>
     </li>
-    <li>重启apache：
+    <li>重启Apache：
         <div class="commandline">service apache2 restart</div>
     </li>
     <li>使用下列地址在浏览器中查看结果：

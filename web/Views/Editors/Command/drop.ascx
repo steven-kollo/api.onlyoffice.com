@@ -41,16 +41,16 @@
             <td>必需的</td>
         </tr>
         <tr class="tablerow">
-            <td>关键字</td>
+            <td>key</td>
             <td>定义文档标识符,用于明确标识文档文件。</td>
             <td>string</td>
             <td>必需的</td>
         </tr>
         <tr class="tablerow">
-            <td>用户</td>
+            <td>users</td>
             <td>定义用户标识符列表。</td>
             <td>string数组</td>
-            <td>可选的</td>
+            <td>必需的</td>
         </tr>
     </tbody>
 </table>
@@ -83,7 +83,7 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>错误</td>
+            <td>error</td>
             <td>定义错误代码</td>
             <td>integer</td>
             <td>必需的</td>

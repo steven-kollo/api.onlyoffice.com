@@ -135,7 +135,8 @@ var onRequestReferenceData = function (event) {
             <img alt="更新值" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
         </li>
         <li>
-            <p>为了刷新源文件中的数据，必须调用 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法：</p>
+            <p>为了刷新源文件中的数据，必须调用 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法。
+                When calling this method, the token must be added to validate the parameters.</p>
             <note>请注意，仅当用户对源文件具有权限时才会执行此方法。</note>
             <pre>
 docEditor.setReferenceData({
@@ -146,6 +147,7 @@ docEditor.setReferenceData({
         "fileKey": "BCFA2CED",
         "instanceId": "https://example.com"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     "url": "https://example.com/url-to-example-document.xlsx"
 });
 </pre>

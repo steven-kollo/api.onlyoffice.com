@@ -35,7 +35,7 @@
         如果您有任何问题， 请继续阅读 <a href="https://docs.python.org/zh-cn/3/using/unix.html" target="_blank">官方文档</a>。
     </li>
     <li>下载包含 Python 示例的存档并解压缩存档：
-        <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Python%20Example.zip"</div>
+        <div class="commandline">wget "https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip"</div>
         <div class="commandline">unzip Python\ Example.zip</div>
     </li>
     <li>将当前目录更改为项目目录：

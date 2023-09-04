@@ -44,7 +44,7 @@
                 如果每个版本都存在历史参数，则此方法包含每个文档版本的文档历史记录。
             </p>
             <pre>
-var onRequestHistory = function() {
+var onRequestHistory = function () {
     docEditor.refreshHistory({
         "currentVersion": 2,
         "history": [
@@ -67,7 +67,7 @@ var onRequestHistory = function() {
                 "version": 2
             },
             ...
-        ]
+        ],
     });
 };
 
@@ -87,14 +87,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 调用 <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> 事件时，必须执行 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法。
                 此方法包含对应版本文件的绝对 URL。
             </p>
+            <p>When calling the <em>setHistoryData</em> method to view the document history version, the token must be added to validate the parameters.</p>
             <pre>
-var onRequestHistoryData = function(event) {
+var onRequestHistoryData = function (event) {
     var version = event.data;
     docEditor.setHistoryData({
+        "fileType": "docx",
         "key": "Khirz6zTPdfd7",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
         "url": "https://example.com/url-to-example-document.docx",
-        "version": version
-    })
+        "version": 2
+    });
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -106,6 +109,57 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <img alt="打开文件" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
+        </li>
+        <li>
+            <p>
+                In the configuration script for Document Editor initialization, specify the event handler which will <a href="<%= Url.Action("config/events") %>#onRequestRestore">restore</a> the file version when the user clicks the <em>Restore</em> button in the version history.
+                When the <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> event is called, the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method must be executed to initialize version history again.
+                This method contains document history for each document version, if the history parameter has been present for each version.
+            </p>
+            <pre>
+var onRequestRestore = function (event) {
+    var fileType = event.data.fileType;
+    var url = event.data.url;
+    var version = event.data.version;
+    ...
+    docEditor.refreshHistory({
+        "currentVersion": 2,
+        "history": [
+            {
+                "changes": changes,
+                "created": "2010-07-06 10:13 AM",
+                "key": "af86C7e71Ca8",
+                "serverVersion": serverVersion,
+                "user": {
+                    "id": "F89d8069ba2b",
+                    "name": "Kate Cage"
+                },
+                "version": 1
+            },
+            {
+                "changes": changes,
+                "created": "2010-07-07 3:46 PM",
+                "key": "Khirz6zTPdfd7",
+                "user": {
+                    "id": "78e1e841",
+                    "name": "John Smith"
+                },
+                "version": 2
+            },
+            ...
+        ]
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestRestore": onRequestRestore,
+        ...
+    },
+    ...
+});
+</pre>
+                <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         </li>
         <li>在浏览器中打开您的 <em>html</em> 文件。</li>
         <li>在文档编辑器菜单中打开 <em>版本历史</em> 选项。</li>
@@ -188,14 +242,18 @@ docEditor.refreshHistory({
                 必须保存文件，并且必须使用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法将其地址作为 changesUrl 参数发送。
                 必须将指向先前文档版本 (<em>previous.url</em>) 的链接添加到对象中。
             </p>
+            <p>When calling the <em>setHistoryData</em> method to view the document history version, the token must be added to validate the parameters.</p>
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "https://example.com/url-to-changes.zip",
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "previous": {
+        "fileType": "docx",
         "key": "af86C7e71Ca8",
         "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });

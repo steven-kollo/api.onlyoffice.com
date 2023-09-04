@@ -39,6 +39,7 @@
         <li><a href="<%= Url.Action("redmine") %>">Redmine ONLYOFFICE 集成插件</a></li>
         <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE 集成解决方案</a></li>
         <li><a href="<%= Url.Action("strapi") %>">Strapi ONLYOFFICE 集成插件</a></li>
+        <li><a href="<%= Url.Action("suitecrm") %>">SuiteCRM ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("wordpress") %>">WordPress ONLYOFFICE 集成插件</a></li>
     </ul>
 
