@@ -7,7 +7,7 @@
 <p class="dscr">A form document has exactly the same structure as a <a href="<%= Url.Action("textdocumentapi") %>">text document</a>.
 The only difference is a new <em>forms</em> entity placed with other paragraph elements – text runs, inline text content controls and hyperlinks.
 There are seven form types: <em>text field</em>, <em>combo box</em>, <em>dropdown list</em>, <em>checkbox</em>, <em>radio button</em>, <em>picture form</em>, and <em>complex field</em>.</p>
-<p>Thus any form document structure with ONLYOFFICE Document Builder API used to create it can be outlined like this:</p>
+<p>Thus any form document structure with ONLYOFFICE Document Builder API used to create it can be outlined like this:</p>
 
 <div class="document_structure">
         <p class="node_label"><b>ONLYOFFICE Document Builder API</b></p>
