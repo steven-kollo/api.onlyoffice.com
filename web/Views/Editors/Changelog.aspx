@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("callback") %>#formdata">formdata</a> parameter to the <em>callback handler</em>.</li>
         <li>Added the <b>3</b> type for the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> parameter of the callback handler.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">editorConfig.customization.submitForm</a> parameter.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#error-codes">-9 error code</a> to the Conversion API.</li>

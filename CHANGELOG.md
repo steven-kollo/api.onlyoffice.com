@@ -1,5 +1,6 @@
 # Change Log
 
+- editor: added the formdata parameter to the callback handler
 - editor: added the 3 type for the forcesavetype parameter of the callback handler
 - editor: added the editorConfig.customization.submitForm parameter
 - editor: added the -9 error code to the Conversion API
