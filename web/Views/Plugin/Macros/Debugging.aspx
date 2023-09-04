@@ -27,7 +27,13 @@ var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("Hello world!");
 </pre>
         </li>
-        <li>Open the developer console by pressing the <b>F12</b> button.</li>
+         <li>
+            <p>To run your script in debug mode:</p>
+            <div class="header-gray">For Document Server</div>
+            <p>Open the developer console by pressing the <b>F12</b> button.</p>
+            <div class="header-gray">For Desktop Editors</div>
+            <p>Use the <a href="<%= Url.Action("debugging", "desktop") %>">instruction</a> for debugging in ONLYOFFICE Desktop Editors.</p>
+        </li>
         <li>
             <p>Press the <b>Run</b> button to run your script.</p>
             <note>Please note that the <b>debugger</b> command will only work if the development tools are open. Otherwise, the browser will ignore it.</note>

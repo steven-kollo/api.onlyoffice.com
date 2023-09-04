@@ -1,11 +1,11 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">How to integrate online editors into your own website on .Net (C#)</span>
+    <span class="hdr">How to integrate online editors into your own website on .Net (C#) / .Net (C# MVC)</span>
 </h1>
 
 <h2>Overview</h2>
-<p class="dscr">This example will help you integrate ONLYOFFICE Docs into your web application written in .Net (C#).</p>
+<p class="dscr">This example will help you integrate ONLYOFFICE Docs into your web application written in .Net (C#) or .Net (C# MVC).</p>
 
 <div class="note">
     The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
@@ -26,8 +26,8 @@
 <p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
 <p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example">for Windows</a>, <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example">for Linux</a>, or <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_csharp_example">for Docker</a>.</p>
 
-<h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
-<p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) example</a> from our site.</p>
+<h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) / .Net (C# MVC) code for the editors integration</h2>
+<p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) or .Net (C# MVC) example</a> from our site.</p>
 <p>
     To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>settings.config</em> file:
 </p>
@@ -68,7 +68,7 @@
         <img alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
     </li>
     <li>
-        <p>In the <b>Add Website</b> dialog box specify the name of the folder with the .Net (C#) project in the <b>Site name</b> box.</p>
+        <p>In the <b>Add Website</b> dialog box specify the name of the folder with the .Net (C#) / .Net (C# MVC) project in the <b>Site name</b> box.</p>
         <p>Specify the path to the folder with your project in the <b>Physical Path</b> box.</p>
         <p>Specify the unique value used only for this website in the <b>Port</b> box.</p>
         <img alt="" src="<%= Url.Content("~/content/img/csharp/sitename.png") %>" />

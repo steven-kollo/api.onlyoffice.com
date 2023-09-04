@@ -139,8 +139,6 @@
   <ItemGroup>
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
-    <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
-    <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\docbuilder\examples\Angle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\AxisPos.docbuilder" />
@@ -1917,8 +1915,6 @@
     <Content Include="App_Data\docbuilder\examples\XlSearchDirection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\XlSearchOrder.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\XlUnderlineStyle.docbuilder" />
-    <Content Include="App_Data\docbuilder\Node.js Example.zip" />
-    <Content Include="App_Data\docbuilder\PHP Example.zip" />
     <Content Include="App_Data\docbuilder\references\cell\Api.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiAreas.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiCharacters.json" />
@@ -2003,7 +1999,6 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\CMarkdownConverter.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
-    <Content Include="App_Data\docbuilder\Ruby Example.zip" />
     <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
@@ -2018,14 +2013,6 @@
     <Content Include="App_Data\docspace\references\ASC.Web.Api.xml" />
     <Content Include="App_Data\docspace\references\ASC.Web.Core.xml" />
     <Content Include="App_Data\docspace\references\ASC.Webhooks.Core.xml" />
-    <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
-    <Content Include="App_Data\editor\DotNet %28Csharp%29 Example.zip" />
-    <Content Include="App_Data\editor\Java Example.zip" />
-    <Content Include="App_Data\editor\Java Spring Example.zip" />
-    <Content Include="App_Data\editor\Node.js Example.zip" />
-    <Content Include="App_Data\editor\PHP Example.zip" />
-    <Content Include="App_Data\editor\Python Example.zip" />
-    <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\editor\wildcardData\persons.json" />
     <Content Include="App_Data\plugins\examples\AddinFieldData.docbuilder" />
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
@@ -2272,7 +2259,6 @@
     <Content Include="Content\img\desktop\debugging.png" />
     <Content Include="Content\img\desktop\encryption-enabled.png" />
     <Content Include="Content\img\desktop\extended_comments.png" />
-    <Content Include="Content\img\desktop\macos-terminal.png" />
     <Content Include="Content\img\desktop\plugins_folder.png" />
     <Content Include="Content\img\desktop\plugin_settings.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
@@ -2298,6 +2284,10 @@
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
     <Content Include="Content\img\docbuilder\terminal.png" />
+    <Content Include="Content\img\docspace\editor-mode.png" />
+    <Content Include="Content\img\docspace\file-selector-mode.png" />
+    <Content Include="Content\img\docspace\manager-mode.png" />
+    <Content Include="Content\img\docspace\room-selector-mode.png" />
     <Content Include="Content\img\Editor\accept_reject.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
     <Content Include="Content\img\Editor\actionLink-open.png" />
@@ -2313,6 +2303,7 @@
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
+    <Content Include="Content\img\Editor\chat.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
     <Content Include="Content\img\Editor\coedit.jpg" />
     <Content Include="Content\img\Editor\coediting-mode.png" />
@@ -2326,13 +2317,16 @@
     <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\Editor\convert-binary-files.jpg" />
     <Content Include="Content\img\Editor\create.png" />
+    <Content Include="Content\img\Editor\customer.png" />
     <Content Include="Content\img\Editor\customization.png" />
+    <Content Include="Content\img\Editor\download.png" />
     <Content Include="Content\img\Editor\e-coedit.png" />
     <Content Include="Content\img\Editor\e-download.png" />
     <Content Include="Content\img\Editor\e-error0.png" />
     <Content Include="Content\img\Editor\e-key.png" />
     <Content Include="Content\img\Editor\e-token.png" />
     <Content Include="Content\img\Editor\editor-samples.png" />
+    <Content Include="Content\img\Editor\edit.png" />
     <Content Include="Content\img\Editor\editor.png" />
     <Content Include="Content\img\Editor\embedded.png" />
     <Content Include="Content\img\Editor\embed-docxf.png" />
@@ -2341,6 +2335,7 @@
     <Content Include="Content\img\Editor\export.jpg" />
     <Content Include="Content\img\Editor\fast-mode.png" />
     <Content Include="Content\img\Editor\favorite.png" />
+    <Content Include="Content\img\Editor\feedback.png" />
     <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\goback.png" />
     <Content Include="Content\img\Editor\help.png" />
@@ -2384,9 +2379,9 @@
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\paste-link.png" />
-    <Content Include="Content\img\Editor\permissions.png" />
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\Editor\plugins.png" />
+    <Content Include="Content\img\Editor\print.png" />
     <Content Include="Content\img\Editor\progress-view.png" />
     <Content Include="Content\img\Editor\protect.png" />
     <Content Include="Content\img\Editor\protect-range.png" />
@@ -2426,6 +2421,7 @@
     <Content Include="Content\img\macros\cell-font-bold.svg" />
     <Content Include="Content\img\macros\change-cell.svg" />
     <Content Include="Content\img\macros\column-width.svg" />
+    <Content Include="Content\img\macros\complete_address_information.svg" />
     <Content Include="Content\img\macros\currency-exchange-rates.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
@@ -2536,6 +2532,7 @@
     <Content Include="Content\img\plugins\plugin_archive.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
     <Content Include="Content\img\plugins\recalculate-cell-values.png" />
+    <Content Include="Content\img\plugins\complete_address_information.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
     <Content Include="Content\img\plugins\remove-shapes.png" />
     <Content Include="Content\img\plugins\text_area.png" />
@@ -3936,14 +3933,28 @@
     <Content Include="Views\DocSpace\ApiSystem\TariffSection.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\TariffSection\TariffGet.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\TariffSection\TariffSet.ascx" />
-    <Content Include="Views\DocSpace\Auth.aspx" />
-    <Content Include="Views\DocSpace\Basic.aspx" />
+    <Content Include="Views\DocSpace\Backend.aspx" />
+    <Content Include="Views\DocSpace\Backend\Auth.ascx" />
+    <Content Include="Views\DocSpace\Backend\Default.ascx" />
     <Content Include="Views\DocSpace\Batch.aspx" />
     <Content Include="Views\DocSpace\Faq.aspx" />
     <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\Filters.aspx" />
+    <Content Include="Views\DocSpace\JsSdk.aspx" />
+    <Content Include="Views\DocSpace\JsSdk\Config.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Default.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Events.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\InitModes.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\InitModes\Editor.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\InitModes\Viewer.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\InitModes\FileSelector.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\InitModes\Manager.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\InitModes\RoomSelector.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\InitModes\System.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Methods.ascx" />
     <Content Include="Views\DocSpace\Method.aspx" />
     <Content Include="Views\DocSpace\Navigation.ascx" />
+    <Content Include="Views\DocSpace\Basic.aspx" />
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
@@ -4047,6 +4058,7 @@
     <Content Include="Views\Editors\Signature\Default.ascx" />
     <Content Include="Views\Editors\Signature\Request.ascx" />
     <Content Include="Views\Editors\Strapi.aspx" />
+    <Content Include="Views\Editors\SuiteCRM.aspx" />
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
@@ -4148,6 +4160,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\unhideallrows.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\completeaddressinformation.ascx" />
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
     <Content Include="Views\Plugin\methodpartial.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />

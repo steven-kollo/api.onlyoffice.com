@@ -1,5 +1,15 @@
 # Change Log
 
+## 4.2.0
+- docspace: v1.1.2
+- docspace: added the DocSpace frame SDK
+- editors: added the SuiteCRM plugin
+- editor: added the argument parameter to the Web Document Builder API
+- editors: added the lang parameter to the WOPI discovery
+- editors: download examples from github
+- plugins: added the store.categories config parameter
+- macros: added the Complete address information macro
+
 ## 4.1.0
 - editors: added a link to the list of error codes
 - editors: added the Protecting ranges page

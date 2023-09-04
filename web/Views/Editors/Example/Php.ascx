@@ -33,10 +33,10 @@
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP example</a> from our site.</p>
 <p>To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>config.php</em> file:</p>
 <pre>
-$GLOBALS['STORAGE_PATH'] = "";
-$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
+"storagePath" = "";
+"docServSiteUrl" = "https://documentserver/";</pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>STORAGE_PATH</b> is the path where files will be created and stored.
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storagePath</b> is the path where files will be created and stored.
 You can set an absolute path. For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>doceditor.php</em> file.</p>
 
@@ -49,8 +49,9 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
 
 <ul>
     <li><b>IIS</b>: version 7 or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php" target="_blank">Microsoft official website</a> to learn how to install IIS);</li>
-    <li><b>PHP</b> (download it from the <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> site);</li>
+    <li><b>PHP</b>: version 8 or later (download it from the <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> site);</li>
     <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115" target="_blank">Microsoft open source site</a>).</li>
+    <li><b>Composer</b> (download it from the <a href="https://getcomposer.org/download/" target="_blank">Composer official website</a>).</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>IIS configuration</h2>
@@ -95,7 +96,13 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
 </ol>
 <p>After IIS manager configuration is complete, everything is ready for running the PHP example.</p>
 
-<h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Run your website with the editors</h2>
+<h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Run Composer</h2>
+<p>Install Composer using the following command:</p>
+<pre>
+php composer.phar install
+</pre>
+
+<h2 id="win-6" class="copy-link"><span class="style_step">Step 6. </span>Run your website with the editors</h2>
 <ol>
     <li>
         <p>Add your website in the IIS Manager.</p>
@@ -115,7 +122,7 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
     </li>
 </ol>
 
-<h2 id="win-6" class="copy-link"><span class="style_step">Step 6. </span>Check accessibility</h2>
+<h2 id="win-7" class="copy-link"><span class="style_step">Step 7. </span>Check accessibility</h2>
 <p>
     In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
     Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
@@ -134,30 +141,38 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
     <li>Install <b>Apache</b> and <b>PHP</b>:
         <div class="commandline">apt-get install -y apache2 php7.0 libapache2-mod-php7.0</div>
     </li>
+    <li>Install <b>Composer</b>.
+        <p>To install Composer globally, use the following command which will download and install Composer as a system-wide command named <em>composer</em>, under <em>/usr/local/bin</em>:</p>
+        <div class="commandline">curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php</div>
+        <div class="commandline">sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer</div>
+    </li>
     <li>Download the archive with the PHP example and unpack the archive:
         <div class="commandline">cd /var/www/html</div>
-        <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/PHP%20Example.zip</div>
+        <div class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip</div>
         <div class="commandline">unzip PHP\ Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
         <div class="commandline">cd PHP\ Example/</div>
     </li>
-    <li>Edit the <em>config.php</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
-        <div class="commandline">nano config.php</div>
+    <li>Edit the <em>config.json</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
+        <div class="commandline">nano config.json</div>
         <p>Edit the following lines:</p>
 
         <pre>
-$GLOBALS['STORAGE_PATH'] = "";
-$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";
+"storagePath" = "";
+"docServSiteUrl" = "https://documentserver/";
 </pre>
 
-        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>STORAGE_PATH</b> is the path where files will be created and stored.
+        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storagePath</b> is the path where files will be created and stored.
         You can set an absolute path.</p>
+    </li>
+    <li>Run Composer:
+        <div class="commandline">php composer.phar install</div>
     </li>
     <li>Set permission for site:
         <div class="commandline">chown -R www-data:www-data /var/www/html</div>
     </li>
-    <li>Restart apache:
+    <li>Restart Apache:
         <div class="commandline">service apache2 restart</div>
     </li>
     <li>See the result in your browser using the address:

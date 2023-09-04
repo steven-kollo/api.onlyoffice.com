@@ -92,6 +92,46 @@
         <member name="F:ASC.Core.Common.Notify.RegisterUserProto.TokenFieldNumber">
             <summary>Field number for the "token" field.</summary>
         </member>
+        <member name="T:ASC.Core.Billing.License">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Core.Billing.License.OriginalLicense">
+            <summary>Original license</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Core.Billing.License.Customization">
+            <summary>Specifies if the license is customizable or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Core.Billing.License.DueDate">
+            <summary>License due date</summary>
+            <type>System.DateTime, System</type>
+        </member>
+        <member name="P:ASC.Core.Billing.License.Trial">
+            <summary>Specifies if the license is trial or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Core.Billing.License.CustomerId">
+            <summary>Customer ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Core.Billing.License.DSUsersCount">
+            <summary>Number of document server users</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Core.Billing.License.DSUsersExpire">
+            <summary>Number of users whose licenses have expired</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Core.Billing.License.DSConnections">
+            <summary>Number of document server connections</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Core.Billing.License.Signature">
+            <summary>License signature</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="T:ASC.Core.Billing.Tariff">
             <summary>
             </summary>
@@ -240,6 +280,10 @@
             <summary>Base domain</summary>
             <type>System.String, System</type>
         </member>
+        <member name="T:ASC.Core.AccountLoginType">
+            <summary>
+            </summary>
+        </member>
         <member name="T:ASC.Core.Users.EmployeeActivationStatus">
             <summary>
             </summary>
@@ -368,6 +412,10 @@
             <summary>Creation date</summary>
             <type>System.DateTime, System</type>
         </member>
+        <member name="T:ASC.Core.Payments">
+            <summary>
+            </summary>
+        </member>
         <member name="F:ASC.Core.SubscriptionRecord.RecipientIdFieldNumber">
             <summary>Field number for the "recipient_id" field.</summary>
         </member>
@@ -421,6 +469,10 @@
         <member name="P:ASC.Core.Tenants.TenantQuota.Price">
             <summary>Price</summary>
             <type>System.Decimal, System</type>
+        </member>
+        <member name="P:ASC.Core.Tenants.TenantQuota.PriceCurrencySymbol">
+            <summary>Price currency symbol</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Core.Tenants.TenantQuota.ProductId">
             <summary>Product ID</summary>
@@ -502,7 +554,10 @@
             <summary>Specifies if the custom domain URL is available or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:ASC.Core.Tenants.TenantQuota.AutoBackupRestore" -->
+        <member name="P:ASC.Core.Tenants.TenantQuota.AutoBackupRestore">
+            <summary>Specifies if the automatic Backup&amp;Restore feature is available or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
         <member name="P:ASC.Core.Tenants.TenantQuota.Oauth">
             <summary>Specifies if Oauth is available or not</summary>
             <type>System.Boolean, System</type>

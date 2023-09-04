@@ -850,6 +850,10 @@
             <summary>File parameters</summary>
             <type>ASC.Files.Core.ApiModels.ResponseDto.FileDto, ASC.Files.Core</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.ErrorMessage">
+            <summary>Error message</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1">
             <summary>
             Result of file conversation operation.
@@ -1325,7 +1329,7 @@
             <param name="parentId"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32)">
             <summary>
                 Get files in folder
             </summary>
@@ -1338,6 +1342,8 @@
             <param name="searchInContent"></param>
             <param name="withSubfolders"> </param>
             <param name="exludeSubject"> </param>
+            <param name="offset"></param>
+            <param name="count"></param>
             <returns>list of files</returns>
             <remarks>
                Return only the latest versions of files of a folder
@@ -1531,7 +1537,7 @@
             </summary>
             <param name="parentId"></param>
         </member>
-        <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32)">
             <summary>
             Get a list of folders.
             </summary>
@@ -1543,6 +1549,8 @@
             <param name="searchText"></param>
             <param name="withSubfolders"></param>
             <param name="exludeSubject"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Nullable{System.Guid},System.String,System.Boolean,System.Boolean,System.Boolean)">
@@ -2380,7 +2388,7 @@
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_InvintationLink">
             <summary>
-              Looks up a localized string similar to The invitation link is invalid or it&apos;s validity has expired.
+              Looks up a localized string similar to The invitation link is invalid or its validity has expired.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_ProviderAlreadyConnect">
@@ -2470,13 +2478,13 @@
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ProductDescription">
             <summary>
-              Looks up a localized string similar to Create, edit, and share office documents. Collaborate on them in real-time. Highest compatibility with docx, xlsx, pptx guaranteed. .
+              Looks up a localized string similar to Create, edit, and share office documents. Collaborate on them in real-time. Highest compatibility with docx, xlsx, pptx guaranteed..
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ProductDescriptionEx">
              <summary>
                Looks up a localized string similar to Edit, share and collaborate on office documents in real-time. Create and manage common docs for the whole team to access. 
-            Highest compatibility with docx, xlsx, pptx. .
+            Highest compatibility with docx, xlsx, pptx..
              </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ProductDescriptionShort">
@@ -2501,7 +2509,7 @@
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoleEnum_Comment">
             <summary>
-              Looks up a localized string similar to Сommentator.
+              Looks up a localized string similar to Сommenter.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoleEnum_DocSpaceAdmin">
@@ -2700,7 +2708,7 @@
              <summary>
                Looks up a localized string similar to h1. $__AuthorName mentioned you in the document comment
             
-            $__AuthorName mentioned you in the comment to the &quot;$DocumentTitle&quot;:&quot;$DocumentURL&quot; documen in the room &quot;$RoomTitle&quot;:&quot;$RoomURL&quot;:
+            $__AuthorName mentioned you in the comment to the &quot;$DocumentTitle&quot;:&quot;$DocumentURL&quot; document in the room &quot;$RoomTitle&quot;:&quot;$RoomURL&quot;:
             
             $Message.
              </summary>
@@ -2818,7 +2826,7 @@
         </member>
         <member name="P:ASC.Files.Core.Services.NotifyService.FilesPatternResource.subject_ShareEncryptedDocument_push">
             <summary>
-              Looks up a localized string similar to Access granted to the encrypted document: $DocumentTitle.
+              Looks up a localized string similar to Access granted to document: $DocumentTitle.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Services.NotifyService.FilesPatternResource.subject_ShareFolder">
@@ -3131,11 +3139,11 @@
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.User">
             <summary>User</summary>
-            <type>System.String</type>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.Permissions">
             <summary>User access rights to the file</summary>
-            <type>System.String</type>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.IsLink">
             <summary>Specifies if the external link is available or not</summary>
