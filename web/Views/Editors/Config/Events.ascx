@@ -567,10 +567,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestOpen" class="copy-link">onRequestOpen</b> - the function called when the user is trying to open an external link.</p>
+        <p><b id="onRequestOpen" class="copy-link">onRequestOpen</b> - the function called when the user is trying to open an external link by clicking the <em>Open source</em> button.
+        If the method is not declared, this button will not be displayed.</p>
         <p>To open the editor with the external file referenced by the <em>path</em> or <em>referenceData</em> parameters in a new tab,
         you must pass a link to this tab by calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a> method with the <em>path</em> and <em>windowName</em> parameters.</p>
         <p>An object with the unique file data, the file path, and a new browser tab name are sent in the <em>data</em> parameter.</p>
+        <img class="screenshot" alt="open-source" src="<%= Url.Content("~/content/img/editor/open-source.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestOpen = function (event) {
