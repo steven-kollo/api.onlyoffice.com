@@ -18,6 +18,8 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
+        <li>Added the <b>3</b> type for the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> parameter of the callback handler.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">editorConfig.customization.submitForm</a> parameter.</li>
         <li>The <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">events.onRequestMailMergeRecipients</a> event is deprecated, please use the <a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">events.onRequestSelectSpreadsheet</a> event instead.</li>
         <li>The <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method is deprecated, please use the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> method instead.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method.</li>
@@ -123,8 +125,6 @@
     <ul>
         <li>Added the <a href="<%= Url.Action("command/license") %>">license</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRulers">editorConfig.customization.hideRulers</a> field.</li>
-        <%--<li>Added the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">editorConfig.customization.submitForm</a> field.</li>--%>
-        <%--<li>Added a new <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a> (<em>forcesavetype = 3</em>).</li>--%>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> field.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> field is deprecated, please use the <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">document.permissions.editCommentAuthorOnly</a> and <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">document.permissions.deleteCommentAuthorOnly</a> fields.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method.</li>

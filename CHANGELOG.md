@@ -1,5 +1,7 @@
 # Change Log
 
+- editor: added the 3 type for the forcesavetype parameter of the callback handler
+- editor: added the editorConfig.customization.submitForm parameter
 - editors: the setMailMergeRecipients method is deprecated, please use the setRequestedSpreadsheet method instead
 - editors: the events.onRequestMailMergeRecipients event is deprecated, please use the events.onRequestSelectSpreadsheet event instead
 - editor: added the setReferenceSource method

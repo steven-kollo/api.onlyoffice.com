@@ -88,7 +88,7 @@
                         <li><b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command/forcesave") %>">command service</a>,</li>
                         <li><b>1</b> - the force saving request is performed each time the saving is done (e.g. the <b>Save</b> button is clicked), which is only available when the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> option is set to <em>true</em>.</li>
                         <li><b>2</b> - the force saving request is performed by timer with the settings from the server config.</li>
-                        <%--<li><b>3</b> - the force saving request is performed each time the form is submitted (e.g. the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">Submit form</a> button is clicked).</li>--%>
+                        <li><b>3</b> - the force saving request is performed each time the form is submitted (e.g. the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">Submit</a> button is clicked).</li>
                     </ul>
                     The type is present when the <em>status</em> value is equal to <b>6</b> or <b>7</b> only.
                 </td>
