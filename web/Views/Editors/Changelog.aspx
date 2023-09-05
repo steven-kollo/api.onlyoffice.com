@@ -18,6 +18,8 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
+        <li>The <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">events.onRequestMailMergeRecipients</a> event is deprecated, please use the <a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">events.onRequestSelectSpreadsheet</a> event instead.</li>
+        <li>The <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method is deprecated, please use the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> method instead.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">events.onRequestReferenceSource</a> event.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#error-codes">-9 error code</a> to the Conversion API.</li>
