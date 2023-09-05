@@ -131,11 +131,7 @@ http://server.address:server.port/
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
 <ol>
-    <li>Install <b>Java</b>:
-        <span class="commandline">sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java11-installer</span>
-    </li>
+    <li>Install <b>Java</b> following the instructions <a href="https://www.java.com/en/download/manual.jsp" target="_blank">here</a>.
     <li>
         <p>There are two ways to get the Java-Spring example:</p>
         <ul>

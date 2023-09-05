@@ -141,10 +141,7 @@ For example, <em>D:\\folder</em>. Please note that on Windows OS the double back
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
 <ol>
-    <li>Install <b>Java</b>:
-        <span class="commandline">sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer</span>
+    <li>Install <b>Java</b> following the instructions <a href="https://www.java.com/en/download/manual.jsp" target="_blank">here</a>.
     </li>
     <li>Download the archive with the Java example and unpack the archive:
         <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
