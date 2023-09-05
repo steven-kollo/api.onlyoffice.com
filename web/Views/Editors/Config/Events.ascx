@@ -31,10 +31,12 @@
     <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
     <li><a href="#onRequestOpen">onRequestOpen</a> - the user is trying to open an external link.</li>
     <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - the user is trying to refresh data inserted from the external file by clicking the <em>Update values</em> button in the <em>External</em> links dialog box of the <em>Data</em> tab.</li>
+    <li><a href="#onRequestReferenceSource">onRequestReferenceSource</a> - the user is trying to change an external link by clicking the <em>Change source</em> button.</li>
     <li><a href="#onRequestRename">onRequestRename</a> - the user is trying to rename the file by clicking the <em>Rename...</em> button.</li>
     <li><a href="#onRequestRestore">onRequestRestore</a> - the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</li>
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
     <li><a href="#onRequestSelectDocument">onRequestSelectDocument</a> - the user is trying to select a document for comparing or combining.</li>
+    <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
     <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
@@ -538,38 +540,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</p>
-        <p>To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
-            When calling this method, the token must be added to validate the parameters.
-            If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.</p>
-        <img class="screenshot" alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
-        <div class="header-gray">Example</div>
-        <pre>
-var onRequestMailMergeRecipients = function () {
-    docEditor.setMailMergeRecipients({
-        "fileType": "xlsx",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
-        "url": "https://example.com/url-to-example-recipients.xlsx"
-    });
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestMailMergeRecipients": onRequestMailMergeRecipients,
-        ...
-    },
-    ...
-});
-</pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
+        Deprecated since version 7.5, please use <a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> instead.</p>
     </li>
 
     <li>
-        <p><b id="onRequestOpen" class="copy-link">onRequestOpen</b> - the function called when the user is trying to open an external link.</p>
+        <p><b id="onRequestOpen" class="copy-link">onRequestOpen</b> - the function called when the user is trying to open an external link by clicking the <em>Open source</em> button.
+        If the method is not declared, this button will not be displayed.</p>
         <p>To open the editor with the external file referenced by the <em>path</em> or <em>referenceData</em> parameters in a new tab,
         you must pass a link to this tab by calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a> method with the <em>path</em> and <em>windowName</em> parameters.</p>
         <p>An object with the unique file data, the file path, and a new browser tab name are sent in the <em>data</em> parameter.</p>
+        <img class="screenshot" alt="open-source" src="<%= Url.Content("~/content/img/editor/open-source.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestOpen = function (event) {
@@ -634,6 +615,46 @@ var onRequestReferenceData = function () {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestReferenceData": onRequestReferenceData,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onRequestReferenceSource" class="copy-link">onRequestReferenceSource</b> - the function called when the user is trying to change a source of the external data
+        by clicking the <em>Change source</em> button.</p>
+        <p>An object with the unique file data and the file path or name are sent in the <em>data</em> parameter.</p>
+        <p>When the button is clicked, you must call the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method to change a source of the external data.
+            When calling this method, the token must be added to validate the parameters.
+            If the event is not declared, the <em>Change source</em> button will not be displayed.</p>
+        <note>To send the data to the <em>setReferenceSource</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
+        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+        <img alt="Change source" class="screenshot" src="<%= Url.Content("~/content/img/editor/change-source.png") %>" />
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestReferenceSource = function () {
+    var referenceData =  event.data.referenceData;
+    var path = event.data.path;
+    ...
+
+    docEditor.setReferenceSource({
+        "fileType": "xlsx",
+        "path": "sample.xlsx",
+        "referenceData": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com",
+            "key": "Khirz6zTPdfd7"
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+        "url": "https://example.com/url-to-example-document.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestReferenceSource": onRequestReferenceSource,
         ...
     },
     ...
@@ -774,6 +795,36 @@ var onRequestSelectDocument = function () {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestSelectDocument": onRequestSelectDocument,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p><b id="onRequestSelectSpreadsheet" class="copy-link">onRequestSelectSpreadsheet</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</p>
+        <p>The type of spreadsheet selection is specified in the <em>data.c</em> parameter.</p>
+        <p>To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> method.
+            When calling this method, the token must be added to validate the parameters.
+            If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.</p>
+        <img class="screenshot" alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSelectSpreadsheet = function () {
+    docEditor.setRequestedSpreadsheet({
+        "c": event.data.c,
+        "fileType": "xlsx",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
+        "url": "https://example.com/url-to-example-recipients.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSelectSpreadsheet": onRequestSelectSpreadsheet,
         ...
     },
     ...
