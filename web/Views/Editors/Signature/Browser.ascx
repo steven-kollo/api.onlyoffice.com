@@ -169,6 +169,34 @@
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w</pre>
     </li>
     <li>
+        <p><b id="setReferenceSource" class="copy-link">setReferenceSource</b> - when calling the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method to change a source of the external data, the <a href="<%= Url.Action("methods") %>#setReferenceSource-token">token</a> must be added to validate the parameters.</p>
+
+        <p>
+            The <em>payload</em> for the JWT token in the JSON format must have the same structure as the method parameter.
+            The parameter list to be signed is not strictly regulated, but we recommend that you specify all the parameter sent:
+        </p>
+
+        <pre>
+{
+    "fileType": "xlsx",
+    "path": "sample.xlsx",
+    "referenceData": {
+        "fileKey": "BCFA2CED",
+        "instanceId": "https://example.com",
+        "key": "Khirz6zTPdfd7"
+    },
+    "url": "https://example.com/url-to-example-document.xlsx"
+}
+</pre>
+        <p>
+            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+
+        <div class="header-gray">Sample token</div>
+        <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w</pre>
+    </li>
+    <li>
         <p><b id="setRequestedDocument" class="copy-link">setRequestedDocument</b> - when calling the <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a> method to select a document for comparing or combining, the <a href="<%= Url.Action("methods") %>#setRequestedDocument-token">token</a> must be added to validate the parameters.</p>
 
         <p>

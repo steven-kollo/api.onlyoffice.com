@@ -254,6 +254,7 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a>": onRequestMailMergeRecipients,
         "<a href="<%= Url.Action("config/events") %>#onRequestOpen">onRequestOpen</a>": onRequestOpen,
         "<a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a>": onRequestReferenceData,
+        "<a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a>": onRequestReferenceSource,
         "<a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a>": onRequestRename,
         "<a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a>": onRequestRestore,
         "<a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a>": onRequestSaveAs,
