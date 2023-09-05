@@ -60,6 +60,7 @@ If the user is logged in to the DocSpace portal that the SDK will connect to, th
 Authentication is also possible through the SDK <a href="<%= Url.Action("jssdk/methods") %>#login">methods</a>.</p>
 
 <h2>Step 4. Initializing</h2>
+<note>Please note that when working via HTTPS, it is necessary to set the <b>"SameSite": "none"</b> parameter in <em>appsettings.json</em> to avoid blocking the work with cookies during cross-domain requests.</note>
 <p>Initialize DocSpace frame using the <a href="<%= Url.Action("jssdk/methods") %>#initFrame">initFrame</a> method with the SDK config passed to it:</p>
 <pre>
 var docSpace = new DocSpace.SDK.initFrame({
@@ -69,16 +70,6 @@ var docSpace = new DocSpace.SDK.initFrame({
 </pre>
 <p>You can use other available <a href="<%= Url.Action("jssdk/methods") %>">methods</a> to initialize DocSpace.</p>
 <p>The full list of <a href="<%= Url.Action("jssdk/config") %>">config parameters</a> can be found here.</p>
-<br />
-
-<p><b>How to set up the test environment</b></p>
-<p>In order to work within the test environment, you need to make the following settings:</p>
-<ul>
-    <li><b>Nginx</b>. To set up nginx, comment out the line with the <b>X-Frame-Options</b> parameter in <em>./config/nginx/onlyoffice.conf</em>
-    (keep in mind that this is not secure, but it will allow you not to bother with the environment).</li>
-    <li><b>Specific domains</b>. Alternatively, you can configure specific domains (in the test environment, this was not possible due to nginx at the CDN level).</li>
-    <li><b>HTTPS</b>. When working via HTTPS, it is necessary to set the <b>"SameSite": "none"</b> parameter in <em>appsettings.json</em> to avoid blocking the work with cookies during cross-domain requests.</li>
-</ul>
 
 <h2>Step 5. Using</h2>
 <p>After initialization, the current SDK instance can be accessed by using its <a href="<%= Url.Action("jssdk/config") %>#frameId">frameId</a>.
