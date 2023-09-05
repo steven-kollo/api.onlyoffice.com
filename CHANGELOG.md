@@ -1,5 +1,7 @@
 # Change Log
 
+- editor: added the setReferenceSource method
+- editor: added the events.onRequestReferenceSource event
 - editor: added the -9 error code to the Conversion API
 - editor: added the key field to the document.referenceData parameter
 - editor: added the deleteForgotten, getForgotten, and getForgottenList commands
