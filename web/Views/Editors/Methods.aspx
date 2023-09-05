@@ -910,6 +910,7 @@ docEditor.setRequestedDocument({
             </p>
             <pre>
 docEditor.setRequestedSpreadsheet({
+    "c": "mailmerge";
     "fileType": "xlsx",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     "url": "https://example.com/url-to-example-recipients.xlsx"
@@ -935,6 +936,14 @@ docEditor.setRequestedSpreadsheet({
                     </tr>
                 </thead>
                 <tbody>
+                    <tr class="tablerow">
+                        <td>c</td>
+                        <td>
+                            Defines a type of spreadsheet selection from the event. Can be <em>mailmerge</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
                     <tr class="tablerow">
                         <td>fileType</td>
                         <td>

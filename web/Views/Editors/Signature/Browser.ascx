@@ -201,6 +201,7 @@
 
         <pre>
 {
+    "c": "mailmerge",
     "fileType": "xlsx",
     "url": "https://example.com/url-to-example-recipients.xlsx"
 }

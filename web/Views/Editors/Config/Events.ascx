@@ -763,6 +763,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p><b id="onRequestSelectSpreadsheet" class="copy-link">onRequestSelectSpreadsheet</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</p>
+        <p>The type of spreadsheet selection is specified in the <em>data.c</em> parameter.</p>
         <p>To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> method.
             When calling this method, the token must be added to validate the parameters.
             If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.</p>
@@ -771,6 +772,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <pre>
 var onRequestSelectSpreadsheet = function () {
     docEditor.setRequestedSpreadsheet({
+        "c": event.data.c,
         "fileType": "xlsx",
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
         "url": "https://example.com/url-to-example-recipients.xlsx"
