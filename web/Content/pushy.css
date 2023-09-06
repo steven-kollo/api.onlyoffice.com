@@ -173,6 +173,7 @@
         display: block;
         max-height: 1000px;
         position: relative;
+        padding: 0;
     }
 
     .pushy-submenu-open .pushy-link {

@@ -132,7 +132,6 @@ tr {
     height: 71px;
     outline: none;
     width: 255px;
-    margin-left: 18px;
 }
 
 /*layout*/
@@ -189,6 +188,7 @@ body {
 .main-page .layout-header {
     max-width: 1170px;
     margin: auto;
+    padding: 0 40px;
 }
 
 .layout-header {
@@ -534,7 +534,9 @@ li.copy-link[id]:hover:before {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     text-align: center;
-    padding: 0;
+    padding-left: 32px;
+    padding-right: 15px;
+    max-width: 833px;
 }
 
     .top-nav li {
@@ -2205,6 +2207,10 @@ article {
         position: absolute;
         margin: -27px 0px 0 18px;
         filter: brightness(200%);
+    }
+
+    .main-page .layout-header{
+        padding: 0px;
     }
 
     .logo {
