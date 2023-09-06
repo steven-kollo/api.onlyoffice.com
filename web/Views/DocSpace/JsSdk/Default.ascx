@@ -63,7 +63,7 @@ Authentication is also possible through the SDK <a href="<%= Url.Action("jssdk/m
 <note>Please note that when working via HTTPS, it is necessary to set the <b>"SameSite": "none"</b> parameter in <em>appsettings.json</em> to avoid blocking the work with cookies during cross-domain requests.</note>
 <p>Initialize DocSpace frame using the <a href="<%= Url.Action("jssdk/methods") %>#initFrame">initFrame</a> method with the SDK config passed to it:</p>
 <pre>
-var docSpace = new DocSpace.SDK.initFrame({
+var docSpace = DocSpace.SDK.initFrame({
     frameId: "frameId",
     showMenu: true
 });
