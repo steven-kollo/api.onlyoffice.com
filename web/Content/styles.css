@@ -80,6 +80,14 @@ table {
 
 b {
     font-weight: bold;
+    scroll-margin-top: 80px;
+    scroll-snap-margin-top: 80px; /* iOS 11 and older */
+}
+
+@supports (scroll-margin-top: 0;) {
+    b {
+        scroll-margin-top: 80px;
+    }
 }
 
 em {
