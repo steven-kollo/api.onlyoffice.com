@@ -34,7 +34,7 @@
                 <li>In the <b>Target</b> field, after the path to the application, enter a space and then type the <em>--ascdesktop-support-debug-info</em> flag.</li>
                 <li>Click the <b>Apply</b> button.</li>
             </ol>
-            <p><img class="screenshot max-width-300" alt="Windows shortcut" src="<%= Url.Content("~/content/img/desktop/windows-shortcut.png") %>" /></p>
+            <p><img class="screenshot" alt="Windows shortcut" src="<%= Url.Content("~/content/img/desktop/windows-shortcut.png") %>" /></p>
 
             <br />
             <p><b>Option 2</b>. Run the app through the terminal:</p>
@@ -42,7 +42,7 @@
                 <li>Press <b>Win+R</b>.</li>
                 <li>
                     <p>In the appeared <b>Run</b> window, type <em>cmd</em> in the <b>Open</b> field.</p>
-                    <p><img class="screenshot max-width-300" alt="Windows terminal" src="<%= Url.Content("~/content/img/desktop/windows-terminal.png") %>" /></p>
+                    <p><img class="screenshot" alt="Windows terminal" src="<%= Url.Content("~/content/img/desktop/windows-terminal.png") %>" /></p>
                 </li>
                 <li>Click the <b>OK</b> button. The terminal will be opened.</li>
                 <li>
