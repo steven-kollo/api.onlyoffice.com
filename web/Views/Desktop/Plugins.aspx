@@ -39,7 +39,7 @@
     <p>If you want to add your own plugin, you can do it manually, even if you are offline:</p>
     <ol>
         <li>
-            <p>Pack all the <a href="<%= Url.Action("structure") %>">plugin files</a> within the plugin folder into a <b>zip</b> archive and change its extension to <em>.plugin</em>
+            <p>Pack all the <a href="<%= Url.Action("structure", "plugin") %>">plugin files</a> within the plugin folder into a <b>zip</b> archive and change its extension to <em>.plugin</em>
         (all the plugin files and subfolders must be at the archive root).</p>
             <note>If you download a plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">GitHub</a>, unpack the plugin folder first and then archive its elements only.</note>
         </li>
