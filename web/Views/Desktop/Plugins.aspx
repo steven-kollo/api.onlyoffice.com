@@ -26,14 +26,16 @@
 
     <p>Starting from version 7.4, you can download ready-to-use plugins from <b>ONLYOFFICE Plugin Marketplace</b>.</p>
 
+    <p><b>Option 1. Using the <b>Install</b> button (an internet connection is required)</b></p>
     <p>Follow the steps below to add the plugins to the editor using plugin manager:</p>
     <ol>
         <li>Open the <b>Plugins</b> tab.</li>
         <li>Click <b>Plugin Manager</b>.</li>
         <li>Find the plugin you need and click <b>Install</b>.</li>
     </ol>
-    <img alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/desktop-plugin-manager.png") %>" />
+    <p><img alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/desktop-plugin-manager.png") %>" /></p>
 
+    <p><b>Option 2. Uploading the plugin archive (an internet connection is not required)</b></p>
     <p>If you want to add your own plugin, you can do it manually:</p>
     <ol>
         <li>
