@@ -30,7 +30,7 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java-Spring example</a> from our site.</p>
-<p>To connect the editors to your website, specify the path to the editors installation, server port and the path to the storage folder in the <em>\src\main\resources\application.properties</em> file:</p>
+<p>To connect the editors to your website, specify the path to the editors installation, server port and the path to the storage folder in the <em>src/main/resources/application.properties</em> file:</p>
 
 <pre>
 files.storage=
@@ -159,7 +159,7 @@ http://server.address:server.port/
             </li>
         </ul>
     </li>
-    <li>Edit the <em>application.properties</em> configuration file.
+    <li>Edit the <em>src/main/resources/application.properties</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Docs installed.
         <div class="commandline">nano src/main/resources/application.properties</div>
         <p>Edit the following lines:</p>
@@ -234,7 +234,7 @@ files.docservice.url.site=https://documentserver/
             </li>
         </ul>
     </li>
-    <li>Edit the <em>application.properties</em> configuration file.
+    <li>Edit the <em>src/main/resources/application.properties</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Docs installed:
         <div class="commandline">nano src/main/resources/application.properties</div>
         <p>Edit the following lines:</p>

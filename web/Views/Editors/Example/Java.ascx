@@ -29,7 +29,7 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java example</a> from our site.</p>
-<p>To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>\src\main\resources\settings.properties</em> file:</p>
+<p>To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>src/main/resources/settings.properties</em> file:</p>
 
 <pre>
 storage-folder = app_data
@@ -37,7 +37,7 @@ files.docservice.url.site=https://documentserver/</pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storage-folder</b> is the path where files will be created and stored. You can set an absolute path.
 For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
-<p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>\src\main\webapp\editor.jsp</em> file.</p>
+<p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>src/main/webapp/editor.jsp</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>To run the Java example code, install the Java version appropriate for your OS and web server <b>Apache Tomcat</b>:</p>
@@ -150,7 +150,7 @@ For example, <em>D:\\folder</em>. Please note that on Windows OS the double back
     <li>Change the current directory for the project directory:
         <div class="commandline">cd Java\ Example/</div>
     </li>
-    <li>Edit the <em>settings.properties</em> configuration file.
+    <li>Edit the <em>src/main/resources/settings.properties</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano src/main/resources/settings.properties</div>
         <p>Edit the following lines:</p>
@@ -219,7 +219,7 @@ sudo chmod -R ugo+rw /{path}
     <li>Change the current directory for the project directory:
         <div class="commandline">cd Java\ Example/</div>
     </li>
-    <li>Edit the <em>settings.properties</em> configuration file.
+    <li>Edit the <em>src/main/resources/settings.properties</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed:
         <div class="commandline">nano src/main/resources/settings.properties</div>
         <p>Edit the following lines:</p>

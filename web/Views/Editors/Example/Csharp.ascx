@@ -29,7 +29,8 @@
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) / .Net (C# MVC) code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) or .Net (C# MVC) example</a> from our site.</p>
 <p>
-    To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>settings.config</em> file:
+    To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>settings.config</em> file
+    (or <em>web.appsettings.config</em> file for MVC version):
 </p>
 <pre>
 &lt;add key="storage-path" value=""/&gt;
