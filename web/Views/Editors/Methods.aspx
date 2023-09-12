@@ -483,7 +483,7 @@ docEditor.setActionLink(link);
         <li>
             <p>
                 <b id="setFavorite" class="copy-link">setFavorite</b> - change the <em>Favorite</em> icon state. 
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event.
             </p>
             <pre>
 docEditor.setFavorite(favorite);

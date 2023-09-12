@@ -6,7 +6,7 @@
 
 <p class="dscr">After initializing SDK, you will get an object that can be used to call the methods:</p>
 <pre>
-var docSpace = new DocSpace.SDK.initManager({config});
+var docSpace = DocSpace.SDK.initManager({config});
 </pre>
 
 <ul class="columns-4" style="list-style: none;">
