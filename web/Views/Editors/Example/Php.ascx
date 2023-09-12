@@ -31,7 +31,7 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP example</a> from our site.</p>
-<p>To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>config.php</em> file:</p>
+<p>To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>config.json</em> file:</p>
 <pre>
 "storagePath" = "";
 "docServSiteUrl" = "https://documentserver/";</pre>
@@ -154,7 +154,8 @@ php composer.phar install
     <li>Change the current directory for the project directory:
         <div class="commandline">cd PHP\ Example/</div>
     </li>
-    <li>Edit the <em>config.json</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
+    <li>Edit the <em>config.json</em> configuration file.
+    Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config.json</div>
         <p>Edit the following lines:</p>
 
