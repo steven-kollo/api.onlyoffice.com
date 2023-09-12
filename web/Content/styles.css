@@ -56,6 +56,17 @@ h1, h2, h3, p, pre, a, code, em, img, strong, dd, dl, dt, li, ul, ol, form, labe
     padding: 0;
 }
 
+b, td {
+    scroll-margin-top: 71px;
+    scroll-snap-margin-top: 71px; /* iOS 11 and older */
+}
+
+@supports (scroll-margin-top: 0;) {
+    b, td {
+        scroll-margin-top: 71px;
+    }
+}
+
 ul {
     list-style: disc outside none;
     margin: 8px 0 8px 24px;
@@ -80,14 +91,6 @@ table {
 
 b {
     font-weight: bold;
-    scroll-margin-top: 80px;
-    scroll-snap-margin-top: 80px; /* iOS 11 and older */
-}
-
-@supports (scroll-margin-top: 0;) {
-    b {
-        scroll-margin-top: 80px;
-    }
 }
 
 em {
