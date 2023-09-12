@@ -122,11 +122,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <li>
             <p>When the user is trying to refresh data from the source file by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab,
                 the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is called. An object with the unique file data received
-                from the source file and the file path or name are sent in the <em>data</em> parameter.</p>
+                from the source file, the file path or name, and the file URL are sent in the <em>data</em> parameter.</p>
             <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
-                If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+                If there is no such a field or a file cannot be found, then the <em>path</em> or <em>link</em> parameters are used.</note>
             <pre>
 var onRequestReferenceData = function (event) {
+    var link = event.data.link;
     var referenceData = event.data.referenceData;
     var path = event.data.path;
     ...
