@@ -25,7 +25,7 @@
 <h2 id="Windows" class="copy-link">For Windows</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
 <p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example">for Windows</a>.</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example" target="_blank">for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java example</a> from our site.</p>
@@ -137,14 +137,11 @@ For example, <em>D:\\folder</em>. Please note that on Windows OS the double back
 <h2 id="Linux" class="copy-link">For Linux</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
 <p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example">for Linux</a>.</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example" target="_blank">for Linux</a>.</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
 <ol>
-    <li>Install <b>Java</b>:
-        <span class="commandline">sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer</span>
+    <li>Install <b>Java</b> following the instructions <a href="https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8" target="_blank">here</a>.
     </li>
     <li>Download the archive with the Java example and unpack the archive:
         <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
@@ -207,10 +204,23 @@ sudo chmod -R ugo+rw /{path}
 
 <h2 id="Docker" class="copy-link">For Docker</h2>
 
+<h2 id="docker-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
+<p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example" target="_blank">for Docker</a>.</p>
 
+<h2 id="docker-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
 <ol>
+    <li>Install <b>Java</b> following the instructions <a href="https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8" target="_blank">here</a>.
+    </li>
+    <li>Download the archive with the Java example and unpack the archive:
+        <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
+        <span class="commandline">unzip Java\ Example.zip</span>
+    </li>
+    <li>Change the current directory for the project directory:
+        <div class="commandline">cd Java\ Example/</div>
+    </li>
     <li>Edit the <em>settings.properties</em> configuration file.
-        Specify the name of your local server with the ONLYOFFICE Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx">installed</a>.
+        Specify the name of your local server with the ONLYOFFICE Document Server installed:
         <div class="commandline">nano src/main/resources/settings.properties</div>
         <p>Edit the following lines:</p>
 
@@ -225,3 +235,12 @@ files.docservice.url.site=https://documentserver/
         <div class="commandline">docker-compose up</div>
     </li>
     <li>After it, all the <em>bin</em> files will be passed to the <em>./target</em> folder.</li>
+</ol>
+
+<h2 id="docker-3" class="copy-link"><span class="style_step">Step 3. </span>Check accessibility</h2>
+<p>
+    In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
+    Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+</p>
+
+<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

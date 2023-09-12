@@ -1,6 +1,7 @@
 window.Asc.plugin.executeMethod ("ChangeComment", ["1_631",
     {
         "UserName": "John Smith",
+        "QuoteText": "text",
         "Text": "comment",
         "Time": "1662737941471",
         "Solved": true,

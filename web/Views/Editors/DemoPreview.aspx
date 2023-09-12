@@ -54,10 +54,10 @@
             </p>
             <ul class="list-buttons">
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip" target="_blank">DotNet (Csharp MVC) Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip" target="_blank">DotNet (Csharp) Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip" target="_blank">DotNet (Csharp) Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip" target="_blank">DotNet (Csharp MVC) Example</a>
                 </li>
                 <li>
                     <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip" target="_blank">Java Example</a>

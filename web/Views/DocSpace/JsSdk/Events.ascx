@@ -18,7 +18,7 @@ var onAppError = function () {
     console.log("ONLYOFFICE DocSpace reports an error");
 };
 
-var docSpace = new DocSpace.SDK.initManager({
+var docSpace = DocSpace.SDK.initManager({
     "events": {
         "onAppError": null,
         ...
@@ -37,7 +37,7 @@ var onAppReady = function () {
     console.log("ONLYOFFICE DocSpace is ready");
 };
 
-var docSpace = new DocSpace.SDK.initManager({
+var docSpace = DocSpace.SDK.initManager({
     "events": {
         "onAppReady": null,
         ...
@@ -57,7 +57,7 @@ var onCloseCallback = function () {
     console.log("The room selector is closed.");
 };
 
-var docSpace = new DocSpace.SDK.initRoomSelector({
+var docSpace = DocSpace.SDK.initRoomSelector({
     "events": {
         "onCloseCallback": null,
         ...
@@ -77,7 +77,7 @@ var onSelectCallback = function () {
     console.log("The 'New room' room was selected.");
 };
 
-var docSpace = new DocSpace.SDK.initRoomSelector({
+var docSpace = DocSpace.SDK.initRoomSelector({
     "events": {
         "onSelectCallback": null,
         ...

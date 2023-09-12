@@ -30,5 +30,5 @@ It allows you to create rooms, folders, and files and work with them.</p>
 </table>
 <div class="mobile-content"></div>
 <pre>
-var docSpace = new DocSpace.SDK.initManager({config});
+var docSpace = DocSpace.SDK.initManager({config});
 </pre>
