@@ -139,8 +139,6 @@
   <ItemGroup>
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
-    <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
-    <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\docbuilder\examples\Angle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\AxisPos.docbuilder" />
@@ -1917,8 +1915,6 @@
     <Content Include="App_Data\docbuilder\examples\XlSearchDirection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\XlSearchOrder.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\XlUnderlineStyle.docbuilder" />
-    <Content Include="App_Data\docbuilder\Node.js Example.zip" />
-    <Content Include="App_Data\docbuilder\PHP Example.zip" />
     <Content Include="App_Data\docbuilder\references\cell\Api.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiAreas.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiCharacters.json" />
@@ -2003,7 +1999,6 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\CMarkdownConverter.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
-    <Content Include="App_Data\docbuilder\Ruby Example.zip" />
     <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
@@ -2018,14 +2013,6 @@
     <Content Include="App_Data\docspace\references\ASC.Web.Api.xml" />
     <Content Include="App_Data\docspace\references\ASC.Web.Core.xml" />
     <Content Include="App_Data\docspace\references\ASC.Webhooks.Core.xml" />
-    <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
-    <Content Include="App_Data\editor\DotNet %28Csharp%29 Example.zip" />
-    <Content Include="App_Data\editor\Java Example.zip" />
-    <Content Include="App_Data\editor\Java Spring Example.zip" />
-    <Content Include="App_Data\editor\Node.js Example.zip" />
-    <Content Include="App_Data\editor\PHP Example.zip" />
-    <Content Include="App_Data\editor\Python Example.zip" />
-    <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\editor\wildcardData\persons.json" />
     <Content Include="App_Data\plugins\examples\AddinFieldData.docbuilder" />
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
@@ -2530,6 +2517,7 @@
     <Content Include="Content\img\plugins\import-csv-macro.png" />
     <Content Include="Content\img\plugins\insert_id.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
+    <Content Include="Content\img\plugins\install-manually.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\plugins\macro_window.png" />
@@ -4077,6 +4065,7 @@
     <Content Include="Views\Editors\Signature\Default.ascx" />
     <Content Include="Views\Editors\Signature\Request.ascx" />
     <Content Include="Views\Editors\Strapi.aspx" />
+    <Content Include="Views\Editors\SuiteCRM.aspx" />
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />

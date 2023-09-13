@@ -170,8 +170,8 @@
                 "reviewDisplay": "original",
                 "trackChanges": true,
                 "hoverMode": false
-            },<%--
-            "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
+            },
+            "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#uiTheme">uiTheme</a>": "theme-dark",
@@ -259,6 +259,7 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a>": onRequestRestore,
         "<a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a>": onRequestSaveAs,
         "<a href="<%= Url.Action("config/events") %>#onRequestSelectDocument">onRequestSelectDocument</a>": onRequestSelectDocument,
+        "<a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a>": onRequestSelectSpreadsheet,
         "<a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a>": onRequestSendNotify,
         "<a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a>": onRequestSaveAs,
         "<a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a>": onRequestUsers,

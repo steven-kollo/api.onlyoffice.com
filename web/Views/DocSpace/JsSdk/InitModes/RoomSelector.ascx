@@ -29,5 +29,5 @@
 </table>
 <div class="mobile-content"></div>
 <pre>
-var docSpace = new DocSpace.SDK.initRoomSelector({config});
+var docSpace = DocSpace.SDK.initRoomSelector({config});
 </pre>
