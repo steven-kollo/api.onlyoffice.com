@@ -15,15 +15,22 @@
     </h1>
 
     <p class="dscr">As any document is a composite object consisting of a tree of larger nodes (paragraphs and tables) where it is possible to insert smaller document elements (text runs, images, charts, shapes),
-        <b>ONLYOFFICE Document Builder</b> allows to insert the content and format it to your liking quickly and easily.
+        <b>Office JavaScript API</b> allows to insert the content and format it to your liking quickly and easily.
     </p>
     <p>
-        To do this, <b>Builder.API</b> is used - the JavaScript API to work with the document editor.
+        Office JavaScript API is the JavaScript library which is used to work with the document editor.
         It contains classes and methods for every document type: <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>,
         <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>, and <a href="<%= Url.Action("formapi") %>">Form API</a>.
     </p>
-    <p>To start using Builder.API, you need to integrate <b>ONLYOFFICE Document Builder</b> into your own application first.
-        Visit <a href="<%= Url.Action("basic") %>">this page</a> to find more information on it.</p>
+
+    <h2>Where to use</h2>
+    <p>Here are some examples of where you can use Office JavaScript API:</p>
+    <ul>
+        <li>build <a href="<%= Url.Action("structure", "plugin") %>">plugins</a> using Office API in the plugin code <em>.js</em> file
+            to interact with the editor content and web services;</li>
+        <li>write <a href="<%= Url.Action("macros", "plugin") %>">macros</a> using the JavaScript syntax and Office API scripting notation;</li>
+        <li>generate documents using Office API in the <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder scripts</a>.</li>
+    </ul>
 
     <h2>Where to start</h2>
     <p>If you are not sure where to start, you can use the list of most common tasks below to find where to go and start creating your document:</p>
