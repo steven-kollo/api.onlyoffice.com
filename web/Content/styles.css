@@ -56,6 +56,17 @@ h1, h2, h3, p, pre, a, code, em, img, strong, dd, dl, dt, li, ul, ol, form, labe
     padding: 0;
 }
 
+b, td {
+    scroll-margin-top: 71px;
+    scroll-snap-margin-top: 71px; /* iOS 11 and older */
+}
+
+@supports (scroll-margin-top: 0;) {
+    b, td {
+        scroll-margin-top: 71px;
+    }
+}
+
 ul {
     list-style: disc outside none;
     margin: 8px 0 8px 24px;
@@ -124,7 +135,6 @@ tr {
     height: 71px;
     outline: none;
     width: 255px;
-    margin-left: 18px;
 }
 
 /*layout*/
@@ -151,10 +161,10 @@ body {
 
 .layout-table {
     border: medium none;
+    display: flex;
     height: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
     max-width: 1170px;
     margin: auto;
     padding: 0 40px;
@@ -168,9 +178,10 @@ body {
 .layout-table-header {
     border-bottom: 1px solid #333;
     height: 71px;
-    /*min-width: 952px;*/
     width: 100%;
     background-color: #333;
+    position: fixed;
+    z-index: 1000;
 }
 
 .main-page .layout-table-header {
@@ -180,6 +191,7 @@ body {
 .main-page .layout-header {
     max-width: 1170px;
     margin: auto;
+    padding: 0 40px;
 }
 
 .layout-header {
@@ -187,16 +199,28 @@ body {
 }
 
 .layout-table-side {
-    height: 100%;
-    margin: 0;
-    padding: 28px 0px 40% 18px;
     width: 256px;
-    background-color: #F5F5F5;
+}
+
+.nav-list {
+    overflow-y: auto;
+    max-height: calc(100vh - 184px);
+    padding-right: 11px;
+}
+
+.nav-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.nav-list::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #D0D5DA;
 }
 
 .background-body {
     width: 100%;
-    background: linear-gradient( 90deg, #f5f5f5 25%, #fff 0%);
+    background: linear-gradient( 90deg, #f5f5f5 50%, #fff 0%);
+    padding-top: 72px;
 }
 
 .mainBody {
@@ -205,19 +229,23 @@ body {
 }
 
 .layout-side {
-    height: 100%;
-    overflow: hidden;
-    padding: 0 22px 0 0;
-    text-overflow: ellipsis;
-    width: 233px;
+    box-sizing: border-box;
+    position: sticky;
+    padding: 28px 0px;
+    padding-right: 16px;
+    top: 72px;
+    max-height: 100vh;
 }
 
 .layout-table-content {
+    background: #fff;
+    display: inline-block;
     margin: 0;
-    padding: 8px 32px;
+    padding: 8px 32px 96px;
     padding-right: 15px;
     border-left: 1px solid #EFEFEF;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .layout-content {
@@ -509,7 +537,9 @@ li.copy-link[id]:hover:before {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     text-align: center;
-    padding: 0;
+    padding-left: 32px;
+    padding-right: 15px;
+    max-width: 833px;
 }
 
     .top-nav li {
@@ -519,25 +549,27 @@ li.copy-link[id]:hover:before {
     }
 
         .top-nav li.active a {
-            color: #f94a0c;
-            border-bottom: 1px solid #f94a0c;
+            color: #FF6F3D;
+            border-bottom: 2px solid #FF6F3D;
         }
 
     .top-nav a {
         color: #CCC;
         font-size: 11px;
         font-weight: 600;
-        line-height: 71px;
+        line-height: 70px;
         outline: none;
         text-decoration: none;
         text-transform: uppercase;
         display: block;
-        padding: 0 7px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 
         .top-nav a:hover {
-            color: #FF6F3D;
-            border-bottom: 1px solid #f94a0c;
+            color: #FFFFFF;
+            border-bottom: 2px solid #FFFFFF;
         }
 
 /*footer*/
@@ -599,7 +631,6 @@ li.copy-link[id]:hover:before {
     border: 1px solid #ccc;
     display: inline-block;
     padding: 2px 2px 2px 4px;
-    float: left;
     width: 232px;
     height: 40px;
     line-height: 18px;
@@ -732,6 +763,7 @@ li.copy-link[id]:hover:before {
     width: 100%;
     border-left: none;
     padding: 45px 0px;
+    background: #f5f5f5;
 }
 
 .products-info {
@@ -1979,7 +2011,7 @@ article {
 
 @media screen and (min-width: 2250px) {
     .background-body {
-        background: linear-gradient( 90deg, #f5f5f5 35%, #fff 0%);
+        background: linear-gradient( 90deg, #f5f5f5 50%, #fff 0%);
     }
 
     .mainBody {
@@ -1990,7 +2022,7 @@ article {
 
 @media screen and (min-width: 3740px) {
     .background-body {
-        background: linear-gradient( 90deg, #f5f5f5 40%, #fff 0%);
+        background: linear-gradient( 90deg, #f5f5f5 50%, #fff 0%);
     }
 
     .mainBody {
@@ -2001,7 +2033,7 @@ article {
 
 @media screen and (max-width: 1265px) {
     .background-body {
-        background: linear-gradient( 90deg, #f5f5f5 10%, #fff 0%);
+        background: linear-gradient( 90deg, #f5f5f5 50%, #fff 0%);
     }
 
     .mainBody {
@@ -2051,10 +2083,6 @@ article {
 
     .top-nav a:hover {
         border-bottom: 0px;
-    }
-
-    .layout-table-header {
-        position: relative;
     }
 
     .bottommenu {
@@ -2184,6 +2212,10 @@ article {
         filter: brightness(200%);
     }
 
+    .main-page .layout-header{
+        padding: 0px;
+    }
+
     .logo {
         width: 40px;
         margin-left: 55px;
@@ -2298,13 +2330,20 @@ article {
     .open-menu {
         display: block;
         background-color: #F5F5F5;
-        padding: 28px 0px 10px 18px;
-        width: 256px;
+        padding-left: 11px;
+        width: 263px;
         position: absolute;
         z-index: 101;
-        overflow-y: scroll;
         height: calc(100vh - 48px);
+        top: 48px;
+        left: 0;
     }
+
+    .open-menu .nav-list {
+            overflow-y: auto;
+            max-height: calc(100vh - 156px);
+            padding-right: 11px;
+        }
 
     .hidden-body .close-menu {
         background-image: url("img/close.svg");
@@ -2740,4 +2779,28 @@ select {
 .screenshot {
     outline: 1px solid #EFEFEF;
     outline-offset: -1px;
+}
+
+.max-width-832 {
+    max-width: 832px;
+}
+
+.max-width-700 {
+    max-width: 700px;
+}
+
+.max-width-550 {
+    max-width: 550px;
+}
+
+.max-width-400 {
+    max-width: 400px;
+}
+
+.max-width-300 {
+    max-width: 300px;
+}
+
+.max-width-260 {
+    max-width: 260px;
 }

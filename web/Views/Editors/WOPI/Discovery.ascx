@@ -140,6 +140,31 @@ ui=en-us&thm=1&"/&gt;
     </table>
     <div class="mobile-content"></div>
 
+    <h2 id="nextcloud-specific" class="copy-link">Nextcloud specific</h2>
+    <div class="header-gray">Parameters</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+            <col class="table-example" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Example</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="lang" class="copy-link">lang</td>
+                <td>Indicates that the Nextcloud WOPI server includes the document language in the format described in <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a>.
+                This language is used when creating a new document with the <a href="#editnew">editnew</a> action.</td>
+                <td>en-us</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mobile-content"></div>
 
     <h2 id="collabora-specific" class="copy-link">Collabora specific</h2>
 

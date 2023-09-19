@@ -131,6 +131,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Signature/Browser",
                 "Signature/Request",
                 "Strapi",
+                "SuiteCRM",
                 "Troubleshooting",
                 "Try",
                 "Viewing",
@@ -303,11 +304,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult DemoPreview()
         {
-            var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/editor"));
-
-            var examples = directoryInfo.GetFiles("*.zip", SearchOption.TopDirectoryOnly).Select(fileInfo => fileInfo.Name).ToList();
-
-            return View(examples);
+            return View();
         }
 
         public ActionResult DocumentBuilderApi()
@@ -489,6 +486,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Strapi()
+        {
+            return View();
+        }
+
+        public ActionResult SuiteCRM()
         {
             return View();
         }
