@@ -189,8 +189,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p><b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command.</p>
         <p>The name of the document is sent in the <em>data.title</em> parameter. The <em>Favorite</em> icon highlighting state is sent in the <em>data.favorite</em> parameter.</p>
-        <p>When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
-            If the method is not declared, the <em>Favorite</em> icon will not be changed.</p>
+        <p>When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
+            If the method is not declared, the <em>Favorite</em> icon will not be changed.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onMetaChange = function (event) {

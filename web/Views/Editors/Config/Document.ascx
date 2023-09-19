@@ -49,7 +49,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">The key characters can be used: <b>0-9</b>, <b>a-z</b>, <b>A-Z</b>, <b>-._=</b>.
-                The maximal key length is <b>20</b> characters.</div>
+                The maximal key length is <b>128</b> characters.</div>
             </td>
         </tr>
         <tr class="tablerow">

@@ -654,6 +654,7 @@
             <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">Newly added user with the detailed information</returns>
             <path>api/2.0/people/active</path>
             <httpMethod>POST</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.People.Api.UserController.AddMember(ASC.People.ApiModels.RequestDto.MemberRequestDto)">
             <summary>
@@ -787,7 +788,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.UserController.GetFullByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments})">
+        <member name="M:ASC.People.Api.UserController.GetFullByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments},System.Nullable{ASC.Core.AccountLoginType})">
             <summary>
             Returns a list of users with full information about them matching the parameters specified in the request.
             </summary>
@@ -801,6 +802,7 @@
             <param type="System.Nullable{ASC.Core.Users.EmployeeType}, System" name="employeeType">User type</param>
             <param type="System.Nullable{System.Boolean}, System" name="isAdministrator">Specifies if the user is an administrator or not</param>
             <param type="System.Nullable{ASC.Core.Payments}, System" name="payments">User payment status</param>
+            <param type="System.Nullable{ASC.Core.AccountLoginType}, System" name="accountLoginType">Account login type</param>
             <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/filter</path>
             <httpMethod>GET</httpMethod>
@@ -815,6 +817,7 @@
             <returns type="ASC.Api.Core.Module, ASC.Api.Core">Module information</returns>
             <path>api/2.0/people/info</path>
             <httpMethod>GET</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.People.Api.UserController.GetPeopleSearch(System.String)">
             <summary>
@@ -840,7 +843,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.UserController.GetSimpleByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments})">
+        <member name="M:ASC.People.Api.UserController.GetSimpleByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments},System.Nullable{ASC.Core.AccountLoginType})">
             <summary>
             Returns a list of users matching the parameters specified in the request.
             </summary>
@@ -854,6 +857,7 @@
             <param type="System.Nullable{ASC.Core.Users.EmployeeType}, System" name="employeeType">User type</param>
             <param type="System.Nullable{System.Boolean}, System" name="isAdministrator">Specifies if the user is an administrator or not</param>
             <param type="System.Nullable{ASC.Core.Payments}, System" name="payments">User payment status</param>
+            <param type="System.Nullable{ASC.Core.AccountLoginType}, System" name="accountLoginType">Account login type</param>
             <returns type="ASC.Web.Api.Models.EmployeeDto, ASC.Api.Core">List of users</returns>
             <path>api/2.0/people/simple/filter</path>
             <httpMethod>GET</httpMethod>

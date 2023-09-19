@@ -227,7 +227,7 @@ new DocsAPI.DocEditor("placeholder", {
                 <td>services.CoAuthoring.server.assemblyFormatAsOrigin</td>
                 <td>
                     Defines if the assembled file is saved in its original format or not.
-                    The default value is <b>true</b>.
+                    The default value is <b>true</b>.
                 </td>
                 <td>boolean</td>
                 <td>true</td>
