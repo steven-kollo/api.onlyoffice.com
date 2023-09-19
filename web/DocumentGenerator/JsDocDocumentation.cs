@@ -183,6 +183,18 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return sec.Methods.ContainsKey(name) ? sec.Methods[name] : null;
         }
 
+        public DBExample GetSample(string name)
+        {
+            var path = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\docbuilder\samples\{name}.docbuilder");
+
+            var sample = new DBExample
+            {
+                Script = File.ReadAllText(path)
+            };
+            
+            return sample;
+        }
+
         public DBEvent GetEvent(string module, string section, string name)
         {
             var sec = GetSection(module, section);
