@@ -28,5 +28,5 @@
 </table>
 <div class="mobile-content"></div>
 <pre>
-var docSpace = new DocSpace.SDK.initSystem({config});
+var docSpace = DocSpace.SDK.initSystem({config});
 </pre>

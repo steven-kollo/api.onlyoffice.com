@@ -2521,6 +2521,7 @@
     <Content Include="Content\img\plugins\import-csv-macro.png" />
     <Content Include="Content\img\plugins\insert_id.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
+    <Content Include="Content\img\plugins\install-manually.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\plugins\macro_window.png" />

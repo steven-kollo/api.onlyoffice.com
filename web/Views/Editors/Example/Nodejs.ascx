@@ -99,7 +99,7 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
     <li>Install the dependencies:
         <div class="commandline">npm install</div>
     </li>
-    <li>Edit the <em>default.json</em> configuration file.
+    <li>Edit the <em>config/default.json</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/default.json</div>
         <p>Edit the following lines:</p>

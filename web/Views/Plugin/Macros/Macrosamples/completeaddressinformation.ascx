@@ -105,4 +105,4 @@
 
 <div class="header-gray">Result</div>
 </br >
-<img class="screenshot" alt="Write data" src="<%= Url.Content("~/content/img/plugins/complete_address_information.png") %>" />
+<img class="screenshot max-width-832" alt="Write data" src="<%= Url.Content("~/content/img/plugins/complete_address_information.png") %>" />

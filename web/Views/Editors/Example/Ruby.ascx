@@ -44,7 +44,7 @@
     <li>Install the dependencies:
         <div class="commandline">bundle install</div>
     </li>
-    <li>Edit the <em>application.rb</em> configuration file.
+    <li>Edit the <em>config/application.rb</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/application.rb</div>
         <p>Edit the following lines:</p>

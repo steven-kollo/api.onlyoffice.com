@@ -29,5 +29,5 @@
 </table>
 <div class="mobile-content"></div>
 <pre>
-var docSpace = new DocSpace.SDK.initFileSelector({config});
+var docSpace = DocSpace.SDK.initFileSelector({config});
 </pre>
