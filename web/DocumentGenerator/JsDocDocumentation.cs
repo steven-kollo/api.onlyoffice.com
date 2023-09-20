@@ -191,7 +191,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 Script = File.ReadAllText(path)
             };
-            
+
             return sample;
         }
 
