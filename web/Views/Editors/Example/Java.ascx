@@ -145,7 +145,7 @@ For example, <em>D:\\folder</em>. Please note that on Windows OS the double back
     </li>
     <li>Download the archive with the Java example and unpack the archive:
         <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
-        <span class="commandline">unzip Java\ Example.zip</span>
+        <span class="commandline">unzip Java.Example.zip</span>
     </li>
     <li>Change the current directory for the project directory:
         <div class="commandline">cd Java\ Example/</div>
@@ -214,7 +214,7 @@ sudo chmod -R ugo+rw /{path}
     </li>
     <li>Download the archive with the Java example and unpack the archive:
         <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
-        <span class="commandline">unzip Java\ Example.zip</span>
+        <span class="commandline">unzip Java.Example.zip</span>
     </li>
     <li>Change the current directory for the project directory:
         <div class="commandline">cd Java\ Example/</div>

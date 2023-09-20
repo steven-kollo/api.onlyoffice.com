@@ -138,7 +138,7 @@ http://server.address:server.port/
             <li>
                 <p>download the archive with the Java-Spring example and unpack it:</p>
                 <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip</span>
-                <span class="commandline">unzip Java\ Spring\ Example.zip</span>
+                <span class="commandline">unzip Java.Spring.Example.zip</span>
             </li>
             <li>
                 <p>clone the git repository:</p>
@@ -213,7 +213,7 @@ files.docservice.url.site=https://documentserver/
             <li>
                 <p>download the archive with the Java-Spring example and unpack it:</p>
                 <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip</span>
-                <span class="commandline">unzip Java\ Spring\ Example.zip</span>
+                <span class="commandline">unzip Java.Spring.Example.zip</span>
             </li>
             <li>
                 <p>clone the git repository:</p>
