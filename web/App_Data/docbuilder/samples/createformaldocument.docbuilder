@@ -693,5 +693,5 @@ oParagraph.SetStyle(oFooterStyle);
 var oElement = oDocument.Last();
 oElement.Delete();
 
-builder.SaveFile("docx", "sample1.docx");
+builder.SaveFile("docx", "Formal document.docx");
 builder.CloseFile();

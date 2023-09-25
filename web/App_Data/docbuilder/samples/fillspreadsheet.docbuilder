@@ -16,5 +16,5 @@ for (var i = 0; i < sColumns.length; i++) {
   }
 }
 
-builder.SaveFile("xlsx", "passed-arguments.xlsx");
+builder.SaveFile("xlsx", "Spreadsheet with data.xlsx");
 builder.CloseFile();

@@ -1,4 +1,4 @@
-builder.OpenFile("data.xlsx");
+builder.OpenFile("Data.xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var data = oWorksheet.GetRange("A:G").GetValue();
 for (var row = 0; row < data.length; row++) {
@@ -10,5 +10,5 @@ for (var row = 0; row < data.length; row++) {
       }
    }
 }
-builder.SaveFile("xlsx", "data.xlsx");
+builder.SaveFile("xlsx", "Data with comments.xlsx");
 builder.CloseFile();

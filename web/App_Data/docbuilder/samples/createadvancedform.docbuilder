@@ -86,5 +86,5 @@ oDocument.RemoveElement(0);
 oDocument.RemoveElement(1);
 
 Api.Save();
-builder.SaveFile("oform", "Form.oform");
+builder.SaveFile("oform", "Purchase order.oform");
 builder.CloseFile();

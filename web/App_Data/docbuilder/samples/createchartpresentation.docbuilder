@@ -54,5 +54,5 @@ var items = ["Price type A", "Price type B", "Price type C"];
 var periods = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July"];
 addChart(values, items, periods);
 
-builder.SaveFile("pptx", "Presentation.pptx");
+builder.SaveFile("pptx", "Chart presentation.pptx");
 builder.CloseFile();
