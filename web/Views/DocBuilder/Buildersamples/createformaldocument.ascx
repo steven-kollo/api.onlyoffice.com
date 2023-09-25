@@ -31,4 +31,4 @@
         <% var defMethod = DocBuilderDocumentation.Instance.GetSample("createformaldocument"); %>
         $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
     </script>
-    <div id="generator"><UserControl:Generator runat="server" /></div>
+    <div id="generator"><UserControl:Generator runat="server" docTitle="Formal document" documentType="word" ext="docx" zoom="60" /></div>

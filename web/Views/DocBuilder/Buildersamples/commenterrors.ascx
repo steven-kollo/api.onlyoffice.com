@@ -30,4 +30,4 @@
         <% var defMethod = DocBuilderDocumentation.Instance.GetSample("commenterrors"); %>
         $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
     </script>
-    <div id="generator"><UserControl:Generator runat="server" /></div>
+    <div id="generator"><UserControl:Generator runat="server" docTitle="Data with comments" documentType="cell" ext="xlsx" template="data_with_errors" /></div>

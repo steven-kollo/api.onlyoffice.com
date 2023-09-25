@@ -6,36 +6,36 @@
 
 <ul class="sample-block">
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
-        <a href="<%= Url.Action("buildersamples/createformaldocument") %>?zoom=60"><div class="example-sample-img create-formal-document"></div></a>
+        <a href="<%= Url.Action("buildersamples/createformaldocument") %>"><div class="example-sample-img create-formal-document"></div></a>
             <div class="sample-info">
-                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>?zoom=60">Creating formal document</a></p>
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>">Creating formal document</a></p>
                 <p>Creates multi-page document with formal styles.</p>
             </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>?zoom=60">More</a></p>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
-        <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>?type=cell"><div class="example-sample-img fill-spreadsheet"></div></a>
+        <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>"><div class="example-sample-img fill-spreadsheet"></div></a>
             <div class="sample-info">
-                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>?type=cell">Filling spreadsheet with data</a></p>
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet with data</a></p>
                 <p>Fills spreadsheet with array-based values.</p>
             </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>?type=cell">More</a></p>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
-        <a href="<%= Url.Action("buildersamples/commenterrors") %>?type=cell&template=data_with_errors"><div class="example-sample-img comment-errors"></div></a>
+        <a href="<%= Url.Action("buildersamples/commenterrors") %>"><div class="example-sample-img comment-errors"></div></a>
             <div class="sample-info">
-                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>?type=cell&template=data_with_errors">Commenting formula errors</a></p>
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting formula errors</a></p>
                 <p>Comments spreadsheet cells with formula errors.</p>
             </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>?type=cell&template=data_with_errors">More</a></p>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
-        <a href="<%= Url.Action("buildersamples/createchartpresentation") %>?type=slide&zoom=40"><div class="example-sample-img create-chart-presentation"></div></a>
+        <a href="<%= Url.Action("buildersamples/createchartpresentation") %>"><div class="example-sample-img create-chart-presentation"></div></a>
             <div class="sample-info">
-                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createchartpresentation") %>?type=slide&zoom=40">Creating chart presentation</a></p>
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createchartpresentation") %>">Creating chart presentation</a></p>
                 <p>Creates single-slide chart presentation.</p>
             </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createchartpresentation") %>?type=slide&zoom=40">More</a></p>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createchartpresentation") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createbasicform") %>"><div class="example-sample-img create-basic-form"></div></a>
@@ -46,19 +46,19 @@
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createbasicform") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
-        <a href="<%= Url.Action("buildersamples/createadvancedform") %>?zoom=80"><div class="example-sample-img create-advanced-form"></div></a>
+        <a href="<%= Url.Action("buildersamples/createadvancedform") %>"><div class="example-sample-img create-advanced-form"></div></a>
             <div class="sample-info">
-                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>?zoom=80">Creating advanced form</a></p>
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>">Creating advanced form</a></p>
                 <p>Create advanced form with table structure.</p>
             </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>?zoom=80">More</a></p>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
-        <a href="<%= Url.Action("buildersamples/fillform") %>?template=empty_form&zoom=80"><div class="example-sample-img fill-form"></div></a>
+        <a href="<%= Url.Action("buildersamples/fillform") %>"><div class="example-sample-img fill-form"></div></a>
             <div class="sample-info">
-                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillform") %>?template=empty_form&zoom=80">Filling form</a></p>
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillform") %>">Filling form</a></p>
                 <p>Fills form with text values and image.</p>
             </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillform") %>?template=empty_form&zoom=80">More</a></p>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillform") %>">More</a></p>
     </li>
 </ul>

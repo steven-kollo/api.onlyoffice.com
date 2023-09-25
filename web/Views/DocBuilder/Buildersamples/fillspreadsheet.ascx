@@ -24,4 +24,4 @@
         <% var defMethod = DocBuilderDocumentation.Instance.GetSample("fillspreadsheet"); %>
         $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
     </script>
-    <div id="generator"><UserControl:Generator runat="server" /></div>
+    <div id="generator"><UserControl:Generator runat="server" docTitle="Spreadsheet with data" documentType="cell" ext="xlsx" /></div>

@@ -6,39 +6,35 @@
 <script type="text/javascript">
 
     <%
-    var documentType = "word";
-    var ext = "docx";
-    if (Request["type"] == "cell")
-    {
-        documentType = "cell";
-        ext = "xlsx";
-    }
-    else if (Request["type"] == "slide")
-    {
-        documentType = "slide";
-        ext = "pptx";
-    }
-    %>
-
-    <%
-    var useTemplateFile = false;
-    var templateUrl = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext;
-    if (Request["template"] != null)
-    {
-        useTemplateFile = true;
-        // TODO: change url once templates uploaded to https://d2nlctn12v279m.cloudfront.net/assets/docs/samples/
-        templateUrl = "https://github.com/steven-kollo/docbuilder_examples/raw/main/Templates/" + Request["template"] + "." + ext;
-    }
-    %>
-
-    <%
+    var documentType = this.Attributes["documentType"];
+    var ext = this.Attributes["ext"];
     var zoom = 100;
-    if (Request["zoom"] != null)
+    var templateUrl = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext;
+    var useTemplateFile = false;
+    var runScript = true;
+    var docTitle = "Sample";
+
+    if (this.Attributes["docTitle"] != null)
     {
-        zoom = Int32.Parse(Request["zoom"]);
+        docTitle = this.Attributes["docTitle"];
+    }
+    if (this.Attributes["zoom"] != null)
+    {
+        zoom = Int32.Parse(this.Attributes["zoom"]);
+    }
+    if (this.Attributes["template"] != null)
+    {
+        // external sample files for localhost tests only
+        templateUrl = "https://github.com/steven-kollo/docbuilder_examples/raw/main/Templates/" +this.Attributes["template"] + "." + ext;
+        useTemplateFile = true;
+    }
+    if (this.Attributes["runScript"] == "false")
+    { 
+        runScript = false;
     }
     %>
 
+    var runScript = "<%=runScript %>"; 
     var useTemplateFile = "<%= useTemplateFile %>"
     var documentType = "<%= documentType %>";
     var methodNames = [];
@@ -88,7 +84,9 @@
 
     var onDocumentReady = function () {
         window.connector = docEditor.createConnector();
-        postScript();
+        if (runScript == "True") {
+            postScript();
+        }
     };
 
     $("#startButton").click(postScript);

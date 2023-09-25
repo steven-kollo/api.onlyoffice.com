@@ -31,4 +31,4 @@
         <% var defMethod = DocBuilderDocumentation.Instance.GetSample("createchartpresentation"); %>
         $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
     </script>
-    <div id="generator"><UserControl:Generator runat="server" /></div>
+    <div id="generator"><UserControl:Generator runat="server" docTitle="Chart presentation" documentType="slide" ext="pptx" zoom="40" /></div>

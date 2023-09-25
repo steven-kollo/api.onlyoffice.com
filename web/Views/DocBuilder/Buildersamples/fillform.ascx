@@ -32,4 +32,4 @@
         <% var defMethod = DocBuilderDocumentation.Instance.GetSample("fillform"); %>
         $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
     </script>
-    <div id="generator"><UserControl:Generator runat="server" /></div>
+    <div id="generator"><UserControl:Generator runat="server" docTitle="Filled form" documentType="word" ext="docx" template="empty_form" zoom="80" /></div>

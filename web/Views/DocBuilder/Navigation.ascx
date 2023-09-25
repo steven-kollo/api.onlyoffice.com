@@ -518,25 +518,25 @@
             <a href="<%= Url.Action("buildersamples") %>">Builder Samples</a>
             <ul>
                 <li>
-                    <a href="<%= Url.Action("buildersamples/createformaldocument") %>?zoom=60">Creating formal document</a>
+                    <a href="<%= Url.Action("buildersamples/createformaldocument") %>">Creating formal document</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>?type=cell">Filling spreadsheet</a>
+                    <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("buildersamples/commenterrors") %>?type=cell&template=data_with_errors">Commenting spreadsheet errors</a>
+                    <a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("buildersamples/createchartpresentation") %>?type=slide&zoom=40">Creating chart presentation</a>
+                    <a href="<%= Url.Action("buildersamples/createchartpresentation") %>">Creating chart presentation</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("buildersamples/createbasicform") %>">Creating basic form</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("buildersamples/createadvancedform") %>?zoom=80">Creating advanced form</a>
+                    <a href="<%= Url.Action("buildersamples/createadvancedform") %>">Creating advanced form</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("buildersamples/fillform") %>?template=empty_form&zoom=80">Filling form</a>
+                    <a href="<%= Url.Action("buildersamples/fillform") %>">Filling form</a>
                 </li>
             </ul>
         </li>
