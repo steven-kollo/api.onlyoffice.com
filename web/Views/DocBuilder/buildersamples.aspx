@@ -5,6 +5,12 @@
     Inherits="System.Web.Mvc.ViewPage"
     ContentType="text/html" %>
 
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<asp:Content ID="IndexHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <%= Styles.Render("~/content/builder-samples") %>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Builder samples
 </asp:Content>

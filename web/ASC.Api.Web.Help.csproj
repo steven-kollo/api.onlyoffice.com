@@ -2299,8 +2299,11 @@
     <Content Include="Content\img\docbuilder\samples\create-basic-form.svg" />
     <Content Include="Content\img\docbuilder\samples\create-chart-presentation.svg" />
     <Content Include="Content\img\docbuilder\samples\create-formal-document.svg" />
+	<Content Include="Content\img\docbuilder\samples\create-presentation.svg" />
+	<Content Include="Content\img\docbuilder\samples\create-reports.svg" />
     <Content Include="Content\img\docbuilder\samples\fill-form.svg" />
     <Content Include="Content\img\docbuilder\samples\fill-spreadsheet.svg" />
+	<Content Include="Content\img\docbuilder\samples\mail-merge-reception.svg" />
     <Content Include="Content\img\docbuilder\terminal.png" />
     <Content Include="Content\img\docspace\editor-mode.png" />
     <Content Include="Content\img\docspace\file-selector-mode.png" />
@@ -2599,6 +2602,7 @@
     <Content Include="Content\img\Video\install-plugins.png" />
     <Content Include="Content\img\Video\nextcloud_integration.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
+	<Content Include="Content\builder-samples.css" />
     <Content Include="Content\connector.css" />
     <Content Include="Content\jquery.treeview.css" />
     <Content Include="Content\main-page.css" />
