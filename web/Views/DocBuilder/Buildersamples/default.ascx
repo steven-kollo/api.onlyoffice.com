@@ -14,6 +14,22 @@
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
+        <a href="<%= Url.Action("buildersamples/createreports") %>"><div class="example-sample-img create-reports"></div></a>
+            <div class="sample-info">
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createreports") %>">Creating report document</a></p>
+                <p>Creates report tables in the document.</p>
+            </div>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createreports") %>">More</a></p>
+    </li>
+    <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
+        <a href="<%= Url.Action("buildersamples/mailmergereceptions") %>"><div class="example-sample-img mail-merge-reception"></div></a>
+            <div class="sample-info">
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">Creating mail merge receptions</a></p>
+                <p>Creates custom mail merge reception.</p>
+            </div>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">More</a></p>
+    </li>
+    <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>"><div class="example-sample-img fill-spreadsheet"></div></a>
             <div class="sample-info">
                 <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet with data</a></p>
@@ -28,6 +44,14 @@
                 <p>Comments spreadsheet cells with formula errors.</p>
             </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">More</a></p>
+    </li>
+    <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
+        <a href="<%= Url.Action("buildersamples/createpresentation") %>"><div class="example-sample-img create-presentation"></div></a>
+            <div class="sample-info">
+                <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createpresentation") %>">Creating presentation</a></p>
+                <p>Creates presentation with multiple slides, images and text.</p>
+            </div>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createpresentation") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createchartpresentation") %>"><div class="example-sample-img create-chart-presentation"></div></a>

@@ -2008,8 +2008,11 @@
     <Content Include="App_Data\docbuilder\samples\createbasicform.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createchartpresentation.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createformaldocument.docbuilder" />
+	<Content Include="App_Data\docbuilder\samples\createpresentation.docbuilder" />
+	<Content Include="App_Data\docbuilder\samples\createreports.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\fillform.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\fillspreadsheet.docbuilder" />
+	<Content Include="App_Data\docbuilder\samples\mailmergereceptions.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
     <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
@@ -3808,9 +3811,12 @@
     <Content Include="Views\DocBuilder\Buildersamples\createbasicform.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createchartpresentation.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createformaldocument.ascx" />
+	<Content Include="Views\DocBuilder\Buildersamples\createpresentation.ascx" />
+	<Content Include="Views\DocBuilder\Buildersamples\createreports.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\default.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\fillform.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\fillspreadsheet.ascx" />
+	<Content Include="Views\DocBuilder\Buildersamples\mailmergereceptions.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\samplegenerator.ascx" />
     <Content Include="Views\DocBuilder\Changelog.aspx" />
     <Content Include="Views\DocBuilder\classlist.aspx" />

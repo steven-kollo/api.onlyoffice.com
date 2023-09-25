@@ -521,10 +521,19 @@
                     <a href="<%= Url.Action("buildersamples/createformaldocument") %>">Creating formal document</a>
                 </li>
                 <li>
+                    <a href="<%= Url.Action("buildersamples/createreports") %>">Creating report document</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">Creating mail merge receptions</a>
+                </li>
+                <li>
                     <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createpresentation") %>">Creating presentation</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("buildersamples/createchartpresentation") %>">Creating chart presentation</a>

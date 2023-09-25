@@ -1,0 +1,21 @@
+builder.OpenFile("MailMergeData.xlsx", "");
+
+GlobalVariable["MailMergeData"] = Api.GetMailMergeData(0);
+
+builder.CloseFile();
+
+builder.OpenFile("Reception.docx", "");
+
+Api.LoadMailMergeData(GlobalVariable["MailMergeData"]);
+
+var oTemplateDocContent = Api.GetMailMergeTemplateDocContent();
+var ReceptionsCount = Api.GetMailMergeReceptionsCount();
+
+for (var nReception = 0; nReception < ReceptionsCount; nReception++) 
+{
+    Api.MailMerge(nReception, nReception);
+    builder.SaveFile(("docx", "MailMergeSample" + nReception + ".docx");
+    Api.ReplaceDocumentContent(oTemplateDocContent);
+}
+
+builder.CloseFile();
