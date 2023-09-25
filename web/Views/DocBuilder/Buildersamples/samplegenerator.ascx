@@ -24,16 +24,16 @@
     }
     if (this.Attributes["template"] != null)
     {
-        // external sample files for localhost tests only
-        templateUrl = "https://github.com/steven-kollo/docbuilder_examples/raw/main/Templates/" +this.Attributes["template"] + "." + ext;
+        string baseUrl = Request.Url.Scheme + "://" + Request.Url.Host;
+        templateUrl = baseUrl + "/app_data/docbuilder/sample-files/" + this.Attributes["template"] + "." + ext;
         useTemplateFile = true;
     }
     if (this.Attributes["runScript"] == "false")
     { 
         runScript = false;
     }
+  
     %>
-
     var runScript = "<%=runScript %>"; 
     var useTemplateFile = "<%= useTemplateFile %>"
     var documentType = "<%= documentType %>";

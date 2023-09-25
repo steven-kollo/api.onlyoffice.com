@@ -1999,6 +1999,10 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\CMarkdownConverter.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
+	<Content Include="App_Data\docbuilder\sample-files\create_reports.docx" />
+	<Content Include="App_Data\docbuilder\sample-files\data_with_errors.xlsx" />
+	<Content Include="App_Data\docbuilder\sample-files\empty_form.docx" />
+	<Content Include="App_Data\docbuilder\sample-files\mail_merge_receptions.docx" />
     <Content Include="App_Data\docbuilder\samples\commenterrors.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createadvancedform.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createbasicform.docbuilder" />
