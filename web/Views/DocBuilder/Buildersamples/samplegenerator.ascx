@@ -24,8 +24,10 @@
     }
     if (this.Attributes["template"] != null)
     {
-        string baseUrl = Request.Url.Scheme + "://" + Request.Url.Host;
-        templateUrl = baseUrl + "/app_data/docbuilder/sample-files/" + this.Attributes["template"] + "." + ext;
+        templateUrl = new System.UriBuilder(Request.Url.AbsoluteUri)
+            {
+                Path = "/app_data/docbuilder/sample-files/" + this.Attributes["template"] + "." + ext
+            }.ToString();
         useTemplateFile = true;
     }
     if (this.Attributes["runScript"] == "false")
