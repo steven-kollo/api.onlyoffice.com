@@ -29,12 +29,12 @@
         useTemplateFile = true;
     }
     if (this.Attributes["runScript"] == "false")
-    { 
+    {
         runScript = false;
     }
-  
+
     %>
-    var runScript = "<%=runScript %>"; 
+    var runScript = "<%=runScript %>";
     var useTemplateFile = "<%= useTemplateFile %>"
     var documentType = "<%= documentType %>";
     var methodNames = [];

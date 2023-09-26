@@ -3,33 +3,35 @@
 <%@ Import Namespace="ASC.Api.Web.Help.DocumentGenerator" %>
 
 <%@ Register TagPrefix="UserControl"
-             TagName="Generator"
-             Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
+    TagName="Generator"
+    Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
 
-    <h1>
-        <span class="hdr">Creating advanced form</span>
-    </h1>
-    <p>This script creates advanced form with multiple inputs structured using tables. Several helper functions are created to simplify styling and populating tables with forms.<br />You can edit script, run it again with the <b>start script</b> button and see updated result.</p>
+<h1>
+    <span class="hdr">Creating advanced form</span>
+</h1>
+<p>This script creates advanced form with multiple inputs structured using tables. Several helper functions are created to simplify styling and populating tables with forms.<br />
+    You can edit script, run it again with the <b>start script</b> button and see updated result.</p>
 
-    <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
+<textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 
-    <ul class="list-buttons doc-builder-list-buttons">
-        <li>
-            <a id="startButton" class="button red">Start script</a>
-        </li>
-        <li>
-            <a id="clearButton" class="button">Clear</a>
-        </li>
-    </ul>
+<ul class="list-buttons doc-builder-list-buttons">
+    <li>
+        <a id="startButton" class="button red">Start script</a>
+    </li>
+    <li>
+        <a id="clearButton" class="button">Clear</a>
+    </li>
+</ul>
 
-    <h2>Resulting document</h2>
+<h2>Resulting document</h2>
 
-    <div id="editorSpace">
-        <div id="placeholder"></div>
-    </div>
-    <script>
-        
-        <% var defMethod = DocBuilderDocumentation.Instance.GetSample("createadvancedform"); %>
-        $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
-    </script>
-    <div id="generator"><UserControl:Generator runat="server" docTitle="Purchase order" documentType="word" ext="docx" zoom="80" /></div>
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+<script>
+    <% var defMethod = DocBuilderDocumentation.Instance.GetSample("createadvancedform"); %>
+    $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
+</script>
+<div id="generator">
+    <UserControl:Generator runat="server" docTitle="Purchase order" documentType="word" ext="docx" zoom="80" />
+</div>
