@@ -2,7 +2,7 @@ builder.OpenFile("Sample.oform", "Sample.oform");
 var oDocument = Api.GetDocument();
     
 var data = {
-    "Photo": "https://t3.ftcdn.net/jpg/02/83/84/96/360_F_283849634_mjguSpWSJMUflTULMaNcK9l4knguewIG.jpg", 
+    "Photo": "https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png", 
     "Serial":"A1345",
     "Company Name": "Blue Cloud Corporation",
     "Date": "25.12.2023",
