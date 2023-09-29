@@ -7,10 +7,16 @@
     Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
+    <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Filling form</span>
 </h1>
-<p>This script fills <a href="<%= Url.Action("buildersamples/createadvancedform") %>">advanced form</a> from another builder sample with data stored in an object.<br />
-    You can edit script, run it again with the <b>start script</b> button and see updated result.</p>
+<p class="dscr">Fill a form with data stored in the object:</p>
+<ul>
+    <li>open existing form and get all forms (<a href="<%= Url.Action("textdocumentapi/apidocument/getallforms") %>">ApiDocument/GetAllForms</a>);</li>
+    <li>run a loop for each form, check the form type an set data corresponding to the form key (<a href="<%= Url.Action("textdocumentapi/apiformbase/getformtype") %>">ApiFormBase/GetFormType</a>, 
+        <a href="<%= Url.Action("textdocumentapi/apiformbase/getformkey") %>">ApiFormBase/GetFormKey</a>, <a href="<%= Url.Action("textdocumentapi/apipictureform/setimage") %>">ApiPictureForm/SetImage</a>, <a href="<%= Url.Action("textdocumentapi/apicomboboxform/settext") %>">ApiComboBoxForm/SetText</a>)</li>
+</ul>
+
 <p>Check <a href="<%= Url.Action("howitworks/globalvariable") %>">Exchanging data among files</a> and <a href="<%= Url.Action("integrationapi/arguments") %>">Using command line arguments</a> to learn more options for passing external data in the DocBuilder script.</p>
 
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>

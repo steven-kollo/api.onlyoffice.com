@@ -7,10 +7,19 @@
     Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
+    <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Commenting spreadsheet errors</span>
 </h1>
-<p>This script checks all used cells for formula errors like "#DIV/0!" and comments each error. After script finishing you can simply find and fix errors.<br />
-    You can edit script, run it again with the <b>start script</b> button and see updated result.</p>
+<p>This script checks all used cells for formula errors like "#DIV/0!" and comments each error. </p>
+
+<ul>
+    <li>open existing spreadsheet file to check for errors;</li>
+    <li>create a loop for columns and nest another loop for rows;</li>
+    <li>get each cell (<a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrangebynumber") %>">ApiWorksheet/GetRangeByNumber</a>) and check value for errors;</li>
+    <li>comment cell with (<a href="<%= Url.Action("spreadsheetapi/apirange/addcomment") %>">ApiRange/AddComment</a>) if an error exists.</li>
+</ul>
+<br />
+
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 
 <ul class="list-buttons doc-builder-list-buttons">

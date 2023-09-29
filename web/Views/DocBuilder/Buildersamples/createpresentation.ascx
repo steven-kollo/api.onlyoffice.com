@@ -8,7 +8,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
-    <span class="hdr">Filling Spreadsheet</span>
+    <span class="hdr">Creating presentation</span>
 </h1>
 <p class="dscr">Create a presentation on a specific topic:</p>
 <ul>
@@ -29,6 +29,7 @@
         <a href="<%= Url.Action("presentationapi/apislide/removeallobjects") %>">ApiSlide/RemoveAllObjects</a>).</li>
 </ul>
 <br />
+
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 
 <ul class="list-buttons doc-builder-list-buttons">

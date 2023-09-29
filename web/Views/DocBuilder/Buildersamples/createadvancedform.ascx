@@ -7,10 +7,23 @@
     Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
+    <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Creating advanced form</span>
 </h1>
-<p>This script creates advanced form with multiple inputs structured using tables. Several helper functions are created to simplify styling and populating tables with forms.<br />
-    You can edit script, run it again with the <b>start script</b> button and see updated result.</p>
+<p class="dscr">Create an advanced form with a table structure:</p>
+<ul>
+   <li>create a new document, create tables for text and form inputs (<a href="<%= Url.Action("textdocumentapi/api/createparagraph") %>">Api/CreateParagraph</a>,
+        <a href="<%= Url.Action("textdocumentapi/api/createtable") %>">Api/CreateTable</a>, <a href="<%= Url.Action("textdocumentapi/apidocument/push") %>">ApiDocument/Push</a>,
+        <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getelement") %>">ApiDocumentContent/GetElement</a>, <a href="<%= Url.Action("textdocumentapi/apiparagraph/addtext") %>">ApiParagraph/AddText</a>,
+        <a href="<%= Url.Action("textdocumentapi/apitable/getrow") %>">ApiTable/GetRow</a>,  <a href="<%= Url.Action("textdocumentapi/apitable/settablebordertop") %>">ApiTable/SetTableBorderTop</a>,
+        <a href="<%= Url.Action("textdocumentapi/apitablecell/getcontent") %>">ApiTableCell/GetContent</a>, <a href="<%= Url.Action("textdocumentapi/apitablerow/getcell") %>">ApiTableRow/GetCell</a>);</li>
+    <li>style tables (<a href="<%= Url.Action("textdocumentapi/apidocument/getstyle") %>">ApiDocument/GetStyle</a>, <a href="<%= Url.Action("textdocumentapi/apirun/setcolor") %>">ApiRun/SetColor</a>,
+        <a href="<%= Url.Action("textdocumentapi/apirun/setstrikeout") %>">ApiRun/SetStrikeout</a>).</li>
+    <li>create text and image forms, and add it to the tables (<a href="<%= Url.Action("formapi/api") %>">FormApi</a>, 
+        <a href="<%= Url.Action("formapi/api/createpictureform") %>">Api/CreatePictureForm</a>, <a href="<%= Url.Action("formapi/api/createtextform") %>">Api/CreateTextForm</a>)</li>
+
+</ul>
+<br />
 
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 

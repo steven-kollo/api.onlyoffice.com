@@ -7,9 +7,25 @@
     Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
+    <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Creating chart presentation</span>
 </h1>
-<p>You can do this for the that with the method to use its script in the text area below. Or, in case you have a script of your own, use the button under the text area to upload it. You can select the necessary editor.</p>
+<p class="dscr">Create a chart presentation:</p>
+<ul>
+    <li>get first slide in the current presentation (<a href="<%= Url.Action("presentationapi/api/createslide") %>">Api/CreateSlide</a>,
+        <a href="<%= Url.Action("presentationapi/api/getpresentation") %>">Api/GetPresentation</a>, <a href="<%= Url.Action("presentationapi/apipresentation/getslidebyindex") %>">ApiPresentation/GetSlideByIndex</a>);</li>
+    <li>set the background gradient (<a href="<%= Url.Action("presentationapi/apigradientstop") %>">PresentationApi/ApiGradientStop</a>,
+        <a href="<%= Url.Action("presentationapi/apislide/setbackground") %>">ApiSlide/SetBackground</a>);</li>
+    <li>set the slide title and text in the specified style (<a href="<%= Url.Action("presentationapi/api/createparagraph") %>">Api/CreateParagraph</a>, 
+        <a href="<%= Url.Action("presentationapi/api/createshape") %>">Api/CreateShape</a>,<a href="<%= Url.Action("presentationapi/apiparagraph/addtext") %>">ApiParagraph/AddText</a>,
+        <a href="<%= Url.Action("presentationapi/apiparagraph/setjc") %>">ApiParagraph/SetJc</a>, <a href="<%= Url.Action("presentationapi/apiparagraph/setspacingafter") %>">ApiParagraph/SetSpacingAfter</a>,
+        <a href="<%= Url.Action("presentationapi/apiparagraph/setspacingbefore") %>">ApiParagraph/SetSpacingBefore</a>, <a href="<%= Url.Action("presentationapi/apirun/setbold") %>">ApiRun/SetBold</a>,
+        <a href="<%= Url.Action("presentationapi/apirun/setfill") %>">ApiRun/SetFill</a>, <a href="<%= Url.Action("presentationapi/apirun/setfontfamily") %>">ApiRun/SetFontFamily</a>,
+        <a href="<%= Url.Action("presentationapi/apirun/setfontsize") %>">ApiRun/SetFontSize</a>, <a href="<%= Url.Action("presentationapi/apishape/getdoccontent") %>">ApiShape/GetDocContent</a>, <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">ApiSlide/AddObject</a>);</li>
+    <li>create and apply the chart (<a href="<%= Url.Action("presentationapi/api/createchart") %>">Api/CreateChart</a>, <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">ApiSlide/AddObject</a>)</li>
+
+</ul>
+<br />
 
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 

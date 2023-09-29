@@ -7,10 +7,26 @@
     Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
+    <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Creating formal document</span>
 </h1>
-<p>This script uses paragraph styles, tables, header, footer and more to create formal document.<br />
-    You can edit script, run it again with the <b>start script</b> button and see updated result.</p>
+<p>Create a document following the structure of a formal paper:</p>
+<ul>
+    <li>create a title page with a document heading and subtitle (<a href="<%= Url.Action("textdocumentapi/api") %>">Api</a>,
+        <a href="<%= Url.Action("textdocumentapi/apidocumentcontent") %>">ApiDocumentContent</a>, <a href="<%= Url.Action("textdocumentapi/apidrawing") %>">ApiDrawing</a>);</li>
+    <li>create different styles for the document text, heading, subtitle, table, footer (<a href="<%= Url.Action("textdocumentapi/apiparapr") %>">ApiParaPr</a>,
+        <a href="<%= Url.Action("textdocumentapi/apistyle") %>">ApiStyle</a>, <a href="<%= Url.Action("textdocumentapi/apitable") %>">ApiTable</a>,
+        <a href="<%= Url.Action("textdocumentapi/apitablecell") %>">ApiTableCell</a>, <a href="<%= Url.Action("textdocumentapi/apitablepr") %>">ApiTablePr</a>,
+        <a href="<%= Url.Action("textdocumentapi/apitablerow") %>">ApiTableRow</a>, <a href="<%= Url.Action("textdocumentapi/apitextpr") %>">ApiTextPr</a>);</li>
+    <li>structure the document by marking up its section: set columns for text and pictures, set page size and margins, create header and footer
+        (<a href="<%= Url.Action("textdocumentapi/apidocument") %>">ApiDocument</a>, <a href="<%= Url.Action("textdocumentapi/apisection") %>">ApiSection</a>);</li>
+    <li>fill the document with text, dividing it into separate fragments and highlighting them with headings
+        (<a href="<%= Url.Action("textdocumentapi/apiparagraph") %>">ApiParagraph</a>, <a href="<%= Url.Action("textdocumentapi/apirun") %>">ApiRun</a>);</li>
+    <li>add images and charts to represent document text (<a href="<%= Url.Action("textdocumentapi/api") %>">Api</a>,
+        <a href="<%= Url.Action("textdocumentapi/apichart") %>">ApiChart</a>).</li>
+</ul>
+<br />
+
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 
 <ul class="list-buttons doc-builder-list-buttons">
