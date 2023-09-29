@@ -1,4 +1,4 @@
-builder.OpenFile("Sample.oform", "Sample.oform");
+builder.OpenFile("Sample.docxf", "Sample.docxf");
 var oDocument = Api.GetDocument();
     
 var data = {

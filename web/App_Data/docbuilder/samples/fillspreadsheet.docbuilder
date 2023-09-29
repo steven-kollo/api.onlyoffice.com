@@ -8,11 +8,10 @@ var sData = [
     [ "true", "true", "false", "true" ]
 ];
 
-var sColumns = ["A","B","C","D"];
-for (var i = 0; i < sColumns.length; i++) {
-  oWorksheet.GetRange(`${sColumns[i]}1`).SetValue(sHeaders[i]);
+for (var i = 0; i < sHeaders.length; i++) {
+  oWorksheet.GetRangeByNumber(0, i).SetValue(sHeaders[i]);
   for (var j = 0; j < sData[0].length; j++) {
-    oWorksheet.GetRange(`${sColumns[i]}${j + 2}`).SetValue(sData[i][j]);
+    oWorksheet.GetRangeByNumber(j + 1, i).SetValue(sData[i][j]);
   }
 }
 
