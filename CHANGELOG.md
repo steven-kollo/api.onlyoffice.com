@@ -1,5 +1,7 @@
 # Change Log
 
+- docspace: added the DocSpace plugins SDK
+
 ## 4.2.0
 - docspace: v1.1.2
 - docspace: added the DocSpace frame SDK

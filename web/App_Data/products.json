@@ -33,6 +33,36 @@
                "Item2":"jssdk/events"
             }
          ],
+         "Plugins SDK":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"pluginssdk/"
+            },
+            {
+               "Item1":"Getting started",
+               "Item2":"pluginssdk/gettingstarted"
+            },
+            {
+               "Item1":"Creating plugin template",
+               "Item2":"pluginssdk/creatingtemplate"
+            },
+            {
+               "Item1":"Coding plugin",
+               "Item2":"pluginssdk/codingplugin"
+            },
+            {
+               "Item1":"Building plugin",
+               "Item2":"pluginssdk/buildingplugin"
+            },
+            {
+               "Item1":"Config",
+               "Item2":"pluginssdk/config"
+            },
+            {
+               "Item1":"Uploading plugin",
+               "Item2":"pluginssdk/uploadingplugin"
+            }
+         ],
          "API Backend":[
             {
                "Item1":"Basic concepts",
