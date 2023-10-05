@@ -147,6 +147,9 @@
         <div class="treeheader">More information</div>
         <ul class="side-nav root">
             <li>
+                <a href="changelog" target="_blank">Changelog</a>
+            </li>
+            <li>
                 <a href="/docspace-storybook" target="_blank">Storybook</a>
             </li>
             <li>

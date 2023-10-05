@@ -3938,6 +3938,7 @@
     <Content Include="Views\DocSpace\Backend\Auth.ascx" />
     <Content Include="Views\DocSpace\Backend\Default.ascx" />
     <Content Include="Views\DocSpace\Batch.aspx" />
+    <Content Include="Views\DocSpace\Changelog.aspx" />
     <Content Include="Views\DocSpace\Faq.aspx" />
     <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\Filters.aspx" />
