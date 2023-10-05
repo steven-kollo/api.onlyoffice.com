@@ -30,12 +30,12 @@
 <pre><code>sudo apt-get install git
 git clone https://github.com/onlyoffice/rails-docbuilder-example.git</code></pre>
                 </li>--%>
-                <li>Download the archive with the Ruby example and unpack the it:
+                <li>Create the <em>Ruby Example</em> project folder. Download the archive with the Ruby Example and unpack the archive in the created folder:
                     <pre>wget "https://github.com/ONLYOFFICE/document-builder-integration/releases/latest/download/Ruby.Example.zip"
-unzip rails-docbuilder-example-master.zip</pre>
+unzip Ruby.Example.zip</pre>
                 </li>
                 <li>Change the current directory for the project directory:
-<pre>cd ~/rails-docbuilder-example-master</pre>
+<pre>cd ~/Ruby\ Example/</pre>
                 </li>
                 <li>Install the dependencies:
 <pre>bundle install</pre>

@@ -47,6 +47,7 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Backend",
                 "Backend/Auth",
+                "Changelog",
                 "Faq",
                 "Filters",
                 "Batch",
@@ -145,6 +146,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Backend", (object)catchall);
+        }
+
+        public ActionResult Changelog()
+        {
+            return View();
         }
 
         public ActionResult Faq()
