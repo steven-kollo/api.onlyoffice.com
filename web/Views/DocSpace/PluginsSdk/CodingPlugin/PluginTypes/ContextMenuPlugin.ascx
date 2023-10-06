@@ -28,8 +28,8 @@
         <tr class="tablerow">
             <td id="contextMenuItems" class="copy-link">contextMenuItems</td>
             <td>Stores a collection of elements where the keys are the <em>key</em> parameters from the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/contextmenuitem") %>">ContextMenuItem</a> objects.
-                It can also store <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/items/ISeparatorItem.ts" target="_blank">ISeparatorItem</a> objects. A list for embedding into the context menu is generated based on this collection.</td>
-            <td>array of IContextMenuItem/ISeparatorItem</td>
+                A list for embedding into the context menu is generated based on this collection.</td>
+            <td>collection of IContextMenuItem</td>
             <td></td>
         </tr>
     </tbody>

@@ -29,7 +29,7 @@
             <td id="eventListenerItems" class="copy-link">eventListenerItems</td>
             <td>Stores a collection of elements where the keys are the <em>key</em> parameters from the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/eventlisteneritem") %>">EventListenerItem</a> objects.
                 A list of event listeners is generated based on this collection.</td>
-            <td>array of IEventListenerItem</td>
+            <td>collection of IEventListenerItem</td>
             <td></td>
         </tr>
     </tbody>

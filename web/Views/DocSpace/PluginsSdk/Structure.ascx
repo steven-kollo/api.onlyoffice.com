@@ -8,10 +8,10 @@
     Each DocSpace plugin is a folder with files. It must contain the following files required for the plugin to work:
 </p>
 <ul>
-    <li><b>assests</b> - a folder for storing plugin images. Nesting is not supported. The following formats are curretly supported: <em>.jpg, .jpeg, .png, .svg</em>.</li>
+    <li><b>assets</b> - a folder for storing plugin images. Nesting is not supported. The following formats are curretly supported: <em>.jpg, .jpeg, .png, .svg</em>.</li>
     <li><b>dist</b> - a folder for storing the compiled plugin version.</li>
     <li><b>scripts</b> - a folder for storing script files for building the plugin.
-    Now there is the <em>createZip.js</em> script that is executed when building the plugin to automatically archive it and create the <em>config.json</em> file.</li>
+    The <em>createZip.js</em> script is added to this folder. The script is executed when building the plugin to automatically archive it and create the <em>config.json</em> file.</li>
     <li><b>src</b> - a folder for the plugin source files.</li>
     <li>
         <p><b>src/index.ts</b> - the entry point for building the plugin. This file is required.
@@ -23,7 +23,7 @@ window.Plugins.PDFConverter = plugin || {};
 </pre>
     </li>
     <li>
-        <p><b>webpack.config.js</b> - the webpack configuration file. You can edit this file but this is important that in the <em>output</em> parameter,
+        <p><b>webpack.config.js</b> - the webpack configuration file. This file can be edited but this is important that in the <em>output</em> parameter,
         the <em>fileName</em> field is equal to <em>plugin.js</em> and the <em>path</em> field is equal to <em>dist</em>:</p>
         <pre>
 "output": {
@@ -32,7 +32,7 @@ window.Plugins.PDFConverter = plugin || {};
 }
 </pre>
     </li>
-    <li><b>tsconfig</b> - the <em>typescript</em> configuration file. You can edit this file.</li>
-    <li><b>package.json</b> - a file with the information about the plugin and dependencies. You can edit this file and add new dependencies.</li>
-    <li><b>.prettierrc</b> - the configuration file for the <em>prettier</em> npm package. You can edit this file.</li>
+    <li><b>tsconfig</b> - the <em>typescript</em> configuration file. This file can be edited.</li>
+    <li><b>package.json</b> - a file with the information about the plugin and dependencies. This file can be edited and the new dependencies can be added.</li>
+    <li><b>.prettierrc</b> - the configuration file for the <em>prettier</em> npm package. This file can be edited.</li>
 </ul>

@@ -9,8 +9,8 @@
 <p><b>Interface</b>: IInput.</p>
 <p>See the parameters of this component in <a href="https://storybook.onlyoffice.io/?path=/docs/components-textinput--docs" target="_blank">storybook</a>.</p>
 <img alt="Input" class="screenshot" src="<%= Url.Content("~/content/img/docspace/input.png") %>" />
-<p>To change the input size, use <b>InputSize</b> (<em>base, middle, big, huge, large</em>), for the input types - <b>InputType</b> (<em>text</em> or <em>password</em>),
-    for the autocomplete feature - <b>InputAutocomplete</b> (<em>on</em> or <em>off</em>).
+<p>To change the input size, use <b>InputSize</b> (<em>base, middle, big, huge, large</em>), for the input types, use <b>InputType</b> (<em>text</em> or <em>password</em>),
+    and for the autocomplete feature, use <b>InputAutocomplete</b> (<em>on</em> or <em>off</em>).
     More information can be found <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/IInput.ts" target="_blank">here</a>.</p>
 
 <div class="header-gray">Example</div>

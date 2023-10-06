@@ -109,8 +109,8 @@
         </tr>
         <tr class="tablerow">
             <td id="disableWhileRequestRunning" class="copy-link">disableWhileRequestRunning</td>
-            <td>Specifies whether to set the <a href="#isDisabled">isDisabled</a> state to the button if it has the <em>withLoadingAfterClick</em> parameter set to <b>true</b>
-            and it was clicked on the page or in the dialog box.</td>
+            <td>Specifies whether to set the <a href="#isDisabled">isDisabled</a> state for the button when the <em>withLoadingAfterClick</em> parameter is set to <b>true</b>,
+            and it is clicked either on the page or in the dialog box.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>

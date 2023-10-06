@@ -40,7 +40,7 @@
         <tr class="tablerow">
             <td id="usersType" class="copy-link">usersType</td>
             <td>Defines the types of users who have the access to the current item.
-            Now the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
+            Currently the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
             If this parameter is not specified, then the current item will be available for all user types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/UsersType.ts" target="_blank">UsersType</a></td>
             <td>[UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]</td>
@@ -48,7 +48,7 @@
         <tr class="tablerow">
             <td id="devices" class="copy-link">devices</td>
             <td>Defines the types of devices where the current item will be available.
-                Now the following device types are available: <b>mobile, tablet, desktop</b>.
+                At the moment the following device types are available: <b>mobile, tablet, desktop</b>.
                 If this parameter is not specified, then the current item will be available in any device types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Devices.ts" target="_blank">Devices</td>
             <td>[Devices.desktop]</td>
@@ -60,10 +60,16 @@
             <td>"Diagram"</td>
         </tr>
         <tr class="tablerow">
-            <td id="fileIcon" class="copy-link">fileIcon</td>
-            <td>Defines a file icon which is displayed in the list.</td>
+            <td id="fileRowIcon" class="copy-link">fileRowIcon</td>
+            <td>Defines a file icon which is displayed in the table format. The preferred icon size is 32x32 px.</td>
             <td>string</td>
             <td>"drawio-32.svg"</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="fileTileIcon" class="copy-link">fileTileIcon</td>
+            <td>Defines a file icon which is displayed in the tile format. The preferred icon size is 96x96 px.</td>
+            <td>string</td>
+            <td>"drawio-96.svg"</td>
         </tr>
     </tbody>
 </table>
@@ -76,7 +82,8 @@ import {IFileItem, File} from "@onlyoffice/docspace-plugin-sdk";
 export const drawIoItem: IFileItem = {
     "extension": ".drawio",
     "fileTypeName": "Diagram",
-    "fileIcon": "drawio-32.svg",
+    "fileRowIcon": "drawio-32.svg",
+    "fileTileIcon": "drawio-96.svg",
     "onClick": async (item: File) =&gt; {},
 };
 </pre>

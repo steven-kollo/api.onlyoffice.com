@@ -41,7 +41,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/createdialog") %>">CreateDialog</a></td>
-            <td>Modal dialog for creating some item (file, folder, etc.).</td>
+            <td>Modal dialog for creating certain item (file, folder, etc.).</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/iframe") %>">IFrame</a></td>

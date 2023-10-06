@@ -24,7 +24,7 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/plugin") %>">Plugin</a></td>
             <td>IPlugin</td>
-            <td>The default plugin.</td>
+            <td>The default plugin. This interface is required.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/settingsplugin") %>">SettingsPlugin</a></td>

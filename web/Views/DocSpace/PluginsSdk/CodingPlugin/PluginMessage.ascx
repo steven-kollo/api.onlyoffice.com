@@ -69,7 +69,7 @@
                     </li>
                 </ul>
                 This parameter is used only with <a href="<%= Url.Action("pluginssdk/codingplugin/events") %>#updateContext">Actions.updateContext</a>
-                and works in the modal windows and on the settings page.
+                and works in the administator or owner settings block that is embedded in the modal window with the plugin description.
             </td>
             <td>array of objects</td>
             <td>[

@@ -29,7 +29,7 @@
             <td id="infoPanelItems" class="copy-link">infoPanelItems</td>
             <td>Stores a collection of elements where the keys are the key parameters from the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/infopanelitem") %>">InfoPanelItem</a> objects.
                 A list for embedding into the info panel is generated based on this collection.</td>
-            <td>array of IInfoPanelItem</td>
+            <td>collection of IInfoPanelItem</td>
             <td></td>
         </tr>
     </tbody>

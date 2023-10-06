@@ -7,6 +7,7 @@
 
 <p class="dscr">The default plugin.</p>
 <p><b>Interface</b>: IPlugin.</p>
+<p>This interface must be used in each plugin because the plugin <a href="#status">status</a> is required to embed the plugin in the portal.</p>
 
 <div class="header-gray">Variables</div>
 <table class="table">
@@ -64,8 +65,8 @@
             <tbody>
                 <tr class="tablerow">
                     <td>status</td>
-                    <td>Defines a new plugin status.</td>
-                    <td>string</td>
+                    <td>Defines a new plugin status (<b>active</b> or <b>hide</b>).</td>
+                    <td><a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Plugins.ts" target="_blank">PluginStatus</a></td>
                     <td>"active"</td>
                 </tr>
             </tbody>

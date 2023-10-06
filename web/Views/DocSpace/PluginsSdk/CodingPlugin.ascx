@@ -4,11 +4,12 @@
     <span class="hdr">Coding plugin</span>
 </h1>
 
-<p>Develop a plugin. Follow the plugin structure described <a href="<%= Url.Action("pluginssdk/codingplugin/structure") %>">here</a>.</p>
+<p>Develop a plugin. Follow the plugin structure described <a href="<%= Url.Action("pluginssdk/structure") %>">here</a>.</p>
 <ul>
     <li>
         <p>Write code for each <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes") %>">plugin type</a> using the corresponding variables, methods
-        and <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems") %>">items</a>. Put the scripts into the <em>src</em> folder.</p>
+        and <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems") %>">items</a>. Put the scripts into the <em>src</em> folder.
+        Specify the required <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/plugin") %>">Plugin</a> interface for each plugin to be embedded in the portal.</p>
         <img alt="Plugin structure" class="screenshot" src="<%= Url.Content("~/content/img/docspace/plugin-structure.png") %>" />
     </li>
     <li>

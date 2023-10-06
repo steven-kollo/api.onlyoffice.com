@@ -108,7 +108,7 @@ const message: IMessage = {
 </pre>
     </li>
     <li>
-        <p><b id="showCreateDialogModal" class="copy-link">showCreateDialogModal</b> - the function called when opening a modal window for creating some item (file, folder, etc.).
+        <p><b id="showCreateDialogModal" class="copy-link">showCreateDialogModal</b> - the function called when opening a modal window for creating certain item (file, folder, etc.).
             It does not work if the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginmessage") %>#createDialogProps">createDialogProps</a> parameter is not passed to the message.</p>
         <pre>
 const message: IMessage = {

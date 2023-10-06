@@ -38,7 +38,8 @@
         </tr>
         <tr class="tablerow">
             <td id="icon" class="copy-link">icon</td>
-            <td>Defines the item display icon. The icon image must be uploaded to the <em>assets</em> folder. Only the image name with the extension must be specified in this field.</td>
+            <td>Defines the item display icon. The icon image must be uploaded to the <em>assets</em> folder. Only the image name with the extension must be specified in this field.
+            The required icon size is 16x16 px. Otherwise, it will be compressed to this size.</td>
             <td>string</td>
             <td>"logo.png"</td>
         </tr>
@@ -51,7 +52,7 @@
         <tr class="tablerow">
             <td id="usersType" class="copy-link">usersType</td>
             <td>Defines the types of users who will see  the current item in the profile menu.
-            Now the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
+            Currently the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
             If this parameter is not specified, then the current profile menu item will be displayed for all user types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/UsersType.ts" target="_blank">UsersType</a></td>
             <td>[UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]</td>
@@ -59,7 +60,7 @@
         <tr class="tablerow">
             <td id="devices" class="copy-link">devices</td>
             <td>Defines the types of devices where the current item will be displayed in the profile menu.
-                Now the following device types are available: <b>mobile, tablet, desktop</b>.
+                At the moment the following device types are available: <b>mobile, tablet, desktop</b>.
                 If this parameter is not specified, then the current profile menu item will be displayed in any device types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Devices.ts" target="_blank">Devices</td>
             <td>[Devices.desktop]</td>

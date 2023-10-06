@@ -21,4 +21,4 @@
         <img alt="DocSpace plugins" class="screenshot" src="<%= Url.Content("~/content/img/docspace/docspace-plugins.png") %>" />
     </li>
 </ol>
-<p>The plugin will appear in the plugin list and start working automatically.</p>
+<p>The plugin will appear in the plugin list and start functioning automatically.</p>

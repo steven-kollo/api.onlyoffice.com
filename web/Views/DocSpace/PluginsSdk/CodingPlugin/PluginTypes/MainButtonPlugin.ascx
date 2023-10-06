@@ -28,8 +28,8 @@
         <tr class="tablerow">
             <td id="mainButtonItems" class="copy-link">mainButtonItems</td>
             <td>Stores a collection of elements where the keys are the <em>key</em> parameters from the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/mainbuttonitem") %>">MainButtonItem</a> objects.
-                It can also store <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/items/ISeparatorItem.ts" target="_blank">ISeparatorItem</a> objects. A list for embedding into the main button menu is generated based on this collection.</td>
-            <td>array of IMainButtonItem/ISeparatorItem</td>
+                A list for embedding into the main button menu is generated based on this collection.</td>
+            <td>collection of IMainButtonItem</td>
             <td></td>
         </tr>
     </tbody>
@@ -105,10 +105,10 @@
 <pre>
 import {IMainButtonPlugin, IMainButtonItem} from "@onlyoffice/docspace-plugin-sdk";
 
-    class Plugin implements IMainButtonPlugin{
-        mainButtonItems: Map&lt;string, IMainButtonItem&gt; = new Map();
+class Plugin implements IMainButtonPlugin{
+    mainButtonItems: Map&lt;string, IMainButtonItem&gt; = new Map();
 
-        addMainButtonItem = (item: IMainButtonItem): void =&gt; {
+    addMainButtonItem = (item: IMainButtonItem): void =&gt; {
         this.mainButtonItems.set(item.key, item);
     };
 

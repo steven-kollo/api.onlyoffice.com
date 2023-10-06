@@ -64,11 +64,11 @@
                 <a href="<%= Url.Action("pluginssdk/creatingtemplate") %>">Creating plugin template</a>
             </li>
             <li>
+                <a href="<%= Url.Action("pluginssdk/structure") %>">Plugin structure</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("pluginssdk/codingplugin") %>">Coding plugin</a>
                 <ul>
-                    <li>
-                        <a href="<%= Url.Action("pluginssdk/codingplugin/structure") %>">Plugin structure</a>
-                    </li>
                     <li>
                         <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes") %>">Plugin types</a>
                         <ul>

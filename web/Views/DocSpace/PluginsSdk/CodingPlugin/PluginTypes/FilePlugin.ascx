@@ -29,7 +29,7 @@
             <td id="fileItems" class="copy-link">fileItems</td>
             <td>Stores a collection of elements where the keys are the <em>key</em> parameters from the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/fileitem") %>">FileItem</a> objects.
                 A list for hooking interactions with files is generated based on this collection.</td>
-            <td>array of IFileItem</td>
+            <td>collection of IFileItem</td>
             <td></td>
         </tr>
     </tbody>
@@ -109,7 +109,7 @@ import {IFilePlugin, IFileItem} from "@onlyoffice/docspace-plugin-sdk";
 class Plugin implements IFilePlugin {
     fileItems: Map&lt;string, IFileItem&gt; = new Map();
 
-        addFileItem = (item: IFileItem): void =&gt; {
+    addFileItem = (item: IFileItem): void =&gt; {
         this.fileItems.set(item.extension, item);
     };
 

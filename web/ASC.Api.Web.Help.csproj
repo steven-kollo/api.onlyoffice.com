@@ -2306,6 +2306,7 @@
     <Content Include="Content\img\docspace\plugin-structure.png" />
     <Content Include="Content\img\docspace\primary-button.png" />
     <Content Include="Content\img\docspace\room-selector-mode.png" />
+    <Content Include="Content\img\docspace\settings-block.png" />
     <Content Include="Content\img\docspace\text.png" />
     <Content Include="Content\img\docspace\textarea.png" />
     <Content Include="Content\img\docspace\toast.png" />
@@ -3986,7 +3987,7 @@
     <Content Include="Views\DocSpace\PluginsSdk\Default.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk\CodingPlugin\Events.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk\GettingStarted.ascx" />
-    <Content Include="Views\DocSpace\PluginsSdk\CodingPlugin\Structure.ascx" />
+    <Content Include="Views\DocSpace\PluginsSdk\Structure.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk\CodingPlugin\PluginComponents.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk\CodingPlugin\PluginComponents\Box.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk\CodingPlugin\PluginComponents\Button.ascx" />

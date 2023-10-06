@@ -32,7 +32,7 @@
         </tr>
         <tr class="tablerow">
             <td id="description" class="copy-link">description</td>
-            <td>The description, i.e. what describes your plugin the best way.</td>
+            <td>The description, i.e. what describes your plugin in the best way.</td>
             <td>string</td>
             <td>"plugin description"</td>
         </tr>

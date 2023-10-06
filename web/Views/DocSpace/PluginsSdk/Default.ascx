@@ -14,7 +14,7 @@
     <li>How to <a href="<%= Url.Action("pluginssdk/creatingtemplate") %>">create</a>, <a href="<%= Url.Action("pluginssdk/codingplugin") %>">code</a>,
     <a href="<%= Url.Action("pluginssdk/buildingplugin") %>">build</a>, and <a href="<%= Url.Action("pluginssdk/uploadingplugin") %>">upload</a> a plugin</li>
     <li>What <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes") %>">plugin types</a> and <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems") %>">items</a> are available</li>
-    <li>What the <a href="<%= Url.Action("pluginssdk/codingplugin/structure") %>">plugin structure</a> consists of</li>
+    <li>What the <a href="<%= Url.Action("pluginssdk/structure") %>">plugin structure</a> consists of</li>
     <li>How to use plugin variables, methods, <a href="<%= Url.Action("pluginssdk/codingplugin/pluginmessage") %>">messages</a>, and <a href="<%= Url.Action("pluginssdk/codingplugin/events") %>">events</a></li>
     <li>What <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents") %>">plugin components</a> can be used to build a plugin</li>
 </ul>

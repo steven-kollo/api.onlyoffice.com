@@ -80,7 +80,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "PluginsSdk/CodingPlugin/Events",
                 "PluginsSdk/GettingStarted",
                 "PluginsSdk/CodingPlugin",
-                "PluginsSdk/CodingPlugin/Structure",
+                "PluginsSdk/Structure",
                 "PluginsSdk/CodingPlugin/PluginComponents",
                 "PluginsSdk/CodingPlugin/PluginComponents/Box",
                 "PluginsSdk/CodingPlugin/PluginComponents/Button",

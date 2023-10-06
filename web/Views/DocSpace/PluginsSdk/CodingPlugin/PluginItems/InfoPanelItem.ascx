@@ -81,7 +81,7 @@
         <tr class="tablerow">
             <td id="fileType" class="copy-link">fileType</td>
             <td>Defines the types of files where the current item will be displayed in the  info panel.
-                Now the following file types are available: <b>room, file, folder, image, video</b>.
+                Presently the following file types are available: <b>room, file, folder, image, video</b>.
                 If this parameter is not specified, then the current  info panel item will be displayed in any file type.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Files.ts" target="_blank">FilesType</a></td>
             <td>[FilesType.room, FilesType.file]</td>
@@ -89,7 +89,7 @@
         <tr class="tablerow">
             <td id="usersType" class="copy-link">usersType</td>
             <td>Defines the types of users who will see the current item in the info panel.
-            Now the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
+            Currently the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
             If this parameter is not specified, then the current  info panel item will be displayed for all user types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/UsersType.ts" target="_blank">UsersType</a></td>
             <td>[UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]</td>
@@ -97,7 +97,7 @@
         <tr class="tablerow">
             <td id="devices" class="copy-link">devices</td>
             <td>Defines the types of devices where the current item will be displayed in the info panel.
-                Now the following device types are available: <b>mobile, tablet, desktop</b>.
+                At the moment the following device types are available: <b>mobile, tablet, desktop</b>.
                 If this parameter is not specified, then the current  info panel item will be displayed in any device types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Devices.ts" target="_blank">Devices</td>
             <td>[Devices.desktop]</td>

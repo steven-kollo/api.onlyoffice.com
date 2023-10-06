@@ -34,7 +34,7 @@
         <tr class="tablerow">
             <td id="eventType" class="copy-link">eventType</td>
             <td>Defines the event type which will be executed.
-                Now the following events are available: <b>CREATE, RENAME, ROOM_CREATE, ROOM_EDIT, CHANGE_COLUMN, CHANGE_USER_TYPE, CREATE_PLUGIN_FILE</b>.</td>
+                Presently the following events are available: <b>CREATE, RENAME, ROOM_CREATE, ROOM_EDIT, CHANGE_COLUMN, CHANGE_USER_TYPE, CREATE_PLUGIN_FILE</b>.</td>
             <td><a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Events.ts" target="_blank">Events</a></td>
             <td>Events.CREATE</td>
         </tr>
@@ -48,7 +48,7 @@
         <tr class="tablerow">
             <td id="usersType" class="copy-link">usersType</td>
             <td>Defines the types of users who have the access to the current item.
-            Now the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
+            Currently the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
             If this parameter is not specified, then the current item will be available for all user types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/UsersType.ts" target="_blank">UsersType</a></td>
             <td>[UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]</td>
@@ -56,7 +56,7 @@
         <tr class="tablerow">
             <td id="devices" class="copy-link">devices</td>
             <td>Defines the types of devices where the current item will be available.
-                Now the following device types are available: <b>mobile, tablet, desktop</b>.
+                At the moment the following device types are available: <b>mobile, tablet, desktop</b>.
                 If this parameter is not specified, then the current item will be available in any device types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Devices.ts" target="_blank">Devices</td>
             <td>[Devices.desktop]</td>

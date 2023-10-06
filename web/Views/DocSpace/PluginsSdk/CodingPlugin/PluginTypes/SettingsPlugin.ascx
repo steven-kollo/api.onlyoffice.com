@@ -7,6 +7,7 @@
 
 <p class="dscr">The plugin that manages settings for the administrator or owner.</p>
 <p><b>Interface</b>: ISettingsPlugin.</p>
+<img alt="Plugin settings" class="screenshot max-width-260" src="<%= Url.Content("~/content/img/docspace/settings-block.png") %>" />
 
 <div class="header-gray">Variables</div>
 <table class="table">
@@ -27,7 +28,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="adminPluginSettings" class="copy-link">adminPluginSettings</td>
-            <td>Stores a page or a modal window for the administator or owner plugin settings. It will be displayed on the <b>Portal settings</b> page.</td>
+            <td>Stores the administator or owner settings block that is embedded in the modal window with the plugin description.</td>
             <td><a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/settings/ISettings.ts" target="_blank">ISettings</a></td>
             <td></td>
         </tr>
@@ -58,7 +59,7 @@
             <tbody>
                 <tr class="tablerow">
                     <td>adminPluginSettings</td>
-                    <td>Defines a page or a modal window for the administator or owner plugin settings.</td>
+                    <td>Defines the administator or owner settings block that is embedded in the modal window with the plugin description.</td>
                     <td>ISettings</td>
                     <td></td>
                 </tr>
