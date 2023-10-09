@@ -1169,7 +1169,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
-                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
+                <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
             </td>
         </tr>
         <tr>
