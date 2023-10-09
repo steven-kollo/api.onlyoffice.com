@@ -31,7 +31,7 @@
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">Creating mail merge receptions</a></p>
-            <p>Creates custom mail merge reception.</p>
+            <p>Creates custom mail merge receptions.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">More</a></p>
     </li>
@@ -40,7 +40,7 @@
             <div class="example-sample-img fill-spreadsheet"></div>
         </a>
         <div class="sample-info">
-            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet with data</a></p>
+            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet</a></p>
             <p>Fills spreadsheet with array-based values.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">More</a></p>
@@ -50,7 +50,7 @@
             <div class="example-sample-img comment-errors"></div>
         </a>
         <div class="sample-info">
-            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting formula errors</a></p>
+            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a></p>
             <p>Comments spreadsheet cells with formula errors.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">More</a></p>
@@ -91,7 +91,7 @@
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>">Creating advanced form</a></p>
-            <p>Create advanced form with table structure.</p>
+            <p>Creates advanced form with table structure.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>">More</a></p>
     </li>

@@ -515,7 +515,7 @@
     <div class="treeheader">More information</div>
     <ul class="side-nav root">
        <li>
-            <a href="<%= Url.Action("buildersamples") %>">Builder Samples</a>
+            <a href="<%= Url.Action("buildersamples") %>">Builder samples</a>
             <ul>
                 <li>
                     <a href="<%= Url.Action("buildersamples/createformaldocument") %>">Creating formal document</a>

@@ -10,12 +10,12 @@
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Creating basic form</span>
 </h1>
-<p class="dscr">Create a basic form with image and text inputs:</p>
+<p class="dscr">Create a basic form with the image and text inputs:</p>
 <ul>
-    <li>create a new document, add text to the first paragraph and style it as heading (<a href="<%= Url.Action("textdocumentapi/api") %>">DocumentApi</a>, 
+    <li>create a new document, add text to the first paragraph and style it as heading (<a href="<%= Url.Action("textdocumentapi/apidocument") %>">ApiDocument</a>, 
         <a href="<%= Url.Action("textdocumentapi/apistyle") %>">ApiStyle</a>, <a href="<%= Url.Action("textdocumentapi/apiparagraph") %>">ApiParagraph</a>);</li>
-    <li>create an image form and a text form, and add form to the document (<a href="<%= Url.Action("formapi/api") %>">FormApi</a>, 
-        <a href="<%= Url.Action("formapi/api/createpictureform") %>">Api/CreatePictureForm</a>, <a href="<%= Url.Action("formapi/api/createtextform") %>">Api/CreateTextForm</a>)</li>
+    <li>create an image form and a text form, and add the form to the document (<a href="<%= Url.Action("formapi/api/createpictureform") %>">Api/CreatePictureForm</a>,
+    <a href="<%= Url.Action("formapi/api/createtextform") %>">Api/CreateTextForm</a>).</li>
 </ul>
 <br />
 

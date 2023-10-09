@@ -8,16 +8,26 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
-    <span class="hdr">Filling Spreadsheet</span>
+    <span class="hdr">Filling spreadsheet</span>
 </h1>
-<p>Fill an empty spreadsheet with data stored in arrays.</p>
+<p>Fill an empty spreadsheet with the data stored in arrays:</p>
 <ul>
     <li>create a loop for columns and nest another loop for rows;</li>
-    <li>get each cell (<a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrangebynumber") %>">ApiWorksheet/GetRangeByNumber</a>) and set corresponding value from data array (<a href="<%= Url.Action("spreadsheetapi/apirange/setvalue") %>">ApiRange/SetValue</a>).</li>
+    <li>get each cell (<a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrangebynumber") %>">ApiWorksheet/GetRangeByNumber</a>) and set the corresponding value from the data array (<a href="<%= Url.Action("spreadsheetapi/apirange/setvalue") %>">ApiRange/SetValue</a>).</li>
 </ul>
 
 <p>Check <a href="<%= Url.Action("howitworks/globalvariable") %>">Exchanging data among files</a> and <a href="<%= Url.Action("integrationapi/arguments") %>">Using command line arguments</a> to learn more options for passing external data in the DocBuilder script.</p>
+
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
+
+<ul class="list-buttons doc-builder-list-buttons">
+    <li>
+        <a id="startButton" class="button red">Start script</a>
+    </li>
+    <li>
+        <a id="clearButton" class="button">Clear</a>
+    </li>
+</ul>
 
 <h2>Resulting document</h2>
 

@@ -10,13 +10,13 @@
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Commenting spreadsheet errors</span>
 </h1>
-<p>This script checks all used cells for formula errors like "#DIV/0!" and comments each error. </p>
+<p>This script checks all used cells for formula errors like "#DIV/0!" and comments each error:</p>
 
 <ul>
-    <li>open existing spreadsheet file to check for errors;</li>
+    <li>open an existing spreadsheet file to check for errors;</li>
     <li>create a loop for columns and nest another loop for rows;</li>
-    <li>get each cell (<a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrangebynumber") %>">ApiWorksheet/GetRangeByNumber</a>) and check value for errors;</li>
-    <li>comment cell with (<a href="<%= Url.Action("spreadsheetapi/apirange/addcomment") %>">ApiRange/AddComment</a>) if an error exists.</li>
+    <li>get each cell (<a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrangebynumber") %>">ApiWorksheet/GetRangeByNumber</a>) and check the value for errors;</li>
+    <li>comment the cell (<a href="<%= Url.Action("spreadsheetapi/apirange/addcomment") %>">ApiRange/AddComment</a>) if an error exists.</li>
 </ul>
 <br />
 

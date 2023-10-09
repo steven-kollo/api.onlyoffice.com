@@ -10,7 +10,7 @@
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Creating mail merge receptions</span>
 </h1>
-<p class="dscr">Create mail merge receptions in the separate documents</p>
+<p class="dscr">Create mail merge receptions in the separate documents:</p>
 <ul>
     <li>load mail merge data from the opened <em>xlsx</em> file to the current document (<a href="<%= Url.Action("spreadsheetapi/api/getmailmergedata") %>">Api/GetMailMergeData</a>,
         <a href="<%= Url.Action("textdocumentapi/api/loadmailmergedata") %>">Api/LoadMailMergeData</a>);</li>

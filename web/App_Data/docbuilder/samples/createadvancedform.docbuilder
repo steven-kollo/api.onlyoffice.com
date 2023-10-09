@@ -43,7 +43,7 @@ addTextToParagraph(oParagraph, "Serial # ", 25);
 addTextFormToParagraph(oParagraph, 25, "Serial", " ", 5, "left", true);
 oDocument.Push(oTable);
 
-var oParagraph = Api.CreateParagraph();
+oParagraph = Api.CreateParagraph();
 var oPictureForm = Api.CreatePictureForm({ "key": "Photo", "tip": "Upload Company Logo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": false, "respectBorders": false });
 oParagraph.AddElement(oPictureForm);
 oDocument.Push(oParagraph);
@@ -61,12 +61,12 @@ oParagraph = Api.CreateParagraph();
 addTextToParagraph(oParagraph, "To:", 35, true);
 oDocument.Push(oParagraph);
 
-var oTable = createFullWidthTable(1, 1, 200);
-var oParagraph = getTableCellParagraph(oTable, 0, 0);
+oTable = createFullWidthTable(1, 1, 200);
+oParagraph = getTableCellParagraph(oTable, 0, 0);
 addTextFormToParagraph(oParagraph, 30, "Recipient", "Recipient", 32, "left", true);
 oDocument.Push(oTable);
 
-var oTable = createFullWidthTable(10, 2, 200);
+oTable = createFullWidthTable(10, 2, 200);
 oTable.GetRow(0).SetBackgroundColor(245, 245, 245, false);
 var oCell = oTable.GetCell(0, 0);
 oCell.SetWidth("percent", 30);
@@ -76,9 +76,9 @@ oParagraph = getTableCellParagraph(oTable, 0, 1);
 addTextToParagraph(oParagraph, "Description", 30, true);
 
 for (var i = 1; i < 10; i++) {
-    var oParagraph = getTableCellParagraph(oTable, i, 0);
+    oParagraph = getTableCellParagraph(oTable, i, 0);
     addTextFormToParagraph(oParagraph, 30, "Qty" + i, " ", 9, "left", true);
-    var oParagraph = getTableCellParagraph(oTable, i, 1);
+    oParagraph = getTableCellParagraph(oTable, i, 1);
     addTextFormToParagraph(oParagraph, 30, "Description" + i, " ", 22, "left", true);
 }
 oDocument.Push(oTable);

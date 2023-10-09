@@ -10,10 +10,10 @@
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Filling form</span>
 </h1>
-<p class="dscr">Fill a form with data stored in the object:</p>
+<p class="dscr">Fill a form with the data stored in the object:</p>
 <ul>
-    <li>open existing form and get all forms (<a href="<%= Url.Action("textdocumentapi/apidocument/getallforms") %>">ApiDocument/GetAllForms</a>);</li>
-    <li>run a loop for each form, check the form type an set data corresponding to the form key (<a href="<%= Url.Action("textdocumentapi/apiformbase/getformtype") %>">ApiFormBase/GetFormType</a>, 
+    <li>open an existing form document and get all forms (<a href="<%= Url.Action("textdocumentapi/apidocument/getallforms") %>">ApiDocument/GetAllForms</a>);</li>
+    <li>run a loop for each form, check the form type and set the data corresponding to the form key (<a href="<%= Url.Action("textdocumentapi/apiformbase/getformtype") %>">ApiFormBase/GetFormType</a>, 
         <a href="<%= Url.Action("textdocumentapi/apiformbase/getformkey") %>">ApiFormBase/GetFormKey</a>, <a href="<%= Url.Action("textdocumentapi/apipictureform/setimage") %>">ApiPictureForm/SetImage</a>, <a href="<%= Url.Action("textdocumentapi/apicomboboxform/settext") %>">ApiComboBoxForm/SetText</a>)</li>
 </ul>
 

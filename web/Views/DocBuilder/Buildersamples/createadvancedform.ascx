@@ -12,15 +12,16 @@
 </h1>
 <p class="dscr">Create an advanced form with a table structure:</p>
 <ul>
-   <li>create a new document, create tables for text and form inputs (<a href="<%= Url.Action("textdocumentapi/api/createparagraph") %>">Api/CreateParagraph</a>,
+   <li>create a new document, create tables for the text and form inputs (<a href="<%= Url.Action("textdocumentapi/api/createparagraph") %>">Api/CreateParagraph</a>,
         <a href="<%= Url.Action("textdocumentapi/api/createtable") %>">Api/CreateTable</a>, <a href="<%= Url.Action("textdocumentapi/apidocument/push") %>">ApiDocument/Push</a>,
         <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getelement") %>">ApiDocumentContent/GetElement</a>, <a href="<%= Url.Action("textdocumentapi/apiparagraph/addtext") %>">ApiParagraph/AddText</a>,
-        <a href="<%= Url.Action("textdocumentapi/apitable/getrow") %>">ApiTable/GetRow</a>,  <a href="<%= Url.Action("textdocumentapi/apitable/settablebordertop") %>">ApiTable/SetTableBorderTop</a>,
-        <a href="<%= Url.Action("textdocumentapi/apitablecell/getcontent") %>">ApiTableCell/GetContent</a>, <a href="<%= Url.Action("textdocumentapi/apitablerow/getcell") %>">ApiTableRow/GetCell</a>);</li>
-    <li>style tables (<a href="<%= Url.Action("textdocumentapi/apidocument/getstyle") %>">ApiDocument/GetStyle</a>, <a href="<%= Url.Action("textdocumentapi/apirun/setcolor") %>">ApiRun/SetColor</a>,
-        <a href="<%= Url.Action("textdocumentapi/apirun/setstrikeout") %>">ApiRun/SetStrikeout</a>).</li>
-    <li>create text and image forms, and add it to the tables (<a href="<%= Url.Action("formapi/api") %>">FormApi</a>, 
-        <a href="<%= Url.Action("formapi/api/createpictureform") %>">Api/CreatePictureForm</a>, <a href="<%= Url.Action("formapi/api/createtextform") %>">Api/CreateTextForm</a>)</li>
+        <a href="<%= Url.Action("textdocumentapi/apitable/getrow") %>">ApiTable/GetRow</a>,
+        <a href="<%= Url.Action("textdocumentapi/apitablecell/getcontent") %>">ApiTableCell/GetContent</a>, <a href="<%= Url.Action("textdocumentapi/apitable/getcell") %>">ApiTable/GetCell</a>);</li>
+    <li>style tables (<a href="<%= Url.Action("textdocumentapi/apitable/settablebordertop") %>">ApiTable/SetTableBorderTop</a>, <a href="<%= Url.Action("textdocumentapi/apitable/settableborderbottom") %>">ApiTable/SetTableBorderBottom</a>,
+        <a href="<%= Url.Action("textdocumentapi/apitable/settableborderleft") %>">ApiTable/SetTableBorderLeft</a>, <a href="<%= Url.Action("textdocumentapi/apitable/settableborderright") %>">ApiTable/SetTableBorderRight</a>,
+        <a href="<%= Url.Action("textdocumentapi/apitable/setwidth") %>">ApiTable/SetWidth</a>, <a href="<%= Url.Action("textdocumentapi/apitablerow/setbackgroundcolor") %>">ApiTableRow/SetBackgroundColor</a>);</li>
+    <li>create the text and image forms and add them to the tables (<a href="<%= Url.Action("formapi/api/createpictureform") %>">Api/CreatePictureForm</a>,
+    <a href="<%= Url.Action("formapi/api/createtextform") %>">Api/CreateTextForm</a>).</li>
 
 </ul>
 <br />

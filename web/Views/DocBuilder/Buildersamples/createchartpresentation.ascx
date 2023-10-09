@@ -12,17 +12,16 @@
 </h1>
 <p class="dscr">Create a chart presentation:</p>
 <ul>
-    <li>get first slide in the current presentation (<a href="<%= Url.Action("presentationapi/api/createslide") %>">Api/CreateSlide</a>,
-        <a href="<%= Url.Action("presentationapi/api/getpresentation") %>">Api/GetPresentation</a>, <a href="<%= Url.Action("presentationapi/apipresentation/getslidebyindex") %>">ApiPresentation/GetSlideByIndex</a>);</li>
-    <li>set the background gradient (<a href="<%= Url.Action("presentationapi/apigradientstop") %>">PresentationApi/ApiGradientStop</a>,
+    <li>get the first slide in the current presentation (<a href="<%= Url.Action("presentationapi/api/getpresentation") %>">Api/GetPresentation</a>,
+    <a href="<%= Url.Action("presentationapi/apipresentation/getslidebyindex") %>">ApiPresentation/GetSlideByIndex</a>);</li>
+    <li>set the gradient background (<a href="<%= Url.Action("presentationapi/api/creategradientstop") %>">Api/CreateGradientStop</a>,
         <a href="<%= Url.Action("presentationapi/apislide/setbackground") %>">ApiSlide/SetBackground</a>);</li>
-    <li>set the slide title and text in the specified style (<a href="<%= Url.Action("presentationapi/api/createparagraph") %>">Api/CreateParagraph</a>, 
-        <a href="<%= Url.Action("presentationapi/api/createshape") %>">Api/CreateShape</a>,<a href="<%= Url.Action("presentationapi/apiparagraph/addtext") %>">ApiParagraph/AddText</a>,
-        <a href="<%= Url.Action("presentationapi/apiparagraph/setjc") %>">ApiParagraph/SetJc</a>, <a href="<%= Url.Action("presentationapi/apiparagraph/setspacingafter") %>">ApiParagraph/SetSpacingAfter</a>,
-        <a href="<%= Url.Action("presentationapi/apiparagraph/setspacingbefore") %>">ApiParagraph/SetSpacingBefore</a>, <a href="<%= Url.Action("presentationapi/apirun/setbold") %>">ApiRun/SetBold</a>,
-        <a href="<%= Url.Action("presentationapi/apirun/setfill") %>">ApiRun/SetFill</a>, <a href="<%= Url.Action("presentationapi/apirun/setfontfamily") %>">ApiRun/SetFontFamily</a>,
-        <a href="<%= Url.Action("presentationapi/apirun/setfontsize") %>">ApiRun/SetFontSize</a>, <a href="<%= Url.Action("presentationapi/apishape/getdoccontent") %>">ApiShape/GetDocContent</a>, <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">ApiSlide/AddObject</a>);</li>
-    <li>create and apply the chart (<a href="<%= Url.Action("presentationapi/api/createchart") %>">Api/CreateChart</a>, <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">ApiSlide/AddObject</a>)</li>
+    <li>set the slide title and text in the specified style (<a href="<%= Url.Action("presentationapi/api/createshape") %>">Api/CreateShape</a>,
+        <a href="<%= Url.Action("presentationapi/apirun/addtext") %>">ApiRun/AddText</a>,
+        <a href="<%= Url.Action("presentationapi/apiparagraph/setjc") %>">ApiParagraph/SetJc</a>,
+        <a href="<%= Url.Action("presentationapi/apitextpr/setfill") %>">ApiTextPr/SetFill</a>, <a href="<%= Url.Action("presentationapi/apitextpr/setfontfamily") %>">ApiTextPr/SetFontFamily</a>,
+        <a href="<%= Url.Action("presentationapi/apitextpr/setfontsize") %>">ApiTextPr/SetFontSize</a>, <a href="<%= Url.Action("presentationapi/apishape/getdoccontent") %>">ApiShape/GetDocContent</a>, <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">ApiSlide/AddObject</a>);</li>
+    <li>create a chart and add it to the specified slide (<a href="<%= Url.Action("presentationapi/api/createchart") %>">Api/CreateChart</a>, <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">ApiSlide/AddObject</a>)</li>
 
 </ul>
 <br />

@@ -16,7 +16,7 @@ oShapeTitle.SetPosition(20 * 36000, 20 * 36000);
 oShapeText.SetPosition(210 * 36000, 50 * 36000);
 var oParagraphTitle = oShapeTitle.GetDocContent().GetElement(0);
 var oParagraphText = oShapeText.GetDocContent().GetElement(0);
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(115, 81, 68));
+oFill = Api.CreateSolidFill(Api.CreateRGBColor(115, 81, 68));
 
 function addText(fontSize, text, oShape, oParagraph, jc) {
    var oRun = Api.CreateRun();
