@@ -20,16 +20,7 @@
 </ul>
 <br />
 
-<textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
-
-<ul class="list-buttons doc-builder-list-buttons">
-    <li>
-        <a id="startButton" class="button red">Start script</a>
-    </li>
-    <li>
-        <a id="clearButton" class="button">Clear</a>
-    </li>
-</ul>
+<textarea disabled="disabled" id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 
 <h2>Resulting document</h2>
 

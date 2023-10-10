@@ -37,7 +37,7 @@
 
     %>
     var runScript = "<%=runScript %>";
-    var useTemplateFile = "<%= useTemplateFile %>"
+    var useTemplateFile = "<%= useTemplateFile %>";
     var documentType = "<%= documentType %>";
     var methodNames = [];
     var sections = <%= Newtonsoft.Json.JsonConvert.SerializeObject(DocBuilderDocumentation.Instance.GetModule(documentType)) %>;
@@ -63,11 +63,11 @@
 
     var postScript = function () {
         var removeMethod = {
-            docx: "Api.GetDocument().RemoveAllElements();",
-            xlsx: "Api.AddSheet(\"Sheet 1\");var sheets = Api.GetSheets(); for (var shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
+            docx: "Api.GetDocument().RemoveAllElements(); Api.GetDocument().GetFinalSection().RemoveFooter('default'); Api.GetDocument().GetFinalSection().RemoveHeader('default');",
+            xlsx: "Api.AddSheet(\"Sheet\"); var sheets = Api.GetSheets(); for (var shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }; Api.GetActiveSheet().SetName(\"Sheet1\");",
             pptx: "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());"
         };
-        if (useTemplateFile) {
+        if (useTemplateFile == "True") {
             removeMethod = {
                 docx: "",
                 xlsx: "",
@@ -112,6 +112,7 @@
                     CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
                     Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                     {
+                        Autosave = false,
                         Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
                         {
                             Request = false
