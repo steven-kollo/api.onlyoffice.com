@@ -115,7 +115,7 @@
     "GetVisible": {
       "memberof": "ApiSlide",
       "name": "GetVisible",
-      "description": "<p>Returns the visibility to the current presentation slide.</p>",
+      "description": "<p>Returns the visibility of the current presentation slide.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -149,7 +149,7 @@
         {
           "type": "boolean",
           "name": "value",
-          "description": "<p>Value of visibility of slide.</p>",
+          "description": "<p>Slide visibility.</p>",
           "optional": false
         }
       ]

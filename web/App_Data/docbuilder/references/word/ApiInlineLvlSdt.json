@@ -623,7 +623,7 @@
     "GetDropdownList": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetDropdownList",
-      "description": "<p>Checks if the content control is a form.</p>",
+      "description": "<p>Returns a list of values of the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

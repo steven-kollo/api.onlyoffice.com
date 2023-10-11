@@ -20,7 +20,7 @@
     "GetParent": {
       "memberof": "ApiContentControlListEntry",
       "name": "GetParent",
-      "description": "<p>Returns the parent of a content control list item in the collection of list items.</p>",
+      "description": "<p>Returns a parent of the content control list item in the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -37,7 +37,7 @@
     "Select": {
       "memberof": "ApiContentControlListEntry",
       "name": "Select",
-      "description": "<p>Selects the list entry in a drop-down list or combo box content control and sets the text of the content control to the value of the item.</p>",
+      "description": "<p>Selects the list entry in the combo box / dropdown list content control and sets the text of the content control to the selected item value.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -54,7 +54,7 @@
     "MoveUp": {
       "memberof": "ApiContentControlListEntry",
       "name": "MoveUp",
-      "description": "<p>Moves the current item in the parent drop-down list or combo box content control up one element.</p>",
+      "description": "<p>Moves the current item in the parent combo box / dropdown list content control up one element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -71,7 +71,7 @@
     "MoveDown": {
       "memberof": "ApiContentControlListEntry",
       "name": "MoveDown",
-      "description": "<p>Moves an item in a drop-down list or combo box content control down one item, so that it is after the item that originally followed it.</p>",
+      "description": "<p>Moves the current item in the parent combo box / dropdown list content control down one element, so that it is after the item that originally followed it.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -88,7 +88,7 @@
     "GetIndex": {
       "memberof": "ApiContentControlListEntry",
       "name": "GetIndex",
-      "description": "<p>Returns the index of a content control list item in the collection of list items.</p>",
+      "description": "<p>Returns an index of the content control list item in the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -105,7 +105,7 @@
     "SetIndex": {
       "memberof": "ApiContentControlListEntry",
       "name": "SetIndex",
-      "description": "<p>Sets the index of a content control list item in the collection of list items.</p>",
+      "description": "<p>Sets an index to the content control list item in the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -122,6 +122,7 @@
         {
           "type": "number",
           "name": "nIndex",
+          "description": "<p>An index of the content control list item.</p>",
           "optional": false
         }
       ]
@@ -129,7 +130,7 @@
     "Delete": {
       "memberof": "ApiContentControlListEntry",
       "name": "Delete",
-      "description": "<p>Deletes the specified item in a combo box or drop-down list content control..</p>",
+      "description": "<p>Deletes the specified item in the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -146,7 +147,7 @@
     "GetText": {
       "memberof": "ApiContentControlListEntry",
       "name": "GetText",
-      "description": "<p>Returns a String that represents the display text of a list item for a drop-down list or combo box content control.</p>",
+      "description": "<p>Returns a String that represents the display text of a list item for the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -163,7 +164,7 @@
     "SetText": {
       "memberof": "ApiContentControlListEntry",
       "name": "SetText",
-      "description": "<p>Sets a String that represents the display text of a list item for a drop-down list or combo box content control.</p>",
+      "description": "<p>Sets a String that represents the display text of a list item for the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -180,6 +181,7 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>The display text of a list item.</p>",
           "optional": false
         }
       ]
@@ -187,7 +189,7 @@
     "GetValue": {
       "memberof": "ApiContentControlListEntry",
       "name": "GetValue",
-      "description": "<p>Returns a String that represents the value of a list item for a drop-down list or combo box content control.</p>",
+      "description": "<p>Returns a String that represents the value of a list item for the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -204,7 +206,7 @@
     "SetValue": {
       "memberof": "ApiContentControlListEntry",
       "name": "SetValue",
-      "description": "<p>Sets a String that represents the value of a list item for a drop-down list or combo box content control.</p>",
+      "description": "<p>Sets a String that represents the value of a list item for the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -221,14 +223,15 @@
         {
           "type": "string",
           "name": "sValue",
+          "description": "<p>The value of a list item.</p>",
           "optional": false
         }
       ]
     }
   },
   "events": {},
-  "comment": "/**\n\t * Class representing an entry of a list values of combobox/dropdown list content control.\n\t * @constructor\n\t */",
-  "description": "<p>Class representing an entry of a list values of combobox/dropdown list content control.</p>",
+  "comment": "/**\n\t * Class representing an entry of the combo box / dropdown list content control.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing an entry of the combo box / dropdown list content control.</p>",
   "scope": "global",
   "params": []
 }

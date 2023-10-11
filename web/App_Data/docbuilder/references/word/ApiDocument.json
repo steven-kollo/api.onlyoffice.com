@@ -823,7 +823,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiDrawing"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -839,9 +843,64 @@
           "name": "bIsDiagonal",
           "description": "<p>Specifies if the watermark is placed diagonally (true) or horizontally (false).</p>",
           "optional": true,
-          "defaultValue": true
+          "defaultValue": false
         }
       ]
+    },
+    "GetWatermarkSettings": {
+      "memberof": "ApiDocument",
+      "name": "GetWatermarkSettings",
+      "description": "<p>Returns the watermark settings in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiWatermarkSettings"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetWatermarkSettings": {
+      "memberof": "ApiDocument",
+      "name": "SetWatermarkSettings",
+      "description": "<p>Sets the watermark settings in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDrawing"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiWatermarkSettings",
+          "name": "Settings",
+          "description": "<p>The object which represents the watermark settings.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "RemoveWatermark": {
+      "memberof": "ApiDocument",
+      "name": "RemoveWatermark",
+      "description": "<p>Removes a watermark from the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
     },
     "UpdateAllTOC": {
       "memberof": "ApiDocument",

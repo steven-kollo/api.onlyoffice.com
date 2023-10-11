@@ -20,7 +20,7 @@
     "GetAllItems": {
       "memberof": "ApiContentControlList",
       "name": "GetAllItems",
-      "description": "<p>Returns a collection of the ApiContentControlListEntry of a list.</p>",
+      "description": "<p>Returns a collection of items (the ApiContentControlListEntry objects) of the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -37,7 +37,7 @@
     "GetElementsCount": {
       "memberof": "ApiContentControlList",
       "name": "GetElementsCount",
-      "description": "<p>Gets items count of the list of values of combobox/listbox.</p>",
+      "description": "<p>Returns a number of items of the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -54,7 +54,7 @@
     "GetParent": {
       "memberof": "ApiContentControlList",
       "name": "GetParent",
-      "description": "<p>Gets parent content control.</p>",
+      "description": "<p>Returns a parent of the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -72,7 +72,7 @@
     "Add": {
       "memberof": "ApiContentControlList",
       "name": "Add",
-      "description": "<p>Adds the new value to list of values of combobox/dropdown list.</p>",
+      "description": "<p>Adds a new value to the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -89,20 +89,20 @@
         {
           "type": "string",
           "name": "sText",
-          "description": "<p>Specifies the display text for the list item..</p>",
+          "description": "<p>The display text for the list item.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sValue",
-          "description": "<p>Specifies the value of the list item.</p>",
+          "description": "<p>The list item value.</p>",
           "optional": true,
           "defaultValue": "sText"
         },
         {
           "type": "number",
           "name": "nIndex",
-          "description": "<p>position to add.</p>",
+          "description": "<p>A position where a new value will be added.</p>",
           "optional": true,
           "defaultValue": "this.GetElementsCount()"
         }
@@ -111,7 +111,7 @@
     "Clear": {
       "memberof": "ApiContentControlList",
       "name": "Clear",
-      "description": "<p>Clears the list of values of combobox/dropdown list.</p>",
+      "description": "<p>Clears a list of values of the combo box / dropdown list content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -124,7 +124,7 @@
     "GetItem": {
       "memberof": "ApiContentControlList",
       "name": "GetItem",
-      "description": "<p>Gets the item of values of combobox/dropdown list.</p>",
+      "description": "<p>Returns an item of the combo box / dropdown list content control by the position specified in the request.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -141,14 +141,15 @@
         {
           "type": "number",
           "name": "nIndex",
+          "description": "<p>Item position.</p>",
           "optional": false
         }
       ]
     }
   },
   "events": {},
-  "comment": "/**\n\t * Class representing a list values of combobox/dropdown list content control.\n\t * @constructor\n\t */",
-  "description": "<p>Class representing a list values of combobox/dropdown list content control.</p>",
+  "comment": "/**\n\t * Class representing a list of values of the combo box / dropdown list content control.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing a list of values of the combo box / dropdown list content control.</p>",
   "scope": "global",
   "params": []
 }
