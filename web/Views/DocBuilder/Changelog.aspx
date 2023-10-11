@@ -17,7 +17,7 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
     <h2 id="75" class="copy-link">Version 7.5</h2>
-    <p><b>Methods of combobox/dropdown list content control</b></p>
+    <p><b>Methods of combo box / dropdown list content control</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/getdropdownlist") %>">ApiBlockLvlSdt/GetDropdownList</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicontentcontrollist") %>">ApiContentControlList</a> class to Text document API.</li>
