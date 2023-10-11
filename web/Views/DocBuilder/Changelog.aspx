@@ -48,6 +48,34 @@
     </ul>
     <br />
 
+    <p><b>Watermark methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getwatermarksettings") %>">ApiDocument/GetWatermarkSettings</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/removewatermark") %>">ApiDocument/RemoveWatermark</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/setwatermarksettings") %>">ApiDocument/SetWatermarkSettings</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings") %>">ApiWatermarkSettings</a> class to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/getclasstype") %>">ApiWatermarkSettings/GetClassType</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/getdirection") %>">ApiWatermarkSettings/GetDirection</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/getimageheight") %>">ApiWatermarkSettings/GetImageHeight</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/getimageurl") %>">ApiWatermarkSettings/GetImageURL</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/getimagewidth") %>">ApiWatermarkSettings/GetImageWidth</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/getopacity") %>">ApiWatermarkSettings/GetOpacity</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/gettext") %>">ApiWatermarkSettings/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/gettextpr") %>">ApiWatermarkSettings/GetTextPr</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/gettype") %>">ApiWatermarkSettings/GetType</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/setdirection") %>">ApiWatermarkSettings/SetDirection</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/setimagesize") %>">ApiWatermarkSettings/SetImageSize</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/setimageurl") %>">ApiWatermarkSettings/SetImageURL</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/setopacity") %>">ApiWatermarkSettings/SetOpacity</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/settext") %>">ApiWatermarkSettings/SetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/settextpr") %>">ApiWatermarkSettings/SetTextPr</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiwatermarksettings/settype") %>">ApiWatermarkSettings/SetType</a> method to Text document API.</li>
+    </ul>
+    <br />
+
     <p><b>Global</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("global") %>#SearchData">SearchData</a> object to Global type definitions.</li>

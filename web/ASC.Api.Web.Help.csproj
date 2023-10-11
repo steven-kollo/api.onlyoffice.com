@@ -2303,6 +2303,7 @@
     <Content Include="Content\img\docbuilder\examples\coordinate_aspects.png" />
     <Content Include="Content\img\docbuilder\examples\icon_DocumentEditors.png" />
     <Content Include="Content\img\docbuilder\examples\ole-object-image.png" />
+    <Content Include="Content\img\docbuilder\examples\onlyoffice_logo.png" />
     <Content Include="Content\img\docbuilder\examples\step2_1.png" />
     <Content Include="Content\img\docbuilder\examples\user-profile.png" />
     <Content Include="Content\img\docbuilder\file_docx.png" />
@@ -4235,6 +4236,28 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\docbuilder\examples\WatermarkDirection.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\WatermarkType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetWatermarkSettings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.RemoveWatermark.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetWatermarkSettings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetDirection.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetImageHeight.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetImageURL.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetImageWidth.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetOpacity.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.GetType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetDirection.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetImageSize.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetImageURL.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetOpacity.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetType.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
