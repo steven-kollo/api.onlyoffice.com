@@ -562,10 +562,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
         <div class="img-block-2">
             <div>
-                <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
+                <img class="screenshot max-width-400" alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
             </div>
             <div>
-                <img alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
+                <img class="screenshot max-width-400" alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
             </div>
         </div>
         <div class="header-gray">Example</div>

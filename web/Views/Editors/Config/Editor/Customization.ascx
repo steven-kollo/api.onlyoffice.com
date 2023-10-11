@@ -204,7 +204,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
+                <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
             </td>
         </tr>
         <tr>
