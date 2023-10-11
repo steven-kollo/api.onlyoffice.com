@@ -309,33 +309,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.</p>
-        <p>To select a document for comparing, you must call the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.
-            When calling this method, the token must be added to validate the parameters.
-            If the method is not declared, the <em>Document from Storage</em> button will not be displayed.</p>
-            <p>Deprecated since version 7.5, please use <a href="#onRequestSelectDocument">onRequestSelectDocument</a> instead.</p>
-            <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
-        <img class="screenshot" alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
-        <div class="header-gray">Example</div>
-        <pre>
-var onRequestCompareFile = function () {
-    docEditor.setRevisedFile({
-        "fileType": "docx",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-        "url": "https://example.com/url-to-example-document.docx"
-    });
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestCompareFile": onRequestCompareFile,
-        ...
-    },
-    ...
-});
-</pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
+        Deprecated since version 7.5, please use <a href="#onRequestSelectDocument">onRequestSelectDocument</a> instead.</p>
+        <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
     </li>
 
     <li>

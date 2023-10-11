@@ -12,7 +12,7 @@
 <div class="header-gray">Request example</div>
 <pre>
 {
-    "c": "getForgotten",
+    "c": "deleteForgotten",
     "key": "Khirz6zTPdfd7"
 }
 </pre>
