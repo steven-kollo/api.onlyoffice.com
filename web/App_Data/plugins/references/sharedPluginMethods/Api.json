@@ -1008,7 +1008,7 @@
         {
           "type": "string",
           "name": "align",
-          "description": "<p>The parameter indicates whether the button will be displayed on the right side of the window or on the left (<em>left</em> by default).</p>",
+          "description": "<p>The parameter indicates whether the button will be displayed on the right side of the window or on the left. The default value is &quot;left&quot;.</p>",
           "optional": false
         }
       ]
