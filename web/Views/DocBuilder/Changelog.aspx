@@ -171,7 +171,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment") %>">ApiComment</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/addreply") %>">ApiComment/AddReply</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/delete") %>">ApiComment/Delete</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getautorname") %>">ApiComment/GetAutorName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getauthorname") %>">ApiComment/GetAuthorName</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getclasstype") %>">ApiComment/GetClassType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getquotetext") %>">ApiComment/GetQuoteText</a> method to Text document API.</li>
     </ul>
@@ -185,18 +185,18 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/getuserid") %>">ApiComment/GetUserId</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/issolved") %>">ApiComment/IsSolved</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/removereplies") %>">ApiComment/RemoveReplies</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/setautorname") %>">ApiComment/SetAutorName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/setauthorname") %>">ApiComment/SetAuthorName</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/setsolved") %>">ApiComment/SetSolved</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/settext") %>">ApiComment/SetText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/settime") %>">ApiComment/SetTime</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/settimeutc") %>">ApiComment/SetTimeUTC</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomment/setuserid") %>">ApiComment/SetUserId</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply") %>">ApiCommentReply</a> class to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/getautorname") %>">ApiCommentReply/GetAutorName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/getauthorname") %>">ApiCommentReply/GetAuthorName</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/getclasstype") %>">ApiCommentReply/GetClassType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/gettext") %>">ApiCommentReply/GetText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/getuserid") %>">ApiCommentReply/GetUserId</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/setautorname") %>">ApiCommentReply/SetAutorName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/setauthorname") %>">ApiCommentReply/SetAuthorName</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/settext") %>">ApiCommentReply/SetText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicommentreply/setuserid") %>">ApiCommentReply/SetUserId</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getallcomments") %>">ApiDocument/GetAllComments</a> method to Text document API.</li>
