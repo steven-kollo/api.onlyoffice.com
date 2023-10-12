@@ -18,28 +18,33 @@ function setBordres(oTable, color) {
     oTable.SetTableBorderInsideH("single", 4, 0, color, color, color);
 }
 
-function addTextToParagraph(oParagraph, text, fontSize, isBold) {
+function addTextToParagraph(oParagraph, text, fontSize, isBold, jc) {
     oParagraph.AddText(text);
     oParagraph.SetFontSize(fontSize);
     oParagraph.SetBold(isBold);
+    oParagraph.SetJc(jc);
 }
 
-function getTableCellParagraph(oTable, row, col) {
-    return oTable.GetCell(row, col).GetContent().GetElement(0);
+function getTableCellParagraph(oTable, row, col, width) {
+    var oCell = oTable.GetCell(row, col);
+    oCell.SetWidth("twips", width);
+    return oCell.GetContent().GetElement(0);
 }
 
-function createFullWidthTable(rows, cols, borderColor) {
+function createFullWidthTable(rows, cols, borderColor, marginTop) {
     var oTable = Api.CreateTable(cols, rows);
     oTable.SetWidth("percent", 100);
     setBordres(oTable, borderColor);
+    oTable.SetTableCellMarginTop(marginTop);
     return oTable;
 }
 
-var oTable = createFullWidthTable(1, 2, 255);
-var oParagraph = getTableCellParagraph(oTable, 0, 0);
+var oTable = createFullWidthTable(1, 3, 255, 100);
+var oParagraph = getTableCellParagraph(oTable, 0, 0, 4320);
 addTextToParagraph(oParagraph, "PURCHASE ORDER", 36, true);
-oParagraph = getTableCellParagraph(oTable, 0, 1);
-addTextToParagraph(oParagraph, "Serial # ", 25);
+oParagraph = getTableCellParagraph(oTable, 0, 1, 720);
+addTextToParagraph(oParagraph, "Serial #", 25, false, "right");
+oParagraph = getTableCellParagraph(oTable, 0, 2, 1440);
 addTextFormToParagraph(oParagraph, 25, "Serial", " ", 5, "left", true);
 oDocument.Push(oTable);
 
@@ -61,12 +66,12 @@ oParagraph = Api.CreateParagraph();
 addTextToParagraph(oParagraph, "To:", 35, true);
 oDocument.Push(oParagraph);
 
-oTable = createFullWidthTable(1, 1, 200);
+oTable = createFullWidthTable(1, 1, 200, 100);
 oParagraph = getTableCellParagraph(oTable, 0, 0);
 addTextFormToParagraph(oParagraph, 30, "Recipient", "Recipient", 32, "left", true);
 oDocument.Push(oTable);
 
-oTable = createFullWidthTable(10, 2, 200);
+oTable = createFullWidthTable(10, 2, 200, 100);
 oTable.GetRow(0).SetBackgroundColor(245, 245, 245, false);
 var oCell = oTable.GetCell(0, 0);
 oCell.SetWidth("percent", 30);
@@ -86,5 +91,5 @@ oDocument.RemoveElement(0);
 oDocument.RemoveElement(1);
 
 Api.Save();
-builder.SaveFile("oform", "Purchase order.oform");
+builder.SaveFile("docxf", "Purchase order.docxf");
 builder.CloseFile();

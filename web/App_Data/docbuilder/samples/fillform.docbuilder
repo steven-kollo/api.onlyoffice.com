@@ -1,4 +1,4 @@
-builder.OpenFile("Sample.docxf", "Sample.docxf");
+builder.OpenFile("Purchase order.docxf", "");
 var oDocument = Api.GetDocument();
     
 var data = {
@@ -22,5 +22,5 @@ aForms.forEach(form => {
 });
 
 Api.Save();
-builder.SaveFile("oform", "Filled form.oform");
+builder.SaveFile("docxf", "Filled form.docxf");
 builder.CloseFile();
