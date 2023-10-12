@@ -4258,6 +4258,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetTextPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiWatermarkSettings.SetType.docbuilder" />
+    <Content Include="App_Data\docbuilder\references\word\ApiWatermarkSettings.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
