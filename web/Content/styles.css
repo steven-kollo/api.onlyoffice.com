@@ -45,6 +45,11 @@
 }
 
 /*global*/
+:root {
+    --header-height: 72px;
+    --footer-height: 88px;
+}
+
 h1, h2, h3, p, pre, a, code, em, img, strong, dd, dl, dt, li, ul, ol, form, label, button, table, tbody, tfoot, thead, tr, th, td {
     border: 0 none;
     font-family: inherit;
@@ -168,6 +173,7 @@ body {
     max-width: 1170px;
     margin: auto;
     padding: 0 40px;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
 .header-navigation {
@@ -176,8 +182,9 @@ body {
 }
 
 .layout-table-header {
+    box-sizing: border-box;
     border-bottom: 1px solid #333;
-    height: 71px;
+    height: var(--header-height);
     width: 100%;
     background-color: #333;
     position: fixed;
@@ -252,7 +259,6 @@ body {
     margin-top: 20px;
     max-width: 832px;
     width: 100%;
-    min-height: 770px;
 }
 
 
@@ -575,7 +581,7 @@ li.copy-link[id]:hover:before {
 
 /*footer*/
 .layout-table-footer {
-    height: 88px;
+    height: var(--footer-height);
     background-color: #333333;
     width: 100%;
 }
