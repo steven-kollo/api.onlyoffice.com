@@ -2082,6 +2082,7 @@
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.resizeWindow.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.sendToPlugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\PluginData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ReplaceImageMode.docbuilder" />
     <Content Include="App_Data\plugins\examples\SelectionType.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddContextMenuItem.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddOleObject.docbuilder" />
@@ -4208,7 +4209,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\plugins\examples\ReplaceImageMode.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
