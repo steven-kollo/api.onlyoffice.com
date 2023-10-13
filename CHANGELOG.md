@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: v7.5.0
 - plugins: v7.5.0
 - desktop: added the uiTheme parameter to the portal:login command
 - desktop: v7.5
