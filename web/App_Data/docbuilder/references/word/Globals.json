@@ -1140,6 +1140,24 @@
       "\"out\""
     ]
   },
+  "WatermarkType": {
+    "name": "WatermarkType",
+    "description": "<p>The watermark type.</p>",
+    "type": [
+      "\"none\"",
+      "\"text\"",
+      "\"image\""
+    ]
+  },
+  "WatermarkDirection": {
+    "name": "WatermarkDirection",
+    "description": "<p>The watermark direction.</p>",
+    "type": [
+      "\"horizontal\"",
+      "\"clockwise45\"",
+      "\"counterclockwise45\""
+    ]
+  },
   "CommentReportRecord": {
     "name": "CommentReportRecord",
     "description": "<p>Record of one comment.</p>",
