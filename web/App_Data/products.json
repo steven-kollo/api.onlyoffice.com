@@ -259,7 +259,7 @@
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"Extend the ONLYOFFICE Docs functionality. In this section, you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"7.4",
+      "version":"7.5",
       "links":{
          "Get started":[
             {

@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: v7.5.0
 - desktop: added the uiTheme parameter to the portal:login command
 - desktop: v7.5
 - editors: added the 3 type for the forcesavetype parameter of the callback handler

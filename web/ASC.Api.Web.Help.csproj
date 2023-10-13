@@ -2055,7 +2055,6 @@
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.callCommand.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.callModule.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.createInputHelper.docbuilder" />
-    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.executeCommand.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.executeMethod.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.getInputHelper.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.init.docbuilder" />
@@ -2080,12 +2079,13 @@
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onRemoveComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onTargetPositionChanged.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onTranslate.docbuilder" />
-    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.sendToPlugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.resizeWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.sendToPlugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\PluginData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ReplaceImageMode.docbuilder" />
     <Content Include="App_Data\plugins\examples\SelectionType.docbuilder" />
-    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddOleObject.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddContextMenuItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddOleObject.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.CloseWindow.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.CoAuthoringChatSendMessage.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ConvertDocument.docbuilder" />
