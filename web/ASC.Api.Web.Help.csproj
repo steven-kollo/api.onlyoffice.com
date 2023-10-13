@@ -540,6 +540,8 @@
     <Content Include="App_Data\docbuilder\examples\CheckBoxFormPrBase.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ComboBoxFormPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ComboBoxFormPrBase.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CommentReport.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CommentReportRecord.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\Direction.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\DocumentElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\EMU.docbuilder" />
@@ -2046,6 +2048,7 @@
     <Content Include="App_Data\docbuilder\references\word\ApiTextPr.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiUniColor.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiWatermarkSettings.json" />
     <Content Include="App_Data\docbuilder\references\word\CMarkdownConverter.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
@@ -4259,9 +4262,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\references\word\ApiWatermarkSettings.json" />
-    <Content Include="App_Data\docbuilder\examples\CommentReport.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\CommentReportRecord.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
