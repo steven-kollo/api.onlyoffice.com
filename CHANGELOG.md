@@ -1,5 +1,7 @@
 # Change Log
 
+- desktop: added the uiTheme parameter to the portal:login command
+- desktop: v7.5
 - editors: added the 3 type for the forcesavetype parameter of the callback handler
 - editors: added the editorConfig.customization.submitForm parameter
 - editors: the setMailMergeRecipients method is deprecated, please use the setRequestedSpreadsheet method instead
