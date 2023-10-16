@@ -1,6 +1,6 @@
-builder.OpenFile("Purchase order.docxf", "");
+builder.OpenFile("https://api.onlyoffice.com/app_data/docbuilder/sample-files/empty_form.oform");
 var oDocument = Api.GetDocument();
-    
+
 var data = {
     "Photo": "https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png",
     "Serial":"A1345",

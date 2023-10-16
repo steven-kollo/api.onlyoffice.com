@@ -1,4 +1,4 @@
-builder.OpenFile("Sample.docx");
+builder.OpenFile("https://api.onlyoffice.com/app_data/docbuilder/sample-files/document_review_mode.docx");
 
 var oDocument = Api.GetDocument();
 GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport();

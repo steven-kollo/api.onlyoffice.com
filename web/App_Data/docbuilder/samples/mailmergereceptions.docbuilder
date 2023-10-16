@@ -1,21 +1,10 @@
-builder.OpenFile("MailMergeData.xlsx", "");
-
+builder.OpenFile("https://api.onlyoffice.com/app_data/docbuilder/sample-files/mail_merge_data.xlsx");
 GlobalVariable["MailMergeData"] = Api.GetMailMergeData(0);
-
 builder.CloseFile();
 
-builder.OpenFile("Reception.docx", "");
-
+builder.OpenFile("https://api.onlyoffice.com/app_data/docbuilder/sample-files/mail_template.docx");
 Api.LoadMailMergeData(GlobalVariable["MailMergeData"]);
+Api.MailMerge();
 
-var oTemplateDocContent = Api.GetMailMergeTemplateDocContent();
-var ReceptionsCount = Api.GetMailMergeReceptionsCount();
-
-for (var nReception = 0; nReception < ReceptionsCount; nReception++) 
-{
-    Api.MailMerge(nReception, nReception);
-    builder.SaveFile("docx", "MailMergeSample" + nReception + ".docx");
-    Api.ReplaceDocumentContent(oTemplateDocContent);
-}
-
+builder.SaveFile("docx", "Mail merge result.docx");
 builder.CloseFile();

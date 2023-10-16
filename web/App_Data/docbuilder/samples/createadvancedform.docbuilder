@@ -2,7 +2,7 @@ builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 
 function addTextFormToParagraph(oParagraph, fontSize, key, placeholder, maxCharacters, jc, comb, border) {
-    var oTextForm = Api.CreateTextForm({ "key": key, "required": true, "comb": comb, placeholder: placeholder, "maxCharacters": maxCharacters, "multiLine": false, "autoFit": true });
+    var oTextForm = Api.CreateTextForm({ "key": key, "required": false, "comb": comb, placeholder: placeholder, "maxCharacters": maxCharacters, "multiLine": false, "autoFit": true });
     if (border) oTextForm.SetBorderColor(200, 200, 200);
     oParagraph.AddElement(oTextForm);
     oParagraph.SetFontSize(fontSize);
@@ -49,7 +49,7 @@ addTextFormToParagraph(oParagraph, 25, "Serial", " ", 5, "left", true);
 oDocument.Push(oTable);
 
 oParagraph = Api.CreateParagraph();
-var oPictureForm = Api.CreatePictureForm({ "key": "Photo", "tip": "Upload Company Logo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": false, "respectBorders": false });
+var oPictureForm = Api.CreatePictureForm({ "key": "Photo", "tip": "Upload Company Logo", "required": false, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": false, "respectBorders": false });
 oParagraph.AddElement(oPictureForm);
 oDocument.Push(oParagraph);
 

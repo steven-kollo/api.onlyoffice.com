@@ -1,4 +1,4 @@
-builder.OpenFile("Data.xlsx");
+builder.OpenFile("https://api.onlyoffice.com/app_data/docbuilder/sample-files/data_with_errors.xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var data = oWorksheet.GetRange("A:G").GetValue();
 for (var row = 0; row < data.length; row++) {
