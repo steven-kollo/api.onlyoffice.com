@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DocSpaceDocumentationUtility.Shared\DocumentationUtility.Shared.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.ActiveDirectory\ASC.ActiveDirectory.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Api.Core\ASC.Api.Core.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Common\ASC.Common.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Core.Common\ASC.Core.Common.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Data.Backup.Core\ASC.Data.Backup.Core.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Data.Encryption\ASC.Data.Encryption.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Data.Reassigns\ASC.Data.Reassigns.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Data.Storage\ASC.Data.Storage.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.EventBus.ActiveMQ\ASC.EventBus.ActiveMQ.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.EventBus.Extensions.Logger\ASC.EventBus.Extensions.Logger.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.EventBus.RabbitMQ\ASC.EventBus.RabbitMQ.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.EventBus\ASC.EventBus.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.FederatedLogin\ASC.FederatedLogin.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Feed\ASC.Feed.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.IPSecurity\ASC.IPSecurity.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.MessagingSystem\ASC.MessagingSystem.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Migration\ASC.Migration.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Notify.Textile\ASC.Notify.Textile.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Textile\ASC.Textile.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\ASC.Webhooks.Core\ASC.Webhooks.Core.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.ApiCache\ASC.ApiCache.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.ApiSystem\ASC.ApiSystem.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.AuditTrail\ASC.AuditTrail.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.ClearEvents\ASC.ClearEvents.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.Data.Backup.BackgroundTasks\ASC.Data.Backup.BackgroundTasks.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.Data.Backup\ASC.Data.Backup.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.Data.Storage.Encryption\ASC.Data.Storage.Encryption.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.ElasticSearch\ASC.ElasticSearch.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.Feed.Aggregator\ASC.Feed.Aggregator.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.Notify\ASC.Notify.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.Studio.Notify\ASC.Studio.Notify.csproj" />
+    <ProjectReference Include="..\DocSpace\server\common\services\ASC.TelegramService\ASC.TelegramService.csproj" />
+    <ProjectReference Include="..\DocSpace\server\products\ASC.Files\Core\ASC.Files.Core.csproj" />
+    <ProjectReference Include="..\DocSpace\server\products\ASC.Files\Server\ASC.Files.csproj" />
+    <ProjectReference Include="..\DocSpace\server\products\ASC.Files\Service\ASC.Files.Service.csproj" />
+    <ProjectReference Include="..\DocSpace\server\products\ASC.People\Server\ASC.People.csproj" />
+    <ProjectReference Include="..\DocSpace\server\web\ASC.Web.Api\ASC.Web.Api.csproj" />
+    <ProjectReference Include="..\DocSpace\server\web\ASC.Web.Core\ASC.Web.Core.csproj" />
+    <ProjectReference Include="..\DocSpace\server\web\ASC.Web.HealthChecks.UI\ASC.Web.HealthChecks.UI.csproj" />
+    <ProjectReference Include="..\DocSpace\server\web\ASC.Web.Studio\ASC.Web.Studio.csproj" />
+  </ItemGroup>
+
+</Project>
