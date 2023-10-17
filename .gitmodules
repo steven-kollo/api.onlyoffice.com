@@ -1,0 +1,3 @@
+[submodule "DocSpace"]
+	path = DocSpace
+	url = https://github.com/ONLYOFFICE/DocSpace.git
