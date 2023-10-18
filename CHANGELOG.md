@@ -1,9 +1,6 @@
 # Change Log
 
-- docbuilder: v7.5.0
-- plugins: v7.5.0
-- desktop: added the uiTheme parameter to the portal:login command
-- desktop: v7.5
+## 4.3.0
 - editors: added the 3 type for the forcesavetype parameter of the callback handler
 - editors: added the editorConfig.customization.submitForm parameter
 - editors: the setMailMergeRecipients method is deprecated, please use the setRequestedSpreadsheet method instead
@@ -16,6 +13,10 @@
 - editors: added the events.onRequestOpen event
 - editors: the setRevisedFile method is deprecated, please use the setRequestedDocument method instead
 - editors: the events.onRequestCompareFile event is deprecated, please use the events.onRequestSelectDocument event instead
+- plugins: v7.5.0
+- docbuilder: v7.5.0
+- desktop: v7.5
+- desktop: added the uiTheme parameter to the portal:login command
 
 ## 4.2.0
 - docspace: v1.1.2
