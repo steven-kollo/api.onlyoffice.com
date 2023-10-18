@@ -722,6 +722,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.AddLayout.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.AddObject.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.ClearBackground.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.Copy.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.Delete.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.docbuilder" />
