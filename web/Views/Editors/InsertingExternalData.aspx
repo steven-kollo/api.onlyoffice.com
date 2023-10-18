@@ -159,4 +159,77 @@ docEditor.setReferenceData({
         </li>
     </ol>
 
+    <h2 id="external-links" class="copy-link">Working with external links</h2>
+    <ol>
+        <li>
+            <p>Specify the event handler for the <em>Open source</em> button to be displayed in the configuration script for Document Editor initialization.
+            When the user is trying to open an external link by clicking the <em>Open source</em> button, the <a href="<%= Url.Action("config/events") %>#onRequestOpen">onRequestOpen</a> event is called.</p>
+            <p>To open the editor with the external file referenced by the <em>path</em> or <em>referenceData</em> parameters in a new tab,
+                you must pass a link to this tab by calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a> method with the <em>path</em> and <em>windowName</em> parameters.</p>
+            <p>An object with the unique file data, the file path, and a new browser tab name are sent in the <em>data</em> parameter.</p>
+            <img class="screenshot" alt="open-source" src="<%= Url.Content("~/content/img/editor/open-source.png") %>"/>
+            <div class="header-gray">Example</div>
+            <pre>
+var onRequestOpen = function (event) {
+    var path  = event.data.path;
+    var referenceData = event.data.referenceData;
+    var windowName  = event.data.windowName;
+    window.open({
+        "path": "https://example.com/external-url.docx",
+        "windowName": event.data.windowName
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestOpen": onRequestOpen,
+        ...
+    },
+    ...
+});
+</pre>
+            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+        </li>
+        <li>
+            <p>Specify the event handler for the <em>Change source</em> button to be displayed in the configuration script for Document Editor initialization.
+            When the user is trying to change an external link by clicking the <em>Change source</em> button, the <a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a> event is called.</p>
+            <p>An object with the unique file data and the file path or name are sent in the <em>data</em> parameter.</p>
+            <p>When the button is clicked, you must call the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method to change a source of the external data.
+                When calling this method, the token must be added to validate the parameters.
+                If the event is not declared, the <em>Change source</em> button will not be displayed.</p>
+            <note>To send the data to the <em>setReferenceSource</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
+            If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+            <img alt="Change source" class="screenshot" src="<%= Url.Content("~/content/img/editor/change-source.png") %>" />
+            <div class="header-gray">Example</div>
+            <pre>
+var onRequestReferenceSource = function () {
+    var referenceData =  event.data.referenceData;
+    var path = event.data.path;
+    ...
+
+    docEditor.setReferenceSource({
+        "fileType": "xlsx",
+        "path": "sample.xlsx",
+        "referenceData": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com",
+            "key": "Khirz6zTPdfd7"
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+        "url": "https://example.com/url-to-example-document.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestReferenceSource": onRequestReferenceSource,
+        ...
+    },
+    ...
+});
+</pre>
+        </li>
+    </ol>
+
 </asp:Content>

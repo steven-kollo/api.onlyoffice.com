@@ -12,7 +12,7 @@
 <div class="header-gray">Request example</div>
 <pre>
 {
-    "c": "getForgotten"
+    "c": "getForgottenList"
 }
 </pre>
 <div class="header-gray">Parameters</div>

@@ -54,28 +54,28 @@
             </p>
             <ul class="list-buttons">
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip" target="_blank">DotNet (Csharp) Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip" target="_blank">DotNet.Csharp.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip" target="_blank">DotNet (Csharp MVC) Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip" target="_blank">DotNet.Csharp.MVC.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip" target="_blank">Java Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip" target="_blank">Java.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip" target="_blank">Java Spring Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip" target="_blank">Java.Spring.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip" target="_blank">Node.js Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip" target="_blank">Node.js.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip" target="_blank">PHP Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip" target="_blank">PHP.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip" target="_blank">Python Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip" target="_blank">Python.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip" target="_blank">Ruby Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip" target="_blank">Ruby.Example</a>
                 </li>
             </ul>
             <p>

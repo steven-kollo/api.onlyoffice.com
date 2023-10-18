@@ -1,1 +1,1 @@
-window.Asc.plugin.executeMethod ("ShowButton", ["back", false]);
+window.Asc.plugin.executeMethod ("ShowButton", ["back", false, "right"]);

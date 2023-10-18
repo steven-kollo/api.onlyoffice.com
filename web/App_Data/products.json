@@ -259,7 +259,7 @@
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"Extend the ONLYOFFICE Docs functionality. In this section, you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"7.4",
+      "version":"7.5",
       "links":{
          "Get started":[
             {
@@ -337,7 +337,7 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section, you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "7.4",
+      "version": "7.5",
       "links":{
          "Get started":[
             {
@@ -403,7 +403,7 @@
       "id":"desktop",
       "title":"Desktop Editors",
       "description":"Extend the ONLYOFFICE Desktop Editors functionality. In this section, you will learn how to set up, customize and integrate them with the document management systems.",
-      "version":"7.4",
+      "version":"7.5",
       "links":{
          "Get Started":[
             {

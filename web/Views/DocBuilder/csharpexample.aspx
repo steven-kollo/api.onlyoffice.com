@@ -6,15 +6,15 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)
+    How to integrate ONLYOFFICE Document Builder into your application on .Net (C#) / .Net (C# MVC)
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)</span>
+        <span class="hdr">How to integrate ONLYOFFICE Document Builder into your application on .Net (C#) / .Net (C# MVC)</span>
     </h1>
     <h2 id="introduction">Introduction</h2>
-            <p class="dscr">To integrate <b>ONLYOFFICE Document Builder</b> into your own application on <b>.Net (C#)</b> you need to download and install <b>ONLYOFFICE Document Builder</b> to your computer and use the <a href="<%= Url.Action("integratingdocumentbuilder") %>">.Net (C#) example</a> for the integration. This guide will show you the sequence of actions to integrate <b>ONLYOFFICE Document Builder</b> successfully.</p>
+            <p class="dscr">To integrate <b>ONLYOFFICE Document Builder</b> into your own application on <b>.Net (C#) or .Net (C# MVC)</b> you need to download and install <b>ONLYOFFICE Document Builder</b> to your computer and use the <a href="<%= Url.Action("integratingdocumentbuilder") %>">.Net (C#) or .Net (C# MVC) example</a> for the integration. This guide will show you the sequence of actions to integrate <b>ONLYOFFICE Document Builder</b> successfully.</p>
             <h2 id="CSharp1"><span class="style_step">Step 1. </span>Download and install ONLYOFFICE Document Builder</h2>
             <p>First, download <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx"><b>ONLYOFFICE Document Builder</b></a> and install it to your computer.</p>
             <h2 id="CSharp2"><span class="style_step">Step 2. </span>Install the prerequisites</h2>
@@ -26,7 +26,7 @@
                     <li>Microsoft Visual Studio (download the latest version from the <a target="_blank" href="https://www.visualstudio.com/downloads/download-visual-studio-vs">official Visual Studio website</a>).</li>
                 </ul>
             </div>
-            <h2 id="CSharp3"><span class="style_step">Step 3. </span>Download the .Net (C#) example code and build your application</h2>
+            <h2 id="CSharp3"><span class="style_step">Step 3. </span>Download the .Net (C#) / .Net (C# MVC) example code and build your application</h2>
             <p><a href="<%= Url.Action("integratingdocumentbuilder") %>">Download</a> the .Net (C#) or .Net (C# MVC) example from our site and unpack it somewhere to your computer.</p>
             <p>Open the <b>DocumentBuilder.sln</b> solution file from the unpacked project folder using the <b>Visual Studio</b> application. Wait while the project loads.</p>
             <p>Once the project is completely loaded, go to the <b>Visual Studio</b> top menu and choose <b>Project</b> -&gt; <b>Rebuild Solution</b>. The project will be rebuilt, after that you can run it in your browser using the green triangle button with the browser name at the top panel.</p>
@@ -51,7 +51,7 @@
                 </li>
                 <li>
                     <h4>Configure your website</h4>
-                    <p>In the <b>Add Website</b> dialog box specify the name of the folder with the .Net (C#) project in the <b>Site name</b> box.</p>
+                    <p>In the <b>Add Website</b> dialog box specify the name of the folder with the .Net (C#) / .Net (C# MVC) project in the <b>Site name</b> box.</p>
                     <p>Specify the path to the folder with your project in the <b>Physical path</b> box.</p>
                     <p>Specify the unique value used only for this website in the <b>Port</b> box:</p>
                     <img class="screenshot" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/sitename.png") %>">
