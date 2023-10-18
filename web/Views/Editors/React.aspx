@@ -15,7 +15,7 @@
         <span class="hdr">ONLYOFFICE Docs React component</span>
     </h1>
 
-    <p>The ONLYOFFICE Docs React <a href="https://github.com/ONLYOFFICE/document-editor-react" target="_blank">component</a> integrates ONLYOFFICE Docs into <a href="https://reactjs.org/" target="_blank">React</a> projects.
+    <p>The ONLYOFFICE Docs React <a href="https://github.com/ONLYOFFICE/document-editor-react" target="_blank">component</a> integrates ONLYOFFICE Docs into <a href="https://react.dev/" target="_blank">React</a> projects.
         This procedure creates a <a href="https://github.com/facebook/create-react-app" target="_blank">basic React application</a> containing an ONLYOFFICE Docs editor.</p>
 
     <h2 id="prerequisites" class="copy-link">Prerequisites</h2>
@@ -24,7 +24,7 @@
     <h2 id="demo-react-app" class="copy-link">Creating the demo React application with ONLYOFFICE Docs editor</h2>
     <ol>
         <li>
-            <p>Create a new React project named <em>onlyoffice-react-demo</em> using the <a href="https://github.com/facebook/create-react-app" target="_blank">Create React App</a> package:</p>
+            <p>Create a new React project named <em>onlyoffice-react-demo</em> using the <em>Create React App</em> package:</p>
             <pre>
 npx create-react-app onlyoffice-react-demo
 </pre>
