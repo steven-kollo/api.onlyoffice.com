@@ -6,7 +6,7 @@
 </h1>
 
 <p class="dscr">Allows you to open the SDK as a document editor for viewing by specifying the <a href="<%= Url.Action("jssdk/config") %>#id">id</a> parameter for a file.</p>
-<img alt="Viewer mode" class="screenshot" src="<%= Url.Content("~/content/img/docspace/editor-mode.png") %>" />
+<img alt="Viewer mode" class="screenshot max-width-550" src="<%= Url.Content("~/content/img/docspace/viewer-mode.png") %>" />
 
 <div class="header-gray">Method</div>
 <table class="table hover">
