@@ -13,6 +13,11 @@
       },
       {
         "type": "string",
+        "name": "QuoteText",
+        "description": "<p>The quote comment text.</p>"
+      },
+      {
+        "type": "string",
         "name": "Text",
         "description": "<p>The comment text.</p>"
       },

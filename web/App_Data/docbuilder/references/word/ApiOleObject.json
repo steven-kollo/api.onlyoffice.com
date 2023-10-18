@@ -113,8 +113,8 @@
     }
   },
   "events": {},
-  "comment": "/**\n\t * Class representing an Ole-object.\n\t * @constructor\n\t */",
-  "description": "<p>Class representing an Ole-object.</p>",
+  "comment": "/**\n\t * Class representing an Ole object.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing an Ole object.</p>",
   "scope": "global",
   "params": []
 }
