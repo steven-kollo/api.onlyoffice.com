@@ -8,7 +8,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
-    <span class="hdr">Running mail merge process</span>
+    <span class="hdr">Creating mail merge receptions</span>
 </h1>
 <p class="dscr">Run the mail merge process for the current document:</p>
 <ul>
