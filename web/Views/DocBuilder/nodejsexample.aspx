@@ -64,9 +64,9 @@
         <div class="commandline">curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -</div>
             <div class="commandline">apt-get install nodejs</div>
         </li>
-        <li>Download the archive with the Node.js Example and unpack the archive:
-        <div class="commandline">wget https://api.onlyoffice.com/app_data/docbuilder/Node.js%20Example.zip</div>
-            <div class="commandline">unzip Node.js\ Example.zip</div>
+        <li>Create the <em>Node.js Example</em> project folder. Download the archive with the Node.js Example and unpack the archive in the created folder:
+        <div class="commandline">wget https://github.com/ONLYOFFICE/document-builder-integration/releases/latest/download/Node.js.Example.zip</div>
+            <div class="commandline">unzip Node.js.Example.zip</div>
         </li>
         <li>Change the current directory for the project directory:
         <div class="commandline">cd ~/Node.js\ Example/</div>

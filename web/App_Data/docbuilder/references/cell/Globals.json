@@ -424,6 +424,94 @@
       "\"xlPrevious\""
     ]
   },
+  "SearchData": {
+    "name": "SearchData",
+    "description": "<p>Properties to make search.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string | undefined",
+        "name": "What",
+        "description": "<p>The data to search for.</p>"
+      },
+      {
+        "type": "ApiRange",
+        "name": "After",
+        "description": "<p>The cell after which you want the search to begin. If this argument is not specified, the search starts after the cell in the upper-left corner of the range.</p>"
+      },
+      {
+        "type": "XlFindLookIn",
+        "name": "LookIn",
+        "description": "<p>Search data type (formulas or values).</p>"
+      },
+      {
+        "type": "XlLookAt",
+        "name": "LookAt",
+        "description": "<p>Specifies whether the whole search text or any part of the search text is matched.</p>"
+      },
+      {
+        "type": "XlSearchOrder",
+        "name": "SearchOrder",
+        "description": "<p>Range search order - by rows or by columns.</p>"
+      },
+      {
+        "type": "XlSearchDirection",
+        "name": "SearchDirection",
+        "description": "<p>Range search direction - next match or previous match.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "MatchCase",
+        "description": "<p>Case sensitive or not. The default value is &quot;false&quot;.</p>"
+      }
+    ]
+  },
+  "ReplaceData": {
+    "name": "ReplaceData",
+    "description": "<p>Properties to make search and replace.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string | undefined",
+        "name": "What",
+        "description": "<p>The data to search for.</p>"
+      },
+      {
+        "type": "string",
+        "name": "Replacement",
+        "description": "<p>The replacement string.</p>"
+      },
+      {
+        "type": "XlLookAt",
+        "name": "LookAt",
+        "description": "<p>Specifies whether the whole search text or any part of the search text is matched.</p>"
+      },
+      {
+        "type": "XlSearchOrder",
+        "name": "SearchOrder",
+        "description": "<p>Range search order - by rows or by columns.</p>"
+      },
+      {
+        "type": "XlSearchDirection",
+        "name": "SearchDirection",
+        "description": "<p>Range search direction - next match or previous match.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "MatchCase",
+        "description": "<p>Case sensitive or not. The default value is &quot;false&quot;.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "ReplaceAll",
+        "description": "<p>Specifies if all the found data will be replaced or not. The default value is &quot;true&quot;.</p>"
+      }
+    ]
+  },
   "XlUnderlineStyle": {
     "name": "XlUnderlineStyle",
     "description": "<p>Underline type.</p>",

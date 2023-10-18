@@ -32,7 +32,7 @@ oParagraph.AddText("Hello world!");
         <li>
             <p>Press the <b>Run</b> button to run your script.</p>
             <note>Please note that the <b>debugger</b> command will only work if the development tools are open. Otherwise, the browser will ignore it.</note>
-            <img alt="Builder debugger" src="<%= Url.Content("~/content/img/docbuilder/builder-debugger.png") %>" />
+            <img class="screenshot max-width-832" alt="Builder debugger" src="<%= Url.Content("~/content/img/docbuilder/builder-debugger.png") %>" />
         </li>
     </ol>
     <p>The <b>debugger</b> command works as a breakpoint and pauses the execution at the script point where this command is inserted.</p>
@@ -60,12 +60,12 @@ docbuilder script.docbuilder
         </li>
         <li>
             <p>A link will appear in the terminal. You must open it in your Chrome/Chromium browser to connect to the JavaScript context.</p>
-            <img alt="Terminal" src="<%= Url.Content("~/content/img/docbuilder/terminal.png") %>" />
+            <img class="screenshot max-width-550" alt="Terminal" src="<%= Url.Content("~/content/img/docbuilder/terminal.png") %>" />
         </li>
         <li>Set the breakpoints by clicking the line numbers and run your script again.</li>
         <li>
             <p>Now you can debug the executed methods.</p>
-            <img alt="DevTools" src="<%= Url.Content("~/content/img/docbuilder/devtools.png") %>" />
+            <img class="screenshot max-width-832" alt="DevTools" src="<%= Url.Content("~/content/img/docbuilder/devtools.png") %>" />
         </li>
     </ol>
 

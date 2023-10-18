@@ -35,8 +35,8 @@
         Python 3.9 is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html" target="_blank">official documentation</a> if you have any troubles.
     </li>
     <li>Download the archive with the Python example and unpack the archive:
-        <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Python%20Example.zip"</div>
-        <div class="commandline">unzip Python\ Example.zip</div>
+        <div class="commandline">wget "https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip"</div>
+        <div class="commandline">unzip Python.Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
         <div class="commandline">cd Python\ Example</div>

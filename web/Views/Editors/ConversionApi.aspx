@@ -361,7 +361,7 @@
                         <li>
                             <b>2</b> - in this case, the width and height settings are not used.
                             Instead of that, metric sizes of the page are converted into pixels with 96dpi.
-                            E.g., the A4 (210x297mm) page will turn out to be a picture with the 794x1123pix dimensions.
+                            E.g., the A4 (210x297mm) page will turn out to be a picture with the 794x1123pix dimensions.
                         </li>
                     </ul>
                     The default value is <b>2</b>.
@@ -1827,6 +1827,11 @@
             <tr class="tablerow">
                 <td>-8</td>
                 <td>Invalid token.</td>
+            </tr>
+            <tr class="tablerow">
+                <td>-9</td>
+                <td>Error when the converter cannot automatically determine the output file format. This error means that the client must explicitly specify
+                    in which format the file should be converted (text document or spreadsheet). It is used to convert XML to OOXML in case the XML type is unknown.</td>
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>

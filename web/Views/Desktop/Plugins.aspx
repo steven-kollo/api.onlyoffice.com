@@ -33,10 +33,10 @@
         <li>Click <b>Plugin Manager</b>.</li>
         <li>Find the plugin you need and click <b>Install</b>.</li>
     </ol>
-    <p><img alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/desktop-plugin-manager.png") %>" /></p>
+    <p><img class="screenshot max-width-832" alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/desktop-plugin-manager.png") %>" /></p>
 
     <p><b>Option 2. Uploading the plugin archive (an internet connection is not required)</b></p>
-    <p>If you want to add your own plugin, you can do it manually:</p>
+    <p>If you want to add your own plugin, you can do it manually, even if you are offline:</p>
     <ol>
         <li>
             <p>Pack all the <a href="<%= Url.Action("structure", "plugin") %>">plugin files</a> within the plugin folder into a <b>zip</b> archive and change its extension to <em>.plugin</em>
@@ -48,6 +48,7 @@
         <li>Choose your created archive and click <b>Open</b>.</li>
     </ol>
     <img alt="Install plugin manually" class="screenshot" src="<%= Url.Content("~/content/img/plugins/install-manually.png") %>" />
+
     <p>The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the <b>Plugins</b> tab.</p>
 
 
@@ -71,10 +72,10 @@
     <p>So, the folder name of this plugin will be <em>{91EAC419-EF8B-440C-A960-B451C7DF3A37}</em>.</p>
     
     <p><b>Step 3.</b> Put all the plugin files to this folder:</p>
-    <img alt="Plugin folder" src="<%= Url.Content("~/content/img/desktop/plugins_folder.png") %>" />
+    <img class="screenshot max-width-832" alt="Plugin folder" src="<%= Url.Content("~/content/img/desktop/plugins_folder.png") %>" />
     
     <p><b>Step 4.</b> Start ONLYOFFICE Desktop Editors. If everything is done correctly, the plugin will be displayed within the <b>Plugins</b> tab:</p>
-    <img alt="Extended comments" src="<%= Url.Content("~/content/img/desktop/extended_comments.png") %>" />
+    <img class="screenshot max-width-832" alt="Extended comments" src="<%= Url.Content("~/content/img/desktop/extended_comments.png") %>" />
     
 
     <h2>Removing plugins from ONLYOFFICE Desktop Editors</h2>

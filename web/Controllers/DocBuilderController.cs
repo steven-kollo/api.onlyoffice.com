@@ -293,11 +293,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Integratingdocumentbuilder()
         {
-            var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/docbuilder"));
-
-            var examples = directoryInfo.GetFiles("*.zip", SearchOption.TopDirectoryOnly).Select(fileInfo => fileInfo.Name).ToList();
-
-            return View(examples);
+            return View();
         }
 
         public ActionResult Integrationapi(string catchall)
