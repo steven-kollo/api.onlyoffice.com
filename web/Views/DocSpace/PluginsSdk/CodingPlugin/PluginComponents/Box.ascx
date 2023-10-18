@@ -11,7 +11,7 @@
 <img alt="Box" class="screenshot" src="<%= Url.Content("~/content/img/docspace/box.png") %>" />
 
 <div class="header-gray">Extra parameters</div>
-<table class="table hover">
+<table class="table">
     <colgroup>
         <col class="table-name" />
         <col />

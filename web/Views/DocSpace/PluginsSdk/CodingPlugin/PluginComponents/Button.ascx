@@ -65,7 +65,7 @@
         <tr class="tablerow">
             <td id="isLoading" class="copy-link">isLoading</td>
             <td>
-                Specifies if the button will be displayed as a loader icon or not
+                Specifies if the button will be displayed as a loader icon or not.
                 <p><img alt="Loading button" class="screenshot" src="<%= Url.Content("~/content/img/docspace/loading-button.png") %>" /></p>
             </td>
             <td>boolean</td>
