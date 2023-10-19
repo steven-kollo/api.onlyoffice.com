@@ -44,6 +44,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Basic",
                 "changelog",
                 "classlist",
+                "csharpbuildersamples",
                 "csharpexample",
                 "debugging",
                 "formapi",
@@ -325,6 +326,11 @@ namespace ASC.Api.Web.Help.Controllers
                 LogManager.GetLogger("ASC.DocumentBuilder").Error(ex);
                 return RedirectToAction(actionName, new { error = ex.Message });
             }
+        }
+
+        public ActionResult Csharpbuildersamples()
+        {
+            return View();
         }
 
         [HttpPost]

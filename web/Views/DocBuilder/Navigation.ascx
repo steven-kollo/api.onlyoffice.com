@@ -517,5 +517,8 @@
         <li>
             <a href="<%= Url.Action("changelog") %>">Changelog</a>
         </li>
+        <li>
+            <a href="<%= Url.Action("csharpbuildersamples") %>">C# Builder samples</a>
+        </li>
     </ul>
 </div>

@@ -139,6 +139,13 @@
   <ItemGroup>
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
+    <Content Include="App_Data\docbuilder\csharp-samples\CommentingErrors.zip" />
+    <Content Include="App_Data\docbuilder\csharp-samples\CreatingAdvancedForm.zip" />
+    <Content Include="App_Data\docbuilder\csharp-samples\CreatingBasicForm.zip" />
+    <Content Include="App_Data\docbuilder\csharp-samples\CreatingChartPresentation.zip" />
+    <Content Include="App_Data\docbuilder\csharp-samples\CreatingPresentation.zip" />
+    <Content Include="App_Data\docbuilder\csharp-samples\FillingForm.zip" />
+    <Content Include="App_Data\docbuilder\csharp-samples\FillingSpreadsheet.zip" />
     <Content Include="App_Data\docbuilder\examples\Angle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\AxisPos.docbuilder" />
@@ -2322,8 +2329,14 @@
     <Content Include="Content\img\docbuilder\compare-documents.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
+    <Content Include="Content\img\docbuilder\csharp\builder_function.png" />
     <Content Include="Content\img\docbuilder\csharp\net46.png" />
     <Content Include="Content\img\docbuilder\csharp\platform.png" />
+    <Content Include="Content\img\docbuilder\csharp\program_file.png" />
+    <Content Include="Content\img\docbuilder\csharp\project_file.png" />
+    <Content Include="Content\img\docbuilder\csharp\result_file.png" />
+    <Content Include="Content\img\docbuilder\csharp\sample_structure.png" />
+    <Content Include="Content\img\docbuilder\csharp\sample_structure_after.png" />
     <Content Include="Content\img\docbuilder\csharp\sitename.png" />
     <Content Include="Content\img\docbuilder\devtools.png" />
     <Content Include="Content\img\docbuilder\download.png" />
@@ -3838,6 +3851,7 @@
     <Content Include="Views\Desktop\Navigation.ascx" />
     <Content Include="Views\Desktop\Plugins.aspx" />
     <Content Include="Views\DocBuilder\Basic.aspx" />
+	<Content Include="Views\DocBuilder\csharpbuildersamples.aspx" />
     <Content Include="Views\DocBuilder\Changelog.aspx" />
     <Content Include="Views\DocBuilder\classlist.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
