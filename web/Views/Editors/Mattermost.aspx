@@ -59,7 +59,7 @@
 
 
     <h2 id="configuration" class="copy-link">配置 Mattermost ONLYOFFICE 集成插件</h2>
-    <img alt="最重要的设置" width="832px" src="<%= Url.Content("~/content/img/editor/mattermost-settings.png") %>"/>
+    <img class="screenshot max-width-832" alt="最重要的设置" src="<%= Url.Content("~/content/img/editor/mattermost-settings.png") %>"/>
     <ul>
         <li><b>启用插件。</b>通过将此参数设置为 <b>true</b>来启用 Mattermost ONLYOFFICE 集成插件。</li>
         <li>
@@ -87,17 +87,17 @@
         <li><b>在 ONLYOFFICE 中打开文件</b> 并 <b>更改访问权限</b> - 适用于消息的作者。</li>
         <li><b>在 ONLYOFFICE 中打开文件</b> - 适用于消息的收件人。</li>
     </ul>
-    <img alt="Mattermost 操作" src="<%= Url.Content("~/content/img/editor/mattermost-actions.png") %>"/>
+    <img class="screenshot max-width-550" alt="Mattermost 操作" src="<%= Url.Content("~/content/img/editor/mattermost-actions.png") %>"/>
 
     <p>单击 <b>在 ONLYOFFICE 中打开文件</b> 按钮时，相应的 ONLYOFFICE 编辑器将在同一窗口中打开。</p>
-    <img alt="Mattermost 编辑器" width="832px" src="<%= Url.Content("~/content/img/editor/mattermost-editor.png") %>"/>
+    <img class="screenshot max-width-832" alt="Mattermost 编辑器" src="<%= Url.Content("~/content/img/editor/mattermost-editor.png") %>"/>
 
     <p>带有附件文档的消息的作者可以通过上下文菜单的 <b>更改访问权限</b> 选项更改对文件的访问权限。
         此操作在个人和群聊中都可用。</p>
-    <img alt="Mattermost 共享" src="<%= Url.Content("~/content/img/editor/mattermost-share.png") %>"/>
+    <img class="screenshot max-width-400" alt="Mattermost 共享" src="<%= Url.Content("~/content/img/editor/mattermost-share.png") %>"/>
 
     <p>ONLYOFFICE bot 发送有关文档更改的通知，指定进行这些更改的用户的名称。</p>
-    <img alt="Mattermost 机器人" src="<%= Url.Content("~/content/img/editor/mattermost-bot.png") %>"/>
+    <img class="screenshot max-width-300" alt="Mattermost 机器人" src="<%= Url.Content("~/content/img/editor/mattermost-bot.png") %>"/>
 
 
     <h2 id="howitworks" class="copy-link">这是如何运作的</h2>

@@ -91,7 +91,7 @@
     </li>
     <li>下载包含 Node.js 示例的存档并解压缩存档：
         <div class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip</div>
-        <div class="commandline">unzip Node.js\ Example.zip</div>
+        <div class="commandline">unzip Node.js.Example.zip</div>
     </li>
     <li>将当前目录更改为项目目录：
         <div class="commandline">cd Node.js\ Example/</div>
@@ -99,7 +99,7 @@
     <li>安装依赖项：
         <div class="commandline">npm install</div>
     </li>
-    <li>编辑 <em>default.json</em> 配置文件。
+    <li>编辑 <em>config/default.json</em> 配置文件。
         指定安装了 ONLYOFFICE 文档服务器的本地服务器的名称。
         <div class="commandline">nano config/default.json</div>
         <p>编辑以下行：</p>

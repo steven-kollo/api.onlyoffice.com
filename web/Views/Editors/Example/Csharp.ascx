@@ -27,9 +27,10 @@
 <p>请参阅详细指南以了解如何为 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example">Windows</a>、 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example">Linux</a>或 <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_csharp_example">Docker</a>安装文档服务器。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的.Net (C#) 代码</h2>
-<p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">Net (C#) 示例</a>。</p>
+<p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">Net (C#) / .Net (C# MVC) 示例</a>。</p>
 <p>
-    要将编辑器连接到您的网站，请在 <em>settings.config</em> 文件中指定编辑器安装的路径和存储文件夹的路径：
+    要将编辑器连接到您的网站，请在 <em>settings.config</em> 文件中指定编辑器安装的路径和存储文件夹的路径
+    (or <em>web.appsettings.config</em> file for MVC version)：
 </p>
 <pre>
 &lt;add key="storage-path" value=""/&gt;
@@ -65,13 +66,13 @@
     <li>
         <p>在 IIS 管理器中添加您的网站。</p>
         <p>在 <b>Connections</b> 面板上，右键单击树中的 <b>Sites</b> 节点，然后单击 <b>Add Website</b>。</p>
-        <img alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
+        <img class="screenshot" alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
     </li>
     <li>
-        <p>在 <b>Add Website</b> 对话框中，在 <b>Site name</b> 框中指定带有 .Net (C#) 项目的文件夹名称。</p>
+        <p>在 <b>Add Website</b> 对话框中，在 <b>Site name</b> 框中指定带有 .Net (C#) / .Net (C# MVC) 项目的文件夹名称。</p>
         <p>在 <b>Physical Path</b> 框中指定项目所在文件夹的路径。</p>
         <p>在 <b>Port</b> 框中指定仅用于此网站的唯一端口值。</p>
-        <img alt="" src="<%= Url.Content("~/content/img/csharp/sitename.png") %>" />
+        <img class="screenshot" alt="" src="<%= Url.Content("~/content/img/csharp/sitename.png") %>" />
     </li>
     <li>
         <p>
@@ -79,12 +80,12 @@
             选择 <b>v4.0.</b> 版本。
         </p>
         <p><b>Application Pools</b> -> 右键单击​平台名称 -> <b>Set application Pool defaults</b> -> <b>.NET CLR version</b></p>
-        <img alt="" src="<%= Url.Content("~/content/img/csharp/platform.png") %>" />
+        <img class="screenshot" alt="" src="<%= Url.Content("~/content/img/csharp/platform.png") %>" />
     </li>
     <li>
         <p>使用 IIS 管理器浏览您的网站：</p>
         <p>右键单击网站 -> <b>Manage Website</b> -> <b>Browse</b></p>
-        <img alt="" src="<%= Url.Content("~/content/img/csharp/browse.png") %>" />
+        <img class="screenshot" alt="" src="<%= Url.Content("~/content/img/csharp/browse.png") %>" />
     </li>
 </ol>
 

@@ -25,11 +25,11 @@
 <h2 id="Windows" class="copy-link">对于 Windows</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
 <p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器）。</p>
-<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example">适用于Windows</a>的文档服务器。</p>
+<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example" target="_blank">适用于Windows</a>的文档服务器。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的 Java 代码</h2>
 <p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">Java 示例</a>。</p>
-<p>要将编辑器连接到您的网站，请在 <em>\src\main\resources\settings.properties</em> 文件中指定编辑器安装的路径和存储文件夹的路径：</p>
+<p>要将编辑器连接到您的网站，请在 <em>/src/main/resources/settings.properties</em> 文件中指定编辑器安装的路径和存储文件夹的路径：</p>
 
 <pre>
 storage-folder = app_data
@@ -37,7 +37,7 @@ files.docservice.url.site=https://documentserver/</pre>
 
 <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称， <b>storage-folder</b> 是创建和存储文件的路径。您可以设置绝对路径。
     例如， <em>D:\\folder</em>。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。</p>
-<p>如果要试验编辑器配置，请修改 <em>\src\main\webapp\editor.jsp</em> 文件中的 <a href="<%= Url.Action("advanced") %>">参数</a>。</p>
+<p>如果要试验编辑器配置，请修改 <em>/src/main/webapp/editor.jsp</em> 文件中的 <a href="<%= Url.Action("advanced") %>">参数</a>。</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">步骤 3.</span>安装的先决条件</h2>
 <p>要运行 Java 示例代码，请安装适用于您的操作系统和 Web 服务器 <b>Apache Tomcat</b>的 Java 版本：</p>
@@ -64,7 +64,7 @@ files.docservice.url.site=https://documentserver/</pre>
         <p>在 <b>变量名称</b> 字段中，如果您安装了 <b>JDK</b> （Java 开发工具包），请输入 <b>JAVA_HOME</b>；如果您安装了 <b>JRE</b> （Java 运行时环境），请输入 <b>JRE_HOME</b> 。</p>
         <p>在 <b>变量值</b> 字段中，输入您的 <b>JDK</b> 或 <b>JRE</b> 安装路径，例如 <em>C:\Program Files\Java\jdk1.8.0_65</em>。</p>
 
-        <img src="<%= Url.Content("~/content/img/java/make-var.png") %>" alt="" />
+        <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/java/make-var.png") %>" alt="" />
 
         <p>检查 <b>命令提示符</b> 中的 <b>echo</b>命令是否成功创建变量：</p>
         <pre>echo %JAVA_HOME%</pre>
@@ -80,7 +80,7 @@ files.docservice.url.site=https://documentserver/</pre>
         <p>使用 <em>startup.bat</em> 脚本启动 Apache Tomcat：</p>
         <pre>startup.bat</pre>
         <p>您将看到显示的新 <b>Tomcat</b> 控制台窗口，其中提供有关 Tomcat 启动的信息和消息：</p>
-        <img src="<%= Url.Content("~/content/img/java/tomcat-cmd.jpg") %>" width="800" alt="" />
+        <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/java/tomcat-cmd.jpg") %>" alt="" />
 
         <p>使用 Web 浏览器中的地址测试 Tomcat 安装：</p>
         <div class="commandline">http://localhost:8080</div>
@@ -92,11 +92,11 @@ files.docservice.url.site=https://documentserver/</pre>
 <ol>
     <li>
         <p>通过单击 <b>Manager App:</b>打开 Tomcat Web Application Manager：</p>
-        <img src="<%= Url.Content("~/content/img/java/manager.jpg") %>" width="700" alt="" />
+        <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/java/manager.jpg") %>" alt="" />
     </li>
     <li>
         <p>Tomcat Web Application Manager 将请求 <b>username</b> 和 <b>password:</b></p>
-        <img src="<%= Url.Content("~/content/img/java/author.jpg") %>" height="300" alt="" />
+        <img class="screenshot max-width-300" src="<%= Url.Content("~/content/img/java/author.jpg") %>" alt="" />
 
         <p>
             在 Apache Tomcat 安装文件夹中的 <em>tomcat-users.xml</em> 文件中指定用户数据。
@@ -113,12 +113,12 @@ files.docservice.url.site=https://documentserver/</pre>
     </li>
     <li>
         <p>在 Tomcat Web Application Manager中上传 Java 项目。为此，单击 <b>WAR file to deploy</b> 部分中的 <b>Choose File</b> 并在 Java 项目文件夹中找到 <em>.war</em> 文件，然后单击 <b>Deploy</b>。</p>
-        <img src="<%= Url.Content("~/content/img/java/upload-app.jpg") %>" width="800" alt="" />
-        <img src="<%= Url.Content("~/content/img/java/war-file.jpg") %>" width="600" alt="" />
+        <img class="screenshot max-width-700" src="<%= Url.Content("~/content/img/java/upload-app.jpg") %>" alt="" />
+        <img class="screenshot max-width-700" src="<%= Url.Content("~/content/img/java/war-file.jpg") %>" alt="" />
     </li>
     <li>
         <p>您将在 <b>Applications 列表</b>中看到该项目：</p>
-        <img src="<%= Url.Content("~/content/img/java/manager-app.jpg") %>" width="800" alt="" />
+        <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/java/manager-app.jpg") %>" alt="" />
     </li>
     <li>
         <p>单击应用程序名来运行它。</p>
@@ -137,23 +137,20 @@ files.docservice.url.site=https://documentserver/</pre>
 <h2 id="Linux" class="copy-link">对于 Linux</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
 <p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器）。</p>
-<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example">适用于Linux</a>的文档服务器。</p>
+<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example" target="_blank">适用于Linux</a>的文档服务器。</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">步骤 2.</span>安装的先决条件及使用编辑器运行网站</h2>
 <ol>
-    <li>安装 <b>Java</b>：
-        <span class="commandline">sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer</span>
+    <li>Install <b>Java</b> following the instructions <a href="https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8" target="_blank">here</a>.
     </li>
     <li>下载包含 Java 示例的存档并解压缩存档：
         <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
-        <span class="commandline">unzip Java\ Example.zip</span>
+        <span class="commandline">unzip Java.Example.zip</span>
     </li>
     <li>将当前目录更改为项目目录：
         <div class="commandline">cd Java\ Example/</div>
     </li>
-    <li>编辑 <em>settings.properties</em> 配置文件。
+    <li>编辑 <em>src/main/resources/settings.properties</em> 配置文件。
         指定安装了 ONLYOFFICE 文档服务器的本地服务器的名称。
         <div class="commandline">nano src/main/resources/settings.properties</div>
         <p>编辑以下行：</p>
@@ -207,10 +204,23 @@ sudo chmod -R ugo+rw /{path}
 
 <h2 id="Docker" class="copy-link">对于 Docker</h2>
 
+<h2 id="docker-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
+<p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example" target="_blank">for Docker</a>.</p>
 
+<h2 id="docker-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
 <ol>
-    <li>编辑 <em>settings.properties</em> 配置文件。
-        指定 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx">安装</a>了 ONLYOFFICE 文档服务器的本地服务器的名称。
+    <li>Install <b>Java</b> following the instructions <a href="https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8" target="_blank">here</a>.
+    </li>
+    <li>Download the archive with the Java example and unpack the archive:
+        <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
+        <span class="commandline">unzip Java.Example.zip</span>
+    </li>
+    <li>Change the current directory for the project directory:
+        <div class="commandline">cd Java\ Example/</div>
+    </li>
+    <li>Edit the <em>src/main/resources/settings.properties</em> configuration file.
+        Specify the name of your local server with the ONLYOFFICE Document Server installed:
         <div class="commandline">nano src/main/resources/settings.properties</div>
         <p>编辑以下行：</p>
 
@@ -225,3 +235,12 @@ files.docservice.url.site=https://documentserver/
         <div class="commandline">docker-compose up</div>
     </li>
     <li>之后，所有的 <em>bin</em> 文件将被传递到 <em>./target</em> 文件夹。</li>
+</ol>
+
+<h2 id="docker-3" class="copy-link"><span class="style_step">Step 3. </span>Check accessibility</h2>
+<p>
+    In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
+    Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+</p>
+
+<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

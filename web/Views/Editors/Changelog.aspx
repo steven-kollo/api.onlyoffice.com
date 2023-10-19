@@ -15,6 +15,23 @@
         <span class="hdr">变更日志</span>
     </h1>
 
+    <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="75" class="copy-link">Version 7.5</h2>
+    <ul>
+        <li>Added the <b>3</b> type for the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> parameter of the callback handler.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">editorConfig.customization.submitForm</a> parameter.</li>
+        <li>The <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">events.onRequestMailMergeRecipients</a> event is deprecated, please use the <a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">events.onRequestSelectSpreadsheet</a> event instead.</li>
+        <li>The <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method is deprecated, please use the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> method instead.</li>
+        <li>Added the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">events.onRequestReferenceSource</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("conversionapi") %>#error-codes">-9 error code</a> to the Conversion API.</li>
+        <li>Added the <em>key</em> field to the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> parameter.</li>
+        <li>The <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">events.onRequestCompareFile</a> event is deprecated, please use the <a href="<%= Url.Action("config/events") %>#onRequestSelectDocument">events.onRequestSelectDocument</a> event instead.</li>
+        <li>The <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method is deprecated, please use the <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a> method instead.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestOpen">events.onRequestOpen</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("command/deleteForgotten") %>">deleteForgotten</a>, <a href="<%= Url.Action("command/getForgotten") %>">getForgotten</a>, and <a href="<%= Url.Action("command/getForgottenlist") %>">getForgottenList</a> commands.</li>
+    </ul>
+
     <p class="dscr">ONLYOFFICE 文档服务器 API 的更改列表。</p>
     <h2 id="74" class="copy-link">版本 7.4</h2>
      <ul>
@@ -109,8 +126,6 @@
     <ul>
         <li>添加了 <a href="<%= Url.Action("command/license") %>">license</a> 命令。</li>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#hideRulers">editorConfig.customization.hideRulers</a> 字段。</li>
-        <%--<li>添加了 <a href="<%=Url.Action("config/editor/customization")%>#submitForm">editorConfig.customing.submitForm</a>字段。</li>--%>
-        <%--<li>添加了一个新的 <a href="<%=Url.Action("callback")%>#used callbackUrl”>forcesavetype</a>（<em>forcesavetype=3</em>）。</li>--%>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> 字段。</li>
         <li><a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> 字段已弃用，请使用 <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">document.permissions.editCommentAuthorOnly</a> 和 <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">document.permissions.deleteCommentAuthorOnly</a> 字段。</li>
         <li>添加了 <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> 方法。</li>

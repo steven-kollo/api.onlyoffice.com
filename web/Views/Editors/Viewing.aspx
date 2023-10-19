@@ -36,11 +36,11 @@
     ...
 }
 </pre>
-            <img alt="设置" src="<%= Url.Content("~/content/img/editor/show-changes-from-other-users.png") %>" />
+            <img class="screenshot max-width-832" alt="设置" src="<%= Url.Content("~/content/img/editor/show-changes-from-other-users.png") %>" />
             <p>在实时查看器中，通过配置 <a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">document.permissions.userInfoGroups</a> 参数来显示其他用户的光标。</p>
-            <img alt="实时查看器" src="<%= Url.Content("~/content/img/editor/live-viewer.png") %>" />
+            <img class="screenshot max-width-832" alt="实时查看器" src="<%= Url.Content("~/content/img/editor/live-viewer.png") %>" />
             <p>更改的显示方式与编辑模式中的相同。</p>
-            <img alt="编辑" src="<%= Url.Content("~/content/img/editor/editor.png") %>" />
+            <img class="screenshot max-width-832" alt="编辑" src="<%= Url.Content("~/content/img/editor/editor.png") %>" />
         </li>
         <li>
             <p>如果 <em>mode</em> 字段是 <em>fast</em>，而 <em>change</em> 字段为 <em>false</em>，则默认情况下会打开实时查看器，并且无法将模式切换到普通查看器：</p>
@@ -85,7 +85,7 @@
     ...
 }
 </pre>
-            <img alt="查看器" src="<%= Url.Content("~/content/img/editor/viewer.png") %>" />
+            <img class="screenshot max-width-832" alt="查看器" src="<%= Url.Content("~/content/img/editor/viewer.png") %>" />
         </li>
     </ol>
 

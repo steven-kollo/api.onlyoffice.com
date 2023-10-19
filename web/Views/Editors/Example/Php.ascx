@@ -31,7 +31,7 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的 PHP 代码</h2>
 <p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">PHP 示例</a>。</p>
-<p>要将编辑器连接到您的网站，请在 <em>config.php</em> 文件 中指定编辑器安装的路径和存储文件夹的路径：</p>
+<p>要将编辑器连接到您的网站，请在 <em>config.json</em> 文件 中指定编辑器安装的路径和存储文件夹的路径：</p>
 <pre>
 "storagePath" = "";
 "docServSiteUrl" = "https://documentserver/";</pre>
@@ -61,7 +61,7 @@
         <p>IIS 的 PHP Manager安装完成后，启动 <b>IIS 管理器：</b></p>
         <p><b>开始</b> -> <b>控制面板</b> -> <b>系统和安全</b> -> <b>管理工具</b> -> <b>Internet Information Services (IIS) Manager</b></p>
         <p>并在 IIS的 <b>功能视图</b> 中找到 <b>PHP Manager</b>。</p>
-        <img src="<%= Url.Content("~/content/img/php/manager.png") %>" alt="">
+        <img class="screenshot" src="<%= Url.Content("~/content/img/php/manager.png") %>" alt="">
 
         <p>您需要使用 PHP Manager 在 IIS 中注册已安装的 PHP 版本。</p>
 
@@ -69,16 +69,16 @@
             双击 <b>PHP Manager</b> 将其打开，单击 <b>Register new PHP version</b> 任务并指定主 PHP 可执行文件位置的完整路径。
             例如：<em>C:\Program Files\PHP\php-cgi.exe</em>.
         </p>
-        <img src="<%= Url.Content("~/content/img/php/php-version-1.jpg") %>" width="700" alt="" />
+        <img class="screenshot" src="<%= Url.Content("~/content/img/php/php-version-1.jpg") %>" width="700" alt="" />
 
         <p>单击 <b>OK</b>后，新的 <b>PHP 版本</b> 将注册到 IIS 并激活。</p>
-        <img src="<%= Url.Content("~/content/img/php/php-version-2.jpg") %>" width="650" alt="" />
+        <img class="screenshot" src="<%= Url.Content("~/content/img/php/php-version-2.jpg") %>" width="650" alt="" />
     </li>
     <li>
         <p>配置 IIS 以处理 PHP 请求。</p>
         <p>要让 IIS 托管 PHP 应用程序，您必须添加处理程序映射，告诉 IIS 使用 <b>FastCGI</b> 协议将所有特定于 PHP 的请求传递到 PHP 应用程序框架。</p>
         <p>双击 <b>Handler Mappings</b> ：</p>
-        <img src="<%= Url.Content("~/content/img/php/handlerclick.png") %>" alt="" />
+        <img class="screenshot" src="<%= Url.Content("~/content/img/php/handlerclick.png") %>" alt="" />
 
         <p>
             在 <b>Action</b> 面板, 单击 <b>Add Module Mapping</b>。
@@ -91,7 +91,7 @@
             <li><b>Name</b>: PHP via FastCGI.</li>
         </ul>
         <p>单击 <b>OK</b>.</p>
-        <img src="<%= Url.Content("~/content/img/php/handler-add.png") %>" alt="" />
+        <img class="screenshot" src="<%= Url.Content("~/content/img/php/handler-add.png") %>" alt="" />
     </li>
 </ol>
 <p>IIS 管理器配置完成后，一切准备就绪，可以运行 PHP 示例。</p>
@@ -107,18 +107,18 @@ php composer.phar install
     <li>
         <p>在 IIS 管理器中添加您的网站。</p>
         <p>在 <b>Connections</b> 面板上，右键单击树中的 <b>Sites</b> 节点，然后单击 <b>Add Website</b>。</p>
-        <img alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
+        <img class="screenshot" alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
     </li>
     <li>
         <p>在 <b>Add Website</b> 对话框中，在 <b>Site name</b> 框中指定包含 PHP 项目的文件夹名称。</p>
         <p>在 <b>Physical path</b> 框中指定项目所在文件夹的路径。</p>
         <p>在 <b>Port</b> 框中指定仅用于此网站的唯一值。</p>
-        <img alt="" src="<%= Url.Content("~/content/img/editor/php-add.png") %>" />
+        <img class="screenshot" alt="" src="<%= Url.Content("~/content/img/editor/php-add.png") %>" />
     </li>
     <li>
         <p>使用 IIS 管理器浏览您的网站：</p>
         <p>右键单击网站 -> <b>Manage Website</b> -> <b>Browse</b></p>
-        <img alt="" src="<%= Url.Content("~/content/img/php/browse.png") %>" />
+        <img class="screenshot" alt="" src="<%= Url.Content("~/content/img/php/browse.png") %>" />
     </li>
 </ol>
 
@@ -149,7 +149,7 @@ php composer.phar install
     <li>下载包含 PHP 示例的存档并解压缩存档：
         <div class="commandline">cd /var/www/html</div>
         <div class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip</div>
-        <div class="commandline">unzip PHP\ Example.zip</div>
+        <div class="commandline">unzip PHP.Example.zip</div>
     </li>
     <li>将当前目录更改为项目目录：
         <div class="commandline">cd PHP\ Example/</div>

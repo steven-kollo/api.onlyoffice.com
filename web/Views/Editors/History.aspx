@@ -79,7 +79,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-            <img alt="打开文件" src="<%= Url.Content("~/content/img/editor/history_open.png") %>" />
+            <img class="screenshot max-width-300" alt="打开文件" src="<%= Url.Content("~/content/img/editor/history_open.png") %>" />
         </li>
         <li>
             <p>
@@ -108,7 +108,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-            <img alt="打开文件" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
+            <img class="screenshot max-width-300" alt="打开文件" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
         </li>
         <li>
             <p>
@@ -159,7 +159,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-                <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
+        <img class="screenshot max-width-832" alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         </li>
         <li>在浏览器中打开您的 <em>html</em> 文件。</li>
         <li>在文档编辑器菜单中打开 <em>版本历史</em> 选项。</li>
@@ -183,7 +183,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-<img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
+<img class="screenshot max-width-832" alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
         </li>
     </ol>
     
@@ -263,7 +263,7 @@ docEditor.setHistoryData({
                 为了正确工作，必须允许跨域 HTTP 请求 (CORS)。
                 这可以使用 <em>Access-Control-Allow-Origin</em> 标头来实现。
             </div>
-            <img width="832px" alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
+            <img class="screenshot max-width-832" alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
         </li>
     </ul>
 </asp:Content>

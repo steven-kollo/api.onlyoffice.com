@@ -24,14 +24,14 @@
         <li>目前可以使用此插件打开和编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
         <li>
             <p>该插件将在 Office 文档的文档库中创建一个新的菜单选项- <b>在ONLYOFFICE 中编辑</b>。</p>
-            <img alt="在ONLYOFFICE 中编辑" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
+            <img class="screenshot max-width-832" alt="在ONLYOFFICE 中编辑" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
             <p>这允许多个用户实时协作并将这些更改保存到 Alfresco中。</p>
         </li>
         <li>要将 ODT、ODP、ODS、DOC、XLS、PPT 文件转换为其 OOXML 对应文件，请选择 <b>用 ONLYOFFICE 转换</b> 选项。生成的文件将放置在同一文件夹中。
             您还可以为文件夹配置规则，这将在上传或更改时自动转换文件。您可以在 <a href="https://docs.alfresco.com/content-services/latest/using/content/rules/" target="_blank">此处</a>找到详细信息。</li>
         <li>
             要创建新文档，请在文档库中选择上下文菜单 <b>新建...</b> 选项。
-            <img alt="新建..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
+            <img class="screenshot max-width-832" alt="新建..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
         </li>
     </ul>
 

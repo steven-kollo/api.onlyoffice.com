@@ -34,7 +34,7 @@
                 选项中。当用户点击按钮时，会调用
                 <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> 事件，他们可以从存储中选择要比较的文档。
             </p>
-            <img alt="比较文件" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>" />
+            <img class="screenshot max-width-832" alt="比较文件" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>" />
             <pre>
 var onRequestCompareFile = function() {
     docEditor.setRevisedFile({
@@ -70,7 +70,7 @@ docEditor.setRevisedFile({
             <p>
                 之后，用户可以使用顶部工具栏上的相应按钮接受或拒绝更改。
             </p>
-            <img alt="接受更改" width="832px" src="<%= Url.Content("~/content/img/editor/compare-documents.png") %>" />
+            <img class="screenshot max-width-832" alt="接受更改" width="832px" src="<%= Url.Content("~/content/img/editor/compare-documents.png") %>" />
         </li>
     </ol>
 </asp:Content>

@@ -29,12 +29,24 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("command/deleteforgotten") %>">deleteForgotten</a></td>
+            <td>This command allows to delete a forgotten file.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("command/drop") %>">drop</a></td>
             <td>此命令允许断开指定用户与文档编辑服务的连接。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/forcesave") %>">forcesave</a></td>
             <td>此命令允许强制保存正在编辑的文档，而无需关闭它。</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("command/getforgotten") %>">getForgotten</a></td>
+            <td>This command allows to request a forgotten file.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("command/getforgottenlist") %>">getForgottenList</a></td>
+            <td>This command allows to request a list of the forgotten files.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/info") %>">info</a></td>

@@ -18,7 +18,7 @@
         <b>审阅选项</b> 允许您在不真正编辑文档的情况下查看文档、更改句子、短语和其他页面元素、更正拼写等。
         所有更改都将被记录并显示给创建文档的用户。
     </p>
-    <img src="<%= Url.Content("~/content/img/editor/review.png") %>" alt="" />
+    <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/review.png") %>" alt="" />
 
     <h2 id="access-rights" class="copy-link">审阅访问权限</h2>
     <p>
@@ -28,7 +28,7 @@
     <p>
         如果 <em>edit</em> 参数设置为 <b>true</b> 并且 <em>review</em> 参数也设置为 <b>true</b>，用户将能够编辑文档，接受或拒绝更改并切换到他/她自己的审阅模式。
     </p>
-    <img alt="审阅" src="<%= Url.Content("~/content/img/editor/accept_reject.png") %>" />
+    <img class="screenshot max-width-832" alt="审阅" src="<%= Url.Content("~/content/img/editor/accept_reject.png") %>" />
     <p>
         如果 <em>edit</em> 参数设置为 <b>false</b> 并且 <em>review</em> 参数设置为 <b>true</b>，则文档将仅可用于审阅。
     </p>

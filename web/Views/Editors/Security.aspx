@@ -43,7 +43,9 @@
         <p>
             在以下方法中使用本地链接时一定要添加token: <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a>, 
             <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a>, <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a>,
-            <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a>, <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a>。
+            <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a>, <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a>,
+            <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a>, <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a>,
+            <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a>.
             此外，当为<a href="<%= Url.Action("config/document") %>#url">打开</a> 或 <a href="<%= Url.Action("conversionapi") %>#url">转换</a>定义本地 url时，它 是有必要的。
         </p>
     </note>

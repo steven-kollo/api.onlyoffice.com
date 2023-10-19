@@ -32,7 +32,7 @@
                 指定用于在文档编辑器初始化的配置脚本中打开 <em>重命名...</em> 菜单的事件处理程序。
                 当调用 <a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a> 事件时，不带扩展名的文档的新名称被发送给软件集成商，软件集成商在文档存储服务中重命名文档。
             </p>
-            <img alt="重命名文件" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>" />
+            <img class="screenshot max-width-300" alt="重命名文件" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>" />
             <pre>
 var onRequestRename = function(event) {
     var title = event.data;

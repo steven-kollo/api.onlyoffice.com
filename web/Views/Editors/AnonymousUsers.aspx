@@ -33,12 +33,12 @@
         <li>
             <p>如果未指定用户名，将被请求用户名。可以使用
             <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> 参数的 <em>"request"=false</em> 值关闭请求。</p>
-            <img width="832px" alt="名称请求" src="<%= Url.Content("~/content/img/editor/name-request.png") %>" />
+            <img class="screenshot max-width-832" alt="名称请求" src="<%= Url.Content("~/content/img/editor/name-request.png") %>" />
         </li>
         <li>
             <p>设置匿名用户名后，通过
                 <em>editorConfig.customization.anonymous</em> 参数的 <em>label</em> 字段添加后缀，以在共同编辑会话期间区分来宾用户。默认情况下，这个后缀是 <em>"Guest"</em>。</p>
-            <img alt="标签" src="<%= Url.Content("~/content/img/editor/label.png") %>" />
+            <img class="screenshot max-width-832" alt="标签" src="<%= Url.Content("~/content/img/editor/label.png") %>" />
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
@@ -64,7 +64,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <h2 id="restricting-access" class="copy-link">限制对编辑器或实时查看器的访问</h2>
     <p>若要限制匿名用户访问编辑器或实时查看器，请设置配置文件中的参数<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring server isAnonymousSupport" target="_blank">services.CoAuthoring.server.isAnymousSupport</a>的值为<b>false</b>。
     在这种情况下，当匿名用户试图打开编辑器时，将出现警告</p>
-    <img alt="匿名用户警告" src="<%=Url.Content("~/Content/img/editor/noymous-warning.jpg")%>" />
+    <img class="screenshot max-width-400" alt="匿名用户警告" src="<%=Url.Content("~/Content/img/editor/noymous-warning.jpg")%>" />
     <p>实时查看器将在没有警告的情况下切换到脱机查看器</p>
 
 </asp:Content>

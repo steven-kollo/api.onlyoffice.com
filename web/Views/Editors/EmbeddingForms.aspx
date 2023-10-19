@@ -110,7 +110,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
 &lt;/script&gt;
 </pre>
             <p>完成后，可以打开表单模板进行编辑。编辑此文件后，您可以获得表单本身。要执行此操作，请单击 <b>另存为</b> 按钮。</p>
-            <img alt="嵌入docxf" src="<%= Url.Content("~/content/img/editor/embed-docxf.png") %>" />
+            <img class="screenshot max-width-832" alt="嵌入docxf" src="<%= Url.Content("~/content/img/editor/embed-docxf.png") %>" />
         </div>
         <div id="filling" class="content">
             <h2 id="oform" class="copy-link">如何从网站打开OFORM进行填写</h2>
@@ -199,7 +199,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
 </pre>
             <p>完成后，可以打开表单进行填写。填写完字段（必填字段用红色边框突出显示）后，您可以获得一个PDF文件。
                 要执行此操作，请单击 <b>&ldquo;另存为PDF&rdquo;</b> 按钮。</p>
-            <img alt="嵌入oform" src="<%= Url.Content("~/content/img/editor/embed-oform.png") %>" />
+            <img class="screenshot max-width-832" alt="嵌入oform" src="<%= Url.Content("~/content/img/editor/embed-oform.png") %>" />
         </div>
     </div>
 

@@ -14,7 +14,7 @@
         <span class="hdr">动作链接</span>
     </h1>
     <p class="dscr">参考图和下面的步骤解释了在 ONLYOFFICE 文档服务器中使用链接的过程。</p>
-    <img alt="动作链接" src="<%= Url.Content("~/content/img/editor/actionLink-create.png") %>" />
+    <img class="screenshot max-width-832" alt="动作链接" src="<%= Url.Content("~/content/img/editor/actionLink-create.png") %>" />
     <ol>
         <li>用户发送请求，以获取一个文档链接，该文档包含 <b>文档编辑器</b>中的一个书签。</li>
         <li><b>文档编辑器</b> 将请求发送给 <b>文档管理器</b> （软件集成商在文档管理器中创建链接）。</li>

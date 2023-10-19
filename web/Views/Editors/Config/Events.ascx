@@ -29,10 +29,14 @@
     <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - 用户正在尝试单击文档版本历史记录中的特定文档版本。</li>
     <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - 用户尝试通过单击 <em>存储中的图像</em> 按钮来插入图像。</li>
     <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - 用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据。</li>
+    <li><a href="#onRequestOpen">onRequestOpen</a> - the user is trying to open an external link.</li>
     <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - 用户正尝试通过单击<em>数据</em> 选项卡的<em>外部</em> 链接对话框中的<em>更新值</em> 按钮来刷新从外部文件插入的数据。</li>
+    <li><a href="#onRequestReferenceSource">onRequestReferenceSource</a> - the user is trying to change an external link by clicking the <em>Change source</em> button.</li>
     <li><a href="#onRequestRename">onRequestRename</a> - 用户试图通过单击 <em>重命名...</em> 按钮来重命名文件。</li>
     <li><a href="#onRequestRestore">onRequestRestore</a> - 用户正在尝试通过单击版本历史记录中的 <em>恢复</em> 按钮来恢复文件版本。</li>
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - 用户试图通过单击 <em>另存为...</em> 按钮来保存文件。</li>
+    <li><a href="#onRequestSelectDocument">onRequestSelectDocument</a> - the user is trying to select a document for comparing or combining.</li>
+    <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - 用户在评论中被提及。</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - 用户尝试通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限。</li>
     <li><a href="#onRequestUsers">onRequestUsers</a> - 评论者可以选择其他用户在评论中提及。</li>
@@ -306,31 +310,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - 当用户通过单击 <em>存储中的文档</em> 按钮尝试选择要比较的文档时调用的函数。</p>
-        <p>要选择一个文档进行比较，您必须调用 <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> 方法。
-            如果未声明该方法，则不会显示 <em>存储中的文档</em> 按钮。
-            <span class="required-descr"><span class="required">*</span><em> - 仅适用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版</em></span></p>
-        <img class="screenshot" alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
-        <div class="header-gray">示例</div>
-        <pre>
-var onRequestCompareFile = function () {
-    docEditor.setRevisedFile({
-        "fileType": "docx",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-        "url": "https://example.com/url-to-example-document.docx"
-    });
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestCompareFile": onRequestCompareFile,
-        ...
-    },
-    ...
-});
-</pre>
-        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-        有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
+        Deprecated since version 7.5, please use <a href="#onRequestSelectDocument">onRequestSelectDocument</a> instead.</p>
+        <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
     </li>
 
     <li>
@@ -534,23 +516,32 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - 当用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据时调用的函数。</p>
-        <p>要选择收件人数据，您必须调用 <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> 方法。
-            如果未声明该方法， <em>邮件合并</em> 按钮将变淡且不可点击。</p>
-        <img class="screenshot" alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
+        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
+        Deprecated since version 7.5, please use <a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> instead.</p>
+    </li>
+
+    <li>
+        <p><b id="onRequestOpen" class="copy-link">onRequestOpen</b> - the function called when the user is trying to open an external link by clicking the <em>Open source</em> button.
+        If the method is not declared, this button will not be displayed.</p>
+        <p>To open the editor with the external file referenced by the <em>path</em> or <em>referenceData</em> parameters in a new tab,
+        you must pass a link to this tab by calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a> method with the <em>path</em> and <em>windowName</em> parameters.</p>
+        <p>An object with the unique file data, the file path, and a new browser tab name are sent in the <em>data</em> parameter.</p>
+        <img class="screenshot" alt="open-source" src="<%= Url.Content("~/content/img/editor/open-source.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
-var onRequestMailMergeRecipients = function () {
-    docEditor.setMailMergeRecipients({
-        "fileType": "xlsx",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
-        "url": "https://example.com/url-to-example-recipients.xlsx"
+var onRequestOpen = function (event) {
+    var path  = event.data.path;
+    var referenceData = event.data.referenceData;
+    var windowName  = event.data.windowName;
+    window.open({
+        "path": "https://example.com/external-url.docx",
+        "windowName": event.data.windowName
     });
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
-        "onRequestMailMergeRecipients": onRequestMailMergeRecipients,
+        "onRequestOpen": onRequestOpen,
         ...
     },
     ...
@@ -571,10 +562,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
          如果没有这样的字段或找不到文件，则使用 <em>path</em> 参数。</note>
         <div class="img-block-2">
             <div>
-                <img alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
+                <img class="screenshot max-width-400" alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
             </div>
             <div>
-                <img alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
+                <img class="screenshot max-width-400" alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
             </div>
         </div>
         <div class="header-gray">示例</div>
@@ -589,7 +580,8 @@ var onRequestReferenceData = function () {
         "path": "sample.xlsx",
         "referenceData": {
             "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com"
+            "instanceId": "https://example.com",
+            "key": "Khirz6zTPdfd7"
         },
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
         "url": "https://example.com/url-to-example-document.xlsx"
@@ -599,6 +591,46 @@ var onRequestReferenceData = function () {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestReferenceData": onRequestReferenceData,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onRequestReferenceSource" class="copy-link">onRequestReferenceSource</b> - the function called when the user is trying to change a source of the external data
+        by clicking the <em>Change source</em> button.</p>
+        <p>An object with the unique file data and the file path or name are sent in the <em>data</em> parameter.</p>
+        <p>When the button is clicked, you must call the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method to change a source of the external data.
+            When calling this method, the token must be added to validate the parameters.
+            If the event is not declared, the <em>Change source</em> button will not be displayed.</p>
+        <note>To send the data to the <em>setReferenceSource</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
+        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+        <img alt="Change source" class="screenshot" src="<%= Url.Content("~/content/img/editor/change-source.png") %>" />
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestReferenceSource = function () {
+    var referenceData =  event.data.referenceData;
+    var path = event.data.path;
+    ...
+
+    docEditor.setReferenceSource({
+        "fileType": "xlsx",
+        "path": "sample.xlsx",
+        "referenceData": {
+            "fileKey": "BCFA2CED",
+            "instanceId": "https://example.com",
+            "key": "Khirz6zTPdfd7"
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+        "url": "https://example.com/url-to-example-document.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestReferenceSource": onRequestReferenceSource,
         ...
     },
     ...
@@ -717,6 +749,65 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
+    </li>
+
+    <li>
+        <p><b id="onRequestSelectDocument" class="copy-link">onRequestSelectDocument<span class="required">*</span></b> - the function called when the user is trying to select a document for comparing or combining.</p>
+        <p>The type of document selection is specified in the <em>data.c</em> parameter.</p>
+        <p>To select a document for comparing or combining, you must call the <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a> method.</p>
+        <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+        <img class="screenshot" alt="onRequestSelectDocument" src="<%= Url.Content("~/content/img/editor/onRequestSelectDocument.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSelectDocument = function () {
+    docEditor.setRequestedDocument({
+        "c": event.data.c,
+        "fileType": "docx",
+        "url": "https://example.com/url-to-example-document.docx",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSelectDocument": onRequestSelectDocument,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p><b id="onRequestSelectSpreadsheet" class="copy-link">onRequestSelectSpreadsheet</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</p>
+        <p>The type of spreadsheet selection is specified in the <em>data.c</em> parameter.</p>
+        <p>To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> method.
+            When calling this method, the token must be added to validate the parameters.
+            If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.</p>
+        <img class="screenshot" alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSelectSpreadsheet = function () {
+    docEditor.setRequestedSpreadsheet({
+        "c": event.data.c,
+        "fileType": "xlsx",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
+        "url": "https://example.com/url-to-example-recipients.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSelectSpreadsheet": onRequestSelectSpreadsheet,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </li>
 
     <li>

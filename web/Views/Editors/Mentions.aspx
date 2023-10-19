@@ -32,7 +32,7 @@
                 当用户输入 <b>+</b> 号时， <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件被调用，评论者可以选择其他用户在评论中提及。
                 此事件中传递具有<em>mention</em>操作类型的<em>data.c</em>参数。
             </p>
-            <img alt="提及" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>" />
+            <img class="screenshot max-width-300" alt="提及" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>" />
             <pre>
 var onRequestUsers = function(event) {
     docEditor.setUsers({
@@ -129,7 +129,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <p>
         如果文档初始化时使用了 <a href="<%= Url.Action("config/document/info") %>#sharingSettings">document.info.sharingSettings</a> 字段，但 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件中的用户列表不同，则必须调用 <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> 方法。
     </p>
-    <img width="832px" alt="提及" src="<%= Url.Content("~/content/img/editor/sharing_settings.png") %>" />
+    <img class="screenshot max-width-832" alt="提及" src="<%= Url.Content("~/content/img/editor/sharing_settings.png") %>" />
     <pre>
 docEditor.setSharingSettings({
     "sharingSettings": [
@@ -151,5 +151,5 @@ docEditor.setSharingSettings({
     <div class="note">
         请注意，如果设置了 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件 ，它将仅可用于评论。
     </div>
-    <img alt="提及" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" />
+    <img class="screenshot max-width-300" alt="提及" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" />
 </asp:Content>

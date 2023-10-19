@@ -234,6 +234,8 @@ git submodule update --init --recursive</span>
                 默认情况下可以 编辑 <em>csv</em> 和 <em>txt</em> 文件。
             </p>
         </li>
+        <li>When accessing a document without download permission, file printing and using the system clipboard are not available.
+            Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.</li>
     </ul>
 
 

@@ -36,7 +36,7 @@
     </li>
     <li>下载包含 Python 示例的存档并解压缩存档：
         <div class="commandline">wget "https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip"</div>
-        <div class="commandline">unzip Python\ Example.zip</div>
+        <div class="commandline">unzip Python.Example.zip</div>
     </li>
     <li>将当前目录更改为项目目录：
         <div class="commandline">cd Python\ Example</div>

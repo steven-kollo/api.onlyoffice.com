@@ -52,4 +52,4 @@
     <p><b>选项3</b>。重定向到插页</p>
     <p>在线办公导航到主机控制的 <a href="<%= Url.Action("wopi/restapi/PutRelativeFile") %>">PutRelativeFile</a> 响应中返回的 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#HostEditUrl">HostEditUrl</a>。
     因此，主机可以在转换完成后将用户发送到任何 URL。例如，主机可能会将用户重定向到一个插页，通知他们，他们的文档已被转换。</p>
-    <img alt="转换二进制文件" src="<%= Url.Content("~/content/img/editor/convert-binary-files.jpg") %>" />
+    <img class="screenshot max-width-300" alt="转换二进制文件" src="<%= Url.Content("~/content/img/editor/convert-binary-files.jpg") %>" />

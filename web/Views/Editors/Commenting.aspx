@@ -18,7 +18,7 @@
         <b>评论选项</b> 允许您对特定的单词、短语、句子和其他文档部分发表评论，编辑和删除这些评论。
         所有评论将被保存并显示给其他文档用户。
     </p>
-    <img src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
+    <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
 
     <h2 id="access-rights" class="copy-link">评论访问权限</h2>
     <p>
@@ -28,7 +28,7 @@
     <p>
         如果 <em>edit</em> 参数设置为 <b>true</b> 并且 <em>comment</em> 参数也设置为 <b>true</b>，用户将能够编辑文档和评论。
     </p>
-    <img alt="评论" width="832px" src="<%= Url.Content("~/content/img/editor/commenting.png") %>" />
+    <img class="screenshot max-width-832" alt="评论" src="<%= Url.Content("~/content/img/editor/commenting.png") %>" />
     <p>
         如果 <em>edit</em> 参数设置为 <b>false</b> 并且 <em>comment</em> 参数设置为 <b>true</b>，则文档将仅可用于评论。
     </p>
@@ -167,7 +167,7 @@ reply1
 ${author2}:
 reply2
 </pre>
-            <img width="832px" src="<%= Url.Content("~/content/img/editor/comments-threaded.png") %>" alt="" />
+            <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/comments-threaded.png") %>" alt="" />
         </li>
         <li>
             要将原始评论格式转换为 <b>线程评论</b>，如果评论以它开头，则删除 <em>"${author}:\n"</em> 字符串。

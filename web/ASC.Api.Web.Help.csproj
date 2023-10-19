@@ -150,6 +150,7 @@
     <Content Include="Content\img\Editor\anonymous-warning.jpg" />
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
+    <Content Include="Content\img\Editor\change-source.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\chat.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
@@ -221,9 +222,11 @@
     <Content Include="Content\img\Editor\onRequestRename.png" />
     <Content Include="Content\img\Editor\onRequestRestore.png" />
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
+    <Content Include="Content\img\Editor\onRequestSelectDocument.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
     <Content Include="Content\img\Editor\opening.svg" />
+    <Content Include="Content\img\Editor\open-source.png" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\paste-link.png" />
@@ -310,8 +313,11 @@
     <Content Include="Views\Editors\Coedit.aspx" />
     <Content Include="Views\Editors\Command.aspx" />
     <Content Include="Views\Editors\Command\default.ascx" />
+    <Content Include="Views\Editors\Command\deleteForgotten.ascx" />
     <Content Include="Views\Editors\Command\drop.ascx" />
     <Content Include="Views\Editors\Command\forcesave.ascx" />
+    <Content Include="Views\Editors\Command\getForgotten.ascx" />
+    <Content Include="Views\Editors\Command\getForgottenList.ascx" />
     <Content Include="Views\Editors\Command\info.ascx" />
     <Content Include="Views\Editors\Command\license.ascx" />
     <Content Include="Views\Editors\Command\meta.ascx" />

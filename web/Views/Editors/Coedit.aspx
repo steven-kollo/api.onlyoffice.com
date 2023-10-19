@@ -22,7 +22,7 @@
         <li><b>文档编辑服务</b> 将用户 1 所做的更改发送给用户 2 <b>文档编辑器</b>。</li>
         <li>现在这些更改对用户 2 可见。</li>
     </ol>
-    <img alt="共同编辑" src="<%= Url.Content("~/content/img/editor/coedit-view.png") %>" />
+    <img class="screenshot max-width-832" alt="共同编辑" src="<%= Url.Content("~/content/img/editor/coedit-view.png") %>" />
 
     <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
     <ol>
@@ -319,7 +319,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     <h3 id="fast"class="copy-link">自动模式</h3>
     <p>默认情况下使用<b>自动</b>模式，并定义实时协同编辑。所有更改都会自动保存，无法重做上次撤消的操作。此模式在用户编辑文本时显示用户光标和工具提示及其名称</p>
-    <img alt="自动模式" src="<%= Url.Content("~/content/img/editor/fast-mode.png") %>" />
+    <img class="screenshot max-width-832" alt="自动模式" src="<%= Url.Content("~/content/img/editor/fast-mode.png") %>" />
 
     <p></p>
     <h3 id="strict"class="copy-link">手动模式</h3>
@@ -327,6 +327,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <p>当用户通过单击<b>保存</b>按钮保存更改时，其他用户将收到有关更新的注释。
         要接受它们并保存您自己的更改以显示给其他用户，请单击<img alt="保存更新" title="保存更新" src="<%= Url.Content("~/content/img/editor/save-updates.png") %>" />。按钮
         位于顶部工具栏的左上角。更新将突出显示。</p>
-    <img alt="手动模式" src="<%= Url.Content("~/content/img/editor/strict-mode.png") %>" />
+    <img class="screenshot max-width-832" alt="手动模式" src="<%= Url.Content("~/content/img/editor/strict-mode.png") %>" />
 
 </asp:Content>

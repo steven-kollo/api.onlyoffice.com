@@ -26,7 +26,7 @@
 
             <h2>基于ONLYOFFICE测试范例的集成</h2>
             <p>此示例演示了如何将ONLYOFFICE移动web编辑器与ONLYOFFICE <a href="<%= Url.Action("demopreview") %>">测试或DMS范例</a>集成。</p>
-            <p><img alt="通过测试范例实现iOS集成" src="<%= Url.Content("~/content/img/editor/ios-test-sample.png") %>" /></p>
+            <p><img class="screenshot max-width-832" alt="通过测试范例实现iOS集成" src="<%= Url.Content("~/content/img/editor/ios-test-sample.png") %>" /></p>
             <p><b>打开ONLYOFFICE编辑器</b></p>
             <ol>
                 <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
@@ -59,11 +59,11 @@ private func load() {
 </pre>
                     <div class="img-block-2">
                         <div>
-                            <img alt="iOS错误" src="<%= Url.Content("~/content/img/editor/ios-error.png") %>" />
+                            <img class="screenshot max-width-260" alt="iOS错误" src="<%= Url.Content("~/content/img/editor/ios-error.png") %>" />
                             <p><b>未指定DocumentServerURL</b></p>
                         </div>
                         <div>
-                            <img alt="iOS管理" src="<%= Url.Content("~/content/img/editor/ios-managing.png") %>" />
+                            <img class="screenshot max-width-260" alt="iOS管理" src="<%= Url.Content("~/content/img/editor/ios-managing.png") %>" />
                             <p><b>已指定DocumentServerURL</b></p>
                         </div>
                     </div>
@@ -112,15 +112,15 @@ func webView(_ webView: WKWebView,
                     <p><b>DocumentServerViewController</b> 的完整代码可以在 <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift" target="_blank">此处</a>找到。</p>
                     <div class="img-block-3">
                         <div>
-                            <img alt="活动指示器" src="<%= Url.Content("~/content/img/editor/activity-indicator.png") %>" />
+                            <img class="screenshot max-width-260" alt="活动指示器" src="<%= Url.Content("~/content/img/editor/activity-indicator.png") %>" />
                             <p align="center"><b>活动指示器</b></p>
                         </div>
                         <div>
-                            <img alt="进度视图" src="<%= Url.Content("~/content/img/editor/progress-view.png") %>" />
+                            <img class="screenshot max-width-260" alt="进度视图" src="<%= Url.Content("~/content/img/editor/progress-view.png") %>" />
                             <p align="center"><b>进度视图</b></p>
                         </div>
                         <div>
-                            <img alt="按钮" src="<%= Url.Content("~/content/img/editor/buttons.png") %>" />
+                            <img class="screenshot max-width-260" alt="按钮" src="<%= Url.Content("~/content/img/editor/buttons.png") %>" />
                             <p align="center"><b>按钮</b></p>
                         </div>
                     </div>
@@ -183,14 +183,14 @@ func webView(_ webView: WKWebView,
 }
 </pre>
             <div>
-                <img alt="回去" src="<%= Url.Content("~/content/img/editor/exit-button.png") %>" />
+                <img class="screenshot max-width-260" alt="回去" src="<%= Url.Content("~/content/img/editor/exit-button.png") %>" />
                 <p style="margin-left: 40px;"><b>退出编辑器的按钮</b></p>
             </div>
             <p><b>DocumentServerEditorViewController</b> 的完整代码可以在 <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerEditor/DocumentServerEditorViewController.swift" target="_blank">此处</a>找到。</p>
 
             <h2>基于ONLYOFFICE 文档 API的集成</h2>
             <p>此示例演示如何使用 <a href="<%= Url.Action("basic") %>">API文档</a> 和 <a href="<%= Url.Action("try") %>">配置示例</a>中描述的编辑器配置通过WKWebView打开ONLYOFFICE编辑器。</p>
-            <p><img alt="通过api集成iOS" src="<%= Url.Content("~/content/img/editor/ios-api-config.png") %>" /></p>
+            <p><img class="screenshot max-width-832" alt="通过api集成iOS" src="<%= Url.Content("~/content/img/editor/ios-api-config.png") %>" /></p>
             <p><b>打开ONLYOFFICE编辑器</b></p>
             <ol>
                 <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
@@ -255,7 +255,7 @@ private func load() {
 }
 </pre>
                     <div>
-                        <img alt="编辑器示例" src="<%= Url.Content("~/content/img/editor/editor-samples.png") %>" />
+                        <img class="screenshot max-width-260" alt="编辑器示例" src="<%= Url.Content("~/content/img/editor/editor-samples.png") %>" />
                         <p style="margin-left: 25px;"><b>ONLYOFFICE编辑器示例</b></p>
                     </div>
                     <p><b>EditorViewController</b> 的完整代码可以在 <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorViewController.swift" target="_blank">这里</a>找到。</p>
@@ -377,7 +377,7 @@ func present(url: URL, in parent: UIViewController, complation: @escaping (() ->
             <h2>基于ONLYOFFICE测试范例的集成</h2>
             <p>此示例演示了如何将ONLYOFFICE移动web编辑器与ONLYOFFICE <a href="<%= Url.Action("demopreview") %>">测试或DMS范例</a>集成。</p>
             
-            <p><img alt="通过测试范例实现Android集成" src="<%= Url.Content("~/content/img/editor/android-test-sample.png") %>" /></p>
+            <p><img class="screenshot max-width-832" alt="通过测试范例实现Android集成" src="<%= Url.Content("~/content/img/editor/android-test-sample.png") %>" /></p>
             <p><b>打开ONLYOFFICE编辑器</b></p>
             <ol>
                 <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
@@ -404,11 +404,11 @@ private fun showDialog() {
 </pre>
                     <div class="img-block-2">
                         <div>
-                            <img alt="Android错误" src="<%= Url.Content("~/content/img/editor/android-error.png") %>" />
+                            <img class="screenshot max-width-260" alt="Android错误" src="<%= Url.Content("~/content/img/editor/android-error.png") %>" />
                             <p><b>未指定DocumentServerURL</b></p>
                         </div>
                         <div>
-                            <img alt="Android管理" src="<%= Url.Content("~/content/img/editor/android-managing.png") %>" />
+                            <img class="screenshot max-width-260" alt="Android管理" src="<%= Url.Content("~/content/img/editor/android-managing.png") %>" />
                             <p><b>已指定DocumentServerURL</b></p>
                         </div>
                     </div>
