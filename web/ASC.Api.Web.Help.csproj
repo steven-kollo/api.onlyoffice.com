@@ -2341,6 +2341,7 @@
     <Content Include="Content\img\docspace\editor-mode.png" />
     <Content Include="Content\img\docspace\file-selector-mode.png" />
     <Content Include="Content\img\docspace\manager-mode.png" />
+    <Content Include="Content\img\docspace\system-mode.png" />
     <Content Include="Content\img\docspace\viewer-mode.png" />
     <Content Include="Content\img\docspace\room-selector-mode.png" />
     <Content Include="Content\img\Editor\accept_reject.png" />
