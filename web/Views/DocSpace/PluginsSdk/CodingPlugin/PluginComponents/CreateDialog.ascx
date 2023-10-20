@@ -6,7 +6,7 @@
 </h1>
 
 <p class="dscr">Modal dialog for creating certain item (file, folder, etc.). The user gets the full acess to the functionality but cannot control the layout.</p>
-<p><b>Interface</b>: <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/ICreateDialog.ts" target="_blank">ICreateDialog</a>.</p>
+<p><b>Interface</b>: <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ICreateDialog.ts" target="_blank">ICreateDialog</a>.</p>
 
 <div class="header-gray">Example</div>
 <pre>

@@ -9,7 +9,7 @@
 <p><b>Interface</b>: IModalDialog.</p>
 <p>See the parameters of this component in <a href="https://storybook.onlyoffice.io/?path=/docs/components-modaldialog--docs" target="_blank">storybook</a>.</p>
 <img alt="Modal dialog" class="screenshot" src="<%= Url.Content("~/content/img/docspace/modal-dialog.png") %>" />
-<p>To change the modal dialog type, use <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/IModalDialog.ts" target="_blank">ModalDisplayType</a> (<em>modal</em> or <em>aside</em>).</p>
+<p>To change the modal dialog type, use <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IModalDialog.ts" target="_blank">ModalDisplayType</a> (<em>modal</em> or <em>aside</em>).</p>
 
 <div class="header-gray">Example</div>
 <pre>

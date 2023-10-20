@@ -55,7 +55,7 @@
             <td>Defines the types of users who will see the current item in the main button menu.
             Currently the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
             If this parameter is not specified, then the current main button item will be displayed for all user types.</td>
-            <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/UsersType.ts" target="_blank">UsersType</a></td>
+            <td>array of <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/UsersType.ts" target="_blank">UsersType</a></td>
             <td>[UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]</td>
         </tr>
         <tr class="tablerow">
@@ -63,7 +63,7 @@
             <td>Defines the types of devices where the current item will be displayed in the main button menu.
                 At the moment the following device types are available: <b>mobile, tablet, desktop</b>.
                 If this parameter is not specified, then the current main button item will be displayed in any device types.</td>
-            <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Devices.ts" target="_blank">Devices</td>
+            <td>array of <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Devices.ts" target="_blank">Devices</td>
             <td>[Devices.desktop]</td>
         </tr>
         <tr class="tablerow">

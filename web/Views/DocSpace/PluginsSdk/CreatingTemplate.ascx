@@ -102,5 +102,5 @@ as the dependency and specifying all the necessary fields in the <em>package.jso
     "pluginName": "PDFConverter",
     "license": "MIT",
     "logo": "logo.png",
-    "homepage": "https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/tree/develop/samples/PDF-Converter"
+    "homepage": "https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter"
 }</pre>

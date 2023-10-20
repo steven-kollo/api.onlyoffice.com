@@ -7,7 +7,7 @@
 
 <p class="dscr">A component that is used to add components into <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/box") %>">Box</a>.
     Only components that are embedded into DOM can be wrapped (toast, modal dialog, etc. cannot be wrapped).</p>
-<p><b>Interface</b>: <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/Component.ts" target="_blank">Component</a>.</p>
+<p><b>Interface</b>: <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts" target="_blank">Component</a>.</p>
 
 <div class="header-gray">Extra parameters</div>
 <table class="table">
