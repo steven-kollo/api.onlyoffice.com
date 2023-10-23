@@ -36,7 +36,7 @@
     </li>
     <li>Download the archive with the Python example and unpack the archive:
         <div class="commandline">wget "https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip"</div>
-        <div class="commandline">unzip Python\ Example.zip</div>
+        <div class="commandline">unzip Python.Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
         <div class="commandline">cd Python\ Example</div>

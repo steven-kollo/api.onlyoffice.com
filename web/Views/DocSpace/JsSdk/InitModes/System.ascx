@@ -6,6 +6,7 @@
 </h1>
 
 <p class="dscr">Displays a blank page with the loader. It allows you to call system methods.</p>
+<img alt="System mode" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/docspace/system-mode.png") %>" />
 
 <div class="header-gray">Method</div>
 <table class="table hover">
@@ -28,5 +29,5 @@
 </table>
 <div class="mobile-content"></div>
 <pre>
-var docSpace = new DocSpace.SDK.initSystem({config});
+var docSpace = DocSpace.SDK.initSystem({config});
 </pre>

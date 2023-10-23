@@ -61,12 +61,7 @@ ul.side-nav,
 .treeview li {
     line-height: 18px;
     margin: 0;
-    padding: 0 0 12px 16px;
-}
-
-.side-nav.root,
-.treeview.root {
-    padding: 0 0 0 4px;
+    padding: 0 0 12px 12px;
 }
 
 .side-nav > li,

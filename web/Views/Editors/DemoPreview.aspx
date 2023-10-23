@@ -54,28 +54,28 @@
             </p>
             <ul class="list-buttons">
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip" target="_blank">DotNet (Csharp MVC) Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip" target="_blank">DotNet.Csharp.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip" target="_blank">DotNet (Csharp) Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip" target="_blank">DotNet.Csharp.MVC.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip" target="_blank">Java Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip" target="_blank">Java.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip" target="_blank">Java Spring Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip" target="_blank">Java.Spring.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip" target="_blank">Node.js Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip" target="_blank">Node.js.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip" target="_blank">PHP Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip" target="_blank">PHP.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip" target="_blank">Python Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip" target="_blank">Python.Example</a>
                 </li>
                 <li>
-                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip" target="_blank">Ruby Example</a>
+                    <a class="button" href="https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip" target="_blank">Ruby.Example</a>
                 </li>
             </ul>
             <p>
@@ -84,7 +84,20 @@
             </p>
         </li>
 
-        <li><a href="<%= Url.Action("advanced") %>">Edit the configuration files</a> in the sample changing the default path for the one to the editors installed at step 1 and other advanced parameters available for editor configuration.</li>
+        <li>
+            <p>Edit the configuration files in the sample changing the default path for the one to the editors installed at step 1 and other parameters available for editor configuration.</p>
+            <p>You can find the configuration files at the following paths:</p>
+            <ul>
+                <li><b>.Net (C# MVC)</b> - <em>web/documentserver-example/csharp-mvc/web.appsettings.config</em></li>
+                <li><b>.Net (C#)</b> - <em>web/documentserver-example/csharp/settings.config</em></li>
+                <li><b>Java</b> - <em>web/documentserver-example/java/src/main/resources/settings.properties</em></li>
+                <li><b>Java Spring</b> - <em>web/documentserver-example/java-spring/src/main/resources/application.properties</em></li>
+                <li><b>Node.js</b> - <em>web/documentserver-example/nodejs/config/default.json</em></li>
+                <li><b>PHP</b> - <em>web/documentserver-example/php/config.json</em></li>
+                <li><b>Python</b> - <em>web/documentserver-example/python/config.py</em></li>
+                <li><b>Ruby</b> - <em>web/documentserver-example/ruby/config/application.rb</em></li>
+            </ul>
+        </li>
 
         <li>In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
             And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.

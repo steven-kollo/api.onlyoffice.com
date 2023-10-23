@@ -619,6 +619,23 @@
           "optional": false
         }
       ]
+    },
+    "GetDropdownList": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetDropdownList",
+      "description": "<p>Returns a list of values of the combo box / dropdown list content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiContentControlList"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "events": {},

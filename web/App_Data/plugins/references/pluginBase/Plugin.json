@@ -1,34 +1,5 @@
 {
   "methods": {
-    "executeCommand": {
-      "memberof": "Plugin",
-      "name": "executeCommand",
-      "description": "<p>Defines the method used to send the data back to the editor.\n<note>This method is deprecated, please use the {@link Plugin#callCommand callCommand} method which runs the code from the <em>data</em> string parameter.</note></p>\n<p>Now this method is mainly used to work with the OLE objects or close the plugin without any other commands.\nIt is also retained for using with text so that the previous versions of the plugin remain compatible.</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.</p>\n<p>The second parameter is the JavaScript code for working with <b>ONLYOFFICE Document Builder</b> {@link /docbuilder/basic API}\nthat allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).\n<note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor\n(using the <em>Api.GetDocument().InsertContent(...)</em>). This limitation exists due to the co-editing feature in the online editors.\nIf it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</note></p>\n<p>When creating/editing OLE objects, two extensions are used to work with them:</p>\n<ul>\n<li><em>Api.asc_addOleObject (window.Asc.plugin.info)</em> - used to create an OLE object in the document;</li>\n<li><em>Api.asc_editOleObject (window.Asc.plugin.info)</em> - used to edit the created OLE object.</li>\n</ul>\n<p>When creating/editing the objects, their properties can be passed to the {@link /plugin/info window.Asc.plugin.info} object that defines how the object should look.</p>",
-      "tags": {},
-      "returns": [],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "string",
-          "name": "type",
-          "description": "<p>Defines the type of the command. The <em>close</em> is used to close the plugin window after executing the function in the <em>data</em> parameter.\nThe <em>command</em> is used to execute the command and leave the window open waiting for the next command.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data",
-          "description": "<p>Defines the command written in JavaScript code which purpose is to form the structured data which can be inserted to the resulting document file\n(formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors.\nThe command must be compatible with {@link /docbuilder/basic ONLYOFFICE Document Builder} syntax.</p>",
-          "optional": false
-        },
-        {
-          "type": "function",
-          "name": "callback",
-          "description": "<p>The result that the method returns.</p>",
-          "optional": false
-        }
-      ]
-    },
     "executeMethod": {
       "memberof": "Plugin",
       "name": "executeMethod",
@@ -112,7 +83,7 @@
     "callCommand": {
       "memberof": "Plugin",
       "name": "callCommand",
-      "description": "<p>Defines the method used to send the data back to the editor.\nIt replaces the {@link Plugin#executeCommand executeCommand} method when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors using <b>ONLYOFFICE Document Builder</b> {@link /docbuilder/basic API}.\nIt allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.\n<note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...)</em>).\nThis limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</note></p>\n<p>This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use {@link /plugin/scope Asc.scope} object.</p>",
+      "description": "<p>Defines the method used to send the data back to the editor.\nIt allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.\n<note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...)</em>).\nThis limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</note></p>\n<p>This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use {@link /plugin/scope Asc.scope} object.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -477,7 +448,7 @@
     "onCommandCallback": {
       "memberof": "Plugin",
       "name": "onCommandCallback",
-      "description": "<p>The function called to return the result of the previously executed command. It can be used to return data after executing the {@link Plugin#executeCommand executeCommand} method.</p>",
+      "description": "<p>The function called to return the result of the previously executed command. It can be used to return data after executing the {@link Plugin#callCommand callCommand} method.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

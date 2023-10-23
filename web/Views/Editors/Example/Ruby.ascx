@@ -36,7 +36,7 @@
     </li>
     <li>Download the archive with the Ruby example and unpack the archive:
         <div class="commandline">wget "https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip"</div>
-        <div class="commandline">unzip Ruby\ Example.zip</div>
+        <div class="commandline">unzip Ruby.Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
         <div class="commandline">cd Ruby\ Example</div>
@@ -44,7 +44,7 @@
     <li>Install the dependencies:
         <div class="commandline">bundle install</div>
     </li>
-    <li>Edit the <em>application.rb</em> configuration file.
+    <li>Edit the <em>config/application.rb</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/application.rb</div>
         <p>Edit the following lines:</p>

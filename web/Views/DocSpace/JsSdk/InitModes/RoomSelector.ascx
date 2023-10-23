@@ -6,7 +6,7 @@
 </h1>
 
 <p class="dscr">Opens the room selector and allows you to select a room from a list of the available rooms.</p>
-<img alt="Room-selector mode" class="screenshot" src="<%= Url.Content("~/content/img/docspace/room-selector-mode.png") %>" />
+<img alt="Room-selector mode" class="screenshot max-width-400" src="<%= Url.Content("~/content/img/docspace/room-selector-mode.png") %>" />
 
 <div class="header-gray">Method</div>
 <table class="table hover">
@@ -29,5 +29,5 @@
 </table>
 <div class="mobile-content"></div>
 <pre>
-var docSpace = new DocSpace.SDK.initRoomSelector({config});
+var docSpace = DocSpace.SDK.initRoomSelector({config});
 </pre>

@@ -28,8 +28,7 @@
       },
       "returns": [
         [
-          "Error",
-          "true"
+          "boolean"
         ]
       ],
       "see": null,

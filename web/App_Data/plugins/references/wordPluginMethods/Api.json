@@ -568,7 +568,7 @@
         {
           "type": "ContentControlType",
           "name": "type",
-          "description": "<p>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block), <b>2</b> (inline), <b>3</b> (row), or <b>4</b> (cell).</p>",
+          "description": "<p>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (combo box), <b>0</b> (dropdown list).</p>",
           "optional": false
         },
         {
