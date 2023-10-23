@@ -45,4 +45,4 @@
 <h2>How to get help</h2>
 
 <p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/docspace-plugins/issues" target="_blank">GitHub</a>.</p>
-<p>You can also ask our developers on <a href="https://forum.onlyoffice.com/" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
+<p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/docspace/46" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
