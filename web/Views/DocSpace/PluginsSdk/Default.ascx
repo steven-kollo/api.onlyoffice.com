@@ -24,12 +24,12 @@
 
 <p>Here are some examples of what you can do with ONLYOFFICE DocSpace plugins:</p>
 <ul>
-    <li>connect third-party services, like <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/tree/develop/samples/draw-io" target="_blank">Draw.io</a>,
-    <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/tree/develop/samples/speech-to-text" target="_blank">Speech to Text Conversion</a>, etc.;</li>
+    <li>connect third-party services, like <a href="https://github.com/ONLYOFFICE/docspace-plugins/tree/master/draw-io" target="_blank">Draw.io</a>,
+    <a href="https://github.com/ONLYOFFICE/docspace-plugins/tree/master/speech-to-text" target="_blank">Speech to Text Conversion</a>, etc.;</li>
     <li>enhance the existing user experience and the editors&#8217; functionality:
-    <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/tree/develop/samples/PDF-Converter" target="_blank">PDF-converter</a>.</li>
+    <a href="https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter" target="_blank">PDF-converter</a>.</li>
 </ul>
-<p>Code samples are available at <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/tree/master/samples" target="_blank">https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/tree/master/samples</a>.</p>
+<p>Code samples are available at <a href="https://github.com/ONLYOFFICE/docspace-plugins" target="_blank">https://github.com/ONLYOFFICE/docspace-plugins</a>.</p>
 
 <h2>How to create plugins</h2>
 
@@ -44,5 +44,5 @@
 
 <h2>How to get help</h2>
 
-<p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/issues" target="_blank">GitHub</a>.</p>
+<p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/docspace-plugins/issues" target="_blank">GitHub</a>.</p>
 <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/" target="_blank">ONLYOFFICE forum</a> (registration required).</p>

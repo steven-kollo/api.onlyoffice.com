@@ -29,7 +29,7 @@
             <td id="actions" class="copy-link">actions</td>
             <td>Defines a collection of <a href="<%= Url.Action("pluginssdk/codingplugin/events") %>">events</a> that will be processed on the portal side.
                 The specified actions will be performed depending on the set of values.</td>
-            <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Actions.ts" target="_blank">Actions</a></td>
+            <td>array of <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Actions.ts" target="_blank">Actions</a></td>
             <td>[Actions.showToast, Actions.closeModal]</td>
         </tr>
         <tr class="tablerow">
@@ -97,7 +97,7 @@
             <td id="postMessage" class="copy-link">postMessage</td>
             <td>Defines the properties that are used to send a message to a frame. If the frame ID is not specified or the frame with such an ID does not exist, then nothing changes.
                 This parameter is used only with <a href="<%= Url.Action("pluginssdk/codingplugin/events") %>#sendPostMessage">Actions.sendPostMessage</a>.</td>
-            <td><a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/utils/index.ts" target="_blank">IPostMessage</a></td>
+            <td><a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts" target="_blank">IPostMessage</a></td>
             <td>{IPostMessage}</td>
         </tr>
     </tbody>

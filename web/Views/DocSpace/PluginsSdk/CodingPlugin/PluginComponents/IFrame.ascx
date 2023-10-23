@@ -6,7 +6,7 @@
 </h1>
 
 <p class="dscr">A component that is used to embed a third-party website into a modal window or the settings page.</p>
-<p><b>Interface</b>: <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/IFrame.ts" target="_blank">IFrame</a>.</p>
+<p><b>Interface</b>: <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFrame.ts" target="_blank">IFrame</a>.</p>
 
 <div class="header-gray">Example</div>
 <pre>

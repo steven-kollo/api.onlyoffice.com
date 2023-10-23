@@ -29,7 +29,7 @@
         <tr class="tablerow">
             <td id="status" class="copy-link">status</td>
             <td>Stores the plugin status (<b>active</b> or <b>hide</b>).</td>
-            <td><a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Plugins.ts" target="_blank">PluginStatus</a></td>
+            <td><a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts" target="_blank">PluginStatus</a></td>
             <td>"active"</td>
         </tr>
         <tr class="tablerow">
@@ -66,7 +66,7 @@
                 <tr class="tablerow">
                     <td>status</td>
                     <td>Defines a new plugin status (<b>active</b> or <b>hide</b>).</td>
-                    <td><a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Plugins.ts" target="_blank">PluginStatus</a></td>
+                    <td><a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts" target="_blank">PluginStatus</a></td>
                     <td>"active"</td>
                 </tr>
             </tbody>

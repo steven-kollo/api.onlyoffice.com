@@ -56,7 +56,7 @@ npx create-docspace-plugin
         <p>Learn which <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents") %>">plugin components</a> can be used for the DocSpace plugin interface and add them to your scripts.</p>
     </li>
 </ul>
-<p>Code samples are available at <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/tree/master/samples" target="_blank">https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/tree/master/samples</a>.</p>
+<p>Code samples are available at <a href="https://github.com/ONLYOFFICE/docspace-plugins" target="_blank">https://github.com/ONLYOFFICE/docspace-plugins</a>.</p>
 
 <h2>Step 4. Building</h2>
 <p>To build a plugin, you need the <em>yarn</em> package manager to be installed. Install all the necessary dependencies using the <b>yarn install</b> command in the plugin root folder

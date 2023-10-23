@@ -6,7 +6,7 @@
 </h1>
 
 <p class="dscr">A component that is used to hide components during uploading.</p>
-<p><b>Interface</b>: <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/ISkeleton.ts" target="_blank">ISkeleton</a>.</p>
+<p><b>Interface</b>: <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/ISkeleton.ts" target="_blank">ISkeleton</a>.</p>
 
 <div class="header-gray">Example</div>
 <pre>

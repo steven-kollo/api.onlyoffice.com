@@ -9,7 +9,7 @@
 <p><b>Interface</b>: IComboBox.</p>
 <p>See the parameters of this component in <a href="https://storybook.onlyoffice.io/?path=/docs/components-combobox--docs" target="_blank">storybook</a>.</p>
 <img alt="Combo box" class="screenshot" src="<%= Url.Content("~/content/img/docspace/combobox.png") %>" />
-<p>To create a combo box option, use <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/IComboBox.ts" target="_blank">IComboBoxItem</a>.</p>
+<p>To create a combo box option, use <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts" target="_blank">IComboBoxItem</a>.</p>
 
 <div class="header-gray">Example</div>
 <pre>

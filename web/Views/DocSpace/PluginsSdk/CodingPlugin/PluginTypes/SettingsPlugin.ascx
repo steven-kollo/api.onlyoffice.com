@@ -29,7 +29,7 @@
         <tr class="tablerow">
             <td id="adminPluginSettings" class="copy-link">adminPluginSettings</td>
             <td>Stores the administator or owner settings block that is embedded in the modal window with the plugin description.</td>
-            <td><a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/settings/ISettings.ts" target="_blank">ISettings</a></td>
+            <td><a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts" target="_blank">ISettings</a></td>
             <td></td>
         </tr>
     </tbody>

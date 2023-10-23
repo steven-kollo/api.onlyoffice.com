@@ -9,7 +9,7 @@
 <p><b>Interface</b>: IButton.</p>
 <p>See the parameters of this component in <a href="https://storybook.onlyoffice.io/?path=/docs/components-button--docs" target="_blank">storybook</a>.</p>
 <img alt="Button" class="screenshot" src="<%= Url.Content("~/content/img/docspace/button.png") %>" />
-<p>To set the button size, use <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/IButton.ts" target="_blank">ButtonSize</a> which can have the following values: <em>extraSmall, small, normal, medium</em>.</p>
+<p>To set the button size, use <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IButton.ts" target="_blank">ButtonSize</a> which can have the following values: <em>extraSmall, small, normal, medium</em>.</p>
 
 <div class="header-gray">Parameters from Storybook</div>
 <table class="table">

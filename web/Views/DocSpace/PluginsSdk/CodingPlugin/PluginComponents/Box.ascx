@@ -37,7 +37,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<p>To set borders to the Box component, use a stroke or the <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/interfaces/components/IBox.ts" target="_blank">IBorderProp</a> interface.</p>
+<p>To set borders to the Box component, use a stroke or the <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts" target="_blank">IBorderProp</a> interface.</p>
 
 <div class="header-gray">Example</div>
 <pre>

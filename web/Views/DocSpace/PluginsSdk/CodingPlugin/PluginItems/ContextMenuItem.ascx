@@ -55,7 +55,7 @@
             <td>Defines the extensions of files where the current item will be displayed in the context menu.
                 It only works if the <em>FilesType.Files</em> is specified in the <em>fileType</em> parameter.
                 If this parameter is not specified, then the current context menu item will be displayed in any file extension.</td>
-            <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Files.ts" target="_blank">FilesExst</a>/string</td>
+            <td>array of <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts" target="_blank">FilesExst</a>/string</td>
             <td>[FilesExst.docx, FilesExst.xlsx]</td>
         </tr>
         <tr class="tablerow">
@@ -63,7 +63,7 @@
             <td>Defines the types of files where the current item will be displayed in the context menu.
                 Presently the following file types are available: <b>room, file, folder, image, video</b>.
                 If this parameter is not specified, then the current context menu item will be displayed in any file type.</td>
-            <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Files.ts" target="_blank">FilesType</a></td>
+            <td>array of <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts" target="_blank">FilesType</a></td>
             <td>[FilesType.file]</td>
         </tr>
         <tr class="tablerow">
@@ -71,7 +71,7 @@
             <td>Defines the types of users who will see the current item in the context menu.
             Currently the following user types are available: <b>owner, docSpaceAdmin, roomAdmin, collaborator, user</b>.
             If this parameter is not specified, then the current context menu item will be displayed for all user types.</td>
-            <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/UsersType.ts" target="_blank">UsersType</a></td>
+            <td>array of <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/UsersType.ts" target="_blank">UsersType</a></td>
             <td>[UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]</td>
         </tr>
         <tr class="tablerow">
@@ -79,7 +79,7 @@
             <td>Defines the types of devices where the current item will be displayed in the context menu.
                 At the moment the following device types are available: <b>mobile, tablet, desktop</b>.
                 If this parameter is not specified, then the current context menu item will be displayed in any device types.</td>
-            <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Devices.ts" target="_blank">Devices</td>
+            <td>array of <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Devices.ts" target="_blank">Devices</td>
             <td>[Devices.desktop]</td>
         </tr>
         <tr class="tablerow">
