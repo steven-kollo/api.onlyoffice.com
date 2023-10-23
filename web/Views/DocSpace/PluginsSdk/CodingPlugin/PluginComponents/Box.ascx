@@ -30,7 +30,7 @@
         <tr class="tablerow">
             <td id="children" class="copy-link">children</td>
             <td>The box components.</td>
-            <td>array of <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/component") %>">Components</a</td>
+            <td>array of <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/component") %>">Components</a></td>
             <td>[inputComponent]</td>
         </tr>
     </tbody>

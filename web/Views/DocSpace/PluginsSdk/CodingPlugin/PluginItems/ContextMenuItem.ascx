@@ -76,7 +76,7 @@
         </tr>
         <tr class="tablerow">
             <td id="devices" class="copy-link">devices</td>
-            <td>Defines the types of devices where the current item will be displayed in the info panel.
+            <td>Defines the types of devices where the current item will be displayed in the context menu.
                 At the moment the following device types are available: <b>mobile, tablet, desktop</b>.
                 If this parameter is not specified, then the current context menu item will be displayed in any device types.</td>
             <td>array of <a href="https://github.com/ONLYOFFICE/onlyoffice-docspace-plugin-sdk/blob/develop/src/enums/Devices.ts" target="_blank">Devices</td>
