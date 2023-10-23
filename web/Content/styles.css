@@ -2339,7 +2339,7 @@ article {
         background-color: #F5F5F5;
         padding-left: 11px;
         width: 263px;
-        position: absolute;
+        position: fixed;
         z-index: 101;
         height: calc(100vh - 48px);
         top: 48px;
