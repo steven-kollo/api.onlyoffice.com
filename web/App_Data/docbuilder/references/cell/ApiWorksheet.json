@@ -97,7 +97,7 @@
       "returns": [
         [
           "ApiRange",
-          "Error"
+          "null"
         ]
       ],
       "see": null,
@@ -129,7 +129,7 @@
       "returns": [
         [
           "ApiRange",
-          "Error"
+          "null"
         ]
       ],
       "see": null,
@@ -740,8 +740,7 @@
       },
       "returns": [
         [
-          "Error",
-          "true"
+          "boolean"
         ]
       ],
       "see": null,

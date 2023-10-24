@@ -98,7 +98,8 @@
         },
         "<a href="<%= Url.Action("config/document") %>#referenceData">referenceData</a>": {
             "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com"
+            "instanceId": "https://example.com",
+            "key": "Khirz6zTPdfd7"
         },
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
         "<a href="<%= Url.Action("config/document") %>#url">url</a>": "https://example.com/url-to-example-document.docx"
@@ -169,8 +170,8 @@
                 "reviewDisplay": "original",
                 "trackChanges": true,
                 "hoverMode": false
-            },<%--
-            "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
+            },
+            "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#uiTheme">uiTheme</a>": "theme-dark",
@@ -244,7 +245,6 @@
         "<a href="<%= Url.Action("config/events") %>#onOutdatedVersion">onOutdatedVersion</a>": onOutdatedVersion,
         "<a href="<%= Url.Action("config/events") %>#onPluginsReady">onPluginsReady</a>": onPluginsReady,
         "<a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a>": onRequestClose,
-        "<a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a>": onRequestCompareFile,
         "<a href="<%= Url.Action("config/events") %>#onRequestCreateNew">onRequestCreateNew</a>": onRequestCreateNew,
         "<a href="<%= Url.Action("config/events") %>#onRequestEditRights">onRequestEditRights</a>": onRequestEditRights,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a>": onRequestHistory,
@@ -252,10 +252,14 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a>": onRequestHistoryData,
         "<a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a>": onRequestInsertImage,
         "<a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a>": onRequestMailMergeRecipients,
+        "<a href="<%= Url.Action("config/events") %>#onRequestOpen">onRequestOpen</a>": onRequestOpen,
         "<a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a>": onRequestReferenceData,
+        "<a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a>": onRequestReferenceSource,
         "<a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a>": onRequestRename,
         "<a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a>": onRequestRestore,
         "<a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a>": onRequestSaveAs,
+        "<a href="<%= Url.Action("config/events") %>#onRequestSelectDocument">onRequestSelectDocument</a>": onRequestSelectDocument,
+        "<a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a>": onRequestSelectSpreadsheet,
         "<a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a>": onRequestSendNotify,
         "<a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a>": onRequestSaveAs,
         "<a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a>": onRequestUsers,

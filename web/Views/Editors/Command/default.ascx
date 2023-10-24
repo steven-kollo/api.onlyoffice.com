@@ -29,12 +29,24 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("command/deleteforgotten") %>">deleteForgotten</a></td>
+            <td>This command allows to delete a forgotten file.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("command/drop") %>">drop</a></td>
             <td>This command allows to disconnect the specified users from the document editing service.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/forcesave") %>">forcesave</a></td>
             <td>This command allows to forcibly save the document being edited without closing it.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("command/getforgotten") %>">getForgotten</a></td>
+            <td>This command allows to request a forgotten file.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("command/getforgottenlist") %>">getForgottenList</a></td>
+            <td>This command allows to request a list of the forgotten files.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/info") %>">info</a></td>

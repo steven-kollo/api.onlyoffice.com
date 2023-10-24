@@ -50,7 +50,7 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
 <ul>
     <li><b>IIS</b>: version 7 or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php" target="_blank">Microsoft official website</a> to learn how to install IIS);</li>
     <li><b>PHP</b>: version 8 or later (download it from the <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> site);</li>
-    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115" target="_blank">Microsoft open source site</a>).</li>
+    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://www.iis.net/downloads/community/2018/05/php-manager-150-for-iis-10" target="_blank">Microsoft open source site</a>).</li>
     <li><b>Composer</b> (download it from the <a href="https://getcomposer.org/download/" target="_blank">Composer official website</a>).</li>
 </ul>
 
@@ -149,7 +149,7 @@ php composer.phar install
     <li>Download the archive with the PHP example and unpack the archive:
         <div class="commandline">cd /var/www/html</div>
         <div class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip</div>
-        <div class="commandline">unzip PHP\ Example.zip</div>
+        <div class="commandline">unzip PHP.Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
         <div class="commandline">cd PHP\ Example/</div>

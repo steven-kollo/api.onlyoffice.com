@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Plugins and Macros API.</p>
 
+    <h2 id="75" class="copy-link">Version 7.5</h2>
+    <ul>
+        <li>Added the <em>align</em> parameter to the <a href="<%= Url.Action("executemethod/common/showbutton") %>">ShowButton</a> method of <em>window.Asc.plugin.executeMethod</em>.</li>
+    </ul>
+
     <h2 id="74" class="copy-link">Version 7.4</h2>
     <ul>
         <li>Added the ability to download ready-to-use plugins from <a href="<%= Url.Action("installation/desktop") %>#plugin-manager">ONLYOFFICE Plugin Marketplace</a> in ONLYOFFICE Desktop Editors.</li>
