@@ -73,7 +73,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li><a href="<%= Url.Action("events/init") %>">init</a></li>
     <li><a href="<%= Url.Action("events/onExternalMouseUp") %>">onExternalMouseUp</a></li>
     <li><a href="<%= Url.Action("callmodule") %>">callModule</a></li>
-    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("info") %>#recalculate">info.recalculate</a></li>
 </ul>
 
