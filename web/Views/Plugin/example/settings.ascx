@@ -66,7 +66,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <ul>
     <li><a href="<%= Url.Action("events/button") %>">button</a></li>
     <li><a href="<%= Url.Action("events/init") %>">init</a></li>
-    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("executeMethod/common/setproperties") %>">executeMethod ("SetProperties")</a></li>
 </ul>
 

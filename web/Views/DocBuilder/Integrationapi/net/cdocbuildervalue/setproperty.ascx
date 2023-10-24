@@ -43,7 +43,7 @@ CContext oContext = oBuilder.GetContext();
 CValue oGlobal = oContext.GetGlobal();
 CValue oApi = oGlobal["Api"];
 CValue oDocument = oApi.Call("GetDocument");
-oDocument.SetProperty("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb"},"Zvf":null,"type":"uniColor"});
+oDocument.SetProperty("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"});
 CDocBuilder.Destroy();
 </pre>
 
@@ -65,7 +65,7 @@ CContext oContext = oBuilder.GetContext();
 CValue oGlobal = oContext.GetGlobal();
 CValue oApi = oGlobal["Api"];
 CValue oDocument = oApi.Call("GetDocument");
-oDocument.Set("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb"},"Zvf":null,"type":"uniColor"});
+oDocument.Set("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"});
 CDocBuilder.Destroy();
 </pre>
     </li>
@@ -85,7 +85,7 @@ CContext oContext = oBuilder.GetContext();
 CValue oGlobal = oContext.GetGlobal();
 CValue oApi = oGlobal["Api"];
 CValue oDocument = oApi.Call("GetDocument");
-oDocument["color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb"},"Zvf":null,"type":"uniColor"}];
+oDocument["color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"}];
 CDocBuilder.Destroy();
 </pre>
     </li>

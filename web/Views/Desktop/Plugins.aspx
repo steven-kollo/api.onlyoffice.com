@@ -56,7 +56,7 @@
     <p><b>Step 1.</b> Create a new folder in the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
     <ul style="list-style: none;">
         <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
-        <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\</em></li>
+        <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\</em></li>
         <li>For Mac OS - <em>/Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/</em></li>
     </ul>
 

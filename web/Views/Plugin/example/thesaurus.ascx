@@ -141,7 +141,6 @@
     <li><a href="<%= Url.Action("events/init") %>">init</a></li>
     <li><a href="<%= Url.Action("events/onExternalMouseUp") %>">onExternalMouseUp</a></li>
     <li><a href="<%= Url.Action("events/onTranslate") %>">onTranslate</a></li>
-    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("executemethod/common/getselectedtext") %>">executeMethod ("GetSelectedText")</a></li>
     <li><a href="<%= Url.Action("executemethod/common/pastetext") %>">executeMethod ("PasteText")</a></li>
 </ul>

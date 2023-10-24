@@ -16,7 +16,7 @@
 
     <h2>Introduction</h2>
     <p class="dscr">
-        To integrate <b>ONLYOFFICE Document Builder</b> into your own website on <b>PHP</b> you need to download and install <b>ONLYOFFICE Document Builder</b> on your local server and use the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> for their integration.
+        To integrate <b>ONLYOFFICE Document Builder</b> into your own website on <b>PHP</b> you need to download and install <b>ONLYOFFICE Document Builder</b> on your local server and use the <a href="<%= Url.Action("integratingdocumentbuilder") %>">PHP Example</a> for their integration.
         We guide will show you how to run the PHP example on <a href="#Windows">Windows OS</a>.
     </p>
 

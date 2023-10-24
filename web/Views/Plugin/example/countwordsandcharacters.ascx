@@ -141,7 +141,6 @@
     <li><a href="<%= Url.Action("events/init") %>">init</a></li>
     <li><a href="<%= Url.Action("events/onTargetPositionChanged") %>">onTargetPositionChanged</a></li>
     <li><a href="<%= Url.Action("events/onTranslate") %>">onTranslate</a></li>
-    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
 </ul>
 
 

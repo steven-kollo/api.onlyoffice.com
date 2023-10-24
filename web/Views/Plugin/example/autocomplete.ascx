@@ -99,7 +99,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li><a href="<%= Url.Action("events/onInputHelperClear") %>">onInputHelperClear</a></li>
     <li><a href="<%= Url.Action("events/onInputHelperInput") %>">onInputHelperInput</a></li>
     <li><a href="<%= Url.Action("createinputhelper") %>">createInputHelper</a></li>
-    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("executemethod/common/inputtext") %>">executeMethod ("InputText")</a></li>
     <li><a href="<%= Url.Action("getinputhelper") %>">getInputHelper</a></li>
     <li><a href="<%= Url.Action("inputhelper/createWindow") %>">InputHelper.createWindow</a></li>
