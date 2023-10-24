@@ -116,6 +116,41 @@
         <li>
             <a href="<%= Url.Action("global") %>">Simple types</a>
         </li>
+        <li>
+            <a href="<%= Url.Action("buildersamples") %>">Builder samples</a>
+            <ul>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createformaldocument") %>">Creating formal document</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createreports") %>">Creating report document</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">Creating mail merge receptions</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createpresentation") %>">Creating presentation</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createchartpresentation") %>">Creating chart presentation</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createbasicform") %>">Creating basic form</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createadvancedform") %>">Creating advanced form</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/fillform") %>">Filling form</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 
     <div class="treeheader">Builder.Framework</div>
@@ -691,41 +726,6 @@
 
     <div class="treeheader">More information</div>
     <ul class="side-nav root">
-       <li>
-            <a href="<%= Url.Action("buildersamples") %>">Builder samples</a>
-            <ul>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/createformaldocument") %>">Creating formal document</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/createreports") %>">Creating report document</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">Creating mail merge receptions</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/createpresentation") %>">Creating presentation</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/createchartpresentation") %>">Creating chart presentation</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/createbasicform") %>">Creating basic form</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/createadvancedform") %>">Creating advanced form</a>
-                </li>
-                <li>
-                    <a href="<%= Url.Action("buildersamples/fillform") %>">Filling form</a>
-                </li>
-            </ul>
-        </li>
         <li>
             <a href="<%= Url.Action("changelog") %>">Changelog</a>
         </li>
