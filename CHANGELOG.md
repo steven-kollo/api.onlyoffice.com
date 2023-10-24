@@ -1,5 +1,6 @@
 # Change Log
 
+- restructured the docbuilder and plugins sections
 - docbuilder: added builder samples
 
 ## 4.3.0
