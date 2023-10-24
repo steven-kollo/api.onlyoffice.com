@@ -54,6 +54,23 @@ import { DocumentEditor } from "@onlyoffice/document-editor-react";
 var onDocumentReady = function (event) {
     console.log("Document is loaded");
 };
+
+var onLoadComponentError = function (errorCode, errorDescription) {
+    switch(errorCode) {
+        case -1: // Unknown error loading component
+            console.log(errorDescription);
+            break;
+
+        case -2: // Error load DocsAPI from http://documentserver/
+            console.log(errorDescription);
+            break;
+
+        case -3: // DocsAPI is not defined
+            console.log(errorDescription);
+            break;
+    }
+};
+
 export default function App() {
     const editorRef = useRef(null);
     const log = () => {
@@ -79,6 +96,7 @@ export default function App() {
                     }
                 }}
                 events_onDocumentReady={onDocumentReady}
+                onLoadComponentError={onLoadComponentError}
             /&gt;
         &lt;/&gt;
     );
@@ -183,6 +201,12 @@ npm run build
                 <td>object</td>
                 <td>null</td>
                 <td>Generic <a href="<%= Url.Action("config") %>">configuration object</a> for opening a file with token.</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="onLoadComponentError" class="copy-link">onLoadComponentError</td>
+                <td>(errorCode: number, errorDescription: string) => void</td>
+                <td>null</td>
+                <td>The function called when an error occurs while loading a component.</td>
             </tr>
             <tr class="tablerow">
                 <td id="document_fileType" class="copy-link">document_fileType</td>
