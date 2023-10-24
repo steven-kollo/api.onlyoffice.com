@@ -417,6 +417,10 @@
             {
                "Item1":"Simple types",
                "Item2":"global"
+            },
+            {
+               "Item1":"Builder samples",
+               "Item2":"buildersamples"
             }
          ],
          "Builder.Framework":[
