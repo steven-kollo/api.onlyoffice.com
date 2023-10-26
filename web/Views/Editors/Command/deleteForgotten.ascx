@@ -1,4 +1,4 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
      <a class="up" href="<%= Url.Action("command/") %>"></a>
