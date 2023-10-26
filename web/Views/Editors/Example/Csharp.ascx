@@ -30,7 +30,7 @@
 <p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">Net (C#) / .Net (C# MVC) 示例</a>。</p>
 <p>
     要将编辑器连接到您的网站，请在 <em>settings.config</em> 文件中指定编辑器安装的路径和存储文件夹的路径
-    (or <em>web.appsettings.config</em> file for MVC version)：
+    (或 MVC 版本的 <em>web.appsettings.config</em> 文件)：
 </p>
 <pre>
 &lt;add key="storage-path" value=""/&gt;

@@ -5,17 +5,17 @@
     <span class="hdr">getForgottenList</span>
 </h1>
 
-<div class="header-gray">Description</div>
+<div class="header-gray">描述</div>
 
-<p class="dscr">Requests a list of the forgotten files.</p>
+<p class="dscr">请求被遗忘文件的列表。</p>
 
-<div class="header-gray">Request example</div>
+<div class="header-gray">请求示例</div>
 <pre>
 {
     "c": "getForgottenList"
 }
 </pre>
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -25,24 +25,24 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Parameter</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Presence</td>
+           <td>参数</td>
+           <td>描述</td>
+           <td>类型</td>
+           <td>存在</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>c</td>
-            <td>Defines the command type.</td>
+            <td>定义命令类型。</td>
             <td>string</td>
-            <td>required</td>
+            <td>必填</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Response example</div>
+<div class="header-gray">响应示例</div>
 
 <pre>
 {
@@ -51,7 +51,7 @@
 }
 </pre>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -61,24 +61,24 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Parameter</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Presence</td>
+           <td>参数</td>
+           <td>描述</td>
+           <td>类型</td>
+           <td>存在</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>error</td>
-            <td>Defines an error code.</td>
+            <td>定义错误代码。</td>
             <td>integer</td>
-            <td>required</td>
+            <td>必填</td>
         </tr>
         <tr class="tablerow">
             <td>keys</td>
-            <td>Defines a list of the document identifiers used to unambiguously identify the document files.</td>
+            <td>定义用于明确标识文档文件的文档标识符列表。</td>
             <td>string</td>
-            <td>required</td>
+            <td>必填</td>
         </tr>
     </tbody>
 </table>

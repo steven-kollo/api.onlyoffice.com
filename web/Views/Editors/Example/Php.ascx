@@ -49,9 +49,9 @@
 
 <ul>
     <li><b>IIS</b>：版本7或更高版本（参考 <a href="https://learn.microsoft.com/zh-cn/iis/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php" target="_blank">微软官网</a> 了解如何安装IIS）；</li>
-    <li><b>PHP</b>: version 8 or later (download it from the <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> site);</li>
+    <li><b>PHP</b>: 版本 8 或更高版本（从 <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> 站点下载）；</li>
     <li><b>PHP Manager for IIS</b> （从 <a href="https://phpmanager.codeplex.com/releases/view/69115" target="_blank">Microsoft 开源网站</a>下载）。</li>
-    <li><b>Composer</b> (download it from the <a href="https://getcomposer.org/download/" target="_blank">Composer official website</a>).</li>
+    <li><b>Composer</b>（从<a href="https://getcomposer.org/download/" target="_blank">Composer官方网站</a> 下载）。</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">步骤 4.</span>IIS 配置</h2>
@@ -96,13 +96,13 @@
 </ol>
 <p>IIS 管理器配置完成后，一切准备就绪，可以运行 PHP 示例。</p>
 
-<h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Run Composer</h2>
-<p>Install Composer using the following command:</p>
+<h2 id="win-5" class="copy-link"><span class="style_step">步骤 5. </span>运行Composer</h2>
+<p>使用以下命令安装 Composer：</p>
 <pre>
 php composer.phar install
 </pre>
 
-<h2 id="win-6" class="copy-link"><span class="style_step">Step 6. </span>Run your website with the editors</h2>
+<h2 id="win-6" class="copy-link"><span class="style_step">步骤 6. </span>运行带编辑器的网站</h2>
 <ol>
     <li>
         <p>在 IIS 管理器中添加您的网站。</p>
@@ -141,8 +141,8 @@ php composer.phar install
     <li>安装 <b>Apache</b> 和 <b>PHP</b>：
         <div class="commandline">apt-get install -y apache2 php7.0 libapache2-mod-php7.0</div>
     </li>
-    <li>Install <b>Composer</b>.
-        <p>To install Composer globally, use the following command which will download and install Composer as a system-wide command named <em>composer</em>, under <em>/usr/local/bin</em>:</p>
+    <li>安装 <b>Composer</b>.
+        <p>要全局安装 Composer，请使用以下命令，该命令将下载 Composer 并将其安装为名为 <em>composer</em> 的系统范围命令，它位于 <em>/usr/local/bin</em> 下：</p>
         <div class="commandline">curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php</div>
         <div class="commandline">sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer</div>
     </li>

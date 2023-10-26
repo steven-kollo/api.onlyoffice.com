@@ -160,16 +160,16 @@ docEditor.setReferenceData({
         </li>
     </ol>
 
-    <h2 id="external-links" class="copy-link">Working with external links</h2>
+    <h2 id="external-links" class="copy-link">使用外部链接</h2>
     <ol>
         <li>
-            <p>Specify the event handler for the <em>Open source</em> button to be displayed in the configuration script for Document Editor initialization.
-            When the user is trying to open an external link by clicking the <em>Open source</em> button, the <a href="<%= Url.Action("config/events") %>#onRequestOpen">onRequestOpen</a> event is called.</p>
-            <p>To open the editor with the external file referenced by the <em>path</em> or <em>referenceData</em> parameters in a new tab,
-                you must pass a link to this tab by calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a> method with the <em>path</em> and <em>windowName</em> parameters.</p>
-            <p>An object with the unique file data, the file path, and a new browser tab name are sent in the <em>data</em> parameter.</p>
+            <p>指定要在文档编辑器初始化的配置脚本中显示的<em>打开源</em>按钮的事件处理程序。
+            当用户尝试通过单击<em>打开源</em>按钮打开外部链接时， <a href="<%= Url.Action("config/events") %>#onRequestOpen">onRequestOpen</a> 事件被调用。</p>
+            <p>要在新选项卡中打开包含 <em>path</em> 或 <em>referenceData</em> 参数引用的外部文件的编辑器，
+                您必须通过调用带有 <em>path</em> 和 <em>windowName</em> 参数的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a> 方法来传递指向此选项卡的链接。</p>
+            <p>具有唯一文件数据、文件路径和新浏览器选项卡名称的对象将在 <em>data</em> 参数中发送。</p>
             <img class="screenshot" alt="open-source" src="<%= Url.Content("~/content/img/editor/open-source.png") %>"/>
-            <div class="header-gray">Example</div>
+            <div class="header-gray">示例</div>
             <pre>
 var onRequestOpen = function (event) {
     var path  = event.data.path;
@@ -189,20 +189,20 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <p>其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+            请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。</p>
         </li>
         <li>
-            <p>Specify the event handler for the <em>Change source</em> button to be displayed in the configuration script for Document Editor initialization.
-            When the user is trying to change an external link by clicking the <em>Change source</em> button, the <a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a> event is called.</p>
-            <p>An object with the unique file data and the file path or name are sent in the <em>data</em> parameter.</p>
-            <p>When the button is clicked, you must call the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method to change a source of the external data.
-                When calling this method, the token must be added to validate the parameters.
-                If the event is not declared, the <em>Change source</em> button will not be displayed.</p>
-            <note>To send the data to the <em>setReferenceSource</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
-            If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+            <p>指定要在文档编辑器初始化的配置脚本中显示的<em>更改源</em>按钮的事件处理程序。
+            当用户尝试通过单击<em>更改源</em>按钮更改外部链接时，<a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a> 事件被调用。</p>
+            <p>具有唯一文件数据和文件路径或名称的对象在 <em>data</em> 参数中发送。</p>
+            <p>单击该按钮时，必须调用 <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> 方法来更改外部数据的来源。
+                调用该方法时，必须添加token来验证参数。
+                如果未声明事件，则不会显示<em>更改源</em>按钮。</p>
+            <note>要将数据发送到<em>setReferenceSource</em>方法，建议首先通过<em>referenceData</em>参数搜索文件。
+                如果没有这样的字段或找不到文件，则使用 <em>path</em> 参数。</note>
             <img alt="Change source" class="screenshot" src="<%= Url.Content("~/content/img/editor/change-source.png") %>" />
-            <div class="header-gray">Example</div>
+            <div class="header-gray">示例</div>
             <pre>
 var onRequestReferenceSource = function () {
     var referenceData =  event.data.referenceData;

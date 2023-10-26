@@ -1830,8 +1830,8 @@
             </tr>
             <tr class="tablerow">
                 <td>-9</td>
-                <td>Error when the converter cannot automatically determine the output file format. This error means that the client must explicitly specify
-                    in which format the file should be converted (text document or spreadsheet). It is used to convert XML to OOXML in case the XML type is unknown.</td>
+                <td>当转换器无法自动确定输出文件格式时出错。 此错误意味着客户端必须明确指定文件应转换为哪种格式（文本文档或电子表格）。
+                    它用于在 XML 类型未知的情况下将 XML 转换为 OOXML。</td>
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>

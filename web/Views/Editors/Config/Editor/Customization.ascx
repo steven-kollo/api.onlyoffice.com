@@ -1132,8 +1132,8 @@
         <tr>
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
-                Defines if the <b>Submit</b> button is displayed or hidden on the top toolbar.
-                Button will only be available for the <em>oform</em> format. The default value is <b>false</b>.
+                定义顶部工具栏上是否显示或隐藏<b>提交</b>按钮。
+                按钮仅适用于 <em>oform</em> 格式。 默认值为<b>false</b>。
             </td>
             <td>boolean</td>
             <td>true</td>

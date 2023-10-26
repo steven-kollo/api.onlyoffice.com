@@ -33,9 +33,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setHistoryData">setHistoryData</a> - 发送文档链接以查看版本历史。</li>
         <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - 将邮件合并的收件人数据插入文件中。</li>
         <li><a href="#setReferenceData">setReferenceData</a> - 通过文件链接刷新数据。</li>
-        <li><a href="#setReferenceSource">setReferenceSource</a> - change a source of the external data.</li>
-        <li><a href="#setRequestedDocument">setRequestedDocument</a> - select a document for comparing or combining.</li>
-        <li><a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> - insert recipient data for mail merge into the file.</li>
+        <li><a href="#setReferenceSource">setReferenceSource</a> - 更改外部数据源。</li>
+        <li><a href="#setRequestedDocument">setRequestedDocument</a> - 选择要比较或合并的文档。</li>
+        <li><a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> - 将邮件合并的收件人数据插入到文件中。</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - 选择一个文档进行比较。</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
         <li><a href="#setUsers">setUsers</a> - 设置要在评论中提及的用户列表或授予编辑特定工作表范围的访问权限。</li>
@@ -662,7 +662,7 @@ docEditor.setHistoryData({
             <p>
                 <b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - 将邮件合并的收件人数据插入文件中。
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> 事件之后调用。
-                Deprecated since version 7.5, please use <a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> instead.
+                自版本 7.5 起已弃用，请改用 <a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a>。
             </p>
             <pre>
 docEditor.setMailMergeRecipients({
@@ -805,14 +805,14 @@ docEditor.setReferenceData({
                                     <b>示例</b>:  "https://example.com";
                                 </li>
                                 <li>
-                                    <b>key</b> - defines the unique document identifier used by the service to take the data from the co-editing session.
-                                    In case the known key is sent, the document will be taken from the cache.
-                                    Every time the document is edited and saved, the key must be generated anew.
-                                    The document url can be used as the <b>key</b> but without the special characters and the length is limited to 128 symbols.
+                                    <b>key</b> - 定义服务用于从共同编辑会话获取数据的唯一文档标识符。
+                                    如果发送已知密钥，将从缓存中获取文档。
+                                    每次编辑并保存文档时，都必须重新生成密钥。
+                                    文档 url 可以用作<b>key</b>，但不能包含特殊字符，且长度限制为 128 个符号。
                                     <br />
-                                    <b>type</b>: string,
+                                    <b>类型</b>: string,
                                     <br />
-                                    <b>example</b>:  "Khirz6zTPdfd7".
+                                    <b>示例</b>:  "Khirz6zTPdfd7".
                                 </li>
                             </ul>
                         </td>
@@ -838,10 +838,10 @@ docEditor.setReferenceData({
 
         <li>
             <p>
-                <b id="setReferenceSource" class="copy-link">setReferenceSource</b> - change a source of the external data.
-                This method can be called after the <a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a> event.
+                <b id="setReferenceSource" class="copy-link">setReferenceSource</b> - 更改外部数据源。
+                该方法可以在 <a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a> 事件之后调用。
             </p>
-            <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
+            <note>请注意，仅当用户对要从中获取数据的文件具有权限时才会执行此方法。</note>
             <pre>
 docEditor.setReferenceSource({
     "fileType": "xlsx",
@@ -856,10 +856,10 @@ docEditor.setReferenceSource({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+                请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
             </p>
-            <p>Show an error message explaining if any error occurred:</p>
+            <p>显示一条错误消息，解释是否发生任何错误：</p>
             <pre>
 docEditor.setReferenceSource({
     "error": "Exception",
@@ -874,80 +874,80 @@ docEditor.setReferenceSource({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>存在</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>error</td>
-                        <td>Defines the error message text.</td>
+                        <td>定义错误消息文本。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
+                        <td>定义使用 <em>url</em> 参数指定的文档的扩展名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>path</td>
-                        <td>Defines the file name or relative path for the formula editor.
-                            It is used to identify a file when the <a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a> event is executed.</td>
+                        <td>定义公式编辑器的文件名或相对路径。
+                            用于在执行 <a href="<%= Url.Action("config/events") %>#onRequestReferenceSource">onRequestReferenceSource</a> 事件时识别文件。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>referenceData</td>
                         <td>
-                            Defines an object that is generated by the integrator to uniquely identify a file in its system.
-                            This data must be the same as in the <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> config parameter:
+                            定义由集成器生成的对象，用于唯一标识其系统中的文件。
+                            此数据必须与 <a href="<%= Url.Action("config/document") %>#referenceData">document.referenceData</a> 配置参数中的数据相同：
                             <ul>
                                 <li>
-                                    <b>fileKey</b> - the unique document identifier used by the service to get a link to the file.
-                                    It must not be changed when the document is edited and saved (i.e. it is not equal to the <a href="<%= Url.Action("config/document") %>#key">document.key</a> parameter),
+                                    <b>fileKey</b> - 服务用于获取文件链接的唯一文档标识符。
+                                    编辑和保存文档时不得更改它（即它不等于 <a href="<%= Url.Action("config/document") %>#key">document.key</a> 参数）,
                                     <br />
-                                    <b>type</b>: string,
+                                    <b>类型</b>: string,
                                     <br />
-                                    <b>example</b>:  "BCFA2CED";
+                                    <b>示例</b>:  "BCFA2CED";
                                 </li>
                                 <li>
-                                    <b>instanceId</b> - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another,
-                                    then pasting by link will not be available and there will be no corresponding button in the context menu,
+                                    <b>instanceId</b> - 唯一的系统标识符。 如果数据是从一个系统上的文件复制并插入到另一个系统上的文件中，
+                                    那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，
                                     <br />
-                                    <b>type</b>: string,
+                                    <b>类型</b>: string,
                                     <br />
-                                    <b>example</b>:  "https://example.com";
+                                    <b>示例</b>:  "https://example.com";
                                 </li>
                                 <li>
-                                    <b>key</b> - defines the unique document identifier used by the service to take the data from the co-editing session.
-                                    In case the known key is sent, the document will be taken from the cache.
-                                    Every time the document is edited and saved, the key must be generated anew.
-                                    The document url can be used as the <b>key</b> but without the special characters and the length is limited to 128 symbols.
+                                    <b>key</b> - 定义服务用于从共同编辑会话获取数据的唯一文档标识符。
+                                    如果发送已知密钥，将从缓存中获取文档。
+                                    每次编辑并保存文档时，都必须重新生成密钥。
+                                    文档 url 可以用作<b>key</b>，但不能包含特殊字符，且长度限制为 128 个符号。
                                     <br />
-                                    <b>type</b>: string,
+                                    <b>类型</b>: string,
                                     <br />
-                                    <b>example</b>:  "Khirz6zTPdfd7".
+                                    <b>示例</b>:  "Khirz6zTPdfd7".
                                 </li>
                             </ul>
                         </td>
                         <td>object</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr id="setReferenceSource-token" class="tablerow">
                         <td>token</td>
-                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setReferenceSource">token</a>.</td>
+                        <td>以 <a href="<%= Url.Action("signature/browser") %>#setReferenceSource">令牌</a> 的形式定义添加到参数的加密签名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the URL address to download the current file.</td>
+                        <td>定义下载当前文件的 URL 地址。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -956,8 +956,8 @@ docEditor.setReferenceSource({
 
         <li>
             <p>
-                <b id="setRequestedDocument" class="copy-link">setRequestedDocument<a href="#requiredDescr2" class="required">**</a></b> - select a document for comparing or combining.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestSelectDocument">onRequestSelectDocument</a> event.
+                <b id="setRequestedDocument" class="copy-link">setRequestedDocument<a href="#requiredDescr2" class="required">**</a></b> - 选择要比较或合并的文档。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestSelectDocument">onRequestSelectDocument</a> 事件之后调用。
             </p>
             <pre>
 docEditor.setRequestedDocument({
@@ -968,8 +968,8 @@ docEditor.setRequestedDocument({
 });
 </pre>
             <p>
-                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+                请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
             </p>
             <table class="table">
                 <colgroup>
@@ -980,10 +980,10 @@ docEditor.setRequestedDocument({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>存在</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -991,31 +991,31 @@ docEditor.setRequestedDocument({
                     <tr class="tablerow">
                         <td>c</td>
                         <td>
-                            Defines a type of document selection from the event. Can be: <em>compare</em>, <em>combine</em>. The default value is "compare".
+                            定义从事件中选择的文档类型。 可以是：<em>compare</em>、<em>combine</em>。 默认值为"compare"。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr><tr class="tablerow">
                         <td>fileType</td>
                         <td>
-                            Defines a type of the document to be selected.
-                            Can be: <em>doc</em>, <em>docm</em>, <em>docx</em>, <em>dot</em>, <em>dotm</em>, <em>dotx</em>, <em>epub</em>, <em>fodt</em>, <em>odt</em>, <em>ott</em>, <em>rtf</em>, <em>wps</em>.
+                            您定义要选择的文档的类型。
+                            可以是：<em>doc</em>、<em>docm</em>、<em>docx</em>、<em>dot</em>、<em>dotm</em>、<em>dotx</em>、<em>epub</em>、<em>fodt</em>、<em>odt</em>、<em>ott</em>、<em>rtf</em>，<em>wps</em>。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr id="setRequestedDocument-token" class="tablerow">
                         <td>token</td>
-                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setRequestedDocument">token</a>.</td>
+                        <td>以 <a href="<%= Url.Action("signature/browser") %>#setRequestedDocument">令牌</a> 的形式定义添加到参数的加密签名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source document is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
-                            Otherwise, an error will occur.</td>
+                        <td>定义存储源文档的绝对 URL。 使用本地链接时，请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。
+                            否则会出现错误。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -1024,8 +1024,8 @@ docEditor.setRequestedDocument({
 
         <li>
             <p>
-                <b id="setRequestedSpreadsheet" class="copy-link">setRequestedSpreadsheet</b> - insert recipient data for mail merge into the file.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> event.
+                <b id="setRequestedSpreadsheet" class="copy-link">setRequestedSpreadsheet</b> - 将邮件合并的收件人数据插入到文件中。
+                必须在 <a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> 事件之后调用此方法。
             </p>
             <pre>
 docEditor.setRequestedSpreadsheet({
@@ -1036,8 +1036,8 @@ docEditor.setRequestedSpreadsheet({
 });
 </pre>
             <p>
-                Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+                请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
             </p>
             <table class="table">
                 <colgroup>
@@ -1048,42 +1048,42 @@ docEditor.setRequestedSpreadsheet({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>存在</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>c</td>
                         <td>
-                            Defines a type of spreadsheet selection from the event. Can be <em>mailmerge</em>.
+                           定义从事件中选择的电子表格类型。 可以是<em>mailmerge</em>。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>fileType</td>
                         <td>
-                            Defines the type of spreadsheet for mail merge in the file.
-                            Can be: <em>csv</em>, <em>fods</em>, <em>ods</em>, <em>ots</em>, <em>xls</em>, <em>xlsm</em>, <em>xlsx</em>, <em>xlt</em>, <em>xltm</em>, <em>xltx</em>.
+                            定义文件中邮件合并的电子表格类型。
+                            可以是：<em>csv</em>、<em>fods</em>、<em>ods</em>、<em>ots</em>、<em>xls</em>、<em>xlsm</em>、<em>xlsx</em>、<em>xlt</em>、<em>xltm</em>、<em>xltx</em>。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr id="setRequestedSpreadsheet-token" class="tablerow">
                         <td>token</td>
-                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setRequestedSpreadsheet">token</a>.</td>
+                        <td>定义以 <a href="<%= Url.Action("signature/browser") %>#setRequestedSpreadsheet">令牌</a> 形式添加到参数的加密签名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source data is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
-                            Otherwise, an error will occur.</td>
+                        <td>定义存储源数据的绝对 URL。 使用本地链接时，请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。
+                            否则会出现错误。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -1094,7 +1094,7 @@ docEditor.setRequestedSpreadsheet({
             <p>
                 <b id="setRevisedFile" class="copy-link">setRevisedFile<a href="#requiredDescr2" class="required">**</a></b> - 选择一个文档进行比较。
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> 事件之后调用。
-                Deprecated since version 7.5, please use <a href="#setRequestedDocument">setRequestedDocument</a> instead.
+                自版本 7.5 起已弃用，请改用 <a href="#setRequestedDocument">setRequestedDocument</a>。
             </p>
             <pre>
 docEditor.setRevisedFile({

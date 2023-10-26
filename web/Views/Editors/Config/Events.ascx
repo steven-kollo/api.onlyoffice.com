@@ -29,14 +29,14 @@
     <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - 用户正在尝试单击文档版本历史记录中的特定文档版本。</li>
     <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - 用户尝试通过单击 <em>存储中的图像</em> 按钮来插入图像。</li>
     <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - 用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据。</li>
-    <li><a href="#onRequestOpen">onRequestOpen</a> - the user is trying to open an external link.</li>
+    <li><a href="#onRequestOpen">onRequestOpen</a> - 用户正在尝试打开外部链接。</li>
     <li><a href="#onRequestReferenceData">onRequestReferenceData</a> - 用户正尝试通过单击<em>数据</em> 选项卡的<em>外部</em> 链接对话框中的<em>更新值</em> 按钮来刷新从外部文件插入的数据。</li>
-    <li><a href="#onRequestReferenceSource">onRequestReferenceSource</a> - the user is trying to change an external link by clicking the <em>Change source</em> button.</li>
+    <li><a href="#onRequestReferenceSource">onRequestReferenceSource</a> - 用户尝试通过单击<em>更改源</em>按钮来更改外部链接。</li>
     <li><a href="#onRequestRename">onRequestRename</a> - 用户试图通过单击 <em>重命名...</em> 按钮来重命名文件。</li>
     <li><a href="#onRequestRestore">onRequestRestore</a> - 用户正在尝试通过单击版本历史记录中的 <em>恢复</em> 按钮来恢复文件版本。</li>
     <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - 用户试图通过单击 <em>另存为...</em> 按钮来保存文件。</li>
-    <li><a href="#onRequestSelectDocument">onRequestSelectDocument</a> - the user is trying to select a document for comparing or combining.</li>
-    <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
+    <li><a href="#onRequestSelectDocument">onRequestSelectDocument</a> - 用户正在尝试选择一个文档进行比较或组合。</li>
+    <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - 用户尝试通过单击<em>邮件合并</em>按钮来选择收件人数据。</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - 用户在评论中被提及。</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - 用户尝试通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限。</li>
     <li><a href="#onRequestUsers">onRequestUsers</a> - 评论者可以选择其他用户在评论中提及。</li>
@@ -310,9 +310,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
-        Deprecated since version 7.5, please use <a href="#onRequestSelectDocument">onRequestSelectDocument</a> instead.</p>
-        <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - 当用户尝试通过单击<em>存储中的文档</em>按钮来选择要进行比较的文档时调用的函数。
+        自版本 7.5 起已弃用，请改用 <a href="#onRequestSelectDocument">onRequestSelectDocument</a>。</p>
+        <span class="required-descr"><span class="required">*</span><em> - 仅适用于ONLYOFFICE企业版和ONLYOFFICE开发者版</em></span>
     </li>
 
     <li>
@@ -437,11 +437,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history.</p>
-        <p>The document version number is sent in the <em>data</em> parameter.</p>
-        <p>To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
-            When calling this method, the token must be added to validate the parameters.
-            If the method and the <a href="#onRequestHistory">onRequestHistory</a> method is not declared the <em>Version History</em> button will not be displayed.</p>
+        <p><b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - 当用户尝试单击文档版本历史记录中的特定文档版本时调用的函数。</p>
+        <p>文档版本号在<em>data</em>参数中发送。</p>
+        <p>要显示与特定文档版本相对应的更改，您必须调用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法。
+           调用该方法时，必须添加token来验证参数。
+           如果该方法和 <a href="#onRequestHistory">onRequestHistory</a> 方法未声明，则不会显示版本历史记录按钮。</p>
         <img class="screenshot" alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
@@ -516,16 +516,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
-        Deprecated since version 7.5, please use <a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> instead.</p>
+        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - 当用户尝试通过单击<em>邮件合并</em>按钮来选择收件人数据时调用的函数。
+        自版本 7.5 起已弃用，请改用 <a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a>。</p>
     </li>
 
     <li>
-        <p><b id="onRequestOpen" class="copy-link">onRequestOpen</b> - the function called when the user is trying to open an external link by clicking the <em>Open source</em> button.
-        If the method is not declared, this button will not be displayed.</p>
-        <p>To open the editor with the external file referenced by the <em>path</em> or <em>referenceData</em> parameters in a new tab,
-        you must pass a link to this tab by calling the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a> method with the <em>path</em> and <em>windowName</em> parameters.</p>
-        <p>An object with the unique file data, the file path, and a new browser tab name are sent in the <em>data</em> parameter.</p>
+        <p><b id="onRequestOpen" class="copy-link">onRequestOpen</b> - 当用户尝试通过单击<em>打开源</em>按钮打开外部链接时调用的函数。
+         如果未声明该方法，则不会显示此按钮。</p>
+        <p>要在新选项卡中打开包含 <em>path</em> 或 <em>referenceData</em> 参数引用的外部文件的编辑器，
+        您必须通过调用带有 <em>path</em> 和 <em>windowName</em> 参数的方法 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open" target="_blank">window.open</a>, 来传递指向此选项卡的链接。</p>
+        <p>具有唯一文件数据、文件路径和新浏览器选项卡名称的对象将在 <em>data</em> 参数中发送。</p>
         <img class="screenshot" alt="open-source" src="<%= Url.Content("~/content/img/editor/open-source.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
@@ -599,16 +599,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestReferenceSource" class="copy-link">onRequestReferenceSource</b> - the function called when the user is trying to change a source of the external data
-        by clicking the <em>Change source</em> button.</p>
-        <p>An object with the unique file data and the file path or name are sent in the <em>data</em> parameter.</p>
-        <p>When the button is clicked, you must call the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method to change a source of the external data.
-            When calling this method, the token must be added to validate the parameters.
-            If the event is not declared, the <em>Change source</em> button will not be displayed.</p>
-        <note>To send the data to the <em>setReferenceSource</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
-        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+        <p><b id="onRequestReferenceSource" class="copy-link">onRequestReferenceSource</b> - 当用户尝试通过单击<em>更改源</em>
+        按钮更改外部数据源时调用的函数。</p>
+        <p>具有唯一文件数据和文件路径或名称的对象在 <em>data</em> 参数中发送。</p>
+        <p>单击该按钮时，必须调用 <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> 方法来更改外部数据的来源。
+             调用该方法时，必须添加token来验证参数。
+             如果未声明事件，则不会显示<em>更改源</em>按钮。</p>
+        <note>要将数据发送到<em>setReferenceSource</em>方法，建议首先通过<em>referenceData</em>参数搜索文件。
+         如果没有这样的字段或找不到文件，则使用 <em>path</em> 参数。</note>
         <img alt="Change source" class="screenshot" src="<%= Url.Content("~/content/img/editor/change-source.png") %>" />
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestReferenceSource = function () {
     var referenceData =  event.data.referenceData;
@@ -662,12 +662,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</p>
-        <p>The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
-            Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">history object</a>.
-            The type of the document which is specified with this link is sent in the <em>data.fileType</em> parameter.</p>
-        <p>When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again.
-            If the method is not declared the <em>Restore</em> button will not be displayed.</p>
+        <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - 当用户尝试通过单击版本历史记录中的<em>恢复</em>按钮来恢复文件版本时调用的函数。</p>
+        <p>如果从历史记录中调用文档版本，则文档版本号将在 <em>data.version</em> 参数中发送。
+            此外，如果从 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 中调用文档更改，则文档链接会在 <em>data.url</em> 参数中发送。
+            此链接指定的文档类型在 <em>data.fileType</em> 参数中发送。</p>
+        <p>调用该函数时，必须调用 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法再次初始化版本历史记录。
+           如果未声明该方法，则不会显示<em>恢复</em>按钮。</p>
         <div class="note">
             <em>恢复</em> 按钮仅对以前的文档版本显示，对当前版本隐藏。
             在 5.5 版之前，仅当 <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> 设置为 <b>true</b>时， <em>恢复</em> 按钮才可用。
@@ -752,12 +752,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestSelectDocument" class="copy-link">onRequestSelectDocument<span class="required">*</span></b> - the function called when the user is trying to select a document for comparing or combining.</p>
-        <p>The type of document selection is specified in the <em>data.c</em> parameter.</p>
-        <p>To select a document for comparing or combining, you must call the <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a> method.</p>
-        <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+        <p><b id="onRequestSelectDocument" class="copy-link">onRequestSelectDocument<span class="required">*</span></b> - 当用户尝试选择一个文档进行比较或组合时调用的函数。</p>
+        <p>文档选择的类型在<em>data.c</em>参数中指定。</p>
+        <p>要选择一个文档进行比较或合并，您必须调用 <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a> 方法。</p>
+        <span class="required-descr"><span class="required">*</span><em> - 仅适用于ONLYOFFICE企业版和ONLYOFFICE开发者版</em></span>
         <img class="screenshot" alt="onRequestSelectDocument" src="<%= Url.Content("~/content/img/editor/onRequestSelectDocument.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestSelectDocument = function () {
     docEditor.setRequestedDocument({
@@ -776,18 +776,18 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+       其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+       请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
     </li>
 
     <li>
-        <p><b id="onRequestSelectSpreadsheet" class="copy-link">onRequestSelectSpreadsheet</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</p>
-        <p>The type of spreadsheet selection is specified in the <em>data.c</em> parameter.</p>
-        <p>To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> method.
-            When calling this method, the token must be added to validate the parameters.
-            If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.</p>
+        <p><b id="onRequestSelectSpreadsheet" class="copy-link">onRequestSelectSpreadsheet</b> - 当用户尝试通过单击<em>邮件合并</em>按钮来选择收件人数据时调用的函数。</p>
+        <p>电子表格选择的类型在 <em>data.c</em> 参数中指定。</p>
+        <p>要选择收件人数据，您必须调用 <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> 方法。
+           调用该方法时，必须添加token来验证参数。
+           如果未声明该方法，<em>邮件合并</em>按钮将变灰且不可单击。</p>
         <img class="screenshot" alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestSelectSpreadsheet = function () {
     docEditor.setRequestedSpreadsheet({
@@ -806,15 +806,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+       其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+       请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
     </li>
 
     <li>
-        <p><b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - the function called when the user is mentioned in a comment.</p>
-        <p>The message and the list of emails is sent in the <em>data</em> parameter.
-            The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.</p>
-        <p>The list of users to be mentioned should be completed by <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</p>
+        <p><b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - 当评论中提到用户时调用的函数。</p>
+        <p>消息和电子邮件列表在 <em>data</em> 参数中发送。
+             注释数据在 <em>data.actionLink</em> 参数中接收，然后必须在配置中用作 <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> 参数的值。</p>
+        <p>要提及的用户列表应通过 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法完成。</p>
         <div class="note">
             在 5.4 版本中，只有在设置了 <a href="#onRequestUsers">onRequestUsers</a> 事件时才能使用 <b>onRequestSendNotify</b> 事件。
             从 5.5 版开始， <b>onRequestSendNotify</b> 和 <b>onRequestUsers</b> 之间没有这种依赖关系两者都可以独立设置。

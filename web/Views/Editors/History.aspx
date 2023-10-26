@@ -87,7 +87,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 调用 <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> 事件时，必须执行 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法。
                 此方法包含对应版本文件的绝对 URL。
             </p>
-            <p>When calling the <em>setHistoryData</em> method to view the document history version, the token must be added to validate the parameters.</p>
+            <p>调用<em>setHistoryData</em>方法查看文档历史版本时，必须添加token来验证参数。</p>
             <pre>
 var onRequestHistoryData = function (event) {
     var version = event.data;
@@ -112,9 +112,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In the configuration script for Document Editor initialization, specify the event handler which will <a href="<%= Url.Action("config/events") %>#onRequestRestore">restore</a> the file version when the user clicks the <em>Restore</em> button in the version history.
-                When the <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> event is called, the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method must be executed to initialize version history again.
-                This method contains document history for each document version, if the history parameter has been present for each version.
+                在文档编辑器初始化的配置脚本中，指定事件处理程序，当用户单击版本历史记录中的<em>恢复</em>按钮时，将 <a href="<%= Url.Action("config/events") %>#onRequestRestore">恢复</a> 文件版本。
+                当调用 <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> 事件时，必须执行 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法才能再次初始化版本历史记录。
+                如果每个版本都存在历史参数，则此方法包含每个文档版本的文档历史记录。
             </p>
             <pre>
 var onRequestRestore = function (event) {
@@ -242,7 +242,7 @@ docEditor.refreshHistory({
                 必须保存文件，并且必须使用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法将其地址作为 changesUrl 参数发送。
                 必须将指向先前文档版本 (<em>previous.url</em>) 的链接添加到对象中。
             </p>
-            <p>When calling the <em>setHistoryData</em> method to view the document history version, the token must be added to validate the parameters.</p>
+            <p>当调用<em>setHistoryData</em>方法查看文档历史版本时，必须添加token来验证参数。</p>
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "https://example.com/url-to-changes.zip",

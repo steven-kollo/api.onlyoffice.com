@@ -74,14 +74,14 @@
                         <b>示例</b>:  "https://example.com";
                     </li>
                     <li>
-                        <b>key</b> - defines the unique document identifier used by the service to take the data from the co-editing session.
-                        In case the known key is sent, the document will be taken from the cache.
-                        Every time the document is edited and saved, the key must be generated anew.
-                        The document url can be used as the <b>key</b> but without the special characters and the length is limited to 128 symbols,
+                        <b>key</b> - 定义服务用于从共同编辑会话获取数据的唯一文档标识符。
+                         如果发送已知密钥，将从缓存中获取文档。
+                         每次编辑并保存文档时，都必须重新生成密钥。
+                         文档 url 可以用作<b>key</b>，但不能包含特殊字符，且长度限制为 128 个字符,
                         <br />
-                        <b>type</b>: string,
+                        <b>类型</b>: string,
                         <br />
-                        <b>example</b>:  "Khirz6zTPdfd7".
+                        <b>示例</b>:  "Khirz6zTPdfd7".
                     </li>
                 </ul>
             <td>object</td>

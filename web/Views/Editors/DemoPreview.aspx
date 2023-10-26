@@ -85,8 +85,8 @@
         </li>
 
         <li>
-            <p>Edit the configuration files in the sample changing the default path for the one to the editors installed at step 1 and other parameters available for editor configuration.</p>
-            <p>You can find the configuration files at the following paths:</p>
+            <p>编辑示例中的配置文件，将配置文件的默认路径更改为步骤 1 中安装的编辑器以及可用于编辑器配置的其他参数。</p>
+            <p>您可以在以下路径找到配置文件：</p>
             <ul>
                 <li><b>.Net (C# MVC)</b> - <em>web/documentserver-example/csharp-mvc/web.appsettings.config</em></li>
                 <li><b>.Net (C#)</b> - <em>web/documentserver-example/csharp/settings.config</em></li>

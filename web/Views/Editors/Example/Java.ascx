@@ -141,7 +141,7 @@ files.docservice.url.site=https://documentserver/</pre>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">步骤 2.</span>安装的先决条件及使用编辑器运行网站</h2>
 <ol>
-    <li>Install <b>Java</b> following the instructions <a href="https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8" target="_blank">here</a>.
+    <li>按照 <a href="https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8" target="_blank">此处</a> 说明安装 <b>Java</b>。
     </li>
     <li>下载包含 Java 示例的存档并解压缩存档：
         <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
@@ -204,23 +204,23 @@ sudo chmod -R ugo+rw /{path}
 
 <h2 id="Docker" class="copy-link">对于 Docker</h2>
 
-<h2 id="docker-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
-<p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example" target="_blank">for Docker</a>.</p>
+<h2 id="docker-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
+<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> （打包为文档服务器）。</p>
+<p>请参阅详细指南，了解如何 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example" target="_blank">为Docker安装文档服务器</a>。</p>
 
-<h2 id="docker-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
+<h2 id="docker-2" class="copy-link"><span class="style_step">步骤 2. </span>安装先决条件并使用编辑器运行网站</h2>
 <ol>
-    <li>Install <b>Java</b> following the instructions <a href="https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8" target="_blank">here</a>.
+    <li>按照 <a href="https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8" target="_blank">此处</a> 说明安装 <b>Java</b>。
     </li>
-    <li>Download the archive with the Java example and unpack the archive:
+    <li>下载包含 Java 示例的存档并解压存档：
         <span class="commandline">wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip</span>
         <span class="commandline">unzip Java.Example.zip</span>
     </li>
-    <li>Change the current directory for the project directory:
+    <li>将当前目录更改为项目目录：
         <div class="commandline">cd Java\ Example/</div>
     </li>
-    <li>Edit the <em>src/main/resources/settings.properties</em> configuration file.
-        Specify the name of your local server with the ONLYOFFICE Document Server installed:
+    <li>编辑<em>src/main/resources/settings.properties</em>配置文件。
+        指定安装了 ONLYOFFICE 文档服务器的本地服务器的名称：
         <div class="commandline">nano src/main/resources/settings.properties</div>
         <p>编辑以下行：</p>
 
@@ -237,10 +237,10 @@ files.docservice.url.site=https://documentserver/
     <li>之后，所有的 <em>bin</em> 文件将被传递到 <em>./target</em> 文件夹。</li>
 </ol>
 
-<h2 id="docker-3" class="copy-link"><span class="style_step">Step 3. </span>Check accessibility</h2>
+<h2 id="docker-3" class="copy-link"><span class="style_step">步骤 3. </span>检查可访问性</h2>
 <p>
-    In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
-    Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+    如果示例和文档服务器安装在不同的计算机上，请确保安装了示例的服务器可以使用您在配置文件中指定的地址（而不是 <b>documentserver</b>）访问文档服务器。
+    确保文档服务器可以访问安装了示例的服务器，该示例的地址是您在配置文件中指定的地址，而不是 <b>example.com</b>。
 </p>
 
-<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
+<p>如果您成功集成了编辑器，结果应类似于我们网站上的 <a href="<%= Url.Action("demopreview") %>#DemoPreview">演示预览</a>。</p>

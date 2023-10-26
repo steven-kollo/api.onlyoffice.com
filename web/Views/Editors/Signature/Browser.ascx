@@ -169,11 +169,11 @@
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w</pre>
     </li>
     <li>
-        <p><b id="setReferenceSource" class="copy-link">setReferenceSource</b> - when calling the <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> method to change a source of the external data, the <a href="<%= Url.Action("methods") %>#setReferenceSource-token">token</a> must be added to validate the parameters.</p>
+        <p><b id="setReferenceSource" class="copy-link">setReferenceSource</b> - 当调用 <a href="<%= Url.Action("methods") %>#setReferenceSource">setReferenceSource</a> 方法更改外部数据源时，<a href="<%= Url .Action("methods") %>#setReferenceSource-token">必须添加token</a> 以验证参数。</p>
 
         <p>
-            The <em>payload</em> for the JWT token in the JSON format must have the same structure as the method parameter.
-            The parameter list to be signed is not strictly regulated, but we recommend that you specify all the parameter sent:
+            JSON 格式的 JWT 令牌的<em>有效负载</em>必须与方法参数具有相同的结构。
+            需要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
         </p>
 
         <pre>
@@ -189,19 +189,19 @@
 }
 </pre>
         <p>
-            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+           其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+           请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
         </p>
 
-        <div class="header-gray">Sample token</div>
+        <div class="header-gray">示例 token</div>
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w</pre>
     </li>
     <li>
-        <p><b id="setRequestedDocument" class="copy-link">setRequestedDocument</b> - when calling the <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a> method to select a document for comparing or combining, the <a href="<%= Url.Action("methods") %>#setRequestedDocument-token">token</a> must be added to validate the parameters.</p>
+        <p><b id="setRequestedDocument" class="copy-link">setRequestedDocument</b> - 当调用 <a href="<%= Url.Action("methods") %>#setRequestedDocument">setRequestedDocument</a> 方法选择要比较或组合的文档时，<a href="<%= Url.Action("methods") %>#setRequestedDocument-token">必须添加token</a> 以验证参数。</p>
 
         <p>
-            The <em>payload</em> for the JWT token in the JSON format must have the same structure as the method parameter.
-            The parameter list to be signed is not strictly regulated, but we recommend that you specify all the parameter sent:
+            JSON 格式的 JWT 令牌的<em>有效负载</em>必须与方法参数具有相同的结构。
+            需要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
         </p>
 
         <pre>
@@ -212,19 +212,19 @@
 }
 </pre>
         <p>
-            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-        </p>
+           其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+           请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
+       </p>
 
-        <div class="header-gray">Sample token</div>
+        <div class="header-gray">示例 token</div>
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8</pre>
     </li>
     <li>
-        <p><b id="setRequestedSpreadsheet" class="copy-link">setRequestedSpreadsheet</b> - when calling the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> method to insert recipient data for mail merge into the file, the <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet-token">token</a> must be added to validate the parameters.</p>
+        <p><b id="setRequestedSpreadsheet" class="copy-link">setRequestedSpreadsheet</b> - 当调用 <a href="<%= Url.Action("methods") %>#setRequestedSpreadsheet">setRequestedSpreadsheet</a> 方法将邮件合并的收件人数据插入文件时，<a href="<% = Url.Action("methods") %>#setRequestedSpreadsheet-token">必须添加令牌</a> 以验证参数。</p>
 
         <p>
-            The <em>payload</em> for the JWT token in the JSON format must have the same structure as the method parameter.
-            The parameter list to be signed is not strictly regulated, but we recommend that you specify all the parameter sent:
+            JSON 格式的 JWT 令牌的<em>有效负载</em>必须与方法参数具有相同的结构。
+            需要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
         </p>
 
         <pre>
@@ -235,11 +235,11 @@
 }
 </pre>
         <p>
-            Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+           其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+           请参阅 <a href="<%= Url.Action("howitworks") %>">工作原理</a> 部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
         </p>
 
-        <div class="header-gray">Sample token</div>
+        <div class="header-gray">示例 token</div>
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ</pre>
     </li>
     <li>

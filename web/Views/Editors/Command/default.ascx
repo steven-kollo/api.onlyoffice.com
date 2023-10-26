@@ -30,7 +30,7 @@
     <tbody>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/deleteforgotten") %>">deleteForgotten</a></td>
-            <td>This command allows to delete a forgotten file.</td>
+            <td>该命令允许删除被遗忘的文件。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/drop") %>">drop</a></td>
@@ -42,11 +42,11 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/getforgotten") %>">getForgotten</a></td>
-            <td>This command allows to request a forgotten file.</td>
+            <td>该命令允许请求一个被遗忘的文件。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/getforgottenlist") %>">getForgottenList</a></td>
-            <td>This command allows to request a list of the forgotten files.</td>
+            <td>此命令允许请求被遗忘文件的列表。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/info") %>">info</a></td>
