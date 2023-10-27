@@ -6,15 +6,16 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Creating plugin entry point
+    index.html
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Creating plugin entry point</span>
+        <span class="hdr">index.html</span>
     </h1>
 
-    <p class="dscr">Each plugin acts in its own iframe. The editor will connect the <em>index.html</em> file, specified in the <a href="<%= Url.Action("config") %>">config.json</a> plugin configuration file. The <em>index.html</em> file is the plugin entry point, connecting the <em>plugin.js</em> file - the base file needed for work with plugins.</p>
+    <p class="dscr">Each plugin acts in its own iframe. The editor will connect the <em>index.html</em> file, specified in the <a href="<%= Url.Action("config") %>">config.json</a> plugin configuration file.
+        The <em>index.html</em> file is the plugin entry point, connecting the <a href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js" target="_blank">plugin.js</a> file - the base file needed for work with plugins in the editors.</p>
 
     <div class="header-gray">Example</div>
     <pre>
@@ -35,6 +36,9 @@
 </pre>
 
     <p>The <em>&lt;head&gt;...&lt;/head&gt;</em> section contains the links to all the scripts and stylesheets necessary for the plugin correct work (both local and remote, if the plugin uses some). It also includes the link to the <em>plugins.js</em> base file needed for correct work with the editors and containing the base plugin method work.</p>
+    <p>If the plugin is visual and you want its buttons and elements to look like those in the editor,
+        then you can connect the <a href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js" target="_blank">plugins-ui.js</a> and <a href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css" target="_blank">plugins.css</a> files.
+    More information about ONLYOFFICE styles and elements can be found <a href="<%= Url.Action("styles") %>">here</a>.</p>
 
-    <p>The body can contains the <em>&lt;div&gt;...&lt;/div&gt;</em> tags with the placeholders where the plugin components will be inserted. The behavior of these plugin components is described in the <a href="<%= Url.Action("code") %>">pluginCode.js</a> file itself.</p>
+    <p>The body can contains the <em>&lt;div&gt;...&lt;/div&gt;</em> tags with the placeholders where the plugin components will be inserted. The behavior of these plugin components is described in the <a href="<%= Url.Action("code") %>">file with plugin code</a> itself.</p>
 </asp:Content>

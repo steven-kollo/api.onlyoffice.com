@@ -60,6 +60,10 @@
     <% if (license)
        { %>
     <li><a href="#statusBar">statusBar</a></li>
+    <% } %>
+    <li><a href="#submitForm">submitForm</a></li>
+    <% if (license)
+       { %>
     <li><a href="#toolbar">toolbar</a></li>
     <% } %>
     <li><a href="#toolbarHideFileName">toolbarHideFileName</a></li>
@@ -200,7 +204,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
+                <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -1125,21 +1129,20 @@
             </td>
         </tr>
         <% } %>
-        <%--<tr>
+        <tr>
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
-                Defines if the <b>Submit form</b> button is displayed or hidden.
-                Button will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b> and at least one of the <a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>, <a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a> or <a href="<%= Url.Action("config/document/permissions") %>#review">review</a> permissions is set to <b>true</b>.
-                The default value is <b>false</b>.
+                Defines if the <b>Submit</b> button is displayed or hidden on the top toolbar.
+                Button will only be available for the <em>oform</em> format. The default value is <b>false</b>.
             </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/submitForm.png") %>" alt="" />
+                <img alt="Submit button" class="screenshot" src="<%= Url.Content("~/content/img/editor/submitForm.png") %>" />
             </td>
-        </tr>--%>
+        </tr>
         <% if (license)
             { %>
         <tr>
@@ -1169,7 +1172,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
-                <img class="screenshot" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
+                <img class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -1388,7 +1391,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"statusBar": true,
-            <% } %><%--"submitForm": true,--%>
+            <% } %>"submitForm": true,
             <% if (license)
                 { %>"toolbar": true,
             <% } %>"toolbarHideFileName": false,

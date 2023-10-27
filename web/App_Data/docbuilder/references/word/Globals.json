@@ -1140,6 +1140,65 @@
       "\"out\""
     ]
   },
+  "WatermarkType": {
+    "name": "WatermarkType",
+    "description": "<p>The watermark type.</p>",
+    "type": [
+      "\"none\"",
+      "\"text\"",
+      "\"image\""
+    ]
+  },
+  "WatermarkDirection": {
+    "name": "WatermarkDirection",
+    "description": "<p>The watermark direction.</p>",
+    "type": [
+      "\"horizontal\"",
+      "\"clockwise45\"",
+      "\"counterclockwise45\""
+    ]
+  },
+  "CommentReportRecord": {
+    "name": "CommentReportRecord",
+    "description": "<p>Record of one comment.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "boolean",
+        "name": "IsAnswer",
+        "description": "<p>Specifies whether this is an initial comment or a reply to another comment.</p>"
+      },
+      {
+        "type": "string",
+        "name": "CommentMessage",
+        "description": "<p>The text of the current comment.</p>"
+      },
+      {
+        "type": "number",
+        "name": "Date",
+        "description": "<p>The time when this change was made in local time.</p>"
+      },
+      {
+        "type": "number",
+        "name": "DateUTC",
+        "description": "<p>The time when this change was made in UTC.</p>"
+      },
+      {
+        "type": "string",
+        "name": "QuoteText",
+        "description": "<p>The text to which this comment is related.</p>"
+      }
+    ]
+  },
+  "CommentReport": {
+    "name": "CommentReport",
+    "description": "<p>Report on all comments.\nThis is a dictionary where the keys are usernames.</p>",
+    "type": [
+      "Object.<string, Array.<CommentReportRecord>>"
+    ]
+  },
   "ReviewReportRecordType": {
     "name": "ReviewReportRecordType",
     "description": "<p>Review record type.</p>",

@@ -206,6 +206,8 @@ git submodule update --init --recursive</span>
                 Editing for <em>csv</em> and <em>txt</em> files is available by default.
             </p>
         </li>
+        <li>When accessing a document without download permission, file printing and using the system clipboard are not available.
+            Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.</li>
     </ul>
 
 

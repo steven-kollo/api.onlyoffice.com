@@ -1,12 +1,32 @@
 # Change Log
 
 - docspace: added the DocSpace plugins SDK
+- restructured the docbuilder and plugins sections
+- docbuilder: added builder samples
+
+## 4.3.0
+- editors: added the 3 type for the forcesavetype parameter of the callback handler
+- editors: added the editorConfig.customization.submitForm parameter
+- editors: the setMailMergeRecipients method is deprecated, please use the setRequestedSpreadsheet method instead
+- editors: the events.onRequestMailMergeRecipients event is deprecated, please use the events.onRequestSelectSpreadsheet event instead
+- editors: added the setReferenceSource method
+- editors: added the events.onRequestReferenceSource event
+- editors: added the -9 error code to the Conversion API
+- editors: added the key field to the document.referenceData parameter
+- editors: added the deleteForgotten, getForgotten, and getForgottenList commands
+- editors: added the events.onRequestOpen event
+- editors: the setRevisedFile method is deprecated, please use the setRequestedDocument method instead
+- editors: the events.onRequestCompareFile event is deprecated, please use the events.onRequestSelectDocument event instead
+- plugins: v7.5.0
+- docbuilder: v7.5.0
+- desktop: v7.5
+- desktop: added the uiTheme parameter to the portal:login command
 
 ## 4.2.0
 - docspace: v1.1.2
 - docspace: added the DocSpace frame SDK
 - editors: added the SuiteCRM plugin
-- editor: added the argument parameter to the Web Document Builder API
+- editors: added the argument parameter to the Web Document Builder API
 - editors: added the lang parameter to the WOPI discovery
 - editors: download examples from github
 - plugins: added the store.categories config parameter

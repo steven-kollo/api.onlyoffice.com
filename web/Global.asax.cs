@@ -138,6 +138,10 @@ namespace ASC.Api.Web.Help
             bundles.Add(new Bundle("~/content/connector", new CssMinify())
                 .Include(
                     "~/content/connector.css"));
+
+            bundles.Add(new Bundle("~/content/builder-samples", new CssMinify())
+                .Include(
+                    "~/content/builder-samples.css"));
         }
 
         protected void Application_Start()

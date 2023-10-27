@@ -112,6 +112,17 @@
             <path>api/2.0/files/file/referencedata</path>
             <httpMethod>POST</httpMethod>
         </member>
+        <member name="M:ASC.Files.Api.EditorController`1.ProtectUsers(`0)">
+            <summary>
+            
+            </summary>
+            <short>Get protect users</short>
+            <category>Files</category>
+            <param type="System.Int32, System" name="fileId"></param>
+            <returns type="ASC.Web.Files.Services.WCFService.MentionWrapper, ASC.Files.Core">List of users</returns>
+            <path>api/2.0/files/file/{fileId}/protectusers</path>
+            <httpMethod>GET</httpMethod>
+        </member>
         <member name="M:ASC.Files.Api.EditorController.CheckDocServiceUrl(ASC.Files.Core.ApiModels.RequestDto.CheckDocServiceUrlRequestDto)">
             <summary>
             Checks the document service location.
@@ -507,7 +518,7 @@
             <httpMethod>DELETE</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.FoldersController`1.GetFolderAsync(`0,System.Nullable{System.Guid},System.Nullable{ASC.Files.Core.FilterType},`0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+        <member name="M:ASC.Files.Api.FoldersController`1.GetFolderAsync(`0,System.Nullable{System.Guid},System.Nullable{ASC.Files.Core.FilterType},`0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.Core.ApplyFilterOption})">
             <summary>
             Returns the detailed list of files and folders located in the folder with the ID specified in the request.
             </summary>
@@ -522,6 +533,7 @@
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
             <param type="System.Nullable{System.Boolean}, System" name="excludeSubject">Specifies whether to exclude a subject or not</param>
+            <param type="System.Nullable{ASC.Files.Core.Core.ApplyFilterOption}, System" name="applyFilterOption"></param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">Folder contents</returns>
             <path>api/2.0/files/{folderId}</path>
             <httpMethod>GET</httpMethod>
@@ -616,7 +628,7 @@
             <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.FoldersControllerCommon.GetMyFolderAsync(System.Nullable{System.Guid},System.Nullable{ASC.Files.Core.FilterType},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+        <member name="M:ASC.Files.Api.FoldersControllerCommon.GetMyFolderAsync(System.Nullable{System.Guid},System.Nullable{ASC.Files.Core.FilterType},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.Core.ApplyFilterOption})">
             <summary>
             Returns the detailed list of files and folders located in the "My documents" section.
             </summary>
@@ -626,6 +638,7 @@
             <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
+            <param type="System.Nullable{ASC.Files.Core.Core.ApplyFilterOption}, System" name="applyFilterOption"></param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "My documents" section contents</returns>
             <path>api/2.0/files/@my</path>
             <httpMethod>GET</httpMethod>
@@ -717,7 +730,7 @@
             <path>api/2.0/files/@templates</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.FoldersControllerCommon.GetTrashFolderAsync(System.Nullable{System.Guid},System.Nullable{ASC.Files.Core.FilterType},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+        <member name="M:ASC.Files.Api.FoldersControllerCommon.GetTrashFolderAsync(System.Nullable{System.Guid},System.Nullable{ASC.Files.Core.FilterType},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.Core.ApplyFilterOption})">
             <summary>
             Returns the detailed list of files and folders located in the "Trash" section.
             </summary>
@@ -727,6 +740,7 @@
             <param type="System.Nullable{ASC.Files.Core.FilterType}, System" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5), ImagesOnly (7), ByUser (8), ByDepartment (9), ArchiveOnly (10), ByExtension (11), MediaOnly (12), EditingRooms (14), CustomRooms (17), OFormTemplateOnly (18), OFormOnly (19)">Filter type</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withsubfolders">Specifies whether to return sections with or without subfolders</param>
+            <param type="System.Nullable{ASC.Files.Core.Core.ApplyFilterOption}, System" name="applyFilterOption"></param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto, ASC.Files.Core">The "Trash" section contents</returns>
             <path>api/2.0/files/@trash</path>
             <httpMethod>GET</httpMethod>
@@ -837,7 +851,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.OperationController.TerminateTasks">
+        <member name="M:ASC.Files.Api.OperationController.TerminateTasks(System.String)">
             <summary>
             Finishes all the active operations.
             </summary>
@@ -848,7 +862,7 @@
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryController`1.GenerateSharedLinkAsync(`0,ASC.Files.Core.ApiModels.RequestDto.GenerateSharedLinkRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityController`1.GenerateSharedLinkAsync(`0,ASC.Files.Core.ApiModels.RequestDto.GenerateSharedLinkRequestDto)">
             <summary>
             Returns an external link to the shared file with the ID specified in the request.
             </summary>
@@ -860,7 +874,7 @@
             <path>api/2.0/files/{fileId}/sharedlinkAsync</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryController`1.GetFileSecurityInfoAsync(`0)">
+        <member name="M:ASC.Files.Api.SecurityController`1.GetFileSecurityInfoAsync(`0)">
             <summary>
             Returns the detailed information about the shared file with the ID specified in the request.
             </summary>
@@ -873,7 +887,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryController`1.GetFolderSecurityInfoAsync(`0)">
+        <member name="M:ASC.Files.Api.SecurityController`1.GetFolderSecurityInfoAsync(`0)">
             <summary>
             Returns the detailed information about the shared folder with the ID specified in the request.
             </summary>
@@ -886,7 +900,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryController`1.SetAceLinkAsync(`0,ASC.Files.Core.ApiModels.RequestDto.GenerateSharedLinkRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityController`1.SetAceLinkAsync(`0,ASC.Files.Core.ApiModels.RequestDto.GenerateSharedLinkRequestDto)">
             <summary>
             Sets the access status for the external link to the file with the ID specified in the request.
             </summary>
@@ -898,7 +912,7 @@
             <path>api/2.0/files/{fileId}/setacelink</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryController`1.SetFileSecurityInfoAsync(`0,ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityController`1.SetFileSecurityInfoAsync(`0,ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto)">
             <summary>
             Sets the sharing settings to a file with the ID specified in the request.
             </summary>
@@ -912,7 +926,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryController`1.SetFolderSecurityInfoAsync(`0,ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityController`1.SetFolderSecurityInfoAsync(`0,ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto)">
             <summary>
             Sets the sharing settings to a folder with the ID specified in the request.
             </summary>
@@ -926,7 +940,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryController`1.GetEncryptionAccess(`0)">
+        <member name="M:ASC.Files.Api.SecurityController`1.GetEncryptionAccess(`0)">
             <summary>
             Returns the encryption keys to access a file with the ID specified in the request.
             </summary>
@@ -938,7 +952,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryController`1.SendEditorNotify(`0,ASC.Web.Files.Services.WCFService.MentionMessageWrapper)">
+        <member name="M:ASC.Files.Api.SecurityController`1.SendEditorNotify(`0,ASC.Web.Files.Services.WCFService.MentionMessageWrapper)">
             <summary>
             Sends a message to the users who are mentioned in the file with the ID specified in the request.
             </summary>
@@ -951,7 +965,7 @@
             <httpMethod>POST</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryControllerCommon.ChangeOwnerAsync(ASC.Files.Core.ApiModels.RequestDto.ChangeOwnerRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityControllerCommon.ChangeOwnerAsync(ASC.Files.Core.ApiModels.RequestDto.ChangeOwnerRequestDto)">
             <summary>
             Changes the owner of the file with the ID specified in the request.
             </summary>
@@ -963,7 +977,7 @@
             <httpMethod>POST</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryControllerCommon.GetSecurityInfoAsync(ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityControllerCommon.GetSecurityInfoAsync(ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto)">
             <summary>
             Returns the sharing rights for all the files and folders specified in the request.
             </summary>
@@ -976,7 +990,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryControllerCommon.RemoveSecurityInfoAsync(ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityControllerCommon.RemoveSecurityInfoAsync(ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto)">
             <summary>
             Removes the sharing rights from all the files and folders specified in the request.
             </summary>
@@ -988,7 +1002,7 @@
             <httpMethod>DELETE</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.SecutiryControllerCommon.SetSecurityInfoAsync(ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityControllerCommon.SetSecurityInfoAsync(ASC.Files.Core.ApiModels.RequestDto.SecurityInfoRequestDto)">
             <summary>
             Sets the sharing rights to all the files and folders specified in the request.
             </summary>
@@ -1001,7 +1015,30 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.SettingsController.ChangeAccessToThirdparty(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
+        <member name="M:ASC.Files.Api.SecurityControllerCommon.GetExternalShareDataAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <short>Get external share data</short>
+            <category>Sharing</category>
+            <param type="ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto, ASC.Files.Core" name="key"></param>
+            <returns type="ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto, ASC.Files.Core"></returns>
+            <path>api/2.0/files/share/{key}</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.Files.Api.SecurityControllerCommon.ApplyExternalSharePasswordAsync(System.String,ASC.Files.Core.ApiModels.RequestDto.ExternalShareRequestDto)">
+            <summary>
+            
+            </summary>
+            <short>Apply external share password</short>
+            <category>Sharing</category>
+            <param type="ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto, ASC.Files.Core" name="key"></param>
+            <param type="ASC.Files.Core.ApiModels.RequestDto.ExternalShareRequestDto, ASC.Files.Core" name="inDto"></param>
+            <returns type="ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto, ASC.Files.Core"></returns>
+            <path>api/2.0/files/share/{key}/password</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.Files.Api.SettingsController.ChangeAccessToThirdpartyAsync(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
             <summary>
             Changes the access to the third-party settings.
             </summary>
@@ -1082,7 +1119,7 @@
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Files.Api.SettingsController.ExternalShare(ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto)">
+        <member name="M:ASC.Files.Api.SettingsController.ExternalShareAsync(ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto)">
             <summary>
             Changes the ability to share a file externally.
             </summary>
@@ -1093,7 +1130,7 @@
             <path>api/2.0/files/settings/external</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.SettingsController.ExternalShareSocialMedia(ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto)">
+        <member name="M:ASC.Files.Api.SettingsController.ExternalShareSocialMediaAsync(ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto)">
             <summary>
             Changes the ability to share a file externally on social networks.
             </summary>
@@ -1166,7 +1203,7 @@
             <path>api/2.0/files/storeforcesave</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.SettingsController.StoreOriginal(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
+        <member name="M:ASC.Files.Api.SettingsController.StoreOriginalAsync(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
             <summary>
             Changes the ability to upload documents in the original formats as well.
             </summary>
@@ -1177,7 +1214,7 @@
             <path>api/2.0/files/storeoriginal</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.SettingsController.KeepNewFileName(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
+        <member name="M:ASC.Files.Api.SettingsController.KeepNewFileNameAsync(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
             <summary>
             Specifies whether to ask a user for a file name on creation or not.
             </summary>
@@ -1188,7 +1225,7 @@
             <path>api/2.0/files/keepnewfilename</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.SettingsController.UpdateIfExist(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
+        <member name="M:ASC.Files.Api.SettingsController.UpdateIfExistAsync(ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto)">
             <summary>
             Updates a file version if a file with such a name already exists.
             </summary>
@@ -1198,6 +1235,16 @@
             <returns type="System.Boolean, System">Boolean value: true if the parameter is enabled</returns>
             <path>api/2.0/files/updateifexist</path>
             <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.Files.Api.SettingsController.GetAutomaticallyCleanUp">
+            <summary>
+            Get the trash bin auto-clearing setting.
+            </summary>
+            <short>Get the trash bin auto-clearing setting</short>
+            <category>Settings</category>
+            <returns type="ASC.Files.Core.AutoCleanUpData, ASC.Files.Core">The auto-clearing setting properties: auto-clearing or not, a time interval when the auto-clearing will be performed</returns>
+            <path>api/2.0/files/settings/autocleanup</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Files.Api.SettingsController.ChangeAutomaticallyCleanUp(ASC.Files.Core.ApiModels.RequestDto.AutoCleanupRequestDto)">
             <summary>
@@ -1209,16 +1256,6 @@
             <returns type="ASC.Files.Core.AutoCleanUpData, ASC.Files.Core">The auto-clearing setting properties: auto-clearing or not, a time interval when the auto-clearing will be performed</returns>
             <path>api/2.0/files/settings/autocleanup</path>
             <httpMethod>PUT</httpMethod>
-        </member>
-        <member name="M:ASC.Files.Api.SettingsController.GetAutomaticallyCleanUp">
-            <summary>
-            Returns the auto-clearing setting properties.
-            </summary>
-            <short>Get the auto-clearing setting properties</short>
-            <category>Settings</category>
-            <returns type="ASC.Files.Core.AutoCleanUpData, ASC.Files.Core">The auto-clearing setting properties: auto-clearing or not, a time interval when the auto-clearing will be performed</returns>
-            <path>api/2.0/files/settings/autocleanup</path>
-            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Files.Api.SettingsController.ChangeDafaultAccessRights(System.Collections.Generic.List{ASC.Files.Core.Security.FileShare})">
             <summary>
@@ -1314,7 +1351,7 @@
             <path>api/2.0/files/templates</path>
             <httpMethod>DELETE</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.ThirdpartyController.Capabilities">
+        <member name="M:ASC.Files.Api.ThirdpartyController.CapabilitiesAsync">
             <summary>
             Returns a list of the available providers.
             </summary>
@@ -1326,7 +1363,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.ThirdpartyController.CreateWordpressPost(ASC.Files.Core.ApiModels.RequestDto.CreateWordpressPostRequestDto)">
+        <member name="M:ASC.Files.Api.ThirdpartyController.CreateWordpressPostAsync(ASC.Files.Core.ApiModels.RequestDto.CreateWordpressPostRequestDto)">
             <summary>
             Creates a WordPress post with the parameters specified in the request.
             </summary>
@@ -1350,7 +1387,7 @@
             <httpMethod>DELETE</httpMethod>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
-        <member name="M:ASC.Files.Api.ThirdpartyController.DeleteWordpressInfo">
+        <member name="M:ASC.Files.Api.ThirdpartyController.DeleteWordpressInfoAsync">
             <summary>
             Deletes the WordPress plugin information.
             </summary>
@@ -1393,7 +1430,7 @@
             <path>api/2.0/files/thirdparty/backup</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.ThirdpartyController.GetWordpressInfo">
+        <member name="M:ASC.Files.Api.ThirdpartyController.GetWordpressInfoAsync">
             <summary>
             Returns the WordPress plugin information.
             </summary>
@@ -1430,7 +1467,7 @@
             <httpMethod>POST</httpMethod>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
-        <member name="M:ASC.Files.Api.ThirdpartyController.WordpressSave(ASC.Files.Core.ApiModels.RequestDto.WordpressSaveRequestDto)">
+        <member name="M:ASC.Files.Api.ThirdpartyController.WordpressSaveAsync(ASC.Files.Core.ApiModels.RequestDto.WordpressSaveRequestDto)">
             <summary>
             Saves the user WordPress information when logging in.
             </summary>
@@ -1685,30 +1722,56 @@
             <path>api/2.0/files/rooms/{id}/share</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.VirtualRoomsController`1.GetRoomSecurityInfoAsync(`0)">
+        <member name="M:ASC.Files.Api.VirtualRoomsController`1.GetRoomSecurityInfoAsync(`0,ASC.Files.Core.Security.ShareFilterType)">
             <summary>
             Returns the access rights of a room with the ID specified in the request.
             </summary>
             <short>Get room access rights</short>
             <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
+            <param name="filterType">
+            Share type filter
+            </param>
             <returns type="ASC.Files.Core.ApiModels.ResponseDto.FileShareDto, ASC.Files.Core">Security information of room files</returns>
             <path>api/2.0/files/rooms/{id}/share</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Files.Api.VirtualRoomsController`1.SetInvintationLinkAsync(`0,ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto)">
+        <member name="M:ASC.Files.Api.VirtualRoomsController`1.SetLinkAsync(`0,ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto)">
             <summary>
-            Sets an external link to invite the users to a room with the ID specified in the request.
+            Sets an external or invitation link with the ID specified in the request.
             </summary>
-            <short>Set an external invitation link</short>
+            <short>Set an external or invitation link</short>
             <category>Rooms</category>
             <param type="System.Int32, System" method="url" name="id">Room ID</param>
-            <param type="ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto, ASC.Files.Core" name="inDto">Invitation link request parameters</param>
-            <returns type="ASC.Files.Core.ApiModels.ResponseDto.FileShareDto, ASC.Files.Core">Security information of room files</returns>
+            <param type="ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto, ASC.Files.Core" name="inDto">Invitation link request parameters</param>
+            <returns type="ASC.Files.Core.ApiModels.ResponseDto.FileShareDto, ASC.Files.Core">Security information of room</returns>
             <path>api/2.0/files/rooms/{id}/links</path>
             <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.Files.Api.VirtualRoomsController`1.GetLinksAsync(`0,System.Nullable{ASC.Files.Core.ApiModels.ResponseDto.LinkType})">
+            <summary>
+            Returns the links of a room with the ID specified in the request.
+            </summary>
+            <short>Returns room links</short>
+            <category>Rooms</category>
+            <param type="System.Int32, System" method="url" name="id">Room ID</param>
+            <param type="ASC.Files.Core.ApiModels.ResponseDto.LinkType, ASC.Files.Core" name="type">Link type</param>
+            <returns type="ASC.Files.Core.ApiModels.ResponseDto.FileShareDto, ASC.Files.Core">Security information of room</returns>
+            <path>api/2.0/files/rooms/{id}/links</path>
+            <httpMethod>GET</httpMethod>
             <collection>list</collection>
+        </member>
+        <member name="M:ASC.Files.Api.VirtualRoomsController`1.GetPrimaryExternalLinkAsync(`0)">
+            <summary>
+            Returns the primary external link with the identifier specified in the request.
+            </summary>
+            <short>Returns primary external link</short>
+            <category>Rooms</category>
+            <param type="System.Int32, System" method="url" name="id">Room ID</param>
+            <returns type="ASC.Files.Core.ApiModels.ResponseDto.FileShareDto, ASC.Files.Core">Security information of room</returns>
+            <path>api/2.0/files/rooms/{id}/link</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Files.Api.VirtualRoomsController`1.AddTagsAsync(`0,ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto)">
             <summary>
@@ -1779,7 +1842,7 @@
             <path>api/2.0/files/rooms/{id}/unpin</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.VirtualRoomsController`1.ResendEmailInvitationsAsync(`0,ASC.Files.Core.ApiModels.RequestDto.UserInvintationRequestDto)">
+        <member name="M:ASC.Files.Api.VirtualRoomsController`1.ResendEmailInvitationsAsync(`0,ASC.Files.Core.ApiModels.RequestDto.UserInvitationRequestDto)">
             <summary>
             Resends the email invitations to a room with the ID specified in the request to the selected users.
             </summary>
@@ -1791,13 +1854,13 @@
             <path>api/2.0/files/rooms/{id}/resend</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Files.Api.VirtualRoomsCommonController.GetRoomsFolderAsync(System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomFilterType},System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.VirtualRooms.SearchArea},System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.ProviderFilter},System.Nullable{ASC.Files.Core.Core.SubjectFilter})">
+        <member name="M:ASC.Files.Api.VirtualRoomsCommonController.GetRoomsFolderAsync(System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomType},System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.VirtualRooms.SearchArea},System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Nullable{ASC.Files.Core.ProviderFilter},System.Nullable{ASC.Files.Core.Core.SubjectFilter})">
             <summary>
             Returns the contents of the "Rooms" section by the parameters specified in the request.
             </summary>
             <short>Get rooms</short>
             <category>Rooms</category>
-            <param type="System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomFilterType}, System" name="type">Filter by room type</param>
+            <param type="System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomType}, System" name="type">Filter by room type</param>
             <param type="System.String, System" name="subjectId">Filter by user ID</param>
             <param type="System.Nullable{System.Boolean}, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
             <param type="System.Nullable{System.Boolean}, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
@@ -1884,7 +1947,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Documents.PrivacyRoomControllerCommon.GetKeys">
+        <member name="M:ASC.Api.Documents.PrivacyRoomControllerCommon.GetKeysAsync">
             <summary>
             Returns a key pair for the current user.
             </summary>
@@ -1894,7 +1957,7 @@
             <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Documents.PrivacyRoomControllerCommon.PrivacyRoom">
+        <member name="M:ASC.Api.Documents.PrivacyRoomControllerCommon.PrivacyRoomAsync">
             <summary>
             Checks if the Private Room settings are enabled or not.
             </summary>
@@ -1904,7 +1967,7 @@
             <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Documents.PrivacyRoomControllerCommon.SetKeys(ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto)">
+        <member name="M:ASC.Api.Documents.PrivacyRoomControllerCommon.SetKeysAsync(ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto)">
             <summary>
             Sets the key pair for the current user.
             </summary>
@@ -1915,7 +1978,7 @@
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Documents.PrivacyRoomControllerCommon.SetPrivacyRoom(ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto)">
+        <member name="M:ASC.Api.Documents.PrivacyRoomControllerCommon.SetPrivacyRoomAsync(ASC.Files.Core.ApiModels.RequestDto.PrivacyRoomRequestDto)">
             <summary>
             Enables the Private Room settings.
             </summary>
