@@ -19,7 +19,7 @@
 
     <h2 id="20" class="copy-link">Version 2.0</h2>
     <ul>
-        <li></li>
+        <li>Updated <a href="/docspace-storybook" target="_blank">Storybook</a>.</li>
     </ul>
 
 </asp:Content>

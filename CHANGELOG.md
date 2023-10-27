@@ -1,5 +1,6 @@
 # Change Log
 
+- docspace: storybook v2.0.0
 - restructured the docbuilder and plugins sections
 - docbuilder: added builder samples
 
