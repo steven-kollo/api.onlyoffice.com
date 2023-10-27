@@ -7,7 +7,7 @@
 
 <p class="dscr">Displays a list of entities depending on the specified <a href="<%= Url.Action("jssdk/config") %>#rootPath">rootPath</a>.
 It allows you to create rooms, folders, and files and work with them.</p>
-<img alt="Manager mode" class="screenshot" src="<%= Url.Content("~/content/img/docspace/manager-mode.png") %>" />
+<img alt="Manager mode" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/docspace/manager-mode.png") %>" />
 
 <div class="header-gray">Method</div>
 <table class="table hover">

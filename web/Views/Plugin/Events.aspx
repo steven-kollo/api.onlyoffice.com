@@ -18,6 +18,8 @@
 
     <p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
     <note>Please note that to use events in your plugin code, you must subscribe to them first by specifying each event in the <a href="<%= Url.Action("config") %>#events">events</a> parameter of the plugin config.</note>
+    <p>You can also subscibe to any event using the <a href="<%= Url.Action("attachEvent") %>">attachEvent</a> method.</p>
+    <p>Look at the example of using plugin events <a href="<%= Url.Action("example/contextmenuandevents") %>">here</a>.</p>
 
     <h2>Events and their description:</h2>
     <table class="table table-classlist">

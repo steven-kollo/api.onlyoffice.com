@@ -112,6 +112,48 @@
         }
       ]
     },
+    "GetVisible": {
+      "memberof": "ApiSlide",
+      "name": "GetVisible",
+      "description": "<p>Returns the visibility of the current presentation slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetVisible": {
+      "memberof": "ApiSlide",
+      "name": "SetVisible",
+      "description": "<p>Sets the visibility to the current presentation slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "value",
+          "description": "<p>Slide visibility.</p>",
+          "optional": false
+        }
+      ]
+    },
     "GetWidth": {
       "memberof": "ApiSlide",
       "name": "GetWidth",
