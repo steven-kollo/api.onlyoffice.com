@@ -6,7 +6,7 @@
 </h1>
 
 <p class="dscr">Describes an item that will be embedded in the <b>Actions</b> item of the file context menu.</p>
-<img alt="ContextMenuItem" class="screenshot" src="<%= Url.Content("~/content/img/docspace/context-menu-plugin.png") %>" />
+<img alt="ContextMenuItem" class="screenshot max-width-400" src="<%= Url.Content("~/content/img/docspace/context-menu-plugin.png") %>" />
 
 <div class="header-gray">Parameters</div>
 <table class="table">

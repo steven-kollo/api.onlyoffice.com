@@ -6,7 +6,7 @@
 </h1>
 
 <p class="dscr">Describes an item that will be embedded in the <b>More</b> item of the main button menu. It is available only inside a room (folder) and is not available for the room list.</p>
-<img alt="MainButtonItem" class="screenshot" src="<%= Url.Content("~/content/img/docspace/main-button-plugin.png") %>" />
+<img alt="MainButtonItem" class="screenshot max-width-400" src="<%= Url.Content("~/content/img/docspace/main-button-plugin.png") %>" />
 
 <div class="header-gray">Parameters</div>
 <table class="table">
