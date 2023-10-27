@@ -250,6 +250,10 @@
             <summary>Specifies if the user is an administrator or not</summary>
             <type>System.Boolean, System</type>
         </member>
+        <member name="P:ASC.Web.Api.Models.EmployeeFullDto.IsRoomAdmin">
+            <summary>Is room admin or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
         <member name="P:ASC.Web.Api.Models.EmployeeFullDto.IsLDAP">
             <summary>Specifies if the LDAP settings are enabled for the user or not</summary>
             <type>System.Boolean, System</type>
