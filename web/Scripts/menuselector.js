@@ -75,12 +75,12 @@ $(function () {
 });
 
 $(function () {
-    $(".site-overlay").on("click", function () {
+    $(".site-overlay, .close-menu").on("click", function () {
         if ($(".site-overlay").hasClass("hidden")) {
-        $("body").removeClass("hidden-body");
+            $("body").removeClass("hidden-body");
         }
         else {
-         $("body").addClass("hidden-body");
+            $("body").addClass("hidden-body");
         }
     })
 });

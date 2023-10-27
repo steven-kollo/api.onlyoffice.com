@@ -6,12 +6,12 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Configuring plugin
+    Config
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Configuring plugin</span>
+        <span class="hdr">Config</span>
     </h1>
 
     <div class="header-gray">Description</div>
@@ -208,7 +208,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="initDataType" class="copy-link">variations.initDataType</td>
-                <td>The data type selected in the editor and sent to the plugin (<b>text</b>, <b>html</b>, <b>ole</b>, <b>desktop</b>, <b>destop-external</b>, <b>sign</b>, or <b>none</b>).</td>
+                <td>The data type selected in the editor and sent to the plugin (<b>text</b>, <b>html</b>, <b>ole</b>, <b>desktop</b>, <b>desktop-external</b>, <b>sign</b>, or <b>none</b>).</td>
                 <td><a href="<%= Url.Action("global") %>#initDataType">initDataType</a></td>
                 <td>"ole"</td>
             </tr>

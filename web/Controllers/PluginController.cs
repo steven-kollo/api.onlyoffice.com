@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Code",
                 "Config",
                 "changelog",
+                "developing",
                 "events",
                 "example",
                 "example/addcommentincell",
@@ -48,6 +49,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "example/autocomplete",
                 "example/chess",
                 "example/clippy",
+                "example/contextmenuandevents",
                 "example/countwordsandcharacters",
                 "example/default",
                 "example/extendedcomments",
@@ -111,6 +113,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/unhideallrows",
                 "macros/macrosamples/unmergecellrange",
                 "macros/macrosamples/writedatatoworksheetcell",
+                "publishing",
                 "scope",
                 "Structure",
                 "Styles",
@@ -167,6 +170,11 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult createInputHelper()
         {
             return RenderBaseMethod("createInputHelper");
+        }
+
+        public ActionResult Developing()
+        {
+            return View();
         }
 
         public ActionResult Events(string catchall)
@@ -232,6 +240,16 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult FormMethods(string catchall)
         {
             return RenderSectionOrMethod("formPluginMethods", "api", catchall);
+        }
+
+        public ActionResult attachContextMenuClickEvent()
+        {
+            return RenderBaseMethod("attachContextMenuClickEvent");
+        }
+
+        public ActionResult attachEvent()
+        {
+            return RenderBaseMethod("attachEvent");
         }
 
         public ActionResult getInputHelper()
@@ -306,6 +324,11 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Plugin(string catchall)
         {
             return RenderBaseMethod(catchall);
+        }
+
+        public ActionResult Publishing()
+        {
+            return View();
         }
 
         public ActionResult scope()
