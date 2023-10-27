@@ -10,9 +10,9 @@
 </p>
 
 <div class="note">
-    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
-    <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
-    If you enabled any of the test examples, disable it before going for production.
+    It is intended for testing purposes and demonstrating functionality of the editors.
+    <b>DO NOT</b> use this integration example on your own server without proper code modifications.
+    In case you enabled the test example, disable it before going for production.
 </div>
 
 <h2 id="security" class="copy-link">Important security info</h2>
@@ -27,7 +27,7 @@
 <h2 id="Windows" class="copy-link">For Windows</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
 <p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
-<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example">install Document Server for Windows</a>.</p>
+<p>See the detailed guide to learn how to <a target="_blank" href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example">install Document Server for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP example</a> from our site.</p>
@@ -50,7 +50,7 @@ You can set an absolute path. For example, <em>D:\\folder</em>. Please note that
 <ul>
     <li><b>IIS</b>: version 7 or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php" target="_blank">Microsoft official website</a> to learn how to install IIS);</li>
     <li><b>PHP</b>: version 8 or later (download it from the <a href="https://php.net/downloads.php" target="_blank">https://php.net</a> site);</li>
-    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115" target="_blank">Microsoft open source site</a>).</li>
+    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://www.iis.net/downloads/community/2018/05/php-manager-150-for-iis-10" target="_blank">Microsoft open source site</a>).</li>
     <li><b>Composer</b> (download it from the <a href="https://getcomposer.org/download/" target="_blank">Composer official website</a>).</li>
 </ul>
 
@@ -134,7 +134,7 @@ php composer.phar install
 <h2 id="Linux" class="copy-link">For Linux</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
 <p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
-<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example">install Document Server for Linux</a>.</p>
+<p>See the detailed guide to learn how to <a target="_blank" href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example">install Document Server for Linux</a>.</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
 <ol>

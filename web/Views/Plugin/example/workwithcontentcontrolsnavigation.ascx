@@ -127,7 +127,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li><a href="<%= Url.Action("events/init") %>#">init</a></li>
     <li><a href="<%= Url.Action("events/onMethodReturn") %>">onMethodReturn</a></li>
     <li><a href="<%= Url.Action("events/onTargetPositionChanged") %>">onTargetPositionChanged</a></li>
-    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("executemethod/text/getallcontentcontrols") %>">executeMethod ("GetAllContentControls")</a></li>
     <li><a href="<%= Url.Action("executemethod/text/getcurrentcontentcontrol") %>">executeMethod ("GetCurrentContentControl")</a></li>
     <li><a href="<%= Url.Action("executemethod/text/movecursortocontentcontrol") %>">executeMethod ("MoveCursorToContentControl")</a></li>

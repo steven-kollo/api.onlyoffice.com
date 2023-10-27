@@ -219,6 +219,11 @@
     background-repeat: no-repeat;
 }
 
+.contextmenuandevents {
+    background-image: url("img/plugin/context-menu-and-events.svg");
+    background-repeat: no-repeat;
+}
+
 .language-tool {
     background-image: url("img/plugin/language-tool.svg");
     background-repeat: no-repeat;

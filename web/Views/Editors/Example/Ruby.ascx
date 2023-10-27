@@ -10,9 +10,9 @@
 </p>
 
 <div class="note">
-    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
-    <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
-    If you enabled any of the test examples, disable it before going for production.
+    It is intended for testing purposes and demonstrating functionality of the editors.
+    <b>DO NOT</b> use this integration example on your own server without proper code modifications.
+    In case you enabled the test example, disable it before going for production.
 </div>
 
 <h2 id="security" class="copy-link">Important security info</h2>
@@ -24,52 +24,106 @@
     <li>There are no prohibitions on using test examples from other sites, since they are intended to interact with ONLYOFFICE Document Server from another domain.</li>
 </ul>
 
-<h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
-<p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example">for Windows</a>, <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example">for Linux</a>, or <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_ruby_example">for Docker</a>.</p>
+<h2 id="install" class="copy-link"><span class="style_step">Step 1. </span>Install the prerequisites and run the website with the editors</h2>
+<p>The Ruby example offers various installation options, but we highly recommend using Docker for this purpose.</p>
+<p><b>Option 1. Using Docker</b></p>
+<p>To run the example using <a href="https://www.docker.com/" target="_blank">Docker</a>,
+you will need <a href="https://docs.docker.com/desktop/" target="_blank">Docker Desktop 4.17.0</a> or <a href="https://docs.docker.com/engine/" target="_blank">Docker Engine 20.10.23</a>
+with <a href="https://docs.docker.com/compose/" target="_blank">Docker Compose 2.15.1</a>.
+Additionally, you might want to consider installing <a href="https://www.gnu.org/software/make/" target="_blank">GNU Make 4.4.1</a>, although it is optional.
+These are the minimum versions required for the tools.</p>
+<p>Once you have everything installed, download the release archive and unarchive it:</p>
+<pre>
+curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip
+unzip Ruby.Example.zip
+</pre>
+<p>Then open the example directory and <a href="https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L46" target="_blank">up containers</a>:</p>
+<pre>
+cd "Ruby Example"
+make compose-prod
+</pre>
+<p>By default, the server starts at <em>localhost:80</em>.</p>
+<p>To configure the example, you can edit the environment variables in <a href="https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/compose-base.yml" target="_blank">compose-base.yml</a>.
+See <a href="#configure">below</a> for more information about environment variables.</p>
 
-<h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
-<ol>
-    <li>Install <b>Ruby Version Manager (RVM)</b> and the latest stable <b>Ruby</b> version:
-        <div class="commandline">gpg --keyserver "hkp://keys.gnupg.net" --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</div>
-        <div class="commandline">\curl -sSL https://get.rvm.io | bash -s stable --ruby</div>
-    </li>
-    <li>Download the archive with the Ruby example and unpack the archive:
-        <div class="commandline">wget "https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip"</div>
-        <div class="commandline">unzip Ruby.Example.zip</div>
-    </li>
-    <li>Change the current directory for the project directory:
-        <div class="commandline">cd Ruby\ Example</div>
-    </li>
-    <li>Install the dependencies:
-        <div class="commandline">bundle install</div>
-    </li>
-    <li>Edit the <em>config/application.rb</em> configuration file.
-        Specify the name of your local server with the ONLYOFFICE Document Server installed.
-        <div class="commandline">nano config/application.rb</div>
-        <p>Edit the following lines:</p>
+<p><b>Option 2. On local machine</b></p>
+<p>Before diving into the example, you will need to install ONLYOFFICE Docs.
+Check the detailed guide to learn how to install it on <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example" target="_blank">Windows</a>,
+<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example" target="_blank">Linux</a>,
+or <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_ruby_example" target="_blank">Docker</a>.</p>
+<p>To run the example on your local machine, you will need <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby 3.2.2</a>
+with <a href="https://bundler.io/" target="_blank">Bundler 2.4.10</a>. Additionally, you might want to consider installing <a href="https://www.gnu.org/software/make/" target="_blank">GNU Make 4.4.1</a>,
+although it is optional. These are the minimum versions required for the tools.</p>
+<p>Once you have everything installed, download the release archive and unarchive it:</p>
+<pre>
+curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip
+unzip Ruby.Example.zip
+</pre>
+<p>Then open the example directory, <a href="https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L33" target="_blank">install dependencies</a>,
+and <a href="https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L42" target="_blank">start the server</a>:</p>
+<pre>
+cd "Ruby Example"
+make prod
+make server-prod
+</pre>
+<p>By default, the server starts at <em>0.0.0.0:3000</em>.</p>
+<p>To configure the example, you can pass the environment variables before the command that starts the server.
+See <a href="#configure">below</a> for more information about environment variables.</p>
 
-        <pre>
-Rails.configuration.storagePath="app_data"
-Rails.configuration.urlSite="https://documentserver/"</pre>
-
-        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storagePath</b> is the path where files will be created and stored.
-        You can set an absolute path. For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
-    </li>
-    <li>Run the <b>Rails</b> application:
-        <div class="commandline">rails server -u webrick</div>
-        <div class="commandline">rails s -b 0.0.0.0 -p 80</div>
-    </li>
-    <li>See the result in your browser using the address:
-        <div class="commandline">http://localhost</div>
-        <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>views\home\editor.html.erb</em> file.</p>
-    </li>
-</ol>
-
-<h2 id="linux-3" class="copy-link"><span class="style_step">Step 3. </span>Check accessibility</h2>
+<h2 id="accessibility" class="copy-link"><span class="style_step">Step 2. </span>Check accessibility</h2>
 <p>
     In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
-    Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
 </p>
+<p>Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.</p>
+
+<h2 id="configure" class="copy-link"><span class="style_step">Step 3. </span>Configure the Ruby example</h2>
+<p>The example is configured by changing environment variables.</p>
+<table class="table">
+    <colgroup>
+        <col class="table-name" />
+        <col />
+        <col class="table-example" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="BINDING" class="copy-link">BINDING</td>
+            <td>The address where the server should be started.</td>
+            <td>0.0.0.0</td>
+        </tr>
+        <tr>
+            <td id="DOCUMENT_SERVER_PRIVATE_URL" class="copy-link">DOCUMENT_SERVER_PRIVATE_URL</td>
+            <td>The URL through which the server will communicate with Document Server.	</td>
+            <td>http://proxy:8080</td>
+        </tr>
+        <tr>
+            <td id="DOCUMENT_SERVER_PUBLIC_URL" class="copy-link">DOCUMENT_SERVER_PUBLIC_URL</td>
+            <td>The URL through which a user will communicate with Document Server.</td>
+            <td>http://localhost:8080</td>
+        </tr>
+        <tr>
+            <td id="EXAMPLE_URL" class="copy-link">EXAMPLE_URL</td>
+            <td>The URL through which Document Server will communicate with the server.</td>
+            <td>http://proxy</td>
+        </tr>
+        <tr>
+            <td id="JWT_SECRET" class="copy-link">JWT_SECRET</td>
+            <td>JWT authorization secret. Leave blank to disable authorization.</td>
+            <td>your-256-bit-secret</td>
+        </tr>
+        <tr>
+            <td id="PORT" class="copy-link">PORT</td>
+            <td>The port on which the server should be running.</td>
+            <td>80</td>
+        </tr>
+    </tbody>
+</table>
+<div class="mobile-content"></div>
 
 <p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

@@ -18,11 +18,11 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td><em>nType</em></td>
-            <td>const&nbsp;int&
+            <td><em>sExtension</em></td>
+            <td>const&nbsp;wchar_t*
             </td>
-            <td>The type of the file to be created set as a hexadecimal integer for the C++ code or <b>docx</b>, <b>xlsx</b> or <b>pptx</b> for the <em>.docbuilder</em> script file
-            (see <a href="<%= Url.Action("integrationapi/c/cdefault") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
+            <td>The file extension. The following values are possible: <b>docx</b>, <b>xlsx</b> or <b>pptx</b>
+            (see <a href="<%= Url.Action("integrationapi/default") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
         </tr>
     </tbody>
 </table>
@@ -33,7 +33,7 @@
 <pre>std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
-oBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
+oBuilder.CreateFile("docx");
 CDocBuilder::Dispose();
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>

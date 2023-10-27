@@ -85,6 +85,14 @@
             </div>
         <p class="block_more plug_more"><a href="<%= Url.Action("example/clippy") %>">More</a></p>
     </li>
+    <li class="plugin-example" data-types="text-editor,non-visual,non-system,other">
+        <a href="<%= Url.Action("example/contextmenuandevents") %>"><div class="example-plug-img contextmenuandevents"></div></a>
+            <div class="plugin-info">
+                <p class="name-example-plugin"><a href="<%= Url.Action("example/contextmenuandevents") %>">Context menu and events</a></p>
+                <p>Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position change.</p>
+            </div>
+        <p class="block_more plug_more"><a href="<%= Url.Action("example/contextmenuandevents") %>">More</a></p>
+    </li>
     <li class="plugin-example" data-types="text-editor,visual,non-system,other">
         <a href="<%= Url.Action("example/countwordsandcharacters") %>"><div class="example-plug-img countwords"></div></a>
             <div class="plugin-info">

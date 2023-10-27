@@ -48,6 +48,10 @@
             <summary>Confirmation data</summary>
             <type>ASC.Web.Api.ApiModel.RequestsDto.ConfirmData, ASC.Web.Api</type>
         </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.RecaptchaResponse">
+            <summary>Recaptcha response</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto">
             <summary>
             </summary>
@@ -523,6 +527,14 @@
             <summary>IP</summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.AuditEventDto.Country">
+            <summary>Country</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.AuditEventDto.City">
+            <summary>City</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.AuditEventDto.Browser">
             <summary>Browser</summary>
             <type>System.String, System</type>
@@ -685,6 +697,14 @@
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.LoginEventDto.IP">
             <summary>IP</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.LoginEventDto.Country">
+            <summary>Country</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.LoginEventDto.City">
+            <summary>City</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.LoginEventDto.Browser">
@@ -938,6 +958,10 @@
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.CookieSettingsEnabled">
             <summary>Specifies whether the cookie settings are enabled</summary>
             <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.UserNameRegex">
+            <summary>User name validation regex</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.Plugins">
             <summary>Plugins</summary>
@@ -1344,6 +1368,10 @@
             <summary>ID</summary>
             <type>System.Int32, System</type>
         </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto.Name">
+            <summary>Name</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto.Uri">
             <summary>URI</summary>
             <type>System.String, System</type>
@@ -1356,12 +1384,20 @@
             <summary>Enabled or not</summary>
             <type>System.Nullable{System.Boolean}, System</type>
         </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto.SSL">
+            <summary>SSL</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
         <member name="T:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest">
             <summary>
             </summary>
         </member>
-        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.Delivery">
-            <summary>Time when a webhook was delivered</summary>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.DeliveryFrom">
+            <summary></summary>
+            <type>System.Nullable{System.DateTime}, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.DeliveryTo">
+            <summary></summary>
             <type>System.Nullable{System.DateTime}, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.HookUri">
@@ -1370,6 +1406,18 @@
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.WebhookId">
             <summary>Webhook ID</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.ConfigId">
+            <summary></summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.EventId">
+            <summary></summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.GroupStatus">
+            <summary></summary>
             <type>System.Int32, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.AdditionalWhiteLabelSettingsDto">
@@ -1912,6 +1960,10 @@
             <summary>ID</summary>
             <type>System.Int32, System</type>
         </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto.Name">
+            <summary>Name</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto.Uri">
             <summary>URI</summary>
             <type>System.String, System</type>
@@ -1922,6 +1974,10 @@
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto.Enabled">
             <summary>Specifies if the webhooks are enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto.SSL">
+            <summary>SSL</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto">
@@ -2047,7 +2103,7 @@
             <path>api/2.0/authentication</path>
             <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api">Authentication data</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.AuthenticationController.Logout">
+        <member name="M:ASC.Web.Api.Controllers.AuthenticationController.LogoutAsync">
             <summary>
             Logs out of the current user account.
             </summary>
@@ -2100,7 +2156,7 @@
             </summary>
             <name>capabilities</name>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.CapabilitiesController.GetPortalCapabilities">
+        <member name="M:ASC.Web.Api.Controllers.CapabilitiesController.GetPortalCapabilitiesAsync">
             <summary>
             Returns the information about portal capabilities.
             </summary>
@@ -2128,7 +2184,7 @@
             <httpMethod>PUT</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.FeedController.GetFeed(System.String,System.String,System.String,ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Boolean},System.Nullable{System.Boolean},ASC.Api.Core.ApiDateTime)">
+        <member name="M:ASC.Web.Api.Controllers.FeedController.GetFeedAsync(System.String,System.String,System.String,ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Boolean},System.Nullable{System.Boolean},ASC.Api.Core.ApiDateTime)">
             <summary>
             Returns a list of feeds that are filtered by the parameters specified in the request.
             </summary>
@@ -2148,7 +2204,7 @@
             <path>api/2.0/feed/filter</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.FeedController.GetFreshNewsCount">
+        <member name="M:ASC.Web.Api.Controllers.FeedController.GetFreshNewsCountAsync">
             <summary>
             Returns an integer representing the number of fresh feeds.
             </summary>
@@ -2194,7 +2250,7 @@
             </summary>
             <name>portal</name>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetPaymentUrl(ASC.Web.Api.Models.PaymentUrlRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetPaymentUrlAsync(ASC.Web.Api.Models.PaymentUrlRequestsDto)">
             <summary>
             Returns the URL to the payment page.
             </summary>
@@ -2207,7 +2263,7 @@
             <path>api/2.0/portal/payment/url</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.PaymentUpdate(ASC.Web.Api.Models.PaymentUrlRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.PaymentUpdateAsync(ASC.Web.Api.Models.PaymentUrlRequestsDto)">
             <summary>
             Updates the quantity of payment.
             </summary>
@@ -2220,7 +2276,7 @@
             <path>api/2.0/portal/payment/update</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetPaymentAccount(System.String)">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetPaymentAccountAsync(System.String)">
             <summary>
             Returns the URL to the payment account.
             </summary>
@@ -2233,7 +2289,7 @@
             <path>api/2.0/portal/payment/account</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetPrices">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetPricesAsync">
             <summary>
             Returns the available portal prices.
             </summary>
@@ -2245,7 +2301,7 @@
             <path>api/2.0/portal/payment/prices</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetCurrencies">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetCurrenciesAsync">
             <summary>
             Returns the available portal currencies.
             </summary>
@@ -2258,7 +2314,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetQuotas">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetQuotasAsync">
             <summary>
             Returns the available portal quotas.
             </summary>
@@ -2271,7 +2327,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetQuota(System.Boolean)">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.GetQuotaAsync(System.Boolean)">
             <summary>
             Returns the payment information about the current portal quota.
             </summary>
@@ -2283,7 +2339,7 @@
             <path>api/2.0/portal/payment/quota</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PaymentController.SendSalesRequest(ASC.Web.Api.ApiModels.RequestsDto.SalesRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.SendSalesRequestAsync(ASC.Web.Api.ApiModels.RequestsDto.SalesRequestsDto)">
             <summary>
             Sends a request for portal payment.
             </summary>
@@ -2314,7 +2370,7 @@
             <path>api/2.0/portal</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GetUser(System.Guid)">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GetUserAsync(System.Guid)">
             <summary>
             Returns a user with the ID specified in the request from the current portal.
             </summary>
@@ -2327,7 +2383,7 @@
             <path>api/2.0/portal/users/{userID}</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GeInviteLink(ASC.Core.Users.EmployeeType)">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GeInviteLinkAsync(ASC.Core.Users.EmployeeType)">
             <summary>
             Returns an invitation link for joining the portal.
             </summary>
@@ -2364,7 +2420,7 @@
             <path>api/2.0/portal/tenantextra</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GetUsedSpace">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GetUsedSpaceAsync">
             <summary>
             Returns the used space of the current portal.
             </summary>
@@ -2376,7 +2432,7 @@
             <path>api/2.0/portal/usedspace</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GetUsersCount">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GetUsersCountAsync">
             <summary>
             Returns a number of portal users.
             </summary>
@@ -2388,7 +2444,7 @@
             <path>api/2.0/portal/userscount</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GetTariff(System.Boolean)">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GetTariffAsync(System.Boolean)">
             <summary>
             Returns the current portal tariff.
             </summary>
@@ -2401,7 +2457,7 @@
             <path>api/2.0/portal/tariff</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GetQuota">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GetQuotaAsync">
             <summary>
             Returns the current portal quota.
             </summary>
@@ -2413,7 +2469,7 @@
             <path>api/2.0/portal/quota</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.GetRightQuota">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.GetRightQuotaAsync">
             <summary>
             Returns the recommended quota for the current portal.
             </summary>
@@ -2451,7 +2507,7 @@
             <path>api/2.0/portal/thumb</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.MarkPresentAsReaded">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.MarkPresentAsReadedAsync">
             <summary>
             Marks a gift message as read.
             </summary>
@@ -2463,7 +2519,7 @@
             <path>api/2.0/portal/present/mark</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.RegisterMobileAppInstall(ASC.Web.Api.ApiModel.RequestsDto.MobileAppRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.RegisterMobileAppInstallAsync(ASC.Web.Api.ApiModel.RequestsDto.MobileAppRequestsDto)">
             <summary>
             Registers the mobile app installation.
             </summary>
@@ -2476,7 +2532,7 @@
             <path>api/2.0/portal/mobile/registration</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.RegisterMobileAppInstall(ASC.Core.Common.Notify.Push.MobileAppType)">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.RegisterMobileAppInstallAsync(ASC.Core.Common.Notify.Push.MobileAppType)">
             <summary>
             Registers the mobile app installation by mobile app type.
             </summary>
@@ -2491,18 +2547,18 @@
             <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.PortalController.UpdatePortalName(ASC.Web.Api.ApiModels.RequestsDto.PortalRenameRequestsDto)">
-             <summary>
-             Updates a portal name with a new one specified in the request.
-             </summary>
-             <short>Update a portal name</short>
-             <category>Settings</category>
-             <param type="ASC.Web.Api.ApiModels.RequestsDto.PortalRenameRequestsDto, ASC.Web.Api" name="inDto">Request parameters for portal renaming</param>
-             <returns type="System.Object, System">Confirmation email about authentication to the portal with a new name</returns>
-             <path>api/2.0/portal/portalrename</path>
-             <httpMethod>PUT</httpMethod>
+            <summary>
+            Updates a portal name with a new one specified in the request.
+            </summary>
+            <short>Update a portal name</short>
+            <category>Settings</category>
+            <param type="ASC.Web.Api.ApiModels.RequestsDto.PortalRenameRequestsDto, ASC.Web.Api" name="inDto">Request parameters for portal renaming</param>
+            <returns type="System.Object, System">Confirmation email about authentication to the portal with a new name</returns>
+            <path>api/2.0/portal/portalrename</path>
+            <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.DeletePortalImmediately">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.DeletePortalImmediatelyAsync">
             <summary>
             Deletes the current portal immediately.
             </summary>
@@ -2512,7 +2568,7 @@
             <path>api/2.0/portal/deleteportalimmediately</path>
             <httpMethod>DELETE</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.SendSuspendInstructions">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.SendSuspendInstructionsAsync">
             <summary>
             Sends the instructions to suspend the current portal.
             </summary>
@@ -2522,7 +2578,7 @@
             <path>api/2.0/portal/suspend</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.SendDeleteInstructions">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.SendDeleteInstructionsAsync">
             <summary>
             Sends the instructions to remove the current portal.
             </summary>
@@ -2532,7 +2588,7 @@
             <path>api/2.0/portal/delete</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.ContinuePortal">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.ContinuePortalAsync">
             <summary>
             Restores the current portal.
             </summary>
@@ -2542,7 +2598,7 @@
             <path>api/2.0/portal/continue</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.SuspendPortal">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.SuspendPortalAsync">
             <summary>
             Deactivates the current portal.
             </summary>
@@ -2552,7 +2608,7 @@
             <path>api/2.0/portal/suspend</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.DeletePortal">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.DeletePortalAsync">
             <summary>
             Deletes the current portal.
             </summary>
@@ -2562,7 +2618,7 @@
             <path>api/2.0/portal/delete</path>
             <httpMethod>DELETE</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.PortalController.SendCongratulations(ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto)">
+        <member name="M:ASC.Web.Api.Controllers.PortalController.SendCongratulationsAsync(ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto)">
             <summary>
             Sends congratulations to the user after registering the portal.
             </summary>
@@ -2579,7 +2635,7 @@
             </summary>
             <name>security</name>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetLastLoginEvents">
+        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetLastLoginEventsAsync">
             <summary>
             Returns all the latest user login activity, including successful logins and error logs.
             </summary>
@@ -2592,7 +2648,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetLastAuditEvents">
+        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetLastAuditEventsAsync">
             <summary>
             Returns a list of the latest changes (creation, modification, deletion, etc.) made by users to the entities (tasks, opportunities, files, etc.) on the portal.
             </summary>
@@ -2605,7 +2661,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetLoginEventsByFilter(System.Guid,ASC.MessagingSystem.Core.MessageAction,ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
+        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetLoginEventsByFilterAsync(System.Guid,ASC.MessagingSystem.Core.MessageAction,ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
             <summary>
             Returns a list of the login events by the parameters specified in the request.
             </summary>
@@ -2622,7 +2678,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetAuditEventsByFilter(System.Guid,ASC.AuditTrail.Types.ProductType,ASC.AuditTrail.Types.ModuleType,ASC.AuditTrail.Types.ActionType,ASC.MessagingSystem.Core.MessageAction,ASC.AuditTrail.Types.EntryType,System.String,ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
+        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetAuditEventsByFilterAsync(System.Guid,ASC.AuditTrail.Types.ProductType,ASC.AuditTrail.Types.ModuleType,ASC.AuditTrail.Types.ActionType,ASC.MessagingSystem.Core.MessageAction,ASC.AuditTrail.Types.EntryType,System.String,ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
             <summary>
             Returns a list of the audit events by the parameters specified in the request.
             </summary>
@@ -2696,7 +2752,7 @@
             <path>api/2.0/security/audit/events/report</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetAuditSettings">
+        <member name="M:ASC.Web.Api.Controllers.SecurityController.GetAuditSettingsAsync">
             <summary>
             Returns the audit trail settings.
             </summary>
@@ -2727,7 +2783,7 @@
             </summary>
             <name>settings</name>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.CustomNavigationController.GetCustomNavigationItems">
+        <member name="M:ASC.Web.Api.Controllers.Settings.CustomNavigationController.GetCustomNavigationItemsAsync">
             <summary>
             Returns a list of the custom navigation items.
             </summary>
@@ -2748,7 +2804,7 @@
             <path>api/2.0/settings/customnavigation/getsample</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.CustomNavigationController.GetCustomNavigationItem(System.Guid)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.CustomNavigationController.GetCustomNavigationItemAsync(System.Guid)">
             <summary>
             Returns a custom navigation item by the ID specified in the request.
             </summary>
@@ -2781,7 +2837,7 @@
             <httpMethod>DELETE</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.PeopleSchemas">
+        <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.PeopleSchemasAsync">
             <summary>
             Returns all portal team templates that allow users to name their organization (or group), add members, and define their activities within the portal.
             </summary>
@@ -2792,7 +2848,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.SaveNamingSettings(ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.SaveNamingSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto)">
             <summary>
             Saves the names from the team template with the ID specified in the request.
             </summary>
@@ -2803,7 +2859,7 @@
             <path>api/2.0/settings/customschemas</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.SaveCustomNamingSettings(ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.SaveCustomNamingSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto)">
             <summary>
             Creates a custom team template with the parameters specified in the request.
             </summary>
@@ -2814,7 +2870,7 @@
             <path>api/2.0/settings/customschemas</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.PeopleSchema(System.String)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.CustomSchemasController.PeopleSchemaAsync(System.String)">
             <summary>
             Returns a team template by the ID specified in the request.
             </summary>
@@ -2845,7 +2901,7 @@
             <path>api/2.0/settings/greetingsettings/isdefault</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.GreetingSettingsController.SaveGreetingSettings(ASC.Web.Api.ApiModel.RequestsDto.GreetingSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.GreetingSettingsController.SaveGreetingSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.GreetingSettingsRequestsDto)">
             <summary>
             Saves the greeting settings specified in the request to the current portal.
             </summary>
@@ -2856,7 +2912,7 @@
             <path>api/2.0/settings/greetingsettings</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.GreetingSettingsController.RestoreGreetingSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.GreetingSettingsController.RestoreGreetingSettingsAsync">
             <summary>
             Restores the current portal greeting settings.
             </summary>
@@ -2866,7 +2922,7 @@
             <path>api/2.0/settings/greetingsettings/restore</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.GetIpRestrictions">
+        <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.GetIpRestrictionsAsync">
             <summary>
             Returns the IP portal restrictions.
             </summary>
@@ -2877,7 +2933,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.SaveIpRestrictions(ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.SaveIpRestrictionsAsync(ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto)">
             <summary>
             Saves the new portal IP restrictions specified in the request.
             </summary>
@@ -2889,7 +2945,7 @@
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.ReadIpRestrictionsSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.ReadIpRestrictionsSettingsAsync">
             <summary>
             Returns the IP restriction settings.
             </summary>
@@ -2899,7 +2955,7 @@
             <path>api/2.0/settings/iprestrictions/settings</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.UpdateIpRestrictionsSettings(ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.IpRestrictionsController.UpdateIpRestrictionsSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsRequestsDto)">
             <summary>
             Updates the IP restriction settings with a parameter specified in the request.
             </summary>
@@ -2910,7 +2966,7 @@
             <path>api/2.0/settings/iprestrictions/settings</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapSettingsAsync">
             <summary>
             Returns the current portal LDAP settings.
             </summary>
@@ -2922,7 +2978,7 @@
             <path>api/2.0/settings/ldap</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapCronSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapCronSettingsAsync">
             <summary>
             Returns the LDAP autosynchronous cron expression for the current portal if it exists.
             </summary>
@@ -2934,7 +2990,7 @@
             <path>api/2.0/settings/ldap/cron</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.SetLdapCronSettingsFromBody(ASC.Web.Api.ApiModels.RequestsDto.LdapCronRequestDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.SetLdapCronSettingsAsync(ASC.Web.Api.ApiModels.RequestsDto.LdapCronRequestDto)">
             <summary>
             Sets the LDAP autosynchronous cron expression to the current portal.
             </summary>
@@ -2947,7 +3003,7 @@
             <httpMethod>POST</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.SyncLdap">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.SyncLdapAsync">
             <summary>
             Synchronizes the portal data with the new information from the LDAP server.
             </summary>
@@ -2971,7 +3027,7 @@
             <httpMethod>GET</httpMethod>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api">LDAP operation status</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.SaveLdapSettings(ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.SaveLdapSettingsAsync(ASC.Web.Api.ApiModels.RequestsDto.LdapRequestsDto)">
             <summary>
             Saves the LDAP settings specified in the request and starts importing/synchronizing users and groups by LDAP.
             </summary>
@@ -2984,7 +3040,7 @@
             <path>api/2.0/settings/ldap</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.TestLdapSave(ASC.ActiveDirectory.Base.Settings.LdapSettings)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.TestLdapSaveAsync(ASC.ActiveDirectory.Base.Settings.LdapSettings)">
             <summary>
             Starts the process of saving LDAP settings and collecting preliminary changes on the portal according to them.
             </summary>
@@ -2997,7 +3053,7 @@
             <httpMethod>POST</httpMethod>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.LdapStatusDto, ASC.Web.Api">LDAP operation status</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapOperationStatus">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapOperationStatusAsync">
             <summary>
             Returns the LDAP synchronization process status.
             </summary>
@@ -3009,7 +3065,7 @@
             <path>api/2.0/settings/ldap/status</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetDefaultLdapSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetDefaultLdapSettingsAsync">
             <summary>
             Returns the LDAP default settings.
             </summary>
@@ -3021,7 +3077,7 @@
             <path>api/2.0/settings/ldap/default</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LicenseController.RefreshLicense">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LicenseController.RefreshLicenseAsync">
             <summary>
             Refreshes the license.
             </summary>
@@ -3031,7 +3087,7 @@
             <path>api/2.0/settings/license/refresh</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LicenseController.AcceptLicense">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LicenseController.AcceptLicenseAsync">
             <summary>
             Activates a license for the portal.
             </summary>
@@ -3043,7 +3099,7 @@
             <path>api/2.0/settings/license/accept</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LicenseController.ActivateTrial">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LicenseController.ActivateTrialAsync">
              <summary>
              Activates a trial license for the portal.
              </summary>
@@ -3069,7 +3125,7 @@
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.LicenseController.UploadLicense(ASC.Web.Api.ApiModel.RequestsDto.UploadLicenseRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.LicenseController.UploadLicenseAsync(ASC.Web.Api.ApiModel.RequestsDto.UploadLicenseRequestsDto)">
             <summary>
             Uploads a portal license specified in the request.
             </summary>
@@ -3082,7 +3138,7 @@
             <path>api/2.0/settings/license</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.MessageSettingsController.EnableAdminMessageSettings(ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.MessageSettingsController.EnableAdminMessageSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto)">
             <summary>
             Displays the contact form on the "Sign In" page, allowing users to send a message to the DocSpace administrator in case they encounter any issues while accessing DocSpace.
             </summary>
@@ -3120,7 +3176,7 @@
             <path>api/2.0/settings/cookiesettings</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.MessageSettingsController.SendAdmMail(ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.MessageSettingsController.SendAdmMailAsync(ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto)">
             <summary>
             Sends a message to the administrator email when unauthorized users encounter issues accessing DocSpace.
             </summary>
@@ -3148,7 +3204,7 @@
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.NotificationController.GetSettings(ASC.Web.Core.Notify.NotificationType)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.NotificationController.GetSettingsAsync(ASC.Web.Core.Notify.NotificationType)">
             <summary>
             Checks if the notification type specified in the request is enabled or not.
             </summary>
@@ -3159,7 +3215,7 @@
             <path>api/2.0/settings/notification/{type}</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.NotificationController.SetSettings(ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.NotificationController.SetSettingsAsync(ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto)">
             <summary>
             Enables the notification type specified in the request.
             </summary>
@@ -3191,7 +3247,7 @@
             <path>api/2.0/settings/notification/rooms</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.OwnerController.SendOwnerChangeInstructions(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.OwnerController.SendOwnerChangeInstructionsAsync(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
             <summary>
             Sends the instructions to change the DocSpace owner.
             </summary>
@@ -3204,7 +3260,7 @@
             <path>api/2.0/settings/owner</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.OwnerController.Owner(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.OwnerController.OwnerAsync(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
             <summary>
             Updates the current portal owner with a new one specified in the request.
             </summary>
@@ -3257,7 +3313,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.GetWebItemSecurityInfo(System.Guid)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.GetWebItemSecurityInfoAsync(System.Guid)">
             <summary>
             Returns the availability of the module with the ID specified in the request.
             </summary>
@@ -3282,7 +3338,7 @@
             <path>api/2.0/settings/security/modules</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.GetPasswordSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.GetPasswordSettingsAsync">
             <summary>
             Returns the portal password settings.
             </summary>
@@ -3294,7 +3350,7 @@
             <path>api/2.0/settings/security/password</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.UpdatePasswordSettings(ASC.Web.Api.Models.PasswordSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.UpdatePasswordSettingsAsync(ASC.Web.Api.Models.PasswordSettingsRequestsDto)">
             <summary>
             Sets the portal password settings.
             </summary>
@@ -3349,7 +3405,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.IsProductAdministrator(System.Guid,System.Guid)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.IsProductAdministratorAsync(System.Guid,System.Guid)">
             <summary>
             Checks if the selected user is a product administrator with the ID specified in the request.
             </summary>
@@ -3376,7 +3432,7 @@
             <path>api/2.0/settings/security/administrator</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.UpdateLoginSettings(ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.UpdateLoginSettingsAsync(ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto)">
             <summary>
             Updates the login settings with the parameters specified in the request.
             </summary>
@@ -3389,7 +3445,7 @@
             <path>api/2.0/settings/security/loginsettings</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.GetLoginSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SecurityController.GetLoginSettingsAsync">
             <summary>
             Returns the portal login settings.
             </summary>
@@ -3401,7 +3457,7 @@
             <path>api/2.0/settings/security/loginsettings</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetSettings(System.Nullable{System.Boolean})">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetSettingsAsync(System.Nullable{System.Boolean})">
             <summary>
             Returns a list of all the available portal settings with the current values for each parameter.
             </summary>
@@ -3415,7 +3471,7 @@
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveMailDomainSettings(ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveMailDomainSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto)">
             <summary>
             Saves the mail domain settings specified in the request to the portal.
             </summary>
@@ -3440,7 +3496,7 @@
             <path>api/2.0/settings/quota</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveUserQuotaSettings(ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveUserQuotaSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto)">
             <summary>
             Saves the user quota settings specified in the request to the current portal.
             </summary>
@@ -3465,7 +3521,7 @@
             <requiresAuthorization>false</requiresAuthorization>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetTimeZones">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetTimeZonesAsyncAsync">
             <summary>
             Returns a list of all the available portal time zones.
             </summary>
@@ -3486,7 +3542,7 @@
             <path>api/2.0/settings/machine</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveDnsSettings(ASC.Web.Api.Models.DnsSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveDnsSettingsAsync(ASC.Web.Api.Models.DnsSettingsRequestsDto)">
             <summary>
             Saves the DNS settings specified in the request to the current portal.
             </summary>
@@ -3497,7 +3553,7 @@
             <path>api/2.0/settings/dns</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.RecalculateQuota">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.RecalculateQuotaAsync">
             <summary>
             Starts the process of quota recalculation.
             </summary>
@@ -3509,7 +3565,7 @@
             <httpMethod>GET</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CheckRecalculateQuota">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CheckRecalculateQuotaAsync">
             <summary>
             Checks the process of quota recalculation.
             </summary>
@@ -3521,7 +3577,7 @@
             <path>api/2.0/settings/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetLogo">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetLogoAsync">
             <summary>
             Returns the portal logo image URL.
             </summary>
@@ -3533,7 +3589,7 @@
             <path>api/2.0/settings/logo</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CompleteWizard(ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CompleteWizardAsync(ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto)">
             <summary>
             Completes the Wizard settings.
             </summary>
@@ -3544,7 +3600,7 @@
             <path>api/2.0/settings/wizard/complete</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CloseWelcomePopup">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CloseWelcomePopupAsync">
              <summary>
              Closes the welcome pop-up notification.
              </summary>
@@ -3555,7 +3611,7 @@
              <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetColorTheme">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetColorThemeAsync">
             <summary>
             Returns the portal color theme.
             </summary>
@@ -3566,7 +3622,7 @@
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveColorTheme(ASC.Web.Api.ApiModels.RequestsDto.CustomColorThemesSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveColorThemeAsync(ASC.Web.Api.ApiModels.RequestsDto.CustomColorThemesSettingsRequestsDto)">
             <summary>
             Saves the portal color theme specified in the request.
             </summary>
@@ -3577,7 +3633,7 @@
             <path>api/2.0/settings/colortheme</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.DeleteColorTheme(System.Int32)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.DeleteColorThemeAsync(System.Int32)">
             <summary>
             Deletes the portal color theme with the ID specified in the request.
             </summary>
@@ -3588,7 +3644,7 @@
             <path>api/2.0/settings/colortheme</path>
             <httpMethod>DELETE</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CloseAdminHelper">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CloseAdminHelperAsync">
             <summary>
             Closes the admin helper notification.
             </summary>
@@ -3598,7 +3654,7 @@
             <path>api/2.0/settings/closeadminhelper</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TimaAndLanguage(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TimaAndLanguageAsync(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
              <summary>
              Sets the portal time zone and language specified in the request.
              </summary>
@@ -3610,7 +3666,7 @@
              <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveDefaultPageSetting(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveDefaultPageSettingAsync(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
              <summary>
              Sets the default product page.
              </summary>
@@ -3622,7 +3678,7 @@
              <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.UpdateEmailActivationSettings(ASC.Web.Studio.Core.EmailActivationSettings)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.UpdateEmailActivationSettingsAsync(ASC.Web.Studio.Core.EmailActivationSettings)">
             <summary>
             Updates the email activation settings.
             </summary>
@@ -3645,7 +3701,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetVisitStatistics(ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetVisitStatisticsAsync(ASC.Api.Core.ApiDateTime,ASC.Api.Core.ApiDateTime)">
             <summary>
             Returns the user visit statistics for the period specified in the request.
             </summary>
@@ -3690,7 +3746,7 @@
             <httpMethod>POST</httpMethod>
             <returns type="System.Boolean, System">Boolean value: true if the authorization keys are changed</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.PaymentSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.PaymentSettingsAsync">
             <summary>
             Returns the portal payment settings.
             </summary>
@@ -3711,7 +3767,7 @@
             <returns type="System.Object, System">Telegram link</returns>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TelegramIsConnected">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TelegramIsConnectedAsync">
             <summary>
             Checks if the user has connected to TelegramBot.
             </summary>
@@ -3721,7 +3777,7 @@
             <httpMethod>GET</httpMethod>
             <returns type="System.Object, System">Operation result: 0 - not connected, 1 - connected, 2 - awaiting confirmation</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TelegramDisconnect">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TelegramDisconnectAsync">
             <summary>
             Unlinks TelegramBot from your account.
             </summary>
@@ -3743,7 +3799,7 @@
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SsoController.GetDefaultSsoSettingsV2">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SsoController.GetDefaultSsoSettingsV2Async">
             <summary>
             Returns the default portal SSO settings.
             </summary>
@@ -3767,7 +3823,7 @@
             <path>api/2.0/settings/ssov2/constants</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SsoController.SaveSsoSettingsV2(ASC.Web.Api.ApiModel.RequestsDto.SsoSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SsoController.SaveSsoSettingsV2Async(ASC.Web.Api.ApiModel.RequestsDto.SsoSettingsRequestsDto)">
             <summary>
             Saves the SSO settings for the current portal.
             </summary>
@@ -3780,7 +3836,7 @@
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SsoController.ResetSsoSettingsV2">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SsoController.ResetSsoSettingsV2Async">
             <summary>
             Resets the SSO settings of the current portal.
             </summary>
@@ -3792,7 +3848,7 @@
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>DELETE</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetAllStorages">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetAllStoragesAsync">
             <summary>
             Returns a list of all the portal storages.
             </summary>
@@ -3803,7 +3859,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetStorageProgress">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetStorageProgressAsync">
             <summary>
             Returns the storage progress.
             </summary>
@@ -3813,7 +3869,7 @@
             <path>api/2.0/settings/storage/progress</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.StartStorageEncryption(ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.StartStorageEncryptionAsync(ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto)">
             <summary>
             Starts the storage encryption process.
             </summary>
@@ -3824,7 +3880,7 @@
             <path>api/2.0/settings/encryption/start</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetStorageEncryptionSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetStorageEncryptionSettingsAsync">
             <summary>
             Returns the storage encryption settings.
             </summary>
@@ -3845,7 +3901,7 @@
             <path>api/2.0/settings/encryption/progress</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.UpdateStorage(ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.UpdateStorageAsync(ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto)">
             <summary>
             Updates a storage with the parameters specified in the request.
             </summary>
@@ -3856,7 +3912,7 @@
             <path>api/2.0/settings/storage</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.ResetStorageToDefault">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.ResetStorageToDefaultAsync">
             <summary>
             Resets the storage settings to the default parameters.
             </summary>
@@ -3866,7 +3922,7 @@
             <httpMethod>DELETE</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetAllCdnStorages">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.GetAllCdnStoragesAsync">
             <summary>
             Returns a list of all the CDN storages.
             </summary>
@@ -3877,7 +3933,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.UpdateCdn(ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.UpdateCdnAsync(ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto)">
             <summary>
             Updates the CDN storage with the parameters specified in the request.
             </summary>
@@ -3888,7 +3944,7 @@
             <path>api/2.0/settings/storage/cdn</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.ResetCdnToDefault">
+        <member name="M:ASC.Web.Api.Controllers.Settings.StorageController.ResetCdnToDefaultAsync">
             <summary>
             Resets the CDN storage settings to the default parameters.
             </summary>
@@ -3919,7 +3975,7 @@
             <path>api/2.0/settings/storage/s3/regions</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.GetTfaSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.GetTfaSettingsAsync">
              <summary>
              Returns the current two-factor authentication settings.
              </summary>
@@ -3930,7 +3986,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaValidateAuthCode(ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaValidateAuthCodeAsync(ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto)">
              <summary>
              Validates the two-factor authentication code specified in the request.
              </summary>
@@ -3941,7 +3997,7 @@
             <path>api/2.0/settings/tfaapp/validate</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaConfirmUrl">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaConfirmUrlAsync">
              <summary>
              Returns the confirmation email URL for authorization via SMS or TFA application.
              </summary>
@@ -3951,7 +4007,7 @@
             <path>api/2.0/settings/tfaapp/confirm</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaSettings(ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto)">
              <summary>
              Updates the two-factor authentication settings with the parameters specified in the request.
              </summary>
@@ -3973,7 +4029,7 @@
             <path>api/2.0/settings/tfaappwithlink</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppGenerateSetupCode">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppGenerateSetupCodeAsync">
             <summary>
             Generates the setup TFA code for the current user.
             </summary>
@@ -3983,7 +4039,7 @@
             <path>api/2.0/settings/tfaapp/setup</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppGetCodes">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppGetCodesAsync">
             <summary>
             Returns the two-factor authentication application codes.
             </summary>
@@ -3994,7 +4050,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppRequestNewCodes">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppRequestNewCodesAsync">
             <summary>
             Requests the new backup codes for the two-factor authentication application.
             </summary>
@@ -4005,7 +4061,7 @@
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppNewApp(ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TfaappController.TfaAppNewAppAsync(ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto)">
             <summary>
             Unlinks the current two-factor authentication application from the user account specified in the request.
             </summary>
@@ -4016,7 +4072,7 @@
             <path>api/2.0/settings/tfaappnewapp</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TipsController.UpdateTipsSettings(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TipsController.UpdateTipsSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
             <summary>
             Updates the tip settings with a parameter specified in the request.
             </summary>
@@ -4027,7 +4083,7 @@
             <path>api/2.0/settings/tips</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TipsController.UpdateTipsSubscription">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TipsController.UpdateTipsSubscriptionAsync">
             <summary>
             Updates the tip subscription.
             </summary>
@@ -4037,7 +4093,7 @@
             <path>api/2.0/settings/tips/change/subscription</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.TipsController.GetTipsSubscription">
+        <member name="M:ASC.Web.Api.Controllers.Settings.TipsController.GetTipsSubscriptionAsync">
             <summary>
             Checks if the current user is subscribed to the tips or not.
             </summary>
@@ -4058,7 +4114,7 @@
             <requiresAuthorization>false</requiresAuthorization>
             <returns type="ASC.Api.Settings.BuildVersion, ASC.Web.Api">Current product versions</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.GetVersions">
+        <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.GetVersionsAsync">
             <summary>
             Returns a list of the availibe portal versions including the current version.
             </summary>
@@ -4070,7 +4126,7 @@
             <httpMethod>GET</httpMethod>
             <returns type="ASC.Web.Api.ApiModel.ResponseDto.TenantVersionDto, ASC.Web.Api">List of availibe portal versions including the current version</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.SetVersion(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.SetVersionAsync(ASC.Web.Api.ApiModel.RequestsDto.SettingsRequestsDto)">
             <summary>
             Sets a version with the ID specified in the request to the current tenant.
             </summary>
@@ -4135,7 +4191,7 @@
             <httpMethod>DELETE</httpMethod>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto, ASC.Web.Api">Tenant webhook with its config parameters</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.GetJournal(ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.GetJournal(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{ASC.Webhooks.Core.WebhookGroupStatus})">
             <summary>
             Returns the logs of the webhook activities.
             </summary>
@@ -4143,7 +4199,13 @@
             Get webhook logs
             </short>
             <category>Webhooks</category>
-            <param type="ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest, ASC.Web.Api" name="inDto">Webhook log request parameters</param>
+            <param type="System.DateTime, System" name="deliveryFrom"></param>
+            <param type="System.DateTime, System" name="deliveryTo"></param>
+            <param type="System.String, System" name="hookUri"></param>
+            <param type="System.Int32, System" name="webhookId"></param>
+            <param type="System.Int32, System" name="configId"></param>
+            <param type="System.Int32, System" name="eventId"></param>
+            <param type="ASC.Webhooks.Core.WebhookGroupStatus, ASC.Webhooks.Core" name="groupStatus"></param>
             <path>api/2.0/settings/webhooks/log</path>
             <httpMethod>GET</httpMethod>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto, ASC.Web.Api">Logs of the webhook activities</returns>
@@ -4176,31 +4238,6 @@
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto, ASC.Web.Api">Logs of the webhook activities</returns>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.GetSslSettings">
-            <summary>
-            Returns the webhook SSL settings.
-            </summary>
-            <short>
-            Get webhook SSL settings
-            </short>
-            <category>Webhooks</category>
-            <path>api/2.0/settings/webhook/ssl</path>
-            <httpMethod>GET</httpMethod>
-            <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksSslSettingsDto, ASC.Web.Api">Webhook SSL settings</returns>
-        </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.SetSslSettings(System.Boolean)">
-            <summary>
-            Sets the webhook SSL settings.
-            </summary>
-            <short>
-            Set webhook SSL settings
-            </short>
-            <category>Webhooks</category>
-            <param type="System.Boolean, System" method="url" name="isEnabled">Specifies if the SSL certificate is enabled or not</param>
-            <path>api/2.0/settings/webhook/ssl/{isEnabled}</path>
-            <httpMethod>POST</httpMethod>
-            <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksSslSettingsDto, ASC.Web.Api">Webhook SSL settings</returns>
-        </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WebhooksController.Settings">
             <summary>
             Returns settings of all webhooks.
@@ -4227,7 +4264,7 @@
             <httpMethod>PUT</httpMethod>
             <returns type="ASC.Webhooks.Core.Webhook, ASC.Webhooks.Core">Webhook settings</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettings(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto)">
              <summary>
              Saves the white label settings specified in the request.
              </summary>
@@ -4241,7 +4278,7 @@
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsFromFiles">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsFromFilesAsync">
              <summary>
              Saves the white label settings from files.
              </summary>
@@ -4270,7 +4307,21 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogoText">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetIsDefaultWhiteLabelLogos">
+            <summary>
+            Returns the is default white label logos.
+            </summary>
+            <short>
+            Get the is default white label logos
+            </short>
+            <category>Rebranding</category>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.IsDefaultWhiteLabelLogosDto, ASC.Web.Api">Is default white label logos</returns>
+            <path>api/2.0/settings/whitelabel/logos/isdefault</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogoTextAsync">
              <summary>
              Returns the white label logo text.
              </summary>
@@ -4283,7 +4334,7 @@
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.RestoreWhiteLabelOptions">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.RestoreWhiteLabelOptionsAsync">
             <summary>
             Restores the white label options.
             </summary>
@@ -4296,7 +4347,7 @@
             <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetLicensorData">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetLicensorDataAsync">
             <summary>
             Returns the licensor data.
             </summary>
@@ -4308,7 +4359,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveCompanyWhiteLabelSettings(ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveCompanyWhiteLabelSettingsAsync(ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper)">
             <summary>
             Saves the company white label settings specified in the request.
             </summary>
@@ -4320,7 +4371,7 @@
             <httpMethod>POST</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetCompanyWhiteLabelSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetCompanyWhiteLabelSettingsAsync">
              <summary>
              Returns the company white label settings.
              </summary>
@@ -4331,7 +4382,7 @@
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.DeleteCompanyWhiteLabelSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.DeleteCompanyWhiteLabelSettingsAsync">
             <summary>
             Deletes the company white label settings.
             </summary>
@@ -4342,7 +4393,7 @@
             <httpMethod>DELETE</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveAdditionalWhiteLabelSettings(ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveAdditionalWhiteLabelSettingsAsync(ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper)">
              <summary>
              Saves the additional white label settings specified in the request.
              </summary>
@@ -4354,7 +4405,7 @@
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetAdditionalWhiteLabelSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetAdditionalWhiteLabelSettingsAsync">
              <summary>
              Returns the additional white label settings.
              </summary>
@@ -4365,7 +4416,7 @@
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.DeleteAdditionalWhiteLabelSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.DeleteAdditionalWhiteLabelSettingsAsync">
              <summary>
              Deletes the additional white label settings.
              </summary>
@@ -4376,7 +4427,7 @@
              <httpMethod>DELETE</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveMailWhiteLabelSettings(ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveMailWhiteLabelSettingsAsync(ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings)">
              <summary>
              Saves the mail white label settings specified in the request.
              </summary>
@@ -4400,7 +4451,7 @@
              <httpMethod>PUT</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetMailWhiteLabelSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetMailWhiteLabelSettingsAsync">
              <summary>
              Returns the mail white label settings.
              </summary>
@@ -4411,7 +4462,7 @@
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.DeleteMailWhiteLabelSettings">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.DeleteMailWhiteLabelSettingsAsync">
              <summary>
              Deletes the mail white label settings.
              </summary>
@@ -4422,7 +4473,7 @@
              <httpMethod>DELETE</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetEnableWhitelabel">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetEnableWhitelabelAsync">
              <summary>
              Checks if the white label is enabled or not.
              </summary>
@@ -4492,7 +4543,7 @@
             <path>api/2.0/security/activeconnections/logoutallchangepassword</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.ConnectionsController.LogOutAllActiveConnectionsForUser(System.Guid)">
+        <member name="M:ASC.Web.Api.ConnectionsController.LogOutAllActiveConnectionsForUserAsync(System.Guid)">
             <summary>
             Logs out from all the active connections of the user with the ID specified in the request.
             </summary>
@@ -4530,7 +4581,7 @@
             <path>api/2.0/security/activeconnections/logout/{loginEventId}</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Api.Settings.PushController.DocRegisterPusnNotificationDevice(ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto)">
+        <member name="M:ASC.Web.Api.Api.Settings.PushController.DocRegisterPusnNotificationDeviceAsync(ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto)">
             <summary>
             Saves the Firebase device token specified in the request for the Documents application.
             </summary>
@@ -4541,7 +4592,7 @@
             <path>api/2.0/settings/push/docregisterdevice</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Web.Api.Api.Settings.PushController.SubscribeDocumentsPushNotification(ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto)">
+        <member name="M:ASC.Web.Api.Api.Settings.PushController.SubscribeDocumentsPushNotificationAsync(ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto)">
             <summary>
             Subscribes to the Documents push notification.
             </summary>
@@ -4602,7 +4653,7 @@
              SMTP settings API.
             </summary>
         </member>
-        <member name="M:ASC.Api.Settings.SmtpSettingsController.GetSmtpSettings">
+        <member name="M:ASC.Api.Settings.SmtpSettingsController.GetSmtpSettingsAsync">
             <summary>
             Returns the current portal SMTP settings.
             </summary>
@@ -4614,7 +4665,7 @@
             <path>api/2.0/smtpsettings/smtp</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Settings.SmtpSettingsController.SaveSmtpSettings(ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto)">
+        <member name="M:ASC.Api.Settings.SmtpSettingsController.SaveSmtpSettingsAsync(ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto)">
             <summary>
             Saves the SMTP settings for the current portal.
             </summary>
@@ -4627,7 +4678,7 @@
             <path>api/2.0/smtpsettings/smtp</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.Api.Settings.SmtpSettingsController.ResetSmtpSettings">
+        <member name="M:ASC.Api.Settings.SmtpSettingsController.ResetSmtpSettingsAsync">
             <summary>
             Resets the SMTP settings of the current portal.
             </summary>

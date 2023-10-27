@@ -238,9 +238,9 @@
         "description": "<p>The text margins measured in millimeters in the watermark shape.</p>"
       },
       {
-        "type": "Array.<number>",
+        "type": "Array.<number> | string",
         "name": "fill",
-        "description": "<p>The watermark fill color in the RGB format. The empty array [] means that the watermark has no fill.</p>"
+        "description": "<p>The watermark fill color in the RGB format, or the URL to image (base64 support: data:image/png;...). The empty array [] means that the watermark has no fill.</p>"
       },
       {
         "type": "number",
