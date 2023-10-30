@@ -78,7 +78,7 @@ ul {
 }
 
 img {
-    width: 100%;
+    max-width: 100%
 }
 
 li {
@@ -2807,25 +2807,31 @@ select {
 }
 
 .max-width-832 {
+    width: 100%;
     max-width: 832px;
 }
 
 .max-width-700 {
+    width: 100%;
     max-width: 700px;
 }
 
 .max-width-550 {
+    width: 100%;
     max-width: 550px;
 }
 
 .max-width-400 {
+    width: 100%;
     max-width: 400px;
 }
 
 .max-width-300 {
+    width: 100%;
     max-width: 300px;
 }
 
 .max-width-260 {
+    width: 100%;
     max-width: 260px;
 }
