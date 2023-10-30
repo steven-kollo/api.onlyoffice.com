@@ -588,6 +588,8 @@ li.copy-link[id]:hover:before {
     height: var(--footer-height);
     background-color: #333333;
     width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
 .layout-footer {
