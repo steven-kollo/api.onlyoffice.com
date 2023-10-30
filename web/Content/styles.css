@@ -77,6 +77,10 @@ ul {
     margin: 8px 0 8px 24px;
 }
 
+img {
+    width: 100%;
+}
+
 li {
     margin: 0 0 10px;
 }
@@ -157,7 +161,7 @@ html {
 }
 
 body {
-    min-width: 795px;
+    min-width: 825px;
 }
 
     body.main-body {
