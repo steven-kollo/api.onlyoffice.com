@@ -2132,7 +2132,6 @@ article {
 
     .layout-table {
         min-width: 0px;
-        padding: 0;
     }
 
 }
@@ -2193,6 +2192,10 @@ article {
 
     .hidden-body {
         overflow-y: hidden;
+    }
+
+    .layout-table {
+        padding: 0;
     }
 
     .table td {
