@@ -2356,6 +2356,8 @@
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
     <Content Include="Content\img\docbuilder\csharp\builder_function.png" />
+    <Content Include="Content\img\docbuilder\csharp\build_and_run.png" />
+    <Content Include="Content\img\docbuilder\csharp\folder_root_after.png" />
     <Content Include="Content\img\docbuilder\csharp\net46.png" />
     <Content Include="Content\img\docbuilder\csharp\platform.png" />
     <Content Include="Content\img\docbuilder\csharp\program_file.png" />

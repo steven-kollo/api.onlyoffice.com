@@ -15,18 +15,17 @@
     </h1>
 
     <h2>Before you start</h2>
-    <p>Create an empty folder for Document Builder C# samples and download <a target="blank" href="https://www.onlyoffice.com/download-builder.aspx?utm_source=api">ONLYOFFICE Document Builder</a>.</p>
     <p class="dscr">For the samples to work correctly, make sure that two conditions are met:</p>
     <ol>
         <li>
-            <p><b>ONLYOFFICE Document builder</b> is installed into default directory <b>"C:/Program Files/ONLYOFFICE/DocumentBuilder"</b> on your computer.</p>
+            <p><a target="blank" href="https://www.onlyoffice.com/download-builder.aspx?utm_source=api">ONLYOFFICE Document Builder</a> is installed into default directory <b>"C:/Program Files/ONLYOFFICE/DocumentBuilder"</b> on your computer.</p>
         </li>
-        <li><b>The folder</b> in which the installed samples will be located <b>has general editing access</b> to save files created by the Document Builder.</li>
+        <li><b>The directory</b> in which you are going to store the downloaded samples <b>has general editing access</b> to save files created by the Document Builder.</li>
     </ol>
 
     <h2>Download a sample</h2>
 
-    <p>Download one of the Builder C# samples archive and unzip it into a folder you created with general editing access.</p>
+    <p>Download one of the Builder C# samples archive and unzip it into a folder with general editing access.</p>
     <ul>
         <li>
             <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/FillingSpreadsheet.zip" }.ToString() %>">Filling spreadsheet</a>
@@ -87,9 +86,13 @@
         </li>
     </ul>
 
-    <h2>Run a sample and check the result</h2>
+    <h2>Run the sample</h2>
+    <p>Open .sln file inside the sample folder to build the project.<br />Run the program when the project is built.</p>
+    <img class="screenshot" alt="Visual Studio build and run sample" src="<%= Url.Content("~/content/img/docbuilder/csharp/build_and_run.png") %>" />
+    <h2>Check the result</h2>
     <p>After program execution the result file will be saved to the <b>result path</b>. It's sample folder root by default.</p>
-    <img class="screenshot" alt="C# Builder sample folder result file" src="<%= Url.Content("~/content/img/docbuilder/csharp/sample_structure_after.png") %>" />
+    <img class="screenshot" alt="C# Builder sample structure result file" src="<%= Url.Content("~/content/img/docbuilder/csharp/sample_structure_after.png") %>" />
+    <img class="screenshot" alt="C# Builder sample folder result file" src="<%= Url.Content("~/content/img/docbuilder/csharp/folder_root_after.png") %>" />
     <p>Open <b>result file</b> and check the result.</p>
     <img class="screenshot" alt="C# Builder result file" src="<%= Url.Content("~/content/img/docbuilder/csharp/result_file.png") %>" />
 
