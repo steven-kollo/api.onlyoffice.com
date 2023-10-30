@@ -677,6 +677,20 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a>Builder framework samples</a>
+            <ul>
+                <li>
+                    <a>C++ samples</a>
+                </li>
+                <li>
+                    <a>COM samples</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("csharpbuildersamples") %>">.Net samples</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 
 
@@ -728,9 +742,6 @@
     <ul class="side-nav root">
         <li>
             <a href="<%= Url.Action("changelog") %>">Changelog</a>
-        </li>
-        <li>
-            <a href="<%= Url.Action("csharpbuildersamples") %>">C# Builder samples</a>
         </li>
     </ul>
 </div>
