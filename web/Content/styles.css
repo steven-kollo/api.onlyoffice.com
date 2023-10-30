@@ -2132,6 +2132,7 @@ article {
 
     .layout-table {
         min-width: 0px;
+        padding: 0;
     }
 
 }
@@ -2378,7 +2379,6 @@ article {
         border: 0 none;
         margin: 0;
         padding: 0 16px 16px;
-        width: auto;
     }
 
     .search-big {
@@ -2461,6 +2461,7 @@ article {
     img {
         width: auto;
         height: auto;
+        max-width: 100% !important;
     }
 
     .copyReserved {
