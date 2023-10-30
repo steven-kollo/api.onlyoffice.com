@@ -279,18 +279,40 @@
                "Item2":"structure"
             }
          ],
-         "Plugins":[
+         "Usage API":[
             {
-               "Item1":"Configuring plugin",
+               "Item1":"Config",
                "Item2":"config"
             },
             {
-               "Item1":"Creating entry point",
+               "Item1":"index.html",
                "Item2":"indexhtml"
             },
             {
-               "Item1":"Coding plugin",
+               "Item1":"Plugin object",
                "Item2":"code"
+            },
+            {
+               "Item1":"Asc.scope object",
+               "Item2":"scope"
+            },
+            {
+               "Item1":"info object",
+               "Item2":"info"
+            },
+            {
+               "Item1":"InputHelper",
+               "Item2":"inputhelper"
+            },
+            {
+               "Item1":"Simple types",
+               "Item2":"global"
+            }
+         ],
+         "Plugins":[
+            {
+               "Item1":"Developing plugins",
+               "Item2":"developing"
             },
             {
                "Item1":"Adding plugins",
@@ -303,6 +325,10 @@
             {
                "Item1":"Plugin styles",
                "Item2":"styles"
+            },
+            {
+               "Item1":"Publishing plugins",
+               "Item2":"publishing"
             },
             {
                "Item1":"Plugin examples",
@@ -330,6 +356,16 @@
                "Item1":"Macro samples",
                "Item2":"macrosamples"
             }
+         ],
+         "More information":[
+            {
+               "Item1":"Changelog",
+               "Item2":"changelog"
+            },
+            {
+               "Item1":"FAQ",
+               "Item2":"faq"
+            }
          ]
       }
    },
@@ -345,26 +381,22 @@
                "Item2":"basic"
             },
             {
-               "Item1":"Getting started",
-               "Item2":"gettingstarted"
+               "Item1":"Get Document Builder",
+               "Item2":"getbuilder"
             },
             {
                "Item1":"Try now",
                "Item2":"try"
             },
             {
-               "Item1":"Integrating Builder",
-               "Item2":"integratingdocumentbuilder"
-            },
-            {
-               "Item1":"How it works",
-               "Item2":"howitworks"
+               "Item1":"Debugging",
+               "Item2":"debugging"
             }
          ],
-         "Usage API":[
+         "Builder.API":[
             {
-               "Item1":"Integration API",
-               "Item2":"integrationapi"
+               "Item1":"Overview",
+               "Item2":"gettingstarted"
             },
             {
                "Item1":"Text document API",
@@ -383,12 +415,70 @@
                "Item2":"formapi"
             },
             {
-               "Item1":"Global",
+               "Item1":"Simple types",
                "Item2":"global"
             },
             {
-               "Item1":"List of classes",
-               "Item2":"classlist"
+               "Item1":"Builder samples",
+               "Item2":"buildersamples"
+            }
+         ],
+         "Builder.Framework":[
+            {
+               "Item1":"Overview",
+               "Item2":"framework"
+            },
+            {
+               "Item1":"C++",
+               "Item2":"integrationapi/c"
+            },
+            {
+               "Item1":"COM",
+               "Item2":"integrationapi/com"
+            },
+            {
+               "Item1":".Net",
+               "Item2":"integrationapi/net"
+            }
+         ],
+         "Builder.App":[
+            {
+               "Item1":"Overview",
+               "Item2":"integrationapi/default"
+            },
+            {
+               "Item1":"Using .docbuilder file",
+               "Item2":"integrationapi/usingdocbuilderfile"
+            },
+            {
+               "Item1":"Using command line arguments",
+               "Item2":"integrationapi/arguments"
+            },
+            {
+               "Item1":"How it works",
+               "Item2":"howitworks"
+            }
+         ],
+         "Builder.Server":[
+            {
+               "Item1":"Overview",
+               "Item2":"integratingdocumentbuilder"
+            },
+            {
+               "Item1":".Net (C#) example",
+               "Item2":"csharpexample"
+            },
+            {
+               "Item1":"Node.js example",
+               "Item2":"nodejsexample"
+            },
+            {
+               "Item1":"PHP example",
+               "Item2":"phpexample"
+            },
+            {
+               "Item1":"Ruby example",
+               "Item2":"rubyexample"
             }
          ],
          "More information":[

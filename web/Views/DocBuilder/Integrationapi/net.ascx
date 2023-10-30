@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-   <span class="hdr">.Net wrapper</span>
+   <span class="hdr">.Net</span>
 </h1>
 
 <p class="dscr">For the integration of <b>ONLYOFFICE Document Builder</b> into any application, the .Net <b>doctrenderer</b> library is used. The current application version contains five main classes:</p>

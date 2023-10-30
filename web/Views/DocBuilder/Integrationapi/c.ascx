@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-   <span class="hdr">C++ wrapper</span>
+   <span class="hdr">C++</span>
 </h1>
 
 <p class="dscr">For the integration of <b>ONLYOFFICE Document Builder</b> into any application, the C++ <b>doctrenderer</b> library is used. The current application version contains six main classes:</p>
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     CDocBuilder oBuilder;
     oBuilder.SetProperty("--work-directory", sWorkDirectory.c_str());
 
-    oBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
+    oBuilder.CreateFile("docx");
 
     CContext oContext = oBuilder.GetContext();
     CContextScope oScope = oContext.CreateScope();
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     oDocument.Call("InsertContent", oContent);
 
     std::wstring sDstPath = sProcessDirectory + L"/result.docx";
-    oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, sDstPath.c_str());
+    oBuilder.SaveFile("docx", sDstPath.c_str());
     oBuilder.CloseFile();
 
     CDocBuilder::Dispose();

@@ -16,7 +16,7 @@
 
     <h2>Introduction</h2>
     <p class="dscr">
-        To integrate <b>ONLYOFFICE Document Builder</b> into your own website on <b>PHP</b> you need to download and install <b>ONLYOFFICE Document Builder</b> on your local server and use the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> for their integration.
+        To integrate <b>ONLYOFFICE Document Builder</b> into your own website on <b>PHP</b> you need to download and install <b>ONLYOFFICE Document Builder</b> on your local server and use the <a href="<%= Url.Action("integratingdocumentbuilder") %>">PHP Example</a> for their integration.
         We guide will show you how to run the PHP example on <a href="#Windows">Windows OS</a>.
     </p>
 
@@ -36,9 +36,9 @@
     </p>
 
     <ul>
-        <li><b>IIS: version 7</b> or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
-        <li><b>PHP</b> (download it from the <a href="https://php.net/downloads.php">php.net</a> site);</li>
-        <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site</a>).</li>
+        <li><b>IIS: version 7</b> or later (refer to <a target="_blank" href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
+        <li><b>PHP</b> (download it from the <a target="_blank" href="https://php.net/downloads.php">php.net</a> site);</li>
+        <li><b>PHP Manager for IIS</b> (download it from the <a target="_blank" href="https://www.iis.net/downloads/community/2018/05/php-manager-150-for-iis-10">Microsoft open source site</a>).</li>
     </ul>
 
     <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>IIS configuration</h2>

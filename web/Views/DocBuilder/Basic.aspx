@@ -16,17 +16,58 @@
 
     <span class="pvl_product">ONLYOFFICE DocumentBuilder</span><span class="pvl_version">v<%= Products.Get("docbuilder").Version %></span>
 
-    <p class="dscr">
-        <b>ONLYOFFICE Document Builder</b> allows you to build a document easily without the need to actually run a document processing editor.
-         It also allows the developers to automate document building using the templates you create or inserting the data from some database of yours into a document or a set of documents. It has all the features of a common document editor but is lightweight and can be easily integrated into your document management system, CRM system, etc. using its JavaScript API.
+    <p><b>ONLYOFFICE Document Builder</b> is a C++ library used to create and edit Office Open XML format files (documents, spreadsheets and presentations) and save them to DOCX, XSLX, PPTX and PDF formats.</p>
+    <p>It allows you to build a document easily without the need to actually run a document processing editor.
+        It also allows the developers to automate document building using the templates you create or inserting the data from some database of yours into a document or a set of documents. It has all the features of a common document editor but is lightweight and can be easily integrated into your document management system, CRM system, etc. using its JavaScript API.
     </p>
+
+    <h2>How to use</h2>
+    <p>There are two ways to use ONLYOFFICE Document Builder in your own project:</p>
+    <ol>
+        <li><p>Integrate this library into your own application. To get ONLYOFFICE Document Builder, visit <a href="<%= Url.Action("getbuilder") %>">this page</a>.</p>
+            <p>After you download and unpack the files, the library is ready for <a href="<%= Url.Action("framework") %>">integration</a>.</p>
+        </li>
+        <li>Use <a href="<%= Url.Action("integrationapi/default") %>">Builder.App</a>, the provided executive binary wrapper for an easy start.
+            The latest versions of executable files can always be downloaded <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx">here</a>.
+            After the file download, run it and see the examples of how ONLYOFFICE Document Builder can be used without the need to write any application.</li>
+    </ol>
+
+    <h2 id="builder-components" class="copy-link">Document Builder components</h2>
+    <p>ONLYOFFICE Document Builder consists of four components:</p>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Component</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("gettingstarted") %>">Builder.API</a></td>
+                <td>The JavaScript API to work with the document editor. It contains classes and methods for every document type: <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>,
+                    <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>, and <a href="<%= Url.Action("formapi") %>">Form API</a>.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("framework") %>">Builder.Framework</a></td>
+                <td>A software tool that contains a collection of libraries, classes, and functions that are used to develop applications.
+                    Currently, the following frameworks are available: <a href="<%= Url.Action("integrationapi/c") %>">C++</a>, <a href="<%= Url.Action("integrationapi/com") %>">COM</a>, <a href="<%= Url.Action("integrationapi/net") %>">.Net</a>.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integrationapi/default") %>">Builder.App</a></td>
+                <td>The <em>docbuilder.exe</em> executable file which can be run from your application with the <em>.docbuilder</em> script file as a parameter to it.</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("integratingdocumentbuilder") %>">Builder.Server</a></td>
+                <td>The code for the sample of ONLYOFFICE Document Builder integration into your application</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mobile-content"></div>
+    <br />
 
     <%
         Html.RenderPartial("DocBuilderShared/DocBuilderAction");
     %>
-
-    <h2>Want to learn how it works?</h2>
-    <p><a href="<%= Url.Action("gettingstarted") %>">Get started here</a> and find out the main principles of <b>ONLYOFFICE Document Builder</b> work, or read the <a href="<%= Url.Action("integrationapi") %>">Integration API</a>, <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>, <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a> or <a href="<%= Url.Action("formapi") %>">Form API</a> articles to find out how to automate your document creation using <b>ONLYOFFICE Document Builder</b>.</p>
 
     <h2>Get help</h2>
 

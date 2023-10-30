@@ -1,5 +1,8 @@
 # Change Log
 
+- restructured the docbuilder and plugins sections
+- docbuilder: added builder samples
+
 ## 4.3.0
 - editors: added the 3 type for the forcesavetype parameter of the callback handler
 - editors: added the editorConfig.customization.submitForm parameter

@@ -1726,6 +1726,10 @@ ul.buider_page_methods_list,
     display: none;
 }
 
+pre.spoiler_code {
+    display: none;
+}
+
 .spoiler_heading {
     color: #808080;
     cursor: pointer;
@@ -1737,6 +1741,10 @@ ul.buider_page_methods_list,
 }
     .spoiler_changelog {
         background-position-x: 35px;
+    }
+
+    .spoiler_plugin {
+        background-position-x: 75px;
     }
 
 span.yes, span.no {
@@ -2339,7 +2347,7 @@ article {
         background-color: #F5F5F5;
         padding-left: 11px;
         width: 263px;
-        position: absolute;
+        position: fixed;
         z-index: 101;
         height: calc(100vh - 48px);
         top: 48px;
@@ -2355,10 +2363,11 @@ article {
     .hidden-body .close-menu {
         background-image: url("img/close.svg");
         background-repeat: no-repeat;
+        cursor: pointer;
         width: 30px;
         height: 30px;
-        z-index: 101;
-        position: absolute;
+        z-index: 102;
+        position: fixed;
         display: block;
         right: 10px;
         top: 57px;

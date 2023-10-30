@@ -6,7 +6,7 @@
 
 <p class="dscr">If you need to pass some arguments to the created document using the command line, you can do that with <b>Document Builder</b>. To do that you will need to modify the code of your <b>.docbuilder</b> script file and include the arguments you need into the command running <b>Document Builder</b>.</p>
 
-<div class="note">This is the same as using the <a href="<%= Url.Action("integrationapi/cdocbuilder/setproperty") %>">SetProperty</a> method.</div>
+<div class="note">This is the same as using the <a href="<%= Url.Action("integrationapi/c/cdocbuilder/setproperty") %>">SetProperty</a> method.</div>
 
 <p>In this case the command will look like this:</p>
 <pre><code>docbuilder.exe "--argument={\"company\":\"ONLYOFFICE\",\"product\":\"ONLYOFFICE Document Builder\",\"compatibility\":\"100%\"}" "path-to-file\sample_with_arguments.docbuilder"</code></pre>
