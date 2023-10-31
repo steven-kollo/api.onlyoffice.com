@@ -1,3 +1,6 @@
 [submodule "DocSpace"]
 	path = DocSpace
 	url = https://github.com/ONLYOFFICE/DocSpace.git
+[submodule "Portals"]
+	path = Portals
+	url = https://github.com/ONLYOFFICE/portals.git
