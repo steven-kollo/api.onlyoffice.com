@@ -1,5 +1,7 @@
 ﻿using ASC.Common;
 using DocumentationUtility.DocSpace.Models;
+using DocumentationUtility.Shared.Markdown;
+using DocumentationUtility.Shared.Models;
 using DocumentationUtility.Shared.XmlDocs;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
@@ -33,5 +35,7 @@ foreach (var controller in controllers)
 {
     result.Add(new DocSpaceApiController(controller));
 }
+
+MarkdownRenderer.RenderApiControllers(result.Cast<DocApiController>().ToList(), "ds_out");
 
 Console.WriteLine();
