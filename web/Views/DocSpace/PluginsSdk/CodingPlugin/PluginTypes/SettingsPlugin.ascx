@@ -28,7 +28,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="adminPluginSettings" class="copy-link">adminPluginSettings</td>
-            <td>Stores the administator or owner settings block that is embedded in the modal window with the plugin description.</td>
+            <td>Stores the administrator or owner settings block that is embedded in the modal window with the plugin description.</td>
             <td><a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts" target="_blank">ISettings</a></td>
             <td></td>
         </tr>
@@ -39,7 +39,7 @@
 <h2>Methods and their description:</h2>
 <ul>
     <li>
-        <p><b id="setAdminPluginSettings" class="copy-link">setAdminPluginSettings</b> - update the administator or owner plugin settings.</p>
+        <p><b id="setAdminPluginSettings" class="copy-link">setAdminPluginSettings</b> - update the administrator or owner plugin settings.</p>
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
@@ -59,7 +59,7 @@
             <tbody>
                 <tr class="tablerow">
                     <td>adminPluginSettings</td>
-                    <td>Defines the administator or owner settings block that is embedded in the modal window with the plugin description.</td>
+                    <td>Defines the administrator or owner settings block that is embedded in the modal window with the plugin description.</td>
                     <td>ISettings</td>
                     <td></td>
                 </tr>
@@ -68,7 +68,7 @@
         <div class="mobile-content"></div>
     </li>
     <li>
-        <p><b id="getAdminPluginSettings" class="copy-link">getAdminPluginSettings</b> - get the administator or owner plugin settings.</p>
+        <p><b id="getAdminPluginSettings" class="copy-link">getAdminPluginSettings</b> - get the administrator or owner plugin settings.</p>
     </li>
 </ul>
 
