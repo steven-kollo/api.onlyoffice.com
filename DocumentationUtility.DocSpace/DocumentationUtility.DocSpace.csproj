@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DocSpaceDocumentationUtility.Shared\DocumentationUtility.Shared.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\ASC.ActiveDirectory\ASC.ActiveDirectory.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\ASC.Api.Core\ASC.Api.Core.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\ASC.Common\ASC.Common.csproj" />
@@ -52,6 +51,7 @@
     <ProjectReference Include="..\DocSpace\server\web\ASC.Web.Core\ASC.Web.Core.csproj" />
     <ProjectReference Include="..\DocSpace\server\web\ASC.Web.HealthChecks.UI\ASC.Web.HealthChecks.UI.csproj" />
     <ProjectReference Include="..\DocSpace\server\web\ASC.Web.Studio\ASC.Web.Studio.csproj" />
+    <ProjectReference Include="..\DocumentationUtility.Shared\DocumentationUtility.Shared.csproj" />
   </ItemGroup>
 
 </Project>
