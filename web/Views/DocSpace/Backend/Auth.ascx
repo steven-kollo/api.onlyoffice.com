@@ -10,7 +10,7 @@
 
         <div class="header-gray">Authentication Request</div>
         <pre>
-POST /api/2.0/authentication.json HTTP/1.1
+POST /api/2.0/authentication HTTP/1.1
 Host: yourportal.onlyoffice.com
 Content-Type: application/json
 Accept: application/json
@@ -44,7 +44,7 @@ Content-Type: application/json; charset=utf-8
 
         <div class="header-gray">Sample API Request</div>
         <pre>
-GET api/2.0/people/@self.json HTTP/1.1
+GET api/2.0/people/@self HTTP/1.1
 Host: yourportal.onlyoffice.com
 Accept: application/json
 Authorization:sdjhfskjdhkqy739459234
@@ -56,7 +56,7 @@ Authorization:sdjhfskjdhkqy739459234
 
 <div id="csharp" class="header-gray">C# authentication request example</div>
 <pre>
-var request = System.Net.WebRequest.Create("https://yourportal.onlyoffice.com/api/2.0/authentication.json");
+var request = System.Net.WebRequest.Create("https://yourportal.onlyoffice.com/api/2.0/authentication");
 request.Method = "POST";
 request.ContentType = "application/json";
 
