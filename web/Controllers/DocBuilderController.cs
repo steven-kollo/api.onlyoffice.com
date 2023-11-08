@@ -42,6 +42,8 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Basic",
+                "builderframeworksamples",
+                "builderframeworksamples/csharpbuildersamples",
                 "buildersamples",
                 "buildersamples/commenterrors",
                 "buildersamples/createadvancedform",
@@ -341,6 +343,15 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Buildersamples", (object)catchall);
         }
 
+        public ActionResult Builderframeworksamples(string catchall)
+        {
+            if (!_actionMap.Contains("builderframeworksamples/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Builderframeworksamples", (object)catchall);
+        }
+
         [HttpPost]
         public string Try(string module, string section, string method)
         {
@@ -406,11 +417,6 @@ namespace ASC.Api.Web.Help.Controllers
                 LogManager.GetLogger("ASC.DocumentBuilder").Error(ex);
                 return RedirectToAction(actionName, new { error = ex.Message });
             }
-        }
-
-        public ActionResult Csharpbuildersamples()
-        {
-            return View();
         }
 
         [HttpPost]

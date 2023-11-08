@@ -3903,7 +3903,8 @@
     <Content Include="Views\Desktop\Navigation.ascx" />
     <Content Include="Views\Desktop\Plugins.aspx" />
     <Content Include="Views\DocBuilder\Basic.aspx" />
-	<Content Include="Views\DocBuilder\csharpbuildersamples.aspx" />
+    <Content Include="Views\DocBuilder\builderframeworksamples.aspx" />
+    <Content Include="Views\DocBuilder\Builderframeworksamples\csharpbuildersamples.ascx" />
     <Content Include="Views\DocBuilder\buildersamples.aspx" />
     <Content Include="Views\DocBuilder\Buildersamples\commenterrors.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createadvancedform.ascx" />
