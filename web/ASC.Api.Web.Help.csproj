@@ -139,6 +139,13 @@
   <ItemGroup>
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
+    <Content Include="App_Data\docbuilder\cpp-samples\CommentingErrors.zip" />
+    <Content Include="App_Data\docbuilder\cpp-samples\CreatingAdvancedForm.zip" />
+    <Content Include="App_Data\docbuilder\cpp-samples\CreatingBasicForm.zip" />
+    <Content Include="App_Data\docbuilder\cpp-samples\CreatingChartPresentation.zip" />
+    <Content Include="App_Data\docbuilder\cpp-samples\CreatingPresentation.zip" />
+    <Content Include="App_Data\docbuilder\cpp-samples\FillingForm.zip" />
+    <Content Include="App_Data\docbuilder\cpp-samples\FillingSpreadsheet.zip" />
     <Content Include="App_Data\docbuilder\csharp-samples\CommentingErrors.zip" />
     <Content Include="App_Data\docbuilder\csharp-samples\CreatingAdvancedForm.zip" />
     <Content Include="App_Data\docbuilder\csharp-samples\CreatingBasicForm.zip" />

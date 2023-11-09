@@ -21,25 +21,25 @@
 <p>Download one of the Builder C++ samples archive and unzip it into a folder with general editing access.</p>
 <ul>
     <li>
-        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "" }.ToString() %>">Filling spreadsheet</a>
+        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/FillingSpreadsheet.zip" }.ToString() %>">Filling spreadsheet</a>
     </li>
     <li>
-        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "" }.ToString() %>">Commenting spreadsheet errors</a>
+        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CommentingErrors.zip" }.ToString() %>">Commenting spreadsheet errors</a>
     </li>
     <li>
-        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "" }.ToString() %>">Creating presentation</a>
+        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingPresentation.zip" }.ToString() %>">Creating presentation</a>
     </li>
     <li>
-        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "" }.ToString() %>">Creating chart presentation</a>
+        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingChartPresentation.zip" }.ToString() %>">Creating chart presentation</a>
     </li>
     <li>
-        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "" }.ToString() %>">Creating basic form</a>
+        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingBasicForm.zip" }.ToString() %>">Creating basic form</a>
     </li>
     <li>
-        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "" }.ToString() %>">Creating advanced form</a>
+        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingAdvancedForm.zip" }.ToString() %>">Creating advanced form</a>
     </li>
     <li>
-        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "" }.ToString() %>">Filling form</a>
+        <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/FillingForm.zip" }.ToString() %>">Filling form</a>
     </li>
 </ul>
 
