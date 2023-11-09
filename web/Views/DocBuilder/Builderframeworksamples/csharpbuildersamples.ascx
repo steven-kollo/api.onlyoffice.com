@@ -4,7 +4,7 @@
 
 
 <h1>
-    <span class="hdr">C# library samples</span>
+    <span class="hdr">C# framework samples</span>
 </h1>
 
 <h2>Before you start</h2>

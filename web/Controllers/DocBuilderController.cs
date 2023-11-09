@@ -44,6 +44,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Basic",
                 "builderframeworksamples",
                 "builderframeworksamples/csharpbuildersamples",
+                "builderframeworksamples/cppbuildersamples",
                 "buildersamples",
                 "buildersamples/commenterrors",
                 "buildersamples/createadvancedform",
