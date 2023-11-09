@@ -44,7 +44,7 @@ namespace Sample
         public static void Main(string[] args)
         {
             string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
-            string resultPath = "../../../../CommentedErrors.xlsx";
+            string resultPath = "../../../../result.xlsx";
             string filePath = "../../../../SpreadsheetWithErrors.xlsx";
             // add Docbuilder dlls in path
             System.Environment.SetEnvironmentVariable("PATH", System.Environment.GetEnvironmentVariable("PATH") + ";" + workDirectory);

@@ -45,7 +45,7 @@ namespace Sample
         {
             string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
             string filePath = "../../../../SampleForm.oform";
-            string resultPath = "../../../../FilledForm.oform";
+            string resultPath = "../../../../result.oform";
 
             IDictionary<string, string> formData = new Dictionary<string, string>() {
                 { "Photo", "https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png" },

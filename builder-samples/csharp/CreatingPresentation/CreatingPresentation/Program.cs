@@ -44,7 +44,7 @@ namespace Sample
         public static void Main(string[] args)
         {
             string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
-            string resultPath = "../../../../Presentation.pptx";
+            string resultPath = "../../../../result.pptx";
 
             IDictionary<string, string> slideImages = new Dictionary<string, string>() {
                 { "gun", "https://api.onlyoffice.com/content/img/docbuilder/examples/presentation_gun.png" },

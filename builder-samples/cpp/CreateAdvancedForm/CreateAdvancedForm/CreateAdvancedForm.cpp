@@ -30,16 +30,17 @@
 *
 */
 
-#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/common.h"
-#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/docbuilder.h"
-#pragma comment(lib, "C:/Program Files/ONLYOFFICE/DocumentBuilder/doctrenderer.lib")
-
 #include<map>
 #include <string>
 #include <iostream>
-
+#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/common.h"
+#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/docbuilder.h"
+#pragma comment(lib, "C:/Program Files/ONLYOFFICE/DocumentBuilder/doctrenderer.lib")
 using namespace std;
 using namespace NSDoctRenderer;
+
+const wchar_t* workDir = L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder";
+const wchar_t* resultPath = L"../result.docx";
 
 // Helper functions
 string cValueToString(CValue value)
@@ -121,9 +122,9 @@ void addTextFormToParagraph(CValue oParagraph, CValue oTextForm, int fontSize, s
 int main(int argc, char* argv[])
 {
     // Init DocBuilder
-    CDocBuilder::Initialize(L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder");
+    CDocBuilder::Initialize(workDir);
     CDocBuilder oBuilder;
-    oBuilder.SetProperty("--work-directory", L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder");
+    oBuilder.SetProperty("--work-directory", workDir);
     oBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
 
     CContext oContext = oBuilder.GetContext();
@@ -200,7 +201,7 @@ int main(int argc, char* argv[])
     oDocument.Call("RemoveElement", 1);
 
     // Save and close
-    oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, L"../result.docx");
+    oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, resultPath);
     oBuilder.CloseFile();
     CDocBuilder::Dispose();
     return 0;

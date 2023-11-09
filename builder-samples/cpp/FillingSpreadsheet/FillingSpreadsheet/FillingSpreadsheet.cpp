@@ -30,16 +30,17 @@
 *
 */
 
-#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/common.h"
-#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/docbuilder.h"
-#pragma comment(lib, "C:/Program Files/ONLYOFFICE/DocumentBuilder/doctrenderer.lib")
-
 #include<map>
 #include <string>
 #include <iostream>
-
+#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/common.h"
+#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/docbuilder.h"
+#pragma comment(lib, "C:/Program Files/ONLYOFFICE/DocumentBuilder/doctrenderer.lib")
 using namespace std;
 using namespace NSDoctRenderer;
+
+const wchar_t* workDir = L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder";
+const wchar_t* resultPath = L"../result.xlsx";
 
 // Main function
 int main(int argc, char* argv[])
@@ -57,9 +58,9 @@ int main(int argc, char* argv[])
     };
 
     // Init DocBuilder
-    CDocBuilder::Initialize(L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder");
+    CDocBuilder::Initialize(workDir);
     CDocBuilder oBuilder;
-    oBuilder.SetProperty("--work-directory", L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder");
+    oBuilder.SetProperty("--work-directory", workDir);
     oBuilder.CreateFile(OFFICESTUDIO_FILE_SPREADSHEET_XLSX);
 
     CContext oContext = oBuilder.GetContext();
@@ -94,7 +95,7 @@ int main(int argc, char* argv[])
     oWorksheet.Call("GetRange", startCell, endCell).Call("SetValue", oArray);
 
     // Save and close
-    oBuilder.SaveFile(OFFICESTUDIO_FILE_SPREADSHEET_XLSX, L"../result.xlsx");
+    oBuilder.SaveFile(OFFICESTUDIO_FILE_SPREADSHEET_XLSX, resultPath);
     oBuilder.CloseFile();
     CDocBuilder::Dispose();
     return 0;

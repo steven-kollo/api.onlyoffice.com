@@ -44,7 +44,7 @@ namespace Sample
         public static void Main(string[] args)
         {
             string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
-            string resultPath = "../../../../BasicForm.oform";
+            string resultPath = "../../../../result.oform";
 
             // add Docbuilder dlls in path
             System.Environment.SetEnvironmentVariable("PATH", System.Environment.GetEnvironmentVariable("PATH") + ";" + workDirectory);

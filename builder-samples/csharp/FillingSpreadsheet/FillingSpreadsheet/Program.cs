@@ -44,7 +44,7 @@ namespace Sample
         public static void Main(string[] args)
         {
             string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
-            string resultPath = "../../../../FilledSpreadsheet.xlsx";
+            string resultPath = "../../../../result.xlsx";
             object[,] data = {
                 { "Id", "Product", "Price", "Available"},
                 { 1001, "Item A", 12.2, true },

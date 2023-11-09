@@ -30,16 +30,17 @@
 *
 */
 
-#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/common.h"
-#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/docbuilder.h"
-#pragma comment(lib, "C:/Program Files/ONLYOFFICE/DocumentBuilder/doctrenderer.lib")
-
 #include<map>
 #include <string>
 #include <iostream>
-
+#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/common.h"
+#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/docbuilder.h"
+#pragma comment(lib, "C:/Program Files/ONLYOFFICE/DocumentBuilder/doctrenderer.lib")
 using namespace std;
 using namespace NSDoctRenderer;
+
+const wchar_t* workDir = L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder";
+const wchar_t* resultPath = L"../result.pptx";
 
 // Helper functions
 CValue createImageSlide(CValue oApi, CValue oPresentation, string image_url)
@@ -69,15 +70,15 @@ void addTextToSlideShape(CValue oApi, CValue oContent, string text, int fontSize
 int main(int argc, char* argv[])
 {
     std::map<string, string>slideImages;
-    slideImages["gun"] = "https://github.com/steven-kollo/docbuilder_examples/blob/main/Templates/presentation_gun.png?raw=true";
-    slideImages["axe"] = "https://github.com/steven-kollo/docbuilder_examples/blob/main/Templates/presentation_axe.png?raw=true";
-    slideImages["knight"] = "https://github.com/steven-kollo/docbuilder_examples/blob/main/Templates/presentation_knight.png?raw=true";
-    slideImages["sky"] = "https://github.com/steven-kollo/docbuilder_examples/blob/main/Templates/presentation_sky.png?raw=true";
+    slideImages["gun"] = "https://api.onlyoffice.com/content/img/docbuilder/examples/presentation_gun.png";
+    slideImages["axe"] = "https://api.onlyoffice.com/content/img/docbuilder/examples/presentation_axe.png";
+    slideImages["knight"] = "https://api.onlyoffice.com/content/img/docbuilder/examples/presentation_knight.png";
+    slideImages["sky"] = "https://api.onlyoffice.com/content/img/docbuilder/examples/presentation_sky.png";
 
     // Init DocBuilder
-    CDocBuilder::Initialize(L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder");
+    CDocBuilder::Initialize(workDir);
     CDocBuilder oBuilder;
-    oBuilder.SetProperty("--work-directory", L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder");
+    oBuilder.SetProperty("--work-directory", workDir);
     oBuilder.CreateFile(OFFICESTUDIO_FILE_PRESENTATION_PPTX);
 
     CContext oContext = oBuilder.GetContext();
@@ -148,7 +149,7 @@ int main(int argc, char* argv[])
     oSlide.Call("AddObject", oShape);
 
     // Save and close
-    oBuilder.SaveFile(OFFICESTUDIO_FILE_PRESENTATION_PPTX, L"../result.pptx");
+    oBuilder.SaveFile(OFFICESTUDIO_FILE_PRESENTATION_PPTX, resultPath);
     oBuilder.CloseFile();
     CDocBuilder::Dispose();
     return 0;

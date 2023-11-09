@@ -29,17 +29,19 @@
 * terms at http://creativecommons.org/licenses/by-sa/4.0/legalcode
 *
 */
-
-#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/common.h"
-#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/docbuilder.h"
-#pragma comment(lib, "C:/Program Files/ONLYOFFICE/DocumentBuilder/doctrenderer.lib")
-
 #include<map>
 #include <string>
 #include <iostream>
 #include <vector> 
+#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/common.h"
+#include "C:/Program Files/ONLYOFFICE/DocumentBuilder/include/docbuilder.h"
+#pragma comment(lib, "C:/Program Files/ONLYOFFICE/DocumentBuilder/doctrenderer.lib")
 using namespace std;
 using namespace NSDoctRenderer;
+
+const wchar_t* workDir = L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder";
+const wchar_t* templatePath = L"../ChartData.xlsx";
+const wchar_t* resultPath = L"../result.pptx";
 
 // Helper functions
 string cValueToString(CValue value)
@@ -67,14 +69,13 @@ void addText(CValue oApi, int fontSize, string text, CValue oSlide, CValue oShap
 // Main function
 int main(int argc, char* argv[])
 {
-
     // Init DocBuilder
-    CDocBuilder::Initialize(L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder");
+    CDocBuilder::Initialize(workDir);
     CDocBuilder oBuilder;
-    oBuilder.SetProperty("--work-directory", L"C:\\Program Files\\ONLYOFFICE\\DocumentBuilder");
+    oBuilder.SetProperty("--work-directory", workDir);
    
     // Read chart data from xlsx
-    oBuilder.OpenFile(L"../ChartData.xlsx", L"");
+    oBuilder.OpenFile(templatePath, L"");
     CContext oContext = oBuilder.GetContext();
     CContextScope oScope = oContext.CreateScope();
     CValue oGlobal = oContext.GetGlobal();
@@ -159,7 +160,7 @@ int main(int argc, char* argv[])
     oSlide.Call("AddObject", oChart);
 
     // Save and close
-    oBuilder.SaveFile(OFFICESTUDIO_FILE_PRESENTATION_PPTX, L"../result.pptx");
+    oBuilder.SaveFile(OFFICESTUDIO_FILE_PRESENTATION_PPTX, resultPath);
     oBuilder.CloseFile();
     CDocBuilder::Dispose();
     return 0;

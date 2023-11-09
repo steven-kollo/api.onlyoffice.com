@@ -44,7 +44,7 @@ namespace Sample
         public static void Main(string[] args)
         {
             string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
-            string resultPath = "../../../../ChartPresentation.pptx";
+            string resultPath = "../../../../result.pptx";
             string filePath = "../../../../ChartData.xlsx";
 
             // add Docbuilder dlls in path
