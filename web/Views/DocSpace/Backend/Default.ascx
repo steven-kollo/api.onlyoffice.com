@@ -18,15 +18,7 @@
 </h2>
 <p>
     To identify the request and response format, please make sure that both the <b>Content-Type</b> and <b>Accept</b> headers are set to <em>application/json</em>.
-        Any API method can be called specifying the format for the response (json or xml).
-</p>
-<p>
-    <b>Example:</b><br />
-    <b>api/2.0/people/@self</b> can be called both as <b>api/2.0/people/@self.json</b> and <b>api/2.0/people/@self.xml</b>. In the first case, the format of the returned media is = JSON,
-    and the second option returns media as = XML.
-</p>
-<p>
-    By default, the XML format is used for the response if no format is specified in the request (e.g. <b>api/2.0/people/@self</b> will return XML media).
+        Any API method can be called specifying the json format for the response.
 </p>
 <h2>Responses
 </h2>
