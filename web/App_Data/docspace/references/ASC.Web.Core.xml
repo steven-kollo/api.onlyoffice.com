@@ -4275,7 +4275,7 @@
             Get logo stream or null in case of default logo
             </summary>
         </member>
-        <member name="M:ASC.Web.Core.WhiteLabel.TenantWhiteLabelSettingsHelper.GetWhitelabelLogoData(ASC.Web.Core.WhiteLabel.TenantWhiteLabelSettings,ASC.Web.Core.WhiteLabel.WhiteLabelLogoTypeEnum,System.Boolean)">
+        <member name="M:ASC.Web.Core.WhiteLabel.TenantWhiteLabelSettingsHelper.GetWhitelabelLogoData(ASC.Web.Core.WhiteLabel.TenantWhiteLabelSettings,ASC.Web.Core.WhiteLabel.WhiteLabelLogoType,System.Boolean)">
             <summary>
             Get logo stream or null in case of default whitelabel
             </summary>

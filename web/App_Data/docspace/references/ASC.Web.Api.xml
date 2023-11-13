@@ -49,7 +49,7 @@
             <type>ASC.Web.Api.ApiModel.RequestsDto.ConfirmData, ASC.Web.Api</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto.RecaptchaResponse">
-            <summary>Recaptcha response</summary>
+            <summary>reCAPTCHA response</summary>
             <type>System.String, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto">
@@ -144,7 +144,7 @@
             <summary>List of trusted domains</summary>
             <type>System.Collections.Generic.List{System.String}, System.Collections.Generic</type>
         </member>
-        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto.InviteAsUsers">
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto.InviteUsersAsVisitors">
             <summary>Invites as a user or not</summary>
             <type>System.Boolean, System</type>
         </member>
@@ -1393,11 +1393,11 @@
             </summary>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.DeliveryFrom">
-            <summary></summary>
+            <summary>Delivey start time</summary>
             <type>System.Nullable{System.DateTime}, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.DeliveryTo">
-            <summary></summary>
+            <summary>Delivey end time</summary>
             <type>System.Nullable{System.DateTime}, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.HookUri">
@@ -1406,19 +1406,19 @@
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.WebhookId">
             <summary>Webhook ID</summary>
-            <type>System.Int32, System</type>
+            <type>System.Nullable{System.Int32}, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.ConfigId">
-            <summary></summary>
-            <type>System.Int32, System</type>
+            <summary>Config ID</summary>
+            <type>System.Nullable{System.Int32}, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.EventId">
-            <summary></summary>
-            <type>System.Int32, System</type>
+            <summary>Event ID</summary>
+            <type>System.Nullable{System.Int32}, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.WebhooksLogRequest.GroupStatus">
-            <summary></summary>
-            <type>System.Int32, System</type>
+            <summary>Webhook group status</summary>
+            <type>System.Nullable{ASC.Webhooks.Core.WebhookGroupStatus}, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.AdditionalWhiteLabelSettingsDto">
             <summary>
@@ -1551,6 +1551,18 @@
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto.Limit">
             <summary>Room name</summary>
             <type>System.Int32, System</type>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModels.ResponseDto.IsDefaultWhiteLabelLogosDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.IsDefaultWhiteLabelLogosDto.Name">
+            <summary>White label logo name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.IsDefaultWhiteLabelLogosDto.Default">
+            <summary>Specifies if the white label logo is default or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.LdapCronSettingsDto">
             <summary>
@@ -4116,7 +4128,7 @@
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.GetVersionsAsync">
             <summary>
-            Returns a list of the availibe portal versions including the current version.
+            Returns a list of the available portal versions including the current version.
             </summary>
             <short>
             Get the portal versions
@@ -4199,13 +4211,13 @@
             Get webhook logs
             </short>
             <category>Webhooks</category>
-            <param type="System.DateTime, System" name="deliveryFrom"></param>
-            <param type="System.DateTime, System" name="deliveryTo"></param>
-            <param type="System.String, System" name="hookUri"></param>
-            <param type="System.Int32, System" name="webhookId"></param>
-            <param type="System.Int32, System" name="configId"></param>
-            <param type="System.Int32, System" name="eventId"></param>
-            <param type="ASC.Webhooks.Core.WebhookGroupStatus, ASC.Webhooks.Core" name="groupStatus"></param>
+            <param type="System.Nullable{System.DateTime}, System" name="deliveryFrom">Delivey start time</param>
+            <param type="System.Nullable{System.DateTime}, System" name="deliveryTo">Delivey end time</param>
+            <param type="System.String, System" name="hookUri">Hook URI</param>
+            <param type="System.Nullable{System.Int32}, System" name="webhookId">Webhook ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="configId">Config ID</param>
+            <param type="System.Nullable{System.Int32}, System" name="eventId">Event ID</param>
+            <param type="System.Nullable{ASC.Webhooks.Core.WebhookGroupStatus}, System" name="groupStatus">Webhook group status</param>
             <path>api/2.0/settings/webhooks/log</path>
             <httpMethod>GET</httpMethod>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto, ASC.Web.Api">Logs of the webhook activities</returns>
@@ -4309,13 +4321,13 @@
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetIsDefaultWhiteLabelLogos">
             <summary>
-            Returns the is default white label logos.
+            Specifies if the white label logos are default or not.
             </summary>
             <short>
-            Get the is default white label logos
+            Check the default white label logos
             </short>
             <category>Rebranding</category>
-            <returns type="ASC.Web.Api.ApiModels.ResponseDto.IsDefaultWhiteLabelLogosDto, ASC.Web.Api">Is default white label logos</returns>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.IsDefaultWhiteLabelLogosDto, ASC.Web.Api">Request properties of white label logos</returns>
             <path>api/2.0/settings/whitelabel/logos/isdefault</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
@@ -4490,12 +4502,12 @@
             </summary>
             <name>thirdparty</name>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.ThirdPartyController.Get(ASC.FederatedLogin.LoginProviders.LoginProviderEnum)">
+        <member name="M:ASC.Web.Api.Controllers.ThirdPartyController.Get(ASC.FederatedLogin.LoginProviders.LoginProvider)">
             <summary>
             Returns a request to get the confirmation code from URL.
             </summary>
             <short>Get the code request</short>
-            <param type="ASC.FederatedLogin.LoginProviders.LoginProviderEnum, ASC.FederatedLogin.LoginProviders" method="url" name="provider">Provider</param>
+            <param type="ASC.FederatedLogin.LoginProviders.LoginProvider, ASC.FederatedLogin.LoginProviders" method="url" name="provider">Provider</param>
             <returns type="System.Object, System">Code request</returns>
             <remarks>List of providers: Google, Dropbox, Docusign, Box, OneDrive, Wordpress.</remarks>
             <path>api/2.0/thirdparty/{provider}</path>
@@ -4704,14 +4716,6 @@
         </member>
         <member name="P:ASC.Api.Settings.BuildVersion.DocumentServer">
             <summary>Document Server version</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Api.Settings.BuildVersion.MailServer">
-            <summary>Mail Server version</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Api.Settings.BuildVersion.XmppServer">
-            <summary>XMPP server version</summary>
             <type>System.String, System</type>
         </member>
     </members>

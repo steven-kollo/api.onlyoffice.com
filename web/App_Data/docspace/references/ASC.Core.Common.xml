@@ -752,9 +752,9 @@
         </member>
         <member name="P:ASC.Web.Core.Users.DarkThemeSettings.Theme">
             <summary>Theme</summary>
-            <type>ASC.Web.Core.Users.DarkThemeSettingsEnum, ASC.Core.Common</type>
+            <type>ASC.Web.Core.Users.DarkThemeSettingsType, ASC.Core.Common</type>
         </member>
-        <member name="T:ASC.Web.Core.Users.DarkThemeSettingsEnum">
+        <member name="T:ASC.Web.Core.Users.DarkThemeSettingsType">
             <summary>
             </summary>
         </member>
