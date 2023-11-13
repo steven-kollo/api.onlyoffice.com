@@ -1,6 +1,7 @@
 # Change Log
 
 - docspace: added the DocSpace plugins SDK
+- docspace: storybook v2.0.0
 - restructured the docbuilder and plugins sections
 - docbuilder: added builder samples
 

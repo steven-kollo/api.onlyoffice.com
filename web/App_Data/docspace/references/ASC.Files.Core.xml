@@ -394,7 +394,7 @@
             </summary>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ExternalShareRequestDto.Password">
-            <summary></summary>
+            <summary>Password</summary>
             <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto">
@@ -506,7 +506,7 @@
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.DenyDownload">
-            <summary>Disable downloading</summary>
+            <summary>Specifies whether downloading a file from a link is disabled or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.LockFileRequestDto">
@@ -874,48 +874,48 @@
             <summary>Error message</summary>
             <type>System.String, System</type>
         </member>
-        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1">
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto">
             <summary>
             Result of file conversation operation.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Id">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Id">
             <summary>
             Operation ID
             </summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.OperationType">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.OperationType">
             <summary>
             Operation type
             </summary>
             <type>ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType, ASC.Files.Core</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Progress">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Progress">
             <summary>
             Operation progress
             </summary>
             <type>System.Int32, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Source">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Source">
             <summary>
             Source file
             </summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.File">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.File">
             <summary>
             Resulting file
             </summary>
             <type>System.Object, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Error">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Error">
             <summary>
             Error
             </summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Processed">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Processed">
             <summary>
             Specifies if the operation is processed or not
             </summary>
@@ -966,31 +966,31 @@
             </summary>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Status">
-            <summary></summary>
+            <summary>External data status</summary>
             <type>ASC.Files.Core.Security.Status, ASC.Files.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Id">
-            <summary></summary>
+            <summary>External data ID</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Title">
-            <summary></summary>
+            <summary>External data title</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.RoomType">
-            <summary></summary>
-            <type>ASC.Files.Core.ApiModels.RequestDto.RoomType, ASC.Files.Core</type>
+            <summary>Type of a room where the external data is located</summary>
+            <type>System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomType}, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.TenantId">
-            <summary></summary>
+            <summary>Tenant ID</summary>
             <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Logo">
-            <summary></summary>
+            <summary>Room logo</summary>
             <type>ASC.Files.Core.VirtualRooms.Logo, ASC.Files.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Shared">
-            <summary></summary>
+            <summary>Specifies whether to share the external data or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1">
@@ -1372,6 +1372,10 @@
             <summary>Spceifies if this user can edit the access to the specified file or not</summary>
             <type>System.Boolean, System</type>
         </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.LinkType">
+            <summary>
+            </summary>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1">
             <summary>
             </summary>
@@ -1488,6 +1492,10 @@
             <summary>Message</summary>
             <type>System.String, System</type>
         </member>
+        <member name="T:ASC.Files.Core.Core.ApplyFilterOption">
+            <summary>
+            </summary>
+        </member>
         <member name="M:ASC.Files.Core.IFileDao`1.InvalidateCacheAsync(`0)">
             <summary>
                 Clear the application cache for the specific file
@@ -1572,7 +1580,7 @@
             <param name="searchText"> </param>
             <param name="searchInContent"></param>
             <param name="withSubfolders"> </param>
-            <param name="exludeSubject"> </param>
+            <param name="excludeSubject"> </param>
             <param name="offset"></param>
             <param name="count"></param>
             <param name="roomId"></param>
@@ -1781,7 +1789,7 @@
             <param name="subjectID"></param>
             <param name="searchText"></param>
             <param name="withSubfolders"></param>
-            <param name="exludeSubject"></param>
+            <param name="excludeSubject"></param>
             <param name="offset"></param>
             <param name="count"></param>
             <param name="roomId"></param>
@@ -1792,13 +1800,13 @@
             Gets the folder (s) by ID (s)
             </summary>
             <param name="folderIds"></param>
-            <param name="filterTypes"></param>
+            <param name="filterType"></param>
             <param name="subjectGroup"></param>
             <param name="subjectID"></param>
             <param name="searchText"></param>
             <param name="searchSubfolders"></param>
             <param name="checkShare"></param>
-            <param name="exludeSubject"></param>
+            <param name="excludeSubject"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.GetParentFoldersAsync(`0)">
@@ -1839,7 +1847,7 @@
             <returns> 
             </returns>
         </member>
-        <member name="M:ASC.Files.Core.IFolderDao`1.CanMoveOrCopyAsync(`0[],`0)">
+        <member name="M:ASC.Files.Core.IFolderDao`1.CanMoveOrCopyAsync(System.Collections.Generic.IEnumerable{`0},`0)">
             <summary>
             Validate the transfer operation directory to another directory.
             </summary>
@@ -2041,6 +2049,22 @@
             <param name="fileEntry"></param>
             <returns></returns>
         </member>
+        <member name="T:ASC.Files.Core.DateToAutoCleanUp">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:ASC.Files.Core.AutoCleanUpData">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.AutoCleanUpData.IsAutoCleanUp">
+            <summary>Specifies if the auto-clearing setting is enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.AutoCleanUpData.Gap">
+            <summary>The period when the trash bin will be cleared</summary>
+            <type>ASC.Files.Core.DateToAutoCleanUp, ASC.Files.Core</type>
+        </member>
         <member name="T:ASC.Files.Core.EditHistoryDataDto">
             <summary>
             </summary>
@@ -2105,7 +2129,55 @@
             <summary>File name mask</summary>
             <type>System.String, System</type>
         </member>
+        <member name="T:ASC.Files.Core.FolderType">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:ASC.Files.Core.Security.ValidationInfo">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Status">
+            <summary>External data status</summary>
+            <type>ASC.Files.Core.Security.Status, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Id">
+            <summary>External data ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Title">
+            <summary>External data title</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Access">
+            <summary>Sharing rights</summary>
+            <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.FolderType">
+            <summary>Type of a folder where the external data is located</summary>
+            <type>ASC.Files.Core.FolderType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Logo">
+            <summary>Room logo</summary>
+            <type>ASC.Files.Core.VirtualRooms.Logo, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.TenantId">
+            <summary>Tenant ID</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Shared">
+            <summary>Specifies whether to share the external data or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.Security.Status">
+            <summary>
+            </summary>
+        </member>
         <member name="T:ASC.Files.Core.Security.FileShare">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:ASC.Files.Core.Security.ShareFilterType">
             <summary>
             </summary>
         </member>
