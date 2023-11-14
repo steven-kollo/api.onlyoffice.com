@@ -50,7 +50,7 @@ npx create-docspace-plugin
                 <tr class="tablerow">
                     <td id="logo" class="copy-link">Name of the logo image</td>
                     <td>The name of the plugin logo image that must be uploaded to the <em>assets</em> folder. There is no need to specify the path to this file.
-                    The logo will be displayed in the DocSpace plugin settings. The required icon size is 64x64 px. Otherwise, it will be compressed to this size.</td>
+                    The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.</td>
                 </tr>
                 <tr class="tablerow">
                     <td id="description" class="copy-link">Description</td>
@@ -85,7 +85,8 @@ npx create-docspace-plugin
 <img alt="Creating template" class="screenshot" src="<%= Url.Content("~/content/img/docspace/creating-template.png") %>" />
 
 <p>All the specified parameters can be changed later in the <em>package.json</em> file.</p>
-<p>You can also create a plugin in any project by adding the <em>@onlyoffice/docspace-plugin-sdk</em> npm package
+<p>In the <em>package.json</em> file, you can also specify the addresses of the third-party websites to add them to the CSP header and prevent these addresses from being blocked.</p>
+<p>You can create a plugin in any project by adding the <em>@onlyoffice/docspace-plugin-sdk</em> npm package
 as the dependency and specifying all the necessary fields in the <em>package.json</em> file.</p>
 
 <div class="header-gray">Example</div>
@@ -102,5 +103,9 @@ as the dependency and specifying all the necessary fields in the <em>package.jso
     "pluginName": "PDFConverter",
     "license": "MIT",
     "logo": "logo.png",
-    "homepage": "https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter"
+    "homepage": "https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter",
+    "cspDomains": [
+      "https://embed.diagrams.net/",
+      "https://*.diagrams.net/"
+    ]
 }</pre>

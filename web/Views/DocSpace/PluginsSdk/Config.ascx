@@ -31,6 +31,12 @@
             <td>"ONLYOFFICE"</td>
         </tr>
         <tr class="tablerow">
+            <td id="cspDomains" class="copy-link">cspDomains</td>
+            <td>The list of all third-party resources that are used in the plugin.</td>
+            <td>array of strings</td>
+            <td>["https://embed.diagrams.net/", "https://*.diagrams.net/"]</td>
+        </tr>
+        <tr class="tablerow">
             <td id="description" class="copy-link">description</td>
             <td>The description, i.e. what describes your plugin in the best way.</td>
             <td>string</td>
@@ -44,7 +50,8 @@
         </tr>
         <tr class="tablerow">
             <td id="image" class="copy-link">image</td>
-            <td>The name of the logo image. It is equal to the <em>logo</em> parameter from the <em>package.json</em> file.</td>
+            <td>The name of the logo image. It is equal to the <em>logo</em> parameter from the <em>package.json</em> file.
+            The required icon size is 48x48 px. Otherwise, it will be compressed to this size.</td>
             <td>string</td>
             <td>"logo.png"</td>
         </tr>
@@ -85,6 +92,10 @@
 <div class="header-gray">Example</div>
 <pre>{
     "author": "ONLYOFFICE",
+    "cspDomains": [
+      "https://embed.diagrams.net/",
+      "https://*.diagrams.net/"
+    ],
     "description": "plugin description",
     "homePage": "https://example.com/url-to-plugin-repository",
     "image": "logo.png",
