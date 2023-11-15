@@ -116,7 +116,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "PluginsSdk/CodingPlugin/PluginTypes/ProfileMenuPlugin",
                 "PluginsSdk/CodingPlugin/PluginTypes/EventListenerPlugin",
                 "PluginsSdk/CodingPlugin/PluginTypes/FilePlugin",
-                "PluginsSdk/UploadingPlugin",
+                "PluginsSdk/AddingPlugin",
                 "Basic",
             };
 

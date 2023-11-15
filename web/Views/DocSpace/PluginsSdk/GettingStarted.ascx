@@ -65,5 +65,5 @@ The completed plugin will be located in the <em>dist</em> folder and can be uplo
 More information can be found <a href="<%= Url.Action("pluginssdk/buildingplugin") %>">here</a>.</p>
 
 <h2>Step 5. Uploading to the portal</h2>
-<p>To upload a plugin to the DocSpace portal, follow the instructions <a href="<%= Url.Action("pluginssdk/uploadingplugin") %>">here</a>.</p>
+<p>To upload a plugin to the DocSpace portal, follow the instructions <a href="<%= Url.Action("pluginssdk/addingplugin") %>">here</a>.</p>
 <p>The plugin will appear in the plugin list and start functioning automatically.</p>

@@ -192,7 +192,7 @@
                 <a href="<%= Url.Action("pluginssdk/config") %>">Config</a>
             </li>
             <li>
-                <a href="<%= Url.Action("pluginssdk/uploadingplugin") %>">Uploading plugin</a>
+                <a href="<%= Url.Action("pluginssdk/addingplugin") %>">Adding plugin</a>
             </li>
             
             <li>
