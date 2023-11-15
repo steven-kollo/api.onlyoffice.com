@@ -3868,6 +3868,7 @@
     <Content Include="Scripts\scripts.js" />
     <Content Include="version.txt" />
     <Content Include="Views\Desktop\AddingDMS.aspx" />
+    <Content Include="Views\Desktop\AddingDMS\ChangingTheme.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Configuring.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Default.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Encryption.ascx" />
@@ -3879,6 +3880,7 @@
     <Content Include="Views\Desktop\Basic.aspx" />
     <Content Include="Views\Desktop\Changelog.aspx" />
     <Content Include="Views\Desktop\Debugging.aspx" />
+    <Content Include="Views\Desktop\execCommand.aspx" />
     <Content Include="Views\Desktop\FAQ.aspx" />
     <Content Include="Views\Desktop\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Desktop\Howitworks.aspx" />

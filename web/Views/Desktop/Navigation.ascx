@@ -39,6 +39,9 @@
                     <a href="<%= Url.Action("addingdms/loginlogout") %>">Login/logout</a>
                 </li>
                 <li>
+                    <a href="<%= Url.Action("addingdms/changingtheme") %>">Changing a theme</a>
+                </li>
+                <li>
                     <a href="<%= Url.Action("addingdms/opening") %>">Opening documents</a>
                 </li>
                 <li>
@@ -56,6 +59,9 @@
                     </ul>
                 </li>
             </ul>
+        </li>
+        <li>
+            <a href="<%= Url.Action("execcommand") %>">execCommand</a>
         </li>
     </ul>
     <div class="treeheader">More information</div>

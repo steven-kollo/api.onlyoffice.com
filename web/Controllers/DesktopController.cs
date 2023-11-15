@@ -37,6 +37,7 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "addingdms",
+                "addingdms/changingtheme",
                 "addingdms/configuring",
                 "addingdms/encryption",
                 "addingdms/encryption/keygeneration",
@@ -47,6 +48,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "basic",
                 "changelog",
                 "debugging",
+                "execcommand",
                 "faq",
                 "howitworks",
                 "howitworks/encryptingclouddocuments",
@@ -90,6 +92,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Debugging()
+        {
+            return View();
+        }
+
+        public ActionResult execCommand()
         {
             return View();
         }
