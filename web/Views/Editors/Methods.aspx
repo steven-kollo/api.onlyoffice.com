@@ -1270,7 +1270,7 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>Defines the email address of the user.</td>
+                        <td>Defines the email address of the user. This field is used only for mentioning a user in the comments.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
