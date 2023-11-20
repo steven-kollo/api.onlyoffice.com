@@ -169,10 +169,10 @@ const message: IMessage = {
 </pre>
     </li>
     <li>
-        <p><b id="saveSettings" class="copy-link">saveSettings</b> - the function called when the <b>Save</b> button is clicked in the <b>Settings</b> block.
-            It saves the data that was transferred in the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginmessage") %>#settings">settings</a> parameter
-            and returns it in the <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/settingsplugin") %>#setAdminPluginSettingsValue">setAdminPluginSettingsValue</a> method
-            each time the plugin is requested.</p>
+        <p><b id="saveSettings" class="copy-link">saveSettings</b> - the function called when saving the data that was transferred
+        in the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginmessage") %>#settings">settings</a> parameter
+        and returning it in the <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/settingsplugin") %>#setAdminPluginSettingsValue">setAdminPluginSettingsValue</a> method
+        each time the plugin is requested. It functions only when the <b>Save</b> button is clicked in the <b>Settings</b> block.</p>
         <pre>
 const message: IMessage = {
     "actions": [
