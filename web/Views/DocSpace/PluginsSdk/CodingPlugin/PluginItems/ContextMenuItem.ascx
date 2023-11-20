@@ -83,6 +83,13 @@
             <td>[Devices.desktop]</td>
         </tr>
         <tr class="tablerow">
+            <td id="security" class="copy-link">security</td>
+            <td>Defines the security parameters of the parent folder or room that will be checked. If all the parameters are <b>true</b>, the current item will be displayed in the context menu.
+            If this parameter is undefined, it will be ignored.</td>
+            <td>array of <a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/Security.ts" target="_blank">Security</a></td>
+            <td>[Security.Create]</td>
+        </tr>
+        <tr class="tablerow">
             <td id="withActiveItem" class="copy-link">withActiveItem</td>
             <td>Specifies whether to add the action state to the item in the file list when the <a href="#onClick">onClick</a> event is triggered.</td>
             <td>boolean</td>

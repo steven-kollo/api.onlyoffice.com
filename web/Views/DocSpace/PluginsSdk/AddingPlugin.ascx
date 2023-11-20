@@ -24,7 +24,7 @@
         <img alt="Plugin switcher" class="screenshot max-width-400" src="<%= Url.Content("~/content/img/docspace/switcher.png") %>" />
     </li>
 </ol>
-<p>After that, the plugin starts working automatically if no additional settings must be specified.</p>
+<p>After that, the plugin will function automatically unless additional settings need to be specified.</p>
 
 <h2 id="configure-plugin" class="copy-link">Configuring plugin settings</h2>
 <p>To set up a plugin:</p>
@@ -39,7 +39,7 @@
 
 <h2 id="upload-plugin" class="copy-link">Uploading plugins</h2>
 <p>In the DocSpace on-premises solution, the system plugins will be available on the same <b>Plugins</b> page.
-But in this case, you can also upload your own plugins. To do this:</p>
+But in this case, you also have the option to upload your own plugins. To do this:</p>
 <ol>
     <li>
         <p>In the lower left corner, click <img class="screenshot" src="<%= Url.Content("~/content/img/docspace/more-icon.png") %>" />
@@ -60,4 +60,4 @@ But in this case, you can also upload your own plugins. To do this:</p>
         <img alt="Plugin archive" class="screenshot" src="<%= Url.Content("~/content/img/docspace/plugin-archive.png") %>" />
     </li>
 </ol>
-<p>After that, the plugin starts working automatically if no additional settings must be specified.</p>
+<p>After that, the plugin will function automatically unless additional settings need to be specified.</p>

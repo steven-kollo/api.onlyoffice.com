@@ -168,4 +168,23 @@ const message: IMessage = {
 };
 </pre>
     </li>
+    <li>
+        <p><b id="saveSettings" class="copy-link">saveSettings</b> - the function called when the <b>Save</b> button is clicked in the <b>Settings</b> block.
+            It saves the data that was transferred in the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginmessage") %>#settings">settings</a> parameter
+            and returns it in the <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/settingsplugin") %>#setAdminPluginSettingsValue">setAdminPluginSettingsValue</a> method
+            each time the plugin is requested.</p>
+        <pre>
+const message: IMessage = {
+    "actions": [
+      Actions.showToast,
+      Actions.updateProps,
+      Actions.updateStatus,
+      Actions.saveSettings,
+    ],
+    "toastProps": [{ "title": "Token is saved", "type": ToastType.success }],
+    "newProps": { ...userButtonProps, "isDisabled": true },
+    "settings": tokenInput.value,
+};
+</pre>
+    </li>
 </ul>

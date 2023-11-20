@@ -100,6 +100,13 @@
             <td><a href="https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts" target="_blank">IPostMessage</a></td>
             <td>{IPostMessage}</td>
         </tr>
+        <tr class="tablerow">
+            <td id="settings" class="copy-link">settings</td>
+            <td>Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users.
+                This parameter is used only with <a href="<%= Url.Action("pluginssdk/codingplugin/events") %>#saveSettings">Actions.saveSettings</a>.</td>
+            <td>string</td>
+            <td>"{settings}"</td>
+        </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>

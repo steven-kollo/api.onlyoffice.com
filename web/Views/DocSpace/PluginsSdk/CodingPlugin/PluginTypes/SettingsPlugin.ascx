@@ -68,6 +68,37 @@
         <div class="mobile-content"></div>
     </li>
     <li>
+        <p><b id="setAdminPluginSettingsValue" class="copy-link">setAdminPluginSettingsValue</b> - transfer the administrator or owner plugin settings to all the portal users.
+        It functions on the DocSpace side.</p>
+        <div class="header-gray">Parameters</div>
+        <table class="table">
+            <colgroup>
+                <col class="table-name" />
+                <col />
+                <col class="table-type" />
+                <col class="table-example" />
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Name</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                    <td>Example</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td>settings</td>
+                    <td>Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users.
+                    This parameter is used only with <a href="<%= Url.Action("pluginssdk/codingplugin/events") %>#saveSettings">Actions.saveSettings</a>.</td>
+                    <td>string</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+    </li>
+    <li>
         <p><b id="getAdminPluginSettings" class="copy-link">getAdminPluginSettings</b> - get the administrator or owner plugin settings.</p>
     </li>
 </ul>
@@ -85,6 +116,10 @@ class Plugin implements ISettingsPlugin {
 
     setAdminPluginSettings = (settings: ISettings | null): void =&gt; {
         this.adminPluginSettings = settings;
+    }
+
+    setAdminPluginSettingsValue = (settings: string | null): void =&gt; {
+
     }
 }
 </pre>
