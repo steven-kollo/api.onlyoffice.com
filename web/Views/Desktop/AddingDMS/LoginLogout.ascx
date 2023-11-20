@@ -6,48 +6,12 @@
 </h1>
 
 <p>Before you start working on documents stored within your cloud, you need to log in to it.</p>
-<p>Use the <b>execCommand</b> method of the <em>window.AscDesktopEditor</em> object to display the cloud in the <b>Connected clouds</b> list or remove it.</p>
-<pre>
-AscDesktopEditor.execCommand (command, parameters)
-</pre>
 
-<div class="header-gray">Parameters</div>
-<table class="table">
-    <colgroup>
-        <col class="table-name" />
-        <col />
-        <col class="table-type" />
-    </colgroup>
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td id="provider" class="copy-link">command</td>
-            <td>
-                Defines the command that must be executed.
-            </td>
-            <td>string</td>
-        </tr>
-        <tr class="tablerow">
-            <td id="name" class="copy-link">parameters</td>
-            <td>
-                Defines the parameters that are passed to the method.
-            </td>
-            <td>string</td>
-        </tr>
-    </tbody>
-</table>
-<div class="mobile-content"></div>
-
-<h2 id="login" class="copy-link">portal:login</h2>
-<p>When the <em>portal:login</em> command is sent, the cloud is registered and listed on the <b>Connected clouds</b> page.
-    Call the command on all the pages you can access after logging in to your cloud.
-    Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
+<h2 id="login" class="copy-link">Login</h2>
+<p>Use the <a href="<%= Url.Action("execcommand") %>">execCommand</a> method to display a cloud in the <b>Connected clouds</b> list.
+When the <em>portal:login</em> command is sent, the cloud is registered and listed on the <b>Connected clouds</b> page.
+Call the command on all the pages you can access after logging in to your cloud.
+Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
 <pre>
 {
     "displayName": "user name", 
@@ -151,12 +115,13 @@ const params = {
     "uiTheme": "theme-dark",
     "userId": "78e1e841"
 }
-AscDesktopEditor.execCommand ("portal:login", JSON.stringify(params))
+window.AscDesktopEditor.execCommand ("portal:login", JSON.stringify(params))
 </pre>
 
-<h2 id="logout" class="copy-link">portal:logout</b></h2>
-<p>When the <em>portal:logout</em> command is sent, the cloud will be removed from the list on the <b>Connected clouds</b> page.
-    Cookies for this domain will be cleared. Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
+<h2 id="logout" class="copy-link">Logout</b></h2>
+<p>Use the <a href="<%= Url.Action("execcommand") %>">execCommand</a> method to remove a cloud from the <b>Connected clouds</b> list.
+When the <em>portal:logout</em> command is sent, the cloud will be removed from the list on the <b>Connected clouds</b> page.
+Cookies for this domain will be cleared. Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
 <pre>
 {
     "domain": "domain name"
@@ -194,7 +159,7 @@ AscDesktopEditor.execCommand ("portal:login", JSON.stringify(params))
 
 <div class="header-gray">Example</div>
 <pre>
-window.AscDesktopEditor.execCommand ("portal:logout", JSON.stringify (({
+window.AscDesktopEditor.execCommand ("portal:logout", JSON.stringify ({
     "domain": "https://exampledomain.com"
 }));
 </pre>

@@ -1,6 +1,7 @@
 # Change Log
 
 - editors: added the information about Health check
+- desktop: added the portal:uiTheme command to the execCommand method
 - restructured the docbuilder and plugins sections
 - docbuilder: added builder samples
 
