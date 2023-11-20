@@ -3874,13 +3874,13 @@
     <Content Include="Views\Desktop\AddingDMS\Encryption.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Encryption\keygeneration.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Encryption\operations.ascx" />
+    <Content Include="Views\Desktop\AddingDMS\execCommand.ascx" />
     <Content Include="Views\Desktop\AddingDMS\LoginLogout.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Notifications.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Opening.ascx" />
     <Content Include="Views\Desktop\Basic.aspx" />
     <Content Include="Views\Desktop\Changelog.aspx" />
     <Content Include="Views\Desktop\Debugging.aspx" />
-    <Content Include="Views\Desktop\execCommand.aspx" />
     <Content Include="Views\Desktop\FAQ.aspx" />
     <Content Include="Views\Desktop\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Desktop\Howitworks.aspx" />

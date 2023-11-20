@@ -1,20 +1,12 @@
-<%@ Page
-    Title=""
-    Language="C#"
-    MasterPageFile="~/Views/Shared/Site.Master"
-    Inherits="System.Web.Mvc.ViewPage"
-    ContentType="text/html" %>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    execCommand
-</asp:Content>
+<h1>
+    <a class="up" href="<%= Url.Action("addingdms/") %>"></a>
+    <span class="hdr">execCommand</span>
+</h1>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>
-        <span class="hdr">execCommand</span>
-    </h1>
 
-    <p>Use the <b>execCommand</b> method of the <em>window.AscDesktopEditor</em> object to execute a command specified in the request.</p>
+<p>Use the <b>execCommand</b> method of the <em>window.AscDesktopEditor</em> object to execute a command specified in the request.</p>
 <pre>
 window.AscDesktopEditor.execCommand (command, parameters)
 </pre>
@@ -89,5 +81,3 @@ window.AscDesktopEditor.execCommand (command, parameters)
     </tbody>
 </table>
 <div class="mobile-content"></div>
-
-</asp:Content>

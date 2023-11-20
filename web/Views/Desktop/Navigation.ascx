@@ -36,16 +36,19 @@
                     <a href="<%= Url.Action("addingdms/configuring") %>">Configuring the interaction</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("addingdms/loginlogout") %>">Login/logout</a>
+                    <a href="<%= Url.Action("addingdms/notifications") %>">Sending notifications</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("addingdms/changingtheme") %>">Changing a theme</a>
+                    <a href="<%= Url.Action("addingdms/execcommand") %>">execCommand</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("addingdms/loginlogout") %>">Login/logout</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("addingdms/opening") %>">Opening documents</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("addingdms/notifications") %>">Sending notifications</a>
+                    <a href="<%= Url.Action("addingdms/changingtheme") %>">Changing a theme</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("addingdms/encryption") %>">Encryption</a>
@@ -59,9 +62,6 @@
                     </ul>
                 </li>
             </ul>
-        </li>
-        <li>
-            <a href="<%= Url.Action("execcommand") %>">execCommand</a>
         </li>
     </ul>
     <div class="treeheader">More information</div>

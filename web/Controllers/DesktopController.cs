@@ -42,13 +42,13 @@ namespace ASC.Api.Web.Help.Controllers
                 "addingdms/encryption",
                 "addingdms/encryption/keygeneration",
                 "addingdms/encryption/operations",
+                "addingdms/execcommand",
                 "addingdms/loginlogout",
                 "addingdms/notifications",
                 "addingdms/opening",
                 "basic",
                 "changelog",
                 "debugging",
-                "execcommand",
                 "faq",
                 "howitworks",
                 "howitworks/encryptingclouddocuments",
@@ -92,11 +92,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Debugging()
-        {
-            return View();
-        }
-
-        public ActionResult execCommand()
         {
             return View();
         }
