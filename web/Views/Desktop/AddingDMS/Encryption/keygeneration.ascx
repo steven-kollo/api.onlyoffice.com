@@ -24,7 +24,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
 </pre>
     </li>
     <li>
-        <p>To monitor the password from the login page, send the desktop editors the <em>portal:checkpwd</em> command through the <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method.
+        <p>To monitor the password from the login page, send the desktop editors the <em>portal:checkpwd</em> command through the <a href="<%= Url.Action("execcommand") %>">execCommand</a> method.
             Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
         <pre>
 {

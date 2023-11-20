@@ -19,6 +19,7 @@
 
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("addingdms/changingtheme") %>">portal:uitheme</a> command to the <em>execCommand</em> method.</li>
         <li>Added the <a href="<%= Url.Action("addingdms/loginlogout") %>#uiTheme">uiTheme</a> parameter to the <em>portal:login</em> command.</li>
     </ul>
 
@@ -46,7 +47,7 @@
     <h2 id="62" class="copy-link">Version 6.2</h2>
     <ul>
         <li>Added <a href="<%= Url.Action("addingdms/") %>">config</a> with DMS integration parameters.</li>
-        <li>Added <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method.</li>
+        <li>Added the <a href="<%= Url.Action("execCommand") %>">execCommand</a> method.</li>
         <li>Added commands for <a href="<%= Url.Action("addingdms/opening") %>#open-command">document opening</a>.</li>
     </ul>
 
