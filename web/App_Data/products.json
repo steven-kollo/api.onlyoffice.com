@@ -59,8 +59,8 @@
                "Item2":"pluginssdk/config"
             },
             {
-               "Item1":"Uploading plugin",
-               "Item2":"pluginssdk/uploadingplugin"
+               "Item1":"Adding plugin",
+               "Item2":"pluginssdk/addingplugin"
             }
          ],
          "API Backend":[
