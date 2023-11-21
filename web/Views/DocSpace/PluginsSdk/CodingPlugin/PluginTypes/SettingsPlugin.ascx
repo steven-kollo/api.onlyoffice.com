@@ -89,8 +89,7 @@
             <tbody>
                 <tr class="tablerow">
                     <td>settings</td>
-                    <td>Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users.
-                    This parameter is used only with <a href="<%= Url.Action("pluginssdk/codingplugin/events") %>#saveSettings">Actions.saveSettings</a>.</td>
+                    <td>Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users.</td>
                     <td>string</td>
                     <td></td>
                 </tr>
