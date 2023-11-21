@@ -30,8 +30,8 @@ Content-Type: application/json; charset=utf-8
 {
     "count": 1,
     "response": {
-        "expires": "2010-07-07T17:06:03.5845502+03:00",
-        "token": "sdjhfskjdhkqy739459234"
+        "Expires": "2010-07-07T17:06:03.5845502+03:00",
+        "Token": "sdjhfskjdhkqy739459234"
     },
     "status": 0,
     "statusCode": 201
