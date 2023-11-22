@@ -2400,6 +2400,7 @@
     <Content Include="Content\img\docspace\modal-dialog.png" />
     <Content Include="Content\img\docspace\more-icon.png" />
     <Content Include="Content\img\docspace\plugin-archive.png" />
+    <Content Include="Content\img\docspace\plugin-samples.png" />
     <Content Include="Content\img\docspace\plugin-settings.png" />
     <Content Include="Content\img\docspace\plugin-structure.png" />
     <Content Include="Content\img\docspace\primary-button.png" />

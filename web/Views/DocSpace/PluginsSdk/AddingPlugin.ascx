@@ -26,6 +26,10 @@
 </ol>
 <p>After that, the plugin will function automatically unless additional settings need to be specified.</p>
 
+<p>A list of the system plugins can be also found in the <b>Developer Tools</b> section on the <b>Plugins SDK</b> tab.
+For each plugin there is a link to the plugin repository, where you can find the information about the plugin structure and code.</p>
+<img alt="Plugin samples" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/docspace/plugin-samples.png") %>" />
+
 <h2 id="configure-plugin" class="copy-link">Configuring plugin settings</h2>
 <p>To set up a plugin:</p>
 <ol>
