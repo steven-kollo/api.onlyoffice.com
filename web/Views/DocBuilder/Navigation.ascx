@@ -681,10 +681,10 @@
             <a href="<%= Url.Action("builderframeworksamples") %>">Builder framework samples</a>
             <ul>
                 <li>
-                    <a href="<%= Url.Action("builderframeworksamples/cppbuildersamples") %>">C++ samples</a>
+                    <a href="<%= Url.Action("builderframeworksamples/cppbuildersamples") %>">C++ samples guide</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("builderframeworksamples/csharpbuildersamples") %>">.Net samples</a>
+                    <a href="<%= Url.Action("builderframeworksamples/csharpbuildersamples") %>">.Net samples guide</a>
                 </li>
             </ul>
         </li>

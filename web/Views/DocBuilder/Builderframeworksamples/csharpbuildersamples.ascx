@@ -4,7 +4,7 @@
 
 
 <h1>
-    <span class="hdr">C# framework samples</span>
+    <span class="hdr">.Net framework samples guide</span>
 </h1>
 
 <h2>Before you start</h2>
@@ -18,7 +18,7 @@
 
 <h2>Download a sample</h2>
 
-<p>Download one of the Builder C# samples archive and unzip it into a folder with general editing access.</p>
+<p>Download one of the Builder .Net samples archive and unzip it into a folder with general editing access.</p>
 <ul>
     <li>
         <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/FillingSpreadsheet.zip" }.ToString() %>">Filling spreadsheet</a>

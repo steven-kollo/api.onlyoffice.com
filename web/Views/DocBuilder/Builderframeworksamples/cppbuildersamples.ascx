@@ -4,7 +4,7 @@
 
 
 <h1>
-    <span class="hdr">C++ framework samples</span>
+    <span class="hdr">C++ framework samples guide</span>
 </h1>
 
 <h2>Before you start</h2>
@@ -53,7 +53,7 @@
 <img class="screenshot" alt="C# Builder program file" src="<%= Url.Content("~/content/img/docbuilder/cpp/program_file.png") %>" />
 <ul>
     <li>
-        <p>Include doctrenderer library <a href="<%= Url.Action("integrationapi/c") %>">Ñ++ wrapper</a></p>
+        <p>Include doctrenderer library <a href="<%= Url.Action("integrationapi/c") %>">C++ wrapper</a></p>
     </li>
     <li>
         <p>Specify the paths to the Document Builder <b>work directory</b>, the <b>result path</b> (where the generated file will be saved), and the optional <b>template path</b> (if a template file will be used).</p>
