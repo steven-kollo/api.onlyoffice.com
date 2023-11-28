@@ -1278,7 +1278,256 @@
 <% } %>
 
 <div class="header-gray">Example</div>
-<pre>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+
+<p>
+    If you have any further questions, please contact us at
+    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+</p>
+
+<div id="controlFields" style="padding-right:20px;">
+    <div id="customization" class="control-panel">
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous" checked>
+            <label for="editorConfig_customization_anonymous">Anonymous</label>
+        </div>
+        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder" style="padding-left: 20px;">
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" checked>
+                <label for="editorConfig_customization_anonymous_request">Request</label>
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_anonymous_label">Label</label>
+                <input type="text" id="editorConfig_customization_anonymous_label" name="editorConfig_customization_anonymous_label" value="Guest">
+            </div>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_comments" name="editorConfig_customization_comments" checked>
+            <label for="editorConfig_customization_comments">Comments</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_compactHeader" name="editorConfig_customization_compactHeader">
+            <label for="editorConfig_customization_compactHeader">Compact Header</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_compactToolbar" name="editorConfig_customization_compactToolbar">
+            <label for="editorConfig_customization_compactToolbar">Compact Toolbar</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_compatibleFeatures" name="editorConfig_customization_compatibleFeatures">
+            <label for="editorConfig_customization_compatibleFeatures">Compatible Features</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" class="config-dropdown" id="editorConfig_customization_customer" name="editorConfig_customization_customer" checked>
+            <label for="editorConfig_customization_customer">Customer</label>
+        </div>
+        <div id="holder_editorConfig_customization_customer" class="config_object_holder" style="padding-left: 20px;">
+            <div class="line">
+                <label for="editorConfig_customization_customer_address">Address</label>
+                <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_info">Info</label>
+                <input type="text" id="editorConfig_customization_customer_info" name="editorConfig_customization_customer_info" value="Some additional information">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_logo">Logo</label>
+                <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo" value="https://example.com/logo-big.png">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_logoDark">Logo Dark</label>
+                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://example.com/dark-logo-big.png">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_mail">Mail</label>
+                <input type="text" id="editorConfig_customization_customer_mail" name="editorConfig_customization_customer_mail" value="john@example.com">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_name">Name</label>
+                <input type="text" id="editorConfig_customization_customer_name" name="editorConfig_customization_customer_name" value="John Smith and Co.">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_phone">phone</label>
+                <input type="text" id="editorConfig_customization_customer_phone" name="editorConfig_customization_customer_phone" value="123456789">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_customer_www">www</label>
+                <input type="text" id="editorConfig_customization_customer_www" name="editorConfig_customization_customer_www" value="example.com">
+            </div>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_features" name="editorConfig_customization_features">
+            <label for="editorConfig_customization_features">Features.Spellcheck</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_feedback" name="editorConfig_customization_feedback" checked>
+            <label for="editorConfig_customization_feedback">Feedback</label>
+        </div>
+        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" style="padding-left: 20px;">
+            <div class="line">
+                <label for="editorConfig_customization_feedback_url">url</label>
+                <input type="text" id="editorConfig_customization_feedback_url" name="editorConfig_customization_feedback_url" value="https://example.com">
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_feedback_visible" name="editorConfig_customization_feedback_visible" checked>
+                <label for="editorConfig_customization_feedback_visible">Visible</label>
+            </div>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_forcesave" name="editorConfig_customization_forcesave">
+            <label for="editorConfig_customization_forcesave">Force Save</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_goback" name="editorConfig_customization_goback" checked>
+            <label for="editorConfig_customization_goback">Go back</label>
+        </div>
+        <div id="holder_editorConfig_customization_goback" class="config_object_holder" style="padding-left: 20px;">
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" checked>
+                <label for="editorConfig_customization_goback_blank">Blank</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_goback_requestClose" name="editorConfig_customization_goback_requestClose">
+                <label for="editorConfig_customization_goback_requestClose">Request Close</label>
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_goback_text">Text</label>
+                <input type="text" id="editorConfig_customization_goback_text" name="editorConfig_customization_goback_text" value="Open file location">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_goback_url">Url</label>
+                <input type="text" id="editorConfig_customization_goback_url" name="editorConfig_customization_goback_url" value="https://example.com">
+            </div>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_help" name="editorConfig_customization_help" checked>
+            <label for="editorConfig_customization_help">Help</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_hideNotes" name="editorConfig_customization_hideNotes">
+            <label for="editorConfig_customization_hideNotes">Hide Notes</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu">
+            <label for="editorConfig_customization_hideRightMenu">Hide Right Menu</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_hideRulers" name="editorConfig_customization_hideRulers">
+            <label for="editorConfig_customization_hideRulers">Hide Rulers</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_integrationMode" name="editorConfig_customization_integrationMode" checked>
+            <label for="editorConfig_customization_integrationMode">Integration Mode</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_logo" name="editorConfig_customization_logo" checked>
+            <label for="editorConfig_customization_logo">Logo</label>
+        </div>
+        <div id="holder_editorConfig_customization_logo" class="config_object_holder" style="padding-left: 20px;">
+            <div class="line">
+                <label for="editorConfig_customization_logo_image">Image</label>
+                <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://example.com/logo.png">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_logo_imageDark">Image Dark</label>
+                <input type="text" id="editorConfig_customization_logo_imageDark" name="editorConfig_customization_logo_imageDark" value="https://example.com/dark-logo.png">
+            </div>
+            <div class="line">
+                <label for="editorConfig_customization_logo_url">Url</label>
+                <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url" value="https://example.com">
+            </div>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_macros" name="editorConfig_customization_macros" checked>
+            <label for="editorConfig_customization_macros">Macros</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_mentionShare" name="editorConfig_customization_mentionShare" checked>
+            <label for="editorConfig_customization_mentionShare">Mention share</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_plugins" name="editorConfig_customization_plugins" checked>
+            <label for="editorConfig_customization_plugins">Plugins</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_review" name="editorConfig_customization_review" checked>
+            <label for="editorConfig_customization_review">Review</label>
+        </div>
+        <div id="holder_editorConfig_customization_review" class="config_object_holder" style="padding-left: 20px;">
+            <div class="line">
+                <label for="editorConfig_customization_review_reviewDisplay">Review Display</label>
+                <select id="editorConfig_customization_review_reviewDisplay" name="editorConfig_customization_review_reviewDisplay">
+                    <option value="markup">markup</option>
+                    <option value="simple">simple</option>
+                    <option value="final">final</option>
+                    <option value="original" selected>original</option>
+                </select>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_review_hideReviewDisplay" name="editorConfig_customization_review_hideReviewDisplay">
+                <label for="editorConfig_customization_review_hideReviewDisplay">Hide Review Display</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_review_showReviewChanges" name="editorConfig_customization_review_showReviewChanges">
+                <label for="editorConfig_customization_review_showReviewChanges">Show Review Changes</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_review_trackChanges" name="editorConfig_customization_review_trackChanges" checked>
+                <label for="editorConfig_customization_review_trackChanges">Track Changes</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_customization_review_hoverMode" name="editorConfig_customization_review_hoverMode">
+                <label for="editorConfig_customization_review_hoverMode">Hover Mode</label>
+            </div>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_submitForm" name="editorConfig_customization_submitForm" checked>
+            <label for="editorConfig_customization_submitForm">Submit Form</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_toolbarHideFileName" name="editorConfig_customization_toolbarHideFileName">
+            <label for="editorConfig_customization_toolbarHideFileName">Toolbar Hide File Name</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs">
+            <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
+        </div>
+        <div class="line">
+            <label for="editorConfig_customization_macrosMode">Macros Mode</label>
+            <select id="editorConfig_customization_macrosMode" name="editorConfig_customization_macrosMode">
+                <option value="warn">Warn</option>
+                <option value="disable">Disable</option>
+                <option value="enable">Enable</option>
+            </select>
+        </div>
+        <div class="line">
+            <label for="editorConfig_customization_uiTheme">UiTheme</label>
+            <select id="editorConfig_customization_uiTheme" name="editorConfig_customization_uiTheme">
+                <option value="theme-classic-light">theme-classic-light</option>
+                <option value="theme-light">theme-light</option>
+                <option value="theme-dark" selected>theme-dark</option>
+                <option value="theme-contrast-dark">theme-contrast-dark</option>
+            </select>
+        </div>
+        <div class="line">
+            <label for="editorConfig_customization_unit">Unit</label>
+            <select id="editorConfig_customization_unit" name="editorConfig_customization_unit">
+                <option value="cm">cm</option>
+                <option value="pt">pt</option>
+                <option value="inch ">inch </option>
+            </select>
+        </div>
+        <div class="line">
+            <label for="editorConfig_customization_zoom">Zoom</label>
+            <input type="text" id="editorConfig_customization_zoom" name="editorConfig_customization_zoom" value="100">
+        </div>
+    </div>
+</div>
+<div id="configPreHolder">
+<pre id="configPre">
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {
@@ -1315,8 +1564,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"font": {
-                "name": "Arial",
-                "size": "11px"
+                "name": "Arial"
             },
             <% } %>"forcesave": false,
             "goback": {
@@ -1351,7 +1599,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 },
                 "toolbar": {
                     "collaboration": true,
-                    "draw": true,
                     "file": {
                         "close": true,
                         "info": true,
@@ -1391,7 +1638,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"statusBar": true,
-            <% } %>"submitForm": true,
+            <% } %><%--"submitForm": true,--%>
             <% if (license)
                 { %>"toolbar": true,
             <% } %>"toolbarHideFileName": false,
@@ -1405,12 +1652,204 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
+</div>
 
-<p>
-    If you have any further questions, please contact us at
-    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
-</p>
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title." + "docx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
+            },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                // CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function (e) {
+        updateConfig(e.target.id);
+    });
+
+    var config_dict = {
+        '"anonymous"': {
+            '"request"': "editorConfig_customization_anonymous_request",
+            '"label"': "editorConfig_customization_anonymous_label"
+        },
+        '"comments"': "editorConfig_customization_comments",
+        '"compactHeader"': "editorConfig_customization_compactHeader",
+        '"compactToolbar"': "editorConfig_customization_compactToolbar",
+        '"compatibleFeatures"': "editorConfig_customization_compatibleFeatures",
+        '"customer"': {
+            '"address"': "editorConfig_customization_customer_address",
+            '"info"': "editorConfig_customization_customer_info",
+            '"logo"': "editorConfig_customization_customer_logo",
+            '"logoDark"': "editorConfig_customization_customer_logoDark",
+            '"mail"': "editorConfig_customization_customer_mail",
+            '"name"': "editorConfig_customization_customer_name",
+            '"phone"': "editorConfig_customization_customer_phone",
+            '"www"': "editorConfig_customization_customer_www",
+        },
+        //'"features"': {
+        //    '"spellcheck"': {
+        //        '"mode"': "editorConfig_customization_features",
+        //    },
+        //},
+        '"feedback"': {
+            '"url"': "editorConfig_customization_feedback_url",
+            '"visible"': "editorConfig_customization_feedback_visible",
+        },
+        '"forcesave"': "editorConfig_customization_forcesave",
+        '"goback"': {
+            '"blank"': "editorConfig_customization_goback_blank",
+            '"requestClose"': "editorConfig_customization_goback_requestClose",
+            '"text"': "editorConfig_customization_goback_text",
+            '"url"': "editorConfig_customization_goback_url",
+        },
+        '"help"': "editorConfig_customization_help",
+        '"hideNotes"': "editorConfig_customization_hideNotes",
+        '"hideRightMenu"': "editorConfig_customization_hideRightMenu",
+        '"integrationMode"': "editorConfig_customization_integrationMode",
+        '"logo"': {
+            '"image"': "editorConfig_customization_logo_image",
+            '"imageDark"': "editorConfig_customization_logo_imageDark",
+            '"url"': "editorConfig_customization_logo_url",
+        },
+        '"macros"': "editorConfig_customization_macros",
+        '"macrosMode"': "editorConfig_customization_macrosMode",
+        '"mentionShare"': "editorConfig_customization_mentionShare",
+        '"plugins"': "editorConfig_customization_plugins",
+        '"review"': {
+            '"hideReviewDisplay"': "editorConfig_customization_review_hideReviewDisplay",
+            '"showReviewChanges"': "editorConfig_customization_review_showReviewChanges",
+            '"reviewDisplay"': "editorConfig_customization_review_reviewDisplay",
+            '"trackChanges"': "editorConfig_customization_review_trackChanges",
+            '"hoverMode"': "editorConfig_customization_review_hoverMode",
+        },
+        '"submitForm"': "editorConfig_customization_submitForm",
+        '"toolbarHideFileName"': "editorConfig_customization_toolbarHideFileName",
+        '"toolbarNoTabs"': "editorConfig_customization_toolbarNoTabs",
+        '"uiTheme"': "editorConfig_customization_uiTheme",
+        '"unit"': "editorConfig_customization_unit",
+        '"zoom"': "editorConfig_customization_zoom",
+    };
+   
+    $("#editorConfig_customization_anonymous").change(showHideConfigObject);
+    $("#editorConfig_customization_customer").change(showHideConfigObject);
+    $("#editorConfig_customization_feedback").change(showHideConfigObject);
+    $("#editorConfig_customization_goback").change(showHideConfigObject);
+    $("#editorConfig_customization_logo").change(showHideConfigObject);
+    $("#editorConfig_customization_review").change(showHideConfigObject);
+
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
+
+    function updateConfigValue(html_element_number, codeFieldChildren, config) {
+        var element = config_dict[codeFieldChildren[html_element_number].innerHTML];
+        if (typeof element === "object") {
+            for (const [config_field, html_id] of Object.entries(element)) {
+                var value = getFieldValue(html_id);
+                var i = 0;
+                while (codeFieldChildren[html_element_number + i].innerHTML != config_field) {
+                    i++
+                }
+                codeFieldChildren[html_element_number + 1 + i].innerHTML = typeof value === 'string' ? `"${value}"` : value;
+
+                if (config.editorConfig.customization[codeFieldChildren[html_element_number].innerHTML.replaceAll('"', '')] === undefined) {
+                    config.editorConfig.customization[codeFieldChildren[html_element_number].innerHTML.replaceAll('"', '')] = {};
+                }
+                config.editorConfig.customization[codeFieldChildren[html_element_number].innerHTML.replaceAll('"', '')][config_field.replaceAll('"', '')] = value;
+            }
+        } else {
+            var value = getFieldValue(config_dict[codeFieldChildren[html_element_number].innerHTML]);
+            codeFieldChildren[html_element_number + 1].innerHTML = typeof value === 'string' ? `"${value}"` : value;
+            config.editorConfig.customization[codeFieldChildren[html_element_number].innerHTML.replaceAll('"', '')] = value;
+        }
+    }
+
+    function updateConfig() {
+        // Update code field
+        var codeFieldChildren = document.getElementById("configPre").children;
+        var i = 0;
+        
+        while (codeFieldChildren[i] != undefined) {
+            if (config_dict[codeFieldChildren[i].innerHTML] != undefined) {
+                updateConfigValue(i, codeFieldChildren, config);
+            }
+            i++;
+        }
+        // Reload editor
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    }
+
+    function getFieldValue(id) {
+        var element = document.getElementById(id);
+        if (element.type == "checkbox") {
+            return element.checked;
+        } else if (isNaN(element.value)) {
+            return element.value;
+        } else {
+            return Number(element.value);
+        }
+    }
+
+    function resizeCodeInput() {
+        var controlFieldPaddingBottom = 0;
+        var controlFieldInputs = document.getElementsByTagName("input");
+        var i = 0;
+        while (controlFieldInputs[i] != undefined) {
+            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
+                break;
+            }
+            i++;
+        }
+        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+
+        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
+        var configPreHeight = fieldsHeight - (offset) + "px";
+        document.getElementById("configPre").style.height = configPreHeight;
+    }
+</script>
