@@ -4,114 +4,58 @@
   <PropertyGroup>
     <RootDir Condition="$(RootDir)==''">..\..\</RootDir>
     <RootCsharp>$(RootDir)builder-samples\csharp\</RootCsharp>
+    <RootCpp>$(RootDir)builder-samples\cpp\</RootCpp>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectToBuild Include="$(RootCsharp)CommentingErrors\CommentingErrors.sln"/>
-    <ProjectToBuild Include="$(RootCsharp)CreatingAdvancedForm\CreatingAdvancedForm.sln"/>
-    <ProjectToBuild Include="$(RootCsharp)CreatingBasicForm\CreatingBasicForm.sln"/>
-    <ProjectToBuild Include="$(RootCsharp)CreatingChartPresentation\CreatingChartPresentation.sln"/>
-    <ProjectToBuild Include="$(RootCsharp)CreatingPresentation\CreatingPresentation.sln"/>
-    <ProjectToBuild Include="$(RootCsharp)FillingForm\FillingForm.sln"/>
-    <ProjectToBuild Include="$(RootCsharp)FillingSpreadsheet\FillingSpreadsheet.sln"/>
-  </ItemGroup>
 
   <PropertyGroup>
-    <To>$(RootDir)web\App_Data\docbuilder\csharp-samples\</To>
-    <DirCommentingErrors>$(RootCsharp)CommentingErrors\</DirCommentingErrors>
-    <NameCommentingErrors>$(To)CommentingErrors</NameCommentingErrors>
-    <DirCreatingAdvancedForm>$(RootCsharp)CreatingAdvancedForm\</DirCreatingAdvancedForm>
-    <NameCreatingAdvancedForm>$(To)CreatingAdvancedForm</NameCreatingAdvancedForm>
-    <DirCreatingBasicForm>$(RootCsharp)CreatingBasicForm\</DirCreatingBasicForm>
-    <NameCreatingBasicForm>$(To)CreatingBasicForm</NameCreatingBasicForm>
-    <DirCreatingChartPresentation>$(RootCsharp)CreatingChartPresentation\</DirCreatingChartPresentation>
-    <NameCreatingChartPresentation>$(To)CreatingChartPresentation</NameCreatingChartPresentation>
-    <DirCreatingPresentation>$(RootCsharp)CreatingPresentation\</DirCreatingPresentation>
-    <NameCreatingPresentation>$(To)CreatingPresentation</NameCreatingPresentation>
-    <NameCreatingChartPresentation>$(To)CreatingChartPresentation</NameCreatingChartPresentation>
-    <DirFillingForm>$(RootCsharp)FillingForm\</DirFillingForm>
-    <NameFillingForm>$(To)FillingForm</NameFillingForm>
-    <DirFillingSpreadsheet>$(RootCsharp)FillingSpreadsheet\</DirFillingSpreadsheet>
-    <NameFillingSpreadsheet>$(To)FillingSpreadsheet</NameFillingSpreadsheet>
+    <ToNet>$(RootDir)web\App_Data\docbuilder\csharp-samples\</ToNet>
+    <DirCommentingErrorsNet>$(RootCsharp)CommentingErrors\</DirCommentingErrorsNet>
+    <NameCommentingErrorsNet>$(ToNet)CommentingErrors</NameCommentingErrorsNet>
+    <DirCreatingAdvancedFormNet>$(RootCsharp)CreatingAdvancedForm\</DirCreatingAdvancedFormNet>
+    <NameCreatingAdvancedFormNet>$(ToNet)CreatingAdvancedForm</NameCreatingAdvancedFormNet>
+    <DirCreatingBasicFormNet>$(RootCsharp)CreatingBasicForm\</DirCreatingBasicFormNet>
+    <NameCreatingBasicFormNet>$(ToNet)CreatingBasicForm</NameCreatingBasicFormNet>
+    <DirCreatingChartPresentationNet>$(RootCsharp)CreatingChartPresentation\</DirCreatingChartPresentationNet>
+    <NameCreatingChartPresentationNet>$(ToNet)CreatingChartPresentation</NameCreatingChartPresentationNet>
+    <DirCreatingPresentationNet>$(RootCsharp)CreatingPresentation\</DirCreatingPresentationNet>
+    <NameCreatingPresentationNet>$(ToNet)CreatingPresentation</NameCreatingPresentationNet>
+    <DirFillingFormNet>$(RootCsharp)FillingForm\</DirFillingFormNet>
+    <NameFillingFormNet>$(ToNet)FillingForm</NameFillingFormNet>
+    <DirFillingSpreadsheetNet>$(RootCsharp)FillingSpreadsheet\</DirFillingSpreadsheetNet>
+    <NameFillingSpreadsheetNet>$(ToNet)FillingSpreadsheet</NameFillingSpreadsheetNet>
+	  
+    <ToCpp>$(RootDir)web\App_Data\docbuilder\cpp-samples\</ToCpp>
+    <DirCommentingErrorsCpp>$(RootCpp)CommentingErrors\</DirCommentingErrorsCpp>
+    <NameCommentingErrorsCpp>$(ToCpp)CommentingErrors</NameCommentingErrorsCpp>
+    <DirCreatingAdvancedFormCpp>$(RootCpp)CreatingAdvancedForm\</DirCreatingAdvancedFormCpp>
+    <NameCreatingAdvancedFormCpp>$(ToCpp)CreatingAdvancedForm</NameCreatingAdvancedFormCpp>
+    <DirCreatingBasicFormCpp>$(RootCpp)CreatingBasicForm\</DirCreatingBasicFormCpp>
+    <NameCreatingBasicFormCpp>$(ToCpp)CreatingBasicForm</NameCreatingBasicFormCpp>
+    <DirCreatingChartPresentationCpp>$(RootCpp)CreatingChartPresentation\</DirCreatingChartPresentationCpp>
+    <NameCreatingChartPresentationCpp>$(ToCpp)CreatingChartPresentation</NameCreatingChartPresentationCpp>
+    <DirCreatingPresentationCpp>$(RootCpp)CreatingPresentation\</DirCreatingPresentationCpp>
+    <NameCreatingPresentationCpp>$(ToCpp)CreatingPresentation</NameCreatingPresentationCpp>
+    <DirFillingFormCpp>$(RootCpp)FillingForm\</DirFillingFormCpp>
+    <NameFillingFormCpp>$(ToCpp)FillingForm</NameFillingFormCpp>
+    <DirFillingSpreadsheetCpp>$(RootCpp)FillingSpreadsheet\</DirFillingSpreadsheetCpp>
+    <NameFillingSpreadsheetCpp>$(ToCpp)FillingSpreadsheet</NameFillingSpreadsheetCpp>
   </PropertyGroup>
-
-  <Target Name="Build">
-    <Message Text="$(BuildTargets) projects:"/>
-    <Message Text="-  %(ProjectToBuild.Filename)%(ProjectToBuild.Extension)"/>
-    <Message Text="  "/>
-
-    <CreateItem Include="$(ASCDir)msbuild\">
-      <Output ItemName="AlToolPath" TaskParameter="Include"/>
-    </CreateItem>
-
-    <MSBuild
-        Projects="@(ProjectToBuild)"
-        Targets="Restore;Build"
-        Properties="Configuration=Release"
-        RebaseOutputs="true"
-        StopOnFirstFailure="true"/>
-
-
-    <Message Text="  "/>
-    <Message Text="Clear $(To)"/>
-    <RemoveDir Directories="$(To)" ContinueOnError="true" />
-
-    <Message Text="  "/>
-    <Message Text="Zip $(DirCommentingErrors)"/>
-    <ItemGroup>
-      <ZipCommentingErrors Include="$(DirCommentingErrors)**" Exclude="$(DirCommentingErrors).vs\**;$(DirCommentingErrors)bin\*.pdb;$(DirCommentingErrors)bin\*.xml;$(DirCommentingErrors)obj\**;$(DirCommentingErrors)packages\**;$(DirCommentingErrors)**\.git" />
-    </ItemGroup>
-    <Copy SourceFiles="@(ZipCommentingErrors)" DestinationFiles="@(ZipCommentingErrors->'CommentingErrors\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Zip Files="CommentingErrors" WorkingDirectory="$(To)" ZipFileName="$(NameCommentingErrors).zip" />
-
-    <Message Text="  "/>
-    <Message Text="Zip $(DirCreatingAdvancedForm)"/>
-    <ItemGroup>
-      <ZipCreatingAdvancedForm Include="$(DirCreatingAdvancedForm)**" Exclude="$(DirCreatingAdvancedForm).vs\**;$(DirCreatingAdvancedForm)bin\*.pdb;$(DirCreatingAdvancedForm)bin\*.xml;$(DirCreatingAdvancedForm)obj\**;$(DirCreatingAdvancedForm)packages\**;$(DirCreatingAdvancedForm)**\.git" />
-    </ItemGroup>
-    <Copy SourceFiles="@(ZipCreatingAdvancedForm)" DestinationFiles="@(ZipCreatingAdvancedForm->'CreatingAdvancedForm\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Zip Files="CreatingAdvancedForm" WorkingDirectory="$(To)" ZipFileName="$(NameCreatingAdvancedForm).zip" />
-
-    <Message Text="  "/>
-    <Message Text="Zip $(DirCreatingBasicForm)"/>
-    <ItemGroup>
-      <ZipCreatingBasicForm Include="$(DirCreatingBasicForm)**" Exclude="$(DirCreatingBasicForm).vs\**;$(DirCreatingBasicForm)bin\*.pdb;$(DirCreatingBasicForm)bin\*.xml;$(DirCreatingBasicForm)obj\**;$(DirCreatingBasicForm)packages\**;$(DirCreatingBasicForm)**\.git" />
-    </ItemGroup>
-    <Copy SourceFiles="@(ZipCreatingBasicForm)" DestinationFiles="@(ZipCreatingBasicForm->'CreatingBasicForm\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Zip Files="CreatingBasicForm" WorkingDirectory="$(To)" ZipFileName="$(NameCreatingBasicForm).zip" />
-
-    <Message Text="  "/>
-    <Message Text="Zip $(DirCreatingChartPresentation)"/>
-    <ItemGroup>
-      <ZipCreatingChartPresentation Include="$(DirCreatingChartPresentation)**" Exclude="$(DirCreatingChartPresentation).vs\**;$(DirCreatingChartPresentation)bin\*.pdb;$(DirCreatingChartPresentation)bin\*.xml;$(DirCreatingChartPresentation)obj\**;$(DirCreatingChartPresentation)packages\**;$(DirCreatingChartPresentation)**\.git" />
-    </ItemGroup>
-    <Copy SourceFiles="@(ZipCreatingChartPresentation)" DestinationFiles="@(ZipCreatingChartPresentation->'CreatingChartPresentation\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Zip Files="CreatingChartPresentation" WorkingDirectory="$(To)" ZipFileName="$(NameCreatingChartPresentation).zip" />
-
-    <Message Text="  "/>
-    <Message Text="Zip $(DirCreatingPresentation)"/>
-    <ItemGroup>
-      <ZipCreatingPresentation Include="$(DirCreatingPresentation)**" Exclude="$(DirCreatingPresentation).vs\**;$(DirCreatingPresentation)bin\*.pdb;$(DirCreatingPresentation)bin\*.xml;$(DirCreatingPresentation)obj\**;$(DirCreatingPresentation)packages\**;$(DirCreatingPresentation)**\.git" />
-    </ItemGroup>
-    <Copy SourceFiles="@(ZipCreatingPresentation)" DestinationFiles="@(ZipCreatingPresentation->'CreatingPresentation\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Zip Files="CreatingPresentation" WorkingDirectory="$(To)" ZipFileName="$(NameCreatingPresentation).zip" />
-
-    <Message Text="  "/>
-    <Message Text="Zip $(DirFillingForm)"/>
-    <ItemGroup>
-      <ZipFillingForm Include="$(DirFillingForm)**" Exclude="$(DirFillingForm).vs\**;$(DirFillingForm)bin\*.pdb;$(DirFillingForm)bin\*.xml;$(DirFillingForm)obj\**;$(DirFillingForm)packages\**;$(DirFillingForm)**\.git" />
-    </ItemGroup>
-    <Copy SourceFiles="@(ZipFillingForm)" DestinationFiles="@(ZipFillingForm->'FillingForm\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Zip Files="FillingForm" WorkingDirectory="$(To)" ZipFileName="$(NameFillingForm).zip" />
-
-    <Message Text="  "/>
-    <Message Text="Zip $(DirFillingSpreadsheet)"/>
-    <ItemGroup>
-      <ZipFillingSpreadsheet Include="$(DirFillingSpreadsheet)**" Exclude="$(DirFillingSpreadsheet).vs\**;$(DirFillingSpreadsheet)bin\*.pdb;$(DirFillingSpreadsheet)bin\*.xml;$(DirFillingSpreadsheet)obj\**;$(DirFillingSpreadsheet)packages\**;$(DirFillingSpreadsheet)**\.git" />
-    </ItemGroup>
-    <Copy SourceFiles="@(ZipFillingSpreadsheet)" DestinationFiles="@(ZipFillingSpreadsheet->'FillingSpreadsheet\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Zip Files="FillingSpreadsheet" WorkingDirectory="$(To)" ZipFileName="$(NameFillingSpreadsheet).zip" />
-
+	
+  <Target Name="ZipOutputPath" AfterTargets="Build">
+    <ZipDirectory SourceDirectory="$(DirCommentingErrorsNet)" DestinationFile="$(NameCommentingErrorsNet).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirCreatingAdvancedFormNet)" DestinationFile="$(NameCreatingAdvancedFormNet).zip" Overwrite="true" /> 
+	<ZipDirectory SourceDirectory="$(DirCreatingBasicFormNet)" DestinationFile="$(NameCreatingBasicFormNet).zip" Overwrite="true" /> 
+	<ZipDirectory SourceDirectory="$(DirCreatingChartPresentationNet)" DestinationFile="$(NameCreatingChartPresentationNet).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirCreatingPresentationNet)" DestinationFile="$(NameCreatingPresentationNet).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirFillingFormNet)" DestinationFile="$(NameFillingFormNet).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirFillingSpreadsheetNet)" DestinationFile="$(NameFillingSpreadsheetNet).zip" Overwrite="true" /> 
+  
+    <ZipDirectory SourceDirectory="$(DirCommentingErrorsCpp)" DestinationFile="$(NameCommentingErrorsCpp).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirCreatingAdvancedFormCpp)" DestinationFile="$(NameCreatingAdvancedFormCpp).zip" Overwrite="true" /> 
+	<ZipDirectory SourceDirectory="$(DirCreatingBasicFormCpp)" DestinationFile="$(NameCreatingBasicFormCpp).zip" Overwrite="true" /> 
+	<ZipDirectory SourceDirectory="$(DirCreatingChartPresentationCpp)" DestinationFile="$(NameCreatingChartPresentationCpp).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirCreatingPresentationCpp)" DestinationFile="$(NameCreatingPresentationCpp).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirFillingFormCpp)" DestinationFile="$(NameFillingFormCpp).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirFillingSpreadsheetCpp)" DestinationFile="$(NameFillingSpreadsheetCpp).zip" Overwrite="true" /> 
   </Target>
-
 </Project>
