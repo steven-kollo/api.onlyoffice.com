@@ -117,15 +117,54 @@
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
 <div class="header-gray">Example</div>
-<pre>
+<p>
+    <b>Example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+
+<div id="controlFields" style="padding-right:20px;">
+    <div id="viewedit" class="control-panel">
+        <div class="line">
+            <label for="document_file_type">File type</label>
+            <select id="document_file_type" name="document_file_type">
+                <option value="docx">docx</option>
+                <option value="doc">doc</option>
+                <option value="odt">odt</option>
+                <option value="txt">txt</option>
+            </select>
+        </div>
+        <div class="line">
+            <label for="document_key">Key</label>
+            <input type="text" id="document_key" name="document_key" value="Khirz6zTPdfd7">
+        </div>
+        <div class="line">
+            <label for="document_file_key">File key</label>
+            <input type="text" id="document_file_key" name="document_file_key" value="BCFA2CED">
+        </div>
+        <div class="line">
+             <label for="document_instance_id">Instance Id</label>
+            <input type="text" id="document_instance_id" name="document_instance_id" value="https://example.com">
+        </div>
+        <div class="line">
+            <label for="document_title">Title</label>
+            <input type="text" id="document_title" name="document_title" value="Example Title">
+        </div>
+        <div class="line">
+            <label for="document_url">URL:</label>
+            <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.docx">
+        </div>
+
+    </div>
+</div>
+<div id="configPreHolder">
+<pre id="configPre">
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "referenceData": {
             "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com",
-            "key": "Khirz6zTPdfd7"
+            "instanceId": "https://example.com"
         },
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx",
@@ -133,7 +172,109 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
+</div>
+
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title." + "docx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
+            },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                // CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                    }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeField();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function (e) {
+        updateConfig(e.target.id);
+    });
+
+
+    function updateConfig(change_id) {
+        // Update code field
+        var configValues = {
+            '"fileType"': document.getElementById("document_file_type").value,
+            '"key"': document.getElementById("document_key").value,
+            '"fileKey"': document.getElementById("document_file_key").value,
+            '"instanceId"': document.getElementById("document_instance_id").value,
+            '"title"': `${document.getElementById("document_title").value}.${ document.getElementById("document_file_type").value}`,
+            '"url"': document.getElementById("document_url").value,
+        }
+        var codeFieldChildren = document.getElementById("configPre").children;
+        var i = 0;
+        while (codeFieldChildren[i] != undefined) {
+            if (configValues[codeFieldChildren[i].innerHTML] != undefined) {
+                codeFieldChildren[i + 1].innerHTML = `"${configValues[codeFieldChildren[i].innerHTML]}"`;
+            }
+            i++;
+        }
+
+
+        // Reload editor
+        var change_ids = ["document_file_type", "document_title"];
+        if (change_ids.includes(change_id)){
+            config.document.fileType = configValues[`"fileType"`];
+            config.document.title = configValues[`"title"`];
+            window.docEditor.destroyEditor();
+            window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+        }
+    }
+    
+    function resizeCodeField() {
+        var controlFieldPaddingBottom = 0;
+        var controlFieldInputs = document.getElementsByTagName("input");
+        var i = 0;
+        while (controlFieldInputs[i] != undefined) {
+            if (controlFieldInputs[i].id.includes("document")) {
+                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
+                break;
+            }
+            i++;
+        }
+        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+        
+        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
+        var configPreHeight = fieldsHeight - (offset) + "px";
+        document.getElementById("configPre").style.height = configPreHeight;
+    }
+</script>
