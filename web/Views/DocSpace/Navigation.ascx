@@ -52,6 +52,154 @@
             </li>
         </ul>
 
+        <div class="treeheader">Plugins SDK</div>
+        <ul class="side-nav root">
+            <li>
+                <a href="<%= Url.Action("pluginssdk/") %>">Basic concepts</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("pluginssdk/gettingstarted") %>">Getting started</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("pluginssdk/creatingtemplate") %>">Creating plugin template</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("pluginssdk/structure") %>">Plugin structure</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("pluginssdk/codingplugin") %>">Coding plugin</a>
+                <ul>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes") %>">Plugin types</a>
+                        <ul>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/plugin") %>">Plugin</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/settingsplugin") %>">SettingsPlugin</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/apiplugin") %>">APIPlugin</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/contextmenuplugin") %>">ContextMenuPlugin</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/infopanelplugin") %>">InfoPanelPlugin</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/mainbuttonplugin") %>">MainButtonPlugin</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/profilemenuplugin") %>">ProfileMenuPlugin</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/eventlistenerplugin") %>">EventListenerPlugin</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugintypes/fileplugin") %>">FilePlugin</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems") %>">Plugin items</a>
+                        <ul>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/contextmenuitem") %>">ContextMenuItem</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/infopanelitem") %>">InfoPanelItem</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/mainbuttonitem") %>">MainButtonItem</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/profilemenuitem") %>">ProfileMenuItem</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/fileitem") %>">FileItem</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/eventlisteneritem") %>">EventListenerItem</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/codingplugin/pluginmessage") %>">Plugin message</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/codingplugin/events") %>">Events</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents") %>">Plugin components</a>
+                        <ul>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/box") %>">Box</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/button") %>">Button</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/checkbox") %>">Checkbox</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/combobox") %>">ComboBox</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/component") %>">Component</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/createdialog") %>">CreateDialog</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/iframe") %>">IFrame</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/img") %>">img</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/input") %>">Input</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/label") %>">Label</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/modaldialog") %>">ModalDialog</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/skeleton") %>">Skeleton</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/text") %>">Text</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/textarea") %>">TextArea</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/toast") %>">Toast</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/togglebutton") %>">ToggleButton</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="<%= Url.Action("pluginssdk/buildingplugin") %>">Building plugin</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("pluginssdk/config") %>">Config</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("pluginssdk/addingplugin") %>">Adding plugin</a>
+            </li>
+            
+            <li>
+                <a href="/docspace-storybook" target="_blank">Storybook</a>
+            </li>
+        </ul>
+
         <div class="treeheader">API backend</div>
         <ul class="side-nav root">
             <li>
@@ -147,10 +295,7 @@
         <div class="treeheader">More information</div>
         <ul class="side-nav root">
             <li>
-                <a href="changelog" target="_blank">Changelog</a>
-            </li>
-            <li>
-                <a href="/docspace-storybook" target="_blank">Storybook</a>
+                <a href="<%= Url.Action("changelog") %>">Changelog</a>
             </li>
             <li>
                 <a href="<%= Url.Action("faq") %>">FAQ</a>

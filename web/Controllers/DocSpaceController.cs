@@ -73,6 +73,50 @@ namespace ASC.Api.Web.Help.Controllers
                 "JsSdk/Config",
                 "JsSdk/Methods",
                 "JsSdk/Events",
+                "PluginsSdk",
+                "PluginsSdk/BuildingPlugin",
+                "PluginsSdk/Config",
+                "PluginsSdk/CreatingTemplate",
+                "PluginsSdk/CodingPlugin/Events",
+                "PluginsSdk/GettingStarted",
+                "PluginsSdk/CodingPlugin",
+                "PluginsSdk/Structure",
+                "PluginsSdk/CodingPlugin/PluginComponents",
+                "PluginsSdk/CodingPlugin/PluginComponents/Box",
+                "PluginsSdk/CodingPlugin/PluginComponents/Button",
+                "PluginsSdk/CodingPlugin/PluginComponents/Checkbox",
+                "PluginsSdk/CodingPlugin/PluginComponents/ComboBox",
+                "PluginsSdk/CodingPlugin/PluginComponents/IFrame",
+                "PluginsSdk/CodingPlugin/PluginComponents/img",
+                "PluginsSdk/CodingPlugin/PluginComponents/Input",
+                "PluginsSdk/CodingPlugin/PluginComponents/Label",
+                "PluginsSdk/CodingPlugin/PluginComponents/ModalDialog",
+                "PluginsSdk/CodingPlugin/PluginComponents/Text",
+                "PluginsSdk/CodingPlugin/PluginComponents/TextArea",
+                "PluginsSdk/CodingPlugin/PluginComponents/Toast",
+                "PluginsSdk/CodingPlugin/PluginComponents/ToggleButton",
+                "PluginsSdk/CodingPlugin/PluginComponents/Skeleton",
+                "PluginsSdk/CodingPlugin/PluginComponents/CreateDialog",
+                "PluginsSdk/CodingPlugin/PluginComponents/Component",
+                "PluginsSdk/CodingPlugin/PluginItems",
+                "PluginsSdk/CodingPlugin/PluginItems/ContextMenuItem",
+                "PluginsSdk/CodingPlugin/PluginItems/InfoPanelItem",
+                "PluginsSdk/CodingPlugin/PluginItems/MainButtonItem",
+                "PluginsSdk/CodingPlugin/PluginItems/ProfileMenuItem",
+                "PluginsSdk/CodingPlugin/PluginItems/FileItem",
+                "PluginsSdk/CodingPlugin/PluginItems/EventListenerItem",
+                "PluginsSdk/CodingPlugin/PluginMessage",
+                "PluginsSdk/CodingPlugin/PluginTypes",
+                "PluginsSdk/CodingPlugin/PluginTypes/Plugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/SettingsPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/ApiPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/ContextMenuPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/MainButtonPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/InfoPanelPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/ProfileMenuPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/EventListenerPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/FilePlugin",
+                "PluginsSdk/AddingPlugin",
                 "Basic",
             };
 
@@ -126,6 +170,15 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("JsSdk", (object)catchall);
+        }
+
+        public ActionResult PluginsSdk(string catchall)
+        {
+            if (!_actionMap.Contains("pluginssdk/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("PluginsSdk", (object)catchall);
         }
 
         public ActionResult Batch()
