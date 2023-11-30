@@ -3,7 +3,7 @@
 <h1>
     <span class="hdr">Builder framework samples</span>
 </h1>
-<p>Use the guides for <a href="<%= Url.Action("builderframeworksamples/csharpbuildersamples") %>">.Net</a> or <a href="<%= Url.Action("builderframeworksamples/cppbuildersamples") %>">C++</a> to run the samples.</p>
+<p>Use the guides for <a href="<%= Url.Action("builderframeworksamples/cppbuildersamples") %>">C++</a> and <a href="<%= Url.Action("builderframeworksamples/csharpbuildersamples") %>">.Net</a> to run the samples.</p>
 
 <ul class="sample-block">
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
@@ -15,8 +15,8 @@
             <p>Fills spreadsheet with array-based values.</p>
         </div>
         <p class="block_more-sample">
-            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/FillingSpreadsheet.zip" }.ToString() %>">.Net</a> / 
-            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/FillingSpreadsheet.zip" }.ToString() %>">C++</a><br />
+            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/FillingSpreadsheet.zip" }.ToString() %>">C++</a> / 
+            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/FillingSpreadsheet.zip" }.ToString() %>">.Net</a><br />
             <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">More</a>
         </p>
     </li>
@@ -29,8 +29,8 @@
             <p>Comments spreadsheet cells with formula errors.</p>
         </div>
         <p class="block_more-sample">
-            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CommentingErrors.zip" }.ToString() %>">.Net</a> / 
-            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CommentingErrors.zip" }.ToString() %>">C++</a><br />
+            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CommentingErrors.zip" }.ToString() %>">C++</a> / 
+            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CommentingErrors.zip" }.ToString() %>">.Net</a><br />
             <a href="<%= Url.Action("buildersamples/commenterrors") %>">More</a>
         </p>
     </li>
@@ -43,8 +43,8 @@
             <p>Creates presentation with multiple slides, images and text.</p>
         </div>
         <p class="block_more-sample">
-            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CreatingPresentation.zip" }.ToString() %>">.Net</a> / 
-            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingPresentation.zip" }.ToString() %>">C++</a><br />
+            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingPresentation.zip" }.ToString() %>">C++</a> / 
+            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CreatingPresentation.zip" }.ToString() %>">.Net</a><br />
             <a href="<%= Url.Action("buildersamples/createpresentation") %>">More</a>
         </p>
     </li>
@@ -57,8 +57,8 @@
             <p>Creates single-slide chart presentation.</p>
         </div>
         <p class="block_more-sample">
-            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CreatingChartPresentation.zip" }.ToString() %>">.Net</a> / 
-            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingChartPresentation.zip" }.ToString() %>">C++</a><br />
+            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingChartPresentation.zip" }.ToString() %>">C++</a> / 
+            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CreatingChartPresentation.zip" }.ToString() %>">.Net</a><br />
             <a href="<%= Url.Action("buildersamples/createchartpresentation") %>">More</a>
         </p>
     </li>
@@ -71,8 +71,8 @@
             <p>Creates basic form with text and image inputs.</p>
         </div>
         <p class="block_more-sample">
-            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CreatingBasicForm.zip" }.ToString() %>">.Net</a> / 
-            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingBasicForm.zip" }.ToString() %>">C++</a><br />
+            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingBasicForm.zip" }.ToString() %>">C++</a> / 
+            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CreatingBasicForm.zip" }.ToString() %>">.Net</a><br />
             <a href="<%= Url.Action("buildersamples/createbasicform") %>">More</a>
         </p>
     </li>
@@ -85,8 +85,8 @@
             <p>Creates advanced form with table structure.</p>
         </div>
         <p class="block_more-sample">
-            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CreatingAdvancedForm.zip" }.ToString() %>">.Net</a> / 
-            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingAdvancedForm.zip" }.ToString() %>">C++</a><br />
+            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/CreatingAdvancedForm.zip" }.ToString() %>">C++</a> / 
+            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/CreatingAdvancedForm.zip" }.ToString() %>">.Net</a><br />
             <a href="<%= Url.Action("buildersamples/createadvancedform") %>">More</a>
         </p>
     </li>
@@ -99,8 +99,8 @@
             <p>Fills form with text values and image.</p>
         </div>
         <p class="block_more-sample">
-            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/FillingForm.zip" }.ToString() %>">.Net</a> / 
-            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/FillingForm.zip" }.ToString() %>">C++</a><br />
+            Download: <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/cpp-samples/FillingForm.zip" }.ToString() %>">C++</a> / 
+            <a href="<%= new System.UriBuilder(Request.Url.AbsoluteUri) { Path = "/app_data/docbuilder/csharp-samples/FillingForm.zip" }.ToString() %>">.Net</a><br />
             <a href="<%= Url.Action("buildersamples/fillform") %>">More</a>
         </p>
     </li>
