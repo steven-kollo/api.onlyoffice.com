@@ -4068,6 +4068,7 @@
     <Content Include="Views\DocBuilder\builderframeworksamples.aspx" />
     <Content Include="Views\DocBuilder\Builderframeworksamples\csharpbuildersamples.ascx" />
     <Content Include="Views\DocBuilder\Builderframeworksamples\cppbuildersamples.ascx" />
+    <Content Include="Views\DocBuilder\Builderframeworksamples\default.ascx" />
     <Content Include="Views\DocBuilder\buildersamples.aspx" />
     <Content Include="Views\DocBuilder\Buildersamples\commenterrors.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createadvancedform.ascx" />
