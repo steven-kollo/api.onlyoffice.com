@@ -1073,9 +1073,9 @@
             <summary>Denies file sharing or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ViewAccessability">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ViewAccessibility">
             <summary>File accessibility</summary>
-            <type>System.Collections.IDictionary{ASC.Files.Core.Helpers.Accessability, System.Boolean}, System.Collections</type>
+            <type>System.Collections.IDictionary{ASC.Files.Core.Helpers.Accessibility, System.Boolean}, System.Collections</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Int32">
             <summary>
@@ -1122,17 +1122,12 @@
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Accessability">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Accessibility">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryAccessabilityBoolean">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileEntryType">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryAccessibilityBoolean">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -1548,7 +1543,7 @@
             <param name="fileIds">id file</param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesFilteredAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesFilteredAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
                 Gets the file (s) by ID (s) for share
             </summary>
@@ -1557,6 +1552,7 @@
             <param name="subjectGroup"></param>
             <param name="subjectID"></param>
             <param name="searchText"></param>
+            <param name="extension"></param>
             <param name="searchInContent"></param>
             <param name="checkShared"></param>
             <returns></returns>
@@ -1568,7 +1564,7 @@
             <param name="parentId"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
             <summary>
                 Get files in folder
             </summary>
@@ -1578,6 +1574,7 @@
             <param name="subjectGroup"></param>
             <param name="subjectID"></param>
             <param name="searchText"> </param>
+            <param name="extension"></param>
             <param name="searchInContent"></param>
             <param name="withSubfolders"> </param>
             <param name="excludeSubject"> </param>
@@ -1715,7 +1712,7 @@
             <param name="newOwnerId"></param>
             <param name="exceptFolderIds"></param>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String,System.Boolean)">
             <summary>
             Search files in SharedWithMe &amp; Projects
             </summary>
@@ -1724,6 +1721,7 @@
             <param name="subjectGroup"></param>
             <param name="subjectID"></param>
             <param name="searchText"></param>
+            <param name="extension"></param>
             <param name="searchInContent"></param>
             <returns></returns>
         </member>

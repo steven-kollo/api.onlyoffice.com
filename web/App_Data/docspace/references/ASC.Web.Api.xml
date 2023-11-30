@@ -2040,14 +2040,6 @@
             <summary>Delivery time</summary>
             <type>System.Nullable{System.DateTime}, System</type>
         </member>
-        <member name="T:ASC.Web.Api.ApiModels.ResponseDto.WebhooksSslSettingsDto">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.WebhooksSslSettingsDto.IsEnabled">
-            <summary>Specifies if the SSL certificate is enabled or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.WhiteLabelItemDto">
             <summary>
             </summary>

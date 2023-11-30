@@ -77,7 +77,7 @@
             
             - Work with all popular formats. Highest compatibility with MS Office files.
             
-            - Create and co-edit &quot;ready-to-fill-out forms&quot;:&quot;https://www.only [rest of string was truncated]&quot;;.
+            - Create and co-edit &quot;ready-to-fill-out forms&quot;:&quot;http [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_personal_custom_mode_change_email_v115">
@@ -119,13 +119,13 @@
         </member>
         <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_personal_custom_mode_profile_delete">
              <summary>
-               Looks up a localized string similar to You have requested a termination of your account at personal.onlyoffice.com. Follow the link to complete the request (the link is active for a 7-day period): 
+               Looks up a localized string similar to You have requested a termination of your account at personal.onlyoffice.com. Follow the link to complete the request (the link is active for a 7-day period):
             
-            Confirm account termination
+            $OrangeButton
             
             *Note*: After the deletion, your account and all data associated with it will be erased permanently in accordance with our &quot;Privacy statement&quot;:&quot;https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5048502&amp;doc=SXhWMEVzSEYxNlVVaXJJeUVtS0kyYk14YWdXTEFUQmRWL250NllHNUFGbz0_IjUwNDg1MDIi0&quot;.
             
-            &quot;Read more about account  [rest of string was truncated]&quot;;.
+            &quot;Read more about account terminati [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_remove_user_data_completed_custom_mode">
@@ -1088,7 +1088,7 @@
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.ConsumersTwitterDescription">
             <summary>
-              Looks up a localized string similar to Enable the application to sign in to the portal using a Twitter account and search for contacts..
+              Looks up a localized string similar to Enable the application to sign in to the portal using a Twitter account..
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.ConsumersTwitterInstruction">
@@ -1429,6 +1429,51 @@
         <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorUserNotFoundByEmail">
             <summary>
               Looks up a localized string similar to The user with &quot;{0}&quot; email could not be found.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginArchive">
+            <summary>
+              Looks up a localized string similar to Wrong plugin archive.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginExist">
+            <summary>
+              Looks up a localized string similar to Plugin already exist.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginFileExtension">
+            <summary>
+              Looks up a localized string similar to Wrong file extension.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginFileSize">
+            <summary>
+              Looks up a localized string similar to File size exceeds limit.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginForbiddenSystem">
+            <summary>
+              Looks up a localized string similar to Сhanges to system plugins are prohibited.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginName">
+            <summary>
+              Looks up a localized string similar to Wrong plugin name.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginNoInputFile">
+            <summary>
+              Looks up a localized string similar to No input file.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginNotFound">
+            <summary>
+              Looks up a localized string similar to Plugin not found.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginToManyInputFiles">
+            <summary>
+              Looks up a localized string similar to To many input files.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.EuServerRegion">
@@ -2444,8 +2489,8 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_admin_activation_v1">
              <summary>
                Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
-            	
-            		
+            
+            
             Hello, $UserName!
             
             You have just created ONLYOFFICE DocSpace, a document hub where you can boost collaboration with your team, customers, partners, and more. Its address is &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;.
@@ -2462,37 +2507,37 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_admin_user_apps_tips_v1">
              <summary>
                Looks up a localized string similar to h1. Get &lt;span style=&quot;color:#FF6F3D;&quot;&gt;free&lt;/span&gt; ONLYOFFICE apps
-            	
+            
             
             Hello, $UserName!
             
             Get free ONLYOFFICE apps to work on documents from any of your devices.
             
-            &lt;table bgcolor=&quot;#FF6F3D&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%)&quot; style=&quot;background: linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%); order: 0 none; border-spacing: 0; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; color: #333333; empty-cells: show; h [rest of string was truncated]&quot;;.
+            &lt;table bgcolor=&quot;#FF6F3D&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%)&quot; style=&quot;background: linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%); order: 0 none; border-spacing: 0; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; color: #333333; empty-cells: show; he [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_admin_user_docs_tips_v1">
              <summary>
                Looks up a localized string similar to h1. &lt;span style=&quot;color:#FF6F3D;&quot;&gt;5 tips&lt;/span&gt; for effective work on your docs
-            	
+            
             
             Hello, $UserName!
             
             We hope you enjoy using your ONLYOFFICE DocSpace. Here are some tips on how to make work on documents more effective.
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td style=&quot;d [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td style=&quot;di [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_admin_welcome_v1">
              <summary>
                Looks up a localized string similar to h1. Discover business subscription of &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace
-            	
-            	
+            
+            
             Hello, $UserName!
             
             Here are three simple questions for you which can help us make your user experience even more comfortable.
             
-            &lt;table bgcolor=&quot;#f5f5f5&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;background: #f5f5f5; order: 0 none; border-spacing: 0; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: #333333; empty-cells: show; height: 0px; margin: 0 auto; max-width: 520px; padding: 0; vertical-align [rest of string was truncated]&quot;;.
+            &lt;table bgcolor=&quot;#f5f5f5&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;background: #f5f5f5; order: 0 none; border-spacing: 0; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: #333333; empty-cells: show; height: 0px; margin: 0 auto; max-width: 520px; padding: 0; vertical-align:  [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_guest_activation_v10">
@@ -2552,8 +2597,8 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_whitelabel_admin_activation_v1">
              <summary>
                Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
-            	
-            	
+            
+            
             Hello, $UserName!
             
             You have just created ONLYOFFICE DocSpace, a document hub where you can boost collaboration with your team, customers, partners, and more. Its address is &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;.
@@ -2570,13 +2615,13 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_whitelabel_admin_welcome_v1">
              <summary>
                Looks up a localized string similar to h1. Discover business subscription of &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace
-            	
-            	
+            
+            
             Hello, $UserName!
             
             Here are three simple questions for you which can help us make your user experience even more comfortable.
             
-            &lt;table bgcolor=&quot;#f5f5f5&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;background: #f5f5f5; order: 0 none; border-spacing: 0; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: #333333; empty-cells: show; height: 0px; margin: 0 auto; max-width: 520px; padding: 0; vertical-align [rest of string was truncated]&quot;;.
+            &lt;table bgcolor=&quot;#f5f5f5&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;background: #f5f5f5; order: 0 none; border-spacing: 0; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: #333333; empty-cells: show; height: 0px; margin: 0 auto; max-width: 520px; padding: 0; vertical-align:  [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_whitelabel_guest_activation_v10">
@@ -2598,13 +2643,13 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_whitelabel_guest_welcome_v1">
              <summary>
                Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
-            	
+            
             
             Hello, $UserName!
             
             Welcome to ONLYOFFICE DocSpace! Your user profile has been successfully added to &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Now you can:
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td  [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td s [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_whitelabel_user_activation_v1">
@@ -2624,13 +2669,13 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_whitelabel_user_welcome_v1">
              <summary>
                Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
-            	
+            
             
             Hello, $UserName!
             
             Welcome to ONLYOFFICE DocSpace! Your user profile has been successfully added to &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Now you can:
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td  [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td s [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_for_admin_notify">
@@ -2775,8 +2820,8 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_opensource_admin_activation_v1">
              <summary>
                Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
-            		
-            		
+            
+            
             Hello, $UserName!
             
             You have just created ONLYOFFICE DocSpace, a document hub where you can boost collaboration with your team, customers, partners, and more. Its address is &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;.
@@ -2805,13 +2850,13 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_opensource_admin_welcome_v1">
              <summary>
                Looks up a localized string similar to h1. Discover business subscription of &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace
-            	
-            	
+            
+            
             Hello, $UserName!
             
             Here are three simple questions for you which can help us make your user experience even more comfortable.
             
-            &lt;table bgcolor=&quot;#f5f5f5&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;background: #f5f5f5; order: 0 none; border-spacing: 0; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: #333333; empty-cells: show; height: 0px; margin: 0 auto; max-width: 520px; padding: 0; vertical-align [rest of string was truncated]&quot;;.
+            &lt;table bgcolor=&quot;#f5f5f5&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;background: #f5f5f5; order: 0 none; border-spacing: 0; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: #333333; empty-cells: show; height: 0px; margin: 0 auto; max-width: 520px; padding: 0; vertical-align:  [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_opensource_guest_activation_v11">
@@ -2833,13 +2878,13 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_opensource_guest_welcome_v1">
              <summary>
                Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
-            	
+            
             
             Hello, $UserName!
             
             Welcome to ONLYOFFICE DocSpace! Your user profile has been successfully added to &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Now you can:
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td  [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td s [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_opensource_user_activation_v1">
@@ -2849,7 +2894,7 @@
             
             Hello!
             
-            You are invited to join ONLYOFFICE DocSpace at  &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Accept the invitation by clicking the link:
+            You are invited to join ONLYOFFICE DocSpace at &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Accept the invitation by clicking the link:
             
             $OrangeButton
             
@@ -2859,25 +2904,25 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_opensource_user_docs_tips_v1">
              <summary>
                Looks up a localized string similar to h1. &lt;span style=&quot;color:#FF6F3D;&quot;&gt;5 tips&lt;/span&gt; for effective work on your docs
-            	
-            	
+            
+            
             Hello, $UserName!
             
             We hope you enjoy using your ONLYOFFICE DocSpace. Here are some tips on how to make work on documents more effective.
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td style=&quot; [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td style=&quot;di [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_opensource_user_welcome_v1">
              <summary>
                Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
-            	
+            
             
             Hello, $UserName!
             
             Welcome to ONLYOFFICE DocSpace! Your user profile has been successfully added to &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Now you can:
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td  [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td s [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_activate">
@@ -2914,13 +2959,13 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_after_registration14_v1">
              <summary>
                Looks up a localized string similar to h1. Get &lt;span style=&quot;color:#FF6F3D;&quot;&gt;free&lt;/span&gt; ONLYOFFICE apps
-            	
-            	
+            
+            
             Hello, $UserName!
             
             Get free ONLYOFFICE apps to work on documents from any of your devices.
             
-            &lt;table bgcolor=&quot;#FF6F3D&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%)&quot; style=&quot;background: linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%); order: 0 none; border-spacing: 0; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; color: #333333; empty-cells: show;  [rest of string was truncated]&quot;;.
+            &lt;table bgcolor=&quot;#FF6F3D&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%)&quot; style=&quot;background: linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%); order: 0 none; border-spacing: 0; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; color: #333333; empty-cells: show; he [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_already_exist">
@@ -2953,7 +2998,7 @@
              <summary>
                Looks up a localized string similar to Want to change the password on your ONLYOFFICE Personal account? Click the button below to confirm.
             
-            $OrangeButton 
+            $OrangeButton
             
             The link is valid for 7 days.
             
@@ -3242,8 +3287,8 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_saas_admin_activation_v1">
              <summary>
                Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
-            		
-            		
+            
+            
             Hello, $UserName!
             
             You have just created ONLYOFFICE DocSpace, a document hub where you can boost collaboration with your team, customers, partners, and more. Its address is &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;.
@@ -3253,55 +3298,55 @@
             
             Your current tariff plan is STARTUP. It is absolutely free and includes:
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;#ffffff&quot; st [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;#ffffff&quot; style= [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_saas_admin_modules_v1">
              <summary>
                Looks up a localized string similar to h1. Configure your &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace
-            	
-            	
+            
+            
             Hello, $UserName!
             
             Adjust security settings of your ONLYOFFICE DocSpace to make it more secure:
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;&quot; style=&quot;background-color: #ffffff; border: 0 none; border-collapse: collapse; border-spacing: 0; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; color: #333333; empty-cells: show; height: 0px; margin: 0 auto; max-width: 342px; padding: 0; vertical-alig [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;&quot; style=&quot;background-color: #ffffff; border: 0 none; border-collapse: collapse; border-spacing: 0; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; color: #333333; empty-cells: show; height: 0px; margin: 0 auto; max-width: 342px; padding: 0; vertical-align: [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_saas_admin_trial_warning_after_half_year_v1">
              <summary>
                Looks up a localized string similar to h1. Your ONLYOFFICE DocSpace will be &lt;span style=&quot;color:#FF6F3D;&quot;&gt;deleted&lt;/span&gt;
             
-            		
+            
             You haven&apos;t entered your ONLYOFFICE DocSpace &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; for more than half a year. 
             
             Since you have decided not to use it anymore, your ONLYOFFICE DocSpace and all the data will be deleted in accordance with our &quot;Privacy Policy&quot;:&quot;https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5048502&amp;doc=SXhWMEVzSEYxNlVVaXJJeUVtS0kyYk14YWdXTEFUQmRWL250NllHNUFGbz0_IjUwNDg1MDIi0&quot;. 
             
-             [rest of string was truncated]&quot;;.
+            &lt;t [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_saas_admin_user_apps_tips_v1">
              <summary>
                Looks up a localized string similar to h1. Get &lt;span style=&quot;color:#FF6F3D;&quot;&gt;free&lt;/span&gt; ONLYOFFICE apps
-            	
+            
             
             Hello, $UserName!
             
             Get free ONLYOFFICE apps to work on documents from any of your devices.
             
-            &lt;table bgcolor=&quot;#FF6F3D&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%)&quot; style=&quot;background: linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%); order: 0 none; border-spacing: 0; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; color: #333333; empty-cells: show; h [rest of string was truncated]&quot;;.
+            &lt;table bgcolor=&quot;#FF6F3D&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%)&quot; style=&quot;background: linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%); order: 0 none; border-spacing: 0; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; color: #333333; empty-cells: show; he [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_saas_admin_user_docs_tips_v1">
              <summary>
                Looks up a localized string similar to h1. &lt;span style=&quot;color:#FF6F3D;&quot;&gt;5 tips&lt;/span&gt; for effective work on your docs
-            	
+            
             	
             Hello, $UserName!
             
             We hope you enjoy using your ONLYOFFICE DocSpace. Here are some tips on how to make work on documents more effective.
             
-            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td style=&quot; [rest of string was truncated]&quot;;.
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td style=&quot;d [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_saas_admin_welcome_v1">
@@ -3428,11 +3473,11 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_saas_user_activation_v1">
              <summary>
                Looks up a localized string similar to h1. Join &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace
-            		
-            		
+            
+            
             Hello!
             
-            You are invited to join ONLYOFFICE DocSpace at  &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Accept the invitation by clicking the link:
+            You are invited to join ONLYOFFICE DocSpace at &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Accept the invitation by clicking the link:
             
             $OrangeButton
             
