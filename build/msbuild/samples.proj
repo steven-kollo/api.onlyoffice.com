@@ -23,7 +23,7 @@
     <NameFillingFormNet>$(ToNet)FillingForm</NameFillingFormNet>
     <DirFillingSpreadsheetNet>$(RootCsharp)FillingSpreadsheet\</DirFillingSpreadsheetNet>
     <NameFillingSpreadsheetNet>$(ToNet)FillingSpreadsheet</NameFillingSpreadsheetNet>
-	  
+
     <ToCpp>$(RootDir)web\App_Data\docbuilder\cpp-samples\</ToCpp>
     <DirCommentingErrorsCpp>$(RootCpp)CommentingErrors\</DirCommentingErrorsCpp>
     <NameCommentingErrorsCpp>$(ToCpp)CommentingErrors</NameCommentingErrorsCpp>
@@ -40,20 +40,20 @@
     <DirFillingSpreadsheetCpp>$(RootCpp)FillingSpreadsheet\</DirFillingSpreadsheetCpp>
     <NameFillingSpreadsheetCpp>$(ToCpp)FillingSpreadsheet</NameFillingSpreadsheetCpp>
   </PropertyGroup>
-	
+
   <Target Name="ZipOutputPath" AfterTargets="Build">
     <ZipDirectory SourceDirectory="$(DirCommentingErrorsNet)" DestinationFile="$(NameCommentingErrorsNet).zip" Overwrite="true" /> 
     <ZipDirectory SourceDirectory="$(DirCreatingAdvancedFormNet)" DestinationFile="$(NameCreatingAdvancedFormNet).zip" Overwrite="true" /> 
-	<ZipDirectory SourceDirectory="$(DirCreatingBasicFormNet)" DestinationFile="$(NameCreatingBasicFormNet).zip" Overwrite="true" /> 
-	<ZipDirectory SourceDirectory="$(DirCreatingChartPresentationNet)" DestinationFile="$(NameCreatingChartPresentationNet).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirCreatingBasicFormNet)" DestinationFile="$(NameCreatingBasicFormNet).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirCreatingChartPresentationNet)" DestinationFile="$(NameCreatingChartPresentationNet).zip" Overwrite="true" /> 
     <ZipDirectory SourceDirectory="$(DirCreatingPresentationNet)" DestinationFile="$(NameCreatingPresentationNet).zip" Overwrite="true" /> 
     <ZipDirectory SourceDirectory="$(DirFillingFormNet)" DestinationFile="$(NameFillingFormNet).zip" Overwrite="true" /> 
     <ZipDirectory SourceDirectory="$(DirFillingSpreadsheetNet)" DestinationFile="$(NameFillingSpreadsheetNet).zip" Overwrite="true" /> 
-  
+
     <ZipDirectory SourceDirectory="$(DirCommentingErrorsCpp)" DestinationFile="$(NameCommentingErrorsCpp).zip" Overwrite="true" /> 
     <ZipDirectory SourceDirectory="$(DirCreatingAdvancedFormCpp)" DestinationFile="$(NameCreatingAdvancedFormCpp).zip" Overwrite="true" /> 
-	<ZipDirectory SourceDirectory="$(DirCreatingBasicFormCpp)" DestinationFile="$(NameCreatingBasicFormCpp).zip" Overwrite="true" /> 
-	<ZipDirectory SourceDirectory="$(DirCreatingChartPresentationCpp)" DestinationFile="$(NameCreatingChartPresentationCpp).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirCreatingBasicFormCpp)" DestinationFile="$(NameCreatingBasicFormCpp).zip" Overwrite="true" /> 
+    <ZipDirectory SourceDirectory="$(DirCreatingChartPresentationCpp)" DestinationFile="$(NameCreatingChartPresentationCpp).zip" Overwrite="true" /> 
     <ZipDirectory SourceDirectory="$(DirCreatingPresentationCpp)" DestinationFile="$(NameCreatingPresentationCpp).zip" Overwrite="true" /> 
     <ZipDirectory SourceDirectory="$(DirFillingFormCpp)" DestinationFile="$(NameFillingFormCpp).zip" Overwrite="true" /> 
     <ZipDirectory SourceDirectory="$(DirFillingSpreadsheetCpp)" DestinationFile="$(NameFillingSpreadsheetCpp).zip" Overwrite="true" /> 
