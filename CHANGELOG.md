@@ -2,6 +2,8 @@
 
 - docspace: added the DocSpace plugins SDK
 - docspace: storybook v2.0.0
+- editors: added the information about Health check
+- desktop: added the portal:uiTheme command to the execCommand method
 - restructured the docbuilder and plugins sections
 - docbuilder: added builder samples
 

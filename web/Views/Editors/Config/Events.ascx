@@ -375,10 +375,8 @@ var onRequestHistory = function () {
         "currentVersion": 2,
         "history": [
             {
-                "changes": changes,
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
-                "serverVersion": serverVersion,
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage"
@@ -389,6 +387,7 @@ var onRequestHistory = function () {
                 "changes": changes,
                 "created": "2010-07-07 3:46 PM",
                 "key": "Khirz6zTPdfd7",
+                "serverVersion": serverVersion,
                 "user": {
                     "id": "78e1e841",
                     "name": "John Smith"
@@ -684,10 +683,8 @@ var onRequestRestore = function (event) {
         "currentVersion": 2,
         "history": [
             {
-                "changes": changes,
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
-                "serverVersion": serverVersion,
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage"
@@ -698,6 +695,7 @@ var onRequestRestore = function (event) {
                 "changes": changes,
                 "created": "2010-07-07 3:46 PM",
                 "key": "Khirz6zTPdfd7",
+                "serverVersion": serverVersion,
                 "user": {
                     "id": "78e1e841",
                     "name": "John Smith"
