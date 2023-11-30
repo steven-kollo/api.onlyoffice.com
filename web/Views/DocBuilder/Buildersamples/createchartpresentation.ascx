@@ -22,9 +22,9 @@
         <a href="<%= Url.Action("presentationapi/apitextpr/setfill") %>">ApiTextPr/SetFill</a>, <a href="<%= Url.Action("presentationapi/apitextpr/setfontfamily") %>">ApiTextPr/SetFontFamily</a>,
         <a href="<%= Url.Action("presentationapi/apitextpr/setfontsize") %>">ApiTextPr/SetFontSize</a>, <a href="<%= Url.Action("presentationapi/apishape/getdoccontent") %>">ApiShape/GetDocContent</a>, <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">ApiSlide/AddObject</a>);</li>
     <li>create a chart and add it to the specified slide (<a href="<%= Url.Action("presentationapi/api/createchart") %>">Api/CreateChart</a>, <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">ApiSlide/AddObject</a>)</li>
-
 </ul>
-<br />
+
+<p>This sample is available for the <b>C++ and .Net DocBuilder Frameworks</b>.<br />Download the sample and get more information on the <a href="<%= Url.Action("builderframeworksamples") %>">Builder framework samples</a> page.</p>
 
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 

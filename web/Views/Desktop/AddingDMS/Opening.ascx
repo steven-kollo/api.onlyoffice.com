@@ -23,7 +23,7 @@
     The document will be opened upon successful validation.
 </p>
 <p id="open-command" class="copy-link">
-    <b>Option 2.</b> Use the <em>open:document</em> command of the <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method. When this command is sent, the document is opened.
+    <b>Option 2.</b> Use the <em>open:document</em> command of the <a href="<%= Url.Action("execcommand") %>">execCommand</a> method. When this command is sent, the document is opened.
     Parameters are specified in the format of a string with the serialized <em>json</em> as follows:
 </p>
 <pre>
@@ -86,5 +86,5 @@ const params = {
     "type" : "word",
     "provider" : "onlyoffice"
 }
-AscDesktopEditor.execCommand("open:document", JSON.stringify(params))
+window.AscDesktopEditor.execCommand("open:document", JSON.stringify(params))
 </pre>

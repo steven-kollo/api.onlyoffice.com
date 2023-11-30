@@ -13,6 +13,7 @@
 <ul>
     <li><a href="<%= Url.Action("addingdms/loginlogout") %>">log in</a> to your DMS so that it will be displayed in the <b>Connected clouds</b> list,</li>
     <li>enable <a href="<%= Url.Action("addingdms/notifications") %>">notifications</a> from the desktop application,</li>
+    <li>change the interface <a href="<%= Url.Action("addingdms/changingtheme") %>">theme</a>,</li>
     <li>enable end-to-end <a href="<%= Url.Action("addingdms/encryption") %>">encryption</a>.</li>
 </ul>
 
