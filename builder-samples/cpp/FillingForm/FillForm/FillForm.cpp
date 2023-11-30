@@ -56,7 +56,7 @@ string cValueToString(CValue value)
 int main(int argc, char* argv[])
 {
     std::map<string, string> formData;
-    formData["Photo"] = "https://github.com/steven-kollo/docbuilder_examples/blob/main/Templates/blue_cloud.png?raw=true";
+    formData["Photo"] = "https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png";
     formData["Serial"] = "A1345";
     formData["Company Name"] = "Blue Cloud";
     formData["Date"] = "25.12.2023";
