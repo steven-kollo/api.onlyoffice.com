@@ -308,10 +308,8 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes,
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
