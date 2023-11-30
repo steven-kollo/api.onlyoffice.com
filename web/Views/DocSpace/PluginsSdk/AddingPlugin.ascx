@@ -53,7 +53,6 @@ But in this case, you also have the option to upload your own plugins. To do thi
     <li>Go to the <b>Integration</b> section.</li>
     <li>
         <p>Open the <b>Plugins</b> tab.</p>
-        <img alt="DocSpace plugins" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/docspace/docspace-plugins.png") %>" />
     </li>
     <li>
         <p>Click the <b>Upload plugin</b> button.</p>
