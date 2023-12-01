@@ -1291,10 +1291,10 @@
 <div id="controlFields" style="padding-right:20px;">
     <div id="customization" class="control-panel">
         <div class="line">
-            <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous" checked>
+            <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous">
             <label for="editorConfig_customization_anonymous">Anonymous</label>
         </div>
-        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder" style="padding-left: 20px;" hidden>
             <div class="line">
                 <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" checked>
                 <label for="editorConfig_customization_anonymous_request">Request</label>
@@ -1321,10 +1321,10 @@
             <label for="editorConfig_customization_compatibleFeatures">Compatible Features</label>
         </div>
         <div class="line">
-            <input type="checkbox" class="config-dropdown" id="editorConfig_customization_customer" name="editorConfig_customization_customer" checked>
+            <input type="checkbox" class="config-dropdown" id="editorConfig_customization_customer" name="editorConfig_customization_customer">
             <label for="editorConfig_customization_customer">Customer</label>
         </div>
-        <div id="holder_editorConfig_customization_customer" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_customization_customer" class="config_object_holder" style="padding-left: 20px;" hidden>
             <div class="line">
                 <label for="editorConfig_customization_customer_address">Address</label>
                 <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
@@ -1363,10 +1363,10 @@
             <label for="editorConfig_customization_features">Features.Spellcheck</label>
         </div>
         <div class="line">
-            <input type="checkbox" id="editorConfig_customization_feedback" name="editorConfig_customization_feedback" checked>
+            <input type="checkbox" id="editorConfig_customization_feedback" name="editorConfig_customization_feedback">
             <label for="editorConfig_customization_feedback">Feedback</label>
         </div>
-        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" style="padding-left: 20px;" hidden>
             <div class="line">
                 <label for="editorConfig_customization_feedback_url">url</label>
                 <input type="text" id="editorConfig_customization_feedback_url" name="editorConfig_customization_feedback_url" value="https://example.com">
@@ -1381,10 +1381,10 @@
             <label for="editorConfig_customization_forcesave">Force Save</label>
         </div>
         <div class="line">
-            <input type="checkbox" id="editorConfig_customization_goback" name="editorConfig_customization_goback" checked>
+            <input type="checkbox" id="editorConfig_customization_goback" name="editorConfig_customization_goback">
             <label for="editorConfig_customization_goback">Go back</label>
         </div>
-        <div id="holder_editorConfig_customization_goback" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_customization_goback" class="config_object_holder" style="padding-left: 20px;" hidden>
             <div class="line">
                 <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" checked>
                 <label for="editorConfig_customization_goback_blank">Blank</label>
@@ -1423,10 +1423,10 @@
             <label for="editorConfig_customization_integrationMode">Integration Mode</label>
         </div>
         <div class="line">
-            <input type="checkbox" id="editorConfig_customization_logo" name="editorConfig_customization_logo" checked>
+            <input type="checkbox" id="editorConfig_customization_logo" name="editorConfig_customization_logo">
             <label for="editorConfig_customization_logo">Logo</label>
         </div>
-        <div id="holder_editorConfig_customization_logo" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_customization_logo" class="config_object_holder" style="padding-left: 20px;" hidden>
             <div class="line">
                 <label for="editorConfig_customization_logo_image">Image</label>
                 <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://example.com/logo.png">
@@ -1453,10 +1453,10 @@
             <label for="editorConfig_customization_plugins">Plugins</label>
         </div>
         <div class="line">
-            <input type="checkbox" id="editorConfig_customization_review" name="editorConfig_customization_review" checked>
+            <input type="checkbox" id="editorConfig_customization_review" name="editorConfig_customization_review">
             <label for="editorConfig_customization_review">Review</label>
         </div>
-        <div id="holder_editorConfig_customization_review" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_customization_review" class="config_object_holder" style="padding-left: 20px;" hidden>
             <div class="line">
                 <label for="editorConfig_customization_review_reviewDisplay">Review Display</label>
                 <select id="editorConfig_customization_review_reviewDisplay" name="editorConfig_customization_review_reviewDisplay">
@@ -1527,131 +1527,7 @@
     </div>
 </div>
 <div id="configPreHolder">
-<pre id="configPre">
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "customization": {
-            "anonymous": {
-                "request": true,
-                "label": "Guest"
-            },
-            <% if (license)
-               { %>"about": true,
-            <% } %>"comments": true,
-            "compactHeader": false,
-            "compactToolbar": false,
-            "compatibleFeatures": false,
-            "customer": {
-                "address": "My City, 123a-45",
-                "info": "Some additional information",
-                "logo": "https://example.com/logo-big.png",
-                "logoDark": "https://example.com/dark-logo-big.png",
-                "mail": "john@example.com",
-                "name": "John Smith and Co.",
-                "phone": "123456789",
-                "www": "example.com"
-            },
-            "features": {
-                "spellcheck": {
-                    "mode": true<% if (license)
-                    { %>,
-                    "change": true<% } %>
-                }
-            },
-            "feedback": {
-                "url": "https://example.com",
-                "visible": true
-            },
-            <% if (license)
-               { %>"font": {
-                "name": "Arial"
-            },
-            <% } %>"forcesave": false,
-            "goback": {
-                "blank": true,
-                "requestClose": false,
-                "text": "Open file location",
-                "url": "https://example.com"
-            },
-            "help": true,
-            "hideNotes": false,
-            "hideRightMenu": false,
-            "hideRulers": false,
-            "integrationMode": "embed",
-            <% if (license)
-               { %>"layout": {
-                "header": {
-                    "save": true,
-                    "users": true
-                },
-                "leftMenu": {
-                    "mode": true,
-                    "navigation": true,
-                    "spellcheck": true
-                },
-                "rightMenu": {
-                    "mode": true
-                },
-                "statusBar": {
-                    "actionStatus": true,
-                    "docLang": true,
-                    "textLang": true
-                },
-                "toolbar": {
-                    "collaboration": true,
-                    "file": {
-                        "close": true,
-                        "info": true,
-                        "save": true,
-                        "settings": true
-                    },
-                    "home": {
-                        "mailmerge": true
-                    },
-                    "layout": true,
-                    "plugins": true,
-                    "protect": true,
-                    "references": true,
-                    "save": true,
-                    "view": {
-                        "navigation": true
-                    }
-                }
-            },
-            "loaderLogo": "https://example.com/loader-logo.png",
-            "loaderName": "The document is loading, please wait...",
-            <% } %>"logo": {
-                "image": "https://example.com/logo.png",
-                "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://example.com"
-            },
-            "macros": true,
-            "macrosMode": "warn",
-            "mentionShare": true,
-            "plugins": true,
-            "review": {
-                "hideReviewDisplay": false,
-                "showReviewChanges": false,
-                "reviewDisplay": "original",
-                "trackChanges": true,
-                "hoverMode": false
-            },
-            <% if (license)
-               { %>"statusBar": true,
-            <% } %><%--"submitForm": true,--%>
-            <% if (license)
-                { %>"toolbar": true,
-            <% } %>"toolbarHideFileName": false,
-            "toolbarNoTabs": false,
-            "uiTheme": "theme-dark",
-            "unit": "cm",
-            "zoom": 100
-        },
-        ...
-    },
-    ...
-});
-</pre>
+    <pre id="configPre"></pre>
 </div>
 
 
@@ -1702,73 +1578,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         updateConfig();
     });
 
-    $("#controlFields").find("input,select").change(function (e) {
-        updateConfig(e.target.id);
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
     });
 
-    var config_dict = {
-        '"anonymous"': {
-            '"request"': "editorConfig_customization_anonymous_request",
-            '"label"': "editorConfig_customization_anonymous_label"
-        },
-        '"comments"': "editorConfig_customization_comments",
-        '"compactHeader"': "editorConfig_customization_compactHeader",
-        '"compactToolbar"': "editorConfig_customization_compactToolbar",
-        '"compatibleFeatures"': "editorConfig_customization_compatibleFeatures",
-        '"customer"': {
-            '"address"': "editorConfig_customization_customer_address",
-            '"info"': "editorConfig_customization_customer_info",
-            '"logo"': "editorConfig_customization_customer_logo",
-            '"logoDark"': "editorConfig_customization_customer_logoDark",
-            '"mail"': "editorConfig_customization_customer_mail",
-            '"name"': "editorConfig_customization_customer_name",
-            '"phone"': "editorConfig_customization_customer_phone",
-            '"www"': "editorConfig_customization_customer_www",
-        },
-        //'"features"': {
-        //    '"spellcheck"': {
-        //        '"mode"': "editorConfig_customization_features",
-        //    },
-        //},
-        '"feedback"': {
-            '"url"': "editorConfig_customization_feedback_url",
-            '"visible"': "editorConfig_customization_feedback_visible",
-        },
-        '"forcesave"': "editorConfig_customization_forcesave",
-        '"goback"': {
-            '"blank"': "editorConfig_customization_goback_blank",
-            '"requestClose"': "editorConfig_customization_goback_requestClose",
-            '"text"': "editorConfig_customization_goback_text",
-            '"url"': "editorConfig_customization_goback_url",
-        },
-        '"help"': "editorConfig_customization_help",
-        '"hideNotes"': "editorConfig_customization_hideNotes",
-        '"hideRightMenu"': "editorConfig_customization_hideRightMenu",
-        '"integrationMode"': "editorConfig_customization_integrationMode",
-        '"logo"': {
-            '"image"': "editorConfig_customization_logo_image",
-            '"imageDark"': "editorConfig_customization_logo_imageDark",
-            '"url"': "editorConfig_customization_logo_url",
-        },
-        '"macros"': "editorConfig_customization_macros",
-        '"macrosMode"': "editorConfig_customization_macrosMode",
-        '"mentionShare"': "editorConfig_customization_mentionShare",
-        '"plugins"': "editorConfig_customization_plugins",
-        '"review"': {
-            '"hideReviewDisplay"': "editorConfig_customization_review_hideReviewDisplay",
-            '"showReviewChanges"': "editorConfig_customization_review_showReviewChanges",
-            '"reviewDisplay"': "editorConfig_customization_review_reviewDisplay",
-            '"trackChanges"': "editorConfig_customization_review_trackChanges",
-            '"hoverMode"': "editorConfig_customization_review_hoverMode",
-        },
-        '"submitForm"': "editorConfig_customization_submitForm",
-        '"toolbarHideFileName"': "editorConfig_customization_toolbarHideFileName",
-        '"toolbarNoTabs"': "editorConfig_customization_toolbarNoTabs",
-        '"uiTheme"': "editorConfig_customization_uiTheme",
-        '"unit"': "editorConfig_customization_unit",
-        '"zoom"': "editorConfig_customization_zoom",
-    };
-   
     $("#editorConfig_customization_anonymous").change(showHideConfigObject);
     $("#editorConfig_customization_customer").change(showHideConfigObject);
     $("#editorConfig_customization_feedback").change(showHideConfigObject);
@@ -1782,43 +1595,103 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         resizeCodeInput();
     }
 
-    function updateConfigValue(html_element_number, codeFieldChildren, config) {
-        var element = config_dict[codeFieldChildren[html_element_number].innerHTML];
-        if (typeof element === "object") {
-            for (const [config_field, html_id] of Object.entries(element)) {
-                var value = getFieldValue(html_id);
-                var i = 0;
-                while (codeFieldChildren[html_element_number + i].innerHTML != config_field) {
-                    i++
-                }
-                codeFieldChildren[html_element_number + 1 + i].innerHTML = typeof value === 'string' ? `"${value}"` : value;
-
-                if (config.editorConfig.customization[codeFieldChildren[html_element_number].innerHTML.replaceAll('"', '')] === undefined) {
-                    config.editorConfig.customization[codeFieldChildren[html_element_number].innerHTML.replaceAll('"', '')] = {};
-                }
-                config.editorConfig.customization[codeFieldChildren[html_element_number].innerHTML.replaceAll('"', '')][config_field.replaceAll('"', '')] = value;
-            }
-        } else {
-            var value = getFieldValue(config_dict[codeFieldChildren[html_element_number].innerHTML]);
-            codeFieldChildren[html_element_number + 1].innerHTML = typeof value === 'string' ? `"${value}"` : value;
-            config.editorConfig.customization[codeFieldChildren[html_element_number].innerHTML.replaceAll('"', '')] = value;
-        }
-    }
-
     function updateConfig() {
-        // Update code field
-        var codeFieldChildren = document.getElementById("configPre").children;
-        var i = 0;
-        
-        while (codeFieldChildren[i] != undefined) {
-            if (config_dict[codeFieldChildren[i].innerHTML] != undefined) {
-                updateConfigValue(i, codeFieldChildren, config);
-            }
-            i++;
+        var anonymous = getFieldValue("editorConfig_customization_anonymous") ?
+            `"anonymous": {
+                "request": ${getFieldValue("editorConfig_customization_anonymous_request")},
+                "label": ${getFieldValue("editorConfig_customization_anonymous_label")}
+            },
+            ` : "";
+        var customer = getFieldValue("editorConfig_customization_customer") ?
+            `"customer": {
+                "address": ${getFieldValue("editorConfig_customization_customer_address")},
+                "info": ${getFieldValue("editorConfig_customization_customer_info")},
+                "logo": ${getFieldValue("editorConfig_customization_customer_logo")},
+                "logoDark": ${getFieldValue("editorConfig_customization_customer_logoDark")},
+                "mail": ${getFieldValue("editorConfig_customization_customer_mail")},
+                "name": ${getFieldValue("editorConfig_customization_customer_name")},
+                "phone": ${getFieldValue("editorConfig_customization_customer_phone")},
+                "www": ${getFieldValue("editorConfig_customization_customer_www")}
+            },
+            ` : "";
+        var features = getFieldValue("editorConfig_customization_features") ?
+            `"features": {
+                "spellcheck": {
+                    "mode": true
+                }
+            },
+            ` : "";
+        var feedback = getFieldValue("editorConfig_customization_feedback") ?
+            `"feedback": {
+                "url": ${getFieldValue("editorConfig_customization_feedback_url")},
+                "visible": ${getFieldValue("editorConfig_customization_feedback_visible")}
+            },
+            ` : "";
+        var goback = getFieldValue("editorConfig_customization_goback") ?
+            `"goback": {
+                "blank": ${getFieldValue("editorConfig_customization_goback_blank")},
+                "requestClose": ${getFieldValue("editorConfig_customization_goback_requestClose")},
+                "text": ${getFieldValue("editorConfig_customization_goback_text")},
+                "url": ${getFieldValue("editorConfig_customization_goback_url")}
+            },
+            ` : "";
+        var logo = getFieldValue("editorConfig_customization_logo") ?
+            `"logo": {
+                "image": ${getFieldValue("editorConfig_customization_logo_image")},
+                "imageDark": ${getFieldValue("editorConfig_customization_logo_imageDark")},
+                "url": ${getFieldValue("editorConfig_customization_logo_url")}
+            },
+            ` : "";
+        var review = getFieldValue("editorConfig_customization_review") ?
+            `"review": {
+                "hideReviewDisplay": ${getFieldValue("editorConfig_customization_review_hideReviewDisplay")},
+                "showReviewChanges": ${getFieldValue("editorConfig_customization_review_showReviewChanges")},
+                "reviewDisplay": ${getFieldValue("editorConfig_customization_review_reviewDisplay")},
+                "trackChanges": ${getFieldValue("editorConfig_customization_review_trackChanges")},
+                "hoverMode": ${getFieldValue("editorConfig_customization_review_hoverMode")}
+            },
+            ` : "";
+        var customization = `{
+            ${anonymous}"comments": ${getFieldValue("editorConfig_customization_comments")},
+            "compactHeader": ${getFieldValue("editorConfig_customization_compactHeader")},
+            "compactToolbar": ${getFieldValue("editorConfig_customization_compactToolbar")},
+            "compatibleFeatures": ${getFieldValue("editorConfig_customization_compatibleFeatures")},
+            ${customer}${features}${feedback}"forcesave": ${getFieldValue("editorConfig_customization_forcesave")},
+            ${goback}"help": ${getFieldValue("editorConfig_customization_help")},
+            "hideNotes": ${getFieldValue("editorConfig_customization_hideNotes")},
+            "hideRightMenu": ${getFieldValue("editorConfig_customization_hideRightMenu")},
+            "hideRulers": ${getFieldValue("editorConfig_customization_hideRulers")},
+            "integrationMode": ${getFieldValue("editorConfig_customization_integrationMode")},
+            ${logo}"macros": ${getFieldValue("editorConfig_customization_macros")},
+            "macrosMode": ${getFieldValue("editorConfig_customization_macrosMode")},
+            "mentionShare": ${getFieldValue("editorConfig_customization_mentionShare")},
+            "plugins": ${getFieldValue("editorConfig_customization_plugins")},
+            ${review}"toolbarHideFileName": ${getFieldValue("editorConfig_customization_toolbarHideFileName")},
+            "toolbarNoTabs": ${getFieldValue("editorConfig_customization_toolbarNoTabs")},
+            "uiTheme": ${getFieldValue("editorConfig_customization_uiTheme")},
+            "unit": ${getFieldValue("editorConfig_customization_unit")},
+            "zoom": ${getFieldValue("editorConfig_customization_zoom")}
+        }`;
+        var config_string =
+`var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "editorConfig": {
+        "customization": ${customization}
+        ,
+        ...
+    },
+    ...
+});
+`;
+        var customization_object = JSON.parse(customization);
+        if (!customization_object.anonymous) {
+            customization_object.anonymous = { request: false }
         }
-        // Reload editor
+        config.editorConfig.customization = customization_object;
         window.docEditor.destroyEditor();
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
     }
 
     function getFieldValue(id) {
@@ -1826,7 +1699,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         if (element.type == "checkbox") {
             return element.checked;
         } else if (isNaN(element.value)) {
-            return element.value;
+            return `"${element.value}"`;
         } else {
             return Number(element.value);
         }
