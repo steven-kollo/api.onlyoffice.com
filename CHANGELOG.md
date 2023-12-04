@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the formsdataurl parameter to the Callback handler
 - editors: added the link field to the data object which is sent to the events.onRequestReferenceData event
 - restructured the docbuilder and plugins sections
 - docbuilder: added builder samples
