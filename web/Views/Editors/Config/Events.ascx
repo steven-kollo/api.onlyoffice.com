@@ -39,7 +39,7 @@
     <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
-    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
 </ul>
 

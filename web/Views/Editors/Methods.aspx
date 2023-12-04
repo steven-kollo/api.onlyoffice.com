@@ -38,7 +38,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> - insert recipient data for mail merge into the file.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
-        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
         <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
     </ul>
 
