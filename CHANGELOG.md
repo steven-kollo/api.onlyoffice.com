@@ -1,5 +1,6 @@
 # Change Log
 
+## 4.4.0
 - docspace: added the DocSpace plugins SDK
 - docspace: storybook v2.0.0
 - editors: added the information about Health check
