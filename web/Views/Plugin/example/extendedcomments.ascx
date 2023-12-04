@@ -125,7 +125,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li><a href="<%= Url.Action("events/onaddcomment") %>">onAddComment</a></li>
     <li><a href="<%= Url.Action("events/onchangecommentData") %>">onChangeCommentData</a></li>
     <li><a href="<%= Url.Action("events/onremovecomment") %>">onRemoveComment</a></li>
-    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("executemethod/text/addcomment") %>">executeMethod ("AddComment")</a></li>
     <li><a href="<%= Url.Action("executemethod/text/changecomment") %>">executeMethod ("ChangeComment")</a></li>
     <li><a href="<%= Url.Action("executemethod/text/getallcomments") %>">executeMethod ("GetAllComments")</a></li>

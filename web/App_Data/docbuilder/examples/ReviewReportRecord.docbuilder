@@ -6,4 +6,4 @@ var oReviewReportRecord4 = {"Type": "TextPr", "Date": 1679941757832};
 var oReviewRecord = {
 	"John Smith" : [oReviewReportRecord1, oReviewReportRecord2],
 	"Mark Pottato" : [oReviewReportRecord3, oReviewReportRecord4]
-}
+};

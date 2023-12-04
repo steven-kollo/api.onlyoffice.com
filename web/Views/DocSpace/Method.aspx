@@ -154,8 +154,10 @@
     <div class="header-gray">Example Response</div>
     <% foreach (var output in method.Response.First().Outputs)
        { %>
-        <p><%= Html.Encode(output.Key) %></p>
+            <% if (output.Key == "application/json")
+               { %>
         <pre><%= Html.Encode(output.Value) %></pre>
+            <% } %>
     <% }
        } %>
     </div>

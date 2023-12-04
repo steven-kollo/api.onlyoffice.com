@@ -15,13 +15,13 @@
         <span class="hdr">ONLYOFFICE Docs React component</span>
     </h1>
 
-    <p>The ONLYOFFICE Docs React <a href="https://github.com/ONLYOFFICE/document-editor-react" target="_blank">component</a> integrates ONLYOFFICE Docs into <a href="https://react.dev/" target="_blank">React</a> projects.
-        This procedure creates a <a href="https://github.com/facebook/create-react-app" target="_blank">basic React application</a> containing an ONLYOFFICE Docs editor.</p>
+    <p>The ONLYOFFICE Docs React <a href="https://github.com/ONLYOFFICE/document-editor-react" target="_blank">component</a> integrates ONLYOFFICE Docs into <a href="https://react.dev/" target="_blank">React</a> projects.</p>
 
     <h2 id="prerequisites" class="copy-link">Prerequisites</h2>
     <p>This procedure requires <a href="https://nodejs.org/en" target="_blank">Node.js (and npm)</a>.</p>
 
     <h2 id="demo-react-app" class="copy-link">Creating the demo React application with ONLYOFFICE Docs editor</h2>
+    <p>This procedure creates a <a href="https://github.com/facebook/create-react-app" target="_blank">basic React application</a> and installs an ONLYOFFICE Docs editor in it.</p>
     <ol>
         <li>
             <p>Create a new React project named <em>onlyoffice-react-demo</em> using the <em>Create React App</em> package:</p>
@@ -54,13 +54,24 @@ import { DocumentEditor } from "@onlyoffice/document-editor-react";
 var onDocumentReady = function (event) {
     console.log("Document is loaded");
 };
+
+var onLoadComponentError = function (errorCode, errorDescription) {
+    switch(errorCode) {
+        case -1: // Unknown error loading component
+            console.log(errorDescription);
+            break;
+
+        case -2: // Error load DocsAPI from http://documentserver/
+            console.log(errorDescription);
+            break;
+
+        case -3: // DocsAPI is not defined
+            console.log(errorDescription);
+            break;
+    }
+};
+
 export default function App() {
-    const editorRef = useRef(null);
-    const log = () => {
-        if (editorRef.current) {
-            console.log(editorRef.current.getContent());
-        }
-    };
     return (
         &lt;pre&gt;
             &lt;DocumentEditor
@@ -79,6 +90,7 @@ export default function App() {
                     }
                 }}
                 events_onDocumentReady={onDocumentReady}
+                onLoadComponentError={onLoadComponentError}
             /&gt;
         &lt;/&gt;
     );
@@ -183,6 +195,12 @@ npm run build
                 <td>object</td>
                 <td>null</td>
                 <td>Generic <a href="<%= Url.Action("config") %>">configuration object</a> for opening a file with token.</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="onLoadComponentError" class="copy-link">onLoadComponentError</td>
+                <td>(errorCode: number, errorDescription: string) => void</td>
+                <td>null</td>
+                <td>The function called when an error occurs while loading a component.</td>
             </tr>
             <tr class="tablerow">
                 <td id="document_fileType" class="copy-link">document_fileType</td>

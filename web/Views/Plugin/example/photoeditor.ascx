@@ -185,7 +185,6 @@
     <li><a href="<%= Url.Action("events/init") %>">init</a></li>
     <li><a href="<%= Url.Action("events/onTranslate") %>">onTranslate</a></li>
     <li><a href="<%= Url.Action("callcommand") %>">callCommand</a></li>
-    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("executemethod/common/getimagedatafromselection") %>">executeMethod ("GetImageDataFromSelection")</a></li>
     <li><a href="<%= Url.Action("executemethod/common/getversion") %>">executeMethod ("GerVersion")</a></li>
     <li><a href="<%= Url.Action("executemethod/common/putimagedatatoselection") %>">executeMethod ("PutImageDataToSelection")</a></li>

@@ -69,9 +69,9 @@
             </ol>
             <p>If you want to experiment with the code changes, you can find the main application code in the <em>\DocumentBuilder\Controllers\</em> control. The path to the <b>ONLYOFFICE Document Builder</b> executable can be changed in the <b>web.config</b> file in the following line:</p>
 <pre>&lt;configuration>
-&lt;appSettings>
-&lt;add key="builder-path" value="C:\ONLYOFFICE\DocumentBuilder\docbuilder.exe" />
-&lt;/appSettings>
+    &lt;appSettings>
+        &lt;add key="builder-path" value="C:\ONLYOFFICE\DocumentBuilder\docbuilder.exe" />
+    &lt;/appSettings>
 &lt;/configuration>
 </pre>
             <p>Set it to the actual path of the <b>ONLYOFFICE Document Builder</b> on your computer.</p>

@@ -18,11 +18,10 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td><em>nType</em></td>
-            <td>const&nbsp;int&</td>
-            <td>The type of the file to be saved set as a hexadecimal integer for the C++ code.
-            For the <em>.docbuilder</em> script file the following values are possible: <b>docx</b>, <b>odt</b>, <b>rtf</b>, <b>txt</b>, <b>pptx</b>, <b>xlsx</b>, <b>ods</b>, <b>csv</b>, <b>pdf</b>
-            (see <a href="<%= Url.Action("integrationapi/c/cdefault") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
+            <td><em>sExtension</em></td>
+            <td>const&nbsp;wchar_t*</td>
+            <td>The file extension. The following values are possible: <b>docx</b>, <b>odt</b>, <b>rtf</b>, <b>txt</b>, <b>pptx</b>, <b>xlsx</b>, <b>ods</b>, <b>csv</b>, <b>pdf</b>
+            (see <a href="<%= Url.Action("integrationapi/default") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
         </tr>
         <tr class="tablerow">
             <td><em>sPath</em></td>
@@ -57,7 +56,7 @@ std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
 std::wstring sDstPath = sProcessDirectory + L"/result.docx";
-oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, sDstPath.c_str());
+oBuilder.SaveFile("docx", sDstPath.c_str());
 CDocBuilder::Dispose();
 </pre>
 <h4 class="header-gray">.docbuilder</h4>
