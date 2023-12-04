@@ -308,10 +308,8 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes,
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
@@ -1270,13 +1268,13 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>定义用户的电子邮件地址。</td>
+                        <td>定义用户的电子邮件地址。 This field is only used when the <em>c</em> parameter is <em>mention</em>.</td>
                         <td>string</td>
                         <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.id</td>
-                        <td>定义用户的身份。 该字段仅用于在向指定用户授予编辑权限时保护工作表范围。</td>
+                        <td>定义用户的身份。 This field is only used when the <em>c</em> parameter is <em>protect</em>.</td>
                         <td>string</td>
                         <td>必需的</td>
                     </tr>

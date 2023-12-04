@@ -9,9 +9,9 @@
 <p>Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自动配置和内置的 servlet 容器。</p>
 
 <div class="note">
-    集成示例用于演示文档编辑器功能以及将 <b>文档服务器</b> 与您自己的应用程序相连接的方法。
-    <b>不要在没有正确修改代码</b> 的情况下在您自己的服务器上使用这些示例<b></b>！
-    如果您启用了任何测试示例，请在发布产品之前将其禁用。
+    It is intended for testing purposes and demonstrating functionality of the editors.
+    <b>DO NOT</b> use this integration example on your own server without proper code modifications.
+    In case you enabled the test example, disable it before going for production.
 </div>
 
 <h2 id="security" class="copy-link">重要安全信息</h2>
@@ -26,7 +26,7 @@
 <h2 id="Windows" class="copy-link">对于 Windows</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
 <p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器 ）。</p>
-<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example" target="_blank">Windows版文档服务器</a>。</p>
+<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_javaspring_example" target="_blank">Windows版文档服务器</a>。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的 Java 代码</h2>
 <p>从我们的网站下载 <a href="<%= Url.Action("demopreview") %>">Java-Spring 示例</a>。</p>
@@ -127,7 +127,7 @@ http://server.address:server.port/
 <h2 id="Linux" class="copy-link">对于 Linux</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
 <p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器 ）。</p>
-<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example" target="_blank">Linux版文档服务器</a>。</p>
+<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_javaspring_example" target="_blank">Linux版文档服务器</a>。</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">步骤 2.</span>安装先决条件并使用编辑器运行网站</h2>
 <ol>
@@ -202,7 +202,7 @@ files.docservice.url.site=https://documentserver/
 
 <h2 id="docker-1" class="copy-link"><span class="style_step">步骤1. </span>安装ONLYOFFICE文档</h2>
 <p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a>（打包为文档服务器）。</p>
-<p>请参阅详细指南，了解如何 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example" target="_blank">为Docker 安装文档服务器</a>。</p>
+<p>请参阅详细指南，了解如何 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_javaspring_example" target="_blank">为Docker 安装文档服务器</a>。</p>
 
 <h2 id="docker-2" class="copy-link"><span class="style_step">步骤2. </span>安装先决条件并使用编辑器运行网站</h2>
 <ol>

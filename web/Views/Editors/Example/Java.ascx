@@ -8,9 +8,9 @@
 <p class="dscr">此示例将帮助您将 ONLYOFFICE 文档集成到用 Java 编写的 Web 应用程序中。</p>
 
 <div class="note">
-    集成示例用于演示文档编辑器功能以及将 <b>文档服务器</b> 与您自己的应用程序相连接的方法。
-    <b>不要在没有正确修改代码</b> 的情况下在您自己的服务器上使用这些示例<b></b>！
-    如果您启用了任何测试示例，请在发布产品之前将其禁用。
+    It is intended for testing purposes and demonstrating functionality of the editors.
+    <b>DO NOT</b> use this integration example on your own server without proper code modifications.
+    In case you enabled the test example, disable it before going for production.
 </div>
 
 <h2 id="security" class="copy-link">重要安全信息</h2>

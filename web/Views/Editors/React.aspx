@@ -15,13 +15,13 @@
         <span class="hdr">ONLYOFFICE 文档 React 组件</span>
     </h1>
 
-    <p>ONLYOFFICE Docs React <a href="https://github.com/ONLYOFFICE/document-editor-react" target="_blank">组件</a> 将ONLYOFFICE Docs集成到 <a href="https://react .dev/" target="_blank">React</a> 项目。
-        此过程创建一个包含 ONLYOFFICE 文档编辑器的 <a href="https://github.com/facebook/create-react-app" target="_blank">基本 React 应用程序</a>。</p>
+    <p>ONLYOFFICE Docs React <a href="https://github.com/ONLYOFFICE/document-editor-react" target="_blank">组件</a> 将ONLYOFFICE Docs集成到 <a href="https://react.dev/" target="_blank">React</a> 项目。
 
     <h2 id="prerequisites" class="copy-link">先决条件</h2>
     <p>此过程需要 <a href="https://nodejs.org/en" target="_blank">Node.js（和 npm）</a>。</p>
 
     <h2 id="demo-react-app" class="copy-link">使用 ONLYOFFICE 文档编辑器创建演示 React 应用程序</h2>
+    <p>This procedure creates a <a href="https://github.com/facebook/create-react-app" target="_blank">basic React application</a> and installs an ONLYOFFICE Docs editor in it.</p>
     <ol>
         <li>
             <p>使用 <em>Create React App</em> 包创建一个名为 <em>onlyoffice-react-demo</em> 的新 React 项目：</p>
@@ -54,13 +54,24 @@ import { DocumentEditor } from "@onlyoffice/document-editor-react";
 var onDocumentReady = function (event) {
     console.log("Document is loaded");
 };
+
+var onLoadComponentError = function (errorCode, errorDescription) {
+    switch(errorCode) {
+        case -1: // Unknown error loading component
+            console.log(errorDescription);
+            break;
+
+        case -2: // Error load DocsAPI from http://documentserver/
+            console.log(errorDescription);
+            break;
+
+        case -3: // DocsAPI is not defined
+            console.log(errorDescription);
+            break;
+    }
+};
+
 export default function App() {
-    const editorRef = useRef(null);
-    const log = () => {
-        if (editorRef.current) {
-            console.log(editorRef.current.getContent());
-        }
-    };
     return (
         &lt;pre&gt;
             &lt;DocumentEditor
@@ -79,6 +90,7 @@ export default function App() {
                     }
                 }}
                 events_onDocumentReady={onDocumentReady}
+                onLoadComponentError={onLoadComponentError}
             /&gt;
         &lt;/&gt;
     );
@@ -183,6 +195,12 @@ npm run build
                 <td>object</td>
                 <td>null</td>
                 <td>用于使用令牌打开文件的 <a href="<%= Url.Action("config") %>">通用配置</a> 对象。</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="onLoadComponentError" class="copy-link">onLoadComponentError</td>
+                <td>(errorCode: number, errorDescription: string) => void</td>
+                <td>null</td>
+                <td>The function called when an error occurs while loading a component.</td>
             </tr>
             <tr class="tablerow">
                 <td id="document_fileType" class="copy-link">document_fileType</td>

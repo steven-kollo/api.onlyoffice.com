@@ -10,9 +10,9 @@
 </p>
 
 <div class="note">
-    集成示例用于演示文档编辑器功能以及将 <b>文档服务器</b> 与您自己的应用程序相连接的方法。
-    <b>不要在没有正确修改代码</b> 的情况下在您自己的服务器上使用这些示例<b></b>！
-    如果您启用了任何测试示例，请在发布产品之前将其禁用。
+    It is intended for testing purposes and demonstrating functionality of the editors.
+    <b>DO NOT</b> use this integration example on your own server without proper code modifications.
+    In case you enabled the test example, disable it before going for production.
 </div>
 
 <h2 id="security" class="copy-link">重要安全信息</h2>
@@ -24,55 +24,111 @@
     <li>没有禁止使用来自其他网站的测试示例，因为它们用于与来自另一个域的 ONLYOFFICE 文档服务器进行交互。</li>
 </ul>
 
-<h2 id="linux-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
-<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器）。</p>
-<p>请参阅详细指南以了解如何为 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_python_example">Windows</a>、 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_python_example">Linux</a>或 <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_python_example">Docker</a>安装文档服务器。</p>
-
-<h2 id="linux-2" class="copy-link"><span class="style_step">步骤 2.</span>安装先决条件并使用编辑器运行网站</h2>
-<ol>
-    <li>
-        <b>Python</b> 预装在大多数 Linux 发行版上，并且在所有其他发行版上都以包的形式提供。需要 Python 3.9。
-        如果您有任何问题， 请继续阅读 <a href="https://docs.python.org/zh-cn/3/using/unix.html" target="_blank">官方文档</a>。
-    </li>
-    <li>下载包含 Python 示例的存档并解压缩存档：
-        <div class="commandline">wget "https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip"</div>
-        <div class="commandline">unzip Python.Example.zip</div>
-    </li>
-    <li>将当前目录更改为项目目录：
-        <div class="commandline">cd Python\ Example</div>
-    </li>
-    <li>安装依赖项：
-        <div class="commandline">pip install Django==3.1.3
-pip install requests==2.25.0
-pip install pyjwt==2.6.0
-pip install python-magic</div>
-    </li>
-    <li>编辑 <em>config.py</em> 配置文件。
-        指定安装了 ONLYOFFICE 文档服务器的本地服务器的名称。
-        并指定安装示例的服务器的名称。
-        <div class="commandline">nano config.py</div>
-        <p>编辑以下行：</p>
-
-        <pre>
-STORAGE_PATH = "app_data"
-DOC_SERV_SITE_URL = "https://documentserver/"
+<h2 id="install" class="copy-link"><span class="style_step">Step 1. </span>Install the prerequisites and run the website with the editors</h2>
+<p>The Python example offers various installation options, but we highly recommend using Docker for this purpose.</p>
+<p><b>Option 1. Using Docker</b></p>
+<p>To run the example using <a href="https://www.docker.com/" target="_blank">Docker</a>,
+you will need <a href="https://docs.docker.com/desktop/" target="_blank">Docker Desktop 4.17.0</a> or <a href="https://docs.docker.com/engine/" target="_blank">Docker Engine 20.10.23</a>
+with <a href="https://docs.docker.com/compose/" target="_blank">Docker Compose 2.15.1</a>.
+Additionally, you might want to consider installing <a href="https://www.gnu.org/software/make/" target="_blank">GNU Make 4.4.1</a>, although it is optional.
+These are the minimum versions required for the tools.</p>
+<p>Once you have everything installed, download the release archive and unarchive it:</p>
+<pre>
+curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
+unzip Python.Example.zip
 </pre>
+<p>Then open the example directory and <a href="https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L38" target="_blank">up containers</a>:</p>
+<pre>
+cd "Python Example"
+make compose-prod
+</pre>
+<p>By default, the server starts at <em>localhost:80</em>.</p>
+<p>To configure the example, you can edit the environment variables in <a href="https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/compose-base.yml" target="_blank">compose-base.yml</a>.
+See <a href="#configure">below</a> for more information about environment variables.</p>
 
-        <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称，而 <b>STORAGE_PATH</b> 是创建和存储文件的路径。您可以设置绝对路径。
-            例如， <em>D:\\folder</em>。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。</p>
-    </li>
-    <li>运行 <b>Python</b> 服务器：
-        <div class="commandline">python manage.py runserver 0.0.0.0:8000</div>
-    </li>
-    <li>使用下列地址在浏览器中查看结果：
-        <div class="commandline">http://localhost:8000</div>
-    </li>
-</ol>
+<p><b>Option 2. On local machine</b></p>
+<p>Before diving into the example, you will need to install ONLYOFFICE Docs.
+Check the detailed guide to learn how to install it on <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_python_example" target="_blank">Windows</a>,
+<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_python_example" target="_blank">Linux</a>,
+or <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_python_example" target="_blank">Docker</a>.</p>
+<p>To run the example on your local machine, you will need <a href="https://www.python.org/" target="_blank">Python 3.11.4</a>
+with <a href="https://pip.pypa.io/en/stable/" target="_blank">pip 23.1.2</a>. Additionally, you might want to consider installing <a href="https://www.gnu.org/software/make/" target="_blank">GNU Make 4.4.1</a>,
+although it is optional. These are the minimum versions required for the tools.</p>
+<p>Once you have everything installed, download the release archive and unarchive it:</p>
+<pre>
+curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
+unzip Python.Example.zip
+</pre>
+<p>Then open the example directory, <a href="https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L13" target="_blank">install dependencies</a>,
+and <a href="https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L21" target="_blank">start the server</a>:</p>
+<pre>
+cd "Python Example"
+make prod
+make server-prod
+</pre>
+<p>By default, the server starts at <em>0.0.0.0:8000</em>.</p>
+<p>To configure the example, you can pass the environment variables before the command that starts the server.
+See <a href="#configure">below</a> for more information about environment variables.</p>
 
-<h2 id="linux-3" class="copy-link"><span class="style_step">步骤 3.</span>检查可访问性</h2>
+<h2 id="accessibility" class="copy-link"><span class="style_step">Step 2. </span>Check accessibility</h2>
 <p>
     如果示例和文档服务器安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的文档服务器，而不是配置文件中的 <b>documentserver</b>。
-    确保文档服务器能够访问安装了示例的服务器，该示例使用您指定的地址而不是配置文件中的 <b>exampleserver</b>。
 </p>
+<p>Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.</p>
 
-<p>如果您成功集成了编辑器，结果应该类似于我们网站上的 <a href="<%= Url.Action("demopreview") %>#DemoPreview">演示预览</a>。</p>
+<h2 id="configure" class="copy-link"><span class="style_step">Step 3. </span>Configure the Python example</h2>
+<p>The example is configured by changing environment variables.</p>
+<table class="table">
+    <colgroup>
+        <col class="table-name" />
+        <col />
+        <col class="table-example" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="DEBUG" class="copy-link">DEBUG</td>
+            <td>Disable or enable debug mode.</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td id="ADDRESS" class="copy-link">ADDRESS</td>
+            <td>The address where the server should be started.</td>
+            <td>0.0.0.0</td>
+        </tr>
+        <tr>
+            <td id="PORT" class="copy-link">PORT</td>
+            <td>The port on which the server should be running.</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td id="DOCUMENT_SERVER_PRIVATE_URL" class="copy-link">DOCUMENT_SERVER_PRIVATE_URL</td>
+            <td>The URL through which the server will communicate with Document Server</td>
+            <td>http://proxy:8080</td>
+        </tr>
+        <tr>
+            <td id="DOCUMENT_SERVER_PUBLIC_URL" class="copy-link">DOCUMENT_SERVER_PUBLIC_URL</td>
+            <td>The URL through which a user will communicate with Document Server.</td>
+            <td>http://localhost:8080</td>
+        </tr>
+        <tr>
+            <td id="EXAMPLE_URL" class="copy-link">EXAMPLE_URL</td>
+            <td>The URL through which Document Server will communicate with the server.</td>
+            <td>http://proxy</td>
+        </tr>
+        <tr>
+            <td id="JWT_SECRET" class="copy-link">JWT_SECRET</td>
+            <td>JWT authorization secret. Leave blank to disable authorization.</td>
+            <td>your-256-bit-secret</td>
+        </tr>
+    </tbody>
+</table>
+<div class="mobile-content"></div>
+
+<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

@@ -32,10 +32,8 @@
         "currentVersion": 2,
         "history": [
             {
-                "changes": changes,
                 "created": "2019-02-01 3:03 PM",
                 "key": "2745492410",
-                "serverVersion": serverVersion,
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage"
