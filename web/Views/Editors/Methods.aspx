@@ -1211,7 +1211,7 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.
+                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> events.
             </p>
             <pre>
@@ -1221,11 +1221,13 @@ docEditor.setUsers({
         {
             "email": "john@example.com",
             "id": "78e1e841",
+            "image": "https://example.com/url-to-user-avatar1.png",
             "name": "John Smith"
         },
         {
             "email": "kate@example.com",
             "id": "F89d8069ba2b",
+            "image": "https://example.com/url-to-user-avatar2.png",
             "name": "Kate Cage"
         },
         ...
@@ -1256,7 +1258,7 @@ docEditor.setUsers({
                         <td>c</td>
                         <td>
                             Defines the operation type from the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event.
-                            It can take one of the following values - <em>mention</em> or <em>protect</em>.
+                            It can take one of the following values - <em>mention</em>, <em>protect</em>, or <em>info</em>.
                             The default value is <em>mention</em>.
                         </td>
                         <td>string</td>
@@ -1277,6 +1279,12 @@ docEditor.setUsers({
                     <tr class="tablerow">
                         <td>users.id</td>
                         <td>Defines the identification of the user. This field is used only for protecting the sheet ranges when granting editing rights to the specified user.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>users.image</td>
+                        <td>Defines the path to the user avatar. This field is only used when the <em>c</em> parameter is <em>info</em>.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
