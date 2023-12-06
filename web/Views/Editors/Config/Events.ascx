@@ -892,7 +892,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onRequestUsers = function (event) {
-    var c =  event.data.c;
+    var c = event.data.c;
     var id = event.data.id;
     ...
 
