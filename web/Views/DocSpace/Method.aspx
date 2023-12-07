@@ -66,7 +66,7 @@
                 <tr class="tablerow">
                     <td>
                         <%= param.Name %>
-                        <div class="infotext">sent in <%= param.Method %></div>
+                        <div class="infotext">sent in <%= method.HttpMethod == "GET" ? "url" : param.Method %></div>
                     </td>
                     <td>
                         <%= param.Description %>
@@ -154,8 +154,10 @@
     <div class="header-gray">Example Response</div>
     <% foreach (var output in method.Response.First().Outputs)
        { %>
-        <p><%= Html.Encode(output.Key) %></p>
+            <% if (output.Key == "application/json")
+               { %>
         <pre><%= Html.Encode(output.Value) %></pre>
+            <% } %>
     <% }
        } %>
     </div>

@@ -1,7 +1,14 @@
 # Change Log
 
 - editors: added the formsdataurl parameter to the Callback handler
+- editors: added the editorConfig.customization.mobileForceView parameter
 - editors: added the link field to the data object which is sent to the events.onRequestReferenceData event
+
+## 4.4.0
+- docspace: added the DocSpace plugins SDK
+- docspace: storybook v2.0.0
+- editors: added the information about Health check
+- desktop: added the portal:uiTheme command to the execCommand method
 - restructured the docbuilder and plugins sections
 - docbuilder: added builder samples
 

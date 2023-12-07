@@ -93,7 +93,7 @@
             <httpMethod>GET</httpMethod>
             <path>api/2.0/backup/getbackupschedule</path>
         </member>
-        <member name="M:ASC.Data.Backup.Controllers.BackupController.CreateBackupSchedule(ASC.Data.Backup.ApiModels.BackupScheduleDto)">
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.CreateBackupScheduleAsync(ASC.Data.Backup.ApiModels.BackupScheduleDto)">
             <summary>
             Creates the backup schedule of the current portal with the parameters specified in the request.
             </summary>
@@ -112,7 +112,7 @@
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/backup/deletebackupschedule</path>
         </member>
-        <member name="M:ASC.Data.Backup.Controllers.BackupController.StartBackup(ASC.Data.Backup.ApiModels.BackupDto)">
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.StartBackupAsync(ASC.Data.Backup.ApiModels.BackupDto)">
             <summary>
             Starts the backup of the current portal with the parameters specified in the request.
             </summary>
@@ -122,7 +122,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/backup/startbackup</path>
         </member>
-        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetBackupProgress">
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetBackupProgressAsync">
             <summary>
             Returns the progress of the started backup.
             </summary>
@@ -160,7 +160,7 @@
             <httpMethod>DELETE</httpMethod>
             <path>api/2.0/backup/deletebackuphistory</path>
         </member>
-        <member name="M:ASC.Data.Backup.Controllers.BackupController.StartBackupRestore(ASC.Data.Backup.ApiModels.BackupRestoreDto)">
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.StartBackupRestoreAsync(ASC.Data.Backup.ApiModels.BackupRestoreDto)">
             <summary>
             Starts the data restoring process of the current portal with the parameters specified in the request.
             </summary>
@@ -170,7 +170,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/backup/startrestore</path>
         </member>
-        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetRestoreProgress">
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.GetRestoreProgressAsync">
             <summary>
             Returns the progress of the started restoring process.
             </summary>

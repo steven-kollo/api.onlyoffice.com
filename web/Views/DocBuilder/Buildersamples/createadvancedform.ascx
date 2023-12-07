@@ -22,9 +22,9 @@
         <a href="<%= Url.Action("textdocumentapi/apitable/setwidth") %>">ApiTable/SetWidth</a>, <a href="<%= Url.Action("textdocumentapi/apitablerow/setbackgroundcolor") %>">ApiTableRow/SetBackgroundColor</a>);</li>
     <li>create the text and image forms and add them to the tables (<a href="<%= Url.Action("formapi/api/createpictureform") %>">Api/CreatePictureForm</a>,
     <a href="<%= Url.Action("formapi/api/createtextform") %>">Api/CreateTextForm</a>).</li>
-
 </ul>
-<br />
+
+<p>This sample is available for the <b>C++ and .Net DocBuilder Frameworks</b>.<br />Download the sample and get more information on the <a href="<%= Url.Action("builderframeworksamples") %>">Builder framework samples</a> page.</p>
 
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 

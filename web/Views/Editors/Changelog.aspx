@@ -16,9 +16,10 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
-    <h2 id="76" class="copy-link">Version 7.6</h2>
+    <h2 id="80" class="copy-link">Version 8.0</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("callback") %>#formsdataurl">formsdataurl</a> parameter to the <em>Callback handler</em>.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#mobileForceView">editorConfig.customization.mobileForceView</a> parameter.</li>
         <li>Added the <em>link</em> field to the <em>data</em> object which is sent to the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">events.onRequestReferenceData</a> event.</li>
     </ul>
 
