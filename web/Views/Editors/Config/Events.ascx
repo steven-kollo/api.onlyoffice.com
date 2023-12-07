@@ -875,7 +875,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</p>
         <p>Starting from version 7.4, the operation type can be specified in the <em>data.c</em> parameter. It can take two values - <em>mention</em> or <em>protect</em>.
         Prior to version 7.4, only the mention operation was available with this event.</p>
-        <p>Starting from version 7.6, the <em>info</em> operation type is added to set the avatars for the users with the ids specified in the <em>data.id</em> parameter.</p>
+        <p>Starting from version 8.0, the <em>info</em> operation type is added to set the avatars for the users with the ids specified in the <em>data.id</em> parameter.</p>
         <p>To set a list of users, you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method which can take different lists of users depending on the specified operation type.
             The <em>onRequestUsers</em> event is called once for each <em>c</em> type when the corresponding operation is performed.
             If the <em>setUsers</em> is called with an empty list, then the <em>onRequestUsers</em> event will fire again.</p>
