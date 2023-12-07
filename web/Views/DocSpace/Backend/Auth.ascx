@@ -6,18 +6,18 @@
 
 <p>The user needs to perform several easy steps to pass authentication:</p>
 <ol>
-    <li>Send POST request, containing the <b>userName</b> and <b>password</b> parameters to the <a href="<%= Url.DocUrl("authentication", null, "post", "api/2.0/authentication", "docspace") %>">api/2.0/authentication</a> address:
+    <li>Send POST request, containing the <b>UserName</b> and <b>Password</b> parameters to the <a href="<%= Url.DocUrl("authentication", null, "post", "api/2.0/authentication", "docspace") %>">api/2.0/authentication</a> address:
 
         <div class="header-gray">Authentication Request</div>
         <pre>
-POST /api/2.0/authentication.json HTTP/1.1
+POST /api/2.0/authentication HTTP/1.1
 Host: yourportal.onlyoffice.com
 Content-Type: application/json
 Accept: application/json
 
 {
-    "userName": "yourusername",
-    "password": "yourpassword"
+    "UserName": "yourusername",
+    "Password": "yourpassword"
 }
 </pre>
         <div class="note">Please note, that you have to enter your own portal address to the <em>Host: yourportal.onlyoffice.com</em> line instead of <em>yourportal.onlyoffice.com</em> address.</div>
@@ -30,8 +30,8 @@ Content-Type: application/json; charset=utf-8
 {
     "count": 1,
     "response": {
-        "expires": "2010-07-07T17:06:03.5845502+03:00",
-        "token": "sdjhfskjdhkqy739459234"
+        "Expires": "2010-07-07T17:06:03.5845502+03:00",
+        "Token": "sdjhfskjdhkqy739459234"
     },
     "status": 0,
     "statusCode": 201
@@ -44,7 +44,7 @@ Content-Type: application/json; charset=utf-8
 
         <div class="header-gray">Sample API Request</div>
         <pre>
-GET api/2.0/people/@self.json HTTP/1.1
+GET api/2.0/people/@self HTTP/1.1
 Host: yourportal.onlyoffice.com
 Accept: application/json
 Authorization:sdjhfskjdhkqy739459234
@@ -56,11 +56,11 @@ Authorization:sdjhfskjdhkqy739459234
 
 <div id="csharp" class="header-gray">C# authentication request example</div>
 <pre>
-var request = System.Net.WebRequest.Create("https://yourportal.onlyoffice.com/api/2.0/authentication.json");
+var request = System.Net.WebRequest.Create("https://yourportal.onlyoffice.com/api/2.0/authentication");
 request.Method = "POST";
 request.ContentType = "application/json";
 
-var body = "{\"userName\":\"yourusername\",\"password\":\"yourpassword\"}";
+var body = "{\"UserName\":\"yourusername\",\"Password\":\"yourpassword\"}";
 var data = System.Text.Encoding.UTF8.GetBytes(body);
 
 request.ContentLength = data.Length;
@@ -76,6 +76,6 @@ var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
 
 <div id="curl" class="header-gray">cURL authentication request example</div>
 <pre>
-curl --request POST --header "Content-Type: application/json" --data "{\"username\":\"yourusername\",\"password\":\"yourpassword\"}" "https://yourportal.onlyoffice.com/api/2.0/authentication.json"
+curl --request POST --header "Content-Type: application/json" --data "{\"UserName\":\"yourusername\",\"Password\":\"yourpassword\"}" "https://yourportal.onlyoffice.com/api/2.0/authentication"
 </pre>
 <div class="note">Please note, that you have to enter your own portal address instead of <em>yourportal.onlyoffice.com</em> address.</div>

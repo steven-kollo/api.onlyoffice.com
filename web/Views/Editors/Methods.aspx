@@ -308,10 +308,8 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes,
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
@@ -1272,13 +1270,13 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>Defines the email address of the user.</td>
+                        <td>Defines the email address of the user. This field is only used when the <em>c</em> parameter is <em>mention</em>.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.id</td>
-                        <td>Defines the identification of the user. This field is used only for protecting the sheet ranges when granting editing rights to the specified user.</td>
+                        <td>Defines the identification of the user. This field is only used when the <em>c</em> parameter is <em>protect</em>.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>

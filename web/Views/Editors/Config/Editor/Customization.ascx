@@ -48,6 +48,7 @@
     <li><a href="#macros">macros</a></li>
     <li><a href="#macrosMode">macrosMode</a></li>
     <li><a href="#mentionShare">mentionShare</a></li>
+    <li><a href="#mobileForceView">mobileForceView</a></li>
     <li><a href="#plugins">plugins</a></li>
     <li><a href="#review">review</a></li>
     <li><a href="#reviewDisplay">reviewDisplay</a></li>
@@ -961,6 +962,14 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="mobileForceView" class="copy-link">mobileForceView</td>
+            <td>
+                Defines if the mobile document editor is opened in the view/edit mode on launch. The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
             <td id="plugins" class="copy-link">plugins</td>
             <td>
                 Defines if <a href="<%= Url.Action("basic", "plugin") %>">plugins</a> will be launched and available.
@@ -1381,6 +1390,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "macros": true,
             "macrosMode": "warn",
             "mentionShare": true,
+            "mobileForceView": true,
             "plugins": true,
             "review": {
                 "hideReviewDisplay": false,

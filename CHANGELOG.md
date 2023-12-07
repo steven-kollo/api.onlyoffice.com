@@ -4,7 +4,14 @@
 - editors: added the users.image field to the setUsers method
 - editors: added the info operation type to the setUsers method and events.onRequestUsers event
 - editors: added the image field to the editorConfig.user parameter
+- editors: added the editorConfig.customization.mobileForceView parameter
 - editors: added the link field to the data object which is sent to the events.onRequestReferenceData event
+
+## 4.4.0
+- docspace: added the DocSpace plugins SDK
+- docspace: storybook v2.0.0
+- editors: added the information about Health check
+- desktop: added the portal:uiTheme command to the execCommand method
 - restructured the docbuilder and plugins sections
 - docbuilder: added builder samples
 

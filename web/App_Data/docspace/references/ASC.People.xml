@@ -10,7 +10,7 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.DarkThemeSettingsRequestDto.Theme">
             <summary>Portal theme (Base, System, or Dark)</summary>
-            <type>ASC.Web.Core.Users.DarkThemeSettingsEnum, ASC.Core.Common</type>
+            <type>ASC.Web.Core.Users.DarkThemeSettingsType, ASC.Core.Common</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.GroupRequestDto">
             <summary>
@@ -78,6 +78,10 @@
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.SignupAccountRequestDto.PasswordHash">
             <summary>Password hash</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.People.ApiModels.RequestDto.SignupAccountRequestDto.Key">
+            <summary>Link key</summary>
             <type>System.String, System</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.MemberRequestDto">
@@ -427,7 +431,7 @@
             <path>api/2.0/people/{userid}/contacts</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.NotificationController.SendNotificationToChange(ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+        <member name="M:ASC.People.Api.NotificationController.SendNotificationToChangeAsync(ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
             <summary>
             Sends a notification to the user with the ID specified in the request to change their phone number.
             </summary>
@@ -454,7 +458,7 @@
             <httpMethod>POST</httpMethod>
             <returns type="ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto, ASC.People">Thumbnail parameters</returns>
         </member>
-        <member name="M:ASC.People.Api.PhotoController.DeleteMemberPhoto(System.String)">
+        <member name="M:ASC.People.Api.PhotoController.DeleteMemberPhotoAsync(System.String)">
             <summary>
             Deletes a photo of the user with the ID specified in the request.
             </summary>
@@ -508,29 +512,29 @@
             <httpMethod>POST</httpMethod>
             <returns type="ASC.People.ApiModels.ResponseDto.FileUploadResultDto, ASC.People">Result of file uploading</returns>
         </member>
-        <member name="M:ASC.People.Api.ReassignController.GetReassignProgress(System.Guid)">
+        <member name="M:ASC.People.Api.ReassignController.GetReassignProgressAsync(System.Guid)">
             <summary>
             Returns the progress of the started data reassignment for the user with the ID specified in the request.
             </summary>
             <short>Get the reassignment progress</short>
             <param type="System.Guid, System" name="userId">User ID whose data is reassigned</param>
             <category>User data</category>
-            <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassignment progress</returns>
-            <path>api/2.0/people/reassign/progress</path>
+            <returns type="ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto, ASC.People">Reassignment progress</returns>
+            <path>api/2.0/people/reassign/progress/{userid}</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.ReassignController.StartReassign(ASC.People.ApiModels.RequestDto.StartReassignRequestDto)">
+        <member name="M:ASC.People.Api.ReassignController.StartReassignAsync(ASC.People.ApiModels.RequestDto.StartReassignRequestDto)">
             <summary>
             Starts the data reassignment for the user with the ID specified in the request.
             </summary>
             <short>Start the data reassignment</short>
             <param type="ASC.People.ApiModels.RequestDto.StartReassignRequestDto, ASC.People" name="inDto">Request parameters for starting the reassignment process</param>
             <category>User data</category>
-            <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassignment progress</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto, ASC.People">Reassignment progress</returns>
             <path>api/2.0/people/reassign/start</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.ReassignController.TerminateReassign(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
+        <member name="M:ASC.People.Api.ReassignController.TerminateReassignAsync(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
             <summary>
             Terminates the data reassignment for the user with the ID specified in the request.
             </summary>
@@ -541,18 +545,18 @@
             <httpMethod>PUT</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.People.Api.RemoveUserDataController.GetRemoveProgress(System.Guid)">
+        <member name="M:ASC.People.Api.RemoveUserDataController.GetRemoveProgressAsync(System.Guid)">
             <summary>
             Returns the progress of the started data deletion for the user with the ID specified in the request.
             </summary>
             <short>Get the deletion progress</short>
             <param type="System.Guid, System" name="userId">User ID</param>
             <category>User data</category>
-            <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Deletion progress</returns>
-            <path>api/2.0/people/remove/progress</path>
+            <returns type="ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto, ASC.People">Deletion progress</returns>
+            <path>api/2.0/people/remove/progress/{userid}</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.RemoveUserDataController.SendInstructionsToDelete">
+        <member name="M:ASC.People.Api.RemoveUserDataController.SendInstructionsToDeleteAsync">
             <summary>
             Sends instructions for deleting a user profile.
             </summary>
@@ -564,18 +568,18 @@
             <path>api/2.0/people/self/delete</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.RemoveUserDataController.StartRemove(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
+        <member name="M:ASC.People.Api.RemoveUserDataController.StartRemoveAsync(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
             <summary>
             Starts the data deletion for the user with the ID specified in the request.
             </summary>
             <short>Start the data deletion</short>
             <param type="ASC.People.ApiModels.RequestDto.TerminateRequestDto, ASC.People" name="inDto">Request parameters for starting the deletion process</param>
             <category>User data</category>
-            <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Deletion progress</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto, ASC.People">Deletion progress</returns>
             <path>api/2.0/people/remove/start</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.RemoveUserDataController.TerminateRemove(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
+        <member name="M:ASC.People.Api.RemoveUserDataController.TerminateRemoveAsync(ASC.People.ApiModels.RequestDto.TerminateRequestDto)">
             <summary>
             Terminates the data deletion for the user with the ID specified in the request.
             </summary>
@@ -586,7 +590,7 @@
             <httpMethod>PUT</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.People.Api.ThirdpartyController.GetAuthProviders(System.Boolean,System.Boolean,System.String,System.String)">
+        <member name="M:ASC.People.Api.ThirdpartyController.GetAuthProvidersAsync(System.Boolean,System.Boolean,System.String,System.String)">
             <summary>
             Returns a list of the available third-party accounts.
             </summary>
@@ -602,7 +606,7 @@
             <requiresAuthorization>false</requiresAuthorization>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.ThirdpartyController.LinkAccount(ASC.People.ApiModels.RequestDto.LinkAccountRequestDto)">
+        <member name="M:ASC.People.Api.ThirdpartyController.LinkAccountAsync(ASC.People.ApiModels.RequestDto.LinkAccountRequestDto)">
             <summary>
             Links a third-party account specified in the request to the user profile.
             </summary>
@@ -615,7 +619,7 @@
             <httpMethod>PUT</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.People.Api.ThirdpartyController.SignupAccount(ASC.People.ApiModels.RequestDto.SignupAccountRequestDto)">
+        <member name="M:ASC.People.Api.ThirdpartyController.SignupAccountAsync(ASC.People.ApiModels.RequestDto.SignupAccountRequestDto)">
             <summary>
             Creates a third-party account with the parameters specified in the request.
             </summary>
@@ -629,7 +633,7 @@
             <returns></returns>
             <requiresAuthorization>false</requiresAuthorization>
         </member>
-        <member name="M:ASC.People.Api.ThirdpartyController.UnlinkAccount(System.String)">
+        <member name="M:ASC.People.Api.ThirdpartyController.UnlinkAccountAsync(System.String)">
             <summary>
             Unlinks a third-party account specified in the request from the user profile.
             </summary>
@@ -642,7 +646,7 @@
             <httpMethod>DELETE</httpMethod>
             <returns></returns>
         </member>
-        <member name="M:ASC.People.Api.UserController.AddMemberAsActivated(ASC.People.ApiModels.RequestDto.MemberRequestDto)">
+        <member name="M:ASC.People.Api.UserController.AddMemberAsActivatedAsync(ASC.People.ApiModels.RequestDto.MemberRequestDto)">
             <summary>
             Adds an activated portal user with the first name, last name, email address, and several optional parameters specified in the request.
             </summary>
@@ -695,7 +699,7 @@
             <path>api/2.0/people/{userid}/password</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.UserController.DeleteMember(System.String)">
+        <member name="M:ASC.People.Api.UserController.DeleteMemberAsync(System.String)">
             <summary>
             Deletes a user with the ID specified in the request from the portal.
             </summary>
@@ -748,7 +752,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.UserController.GetByEmail(System.String)">
+        <member name="M:ASC.People.Api.UserController.GetByEmailAsync(System.String)">
             <summary>
             Returns the detailed information about a profile of the user with the email specified in the request.
             </summary>
@@ -788,7 +792,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.UserController.GetFullByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments},System.Nullable{ASC.Core.AccountLoginType})">
+        <member name="M:ASC.People.Api.UserController.GetFullByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},ASC.Core.Users.EmployeeType[],System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments},System.Nullable{ASC.Core.AccountLoginType})">
             <summary>
             Returns a list of users with full information about them matching the parameters specified in the request.
             </summary>
@@ -800,6 +804,7 @@
             <param type="System.Nullable{System.Guid}, System" name="groupId">Group ID</param>
             <param type="System.Nullable{ASC.Core.Users.EmployeeActivationStatus}, System" name="activationStatus">Activation status</param>
             <param type="System.Nullable{ASC.Core.Users.EmployeeType}, System" name="employeeType">User type</param>
+            <param type="ASC.Core.Users.EmployeeType[], ASC.Core.Common" name="employeeTypes">List of user types</param>
             <param type="System.Nullable{System.Boolean}, System" name="isAdministrator">Specifies if the user is an administrator or not</param>
             <param type="System.Nullable{ASC.Core.Payments}, System" name="payments">User payment status</param>
             <param type="System.Nullable{ASC.Core.AccountLoginType}, System" name="accountLoginType">Account login type</param>
@@ -843,7 +848,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.UserController.GetSimpleByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments},System.Nullable{ASC.Core.AccountLoginType})">
+        <member name="M:ASC.People.Api.UserController.GetSimpleByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},ASC.Core.Users.EmployeeType[],System.Nullable{System.Boolean},System.Nullable{ASC.Core.Payments},System.Nullable{ASC.Core.AccountLoginType})">
             <summary>
             Returns a list of users matching the parameters specified in the request.
             </summary>
@@ -855,6 +860,7 @@
             <param type="System.Nullable{System.Guid}, System" name="groupId">Group ID</param>
             <param type="System.Nullable{ASC.Core.Users.EmployeeActivationStatus}, System" name="activationStatus">Activation status</param>
             <param type="System.Nullable{ASC.Core.Users.EmployeeType}, System" name="employeeType">User type</param>
+            <param type="ASC.Core.Users.EmployeeType[], ASC.Core.Common" name="employeeTypes">List of user types</param>
             <param type="System.Nullable{System.Boolean}, System" name="isAdministrator">Specifies if the user is an administrator or not</param>
             <param type="System.Nullable{ASC.Core.Payments}, System" name="payments">User payment status</param>
             <param type="System.Nullable{ASC.Core.AccountLoginType}, System" name="accountLoginType">Account login type</param>
@@ -891,7 +897,7 @@
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.UserController.ResendUserInvites(ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto)">
+        <member name="M:ASC.People.Api.UserController.ResendUserInvitesAsync(ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto)">
             <summary>
             Resends emails to the users who have not activated their emails.
             </summary>
@@ -905,7 +911,7 @@
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.UserController.GetTheme">
+        <member name="M:ASC.People.Api.UserController.GetThemeAsync">
             <summary>
             Returns a theme which is set to the current portal.
             </summary>
@@ -917,7 +923,7 @@
             <path>api/2.0/people/theme</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.UserController.ChangeTheme(ASC.People.ApiModels.RequestDto.DarkThemeSettingsRequestDto)">
+        <member name="M:ASC.People.Api.UserController.ChangeThemeAsync(ASC.People.ApiModels.RequestDto.DarkThemeSettingsRequestDto)">
             <summary>
             Changes the current portal theme.
             </summary>
@@ -930,7 +936,7 @@
             <path>api/2.0/people/theme</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.UserController.Self">
+        <member name="M:ASC.People.Api.UserController.SelfAsync">
             <summary>
             Returns the detailed information about the current user profile.
             </summary>
@@ -942,7 +948,7 @@
             <path>api/2.0/people/@self</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.UserController.SendEmailChangeInstructions(ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
+        <member name="M:ASC.People.Api.UserController.SendEmailChangeInstructionsAsync(ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
             <summary>
             Sends a message to the user email with the instructions to change the email address connected to the portal.
             </summary>
@@ -955,7 +961,7 @@
             <path>api/2.0/people/email</path>
             <httpMethod>POST</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.UserController.SendUserPassword(ASC.People.ApiModels.RequestDto.MemberRequestDto)">
+        <member name="M:ASC.People.Api.UserController.SendUserPasswordAsync(ASC.People.ApiModels.RequestDto.MemberRequestDto)">
             <summary>
             Reminds a password to the user using the email address specified in the request.
             </summary>
@@ -1042,7 +1048,7 @@
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.People.Api.UserController.RecalculateQuota">
+        <member name="M:ASC.People.Api.UserController.RecalculateQuotaAsync">
             <summary>
              Starts the process of recalculating quota.
              </summary>
@@ -1054,7 +1060,7 @@
              <httpMethod>GET</httpMethod>
              <returns></returns>
         </member>
-        <member name="M:ASC.People.Api.UserController.CheckRecalculateQuota">
+        <member name="M:ASC.People.Api.UserController.CheckRecalculateQuotaAsync">
             <summary>
             Checks the process of recalculating quota.
             </summary>
@@ -1066,7 +1072,7 @@
             <path>api/2.0/people/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.People.Api.UserController.UpdateUserQuota(ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto)">
+        <member name="M:ASC.People.Api.UserController.UpdateUserQuotaAsync(ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto)">
             <summary>
             Changes a quota limit for the users with the IDs specified in the request.
             </summary>
@@ -1142,7 +1148,7 @@
             </summary>
             <name>group</name>
         </member>
-        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetAll">
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetAllAsync">
             <summary>
             Returns the general information about all the groups, such as group ID and group manager.
             </summary>
@@ -1157,7 +1163,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetAllWithMembers">
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetAllWithMembersAsync">
             <summary>
             Returns the detailed information about all the groups.
             </summary>
@@ -1172,7 +1178,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetTagsByName(System.String)">
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetTagsByNameAsync(System.String)">
             <summary>
             Returns a list of all the groups by the group name specified in the request.
             </summary>
@@ -1200,7 +1206,7 @@
             <path>api/2.0/group/{groupid}</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetByUserId(System.Guid)">
+        <member name="M:ASC.Employee.Core.Controllers.GroupController.GetByUserIdAsync(System.Guid)">
             <summary>
             Returns a list of groups for the user with the ID specified in the request.
             </summary>

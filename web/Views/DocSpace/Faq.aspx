@@ -39,17 +39,6 @@
     </dd>
 </dl>
 <dl class="faq_block" id="community_2">
-    <dt>How to get json or xml format?</dt>
-    <dd>
-        <p>
-            You can get <em>json</em> or <em>xml</em> format adding <em>.json</em> or <em>.xml</em> to the request or pointing the request <em>Content-Type</em> in application/json or text/xml.
-        </p>
-        <p>
-            E.g.: <a href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "docspace") %>">api/2.0/people.json</a> 
-        </p>
-    </dd>
-</dl>
-<dl class="faq_block" id="community_3">
     <dt>Is the response data pagination supported?</dt>
     <dd>
         <p>
