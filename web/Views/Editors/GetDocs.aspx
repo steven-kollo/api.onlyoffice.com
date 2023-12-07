@@ -49,4 +49,10 @@
         <li>add your own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">color themes</a> for the application interface.</li>
     </ul>
 
+    <h2 class="copy-link" id="healthcheck">Health check</h2>
+    <p>To check if the editors are available, send the GET request to <em>/healthcheck</em>.
+        This request checks the availability of the databases, message broker, Redis connection, and storage.</p>
+    <p>The response must be <b>true</b>, which means that the editors are ready to use.</p>
+    <p>If something went wrong, make sure that you have followed the installation instructions above.</p>
+
 </asp:Content>

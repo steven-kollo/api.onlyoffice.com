@@ -42,6 +42,9 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Basic",
+                "builderframeworksamples",
+                "builderframeworksamples/csharpbuildersamples",
+                "builderframeworksamples/cppbuildersamples",
                 "buildersamples",
                 "buildersamples/commenterrors",
                 "buildersamples/createadvancedform",
@@ -54,6 +57,8 @@ namespace ASC.Api.Web.Help.Controllers
                 "buildersamples/fillspreadsheet",
                 "buildersamples/mailmergereceptions",
                 "changelog",
+                "classlist",
+                "csharpbuildersamples",
                 "csharpexample",
                 "debugging",
                 "formapi",
@@ -337,6 +342,15 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Buildersamples", (object)catchall);
+        }
+
+        public ActionResult Builderframeworksamples(string catchall)
+        {
+            if (!_actionMap.Contains("builderframeworksamples/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Builderframeworksamples", (object)catchall);
         }
 
         [HttpPost]

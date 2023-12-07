@@ -37,10 +37,12 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "addingdms",
+                "addingdms/changingtheme",
                 "addingdms/configuring",
                 "addingdms/encryption",
                 "addingdms/encryption/keygeneration",
                 "addingdms/encryption/operations",
+                "addingdms/execcommand",
                 "addingdms/loginlogout",
                 "addingdms/notifications",
                 "addingdms/opening",

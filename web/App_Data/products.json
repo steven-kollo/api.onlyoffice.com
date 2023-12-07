@@ -3,7 +3,7 @@
       "id":"docspace",
       "title":"DocSpace",
       "description":"Create your own productivity platform based on ONLYOFFICE DocSpace. In this section, you will learn how to make GET, POST, PUT and DELETE requests to collaborate on documents with teams, clients, partners, etc., based on the concept of rooms – special spaces with predefined permissions.",
-      "version":"1.1",
+      "version":"2.0",
       "links":{
          "Get started":[
             {
@@ -31,6 +31,36 @@
             {
                "Item1":"Events",
                "Item2":"jssdk/events"
+            }
+         ],
+         "Plugins SDK":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"pluginssdk/"
+            },
+            {
+               "Item1":"Getting started",
+               "Item2":"pluginssdk/gettingstarted"
+            },
+            {
+               "Item1":"Creating plugin template",
+               "Item2":"pluginssdk/creatingtemplate"
+            },
+            {
+               "Item1":"Coding plugin",
+               "Item2":"pluginssdk/codingplugin"
+            },
+            {
+               "Item1":"Building plugin",
+               "Item2":"pluginssdk/buildingplugin"
+            },
+            {
+               "Item1":"Config",
+               "Item2":"pluginssdk/config"
+            },
+            {
+               "Item1":"Adding plugin",
+               "Item2":"pluginssdk/addingplugin"
             }
          ],
          "API Backend":[

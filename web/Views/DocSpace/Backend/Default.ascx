@@ -18,25 +18,17 @@
 </h2>
 <p>
     To identify the request and response format, please make sure that both the <b>Content-Type</b> and <b>Accept</b> headers are set to <em>application/json</em>.
-        Any API method can be called specifying the format for the response (json or xml).
-</p>
-<p>
-    <b>Example:</b><br />
-    <b>api/2.0/people/@self</b> can be called both as <b>api/2.0/people/@self.json</b> and <b>api/2.0/people/@self.xml</b>. In the first case, the format of the returned media is = JSON,
-    and the second option returns media as = XML.
-</p>
-<p>
-    By default, the XML format is used for the response if no format is specified in the request (e.g. <b>api/2.0/people/@self</b> will return XML media).
+        Any API method can be called specifying the json format for the response.
 </p>
 <h2>Responses
 </h2>
 <p>
-    <b>If a request succeeds, it will return a status code in the 200 range</b> and in case no format was specified in the request, it will return an XML-formatted response.
+    <b>If a request succeeds, it will return a status code in the 200 range</b> and a JSON-formatted response.
         Note that, in general, if a request causes a new record to be created (like a new post, or comment, etc.), the response will use the <b>201 Created</b> status.
         Any other successful operation (like a successful query, delete, or update) will return a 200 status code.
 </p>
 <p>
-    <b>If a request fails, a non-200 status code will be returned</b>, possibly with error information in XML format as the response content.
+    <b>If a request fails, a non-200 status code will be returned</b> in JSON format, possibly with error information as the response content.
         For instance, if a requested record could not be found, the HTTP response might look something like:
 </p>
 <pre>HTTP/1.1 404 Not Found</pre>

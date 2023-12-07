@@ -372,8 +372,8 @@
             <summary>Last modified date</summary>
             <type>System.DateTime, System</type>
         </member>
-        <member name="P:ASC.Core.Users.UserInfo.Tenant">
-            <summary>Tenant</summary>
+        <member name="P:ASC.Core.Users.UserInfo.TenantId">
+            <summary>Tenant ID</summary>
             <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Core.Users.UserInfo.IsActive">
@@ -458,8 +458,8 @@
             <summary>
             </summary>
         </member>
-        <member name="P:ASC.Core.Tenants.TenantQuota.Tenant">
-            <summary>Tenant</summary>
+        <member name="P:ASC.Core.Tenants.TenantQuota.TenantId">
+            <summary>Tenant ID</summary>
             <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Core.Tenants.TenantQuota.Name">
@@ -599,7 +599,7 @@
             <summary>Specifies if the users will be notified or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="M:ASC.Core.Notify.RecipientProviderImpl.FilterRecipientAddresses(ASC.Notify.Recipients.IDirectRecipient)">
+        <member name="M:ASC.Core.Notify.RecipientProviderImpl.FilterRecipientAddressesAsync(ASC.Notify.Recipients.IDirectRecipient)">
             <summary>
             Check if user with this email is activated
             </summary>
@@ -734,6 +734,10 @@
             <summary>Confirmation email type</summary>
             <type>System.Nullabel{ASC.Web.Studio.Utility.ConfirmType}, System</type>
         </member>
+        <member name="P:ASC.Security.Cryptography.EmailValidationKeyModel.RoomId">
+            <summary>Room ID</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="T:ASC.Web.Studio.Utility.ConfirmType">
             <summary>
             </summary>
@@ -748,9 +752,9 @@
         </member>
         <member name="P:ASC.Web.Core.Users.DarkThemeSettings.Theme">
             <summary>Theme</summary>
-            <type>ASC.Web.Core.Users.DarkThemeSettingsEnum, ASC.Core.Common</type>
+            <type>ASC.Web.Core.Users.DarkThemeSettingsType, ASC.Core.Common</type>
         </member>
-        <member name="T:ASC.Web.Core.Users.DarkThemeSettingsEnum">
+        <member name="T:ASC.Web.Core.Users.DarkThemeSettingsType">
             <summary>
             </summary>
         </member>

@@ -36,6 +36,11 @@
     margin-bottom: 12px;
 }
 
+.framework-sample-info {
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
 .sample-example {
     background-color: #fff;
     border: 1px solid #EFEFEF;

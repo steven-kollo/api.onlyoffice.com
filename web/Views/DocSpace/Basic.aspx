@@ -32,6 +32,7 @@
     <p>This documentation contains:</p>
     <ul>
         <li><a href="<%= Url.Action("jssdk/") %>">JavaScript SDK</a> which allows developers to connect DocSpace as a frame to their websites using <em>api.js</em>;</li>
+        <li><a href="<%= Url.Action("pluginssdk/") %>">Plugins SDK</a> which allows developers to create their own plugins and add them to the DocSpace portal;</li>
         <li><a href="<%= Url.Action("backend/") %>">API Backend</a> which is implemented as REST over HTTP using GET/POST/PUT/DELETE and allows developers to interact with the backend of ONLYOFFICE DocSpace on-premises;</li>
         <li><a href="<%= Url.Action("apisystem/") %>">API System</a> which is implemented as REST over HTTP using GET/POST and allows developers to interact with ONLYOFFICE DocSpace hosted solution;</li>
         <li><a href="/docspace-storybook" target="_blank">Storybook</a> which is a JavaScript tool for developing DocSpace UI.</li>
