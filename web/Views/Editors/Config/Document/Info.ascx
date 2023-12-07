@@ -127,29 +127,242 @@
 <div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
-<pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "document": {
-        "info": {
-            "favorite": true,
-            "folder": "Example Files",
-            "owner": "John Smith",
-            "sharingSettings": [
+
+<div id="controlFields" style="padding-right:20px;">
+    <div id="info" class="control-panel">
+        <div class="line">
+            <label for="documentConfig_info_folder">Folder</label>
+            <input type="text" id="documentConfig_info_folder" name="documentConfig_info_folder" value="Example Files">
+        </div>
+        <div class="line">
+            <label for="documentConfig_info_owner">Owner</label>
+            <input type="text" id="documentConfig_info_owner" name="documentConfig_info_owner" value="John Smith">
+        </div>
+        <div class="line">
+            <label for="documentConfig_info_uploaded">Uploaded</label>
+            <input type="text" id="documentConfig_info_uploaded" name="documentConfig_info_uploaded" value="2010-07-07 3:46 PM">
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_info_favorite" name="documentConfig_info_favorite" checked>
+            <label for="documentConfig_info_favorite">Favorite</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" checked>
+            <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
+        </div>
+        <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder" style="padding-left: 20px;">
+            <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem">
+                <div class="line">
+                    <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
+                    <select id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
+                        <option value="Full Access" selected>Full Access</option>
+                        <option value="Read Only">Read Only</option>
+                        <option value="Deny Access">Deny Access</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <label for="documentConfig_info_sharingSettings_user_0">User</label>
+                    <input type="text" id="documentConfig_info_sharingSettings_user_0" name="documentConfig_info_sharingSettings_user_0" value="John Smith">
+                </div>
+                <div class="line">
+                    <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_0" name="documentConfig_info_sharingSettings_isLink_0">
+                    <label for="documentConfig_info_sharingSettings_isLink_0">Is Link</label>
+                </div>
+                <hr />
+            </div> 
+        </div>
+        <div style="padding-left: 20px;">
+            <button id="addButton_info_sharingSettings" class="add-button">+</button>
+        </div>
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title." + "docx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
+            },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
+    });
+
+    $('#addButton_info_sharingSettings').click(addSharingSettingItem);
+    $("#documentConfig_info_sharingSettings").change(showHideConfigObject);
+   
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
+
+    function addSharingSettingItem() {
+        var sharingSettingElements = document.getElementsByClassName("documentConfig_info_sharingSettingsItem");
+        var i = 0;
+        while (sharingSettingElements[i] != undefined) {
+            i++;
+        }
+        let div = document.createElement("div");
+        div.innerHTML = `
+        <div id="holder_documentConfig_info_sharingSettings_${i}" class="documentConfig_info_sharingSettingsItem">
+            <div class="line">
+                <label for="documentConfig_info_sharingSettings_permissions_${i}">Permissions</label>
+                <select id="documentConfig_info_sharingSettings_permissions_${i}" name="documentConfig_info_sharingSettings_permissions_${i}">
+                    <option value="Full Access">Full Access</option>
+                    <option value="Read Only" selected>Read Only</option>
+                    <option value="Deny Access">Deny Access</option>
+                </select>
+            </div>
+            <div class="line">
+                <label for="documentConfig_info_sharingSettings_user_${i}">User</label>
+                <input type="text" id="documentConfig_info_sharingSettings_user_${i}" name="documentConfig_info_sharingSettings_user_${i}" value="New user ${i}">
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_${i}" name="documentConfig_info_sharingSettings_isLink_${i}">
+                <label for="documentConfig_info_sharingSettings_isLink_${i}">Is Link</label>
+            </div>
+            <hr />
+        </div>`;
+        document.getElementById("holder_documentConfig_info_sharingSettings").appendChild(div);
+        $("#controlFields").find("input,select").change(function () {
+            updateConfig();
+        });
+        resizeCodeInput();
+        updateConfig();
+    }
+
+    function getSharingSettings() {
+        if (!getFieldValue("documentConfig_info_sharingSettings")) {
+            return "";
+        }
+        var sharingSettingsString = "";
+        var sharingSettingElements = document.getElementsByClassName("documentConfig_info_sharingSettingsItem");
+        var i = 0;
+        while (sharingSettingElements[i] != undefined) {
+            var isLink = !getFieldValue("documentConfig_info_sharingSettings_isLink_" + i) ? "" : `,
+                    "isLink": ${true}`;
+        
+            var string = `
                 {
-                    "permissions": "Full Access",
-                    "user": "John Smith"
-                },
-                {
-                    "isLink": true,
-                    "permissions": "Read Only",
-                    "user": "External link"
-                },
-                ...
+                    "permissions": ${getFieldValue("documentConfig_info_sharingSettings_permissions_" + i)},
+                    "user": ${getFieldValue("documentConfig_info_sharingSettings_user_" + i)}${isLink}
+                }`;
+            sharingSettingsString += sharingSettingsString == "" ? string : "," + string;
+            i++;
+        }
+        return sharingSettingsString == "" ? "" : `"sharingSettings": [${sharingSettingsString}
             ],
-            "uploaded": "2010-07-07 3:46 PM"
-        },
+            `;
+    }
+
+    function updateConfig() {
+        var sharingSettings = "";
+        if (getFieldValue("documentConfig_info_sharingSettings")) {
+            sharingSettings = getSharingSettings();
+            document.getElementById("addButton_info_sharingSettings").hidden = false;
+        } else {
+            document.getElementById("addButton_info_sharingSettings").hidden = true;
+        }
+
+        var info = `{
+            "favorite": ${getFieldValue("documentConfig_info_favorite")},
+            "folder": ${getFieldValue("documentConfig_info_folder")},
+            "owner": ${getFieldValue("documentConfig_info_owner")},
+            ${sharingSettings}"uploaded": ${getFieldValue("documentConfig_info_uploaded")}     
+        }`;
+        var config_string =
+            `var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "document": {
+        "info": ${info}
+        ,
         ...
     },
     ...
 });
-</pre>
+`;
+        var info_object = JSON.parse(info);
+        config.document.info = info_object;
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+    }
+
+    function getFieldValue(id) {
+        var element = document.getElementById(id);
+        if (element.type == "checkbox") {
+            return element.checked;
+        } else if (isNaN(element.value)) {
+            return `"${element.value}"`;
+        } else {
+            return Number(element.value);
+        }
+    }
+
+    function resizeCodeInput() {
+        var controlFieldPaddingBottom = 0;
+        var controlFieldInputs = document.getElementsByTagName("input");
+        var i = 0;
+        while (controlFieldInputs[i] != undefined) {
+            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
+                break;
+            }
+            i++;
+        }
+        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+
+        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
+        var configPreHeight = fieldsHeight - (offset) + "px";
+        document.getElementById("configPre").style.height = configPreHeight;
+    }
+</script>
