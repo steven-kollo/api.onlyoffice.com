@@ -80,13 +80,221 @@
 <div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
-<pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "documentType": "word",
-    "height": "100%",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
-    "type": "desktop",
-    "width": "100%",
+
+<div id="controlFields" style="padding-right:20px;">
+    <div id="info" class="control-panel">
+        <div class="line">
+            <label for="config_documentType">Document Type</label>
+            <select id="config_documentType" name="config_documentType">
+                <option value="word" selected>word</option>
+                <option value="cell">cell</option>
+                <option value="slide">slide</option>
+            </select>
+        </div>
+        <div class="line">
+            <label for="config_type">Type</label>
+            <select id="config_type" name="config_type">
+                <option value="desktop" selected>desktop</option>
+                <option value="mobile">mobile</option>
+            </select>
+        </div>
+        <div class="line">
+            <label for="config_height">Height</label>
+            <input type="text" id="config_height" name="config_height" value="550px">
+        </div>
+        <div class="line">
+            <label for="config_width">Width</label>
+            <input type="text" id="config_width" name="config_width" value="100%">
+        </div>
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+
+<div id="editorSpace">
+    <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config_word = <%= Config.Serialize(
+        new Config {
+            Document = new Config.DocumentConfig
+                {
+                    FileType = "docx",
+                    Key = "apiwh" + Guid.NewGuid(),
+                    Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                    Title = "Example Title." + "docx",
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
+                },
+            DocumentType = "word",
+            EditorConfig = new Config.EditorConfigConfiguration
+                {
+                    CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                    Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                        {
+                            Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                {
+                                    Request = false
+                                },
+                            Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                                {
+                                    Visible = true
+                                },
+                            IntegrationMode = "embed",
+                    }
+                },
+            Height = "550px",
+            Width = "100%"
+        }) %>;
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config_word);
+
+    var config_cell = <%= Config.Serialize(
+        new Config {
+            Document = new Config.DocumentConfig
+                {
+                    FileType = "xlsx",
+                    Key = "apiwh" + Guid.NewGuid(),
+                    Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                    Title = "Example Title." + "xlsx",
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx" 
+                },
+            DocumentType = "cell",
+            EditorConfig = new Config.EditorConfigConfiguration
+                {
+                    CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                    Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                        {
+                            Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                {
+                                    Request = false
+                                },
+                            Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                                {
+                                    Visible = true
+                                },
+                            IntegrationMode = "embed",
+                    }
+                },
+            Height = "550px",
+            Width = "100%"
+        }) %>;
+
+    var config_slide = <%= Config.Serialize(
+        new Config {
+            Document = new Config.DocumentConfig
+                {
+                    FileType = "pptx",
+                    Key = "apiwh" + Guid.NewGuid(),
+                    Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                    Title = "Example Title." + "pptx",
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pptx" 
+                },
+            DocumentType = "slide",
+            EditorConfig = new Config.EditorConfigConfiguration
+                {
+                    CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                    Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                        {
+                            Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                {
+                                    Request = false
+                                },
+                            Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                                {
+                                    Visible = true
+                                },
+                            IntegrationMode = "embed",
+                    }
+                },
+            Height = "550px",
+            Width = "100%"
+        }) %>;
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
+    });
+
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
+
+    function updateConfig() {
+        
+        var config_str = `{
+            "documentType": ${getFieldValue("config_documentType")},
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+            "type": ${getFieldValue("config_type")},
+            "height": ${getFieldValue("config_height")},
+            "width": ${getFieldValue("config_width")}     
+        }`;
+        config_string =
+            `var docEditor = new DocsAPI.DocEditor("placeholder", {
+    ${config_str}
     ...
 });
-</pre>
+`;
+        var config_object = JSON.parse(config_str);
+        var config = config_word;
+        if (config_object.documentType == "cell") {
+            config = config_cell;
+        } else if (config_object.documentType == "slide") {
+            config = config_slide;
+        }
+
+        config.documentType = config_object.documentType;
+        config.type = config_object.type;
+        config.height = config_object.height;
+        config.width = config_object.width;
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+    }
+
+    function getFieldValue(id) {
+        var element = document.getElementById(id);
+        if (element.type == "checkbox") {
+            return element.checked;
+        } else if (isNaN(element.value)) {
+            return `"${element.value}"`;
+        } else {
+            return Number(element.value);
+        }
+    }
+
+    function resizeCodeInput() {
+        var controlFieldPaddingBottom = 0;
+        var controlFieldInputs = document.getElementsByTagName("input");
+        var i = 0;
+        while (controlFieldInputs[i] != undefined) {
+            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
+                break;
+            }
+            i++;
+        }
+        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+
+        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
+        var configPreHeight = fieldsHeight - (offset) + "px";
+        document.getElementById("configPre").style.height = configPreHeight;
+    }
+</script>
