@@ -299,33 +299,223 @@
 <div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
-<pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "document": {
-        "permissions": {
-            "chat": true,
-            "comment": true,
-            "commentGroups": {
-                "edit": ["Group2", ""],
-                "remove": [""],
-                "view": ""
+<div id="controlFields" style="padding-right:20px;">
+    <div id="permissions" class="control-panel">
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" checked>
+            <label for="documentConfig_permissions_chat">Chat</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_comment" name="documentConfig_permissions_comment" checked>
+            <label for="documentConfig_permissions_comment">Comment</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" checked>
+            <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
+        </div>
+        <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder" style="padding-left: 23px;">
+            <div class="line">
+                <label for="documentConfig_permissions_commentGroups_edit">Edit</label>
+                <input type="text" id="documentConfig_permissions_commentGroups_edit" name="documentConfig_permissions_commentGroups_edit" value='["Group2", ""]'>
+            </div>
+            <div class="line">
+                <label for="documentConfig_permissions_commentGroups_remove">Remove</label>
+                <input type="text" id="documentConfig_permissions_commentGroups_remove" name="documentConfig_permissions_commentGroups_remove" value='[""]'>
+            </div>
+            <div class="line">
+                <label for="documentConfig_permissions_commentGroups_view">View</label>
+                <input type="text" id="documentConfig_permissions_commentGroups_view" name="documentConfig_permissions_commentGroups_view" value='""'>
+            </div>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_copy" name="documentConfig_permissions_copy" checked>
+            <label for="documentConfig_permissions_copy">Copy</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_deleteCommentAuthorOnly" name="documentConfig_permissions_deleteCommentAuthorOnly">
+            <label for="documentConfig_permissions_deleteCommentAuthorOnly">Delete Comment Author Only</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_download" name="documentConfig_permissions_download" checked>
+            <label for="documentConfig_permissions_download">Download</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_edit" name="documentConfig_permissions_edit" checked>
+            <label for="documentConfig_permissions_edit">Edit</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_editCommentAuthorOnly" name="documentConfig_permissions_editCommentAuthorOnly">
+            <label for="documentConfig_permissions_editCommentAuthorOnly">Edit Comment Author Only</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_fillForms" name="documentConfig_permissions_fillForms" checked>
+            <label for="documentConfig_permissions_fillForms">Fill Forms</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_modifyContentControl" name="documentConfig_permissions_modifyContentControl" checked>
+            <label for="documentConfig_permissions_modifyContentControl">Modify Content Control</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_modifyFilter" name="documentConfig_permissions_modifyFilter" checked>
+            <label for="documentConfig_permissions_modifyFilter">Modify Filter</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" checked>
+            <label for="documentConfig_permissions_print">Print</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_protect" name="documentConfig_permissions_protect" checked>
+            <label for="documentConfig_permissions_protect">Protect</label>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review" checked>
+            <label for="documentConfig_permissions_review">Review</label>
+        </div>
+        <div class="line">
+            <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
+            <input type="text" id="documentConfig_permissions_reviewGroups" name="documentConfig_permissions_reviewGroups" value='["Group1", "Group2", ""]'>
+        </div>
+        <div class="line">
+            <label for="documentConfig_permissions_userInfoGroups">User Info Groups</label>
+            <input type="text" id="documentConfig_permissions_userInfoGroups" name="documentConfig_permissions_userInfoGroups" value='["Group1", ""]'>
+        </div>
+
+        
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title." + "docx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
             },
-            "copy": true,
-            "deleteCommentAuthorOnly": false,
-            "download": true,
-            "edit": true,
-            "editCommentAuthorOnly": false,
-            "fillForms": true,
-            "modifyContentControl": true,
-            "modifyFilter": true,
-            "print": true,
-            "protect": true,
-            "review": true,
-            "reviewGroups": ["Group1", "Group2", ""],
-            "userInfoGroups": ["Group1", ""]
-        },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
+    });
+
+    function updateConfig() {
+        var permissions = `{
+            "chat": ${getFieldValue("documentConfig_permissions_chat")},
+            "comment": ${getFieldValue("documentConfig_permissions_comment")},
+            "copy": ${getFieldValue("documentConfig_permissions_copy")},
+            "commentGroups": {
+                "edit": ${getFieldValue("documentConfig_permissions_commentGroups_edit")},
+                "remove": ${getFieldValue("documentConfig_permissions_commentGroups_remove")},
+                "view": ${getFieldValue("documentConfig_permissions_commentGroups_view")}
+            },
+            "deleteCommentAuthorOnly": ${getFieldValue("documentConfig_permissions_deleteCommentAuthorOnly")},
+            "download": ${getFieldValue("documentConfig_permissions_download")},
+            "edit": ${getFieldValue("documentConfig_permissions_edit")},
+            "editCommentAuthorOnly": ${getFieldValue("documentConfig_permissions_editCommentAuthorOnly")},
+            "fillForms": ${getFieldValue("documentConfig_permissions_fillForms")},
+            "modifyContentControl": ${getFieldValue("documentConfig_permissions_modifyContentControl")},
+            "modifyFilter": ${getFieldValue("documentConfig_permissions_modifyFilter")},
+            "print": ${getFieldValue("documentConfig_permissions_print")},
+            "protect": ${getFieldValue("documentConfig_permissions_protect")},
+            "review": ${getFieldValue("documentConfig_permissions_review")},
+            "reviewGroups": ${getFieldValue("documentConfig_permissions_reviewGroups")},
+            "userInfoGroups": ${getFieldValue("documentConfig_permissions_userInfoGroups")}
+        }`;
+        var config_string =
+            `var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "document": {
+        "permissions": ${permissions}
+        ,
         ...
     },
     ...
 });
-</pre>
+`;
+        console.log(permissions)
+        var info_object = JSON.parse(permissions);
+        
+        console.log(config)
+        //config.document.permissions = info_object;
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+    }
+
+    function getFieldValue(id) {
+        var element = document.getElementById(id);
+        if (element.type == "checkbox") {
+            return element.checked;
+        } else if (isNaN(element.value)) {
+            if (element.value.includes("[") || element.value.includes('""')) {
+                return element.value;
+            }
+            return `"${element.value}"`;
+        } else {
+            return Number(element.value);
+        }
+    }
+
+    function resizeCodeInput() {
+        var controlFieldPaddingBottom = 0;
+        var controlFieldInputs = document.getElementsByTagName("input");
+        var i = 0;
+        while (controlFieldInputs[i] != undefined) {
+            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
+                break;
+            }
+            i++;
+        }
+        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+
+        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
+        var configPreHeight = fieldsHeight - (offset) + "px";
+        document.getElementById("configPre").style.height = configPreHeight;
+    }
+</script>
