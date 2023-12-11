@@ -151,6 +151,10 @@
                 ext = "docx";
                 zoom = 50;
             }
+            if (Request["type"] == "slide")
+            {
+                zoom = 33;
+            }
         %>
 
         var config = <%= Config.Serialize(

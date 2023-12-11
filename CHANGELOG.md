@@ -1,5 +1,7 @@
 # Change Log
 
+- docspace: fix samples
+
 ## 4.4.0
 - docspace: added the DocSpace plugins SDK
 - docspace: storybook v2.0.0

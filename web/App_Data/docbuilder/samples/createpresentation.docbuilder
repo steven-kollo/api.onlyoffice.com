@@ -91,7 +91,7 @@ oShape = Api.CreateShape('rect', 7887600, 3063600, Api.CreateNoFill(), Api.Creat
 oShape.SetPosition(630000, 1357200);
 oContent = oShape.GetDocContent();
 oContent.RemoveAllElements();
-addText(oShape, oContent, 'OnlyOffice', 176, false, 'center');
+addText(oShape, oContent, 'ONLYOFFICE', 176, false, 'center');
 addText(oShape, oContent, 'stands for Peace', 132, false, 'center');
 oSlide.AddObject(oShape);
 
