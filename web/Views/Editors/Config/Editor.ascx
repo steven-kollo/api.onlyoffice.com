@@ -356,3 +356,379 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
     See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 </p>
+<div id="controlFields" style="padding-right:20px;">
+    <div id="info" class="control-panel">
+        <div class="line">
+            <label for="editorConfig_actionLink">Action Link</label>
+            <input type="text" id="editorConfig_actionLink" name="editorConfig_actionLink" value="ACTION_DATA">
+        </div>
+        <div class="line">
+            <label for="editorConfig_callbackUrl">Callback Url</label>
+            <input type="text" id="editorConfig_callbackUrl" name="editorConfig_callbackUrl" value="https://example.com/url-to-callback.ashx">
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_coEditing" name="editorConfig_coEditing" checked>
+            <label for="editorConfig_coEditing">coEditing</label>
+        </div>
+        <div id="holder_editorConfig_coEditing" class="config_object_holder" style="padding-left: 23px;">
+            <div class="line">
+                <label for="editorConfig_coEditing_mode">Mode</label>
+                <select id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
+                    <option value="fast" selected>fast</option>
+                    <option value="strict">strict</option>
+                </select>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" checked>
+                <label for="editorConfig_coEditing_change">Change</label>
+            </div>
+        </div>
+        <div class="line">
+            <label for="editorConfig_createUrl">Create Url</label>
+            <input type="text" id="editorConfig_createUrl" name="editorConfig_createUrl" value="https://example.com/url-to-create-document/">
+        </div>
+        <div class="line">
+            <label for="editorConfig_lang">Lang</label>
+            <input type="text" id="editorConfig_lang" name="editorConfig_lang" value="en">
+        </div>
+        <div class="line">
+            <label for="editorConfig_location">Location</label>
+            <input type="text" id="editorConfig_location" name="editorConfig_location" value="">
+        </div>
+        <div class="line">
+            <label for="editorConfig_mode">Mode</label>
+            <select id="editorConfig_mode" name="editorConfig_mode">
+                <option value="edit" selected>edit</option>
+                <option value="view">view </option>
+            </select>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_recent" name="editorConfig_recent" checked>
+            <label for="editorConfig_recent">Recent</label>
+        </div>
+        <div id="holder_editorConfig_recent" class="config_object_holder" style="padding-left: 20px;">
+            <div id="holder_editorConfig_recent_0" class="editorConfig_recentItem">
+                <div class="line">
+                    <label for="editorConfig_recent_folder_0">Folder</label>
+                    <input type="text" id="editorConfig_recent_folder_0" name="editorConfig_recent_folder_0" value="Example Folder">
+                </div>
+                <div class="line">
+                    <label for="editorConfig_recent_title_0">Title</label>
+                    <input type="text" id="editorConfig_recent_title_0" name="editorConfig_recent_title_0" value="exampledocument1.docx">
+                </div>
+               <div class="line">
+                    <label for="editorConfig_recent_url_0">Url</label>
+                    <input type="text" id="editorConfig_recent_url_0" name="editorConfig_recent_url_0" value="https://example.com/exampledocument1.docx">
+                </div>
+                <hr />
+            </div> 
+        </div>
+        <div style="padding-left: 20px;">
+            <button id="addButton_editorConfig_recent" class="add-button">+</button>
+        </div>
+        <div class="line">
+            <label for="editorConfig_region">Region</label>
+            <input type="text" id="editorConfig_region" name="editorConfig_region" value="en-US">
+        </div>
+
+       <div class="line">
+            <input type="checkbox" id="editorConfig_templates" name="editorConfig_templates" checked>
+            <label for="editorConfig_templates">Templates</label>
+        </div>
+        <div id="holder_editorConfig_templates" class="config_object_holder" style="padding-left: 20px;">
+            <div id="holder_editorConfig_templates_0" class="editorConfig_templatesItem">
+                <div class="line">
+                    <label for="editorConfig_templates_image_0">Image</label>
+                    <input type="text" id="editorConfig_templates_image_0" name="editorConfig_templates_image_0" value="https://example.com/exampletemplate1.png">
+                </div>
+                <div class="line">
+                    <label for="editorConfig_templates_title_0">Title</label>
+                    <input type="text" id="editorConfig_templates_title_0" name="editorConfig_templates_title_0" value="exampledocument1.docx">
+                </div>
+               <div class="line">
+                    <label for="editorConfig_templates_url_0">Url</label>
+                    <input type="text" id="editorConfig_templates_url_0" name="editorConfig_templates_url_0" value="https://example.com/url-to-create-template1">
+                </div>
+                <hr />
+            </div> 
+        </div>
+        <div style="padding-left: 20px;">
+            <button id="addButton_editorConfig_templates" class="add-button">+</button>
+        </div>
+        <div class="line">
+            <input type="checkbox" id="editorConfig_user" name="editorConfig_user" checked>
+            <label for="editorConfig_user">User</label>
+        </div>
+        <div id="holder_editorConfig_user" class="config_object_holder" style="padding-left: 20px;">
+            <div class="line">
+                <label for="editorConfig_user_group">Group</label>
+                <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
+            </div>
+            <div class="line">
+                <label for="editorConfig_user_id">Id</label>
+                <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
+            </div>
+            <div class="line">
+                <label for="editorConfig_user_name">Name</label>
+                <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title." + "docx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
+            },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                // CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
+    });
+
+    $('#addButton_editorConfig_recent').click(addRecentItem);
+    $("#editorConfig_recent").change(showHideConfigObject);
+    $('#addButton_editorConfig_templates').click(addTemplatesItem);
+    $("#editorConfig_templates").change(showHideConfigObject);
+   
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
+
+    // Recent Items
+    function addRecentItem() {
+        var items = document.getElementsByClassName("editorConfig_recentItem");
+        var i = 0;
+        while (items[i] != undefined) {
+            i++;
+        }
+        let div = document.createElement("div");
+        div.innerHTML = `
+        <div id="holder_editorConfig_recent_${i}" class="editorConfig_recentItem">
+            <div class="line">
+                <label for="editorConfig_recent_folder_${i}">Folder</label>
+                <input type="text" id="editorConfig_recent_folder_${i}" name="editorConfig_recent_folder_${i}" value="Example Folder">
+            </div>
+            <div class="line">
+                <label for="editorConfig_recent_title_${i}">Title</label>
+                <input type="text" id="editorConfig_recent_title_${i}" name="editorConfig_recent_title_${i}" value="exampledocument${i+1}.docx">
+            </div>
+           <div class="line">
+                <label for="editorConfig_recent_url_${i}">Url</label>
+                <input type="text" id="editorConfig_recent_url_${i}" name="editorConfig_recent_url_${i}" value="https://example.com/exampledocument${i+1}.docx">
+            </div>
+            <hr />
+        </div>`;
+
+        document.getElementById("holder_editorConfig_recent").appendChild(div);
+        $("#controlFields").find("input,select").change(function () {
+            updateConfig();
+        });
+        resizeCodeInput();
+        updateConfig();
+    }
+
+    function getRecentSettings() {
+        if (!getFieldValue("editorConfig_recent")) {
+            return "";
+        }
+        var recentString = "";
+        var recentElements = document.getElementsByClassName("editorConfig_recentItem");
+        var i = 0;
+        while (recentElements[i] != undefined) {
+            var string = `
+            {
+                "folder": ${getFieldValue("editorConfig_recent_folder_" + i)},
+                "title": ${getFieldValue("editorConfig_recent_title_" + i)},
+                "url": ${getFieldValue("editorConfig_recent_url_" + i)}
+            }`;
+            recentString += recentString == "" ? string : "," + string;
+            i++;
+        }
+        return recentString == "" ? "" : `"recent": [${recentString}
+        ],`;
+    }
+
+    // Templates Items
+    function addTemplatesItem() {
+        var items = document.getElementsByClassName("editorConfig_templatesItem");
+        var i = 0;
+        while (items[i] != undefined) {
+            i++;
+        }
+        let div = document.createElement("div");
+        div.innerHTML = `
+        <div id="holder_editorConfig_templates_${i}" class="editorConfig_templatesItem">
+            <div class="line">
+                <label for="editorConfig_templates_image_${i}">Image</label>
+                <input type="text" id="editorConfig_templates_image_${i}" name="editorConfig_templates_image_${i}" value="https://example.com/exampletemplate${i+1}.png">
+            </div>
+            <div class="line">
+                <label for="editorConfig_templates_title_${i}">Title</label>
+                <input type="text" id="editorConfig_templates_title_${i}" name="editorConfig_templates_title_${i}" value="exampledocument${i+1}.docx">
+            </div>
+           <div class="line">
+                <label for="editorConfig_templates_url_${i}">Url</label>
+                <input type="text" id="editorConfig_templates_url_${i}" name="editorConfig_templates_url_${i}" value="https://example.com/url-to-create-template${i+1}">
+            </div>
+            <hr />
+        </div>`;
+
+        document.getElementById("holder_editorConfig_templates").appendChild(div);
+        $("#controlFields").find("input,select").change(function () {
+            updateConfig();
+        });
+        resizeCodeInput();
+        updateConfig();
+    }
+
+    function getTemplatesSettings() {
+        if (!getFieldValue("editorConfig_templates")) {
+            return "";
+        }
+        var templatesString = "";
+        var templatesElements = document.getElementsByClassName("editorConfig_templatesItem");
+        var i = 0;
+        while (templatesElements[i] != undefined) {
+            var string = `
+            {
+                "image": ${getFieldValue("editorConfig_templates_image_" + i)},
+                "title": ${getFieldValue("editorConfig_templates_title_" + i)},
+                "url": ${getFieldValue("editorConfig_templates_url_" + i)}
+            }`;
+            templatesString += templatesString == "" ? string : "," + string;
+            i++;
+        }
+        return templatesString == "" ? "" : `"templates": [${templatesString}
+        ],`;
+    }
+
+    function updateConfig() {
+        var recent = "";
+        var templates = "";
+        if (getFieldValue("editorConfig_recent")) {
+            recent = getRecentSettings();
+            document.getElementById("addButton_editorConfig_recent").hidden = false;
+        } else {
+            document.getElementById("addButton_editorConfig_recent").hidden = true;
+        }
+
+        if (getFieldValue("editorConfig_templates")) {
+            templates = getTemplatesSettings();
+            document.getElementById("addButton_editorConfig_templates").hidden = false;
+        } else {
+            document.getElementById("addButton_editorConfig_templates").hidden = true;
+        }
+        
+        var editorConfig = `{
+        "coEditing": {
+            "mode": ${getFieldValue("editorConfig_coEditing_mode")},
+            "change": ${getFieldValue("editorConfig_coEditing_change")}
+        },
+        "createUrl": ${getFieldValue("editorConfig_createUrl")},
+        "lang": ${getFieldValue("editorConfig_lang")},
+        "location": ${getFieldValue("editorConfig_location")},
+        "mode": ${getFieldValue("editorConfig_mode")},
+        ${recent}
+        "region": ${getFieldValue("editorConfig_region")},
+        ${templates}
+        "user": {
+            "group": ${getFieldValue("editorConfig_user_group")},
+            "id": ${getFieldValue("editorConfig_user_id")},
+            "name": ${getFieldValue("editorConfig_user_name")}
+        }
+    }`;
+        var config_string =
+            `var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "editorConfig": ${editorConfig},
+    ...
+});
+`;
+        var editorConfig_object = JSON.parse(editorConfig);
+        config.editorConfig = editorConfig_object;
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+    }
+
+    function getFieldValue(id) {
+        var element = document.getElementById(id);
+        if (element.type == "checkbox") {
+            return element.checked;
+        } else if (isNaN(element.value)) {
+            return `"${element.value}"`;
+        } else {
+            return Number(element.value);
+        }
+    }
+
+    function resizeCodeInput() {
+        var controlFieldPaddingBottom = 0;
+        var controlFieldInputs = document.getElementsByTagName("input");
+        var i = 0;
+        while (controlFieldInputs[i] != undefined) {
+            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
+                break;
+            }
+            i++;
+        }
+        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+
+        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
+        var configPreHeight = fieldsHeight - (offset) + "px";
+        document.getElementById("configPre").style.height = configPreHeight;
+    }
+</script>
