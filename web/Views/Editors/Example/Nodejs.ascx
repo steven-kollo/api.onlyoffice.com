@@ -10,9 +10,9 @@
 </p>
 
 <div class="note">
-    It is intended for testing purposes and demonstrating functionality of the editors.
-    <b>DO NOT</b> use this integration example on your own server without proper code modifications.
-    In case you enabled the test example, disable it before going for production.
+    它用于测试和演示编辑器的功能。
+    如果没有适当的代码修改，<b>请不要</b>在自己的服务器上使用此集成示例。
+    如果您启用了测试示例，请在投入产品之前将其禁用。
 </div>
 
 <h2 id="security" class="copy-link">重要安全信息</h2>

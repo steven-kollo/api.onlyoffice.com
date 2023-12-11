@@ -15,13 +15,13 @@
         <span class="hdr">ONLYOFFICE 文档 React 组件</span>
     </h1>
 
-    <p>ONLYOFFICE Docs React <a href="https://github.com/ONLYOFFICE/document-editor-react" target="_blank">组件</a> 将ONLYOFFICE Docs集成到 <a href="https://react.dev/" target="_blank">React</a> 项目。
+    <p>ONLYOFFICE 文档 React <a href="https://github.com/ONLYOFFICE/document-editor-react" target="_blank">组件</a> 将ONLYOFFICE Docs集成到 <a href="https://react.dev/" target="_blank">React</a> 项目。
 
     <h2 id="prerequisites" class="copy-link">先决条件</h2>
     <p>此过程需要 <a href="https://nodejs.org/en" target="_blank">Node.js（和 npm）</a>。</p>
 
     <h2 id="demo-react-app" class="copy-link">使用 ONLYOFFICE 文档编辑器创建演示 React 应用程序</h2>
-    <p>This procedure creates a <a href="https://github.com/facebook/create-react-app" target="_blank">basic React application</a> and installs an ONLYOFFICE Docs editor in it.</p>
+    <p>此过程创建一个<a href="https://github.com/facebook/create-react-app" target="_blank">基本 React 应用程序</a>，并在其中安装 ONLYOFFICE 文档编辑器。</p>
     <ol>
         <li>
             <p>使用 <em>Create React App</em> 包创建一个名为 <em>onlyoffice-react-demo</em> 的新 React 项目：</p>
@@ -200,7 +200,7 @@ npm run build
                 <td id="onLoadComponentError" class="copy-link">onLoadComponentError</td>
                 <td>(errorCode: number, errorDescription: string) => void</td>
                 <td>null</td>
-                <td>The function called when an error occurs while loading a component.</td>
+                <td>加载组件时发生错误时调用的函数。</td>
             </tr>
             <tr class="tablerow">
                 <td id="document_fileType" class="copy-link">document_fileType</td>

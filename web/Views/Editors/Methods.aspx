@@ -1268,13 +1268,13 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>定义用户的电子邮件地址。 This field is only used when the <em>c</em> parameter is <em>mention</em>.</td>
+                        <td>定义用户的电子邮件地址。仅当 <em>c</em> 参数为 <em>mention</em> 时才使用此字段。</td>
                         <td>string</td>
                         <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.id</td>
-                        <td>定义用户的身份。 This field is only used when the <em>c</em> parameter is <em>protect</em>.</td>
+                        <td>定义用户的身份。仅当<em>c</em>参数为<em>protect</em>时才使用该字段。</td>
                         <td>string</td>
                         <td>必需的</td>
                     </tr>

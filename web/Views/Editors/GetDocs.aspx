@@ -49,10 +49,10 @@
         <li>为应用程序界面添加您自己的<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">颜色主题</a></li>
     </ul>
 
-    <h2 class="copy-link" id="healthcheck">Health check</h2>
-    <p>To check if the editors are available, send the GET request to <em>/healthcheck</em>.
-        This request checks the availability of the databases, message broker, Redis connection, and storage.</p>
-    <p>The response must be <b>true</b>, which means that the editors are ready to use.</p>
-    <p>If something went wrong, make sure that you have followed the installation instructions above.</p>
+    <h2 class="copy-link" id="healthcheck">健康检查</h2>
+    <p>要检查编辑器是否可用，请发送GET请求到<em>/healthcheck</em>。
+        此请求检查数据库、消息代理、Redis 连接和存储的可用性。</p>
+    <p>响应必须为<b>true</b>，这意味着编辑器已准备好使用。</p>
+    <p>如果出现问题，请确保您已按照上面的安装说明进行操作。</p>
 
 </asp:Content>
