@@ -16,6 +16,8 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <h2 id="80" class="copy-link">Version 8.0</h2>
+
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <p><b>Methods of combo box / dropdown list content control</b></p>
     <ul>
