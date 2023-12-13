@@ -303,57 +303,8 @@
 
 <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - required field</em></span>
 <div class="header-gray">Example</div>
-<pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "actionLink": ACTION_DATA,
-        "callbackUrl": "https://example.com/url-to-callback.ashx",
-        "coEditing": {
-            "mode": "fast",
-            "change": true
-        },
-        "createUrl": "https://example.com/url-to-create-document/",
-        "lang": "en",
-        "location": "",
-        "mode": "edit",
-        "recent": [
-            {
-                "folder": "Example Files",
-                "title": "exampledocument1.docx",
-                "url": "https://example.com/exampledocument1.docx"
-            },
-            {
-                "folder": "Example Files",
-                "title": "exampledocument2.docx",
-                "url": "https://example.com/exampledocument2.docx"
-            },
-            ...
-        ],
-        "region": "en-US",
-        "templates": [
-            {
-                "image": "https://example.com/exampletemplate1.png",
-                "title": "exampletemplate1.docx",
-                "url": "https://example.com/url-to-create-template1"
-            },
-            {
-                "image": "https://example.com/exampletemplate2.png",
-                "title": "exampletemplate2.docx",
-                "url": "https://example.com/url-to-create-template2"
-            },
-            ...
-        ],
-        "user": {
-            "group": "Group1",
-            "id": "78e1e841",
-            "name": "John Smith"
-        }
-    },
-    ...
-});
-</pre>
 <p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
     See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 </p>
 <div id="controlFields" style="padding-right:20px;">
