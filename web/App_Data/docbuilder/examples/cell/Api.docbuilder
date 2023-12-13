@@ -52,12 +52,13 @@ oWorksheet.GetRange("G11:I15").SetValue([
   ["=A10","=B10","=M10"]
 ]);
 
+var sheetName = oWorksheet.GetName();
 oWorksheet.GetRange("G11:I15").SetNumberFormat("$#,##0");
-var oChart = oWorksheet.AddChart("'Sheet1'!$A$6:$M$10", true, "lineNormal", 1, 100 * 36000, 50 * 36000, 0, 0, 10, 0);
+var oChart = oWorksheet.AddChart(`'${sheetName}'!$A$6:$M$10`, true, "lineNormal", 1, 100 * 36000, 50 * 36000, 0, 0, 10, 0);
 oChart.SetTitle("Financial Overview (in thousands of USD)", 10);
 oChart.SetLegendPos("left");
 
-oChart = oWorksheet.AddChart("'Sheet1'!$G$11:$I$15", true, "bar", 2, 100 * 36000, 50 * 36000, 6, 0, 10, 0);
+oChart = oWorksheet.AddChart(`'${sheetName}'!$G$11:$I$15`, true, "bar", 2, 100 * 36000, 50 * 36000, 6, 0, 10, 0);
 oChart.SetTitle("Year start VS Year End (in thousands of USD)", 10);
 oChart.SetLegendPos("left");
 Api.Save();
