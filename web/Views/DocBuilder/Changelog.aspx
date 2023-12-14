@@ -28,11 +28,15 @@
     <ul>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getfreezepanestype") %>">Api/GetFreezePanesType</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/setfreezepanestype") %>">Api/SetFreezePanesType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes") %>">ApiFreezePanes</a> class to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezeat") %>">ApiFreezePanes/FreezeAt</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezecolumns") %>">ApiFreezePanes/FreezeColumns</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezerows") %>">ApiFreezePanes/FreezeRows</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/getlocation") %>">ApiFreezePanes/GetLocation</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/unfreeze") %>">ApiFreezePanes/Unfreeze</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getfreezepanes") %>">ApiWorksheet/GetFreezePanes</a> method to Spreadsheet API.</li>
+        <li>Added the <em>FreezePanes</em> property to the <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a> object of Spreadsheet API.</li>
+        <li>Added the <em>FreezePanes</em> property to the <a href="<%= Url.Action("spreadsheetapi/apiworksheet") %>">ApiWorksheet</a> object of Spreadsheet API.</li>
     </ul>
     <br />
 
