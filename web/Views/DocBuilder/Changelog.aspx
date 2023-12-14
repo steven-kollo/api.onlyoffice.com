@@ -24,10 +24,23 @@
     </ul>
     <br />
 
+    <p><b>Freeze panes methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getfreezepanestype") %>">Api/GetFreezePanesType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/setfreezepanestype") %>">Api/SetFreezePanesType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezeat") %>">ApiFreezePanes/FreezeAt</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezecolumns") %>">ApiFreezePanes/FreezeColumns</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezerows") %>">ApiFreezePanes/FreezeRows</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/getlocation") %>">ApiFreezePanes/GetLocation</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/unfreeze") %>">ApiFreezePanes/Unfreeze</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
     <p><b>Global</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("global") %>#FormData">FormData</a> object to Global type definitions.</li>
         <li>Added the <a href="<%= Url.Action("global") %>#FormSpecificType">FormSpecificType</a> type to Global type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#FreezePaneType">FreezePaneType</a> type to Global type definitions.</li>
     </ul>
     <br />
 

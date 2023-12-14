@@ -561,8 +561,10 @@
     <Content Include="App_Data\docbuilder\examples\EMU.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\endnoteRefTo.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\footnoteRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\FormData.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\FormInsertPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\FormPrBase.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\FormSpecificType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\FormType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateCheckBoxForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateComboBoxForm.docbuilder" />
@@ -1223,6 +1225,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.SetValue.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AcceptAllRevisionChanges.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddComment.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddDrawingToPage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddEndnote.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddFootnote.docbuilder" />
@@ -1265,6 +1268,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetEndNotesFirstParagraphs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetFinalSection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetFootnotesFirstParagraphs.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetFormsData.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetPageCount.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetRangeBySelect.docbuilder" />
@@ -1291,6 +1295,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SearchAndReplace.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetControlsHighlight.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetEvenAndOddHdrFtr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetFormsData.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetFormsHighlight.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetTrackRevisions.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetWatermarkSettings.docbuilder" />
@@ -4663,11 +4668,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\FormData.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\FormSpecificType.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddDrawingToPage.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetFormsData.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetFormsData.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.GetFreezePanesType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.SetFreezePanesType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeAt.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeColumns.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeRows.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.GetLocation.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.Unfreeze.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\FreezePaneType.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
