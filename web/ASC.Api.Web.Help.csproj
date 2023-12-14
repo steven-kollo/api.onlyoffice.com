@@ -1070,7 +1070,6 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.Search.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.Select.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetAlias.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetBackgroundColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetLabel.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetLock.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetPlaceholderText.docbuilder" />
@@ -4664,6 +4663,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\docbuilder\examples\FormData.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\FormSpecificType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddDrawingToPage.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.GetFormsData.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDocument.SetFormsData.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
