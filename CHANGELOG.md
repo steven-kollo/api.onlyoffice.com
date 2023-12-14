@@ -1,5 +1,7 @@
 # Change Log
 
+- plugins: v8.0.0
+
 ## 4.4.1
 - docspace: fix samples
 

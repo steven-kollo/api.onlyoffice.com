@@ -16,6 +16,7 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Plugins and Macros API.</p>
+    <h2 id="80" class="copy-link">Version 8.0</h2>
 
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
