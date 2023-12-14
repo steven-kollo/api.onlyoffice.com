@@ -17,6 +17,27 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
     <h2 id="80" class="copy-link">Version 8.0</h2>
+    <p><b>Form methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getformsdata") %>">ApiDocument/GetFormsData</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/setformsdata") %>">ApiDocument/SetFormsData</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Global</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("global") %>#FormData">FormData</a> object to Global type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#FormSpecificType">FormSpecificType</a> type to Global type definitions.</li>
+    </ul>
+    <br />
+
+    <p><b>Other methods</b></p>
+    <ul>
+        <li>Removed the <em>ApiBlockLvlSdt/SetBackgroundColor</em> method from Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/adddrawingtopage") %>">ApiDocument/AddDrawingToPage</a> method to Text document API.</li>
+        <li>Added the <em>bWithotPaddings</em> parameter to the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/setcolumnwidth") %>">ApiWorksheet/SetColumnWidth</a> method of Spreadsheet API.</li>
+    </ul>
+    <br />
 
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <p><b>Methods of combo box / dropdown list content control</b></p>
