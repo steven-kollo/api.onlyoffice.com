@@ -21,11 +21,14 @@
 
                    var enabledProducts = Products.EnabledProducts();
                    foreach (var product in enabledProducts)
-                   { %>
+                   {
+                        if (product.Parent == null)
+                        { %>
                 <li class="pushy-submenu <%= Html.IfController(product.Id) || subControllerStr.Equals(product.Id, StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-                    <a href="<%= Url.Action("basic", product.Id) %>"><%= product.Title %></a>
+                    <a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><%= product.Title %></a>
                 </li>
-                <% } %>
+                <%      }
+                   } %>
             </ul>
         </div>
     </nav>

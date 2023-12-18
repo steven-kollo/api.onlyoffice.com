@@ -49,6 +49,12 @@ namespace ASC.Api.Web.Help.Helpers
         [DataMember(Name = "version")]
         public string Version;
 
+        [DataMember(Name = "sections")]
+        public List<String> Sections;
+
+        [DataMember(Name = "parent")]
+        public String Parent;
+
         [DataMember(Name = "links")]
         public Dictionary<string, List<Tuple<string, string>>> Links;
     }

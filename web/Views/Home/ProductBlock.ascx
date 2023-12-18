@@ -5,11 +5,11 @@
 <div class="docs_block">
     <div class="api_title long">
         <div class="img-title-<%= product.Id %> block-img"></div>
-        <p class="title-block"><a href="<%= Url.Action("basic", product.Id) %>"><%: product.Title %></a></p>
+        <p class="title-block"><a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><%: product.Title %></a></p>
     </div>
     <div class="pp_info_block">
         <%: product.Description %>
-        <p class="pp_info_block_more"><a href="<%= Url.Action("basic", product.Id) %>">More</a></p>
+        <p class="pp_info_block_more"><a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>">More</a></p>
     </div>
     <% if (product.Links != null)
        { %>

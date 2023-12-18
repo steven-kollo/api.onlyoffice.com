@@ -30,14 +30,14 @@
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
-<body class="<%= Html.IfController("Home") ? "main-body" : string.Empty %>">
+<body class="<%= Html.IfController("Home") || Html.IfAction("Index") ? "main-body" : string.Empty %>">
     <div class="site-overlay hidden"></div><div class="close-menu"></div>
     <div class="layout-table-header main-page">
         <% Html.RenderPartial("TopNavigation");%>
     </div>
-    <div class="background-body <%= Html.IfController("Home") ? "mainBody" : string.Empty %>">
-        <div class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
-                <% if (!Html.IfController("Home"))
+    <div class="background-body <%= Html.IfController("Home") || Html.IfAction("Index") ? "mainBody" : string.Empty %>">
+        <div class="layout-table <%= Html.IfController("Home") || Html.IfAction("Index") ? "home" : string.Empty %>">
+                <% if (!Html.IfController("Home") && !Html.IfAction("Index"))
                    { %>
                 <div class="layout-table-side">
                     <div class="layout-side">
@@ -47,7 +47,7 @@
                 </div>
                 <% } %>
 
-                <div class="layout-table-content" <%= Html.IfController("Home") ? "colspan=\"2\"" : ""  %>>
+                <div class="layout-table-content" <%= Html.IfController("Home") || Html.IfAction("Index") ? "colspan=\"2\"" : ""  %>>
                     <div class="layout-content">
                         <%--<% Html.RenderPartial("BreadCrumbs");%>--%>
                         <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
