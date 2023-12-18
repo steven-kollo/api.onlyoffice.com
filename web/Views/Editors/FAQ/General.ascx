@@ -9,7 +9,7 @@
 <dl class="faq_block" id="general_1">
     <dt>我是文档服务器 API 的新手。我应该从哪里开始？</dt>
     <dd>
-        <p>如果您不知道从哪里开始使用文档服务器API，我们建议您先阅读 <a href="<%= Url.Action("basic") %>">基本概念</a> 和 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分，以便更好地了解文档服务器API的构建方式。熟悉主要概念后，您可以访问 <a href="<%= Url.Action("try") %>">立即尝试</a> 部分，查看实际使用的文档服务器主要功能示例。</p>
+        <p>如果您不知道从哪里开始使用文档服务器API，我们建议您先阅读 <a href="<%= Url.Action("basic") %>">基本概念</a> 和 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分，以便更好地了解文档服务器API的构建方式。熟悉主要概念后，您可以访问 <a href="<%= Url.Action("try") %>">立即尝试</a> 部分，查看实际使用的文档服务器主要功能示例。</p>
         <p>如果您对特定的编程语言示例感兴趣，请参阅 <a href="<%= Url.Action("demopreview") %>">特定于语言的示例</a>，它们是以多种编程语言编写，解释了如何安装文档服务器、从何处获取示例源文件以及如何安装它们和连接文档服务器。</p>
         <p>对于使用某些文档管理系统（Nextcloud、ownCloud、SharePoint 等）、并且只是想知道如何将文档服务器连接到这些系统的用户，应该访问 <a href="<%= Url.Action("plugins") %>">即用型连接器</a> 部分，在那里所有与文档服务器一起使用的主要插件都有解释。</p>
         <p>每个API方法的详细描述可在更大的 <b>文档</b> 模块中找到。所有方法都在相应的部分中描述，它们的列表在 <a href="<%= Url.Action("advanced") %>">高级参数</a>部分中可以找到。</p>

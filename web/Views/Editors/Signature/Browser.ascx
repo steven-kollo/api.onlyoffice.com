@@ -53,7 +53,7 @@
 </pre>
 <p>
     其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-    有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+    有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
 </p>
 
 <div class="header-gray">示例令牌</div>
@@ -84,7 +84,7 @@
 </pre>
         <p>
             其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
         </p>
 
         <div class="header-gray">示例令牌</div>
@@ -112,7 +112,7 @@
 </pre>
         <p>
             其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
         </p>
 
         <div class="header-gray">示例令牌</div>
@@ -134,7 +134,7 @@
 </pre>
         <p>
             其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
         </p>
 
         <div class="header-gray">示例令牌</div>
@@ -162,7 +162,7 @@
 </pre>
         <p>
            其中，<b>example.com</b> 是安装了<b>文档管理器</b> 和<b>文档存储服务</b> 的服务器的名称。
-             请参阅<a href="<%= Url.Action("howitworks") %>">它是如何工作的</a>部分以了解有关文档服务器服务客户端-服务器交互的更多信息。
+             请参阅<a href="<%= Url.Action("howitworks") %>">它是如何运作的</a>部分以了解有关文档服务器服务客户端-服务器交互的更多信息。
         </p>
 
         <div class="header-gray">示例令牌</div>
@@ -263,7 +263,7 @@
 </pre>
         <p>
             其中，<b>example.com</b> 是安装了<b>文档管理器</b> 和<b>文档存储服务</b> 的服务器的名称。
-             请参阅<a href="<%= Url.Action("howitworks") %>">它是如何工作的</a>部分以了解有关文档服务器服务的客户端-服务器交互的更多信息。
+             请参阅<a href="<%= Url.Action("howitworks") %>">它是如何运作的</a>部分以了解有关文档服务器服务的客户端-服务器交互的更多信息。
         </p>
 
         <div class="header-gray">示例 token</div>
@@ -285,7 +285,7 @@
 </pre>
         <p>
             其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
         </p>
 
         <div class="header-gray">示例令牌</div>

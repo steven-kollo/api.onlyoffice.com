@@ -79,7 +79,7 @@
     <p>从版本 7.2 开始，默认启用 JWT，并自动生成密钥，以限制对 ONLYOFFICE Docs 的访问，这也出于安全原因和数据完整性考虑。
         在 Odoo 配置页面上指定您自己的<b>密钥</b>。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</p>
 
-        <h2 id="how-it-works" class="copy-link">它是如何工作的</h2>
+        <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
 
         <p>ONLYOFFICE 集成遵循<a href="https://api.onlyoffice.com/editors/basic">此处</a>的 API文档。</p>
    

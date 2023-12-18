@@ -64,7 +64,7 @@ config = {
 </pre>
     <p>
         其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
     </p>
 
     <p>从现在开始， <i>docEditor</i> 对象可用来调用 <b>文档编辑器</b> <a href="<%= Url.Action("methods") %>">方法</a>。</p>

@@ -169,7 +169,7 @@ docEditor.insertImage({
 </pre>
             <p>
                 其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>
@@ -529,7 +529,7 @@ docEditor.setHistoryData({
 </pre>
             <p>
                 其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
             </p>
             <p>
                 如果在编辑和保存文档后，返回到包含更改数据的文件的 <em>changesurl</em> 链接，请通过此链接下载文件，并在 <em>changesurl</em> 参数中发送文件URL。
@@ -552,7 +552,7 @@ docEditor.setHistoryData({
 </pre>
             <p>
                 其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
             </p>
             <p>发送错误消息，说明文档版本无法显示的原因。</p>
             <pre>
@@ -671,7 +671,7 @@ docEditor.setMailMergeRecipients({
 </pre>
             <p>
                 其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>
@@ -737,7 +737,7 @@ docEditor.setReferenceData({
 </pre>
             <p>
                 其中，<b>example.com</b> 是安装了<b>文档管理器</b> 和<b>文档存储服务</b> 的服务器的名称。
-                 请参阅<a href="<%= Url.Action("howitworks") %>">它是如何工作的</a>部分以了解有关文档服务器服务的客户端-服务器交互的更多信息。
+                 请参阅<a href="<%= Url.Action("howitworks") %>">它是如何运作的</a>部分以了解有关文档服务器服务的客户端-服务器交互的更多信息。
             </p>
             <p>显示错误消息，说明是否有错误发生：</p>
             <pre>
@@ -1103,7 +1103,7 @@ docEditor.setRevisedFile({
 </pre>
             <p>
                 其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>
@@ -1232,7 +1232,7 @@ docEditor.setUsers({
 </pre>
             <p>
                 其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>

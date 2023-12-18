@@ -1586,7 +1586,7 @@
 </pre>
     <p>
         其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
     </p>
 
     <div id="sample-password-conversion" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于将受密码保护的文件从 <em>docx</em> 格式转换为 <em>pdf</em> 格式</div>
@@ -1603,7 +1603,7 @@
 </pre>
     <p>
         其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
     </p>
 
     <div id="sample-thumbnail" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于生成 <em>docx</em> 格式的文件的 <em>png</em> 缩略图</div>
@@ -1624,7 +1624,7 @@
 </pre>
     <p>
         其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
     </p>
 
     <div id="sample-spreadsheet-to-pdf" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于将 <em>电子表格</em> 文件转换为 <em>pdf</em> 格式</div>
@@ -1659,7 +1659,7 @@
     </pre>
     <p>
         其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
     </p>
 
     <div id="sample-conversion-token" class="header-gray copy-link">JSON 对象示例包含发送到 <b>文档转换服务</b> 的 JSON Web Token，用于将文件从 <em>docx</em> 格式转换为 <em>pdf</em> 格式</div>
@@ -1670,7 +1670,7 @@
 </pre>
     <p>
         其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
-        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
     </p>
 
     <h2 id="response" class="copy-link">响应参数及其说明：</h2>

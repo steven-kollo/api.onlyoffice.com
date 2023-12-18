@@ -72,7 +72,7 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
         添加的文件将显示为ONLYOFFICE徽标，并在当前编辑的帖子中显示文件名。
         发布文章后（当您按下 <b>发布</b> 或 <b>更新</b> 按钮时），WordPress网站访问者将可以访问此文件，以便在 <b>嵌入式</b> 模式下查看。</p>
 
-    <h2 id="howitworks" class="copy-link">它是如何工作的</h2>
+    <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
     <p>ONLYOFFICE集成遵循 <a href="<%= Url.Action("basic") %>">此处</a>API文档。</p>
 
     <br />

@@ -107,7 +107,7 @@ https://&lt;documentserver&gt;/
     <p>对于 <b>媒体</b> 部分，指定以前上传的文件的名称。</p>
     <p>您的网站访问者还可以查看创建的页面（<b>人员->权限->查看发布的内容</b>）。</p>
 
-    <h2 id="howitworks" class="copy-link">它是如何工作的</h2>
+    <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
     <p>ONLYOFFICE集成遵循 <a href="<%= Url.Action("basic") %>">此处</a>API文档。</p>
 
     <br />
