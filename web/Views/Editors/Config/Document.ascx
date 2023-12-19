@@ -118,7 +118,7 @@
 
 <div class="header-gray">Example</div>
 <p>
-    <b>Example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
     See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 </p>
 
@@ -156,22 +156,9 @@
 
     </div>
 </div>
+
 <div id="configPreHolder">
-<pre id="configPre">
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "document": {
-        "fileType": "docx",
-        "key": "Khirz6zTPdfd7",
-        "referenceData": {
-            "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com"
-        },
-        "title": "Example Document Title.docx",
-        "url": "https://example.com/url-to-example-document.docx",
-    },
-    ...
-});
-</pre>
+    <pre id="configPre"></pre>
 </div>
 
 
@@ -208,7 +195,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                                 Visible = true
                             },
                         IntegrationMode = "embed",
-                    }
+                }
             },
         Height = "550px",
         Width = "100%"
@@ -218,51 +205,60 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
 <script>
     $(document).ready(function () {
-        resizeCodeField();
+        resizeCodeInput();
         updateConfig();
     });
 
-    $("#controlFields").find("input,select").change(function (e) {
-        updateConfig(e.target.id);
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
     });
 
+    function updateConfig() {
+        var document_string = `{
+        "fileType": ${getFieldValue("document_file_type")},
+        "key": ${getFieldValue("document_key")},
+        "referenceData": {
+            "fileKey": ${getFieldValue("document_file_key")},
+            "instanceId": ${getFieldValue("document_instance_id")},
+            "key": ${getFieldValue("document_key")}
+        },
+        "title": ${getFieldValue("document_title").slice(0, -1)}.${getFieldValue("document_file_type").slice(1) },
+        "url": ${getFieldValue("document_url")}
+    }`;
+        var config_string =
+            `var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "document": ${document_string},
+    ...
+});
+`;
+        var document_object = JSON.parse(document_string);
+        config.document.fileType = document_object.fileType;
+        config.document.title = document_object.title;
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 
-    function updateConfig(change_id) {
-        // Update code field
-        var configValues = {
-            '"fileType"': document.getElementById("document_file_type").value,
-            '"key"': document.getElementById("document_key").value,
-            '"fileKey"': document.getElementById("document_file_key").value,
-            '"instanceId"': document.getElementById("document_instance_id").value,
-            '"title"': `${document.getElementById("document_title").value}.${ document.getElementById("document_file_type").value}`,
-            '"url"': document.getElementById("document_url").value,
-        }
-        var codeFieldChildren = document.getElementById("configPre").children;
-        var i = 0;
-        while (codeFieldChildren[i] != undefined) {
-            if (configValues[codeFieldChildren[i].innerHTML] != undefined) {
-                codeFieldChildren[i + 1].innerHTML = `"${configValues[codeFieldChildren[i].innerHTML]}"`;
-            }
-            i++;
-        }
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+        hljs.highlightBlock(pre);
+    }
 
-
-        // Reload editor
-        var change_ids = ["document_file_type", "document_title"];
-        if (change_ids.includes(change_id)){
-            config.document.fileType = configValues[`"fileType"`];
-            config.document.title = configValues[`"title"`];
-            window.docEditor.destroyEditor();
-            window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    function getFieldValue(id) {
+        var element = document.getElementById(id);
+        if (element.type == "checkbox") {
+            return element.checked;
+        } else if (isNaN(element.value)) {
+            return `"${element.value}"`;
+        } else {
+            return Number(element.value);
         }
     }
-    
-    function resizeCodeField() {
+
+    function resizeCodeInput() {
         var controlFieldPaddingBottom = 0;
         var controlFieldInputs = document.getElementsByTagName("input");
         var i = 0;
         while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("document")) {
+            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
                 controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
                 break;
             }
@@ -272,7 +268,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
         var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
         var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
-        
+
         var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
         var configPreHeight = fieldsHeight - (offset) + "px";
         document.getElementById("configPre").style.height = configPreHeight;
