@@ -332,6 +332,7 @@
 
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
+        hljs.highlightBlock(pre);
     }
 
     function getFieldValue(id) {
