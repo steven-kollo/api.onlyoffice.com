@@ -26,8 +26,22 @@
                         { %>
                 <li class="pushy-submenu <%= Html.IfController(product.Id) || subControllerStr.Equals(product.Id, StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
                     <a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><%= product.Title %></a>
-                </li>
-                <%      }
+                    <% if (product.Sections != null)
+                       { %>
+                        <div class="top-navigation-pop-up">
+                            <ul class="dropdown-content akkordeon">
+                                <li>
+                    <% foreach (var section in product.Sections)
+                       {
+                            var sectionProduct = Products.Get(section);
+                            %> 
+                            <a class="dropdown-item active" href="<%= Url.Action("basic", sectionProduct.Id) %>"><%= sectionProduct.Title %></a>
+                    <% } %> 
+                                </li>
+                            </ul>
+                        </div>
+                    <% }
+                        }
                    } %>
             </ul>
         </div>

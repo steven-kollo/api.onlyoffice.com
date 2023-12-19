@@ -583,8 +583,22 @@ li.copy-link[id]:hover:before {
             border-bottom: 2px solid #FFFFFF;
         }
 
-/*footer*/
-.layout-table-footer {
+            .top-nav a:hover + .top-navigation-pop-up {
+                display: block;
+            }
+
+            .top-navigation-pop-up:hover {
+                display: block;
+            }
+
+    .top-nav .top-navigation-pop-up {
+        position: absolute;
+        display: none;
+        background-color: #333;
+    }
+
+    /*footer*/
+    .layout-table-footer {
     height: var(--footer-height);
     background-color: #333333;
     width: 100%;
