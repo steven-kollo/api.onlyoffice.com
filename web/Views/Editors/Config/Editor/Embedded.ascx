@@ -68,22 +68,155 @@
 <div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
-<pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", {
+<p>
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+<div id="controlFields" style="padding-right:20px;">
+    <div id="embedded" class="control-panel">
+        <div class="line">
+            <label for="editorConfig_embedded_embedUrl">Embed Url</label>
+            <input type="text" id="editorConfig_embedded_embedUrl" name="editorConfig_embedded_embedUrl" value="https://example.com/embedded?doc=exampledocument1.docx">
+        </div>
+        <div class="line">
+            <label for="editorConfig_embedded_fullscreenUrl">Fullscreen Url</label>
+            <input type="text" id="editorConfig_embedded_fullscreenUrl" name="editorConfig_embedded_fullscreenUrl" value="https://example.com/embedded?doc=exampledocument1.docx#fullscreen">
+        </div>
+        <div class="line">
+            <label for="editorConfig_embedded_saveUrl">Save Url</label>
+            <input type="text" id="editorConfig_embedded_saveUrl" name="editorConfig_embedded_saveUrl" value="https://example.com/download?doc=exampledocument1.docx">
+        </div>
+        <div class="line">
+            <label for="editorConfig_embedded_shareUrl">Share Url</label>
+            <input type="text" id="editorConfig_embedded_shareUrl" name="editorConfig_embedded_shareUrl" value="https://example.com/view?doc=exampledocument1.docx">
+        </div>
+        <div class="line">
+            <label for="editorConfig_embedded_toolbarDocked">Toolbar Docked</label>
+            <select id="editorConfig_embedded_toolbarDocked" name="editorConfig_embedded_toolbarDocked">
+                <option value="top" selected>top</option>
+                <option value="bottom">bottom</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title." + "docx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
+            },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                //CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+    config.type = "embedded";
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
+    });
+
+    function updateConfig() {
+        var embedded = `{
+            "embedUrl": ${getFieldValue("editorConfig_embedded_embedUrl")},
+            "fullscreenUrl": ${getFieldValue("editorConfig_embedded_fullscreenUrl")},
+            "saveUrl": ${getFieldValue("editorConfig_embedded_saveUrl")},
+            "shareUrl": ${getFieldValue("editorConfig_embedded_shareUrl")},
+            "toolbarDocked": ${getFieldValue("editorConfig_embedded_toolbarDocked")}
+        }`;
+        var config_string =
+            `var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
-        "embedded": {
-            "embedUrl": "https://example.com/embedded?doc=exampledocument1.docx",
-            "fullscreenUrl": "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
-            "saveUrl": "https://example.com/download?doc=exampledocument1.docx",
-            "shareUrl": "https://example.com/view?doc=exampledocument1.docx",
-            "toolbarDocked": "top"
-        },
+        "embedded": ${embedded}
+        ,
         ...
     },
     ...
 });
-</pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
+`;
+
+        var embedded_object = JSON.parse(embedded);
+        config.editorConfig.embedded = embedded_object;
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+        hljs.highlightBlock(pre);
+    }
+
+    function getFieldValue(id) {
+        var element = document.getElementById(id);
+        if (element.type == "checkbox") {
+            return element.checked;
+        } else if (isNaN(element.value)) {
+            if (element.value.includes("[") || element.value.includes('""')) {
+                return element.value;
+            }
+            return `"${element.value}"`;
+        } else {
+            return Number(element.value);
+        }
+    }
+
+    function resizeCodeInput() {
+        var controlFieldPaddingBottom = 0;
+        var controlFieldInputs = document.getElementsByTagName("input");
+        var i = 0;
+        while (controlFieldInputs[i] != undefined) {
+            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
+                break;
+            }
+            i++;
+        }
+        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+
+        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
+        var configPreHeight = fieldsHeight - (offset) + "px";
+        document.getElementById("configPre").style.height = configPreHeight;
+    }
+</script>
