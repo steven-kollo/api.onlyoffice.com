@@ -189,17 +189,29 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "permissions", Namespace = "")]
             public class PermissionsConfig
             {
+                [DataMember(Name = "chat", EmitDefaultValue = false)]
+                public bool? Chat;
+
                 [DataMember(Name = "comment", EmitDefaultValue = false)]
                 public bool? Comment;
 
+                [DataMember(Name = "copy", EmitDefaultValue = false)]
+                public bool? Copy;
+
                 [DataMember(Name = "commentGroups", EmitDefaultValue = false)]
                 public CommentGroupsConfig CommentGroups;
+
+                [DataMember(Name = "deleteCommentAuthorOnly", EmitDefaultValue = false)]
+                public bool? DeleteCommentAuthorOnly;
 
                 [DataMember(Name = "download", EmitDefaultValue = false)]
                 public bool? Download;
 
                 [DataMember(Name = "edit", EmitDefaultValue = false)]
                 public bool? Edit;
+
+                [DataMember(Name = "editCommentAuthorOnly", EmitDefaultValue = false)]
+                public bool? EditCommentAuthorOnly;
 
                 [DataMember(Name = "fillForms", EmitDefaultValue = false)]
                 public bool? FillForms;
@@ -212,6 +224,9 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "print", EmitDefaultValue = false)]
                 public bool? Print;
+
+                [DataMember(Name = "protect", EmitDefaultValue = false)]
+                public bool? Protect;
 
                 [DataMember(Name = "review", EmitDefaultValue = false)]
                 public bool? Review;
