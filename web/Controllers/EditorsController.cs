@@ -271,8 +271,42 @@ namespace ASC.Api.Web.Help.Controllers
             string jsonConfig
         )
         {
-            Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
-            config.Document.Key = "apiwh" + Guid.NewGuid();
+            Config config = new Config
+            {
+                Document = new Config.DocumentConfig
+                {
+                    FileType = "docx",
+                    Key = "apiwh" + Guid.NewGuid(),
+                    Permissions = JsonConvert.DeserializeObject<Config>(jsonConfig).Document.Permissions,
+                    Title = "Example Title." + "docx",
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx"
+                },
+                DocumentType = "word",
+                EditorConfig = new Config.EditorConfigConfiguration
+                {
+                    CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                    Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        CompactToolbar = true,
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                        {
+                            Visible = true
+                        },
+                        HideRightMenu = true,
+                        HideRulers = true,
+                        IntegrationMode = "embed",
+                        ToolbarNoTabs = true
+                    },
+                    User = new Config.EditorConfigConfiguration.UserConfig
+                    {
+                        Name = "John Smith",
+                        Id = "79e1e841"
+                    }
+                },
+                Height = "550px",
+                Width = "100%"
+            };
+
             return Json(Helpers.Config.Serialize(config));
         }
 
