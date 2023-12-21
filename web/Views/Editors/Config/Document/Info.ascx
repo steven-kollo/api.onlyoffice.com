@@ -127,60 +127,59 @@
 <div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
-
-<div id="controlFields" style="padding-right:20px;">
-    <div id="info" class="control-panel">
-        <div class="line">
-            <label for="documentConfig_info_folder">Folder</label>
-            <input type="text" id="documentConfig_info_folder" name="documentConfig_info_folder" value="Example Files">
-        </div>
-        <div class="line">
-            <label for="documentConfig_info_owner">Owner</label>
-            <input type="text" id="documentConfig_info_owner" name="documentConfig_info_owner" value="John Smith">
-        </div>
-        <div class="line">
-            <label for="documentConfig_info_uploaded">Uploaded</label>
-            <input type="text" id="documentConfig_info_uploaded" name="documentConfig_info_uploaded" value="2010-07-07 3:46 PM">
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_info_favorite" name="documentConfig_info_favorite" checked>
-            <label for="documentConfig_info_favorite">Favorite</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" checked>
-            <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
-        </div>
-        <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder" style="padding-left: 20px;">
-            <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem">
-                <div class="line">
-                    <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
-                    <select id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
-                        <option value="Full Access" selected>Full Access</option>
-                        <option value="Read Only">Read Only</option>
-                        <option value="Deny Access">Deny Access</option>
-                    </select>
-                </div>
-                <div class="line">
-                    <label for="documentConfig_info_sharingSettings_user_0">User</label>
-                    <input type="text" id="documentConfig_info_sharingSettings_user_0" name="documentConfig_info_sharingSettings_user_0" value="John Smith">
-                </div>
-                <div class="line">
-                    <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_0" name="documentConfig_info_sharingSettings_isLink_0">
-                    <label for="documentConfig_info_sharingSettings_isLink_0">Is Link</label>
-                </div>
-                <hr />
-            </div> 
-        </div>
-        <div style="padding-left: 20px;">
-            <button id="addButton_info_sharingSettings" class="add-button">+</button>
+<div>
+    <div id="controlFields" style="padding-right:20px;">
+        <div id="info" class="control-panel">
+            <div class="line">
+                <label for="documentConfig_info_folder">Folder</label>
+                <input type="text" id="documentConfig_info_folder" name="documentConfig_info_folder" value="Example Files">
+            </div>
+            <div class="line">
+                <label for="documentConfig_info_owner">Owner</label>
+                <input type="text" id="documentConfig_info_owner" name="documentConfig_info_owner" value="John Smith">
+            </div>
+            <div class="line">
+                <label for="documentConfig_info_uploaded">Uploaded</label>
+                <input type="text" id="documentConfig_info_uploaded" name="documentConfig_info_uploaded" value="2010-07-07 3:46 PM">
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_info_favorite" name="documentConfig_info_favorite" checked>
+                <label for="documentConfig_info_favorite">Favorite</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" checked>
+                <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
+            </div>
+            <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder" style="padding-left: 20px;">
+                <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem">
+                    <div class="line">
+                        <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
+                        <select id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
+                            <option value="Full Access" selected>Full Access</option>
+                            <option value="Read Only">Read Only</option>
+                            <option value="Deny Access">Deny Access</option>
+                        </select>
+                    </div>
+                    <div class="line">
+                        <label for="documentConfig_info_sharingSettings_user_0">User</label>
+                        <input type="text" id="documentConfig_info_sharingSettings_user_0" name="documentConfig_info_sharingSettings_user_0" value="John Smith">
+                    </div>
+                    <div class="line">
+                        <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_0" name="documentConfig_info_sharingSettings_isLink_0">
+                        <label for="documentConfig_info_sharingSettings_isLink_0">Is Link</label>
+                    </div>
+                    <hr />
+                </div> 
+            </div>
+            <div style="padding-left: 20px;">
+                <button id="addButton_info_sharingSettings" class="add-button">+</button>
+            </div>
         </div>
     </div>
+    <div id="configPreHolder">
+        <pre id="configPre"></pre>
+    </div>
 </div>
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
-</div>
-
-
 <div id="editorSpace">
     <div id="placeholder"></div>
 </div>
@@ -351,7 +350,7 @@
         var controlFieldInputs = document.getElementsByTagName("input");
         var i = 0;
         while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+            if (controlFieldInputs[i].id.includes("documentConfig") && controlFieldInputs[i].type == "text") {
                 controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
                 break;
             }

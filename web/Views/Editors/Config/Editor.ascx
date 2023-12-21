@@ -668,7 +668,7 @@
         var controlFieldInputs = document.getElementsByTagName("input");
         var i = 0;
         while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+            if (controlFieldInputs[i].id.includes("editorConfig") && controlFieldInputs[i].type == "text") {
                 controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
                 break;
             }

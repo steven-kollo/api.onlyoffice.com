@@ -299,94 +299,95 @@
 <div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
-<div id="controlFields" style="padding-right:20px;">
-    <div id="permissions" class="control-panel">
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" checked>
-            <label for="documentConfig_permissions_chat">Chat</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_comment" name="documentConfig_permissions_comment" checked>
-            <label for="documentConfig_permissions_comment">Comment</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" checked>
-            <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
-        </div>
-        <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder" style="padding-left: 23px;">
+<div>
+    <div id="controlFields" style="padding-right:20px;">
+        <div id="permissions" class="control-panel">
             <div class="line">
-                <label for="documentConfig_permissions_commentGroups_edit">Edit</label>
-                <input type="text" id="documentConfig_permissions_commentGroups_edit" name="documentConfig_permissions_commentGroups_edit" value='["Group2", ""]'>
+                <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" checked>
+                <label for="documentConfig_permissions_chat">Chat</label>
             </div>
             <div class="line">
-                <label for="documentConfig_permissions_commentGroups_remove">Remove</label>
-                <input type="text" id="documentConfig_permissions_commentGroups_remove" name="documentConfig_permissions_commentGroups_remove" value='[""]'>
+                <input type="checkbox" id="documentConfig_permissions_comment" name="documentConfig_permissions_comment" checked>
+                <label for="documentConfig_permissions_comment">Comment</label>
             </div>
             <div class="line">
-                <label for="documentConfig_permissions_commentGroups_view">View</label>
-                <input type="text" id="documentConfig_permissions_commentGroups_view" name="documentConfig_permissions_commentGroups_view" value='""'>
+                <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" checked>
+                <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
             </div>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_copy" name="documentConfig_permissions_copy" checked>
-            <label for="documentConfig_permissions_copy">Copy</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_deleteCommentAuthorOnly" name="documentConfig_permissions_deleteCommentAuthorOnly">
-            <label for="documentConfig_permissions_deleteCommentAuthorOnly">Delete Comment Author Only</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_download" name="documentConfig_permissions_download" checked>
-            <label for="documentConfig_permissions_download">Download</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_edit" name="documentConfig_permissions_edit" checked>
-            <label for="documentConfig_permissions_edit">Edit</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_editCommentAuthorOnly" name="documentConfig_permissions_editCommentAuthorOnly">
-            <label for="documentConfig_permissions_editCommentAuthorOnly">Edit Comment Author Only</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_fillForms" name="documentConfig_permissions_fillForms" checked>
-            <label for="documentConfig_permissions_fillForms">Fill Forms</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_modifyContentControl" name="documentConfig_permissions_modifyContentControl" checked>
-            <label for="documentConfig_permissions_modifyContentControl">Modify Content Control</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_modifyFilter" name="documentConfig_permissions_modifyFilter" checked>
-            <label for="documentConfig_permissions_modifyFilter">Modify Filter</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" checked>
-            <label for="documentConfig_permissions_print">Print</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_protect" name="documentConfig_permissions_protect" checked>
-            <label for="documentConfig_permissions_protect">Protect</label>
-        </div>
-        <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review">
-            <label for="documentConfig_permissions_review">Review</label>
-        </div>
-        <div class="line">
-            <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
-            <input type="text" id="documentConfig_permissions_reviewGroups" name="documentConfig_permissions_reviewGroups" value='["Group1", "Group2", ""]'>
-        </div>
-        <div class="line">
-            <label for="documentConfig_permissions_userInfoGroups">User Info Groups</label>
-            <input type="text" id="documentConfig_permissions_userInfoGroups" name="documentConfig_permissions_userInfoGroups" value='["Group1", ""]'>
-        </div>
+            <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder" style="padding-left: 23px;">
+                <div class="line">
+                    <label for="documentConfig_permissions_commentGroups_edit">Edit</label>
+                    <input type="text" id="documentConfig_permissions_commentGroups_edit" name="documentConfig_permissions_commentGroups_edit" value='["Group2", ""]'>
+                </div>
+                <div class="line">
+                    <label for="documentConfig_permissions_commentGroups_remove">Remove</label>
+                    <input type="text" id="documentConfig_permissions_commentGroups_remove" name="documentConfig_permissions_commentGroups_remove" value='[""]'>
+                </div>
+                <div class="line">
+                    <label for="documentConfig_permissions_commentGroups_view">View</label>
+                    <input type="text" id="documentConfig_permissions_commentGroups_view" name="documentConfig_permissions_commentGroups_view" value='""'>
+                </div>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_copy" name="documentConfig_permissions_copy" checked>
+                <label for="documentConfig_permissions_copy">Copy</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_deleteCommentAuthorOnly" name="documentConfig_permissions_deleteCommentAuthorOnly">
+                <label for="documentConfig_permissions_deleteCommentAuthorOnly">Delete Comment Author Only</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_download" name="documentConfig_permissions_download" checked>
+                <label for="documentConfig_permissions_download">Download</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_edit" name="documentConfig_permissions_edit" checked>
+                <label for="documentConfig_permissions_edit">Edit</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_editCommentAuthorOnly" name="documentConfig_permissions_editCommentAuthorOnly">
+                <label for="documentConfig_permissions_editCommentAuthorOnly">Edit Comment Author Only</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_fillForms" name="documentConfig_permissions_fillForms" checked>
+                <label for="documentConfig_permissions_fillForms">Fill Forms</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_modifyContentControl" name="documentConfig_permissions_modifyContentControl" checked>
+                <label for="documentConfig_permissions_modifyContentControl">Modify Content Control</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_modifyFilter" name="documentConfig_permissions_modifyFilter" checked>
+                <label for="documentConfig_permissions_modifyFilter">Modify Filter</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" checked>
+                <label for="documentConfig_permissions_print">Print</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_protect" name="documentConfig_permissions_protect" checked>
+                <label for="documentConfig_permissions_protect">Protect</label>
+            </div>
+            <div class="line">
+                <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review">
+                <label for="documentConfig_permissions_review">Review</label>
+            </div>
+            <div class="line">
+                <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
+                <input type="text" id="documentConfig_permissions_reviewGroups" name="documentConfig_permissions_reviewGroups" value='["Group1", "Group2", ""]'>
+            </div>
+            <div class="line">
+                <label for="documentConfig_permissions_userInfoGroups">User Info Groups</label>
+                <input type="text" id="documentConfig_permissions_userInfoGroups" name="documentConfig_permissions_userInfoGroups" value='["Group1", ""]'>
+            </div>
 
         
+        </div>
+    </div>
+    <div id="configPreHolder">
+        <pre id="configPre"></pre>
     </div>
 </div>
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
-</div>
-
 
 <div id="editorSpace">
     <div id="placeholder"></div>
@@ -515,7 +516,7 @@
         var controlFieldInputs = document.getElementsByTagName("input");
         var i = 0;
         while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+            if (controlFieldInputs[i].id.includes("documentConfig_permissions") && controlFieldInputs[i].type == "text") {
                 controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
                 break;
             }

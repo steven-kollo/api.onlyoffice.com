@@ -80,38 +80,38 @@
 <div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
-
-<div id="controlFields" style="padding-right:20px;">
-    <div id="info" class="control-panel">
-        <div class="line">
-            <label for="config_documentType">Document Type</label>
-            <select id="config_documentType" name="config_documentType">
-                <option value="word" selected>word</option>
-                <option value="cell">cell</option>
-                <option value="slide">slide</option>
-            </select>
-        </div>
-        <div class="line">
-            <label for="config_type">Type</label>
-            <select id="config_type" name="config_type">
-                <option value="desktop" selected>desktop</option>
-                <option value="mobile">mobile</option>
-            </select>
-        </div>
-        <div class="line">
-            <label for="config_height">Height</label>
-            <input type="text" id="config_height" name="config_height" value="550px">
-        </div>
-        <div class="line">
-            <label for="config_width">Width</label>
-            <input type="text" id="config_width" name="config_width" value="100%">
+<div>
+    <div id="controlFields" style="padding-right:20px;">
+        <div id="info" class="control-panel">
+            <div class="line">
+                <label for="config_documentType">Document Type</label>
+                <select id="config_documentType" name="config_documentType">
+                    <option value="word" selected>word</option>
+                    <option value="cell">cell</option>
+                    <option value="slide">slide</option>
+                </select>
+            </div>
+            <div class="line">
+                <label for="config_type">Type</label>
+                <select id="config_type" name="config_type">
+                    <option value="desktop" selected>desktop</option>
+                    <option value="mobile">mobile</option>
+                </select>
+            </div>
+            <div class="line">
+                <label for="config_height">Height</label>
+                <input type="text" id="config_height" name="config_height" value="550px">
+            </div>
+            <div class="line">
+                <label for="config_width">Width</label>
+                <input type="text" id="config_width" name="config_width" value="100%">
+            </div>
         </div>
     </div>
+    <div id="configPreHolder">
+        <pre id="configPre"></pre>
+    </div>
 </div>
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
-</div>
-
 
 <div id="editorSpace">
     <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
@@ -283,7 +283,7 @@
         var controlFieldInputs = document.getElementsByTagName("input");
         var i = 0;
         while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("customization") && controlFieldInputs[i].type == "text") {
+            if (controlFieldInputs[i].id.includes("config") && controlFieldInputs[i].type == "text") {
                 controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
                 break;
             }
