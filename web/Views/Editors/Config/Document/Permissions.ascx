@@ -368,7 +368,7 @@
             <label for="documentConfig_permissions_protect">Protect</label>
         </div>
         <div class="line">
-            <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review" checked>
+            <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review">
             <label for="documentConfig_permissions_review">Review</label>
         </div>
         <div class="line">
@@ -408,19 +408,22 @@
             },
         DocumentType = "word",
         EditorConfig = new Config.EditorConfigConfiguration
-            {
-                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
-                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
-                    {
-                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
-                            {
-                                Request = false
-                            },
-                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
-                            {
-                                Visible = true
-                            },
-                        IntegrationMode = "embed",
+            {     
+                //CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig {
+                    CompactToolbar = true,
+                    Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                        {
+                            Visible = true
+                        },
+                    HideRightMenu = true,
+                    HideRulers = true,
+                    IntegrationMode = "embed",
+                    ToolbarNoTabs = true
+                },
+                User = new Config.EditorConfigConfiguration.UserConfig {
+                    Name = "John Smith",
+                    Id = "79e1e841"
                 }
             },
         Height = "550px",
@@ -471,15 +474,23 @@
     },
     ...
 });
-`;
-        console.log(permissions)
-        var info_object = JSON.parse(permissions);
-        
-        console.log(config)
-        //config.document.permissions = info_object;
-        window.docEditor.destroyEditor();
-        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+`;      
 
+        var info_object = JSON.parse(permissions);
+        config.document.permissions = info_object;
+        window.docEditor.destroyEditor();
+        $.ajax({
+            type: "POST",
+            url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
+            data: JSON.stringify({ jsonConfig: JSON.stringify(config) }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
+            }
+        });
+        
+        
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);

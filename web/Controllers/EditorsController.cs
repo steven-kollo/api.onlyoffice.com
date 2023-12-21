@@ -25,10 +25,14 @@
 
 
 using System;
+using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Security;
 using System.Web.Mvc;
+using System.Web.WebPages;
 using ASC.Api.Web.Help.Helpers;
+using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -260,6 +264,16 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Config", (object) catchall);
+        }
+
+        [HttpPost]
+        public JsonResult ConfigCreate(
+            string jsonConfig
+        )
+        {
+            Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
+            config.Document.Key = "apiwh" + Guid.NewGuid();
+            return Json(Helpers.Config.Serialize(config));
         }
 
         public ActionResult Confluence()
