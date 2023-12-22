@@ -727,9 +727,13 @@
             <summary>Specifies if the plugins are enabled or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.PluginsDto.Allow">
-            <summary>The allowed actions with the plugins ("upload", "delete", etc.)</summary>
-            <type>System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic</type>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.PluginsDto.Upload">
+            <summary>Specifies if the plugins can be uploaded or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.PluginsDto.Delete">
+            <summary>Specifies if the plugins can be deleted or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModel.ResponseDto.QuotaUsageDto">
             <summary>
@@ -929,6 +933,10 @@
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.HelpLink">
             <summary>Link to the help</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.ForumLink">
+            <summary>Link to the forum</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.ApiDocsLink">
@@ -3780,6 +3788,7 @@
             <path>api/2.0/settings/telegramisconnected</path>
             <httpMethod>GET</httpMethod>
             <returns type="System.Object, System">Operation result: 0 - not connected, 1 - connected, 2 - awaiting confirmation</returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.TelegramDisconnectAsync">
             <summary>
@@ -3790,6 +3799,7 @@
             <path>api/2.0/settings/telegramdisconnect</path>
             <httpMethod>DELETE</httpMethod>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SsoController.GetSsoSettingsV2">
             <summary>

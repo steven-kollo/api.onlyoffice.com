@@ -1,5 +1,7 @@
 # Change Log
 
+- docspace: v2.0.1
+
 ## 4.4.1
 - docspace: fix samples
 
