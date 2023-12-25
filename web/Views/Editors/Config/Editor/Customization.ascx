@@ -1291,10 +1291,10 @@
 <div id="controlFields" style="padding-right:20px;">
     <div id="customization" class="control-panel">
         <div class="line">
-            <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous">
+            <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous" checked>
             <label for="editorConfig_customization_anonymous">Anonymous</label>
         </div>
-        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder" style="padding-left: 20px;" hidden>
+        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder" style="padding-left: 20px;">
             <div class="line">
                 <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" checked>
                 <label for="editorConfig_customization_anonymous_request">Request</label>
@@ -1554,10 +1554,10 @@
             {
                 // CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
-                    {
+                    {   
                         Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
                             {
-                                Request = false
+                                Request = true
                             },
                         Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
                             {
@@ -1651,6 +1651,8 @@
                 "hoverMode": ${getFieldValue("editorConfig_customization_review_hoverMode")}
             },
             ` : "";
+        var integrationMode = getFieldValue("editorConfig_customization_integrationMode") ? `
+            "integrationMode": "embed",` : "";
         var customization = `{
             ${anonymous}"comments": ${getFieldValue("editorConfig_customization_comments")},
             "compactHeader": ${getFieldValue("editorConfig_customization_compactHeader")},
@@ -1660,8 +1662,7 @@
             ${goback}"help": ${getFieldValue("editorConfig_customization_help")},
             "hideNotes": ${getFieldValue("editorConfig_customization_hideNotes")},
             "hideRightMenu": ${getFieldValue("editorConfig_customization_hideRightMenu")},
-            "hideRulers": ${getFieldValue("editorConfig_customization_hideRulers")},
-            "integrationMode": ${getFieldValue("editorConfig_customization_integrationMode")},
+            "hideRulers": ${getFieldValue("editorConfig_customization_hideRulers")},${integrationMode}
             ${logo}"macros": ${getFieldValue("editorConfig_customization_macros")},
             "macrosMode": ${getFieldValue("editorConfig_customization_macrosMode")},
             "mentionShare": ${getFieldValue("editorConfig_customization_mentionShare")},
@@ -1689,7 +1690,7 @@
         config.editorConfig.customization = customization_object;
         window.docEditor.destroyEditor();
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-
+        console.log(config)
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
