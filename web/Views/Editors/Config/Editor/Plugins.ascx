@@ -74,7 +74,7 @@
             <div class="line">
                 <label for="editorConfig_plugins_autostart">Autostart</label>
                 <div id="plugins_autostart_0" class="line plugins_autostart">
-                    <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{c9d216a5-4f1a-49f2-9ff0-67c510a73523}">
+                    <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}">
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@
             <div class="line">
                 <label for="editorConfig_plugins_pluginsData">Plugins Data</label>
                 <div id="plugins_pluginsData_0" class="line plugins_pluginsData">
-                    <input type="text" id="editorConfig_plugins_pluginsData_0" name="editorConfig_plugins_pluginsData_0" value="https://nct.onlyoffice.com/ThirdParty/plugin/easybib/config.json">
+                    <input type="text" id="editorConfig_plugins_pluginsData_0" name="editorConfig_plugins_pluginsData_0" value="https://example.com/plugins/chess-plugin/config.json">
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@
     </div>
 </div>
 <div id="configPreHolder">
-    <pre id="configPre"></pre>
+    <pre style="word-wrap: break-word;" id="configPre"></pre>
 </div>
 
 
@@ -186,7 +186,7 @@
         while (elements[i] != undefined) {
             var value = getFieldValue(`editorConfig_plugins_${param}_${i}`);
             if (value.toString().indexOf("asc.{") != -1 || value.toString().indexOf("http") != -1) {
-                string += string == "" ? value : "," + "\n" + "        " + value;
+                string += string == "" ? value : "," + "\n        " + value;
             }
             i++;
         }
