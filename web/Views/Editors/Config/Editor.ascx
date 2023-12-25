@@ -617,7 +617,7 @@
         } else {
             document.getElementById("addButton_editorConfig_templates").hidden = true;
         }
-        
+
         var editorConfig = `{
         "coEditing": {
             "mode": ${getFieldValue("editorConfig_coEditing_mode")},
@@ -644,6 +644,9 @@
 `;
         var editorConfig_object = JSON.parse(editorConfig);
         config.editorConfig = editorConfig_object;
+        config.editorConfig.customization = {
+            "integrationMode": "embed"
+        };
         window.docEditor.destroyEditor();
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 
