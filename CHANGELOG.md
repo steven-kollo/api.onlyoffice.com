@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the page about Java Integration SDK
+
 ## 4.4.1
 - docspace: fix samples
 
