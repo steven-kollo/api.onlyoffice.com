@@ -321,7 +321,7 @@
             <input type="checkbox" id="editorConfig_coEditing" name="editorConfig_coEditing" checked>
             <label for="editorConfig_coEditing">coEditing</label>
         </div>
-        <div id="holder_editorConfig_coEditing" class="config_object_holder" style="padding-left: 23px;">
+        <div id="holder_editorConfig_coEditing" class="config_object_holder" style="padding-left: 24px;">
             <div class="line">
                 <label for="editorConfig_coEditing_mode">Mode</label>
                 <select id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
@@ -357,7 +357,7 @@
             <input type="checkbox" id="editorConfig_recent" name="editorConfig_recent" checked>
             <label for="editorConfig_recent">Recent</label>
         </div>
-        <div id="holder_editorConfig_recent" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_recent" class="config_object_holder" style="padding-left: 24px;">
             <div id="holder_editorConfig_recent_0" class="editorConfig_recentItem">
                 <div class="line">
                     <label for="editorConfig_recent_folder_0">Folder</label>
@@ -386,7 +386,7 @@
             <input type="checkbox" id="editorConfig_templates" name="editorConfig_templates" checked>
             <label for="editorConfig_templates">Templates</label>
         </div>
-        <div id="holder_editorConfig_templates" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_templates" class="config_object_holder" style="padding-left: 24px;">
             <div id="holder_editorConfig_templates_0" class="editorConfig_templatesItem">
                 <div class="line">
                     <label for="editorConfig_templates_image_0">Image</label>
@@ -410,7 +410,7 @@
             <input type="checkbox" id="editorConfig_user" name="editorConfig_user" checked>
             <label for="editorConfig_user">User</label>
         </div>
-        <div id="holder_editorConfig_user" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_user" class="config_object_holder" style="padding-left: 24px;">
             <div class="line">
                 <label for="editorConfig_user_group">Group</label>
                 <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">

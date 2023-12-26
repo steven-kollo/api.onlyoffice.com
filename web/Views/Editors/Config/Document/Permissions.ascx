@@ -314,7 +314,7 @@
                 <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" checked>
                 <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
             </div>
-            <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder" style="padding-left: 23px;">
+            <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder" style="padding-left: 24px;">
                 <div class="line">
                     <label for="documentConfig_permissions_commentGroups_edit">Edit</label>
                     <input type="text" id="documentConfig_permissions_commentGroups_edit" name="documentConfig_permissions_commentGroups_edit" value='["Group2", ""]'>

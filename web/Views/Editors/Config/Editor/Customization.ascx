@@ -1294,7 +1294,7 @@
             <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous" checked>
             <label for="editorConfig_customization_anonymous">Anonymous</label>
         </div>
-        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder" style="padding-left: 20px;">
+        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder" style="padding-left: 24px;">
             <div class="line">
                 <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" checked>
                 <label for="editorConfig_customization_anonymous_request">Request</label>
@@ -1324,7 +1324,7 @@
             <input type="checkbox" class="config-dropdown" id="editorConfig_customization_customer" name="editorConfig_customization_customer">
             <label for="editorConfig_customization_customer">Customer</label>
         </div>
-        <div id="holder_editorConfig_customization_customer" class="config_object_holder" style="padding-left: 20px;" hidden>
+        <div id="holder_editorConfig_customization_customer" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div class="line">
                 <label for="editorConfig_customization_customer_address">Address</label>
                 <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
@@ -1366,7 +1366,7 @@
             <input type="checkbox" id="editorConfig_customization_feedback" name="editorConfig_customization_feedback">
             <label for="editorConfig_customization_feedback">Feedback</label>
         </div>
-        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" style="padding-left: 20px;" hidden>
+        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div class="line">
                 <label for="editorConfig_customization_feedback_url">url</label>
                 <input type="text" id="editorConfig_customization_feedback_url" name="editorConfig_customization_feedback_url" value="https://example.com">
@@ -1384,7 +1384,7 @@
             <input type="checkbox" id="editorConfig_customization_goback" name="editorConfig_customization_goback">
             <label for="editorConfig_customization_goback">Go back</label>
         </div>
-        <div id="holder_editorConfig_customization_goback" class="config_object_holder" style="padding-left: 20px;" hidden>
+        <div id="holder_editorConfig_customization_goback" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div class="line">
                 <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" checked>
                 <label for="editorConfig_customization_goback_blank">Blank</label>
@@ -1426,7 +1426,7 @@
             <input type="checkbox" id="editorConfig_customization_logo" name="editorConfig_customization_logo">
             <label for="editorConfig_customization_logo">Logo</label>
         </div>
-        <div id="holder_editorConfig_customization_logo" class="config_object_holder" style="padding-left: 20px;" hidden>
+        <div id="holder_editorConfig_customization_logo" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div class="line">
                 <label for="editorConfig_customization_logo_image">Image</label>
                 <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://example.com/logo.png">
@@ -1456,7 +1456,7 @@
             <input type="checkbox" id="editorConfig_customization_review" name="editorConfig_customization_review">
             <label for="editorConfig_customization_review">Review</label>
         </div>
-        <div id="holder_editorConfig_customization_review" class="config_object_holder" style="padding-left: 20px;" hidden>
+        <div id="holder_editorConfig_customization_review" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div class="line">
                 <label for="editorConfig_customization_review_reviewDisplay">Review Display</label>
                 <select id="editorConfig_customization_review_reviewDisplay" name="editorConfig_customization_review_reviewDisplay">

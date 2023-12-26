@@ -150,7 +150,7 @@
                 <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" checked>
                 <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
             </div>
-            <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder" style="padding-left: 20px;">
+            <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder" style="padding-left: 24px;">
                 <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem">
                     <div class="line">
                         <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
