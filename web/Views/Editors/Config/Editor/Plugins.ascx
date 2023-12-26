@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <button id="addButton_plugins_autostart" class="add-button">+</button>
+        <button id="addButton_plugins_autostart" class="add-button" style="margin-top: 4px;">+</button>
         <div id="holder_editorConfig_plugins_pluginsData" class="config_object_holder">
             <div class="line">
                 <label for="editorConfig_plugins_pluginsData">Plugins Data</label>
@@ -87,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <button id="addButton_plugins_pluginsData" class="add-button">+</button>
+        <button id="addButton_plugins_pluginsData" class="add-button" style="margin-top: 4px;">+</button>
     </div>
 </div>
 <div id="configPreHolder">

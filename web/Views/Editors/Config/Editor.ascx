@@ -374,7 +374,7 @@
                 <hr />
             </div> 
         </div>
-        <div style="padding-left: 20px;">
+        <div style="padding-left: 24px;">
             <button id="addButton_editorConfig_recent" class="add-button">+</button>
         </div>
         <div class="line">
@@ -403,7 +403,7 @@
                 <hr />
             </div> 
         </div>
-        <div style="padding-left: 20px;">
+        <div style="padding-left: 24px;">
             <button id="addButton_editorConfig_templates" class="add-button">+</button>
         </div>
         <div class="line">

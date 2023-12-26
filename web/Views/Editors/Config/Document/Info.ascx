@@ -171,7 +171,7 @@
                     <hr />
                 </div> 
             </div>
-            <div style="padding-left: 20px;">
+            <div style="padding-left: 24px;">
                 <button id="addButton_info_sharingSettings" class="add-button">+</button>
             </div>
         </div>
