@@ -143,12 +143,18 @@
                 <input type="text" id="documentConfig_info_uploaded" name="documentConfig_info_uploaded" value="2010-07-07 3:46 PM">
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_info_favorite" name="documentConfig_info_favorite" checked>
-                <label for="documentConfig_info_favorite">Favorite</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_info_favorite" name="documentConfig_info_favorite" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_info_favorite">Favorite</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" checked>
-                <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
+                </label>
             </div>
             <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder" style="padding-left: 24px;">
                 <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem">
@@ -165,8 +171,11 @@
                         <input type="text" id="documentConfig_info_sharingSettings_user_0" name="documentConfig_info_sharingSettings_user_0" value="John Smith">
                     </div>
                     <div class="line">
-                        <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_0" name="documentConfig_info_sharingSettings_isLink_0">
-                        <label for="documentConfig_info_sharingSettings_isLink_0">Is Link</label>
+                        <label class="dataItemSpan">
+                            <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_0" name="documentConfig_info_sharingSettings_isLink_0" hidden="hidden">
+                            <span></span>
+                            <label for="documentConfig_info_sharingSettings_isLink_0">Is link</label>
+                        </label>
                     </div>
                     <hr />
                 </div> 
@@ -262,8 +271,11 @@
                 <input type="text" id="documentConfig_info_sharingSettings_user_${i}" name="documentConfig_info_sharingSettings_user_${i}" value="New user ${i}">
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_${i}" name="documentConfig_info_sharingSettings_isLink_${i}">
-                <label for="documentConfig_info_sharingSettings_isLink_${i}">Is Link</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_${i}" name="documentConfig_info_sharingSettings_isLink_${i}" hidden="hidden">
+                    <span></span>
+                    <label for="documentConfig_info_sharingSettings_isLink_${i}">Is link</label>
+                </label>
             </div>
             <hr />
         </div>`;
