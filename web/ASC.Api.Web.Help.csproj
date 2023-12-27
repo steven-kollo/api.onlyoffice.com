@@ -2437,6 +2437,7 @@
     <Content Include="Content\img\Editor\feedback.png" />
     <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\goback.png" />
+    <Content Include="Content\img\Editor\green-checkbox.svg" />
     <Content Include="Content\img\Editor\help.png" />
     <Content Include="Content\img\Editor\hideNotes.png" />
     <Content Include="Content\img\Editor\hideRulers.png" />

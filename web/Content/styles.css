@@ -2971,3 +2971,40 @@ select {
         margin: 8px 0;
         white-space: pre;
     }
+
+.dataItemSpan {
+    display: flex;
+    margin-top: 8px;
+}
+
+.dataItemSpan span {
+    -webkit-appearance: none;
+    background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    margin-right: 2px;
+    margin-left: 0;
+    outline: none;
+    width: 16px;
+}
+
+.dataItemSpan span:hover,
+.dataItemSpan span:active {
+    border-color: #666
+}
+
+.dataItemSpan input:checked + span {
+    background-color: #f9feef;
+    border-color: #8bba25;
+    background-image: url("img/Editor/green-checkbox.svg");
+    background-position: center;
+    background-repeat: no-repeat
+}
