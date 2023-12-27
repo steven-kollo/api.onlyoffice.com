@@ -318,10 +318,13 @@
             <input type="text" id="editorConfig_callbackUrl" name="editorConfig_callbackUrl" value="https://example.com/url-to-callback.ashx">
         </div>
         <div class="line">
-            <input type="checkbox" id="editorConfig_coEditing" name="editorConfig_coEditing" checked>
-            <label for="editorConfig_coEditing">coEditing</label>
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_coEditing" name="editorConfig_coEditing" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_coEditing">coEditing</label>
+            </label>
         </div>
-        <div id="holder_editorConfig_coEditing" class="config_object_holder" style="padding-left: 24px;">
+        <div id="holder_editorConfig_coEditing" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div class="line">
                 <label for="editorConfig_coEditing_mode">Mode</label>
                 <select id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
@@ -330,8 +333,11 @@
                 </select>
             </div>
             <div class="line">
-                <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" checked>
-                <label for="editorConfig_coEditing_change">Change</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_coEditing_change">Change</label>
+                </label>
             </div>
         </div>
         <div class="line">
@@ -354,10 +360,13 @@
             </select>
         </div>
         <div class="line">
-            <input type="checkbox" id="editorConfig_recent" name="editorConfig_recent" checked>
-            <label for="editorConfig_recent">Recent</label>
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_recent" name="editorConfig_recent" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_recent">Recent</label>
+            </label>
         </div>
-        <div id="holder_editorConfig_recent" class="config_object_holder" style="padding-left: 24px;">
+        <div id="holder_editorConfig_recent" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div id="holder_editorConfig_recent_0" class="editorConfig_recentItem">
                 <div class="line">
                     <label for="editorConfig_recent_folder_0">Folder</label>
@@ -375,18 +384,20 @@
             </div> 
         </div>
         <div style="padding-left: 24px;">
-            <button id="addButton_editorConfig_recent" class="add-button">+</button>
+            <button id="addButton_editorConfig_recent" class="add-button" hidden>+</button>
         </div>
         <div class="line">
             <label for="editorConfig_region">Region</label>
             <input type="text" id="editorConfig_region" name="editorConfig_region" value="en-US">
         </div>
-
-       <div class="line">
-            <input type="checkbox" id="editorConfig_templates" name="editorConfig_templates" checked>
-            <label for="editorConfig_templates">Templates</label>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_templates" name="editorConfig_templates" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_templates">Templates</label>
+            </label>
         </div>
-        <div id="holder_editorConfig_templates" class="config_object_holder" style="padding-left: 24px;">
+        <div id="holder_editorConfig_templates" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div id="holder_editorConfig_templates_0" class="editorConfig_templatesItem">
                 <div class="line">
                     <label for="editorConfig_templates_image_0">Image</label>
@@ -404,13 +415,16 @@
             </div> 
         </div>
         <div style="padding-left: 24px;">
-            <button id="addButton_editorConfig_templates" class="add-button">+</button>
+            <button id="addButton_editorConfig_templates" class="add-button" hidden>+</button>
         </div>
         <div class="line">
-            <input type="checkbox" id="editorConfig_user" name="editorConfig_user" checked>
-            <label for="editorConfig_user">User</label>
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_user" name="editorConfig_user" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_user">User</label>
+            </label>
         </div>
-        <div id="holder_editorConfig_user" class="config_object_holder" style="padding-left: 24px;">
+        <div id="holder_editorConfig_user" class="config_object_holder" style="padding-left: 24px;" hidden>
             <div class="line">
                 <label for="editorConfig_user_group">Group</label>
                 <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
@@ -482,11 +496,13 @@
         updateConfig();
     });
 
+    $("#editorConfig_coEditing").change(showHideConfigObject);
     $('#addButton_editorConfig_recent').click(addRecentItem);
     $("#editorConfig_recent").change(showHideConfigObject);
     $('#addButton_editorConfig_templates').click(addTemplatesItem);
     $("#editorConfig_templates").change(showHideConfigObject);
-   
+    $("#editorConfig_user").change(showHideConfigObject);
+
     function showHideConfigObject(e) {
         var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
         document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
@@ -543,7 +559,8 @@
             recentString += recentString == "" ? string : "," + string;
             i++;
         }
-        return recentString == "" ? "" : `"recent": [${recentString}
+        return recentString == "" ? "" : `
+        "recent": [${recentString}
         ],`;
     }
 
@@ -597,8 +614,9 @@
             templatesString += templatesString == "" ? string : "," + string;
             i++;
         }
-        return templatesString == "" ? "" : `"templates": [${templatesString}
-        ],`;
+        return templatesString == "" ? "" : `,
+        "templates": [${templatesString}
+        ]`;
     }
 
     function updateConfig() {
@@ -618,23 +636,27 @@
             document.getElementById("addButton_editorConfig_templates").hidden = true;
         }
 
-        var editorConfig = `{
-        "coEditing": {
+        var coEditing = !getFieldValue("editorConfig_coEditing") ? "" : `"coEditing": {
             "mode": ${getFieldValue("editorConfig_coEditing_mode")},
             "change": ${getFieldValue("editorConfig_coEditing_change")}
         },
-        "createUrl": ${getFieldValue("editorConfig_createUrl")},
-        "lang": ${getFieldValue("editorConfig_lang")},
-        "location": ${getFieldValue("editorConfig_location")},
-        "mode": ${getFieldValue("editorConfig_mode")},
-        ${recent}
-        "region": ${getFieldValue("editorConfig_region")},
-        ${templates}
+        `;
+
+        var user = !getFieldValue("editorConfig_user") ? "" : `,
         "user": {
             "group": ${getFieldValue("editorConfig_user_group")},
             "id": ${getFieldValue("editorConfig_user_id")},
             "name": ${getFieldValue("editorConfig_user_name")}
-        }
+        }`;
+
+        var location = getFieldValue("editorConfig_location") == 0 ? `""` : getFieldValue("editorConfig_location");
+
+        var editorConfig = `{
+        ${coEditing}"createUrl": ${getFieldValue("editorConfig_createUrl")},
+        "lang": ${getFieldValue("editorConfig_lang")},
+        "location": ${location},
+        "mode": ${getFieldValue("editorConfig_mode")},${recent}
+        "region": ${getFieldValue("editorConfig_region")}${templates}${user}
     }`;
         var config_string =
             `var docEditor = new DocsAPI.DocEditor("placeholder", {
