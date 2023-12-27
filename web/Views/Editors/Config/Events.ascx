@@ -43,7 +43,7 @@
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
 </ul>
 <div class="header-gray">Example</div>
-<div id="controlFields" style="width: 100%; padding-right:20px;">
+<div id="controlFields" style="width: 100%; padding-right:20px; margin-bottom: 20px;">
     <div id="info" class="control-panel">
         <table id="events-table" style="text-align: left;"></table>
     </div>
@@ -190,20 +190,29 @@
         tr.innerHTML = `
         <th>
             <div class="line">
-                <input type="checkbox" id="event_${eventNames[i]}" name="event_${eventNames[i]}">
-                <label style="text-transform: none;" for="event_${eventNames[i]}">${eventNames[i]}</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i]}" name="event_${eventNames[i]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i]}">${eventNames[i]}</label>
+                </label>
             </div>
         </th>
         <th>
             <div class="line">
-                <input type="checkbox" id="event_${eventNames[i + 11]}" name="event_${eventNames[i + 11]}">
-                <label style="text-transform: none;" for="event_${eventNames[i + 11]}">${eventNames[i + 11]}</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i + 11]}" name="event_${eventNames[i + 11]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i + 11]}">${eventNames[i + 11]}</label>
+                </label>
             </div>
         </th>
         <th>
             <div class="line">
-                <input type="checkbox" id="event_${eventNames[i + 22]}" name="event_${eventNames[i + 22]}">
-                <label style="text-transform: none;" for="event_${eventNames[i + 22]}">${eventNames[i + 22]}</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i + 22]}" name="event_${eventNames[i + 22]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i + 22]}">${eventNames[i + 22]}</label>
+                </label>
             </div>
         </th>`;
         document.getElementById("events-table").appendChild(tr);
