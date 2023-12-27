@@ -303,16 +303,32 @@
     <div id="controlFields" style="padding-right:20px;">
         <div id="permissions" class="control-panel">
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" checked>
-                <label for="documentConfig_permissions_chat">Chat</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_chat">Chat</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_comment" name="documentConfig_permissions_comment" checked>
-                <label for="documentConfig_permissions_comment">Comment</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_comment" name="documentConfig_permissions_comment" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_comment">Comment</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" checked>
-                <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_copy" name="documentConfig_permissions_copy" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_copy">Copy</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
+                </label>
             </div>
             <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder" style="padding-left: 24px;">
                 <div class="line">
@@ -329,48 +345,74 @@
                 </div>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_copy" name="documentConfig_permissions_copy" checked>
-                <label for="documentConfig_permissions_copy">Copy</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_deleteCommentAuthorOnly" name="documentConfig_permissions_deleteCommentAuthorOnly" hidden="hidden">
+                    <span></span>
+                    <label for="documentConfig_permissions_deleteCommentAuthorOnly">Delete Comment Author Only</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_deleteCommentAuthorOnly" name="documentConfig_permissions_deleteCommentAuthorOnly">
-                <label for="documentConfig_permissions_deleteCommentAuthorOnly">Delete Comment Author Only</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_download" name="documentConfig_permissions_download" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_download">Download</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_download" name="documentConfig_permissions_download" checked>
-                <label for="documentConfig_permissions_download">Download</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_edit" name="documentConfig_permissions_edit" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_edit">Edit</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_edit" name="documentConfig_permissions_edit" checked>
-                <label for="documentConfig_permissions_edit">Edit</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_editCommentAuthorOnly" name="documentConfig_permissions_editCommentAuthorOnly" hidden="hidden">
+                    <span></span>
+                    <label for="documentConfig_permissions_editCommentAuthorOnly">Edit Comment Author Only</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_editCommentAuthorOnly" name="documentConfig_permissions_editCommentAuthorOnly">
-                <label for="documentConfig_permissions_editCommentAuthorOnly">Edit Comment Author Only</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_fillForms" name="documentConfig_permissions_fillForms" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_fillForms">Fill Forms</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_fillForms" name="documentConfig_permissions_fillForms" checked>
-                <label for="documentConfig_permissions_fillForms">Fill Forms</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_modifyContentControl" name="documentConfig_permissions_modifyContentControl" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_modifyContentControl">Modify Content Control</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_modifyContentControl" name="documentConfig_permissions_modifyContentControl" checked>
-                <label for="documentConfig_permissions_modifyContentControl">Modify Content Control</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_modifyFilter" name="documentConfig_permissions_modifyFilter" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_modifyFilter">Modify Filter</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_modifyFilter" name="documentConfig_permissions_modifyFilter" checked>
-                <label for="documentConfig_permissions_modifyFilter">Modify Filter</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_print">Print</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" checked>
-                <label for="documentConfig_permissions_print">Print</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_protect" name="documentConfig_permissions_protect" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_protect">Protect</label>
+                </label>
             </div>
             <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_protect" name="documentConfig_permissions_protect" checked>
-                <label for="documentConfig_permissions_protect">Protect</label>
-            </div>
-            <div class="line">
-                <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review">
-                <label for="documentConfig_permissions_review">Review</label>
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review" hidden="hidden">
+                    <span></span>
+                    <label for="documentConfig_permissions_review">Review</label>
+                </label>
             </div>
             <div class="line">
                 <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
@@ -443,16 +485,28 @@
         updateConfig();
     });
 
+    $("#documentConfig_permissions_commentGroups").change(showHideConfigObject);
+
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
+
     function updateConfig() {
-        var permissions = `{
-            "chat": ${getFieldValue("documentConfig_permissions_chat")},
-            "comment": ${getFieldValue("documentConfig_permissions_comment")},
-            "copy": ${getFieldValue("documentConfig_permissions_copy")},
+        var commentGroups = `
             "commentGroups": {
                 "edit": ${getFieldValue("documentConfig_permissions_commentGroups_edit")},
                 "remove": ${getFieldValue("documentConfig_permissions_commentGroups_remove")},
                 "view": ${getFieldValue("documentConfig_permissions_commentGroups_view")}
-            },
+            },`;
+        if (!getFieldValue("documentConfig_permissions_commentGroups")) {
+            commentGroups = "";
+        }
+        var permissions = `{
+            "chat": ${getFieldValue("documentConfig_permissions_chat")},
+            "comment": ${getFieldValue("documentConfig_permissions_comment")},
+            "copy": ${getFieldValue("documentConfig_permissions_copy")},${commentGroups}
             "deleteCommentAuthorOnly": ${getFieldValue("documentConfig_permissions_deleteCommentAuthorOnly")},
             "download": ${getFieldValue("documentConfig_permissions_download")},
             "edit": ${getFieldValue("documentConfig_permissions_edit")},
@@ -490,7 +544,6 @@
                 window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
             }
         });
-        
         
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
