@@ -6,76 +6,76 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    SuiteCRM ONLYOFFICE integration plugin
+    SuiteCRM ONLYOFFICE 集成插件
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">SuiteCRM ONLYOFFICE integration plugin</span>
+        <span class="hdr">SuiteCRM ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-suitecrm" target="_blank">plugin</a> enables users to edit office documents from <a href="https://suitecrm.com/" target="_blank">SuiteCRM</a> using ONLYOFFICE Docs.</p>
+    <p class="dscr">此<a href="https://github.com/ONLYOFFICE/onlyoffice-suitecrm" target="_blank">插件</a>使用户能够从<a href="https://suitecrm.com/" target="_blank">SuiteCRM</a> 用 ONLYOFFICE 文档来编辑Office文档。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">功能</h2>
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
-        <li>The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, TXT, CSV.</li>
-        <li>The plugin allows users to edit text documents, spreadsheets, presentations, and create and fill out digital forms.</li>
-        <li>The plugin will create a new <b>Open in ONLYOFFICE</b> menu option within the document library for office documents.
-            This allows multiple users to collaborate in real time and save back those changes to SuiteCRM.</li>
+        <li>目前可以编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
+        <li>以下格式仅供查看：PDF、ODT、ODS、ODP、DOC、XLS、PPT、PPS、EPUB、RTF、HTML、HTM、TXT、CSV。</li>
+        <li>该插件允许用户编辑文本文档、电子表格、演示文稿以及创建和填写数字表单。</li>
+        <li>该插件将在 Office 文档的文档库中创建一个新的菜单选项：<b>在 ONLYOFFICE 中打开</b>。
+            这允许多个用户实时协作并将这些更改保存回 SuiteCRM。</li>
     </ul>
 
 
-    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="install-doc" class="copy-link">安装ONLYOFFICE文档</h2>
     <p>
-        You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from SuiteCRM and any end clients.
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>.
-        ONLYOFFICE Docs must also be able to POST to SuiteCRM directly.
+        您需要一个可从 SuiteCRM 和任何最终客户端解析和连接的 ONLYOFFICE Docs（文档服务器）实例。
+        如果情况并非如此，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE Docs 还必须能够直接 POST 到 SuiteCRM。
     </p>
-    <p>The easiest way to install an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
+    <p>安装 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
-    <h2 id="install" class="copy-link">Installing SuiteCRM ONLYOFFICE integration plugin</h2>
-    <p>The latest compiled package files of the ONLYOFFICE integration plugin are available <a href="https://github.com/ONLYOFFICE/onlyoffice-suitecrm/releases" target="_blank">here</a>.</p>
-    <p>To start using ONLYOFFICE Docs with SuiteCRM, follow these steps:</p>
+    <h2 id="install" class="copy-link">安装 SuiteCRM ONLYOFFICE 集成插件</h2>
+    <p>ONLYOFFICE集成插件的最新编译包文件可以在<a href="https://github.com/ONLYOFFICE/onlyoffice-suitecrm/releases" target="_blank">此处</a>获取。</p>
+    <p>要开始将ONLYOFFICE文档与SuiteCRM一起使用，请执行以下步骤：</p>
     <ol>
-        <li>Launch your SuiteCRM, switch to <b>Admin -> Admin Tools -> Module Loader</b> and upload the ONLYOFFICE plugin archive.</li>
-        <li>Install the uploaded module by pressing the <b>Install</b> button.</li>
-        <li>Switch to <b>Admin -> Admin Tools -> Repair</b> and run <b>Quick Repair and Rebuild</b>.</li>
+        <li>启动您的 SuiteCRM，切换到<b>Admin -> Admin Tools -> Module Loader</b>并上传 ONLYOFFICE 插件压缩文档。</li>
+        <li>按<b>Install</b>按钮安装上传的模块。</li>
+        <li>切换到<b>Admin -> Admin Tools -> Repair</b>并运行<b>Quick Repair and Rebuild</b>。</li>
     </ol>
 
 
-    <h2 id="configuration" class="copy-link">Configuring SuiteCRM ONLYOFFICE integration plugin</h2>
-    <p>The plugin settings page is available after installation: <b>Admin -> ONLYOFFICE -> ONLYOFFICE Settings</b>.</p>
+    <h2 id="configuration" class="copy-link">配置 SuiteCRM ONLYOFFICE 集成插件</h2>
+    <p>安装后可以看到插件设置页面： <b>Admin -> ONLYOFFICE -> ONLYOFFICE Settings</b>。</p>
     <ul>
         <li>
-            <p><b>Document Server address</b>. Enter the name of the server with ONLYOFFICE Docs installed:</p>
+            <p><b>文档服务器地址</b>。 输入安装了 ONLYOFFICE Docs 的服务器的名称：</p>
             <span class="commandline">http://documentserver/</span>
             <p>
-                where <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.
-                The address must be accessible from the user browser and from the SuiteCRM server.
-                The SuiteCRM server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
+                其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。
+                该地址必须可从用户浏览器和 SuiteCRM 服务器访问。
+                SuiteCRM 服务器地址还必须可从 <b>ONLYOFFICE Docs</b> 访问才能正常工作。
             </p>
         </li>
-        <li><b>Document Server Secret</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
-            Specify your own secret key on the SuiteCRM <b>ONLYOFFICE Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
+        <li> <b>文档服务器秘钥</b>。 从版本 7.2 开始，默认启用 JWT，并自动生成密钥以限制对 ONLYOFFICE Docs 的访问，这也是出于安全原因和数据完整性的考虑。
+            在 SuiteCRM <b>ONLYOFFICE Settings</b> 页面上指定您自己的密钥。 在 ONLYOFFICE Docs <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
     </ul>
 
 
-    <h2 id="usage" class="copy-link">Using SuiteCRM ONLYOFFICE integration plugin</h2>
-    <p>Once the plugin is installed and configured, you can edit and collaborate on office files in the <b>Documents</b> module:</p>
+    <h2 id="usage" class="copy-link">使用 SuiteCRM ONLYOFFICE 集成插件</h2>
+    <p>安装并配置插件后，您可以在<b>Documents</b>模块中编辑和协作处理office文件：</p>
     <ol>
-        <li>Go to the <b>Documents</b> module.</li>
-        <li>Open the <b>Detail View</b> page by clicking the file name.</li>
-        <li>On the <b>Detail View</b> page, click <b>Open in ONLYOFFICE</b> in the drop-down <b>ACTIONS</b> menu - the file will open in a new tab.</li>
+        <li>转到<b>Documents</b>模块。</li>
+        <li>点击文件名打开<b>Detail View</b>页面。</li>
+        <li>在<b>Detail View</b>页面上，点击<b>ACTIONS</b>下拉菜单中的<b>Open in ONLYOFFICE</b> - 文件将在新选项卡中打开。</li>
     </ol>
 
 
-    <h2 id="howitworks" class="copy-link">How it works</h2>
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <h2 id="howitworks" class="copy-link">工作原理</h2>
+    <p>ONLYOFFICE 集成遵循<a href="<%= Url.Action("basic") %>">此处</a>的 API文档。</p>
 
     <br />
-    <p>Download the SuiteCRM ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-suitecrm" target="_blank">here</a>.</p>
+    <p><a href="https://github.com/ONLYOFFICE/onlyoffice-suitecrm" target="_blank">此处</a>下载 SuiteCRM ONLYOFFICE 集成插件。</p>
 
 </asp:Content>

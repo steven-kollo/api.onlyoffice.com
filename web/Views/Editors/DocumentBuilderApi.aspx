@@ -39,9 +39,9 @@
         <tbody>
             <tr class="tablerow">
                 <td id="argument" class="copy-link">argument</td>
-                <td>Defines the arguments to pass to the created document.</td>
+                <td>定义要传递给创建的文档的参数。</td>
                 <td>object</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="async" class="copy-link">async</td>
@@ -178,7 +178,7 @@
 }
 </pre>
 
-    <div id="sample-argument" class="header-gray copy-link">Sample of JSON object contains the arguments sent to <b>document builder service</b> for the first synchronous request</div>
+    <div id="sample-argument" class="header-gray copy-link">JSON 对象的示例包含发送到第一个同步请求的<b>文档生成器服务</b>的参数</div>
     <pre>
 {
     "async": false,
@@ -187,11 +187,11 @@
 }
 </pre>
     <p>
-        Where <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装<b>文档存储服务</b>的服务器的名称。
+         请参阅<a href="<%= Url.Action("howitworks") %>">工作原理</a>部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
     </p>
 
-    <div class="header-gray">Response format</div>
+    <div class="header-gray">响应格式</div>
     <pre>
 {
     "key": "af86C7e71Ca8",
@@ -242,7 +242,7 @@
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>
-                <td>Token signature is expired.</td>
+                <td>令牌签名已过期。</td>
             </tr>--%>
         </tbody>
     </table>
