@@ -43,6 +43,9 @@
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
 </ul>
 <div class="header-gray">Example</div>
+<p>
+Event messages will be available in your browser's DevTools console.
+</p>
 <div id="controlFields" style="width: 100%; padding-right:20px; margin-bottom: 20px;">
     <div id="info" class="control-panel">
         <table id="events-table" style="text-align: left;"></table>
