@@ -40,6 +40,19 @@
     </ul>
     <br />
 
+    <p><b>Comment methods</b></p>
+    <ul>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/api/addcomment") %>">Api/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/addcomment") %>">ApiBlockLvlSdt/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apidocument/addcomment") %>">ApiDocument/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/addcomment") %>">ApiInlineLvlSdt/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apiparagraph/addcomment") %>">ApiParagraph/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apirange/addcomment") %>">ApiRange/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apirun/addcomment") %>">ApiRun/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apitable/addcomment") %>">ApiTable/AddComment</a> method of Text document API.</li>
+    </ul>
+    <br />
+
     <p><b>Global</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("global") %>#FormData">FormData</a> object to Global type definitions.</li>
