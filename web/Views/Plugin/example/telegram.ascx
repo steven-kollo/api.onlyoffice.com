@@ -56,7 +56,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
         "de": "Telegram"
     },
     "guid" : "asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}",
-    "version" : "1.0.0",
+    "version" : "1.0.2",
 
     "variations" : [
         {
@@ -79,7 +79,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
                 }
             ],
             "isViewer"        : true,
-            "EditorsSupport"  : ["word", "cell", "slide"],
+            "EditorsSupport"  : ["word", "cell", "slide", "pdf"],
             "isVisual"        : true,
             "isModal"         : false,
             "isInsideMode"    : true,
@@ -93,7 +93,8 @@ The plugin has no access to the camera and microphone, so you will be unable to 
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities", "communication", "entertainment"]
             }
         }
     ]
