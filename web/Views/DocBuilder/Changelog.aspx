@@ -53,11 +53,11 @@
     </ul>
     <br />
 
-    <p><b>Global</b></p>
+    <p><b>Simple types</b></p>
     <ul>
-        <li>Added the <a href="<%= Url.Action("global") %>#FormData">FormData</a> object to Global type definitions.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#FormSpecificType">FormSpecificType</a> type to Global type definitions.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#FreezePaneType">FreezePaneType</a> type to Global type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#FormData">FormData</a> object to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#FormSpecificType">FormSpecificType</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#FreezePaneType">FreezePaneType</a> type to the simple type definitions.</li>
     </ul>
     <br />
 
@@ -129,10 +129,10 @@
     </ul>
     <br />
 
-    <p><b>Global</b></p>
+    <p><b>Simple types</b></p>
     <ul>
-        <li>Added the <a href="<%= Url.Action("global") %>#SearchData">SearchData</a> object to Global type definitions.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#ReplaceData">ReplaceData</a> object to Global type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SearchData">SearchData</a> object to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ReplaceData">ReplaceData</a> object to the simple type definitions.</li>
     </ul>
     <br />
 
@@ -958,9 +958,9 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/convertdocument") %>">Api/ConvertDocument</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/tohtml") %>">ApiDocument/ToHtml</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/tomarkdown") %>">ApiDocument/ToMarkdown</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#SortOrientation">SortOrientation</a> global type.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#SortHeader">SortHeader</a> global type.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#SortOrder">SortOrder</a> global type.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortOrientation">SortOrientation</a> simple type.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortHeader">SortHeader</a> simple type.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortOrder">SortOrder</a> simple type.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/setsort") %>">ApiRange/SetSort</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/recalculateallformulas") %>">Api/RecalculateAllFormulas</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/setlanguage") %>">ApiPresentation/SetLanguage</a> method to Presentation API.</li>
