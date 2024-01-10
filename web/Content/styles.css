@@ -2875,16 +2875,31 @@ select {
 
 
 #controlFields {
+    padding-right: 32px;
     width: 40%;
     display: inline-block;
     float: left;
 }
 
     #controlFields label {
-        text-transform: uppercase;
-        color: #666666;
+        color: #333333;
         font-size: 12px;
         padding: 0px 5px;
+    }
+        #controlFields label.input_label {
+            color: #666666;
+            text-transform: uppercase;
+        }
+        #controlFields label.dataItemSpan {
+            padding: 0px;
+        }
+
+    #controlFields input {
+        font-size: 12px;
+    }
+
+    #controlFields select {
+        font-size: 12px;
     }
 
     #controlFields select {
@@ -2894,7 +2909,6 @@ select {
         padding: 0;
         display: block;
         margin: 0;
-        font-size: 14px;
     }
 
     #controlFields input[type="text"] {
