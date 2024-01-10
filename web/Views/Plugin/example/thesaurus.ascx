@@ -56,7 +56,7 @@
         "de": "Thesaurus"
     },
     "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9840}",
-    "version": "1.0.0",
+    "version": "1.0.2",
 
     "variations": [
         {
@@ -110,7 +110,7 @@
                 }
             ],
             "isViewer": true,
-            "EditorsSupport": [ "word", "cell", "slide" ],
+            "EditorsSupport": [ "word", "cell", "slide", "pdf" ],
 
             "isVisual": true,
             "isModal": false,
@@ -126,7 +126,8 @@
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities"]
             }
         }
     ]

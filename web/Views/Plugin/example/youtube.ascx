@@ -53,7 +53,7 @@
         "de": "YouTube"
     },
     "guid": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}",
-    "version": "1.0.2",
+    "version": "1.0.4",
 
     "variations": [
         {
@@ -87,12 +87,13 @@
             "buttons": [
                 {
                     "text": "Ok",
-                    "primary": true
+                    "primary": true,
+                    "isViewer": false
                 },
                 {
                     "text": "Cancel",
                     "primary": false,
-                    "isViewer": false,
+                    "isViewer": true,
                     "textLocale": {
                         "fr": "Annuler",
                         "es": "Cancelar",
@@ -107,11 +108,15 @@
                     "light" : "#ED3323",
                     "dark" : "#ED3323"
                 },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
+                "screenshots" : [
+                    "resources/store/screenshots/screen_1.png",
+                    "resources/store/screenshots/screen_2.png"
+                ],
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities", "entertainment", "recommended"]
             }
         }
     ]
