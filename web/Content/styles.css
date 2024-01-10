@@ -2885,10 +2885,6 @@ select {
         color: #333333;
         font-size: 12px;
     }
-        #controlFields label.input_label {
-            color: #666666;
-            text-transform: uppercase;
-        }
 
     #controlFields input {
         font-size: 12px;
@@ -2928,6 +2924,13 @@ select {
     #controlFields .line {
         margin-bottom: 6px;
     }
+    #controlFields .line.input_line{
+        margin-bottom: 4px;
+    }
+        #controlFields .line.input_line label {
+            color: #666666;
+            text-transform: uppercase;
+        }
 
     #controlFields #checkboxes {
         display: none;
