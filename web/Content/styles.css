@@ -2884,20 +2884,17 @@ select {
     #controlFields label {
         color: #333333;
         font-size: 12px;
-        padding: 0px 5px;
     }
         #controlFields label.input_label {
             color: #666666;
             text-transform: uppercase;
         }
-        #controlFields label.dataItemSpan {
-            padding: 0px;
-        }
 
     #controlFields input {
         font-size: 12px;
+        background-color: #F9F9F9;
     }
-
+    
     #controlFields select {
         font-size: 12px;
     }
@@ -2906,6 +2903,7 @@ select {
         width: 100%;
         height: 36px;
         border: 1px #E5E5E5 solid;
+        background-color: #F9F9F9;
         padding: 0;
         display: block;
         margin: 0;
@@ -2928,7 +2926,7 @@ select {
     }
 
     #controlFields .line {
-        margin: 3px 0;
+        margin-bottom: 6px;
     }
 
     #controlFields #checkboxes {
@@ -2988,7 +2986,7 @@ select {
 
 .dataItemSpan {
     display: flex;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .dataItemSpan span {
@@ -3010,6 +3008,10 @@ select {
     width: 16px;
 }
 
+    .dataItemSpan label {
+        padding: 0px 5px;
+    }
+
 .dataItemSpan span:hover,
 .dataItemSpan span:active {
     border-color: #666
@@ -3021,4 +3023,12 @@ select {
     background-image: url("img/Editor/green-checkbox.svg");
     background-position: center;
     background-repeat: no-repeat
+}
+
+.config_object_holder {
+    padding-left: 24px;
+}
+
+.config_nested_group {
+    margin-bottom: 18px;
 }
