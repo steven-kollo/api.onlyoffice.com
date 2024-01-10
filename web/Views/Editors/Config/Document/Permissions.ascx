@@ -300,7 +300,7 @@
 
 <div class="header-gray">Example</div>
 <div>
-    <div id="controlFields" style="padding-right:20px;">
+    <div id="controlFields">
         <div id="permissions" class="control-panel">
             <div class="line">
                 <label class="dataItemSpan">
@@ -330,16 +330,16 @@
                     <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
                 </label>
             </div>
-            <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder" style="padding-left: 24px;">
-                <div class="line">
+            <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder">
+                <div class="line input_line">
                     <label for="documentConfig_permissions_commentGroups_edit">Edit</label>
                     <input type="text" id="documentConfig_permissions_commentGroups_edit" name="documentConfig_permissions_commentGroups_edit" value='["Group2", ""]'>
                 </div>
-                <div class="line">
+                <div class="line input_line">
                     <label for="documentConfig_permissions_commentGroups_remove">Remove</label>
                     <input type="text" id="documentConfig_permissions_commentGroups_remove" name="documentConfig_permissions_commentGroups_remove" value='[""]'>
                 </div>
-                <div class="line">
+                <div class="line input_line">
                     <label for="documentConfig_permissions_commentGroups_view">View</label>
                     <input type="text" id="documentConfig_permissions_commentGroups_view" name="documentConfig_permissions_commentGroups_view" value='""'>
                 </div>
@@ -414,11 +414,11 @@
                     <label for="documentConfig_permissions_review">Review</label>
                 </label>
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
                 <input type="text" id="documentConfig_permissions_reviewGroups" name="documentConfig_permissions_reviewGroups" value='["Group1", "Group2", ""]'>
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="documentConfig_permissions_userInfoGroups">User Info Groups</label>
                 <input type="text" id="documentConfig_permissions_userInfoGroups" name="documentConfig_permissions_userInfoGroups" value='["Group1", ""]'>
             </div>

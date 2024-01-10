@@ -128,17 +128,17 @@
 
 <div class="header-gray">Example</div>
 <div>
-    <div id="controlFields" style="padding-right:20px;">
+    <div id="controlFields">
         <div id="info" class="control-panel">
-            <div class="line">
+            <div class="line input_line">
                 <label for="documentConfig_info_folder">Folder</label>
                 <input type="text" id="documentConfig_info_folder" name="documentConfig_info_folder" value="Example Files">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="documentConfig_info_owner">Owner</label>
                 <input type="text" id="documentConfig_info_owner" name="documentConfig_info_owner" value="John Smith">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="documentConfig_info_uploaded">Uploaded</label>
                 <input type="text" id="documentConfig_info_uploaded" name="documentConfig_info_uploaded" value="2010-07-07 3:46 PM">
             </div>
@@ -156,9 +156,9 @@
                     <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
                 </label>
             </div>
-            <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder" style="padding-left: 24px;">
-                <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem">
-                    <div class="line">
+            <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder">
+                <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem config_nested_group">
+                    <div class="line input_line">
                         <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
                         <select id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
                             <option value="Full Access" selected>Full Access</option>
@@ -166,7 +166,7 @@
                             <option value="Deny Access">Deny Access</option>
                         </select>
                     </div>
-                    <div class="line">
+                    <div class="line input_line">
                         <label for="documentConfig_info_sharingSettings_user_0">User</label>
                         <input type="text" id="documentConfig_info_sharingSettings_user_0" name="documentConfig_info_sharingSettings_user_0" value="John Smith">
                     </div>
@@ -177,7 +177,6 @@
                             <label for="documentConfig_info_sharingSettings_isLink_0">Is link</label>
                         </label>
                     </div>
-                    <hr />
                 </div> 
             </div>
             <div style="padding-left: 24px;">
@@ -257,8 +256,8 @@
         }
         let div = document.createElement("div");
         div.innerHTML = `
-        <div id="holder_documentConfig_info_sharingSettings_${i}" class="documentConfig_info_sharingSettingsItem">
-            <div class="line">
+        <div id="holder_documentConfig_info_sharingSettings_${i}" class="documentConfig_info_sharingSettingsItem config_nested_group">
+            <div class="line input_line">
                 <label for="documentConfig_info_sharingSettings_permissions_${i}">Permissions</label>
                 <select id="documentConfig_info_sharingSettings_permissions_${i}" name="documentConfig_info_sharingSettings_permissions_${i}">
                     <option value="Full Access">Full Access</option>
@@ -266,7 +265,7 @@
                     <option value="Deny Access">Deny Access</option>
                 </select>
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="documentConfig_info_sharingSettings_user_${i}">User</label>
                 <input type="text" id="documentConfig_info_sharingSettings_user_${i}" name="documentConfig_info_sharingSettings_user_${i}" value="New user ${i}">
             </div>
@@ -277,7 +276,6 @@
                     <label for="documentConfig_info_sharingSettings_isLink_${i}">Is link</label>
                 </label>
             </div>
-            <hr />
         </div>`;
         document.getElementById("holder_documentConfig_info_sharingSettings").appendChild(div);
         $("#controlFields").find("input,select").change(function () {

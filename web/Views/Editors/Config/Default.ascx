@@ -81,9 +81,9 @@
 
 <div class="header-gray">Example</div>
 <div>
-    <div id="controlFields" style="padding-right:20px;">
+    <div id="controlFields">
         <div id="info" class="control-panel">
-            <div class="line">
+            <div class="line input_line">
                 <label for="config_documentType">Document Type</label>
                 <select id="config_documentType" name="config_documentType">
                     <option value="word" selected>word</option>
@@ -91,18 +91,18 @@
                     <option value="slide">slide</option>
                 </select>
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="config_type">Type</label>
                 <select id="config_type" name="config_type">
                     <option value="desktop" selected>desktop</option>
                     <option value="mobile">mobile</option>
                 </select>
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="config_height">Height</label>
                 <input type="text" id="config_height" name="config_height" value="550px">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="config_width">Width</label>
                 <input type="text" id="config_width" name="config_width" value="100%">
             </div>

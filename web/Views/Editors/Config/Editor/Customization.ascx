@@ -1288,7 +1288,7 @@
     <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
 </p>
 
-<div id="controlFields" style="padding-right:20px;">
+<div id="controlFields">
     <div id="customization" class="control-panel">
         <div class="line">
             <label class="dataItemSpan">
@@ -1297,7 +1297,7 @@
                 <label for="editorConfig_customization_anonymous">Anonymous</label>
             </label>
         </div>
-        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder" style="padding-left: 24px;">
+        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder">
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" hidden="hidden" checked>
@@ -1305,7 +1305,7 @@
                     <label for="editorConfig_customization_anonymous">Request</label>
                 </label>
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_anonymous_label">Label</label>
                 <input type="text" id="editorConfig_customization_anonymous_label" name="editorConfig_customization_anonymous_label" value="Guest">
             </div>
@@ -1345,36 +1345,36 @@
                 <label for="editorConfig_customization_customer">Customer</label>
             </label>
         </div>
-        <div id="holder_editorConfig_customization_customer" class="config_object_holder" style="padding-left: 24px;" hidden>
-            <div class="line">
+        <div id="holder_editorConfig_customization_customer" class="config_object_holder" hidden>
+            <div class="line input_line">
                 <label for="editorConfig_customization_customer_address">Address</label>
                 <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_customer_info">Info</label>
                 <input type="text" id="editorConfig_customization_customer_info" name="editorConfig_customization_customer_info" value="Some additional information">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_customer_logo">Logo</label>
                 <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo" value="https://example.com/logo-big.png">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_customer_logoDark">Logo Dark</label>
                 <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://example.com/dark-logo-big.png">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_customer_mail">Mail</label>
                 <input type="text" id="editorConfig_customization_customer_mail" name="editorConfig_customization_customer_mail" value="john@example.com">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_customer_name">Name</label>
                 <input type="text" id="editorConfig_customization_customer_name" name="editorConfig_customization_customer_name" value="John Smith and Co.">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_customer_phone">phone</label>
                 <input type="text" id="editorConfig_customization_customer_phone" name="editorConfig_customization_customer_phone" value="123456789">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_customer_www">www</label>
                 <input type="text" id="editorConfig_customization_customer_www" name="editorConfig_customization_customer_www" value="example.com">
             </div>
@@ -1393,8 +1393,8 @@
                 <label for="editorConfig_customization_feedback">Feedback</label>
             </label>
         </div>
-        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" style="padding-left: 24px;" hidden>
-            <div class="line">
+        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" hidden>
+            <div class="line input_line">
                 <label for="editorConfig_customization_feedback_url">url</label>
                 <input type="text" id="editorConfig_customization_feedback_url" name="editorConfig_customization_feedback_url" value="https://example.com">
             </div>
@@ -1420,7 +1420,7 @@
                 <label for="editorConfig_customization_goback">Go back</label>
             </label>
         </div>
-        <div id="holder_editorConfig_customization_goback" class="config_object_holder" style="padding-left: 24px;" hidden>
+        <div id="holder_editorConfig_customization_goback" class="config_object_holder" hidden>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" hidden="hidden" checked>
@@ -1435,11 +1435,11 @@
                     <label for="editorConfig_customization_goback_requestClose">Request Close</label>
                 </label>
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_goback_text">Text</label>
                 <input type="text" id="editorConfig_customization_goback_text" name="editorConfig_customization_goback_text" value="Open file location">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_goback_url">Url</label>
                 <input type="text" id="editorConfig_customization_goback_url" name="editorConfig_customization_goback_url" value="https://example.com">
             </div>
@@ -1487,16 +1487,16 @@
                 <label for="editorConfig_customization_logo">Logo</label>
             </label>
         </div>
-        <div id="holder_editorConfig_customization_logo" class="config_object_holder" style="padding-left: 24px;" hidden>
-            <div class="line">
+        <div id="holder_editorConfig_customization_logo" class="config_object_holder" hidden>
+            <div class="line input_line">
                 <label for="editorConfig_customization_logo_image">Image</label>
                 <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://example.com/logo.png">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_logo_imageDark">Image Dark</label>
                 <input type="text" id="editorConfig_customization_logo_imageDark" name="editorConfig_customization_logo_imageDark" value="https://example.com/dark-logo.png">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_customization_logo_url">Url</label>
                 <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url" value="https://example.com">
             </div>
@@ -1530,8 +1530,8 @@
             </label>
         </div>
 
-        <div id="holder_editorConfig_customization_review" class="config_object_holder" style="padding-left: 24px;" hidden>
-            <div class="line">
+        <div id="holder_editorConfig_customization_review" class="config_object_holder" hidden>
+            <div class="line input_line">
                 <label for="editorConfig_customization_review_reviewDisplay">Review Display</label>
                 <select id="editorConfig_customization_review_reviewDisplay" name="editorConfig_customization_review_reviewDisplay">
                     <option value="markup">markup</option>
@@ -1590,7 +1590,7 @@
                 <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
             </label>
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_customization_macrosMode">Macros Mode</label>
             <select id="editorConfig_customization_macrosMode" name="editorConfig_customization_macrosMode">
                 <option value="warn">Warn</option>
@@ -1598,7 +1598,7 @@
                 <option value="enable">Enable</option>
             </select>
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_customization_uiTheme">UiTheme</label>
             <select id="editorConfig_customization_uiTheme" name="editorConfig_customization_uiTheme">
                 <option value="theme-classic-light">theme-classic-light</option>
@@ -1607,7 +1607,7 @@
                 <option value="theme-contrast-dark">theme-contrast-dark</option>
             </select>
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_customization_unit">Unit</label>
             <select id="editorConfig_customization_unit" name="editorConfig_customization_unit">
                 <option value="cm">cm</option>
@@ -1615,7 +1615,7 @@
                 <option value="inch ">inch </option>
             </select>
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_customization_zoom">Zoom</label>
             <input type="text" id="editorConfig_customization_zoom" name="editorConfig_customization_zoom" value="100">
         </div>

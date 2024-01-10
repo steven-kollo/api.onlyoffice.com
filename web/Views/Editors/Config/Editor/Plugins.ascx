@@ -68,21 +68,21 @@
 </p>
 
 
-<div id="controlFields" style="padding-right:20px;">
+<div id="controlFields">
     <div id="plugins" class="control-panel">
-        <div id="holder_editorConfig_plugins_autostart" class="config_object_holder">
-            <div class="line">
+        <div id="holder_editorConfig_plugins_autostart">
+            <div class="line input_line">
                 <label for="editorConfig_plugins_autostart">Autostart</label>
-                <div id="plugins_autostart_0" class="line plugins_autostart">
+                <div id="plugins_autostart_0" class="line input_line plugins_autostart">
                     <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}">
                 </div>
             </div>
         </div>
         <button id="addButton_plugins_autostart" class="add-button" style="margin-top: 4px;">+</button>
-        <div id="holder_editorConfig_plugins_pluginsData" class="config_object_holder">
-            <div class="line">
+        <div id="holder_editorConfig_plugins_pluginsData">
+            <div class="line input_line">
                 <label for="editorConfig_plugins_pluginsData">Plugins Data</label>
-                <div id="plugins_pluginsData_0" class="line plugins_pluginsData">
+                <div id="plugins_pluginsData_0" class="line input_line plugins_pluginsData">
                     <input type="text" id="editorConfig_plugins_pluginsData_0" name="editorConfig_plugins_pluginsData_0" value="https://example.com/plugins/chess-plugin/config.json">
                 </div>
             </div>
@@ -158,7 +158,7 @@
         console.log(i)
         let div = document.createElement("div");
         div.innerHTML = `
-        <div class="plugins_${itemType}" id="plugins_${itemType}_${i}" class="line">
+        <div class="plugins_${itemType} line input_line" id="plugins_${itemType}_${i}">
             <input type="text" id="editorConfig_plugins_${itemType}_${i}" name="editorConfig_plugins_${itemType}_${i}" value="">
         </div>`;
         document.getElementById(`holder_editorConfig_plugins_${itemType}`).appendChild(div);

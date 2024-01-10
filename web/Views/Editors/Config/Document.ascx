@@ -122,9 +122,9 @@
     See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 </p>
 
-<div id="controlFields" style="padding-right:20px;">
+<div id="controlFields">
     <div id="viewedit" class="control-panel">
-        <div class="line">
+        <div class="line input_line">
             <label for="document_file_type">File type</label>
             <select id="document_file_type" name="document_file_type">
                 <option value="docx">docx</option>
@@ -133,23 +133,23 @@
                 <option value="txt">txt</option>
             </select>
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="document_key">Key</label>
             <input type="text" id="document_key" name="document_key" value="Khirz6zTPdfd7">
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="document_file_key">File key</label>
             <input type="text" id="document_file_key" name="document_file_key" value="BCFA2CED">
         </div>
-        <div class="line">
+        <div class="line input_line">
              <label for="document_instance_id">Instance Id</label>
             <input type="text" id="document_instance_id" name="document_instance_id" value="https://example.com">
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="document_title">Title</label>
             <input type="text" id="document_title" name="document_title" value="Example Title">
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="document_url">URL:</label>
             <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.docx">
         </div>
