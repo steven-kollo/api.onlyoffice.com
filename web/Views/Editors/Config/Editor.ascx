@@ -309,11 +309,11 @@
 </p>
 <div id="controlFields" style="padding-right:20px;">
     <div id="info" class="control-panel">
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_actionLink">Action Link</label>
             <input type="text" id="editorConfig_actionLink" name="editorConfig_actionLink" value="ACTION_DATA">
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_callbackUrl">Callback Url</label>
             <input type="text" id="editorConfig_callbackUrl" name="editorConfig_callbackUrl" value="https://example.com/url-to-callback.ashx">
         </div>
@@ -324,8 +324,8 @@
                 <label for="editorConfig_coEditing">coEditing</label>
             </label>
         </div>
-        <div id="holder_editorConfig_coEditing" class="config_object_holder" style="padding-left: 24px;" hidden>
-            <div class="line">
+        <div id="holder_editorConfig_coEditing" class="config_object_holder" hidden>
+            <div class="line input_line">
                 <label for="editorConfig_coEditing_mode">Mode</label>
                 <select id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
                     <option value="fast" selected>fast</option>
@@ -340,19 +340,19 @@
                 </label>
             </div>
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_createUrl">Create Url</label>
             <input type="text" id="editorConfig_createUrl" name="editorConfig_createUrl" value="https://example.com/url-to-create-document/">
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_lang">Lang</label>
             <input type="text" id="editorConfig_lang" name="editorConfig_lang" value="en">
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_location">Location</label>
             <input type="text" id="editorConfig_location" name="editorConfig_location" value="">
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_mode">Mode</label>
             <select id="editorConfig_mode" name="editorConfig_mode">
                 <option value="edit" selected>edit</option>
@@ -366,27 +366,26 @@
                 <label for="editorConfig_recent">Recent</label>
             </label>
         </div>
-        <div id="holder_editorConfig_recent" class="config_object_holder" style="padding-left: 24px;" hidden>
-            <div id="holder_editorConfig_recent_0" class="editorConfig_recentItem">
-                <div class="line">
+        <div id="holder_editorConfig_recent" class="config_object_holder" hidden>
+            <div id="holder_editorConfig_recent_0" class="editorConfig_recentItem config_nested_group">
+                <div class="line input_line">
                     <label for="editorConfig_recent_folder_0">Folder</label>
                     <input type="text" id="editorConfig_recent_folder_0" name="editorConfig_recent_folder_0" value="Example Folder">
                 </div>
-                <div class="line">
+                <div class="line input_line">
                     <label for="editorConfig_recent_title_0">Title</label>
                     <input type="text" id="editorConfig_recent_title_0" name="editorConfig_recent_title_0" value="exampledocument1.docx">
                 </div>
-               <div class="line">
+               <div class="line input_line">
                     <label for="editorConfig_recent_url_0">Url</label>
                     <input type="text" id="editorConfig_recent_url_0" name="editorConfig_recent_url_0" value="https://example.com/exampledocument1.docx">
                 </div>
-                <hr />
             </div> 
         </div>
         <div style="padding-left: 24px;">
             <button id="addButton_editorConfig_recent" class="add-button" hidden>+</button>
         </div>
-        <div class="line">
+        <div class="line input_line">
             <label for="editorConfig_region">Region</label>
             <input type="text" id="editorConfig_region" name="editorConfig_region" value="en-US">
         </div>
@@ -397,21 +396,20 @@
                 <label for="editorConfig_templates">Templates</label>
             </label>
         </div>
-        <div id="holder_editorConfig_templates" class="config_object_holder" style="padding-left: 24px;" hidden>
-            <div id="holder_editorConfig_templates_0" class="editorConfig_templatesItem">
-                <div class="line">
+        <div id="holder_editorConfig_templates" class="config_object_holder"hidden>
+            <div id="holder_editorConfig_templates_0" class="editorConfig_templatesItem config_nested_group">
+                <div class="line input_line">
                     <label for="editorConfig_templates_image_0">Image</label>
                     <input type="text" id="editorConfig_templates_image_0" name="editorConfig_templates_image_0" value="https://example.com/exampletemplate1.png">
                 </div>
-                <div class="line">
+                <div class="line input_line">
                     <label for="editorConfig_templates_title_0">Title</label>
                     <input type="text" id="editorConfig_templates_title_0" name="editorConfig_templates_title_0" value="exampledocument1.docx">
                 </div>
-               <div class="line">
+               <div class="line input_line">
                     <label for="editorConfig_templates_url_0">Url</label>
                     <input type="text" id="editorConfig_templates_url_0" name="editorConfig_templates_url_0" value="https://example.com/url-to-create-template1">
                 </div>
-                <hr />
             </div> 
         </div>
         <div style="padding-left: 24px;">
@@ -424,16 +422,16 @@
                 <label for="editorConfig_user">User</label>
             </label>
         </div>
-        <div id="holder_editorConfig_user" class="config_object_holder" style="padding-left: 24px;" hidden>
-            <div class="line">
+        <div id="holder_editorConfig_user" class="config_object_holder" hidden>
+            <div class="line input_line">
                 <label for="editorConfig_user_group">Group</label>
                 <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_user_id">Id</label>
                 <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_user_name">Name</label>
                 <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
             </div>
@@ -518,20 +516,19 @@
         }
         let div = document.createElement("div");
         div.innerHTML = `
-        <div id="holder_editorConfig_recent_${i}" class="editorConfig_recentItem">
-            <div class="line">
+        <div id="holder_editorConfig_recent_${i}" class="editorConfig_recentItem config_nested_group">
+            <div class="line input_line">
                 <label for="editorConfig_recent_folder_${i}">Folder</label>
                 <input type="text" id="editorConfig_recent_folder_${i}" name="editorConfig_recent_folder_${i}" value="Example Folder">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_recent_title_${i}">Title</label>
                 <input type="text" id="editorConfig_recent_title_${i}" name="editorConfig_recent_title_${i}" value="exampledocument${i+1}.docx">
             </div>
-           <div class="line">
+           <div class="line input_line">
                 <label for="editorConfig_recent_url_${i}">Url</label>
                 <input type="text" id="editorConfig_recent_url_${i}" name="editorConfig_recent_url_${i}" value="https://example.com/exampledocument${i+1}.docx">
             </div>
-            <hr />
         </div>`;
 
         document.getElementById("holder_editorConfig_recent").appendChild(div);
@@ -573,20 +570,19 @@
         }
         let div = document.createElement("div");
         div.innerHTML = `
-        <div id="holder_editorConfig_templates_${i}" class="editorConfig_templatesItem">
-            <div class="line">
+        <div id="holder_editorConfig_templates_${i}" class="editorConfig_templatesItem config_nested_group">
+            <div class="line input_line">
                 <label for="editorConfig_templates_image_${i}">Image</label>
                 <input type="text" id="editorConfig_templates_image_${i}" name="editorConfig_templates_image_${i}" value="https://example.com/exampletemplate${i+1}.png">
             </div>
-            <div class="line">
+            <div class="line input_line">
                 <label for="editorConfig_templates_title_${i}">Title</label>
                 <input type="text" id="editorConfig_templates_title_${i}" name="editorConfig_templates_title_${i}" value="exampledocument${i+1}.docx">
             </div>
-           <div class="line">
+           <div class="line input_line">
                 <label for="editorConfig_templates_url_${i}">Url</label>
                 <input type="text" id="editorConfig_templates_url_${i}" name="editorConfig_templates_url_${i}" value="https://example.com/url-to-create-template${i+1}">
             </div>
-            <hr />
         </div>`;
 
         document.getElementById("holder_editorConfig_templates").appendChild(div);
