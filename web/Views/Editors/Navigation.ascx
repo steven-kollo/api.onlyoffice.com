@@ -58,10 +58,10 @@
             <a href="<%= Url.Action("plugins") %>">即用型连接器</a>
             <ul>
                 <li>
-                    <a href="<%= Url.Action("alfresco") %>">Alfresco整合</a>
+                    <a href="<%= Url.Action("alfresco") %>">Alfresco 集成</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("chamilo") %>">Chamilo整合</a>
+                    <a href="<%= Url.Action("chamilo") %>">Chamilo 集成</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("confluence") %>">Confluence 集成</a>
@@ -79,7 +79,7 @@
                     <a href="<%= Url.Action("liferay") %>">Liferay 集成</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("mattermost") %>">Mattermost整合</a>
+                    <a href="<%= Url.Action("mattermost") %>">Mattermost 集成</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("moodle") %>">Moodle 集成</a>
@@ -91,13 +91,13 @@
                     <a href="<%= Url.Action("nuxeo") %>">Nuxeo 集成</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("odoo") %>">Odoo integration</a>
+                    <a href="<%= Url.Action("odoo") %>">Odoo 集成</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("owncloud") %>">ownCloud云集成</a>
+                    <a href="<%= Url.Action("owncloud") %>">ownCloud 集成</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("plone") %>">Plone集成</a>
+                    <a href="<%= Url.Action("plone") %>">Plone 集成</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("redmine") %>">Redmine 集成</a>
@@ -109,7 +109,7 @@
                     <a href="<%= Url.Action("strapi") %>">Strapi 集成</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("suitecrm") %>">SuiteCRM integration</a>
+                    <a href="<%= Url.Action("suitecrm") %>">SuiteCRM 集成</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("wordpress") %>">WordPress 集成</a>
