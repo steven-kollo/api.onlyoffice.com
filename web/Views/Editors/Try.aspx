@@ -635,7 +635,7 @@
                     "title": "Example Document Title.pdf",
                     "url": "https://example.com/url-to-example-document.pdf"
                 },
-                "documentType": "word",
+                "documentType": "pdf",
                 "editorConfig": {
                     "mode": "view"
                 },

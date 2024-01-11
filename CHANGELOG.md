@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the pdf document type to the documentType parameter
 - editors: added the data.id parameter to the events.onRequestUsers event
 - editors: added the users.image field to the setUsers method
 - editors: added the info operation type to the setUsers method and events.onRequestUsers event
