@@ -70,7 +70,7 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
         "zh": "&#35762;&#35805;"
     },
     "guid": "asc.{D71C2EF0-F15B-47C7-80E9-86D671F9C595}",
-    "version" : "2.0.0",
+    "version" : "2.0.1",
 
     "variations": [
         {
@@ -124,7 +124,7 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
                 }
             ],
             "isViewer": true,
-            "EditorsSupport": [ "word" ],
+            "EditorsSupport": [ "word", "pdf" ],
             "isVisual": false,
             "initDataType": "text",
 
@@ -134,11 +134,16 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
                     "light": "#444444",
                     "dark": "#444444"
                 },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
+                "screenshots" : [
+                    "resources/store/screenshots/screen_1.png",
+                    "resources/store/screenshots/screen_2.png",
+                    "resources/store/screenshots/screen_3.png"
+                ],
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities"]
             }
         },
         {
@@ -158,8 +163,8 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
             "url": "settings.html",
 
             "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png" ],
-            "isViewer": false,
-            "EditorsSupport": [ "word" ],
+            "isViewer": true,
+            "EditorsSupport": [ "word", "pdf" ],
             "isVisual": true,
             "isModal": true,
             "isInsideMode": false,
