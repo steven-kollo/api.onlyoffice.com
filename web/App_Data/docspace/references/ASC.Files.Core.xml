@@ -921,6 +921,24 @@
             </summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.Version">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrlApi">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrl">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrlInternal">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServicePortalUrl">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.IsDefault">
+            <type>System.Boolean, System</type>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto">
             <summary>
             </summary>

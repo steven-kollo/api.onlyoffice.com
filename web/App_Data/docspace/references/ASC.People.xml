@@ -1059,6 +1059,7 @@
              <path>api/2.0/people/recalculatequota</path>
              <httpMethod>GET</httpMethod>
              <returns></returns>
+             <visible>false</visible>
         </member>
         <member name="M:ASC.People.Api.UserController.CheckRecalculateQuotaAsync">
             <summary>
@@ -1071,6 +1072,7 @@
             <returns type="ASC.Api.Core.Model.TaskProgressDto, ASC.Api.Core.Model">Task progress</returns>
             <path>api/2.0/people/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.People.Api.UserController.UpdateUserQuotaAsync(ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto)">
             <summary>
@@ -1085,6 +1087,7 @@
             <path>api/2.0/people/quota</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
+            <visible>false</visible>
         </member>
         <member name="T:ASC.People.Resources.PeopleResource">
             <summary>
@@ -1147,6 +1150,7 @@
              Groups API.
             </summary>
             <name>group</name>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Employee.Core.Controllers.GroupController.GetAllAsync">
             <summary>

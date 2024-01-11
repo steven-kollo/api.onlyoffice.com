@@ -2184,6 +2184,7 @@
             Feed API.
             </summary>
             <name>feed</name>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.FeedController.Read">
             <summary>
@@ -2261,6 +2262,7 @@
              Portal information access.
             </summary>
             <name>portal</name>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.PaymentController.GetPaymentUrlAsync(ASC.Web.Api.Models.PaymentUrlRequestsDto)">
             <summary>
@@ -2431,6 +2433,7 @@
             <returns type="ASC.Web.Api.ApiModels.ResponseDto, ASC.Web.Api">Extra tenant license information</returns>
             <path>api/2.0/portal/tenantextra</path>
             <httpMethod>GET</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.PortalController.GetUsedSpaceAsync">
             <summary>
@@ -2518,6 +2521,7 @@
             <returns type="Microsoft.AspNetCore.Mvc.FileResult, Microsoft.AspNetCore.Mvc">Thumbnail</returns>
             <path>api/2.0/portal/thumb</path>
             <httpMethod>GET</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.PortalController.MarkPresentAsReadedAsync">
             <summary>
@@ -2543,6 +2547,7 @@
             <returns></returns>
             <path>api/2.0/portal/mobile/registration</path>
             <httpMethod>POST</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.PortalController.RegisterMobileAppInstallAsync(ASC.Core.Common.Notify.Push.MobileAppType)">
             <summary>
@@ -2977,6 +2982,9 @@
             <returns type="ASC.IPSecurity.IPRestrictionsSettings, ASC.IPSecurity">Updated IP restriction settings</returns>
             <path>api/2.0/settings/iprestrictions/settings</path>
             <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="T:ASC.Web.Api.Controllers.Settings.LdapController">
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapSettingsAsync">
             <summary>
@@ -3507,6 +3515,7 @@
             <returns type="ASC.Web.Api.ApiModel.ResponseDto.QuotaUsageDto, ASC.Web.Api">Space usage and limits for upload</returns>
             <path>api/2.0/settings/quota</path>
             <httpMethod>GET</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveUserQuotaSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto)">
             <summary>
@@ -3520,6 +3529,7 @@
             <returns type="System.Object, System">Message about the result of saving the user quota settings</returns>
             <path>api/2.0/settings/userquotasettings</path>
             <httpMethod>POST</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetSupportedCultures">
             <summary>
@@ -3576,6 +3586,7 @@
             <path>api/2.0/settings/recalculatequota</path>
             <httpMethod>GET</httpMethod>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.CheckRecalculateQuotaAsync">
             <summary>
@@ -3588,6 +3599,7 @@
             <returns type="System.Boolean, System">Boolean value: true - quota recalculation process is enabled, false - quota recalculation process is disabled</returns>
             <path>api/2.0/settings/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetLogoAsync">
             <summary>
@@ -4117,6 +4129,9 @@
             <path>api/2.0/settings/tips/subscription</path>
             <httpMethod>GET</httpMethod>
         </member>
+        <member name="T:ASC.Web.Api.Controllers.Settings.VersionController">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.GetBuildVersionsAsync">
             <summary>
             Returns the current build version.
@@ -4503,6 +4518,7 @@
              Third-party API.
             </summary>
             <name>thirdparty</name>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.ThirdPartyController.Get(ASC.FederatedLogin.LoginProviders.LoginProvider)">
             <summary>
