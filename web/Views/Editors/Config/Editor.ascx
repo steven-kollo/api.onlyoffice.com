@@ -309,7 +309,7 @@
 </p>
 <div id="controlFields">
     <div id="info" class="control-panel">
-        <div class="line input_line">
+        <div class="line input_line" style="margin-top: 0;">
             <label for="editorConfig_actionLink">Action Link</label>
             <input type="text" id="editorConfig_actionLink" name="editorConfig_actionLink" value="ACTION_DATA">
         </div>
@@ -325,19 +325,21 @@
             </label>
         </div>
         <div id="holder_editorConfig_coEditing" class="config_object_holder" hidden>
-            <div class="line input_line">
-                <label for="editorConfig_coEditing_mode">Mode</label>
-                <select id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
-                    <option value="fast" selected>fast</option>
-                    <option value="strict">strict</option>
-                </select>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" hidden="hidden" checked>
-                    <span></span>
-                    <label for="editorConfig_coEditing_change">Change</label>
-                </label>
+            <div class="config_nested_group">
+                <div class="line input_line">
+                    <label for="editorConfig_coEditing_mode">Mode</label>
+                    <select id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
+                        <option value="fast" selected>fast</option>
+                        <option value="strict">strict</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <label class="dataItemSpan">
+                        <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" hidden="hidden" checked>
+                        <span></span>
+                        <label for="editorConfig_coEditing_change">Change</label>
+                    </label>
+                </div>
             </div>
         </div>
         <div class="line input_line">
@@ -412,7 +414,7 @@
                 </div>
             </div> 
         </div>
-        <div style="padding-left: 24px;">
+        <div style="padding-left: 24px; margin-bottom: 18px;">
             <button id="addButton_editorConfig_templates" class="add-button" hidden>+</button>
         </div>
         <div class="line">
@@ -422,18 +424,20 @@
                 <label for="editorConfig_user">User</label>
             </label>
         </div>
-        <div id="holder_editorConfig_user" class="config_object_holder" hidden>
-            <div class="line input_line">
-                <label for="editorConfig_user_group">Group</label>
-                <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_user_id">Id</label>
-                <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_user_name">Name</label>
-                <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
+        <div class="config_nested_group" style="margin-bottom: 0;">
+            <div id="holder_editorConfig_user" class="config_object_holder" hidden>
+                <div class="line input_line">
+                    <label for="editorConfig_user_group">Group</label>
+                    <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
+                </div>
+                <div class="line input_line">
+                    <label for="editorConfig_user_id">Id</label>
+                    <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
+                </div>
+                <div class="line input_line">
+                    <label for="editorConfig_user_name">Name</label>
+                    <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
+                </div>
             </div>
         </div>
     </div>
