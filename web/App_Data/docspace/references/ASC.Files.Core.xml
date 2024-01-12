@@ -495,7 +495,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.ExpirationDate">
             <summary>Link expiration date</summary>
-            <type>System.DateTime, System</type>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.LinkType">
             <summary>Link type</summary>
@@ -1010,6 +1010,10 @@
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Shared">
             <summary>Specifies whether to share the external data or not</summary>
             <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.LinkId">
+            <summary>Link ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1">
             <summary>
@@ -2184,6 +2188,10 @@
         <member name="P:ASC.Files.Core.Security.ValidationInfo.Shared">
             <summary>Specifies whether to share the external data or not</summary>
             <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.LinkId">
+            <summary>Link ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.Files.Core.Security.Status">
             <summary>
