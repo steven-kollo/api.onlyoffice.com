@@ -328,9 +328,10 @@
             <div class="config_nested_group">
                 <div class="line input_line">
                     <label for="editorConfig_coEditing_mode">Mode</label>
-                    <select id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
-                        <option value="fast" selected>fast</option>
-                        <option value="strict">strict</option>
+                    <select class="select" id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
+                        <option disabled>fast</option>
+                        <option value="fast">fast</option>
+                        <option value="strict">strict </option>
                     </select>
                 </div>
                 <div class="line">
@@ -356,8 +357,9 @@
         </div>
         <div class="line input_line">
             <label for="editorConfig_mode">Mode</label>
-            <select id="editorConfig_mode" name="editorConfig_mode">
-                <option value="edit" selected>edit</option>
+            <select class="select" id="editorConfig_mode" name="editorConfig_mode">
+                <option disabled>edit</option>
+                <option value="edit">edit</option>
                 <option value="view">view </option>
             </select>
         </div>
@@ -450,7 +452,60 @@
 <div id="editorSpace">
     <div id="placeholder"></div>
 </div>
+<script>
+    $('.select').each(function () {
+        const _this = $(this),
+            selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 120;
 
+        _this.hide();
+        _this.wrap('<div class="select"></div>');
+        $('<div>', {
+            class: 'new-select',
+            text: _this.children('option:disabled').text()
+        }).insertAfter(_this);
+
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
+            $('<div>', {
+                class: 'new-select__item',
+                html: $('<span>', {
+                    text: selectOption.eq(i).text()
+                })
+            })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
+
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function () {
+            if (!$(this).hasClass('on')) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
+                selectItem.on('click', function () {
+                    let chooseItem = $(this).data('value');
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text($(this).find('span').text());
+                    selectList.slideUp(duration);
+                    selectHead.removeClass('on');
+                    updateConfig();
+                });
+
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
+        });
+    });
+</script>
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
 
@@ -635,7 +690,7 @@
         } else {
             document.getElementById("addButton_editorConfig_templates").hidden = true;
         }
-
+        
         var coEditing = !getFieldValue("editorConfig_coEditing") ? "" : `"coEditing": {
             "mode": ${getFieldValue("editorConfig_coEditing_mode")},
             "change": ${getFieldValue("editorConfig_coEditing_change")}
@@ -652,6 +707,8 @@
         var location = getFieldValue("editorConfig_location") == 0 ? `""` : getFieldValue("editorConfig_location");
 
         var editorConfig = `{
+        "actionLink": ${getFieldValue("editorConfig_actionLink")},
+        "callbackUrl": ${getFieldValue("editorConfig_callbackUrl")},
         ${coEditing}"createUrl": ${getFieldValue("editorConfig_createUrl")},
         "lang": ${getFieldValue("editorConfig_lang")},
         "location": ${location},
@@ -666,6 +723,8 @@
 `;
         var editorConfig_object = JSON.parse(editorConfig);
         config.editorConfig = editorConfig_object;
+        delete editorConfig_object["actionLink"];
+        delete editorConfig_object["callbackUrl"];
         config.editorConfig.customization = {
             "integrationMode": "embed"
         };
@@ -679,7 +738,9 @@
 
     function getFieldValue(id) {
         var element = document.getElementById(id);
-        if (element.type == "checkbox") {
+        if (document.getElementById(id).parentElement.className == "select") {
+            return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
+        } else if (element.type == "checkbox") {
             return element.checked;
         } else if (isNaN(element.value)) {
             return `"${element.value}"`;
@@ -689,23 +750,14 @@
     }
 
     function resizeCodeInput() {
-        var controlFieldPaddingBottom = 0;
-        var controlFieldInputs = document.getElementsByTagName("input");
-        var i = 0;
-        while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("editorConfig") && controlFieldInputs[i].type == "text") {
-                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
-                break;
-            }
-            i++;
-        }
         var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
         var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
         var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
 
-        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
-        var configPreHeight = fieldsHeight - (offset) + "px";
-        document.getElementById("configPre").style.height = configPreHeight;
+        var offset = paddingTop + paddingBottom + (borderSize * 2);
+        var height = controlFieldsHeight - offset;
+
+        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>
