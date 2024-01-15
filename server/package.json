@@ -1,0 +1,5 @@
+{
+  "name": "@onlyoffice/documentation-server",
+  "private": true,
+  "type": "module"
+}

@@ -1,0 +1,81 @@
+.tree {}
+
+.tree__limb {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 16px;
+}
+
+.tree__limb_bole {
+  padding-inline-start: 0;
+}
+
+.tree__branch {
+  margin-top: 12px;
+}
+
+.tree__branch:first-of-type {
+  margin-top: 0;
+}
+
+.tree__branch_bole {
+  margin-top: 30px;
+}
+
+.tree__branch_bole > .tree__limb {
+  padding-inline-start: 0;
+}
+
+.tree__twig {
+  pointer-events: none;
+}
+
+.tree__twig ~ .tree__limb {
+  margin-top: 12px;
+}
+
+.tree__twig_closed ~ .tree__limb {
+  display: none;
+}
+
+.tree__fruit {
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  width: 8px;
+}
+
+.tree__fruit * {
+  pointer-events: none;
+}
+
+.tree__leaf {
+  pointer-events: auto;
+  color: inherit;
+  font-size: 14px;
+  padding-inline-start: 16px;
+  text-decoration: none;
+}
+
+.tree__leaf:hover,
+.tree__leaf:focus {
+  color: var(--color-scale-orange-0);
+}
+
+.tree__leaf_active {
+  color: var(--color-scale-orange-0);
+}
+
+.tree__leaf_bole {
+  font-weight: 700;
+  text-transform: uppercase;
+
+  padding-inline-start: 0;
+}
+
+.tree__fruit ~ .tree__leaf {
+  margin-left: 8px;
+  padding-inline-start: 0;
+}

@@ -1,0 +1,10 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="site-header__logo">
+      <a href="/"><slot name="logo"></slot></a>
+    </div>
+    <div class="site-header__nav">
+      <slot name="nav"></slot>
+    </div>
+  </div>
+</header>

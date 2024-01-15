@@ -1,0 +1,23 @@
+.site-header {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.site-header__inner {
+  display: flex;
+  height: 72px;
+  margin: 0 auto;
+  max-width: 1168px;
+}
+
+.site-header__logo {
+  align-items: center;
+  display: flex;
+  min-width: 232px;
+  padding: 0 24px;
+}
+
+.site-header__nav {
+  height: 100%;
+  padding: 0 16px;
+  width: 100%;
+}

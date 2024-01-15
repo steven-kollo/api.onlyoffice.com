@@ -1,0 +1,50 @@
+.code-example {
+  border: 1px solid var(--color-scale-gray-1);
+  font-family: var(--text-font-monospace);
+  margin-top: 24px;
+}
+
+.code-example__header {
+  display: flex;
+  background-color: var(--color-scale-neutral-1);
+}
+
+.code-example__tabs {
+  border-right: 1px solid var(--color-scale-gray-1);
+}
+
+.code-example__tab {
+  align-items: center;
+  background-color: var(--color-scale-white);
+  display: flex;
+  font-size: 13px;
+  height: calc(100% - 9px * 2);
+  line-height: 1;
+  padding: 9px 12px;
+}
+
+.code-example__actions {
+  margin-left: auto;
+}
+
+.code-example__action {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 4px;
+}
+
+.code-example__action svg {
+  display: block;
+}
+
+.code-example pre {
+  background-color: var(--color-scale-neutral-0);
+  border-top: 1px solid var(--color-scale-gray-1);
+  font-family: inherit;
+  font-size: 13px;
+  margin: 0;
+  padding: 9px 35px;
+}

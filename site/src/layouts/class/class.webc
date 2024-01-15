@@ -1,0 +1,55 @@
+---
+layout: page/page.webc
+---
+<template webc:for="c of pagination.items" webc:nokeep>
+  <content>
+    <h1 @text="c.name"></h1>
+    <template webc:nokeep webc:if="c.description">
+      <content-h2 @anchor="/"><l>Description</l></content-h2>
+      <p @text="c.description"></p>
+      <template webc:nokeep webc:for="s of c.signatures">
+        <code-example @tab="Unknown" @language="js" @text="s"></code-example>
+      </template>
+    </template>
+    <!-- todo: c.content -->
+    <!--  -->
+    <template webc:nokeep webc:if="c.properties.length > 0">
+      <content-h2 @anchor="/"><l>Properties</l></content-h2>
+      <reflection :@value="c.properties">
+        <template webc:nokeep slot="caption"><l>Properties for <code @text="c.name"></code></l></template>
+        <template webc:nokeep slot="head"><l>Name, Type, Description</l></template>
+      </reflection>
+    </template>
+    <!-- todo: c.methods -->
+    <!-- <template webc:nokeep webc:if="c.methods.length > 0">
+      <content-h2 @anchor="/"><l>Methods</l></content-h2>
+      <reflection :@value="c.methods">
+        <template webc:nokeep slot="caption"><l>Methods for <code @text="c.name"></code></l></template>
+        <template webc:nokeep slot="head"><l>Name, Description</l></template>
+      </reflection>
+    </template> -->
+    <!-- todo: c.events -->
+    <!--  -->
+    <template webc:nokeep webc:if="c.parameters.length > 0">
+      <content-h2 @anchor="/"><l>Parameters</l></content-h2>
+      <reflection :@value="c.parameters">
+        <template webc:nokeep slot="caption"><l>Parameters for <code @text="c.name"></code></l></template>
+        <template webc:nokeep slot="head"><l>Name, Type, Required, Description</l></template>
+      </reflection>
+    </template>
+    <template webc:nokeep webc:if="c.returns.length > 0">
+      <content-h2 @anchor="/"><l>Returns</l></content-h2>
+      <reflection :@value="c.returns">
+        <template webc:nokeep slot="caption"><l>Returns for <code @text="c.name"></code></l></template>
+        <template webc:nokeep slot="head"><l>Name, Type, Description</l></template>
+      </reflection>
+    </template>
+    <template webc:nokeep webc:if="c.examples.length > 0">
+      <content-h2 @anchor="/"><l>Examples</l></content-h2>
+      <template webc:nokeep webc:for="e of c.examples">
+        <code-example @tab="Unknown" @language="js" @text="e"></code-example>
+        <code-example @tab="Unknown" @language="js" @text="e"></code-example>
+      </template>
+    </template>
+  </content>
+</template>

@@ -1,0 +1,42 @@
+.footer {
+  background-color: hsl(0, 0%, 20%);
+  padding: 13px 0 28px 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  padding: 0 160px;
+}
+
+.footer__rights {
+  margin: 0;
+}
+
+.footer-nav {
+  padding: 13px 0;
+}
+
+.footer-nav__anchor {
+  color: hsl(0, 0%, 94%);
+  font-size: 12px;
+  margin-left: 16px;
+  text-decoration: none;
+}
+
+.footer-nav__anchor:first-of-type {
+  margin-left: 0;
+}
+
+.footer-nav__anchor:hover,
+.footer-nav__anchor:focus {
+  color: hsl(15deg, 100%, 62%);
+  text-decoration: underline;
+}
+
+.footer__rights {
+  color: hsl(0, 0%, 50%);
+  font-size: 12px;
+  padding: 13px 0;
+}

@@ -1,0 +1,14 @@
+<script webc:setup>
+function resolveLinkClass(i) {
+  let c = "site-nav__link"
+  if (i.isCurrent()) {
+    c += " site-nav__link_current"
+  }
+  return c
+}
+</script>
+<nav class="site-nav">
+  <div webc:for="i of nav" class="site-nav__container">
+    <a :class="resolveLinkClass(i)" :href="i.url" @text="i.title"></a>
+  </div>
+</nav>

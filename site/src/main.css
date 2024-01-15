@@ -1,0 +1,12 @@
+@import "../node_modules/@onlyoffice/documentation-ui-kit/node_modules/@onlyoffice/documentation-ui-primitives/dist/light.css";
+@import "../node_modules/@onlyoffice/documentation-ui-kit/dist/kit.css";
+
+@import "./blocks/site-header/site-header.css";
+@import "./blocks/site-nav/site-nav.css";
+@import "./blocks/site-footer/site-footer.css";
+
+@import "./blocks/page-nav/page-nav.css";
+
+@import "./layouts/site/site.css";
+@import "./layouts/page/page.css";
+@import "./layouts/blank/blank.css";

@@ -1,0 +1,68 @@
+/* hsl(0, 0%, 0%, 12%); */
+/* hsl(0, 0%, 0%, 46%); */
+/* --breakpoint-xs */
+
+/* Colors */
+
+:root {
+  /* Scales */
+
+  --color-scale-black: hsl(0, 0%, 20%);  /* #333333 */
+  --color-scale-white: hsl(0, 0%, 100%); /* #FFFFFF */
+
+  --color-scale-neutral-0: hsl(0, 0%, 98%); /* #F9F9F9 */
+  --color-scale-neutral-1: hsl(0, 0%, 96%); /* #F5F5F5 */
+  --color-scale-neutral-2: hsl(0, 0%, 94%); /* #EFEFEF */
+  --color-scale-neutral-3: hsl(0, 0%, 89%); /* #E2E2E2 */
+  --color-scale-neutral-4: hsl(0, 0%, 83%); /* #D4D4D4 */
+  --color-scale-neutral-5: hsl(0, 0%, 80%);
+  --color-scale-neutral-6: hsl(0, 0%, 50%); /* #808080 */
+  --color-scale-neutral-7: hsl(0, 0%, 45%);
+
+  --color-scale-gray-0: hsl(216, 15%, 94%); /* #ECEEF1 */
+  --color-scale-gray-1: hsl(213, 12%, 85%); /* #D5D9DE */
+  --color-scale-gray-2: hsl(210, 12%, 84%); /* #D0D5DA */
+  --color-scale-gray-3: hsl(207,  6%, 66%); /* #A3A9AE */
+
+  --color-scale-blue-0:   hsl(240, 100%, 50%); /* #0000FF */
+  --color-scale-orange-0: hsl( 15, 100%, 62%); /* #FF6F3D */
+  --color-scale-red-0:    hsl(360,  54%, 47%); /* #B93838 */
+
+  /* Content */
+
+  --color-content-background: var(--color-scale-white);
+  --color-content-foreground: var(--color-scale-black);
+
+  /* --color-header-background: var(--color-scale-black); */
+
+  /* Foreground */
+
+  --color-foreground-primary:   var(--color-scale-white);
+  --color-foreground-secondary: var(--color-scale-neutral-2);
+  --color-foreground-ternary:   var(--color-scale-black);
+
+  /* Border */
+
+  --color-border-primary:   var(--color-scale-gray-0);
+  --color-border-secondary: var(--color-scale-gray-2);
+
+  /* Shadow */
+
+  --color-shadow-primary: 0px 7px 25px 0px hsl(0deg, 0%, 33%, 0.15); /* #55555526 */
+}
+
+/* Typography */
+
+:root {
+  --text-line-height: 1.5;
+
+  /* Font */
+
+  --text-font-monospace:  monospace;
+  --text-font-sans-serif: "Open Sans";
+
+  /* Code Inline */
+
+  /* --text-code-inline-font-family: var(--text-font-monospace); */
+  /* --text-code-inline-font-size: ; */
+}
