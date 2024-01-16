@@ -948,10 +948,10 @@
                     {
                         Document = new Config.DocumentConfig
                             {
-                                FileType = "oform",
+                                FileType = "pdf",
                                 Key = "apiwh" + Guid.NewGuid(),
-                                Title = "Example Form Title.oform",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.oform",
+                                Title = "Example Form Title.pdf",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Edit = false,

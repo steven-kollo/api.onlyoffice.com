@@ -1142,7 +1142,7 @@
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
                 Defines if the <b>Submit</b> button is displayed or hidden on the top toolbar.
-                Button will only be available for the <em>oform</em> format. The default value is <b>false</b>.
+                Button will only be available for the <em>pdf</em> format. The default value is <b>false</b>.
             </td>
             <td>boolean</td>
             <td>true</td>

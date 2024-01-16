@@ -14,7 +14,7 @@
         <span class="hdr">Integrating ONLYOFFICE mobile web editors</span>
     </h1>
     <p>To access the editor features in your mobile application, integrate it with ONLYOFFICE editors via the WebView component - a system component that is responsible for opening web pages within applications.
-        After that, users will be able to view, create and edit text documents, spreadsheets, and presentations, fill out oforms, and read PDFs directly on their iOS or Android devices.</p>
+        After that, users will be able to view, create and edit text documents, spreadsheets, and presentations, fill out and read PDFs directly on their iOS or Android devices.</p>
     <note>Please note that ONLYOFFICE mobile web editors are available only for commercial builds of <a href="https://www.onlyoffice.com/docs-enterprise.aspx" target="_blank">Enterprise</a> and <a href="https://www.onlyoffice.com/developer-edition.aspx" target="_blank">Developer</a> editions.</note>
     <div class="container">
         <ul class="browser">

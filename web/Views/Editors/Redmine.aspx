@@ -21,8 +21,8 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
-        <li>The following formats are available for viewing only: DOC, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP.</li>
+        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, PDF.</li>
+        <li>The following formats are available for viewing only: DOC, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP.</li>
         <li>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for office documents. This allows multiple users to collaborate in real time and to save back those changes to Redmine.</li>
     </ul>
 

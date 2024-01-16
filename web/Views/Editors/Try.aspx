@@ -100,7 +100,7 @@
             </tr>
             <tr>
                 <th>Filling in forms</th>
-                <td><a title="Open OFORM file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">OFORM</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
+                <td><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
@@ -1465,7 +1465,7 @@
             </div>
 
             <div id="fillFormsCode">
-                <div class="popap-header">Open oform for filling in forms</div>
+                <div class="popap-header">Open pdf for filling in forms</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1481,10 +1481,10 @@
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
                 "document": {
-                    "fileType": "oform",
+                    "fileType": "pdf",
                     "key": "DEEC57D9",
-                    "title": "Example Form Title.oform",
-                    "url": "https://example.com/url-to-example-document.oform",
+                    "title": "Example Form Title.pdf",
+                    "url": "https://example.com/url-to-example-document.pdf",
                     "permissions": {
                         "edit": false,
                         "fillForms": true
