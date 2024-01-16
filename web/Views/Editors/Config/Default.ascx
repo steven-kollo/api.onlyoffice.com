@@ -83,9 +83,10 @@
 <div>
     <div id="controlFields">
         <div id="info" class="control-panel">
-            <div class="line input_line">
-                <label for="config_documentType">Document Type</label>
-                <select id="config_documentType" name="config_documentType">
+            <div class="line input_line" style="margin-top: 0;">
+                <label for="config_documentType">Type</label>
+                <select class="select" id="config_documentType" name="config_documentType">
+                    <option disabled>word</option>
                     <option value="word" selected>word</option>
                     <option value="cell">cell</option>
                     <option value="slide">slide</option>
@@ -93,16 +94,17 @@
             </div>
             <div class="line input_line">
                 <label for="config_type">Type</label>
-                <select id="config_type" name="config_type">
+                <select class="select" id="config_type" name="config_type">
+                    <option disabled>desktop</option>
                     <option value="desktop" selected>desktop</option>
-                    <option value="mobile">mobile</option>
+                    <option value="mobile">mobile </option>
                 </select>
             </div>
             <div class="line input_line">
                 <label for="config_height">Height</label>
                 <input type="text" id="config_height" name="config_height" value="550px">
             </div>
-            <div class="line input_line">
+            <div class="line input_line" style="margin-bottom: 0;">
                 <label for="config_width">Width</label>
                 <input type="text" id="config_width" name="config_width" value="100%">
             </div>
@@ -116,7 +118,60 @@
 <div id="editorSpace">
     <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
 </div>
+<script>
+    $('.select').each(function () {
+        const _this = $(this),
+            selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 120;
 
+        _this.hide();
+        _this.wrap('<div class="select"></div>');
+        $('<div>', {
+            class: 'new-select',
+            text: _this.children('option:disabled').text()
+        }).insertAfter(_this);
+
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
+            $('<div>', {
+                class: 'new-select__item',
+                html: $('<span>', {
+                    text: selectOption.eq(i).text()
+                })
+            })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
+
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function () {
+            if (!$(this).hasClass('on')) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
+                selectItem.on('click', function () {
+                    let chooseItem = $(this).data('value');
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text($(this).find('span').text());
+                    selectList.slideUp(duration);
+                    selectHead.removeClass('on');
+                    updateConfig();
+                });
+
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
+        });
+    });
+</script>
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
 
@@ -269,7 +324,9 @@
 
     function getFieldValue(id) {
         var element = document.getElementById(id);
-        if (element.type == "checkbox") {
+        if (document.getElementById(id).parentElement.className == "select") {
+            return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
+        } else if (element.type == "checkbox") {
             return element.checked;
         } else if (isNaN(element.value)) {
             return `"${element.value}"`;
@@ -279,23 +336,14 @@
     }
 
     function resizeCodeInput() {
-        var controlFieldPaddingBottom = 0;
-        var controlFieldInputs = document.getElementsByTagName("input");
-        var i = 0;
-        while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("config") && controlFieldInputs[i].type == "text") {
-                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
-                break;
-            }
-            i++;
-        }
         var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
         var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
         var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
 
-        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
-        var configPreHeight = fieldsHeight - (offset) + "px";
-        document.getElementById("configPre").style.height = configPreHeight;
+        var offset = paddingTop + paddingBottom + (borderSize * 2);
+        var height = controlFieldsHeight - offset;
+
+        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>
