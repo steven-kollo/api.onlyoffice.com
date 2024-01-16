@@ -71,23 +71,23 @@
 <div id="controlFields">
     <div id="plugins" class="control-panel">
         <div id="holder_editorConfig_plugins_autostart">
-            <div class="line input_line">
-                <label for="editorConfig_plugins_autostart">Autostart</label>
-                <div id="plugins_autostart_0" class="line input_line plugins_autostart">
+            <div class="line input_line" style="margin-top: 0px;">
+                <label for="plugins_autostart_0">Autostart</label>
+                <div id="plugins_autostart_0" style="margin-top: 0px;" class="line input_line plugins_autostart">
                     <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}">
                 </div>
             </div>
         </div>
-        <button id="addButton_plugins_autostart" class="add-button" style="margin-top: 4px;">+</button>
+        <button id="addButton_plugins_autostart" class="add-button" style="margin-top: 12px;">+</button>
         <div id="holder_editorConfig_plugins_pluginsData">
             <div class="line input_line">
-                <label for="editorConfig_plugins_pluginsData">Plugins Data</label>
-                <div id="plugins_pluginsData_0" class="line input_line plugins_pluginsData">
+                <label for="plugins_pluginsData_0">Plugins Data</label>
+                <div id="plugins_pluginsData_0" style="margin-top: 0px;" class="line input_line plugins_pluginsData">
                     <input type="text" id="editorConfig_plugins_pluginsData_0" name="editorConfig_plugins_pluginsData_0" value="https://example.com/plugins/chess-plugin/config.json">
                 </div>
             </div>
         </div>
-        <button id="addButton_plugins_pluginsData" class="add-button" style="margin-top: 4px;">+</button>
+        <button id="addButton_plugins_pluginsData" class="add-button" style="margin-top: 12px;">+</button>
     </div>
 </div>
 <div id="configPreHolder">
@@ -155,7 +155,6 @@
         while (elements[i] != undefined) {
             i++;
         }
-        console.log(i)
         let div = document.createElement("div");
         div.innerHTML = `
         <div class="plugins_${itemType} line input_line" id="plugins_${itemType}_${i}">
@@ -232,23 +231,14 @@
     }
 
     function resizeCodeInput() {
-        var controlFieldPaddingBottom = 0;
-        var controlFieldInputs = document.getElementsByTagName("input");
-        var i = 0;
-        while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("plugins") && controlFieldInputs[i].type == "text") {
-                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
-                break;
-            }
-            i++;
-        }
         var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
         var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
         var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
 
-        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
-        var configPreHeight = fieldsHeight - (offset) + "px";
-        document.getElementById("configPre").style.height = configPreHeight;
+        var offset = paddingTop + paddingBottom + (borderSize * 2);
+        var height = controlFieldsHeight - offset;
+
+        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>
