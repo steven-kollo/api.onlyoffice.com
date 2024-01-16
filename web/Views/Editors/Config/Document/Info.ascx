@@ -130,7 +130,7 @@
 <div>
     <div id="controlFields">
         <div id="info" class="control-panel">
-            <div class="line input_line">
+            <div class="line input_line" style="margin-top: 0px;">
                 <label for="documentConfig_info_folder">Folder</label>
                 <input type="text" id="documentConfig_info_folder" name="documentConfig_info_folder" value="Example Files">
             </div>
@@ -160,7 +160,8 @@
                 <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem config_nested_group">
                     <div class="line input_line">
                         <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
-                        <select id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
+                        <select class="select" id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
+                            <option value="Full Access" disabled>Full Access</option>
                             <option value="Full Access" selected>Full Access</option>
                             <option value="Read Only">Read Only</option>
                             <option value="Deny Access">Deny Access</option>
@@ -191,7 +192,75 @@
 <div id="editorSpace">
     <div id="placeholder"></div>
 </div>
+<script>
+    function buildSelects(id) {
+        $('.select').each(function () {
+            const item = $(this);
+            if (id != null && item[0].id.toString().includes(id)) {
+                buildSelect(item);
+            } 
+        });
+    }
+    function buildSelect(item, isNew) {
+        _this = item;
+        if (isNew) {
+            _this = $('.select')[1];
+        }
+        selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 120;
 
+        _this.hide();
+        _this.wrap('<div class="select"></div>');
+        $('<div>', {
+            class: 'new-select',
+            text: _this.children('option:disabled').text()
+        }).insertAfter(_this);
+
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
+            $('<div>', {
+                class: 'new-select__item',
+                html: $('<span>', {
+                    text: selectOption.eq(i).text()
+                })
+            })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
+
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function () {
+            if (!$(this).hasClass('on')) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
+                selectItem.on('click', function () {
+                    let chooseItem = $(this).data('value');
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text($(this).find('span').text());
+                    selectList.slideUp(duration);
+                    selectHead.removeClass('on');
+                    updateConfig();
+                });
+
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
+        });
+    }
+    $('.select').each(function () {
+        const item = $(this);
+        buildSelect(item);
+    });
+</script>
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
 
@@ -259,7 +328,8 @@
         <div id="holder_documentConfig_info_sharingSettings_${i}" class="documentConfig_info_sharingSettingsItem config_nested_group">
             <div class="line input_line">
                 <label for="documentConfig_info_sharingSettings_permissions_${i}">Permissions</label>
-                <select id="documentConfig_info_sharingSettings_permissions_${i}" name="documentConfig_info_sharingSettings_permissions_${i}">
+                <select class="select" id="documentConfig_info_sharingSettings_permissions_${i}" name="documentConfig_info_sharingSettings_permissions_${i}">
+                    <option value="Read Only" disabled>Read Only</option>    
                     <option value="Full Access">Full Access</option>
                     <option value="Read Only" selected>Read Only</option>
                     <option value="Deny Access">Deny Access</option>
@@ -278,6 +348,7 @@
             </div>
         </div>`;
         document.getElementById("holder_documentConfig_info_sharingSettings").appendChild(div);
+        buildSelects(i);
         $("#controlFields").find("input,select").change(function () {
             updateConfig();
         });
@@ -346,7 +417,9 @@
 
     function getFieldValue(id) {
         var element = document.getElementById(id);
-        if (element.type == "checkbox") {
+        if (document.getElementById(id).parentElement.className == "select") {
+            return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
+        } else if (element.type == "checkbox") {
             return element.checked;
         } else if (isNaN(element.value)) {
             return `"${element.value}"`;
@@ -356,23 +429,14 @@
     }
 
     function resizeCodeInput() {
-        var controlFieldPaddingBottom = 0;
-        var controlFieldInputs = document.getElementsByTagName("input");
-        var i = 0;
-        while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("documentConfig") && controlFieldInputs[i].type == "text") {
-                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
-                break;
-            }
-            i++;
-        }
         var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
         var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
         var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
 
-        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
-        var configPreHeight = fieldsHeight - (offset) + "px";
-        document.getElementById("configPre").style.height = configPreHeight;
+        var offset = paddingTop + paddingBottom + (borderSize * 2);
+        var height = controlFieldsHeight - offset;
+
+        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>

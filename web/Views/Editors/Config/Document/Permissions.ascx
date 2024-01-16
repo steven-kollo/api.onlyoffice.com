@@ -302,8 +302,8 @@
 <div>
     <div id="controlFields">
         <div id="permissions" class="control-panel">
-            <div class="line">
-                <label class="dataItemSpan">
+            <div class="line" style="margin-top: 0px;">
+                <label class="dataItemSpan" style="margin-top: 0px;">
                     <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" hidden="hidden" checked>
                     <span></span>
                     <label for="documentConfig_permissions_chat">Chat</label>
@@ -418,12 +418,10 @@
                 <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
                 <input type="text" id="documentConfig_permissions_reviewGroups" name="documentConfig_permissions_reviewGroups" value='["Group1", "Group2", ""]'>
             </div>
-            <div class="line input_line">
+            <div class="line input_line" style="margin-bottom: 0px;">
                 <label for="documentConfig_permissions_userInfoGroups">User Info Groups</label>
                 <input type="text" id="documentConfig_permissions_userInfoGroups" name="documentConfig_permissions_userInfoGroups" value='["Group1", ""]'>
             </div>
-
-        
         </div>
     </div>
     <div id="configPreHolder">
@@ -565,23 +563,14 @@
     }
 
     function resizeCodeInput() {
-        var controlFieldPaddingBottom = 0;
-        var controlFieldInputs = document.getElementsByTagName("input");
-        var i = 0;
-        while (controlFieldInputs[i] != undefined) {
-            if (controlFieldInputs[i].id.includes("documentConfig_permissions") && controlFieldInputs[i].type == "text") {
-                controlFieldPaddingBottom = Number(getComputedStyle(controlFieldInputs[i]).paddingBottom.split("px")[0]);
-                break;
-            }
-            i++;
-        }
         var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
         var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
         var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var fieldsHeight = Number(getComputedStyle(document.getElementById("controlFields")).height.split("px")[0]);
+        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
 
-        var offset = (paddingTop + paddingBottom + (borderSize * 2) + controlFieldPaddingBottom);
-        var configPreHeight = fieldsHeight - (offset) + "px";
-        document.getElementById("configPre").style.height = configPreHeight;
+        var offset = paddingTop + paddingBottom + (borderSize * 2);
+        var height = controlFieldsHeight - offset;
+
+        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>
