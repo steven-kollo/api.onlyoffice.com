@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the WOPISrc query parameter to the requests from the browser to the server
 - editors: added the data.id parameter to the events.onRequestUsers event
 - editors: added the users.image field to the setUsers method
 - editors: added the info operation type to the setUsers method and events.onRequestUsers event
