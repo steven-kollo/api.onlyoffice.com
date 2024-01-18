@@ -53,6 +53,13 @@
     </ul>
     <br />
 
+    <p><b>Section methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apisection/getpageheight") %>">ApiSection/GetPageHeight</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apisection/getpagewidth") %>">ApiSection/GetPageWidth</a> method to Text document API.</li>
+    </ul>
+    <br />
+
     <p><b>Simple types</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("global") %>#FormData">FormData</a> object to the simple type definitions.</li>

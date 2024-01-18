@@ -313,6 +313,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiFont.SetSubscript.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFont.SetSuperscript.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFont.SetUnderline.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePane.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeAt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeColumns.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeRows.docbuilder" />
@@ -4677,7 +4678,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePane.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPageHeight.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPageWidth.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
