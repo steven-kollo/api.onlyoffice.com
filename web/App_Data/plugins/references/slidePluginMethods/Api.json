@@ -77,6 +77,105 @@
           "optional": false
         }
       ]
+    },
+    "StartSlideShow": {
+      "memberof": "Api",
+      "name": "StartSlideShow",
+      "description": "<p>Starts the presentation slide show.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "PauseSlideShow": {
+      "memberof": "Api",
+      "name": "PauseSlideShow",
+      "description": "<p>Pauses the current slide show.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "ResumeSlideShow": {
+      "memberof": "Api",
+      "name": "ResumeSlideShow",
+      "description": "<p>Resumes the current slide show.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "EndSlideShow": {
+      "memberof": "Api",
+      "name": "EndSlideShow",
+      "description": "<p>Ends the current slide show.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GoToNextSlideInSlideShow": {
+      "memberof": "Api",
+      "name": "GoToNextSlideInSlideShow",
+      "description": "<p>Displays the slide following the current slide in the slide show.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GoToPreviousSlideInSlideShow": {
+      "memberof": "Api",
+      "name": "GoToPreviousSlideInSlideShow",
+      "description": "<p>Displays the slide following the current slide in the slide show.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GoToSlideInSlideShow": {
+      "memberof": "Api",
+      "name": "GoToSlideInSlideShow",
+      "description": "<p>Displays the slide with the specific index.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nSlideIndex",
+          "description": "<p>The slide index.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "events": {},
