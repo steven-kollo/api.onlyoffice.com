@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 
-const { existsSync } = require("node:fs")
-const { mkdir, readdir, copyFile } = require("node:fs/promises")
-const { join } = require("node:path")
-const { argv } = require("node:process")
-const sade = require("sade")
-const uiKit = require("./ui/kit/makefile.js")
+// @ts-check
 
-const root = __dirname
+import { existsSync } from "node:fs"
+import { mkdir, readdir, copyFile } from "node:fs/promises"
+import { join } from "node:path"
+import { argv } from "node:process"
+import { fileURLToPath } from "node:url"
+import sade from "sade"
+// const uiKit = require("./ui/kit/makefile.js")
+
+const root = fileURLToPath(new URL(".", import.meta.url))
 const make = sade("./makefile.js")
 
 // todo: separate build and watch commands
@@ -51,7 +54,7 @@ make
         }))
       }
 
-      await uiKit.build()
+      // await uiKit.build()
     }))
   })
 
