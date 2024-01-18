@@ -348,6 +348,13 @@
           "name": "nWidth",
           "description": "<p>The width of the column divided by 7 pixels.</p>",
           "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWithotPaddings",
+          "description": "<p>Specifies whether nWidth will be set without standard paddings.</p>",
+          "optional": true,
+          "defaultValue": false
         }
       ]
     },
@@ -1375,10 +1382,27 @@
           "optional": false
         }
       ]
+    },
+    "GetFreezePanes": {
+      "memberof": "ApiWorksheet",
+      "name": "GetFreezePanes",
+      "description": "<p>Returns the freeze panes from the current worksheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiFreezePanes"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "events": {},
-  "comment": "/**\n\t * Class representing a sheet.\n\t * @constructor\n\t * @property {boolean} Visible - Returns or sets the state of sheet visibility.\n\t * @property {number} Active - Makes the current sheet active.\n\t * @property {ApiRange} ActiveCell - Returns an object that represents an active cell.\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\n\t * @property {ApiRange} Cells - Returns ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use).\n\t * @property {ApiRange} Rows - Returns ApiRange that represents all the cells of the rows range.\n\t * @property {ApiRange} Cols - Returns ApiRange that represents all the cells of the columns range.\n\t * @property {ApiRange} UsedRange - Returns ApiRange that represents the used range on the specified worksheet.\n\t * @property {string} Name - Returns or sets a name of the active sheet.\n\t * @property {number} Index - Returns a sheet index.\n\t * @property {number} LeftMargin - Returns or sets the size of the sheet left margin measured in points.\n\t * @property {number} RightMargin - Returns or sets the size of the sheet right margin measured in points.\n\t * @property {number} TopMargin - Returns or sets the size of the sheet top margin measured in points.\n\t * @property {number} BottomMargin - Returns or sets the size of the sheet bottom margin measured in points.\n\t * @property {PageOrientation} PageOrientation - Returns or sets the page orientation.\n\t * @property {boolean} PrintHeadings - Returns or sets the page PrintHeadings property.\n\t * @property {boolean} PrintGridlines - Returns or sets the page PrintGridlines property.\n\t * @property {Array} Defnames - Returns an array of the ApiName objects.\n\t * @property {Array} Comments - Returns an array of the ApiComment objects.\n\t */",
+  "comment": "/**\n\t * Class representing a sheet.\n\t * @constructor\n\t * @property {boolean} Visible - Returns or sets the state of sheet visibility.\n\t * @property {number} Active - Makes the current sheet active.\n\t * @property {ApiRange} ActiveCell - Returns an object that represents an active cell.\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\n\t * @property {ApiRange} Cells - Returns ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use).\n\t * @property {ApiRange} Rows - Returns ApiRange that represents all the cells of the rows range.\n\t * @property {ApiRange} Cols - Returns ApiRange that represents all the cells of the columns range.\n\t * @property {ApiRange} UsedRange - Returns ApiRange that represents the used range on the specified worksheet.\n\t * @property {string} Name - Returns or sets a name of the active sheet.\n\t * @property {number} Index - Returns a sheet index.\n\t * @property {number} LeftMargin - Returns or sets the size of the sheet left margin measured in points.\n\t * @property {number} RightMargin - Returns or sets the size of the sheet right margin measured in points.\n\t * @property {number} TopMargin - Returns or sets the size of the sheet top margin measured in points.\n\t * @property {number} BottomMargin - Returns or sets the size of the sheet bottom margin measured in points.\n\t * @property {PageOrientation} PageOrientation - Returns or sets the page orientation.\n\t * @property {boolean} PrintHeadings - Returns or sets the page PrintHeadings property.\n\t * @property {boolean} PrintGridlines - Returns or sets the page PrintGridlines property.\n\t * @property {Array} Defnames - Returns an array of the ApiName objects.\n\t * @property {Array} Comments - Returns an array of the ApiComment objects.\n\t * @property {ApiFreezePanes} FreezePanes - Returns the freeze panes for the current worksheet.\n\t */",
   "description": "<p>Class representing a sheet.</p>",
   "scope": "global",
   "params": [],
@@ -1477,6 +1501,11 @@
       "type": "Array",
       "name": "Comments",
       "description": "<p>Returns an array of the ApiComment objects.</p>"
+    },
+    {
+      "type": "ApiFreezePanes",
+      "name": "FreezePanes",
+      "description": "<p>Returns the freeze panes for the current worksheet.</p>"
     }
   ]
 }
