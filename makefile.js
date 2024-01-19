@@ -8,10 +8,18 @@ import { join } from "node:path"
 import { argv } from "node:process"
 import { fileURLToPath } from "node:url"
 import sade from "sade"
+import * as documentBuilder from "./resources/document-builder/makefile.js"
 // const uiKit = require("./ui/kit/makefile.js")
 
 const root = fileURLToPath(new URL(".", import.meta.url))
 const make = sade("./makefile.js")
+
+make
+  .command("build-resources")
+  .option("-p, --prettify", "Prettify the output")
+  .action(async (o) => {
+    await documentBuilder.build(o)
+  })
 
 // todo: separate build and watch commands
 // todo: add postprocessing for the build command

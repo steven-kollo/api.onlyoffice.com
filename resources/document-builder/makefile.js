@@ -1,40 +1,65 @@
+#!/usr/bin/env node
+
 // @ts-check
 
 /**
+ * @typedef {import("node:fs").WriteStream} WriteStream
  * @typedef {import("node:stream").TransformCallback} TransformCallback
  * @typedef {import("../resource").Declaration} Declaration
+ * @typedef {import("../resource").Array} Array
+ * @typedef {import("../resource").Literal} Literal
+ * @typedef {import("../resource").Record} Record
+ * @typedef {import("../resource").Generic} Generic
  * @typedef {import("../resource").Type} Type
  */
 
 import { spawn } from "node:child_process"
-import { copyFile, mkdir, mkdtemp, rm } from "node:fs/promises"
+import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises"
 import { createReadStream, createWriteStream, existsSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { basename, extname, join } from "node:path"
+import { argv } from "node:process"
 import { finished } from "node:stream/promises"
 import { Readable, Transform } from "node:stream"
 import { fileURLToPath } from "node:url"
+import esMain from "es-main"
 import MultiStream from "multistream"
+import sade from "sade"
 import Chain from "stream-chain"
 import StreamArray from "stream-json/streamers/StreamArray.js"
-import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
 import * as builtin from "../builtin.js"
 import pack from "./package.json" assert { type: "json" }
 
-import crypto from 'crypto'
-
-function generateRandomFilename() {
-  return crypto.randomBytes(16).toString('hex');
-}
-
 const root = fileURLToPath(new URL(".", import.meta.url))
-const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-definitions-demo/dist"
-const files = ["sdkjs-forms.json", "sdkjs.json"]
+const make = sade("./makefile.js")
 
-async function build() {
+make
+  .command("build")
+  .option("-p, --prettify", "Prettify the output")
+  .action(build)
+
+/**
+ * @typedef {Object} BuildOptions
+ * @property {boolean} [prettify=false]
+ */
+
+/**
+ * @param {BuildOptions=} options
+ * @returns {Promise<void>}
+ */
+async function build(options) {
+  /** @type {BuildOptions} */
+  const opts = {
+    prettify: false,
+    ...options
+  }
+
+  const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-definitions-demo/dist"
+  const files = ["sdkjs-forms.json", "sdkjs.json"]
+
   const tmp = join(tmpdir(), pack.name.replace("/", "-"))
   const temp = await mkdtemp(tmp)
 
@@ -45,10 +70,16 @@ async function build() {
 
   // todo: write js objects directly to the ./dist/main.cjs.
 
+  const bn = "builtin.json"
+  const bf = join(temp, bn)
+  const bl = Object.values(builtin)
+  const bc = JSON.stringify(bl, null, 2)
+  await writeFile(bf, bc)
+
   const ln = "list.json"
 
   /** @type {string[]} */
-  const li = []
+  const li = [bf]
 
   await Promise.all(files.map(async (file) => {
     const f = join(temp, file)
@@ -61,29 +92,36 @@ async function build() {
     li.push(lp)
   }))
 
+  const mn = "map.json"
+
   const lp = join(temp, ln)
   await mergeArrays(li, lp)
 
-  const mn = "map.json"
+  const lp2 = join(temp, `${ln}2`)
+  await sortJSON(lp, lp2, ".id")
 
   const mp = join(temp, mn)
-  await createMap(lp, mp)
+  await createMap(lp2, mp)
 
-  if (await canPrettify()) {
+  if (opts.prettify) {
     const lt = join(dist, ln)
-    await prettify(lp, lt)
+    await prettifyJSON(lp2, lt)
 
     const mt = join(dist, mn)
-    await prettify(mp, mt)
+    await prettifyJSON(mp, mt)
+  } else {
+    const lt = join(dist, ln)
+    await copyFile(lp2, lt)
+
+    const mt = join(dist, mn)
+    await copyFile(mp, mt)
   }
 
-  // sort
-
   const src = join(root, "src")
-  const m = "main.cjs"
-  const mf = join(src, m)
-  const mt = join(dist, m)
-  await copyFile(mf, mt)
+  const ma = "main.cjs"
+  const maf = join(src, ma)
+  const mat = join(dist, ma)
+  await copyFile(maf, mat)
 
   await rm(temp, { recursive: true, force: true })
 }
@@ -145,7 +183,7 @@ function createMap(from, to) {
           cb(null)
         }
       }),
-      objectBrackets(),
+      makeObject(),
       new Stringer(),
       createWriteStream(to)
     ])
@@ -195,7 +233,8 @@ function pushPair(k, v) {
 /**
  * @returns {Transform}
  */
-function objectBrackets() {
+function makeObject() {
+  // https://github.com/uhop/stream-json/pull/143
   return new Transform({
     objectMode: true,
     transform(ch, enc, cb) {
@@ -241,7 +280,15 @@ function createDeclaration(v) {
   )) {
     return
   }
-  d.id = [v.meta.file, v.longname].join(";")
+
+  let longname = v.longname
+  if (!longname.includes("#")) {
+    if (!longname.includes("<anonymous>") && Object.hasOwn(v, "memberof")) {
+      longname = [v.memberof, longname].join("#")
+    }
+  }
+
+  d.id = [v.meta.file, longname].join(";")
 
   if (!(Object.hasOwn(v, "name"))) {
     return
@@ -252,7 +299,7 @@ function createDeclaration(v) {
     d.summary = v.description.split("\n")[0]
     d.description = {
       syntax: "txt",
-      text: v.definitions
+      text: v.description
     }
   }
 
@@ -266,52 +313,201 @@ function createDeclaration(v) {
 
   if (Object.hasOwn(v, "type")) {
     d.type = v.type.names.map((n) => {
-      if (n.startsWith("Array")) {
-        /** @type {Type} */
-        const t = { ...builtin.Array }
-        // Array<Readonly<MyType>>
-        // t.children
-        return t
-      }
-      if (n === "boolean") {
-        return { ...builtin.Boolean }
-      }
-      if (n === "null") {
-        return { ...builtin.Null }
-      }
-      if (n === "number") {
-        return { ...builtin.Number }
-      }
-      if (n === "Object") {
-        return { ...builtin.Object }
-      }
-      if (n.startsWith('"') && n.endsWith('"')) {
-        return { ...builtin.String }
-      }
-      if (n === "undefined") {
-        return { ...builtin.Undefined }
-      }
+      return parseType(n)
     })
   }
 
   return d
 }
 
+/**
+ * @param {string} s
+ * @returns {Type}
+ */
+export function parseType(s) {
+  // todo: should we separate primitives and objects or not?
+
+  if (s === "array" || s === "Array") {
+    /** @type {Array} */
+    const t = {
+      id: builtin.Array.id,
+      children: []
+    }
+    return t
+  }
+  if (s === "boolean" || s === "Boolean") {
+    /** @type {Type} */
+    const t = {
+      id: builtin.Boolean.id
+    }
+    return t
+  }
+  if (s === "null" || s === "Null") {
+    /** @type {Type} */
+    const t = {
+      id: builtin.Null.id
+    }
+    return t
+  }
+  if (s === "number" || s === "Number") {
+    /** @type {Type} */
+    const t = {
+      id: builtin.Number.id
+    }
+    return t
+  }
+  if (s === "object" || s === "Object") {
+    /** @type {Type} */
+    const t = {
+      id: builtin.Object.id,
+      children: []
+    }
+    return t
+  }
+  if (s === "string" || s === "String") {
+    /** @type {Type} */
+    const t = {
+      id: builtin.String.id
+    }
+    return t
+  }
+  if (s === "undefined") {
+    /** @type {Type} */
+    const t = {
+      id: builtin.Undefined.id
+    }
+    return t
+  }
+
+  if (isGeneric(s)) {
+    return parseGeneric(s)
+  }
+  if (isLiteralNumber(s)) {
+    /** @type {Literal} */
+    const t = {
+      id: builtin.Literal.id,
+      value: s
+    }
+    return t
+  }
+  if (isLiteralString(s)) {
+    /** @type {Literal} */
+    const t = {
+      id: builtin.Literal.id,
+      value: s.slice(1, -1)
+    }
+    return t
+  }
+
+  /** @type {Generic} */
+  const t = {
+    id: "custom",
+    children: []
+  }
+  return t
+}
 
 /**
- * @returns {Promise<boolean>}
+ * @param {string} s
+ * @returns {boolean}
  */
-function canPrettify() {
-  // todo: it should return false if it's running in the CI
-  return new Promise((res) => {
-    const s = spawn("jq", ["--version"])
-    s.stdout.on("close", () => {
-      res(true)
-    })
-    s.stdout.on("error", () => {
-      res(false)
-    })
-  })
+function isGeneric(s) {
+  return s.includes("<")
+}
+
+/**
+ * @param {string} s
+ * @returns {Type}
+ */
+function parseGeneric(s) {
+  /** @type {Type[]} */
+  const st = []
+  let c = {
+    id: "",
+    children: []
+  }
+
+  for (let i = 0; i < s.length; i += 1) {
+    switch (s[i]) {
+      case ".":
+        i += 2
+        const [t0, j0] = process(i)
+        c.children.push(t0)
+        st.push(c)
+        i = j0
+        c = t0
+        break
+      case ",":
+        i += 2
+        const [t1, j1] = process(i)
+        const p = st.pop()
+        p.children.push(t1)
+        st.push(p)
+        i = j1
+        c = t1
+        break
+      case ">":
+        c = st.pop()
+        break
+      default:
+        const [t2, j2] = process(i)
+        i = j2
+        c = t2
+        break
+    }
+  }
+
+  /**
+   * @param {number} i
+   * @returns {[Type, number]}
+   */
+  function process(i) {
+    let n = ""
+    while (s[i] !== "." && s[i] !== "," && s[i] !== ">") {
+      n += s[i]
+      i += 1
+    }
+
+    const t = parseType(n)
+    // // todo: not sure that it is right way.
+    // if (s[i] === "," || s[i] === ">") {
+    //   delete t.children
+    // } else if (t.id === builtin.Object.id) {
+    //   t.id = builtin.Record.id
+    // }
+
+    i -= 1
+    return [t, i]
+  }
+
+  return c
+}
+
+/**
+ * @param {string} s
+ * @returns {boolean}
+ */
+function isLiteralNumber(s) {
+  return !isNaN(parseFloat(s));
+}
+
+/**
+ * @param {string} s
+ * @returns {boolean}
+ */
+function isLiteralString(s) {
+  return s.startsWith('"') && s.endsWith('"')
+}
+
+/**
+ * @param {string} from
+ * @param {string} to
+ * @param {string} by
+ * @returns {Promise<void>}
+ */
+function sortJSON(from, to, by) {
+  const w = createWriteStream(to)
+  return jq(w, [`. |= sort_by(${by})`, from])
 }
 
 /**
@@ -319,10 +515,19 @@ function canPrettify() {
  * @param {string} to
  * @returns {Promise<void>}
  */
-function prettify(from, to) {
+function prettifyJSON(from, to) {
+  const w = createWriteStream(to)
+  return jq(w, [".", from])
+}
+
+/**
+ * @param {WriteStream} w
+ * @param {string[]} [args=[]]
+ * @returns {Promise<void>}
+ */
+function jq(w, args = []) {
   return new Promise((res, rej) => {
-    const w = createWriteStream(to)
-    const s = spawn("jq", [".", from])
+    const s = spawn("jq", args)
     s.stdout.on("data", (ch) => {
       w.write(ch)
     })
@@ -335,6 +540,10 @@ function prettify(from, to) {
       rej(e)
     })
   })
+}
+
+if (esMain(import.meta)) {
+  make.parse(argv)
 }
 
 export { build }

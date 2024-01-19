@@ -8,7 +8,7 @@ interface Declaration {
 
   kind?: Kind
   memberof?: string
-  type?: Type[]
+  type?: Type
   properties?: Value[]
   parameters?: Value[]
   returns?: Value[]
@@ -24,20 +24,90 @@ interface Content {
 
 type Syntax = "js" | "md" | "txt"
 
-type Kind = "class" | "event" | "function" | "package" | "typedef"
+type Kind = "builtin" | "class" | "event" | "function" | "package" | "typedef"
+
+interface Array extends Generic {
+  id: "_array"
+}
+
+interface Boolean extends Type {
+  id: "_boolean"
+}
+
+interface Double extends Type {
+  id: "_double"
+}
+
+interface Float extends Type {
+  id: "_float"
+}
+
+interface Int extends Type {
+  id: "_int"
+}
+
+interface Literal extends Type {
+  id: "_literal"
+  value: string
+}
+
+interface Null extends Type {
+  id: "_null"
+}
+
+interface Number extends Type {
+  id: "_number"
+}
+
+interface Object extends Type {
+  id: "_object"
+}
+
+interface Optional extends Generic {
+  id: "_optional"
+}
+
+interface Or extends Generic {
+  id: "_or"
+}
+
+interface Readonly extends Generic {
+  id: "_readonly"
+}
+
+interface Record extends Generic {
+  id: "_record"
+}
+
+interface Setonly extends Generic {
+  id: "_setonly"
+}
+
+interface String extends Type {
+  id: "_string"
+}
+
+interface Undefined extends Type {
+  id: "_undefined"
+}
+
+interface Void extends Type {
+  id: "_void"
+}
+
+interface Generic extends Type {
+  children: Type[]
+}
 
 interface Type {
   id: string
-  name: string
-  children?: Type[]
 }
 
 interface Value {
   name: string
   description?: string
-  optional?: boolean
-  type: Type[]
-  default?: unknown // string | number | boolean, force string?
+  type: Type
+  default?: string
 }
 
 export {
@@ -45,6 +115,24 @@ export {
   Content,
   Syntax,
   Kind,
+  Array,
+  Boolean,
+  Double,
+  Float,
+  Int,
+  Literal,
+  Null,
+  Number,
+  Object,
+  Optional,
+  Or,
+  Readonly,
+  Record,
+  Setonly,
+  String,
+  Undefined,
+  Void,
   Type,
+  Generic,
   Value
 }

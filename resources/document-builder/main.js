@@ -4,7 +4,9 @@
 
 import { build } from "./makefile.js"
 
-await build()
+await build({
+  prettify: true
+})
 
 // const findDuplicates = (arr) => {
 //   let ids = arr.map(obj => obj.id);
