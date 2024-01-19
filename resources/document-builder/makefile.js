@@ -4,7 +4,7 @@
 
 /**
  * @typedef {import("node:stream").TransformCallback} TransformCallback
- * @typedef {import("@onlyoffice/documentation-declarations/declaration").Declaration} Declaration
+ * @typedef {import("@onlyoffice/documentation-declarations").Declaration} Declaration
  */
 
 import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises"

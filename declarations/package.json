@@ -2,6 +2,14 @@
   "name": "@onlyoffice/documentation-declarations",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts"
+    },
+    "./builtin.js": "./lib/builtin.js",
+    "./jsdoc.js": "./lib/jsdoc.js"
+  },
+  "types": "./index.d.ts",
   "packageManager": "pnpm@8.13.0",
   "engines": {
     "node": "21.5.0"

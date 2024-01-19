@@ -1,23 +1,25 @@
 // @ts-check
 
 /**
- * @typedef {import("./declaration.js").Declaration} TDeclaration
- * @typedef {import("./declaration.js").Array} TArray
- * @typedef {import("./declaration.js").Boolean} TBoolean
- * @typedef {import("./declaration.js").Byte} TByte
- * @typedef {import("./declaration.js").Literal} TLiteral
- * @typedef {import("./declaration.js").Null} TNull
- * @typedef {import("./declaration.js").Number} TNumber
- * @typedef {import("./declaration.js").Object} TObject
- * @typedef {import("./declaration.js").Optional} TOptional
- * @typedef {import("./declaration.js").Record} TRecord
- * @typedef {import("./declaration.js").String} TString
- * @typedef {import("./declaration.js").Undefined} TUndefined
- * @typedef {import("./declaration.js").Union} TUnion
- * @typedef {import("./declaration.js").Generic} TGeneric
- * @typedef {import("./declaration.js").Type} TType
- * @typedef {import("./declaration.js").Value} TValue
+ * @typedef {import("../index.js").Declaration} TDeclaration
+ * @typedef {import("../index.js").Array} TArray
+ * @typedef {import("../index.js").Boolean} TBoolean
+ * @typedef {import("../index.js").Byte} TByte
+ * @typedef {import("../index.js").Literal} TLiteral
+ * @typedef {import("../index.js").Null} TNull
+ * @typedef {import("../index.js").Number} TNumber
+ * @typedef {import("../index.js").Object} TObject
+ * @typedef {import("../index.js").Optional} TOptional
+ * @typedef {import("../index.js").Record} TRecord
+ * @typedef {import("../index.js").String} TString
+ * @typedef {import("../index.js").Undefined} TUndefined
+ * @typedef {import("../index.js").Union} TUnion
+ * @typedef {import("../index.js").Generic} TGeneric
+ * @typedef {import("../index.js").Type} TType
+ * @typedef {import("../index.js").Value} TValue
  */
+
+import * as builtin from "./builtin.js"
 
 /**
  * @typedef {any} JSDoc
@@ -26,8 +28,6 @@
 /**
  * @typedef {(t: TType) => void} TypeCallback
  */
-
-import * as builtin from "./builtin.js"
 
 /**
  * @param {JSDoc} v

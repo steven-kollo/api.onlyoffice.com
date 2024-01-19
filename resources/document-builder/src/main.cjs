@@ -1,7 +1,7 @@
-// @ts-check
+// @ts-ignore
 
 /**
- * @typedef {import("@onlyoffice/documentation-declarations/declaration").Declaration} Declaration
+ * @typedef {import("@onlyoffice/documentation-declarations").Declaration} Declaration
  */
 
 /**

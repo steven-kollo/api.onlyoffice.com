@@ -26,6 +26,17 @@ type Syntax = "js" | "md" | "txt"
 
 type Kind = "builtin" | "class" | "event" | "function" | "package" | "typedef"
 
+interface Type {
+  id: string
+}
+
+interface Value {
+  name: string
+  description?: string
+  type: Type
+  default?: string
+}
+
 interface Array extends Type {
   id: "_array"
 }
@@ -99,26 +110,15 @@ interface Void extends Type {
   id: "_void"
 }
 
-interface Generic extends Type {
-  children: Type[]
-}
-
-interface Type {
-  id: string
-}
-
-interface Value {
-  name: string
-  description?: string
-  type: Type
-  default?: string
-}
-
 export {
   Declaration,
   Content,
   Syntax,
   Kind,
+  Generic,
+  Type,
+  Value,
+
   Array,
   Boolean,
   Byte,
@@ -136,8 +136,5 @@ export {
   String,
   Undefined,
   Union,
-  Void,
-  Generic,
-  Type,
-  Value
+  Void
 }
