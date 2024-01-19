@@ -286,6 +286,8 @@ async function createDeclaration(v) {
     d.description.syntax = "md"
   }
 
+  // todo: support the `Example: 1.` in properties, parameters, and returns.
+
   if (d.properties !== undefined) {
     d.properties = d.properties.map((p) => {
       if (p.description !== undefined) {
