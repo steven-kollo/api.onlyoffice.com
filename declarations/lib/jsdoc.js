@@ -2,6 +2,7 @@
 
 /**
  * @typedef {import("../index.js").Declaration} TDeclaration
+ * @typedef {import("../index.js").Content} TContent
  * @typedef {import("../index.js").Array} TArray
  * @typedef {import("../index.js").Boolean} TBoolean
  * @typedef {import("../index.js").Byte} TByte
@@ -115,6 +116,17 @@ function parseDeclaration(v, cb) {
     }
   }
 
+  if (Object.hasOwn(v, "examples")) {
+    d.examples = v.examples.map((e) => {
+      /** @type {TContent} */
+      const c = {
+        syntax: "js",
+        text: e
+      }
+      return c
+    })
+  }
+
   return d
 }
 
@@ -128,7 +140,10 @@ function parseValue(v, cb) {
   /** @type {TValue} */
   const rv = {
     name: "",
-    description: "",
+    description: {
+      syntax: "txt",
+      text: ""
+    },
     type: {
       id: ""
     },
@@ -140,7 +155,12 @@ function parseValue(v, cb) {
     return
   }
   if (Object.hasOwn(v, "description")) {
-    rv.description = v.description
+    /** @type {TContent} */
+    const c = {
+      syntax: "txt",
+      text: v.description
+    }
+    rv.description = c
   } else {
     delete rv.description
   }

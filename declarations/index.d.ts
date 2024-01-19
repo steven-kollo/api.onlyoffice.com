@@ -13,18 +13,27 @@ interface Declaration {
   parameters?: Value[]
   returns?: Value[]
 
-  signatures?: Content[]
   examples?: Content[]
 }
 
 interface Content {
-  syntax?: Syntax
+  syntax: Syntax
   text: string
 }
 
-type Syntax = "js" | "md" | "txt"
+type Syntax =
+  "js" |
+  "md" |
+  "ts" |
+  "txt"
 
-type Kind = "builtin" | "class" | "event" | "function" | "package" | "typedef"
+type Kind =
+  "builtin" |
+  "class" |
+  "event" |
+  "function" |
+  "package" |
+  "typedef"
 
 interface Type {
   id: string
@@ -32,7 +41,7 @@ interface Type {
 
 interface Value {
   name: string
-  description?: string
+  description?: Content
   type: Type
   default?: string
 }
