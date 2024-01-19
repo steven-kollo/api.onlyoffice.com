@@ -1,6 +1,6 @@
 packages:
   - "declarations"
-  - "resources"
+  - "resources/*"
   - "scripts"
   - "server"
   - "site"
