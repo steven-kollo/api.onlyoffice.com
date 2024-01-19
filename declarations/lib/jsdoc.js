@@ -190,7 +190,7 @@ function parseType(v, cb) {
     }
     t = s
   }
-  if (Object.hasOwn(v, "optional")) {
+  if (Object.hasOwn(v, "optional") || Object.hasOwn(v, "nullable")) {
     /** @type {TOptional} */
     const o = {
       id: builtin.Optional.id,
