@@ -72,6 +72,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config/Editor/Embedded",
                 "Config/Editor/Plugins",
                 "Config/Events",
+                "ConfigCreate",
                 "Confluence",
                 "Connector",
                 "Conversion",
