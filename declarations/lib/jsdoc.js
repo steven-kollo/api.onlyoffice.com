@@ -124,6 +124,7 @@ function parseDeclaration(v, cb) {
  * @returns {TValue=}
  */
 function parseValue(v, cb) {
+  // delete uses to keep the order of the properties.
   /** @type {TValue} */
   const rv = {
     name: "",

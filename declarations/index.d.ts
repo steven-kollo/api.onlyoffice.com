@@ -110,12 +110,15 @@ interface Void extends Type {
   id: "_void"
 }
 
+interface Generic extends Type {
+  children: Type[]
+}
+
 export {
   Declaration,
   Content,
   Syntax,
   Kind,
-  Generic,
   Type,
   Value,
 
@@ -136,5 +139,6 @@ export {
   String,
   Undefined,
   Union,
-  Void
+  Void,
+  Generic
 }
