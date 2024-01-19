@@ -23,6 +23,12 @@ importers:
 
   resources/document-builder:
     devDependencies:
+      '@onlyoffice/documentation-declarations':
+        specifier: workspace:^
+        version: link:../../declarations
+      '@onlyoffice/documentation-scripts':
+        specifier: workspace:^
+        version: link:../../scripts
       '@types/multistream':
         specifier: ^4.1.3
         version: 4.1.3

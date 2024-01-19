@@ -1,14 +1,18 @@
 // @ts-check
 
 /**
- * @typedef {import("../../resource.d.ts").Declaration} Declaration
+ * @typedef {import("@onlyoffice/documentation-declarations/declaration").Declaration} Declaration
  */
 
-/** @type {Declaration[]} */
+/**
+ * @typedef {Declaration[]} List
+ */
+
+/** @type {List} */
 const l = require("./list.json")
 
 /**
- * @returns {Declaration[]}
+ * @returns {List}
  */
 function list() {
   return l
@@ -23,7 +27,7 @@ const m = require("./map.json")
 
 /**
  * @param {string} id
- * @returns {Declaration | undefined}
+ * @returns {Declaration=}
  */
 function retrieve(id) {
   const i = m[id]
@@ -33,7 +37,4 @@ function retrieve(id) {
   return l[i]
 }
 
-module.exports = {
-  list,
-  retrieve
-}
+module.exports = { list, retrieve }

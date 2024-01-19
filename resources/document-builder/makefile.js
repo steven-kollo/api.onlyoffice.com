@@ -3,17 +3,10 @@
 // @ts-check
 
 /**
- * @typedef {import("node:fs").WriteStream} WriteStream
  * @typedef {import("node:stream").TransformCallback} TransformCallback
- * @typedef {import("../resource").Declaration} Declaration
- * @typedef {import("../resource").Array} Array
- * @typedef {import("../resource").Literal} Literal
- * @typedef {import("../resource").Record} Record
- * @typedef {import("../resource").Generic} Generic
- * @typedef {import("../resource").Type} Type
+ * @typedef {import("@onlyoffice/documentation-declarations/declaration").Declaration} Declaration
  */
 
-import { spawn } from "node:child_process"
 import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises"
 import { createReadStream, createWriteStream, existsSync } from "node:fs"
 import { tmpdir } from "node:os"
@@ -22,6 +15,9 @@ import { argv } from "node:process"
 import { finished } from "node:stream/promises"
 import { Readable, Transform } from "node:stream"
 import { fileURLToPath } from "node:url"
+import * as builtin from "@onlyoffice/documentation-declarations/builtin.js"
+import { parseDeclaration } from "@onlyoffice/documentation-declarations/jsdoc.js"
+import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-scripts/jq.js"
 import esMain from "es-main"
 import MultiStream from "multistream"
 import sade from "sade"
@@ -30,7 +26,6 @@ import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
-import * as builtin from "../builtin.js"
 import pack from "./package.json" assert { type: "json" }
 
 const root = fileURLToPath(new URL(".", import.meta.url))
@@ -267,12 +262,6 @@ function transformPassThrough(ch, enc, cb) {
  * @returns {Declaration=}
  */
 function createDeclaration(v) {
-  /** @type {Declaration} */
-  const d = {
-    id: "",
-    name: ""
-  }
-
   if (!(
     Object.hasOwn(v, "meta") &&
     Object.hasOwn(v.meta, "file") &&
@@ -281,265 +270,21 @@ function createDeclaration(v) {
     return
   }
 
-  let longname = v.longname
-  if (!longname.includes("#")) {
-    if (!longname.includes("<anonymous>") && Object.hasOwn(v, "memberof")) {
-      longname = [v.memberof, longname].join("#")
-    }
-  }
-
-  d.id = [v.meta.file, longname].join(";")
-
-  if (!(Object.hasOwn(v, "name"))) {
+  const d = parseDeclaration(v, (t) => {
+    t.id = [v.meta.file, t.id].join(";")
+  })
+  if (d === undefined) {
     return
   }
-  d.name = v.name
 
-  if (Object.hasOwn(v, "description")) {
-    d.summary = v.description.split("\n")[0]
-    d.description = {
-      syntax: "txt",
-      text: v.description
-    }
-  }
+  const longname = v.longname.replace(/\<anonymous\>~?/, "")
+  d.id = [v.meta.file, longname].join(";")
 
-  if (Object.hasOwn(v, "kind")) {
-    d.kind = v.kind
-  }
-
-  if (Object.hasOwn(v, "memberof")) {
-    d.memberof = v.memberof
-  }
-
-  if (Object.hasOwn(v, "type")) {
-    d.type = v.type.names.map((n) => {
-      return parseType(n)
-    })
+  if (d.memberof !== undefined) {
+    d.memberof = d.memberof.replace(/\<anonymous\>~?/, "")
   }
 
   return d
-}
-
-/**
- * @param {string} s
- * @returns {Type}
- */
-export function parseType(s) {
-  // todo: should we separate primitives and objects or not?
-
-  if (s === "array" || s === "Array") {
-    /** @type {Array} */
-    const t = {
-      id: builtin.Array.id,
-      children: []
-    }
-    return t
-  }
-  if (s === "boolean" || s === "Boolean") {
-    /** @type {Type} */
-    const t = {
-      id: builtin.Boolean.id
-    }
-    return t
-  }
-  if (s === "null" || s === "Null") {
-    /** @type {Type} */
-    const t = {
-      id: builtin.Null.id
-    }
-    return t
-  }
-  if (s === "number" || s === "Number") {
-    /** @type {Type} */
-    const t = {
-      id: builtin.Number.id
-    }
-    return t
-  }
-  if (s === "object" || s === "Object") {
-    /** @type {Type} */
-    const t = {
-      id: builtin.Object.id,
-      children: []
-    }
-    return t
-  }
-  if (s === "string" || s === "String") {
-    /** @type {Type} */
-    const t = {
-      id: builtin.String.id
-    }
-    return t
-  }
-  if (s === "undefined") {
-    /** @type {Type} */
-    const t = {
-      id: builtin.Undefined.id
-    }
-    return t
-  }
-
-  if (isGeneric(s)) {
-    return parseGeneric(s)
-  }
-  if (isLiteralNumber(s)) {
-    /** @type {Literal} */
-    const t = {
-      id: builtin.Literal.id,
-      value: s
-    }
-    return t
-  }
-  if (isLiteralString(s)) {
-    /** @type {Literal} */
-    const t = {
-      id: builtin.Literal.id,
-      value: s.slice(1, -1)
-    }
-    return t
-  }
-
-  /** @type {Generic} */
-  const t = {
-    id: "custom",
-    children: []
-  }
-  return t
-}
-
-/**
- * @param {string} s
- * @returns {boolean}
- */
-function isGeneric(s) {
-  return s.includes("<")
-}
-
-/**
- * @param {string} s
- * @returns {Type}
- */
-function parseGeneric(s) {
-  /** @type {Type[]} */
-  const st = []
-  let c = {
-    id: "",
-    children: []
-  }
-
-  for (let i = 0; i < s.length; i += 1) {
-    switch (s[i]) {
-      case ".":
-        i += 2
-        const [t0, j0] = process(i)
-        c.children.push(t0)
-        st.push(c)
-        i = j0
-        c = t0
-        break
-      case ",":
-        i += 2
-        const [t1, j1] = process(i)
-        const p = st.pop()
-        p.children.push(t1)
-        st.push(p)
-        i = j1
-        c = t1
-        break
-      case ">":
-        c = st.pop()
-        break
-      default:
-        const [t2, j2] = process(i)
-        i = j2
-        c = t2
-        break
-    }
-  }
-
-  /**
-   * @param {number} i
-   * @returns {[Type, number]}
-   */
-  function process(i) {
-    let n = ""
-    while (s[i] !== "." && s[i] !== "," && s[i] !== ">") {
-      n += s[i]
-      i += 1
-    }
-
-    const t = parseType(n)
-    // // todo: not sure that it is right way.
-    // if (s[i] === "," || s[i] === ">") {
-    //   delete t.children
-    // } else if (t.id === builtin.Object.id) {
-    //   t.id = builtin.Record.id
-    // }
-
-    i -= 1
-    return [t, i]
-  }
-
-  return c
-}
-
-/**
- * @param {string} s
- * @returns {boolean}
- */
-function isLiteralNumber(s) {
-  return !isNaN(parseFloat(s));
-}
-
-/**
- * @param {string} s
- * @returns {boolean}
- */
-function isLiteralString(s) {
-  return s.startsWith('"') && s.endsWith('"')
-}
-
-/**
- * @param {string} from
- * @param {string} to
- * @param {string} by
- * @returns {Promise<void>}
- */
-function sortJSON(from, to, by) {
-  const w = createWriteStream(to)
-  return jq(w, [`. |= sort_by(${by})`, from])
-}
-
-/**
- * @param {string} from
- * @param {string} to
- * @returns {Promise<void>}
- */
-function prettifyJSON(from, to) {
-  const w = createWriteStream(to)
-  return jq(w, [".", from])
-}
-
-/**
- * @param {WriteStream} w
- * @param {string[]} [args=[]]
- * @returns {Promise<void>}
- */
-function jq(w, args = []) {
-  return new Promise((res, rej) => {
-    const s = spawn("jq", args)
-    s.stdout.on("data", (ch) => {
-      w.write(ch)
-    })
-    s.stdout.on("close", () => {
-      w.close()
-      res(undefined)
-    })
-    s.stdout.on("error", (e) => {
-      w.close()
-      rej(e)
-    })
-  })
 }
 
 if (esMain(import.meta)) {

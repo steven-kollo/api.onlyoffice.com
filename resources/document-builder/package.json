@@ -6,6 +6,8 @@
     "build": "node ./makefile.js build"
   },
   "devDependencies": {
+    "@onlyoffice/documentation-declarations": "workspace:^",
+    "@onlyoffice/documentation-scripts": "workspace:^",
     "@types/multistream": "^4.1.3",
     "@types/stream-chain": "^2.0.4",
     "@types/stream-json": "^1.7.7",

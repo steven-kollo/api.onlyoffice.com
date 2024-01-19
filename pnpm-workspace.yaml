@@ -1,4 +1,7 @@
 packages:
+  - "declarations"
+  - "resources"
+  - "scripts"
   - "server"
   - "site"
   - "ui/*"

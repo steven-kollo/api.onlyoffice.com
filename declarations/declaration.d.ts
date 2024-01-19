@@ -26,12 +26,16 @@ type Syntax = "js" | "md" | "txt"
 
 type Kind = "builtin" | "class" | "event" | "function" | "package" | "typedef"
 
-interface Array extends Generic {
+interface Array extends Type {
   id: "_array"
 }
 
 interface Boolean extends Type {
   id: "_boolean"
+}
+
+interface Byte extends Type {
+  id: "_byte"
 }
 
 interface Double extends Type {
@@ -67,10 +71,6 @@ interface Optional extends Generic {
   id: "_optional"
 }
 
-interface Or extends Generic {
-  id: "_or"
-}
-
 interface Readonly extends Generic {
   id: "_readonly"
 }
@@ -89,6 +89,10 @@ interface String extends Type {
 
 interface Undefined extends Type {
   id: "_undefined"
+}
+
+interface Union extends Generic {
+  id: "_union"
 }
 
 interface Void extends Type {
@@ -117,6 +121,7 @@ export {
   Kind,
   Array,
   Boolean,
+  Byte,
   Double,
   Float,
   Int,
@@ -125,14 +130,14 @@ export {
   Number,
   Object,
   Optional,
-  Or,
   Readonly,
   Record,
   Setonly,
   String,
   Undefined,
+  Union,
   Void,
-  Type,
   Generic,
+  Type,
   Value
 }

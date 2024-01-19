@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/documentation-scripts",
+  "name": "@onlyoffice/documentation-declarations",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@8.13.0",
