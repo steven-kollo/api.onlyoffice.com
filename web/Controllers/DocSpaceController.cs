@@ -47,6 +47,7 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Backend",
                 "Backend/Auth",
+                "Backend/Webhooks",
                 "Changelog",
                 "Faq",
                 "Filters",

@@ -208,6 +208,9 @@
             <li>
                 <a href="<%= Url.Action("backend/auth") %>">Passing authentication</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("backend/webhooks") %>">Webhooks</a>
+            </li>
             <% if (entryPoints != null && entryPoints.Any())
             { %>
             <% foreach (var entryPoint in entryPoints.OrderBy(x => x.Name).ToList())

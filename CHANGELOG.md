@@ -1,5 +1,7 @@
 # Change Log
 
+- docspace: added the information about webhooks
+
 ## 4.4.1
 - docspace: fix samples
 
