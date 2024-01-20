@@ -1,36 +1,73 @@
 const { basename } = require("node:path")
-const { cell } = require("../../../../resources/document-builder/main.js")
+// const { isBuiltin } = require // todo: cjs
+const { list, retrieve } = require("@onlyoffice/documentation-resources-document-builder")
 
 /**
- * @typedef {import("@onlyoffice-demo-docs/document-builder/main.js").TypeDefinition} TypeDefinition
+ * @typedef {import("@onlyoffice/documentation-declarations").Declaration} Declaration
  */
+
+const items = list()
 
 function data() {
   const data = {
-    layout: "class/class.webc",
+    // layout: "class/class.webc",
+    layout: "blank/blank.webc",
     pagination: {
       data: "items",
       size: 1,
-      addAllPagesToCollections: true
-    },
-    items: [
-      ...populate(cell, "spreadsheet"),
-      // ...populate(form, "form"),
-      // ...populate(slide, "presentation"),
-      // ...populate(word, "text")
-    ],
-    permalink(data) {
-      /** @type {TypeDefinition} */
-      const d = data.pagination.items[0]
-      let u = `/document-builder/javascript-sdk/${d.slug}/`
-      switch (d.type) {
-        case "class":
-          u += `${d.name}/index.html`
-          break
-        case "member":
-          u += `${d.memberof}/${d.name}/index.html`
-          break
+      addAllPagesToCollections: true,
+      before(data) {
+        // data.order = 0
+        // https://github.com/11ty/eleventy/issues/2260
+        return data.filter((d) => d.kind !== "builtin")
       }
+    },
+    items,
+    permalink(data) {
+      /** @type {Declaration} */
+      const d = data.pagination.items[0]
+      if (d.kind === "builtin") {
+        return false
+      }
+
+      // let p = ""
+      let p = d._package
+      // switch (d._package) {
+      //   case "word":
+      //     p = "text"
+      //     break
+      //   case "cell":
+      //     p = "spreadsheet"
+      //     break
+      //   case "slide":
+      //     p = "presentation"
+      //     break
+      //   case "form":
+      //     p = "form"
+      //     break
+      // }
+
+      let u = ""
+      switch (d.kind) {
+        case "builtin":
+          u = `/document-builder/javascript-sdk/_/${d.name}/index.html`
+          break
+        case "class":
+          u = `/document-builder/javascript-sdk/${p}/${d.name}/index.html`
+          break
+        case "event":
+          u = `/document-builder/javascript-sdk/${p}/_e/${d.name}/index.html`
+          break
+        case "function":
+          u = `/document-builder/javascript-sdk/${p}/${d.memberof}/${d.name}/index.html`
+          break
+        case "typedef":
+          u = `/document-builder/javascript-sdk/${p}/_t/${d.name}/index.html`
+          break
+        default:
+          throw new Error(`Unknown kind: ${d.kind}`)
+      }
+
       return u
     },
     eleventyComputed: {
@@ -39,26 +76,16 @@ function data() {
       },
       currentName(data) {
         return basename(data.page.url)
+      },
+      eleventyExcludeFromCollections(data) {
+        /** @type {Declaration} */
+        const d = data.pagination.items[0]
+        return d.kind === "builtin"
       }
     }
   }
 
   return data
-}
-
-/**
- * @param {TypeDefinition[]} raw
- * @param {string} slug
- * @returns {(TypeDefinition | { slug: string })[]}
- */
-function populate(raw, slug) {
-  // todo: permalink
-  return raw.map((o) => {
-    return {
-      ...o,
-      slug: slug
-    }
-  })
 }
 
 function render() {

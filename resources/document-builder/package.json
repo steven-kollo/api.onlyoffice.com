@@ -2,6 +2,12 @@
   "name": "@onlyoffice/documentation-resources-document-builder",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/main.cjs"
+    },
+    "./makefile.js": "./makefile.js"
+  },
   "scripts": {
     "build": "node ./makefile.js build"
   },

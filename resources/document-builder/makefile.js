@@ -279,8 +279,24 @@ async function createDeclaration(v) {
     return
   }
 
-  const longname = v.longname.replace(/\<anonymous\>~?/, "")
+  let longname = ""
+  if (Object.hasOwn(v, "inherits")) {
+    return
+    d.memberof = v.inherits.split("#")[0]
+    longname = v.inherits
+  } else {
+    longname = v.longname.replace(/\<anonymous\>~?/, "")
+  }
+
+  // const longname = v.longname.replace(/\<anonymous\>~?/, "")
   d.id = [v.meta.file, longname].join(";")
+
+  if (longname === "ApiRange#Find" || longname === "ApiRange#Replace") {
+    // todo: @also
+    // https://github.com/ONLYOFFICE/sdkjs/blob/eb92448a74506b94ca984b6c6dd82b715ecf4836/cell/apiBuilder.js#L3307
+    // https://github.com/ONLYOFFICE/sdkjs/blob/eb92448a74506b94ca984b6c6dd82b715ecf4836/cell/apiBuilder.js#L3464
+    return
+  }
 
   if (d.description !== undefined) {
     d.description.syntax = "md"
@@ -327,6 +343,30 @@ async function createDeclaration(v) {
       }
       return e
     }))
+  }
+
+  // todo: in progress...
+  d._package = ""
+  if (d.id.includes("sdkjs/contents/word/apiBuilder.js")) {
+    d._package = "word"
+  } else if (d.id.includes("sdkjs/contents/cell/apiBuilder.js")) {
+    d._package = "cell"
+  } else if (d.id.includes("sdkjs/contents/slide/apiBuilder.js")) {
+    d._package = "slide"
+  } else if (d.id.includes("sdkjs/contents/word/api_plugins.js")) {
+    d._package = "word-plugins"
+  } else if (d.id.includes("sdkjs/contents/cell/api_plugins.js")) {
+    d._package = "cell-plugins"
+  } else if (d.id.includes("sdkjs/contents/slide/api_plugins.js")) {
+    d._package = "slide-plugins"
+  } else if (d.id.includes("sdkjs/contents/common/apiBase_plugins.js")) {
+    d._package = "common"
+  } else if (d.id.includes("sdkjs/contents/common/plugins/plugin_base_api.js")) {
+    d._package = "common-plugins"
+  } else if (d.id.includes("sdkjs-forms/contents/apiBuilder.js")) {
+    d._package = "form"
+  } else if (d.id.includes("sdkjs-forms/contents/apiPlugins.js")) {
+    d._package = "form-plugins"
   }
 
   return d

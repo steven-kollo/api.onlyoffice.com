@@ -43,7 +43,7 @@ interface Value {
   name: string
   description?: Content
   type: Type
-  default?: string
+  default?: unknown
 }
 
 interface Array extends Type {
@@ -70,9 +70,17 @@ interface Int extends Type {
   id: "_int"
 }
 
+// todo
+// interface NumberLiteral extends Literal {
+//   value: number
+// }
+// interface StringLiteral extends Literal {
+//   value: string
+// }
+
 interface Literal extends Type {
   id: "_literal"
-  value: string
+  value: unknown
 }
 
 interface Null extends Type {
@@ -120,6 +128,7 @@ interface Void extends Type {
 }
 
 interface Generic extends Type {
+  // todo: id: "_generic"
   children: Type[]
 }
 

@@ -172,6 +172,7 @@ function configureProducts(c) {
       })
     }
 
+    return g
     const result = sort(g).map((p) => {
       p.type = "root"
       return p

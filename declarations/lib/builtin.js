@@ -153,7 +153,7 @@ const Void = {
  * @param {TDeclaration | TType} t
  */
 function isBuiltin(t) {
-  return (
+  const trueID =
     t.id === Array.id ||
     t.id === Boolean.id ||
     t.id === Byte.id ||
@@ -172,7 +172,10 @@ function isBuiltin(t) {
     t.id === Undefined.id ||
     t.id === Union.id ||
     t.id === Void.id
-  )
+  if (global.Object.hasOwn(t, "name") && global.Object.hasOwn(t, "kind")) {
+    return trueID && t.kind === "builtin"
+  }
+  return trueID
 }
 
 export {

@@ -189,26 +189,12 @@ function parseValue(v, cb) {
  * @returns {TType=}
  */
 function parseType(v, cb) {
-  if (!Object.hasOwn(v.type, "names")) {
+  if (!Object.hasOwn(v.type, "parsedType")) {
     return
   }
-  /** @type {TType=} */
-  let t
-  if (v.type.names.length > 1) {
-    /** @type {TUnion} */
-    const u = {
-      id: builtin.Union.id,
-      children: v.type.names.map((n) => {
-        return parseTypeString(n, cb)
-      })
-    }
-    t = u
-  } else {
-    const s = parseTypeString(v.type.names[0], cb)
-    if (s === undefined) {
-      return
-    }
-    t = s
+  let t = parseTypeComposition(v.type.parsedType, cb)
+  if (t === undefined) {
+    return
   }
   if (Object.hasOwn(v, "optional") || Object.hasOwn(v, "nullable")) {
     /** @type {TOptional} */
@@ -222,133 +208,76 @@ function parseType(v, cb) {
 }
 
 /**
- * @param {string} s
+ * @param {JSDoc} v
  * @param {TypeCallback} cb
- * @returns {TType}
+ * @returns {TType=}
  */
-function parseTypeString(s, cb) {
-  // todo: explain, "#,##0_);(#,##0)".
-  const u = parseTypeUnit(s, cb)
-  if (builtin.isBuiltin(u)) {
-    return u
+function parseTypeComposition(v, cb) {
+  // https://github.com/hegemonic/catharsis
+  /** @type {TType=} */
+  let t
+  switch (v.type) {
+    // case "AllLiteral":
+    //   break
+    // case "FieldType":
+    //   break
+    // case "FunctionType":
+    //   break
+    case "NameExpression":
+      if (!Object.hasOwn(v, "name")) {
+        return
+      }
+      t = parseTypeUnit(v.name, cb)
+      break
+    case "NullLiteral":
+      t = parseTypeUnit("null", cb)
+      break
+    // case "RecordType":
+    //   break
+    case "TypeApplication":
+      if (!Object.hasOwn(v, "expression")) {
+        return
+      }
+      t = parseTypeComposition(v.expression, cb)
+      if (t === undefined) {
+        return
+      }
+      if (Object.hasOwn(v, "applications")) {
+        /** @type {TGeneric} */
+        const g = {
+          id: t.id,
+          children: v.applications.map((a) => {
+            return parseTypeComposition(a, cb)
+          })
+        }
+        if (g.id === builtin.Object.id) {
+          g.id = builtin.Record.id
+        }
+        t = g
+      }
+      break
+    case "TypeUnion":
+      if (!Object.hasOwn(v, "elements")) {
+        return
+      }
+      /** @type {TUnion} */
+      const u = {
+        id: builtin.Union.id,
+        children: v.elements.map((e) => {
+          return parseTypeComposition(e, cb)
+        })
+      }
+      t = u
+      break
+    case "UndefinedLiteral":
+      t = parseTypeUnit("undefined", cb)
+      break
+    // case "UnknownLiteral":
+    //   break
+    default:
+      break
   }
-  return parseTypeComposition(s, cb)
-}
-
-/**
- * @param {string} s
- * @param {TypeCallback} cb
- * @returns {TType}
- */
-function parseTypeComposition(s, cb) {
-  /** @type {TType[]} */
-  const st = []
-
-  /** @type {TGeneric} */
-  const r = { id: "_root", children: [] }
-  st.push(r)
-
-  /** @type {TType} */
-  let p
-
-  /** @type {TType} */
-  let n
-
-  let b = ""
-
-  for (let i = 0; i < s.length; i += 1) {
-    let u = s[i]
-
-    switch (u) {
-      case ".":
-        if (b !== "") {
-          p = st[st.length - 1]
-          n = parseTypeUnit(b, cb)
-          n.children = []
-          n = resolveTypeUnit(n)
-          p.children.push(n)
-          st.push(n)
-        }
-        u = ""
-        break
-      case "<":
-        u = ""
-        break
-      case ",":
-        if (b !== "") {
-          p = st[st.length - 1]
-          n = parseTypeUnit(b, cb)
-          p.children.push(n)
-        }
-        u = ""
-        break
-      case " ":
-        u = ""
-        break
-      case ">":
-        p = st.pop()
-        if (b !== "") {
-          n = parseTypeUnit(b, cb)
-          p.children.push(n)
-        }
-        u = ""
-        break
-      case "(":
-        p = st[st.length - 1]
-        n = { id: builtin.Union.id }
-        n.children = []
-        p.children.push(n)
-        st.push(n)
-        u = ""
-        break
-      case "|":
-        if (b !== "") {
-          p = st[st.length - 1]
-          n = parseTypeUnit(b, cb)
-          p.children.push(n)
-        }
-        u = ""
-        break
-      case ")":
-        p = st.pop()
-        if (b !== "") {
-          n = parseTypeUnit(b, cb)
-          p.children.push(n)
-        }
-        u = ""
-        break
-      default:
-        break
-    }
-
-    let j = i + 1
-    while (
-      s[j] !== undefined &&
-      s[j] !== "." &&
-      s[j] !== "<" &&
-      s[j] !== "," &&
-      s[j] !== " " &&
-      s[j] !== ">" &&
-      s[j] !== "(" &&
-      s[j] !== "|" &&
-      s[j] !== ")"
-    ) {
-      u += s[j]
-      i += 1
-      j += 1
-    }
-
-    b = u
-  }
-
-  if (b !== "") {
-    p = st[st.length - 1]
-    n = parseTypeUnit(b, cb)
-    p.children.push(n)
-    st.push(n)
-  }
-
-  return r.children[0]
+  return t
 }
 
 /**
@@ -435,22 +364,6 @@ function parseTypeUnit(s, cb) {
     id: s,
   }
   cb(t)
-  return t
-}
-
-/**
- * @param {TType} t
- * @returns {TType}
- */
-function resolveTypeUnit(t) {
-  if (t.id === builtin.Object.id && Object.hasOwn(t, "children")) {
-    /** @type {TRecord} */
-    const n = {
-      id: builtin.Record.id,
-      children: []
-    }
-    return n
-  }
   return t
 }
 

@@ -83,6 +83,12 @@ importers:
       '@11ty/webc':
         specifier: ^0.11.4
         version: 0.11.4
+      '@onlyoffice/documentation-declarations':
+        specifier: workspace:^
+        version: link:../declarations
+      '@onlyoffice/documentation-resources-document-builder':
+        specifier: workspace:^
+        version: link:../resources/document-builder
       '@onlyoffice/documentation-ui-kit':
         specifier: workspace:^
         version: link:../ui/kit

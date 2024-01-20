@@ -11,6 +11,8 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
     "@11ty/webc": "^0.11.4",
+    "@onlyoffice/documentation-declarations": "workspace:^",
+    "@onlyoffice/documentation-resources-document-builder": "workspace:^",
     "@onlyoffice/documentation-ui-kit": "workspace:^",
     "esbuild": "^0.19.11",
     "html-minifier-terser": "^7.2.0",

@@ -139,7 +139,7 @@ layout: blank/blank.webc
   text-decoration: underline;
 }
 </style>
-<h1 class="heading" @text="title"></h1>
+<!-- <h1 class="heading" @text="title"></h1>
 <section>
   <h2 class="sr-only"><l>All Products</l></h2>
   <ul class="cards">
@@ -170,4 +170,4 @@ layout: blank/blank.webc
       </o-masonry>
     </div>
   </section>
-</o-masonry>
+</o-masonry> -->

@@ -24,7 +24,7 @@ function createNavigation(products, page) {
   <body>
     <site-header>
       <onlyoffice-logo slot="logo"></onlyoffice-logo>
-      <site-nav slot="nav" :@nav="createNavigation(collections.products, page)"></site-nav>
+      <!-- <site-nav slot="nav" :@nav="createNavigation(collections.products, page)"></site-nav> -->
     </site-header>
     <template webc:nokeep @raw="content"></template>
     <site-footer></site-footer>
