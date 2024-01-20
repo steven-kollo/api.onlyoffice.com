@@ -439,7 +439,8 @@
             </tr>
             <tr class="tablerow">
                 <td id="watermark" class="copy-link">watermark</td>
-                <td>Defines a JSON object containing the properties of a watermark which is inserted into the pdf and image files during conversion.</td>
+                <td>Defines a JSON object containing the <a href="<%= Url.Action("global", "plugin") %>#watermark_on_draw">properties</a> of a watermark
+                    which is inserted into the pdf and image files during conversion.</td>
                 <td>object</td>
                 <td>optional</td>
             </tr>
