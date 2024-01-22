@@ -138,20 +138,31 @@
             <label for="document_key">Key</label>
             <input type="text" id="document_key" name="document_key" value="Khirz6zTPdfd7">
         </div>
-        <div class="line input_line">
-            <label for="document_file_key">File key</label>
-            <input type="text" id="document_file_key" name="document_file_key" value="BCFA2CED">
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="document_reference_data" name="document_reference_data" hidden="hidden" checked>
+                <span></span>
+                <label for="document_reference_data">Reference data</label>
+            </label>
         </div>
-        <div class="line input_line">
-             <label for="document_instance_id">Instance Id</label>
-            <input type="text" id="document_instance_id" name="document_instance_id" value="https://example.com">
+        <div class="config_object_holder" id="holder_document_reference_data">
+            <div class="config_nested_group">
+                <div class="line input_line">
+                    <label for="document_file_key">File key</label>
+                    <input type="text" id="document_file_key" name="document_file_key" value="BCFA2CED">
+                </div>
+                <div class="line input_line">
+                     <label for="document_instance_id">Instance Id</label>
+                    <input type="text" id="document_instance_id" name="document_instance_id" value="https://example.com">
+                </div>
+            </div>
         </div>
         <div class="line input_line">
             <label for="document_title">Title</label>
             <input type="text" id="document_title" name="document_title" value="Example Title">
         </div>
         <div class="line input_line" style="margin-bottom: 0;">
-            <label for="document_url">URL:</label>
+            <label for="document_url">URL</label>
             <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.docx">
         </div>
 
@@ -237,7 +248,7 @@
         DocumentType = "word",
         EditorConfig = new Config.EditorConfigConfiguration
             {
-                // CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                     {
                         Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
@@ -267,15 +278,26 @@
         updateConfig();
     });
 
+    $("#document_reference_data").change(showHideConfigObject);
+
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
     function updateConfig() {
-        var document_string = `{
-        "fileType": ${getFieldValue("document_file_type")},
-        "key": ${getFieldValue("document_key")},
+        var referenceData = `
         "referenceData": {
             "fileKey": ${getFieldValue("document_file_key")},
             "instanceId": ${getFieldValue("document_instance_id")},
             "key": ${getFieldValue("document_key")}
-        },
+        },`;
+        if (!document.getElementById('document_reference_data').checked) {
+            referenceData = "";
+        }
+        var document_string = `{
+        "fileType": ${getFieldValue("document_file_type")},
+        "key": ${getFieldValue("document_key")},${referenceData}
         "title": ${getFieldValue("document_title").slice(0, -1)}.${getFieldValue("document_file_type").slice(1) },
         "url": ${getFieldValue("document_url")}
     }`;

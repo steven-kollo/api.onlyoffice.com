@@ -388,13 +388,6 @@
             </div>
             <div class="line">
                 <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_modifyFilter" name="documentConfig_permissions_modifyFilter" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_modifyFilter">Modify Filter</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" hidden="hidden" checked>
                     <span></span>
                     <label for="documentConfig_permissions_print">Print</label>
@@ -450,7 +443,7 @@
         DocumentType = "word",
         EditorConfig = new Config.EditorConfigConfiguration
             {     
-                //CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig {
                     CompactToolbar = true,
                     Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
@@ -511,7 +504,6 @@
             "editCommentAuthorOnly": ${getFieldValue("documentConfig_permissions_editCommentAuthorOnly")},
             "fillForms": ${getFieldValue("documentConfig_permissions_fillForms")},
             "modifyContentControl": ${getFieldValue("documentConfig_permissions_modifyContentControl")},
-            "modifyFilter": ${getFieldValue("documentConfig_permissions_modifyFilter")},
             "print": ${getFieldValue("documentConfig_permissions_print")},
             "protect": ${getFieldValue("documentConfig_permissions_protect")},
             "review": ${getFieldValue("documentConfig_permissions_review")},

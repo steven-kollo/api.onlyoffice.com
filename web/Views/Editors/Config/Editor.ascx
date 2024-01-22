@@ -389,10 +389,6 @@
         <div style="padding-left: 24px;">
             <button id="addButton_editorConfig_recent" class="add-button" hidden>+</button>
         </div>
-        <div class="line input_line">
-            <label for="editorConfig_region">Region</label>
-            <input type="text" id="editorConfig_region" name="editorConfig_region" value="en-US">
-        </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_templates" name="editorConfig_templates" hidden="hidden">
@@ -523,7 +519,7 @@
         DocumentType = "word",
         EditorConfig = new Config.EditorConfigConfiguration
             {
-                // CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                     {
                         Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
@@ -615,9 +611,9 @@
             recentString += recentString == "" ? string : "," + string;
             i++;
         }
-        return recentString == "" ? "" : `
+        return recentString == "" ? "" : `,
         "recent": [${recentString}
-        ],`;
+        ]`;
     }
 
     // Templates Items
@@ -712,8 +708,7 @@
         ${coEditing}"createUrl": ${getFieldValue("editorConfig_createUrl")},
         "lang": ${getFieldValue("editorConfig_lang")},
         "location": ${location},
-        "mode": ${getFieldValue("editorConfig_mode")},${recent}
-        "region": ${getFieldValue("editorConfig_region")}${templates}${user}
+        "mode": ${getFieldValue("editorConfig_mode")}${recent}${templates}${user}
     }`;
         var config_string =
             `var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -721,6 +716,7 @@
     ...
 });
 `;
+        console.log(editorConfig)
         var editorConfig_object = JSON.parse(editorConfig);
         config.editorConfig = editorConfig_object;
         delete editorConfig_object["actionLink"];

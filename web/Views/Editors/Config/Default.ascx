@@ -84,7 +84,7 @@
     <div id="controlFields">
         <div id="info" class="control-panel">
             <div class="line input_line" style="margin-top: 0;">
-                <label for="config_documentType">Type</label>
+                <label for="config_documentType">Document Type</label>
                 <select class="select" id="config_documentType" name="config_documentType">
                     <option disabled>word</option>
                     <option value="word" selected>word</option>

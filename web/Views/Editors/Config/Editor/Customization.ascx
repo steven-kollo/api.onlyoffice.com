@@ -1312,6 +1312,13 @@
         </div>
         <div class="line">
             <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_autosave" name="editorConfig_customization_autosave" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_autosave">Autosave</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_comments" name="editorConfig_customization_comments" hidden="hidden" checked>
                 <span></span>
                 <label for="editorConfig_customization_comments">Comments</label>
@@ -1453,14 +1460,6 @@
         </div>
         <div class="line">
             <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_hideNotes" name="editorConfig_customization_hideNotes" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_hideNotes">Hide Notes</label>
-            </label>
-        </div>
-
-        <div class="line">
-            <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden">
                 <span></span>
                 <label for="editorConfig_customization_hideRightMenu">Hide Right Menu</label>
@@ -1591,7 +1590,7 @@
                 <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
             </label>
         </div>
-        <div class="line input_line">
+        <div class="line input_line" id="macrosModeLine">
             <label for="editorConfig_customization_macrosMode">Macros Mode</label>
             <select class="select" id="editorConfig_customization_macrosMode" name="editorConfig_customization_macrosMode">
                 <option value="warn" disabled>Warn</option>
@@ -1704,7 +1703,7 @@
         DocumentType = "word",
         EditorConfig = new Config.EditorConfigConfiguration
             {
-                // CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                     {   
                         Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
@@ -1748,6 +1747,15 @@
     }
 
     function updateConfig() {
+        var macrosMode = `
+            "macrosMode": ${getFieldValue("editorConfig_customization_macrosMode")},`;
+        if (!document.getElementById("editorConfig_customization_macros").checked) {
+            document.getElementById(`macrosModeLine`).hidden = true;
+            macrosMode = "";
+        } else {
+            document.getElementById(`macrosModeLine`).hidden = false;
+        }
+
         var anonymous = getFieldValue("editorConfig_customization_anonymous") ?
             `"anonymous": {
                 "request": ${getFieldValue("editorConfig_customization_anonymous_request")},
@@ -1806,17 +1814,16 @@
         var integrationMode = getFieldValue("editorConfig_customization_integrationMode") ? `
             "integrationMode": "embed",` : "";
         var customization = `{
-            ${anonymous}"comments": ${getFieldValue("editorConfig_customization_comments")},
+            ${anonymous}"autosave": ${getFieldValue("editorConfig_customization_autosave")},
+            "comments": ${getFieldValue("editorConfig_customization_comments")},
             "compactHeader": ${getFieldValue("editorConfig_customization_compactHeader")},
             "compactToolbar": ${getFieldValue("editorConfig_customization_compactToolbar")},
             "compatibleFeatures": ${getFieldValue("editorConfig_customization_compatibleFeatures")},
             ${customer}${features}${feedback}"forcesave": ${getFieldValue("editorConfig_customization_forcesave")},
             ${goback}"help": ${getFieldValue("editorConfig_customization_help")},
-            "hideNotes": ${getFieldValue("editorConfig_customization_hideNotes")},
             "hideRightMenu": ${getFieldValue("editorConfig_customization_hideRightMenu")},
             "hideRulers": ${getFieldValue("editorConfig_customization_hideRulers")},${integrationMode}
-            ${logo}"macros": ${getFieldValue("editorConfig_customization_macros")},
-            "macrosMode": ${getFieldValue("editorConfig_customization_macrosMode")},
+            ${logo}"macros": ${getFieldValue("editorConfig_customization_macros")},${macrosMode}
             "mentionShare": ${getFieldValue("editorConfig_customization_mentionShare")},
             "plugins": ${getFieldValue("editorConfig_customization_plugins")},
             ${review}"toolbarHideFileName": ${getFieldValue("editorConfig_customization_toolbarHideFileName")},
@@ -1842,7 +1849,6 @@
         config.editorConfig.customization = customization_object;
         window.docEditor.destroyEditor();
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-        console.log(config)
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);

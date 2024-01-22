@@ -179,7 +179,7 @@
         DocumentType = "word",
         EditorConfig = new Config.EditorConfigConfiguration
             {
-                //CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                     {
                         Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
