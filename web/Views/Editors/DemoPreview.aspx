@@ -118,6 +118,9 @@
             <td>
                 <a class="<%= Request["type"] == "presentation" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=presentation#DemoPreview">Demo Presentation editor</a>
             </td>
+            <td>
+                <a class="<%= Request["type"] == "pdf" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=pdf#DemoPreview">Demo Pdf editor</a>
+            </td>
         </tr>
     </table>
 
@@ -148,6 +151,11 @@
         {
             documentType = "slide";
             ext = "pptx";
+        }
+        else if (Request["type"] == "pdf")
+        {
+            documentType = "pdf";
+            ext = "pdf";
         }
     %>
     <script type="text/javascript">

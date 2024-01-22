@@ -403,7 +403,7 @@
                                 Title = "Example Document Title.pdf",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf"
                             },
-                        DocumentType = "word",
+                        DocumentType = "pdf",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
