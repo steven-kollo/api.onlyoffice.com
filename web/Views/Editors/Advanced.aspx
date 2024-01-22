@@ -231,6 +231,7 @@
         "<a href="<%= Url.Action("config/editor") %>#user">user</a>": {
             "group": "Group1",
             "id": "78e1e841",
+            "image": "https://example.com/url-to-user-avatar.png",
             "name": "John Smith"
         }
     },
