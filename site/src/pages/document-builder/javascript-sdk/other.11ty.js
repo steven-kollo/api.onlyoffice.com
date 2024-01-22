@@ -14,7 +14,7 @@ const builtin = require("@onlyoffice/documentation-declarations/builtin.js")
 const { list, retrieve } = require("@onlyoffice/documentation-resources/document-builder.cjs")
 const reflection = require("@onlyoffice/documentation-ui-reflection-webc/reflection.cjs")
 
-const items = list().slice(0, 101)
+const items = list().slice(0, 201)
 
 /**
  * @param {DeclarationValue} dv
@@ -89,9 +89,7 @@ function resolveType(dt) {
       if (d === undefined) {
         break
       }
-      // todo: rt.permalink
-      rt.permalink = "/"
-
+      rt.permalink = resolveLink(d)
       if (dt.children === undefined) {
         rt.value = d.name
       } else {
@@ -112,6 +110,47 @@ function resolveType(dt) {
   }
 
   return rt
+}
+
+/**
+ * @param {Declaration} d
+ * @returns {string}
+ */
+function resolveLink(d) {
+  let p = d.meta.package
+  switch (d.meta.package) {
+    case "word":
+      p = "text"
+      break
+    case "cell":
+      p = "spreadsheet"
+      break
+    case "slide":
+      p = "presentation"
+      break
+    case "forms":
+      p = "form"
+      break
+  }
+  let u = "/document-builder/javascript-sdk/"
+  switch (d.kind) {
+    case "class":
+      u += `${p}/${d.name}/`
+      break
+    case "event":
+      u += `${p}/_e/${d.name}/`
+      break
+    case "function":
+      u += `${p}/${d.memberof}/${d.name}/`
+      break
+    case "typedef":
+      u += `${p}/_t/${d.name}/`
+      break
+    default:
+      throw new Error(`Unknown kind: ${d.kind}`)
+  }
+  u += "index.html"
+  return u
 }
 
 function data() {
@@ -148,43 +187,7 @@ function data() {
       if (d.kind === "builtin") {
         return false
       }
-
-      // let p = ""
-      let p = d._package
-      // switch (d._package) {
-      //   case "word":
-      //     p = "text"
-      //     break
-      //   case "cell":
-      //     p = "spreadsheet"
-      //     break
-      //   case "slide":
-      //     p = "presentation"
-      //     break
-      //   case "form":
-      //     p = "form"
-      //     break
-      // }
-
-      let u = ""
-      switch (d.kind) {
-        case "class":
-          u = `/document-builder/javascript-sdk/${p}/${d.name}/index.html`
-          break
-        case "event":
-          u = `/document-builder/javascript-sdk/${p}/_e/${d.name}/index.html`
-          break
-        case "function":
-          u = `/document-builder/javascript-sdk/${p}/${d.memberof}/${d.name}/index.html`
-          break
-        case "typedef":
-          u = `/document-builder/javascript-sdk/${p}/_t/${d.name}/index.html`
-          break
-        default:
-          throw new Error(`Unknown kind: ${d.kind}`)
-      }
-
-      return u
+      return resolveLink(d)
     },
     eleventyComputed: {
       title(data) {

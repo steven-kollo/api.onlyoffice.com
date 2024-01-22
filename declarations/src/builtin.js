@@ -1,80 +1,58 @@
 // @ts-check
 
 /**
- * @typedef {import("../index.js").ArrayDeclaration} ArrayDeclaration
- * @typedef {import("../index.js").LiteralDeclaration} LiteralDeclaration
- * @typedef {import("../index.js").ObjectDeclaration} ObjectDeclaration
- * @typedef {import("../index.js").OptionalDeclaration} OptionalDeclaration
- * @typedef {import("../index.js").ReadonlyDeclaration} ReadonlyDeclaration
- * @typedef {import("../index.js").RecordDeclaration} RecordDeclaration
- * @typedef {import("../index.js").SetonlyDeclaration} SetonlyDeclaration
- * @typedef {import("../index.js").UnionDeclaration} UnionDeclaration
+ * @typedef {import("../index.js").ArrayType} ArrayType
+ * @typedef {import("../index.js").LiteralType} LiteralType
+ * @typedef {import("../index.js").ObjectType} ObjectType
+ * @typedef {import("../index.js").OptionalType} OptionalType
+ * @typedef {import("../index.js").ReadonlyType} ReadonlyType
+ * @typedef {import("../index.js").RecordType} RecordType
+ * @typedef {import("../index.js").SetonlyType} SetonlyType
+ * @typedef {import("../index.js").UnionType} UnionType
  * @typedef {import("../index.js").Declaration} Declaration
  * @typedef {import("../index.js").DeclarationType} DeclarationType
  */
 
-/** @type {ArrayDeclaration} */
+// todo: replace them with types
+
+/** @type {ArrayType} */
 const Array = {
-  id: "_array",
-  name: "Array",
-  kind: "builtin"
+  id: "_array"
 }
 
-/** @type {LiteralDeclaration} */
+/** @type {LiteralType} */
 const Literal = {
-  id: "_literal",
-  name: "Literal",
-  kind: "builtin"
+  id: "_literal"
 }
 
-/** @type {ObjectDeclaration} */
+/** @type {ObjectType} */
 const Object = {
-  id: "_object",
-  name: "Object",
-  kind: "builtin"
+  id: "_object"
 }
 
-/** @type {OptionalDeclaration} */
+/** @type {OptionalType} */
 const Optional = {
-  id: "_optional",
-  name: "Optional",
-  kind: "builtin"
+  id: "_optional"
 }
 
-/** @type {ReadonlyDeclaration} */
+/** @type {ReadonlyType} */
 const Readonly = {
-  id: "_readonly",
-  name: "Readonly",
-  kind: "builtin"
+  id: "_readonly"
 }
 
-/** @type {RecordDeclaration} */
+/** @type {RecordType} */
 const Record = {
-  id: "_record",
-  name: "Record",
-  kind: "builtin"
+  id: "_record"
 }
 
-/** @type {SetonlyDeclaration} */
+/** @type {SetonlyType} */
 const Setonly = {
-  id: "_setonly",
-  name: "Setonly",
-  kind: "builtin"
+  id: "_setonly"
 }
 
-/** @type {UnionDeclaration} */
+/** @type {UnionType} */
 const Union = {
-  id: "_union",
-  name: "Union",
-  kind: "builtin"
-}
-
-/**
- * @param {Declaration} d
- * @returns {boolean}
- */
-function isBuiltinDeclaration(d) {
-  return d.kind === "builtin"
+  id: "_union"
 }
 
 /**
@@ -103,6 +81,5 @@ export {
   Record,
   Setonly,
   Union,
-  isBuiltinDeclaration,
   isBuiltinType
 }

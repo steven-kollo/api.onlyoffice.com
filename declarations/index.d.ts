@@ -1,42 +1,6 @@
-interface ArrayDeclaration extends BuiltinDeclaration {
-  id: "_array"
-}
-
-interface LiteralDeclaration extends BuiltinDeclaration {
-  id: "_literal"
-}
-
-interface ObjectDeclaration extends BuiltinDeclaration {
-  id: "_object"
-}
-
-interface OptionalDeclaration extends BuiltinDeclaration {
-  id: "_optional"
-}
-
-interface ReadonlyDeclaration extends BuiltinDeclaration {
-  id: "_readonly"
-}
-
-interface RecordDeclaration extends BuiltinDeclaration {
-  id: "_record"
-}
-
-interface SetonlyDeclaration extends BuiltinDeclaration {
-  id: "_setonly"
-}
-
-interface UnionDeclaration extends BuiltinDeclaration {
-  id: "_union"
-}
-
-interface BuiltinDeclaration extends Declaration {
-  kind: "builtin"
-}
-
 interface Declaration {
   id: string
-  // meta: DeclarationMeta
+  meta: DeclarationMeta
 
   name: string
   summary?: string
@@ -53,8 +17,7 @@ interface Declaration {
 }
 
 interface DeclarationMeta {
-  // package: string // ex: /word/apiBuilder.js, or main
-  // todo
+  package: string
 }
 
 interface DeclarationContent {
@@ -90,20 +53,63 @@ interface DeclarationValue {
   // todo: example?: unknown
 }
 
+type BuiltinType =
+  ArrayType |
+  LiteralType |
+  ObjectType |
+  OptionalType |
+  ReadonlyType |
+  RecordType |
+  SetonlyType |
+  UnionType
+
+interface ArrayType extends DeclarationType {
+  id: "_array"
+}
+
+interface LiteralType extends DeclarationType {
+  id: "_literal"
+}
+
+interface ObjectType extends DeclarationType {
+  id: "_object"
+}
+
+interface OptionalType extends DeclarationType {
+  id: "_optional"
+}
+
+interface ReadonlyType extends DeclarationType {
+  id: "_readonly"
+}
+
+interface RecordType extends DeclarationType {
+  id: "_record"
+}
+
+interface SetonlyType extends DeclarationType {
+  id: "_setonly"
+}
+
+interface UnionType extends DeclarationType {
+  id: "_union"
+}
+
 export {
-  BuiltinDeclaration,
-  ArrayDeclaration,
-  LiteralDeclaration,
-  ObjectDeclaration,
-  OptionalDeclaration,
-  ReadonlyDeclaration,
-  RecordDeclaration,
-  SetonlyDeclaration,
-  UnionDeclaration,
   Declaration,
+  DeclarationMeta,
   DeclarationContent,
   DeclarationSyntax,
   DeclarationKind,
   DeclarationType,
   DeclarationValue,
+  BuiltinType,
+  ArrayType,
+  LiteralType,
+  ObjectType,
+  OptionalType,
+  ReadonlyType,
+  RecordType,
+  SetonlyType,
+  UnionType
 }

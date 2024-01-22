@@ -21,6 +21,9 @@ function parseDeclaration(v) {
   /** @type {Declaration} */
   const d = {
     id: "",
+    meta: {
+      package: "main"
+    },
     name: ""
   }
 

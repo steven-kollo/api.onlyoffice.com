@@ -8,7 +8,7 @@
     "allowJs": true,
     "checkJs": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2022",
+    "target": "ESNext",
     "skipLibCheck": true
   }
 }

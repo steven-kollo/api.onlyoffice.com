@@ -12,11 +12,11 @@
 import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises"
 import { createReadStream, createWriteStream, existsSync } from "node:fs"
 import { tmpdir } from "node:os"
-import { basename, extname, join } from "node:path"
+import { basename, dirname, extname, join } from "node:path"
 import { argv } from "node:process"
 import { finished } from "node:stream/promises"
 import { Readable, Transform } from "node:stream"
-import { fileURLToPath } from "node:url"
+import { URL, fileURLToPath } from "node:url"
 import * as builtin from "@onlyoffice/documentation-declarations/builtin.js"
 import { parseDeclaration } from "@onlyoffice/documentation-declarations/jsdoc.js"
 import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-scripts/jq.js"
@@ -67,18 +67,10 @@ async function build(options) {
     await mkdir(dist)
   }
 
-  // todo: write js objects directly to the ./dist/main.cjs.
-
-  const bn = "builtin.json"
-  const bf = join(temp, bn)
-  const bl = Object.values(builtin)
-  const bc = JSON.stringify(bl, null, 2)
-  await writeFile(bf, bc)
-
   const ln = "document-builder.list.json"
 
   /** @type {string[]} */
-  const li = [bf]
+  const li = []
 
   await Promise.all(files.map(async (file) => {
     const f = join(temp, file)
@@ -279,6 +271,16 @@ async function createDeclaration(js) {
     return
   }
 
+  // todo: rewrite it.
+  const u = new URL(js.meta.file)
+  let p = u.pathname.replace(/^\/repos\/onlyoffice/, "")
+  if (js.meta.file.includes("/sdkjs/")) {
+    p = p.replace(/^\/sdkjs\/contents/, "")
+  } else if (js.meta.file.includes("/sdkjs-forms/")) {
+    p = p.replace(/^\/sdkjs-forms\/contents/, "/forms")
+  }
+  d.meta.package = dirname(p).slice(1)
+
   let longname = ""
   if (Object.hasOwn(js, "inherits")) {
     return
@@ -289,7 +291,7 @@ async function createDeclaration(js) {
   }
 
   // const longname = js.longname.replace(/\<anonymous\>~?/, "")
-  d.id = [js.meta.file, longname].join(";")
+  d.id = id(longname)
 
   if (longname === "ApiRange#Find" || longname === "ApiRange#Replace") {
     // todo: @also
@@ -334,30 +336,6 @@ async function createDeclaration(js) {
     }))
   }
 
-  // todo: in progress...
-  d._package = ""
-  if (d.id.includes("sdkjs/contents/word/apiBuilder.js")) {
-    d._package = "word"
-  } else if (d.id.includes("sdkjs/contents/cell/apiBuilder.js")) {
-    d._package = "cell"
-  } else if (d.id.includes("sdkjs/contents/slide/apiBuilder.js")) {
-    d._package = "slide"
-  } else if (d.id.includes("sdkjs/contents/word/api_plugins.js")) {
-    d._package = "word-plugins"
-  } else if (d.id.includes("sdkjs/contents/cell/api_plugins.js")) {
-    d._package = "cell-plugins"
-  } else if (d.id.includes("sdkjs/contents/slide/api_plugins.js")) {
-    d._package = "slide-plugins"
-  } else if (d.id.includes("sdkjs/contents/common/apiBase_plugins.js")) {
-    d._package = "common"
-  } else if (d.id.includes("sdkjs/contents/common/plugins/plugin_base_api.js")) {
-    d._package = "common-plugins"
-  } else if (d.id.includes("sdkjs-forms/contents/apiBuilder.js")) {
-    d._package = "form"
-  } else if (d.id.includes("sdkjs-forms/contents/apiPlugins.js")) {
-    d._package = "form-plugins"
-  }
-
   /**
    * @param {DeclarationValue} v
    * @returns {DeclarationValue}
@@ -379,9 +357,17 @@ async function createDeclaration(js) {
       t.children = t.children.map(populateType)
     }
     if (!builtin.isBuiltinType(t)) {
-      t.id = [js.meta.file, t.id].join(";")
+      t.id = id(t.id)
     }
     return t
+  }
+
+  /**
+   * @param {string} s
+   * @returns {string}
+   */
+  function id(s) {
+    return [js.meta.file, s].join(";")
   }
 
   return d
