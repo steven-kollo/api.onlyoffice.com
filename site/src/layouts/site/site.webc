@@ -1,17 +1,3 @@
-<script webc:setup>
-function createNavigation(products, page) {
-  return products.map((p) => {
-    const isCurrent = page.url.startsWith(p.internal.url)
-    return {
-      title: p.internal.data.title,
-      url: p.internal.url,
-      isCurrent() {
-        return isCurrent
-      }
-    }
-  })
-}
-</script>
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,7 +10,7 @@ function createNavigation(products, page) {
   <body>
     <site-header>
       <onlyoffice-logo slot="logo"></onlyoffice-logo>
-      <!-- <site-nav slot="nav" :@nav="createNavigation(collections.products, page)"></site-nav> -->
+      <site-nav slot="nav" :@page="page" :@nav="collections.navigation"></site-nav>
     </site-header>
     <template webc:nokeep @raw="content"></template>
     <site-footer></site-footer>

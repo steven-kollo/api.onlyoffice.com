@@ -1,14 +1,13 @@
 <script webc:setup>
-function resolveLinkClass(i) {
-  let c = "site-nav__link"
-  if (i.isCurrent()) {
-    c += " site-nav__link_current"
-  }
-  return c
+function resolveClass(page, item) {
+  return `site-nav__link ${onPage(page, item) ? "site-nav__link_current" : ""}`
+}
+function onPage(page, item) {
+  return page.url.startsWith(item.link)
 }
 </script>
 <nav class="site-nav">
-  <div webc:for="i of nav" class="site-nav__container">
-    <a :class="resolveLinkClass(i)" :href="i.url" @text="i.title"></a>
+  <div webc:for="item of nav" class="site-nav__container">
+    <a :class="resolveClass(page, item)" :href="item.link" @text="item.title"></a>
   </div>
 </nav>
