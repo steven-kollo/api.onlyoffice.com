@@ -1490,7 +1490,7 @@
                         "fillForms": true
                     }
                 },
-                "documentType": "word",
+                "documentType": "pdf",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
