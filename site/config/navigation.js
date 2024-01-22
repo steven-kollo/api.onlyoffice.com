@@ -36,18 +36,6 @@ function navigationPlugin(uc) {
   })
 }
 
-// /**
-//  * @param {NavigationItem[]} nav
-//  * @returns
-//  */
-// function pageNavigation(nav) {
-//   const item = nav.find((i) => this.page.url.startsWith(i.link))
-//   if (item === undefined) {
-//     return []
-//   }
-//   return item.children
-// }
-
 /**
  * @param {any[]} list
  * @returns {CacheNavigationItem}
@@ -115,27 +103,72 @@ function resolve(cache) {
   /** @type {NavigationItem} */
   const item = {
     title: cache.title,
-    link: cache.link,
-    // isCurrent: function isCurrent(page) {
-    //   // todo: use the this?
-    //   return item.link === page.url
-    // }
+    link: cache.link
   }
 
   const ch = Object.values(cache.children)
   if (ch.length > 0) {
-    item.children = ch
-      .sort((a, b) => {
-        const d = a.order - b.order
-        if (d !== 0) {
-          return d
-        }
-        return a.title.localeCompare(b.title)
-      })
-      .map(resolve)
+    item.children = resolveChildren(ch)
+
+    // todo: is it okay? explain why it might happen.
+    // todo: thrown an error on production.
+    // todo: print a warning on development.
+    if (item.link === "") {
+      item.link = resolveMissedLink(item.children)
+    }
+    if (item.title === "") {
+      item.title = resolveMissedTitle(item.link)
+    }
   }
 
   return item
+}
+
+/**
+ * @param {CacheNavigationItem[]} ch
+ * @returns {NavigationItem[]}
+ */
+function resolveChildren(ch) {
+  return ch
+    .sort((a, b) => {
+      const d = a.order - b.order
+      if (d !== 0) {
+        return d
+      }
+      return a.title.localeCompare(b.title)
+    })
+    .map(resolve)
+}
+
+/**
+ * @param {NavigationItem[]} ch
+ * @returns {string}
+ */
+function resolveMissedLink(ch) {
+  let l = ch[0].link
+  if (ch.length === 1) {
+    const i = l.lastIndexOf("/", l.lastIndexOf("/") - 1)
+    l = l.substring(0, i + 1)
+  } else {
+    for (let i = 1; i < ch.length; i += 1) {
+      for (let j = 0; j < l.length; j += 1) {
+        if (l[j] !== ch[i].link[j]) {
+          l = l.slice(0, j)
+          break
+        }
+      }
+    }
+  }
+  return l
+}
+
+/**
+ * @param {string} l
+ * @returns {string}
+ */
+function resolveMissedTitle(l) {
+  const i = l.lastIndexOf("/", l.lastIndexOf("/") - 1)
+  return l.substring(i + 1, l.length - 1)
 }
 
 module.exports = { navigationPlugin }

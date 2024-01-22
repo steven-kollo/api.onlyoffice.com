@@ -5,31 +5,28 @@ function onPage(page, item) {
 function renderItem(page, item) {
   let html = '<ul class="tree__limb">'
   item.children.forEach((sub) => {
-    if (sub.children !== undefined) {
+    if (sub.children === undefined) {
       html += '<li class="tree__branch">'
-        // todo
-        // html += `<div class="tree__twig ${page.url.startsWith(sub.link) ? "" : "tree__twig_closed"}">`
-        html += `<div class="tree__twig tree__twig_closed">`
-          // todo: export svg.
-          html += '<button class="tree__fruit" type="button"><svg fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.531 2.5923 1e-6 18.815c0 1.3326 1.5415 2.0735 2.5821 1.241l11.76-9.4077c0.79529-0.63623 0.79529-1.8458 0-2.4821l-11.76-9.4077c-1.0406-0.8325-2.5821-0.091605-2.5821 1.241z" fill="#808080" /></svg></button>'
-          html += `<a class="tree__leaf ${page.url === sub.link ? "tree__leaf_current" : ""}" href="${sub.link}">`
-            html += sub.title
-          html += "</a>"
+        html += '<div class="tree__twig">'
+          html += renderLink(page, sub)
         html += "</div>"
-        html += renderItem(page, sub)
       html += "</li>"
     } else {
       html += '<li class="tree__branch">'
-        html += '<div class="tree__twig">'
-          html += `<a class="tree__leaf ${page.url === sub.link ? "tree__leaf_current" : ""}" href="${sub.link}">`
-            html += sub.title
-          html += "</a>"
+        html += `<div class="tree__twig ${page.url.startsWith(sub.link) ? "" : "tree__twig_closed"}">`
+          // todo: export svg.
+          html += '<button class="tree__fruit" type="button"><svg fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.531 2.5923 1e-6 18.815c0 1.3326 1.5415 2.0735 2.5821 1.241l11.76-9.4077c0.79529-0.63623 0.79529-1.8458 0-2.4821l-11.76-9.4077c-1.0406-0.8325-2.5821-0.091605-2.5821 1.241z" fill="#808080" /></svg></button>'
+          html += renderLink(page, sub)
         html += "</div>"
+        html += renderItem(page, sub)
       html += "</li>"
     }
   })
   html += "</ul>"
   return html
+}
+function renderLink(page, item) {
+  return `<a class="tree__leaf ${page.url === item.link ? "tree__leaf_current" : ""}" href="${item.link}">${item.title}</a>`
 }
 </script>
 <o-page-nav>
@@ -37,7 +34,7 @@ function renderItem(page, item) {
     <ul class="tree__limb tree__limb_bole">
       <li webc:for="sub of item.children" class="tree__branch tree__branch_bole">
         <div class="tree__twig">
-          <a class="tree_leaf tree__leaf_bole" :href="sub.link" @text="sub.title"></a>
+          <a class="tree__leaf tree__leaf_bole" :href="sub.link" @text="sub.title"></a>
         </div>
         <template webc:nokeep webc:if="sub.children" @html="renderItem(page, sub)"></template>
       </li>
