@@ -1,0 +1,34 @@
+<script webc:setup>
+const state = {
+  required: false
+}
+</script>
+<table webc:root="override">
+  <caption class="sr-only"><slot name="caption"></slot></caption>
+  <thead class="sr-only">
+    <tr>
+      <th><slot name="head"></slot></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr webc:for="v of values">
+      <td class="reflection__value">
+        <div class="reflection-value">
+          <p class="reflection-value__meta">
+            <code class="reflection-value__tag reflection-value__tag_name">
+              <a webc:if="v.permalink" :href="v.permalink" @text="v.name"></a>
+              <template webc:else webc:nokeep @text="v.name"></template>
+            </code>
+            <code class="reflection-value__tag" @html="v.type.render(v.type, state)"></code>
+            <span webc:if="state.required" class="reflection-value__tag reflection-value__tag_required"><slot name="required"></slot></span>
+          </p>
+          <div webc:if="v.description" class="reflection-value__description">
+            <template webc:nokeep @html="v.description.render(v.description)"></template>
+          </div>
+          <p webc:if="v.default"><slot name="default-value"></slot> <code @text="v.default"></code></p>
+          <p webc:if="v.example"><slot name="example"></slot> <code @text="v.example"></code></p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

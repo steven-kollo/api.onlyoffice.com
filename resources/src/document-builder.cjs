@@ -9,7 +9,7 @@
  */
 
 /** @type {List} */
-const l = require("./list.json")
+const l = require("./document-builder.list.json")
 
 /**
  * @returns {List}
@@ -23,7 +23,7 @@ function list() {
  */
 
 /** @type {Map} */
-const m = require("./map.json")
+const m = require("./document-builder.map.json")
 
 /**
  * @param {string} id

@@ -1,0 +1,7 @@
+<reflection :@values="testValues()">
+  <span webc:nokeep slot="caption">Caption</span>
+  <span webc:nokeep slot="head">Head</span>
+  <span webc:nokeep slot="required">Required</span>
+  <span webc:nokeep slot="default-value">Default</span>
+  <span webc:nokeep slot="example">Example</span>
+</reflection>

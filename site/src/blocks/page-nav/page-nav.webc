@@ -1,42 +1,46 @@
 <script webc:setup>
-/**
- * Renders a tree recursively.
- * https://github.com/11ty/webc/issues/184
- * 
- * @param {TreeBranch} product
- * @returns {string}
- */
-function renderTree(url, product) {
-  // todo: huh? *.11tydata.js
-  if (product === undefined) {
-    return ""
-  }
-  let html = `<ul class="tree__limb ${product.type === "root" ? "tree__limb_bole" : ""}">`
-  product.children.forEach((p) => {
-    html += `<li class="tree__branch ${product.type === "root" ? "tree__branch_bole" : ""}">`
-    if (p.children.length > 0 && product.type !== "root") {
-      if (url.startsWith(p.link)) {
-        html += '<div class="tree__twig">'
-      } else {
-        html += '<div class="tree__twig tree__twig_closed">'
-      }
-      html += '<button class="tree__fruit" type="button"><svg fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.531 2.5923 1e-6 18.815c0 1.3326 1.5415 2.0735 2.5821 1.241l11.76-9.4077c0.79529-0.63623 0.79529-1.8458 0-2.4821l-11.76-9.4077c-1.0406-0.8325-2.5821-0.091605-2.5821 1.241z" fill="#808080" /></svg></button>'
+function onPage(page, item) {
+  return page.url.startsWith(item.link)
+}
+function renderItem(page, item) {
+  let html = '<ul class="tree__limb">'
+  item.children.forEach((sub) => {
+    if (sub.children !== undefined) {
+      html += '<li class="tree__branch">'
+        // todo
+        // html += `<div class="tree__twig ${page.url.startsWith(sub.link) ? "" : "tree__twig_closed"}">`
+        html += `<div class="tree__twig tree__twig_closed">`
+          // todo: export svg.
+          html += '<button class="tree__fruit" type="button"><svg fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.531 2.5923 1e-6 18.815c0 1.3326 1.5415 2.0735 2.5821 1.241l11.76-9.4077c0.79529-0.63623 0.79529-1.8458 0-2.4821l-11.76-9.4077c-1.0406-0.8325-2.5821-0.091605-2.5821 1.241z" fill="#808080" /></svg></button>'
+          html += `<a class="tree__leaf ${page.url === sub.link ? "tree__leaf_current" : ""}" href="${sub.link}">`
+            html += sub.title
+          html += "</a>"
+        html += "</div>"
+        html += renderItem(page, sub)
+      html += "</li>"
     } else {
-      html += '<div class="tree__twig">'
+      html += '<li class="tree__branch">'
+        html += '<div class="tree__twig">'
+          html += `<a class="tree__leaf ${page.url === sub.link ? "tree__leaf_current" : ""}" href="${sub.link}">`
+            html += sub.title
+          html += "</a>"
+        html += "</div>"
+      html += "</li>"
     }
-    html += `<a class="tree__leaf ${product.type === "root" ? "tree__leaf_bole" : ""} ${url === p.link ? "tree__leaf_active" : ""}" href="${p.link}">${p.title}</a>`
-    html += '</div>'
-    if (p.children.length > 0) {
-      html += renderTree(url, p)
-    }
-    html += "</li>"
   })
   html += "</ul>"
   return html
 }
 </script>
 <o-page-nav>
-  <div class="tree">
-    <template webc:nokeep @html="renderTree(url, product)"></template>
+  <div webc:for="item of nav" webc:if="onPage(page, item)" class="tree">
+    <ul class="tree__limb tree__limb_bole">
+      <li webc:for="sub of item.children" class="tree__branch tree__branch_bole">
+        <div class="tree__twig">
+          <a class="tree_leaf tree__leaf_bole" :href="sub.link" @text="sub.title"></a>
+        </div>
+        <template webc:nokeep webc:if="sub.children" @html="renderItem(page, sub)"></template>
+      </li>
+    </ul>
   </div>
 </o-page-nav>

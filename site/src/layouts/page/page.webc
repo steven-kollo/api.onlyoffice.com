@@ -1,15 +1,10 @@
 ---
 layout: site/site.webc
 ---
-<script webc:setup>
-function currentProduct(products, page) {
-  return products.find((p) => page.url.startsWith(p.link))
-}
-</script>
 <div class="product__main">
   <div class="product__inner">
     <nav class="product-nav">
-      <page-nav :@url="page.url" :@product="currentProduct(collections.products, page)"></page-nav>
+      <page-nav :@page="page" :@nav="collections.navigation"></page-nav>
     </nav>
     <main class="product__main2">
       <div class="product__inner2" @raw="content"></div>

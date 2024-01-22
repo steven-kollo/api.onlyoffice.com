@@ -5,6 +5,8 @@
 /**
  * @typedef {import("node:stream").TransformCallback} TransformCallback
  * @typedef {import("@onlyoffice/documentation-declarations").Declaration} Declaration
+ * @typedef {import("@onlyoffice/documentation-declarations").DeclarationType} DeclarationType
+ * @typedef {import("@onlyoffice/documentation-declarations").DeclarationValue} DeclarationValue
  */
 
 import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises"
@@ -73,7 +75,7 @@ async function build(options) {
   const bc = JSON.stringify(bl, null, 2)
   await writeFile(bf, bc)
 
-  const ln = "list.json"
+  const ln = "document-builder.list.json"
 
   /** @type {string[]} */
   const li = [bf]
@@ -89,7 +91,7 @@ async function build(options) {
     li.push(lp)
   }))
 
-  const mn = "map.json"
+  const mn = "document-builder.map.json"
 
   const lp = join(temp, ln)
   await mergeArrays(li, lp)
@@ -115,7 +117,7 @@ async function build(options) {
   }
 
   const src = join(root, "src")
-  const ma = "main.cjs"
+  const ma = "document-builder.cjs"
   const maf = join(src, ma)
   const mat = join(dist, ma)
   await copyFile(maf, mat)
@@ -260,36 +262,34 @@ function transformPassThrough(ch, enc, cb) {
 }
 
 /**
- * @param {any} v
+ * @param {any} js
  * @returns {Promise<Declaration | undefined>}
  */
-async function createDeclaration(v) {
+async function createDeclaration(js) {
   if (!(
-    Object.hasOwn(v, "meta") &&
-    Object.hasOwn(v.meta, "file") &&
-    Object.hasOwn(v, "longname")
+    Object.hasOwn(js, "meta") &&
+    Object.hasOwn(js.meta, "file") &&
+    Object.hasOwn(js, "longname")
   )) {
     return
   }
 
-  const d = parseDeclaration(v, (t) => {
-    t.id = [v.meta.file, t.id].join(";")
-  })
+  const d = parseDeclaration(js)
   if (d === undefined) {
     return
   }
 
   let longname = ""
-  if (Object.hasOwn(v, "inherits")) {
+  if (Object.hasOwn(js, "inherits")) {
     return
-    d.memberof = v.inherits.split("#")[0]
-    longname = v.inherits
+    d.memberof = js.inherits.split("#")[0]
+    longname = js.inherits
   } else {
-    longname = v.longname.replace(/\<anonymous\>~?/, "")
+    longname = js.longname.replace(/\<anonymous\>~?/, "")
   }
 
-  // const longname = v.longname.replace(/\<anonymous\>~?/, "")
-  d.id = [v.meta.file, longname].join(";")
+  // const longname = js.longname.replace(/\<anonymous\>~?/, "")
+  d.id = [js.meta.file, longname].join(";")
 
   if (longname === "ApiRange#Find" || longname === "ApiRange#Replace") {
     // todo: @also
@@ -302,33 +302,22 @@ async function createDeclaration(v) {
     d.description.syntax = "md"
   }
 
+  if (d.type !== undefined) {
+    d.type = populateType(d.type)
+  }
+
   // todo: support the `Example: 1.` in properties, parameters, and returns.
 
   if (d.properties !== undefined) {
-    d.properties = d.properties.map((p) => {
-      if (p.description !== undefined) {
-        p.description.syntax = "md"
-      }
-      return p
-    })
+    d.properties = d.properties.map(populateValue)
   }
 
   if (d.parameters !== undefined) {
-    d.parameters = d.parameters.map((p) => {
-      if (p.description !== undefined) {
-        p.description.syntax = "md"
-      }
-      return p
-    })
+    d.parameters = d.parameters.map(populateValue)
   }
 
   if (d.returns !== undefined) {
-    d.returns = d.returns.map((p) => {
-      if (p.description !== undefined) {
-        p.description.syntax = "md"
-      }
-      return p
-    })
+    d.returns = d.returns.map(populateValue)
   }
 
   if (d.memberof !== undefined) {
@@ -367,6 +356,32 @@ async function createDeclaration(v) {
     d._package = "form"
   } else if (d.id.includes("sdkjs-forms/contents/apiPlugins.js")) {
     d._package = "form-plugins"
+  }
+
+  /**
+   * @param {DeclarationValue} v
+   * @returns {DeclarationValue}
+   */
+  function populateValue(v) {
+    v.type = populateType(v.type)
+    if (v.description !== undefined) {
+      v.description.syntax = "md"
+    }
+    return v
+  }
+
+  /**
+   * @param {DeclarationType} t
+   * @returns {DeclarationType}
+   */
+  function populateType(t) {
+    if (t.children !== undefined) {
+      t.children = t.children.map(populateType)
+    }
+    if (!builtin.isBuiltinType(t)) {
+      t.id = [js.meta.file, t.id].join(";")
+    }
+    return t
   }
 
   return d

@@ -9,7 +9,6 @@
     "@onlyoffice/documentation-ui-l": "workspace:^",
     "@onlyoffice/documentation-ui-logo": "workspace:^",
     "@onlyoffice/documentation-ui-primitives": "workspace:^",
-    "@onlyoffice/documentation-ui-reflection": "workspace:^",
     "@onlyoffice/documentation-ui-sr-only": "workspace:^"
   },
   "devDependencies": {

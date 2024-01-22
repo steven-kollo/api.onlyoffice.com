@@ -1,0 +1,44 @@
+<script webc:type="render" webc:is="template" webc:raw webc:nokeep>
+function _() {
+  // todo: add validation, see 11ty/eleventy-plugin-syntaxhighlight
+
+  let c = " "
+  if (Object.hasOwn(this, "c")) {
+    c = this.c
+  }
+
+  let text = this.slots.text.default
+
+  if (Object.hasOwn(this, "i")) {
+    if (this.i > 0) {
+      const s = c.repeat(this.i)
+      text = text.replaceAll(`\n${s}`, "\n")
+    } else if (this.i < 0) {
+      // todo
+      // const i = -this.i
+      // const s = c.repeat(i)
+      // text = text.replaceAll("\n", `\n${s}`)
+    }
+  }
+
+  if (Object.hasOwn(this, "s")) {
+    if (this.s > 0) {
+      const r = new RegExp(`^[\n\\s]{${this.s}}`)
+      text = text.replace(r, "")
+    } else if (this.s < 0) {
+      // todo
+    }
+  }
+
+  if (Object.hasOwn(this, "e")) {
+    if (this.e > 0) {
+      const r = new RegExp(`[\n\\s]{${this.e}}$`)
+      text = text.replace(r, "")
+    } else if (this.e < 0) {
+      // todo
+    }
+  }
+
+  return text
+}
+</script>

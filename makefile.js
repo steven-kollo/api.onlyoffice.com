@@ -8,7 +8,7 @@ import { join } from "node:path"
 import { argv } from "node:process"
 import { fileURLToPath } from "node:url"
 import sade from "sade"
-import * as documentBuilder from "./resources/document-builder/makefile.js"
+import * as documentBuilder from "./resources/makefile.js"
 // const uiKit = require("./ui/kit/makefile.js")
 
 const root = fileURLToPath(new URL(".", import.meta.url))

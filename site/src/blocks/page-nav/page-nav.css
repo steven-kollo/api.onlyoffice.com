@@ -64,7 +64,7 @@
   color: var(--color-scale-orange-0);
 }
 
-.tree__leaf_active {
+.tree__leaf_current {
   color: var(--color-scale-orange-0);
 }
 
