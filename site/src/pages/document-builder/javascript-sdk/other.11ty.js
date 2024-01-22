@@ -9,12 +9,53 @@
  */
 
 const { basename } = require("node:path")
-// const { isBuiltin } = require // todo: cjs
 const builtin = require("@onlyoffice/documentation-declarations/builtin.js")
 const { list, retrieve } = require("@onlyoffice/documentation-resources/document-builder.cjs")
 const reflection = require("@onlyoffice/documentation-ui-reflection-webc/reflection.cjs")
 
-const items = list().slice(0, 201)
+function data() {
+  return {
+    layout: "class/class.webc",
+    pagination: {
+      data: "items",
+      size: 1,
+      addAllPagesToCollections: true,
+      before(data) {
+        return data.map(resolveDeclaration)
+      }
+    },
+    // todo: do not forget to remove slice.
+    items: list().slice(0, 201),
+    permalink(data) {
+      return resolveLink(data.pagination.items[0])
+    },
+    eleventyComputed: {
+      title(data) {
+        return basename(data.page.url)
+      },
+      currentName(data) {
+        return basename(data.page.url)
+      }
+    }
+  }
+}
+
+/**
+ * @param {Declaration} d
+ * @returns {Declaration}
+ */
+function resolveDeclaration(d) {
+  if (d.parameters !== undefined) {
+    d._parameters = d.parameters.map(resolveValue)
+  }
+  if (d.properties !== undefined) {
+    d._properties = d.properties.map(resolveValue)
+  }
+  if (d.returns !== undefined) {
+    d._returns = d.returns.map(resolveValue)
+  }
+  return d
+}
 
 /**
  * @param {DeclarationValue} dv
@@ -84,9 +125,10 @@ function resolveType(dt) {
       rt.render = reflection.renderUnionType
       break
     default:
-      // todo: huh?
       const d = retrieve(dt.id)
       if (d === undefined) {
+        // todo: thrown an error on production.
+        // throw new Error(`pages: unknown type: ${dt.id}`)
         break
       }
       rt.permalink = resolveLink(d)
@@ -131,6 +173,8 @@ function resolveLink(d) {
     case "forms":
       p = "form"
       break
+    default:
+      throw new Error(`pages: unknown package: ${d.meta.package}`)
   }
   let u = "/document-builder/javascript-sdk/"
   switch (d.kind) {
@@ -147,64 +191,10 @@ function resolveLink(d) {
       u += `${p}/_t/${d.name}/`
       break
     default:
-      throw new Error(`Unknown kind: ${d.kind}`)
+      throw new Error(`pages: unknown kind: ${d.kind}`)
   }
   u += "index.html"
   return u
-}
-
-function data() {
-  const data = {
-    layout: "class/class.webc",
-    pagination: {
-      data: "items",
-      size: 1,
-      addAllPagesToCollections: true,
-      before(/** @type {Declaration[]} */ data) {
-        // https://github.com/11ty/eleventy/issues/2260
-        return data.flatMap((d) => {
-          // d.order = 0
-          if (d.kind === "builtin") {
-            return []
-          }
-          if (d.parameters !== undefined) {
-            d._parameters = d.parameters.map(resolveValue)
-          }
-          if (d.properties !== undefined) {
-            d._properties = d.properties.map(resolveValue)
-          }
-          if (d.returns !== undefined) {
-            d._returns = resolveValue(d.returns)
-          }
-          return d
-        })
-      }
-    },
-    items,
-    permalink(data) {
-      /** @type {Declaration} */
-      const d = data.pagination.items[0]
-      if (d.kind === "builtin") {
-        return false
-      }
-      return resolveLink(d)
-    },
-    eleventyComputed: {
-      title(data) {
-        return basename(data.page.url)
-      },
-      currentName(data) {
-        return basename(data.page.url)
-      },
-      eleventyExcludeFromCollections(data) {
-        /** @type {Declaration} */
-        const d = data.pagination.items[0]
-        return d.kind === "builtin"
-      }
-    }
-  }
-
-  return data
 }
 
 function render() {
