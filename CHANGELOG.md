@@ -1,5 +1,6 @@
 # Change Log
 
+- docspace: v2.0.1
 - docspace: added the information about webhooks
 
 ## 4.4.1
