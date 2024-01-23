@@ -15,7 +15,7 @@
         <span class="hdr">Integrating editors using Java SDK</span>
     </h1>
 
-    <p class="dscr"><a href="https://github.com/ONLYOFFICE/docs-integration-sdk-java" target="_blank">ONLYOFFICE Docs Integration SDK</a> provides common interfaces and default implementations for integrating ONLYOFFICE Document Server
+    <p class="dscr"><a href="https://central.sonatype.com/artifact/com.onlyoffice/docs-integration-sdk" target="_blank">ONLYOFFICE Docs Integration SDK</a> provides common interfaces and default implementations for integrating ONLYOFFICE Document Server
         into your own website or application on Java.</p>
 
     <h2 id="prerequisites" class="copy-link">Prerequisites</h2>
