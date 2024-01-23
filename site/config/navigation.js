@@ -29,23 +29,29 @@ const gc = new WeakMap()
  * @returns {void}
  */
 function navigationPlugin(uc) {
-  uc.addCollection("navigation", (c) => {
-    if (gc.has(navigationPlugin)) {
-      return gc.get(navigationPlugin)
-    }
-    const list = c.getFilteredByTag("navigation")
-    const cache = collect(list)
-    const root = resolve(cache)
-    gc.set(navigationPlugin, root.children)
-    return root.children
-  })
+  uc.addCollection(navigation.name, navigation)
+}
+
+/**
+ * @param {any} c
+ * @returns {NavigationItem[]}
+ */
+function navigation(c) {
+  if (gc.has(navigation)) {
+    return gc.get(navigation)
+  }
+  const list = c.getFilteredByTag("navigation")
+  const cache = collectNavigation(list)
+  const root = resolveNavigation(cache)
+  gc.set(navigation, root.children)
+  return root.children
 }
 
 /**
  * @param {any[]} list
  * @returns {CacheNavigationItem}
  */
-function collect(list) {
+function collectNavigation(list) {
   /** @type {CacheNavigationItem} */
   const cache = {
     title: "",
@@ -104,7 +110,7 @@ function collect(list) {
  * @param {CacheNavigationItem} cache
  * @returns {NavigationItem}
  */
-function resolve(cache) {
+function resolveNavigation(cache) {
   /** @type {NavigationItem} */
   const item = {
     title: cache.title,
@@ -142,7 +148,7 @@ function resolveChildren(ch) {
       }
       return a.title.localeCompare(b.title)
     })
-    .map(resolve)
+    .map(resolveNavigation)
 }
 
 /**
