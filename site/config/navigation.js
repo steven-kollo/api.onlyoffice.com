@@ -119,10 +119,10 @@ function resolve(cache) {
     // todo: thrown an error on production.
     // todo: print a warning on development.
     if (item.link === "") {
-      item.link = resolveMissedLink(item.children)
+      item.link = resolveLink(item.children)
     }
     if (item.title === "") {
-      item.title = resolveMissedTitle(item.link)
+      item.title = resolveTitle(item.link)
     }
   }
 
@@ -149,7 +149,7 @@ function resolveChildren(ch) {
  * @param {NavigationItem[]} ch
  * @returns {string}
  */
-function resolveMissedLink(ch) {
+function resolveLink(ch) {
   let l = ch[0].link
   if (ch.length === 1) {
     const i = l.lastIndexOf("/", l.lastIndexOf("/") - 1)
@@ -171,7 +171,7 @@ function resolveMissedLink(ch) {
  * @param {string} l
  * @returns {string}
  */
-function resolveMissedTitle(l) {
+function resolveTitle(l) {
   const i = l.lastIndexOf("/", l.lastIndexOf("/") - 1)
   return l.substring(i + 1, l.length - 1)
 }
