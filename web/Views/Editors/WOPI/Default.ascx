@@ -124,6 +124,6 @@ supervisorctl restart all
 
     <h2 id="wopisrc" class="copy-link">WOPISrc</h2>
     <p>Starting from version 8.0, the WOPISrc query parameter is added to the requests from the browser to the server.
-    This allows collaborative editing to function correctly: all users editing the same document are served by the same server.</p>
+    This allows you to create several independent instances of ONLYOFFICE.
+    Load balancing requests with WOPISrc ensure that collaborative editing works correctly: all users editing the same document are served by the same server.</p>
     <p>For WOPI, the parameter sent by the integrator is used. For Docs API, the <a href="<%= Url.Action("config/document") %>#key">document.key</a> parameter is written to WOPISrc.</p>
-    <p>If it doesn't matter on which server the document is opened, then the request remains unchanged.</p>

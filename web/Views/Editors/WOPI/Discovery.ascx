@@ -138,7 +138,9 @@ ui=en-us&thm=1&"/&gt;
             </tr>
             <tr>
                 <td id="wopisrc" class="copy-link">wopisrc</td>
-                <td>Indicates that the WOPI server includes the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> value. This parameter is required.</td>
+                <td>Indicates that the WOPI server includes the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> value. 
+                It tells the WOPI client what URL to call back to when running WOPI operations on a file.
+                This parameter is required.</td>
                 <td>https://&lt;host_address&gt;/wopi/files/(file_id)</td>
             </tr>
         </tbody>
