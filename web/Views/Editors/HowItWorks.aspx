@@ -39,6 +39,7 @@
         <li><a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a></li>
         <li><a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a></li>
         <li><a href="<%= Url.Action("protectingranges") %>">Protecting ranges</a></li>
+        <li><a href="<%= Url.Action("javasdk") %>">Integrating editors using Java SDK</a></li>
     </ul>
     
     <br />

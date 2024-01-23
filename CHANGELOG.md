@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the page about Java Integration SDK
 - docspace: v2.0.1
 - docspace: added the information about webhooks
 
