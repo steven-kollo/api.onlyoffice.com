@@ -58,7 +58,7 @@
         "de": "OCR"
     },
     "guid": "asc.{440EBF13-9B19-4BD8-8621-05200E58140B}",
-    "version": "1.0.0",
+    "version": "2.0.0",
 
     "variations": [
         {
@@ -146,11 +146,16 @@
                     "light" : "#444444",
                     "dark" : "#444444"
                 },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
+                "screenshots" : [
+                    "resources/store/screenshots/screen_1.png",
+                    "resources/store/screenshots/screen_2.png",
+                    "resources/store/screenshots/screen_3.png"
+                ],
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities", "work"]
             }
         },
         {

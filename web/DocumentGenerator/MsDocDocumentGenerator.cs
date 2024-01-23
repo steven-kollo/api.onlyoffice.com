@@ -181,6 +181,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [DataMember(Name = "functions")]
         public List<MsDocEntryPointMethod> Methods { get; set; }
+
+        [DataMember(Name = "visible")]
+        public bool Visible { get; set; }
     }
 
     [DataContract(Name = "function", Namespace = "")]
@@ -346,8 +349,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 Remarks = entryPointDoc.Element("remarks").ValueOrNull(),
                 Name = entryPointDoc.Element("name").ValueOrNull(),
                 Example = entryPointDoc.Element("example").ValueOrNull(),
+                Visible = !string.Equals(entryPointDoc.Element("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
                 Methods = new List<MsDocEntryPointMethod>()
             };
+
+            if (!root.Visible) return;
+
             for (int i = 0; i < memberdesc.Count; i++)
             {
                 try

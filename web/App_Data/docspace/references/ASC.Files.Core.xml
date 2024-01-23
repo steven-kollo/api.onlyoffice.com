@@ -495,7 +495,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.ExpirationDate">
             <summary>Link expiration date</summary>
-            <type>System.DateTime, System</type>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.LinkType">
             <summary>Link type</summary>
@@ -921,6 +921,24 @@
             </summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.Version">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrlApi">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrl">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrlInternal">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServicePortalUrl">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.IsDefault">
+            <type>System.Boolean, System</type>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto">
             <summary>
             </summary>
@@ -992,6 +1010,10 @@
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Shared">
             <summary>Specifies whether to share the external data or not</summary>
             <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.LinkId">
+            <summary>Link ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1">
             <summary>
@@ -1543,7 +1565,7 @@
             <param name="fileIds">id file</param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesFilteredAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesFilteredAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String[],System.Boolean,System.Boolean)">
             <summary>
                 Gets the file (s) by ID (s) for share
             </summary>
@@ -1564,7 +1586,7 @@
             <param name="parentId"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String[],System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
             <summary>
                 Get files in folder
             </summary>
@@ -1712,7 +1734,7 @@
             <param name="newOwnerId"></param>
             <param name="exceptFolderIds"></param>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String[],System.Boolean)">
             <summary>
             Search files in SharedWithMe &amp; Projects
             </summary>
@@ -2166,6 +2188,10 @@
         <member name="P:ASC.Files.Core.Security.ValidationInfo.Shared">
             <summary>Specifies whether to share the external data or not</summary>
             <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.LinkId">
+            <summary>Link ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.Files.Core.Security.Status">
             <summary>

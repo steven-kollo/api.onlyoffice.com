@@ -47,6 +47,7 @@
         <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
         <li><a href="#isViewer">isViewer</a></li>
         <li><a href="#isVisual">isVisual</a></li>
+        <li><a href="#screens">screens</a></li>
         <li><a href="#size">size</a></li>
         <li><a href="#store">store</a></li>
         <li><a href="#store-background">store.background</a></li>
@@ -174,7 +175,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="EditorsSupport" class="copy-link">variations.EditorsSupport</td>
-                <td>The editors which the plugin is available for (<b>word</b>, <b>cell</b>, or <b>slide</b>).</td>
+                <td>The editors which the plugin is available for (<b>word</b>, <b>cell</b>, <b>slide</b>, or <b>pdf</b>).</td>
                 <td>Array.&lt;<a href="<%= Url.Action("global") %>#editorType">editorType</a>&gt;</td>
                 <td>["word"]</td>
             </tr>
@@ -265,6 +266,12 @@
                 <td>Specifies if the plugin is visual (will open a window for some action, or introduce some additions to the editor panel interface) or non-visual (will provide a button (or buttons) which is going to apply some transformations or manipulations to the document).</td>
                 <td>boolean</td>
                 <td>true</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="screens" class="copy-link">variations.screens</td>
+                <td>Plugin screenshot image files used in the editors.</td>
+                <td>Array.&lt;string&gt;</td>
+                <td>["resources/store/screenshots/screen_1.png"]</td>
             </tr>
             <tr class="tablerow">
                 <td id="size" class="copy-link">variations.size</td>
@@ -405,7 +412,7 @@
                     "fr": "french plugin description",
                     "es": "spanish plugin description"
                 },
-                "EditorsSupport": ["word", "cell", "slide"],
+                "EditorsSupport": ["word", "cell", "slide", "pdf"],
                 "events": ["onClick"],
                 "icons": ["icon.png", "icon@2x.png"],
                 "icons2": [
@@ -431,6 +438,7 @@
                 "isUpdateOleOnResize": true,
                 "isViewer": true,
                 "isVisual": false,
+                "screens": ["resources/store/screenshots/screen_1.png"],
                 "size": [600, 700],
                 "store": {
                     "background": {

@@ -82,7 +82,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities", "work", "recommended"]
             }
         }
     ]

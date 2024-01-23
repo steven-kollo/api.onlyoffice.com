@@ -56,7 +56,7 @@
         "de": "Wortanzahl"
     },
     "guid" : "asc.{584EEEE8-DBF5-45C3-A4CA-F52177C82754}",
-    "version": "1.0.0",
+    "version": "1.0.1",
 
     "variations" : [
         {
@@ -110,7 +110,7 @@
                 }
             ],
             "isViewer"        : true,
-            "EditorsSupport"  : ["word"],
+            "EditorsSupport"  : ["word", "pdf"],
             "isVisual"        : true,
             "isModal"         : false,
             "isInsideMode"    : true,
@@ -126,7 +126,8 @@
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities"]
             }
         }
     ]
