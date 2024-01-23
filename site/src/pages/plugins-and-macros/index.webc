@@ -3,4 +3,5 @@ title: Plugins and Macros
 description: "Extend the ONLYOFFICE Docs functionality. In this section, you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples."
 permalink: /plugins-and-macros/index.html
 logo: plugins-and-macros-logo
+tags: product
 ---

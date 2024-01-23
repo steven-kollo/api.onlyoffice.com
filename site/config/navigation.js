@@ -22,16 +22,21 @@ const { extname } = require("node:path")
  * @property {Record<string, CacheNavigationItem>} children
  */
 
+const gc = new WeakMap()
+
 /**
  * @param {UserConfig} uc
  * @returns {void}
  */
 function navigationPlugin(uc) {
   uc.addCollection("navigation", (c) => {
-    // todo: rename tag to the navigation.
-    const list = c.getFilteredByTag("product")
+    if (gc.has(navigationPlugin)) {
+      return gc.get(navigationPlugin)
+    }
+    const list = c.getFilteredByTag("navigation")
     const cache = collect(list)
     const root = resolve(cache)
+    gc.set(navigationPlugin, root.children)
     return root.children
   })
 }

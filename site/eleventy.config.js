@@ -10,6 +10,7 @@ const { plugin: html } = require("./config/html.js")
 const { plugin: js } = require("./config/js.js")
 const { plugin: md } = require("./config/md.js")
 const { navigationPlugin } = require("./config/navigation.js")
+// const { productsPlugin } = require("./config/products.js")
 const { plugin: webc } = require("./config/webc.js")
 
 /**
@@ -46,6 +47,7 @@ function config(c) {
   c.addPlugin(md, { components })
 
   c.addPlugin(navigationPlugin)
+  // c.addPlugin(productsPlugin)
 
   return {
     templateFormats: ["md", "webc"],

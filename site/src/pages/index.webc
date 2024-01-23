@@ -2,6 +2,7 @@
 title: Welcome to ONLYOFFICE API
 permalink: /index.html
 layout: blank/blank.webc
+eleventyExcludeFromCollections: true
 ---
 <style webc:keep>
 .heading {
