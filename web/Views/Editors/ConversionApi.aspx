@@ -1779,40 +1779,39 @@
     "outputtype": "pdf",
     "title": "Example Document Title.docx",
     "url": "https://example.com/url-to-example-document.docx",
-    "watermark" : {
-        "transparent" : 0.3,
-        "type" : "rect",
-        "width" : 100,
-        "height" : 100,
-        "rotate" : -45,
-        "margins" : [ 10, 10, 10, 10 ],
-        "fill" : [255, 0, 0],
-        "stroke-width" : 1,
-        "stroke" : [0, 0, 255],
-        "align" : 1,
-
-        "paragraphs" : [ {
-            "align" : 2,
-            "fill" : [255, 0, 0],
-            "linespacing" : 1,
-
-            "runs" : [
-                        {
-                            "text" : "Do not steal, %user_name%!",
-                            "fill" : [0, 0, 0],
-                            "font-family" : "Arial",
-                            "font-size" : 40,
-                            "bold" : true,
-                            "italic" : false,
-                            "strikeout" : false,
-                            "underline" : false
-                        },
-                        {
-                            "text" : "&lt;%br%&gt;"
-                        }
-                    ]
+    "watermark": {
+        "align": 1,
+        "fill": [255, 0, 0],
+        "height": 100,
+        "margins": [ 10, 10, 10, 10 ],
+        "paragraphs": [
+            {
+                "align": 2,
+                "fill": [255, 0, 0],
+                "linespacing": 1,
+                "runs": [
+                    {
+                        "bold": true,
+                        "italic": false,
+                        "fill": [0, 0, 0],
+                        "font-family": "Arial",
+                        "font-size": 40,
+                        "strikeout": false,
+                        "text": "Watermark",
+                        "underline": false
+                    },
+                    {
+                        "text": "&lt;%br%&gt;"
+                    }
+                ]
             }
-        ]
+        ],
+        "rotate": -45,
+        "transparent": 0.3,
+        "type": "rect",
+        "stroke-width": 1,
+        "stroke": [0, 0, 255],
+        "width": 100
     }
 }
 </pre>
