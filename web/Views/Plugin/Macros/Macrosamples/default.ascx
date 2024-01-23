@@ -113,7 +113,7 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
      <li class="macro-example">
         <div class="macro-info"><a href="<%= Url.Action("macrosamples/insertid") %>"><div class="example-img assign_unique_id"></div></a>
         <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/insertid") %>">Insert unique id</a></h2>
-        <p>In this example we are inserting a unique id into the OFORM.</p></div>
+        <p>In this example we are inserting a unique id into a form document.</p></div>
         <p class="block_more"><a href="<%= Url.Action("macrosamples/insertid") %>">More</a></p>
     </li>
      <li class="macro-example">
