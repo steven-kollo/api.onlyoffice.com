@@ -1,0 +1,369 @@
+span.phoneControlContainer .phoneControlSwitherWrapper {
+    border: 1px solid #AAAAAA;
+    border-right: 0 none;
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    border-bottom-left-radius: 4px;
+}
+
+span.phoneControlContainer .phoneControlInputContainer {
+    border: 1px solid #AAAAAA;
+    border-left: 0 none;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    border-bottom-right-radius: 4px;
+}
+
+span.phoneControlContainer.error .phoneControlSwitherWrapper,
+span.phoneControlContainer.error .phoneControlInput,
+span.phoneControlContainer.error .phoneControlInputContainer {
+    border-color: #BF3703;
+    color: #bf3703;
+}
+
+span.phoneControlContainer .phoneControlSwither {
+    cursor: pointer;
+    border: 0 none;
+    margin-top: -2px;
+}
+
+span.phoneControlContainer .phoneControlSwither:after {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #AAAAAA;
+    content: "";
+    height: 0;
+    margin: 0;
+    position: absolute;
+    right: 6px;
+    top: 32px;
+    width: 0;
+}
+
+span.phoneControlContainer .phoneControlSwither .selectedPhoneCountry {
+    display: inline-block;
+    line-height: 15px;
+    margin: 8px 0 0 16px;
+}
+
+span.phoneControlContainer input[type="text"].phoneControlInput {
+    border: 0 none;
+    padding-left: 5px;
+    margin-left: 0;
+    height: 34px;
+    border-bottom-right-radius: 4px;
+    box-sizing: border-box;
+}
+
+#phoneControlDropDown {
+    padding-left: 10px;
+}
+
+#phoneControlDropDown ul.dropdown-content {
+    max-height: 260px;
+    max-width: 280px;
+}
+
+#phoneControlDropDown ul.dropdown-content li {
+    min-height: 23px;
+    padding: 0;
+}
+
+#phoneControlDropDown ul.dropdown-content li.selected {
+    background-color: #EEEEEE;
+}
+
+#phoneControlDropDown ul.dropdown-content li div.fg-item {
+    background-image: url("img/flags.gif");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 11px;
+    width: 16px;
+    float: left;
+    line-height: 15px;
+    margin: 5px 0 3px 10px;
+}
+
+#phoneControlDropDown ul.dropdown-content a.dropdown-item {
+    color: #333333;
+    display: block;
+    font-weight: 700;
+    line-height: 15px;
+    margin: 2px 0 2px 8px;
+    padding: 1px 1px 1px 2px;
+    text-align: left;
+    white-space: normal;
+}
+
+.phoneControlSwitherWrapper .phoneControlSwither .selectedPhoneCountry {
+    background-image: url("img/flags.gif");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 11px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.dataItem.dataItemPhone .phoneControlSwither:hover {
+    background-color: #EEEEEE;
+}
+
+
+.fg_AL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AL { background-position: 0px -1034px; }
+.fg_AU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AU { background-position: 0px -1716px; }
+.fg_AT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AT { background-position: 0px -1331px; }
+.fg_AZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AZ { background-position: 0px -1243px; }
+.fg_DZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_DZ { background-position: 0px -528px; }
+.fg_AS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AS { background-position: 0px -1562px; }
+.fg_AI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AI { background-position: 0px -1980px; }
+.fg_AO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AO { background-position: 0px -1947px; }
+.fg_AD, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AD { background-position: 0px -594px; }
+.fg_AG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AG { background-position: 0px -869px; }
+.fg_AR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AR { background-position: 0px -2377px; }
+.fg_AM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AM { background-position: 0px -176px; }
+.fg_AW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AW { background-position: 0px -792px; }
+.fg_AF, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AF { background-position: 0px -2311px; }
+.fg_BS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BS { background-position: 0px -363px; }
+.fg_BD, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BD { background-position: 0px -1771px; }
+.fg_BB, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BB { background-position: 0px -1573px; }
+.fg_BH, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BH { background-position: 0px -1496px; }
+.fg_BY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BY { background-position: 0px -1100px; }
+.fg_BZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BZ { background-position: 0px -484px; }
+.fg_BE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BE { background-position: 0px 0px; }
+.fg_BJ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BJ { background-position: 0px -1298px; }
+.fg_BM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BM { background-position: 0px -1914px; }
+.fg_BG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BG { background-position: 0px -2586px; }
+.fg_BO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BO { background-position: 0px -1650px; }
+.fg_BQ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BQ { background-position: 0px -2719px; }
+.fg_BA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BA { background-position: 0px -1584px; }
+.fg_BW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BW { background-position: 0px -2707px; }
+.fg_BR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BR { background-position: 0px -770px; }
+.fg_IO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_IO { background-position: 0px -55px; }
+.fg_VG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_VG { background-position: 0px -1408px; }
+.fg_BN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BN { background-position: 0px -1683px; }
+.fg_BF, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BF { background-position: 0px -726px; }
+.fg_BI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BI { background-position: 0px -1892px; }
+.fg_BT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BT { background-position: 0px -1848px; }
+.fg_VU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_VU { background-position: 0px -1265px; }
+.fg_VA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_VA { background-position: 0px -2322px; }
+.fg_GB, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GB { background-position: 0px -55px; }
+.fg_HU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_HU { background-position: 0px -682px; }
+.fg_VE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_VE { background-position: 0px -1056px; }
+.fg_VI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_VI { background-position: 0px -1782px; }
+.fg_VN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_VN { background-position: 0px -968px; }
+.fg_GA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GA { background-position: 0px -880px; }
+.fg_HT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_HT { background-position: 0px -319px; }
+.fg_GY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GY { background-position: 0px -803px; }
+.fg_GM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GM { background-position: 0px -627px; }
+.fg_GH, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GH { background-position: 0px -2112px; }
+.fg_GP, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GP { background-position: 0px -407px; }
+.fg_GT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GT { background-position: 0px -935px; }
+.fg_GN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GN { background-position: 0px -2575px; }
+.fg_GW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GW { background-position: 0px -1925px; }
+.fg_DE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_DE { background-position: 0px -2509px; }
+.fg_GI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GI { background-position: 0px -275px; }
+.fg_HN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_HN { background-position: 0px -2156px; }
+.fg_HK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_HK { background-position: 0px -825px; }
+.fg_GD, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GD { background-position: 0px -2399px; }
+.fg_GL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GL { background-position: 0px -1760px; }
+.fg_GR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GR { background-position: 0px -165px; }
+.fg_GE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GE { background-position: 0px -858px; }
+.fg_GU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GU { background-position: 0px -2366px; }
+.fg_DK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_DK { background-position: 0px -1386px; }
+.fg_CD, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CD { background-position: 0px -1518px; }
+.fg_DJ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_DJ { background-position: 0px -2101px; }
+.fg_DM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_DM { background-position: 0px -2432px; }
+.fg_DO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_DO { background-position: 0px -1529px; }
+.fg_EG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_EG { background-position: 0px -2201px; }
+.fg_ZM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ZM { background-position: 0px -1595px; }
+.fg_ZW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ZW { background-position: 0px -2046px; }
+.fg_IL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_IL { background-position: 0px -341px; }
+.fg_IN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_IN { background-position: 0px -1694px; }
+.fg_ID, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ID { background-position: 0px -1958px; }
+.fg_JO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_JO { background-position: 0px -1463px; }
+.fg_IQ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_IQ { background-position: 0px -649px; }
+.fg_IR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_IR { background-position: 0px -2013px; }
+.fg_IE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_IE { background-position: 0px -1969px; }
+.fg_IS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_IS { background-position: 0px -1991px; }
+.fg_ES, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ES { background-position: 0px -1155px; }
+.fg_IT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_IT { background-position: 0px -143px; }
+.fg_YE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_YE { background-position: 0px -1672px; }
+.fg_KZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KZ { background-position: 0px -1210px; }
+.fg_KY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KY { background-position: 0px -308px; }
+.fg_KH, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KH { background-position: 0px -242px; }
+.fg_CM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CM { background-position: 0px -2057px; }
+.fg_CA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CA { background-position: 0px -1375px; }
+.fg_QA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_QA { background-position: 0px -462px; }
+.fg_KE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KE { background-position: 0px -2630px; }
+.fg_CY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CY { background-position: 0px -561px; }
+.fg_KG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KG { background-position: 0px -1617px; }
+.fg_KI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KI { background-position: 0px -374px; }
+.fg_CN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CN { background-position: 0px -825px; }
+.fg_CO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CO { background-position: 0px -330px; }
+.fg_KM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KM { background-position: 0px -1430px; }
+.fg_CG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CG { background-position: 0px -1793px; }
+.fg_CR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CR { background-position: 0px -2090px; }
+.fg_CI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CI { background-position: 0px -1661px; }
+.fg_CU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CU { background-position: 0px -748px; }
+.fg_KW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KW { background-position: 0px -2487px; }
+.fg_CW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CW { background-position: 0px -2729px; }
+.fg_LA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LA { background-position: 0px -451px; }
+.fg_LV, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LV { background-position: 0px -1936px; }
+.fg_LS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LS { background-position: 0px -2190px; }
+.fg_LR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LR { background-position: 0px -2068px; }
+.fg_LB, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LB { background-position: 0px -1254px; }
+.fg_LY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LY { background-position: 0px -132px; }
+.fg_LT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LT { background-position: 0px -1122px; }
+.fg_LI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LI { background-position: 0px -979px; }
+.fg_LU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LU { background-position: 0px -1474px; }
+.fg_MU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MU { background-position: 0px -2179px; }
+.fg_MR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MR { background-position: 0px -253px; }
+.fg_MG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MG { background-position: 0px -1287px; }
+.fg_MO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MO { background-position: 0px -825px; }
+.fg_MK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MK { background-position: 0px -1353px; }
+.fg_MW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MW { background-position: 0px -2145px; }
+.fg_MY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MY { background-position: 0px -1870px; }
+.fg_ML, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ML { background-position: 0px -2520px; }
+.fg_MV, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MV { background-position: 0px -616px; }
+.fg_MT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MT { background-position: 0px -1551px; }
+.fg_MA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MA { background-position: 0px -2333px; }
+.fg_MQ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MQ { background-position: 0px -198px; }
+.fg_MH, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MH { background-position: 0px -1144px; }
+.fg_MX, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MX { background-position: 0px -2024px; }
+.fg_MZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MZ { background-position: 0px -638px; }
+.fg_MD, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MD { background-position: 0px -2685px; }
+.fg_MC, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MC { background-position: 0px -913px; }
+.fg_MN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MN { background-position: 0px -2553px; }
+.fg_MS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MS { background-position: 0px -583px; }
+.fg_MM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MM { background-position: 0px -11px; }
+.fg_NA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NA { background-position: 0px -1881px; }
+.fg_NR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NR { background-position: 0px -1749px; }
+.fg_NP, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NP { background-position: 0px -110px; }
+.fg_NE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NE { background-position: 0px -550px; }
+.fg_NG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NG { background-position: 0px -2476px; }
+.fg_NL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NL { background-position: 0px -1441px; }
+.fg_NI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NI { background-position: 0px -154px; }
+.fg_NU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NU { background-position: 0px -2079px; }
+.fg_NZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NZ { background-position: 0px -1540px; }
+.fg_NC, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NC { background-position: 0px -1276px; }
+.fg_NO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NO { background-position: 0px -836px; }
+.fg_AE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AE { background-position: 0px -2223px; }
+.fg_TC, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TC { background-position: 0px -1309px; }
+.fg_BL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_BL { background-position: 0px -1012px; }
+.fg_SH, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SH { background-position: 0px -495px; }
+.fg_OM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_OM { background-position: 0px -2454px; }
+.fg_CV, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CV { background-position: 0px -2652px; }
+.fg_CK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CK { background-position: 0px -2267px; }
+.fg_AC, #phoneControlDropDown ul.dropdown-content .fg-item.fg_AC { background-position: 0px -55px; }
+.fg_NF, #phoneControlDropDown ul.dropdown-content .fg-item.fg_NF { background-position: 0px -209px; }
+.fg_MF, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MF { background-position: 0px -55px; }
+.fg_PK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PK { background-position: 0px -2035px; }
+.fg_PW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PW { background-position: 0px -231px; }
+.fg_PS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PS { background-position: 0px -1199px; }
+.fg_PA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PA { background-position: 0px -847px; }
+.fg_PG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PG { background-position: 0px -1485px; }
+.fg_PY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PY { background-position: 0px -2344px; }
+.fg_PE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PE { background-position: 0px -946px; }
+.fg_PL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PL { background-position: 0px -1177px; }
+.fg_PT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PT { background-position: 0px -517px; }
+.fg_PR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PR { background-position: 0px -473px; }
+.fg_KR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KR { background-position: 0px -2245px; }
+.fg_RE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_RE { background-position: 0px -264px; }
+.fg_RU, #phoneControlDropDown ul.dropdown-content .fg-item.fg_RU { background-position: 0px -660px; }
+.fg_RW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_RW { background-position: 0px -2674px; }
+.fg_RO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_RO { background-position: 0px -671px; }
+.fg_SV, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SV { background-position: 0px -1639px; }
+.fg_WS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_WS { background-position: 0px -2300px; }
+.fg_SM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SM { background-position: 0px -2123px; }
+.fg_ST, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ST { background-position: 0px -2388px; }
+.fg_SA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SA { background-position: 0px -33px; }
+.fg_SZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SZ { background-position: 0px -2278px; }
+.fg_KP, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KP { background-position: 0px -1804px; }
+.fg_MP, #phoneControlDropDown ul.dropdown-content .fg-item.fg_MP { background-position: 0px -704px; }
+.fg_SC, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SC { background-position: 0px -1045px; }
+.fg_SN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SN { background-position: 0px -2134px; }
+.fg_PM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PM { background-position: 0px -1078px; }
+.fg_VC, #phoneControlDropDown ul.dropdown-content .fg-item.fg_VC { background-position: 0px -2619px; }
+.fg_KN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_KN { background-position: 0px -99px; }
+.fg_LC, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LC { background-position: 0px -1397px; }
+.fg_RS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_RS { background-position: 0px -2465px; }
+.fg_SG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SG { background-position: 0px -22px; }
+.fg_SX, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SX { background-position: 0px -2773px; }
+.fg_SY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SY { background-position: 0px -1826px; }
+.fg_SK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SK { background-position: 0px -2212px; }
+.fg_SI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SI { background-position: 0px -1221px; }
+.fg_SB, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SB { background-position: 0px -1067px; }
+.fg_SO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SO { background-position: 0px -1364px; }
+.fg_SD, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SD { background-position: 0px -352px; }
+.fg_SR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SR { background-position: 0px -2663px; }
+.fg_US, #phoneControlDropDown ul.dropdown-content .fg-item.fg_US { background-position: 0px -44px; }
+.fg_SL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SL { background-position: 0px -737px; }
+.fg_TJ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TJ { background-position: 0px -187px; }
+.fg_TH, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TH { background-position: 0px -957px; }
+.fg_TW, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TW { background-position: 0px -825px; }
+.fg_TZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TZ { background-position: 0px -2289px; }
+.fg_TL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TL { background-position: 0px -2784px; }
+.fg_TG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TG { background-position: 0px -605px; }
+.fg_TK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TK { background-position: 0px -2751px; }
+.fg_TO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TO { background-position: 0px -1089px; }
+.fg_TT, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TT { background-position: 0px -440px; }
+.fg_TV, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TV { background-position: 0px -286px; }
+.fg_TN, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TN { background-position: 0px -539px; }
+.fg_TM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TM { background-position: 0px -2542px; }
+.fg_TR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TR { background-position: 0px -1606px; }
+.fg_UG, #phoneControlDropDown ul.dropdown-content .fg-item.fg_UG { background-position: 0px -1166px; }
+.fg_UZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_UZ { background-position: 0px -1001px; }
+.fg_UA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_UA { background-position: 0px -2002px; }
+.fg_WF, #phoneControlDropDown ul.dropdown-content .fg-item.fg_WF { background-position: 0px -1012px; }
+.fg_UY, #phoneControlDropDown ul.dropdown-content .fg-item.fg_UY { background-position: 0px -2608px; }
+.fg_FO, #phoneControlDropDown ul.dropdown-content .fg-item.fg_FO { background-position: 0px -1111px; }
+.fg_FM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_FM { background-position: 0px -1738px; }
+.fg_FJ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_FJ { background-position: 0px -1859px; }
+.fg_PH, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PH { background-position: 0px -1815px; }
+.fg_FI, #phoneControlDropDown ul.dropdown-content .fg-item.fg_FI { background-position: 0px -1903px; }
+.fg_FK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_FK { background-position: 0px -2762px; }
+.fg_FR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_FR { background-position: 0px -1012px; }
+.fg_GF, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GF { background-position: 0px -2234px; }
+.fg_PF, #phoneControlDropDown ul.dropdown-content .fg-item.fg_PF { background-position: 0px -1705px; }
+.fg_HR, #phoneControlDropDown ul.dropdown-content .fg-item.fg_HR { background-position: 0px -902px; }
+.fg_CF, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CF { background-position: 0px -1837px; }
+.fg_TD, #phoneControlDropDown ul.dropdown-content .fg-item.fg_TD { background-position: 0px -814px; }
+.fg_ME, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ME { background-position: 0px -2167px; }
+.fg_CZ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CZ { background-position: 0px -2256px; }
+.fg_CL, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CL { background-position: 0px -1342px; }
+.fg_CH, #phoneControlDropDown ul.dropdown-content .fg-item.fg_CH { background-position: 0px -1320px; }
+.fg_SE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SE { background-position: 0px -385px; }
+.fg_LK, #phoneControlDropDown ul.dropdown-content .fg-item.fg_LK { background-position: 0px -2641px; }
+.fg_EC, #phoneControlDropDown ul.dropdown-content .fg-item.fg_EC { background-position: 0px -1188px; }
+.fg_GQ, #phoneControlDropDown ul.dropdown-content .fg-item.fg_GQ { background-position: 0px -1507px; }
+.fg_ER, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ER { background-position: 0px -715px; }
+.fg_EE, #phoneControlDropDown ul.dropdown-content .fg-item.fg_EE { background-position: 0px -2410px; }
+.fg_ET, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ET { background-position: 0px -2443px; }
+.fg_ZA, #phoneControlDropDown ul.dropdown-content .fg-item.fg_ZA { background-position: 0px -2355px; }
+.fg_SS, #phoneControlDropDown ul.dropdown-content .fg-item.fg_SS { background-position: 0px -2741px; }
+.fg_JM, #phoneControlDropDown ul.dropdown-content .fg-item.fg_JM { background-position: 0px -1727px; }
+.fg_JP, #phoneControlDropDown ul.dropdown-content .fg-item.fg_JP { background-position: 0px -429px; }
+
+
+@media screen and (max-width: 1089px) {
+    #phoneControlDropDown ul.dropdown-content {
+        max-height: 215px;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    span.phoneControlContainer .phoneControlSwither .selectedPhoneCountry {
+        margin-left: 13px;
+    }
+
+    span.phoneControlContainer .phoneControlSwither:after {
+        right: 3px;
+        top: 27px;
+    }
+}

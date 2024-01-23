@@ -1,0 +1,98 @@
+[
+   {
+      "id": "docspace",
+      "title": "DocSpace",
+      "description": "In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API. You will also find the information on how to embed DocSpace using JavaScript SDK, create your own plugins with our Plugins SDK, and host a portal on your own servers using our methods for hosting providers.",
+      "shortDescription": "ONLYOFFICE DocSpace is a collaborative cloud platform that allows users to store, manage, edit, and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.",
+      "items": [
+         {
+            "id": "docspace",
+            "title": "DocSpace API",
+            "description": "In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the <a href=\"\" target=\"_blank\" rel=\"noopener noreferrer\">DocSpace API Backend</a> which is implemented as REST over HTTP using GET/POST/PUT/DELETE.",
+            "links": []
+         },
+         {
+            "id": "javascript-sdk",
+            "title": "JavaScript SDK",
+            "description": "In this section, you will learn how to connect DocSpace as a frame to your website using api.js. You can embed an entire DocSpace portal, a single room, or a document.",
+            "links": []
+         },
+         {
+            "id": "plugins",
+            "title": "Plugins",
+            "description": "In this section, you will learn how to create your own plugins and add them to the DocSpace portal.",
+            "links": []
+         },
+         {
+            "id": "hosting-providers",
+            "title": "For hosting providers",
+            "description": " In this section, you will learn how to provide the DocSpace portal as a SaaS solution on your own servers using our API methods.",
+            "links": []
+         }
+      ]
+   },
+   {
+      "id": "docs",
+      "title": "Docs",
+      "description": "In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure and integrate ONLYOFFICE Docs, extend its functionality using your own plugins/macros, and integrate document editors into the desktop or mobile applications. You will also find the information on how to use Document builder to generate documents easily without running document editors. Use our Office JavaScript API to write code for your plugins, macros, builder scripts, etc.",
+      "shortDescription": "ONLYOFFICE Docs is a collaborative office suite that includes editors for text documents, spreadsheets, presentations, fillable forms, and PDFs.",
+      "items": [
+         {
+            "id": "office-api",
+            "title": "Office API",
+            "description": "In this section, you will learn how to use our JavaScript library to write code for your plugins, macros, builder scripts, etc. This library contains classes and methods for every document type: Text document API, Spreadsheet API, Presentation API, and Form API.",
+            "links": []
+         },
+         {
+            "id": "docs-api",
+            "title": "Docs API",
+            "description": "In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure, and integrate ONLYOFFICE Docs.",
+            "links": []
+         },
+         {
+            "id": "plugins-macros",
+            "title": "Plugins and macros",
+            "description": "In this section, you will learn how to extend the ONLYOFFICE Docs functionality by creating your own plugins/macros. Here you will find the information about their structure, development lifecycle, and examples.",
+            "links": []
+         },
+         {
+            "id": "document-builder",
+            "title": "Document builder",
+            "description": "In this section, you will learn how to generate documents easily without running a document editor and integrate Document builder into your DMS, CRM system, etc.",
+            "links": []
+         },
+         {
+            "id": "desktop-editors",
+            "title": "Desktop editors",
+            "description": "In this section, you will learn how to extend the ONLYOFFICE Desktop Editors functionality by setting up, customizing and integrating them with the document management systems.",
+            "links": []
+         },
+         {
+            "id": "mobile-editors",
+            "title": "Mobile editors",
+            "description": "In this section, you will learn how to extend the ONLYOFFICE Desktop Editors functionality by setting up, customizing and integrating them with the document management systems.",
+            "links": []
+         }
+      ]
+   },
+   {
+      "id": "workspace",
+      "title": "Workspace",
+      "description": "In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API. This solution is provided without editors, you need to install ONLYOFFICE Docs separately. You can also host a portal and interact with it using our methods for hosting providers.",
+      "shortDescription": "ONLYOFFICE Docs is a collaborative office suite that includes editors for text documents, spreadsheets, presentations, fillable forms, and PDFs.",
+      "items": [
+         {
+            "id": "workspace-api",
+            "title": "Workspace API",
+            "description": "In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the <a href=\"\" target=\"_blank\" rel=\"noopener noreferrer\">Workspace API Backend</a> which is implemented as REST over HTTP using GET/POST/PUT/DELETE. This solution is provided without editors, you need to install ONLYOFFICE Docs separately.",
+            "links": []
+         },
+         {
+            "id": "hosting-providers",
+            "title": "For hosting providers",
+            "description": "In this section, you will learn how to provide the Workspace portal as a SaaS solution on your own servers using our API methods.",
+            "links": []
+         }
+      ]
+   }
+]

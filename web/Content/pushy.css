@@ -15,11 +15,11 @@
  * The interactive user interfaces in modified source and object code versions of ONLYOFFICE must display 
  * Appropriate Legal Notices, as required under Section 5 of the GNU GPL version 3.
  *
- * Pursuant to Section 7 § 3(b) of the GNU GPL you must retain the original ONLYOFFICE logo which contains 
+ * Pursuant to Section 7 ï¿½ 3(b) of the GNU GPL you must retain the original ONLYOFFICE logo which contains 
  * relevant author attributions when distributing the software. If the display of the logo in its graphic 
  * form is not reasonably feasible for technical reasons, you must include the words "Powered by ONLYOFFICE" 
  * in every copy of the program you distribute. 
- * Pursuant to Section 7 § 3(e) we decline to grant you any rights under trademark law for use of our trademarks.
+ * Pursuant to Section 7 ï¿½ 3(e) we decline to grant you any rights under trademark law for use of our trademarks.
  *
 */
 
@@ -28,8 +28,153 @@
     display: none;
 }
 
-.pushy-submenu-closed ul {
-    display: grid !important;
+.pushy-submenu {
+    position: relative;
+}
+
+.pushy-submenu:hover .pushy-dropdown {
+    display: block;
+}
+
+.pushy-submenu:hover > a {
+    color: #FF6F3D;
+}
+
+.pushy-submenu:hover .pushy-dropdown::before {
+    animation: 0.3s forwards ease-in-out menuLineLeft;
+}
+
+.pushy-submenu:hover .pushy-dropdown::after {
+    animation: 0.3s forwards ease-in-out menuLineRight;
+}
+
+.pushy-dropdown {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: 0;
+    padding: 32px;
+    list-style-type: none;
+    border: 1px solid #616161;
+    border-radius: 0 0 8px 8px;
+    width: max-content;
+    min-width: 256px;
+    max-width: 300px;
+    background-color: #2A2A2A;
+    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.40);
+    transform: translateX(-50%);
+}
+
+.pushy-dropdown:before {
+    display: block;
+    position: absolute;
+    width: 0;
+    content: "";
+    height: 1px;
+    background-color: #FF6F3D;
+    transition: width 0.2s ease-in-out;
+    left: 50%;
+    top: 0;
+}
+
+.pushy-dropdown:after {
+    display: block;
+    position: absolute;
+    width: 0;
+    content: "";
+    height: 1px;
+    background-color: #FF6F3D;
+    transition: width 0.2s ease-in-out;
+    left: 50%;
+    top: 0;
+}
+
+.pushy-dropdown li {
+    margin-bottom: 16px;
+}
+
+.pushy-dropdown li:last-child {
+    margin-bottom: 0;
+}
+
+.pushy-dropdown a {
+    display: flex;
+    color: rgba(255, 255, 255, 0.60);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.pushy-dropdown a:hover {
+    color: #FF6F3D;
+}
+
+.pushy-dropdown a::before {
+    content: "";
+    display: inline-flex;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-image: url("img/menu-icons.svg");
+}
+
+.pushy-dropdown a.office-api::before,
+.pushy-dropdown a.workspace-api::before,
+.pushy-dropdown a.docspace-api::before {
+    background-position-y: 0;
+}
+
+.pushy-dropdown a.docs-api::before {
+    background-position-y: -26px;
+}
+
+.pushy-dropdown a.plugins::before,
+.pushy-dropdown a.plugins-macros::before {
+    background-position-y: -52px;
+}
+
+.pushy-dropdown a.document-builder::before {
+    background-position-y: -78px;
+}
+
+.pushy-dropdown a.desktop-editors::before {
+    background-position-y: -104px;
+}
+
+.pushy-dropdown a.javascript-sdk::before {
+    background-position-y: -130px;
+}
+
+.pushy-dropdown a.hosting-providers::before {
+    background-position-y: -156px;
+}
+
+@keyframes menuLineLeft {
+    0% {
+      width: 0;
+      left: 50%;
+    }
+
+    100% {
+      width: 50%;
+      left: 0;
+    }
+}
+
+@keyframes menuLineRight {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 50%;
+    }
 }
 
 @media screen and (max-width: 1024px) {

@@ -108,6 +108,8 @@
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\DocSpaceController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\DeveloperProfileController.cs" />
     <Compile Include="DocumentGenerator\DocSpaceDocumentation.cs" />
     <Compile Include="DocumentGenerator\CSharpDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
@@ -129,6 +131,7 @@
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
     <Compile Include="Helpers\Persons.cs" />
     <Compile Include="Helpers\Products.cs" />
+    <Compile Include="Helpers\Categories.cs" />
     <Compile Include="Helpers\RedirectAttribute.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
     <Compile Include="Helpers\Url.cs" />
@@ -2752,6 +2755,9 @@
     <Content Include="Content\connector.css" />
     <Content Include="Content\jquery.treeview.css" />
     <Content Include="Content\main-page.css" />
+    <Content Include="Content\phone-controller.css" /> 
+    <Content Include="Content\category-page.css" />
+    <Content Include="Content\developer-profile.css" />
     <Content Include="Content\plugins-macros.css" />
     <Content Include="Content\pushy.css" />
     <Content Include="Content\styles.css" />
@@ -4086,11 +4092,18 @@
     <Content Include="Scripts\jquery\jquery.blockUI.js" />
     <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery.treeview.js" />
+    <Content Include="Scripts\phone-controller.js" />
+    <Content Include="Scripts\recaptcha-controller.js" />
     <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\menuselector.js" />
     <Content Include="Scripts\navigation-menu.js" />
+    <Content Include="Scripts\developer-profile.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="version.txt" />
+    <Content Include="Views\Category\Docspace.aspx" />
+    <Content Include="Views\Category\Docs.aspx" />
+    <Content Include="Views\Category\Workspace.aspx" />
+    <Content Include="Views\DeveloperProfile\Registration.aspx" />
     <Content Include="Views\Desktop\AddingDMS.aspx" />
     <Content Include="Views\Desktop\AddingDMS\ChangingTheme.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Configuring.ascx" />

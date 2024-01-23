@@ -22,7 +22,51 @@
  * Pursuant to Section 7 § 3(e) we decline to grant you any rights under trademark law for use of our trademarks.
  *
 */
+$(window).on("load", function () {
+    const localStorageTheme = localStorage.getItem("theme");
+    const themeBtn = $(".theme-btn");
+    const body = $("html");
 
+    const applyDarkTheme = () => {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            body.addClass("theme-dark");
+        } else {
+            body.removeClass("theme-dark");
+        }
+    };
+
+    if (localStorageTheme === "dark") {
+        body.addClass("theme-dark");
+        themeBtn.removeClass("active");
+        $("#theme-dark-btn").addClass("active");
+    } else if (localStorageTheme === "light") {
+        body.removeClass("theme-dark");
+        themeBtn.removeClass("active");
+        $("#theme-light-btn").addClass("active");
+    } else if (localStorageTheme === "auto" || !localStorageTheme) {
+        themeBtn.removeClass("active");
+        $("#theme-auto-btn").addClass("active");
+        applyDarkTheme();
+    }
+
+    $("html").removeClass("invisible");
+
+    themeBtn.on("click", function () {
+        themeBtn.removeClass("active");
+        $(this).addClass("active");
+
+        if ($(this).attr("id") === "theme-light-btn") {
+            localStorage.setItem("theme", "light");
+            body.removeClass("theme-dark");
+        } else if ($(this).attr("id") === "theme-dark-btn") {
+            localStorage.setItem("theme", "dark");
+            body.addClass("theme-dark");
+        } else {
+            localStorage.setItem("theme", "auto");
+            applyDarkTheme();
+        }
+    });
+});
 
 $(function() {
     function displayModalPanel (obj, width, height, top, position) {

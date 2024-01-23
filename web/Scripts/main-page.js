@@ -25,66 +25,60 @@
 
 
 $(document).ready(function () {
+	function animateEllipses(...ellipses) {
+		let currentEllipseIndex = 0;
 
-    var $docsBlocks = $(".docs_block");
-    $docsBlocks.each(function (i, block) {
-        var $firstCol = $("#body-block .ip_main_part.col_1");
-        var $secondCol = $("#body-block .ip_main_part.col_2");
+		function toggleAnimation() {
+			ellipses.forEach((ellipse) => ellipse.removeClass("animate"));
+			ellipses[currentEllipseIndex].addClass("animate");
+			currentEllipseIndex = (currentEllipseIndex + 1) % ellipses.length;
+		}
 
-        if ($firstCol.height() <= $secondCol.height()) {
-            $(block).appendTo($firstCol);
-        } else {
-            $(block).appendTo($secondCol);
-        }
-    });
+		toggleAnimation();
 
-});
+		setInterval(toggleAnimation, 3000);
+	};
 
-$(document).ready(function () {
+	animateEllipses($(".line-1-ellipse-1"), $(".line-1-ellipse-2"), $(".line-1-ellipse-3"));
+	animateEllipses($(".line-2-ellipse-1"), $(".line-2-ellipse-2"));
+	animateEllipses($(".line-3-ellipse-1"), $(".line-3-ellipse-2"));
 
-    var $firstProductsCol = $(".ip_main_part.col_1").children()
-    var $secondProductsCol = $(".ip_main_part.col_2").children()
+	function handleMouseMoveEllipse(selector, lineClass, offset) {
+		selector.each((index, el) => {
+			$(el).on("mousemove", function () {
+				lineClass.css("top", $(this).position().top - offset);
+			});
+		});
+	};
 
-    $firstProductsCol.each(function (i, product) {
-        var $firstCol = $(product).find(".api_products.col_1");
-        var $secondCol = $(product).find(".api_products.col_2");
-        var $linkBlocks = $(product).find(".api_users_block").children();
+	handleMouseMoveEllipse($(".main-item-links.docs li a"), $(".line-ellipse.line-1-ellipse-4"), 450);
+	handleMouseMoveEllipse($(".main-item-links.docspace li a"), $(".line-ellipse.line-2-ellipse-3"), 495);
+	handleMouseMoveEllipse($(".main-item-links.workspace li a"), $(".line-ellipse.line-3-ellipse-3"), 380);
 
-        $linkBlocks.each(function (i, block) {
-            if ($firstCol.height() <= $secondCol.height()) {
-                $(block).clone().appendTo($firstCol);
-            } else {
-                $(block).clone().appendTo($secondCol);
-            }
-        })
-    })
+	function createIntersectionObserver(selector, callback) {
+		const observer = new IntersectionObserver(function (entries, observer) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					callback(entry.target);
+				}
+			});
+		}, { root: null, threshold: 0 });
 
-    $secondProductsCol.each(function (i, product) {
-        var $firstCol = $(product).find(".api_products.col_1");
-        var $secondCol = $(product).find(".api_products.col_2");
-        var $linkBlocks = $(product).find(".api_users_block").children();
+		observer.observe($(selector)[0]);
+	};
 
-        $linkBlocks.each(function (i, block) {
-            if ($firstCol.height() <= $secondCol.height()) {
-                $(block).clone().appendTo($firstCol);
-            } else {
-                $(block).clone().appendTo($secondCol);
-            }
-        })
-    })
+	createIntersectionObserver(".main-item.docs", function () {
+		$(".line-1-circle-1").addClass("animate");
+		$(".line-1-circle-2").addClass("animate");
+	});
 
-    $(".api_col_wrapper").addClass("showing");
+	createIntersectionObserver(".main-item.docspace", function () {
+		$(".line-2-circle-1").addClass("animate");
+		$(".line-2-circle-2").addClass("animate");
+	});
 
-    /*var $docsBlocks = $("#api_product_links");
-    $docsBlocks.children().each(function (i, block) {
-        var $firstCol = $("#product_links_wrapper .api_products.col_1");
-        var $secondCol = $("#product_links_wrapper .api_products.col_2");
-           
-        if ($firstCol.height() <= $secondCol.height()) {
-            $(block).appendTo($firstCol);
-        } else {
-            $(block).appendTo($secondCol);
-        }
-    });*/
-
+	createIntersectionObserver(".main-item.workspace", function () {
+		$(".line-3-circle-1").addClass("animate");
+		$(".line-3-circle-2").addClass("animate");
+	});
 });

@@ -27,30 +27,16 @@
 using System;
 using System.Linq;
 using System.Web.Mvc;
-using System.Web.Routing;
+using ASC.Api.Web.Help.Helpers;
 
-namespace ASC.Api.Web.Help.Helpers
+namespace ASC.Api.Web.Help.Controllers
 {
-    public class RedirectAttribute : ActionFilterAttribute
+    [Redirect]
+    public class DeveloperProfileController : AsyncController
     {
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        public ActionResult Registration()
         {
-            base.OnActionExecuting(filterContext);
-
-            if ((filterContext.ActionDescriptor.ControllerDescriptor.ControllerName.Equals("category", StringComparison.InvariantCultureIgnoreCase)) || 
-                (filterContext.ActionDescriptor.ControllerDescriptor.ControllerName.Equals("developerprofile", StringComparison.InvariantCultureIgnoreCase))) {
-                return;
-            }
-
-            var products = Products.EnabledProducts().Select(product => product.Id);
-            if (!products.Contains(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName, StringComparer.InvariantCultureIgnoreCase))
-            {
-                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
-                    {
-                        controller = "home",
-                        action = "index"
-                    }));
-            }
+            return View();
         }
     }
 }

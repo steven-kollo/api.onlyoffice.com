@@ -102,6 +102,8 @@ namespace ASC.Api.Web.Help
                                 "~/scripts/clipboard.js",
                                 "~/scripts/navigation-menu.js",
                                 "~/scripts/menuselector.js",
+                                "~/scripts/phone-controller.js",
+                                "~/scripts/recaptcha-controller.js",
                                 "~/scripts/scripts.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/plugin-example")
@@ -116,16 +118,29 @@ namespace ASC.Api.Web.Help
                             .Include(
                                 "~/scripts/main-page.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/developer-profile")
+                            .Include(
+                                "~/scripts/developer-profile.js"));
+
             bundles.Add(new Bundle("~/content/styles", new CssMinify())
                             .Include(
                                 "~/content/styles.css",
                                 "~/content/pushy.css",
                                 "~/content/jquery.treeview.css",
-                                "~/content/highlight.css"));
+                                "~/content/highlight.css",
+                                "~/content/phone-controller.css"));
 
             bundles.Add(new Bundle("~/content/main-page", new CssMinify())
                             .Include(
                                 "~/content/main-page.css"));
+
+            bundles.Add(new Bundle("~/content/developer-profile", new CssMinify())
+                            .Include(
+                                "~/content/developer-profile.css"));
+
+            bundles.Add(new Bundle("~/content/category-page", new CssMinify())
+                            .Include(
+                                "~/content/category-page.css"));
 
             bundles.Add(new Bundle("~/content/plugins-and-macros", new CssMinify())
                 .Include(
