@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the watermark field to the conversion request
 - editors: added the pdf document type to the documentType parameter
 - editors: added the formsdataurl parameter to the Callback handler
 - editors: added the data.id parameter to the events.onRequestUsers event
