@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> query parameter to the requests from the browser to the server.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#watermark">watermark</a> field to the conversion request.</li>
         <li>Added the <em>pdf</em> document type to the <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter.</li>
         <li>Added the <a href="<%= Url.Action("callback") %>#formsdataurl">formsdataurl</a> parameter to the <em>Callback handler</em>.</li>
