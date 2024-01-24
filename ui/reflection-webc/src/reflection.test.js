@@ -16,7 +16,6 @@ import {
   renderGenericType,
   renderLiteralType,
   renderOptionalType,
-  renderRequiredType,
   renderTextContent,
   renderUnionType
 } from "./reflection.cjs"
@@ -32,7 +31,7 @@ test("check", async () => {
       name: "hi",
       type: {
         name: "",
-        render: renderRequiredType,
+        render: renderGenericType,
         children: [
           {
             name: "",
@@ -40,14 +39,13 @@ test("check", async () => {
             children: [
               {
                 name: "string",
-                permalink: "/",
+                link: "/",
                 render: renderLiteralType
               }
             ]
           }
         ],
       },
-      permalink: "/",
       description: {
         text: "hi",
         render: renderTextContent

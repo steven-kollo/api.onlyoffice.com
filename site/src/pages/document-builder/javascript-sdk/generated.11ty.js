@@ -131,7 +131,7 @@ function resolveType(dt) {
         // throw new Error(`pages: unknown type: ${dt.id}`)
         break
       }
-      rt.permalink = resolveLink(d)
+      rt.link = resolveLink(d)
       if (dt.children === undefined) {
         rt.value = d.name
       } else {

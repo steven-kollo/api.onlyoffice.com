@@ -69,8 +69,8 @@ function renderGenericType(t) {
 /** @type {ReflectionTypeRender} */
 function renderLiteralType(t) {
   let p = `${t.value}`
-  if (t.permalink !== undefined) {
-    p = `<a href="${t.permalink}">${p}</a>`
+  if (t.link !== undefined) {
+    p = `<a href="${t.link}">${p}</a>`
   }
   return p
 }
@@ -81,16 +81,6 @@ function renderOptionalType(t) {
   if (t.children !== undefined) {
     const c = renderTypeChildren(t.children)
     p = `${c}${p}`
-  }
-  return p
-}
-
-/** @type {ReflectionTypeRender} */
-function renderRequiredType(t, st) {
-  st.required = true
-  let p = ""
-  if (t.children !== undefined) {
-    p = renderTypeChildren(t.children)
   }
   return p
 }
@@ -130,6 +120,5 @@ module.exports = {
   renderGenericType,
   renderLiteralType,
   renderOptionalType,
-  renderRequiredType,
   renderUnionType
 }

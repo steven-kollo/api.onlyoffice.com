@@ -19,8 +19,8 @@ interface ReflectionParameters {
 interface ReflectionValue {
   name: string
   description?: ReflectionContent
-  permalink?: string
   type: ReflectionType
+  required?: boolean
   default?: unknown
   example?: string
 }
@@ -34,17 +34,13 @@ type ReflectionContentRender = (content: ReflectionContent) => string
 
 interface ReflectionType {
   name: string
-  permalink?: string
+  link?: string
   value?: unknown
   children?: ReflectionType[]
   render: ReflectionTypeRender
 }
 
-type ReflectionTypeRender = (type: ReflectionType, state: ReflectionState) => string
-
-interface ReflectionTypeState {
-  required: boolean
-}
+type ReflectionTypeRender = (type: ReflectionType) => string
 
 export {
   ReflectionParameters,
@@ -52,6 +48,5 @@ export {
   ReflectionContent,
   ReflectionContentRender,
   ReflectionType,
-  ReflectionTypeRender,
-  ReflectionTypeState
+  ReflectionTypeRender
 }

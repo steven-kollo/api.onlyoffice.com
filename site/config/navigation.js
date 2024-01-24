@@ -10,9 +10,11 @@ const { extname } = require("node:path")
  * @typedef {Object} NavigationItem
  * @property {string} title
  * @property {string} link
- * //@property {(page: any) => boolean} isCurrent
  * @property {NavigationItem[]=} children
  */
+
+// todo: @property hasChildren(link: string)
+// todo: @property {(link: string) => boolean} isCurrent; it should be a property
 
 /**
  * @typedef {Object} TemporalNavigationItem
@@ -123,16 +125,6 @@ function resolveNavigation(t) {
   const ch = Object.values(t.children)
   if (ch.length > 0) {
     item.children = resolveChildren(ch)
-
-    // todo: is it okay? explain why it might happen.
-    // todo: thrown an error on production.
-    // todo: print a warning on development.
-    if (item.link === "") {
-      item.link = resolveLink(item.children)
-    }
-    if (item.title === "") {
-      item.title = resolveTitle(item.link)
-    }
   }
 
   return item
@@ -144,6 +136,22 @@ function resolveNavigation(t) {
  */
 function resolveChildren(ch) {
   return ch
+    .map((t) => {
+      // todo: is it okay? explain why it might happen.
+      // todo: thrown an error on production.
+      // todo: print a warning on development.
+      if (t.link === "" || t.title === "") {
+        const ch = Object.values(t.children)
+        if (ch.length > 0) {
+          t.link = resolveLink(ch)
+          t.title = resolveTitle(t.link)
+        } else {
+          t.link = "/404/index.html"
+          t.title = "404"
+        }
+      }
+      return t
+    })
     .sort((a, b) => {
       const d = a.order - b.order
       if (d !== 0) {
@@ -155,7 +163,7 @@ function resolveChildren(ch) {
 }
 
 /**
- * @param {NavigationItem[]} ch
+ * @param {TemporalNavigationItem[]} ch
  * @returns {string}
  */
 function resolveLink(ch) {
