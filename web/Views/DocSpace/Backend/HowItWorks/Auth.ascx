@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">How to pass authentication?</span>
+    <span class="hdr">Passing authentication</span>
 </h1>
 
 <p>The user needs to perform several easy steps to pass authentication:</p>
