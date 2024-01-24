@@ -15,52 +15,55 @@ const { extname } = require("node:path")
  */
 
 /**
- * @typedef {Object} CacheNavigationItem
+ * @typedef {Object} TemporalNavigationItem
  * @property {string} title
  * @property {string} link
  * @property {number} order
- * @property {Record<string, CacheNavigationItem>} children
+ * @property {Record<string, TemporalNavigationItem>} children
  */
 
-const gc = new WeakMap()
+const cache = new WeakMap()
 
 /**
  * @param {UserConfig} uc
  * @returns {void}
  */
 function navigationPlugin(uc) {
-  uc.addCollection(navigation.name, navigation)
+  uc.addCollection(navigation.name, (tc) => {
+    if (cache.has(navigation)) {
+      return cache.get(navigation)
+    }
+    const n = navigation(tc)
+    cache.set(navigation, n)
+    return n
+  })
 }
 
 /**
- * @param {any} c
+ * @param {any} tc
  * @returns {NavigationItem[]}
  */
-function navigation(c) {
-  if (gc.has(navigation)) {
-    return gc.get(navigation)
-  }
-  const list = c.getFilteredByTag("navigation")
-  const cache = collectNavigation(list)
-  const root = resolveNavigation(cache)
-  gc.set(navigation, root.children)
-  return root.children
+function navigation(tc) {
+  const l = tc.getFilteredByTag("navigation")
+  const t = collectNavigation(l)
+  const r = resolveNavigation(t)
+  return r.children
 }
 
 /**
- * @param {any[]} list
- * @returns {CacheNavigationItem}
+ * @param {any[]} l
+ * @returns {TemporalNavigationItem}
  */
-function collectNavigation(list) {
-  /** @type {CacheNavigationItem} */
-  const cache = {
+function collectNavigation(l) {
+  /** @type {TemporalNavigationItem} */
+  const temp = {
     title: "",
     link: "",
     order: 0,
     children: {}
   }
 
-  list.forEach((item) => {
+  l.forEach((item) => {
     if (extname(item.outputPath) !== ".html") {
       return
     }
@@ -75,7 +78,7 @@ function collectNavigation(list) {
       return
     }
 
-    let r = cache.children
+    let r = temp.children
 
     const us = u.split("/")
     us.forEach((s, i) => {
@@ -103,21 +106,21 @@ function collectNavigation(list) {
     })
   })
 
-  return cache
+  return temp
 }
 
 /**
- * @param {CacheNavigationItem} cache
+ * @param {TemporalNavigationItem} t
  * @returns {NavigationItem}
  */
-function resolveNavigation(cache) {
+function resolveNavigation(t) {
   /** @type {NavigationItem} */
   const item = {
-    title: cache.title,
-    link: cache.link
+    title: t.title,
+    link: t.link
   }
 
-  const ch = Object.values(cache.children)
+  const ch = Object.values(t.children)
   if (ch.length > 0) {
     item.children = resolveChildren(ch)
 
@@ -136,7 +139,7 @@ function resolveNavigation(cache) {
 }
 
 /**
- * @param {CacheNavigationItem[]} ch
+ * @param {TemporalNavigationItem[]} ch
  * @returns {NavigationItem[]}
  */
 function resolveChildren(ch) {
