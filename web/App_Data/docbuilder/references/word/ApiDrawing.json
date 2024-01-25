@@ -688,7 +688,7 @@
       "description": "<p>Returns the lock value for the specified lock type of the current drawing.</p>",
       "tags": {
         "typeofeditors": [
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [
@@ -713,7 +713,7 @@
       "description": "<p>Sets the lock value to the specified lock type of the current drawing.</p>",
       "tags": {
         "typeofeditors": [
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [
