@@ -127,11 +127,11 @@
         <div class="line input_line" style="margin-top: 0;">
             <label for="document_file_type">File type</label>
             <select class="select" id="document_file_type" name="document_file_type">
-                <option disabled>docx</option>
-                <option value="docx" selected>docx</option>
-                <option value="doc">doc</option>
-                <option value="odt">odt</option>
-                <option value="txt">txt</option>
+                <option disabled>xlsx</option>
+                <option value="xlsx" selected>xlsx</option>
+                <option value="csv">csv</option>
+                <option value="xls">xls</option>
+                <option value="xlsb">xlsb</option>
             </select>
         </div>
         <div class="line input_line">
@@ -239,13 +239,13 @@
     new Config {
         Document = new Config.DocumentConfig
             {
-                FileType = "docx",
+                FileType = "xlsx",
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                Title = "Example Title." + "docx",
-                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
+                Title = "Example Title." + "xlsx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx" 
             },
-        DocumentType = "word",
+        DocumentType = "cell",
         EditorConfig = new Config.EditorConfigConfiguration
             {
                 CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
