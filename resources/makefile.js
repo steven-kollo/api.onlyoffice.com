@@ -9,7 +9,7 @@
  * @typedef {import("@onlyoffice/documentation-declarations").DeclarationValue} DeclarationValue
  */
 
-import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises"
+import { copyFile, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises"
 import { createReadStream, createWriteStream, existsSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { basename, dirname, extname, join } from "node:path"
@@ -56,6 +56,8 @@ async function build(options) {
     ...options
   }
 
+  // todo: jq -c if output is false, --monochrome-output
+
   const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-definitions-demo/dist"
   const files = ["sdkjs-forms.json", "sdkjs.json"]
 
@@ -67,7 +69,7 @@ async function build(options) {
     await mkdir(dist)
   }
 
-  const ln = "document-builder.list.json"
+  const ln = "document-builder.declarations.json"
 
   /** @type {string[]} */
   const li = []
@@ -79,33 +81,199 @@ async function build(options) {
 
     const n = basename(file, extname(file))
     const lp = join(temp, `${n}.${ln}`)
-    await createList(f, lp)
+    // preprocessing
+    await createList(f, lp, {})
     li.push(lp)
   }))
 
-  const mn = "document-builder.map.json"
+  const mn = "document-builder.indexes.json"
 
-  const lp = join(temp, ln)
-  await mergeArrays(li, lp)
+  const lp1 = join(temp, `${ln}1`)
+  await mergeArrays(li, lp1)
 
+  const mp1 = join(temp, `${mn}1`)
+  await createMap(lp1, mp1)
+
+  const mapString = await readFile(mp1, { encoding: "utf8" })
+  const mapJSON = JSON.parse(mapString)
   const lp2 = join(temp, `${ln}2`)
-  await sortJSON(lp, lp2, ".id")
 
-  const mp = join(temp, mn)
-  await createMap(lp2, mp)
+  function check(item) {
+    if (item.type !== undefined) {
+      if (!builtin.isBuiltinType(item.type)) {
+        const r = mapJSON[item.type.id]
+        if (r === undefined) {
+          item.type.id = "unknown"
+        }
+      }
+      if (item.type.children !== undefined) {
+        item.type.children.forEach(check.bind(this))
+      }
+    }
+  }
+
+  const cache0 = {}
+  // postprocessing, middle-processing?
+  const cache = {}
+  await new Promise((res, rej) => {
+    const from = lp1
+    const to = lp2
+    const c = new Chain([
+      createReadStream(from),
+      parser(),
+      new StreamArray(),
+      new Transform({
+        objectMode: true,
+        transform(ch, _, cb) {
+          /** @type {Declaration} */
+          const d = ch.value
+          if (d.memberOf !== undefined) {
+            let r = mapJSON[d.memberOf.id]
+            if (r === undefined) {
+              r = cache[d.memberOf.id]
+              if (r === undefined) {
+                const [, n] = d.memberOf.id.split(";")
+                /** @type {Declaration} */
+                const m = {
+                  id: d.memberOf.id,
+                  meta: {
+                    package: d.meta.package
+                  },
+                  name: n,
+                  type: {
+                    id: "unknown"
+                  }
+                }
+                cache[d.memberOf.id] = m
+                this.push(m)
+              }
+            }
+            if (cache0[d.memberOf.id] === undefined) {
+              cache0[d.memberOf.id] = []
+            }
+            cache0[d.memberOf.id].push(d.id)
+          }
+          if (d.type.properties !== undefined) {
+            // todo: sort them
+            d.type.properties.forEach(check.bind(this))
+          }
+          if (d.type.parameters !== undefined) {
+            d.type.parameters.forEach(check.bind(this))
+          }
+          if (d.type.returns !== undefined) {
+            d.type.returns.forEach(check.bind(this))
+          }
+          if (d.type.children !== undefined) {
+            d.type.children.forEach(check.bind(this))
+          }
+          if (d.type.properties !== undefined) {
+            d.type.properties = d.type.properties.map((p) => {
+              /** @type {Declaration} */
+              const c = {
+                id: d.meta.package + ";" + d.name + "#" + p.name,
+                meta: {
+                  package: d.meta.package
+                },
+                name: p.name,
+                summary: "",
+                description: p.description,
+                type: p.type
+              }
+              this.push(c)
+              return {
+                id: c.id
+              }
+            })
+          }
+          if (d.type.id === "class") {
+            /** @type {Declaration} */
+            const c = {
+              id: d.meta.package + ";" + d.name + "#constructor",
+              meta: {
+                package: d.meta.package
+              },
+              name: "constructor",
+              type: {
+                id: "constructor",
+              }
+            }
+            if (d.type.parameters !== undefined) {
+              c.type.parameters = d.type.parameters
+              delete d.type.parameters
+            }
+            d.type.constructors = [
+              {
+                id: c.id
+              }
+            ]
+            this.push(c)
+          }
+          this.push(d)
+          cb(null)
+        }
+      }),
+      new Disassembler(),
+      new Stringer({ makeArray: true }),
+      createWriteStream(to)
+    ])
+    c.on("error", rej)
+    c.on("finish", res)
+  })
+
+  const lp3 = join(temp, `${ln}3`)
+  await new Promise((res, rej) => {
+    const from = lp2
+    const to = lp3
+    const c = new Chain([
+      createReadStream(from),
+      parser(),
+      new StreamArray(),
+      new Transform({
+        objectMode: true,
+        transform(ch, _, cb) {
+          /** @type {Declaration} */
+          const d = ch.value
+          if (cache0[d.id]) {
+            d.type.methods = Object.values(cache0[d.id])
+              .sort((a, b) => a.localeCompare(b))
+              .map((id) => ({ id }))
+          }
+          if (d.type.constructors !== undefined) {
+            d.type.constructors = d.type.constructors.sort((a, b) => a.id.localeCompare(b.id))
+          }
+          if (d.type.properties !== undefined) {
+            d.type.properties = d.type.properties.sort((a, b) => a.id.localeCompare(b.id))
+          }
+          this.push(d)
+          cb(null)
+        }
+      }),
+      new Disassembler(),
+      new Stringer({ makeArray: true }),
+      createWriteStream(to)
+    ])
+    c.on("error", rej)
+    c.on("finish", res)
+  })
+
+  const lp4 = join(temp, `${ln}4`)
+  await sortJSON(lp3, lp4, ".id")
+
+  const mp2 = join(temp, `${mn}2`)
+  await createMap(lp4, mp2)
 
   if (opts.prettify) {
     const lt = join(dist, ln)
-    await prettifyJSON(lp2, lt)
+    await prettifyJSON(lp4, lt)
 
     const mt = join(dist, mn)
-    await prettifyJSON(mp, mt)
+    await prettifyJSON(mp2, mt)
   } else {
     const lt = join(dist, ln)
-    await copyFile(lp2, lt)
+    await copyFile(lp4, lt)
 
     const mt = join(dist, mn)
-    await copyFile(mp, mt)
+    await copyFile(mp2, mt)
   }
 
   const src = join(root, "src")
@@ -133,16 +301,17 @@ async function fetchFile(from, to) {
 /**
  * @param {string} from
  * @param {string} to
+ * @param {any} cache
  * @returns {Promise<void>}
  */
-function createList(from, to) {
+function createList(from, to, cache) {
   return new Promise((res, rej) => {
     const c = new Chain([
       createReadStream(from),
       parser(),
       new StreamArray(),
       (ch) => {
-        return createDeclaration(ch.value)
+        return createDeclaration(ch.value, cache)
       },
       new Disassembler(),
       new Stringer({ makeArray: true }),
@@ -255,9 +424,10 @@ function transformPassThrough(ch, enc, cb) {
 
 /**
  * @param {any} js
+ * @param {any} cache
  * @returns {Promise<Declaration | undefined>}
  */
-async function createDeclaration(js) {
+async function createDeclaration(js, cache) {
   if (!(
     Object.hasOwn(js, "meta") &&
     Object.hasOwn(js.meta, "file") &&
@@ -279,15 +449,15 @@ async function createDeclaration(js) {
   } else if (js.meta.file.includes("/sdkjs-forms/")) {
     p = p.replace(/^\/sdkjs-forms\/contents/, "/forms")
   }
-  d.meta.package = dirname(p).slice(1)
+  d.meta.package = "/" + p.slice(1).replace(".js", "")
 
   let longname = ""
   if (Object.hasOwn(js, "inherits")) {
     return
-    d.memberof = js.inherits.split("#")[0]
-    longname = js.inherits
+    // d.memberof = js.inherits.split("#")[0]
+    // longname = js.inherits
   } else {
-    longname = js.longname.replace(/\<anonymous\>~?/, "")
+    longname = js.longname.replace(/\<anonymous\>~?/, "").replace("event:", "")
   }
 
   // const longname = js.longname.replace(/\<anonymous\>~?/, "")
@@ -310,20 +480,31 @@ async function createDeclaration(js) {
 
   // todo: support the `Example: 1.` in properties, parameters, and returns.
 
-  if (d.properties !== undefined) {
-    d.properties = d.properties.map(populateValue)
-  }
+  // if (d.properties !== undefined) {
+  //   d.properties = d.properties.map(populateValue)
+  // }
 
-  if (d.parameters !== undefined) {
-    d.parameters = d.parameters.map(populateValue)
-  }
+  // if (d.parameters !== undefined) {
+  //   d.parameters = d.parameters.map(populateValue)
+  // }
 
-  if (d.returns !== undefined) {
-    d.returns = d.returns.map(populateValue)
-  }
+  // if (d.returns !== undefined) {
+  //   d.returns = d.returns.map(populateValue)
+  // }
 
-  if (d.memberof !== undefined) {
-    d.memberof = d.memberof.replace(/\<anonymous\>~?/, "")
+  if (d.memberOf !== undefined) {
+    const m = d.memberOf.id.replace(/\<anonymous\>~?/, "")
+    if (m === "") {
+      delete d.memberOf
+    } else {
+      d.memberOf = {
+        id: id(m)
+      }
+      if (cache[d.memberOf.id] === undefined) {
+        cache[d.memberOf.id] = []
+      }
+      cache[d.memberOf.id].push(d.id)
+    }
   }
 
   if (d.examples !== undefined) {
@@ -334,6 +515,33 @@ async function createDeclaration(js) {
       }
       return e
     }))
+  }
+
+  /**
+   * @param {DeclarationType} t
+   * @returns {DeclarationType}
+   */
+  function populateType(t) {
+    if (t.properties !== undefined) {
+      // todo: populate as types
+      t.properties = t.properties.map(populateValue)
+    }
+    if (t.parameters !== undefined) {
+      t.parameters = t.parameters.map(populateValue)
+    }
+    if (t.returns !== undefined) {
+      t.returns = t.returns.map(populateValue)
+    }
+    if (t.children !== undefined) {
+      t.children = t.children.map(populateType)
+    }
+    if (!builtin.isBuiltinType(t)) {
+      t.id = id(t.id)
+      if (t.id.endsWith(";")) {
+        t.id = "unknown"
+      }
+    }
+    return t
   }
 
   /**
@@ -349,25 +557,11 @@ async function createDeclaration(js) {
   }
 
   /**
-   * @param {DeclarationType} t
-   * @returns {DeclarationType}
-   */
-  function populateType(t) {
-    if (t.children !== undefined) {
-      t.children = t.children.map(populateType)
-    }
-    if (!builtin.isBuiltinType(t)) {
-      t.id = id(t.id)
-    }
-    return t
-  }
-
-  /**
    * @param {string} s
    * @returns {string}
    */
   function id(s) {
-    return [js.meta.file, s].join(";")
+    return [d.meta.package, s].join(";")
   }
 
   return d

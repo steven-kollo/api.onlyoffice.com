@@ -6,12 +6,8 @@ interface Declaration {
   summary?: string
   description?: DeclarationContent
 
-  kind?: Kind
-  memberof?: string
-  type?: Type
-  properties?: DeclarationValue[]
-  parameters?: DeclarationValue[]
-  returns?: DeclarationValue[]
+  memberOf?: DeclarationMemberOf
+  type: DeclarationType
 
   examples?: DeclarationContent[]
 }
@@ -21,29 +17,17 @@ interface DeclarationMeta {
 }
 
 interface DeclarationContent {
-  syntax: Syntax
+  syntax: DeclarationSyntax
   text: string
 }
 
-type DeclarationSyntax =
-  "js" |
-  "md" |
-  "ts" |
-  "txt"
+type DeclarationSyntax = "js" | "md" | "ts" | "txt"
 
-type DeclarationKind =
-  "builtin" |
-  "class" |
-  "event" |
-  "function" |
-  "package" |
-  "typedef"
-
-interface DeclarationType {
+interface DeclarationMemberOf {
   id: string
-  value?: unknown
-  children?: DeclarationType[]
 }
+
+type DeclarationType = DeclarationTypeMap[keyof DeclarationTypeMap]
 
 interface DeclarationValue {
   name: string
@@ -53,63 +37,135 @@ interface DeclarationValue {
   // todo: example?: unknown
 }
 
-type BuiltinType =
-  ArrayType |
-  LiteralType |
-  ObjectType |
-  OptionalType |
-  ReadonlyType |
-  RecordType |
-  SetonlyType |
-  UnionType
-
-interface ArrayType extends DeclarationType {
-  id: "_array"
+interface DeclarationTypeMap {
+  array: ArrayType
+  class: ClassType
+  constructor: ConstructorType
+  event: EventType
+  function: FunctionType
+  initializer: InitializerType
+  literal: LiteralType
+  method: MethodType
+  object: ObjectType
+  optional: OptionalType
+  readonly: ReadonlyType
+  record: RecordType
+  setonly: SetonlyType
+  union: UnionType
+  unknown: UnknownType
 }
 
-interface LiteralType extends DeclarationType {
-  id: "_literal"
+// todo: split into JS*Type and UniversalType. JSDeclaration, UniversalDeclaration.
+// constructors have only js classes
+
+interface ArrayType extends ParentType {
+  id: "array"
 }
 
-interface ObjectType extends DeclarationType {
-  id: "_object"
+interface CustomType extends NodeType {
+  id: "custom"
 }
 
-interface OptionalType extends DeclarationType {
-  id: "_optional"
+interface ClassType extends NodeType {
+  id: "class"
+  // extends?: NodeType
+  // implements?: NodeType[]
+  constructors: NodeType[]
+  // initializers?: NodeType[]
+  properties?: NodeType[]
+  methods?: NodeType[]
 }
 
-interface ReadonlyType extends DeclarationType {
-  id: "_readonly"
+interface ConstructorType extends NodeType {
+  id: "constructor"
+  parameters?: DeclarationValue[]
 }
 
-interface RecordType extends DeclarationType {
-  id: "_record"
+interface EventType extends NodeType {
+  id: "event"
+  parameters?: DeclarationValue[]
 }
 
-interface SetonlyType extends DeclarationType {
-  id: "_setonly"
+interface FunctionType extends NodeType {
+  id: "function"
+  parameters?: DeclarationValue[]
+  returns?: DeclarationValue[]
 }
 
-interface UnionType extends DeclarationType {
-  id: "_union"
+interface InitializerType extends NodeType {
+  id: "initializer"
+  parameters?: DeclarationValue[]
+}
+
+interface LiteralType extends NodeType {
+  id: "literal"
+  // todo: remove quotes from string, use typedef to check if it is a string literal
+  value: bigint | boolean | number | string | symbol
+}
+
+interface MethodType extends FunctionType {
+  id: "method"
+}
+
+interface ObjectType extends NodeType {
+  id: "object"
+  properties?: NodeType[]
+}
+
+interface OptionalType extends ParentType {
+  id: "optional"
+}
+
+interface ReadonlyType extends ParentType {
+  id: "readonly"
+}
+
+interface RecordType extends ParentType {
+  id: "record"
+}
+
+interface SetonlyType extends ParentType {
+  id: "setonly"
+}
+
+interface UnionType extends ParentType {
+  id: "union"
+}
+
+interface UnknownType extends NodeType {
+  id: "unknown"
+}
+
+interface ParentType extends NodeType {
+  children: DeclarationType[]
+}
+
+interface NodeType {
+  id: string
 }
 
 export {
+  ArrayType,
+  ClassType,
+  ConstructorType,
+  CustomType,
   Declaration,
-  DeclarationMeta,
   DeclarationContent,
+  DeclarationMeta,
   DeclarationSyntax,
-  DeclarationKind,
   DeclarationType,
   DeclarationValue,
-  BuiltinType,
-  ArrayType,
+  EventType,
+  FunctionType,
+  InitializerType,
   LiteralType,
+  MethodType,
+  NodeType,
   ObjectType,
   OptionalType,
   ReadonlyType,
   RecordType,
   SetonlyType,
-  UnionType
+  UnionType,
+  UnknownType
 }

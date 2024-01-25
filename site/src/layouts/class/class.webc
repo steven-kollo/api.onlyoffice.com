@@ -1,6 +1,7 @@
 ---
 layout: page/page.webc
 ---
+<!-- todo: it is about rest api not class, rename it -->
 <template webc:for="d of pagination.items" webc:nokeep>
   <content>
     <h1 @text="d.name"></h1>

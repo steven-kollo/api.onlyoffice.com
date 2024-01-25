@@ -99,29 +99,29 @@ function resolveType(dt) {
   }
 
   switch (dt.id) {
-    case builtin.Array.id:
+    case "array":
       rt.render = reflection.renderArrayType
       break
-    case builtin.Literal.id:
-    case builtin.Object.id:
+    case "literal":
+    case "object":
       rt.render = reflection.renderLiteralType
       break
-    case builtin.Optional.id:
+    case "optional":
       rt.render = reflection.renderOptionalType
       break
-    case builtin.Readonly.id:
+    case "readonly":
       rt.name = "Readonly"
       rt.render = reflection.renderGenericType
       break
-    case builtin.Record.id:
+    case "record":
       rt.name = "Record"
       rt.render = reflection.renderGenericType
       break
-    case builtin.Setonly.id:
+    case "setonly":
       rt.name = "Setonly"
       rt.render = reflection.renderGenericType
       break
-    case builtin.Union.id:
+    case "union":
       rt.render = reflection.renderUnionType
       break
     default:
@@ -176,24 +176,11 @@ function resolveLink(d) {
     default:
       throw new Error(`pages: unknown package: ${d.meta.package}`)
   }
-  let u = "/document-builder/javascript-sdk/"
-  switch (d.kind) {
-    case "class":
-      u += `${p}/${d.name}/`
-      break
-    case "event":
-      u += `${p}/_e/${d.name}/`
-      break
-    case "function":
-      u += `${p}/${d.memberof}/${d.name}/`
-      break
-    case "typedef":
-      u += `${p}/_t/${d.name}/`
-      break
-    default:
-      throw new Error(`pages: unknown kind: ${d.kind}`)
+  let u = `/document-builder/javascript-sdk/${p}/`
+  if (d.memberof !== undefined) {
+    u += `${d.memberof}/`
   }
-  u += "index.html"
+  u += `${d.name}/index.html`
   return u
 }
 

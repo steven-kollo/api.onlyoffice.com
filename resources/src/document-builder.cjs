@@ -4,37 +4,29 @@
  * @typedef {import("@onlyoffice/documentation-declarations").Declaration} Declaration
  */
 
-/**
- * @typedef {Declaration[]} List
- */
-
-/** @type {List} */
-const l = require("./document-builder.list.json")
+/** @type {Declaration[]} */
+const declarations = require("./document-builder.declarations.json")
 
 /**
- * @returns {List}
+ * @returns {Declaration[]}
  */
 function list() {
-  return l
+  return declarations
 }
 
-/**
- * @typedef {Record<string, number>} Map
- */
-
-/** @type {Map} */
-const m = require("./document-builder.map.json")
+/** @type {Record<string, number>} */
+const indexes = require("./document-builder.indexes.json")
 
 /**
  * @param {string} id
  * @returns {Declaration=}
  */
 function retrieve(id) {
-  const i = m[id]
+  const i = indexes[id]
   if (i === undefined) {
     return
   }
-  return l[i]
+  return declarations[i]
 }
 
 module.exports = { list, retrieve }
