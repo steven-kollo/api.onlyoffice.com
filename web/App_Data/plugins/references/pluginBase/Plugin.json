@@ -170,7 +170,7 @@
     "attachEvent": {
       "memberof": "Plugin",
       "name": "attachEvent",
-      "description": "<p>Defines the method to add an event listener, a function that will be called whenever the specified event is delivered to the target.\nThe list of all the available events can be found {@link Plugin#events here}.</p>",
+      "description": "<p>Defines the method to add an event listener, a function that will be called whenever the specified event is delivered to the target.\nThe list of all the available events can be found {@link /plugin/events here}.</p>",
       "tags": {},
       "returns": [],
       "see": null,
