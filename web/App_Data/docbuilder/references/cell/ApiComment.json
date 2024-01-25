@@ -1,5 +1,22 @@
 {
   "methods": {
+    "GetClassType": {
+      "memberof": "ApiComment",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiComment class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "\"comment\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetText": {
       "memberof": "ApiComment",
       "name": "GetText",
@@ -17,6 +34,371 @@
       "see": null,
       "inherits": null
     },
+    "SetText": {
+      "memberof": "ApiComment",
+      "name": "SetText",
+      "description": "<p>Sets the comment text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "text",
+          "description": "<p>New text for comment.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetId": {
+      "memberof": "ApiComment",
+      "name": "GetId",
+      "description": "<p>Returns the current comment ID.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAuthorName": {
+      "memberof": "ApiComment",
+      "name": "GetAuthorName",
+      "description": "<p>Returns the comment author's name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetAuthorName": {
+      "memberof": "ApiComment",
+      "name": "SetAuthorName",
+      "description": "<p>Sets the comment author's name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sAuthorName",
+          "description": "<p>The comment author's name.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetUserId": {
+      "memberof": "ApiComment",
+      "name": "GetUserId",
+      "description": "<p>Returns the user ID of the comment author.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetUserId": {
+      "memberof": "ApiComment",
+      "name": "SetUserId",
+      "description": "<p>Sets the user ID to the comment author.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sUserId",
+          "description": "<p>The user ID of the comment author.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "IsSolved": {
+      "memberof": "ApiComment",
+      "name": "IsSolved",
+      "description": "<p>Checks if a comment is solved or not.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSolved": {
+      "memberof": "ApiComment",
+      "name": "SetSolved",
+      "description": "<p>Marks a comment as solved.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bSolved",
+          "description": "<p>Specifies if a comment is solved or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTimeUTC": {
+      "memberof": "ApiComment",
+      "name": "GetTimeUTC",
+      "description": "<p>Returns the timestamp of the comment creation in UTC format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTimeUTC": {
+      "memberof": "ApiComment",
+      "name": "SetTimeUTC",
+      "description": "<p>Sets the timestamp of the comment creation in UTC format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number | String",
+          "name": "nTimeStamp",
+          "description": "<p>The timestamp of the comment creation in UTC format.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTime": {
+      "memberof": "ApiComment",
+      "name": "GetTime",
+      "description": "<p>Returns the timestamp of the comment creation in the current time zone format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTime": {
+      "memberof": "ApiComment",
+      "name": "SetTime",
+      "description": "<p>Sets the timestamp of the comment creation in the current time zone format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number | String",
+          "name": "nTimeStamp",
+          "description": "<p>The timestamp of the comment creation in the current time zone format.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetQuoteText": {
+      "memberof": "ApiComment",
+      "name": "GetQuoteText",
+      "description": "<p>Returns the quote text of the current comment.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "String",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetRepliesCount": {
+      "memberof": "ApiComment",
+      "name": "GetRepliesCount",
+      "description": "<p>Returns a number of the comment replies.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetReply": {
+      "memberof": "ApiComment",
+      "name": "GetReply",
+      "description": "<p>Returns the specified comment reply.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiCommentReply"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "nIndex",
+          "description": "<p>The comment reply index.</p>",
+          "optional": true,
+          "defaultValue": 0
+        }
+      ]
+    },
+    "AddReply": {
+      "memberof": "ApiComment",
+      "name": "AddReply",
+      "description": "<p>Adds a reply to a comment.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "String",
+          "name": "sText",
+          "description": "<p>The comment reply text (required).</p>",
+          "optional": false
+        },
+        {
+          "type": "String",
+          "name": "sAuthorName",
+          "description": "<p>The name of the comment reply author (optional).</p>",
+          "optional": false
+        },
+        {
+          "type": "String",
+          "name": "sUserId",
+          "description": "<p>The user ID of the comment reply author (optional).</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "nPos",
+          "description": "<p>The comment reply position.</p>",
+          "optional": true,
+          "defaultValue": "this.GetRepliesCount()"
+        }
+      ]
+    },
+    "RemoveReplies": {
+      "memberof": "ApiComment",
+      "name": "RemoveReplies",
+      "description": "<p>Removes the specified comment replies.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "nPos",
+          "description": "<p>The position of the first comment reply to remove.</p>",
+          "optional": true,
+          "defaultValue": 0
+        },
+        {
+          "type": "Number",
+          "name": "nCount",
+          "description": "<p>A number of comment replies to remove.</p>",
+          "optional": true,
+          "defaultValue": 1
+        },
+        {
+          "type": "boolean",
+          "name": "bRemoveAll",
+          "description": "<p>Specifies whether to remove all comment replies or not.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
     "Delete": {
       "memberof": "ApiComment",
       "name": "Delete",
@@ -29,27 +411,10 @@
       "returns": [],
       "see": null,
       "inherits": null
-    },
-    "GetClassType": {
-      "memberof": "ApiComment",
-      "name": "GetClassType",
-      "description": "<p>Returns a type of the ApiComment class.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CSE"
-        ]
-      },
-      "returns": [
-        [
-          "\"comment\""
-        ]
-      ],
-      "see": null,
-      "inherits": null
     }
   },
   "events": {},
-  "comment": "/**\n\t * Class representing a comment.\n\t * @constructor\n\t * @property {string} Text - Returns the text from the first cell in range.\n\t */",
+  "comment": "/**\n\t * Class representing a comment.\n\t * @constructor\n\t * @property {string} Text - Returns or sets the comment text.\n\t * @property {string} Id - Returns the current comment ID.\n\t * @property {string} AuthorName - Returns or sets the comment author's name.\n\t * @property {string} UserId - Returns or sets the user ID of the comment author.\n\t * @property {boolean} Solved - Checks if a comment is solved or not or marks a comment as solved.\n\t * @property {number | string} TimeUTC - Returns or sets the timestamp of the comment creation in UTC format.\n\t * @property {number | string} Time - Returns or sets the timestamp of the comment creation in the current time zone format.\n\t * @property {string} QuoteText - Returns the quote text of the current comment.\n\t * @property {Number} RepliesCount - Returns a number of the comment replies.\n\t */",
   "description": "<p>Class representing a comment.</p>",
   "scope": "global",
   "params": [],
@@ -57,7 +422,47 @@
     {
       "type": "string",
       "name": "Text",
-      "description": "<p>Returns the text from the first cell in range.</p>"
+      "description": "<p>Returns or sets the comment text.</p>"
+    },
+    {
+      "type": "string",
+      "name": "Id",
+      "description": "<p>Returns the current comment ID.</p>"
+    },
+    {
+      "type": "string",
+      "name": "AuthorName",
+      "description": "<p>Returns or sets the comment author's name.</p>"
+    },
+    {
+      "type": "string",
+      "name": "UserId",
+      "description": "<p>Returns or sets the user ID of the comment author.</p>"
+    },
+    {
+      "type": "boolean",
+      "name": "Solved",
+      "description": "<p>Checks if a comment is solved or not or marks a comment as solved.</p>"
+    },
+    {
+      "type": "number | string",
+      "name": "TimeUTC",
+      "description": "<p>Returns or sets the timestamp of the comment creation in UTC format.</p>"
+    },
+    {
+      "type": "number | string",
+      "name": "Time",
+      "description": "<p>Returns or sets the timestamp of the comment creation in the current time zone format.</p>"
+    },
+    {
+      "type": "string",
+      "name": "QuoteText",
+      "description": "<p>Returns the quote text of the current comment.</p>"
+    },
+    {
+      "type": "Number",
+      "name": "RepliesCount",
+      "description": "<p>Returns a number of the comment replies.</p>"
     }
   ]
 }

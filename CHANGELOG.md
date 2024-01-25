@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: v8.0.0
 - editors: added the WOPISrc query parameter to the requests from the browser to the server
 - editors: added the watermark field to the conversion request
 - editors: added the pdf document type to the documentType parameter

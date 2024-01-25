@@ -5,6 +5,6 @@ oParagraph.AddText("Document");
 var oRange = oDocument.GetRange(0, 7);
 oRange.AddText("ONLYOFFICE ", "before");
 oRange.AddText(" Builder", "after");
-oRange.AddComment("comment", "John Smith");
+oRange.AddComment("comment", "John Smith", "uid-1");
 builder.SaveFile("docx", "AddComment.docx");
 builder.CloseFile();
