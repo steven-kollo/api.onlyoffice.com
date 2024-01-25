@@ -18,7 +18,7 @@
     <ol>
         <li>Send POST request, containing the <b>userName</b> and <b>password</b> parameters to the <a href="<%= Url.DocUrl("authentication", null, "post", "api/2.0/authentication", "portals") %>">api/2.0/authentication</a> address:
 
-    <div class="header-gray">Authentication Request</div>
+    <div class="header-gray">Example Authentication Request</div>
             <pre>
 POST /api/2.0/authentication.json HTTP/1.1
 Host: yourportal.onlyoffice.com
@@ -32,10 +32,9 @@ Accept: application/json
 </pre>
             <div class="note">Please note, that you have to enter your own portal address to the <em>Host: yourportal.onlyoffice.com</em> line instead of <em>yourportal.onlyoffice.com</em> address.</div>
 
-            <div class="header-gray">Response</div>
+            <div class="header-gray">Example Response</div>
             <pre>
 HTTP/1.1 201 Created
-Cache-Control: private
 Content-Type: application/json; charset=utf-8
 {
     "count": 1,
@@ -52,7 +51,7 @@ Content-Type: application/json; charset=utf-8
         <li>In case authentication is successful, a token which will look like <b>sdjhfskjdhkqy739459234</b> will be received.</li>
         <li>Use this token every time you call API methods inserting it to the <b>Authorization</b> HTTP header:
 
-        <div class="header-gray">Sample API Request</div>
+        <div class="header-gray">Example API Request</div>
             <pre>
 GET api/2.0/people/@self.json HTTP/1.1
 Host: yourportal.onlyoffice.com
