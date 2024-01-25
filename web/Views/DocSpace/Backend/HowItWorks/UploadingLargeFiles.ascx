@@ -26,13 +26,13 @@ POST api/2.0/files/{folderid}/upload/create_session
 {
     "success": true,
     "data": {
-        "id": "00000000000000000000000000000000",
-        "path": [12345],
+        "bytes_total": 15728640,
+        "bytes_uploaded": 0,
         "created": "2024-01-01T12:00:00.600Z",
         "expired": "2024-01-01T12:00:00.600Z",
+        "id": "00000000000000000000000000000000",
         "location": "https://example.onlyoffice.io/ChunkedUploader.ashx?uid=00000000000000000000000000000000",
-        "bytes_uploaded": 0,
-        "bytes_total": 15728640
+        "path": [12345]
     }
 }
 </pre>
@@ -56,12 +56,12 @@ POST api/2.0/files/{folderid}/upload/create_session
 <p>After the last chunk is uploaded, the server returns an object in the following format:</p>
 <pre>
 {
-    "id": 123456,
+    "file": {},,
     "folderId": 12345,
-    "version": 1,
+    "id": 123456,
     "title": "demo.docx",
     "uploaded": true,
-    "file": {},
+    "version": 1
 }
 </pre>
 <p>Below you can see an example in Node.js:</p>

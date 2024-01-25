@@ -7,7 +7,7 @@
 <p>The user initiates a long-running operation by sending a request to the appropriate API endpoint,
     which returns an object containing information about the initiated operation.
     An <a href="<%= Url.DocUrl("files", null, "put", "api/2.0/files/rooms/{id}/archive", "docspace") %>">example</a> of such a request and response:</p>
-<div class="header-gray">Request</div>
+<div class="header-gray">Example Request</div>
 <pre>
 PUT api/2.0/files/rooms/1234/archive
 Host: yourportal.onlyoffice.com
@@ -19,7 +19,7 @@ Accept: application/json
 }
 </pre>
 
-<div class="header-gray">Response</div>
+<div class="header-gray">Example Response</div>
 <pre>
 {
     "error": "",
