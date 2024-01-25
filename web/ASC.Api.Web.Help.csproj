@@ -313,7 +313,6 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiFont.SetSubscript.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFont.SetSuperscript.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFont.SetUnderline.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePane.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeAt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeColumns.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.FreezeRows.docbuilder" />
@@ -1028,7 +1027,6 @@
     <Content Include="App_Data\docbuilder\examples\word\Api.CreateInlineLvlSdt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.CreateLinearGradientFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.CreateNoFill.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\Api.CreateNumbering.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.CreateOleObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.CreateParagraph.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.CreatePatternFill.docbuilder" />
@@ -1088,7 +1086,6 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetTag.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.SetTextPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.ToJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiBullet.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.ApplyChartStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.GetClassType.docbuilder" />
@@ -1688,7 +1685,6 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.SetCaps.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.SetColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.SetDoubleStrikeout.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiRun.SetFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.SetFontFamily.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.SetFontSize.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.SetHighlight.docbuilder" />
@@ -1955,7 +1951,6 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiTextPr.SetCaps.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTextPr.SetColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTextPr.SetDoubleStrikeout.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiTextPr.SetFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTextPr.SetFontFamily.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTextPr.SetFontSize.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiTextPr.SetHighlight.docbuilder" />
@@ -4696,6 +4691,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\docbuilder\examples\cell\ApiFreezePanes.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
