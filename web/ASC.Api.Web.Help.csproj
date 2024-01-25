@@ -1713,6 +1713,8 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetFooter.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetHeader.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetNext.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPageHeight.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPageWidth.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPrevious.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiSection.RemoveFooter.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiSection.RemoveHeader.docbuilder" />
@@ -2227,7 +2229,14 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.UpdatePlugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.EndSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToNextSlideInSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToPreviousSlideInSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToSlideInSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.PauseSlideShow.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.RemoveComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ResumeSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.StartSlideShow.docbuilder" />
     <Content Include="App_Data\plugins\examples\TextPartType.docbuilder" />
     <Content Include="App_Data\plugins\examples\watermark_on_draw.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AcceptReviewChanges.docbuilder" />
@@ -4685,15 +4694,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPageHeight.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPageWidth.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.EndSlideShow.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToNextSlideInSlideShow.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToPreviousSlideInSlideShow.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToSlideInSlideShow.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.PauseSlideShow.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ResumeSlideShow.docbuilder" />
-    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.StartSlideShow.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
