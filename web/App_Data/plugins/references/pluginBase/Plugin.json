@@ -167,6 +167,52 @@
         }
       ]
     },
+    "attachEvent": {
+      "memberof": "Plugin",
+      "name": "attachEvent",
+      "description": "<p>Defines the method to add an event listener, a function that will be called whenever the specified event is delivered to the target.\nThe list of all the available events can be found {@link Plugin#events here}.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "id",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "action",
+          "description": "<p>The event listener.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "attachContextMenuClickEvent": {
+      "memberof": "Plugin",
+      "name": "attachContextMenuClickEvent",
+      "description": "<p>Defines the method to add an event listener, a function that will be called whenever the specified event is clicked in the context menu.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "id",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "action",
+          "description": "<p>The event listener.</p>",
+          "optional": false
+        }
+      ]
+    },
     "createInputHelper": {
       "memberof": "Plugin",
       "name": "createInputHelper",
