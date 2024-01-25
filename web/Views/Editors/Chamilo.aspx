@@ -19,8 +19,8 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PPSX, DOCXF, OFORM.</li>
-        <li>The following formats are available for viewing only: PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.</li>
+        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PPSX, DOCXF, PDF.</li>
+        <li>The following formats are available for viewing only: DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.</li>
         <li>The plugin will create a new <b>Open with ONLYOFFICE</b> menu option within the document library for Office documents. 
             This allows multiple users to collaborate in real time and to save back those changes to Chamilo.</li>
     </ul>

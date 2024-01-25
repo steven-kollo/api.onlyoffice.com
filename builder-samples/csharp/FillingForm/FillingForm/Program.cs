@@ -44,8 +44,8 @@ namespace Sample
         public static void Main(string[] args)
         {
             string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
-            string filePath = "../../../../SampleForm.oform";
-            string resultPath = "../../../../result.oform";
+            string filePath = "../../../../SampleForm.docxf";
+            string resultPath = "../../../../result.docxf";
 
             IDictionary<string, string> formData = new Dictionary<string, string>() {
                 { "Photo", "https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png" },
@@ -73,7 +73,7 @@ namespace Sample
             // Init DocBuilder
             CDocBuilder.Initialize(workDirectory);
             CDocBuilder oBuilder = new CDocBuilder();
-            oBuilder.OpenFile(filePath, "oform");
+            oBuilder.OpenFile(filePath, "docxf");
 
             CContext oContext = oBuilder.GetContext();
             CContextScope oScope = oContext.CreateScope();

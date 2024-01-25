@@ -1,5 +1,15 @@
 # Change Log
 
+- editors: added the WOPISrc query parameter to the requests from the browser to the server
+- editors: added the watermark field to the conversion request
+- editors: added the pdf document type to the documentType parameter
+- editors: added the formsdataurl parameter to the Callback handler
+- editors: added the data.id parameter to the events.onRequestUsers event
+- editors: added the users.image field to the setUsers method
+- editors: added the info operation type to the setUsers method and events.onRequestUsers event
+- editors: added the image field to the editorConfig.user parameter
+- editors: added the editorConfig.customization.mobileForceView parameter
+- editors: added the link field to the data object which is sent to the events.onRequestReferenceData event
 - docspace: added the How it works section
 - editors: added the page about Java Integration SDK
 - docspace: v2.0.1
