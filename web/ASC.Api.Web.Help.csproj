@@ -2001,8 +2001,10 @@
     <Content Include="App_Data\docbuilder\references\cell\ApiChart.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiColor.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiComment.json" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiCommentReply.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiDrawing.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiFont.json" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiFreezePanes.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiImage.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiName.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiOleObject.json" />
@@ -2084,8 +2086,8 @@
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\docbuilder\sample-files\data_with_errors.xlsx" />
     <Content Include="App_Data\docbuilder\sample-files\document_review_mode.docx" />
-    <Content Include="App_Data\docbuilder\sample-files\empty_form.oform" />
-    <Content Include="App_Data\docbuilder\sample-files\filled_form.oform" />
+    <Content Include="App_Data\docbuilder\sample-files\empty_form.docxf" />
+    <Content Include="App_Data\docbuilder\sample-files\filled_form.docxf" />
     <Content Include="App_Data\docbuilder\sample-files\mail_merge_data.xlsx" />
     <Content Include="App_Data\docbuilder\sample-files\mail_merge_result.docx" />
     <Content Include="App_Data\docbuilder\sample-files\mail_template.docx" />
