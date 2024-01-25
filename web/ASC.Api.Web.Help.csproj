@@ -4687,6 +4687,13 @@
   <ItemGroup>
     <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPageHeight.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiSection.GetPageWidth.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.EndSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToNextSlideInSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToPreviousSlideInSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToSlideInSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.PauseSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ResumeSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.StartSlideShow.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

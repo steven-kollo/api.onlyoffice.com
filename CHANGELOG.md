@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: v8.0.0
 - docbuilder: v8.0.0
 - editors: added the WOPISrc query parameter to the requests from the browser to the server
 - editors: added the watermark field to the conversion request
