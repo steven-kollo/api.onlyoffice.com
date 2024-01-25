@@ -664,7 +664,7 @@
       "description": "<p>Converts the specified JSON object into the Document Builder object of the corresponding type.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CPE"
         ]
       },
       "returns": [],
