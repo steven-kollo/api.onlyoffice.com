@@ -275,7 +275,7 @@
     });
 
     $("#controlFields").find("input,select").change(function () {
-        updateConfig();
+        updateConfig(this.id);
     });
 
     $("#document_reference_data").change(showHideConfigObject);
@@ -285,7 +285,7 @@
         document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
         resizeCodeInput();
     }
-    function updateConfig() {
+    function updateConfig(id) {
         var referenceData = `
         "referenceData": {
             "fileKey": ${getFieldValue("document_file_key")},
@@ -307,11 +307,15 @@
     ...
 });
 `;
-        var document_object = JSON.parse(document_string);
-        config.document.fileType = document_object.fileType;
-        config.document.title = document_object.title;
-        window.docEditor.destroyEditor();
-        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        var fakeFields = ['document_key', 'document_reference_data', 'document_file_key', 'document_instance_id', 'document_url'];
+        if (!fakeFields.includes(id)) {
+            var document_object = JSON.parse(document_string);
+            config.document.fileType = document_object.fileType;
+            config.document.title = document_object.title;
+            window.docEditor.destroyEditor();
+            window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+        }
 
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;

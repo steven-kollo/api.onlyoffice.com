@@ -546,7 +546,7 @@
     });
 
     $("#controlFields").find("input,select").change(function () {
-        updateConfig();
+        updateConfig(this.id);
     });
 
     $("#editorConfig_coEditing").change(showHideConfigObject);
@@ -588,7 +588,7 @@
 
         document.getElementById("holder_editorConfig_recent").appendChild(div);
         $("#controlFields").find("input,select").change(function () {
-            updateConfig();
+            updateConfig(this.id);
         });
         resizeCodeInput();
         updateConfig();
@@ -642,7 +642,7 @@
 
         document.getElementById("holder_editorConfig_templates").appendChild(div);
         $("#controlFields").find("input,select").change(function () {
-            updateConfig();
+            updateConfig(this.id);
         });
         resizeCodeInput();
         updateConfig();
@@ -670,7 +670,7 @@
         ]`;
     }
 
-    function updateConfig() {
+    function updateConfig(id) {
         var recent = "";
         var templates = "";
         if (getFieldValue("editorConfig_recent")) {
@@ -716,16 +716,18 @@
     ...
 });
 `;
-        console.log(editorConfig)
-        var editorConfig_object = JSON.parse(editorConfig);
-        config.editorConfig = editorConfig_object;
-        delete editorConfig_object["actionLink"];
-        delete editorConfig_object["callbackUrl"];
-        config.editorConfig.customization = {
-            "integrationMode": "embed"
-        };
-        window.docEditor.destroyEditor();
-        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+        var fakeFields = ['editorConfig_actionLink', 'editorConfig_callbackUrl'];
+        if (!fakeFields.includes(id)) {
+            var editorConfig_object = JSON.parse(editorConfig);
+            config.editorConfig = editorConfig_object;
+            delete editorConfig_object["actionLink"];
+            delete editorConfig_object["callbackUrl"];
+            config.editorConfig.customization = {
+                "integrationMode": "embed"
+            };
+            window.docEditor.destroyEditor();
+            window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+        }
 
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
