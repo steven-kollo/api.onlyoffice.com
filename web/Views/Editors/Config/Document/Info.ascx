@@ -421,6 +421,8 @@
             return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
         } else if (element.type == "checkbox") {
             return element.checked;
+        } else if (`${element.value}` == ``) {
+            return `""`;
         } else if (isNaN(element.value)) {
             return `"${element.value}"`;
         } else {

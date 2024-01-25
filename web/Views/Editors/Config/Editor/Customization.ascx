@@ -1860,6 +1860,10 @@
             return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
         } else if (element.type == "checkbox") {
             return element.checked;
+        } else if (element.id == `editorConfig_customization_zoom`) {
+            return isNaN(Number(element.value)) ? 0 : Number(element.value);
+        } else if (`${element.value}` == ``) {
+            return `""`;
         } else if (isNaN(element.value)) {
             return `"${element.value}"`;
         } else {

@@ -544,6 +544,8 @@
         var element = document.getElementById(id);
         if (element.type == "checkbox") {
             return element.checked;
+        } else if (`${element.value}` == ``) {
+            return `""`;
         } else if (isNaN(element.value)) {
             if (element.value.includes("[") || element.value.includes('""')) {
                 return element.value;
