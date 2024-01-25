@@ -553,7 +553,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p><b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - the function called when the user is trying to refresh data inserted from the external file
             by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab.</p>
-        <p>An object with the unique file data and the file path or name are sent in the <em>data</em> parameter.</p>
+        <p>An object with the unique file data from the source file, the file path or name, and the file URL are sent in the <em>data</em> parameter.</p>
         <p>To refresh data by a link to a file which is specified with the event parameters, you must call the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.
             When calling this method, the token must be added to validate the parameters.
             If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.</p>
