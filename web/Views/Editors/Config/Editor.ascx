@@ -494,7 +494,12 @@
                     selectHead.removeClass('on');
                     updateConfig();
                 });
-
+                window.addEventListener('click', function (e) {
+                    if (e.target != selectList[0] && e.target != selectHead[0] && e.target != selectItem[0]) {
+                        selectHead.removeClass('on');
+                        selectList.slideUp(duration);
+                    }
+                });
             } else {
                 $(this).removeClass('on');
                 selectList.slideUp(duration);
