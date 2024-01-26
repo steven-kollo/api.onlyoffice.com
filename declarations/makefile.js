@@ -31,6 +31,7 @@ async function build() {
     return esbuild.build({
       entryPoints:[
         join(src, "builtin.js"),
+        join(src, "helpers.js"),
         join(src, "jsdoc.js"),
       ],
       outdir: dist,

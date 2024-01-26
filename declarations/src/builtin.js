@@ -18,21 +18,21 @@ function isCustomType(t) {
  */
 function isBuiltinType(t) {
   return (
-    t.id === "array" ||
-    t.id === "class" ||
-    t.id === "constructor" ||
-    t.id === "event" ||
-    t.id === "function" ||
-    t.id === "initializer" ||
-    t.id === "literal" ||
-    t.id === "method" ||
-    t.id === "object" ||
-    t.id === "optional" ||
-    t.id === "readonly" ||
-    t.id === "record" ||
-    t.id === "setonly" ||
-    t.id === "union" ||
-    t.id === "unknown"
+    t.name === "array" ||
+    t.name === "class" ||
+    t.name === "constructor" ||
+    t.name === "event" ||
+    t.name === "function" ||
+    t.name === "initializer" ||
+    t.name === "literal" ||
+    t.name === "method" ||
+    t.name === "object" ||
+    t.name === "optional" ||
+    t.name === "readonly" ||
+    t.name === "record" ||
+    t.name === "setonly" ||
+    t.name === "union" ||
+    t.name === "unknown"
   )
 }
 

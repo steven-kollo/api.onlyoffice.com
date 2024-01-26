@@ -11,6 +11,11 @@
       "require": "./dist/builtin.cjs",
       "types": "./dist/builtin.d.ts"
     },
+    "./helpers.js": {
+      "import": "./dist/helpers.js",
+      "require": "./dist/helpers.cjs",
+      "types": "./dist/helpers.d.ts"
+    },
     "./jsdoc.js": {
       "import": "./dist/jsdoc.js",
       "require": "./dist/jsdoc.cjs",
@@ -21,9 +26,12 @@
     "build": "tsc && node ./makefile.js build"
   },
   "devDependencies": {
+    "@stylistic/eslint-plugin-js": "^1.5.4",
+    "@types/eslint": "^8.56.2",
     "@types/node": "^20.11.5",
     "es-main": "^1.3.0",
     "esbuild": "^0.19.11",
+    "eslint": "^8.56.0",
     "sade": "^1.8.1",
     "typescript": "^5.3.3"
   },

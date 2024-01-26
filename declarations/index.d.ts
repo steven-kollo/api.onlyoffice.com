@@ -1,14 +1,8 @@
-interface Declaration {
+interface Declaration extends NodeDeclaration {
   id: string
   meta: DeclarationMeta
-
-  name: string
   summary?: string
-  description?: DeclarationContent
-
-  memberOf?: DeclarationMemberOf
-  type: DeclarationType
-
+  parent?: DeclarationParent
   examples?: DeclarationContent[]
 }
 
@@ -16,29 +10,55 @@ interface DeclarationMeta {
   package: string
 }
 
-interface DeclarationContent {
-  syntax: DeclarationSyntax
-  text: string
+interface DeclarationParent {
+  id: string
 }
 
-type DeclarationSyntax = "js" | "md" | "ts" | "txt"
+interface DeclarationValue extends NodeDeclaration {
+  default?: LiteralValue
+  // todo: example?: unknown
+}
 
-interface DeclarationMemberOf {
-  id: string
+interface NodeDeclaration {
+  name: string
+  description?: DeclarationContent
+  type: DeclarationType
+}
+
+type DeclarationContent = DeclarationContentMap[keyof DeclarationContentMap]
+
+interface DeclarationContentMap {
+  js: JavaScriptContent
+  md: MarkdownContent
+  ts: TypeScriptContent
+  txt: TextContent
+}
+
+interface JavaScriptContent extends NodeContent {
+  syntax: "js"
+}
+
+interface MarkdownContent extends NodeContent {
+  syntax: "md"
+}
+
+interface TypeScriptContent extends NodeContent {
+  syntax: "ts"
+}
+
+interface TextContent extends NodeContent {
+  syntax: "txt"
+}
+
+interface NodeContent {
+  text: string
 }
 
 type DeclarationType = DeclarationTypeMap[keyof DeclarationTypeMap]
 
-interface DeclarationValue {
-  name: string
-  description?: DeclarationContent
-  type: DeclarationType
-  default?: unknown
-  // todo: example?: unknown
-}
-
 interface DeclarationTypeMap {
   array: ArrayType
+  custom: CustomType
   class: ClassType
   constructor: ConstructorType
   event: EventType
@@ -59,81 +79,85 @@ interface DeclarationTypeMap {
 // constructors have only js classes
 
 interface ArrayType extends ParentType {
-  id: "array"
+  name: "array"
 }
 
 interface CustomType extends NodeType {
-  id: "custom"
+  name: "custom"
+  id: string
 }
 
 interface ClassType extends NodeType {
-  id: "class"
-  // extends?: NodeType
-  // implements?: NodeType[]
-  constructors: NodeType[]
-  // initializers?: NodeType[]
-  properties?: NodeType[]
-  methods?: NodeType[]
+  name: "class"
+  constructors?: CustomType[]
+  initializers?: CustomType[]
+  // staticProperties?: CustomType[]
+  properties?: CustomType[]
+  // staticMethods?: CustomType[]
+  methods?: CustomType[]
+  events?: CustomType[]
+  extends?: CustomType[] // todo: what about built-in classes?
+  implements?: CustomType[]
 }
 
 interface ConstructorType extends NodeType {
-  id: "constructor"
+  name: "constructor"
   parameters?: DeclarationValue[]
 }
 
 interface EventType extends NodeType {
-  id: "event"
+  name: "event"
   parameters?: DeclarationValue[]
 }
 
 interface FunctionType extends NodeType {
-  id: "function"
+  name: "function"
   parameters?: DeclarationValue[]
-  returns?: DeclarationValue[]
+  returns?: DeclarationType
 }
 
 interface InitializerType extends NodeType {
-  id: "initializer"
+  name: "initializer"
   parameters?: DeclarationValue[]
 }
 
 interface LiteralType extends NodeType {
-  id: "literal"
+  name: "literal"
   // todo: remove quotes from string, use typedef to check if it is a string literal
-  value: bigint | boolean | number | string | symbol
+  value: LiteralValue
 }
 
 interface MethodType extends FunctionType {
-  id: "method"
+  name: "method"
 }
 
 interface ObjectType extends NodeType {
-  id: "object"
+  name: "object"
   properties?: NodeType[]
 }
 
 interface OptionalType extends ParentType {
-  id: "optional"
+  name: "optional"
 }
 
 interface ReadonlyType extends ParentType {
-  id: "readonly"
+  name: "readonly"
 }
 
 interface RecordType extends ParentType {
-  id: "record"
+  name: "record"
 }
 
 interface SetonlyType extends ParentType {
-  id: "setonly"
+  name: "setonly"
 }
 
 interface UnionType extends ParentType {
-  id: "union"
+  name: "union"
 }
 
 interface UnknownType extends NodeType {
-  id: "unknown"
+  name: "unknown"
 }
 
 interface ParentType extends NodeType {
@@ -141,8 +165,10 @@ interface ParentType extends NodeType {
 }
 
 interface NodeType {
-  id: string
+  name: string
 }
+
+type LiteralValue = bigint | boolean | number | string | symbol
 
 export {
   ArrayType,
@@ -151,21 +177,29 @@ export {
   CustomType,
   Declaration,
   DeclarationContent,
+  DeclarationContentMap,
   DeclarationMeta,
-  DeclarationSyntax,
+  DeclarationParent,
   DeclarationType,
   DeclarationValue,
   EventType,
   FunctionType,
   InitializerType,
+  JavaScriptContent,
   LiteralType,
+  LiteralValue,
+  MarkdownContent,
   MethodType,
+  NodeContent,
+  NodeDeclaration,
   NodeType,
   ObjectType,
   OptionalType,
   ReadonlyType,
   RecordType,
   SetonlyType,
+  TextContent,
+  TypeScriptContent,
   UnionType,
   UnknownType
 }

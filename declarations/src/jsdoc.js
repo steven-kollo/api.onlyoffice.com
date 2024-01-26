@@ -1,213 +1,602 @@
 // @ts-check
 
 /**
+ * @typedef {import("../types/doclet.js").Doclet} Doclet
+ * @typedef {import("../types/doclet.js").DocletCatharsis} DocletCatharsis
+ * @typedef {import("../types/doclet.js").DocletParam} DocletParam
+ * @typedef {import("../index.js").ClassType} ClassType
+ * @typedef {import("../index.js").ConstructorType} ConstructorType
+ * @typedef {import("../index.js").CustomType} CustomType
  * @typedef {import("../index.js").Declaration} Declaration
  * @typedef {import("../index.js").DeclarationContent} DeclarationContent
  * @typedef {import("../index.js").DeclarationType} DeclarationType
  * @typedef {import("../index.js").DeclarationValue} DeclarationValue
  */
 
-/**
- * @typedef {any} JSDoc
- */
+import { Transform } from "node:stream"
+import { ESLint } from "eslint"
 
-/**
- * @param {JSDoc} v
- * @returns {Declaration=}
- */
-function parseDeclaration(v) {
-  /** @type {Declaration} */
-  const d = {
-    id: "",
-    meta: {
-      package: "main"
+const eslint = new ESLint({
+  useEslintrc: false,
+  fix: true,
+  overrideConfig: {
+    extends: ["eslint:recommended"],
+    env: {
+      browser: true,
+      es2022: true
     },
-    name: "",
-    summary: "",
-    description: {
-      syntax: "txt",
-      text: ""
+    parserOptions: {
+      sourceType: "module",
+      ecmaVersion: "latest",
     },
-    memberOf: {
-      id: ""
-    },
-    type: customType("")
-  }
-
-  if (Object.hasOwn(v, "name")) {
-    d.name = v.name
-  }
-
-  if (Object.hasOwn(v, "summary") && Object.hasOwn(v, "description")) {
-    d.summary = v.summary
-    d.description = {
-      syntax: "txt",
-      text: v.description
-    }
-  } else if (Object.hasOwn(v, "summary")) {
-    d.summary = v.summary
-  } else if (Object.hasOwn(v, "description")) {
-    d.summary = v.description.split("\n")[0]
-    d.description = {
-      syntax: "txt",
-      text: v.description
-    }
-  } else {
-    delete d.summary
-    delete d.description
-  }
-
-  /** @type {string} */
-  let kind = ""
-
-  if (Object.hasOwn(v, "kind")) {
-    kind = v.kind
-  }
-
-  if (Object.hasOwn(v, "memberof")) {
-    d.memberOf = {
-      id: v.memberof
-    }
-  } else {
-    delete d.memberOf
-  }
-
-  if (Object.hasOwn(v, "type")) {
-    const t = parseType(v)
-    if (t !== undefined) {
-      d.type = t
-    }
-  }
-
-  if (Object.hasOwn(v, "properties")) {
-    const p = v.properties.flatMap((p) => {
-      const v = parseValue(p)
-      if (v === undefined) {
-        return []
-      }
-      return v
-    })
-    if (p.length > 0) {
-      // @ts-ignore
-      d.type.properties = p
-    }
-  }
-
-  if (Object.hasOwn(v, "params")) {
-    const p = v.params.flatMap((p) => {
-      const v = parseValue(p)
-      if (v === undefined) {
-        return []
-      }
-      return v
-    })
-    if (p.length > 0) {
-      // @ts-ignore
-      d.type.parameters = p
-    }
-  }
-
-  if (Object.hasOwn(v, "returns")) {
-    const p = v.returns.flatMap((p) => {
-      const v = parseValue(p)
-      if (v === undefined) {
-        return []
-      }
-      return v
-    })
-    if (p.length > 0) {
-      // @ts-ignore
-      d.type.returns = p
+    plugins: ["@stylistic/js"],
+    rules: {
+      "no-undef": "off",
+      "no-unused-vars": ["warn", {
+        "vars": "local"
+      }],
+      "no-var": "warn",
+      "prefer-const": "warn",
+      "prefer-arrow-callback": "warn",
+      "@stylistic/js/array-bracket-newline": ["warn", {
+        "multiline": true,
+        "minItems": null
+      }],
+      "@stylistic/js/array-bracket-spacing": ["warn", "never"],
+      "@stylistic/js/array-element-newline": ["warn", "always"],
+      "@stylistic/js/arrow-spacing": "warn",
+      "@stylistic/js/block-spacing": "warn",
+      "@stylistic/js/brace-style": "warn",
+      "@stylistic/js/comma-dangle": ["warn", "never"],
+      "@stylistic/js/comma-spacing": ["warn", {
+        "before": false,
+        "after": true
+      }],
+      "@stylistic/js/comma-style": ["warn", "last"],
+      "@stylistic/js/function-call-argument-newline": ["warn", "consistent"],
+      "@stylistic/js/function-call-spacing": ["warn", "never"],
+      "@stylistic/js/function-paren-newline": ["warn", "multiline"],
+      "@stylistic/js/implicit-arrow-linebreak": ["warn", "beside"],
+      "@stylistic/js/indent": ["warn", 2, {
+        "VariableDeclarator": "first",
+        "FunctionDeclaration": {
+          "parameters": "first"
+        },
+        "FunctionExpression": {
+          "parameters": "first"
+        },
+        "CallExpression": {
+          "arguments": "first"
+        },
+        "ArrayExpression": "first",
+        "ObjectExpression": "first",
+        "ImportDeclaration": "first",
+        "flatTernaryExpressions": true
+      }],
+      "@stylistic/js/key-spacing": ["warn", {
+        "beforeColon": false,
+        "mode": "strict"
+      }],
+      "@stylistic/js/keyword-spacing": ["warn", {
+        "before": true
+      }],
+      "@stylistic/js/lines-between-class-members": ["warn", "always"],
+      "@stylistic/js/max-len": ["warn", {
+        "code": 120
+      }],
+      "@stylistic/js/multiline-ternary": ["warn", "never"],
+      "@stylistic/js/new-parens": "warn",
+      "@stylistic/js/no-extra-semi": "warn",
+      "@stylistic/js/no-mixed-spaces-and-tabs": "warn",
+      "@stylistic/js/no-multi-spaces": "warn",
+      "@stylistic/js/no-multiple-empty-lines": "warn",
+      "@stylistic/js/no-tabs": "warn",
+      "@stylistic/js/no-trailing-spaces": "warn",
+      "@stylistic/js/no-whitespace-before-property": "warn",
+      "@stylistic/js/nonblock-statement-body-position": ["warn", "beside"],
+      "@stylistic/js/object-curly-newline": ["warn", {
+        "consistent": true
+      }],
+      "@stylistic/js/object-curly-spacing": ["warn", "always"],
+      "@stylistic/js/object-property-newline": ["warn", {
+        "allowAllPropertiesOnSameLine": true
+      }],
+      "@stylistic/js/padded-blocks": ["warn", "never"],
+      "@stylistic/js/quotes": ["warn", "double"],
+      "@stylistic/js/semi": ["warn", "never"],
+      "@stylistic/js/semi-spacing": "warn",
+      "@stylistic/js/space-before-blocks": "warn",
+      "@stylistic/js/space-before-function-paren": ["warn", {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }],
+      "@stylistic/js/space-in-parens": ["warn", "never"],
+      "@stylistic/js/eol-last": ["warn", "never"]
     }
   }
+})
 
-  if (Object.hasOwn(v, "examples")) {
-    d.examples = v.examples.map((e) => {
-      /** @type {DeclarationContent} */
-      const c = {
-        syntax: "js",
-        text: e
-      }
-      return c
+class PreprocessDeclarations extends Transform {
+  /**
+   * @param {DeclarationsCache} cache
+   */
+  constructor(cache) {
+    super({ objectMode: true })
+    this._cache = cache
+  }
+
+  _transform(ch, _, cb) {
+    this._asyncTransform(ch).then(() => {
+      cb(null)
     })
   }
 
-  switch (kind) {
-    case "class":
-      d.type.id = "class"
-      break
-    case "event":
-      d.type.id = "event"
-      break
-    case "function":
-      d.type.id = "function"
-      break
-    default:
-      break
-  }
+  /**
+   * @param {any} ch
+   * @returns {Promise<void>}
+   */
+  async _asyncTransform(ch) {
+    /** @type {Doclet} */
+    const doc = ch.value
 
-  return d
-}
-
-/**
- * @param {JSDoc} v
- * @returns {DeclarationValue=}
- */
-function parseValue(v) {
-  // delete uses to keep the order of properties.
-  /** @type {DeclarationValue} */
-  const rv = {
-    name: "",
-    description: {
-      syntax: "txt",
-      text: ""
-    },
-    type: customType(""),
-    default: ""
-  }
-  if (Object.hasOwn(v, "name")) {
-    rv.name = v.name
-  } else {
-    return
-  }
-  if (Object.hasOwn(v, "description")) {
-    rv.description = {
-      syntax: "txt",
-      text: v.description
+    if (Object.hasOwn(doc, "kind")) {
+      if (doc.kind === "package") {
+        return
+      }
     }
-  } else {
-    delete rv.description
-  }
-  if (Object.hasOwn(v, "type")) {
-    const t = parseType(v)
-    if (t === undefined) {
+
+    /** @type {Declaration} */
+    const d = {
+      id: "",
+      meta: {
+        package: "main"
+      },
+      name: "",
+      type: {
+        name: "unknown"
+      }
+    }
+
+    // todo: "scope": "static"
+    // todo: for id const sign = "" (we do not need actually a new const)
+    // just add the sign to the id
+
+    if (Object.hasOwn(doc, "meta")) {
+      if (Object.hasOwn(doc.meta, "file")) {
+        d.meta.package = doc.meta.file
+      }
+    }
+
+    // In most cases anonymous refer to a global iife.
+
+    if (Object.hasOwn(doc, "inherits")) {
+      if (Object.hasOwn(doc, "memberof")) {
+        if (doc.memberof === "<anonymous>") {
+          return
+        }
+        const mo = doc.memberof.replace("<anonymous>~", "")
+        const cid = createID(d.meta.package, mo)
+        const p = doc.inherits.split("#")[0]
+        const pid = createID(d.meta.package, p)
+        this._cache.populate(cid, "extends", pid)
+        this._cache.populate(pid, "implements", cid)
+      }
       return
     }
-    rv.type = t
+
+    if (Object.hasOwn(doc, "name")) {
+      d.name = doc.name
+    }
+
+    if (Object.hasOwn(doc, "summary") && Object.hasOwn(doc, "description")) {
+      d.summary = doc.summary
+      d.description = {
+        syntax: "txt",
+        text: doc.description
+      }
+    } else if (Object.hasOwn(doc, "summary")) {
+      d.summary = doc.summary
+    } else if (Object.hasOwn(doc, "description")) {
+      const l = doc.description.split("\n")
+      if (l.length > 1) {
+        d.summary = l[0]
+      }
+      d.description = {
+        syntax: "txt",
+        text: doc.description
+      }
+    }
+
+    let ln = d.name
+    if (Object.hasOwn(doc, "memberof")) {
+      if (doc.memberof !== "<anonymous>") {
+        const mo = doc.memberof.replace("<anonymous>~", "")
+        ln = `${mo}#${ln}`
+        d.parent = {
+          id: createID(d.meta.package, mo)
+        }
+      }
+    }
+    d.id = createID(d.meta.package, ln)
+
+    if (Object.hasOwn(doc, "kind")) {
+      if (doc.kind === "class") {
+        /** @type {ClassType} */
+        const dt = {
+          name: doc.kind,
+          constructors: []
+        }
+        /** @type {ConstructorType} */
+        const ct = {
+          name: "constructor"
+        }
+        if (Object.hasOwn(doc, "params")) {
+          ct.parameters = doc.params.map((p) => {
+            return praseValue(d, p)
+          })
+        }
+        /** @type {Declaration} */
+        const cd = {
+          id: createID(d.meta.package, `${d.name}#constructor`),
+          meta: {
+            package: d.meta.package
+          },
+          name: "constructor",
+          parent: {
+            id: d.id
+          },
+          type: ct
+        }
+        this.push(cd)
+        dt.constructors.push({
+          name: "custom",
+          id: cd.id
+        })
+        if (Object.hasOwn(doc, "properties")) {
+          dt.properties = doc.properties.map((p) => {
+            const v = praseValue(d, p)
+            /** @type {Declaration} */
+            const pd = {
+              id: createID(d.meta.package, `${d.name}#${p.name}`),
+              meta: {
+                package: d.meta.package
+              },
+              name: v.name,
+              parent: {
+                id: d.id
+              },
+              type: v.type
+            }
+            if (Object.hasOwn(v, "description")) {
+              pd.description = v.description
+            }
+            this.push(pd)
+            return {
+              name: "custom",
+              id: pd.id
+            }
+          })
+        }
+        d.type = dt
+      } else {
+        if (Object.hasOwn(doc, "type") && Object.hasOwn(doc.type, "parsedType")) {
+          d.type = parseType(d, doc.type.parsedType)
+        }
+        switch (doc.kind) {
+          case "event":
+            d.type.name = doc.kind
+            if (Object.hasOwn(d, "parent")) {
+              this._cache.populate(d.parent.id, "events", d.id)
+            }
+            break
+          case "function":
+            d.type.name = doc.kind
+            if (Object.hasOwn(d, "parent")) {
+              this._cache.populate(d.parent.id, "methods", d.id)
+              d.type.name = "method"
+            }
+            break
+        }
+        if (Object.hasOwn(doc, "properties")) {
+          // todo: resolve ignoring.
+          // @ts-ignore
+          d.type.properties = doc.properties.map((p) => {
+            const v = praseValue(d, p)
+            /** @type {Declaration} */
+            const pd = {
+              id: createID(d.meta.package, `${d.name}#${p.name}`),
+              meta: {
+                package: d.meta.package
+              },
+              name: v.name,
+              parent: {
+                id: d.id
+              },
+              type: v.type
+            }
+            if (Object.hasOwn(v, "description")) {
+              pd.description = v.description
+            }
+            this.push(pd)
+            return {
+              name: "custom",
+              id: pd.id
+            }
+          })
+        }
+        if (Object.hasOwn(doc, "params")) {
+          // todo: resolve ignoring.
+          // @ts-ignore
+          d.type.parameters = doc.params.map((p) => {
+            return praseValue(d, p)
+          })
+        }
+        if (Object.hasOwn(doc, "returns")) {
+          // There is no way that the `returns` contains more than one element.
+          if (doc.returns.length === 1) {
+            // todo: resolve ignoring.
+            // @ts-ignore
+            d.type.returns = praseValue(d, doc.returns[0]).type
+          }
+        }
+      }
+    }
+
+    if (Object.hasOwn(doc, "examples")) {
+      d.examples = await Promise.all(doc.examples.map(async (e) => {
+        /** @type {DeclarationContent} */
+        const c = {
+          syntax: "js",
+          text: e
+        }
+        const [r] = await eslint.lintText(e)
+        if (r.output !== undefined) {
+          c.text = r.output
+        }
+        return c
+      }))
+    }
+
+    this.push(d)
   }
-  if (Object.hasOwn(v, "defaultvalue")) {
-    rv.default = v.defaultvalue
-  } else {
-    delete rv.default
+}
+
+class PostprocessDeclarations extends Transform {
+  /**
+   * @param {DeclarationsCache} cache
+   */
+  constructor(cache) {
+    super({ objectMode: true })
+    this._cache = cache
   }
-  return rv
+
+  _transform(ch, _, cb) {
+    /** @type {Declaration} */
+    const d = ch.value
+
+    const dc = this._cache.retrieve(d.id)
+    if (dc !== undefined) {
+      if (Object.hasOwn(dc, "methods")) {
+        // todo: resolve ignoring.
+        // @ts-ignore
+        d.type.methods = dc.methods.map((id) => {
+          /** @type {CustomType} */
+          const t = {
+            name: "custom",
+            id
+          }
+          return t
+        })
+      }
+      if (Object.hasOwn(dc, "events")) {
+        // todo: resolve ignoring.
+        // @ts-ignore
+        d.type.events = dc.events.map((id) => {
+          /** @type {CustomType} */
+          const t = {
+            name: "custom",
+            id
+          }
+          return t
+        })
+      }
+      if (Object.hasOwn(dc, "extends")) {
+        // todo: resolve ignoring.
+        // @ts-ignore
+        d.type.extends = dc.extends.map((id) => {
+          /** @type {CustomType} */
+          const t = {
+            name: "custom",
+            id
+          }
+          return t
+        })
+      }
+      if (Object.hasOwn(dc, "implements")) {
+        // todo: resolve ignoring.
+        // @ts-ignore
+        d.type.implements = dc.implements.map((id) => {
+          /** @type {CustomType} */
+          const t = {
+            name: "custom",
+            id
+          }
+          return t
+        })
+      }
+    }
+
+    this.push(d)
+    cb(null)
+  }
 }
 
 /**
- * @param {JSDoc} v
- * @returns {DeclarationType=}
+ * @param {Declaration} d
+ * @param {DocletParam} p
+ * @returns {DeclarationValue}
  */
-function parseType(v) {
-  if (!Object.hasOwn(v.type, "parsedType")) {
-    return
+function praseValue(d, p) {
+  /** @type {DeclarationValue} */
+  const v = {
+    name: "",
+    type: {
+      name: "unknown"
+    }
   }
-  let t = parseTypeComposition(v.type.parsedType)
-  if (t === undefined) {
-    return
+  if (Object.hasOwn(p, "name")) {
+    v.name = p.name
   }
-  if (Object.hasOwn(v, "optional") || Object.hasOwn(v, "nullable")) {
+  if (Object.hasOwn(p, "description")) {
+    v.description = {
+      syntax: "txt",
+      text: p.description
+    }
+  }
+  if (Object.hasOwn(p, "type") && Object.hasOwn(p.type, "parsedType")) {
+    v.type = parseType(d, p.type.parsedType)
+  }
+  if (Object.hasOwn(p, "defaultvalue")) {
+    // todo: resolve ignoring.
+    // @ts-ignore
+    v.default = p.defaultvalue
+  }
+  return v
+}
+
+/**
+ * @param {Declaration} d
+ * @param {DocletCatharsis} ca
+ * @returns {DeclarationType}
+ */
+function parseType(d, ca) {
+  /** @type {DeclarationType} */
+  let t = {
+    name: "unknown"
+  }
+  if (Object.hasOwn(ca, "type")) {
+    switch (ca.type) {
+      // case "AllLiteral":
+      // case "FieldType":
+      // case "FunctionType":
+      case "NameExpression":
+        if (!Object.hasOwn(ca, "name")) {
+          break
+        }
+        // todo: should we parse primitives with objects or just one of them?
+        switch (ca.name) {
+          case "array":
+          case "Array":
+            t = {
+              name: "array",
+              children: []
+            }
+            break
+          case "boolean":
+          case "Boolean":
+          case "number":
+          case "Number":
+            // todo: non-obvious behavior.
+            t = {
+              name: "literal",
+              value: ca.name
+            }
+            break
+          case "object":
+          case "Object":
+            t = {
+              name: "object"
+            }
+            break
+          case "string":
+          case "String":
+            // todo: non-obvious behavior.
+            t = {
+              name: "literal",
+              value: ca.name
+            }
+            break
+          default:
+            if (isNumberLiteral(ca.name)) {
+              // todo: what if `Number(ca.name)` is `NaN`?
+              t = {
+                name: "literal",
+                value: Number(ca.name)
+              }
+              break
+            }
+            if (isStringLiteral(ca.name)) {
+              t = {
+                name: "literal",
+                value: ca.name.slice(1, -1)
+              }
+              break
+            }
+            t = {
+              name: "custom",
+              id: createID(d.meta.package, ca.name)
+            }
+            break
+        }
+        break
+      case "NullLiteral":
+        t = {
+          name: "literal",
+          value: "null"
+        }
+        break
+      // case "RecordType":
+      case "TypeApplication":
+        if (!Object.hasOwn(ca, "expression")) {
+          break
+        }
+        // todo: should we be checking this more strictly? (see ts-ignore below)
+        t = parseType(d, ca.expression)
+        if (Object.hasOwn(ca, "applications")) {
+          if (t.name === "object") {
+            // @ts-ignore
+            t.name = "record"
+          }
+          // @ts-ignore
+          t.children = ca.applications.map((a) => {
+            return parseType(d, a)
+          })
+          break
+        }
+        // @ts-ignore
+        t.children = [{
+          name: "unknown"
+        }]
+        break
+      case "TypeUnion":
+        if (!Object.hasOwn(ca, "elements")) {
+          break
+        }
+        t = {
+          name: "union",
+          children: ca.elements.map((e) => {
+            return parseType(d, e)
+          })
+        }
+        break
+      case "UndefinedLiteral":
+        t = {
+          name: "literal",
+          value: "undefined"
+        }
+        break
+      // case "UnknownLiteral":
+      default:
+        // todo: should we throw an error here?
+        // throw new Error(`Unknown type: ${ca.type}`)
+        break
+    }
+  }
+  // todo: separate them, they mean different things.
+  if (Object.hasOwn(ca, "optional") || Object.hasOwn(ca, "nullable")) {
     t = {
-      id: "optional",
+      name: "optional",
       children: [t]
     }
   }
@@ -215,116 +604,12 @@ function parseType(v) {
 }
 
 /**
- * @param {JSDoc} v
- * @returns {DeclarationType=}
+ * @param {string} a
+ * @param {string} b
+ * @returns {string}
  */
-function parseTypeComposition(v) {
-  // https://github.com/hegemonic/catharsis
-  /** @type {DeclarationType=} */
-  let t
-  switch (v.type) {
-    // case "AllLiteral":
-    //   break
-    // case "FieldType":
-    //   break
-    // case "FunctionType":
-    //   break
-    case "NameExpression":
-      if (!Object.hasOwn(v, "name")) {
-        return
-      }
-      t = parseTypeUnit(v.name)
-      break
-    case "NullLiteral":
-      t = parseTypeUnit("null")
-      break
-    // case "RecordType":
-    //   break
-    case "TypeApplication":
-      if (!Object.hasOwn(v, "expression")) {
-        return
-      }
-      t = parseTypeComposition(v.expression)
-      if (t === undefined) {
-        return
-      }
-      if (Object.hasOwn(v, "applications")) {
-        // @ts-ignore
-        t = {
-          id: t.id,
-          children: v.applications.map(parseTypeComposition)
-        }
-        if (t.id === "object") {
-          // @ts-ignore
-          t.id = "record"
-        }
-      }
-      break
-    case "TypeUnion":
-      if (!Object.hasOwn(v, "elements")) {
-        return
-      }
-      t = {
-        id: "union",
-        children: v.elements.map(parseTypeComposition)
-      }
-      break
-    case "UndefinedLiteral":
-      t = parseTypeUnit("undefined")
-      break
-    // case "UnknownLiteral":
-    //   break
-    default:
-      break
-  }
-  return t
-}
-
-/**
- * @param {string} s
- * @returns {DeclarationType}
- */
-function parseTypeUnit(s) {
-  // todo: should we parse primitives with objects or just one of them?
-  let t = customType(s)
-  switch (s) {
-    case "array":
-    case "Array":
-      t.id = "array"
-      break
-    case "bool":
-    case "boolean":
-    case "Boolean":
-    case "byte":
-    case "null":
-    case "Null":
-    case "number":
-    case "Number":
-      t.id = "literal"
-      // @ts-ignore
-      t.value = s
-      break
-    case "object":
-    case "Object":
-      t.id = "object"
-      break
-    case "string":
-    case "String":
-    case "undefined":
-      t.id = "literal"
-      // @ts-ignore
-      t.value = s
-      break
-    default:
-      if (isNumberLiteral(s) || isStringLiteral(s)) {
-        t.id = "literal"
-        // @ts-ignore
-        t.value = s
-        break
-      }
-      break
-  }
-  return t
+function createID(a, b) {
+  return `${a};${b}`
 }
 
 /**
@@ -332,7 +617,7 @@ function parseTypeUnit(s) {
  * @returns {boolean}
  */
 function isNumberLiteral(s) {
-  return !isNaN(parseFloat(s));
+  return !isNaN(parseFloat(s))
 }
 
 /**
@@ -345,21 +630,64 @@ function isStringLiteral(s) {
 }
 
 /**
- * @param {string} id
- * @param {any} other
- * @returns {DeclarationType}
+ * @typedef {Object} CacheDeclaration
+ * @property {string[]=} methods
+ * @property {string[]=} events
+ * @property {string[]=} extends
+ * @property {string[]=} implements
  */
-function customType(id, other = {}) {
-  // https://github.com/microsoft/TypeScript/issues/29729
-  const t = {
-    id: id,
-    ...other
+
+class DeclarationsCache {
+  constructor() {
+    /** @type {Record<string, CacheDeclaration>} */
+    this.m = {}
   }
-  // @ts-ignore
-  return t
+
+  /**
+   * @param {string} id
+   * @returns {void}
+   */
+  setup(id) {
+    this.m[id] = {}
+  }
+
+  /**
+   * @param {string} id
+   * @param {keyof CacheDeclaration} k
+   * @param {string} v
+   * @returns {void}
+   */
+  populate(id, k, v) {
+    if (!Object.hasOwn(this.m, id)) {
+      this.setup(id)
+    }
+    if (!Object.hasOwn(this.m[id], k)) {
+      this.m[id][k] = []
+    }
+    if (this.m[id][k].includes(v)) {
+      return
+    }
+    this.m[id][k].push(v)
+  }
+
+  /**
+   * @param {string} id
+   * @returns {CacheDeclaration=}
+   */
+  retrieve(id) {
+    return this.m[id]
+  }
+
+  /**
+   * @returns {void}
+   */
+  clear() {
+    this.m = {}
+  }
 }
 
-// function retrieveCustomType() {}
-// function retrieveBuiltinType() {}
-
-export { parseDeclaration }
+export {
+  DeclarationsCache,
+  PostprocessDeclarations,
+  PreprocessDeclarations
+}
