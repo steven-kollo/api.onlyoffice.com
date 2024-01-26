@@ -99,7 +99,7 @@
                 <td id="formsdataurl" class="copy-link">formsdataurl</td>
                 <td>
                     Defines the URL to the JSON file with the submitted form data.
-                    The array structure with the form data is described here.
+                    The array structure with the form data is described <a href="<%= Url.Action("global", "docbuilder") %>#FormData">here</a>.
                     This file contains the following parameters:
                     <ul>
                         <li>
