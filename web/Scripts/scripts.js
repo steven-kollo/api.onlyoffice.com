@@ -23,6 +23,7 @@
  *
 */
 $(window).on("load", function () {
+    localStorage.setItem("theme", "light");
     const localStorageTheme = localStorage.getItem("theme");
     const themeBtn = $(".theme-btn");
     const body = $("html");
