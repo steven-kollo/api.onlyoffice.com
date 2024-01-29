@@ -138,19 +138,19 @@
 }
 
 .category-item-title.docspace.plugins:before,
-.category-item-title.docs.plugins-macros:before {
+.category-item-title.docs.plugin:before {
     background-position-y: -128px;
 }
 
-.category-item-title.docs.desktop-editors:before {
+.category-item-title.docs.desktop:before {
     background-position-y: -320px;
 }
 
-.category-item-title.docs.docs-api:before {
+.category-item-title.docs.editors:before {
     background-position-y: -256px;
 }
 
-.category-item-title.docs.document-builder:before {
+.category-item-title.docs.docbuilder:before {
     background-position-y: -384px;
 }
 

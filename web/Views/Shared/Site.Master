@@ -37,7 +37,7 @@
     </div>
     <div class="background-body <%= Html.IfController("Home") ? "mainBody" : string.Empty %>">
         <div class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
-                <% if (!Html.IfController("Home") && !Html.IfController("Category") && !Html.IfController("DeveloperProfile"))
+                <% if (!Html.IfController("Home") && !Html.IfAction("Index") && !Html.IfController("DeveloperProfile"))
                    { %>
                 <div class="layout-table-side">
                     <div class="layout-side">
