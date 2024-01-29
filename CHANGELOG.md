@@ -1,5 +1,7 @@
 # Change Log
 
+- docspace: added the Plugin Tutorial
+
 ## 4.4.1
 - docspace: fix samples
 

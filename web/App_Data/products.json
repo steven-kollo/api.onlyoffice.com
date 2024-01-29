@@ -61,6 +61,10 @@
             {
                "Item1":"Adding plugin",
                "Item2":"pluginssdk/addingplugin"
+            },
+            {
+               "Item1":"How to create plugin step by step",
+               "Item2":"pluginssdk/plugintutorial"
             }
          ],
          "API Backend":[
