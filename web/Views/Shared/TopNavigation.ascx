@@ -43,7 +43,7 @@
             </ul>
         </div>
     </nav>
-    <div class="header-try-now">
+    <%--<div class="header-try-now">
         <button class="header-btn">Try now</button>
 
         <div class="header-tn-popup">
@@ -56,5 +56,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 </div>
