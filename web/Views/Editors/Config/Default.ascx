@@ -90,6 +90,7 @@
                     <option value="word" selected>word</option>
                     <option value="cell">cell</option>
                     <option value="slide">slide</option>
+                    <option value="pdf">pdf</option>
                 </select>
             </div>
             <div class="line input_line">
@@ -274,6 +275,37 @@
             Height = "550px",
             Width = "100%"
         }) %>;
+
+    var config_pdf = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "pdf",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title." + "pdf",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pdf" 
+            },
+        DocumentType = "pdf",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
 </script>
 
 <script>
@@ -313,6 +345,8 @@
             config = config_cell;
         } else if (config_object.documentType == "slide") {
             config = config_slide;
+        } else if (config_object.documentType == "pdf") {
+            config = config_pdf;
         }
 
         config.documentType = config_object.documentType;
