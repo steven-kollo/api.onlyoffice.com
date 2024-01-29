@@ -69,6 +69,7 @@
         "es": "Resaltar el c&#243;digo",
         "fr": "Code en surbrillance"
     },
+    "version": "1.0.2",
     "variations": [
         {
             "EditorsSupport": [
@@ -152,15 +153,20 @@
                     "light" : "#282C33",
                     "dark" : "#282C33"
                 },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
+                "screenshots" : [
+                    "resources/store/screenshots/screen_1.png",
+                    "resources/store/screenshots/screen_2.png",
+                    "resources/store/screenshots/screen_3.png",
+                    "resources/store/screenshots/screen_4.png"
+                ],
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                } 
+                },
+                "categories": ["specAbilities", "work", "devTools"]
             }
         }
-    ],
-    "version": "1.0.0"
+    ]
 }
 </pre>
 

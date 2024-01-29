@@ -46,7 +46,11 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Backend",
-                "Backend/Auth",
+                "Backend/HowItWorks",
+                "Backend/HowItWorks/Auth",
+                "Backend/HowItWorks/LongRunningOperations",
+                "Backend/HowItWorks/UploadingLargeFiles",
+                "Backend/HowItWorks/Webhooks",
                 "Changelog",
                 "Faq",
                 "Filters",

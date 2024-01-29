@@ -245,7 +245,21 @@
                 <a href="<%= Url.Action("backend/") %>">Basic concepts</a>
             </li>
             <li>
-                <a href="<%= Url.Action("backend/auth") %>">Passing authentication</a>
+                <a href="<%= Url.Action("backend/howitworks") %>">How it works</a>
+                <ul>
+                    <li>
+                        <a href="<%= Url.Action("backend/howitworks/auth") %>">Passing authentication</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("backend/howitworks/longrunningoperations") %>">Long-running operations</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("backend/howitworks/uploadinglargefiles") %>">Uploading large files</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("backend/howitworks/webhooks") %>">Webhooks</a>
+                    </li>
+                </ul>
             </li>
             <% if (entryPoints != null && entryPoints.Any())
             { %>

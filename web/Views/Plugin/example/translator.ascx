@@ -57,7 +57,7 @@
         "de": "&#220;bersetzer"
     },
     "guid": "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
-    "version": "1.0.1",
+    "version": "1.0.6",
 
     "variations": [
         {
@@ -81,7 +81,7 @@
             ],
             "screens": ["resources/store/screen_1.png"],
             "isViewer": true,
-            "EditorsSupport": [ "word", "cell", "slide" ],
+            "EditorsSupport": [ "word", "cell", "slide", "pdf" ],
             "isVisual": true,
             "isModal": false,
             "isInsideMode": true,
@@ -92,11 +92,15 @@
                     "light": "#F5F5F5",
                     "dark": "#444444"
                 },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
+                "screenshots" : [
+                    "resources/store/screenshots/screen_1.png",
+                    "resources/store/screenshots/screen_2.png"
+                ],
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities"]
             }
         }
     ]
