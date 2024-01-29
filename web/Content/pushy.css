@@ -130,20 +130,20 @@
     background-position-y: 0;
 }
 
-.pushy-dropdown a.docs-api::before {
+.pushy-dropdown a.editors::before {
     background-position-y: -26px;
 }
 
-.pushy-dropdown a.plugins::before,
+.pushy-dropdown a.plugin::before,
 .pushy-dropdown a.plugins-macros::before {
     background-position-y: -52px;
 }
 
-.pushy-dropdown a.document-builder::before {
+.pushy-dropdown a.docbuilder::before {
     background-position-y: -78px;
 }
 
-.pushy-dropdown a.desktop-editors::before {
+.pushy-dropdown a.desktop::before {
     background-position-y: -104px;
 }
 

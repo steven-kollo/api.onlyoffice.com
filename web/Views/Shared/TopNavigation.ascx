@@ -19,19 +19,27 @@
                 <% var subControllerObj = ViewContext.RequestContext.RouteData.Values["id"];
                    var subControllerStr = subControllerObj != null ? subControllerObj.ToString() : string.Empty;
 
-                   var enabledCategories = Categories.EnabledCategories();
-                   foreach (var category in enabledCategories)
-                   { %>
-                <li class="pushy-submenu <%= Html.IfController(category.Id) || subControllerStr.Equals(category.Id, StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-                    <a href="/category/<%= category.Id %>"><%= category.Title %></a>
-
-                    <ul class="pushy-dropdown">
-                        <% foreach (var item in category.Items) { %>
-                            <li><a href="<%= Url.Action("basic", item.Id) %>" class="pushy-dropdown-link <%: item.Id %>"><%: item.Title %></a></li>
+                   var enabledProducts = Products.EnabledProducts();
+                   foreach (var product in enabledProducts)
+                   { 
+                        if (product.Parent == null)
+                        { %>
+                    <li class="pushy-submenu <%= Html.IfController(product.Id) || subControllerStr.Equals(product.Id, StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+                        <a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><%= product.Title %></a>
+                        <% if (product.Sections != null)
+                           { %>
+                           <ul class="pushy-dropdown">
+                                <% foreach (var section in product.Sections)
+                                   {
+                                        var sectionProduct = Products.Get(section);
+                                        %>
+                                        <li><a href="<%= Url.Action("basic", sectionProduct.Id) %>" class="pushy-dropdown-link <%: sectionProduct.Id %>"><%: sectionProduct.Title %></a></li>
+                                <% } %>
+                           </ul>
                         <% } %>
-                    </ul>
-                </li>
-                <% } %>
+                    </li>
+                <%      }
+                   } %>
             </ul>
         </div>
     </nav>
