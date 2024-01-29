@@ -47,6 +47,10 @@
                "Item2":"pluginssdk/creatingtemplate"
             },
             {
+               "Item1":"Plugin structure",
+               "Item2":"pluginssdk/structure"
+            },
+            {
                "Item1":"Coding plugin",
                "Item2":"pluginssdk/codingplugin"
             },
@@ -69,8 +73,8 @@
                "Item2":"backend/"
             },
             {
-               "Item1":"Passing authentication",
-               "Item2":"backend/auth"
+               "Item1":"How it works",
+               "Item2":"backend/howitworks"
             },
             {
                "Item1":"authentication",
@@ -85,16 +89,8 @@
                "Item2":"section/capabilities"
             },
             {
-               "Item1":"feed",
-               "Item2":"section/feed"
-            },
-            {
                "Item1":"files",
                "Item2":"section/files"
-            },
-            {
-               "Item1":"group",
-               "Item2":"section/group"
             },
             {
                "Item1":"people",
@@ -111,10 +107,6 @@
             {
                "Item1":"settings",
                "Item2":"section/settings"
-            },
-            {
-               "Item1":"thirdparty",
-               "Item2":"section/thirdparty"
             }
          ],
          "API System":[
@@ -136,6 +128,10 @@
             }
          ],
          "More information":[
+            {
+               "Item1":"Changelog",
+               "Item2":"changelog"
+            },
             {
                "Item1":"FAQ",
                "Item2":"faq"
@@ -469,6 +465,10 @@
             {
                "Item1":".Net",
                "Item2":"integrationapi/net"
+            },
+            {
+               "Item1":"Builder framework samples",
+               "Item2":"builderframeworksamples"
             }
          ],
          "Builder.App":[
