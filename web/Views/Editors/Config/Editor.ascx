@@ -349,7 +349,48 @@
         </div>
         <div class="line input_line">
             <label for="editorConfig_lang">Lang</label>
-            <input type="text" id="editorConfig_lang" name="editorConfig_lang" value="en">
+            <select class="select" id="editorConfig_lang" name="editorConfig_lang">
+                <option disabled>en</option>
+                <option value="en">en</option>
+                <option value="hy">hy</option>
+                <option value="az">az</option>
+                <option value="eu">eu</option>
+                <option value="be">be</option>
+                <option value="bg">bg</option>
+                <option value="ca">ca</option>
+                <option value="zh">zh</option>
+                <option value="zh-TW">zh-TW</option>
+                <option value="cs">cs</option>
+                <option value="da">da</option>
+                <option value="nl">nl</option>
+                <option value="fi">fi</option>
+                <option value="fr">fr</option>
+                <option value="gl">gl</option>
+                <option value="de">de</option>
+                <option value="el">el</option>
+                <option value="hu">hu</option>
+                <option value="id">id</option>
+                <option value="it">it</option>
+                <option value="ja">ja</option>
+                <option value="ko">ko</option>
+                <option value="lo">lo</option>
+                <option value="lv">lv</option>
+                <option value="ms">ms</option>
+                <option value="no">no</option>
+                <option value="pl">pl</option>
+                <option value="pt">pt</option>
+                <option value="pt-PT">pt-PT</option>
+                <option value="ro">ro</option>
+                <option value="ru">ru</option>
+                <option value="si">si</option>
+                <option value="sk">sk</option>
+                <option value="sl">sl</option>
+                <option value="es">es</option>
+                <option value="sv">sv</option>
+                <option value="tr">tr</option>
+                <option value="uk">uk</option>
+                <option value="vi">vi</option>
+            </select>
         </div>
         <div class="line input_line">
             <label for="editorConfig_location">Location</label>

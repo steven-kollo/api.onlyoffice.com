@@ -149,6 +149,17 @@
                     <label for="documentConfig_info_favorite">Favorite</label>
                 </label>
             </div>
+            <div class="config_object_holder">
+                <div id="holder_documentConfig_info_favorite" class="config_nested_group">
+                    <div class="line input_line">
+                        <select class="select" id="documentConfig_info_favorite_bool" name="documentConfig_info_favorite_bool">
+                            <option value=0 disabled>False</option>
+                            <option value=0 selected>False</option>
+                            <option value=1>True</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" hidden="hidden" checked>
@@ -315,7 +326,8 @@
 
     $('#addButton_info_sharingSettings').click(addSharingSettingItem);
     $("#documentConfig_info_sharingSettings").change(showHideConfigObject);
-   
+    $("#documentConfig_info_favorite").change(showHideConfigObject);
+
     function showHideConfigObject(e) {
         var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
         document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
@@ -393,9 +405,16 @@
         } else {
             document.getElementById("addButton_info_sharingSettings").hidden = true;
         }
+        var favorite = () => {
+            if (getFieldValue("documentConfig_info_favorite")) {
+                var value = getFieldValue("documentConfig_info_favorite_bool") == `"True"` ? true : false;
+                return `
+            "favorite": ${value},`;
+            }
+            return "";
+        };
 
-        var info = `{
-            "favorite": ${getFieldValue("documentConfig_info_favorite")},
+        var info = `{${favorite()}
             "folder": ${getFieldValue("documentConfig_info_folder")},
             "owner": ${getFieldValue("documentConfig_info_owner")},
             ${sharingSettings}"uploaded": ${getFieldValue("documentConfig_info_uploaded")}     

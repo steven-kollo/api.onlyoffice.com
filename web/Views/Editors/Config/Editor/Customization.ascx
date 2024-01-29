@@ -1390,8 +1390,24 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_features" name="editorConfig_customization_features" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_features">Features.Spellcheck</label>
+                <label for="editorConfig_customization_features">Features</label>
             </label>
+        </div>
+        <div id="holder_editorConfig_customization_features" class="config_object_holder" hidden>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_spellcheck" name="editorConfig_customization_features_spellcheck" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_features_spellcheck">Features.Spellcheck</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_spellcheck_mode" name="editorConfig_customization_features_spellcheck_mode" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_features_spellcheck_mode">Features.Spellcheck.Mode</label>
+                </label>
+            </div>
         </div>
         <div class="line">
             <label class="dataItemSpan">
@@ -1741,6 +1757,7 @@
     $("#editorConfig_customization_anonymous").change(showHideConfigObject);
     $("#editorConfig_customization_customer").change(showHideConfigObject);
     $("#editorConfig_customization_feedback").change(showHideConfigObject);
+    $("#editorConfig_customization_features").change(showHideConfigObject);
     $("#editorConfig_customization_goback").change(showHideConfigObject);
     $("#editorConfig_customization_logo").change(showHideConfigObject);
     $("#editorConfig_customization_review").change(showHideConfigObject);
@@ -1749,6 +1766,25 @@
         var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
         document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
         resizeCodeInput();
+    }
+
+    function getFeaturesValue() {
+        if (!getFieldValue("editorConfig_customization_features")) {
+            return "";
+        }
+        if (!getFieldValue("editorConfig_customization_features_spellcheck_mode")) {
+            return `"features": {
+                "spellcheck": ${getFieldValue("editorConfig_customization_features_spellcheck")}
+            },
+            `
+        } else {
+            return `"features": {
+                "spellcheck": {
+                    "mode": true
+                }
+            },
+            `
+        }
     }
 
     function updateConfig() {
@@ -1779,13 +1815,7 @@
                 "www": ${getFieldValue("editorConfig_customization_customer_www")}
             },
             ` : "";
-        var features = getFieldValue("editorConfig_customization_features") ?
-            `"features": {
-                "spellcheck": {
-                    "mode": true
-                }
-            },
-            ` : "";
+        var features = getFeaturesValue();
         var feedback = getFieldValue("editorConfig_customization_feedback") ?
             `"feedback": {
                 "url": ${getFieldValue("editorConfig_customization_feedback_url")},
