@@ -23,9 +23,15 @@
         </div>
 
         <div class="main-items">
-            <% var categories = Categories.EnabledCategories(); foreach (var category in categories) { %>
-                <% Html.RenderPartial("ProductBlock", category); %>
-            <% } %>
+            <%
+                var products = Products.EnabledProducts();
+                foreach (var product in products)
+                {
+                    if (product.Parent == null)
+                    {
+                        Html.RenderPartial("ProductBlock", product);
+                    }
+                } %>
         </div>
     </div>
 </asp:Content>

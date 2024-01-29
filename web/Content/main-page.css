@@ -374,7 +374,7 @@
     background-position-y: -34px;
 }
 
-.main-item.docs .main-item-links a.plugins-macros:before,
+.main-item.docs .main-item-links a.plugin:before,
 .main-item.docspace .main-item-links a.plugins:before {
     background-position-y: -68px;
 }
@@ -388,14 +388,14 @@
     background-position-y: -136px;
 }
 
-.main-item.docs .main-item-links a.desktop-editors:before {
+.main-item.docs .main-item-links a.desktop:before {
     background-position-y: -170px;
 }
 
-.main-item.docs .main-item-links a.docs-api:before {
+.main-item.docs .main-item-links a.editors:before {
     background-position-y: -204px;
 }
 
-.main-item.docs .main-item-links a.document-builder:before {
+.main-item.docs .main-item-links a.docbuilder:before {
     background-position-y: -238px;
 }
