@@ -1,184 +1,62 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Step 6. Configure the plugin's interface elements</span>
+    <span class="hdr">Step 6. Create the settings plugin type</span>
 </h1>
 
-<p>If necessary, define the plugin's UI elements.
-    Consult our <a href="/docspace-storybook" target="_blank">Storybook</a> to develop your plugin's UI.</p>
-<p>For example, the <b>draw.io</b> plugin contains two main UI elements - the modal window and the diagram editor.
-    Create the files for configuring each element. For your convenience, you can put these files into a separate <em>DrawIO</em> folder.</p>
-<ul>
+<p>Configure the settings plugin type to provide users with the administrator settings.</p>
+<ol>
     <li>
-        <p>In the <a href="https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Dialog.ts" target="_blank">Dialog.ts</a> file,
-            configure the modal window settings.
-            Specify the <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/iframe") %>">IFrame</a> UI component
-            that is used to embed the draw.io website into a modal window:</p>
+        <p>Create a container where the plugin settings will be placed:</p>
         <pre>
-export const frameProps: IFrame = {
-    width: "100%",
-    height: "100%",
-    name: "test-drawio",
-    src: "",
-};
-</pre>
-        <p>Create the <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/box") %>">IBox</a> container to add the iframe to it:</p>
-        <pre>
-const body:
-IBox = {
-    widthProp: "100%",
-    heightProp: "100%",
-
-    children: [
-        {
-            component: Components.iFrame,
-            props: frameProps,
-        },
-    ],
-};
-</pre>
-        <p>Configure the <a href="<%= Url.Action("pluginssdk/codingplugin/plugincomponents/modaldialog") %>">modal window</a> properties:</p>
-        <pre>
-export const drawIoModalDialogProps: IModalDialog = {
-    dialogHeader: "",
-    dialogBody: body,
-    displayType: ModalDisplayType.modal,
-    fullScreen: true,
-    onClose: () => {
-        const message: IMessage = {
-            actions: [Actions.closeModal],
-        };
-
-        return message;
+const descriptionText: TextGroup = {
+    component: Components.text,
+    props: {
+        text: "To generate API token visit https://www.assemblyai.com",
+        color: "#A3A9AE",
+        fontSize: "12px",
+        fontWeight: 400,
+        lineHeight: "16px",
     },
+};
+
+const descGroup: BoxGroup = {
+    component: Components.box,
+    props: { children: [descriptionText] },
+};
+
+const parentBox: IBox = {
+    displayProp: "flex",
+    flexDirection: "column",
+    // marginProp: "16px 0 0 0",
+    children: [tokenGroup, descGroup],
+};
+</pre>
+        <p>In the settings description, indicate that it is necessary to generate an API token in order to be able to work with the plugin.</p>
+    </li>
+    <li>
+        <p>Configure the administrator settings with the <em>ISettings</em> object:</p>
+        <pre>
+const adminSettings: ISettings = {
+    settings: parentBox,
+    saveButton: userButtonComponent,
     onLoad: async () => {
-        return {
-            newDialogHeader: drawIoModalDialogProps.dialogHeader || "",
-            newDialogBody: drawIoModalDialogProps.dialogBody,
-        };
+        assemblyAI.fetchAPIToken();
+
+        tokenInput.value = assemblyAI.apiToken;
+
+        if (!assemblyAI.apiToken) return { settings: parentBox };
+
+        plugin.setAdminPluginSettings(adminSettings);
+
+        return { settings: parentBox };
     },
-    autoMaxHeight: true,
-    autoMaxWidth: true,
 };
 </pre>
+        <p>Specify the <em>onLoad</em> event which defines which plugin settings will be displayed when the settins block is loaded.</p>
     </li>
-    <li>
-        <p>In the <a href="https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Editor.ts" target="_blank">Editor.ts</a> file, configure the diagram editor.
-            Create the <em>DiagramEditor</em> function with the following parameters:</p>
-        <table class="table">
-            <colgroup>
-                <col class="table-name" />
-                <col />
-                <col class="table-type" />
-                <col class="table-example" />
-            </colgroup>
-            <thead>
-                <tr class="tablerow">
-                    <td>Parameter</td>
-                    <td>Description</td>
-                    <td>Type</td>
-                    <td>Example</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="tablerow">
-                    <td id="ui" class="copy-link">ui</td>
-                    <td>Defines the editor's ui theme.</td>
-                    <td>string</td>
-                    <td>"default"</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="dark" class="copy-link">dark</td>
-                    <td>Defines the editor's dark theme.</td>
-                    <td>string</td>
-                    <td>"auto"</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="off" class="copy-link">off</td>
-                    <td>Specifies if the offline mode is active or not.</td>
-                    <td>boolean</td>
-                    <td>false</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="lib" class="copy-link">lib</td>
-                    <td>Specifies if the libraries are enabled or not.</td>
-                    <td>boolean</td>
-                    <td>false</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="lang" class="copy-link">lang</td>
-                    <td>Defines the editor's language.</td>
-                    <td>string</td>
-                    <td>"auto"</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="url" class="copy-link">url</td>
-                    <td>Defines the URL to the editor.</td>
-                    <td>string</td>
-                    <td>"https://embed.diagrams.net"</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="showSaveButton" class="copy-link">showSaveButton</td>
-                    <td>Specifies if the <b>Save</b> button will be displayed in the editor.</td>
-                    <td>boolean</td>
-                    <td>true</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="mobile-content"></div>
-
-        <p>Then specify methods to work with diagrams:</p>
-        <table class="table">
-            <colgroup>
-                <col class="table-name" />
-                <col />
-            </colgroup>
-            <thead>
-                <tr class="tablerow">
-                    <td>Method</td>
-                    <td>Description</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="tablerow">
-                    <td id="startEditing" class="copy-link">startEditing</td>
-                    <td>Starts the editor with the given data.</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="getData" class="copy-link">getData</td>
-                    <td>Returns the diagram's data.</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="getTitle" class="copy-link">getTitle</td>
-                    <td>Returns the diagram's title.</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="getFormat" class="copy-link">getFormat</td>
-                    <td>Returns the diagram's format.</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="getFrameId" class="copy-link">getFrameId</td>
-                    <td>Returns the editor's frame ID.</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="getFrameUrl" class="copy-link">getFrameUrl</td>
-                    <td>Returns the URL to the iframe.</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="handleMessage" class="copy-link">handleMessage</td>
-                    <td>Handles the given message.</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="initializeEditor" class="copy-link">initializeEditor</td>
-                    <td>Posts the <em>load</em> message to the editor.</td>
-                </tr>
-                <tr class="tablerow">
-                    <td id="save" class="copy-link">save</td>
-                    <td>Saves the given data.</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="mobile-content"></div>
-        <p>The full code for the <em>DiagramEditor</em> can be found <a href="https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Editor.ts" target="_blank">here</a>.</p>
-    </li>
-</ul>
+</ol>
+<p>Each settings item is determined in separate files
+    (<a href="https://github.com/ONLYOFFICE/docspace-plugins/blob/master/speech-to-text/src/Settings/Button.ts" target="_blank">buttons</a>,
+    <a href="https://github.com/ONLYOFFICE/docspace-plugins/blob/master/speech-to-text/src/Settings/Token.ts" target="_blank">token</a>).</p>
+<img alt="Speech settings" class="screenshot max-width-300" src="<%= Url.Content("~/content/img/docspace/speech-settings.png") %>" />

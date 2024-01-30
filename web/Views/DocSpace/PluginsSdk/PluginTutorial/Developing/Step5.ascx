@@ -1,62 +1,85 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Step 5. Create the settings plugin type</span>
+    <span class="hdr">Step 5. Create plugin types</span>
 </h1>
 
-<p>Configure the settings plugin type to provide users with the administrator settings.</p>
+<p>Now that the default plugin is ready, you can start coding other plugin types.</p>
+<p>Each plugin type has specific plugin items.
+Define the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/contextmenuitem") %>">context menu item</a> that will be displayed when you right-click on audio or video files:</p>
+<pre>
+export const contextMenuItem: IContextMenuItem = {
+    key: "speech-to-text-context-menu-item",
+    label: "Convert to text",
+    icon: "speech-to-text-16.png",
+    onClick: assemblyAI.speechToText,
+    fileType: [FilesType.video],
+    withActiveItem: true,
+};
+</pre>
+<img alt="Context menu item" class="screenshot max-width-400" src="<%= Url.Content("~/content/img/docspace/context-menu-item.png") %>" />
+
+<p>You can add more plugin types. For example, the <b>draw.io</b> plugin can be accessed from the main button menu,
+    so we need to specify the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/mainbuttonitem") %>">main button item</a>:</p>
+<pre>
+const mainButtonItem: IMainButtonItem = {
+    key: "draw-io-main-button-item",
+    label: "Draw.io",
+    icon: "drawio.png",
+    onClick: (id: number) => {
+        drawIo.setCurrentFolderId(id);
+
+        const message: IMessage = {
+            actions: [Actions.showCreateDialogModal],
+            createDialogProps: {
+                title: "Create diagram",
+                startValue: "New diagram",
+                visible: true,
+                isCreateDialog: true,
+                extension: ".drawio",
+                onSave: async (e: any, value: string) => {
+                    await drawIo.createNewFile(value);
+                },
+                onCancel: (e: any) => {
+                    drawIo.setCurrentFolderId(null);
+                },
+                onClose: (e: any) => {
+                    drawIo.setCurrentFolderId(null);
+                },
+            },
+        };
+
+        return message;
+    },
+    // items: [createItem],
+};
+</pre>
+<p>When the main button item is clicked, the modal window appears where you can type the diagram's name and open an empty <em>.drawio</em> file.</p>
+<img alt="Create diagram" class="screenshot" src="<%= Url.Content("~/content/img/docspace/create-diagram.png") %>" />
+
+<p>For the <b>draw.io</b> plugin, you also need to configure the file plugin type which works when the user opens the specific <em>.drawio</em> file:</p>
 <ol>
     <li>
-        <p>Create a container where the plugin settings will be placed:</p>
+        <p>Define the <a href="<%= Url.Action("pluginssdk/codingplugin/pluginitems/fileitem") %>">file item</a>
+            that is represented as a file with the specific extension (<em>.drawio</em>) and icon:</p>
         <pre>
-const descriptionText: TextGroup = {
-    component: Components.text,
-    props: {
-        text: "To generate API token visit https://www.assemblyai.com",
-        color: "#A3A9AE",
-        fontSize: "12px",
-        fontWeight: 400,
-        lineHeight: "16px",
-    },
-};
-
-const descGroup: BoxGroup = {
-    component: Components.box,
-    props: { children: [descriptionText] },
-};
-
-const parentBox: IBox = {
-    displayProp: "flex",
-    flexDirection: "column",
-    // marginProp: "16px 0 0 0",
-    children: [tokenGroup, descGroup],
+export const drawIoItem: IFileItem = {
+    extension: ".drawio",
+    fileTypeName: "Diagram",
+    fileRowIcon: "drawio-32.svg",
+    fileTileIcon: "drawio-32.svg",
+    devices: [Devices.desktop],
+    onClick,
 };
 </pre>
-        <p>In the settings description, indicate that it is necessary to generate an API token in order to be able to work with the plugin.</p>
     </li>
     <li>
-        <p>Configure the administrator settings with the <em>ISettings</em> object:</p>
+        <p>Define the <em>onClick</em> event which will execute the <em>editDiagram</em> method each time the <em>.drawio</em> file is opened:</p>
         <pre>
-const adminSettings: ISettings = {
-    settings: parentBox,
-    saveButton: userButtonComponent,
-    onLoad: async () => {
-        assemblyAI.fetchAPIToken();
-
-        tokenInput.value = assemblyAI.apiToken;
-
-        if (!assemblyAI.apiToken) return { settings: parentBox };
-
-        plugin.setAdminPluginSettings(adminSettings);
-
-        return { settings: parentBox };
-    },
+const onClick = async (item: File) => {
+    return await drawIo.editDiagram(item.id);
 };
 </pre>
-        <p>Specify the <em>onLoad</em> event which defines which plugin settings will be displayed when the settins block is loaded.</p>
+        <img alt="Drawio file" class="screenshot" src="<%= Url.Content("~/content/img/docspace/drawio-file.png") %>" />
     </li>
 </ol>
-<p>Each settings item is determined in separate files
-    (<a href="https://github.com/ONLYOFFICE/docspace-plugins/blob/master/speech-to-text/src/Settings/Button.ts" target="_blank">buttons</a>,
-    <a href="https://github.com/ONLYOFFICE/docspace-plugins/blob/master/speech-to-text/src/Settings/Token.ts" target="_blank">token</a>).</p>
-<img alt="Speech settings" class="screenshot max-width-300" src="<%= Url.Content("~/content/img/docspace/speech-settings.png") %>" />
