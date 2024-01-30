@@ -103,7 +103,7 @@
     "AddPageNumber": {
       "memberof": "ApiParagraph",
       "name": "AddPageNumber",
-      "description": "<p>Inserts a number of the current document page into the paragraph.\n<note>This method works for the paragraphs in the document header/footer only.</note></p>",
+      "description": "<p>Inserts a number of the current document page into the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -120,7 +120,7 @@
     "AddPagesCount": {
       "memberof": "ApiParagraph",
       "name": "AddPagesCount",
-      "description": "<p>Inserts a number of pages in the current document into the paragraph.\n<note>This method works for the paragraphs in the document header/footer only.</note></p>",
+      "description": "<p>Inserts a number of pages in the current document into the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -498,6 +498,12 @@
           "type": "string",
           "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sUserId",
+          "description": "<p>The user ID of the comment author (optional).</p>",
           "optional": false
         }
       ]

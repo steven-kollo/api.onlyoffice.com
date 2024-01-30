@@ -1001,6 +1001,12 @@
           "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sUserId",
+          "description": "<p>The user ID of the comment author (optional).</p>",
+          "optional": false
         }
       ]
     },

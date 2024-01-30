@@ -136,6 +136,13 @@ ui=en-us&thm=1&"/&gt;
                 <td>Indicates that the output of the action will be embedded in a web page (<b>true</b>).</td>
                 <td>true</td>
             </tr>
+            <tr>
+                <td id="wopisrc" class="copy-link">wopisrc</td>
+                <td>Indicates that the WOPI server includes the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> value. 
+                It tells the WOPI client what URL to call back to when running WOPI operations on a file.
+                This parameter is required.</td>
+                <td>https://&lt;host_address&gt;/wopi/files/(file_id)</td>
+            </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>

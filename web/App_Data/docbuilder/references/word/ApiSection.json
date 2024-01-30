@@ -126,6 +126,40 @@
         }
       ]
     },
+    "GetPageHeight": {
+      "memberof": "ApiSection",
+      "name": "GetPageHeight",
+      "description": "<p>Gets page height for current section.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "twips"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPageWidth": {
+      "memberof": "ApiSection",
+      "name": "GetPageWidth",
+      "description": "<p>Gets page width for current section.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "twips"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetPageMargins": {
       "memberof": "ApiSection",
       "name": "SetPageMargins",
