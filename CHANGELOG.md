@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: updated the Redmine page
 - docspace: added the How it works section
 - editors: added the page about Java Integration SDK
 - docspace: v2.0.1
