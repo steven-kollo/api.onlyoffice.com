@@ -29,8 +29,8 @@
         <li>Converting attachments and saving or downloading them.</li>
     </ul>
 
-    <h2 id="word-formats" class="copy-link">Text document supported formats</h2>
-    <table class="table-conversion-matrix-text">
+    <h2 id="formats" class="copy-link">Supported formats</h2>
+    <table class="table-formats">
         <tbody>
             <tr class="scroll-arrow" style="margin-top:247px;"></tr>
             <tr>
@@ -65,115 +65,6 @@
                 <td>wpt</td>
                 <td>xml</td>
                 <td>xps</td>
-            </tr>
-            <tr>
-                <td>View</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>Edit</td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-            </tr>
-            <tr>
-                <td>Create</td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="mobile-content"></div>
-    <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - to be able to open the format for editing,
-        check it in the <a href="#formats-settings" target="_blank">formats settings</a>.
-        Due to some format restrictions, data loss may occur.</em></span>
-
-    <h2 id="cell-formats" class="copy-link">Spreadsheet supported formats</h2>
-    <table class="table-conversion-matrix-text">
-        <tbody>
-            <tr class="scroll-arrow" style="margin-top:247px;"></tr>
-            <tr>
-                <th rowspan="2"></th>
-            </tr>
-            <tr>
                 <td>csv<a href="#requiredDescr" class="required">*</a></td>
                 <td>et</td>
                 <td>ett</td>
@@ -188,73 +79,6 @@
                 <td>xlt</td>
                 <td>xltm</td>
                 <td>xltx</td>
-            </tr>
-            <tr>
-                <td>View</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>Edit</td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>Create</td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="mobile-content"></div>
-    <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - to be able to open the format for editing,
-        check it in the <a href="#formats-settings" target="_blank">formats settings</a>.
-        Due to some format restrictions, data loss may occur.</em></span>
-
-    <h2 id="slide-formats" class="copy-link">Presentation supported formats</h2>
-    <table class="table-conversion-matrix-text">
-        <tbody>
-            <tr class="scroll-arrow" style="margin-top:247px;"></tr>
-            <tr>
-                <th rowspan="2"></th>
-            </tr>
-            <tr>
                 <td>dps</td>
                 <td>dpt</td>
                 <td>fodp</td>
@@ -288,9 +112,93 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>Edit</td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
@@ -309,6 +217,48 @@
             </tr>
             <tr>
                 <td>Create</td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
@@ -331,7 +281,6 @@
     <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - to be able to open the format for editing,
         check it in the <a href="#formats-settings" target="_blank">formats settings</a>.
         Due to some format restrictions, data loss may occur.</em></span>
-
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
     <p>
@@ -671,7 +620,7 @@ RAILS_ENV=production bundle exec rake redmine:plugins:migrate NAME=onlyoffice_re
             <p id="create-page" class="copy-link"><b>Create in ONLYOFFICE</b></p>
             <img alt="Create in ONLYOFFICE" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/create-page.png") %>"  />
             <p>On the <b>Create in ONLYOFFICE</b> page, users can create the attachment using templates that consider the user's language preference.
-                Take a look at <a href="#word-formats" target="_blank">supported formats</a>. The visibility of this page depends on the user's permissions for the module.</p>
+                Take a look at <a href="#formats" target="_blank">supported formats</a>. The visibility of this page depends on the user's permissions for the module.</p>
         </li>
         <li>
             <p id="convert" class="copy-link"><b>Convert with ONLYOFFICE</b></p>
