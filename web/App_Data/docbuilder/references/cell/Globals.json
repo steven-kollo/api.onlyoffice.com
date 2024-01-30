@@ -314,6 +314,16 @@
       "\"@\""
     ]
   },
+  "FreezePaneType": {
+    "name": "FreezePaneType",
+    "description": "<p>Specifies a type of freeze panes.</p>",
+    "type": [
+      "\"row\"",
+      "\"column\"",
+      "\"cell\"",
+      "null"
+    ]
+  },
   "BordersIndex": {
     "name": "BordersIndex",
     "description": "<p>Specifies the cell border position.</p>",

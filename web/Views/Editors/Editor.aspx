@@ -403,7 +403,7 @@
                                 Title = "Example Document Title.pdf",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf"
                             },
-                        DocumentType = "word",
+                        DocumentType = "pdf",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
@@ -948,17 +948,17 @@
                     {
                         Document = new Config.DocumentConfig
                             {
-                                FileType = "oform",
+                                FileType = "pdf",
                                 Key = "apiwh" + Guid.NewGuid(),
-                                Title = "Example Form Title.oform",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.oform",
+                                Title = "Example Form Title.pdf",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "oform.pdf",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Edit = false,
                                         FillForms = true
                                     }
                             },
-                        DocumentType = "word",
+                        DocumentType = "pdf",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
