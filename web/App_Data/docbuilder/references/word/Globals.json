@@ -1242,5 +1242,47 @@
     "type": [
       "Object.<string, Array.<ReviewReportRecord>>"
     ]
+  },
+  "FormSpecificType": {
+    "name": "FormSpecificType",
+    "description": "<p>The specific form type.</p>",
+    "type": [
+      "\"text\"",
+      "\"checkBox\"",
+      "\"picture\"",
+      "\"comboBox\"",
+      "\"dropDownList\"",
+      "\"dateTime\"",
+      "\"radio\""
+    ]
+  },
+  "FormData": {
+    "name": "FormData",
+    "description": "<p>Form data.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "key",
+        "description": "<p>The form key. If the current form is a radio button, then this field contains the group key.</p>"
+      },
+      {
+        "type": "string | boolean",
+        "name": "value",
+        "description": "<p>The current field value.</p>"
+      },
+      {
+        "type": "string",
+        "name": "tag",
+        "description": "<p>The form tag.</p>"
+      },
+      {
+        "type": "FormSpecificType",
+        "name": "type",
+        "description": "<p>The form type.</p>"
+      }
+    ]
   }
 }

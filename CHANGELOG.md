@@ -1,10 +1,22 @@
 # Change Log
 
 - editors: updated the Redmine page
-- docspace: added the How it works section
-- editors: added the page about Java Integration SDK
 - docspace: v2.0.1
+- docspace: added the How it works section
 - docspace: added the information about webhooks
+- editors: added the WOPISrc query parameter to the requests from the browser to the server
+- editors: added the watermark field to the conversion request
+- editors: added the pdf document type to the documentType parameter
+- editors: added the formsdataurl parameter to the Callback handler
+- editors: added the data.id parameter to the events.onRequestUsers event
+- editors: added the users.image field to the setUsers method
+- editors: added the info operation type to the setUsers method and events.onRequestUsers event
+- editors: added the image field to the editorConfig.user parameter
+- editors: added the editorConfig.customization.mobileForceView parameter
+- editors: added the link field to the data object which is sent to the events.onRequestReferenceData event
+- editors: added the page about Java Integration SDK
+- plugins: v8.0.0
+- docbuilder: v8.0.0
 
 ## 4.4.1
 - docspace: fix samples

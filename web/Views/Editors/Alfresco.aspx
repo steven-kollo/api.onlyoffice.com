@@ -21,7 +21,7 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
+        <li>Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, PDF.</li>
         <li>
             <p>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents.</p>
             <img class="screenshot max-width-832" alt="Edit in OnlyOffice" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
@@ -30,7 +30,7 @@
         <li>To convert ODT, ODP, ODS, DOC, XLS, PPT files into their OOXML counterparts, select the <b>Convert using ONLYOFFICE</b> option. Resulting files will be placed in the same folder. 
             You can also configure rules for a folder, that will automatically convert files on upload or on change. Details you can find <a href="https://docs.alfresco.com/content-services/latest/using/content/rules/" target="_blank">here</a>.</li>
         <li>
-            To create a new document, choose the context menu <b>Create new...</b> option within document library.
+            To create a new document, open the folder where you want to create a document and click the <b>Create...</b> button.
             <img class="screenshot max-width-832" alt="Create new..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
         </li>
     </ul>
