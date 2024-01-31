@@ -207,25 +207,25 @@
                         <a href="<%= Url.Action("pluginssdk/plugintutorial/developing") %>">Developing</a>
                         <ul>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/step1") %>">Step 1. Create a plugin template</a>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingtemplate") %>">Step 1. Create a plugin template</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/step2") %>">Step 2. Configure the plugin entry point</a>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/configuringentrypoint") %>">Step 2. Configure the plugin entry point</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/step3") %>">Step 3. Add plugin icons</a>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/addingicons") %>">Step 3. Add plugin icons</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/step4") %>">Step 4. Configure the plugin's interface elements</a>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/configuringinterfaceelements") %>">Step 4. Configure the plugin's interface elements</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/step5") %>">Step 5. Create plugin types</a>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingplugintypes") %>">Step 5. Create plugin types</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/step6") %>">Step 6. Create the settings plugin type</a>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingsettingstype") %>">Step 6. Create the settings plugin type</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/step7") %>">Step 7. Create the main plugin code file</a>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingcodefile") %>">Step 7. Create the main plugin code file</a>
                             </li>
                         </ul>
                     </li>
