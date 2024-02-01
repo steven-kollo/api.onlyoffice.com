@@ -46,7 +46,12 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Backend",
-                "Backend/Auth",
+                "Backend/HowItWorks",
+                "Backend/HowItWorks/Auth",
+                "Backend/HowItWorks/LongRunningOperations",
+                "Backend/HowItWorks/UploadingLargeFiles",
+                "Backend/HowItWorks/Webhooks",
+                "Changelog",
                 "Faq",
                 "Filters",
                 "Batch",
@@ -72,6 +77,62 @@ namespace ASC.Api.Web.Help.Controllers
                 "JsSdk/Config",
                 "JsSdk/Methods",
                 "JsSdk/Events",
+                "PluginsSdk",
+                "PluginsSdk/BuildingPlugin",
+                "PluginsSdk/Config",
+                "PluginsSdk/CreatingTemplate",
+                "PluginsSdk/CodingPlugin/Events",
+                "PluginsSdk/GettingStarted",
+                "PluginsSdk/CodingPlugin",
+                "PluginsSdk/Structure",
+                "PluginsSdk/CodingPlugin/PluginComponents",
+                "PluginsSdk/CodingPlugin/PluginComponents/Box",
+                "PluginsSdk/CodingPlugin/PluginComponents/Button",
+                "PluginsSdk/CodingPlugin/PluginComponents/Checkbox",
+                "PluginsSdk/CodingPlugin/PluginComponents/ComboBox",
+                "PluginsSdk/CodingPlugin/PluginComponents/IFrame",
+                "PluginsSdk/CodingPlugin/PluginComponents/img",
+                "PluginsSdk/CodingPlugin/PluginComponents/Input",
+                "PluginsSdk/CodingPlugin/PluginComponents/Label",
+                "PluginsSdk/CodingPlugin/PluginComponents/ModalDialog",
+                "PluginsSdk/CodingPlugin/PluginComponents/Text",
+                "PluginsSdk/CodingPlugin/PluginComponents/TextArea",
+                "PluginsSdk/CodingPlugin/PluginComponents/Toast",
+                "PluginsSdk/CodingPlugin/PluginComponents/ToggleButton",
+                "PluginsSdk/CodingPlugin/PluginComponents/Skeleton",
+                "PluginsSdk/CodingPlugin/PluginComponents/CreateDialog",
+                "PluginsSdk/CodingPlugin/PluginComponents/Component",
+                "PluginsSdk/CodingPlugin/PluginItems",
+                "PluginsSdk/CodingPlugin/PluginItems/ContextMenuItem",
+                "PluginsSdk/CodingPlugin/PluginItems/InfoPanelItem",
+                "PluginsSdk/CodingPlugin/PluginItems/MainButtonItem",
+                "PluginsSdk/CodingPlugin/PluginItems/ProfileMenuItem",
+                "PluginsSdk/CodingPlugin/PluginItems/FileItem",
+                "PluginsSdk/CodingPlugin/PluginItems/EventListenerItem",
+                "PluginsSdk/CodingPlugin/PluginMessage",
+                "PluginsSdk/CodingPlugin/PluginTypes",
+                "PluginsSdk/CodingPlugin/PluginTypes/Plugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/SettingsPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/ApiPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/ContextMenuPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/MainButtonPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/InfoPanelPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/ProfileMenuPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/EventListenerPlugin",
+                "PluginsSdk/CodingPlugin/PluginTypes/FilePlugin",
+                "PluginsSdk/AddingPlugin",
+                "PluginsSdk/PluginTutorial",
+                "PluginsSdk/PluginTutorial/Developing",
+                "PluginsSdk/PluginTutorial/Developing/addingicons",
+                "PluginsSdk/PluginTutorial/Developing/configuringentrypoint",
+                "PluginsSdk/PluginTutorial/Developing/configuringinterfaceelements",
+                "PluginsSdk/PluginTutorial/Developing/creatingcodefile",
+                "PluginsSdk/PluginTutorial/Developing/creatingplugintypes",
+                "PluginsSdk/PluginTutorial/Developing/creatingsettingstype",
+                "PluginsSdk/PluginTutorial/Developing/creatingtemplate",
+                "PluginsSdk/PluginTutorial/Planning",
+                "PluginsSdk/PluginTutorial/Testing",
+                "PluginsSdk/PluginTutorial/Using",
                 "Basic",
             };
 
@@ -103,6 +164,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Backend", (object)catchall);
         }
 
+        public ActionResult Changelog()
+        {
+            return View();
+        }
+
         public ActionResult Faq()
         {
             return View();
@@ -120,6 +186,15 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("JsSdk", (object)catchall);
+        }
+
+        public ActionResult PluginsSdk(string catchall)
+        {
+            if (!_actionMap.Contains("pluginssdk/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("PluginsSdk", (object)catchall);
         }
 
         public ActionResult Batch()

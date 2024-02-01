@@ -110,13 +110,16 @@
     <table class="demo-tab-panel">
         <tr>
             <td>
-                <a class="<%= Request["type"] != "spreadsheet" && Request["type"] != "presentation"  ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=text#DemoPreview">Demo Document editor</a>
+                <a class="<%= Request["type"] != "spreadsheet" && Request["type"] != "presentation" && Request["type"] != "pdf"  ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=text#DemoPreview">Demo Document editor</a>
             </td>
             <td>
                 <a class="<%= Request["type"] == "spreadsheet" ? "active" : "" %> demo-tab-center" href="<%= Url.Action("demopreview") %>?type=spreadsheet#DemoPreview">Demo Spreadsheet editor</a>
             </td>
             <td>
                 <a class="<%= Request["type"] == "presentation" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=presentation#DemoPreview">Demo Presentation editor</a>
+            </td>
+            <td>
+                <a class="<%= Request["type"] == "pdf" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=pdf#DemoPreview">Demo Pdf editor</a>
             </td>
         </tr>
     </table>
@@ -148,6 +151,11 @@
         {
             documentType = "slide";
             ext = "pptx";
+        }
+        else if (Request["type"] == "pdf")
+        {
+            documentType = "pdf";
+            ext = "pdf";
         }
     %>
     <script type="text/javascript">

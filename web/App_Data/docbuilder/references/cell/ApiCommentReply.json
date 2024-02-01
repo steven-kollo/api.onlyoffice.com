@@ -1,0 +1,243 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiCommentReply",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiCommentReply class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "\"commentReply\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetText": {
+      "memberof": "ApiCommentReply",
+      "name": "GetText",
+      "description": "<p>Returns the comment reply text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetText": {
+      "memberof": "ApiCommentReply",
+      "name": "SetText",
+      "description": "<p>Sets the comment reply text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The comment reply text.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetAuthorName": {
+      "memberof": "ApiCommentReply",
+      "name": "GetAuthorName",
+      "description": "<p>Returns the comment reply author's name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetAuthorName": {
+      "memberof": "ApiCommentReply",
+      "name": "SetAuthorName",
+      "description": "<p>Sets the comment reply author's name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sAuthorName",
+          "description": "<p>The comment reply author's name.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetUserId": {
+      "memberof": "ApiCommentReply",
+      "name": "GetUserId",
+      "description": "<p>Returns the user ID of the comment reply author.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetUserId": {
+      "memberof": "ApiCommentReply",
+      "name": "SetUserId",
+      "description": "<p>Sets the user ID to the comment reply author.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sUserId",
+          "description": "<p>The user ID of the comment reply author.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTimeUTC": {
+      "memberof": "ApiCommentReply",
+      "name": "GetTimeUTC",
+      "description": "<p>Returns the timestamp of the comment reply creation in UTC format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTimeUTC": {
+      "memberof": "ApiCommentReply",
+      "name": "SetTimeUTC",
+      "description": "<p>Sets the timestamp of the comment reply creation in UTC format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number | String",
+          "name": "nTimeStamp",
+          "description": "<p>The timestamp of the comment reply creation in UTC format.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTime": {
+      "memberof": "ApiCommentReply",
+      "name": "GetTime",
+      "description": "<p>Returns the timestamp of the comment reply creation in the current time zone format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTime": {
+      "memberof": "ApiCommentReply",
+      "name": "SetTime",
+      "description": "<p>Sets the timestamp of the comment reply creation in the current time zone format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number | String",
+          "name": "nTimeStamp",
+          "description": "<p>The timestamp of the comment reply creation in the current time zone format.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "events": {},
+  "comment": "/**\n\t * Class representing a comment reply.\n\t * @constructor\n\t * @property {string} Text - Returns or sets the comment reply text.\n\t * @property {string} AuthorName - Returns or sets the comment reply author's name.\n\t * @property {string} UserId - Returns or sets the user ID of the comment reply author.\n\t * @property {number | string} TimeUTC - Returns or sets the timestamp of the comment reply creation in UTC format.\n\t * @property {number | string} Time - Returns or sets the timestamp of the comment reply creation in the current time zone format.\n\t */",
+  "description": "<p>Class representing a comment reply.</p>",
+  "scope": "global",
+  "params": [],
+  "properties": [
+    {
+      "type": "string",
+      "name": "Text",
+      "description": "<p>Returns or sets the comment reply text.</p>"
+    },
+    {
+      "type": "string",
+      "name": "AuthorName",
+      "description": "<p>Returns or sets the comment reply author's name.</p>"
+    },
+    {
+      "type": "string",
+      "name": "UserId",
+      "description": "<p>Returns or sets the user ID of the comment reply author.</p>"
+    },
+    {
+      "type": "number | string",
+      "name": "TimeUTC",
+      "description": "<p>Returns or sets the timestamp of the comment reply creation in UTC format.</p>"
+    },
+    {
+      "type": "number | string",
+      "name": "Time",
+      "description": "<p>Returns or sets the timestamp of the comment reply creation in the current time zone format.</p>"
+    }
+  ]
+}

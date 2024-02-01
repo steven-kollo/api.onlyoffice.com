@@ -3,7 +3,7 @@
       "id":"docspace",
       "title":"DocSpace",
       "description":"Create your own productivity platform based on ONLYOFFICE DocSpace. In this section, you will learn how to make GET, POST, PUT and DELETE requests to collaborate on documents with teams, clients, partners, etc., based on the concept of rooms – special spaces with predefined permissions.",
-      "version":"1.1",
+      "version":"2.0",
       "links":{
          "Get started":[
             {
@@ -33,14 +33,52 @@
                "Item2":"jssdk/events"
             }
          ],
+         "Plugins SDK":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"pluginssdk/"
+            },
+            {
+               "Item1":"Getting started",
+               "Item2":"pluginssdk/gettingstarted"
+            },
+            {
+               "Item1":"Creating plugin template",
+               "Item2":"pluginssdk/creatingtemplate"
+            },
+            {
+               "Item1":"Plugin structure",
+               "Item2":"pluginssdk/structure"
+            },
+            {
+               "Item1":"Coding plugin",
+               "Item2":"pluginssdk/codingplugin"
+            },
+            {
+               "Item1":"Building plugin",
+               "Item2":"pluginssdk/buildingplugin"
+            },
+            {
+               "Item1":"Config",
+               "Item2":"pluginssdk/config"
+            },
+            {
+               "Item1":"Adding plugin",
+               "Item2":"pluginssdk/addingplugin"
+            },
+            {
+               "Item1":"How to create plugin step by step",
+               "Item2":"pluginssdk/plugintutorial"
+            }
+         ],
          "API Backend":[
             {
                "Item1":"Basic concepts",
                "Item2":"backend/"
             },
             {
-               "Item1":"Passing authentication",
-               "Item2":"backend/auth"
+               "Item1":"How it works",
+               "Item2":"backend/howitworks"
             },
             {
                "Item1":"authentication",
@@ -55,16 +93,8 @@
                "Item2":"section/capabilities"
             },
             {
-               "Item1":"feed",
-               "Item2":"section/feed"
-            },
-            {
                "Item1":"files",
                "Item2":"section/files"
-            },
-            {
-               "Item1":"group",
-               "Item2":"section/group"
             },
             {
                "Item1":"people",
@@ -81,10 +111,6 @@
             {
                "Item1":"settings",
                "Item2":"section/settings"
-            },
-            {
-               "Item1":"thirdparty",
-               "Item2":"section/thirdparty"
             }
          ],
          "API System":[
@@ -107,6 +133,10 @@
          ],
          "More information":[
             {
+               "Item1":"Changelog",
+               "Item2":"changelog"
+            },
+            {
                "Item1":"FAQ",
                "Item2":"faq"
             },
@@ -125,7 +155,7 @@
       "id":"editors",
       "title":"Document Server",
       "description":"Bring document editing and co-authoring to your web app users. In this section, you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
-      "version":"7.5",
+      "version":"8.0",
       "links":{
          "Get Started":[
             {
@@ -259,7 +289,7 @@
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"Extend the ONLYOFFICE Docs functionality. In this section, you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"7.5",
+      "version":"8.0",
       "links":{
          "Get started":[
             {
@@ -373,7 +403,7 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section, you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "7.5",
+      "version": "8.0",
       "links":{
          "Get started":[
             {
@@ -439,6 +469,10 @@
             {
                "Item1":".Net",
                "Item2":"integrationapi/net"
+            },
+            {
+               "Item1":"Builder framework samples",
+               "Item2":"builderframeworksamples"
             }
          ],
          "Builder.App":[

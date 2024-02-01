@@ -144,12 +144,10 @@
         });
 
         <%
-            var zoom = 100;
             if (Request["type"] == "form")
             {
                 documentType = "word";
                 ext = "docx";
-                zoom = 50;
             }
         %>
 
@@ -184,7 +182,7 @@
                                 IntegrationMode = "embed",
                                 ToolbarHideFileName = true,
                                 ToolbarNoTabs = true,
-                                Zoom = zoom
+                                Zoom = -2
                             }
                     },
                 Height = "550px",

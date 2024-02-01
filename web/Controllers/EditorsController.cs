@@ -112,6 +112,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "InteractingOutside/Comments",
                 "InteractingOutside/FillingForm",
                 "InteractingOutside/ReviewWork",
+                "JavaSdk",
                 "Jira",
                 "Liferay",
                 "Mattermost",
@@ -422,7 +423,12 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View();
         }
-        
+
+        public ActionResult JavaSdk()
+        {
+            return View();
+        }
+
         public ActionResult Liferay()
         {
             return View();

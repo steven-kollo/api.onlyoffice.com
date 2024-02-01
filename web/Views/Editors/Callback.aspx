@@ -96,6 +96,47 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="formsdataurl" class="copy-link">formsdataurl</td>
+                <td>
+                    Defines the URL to the JSON file with the submitted form data.
+                    The array structure with the form data is described <a href="<%= Url.Action("global", "docbuilder") %>#FormData">here</a>.
+                    This file contains the following parameters:
+                    <ul>
+                        <li>
+                            <b>key</b> - the form key. If the current form is a radio button, then this field contains the form group key,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "Text1";
+                        </li>
+                        <li>
+                            <b>tag</b> - the form tag,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "";
+                        </li>
+                        <li>
+                            <b>value</b> - the current form value,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "inner text";
+                        </li>
+                        <li>
+                            <b>type</b> - the form type (<b>text</b>, <b>checkBox</b>, <b>picture</b>, <b>comboBox</b>, <b>dropDownList</b>, <b>dateTime</b>, <b>radio</b>),
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "text".
+                        </li>
+                    </ul>
+                    The object is present when the <em>status</em> value is equal to <em>6</em> and the <em>forcesavetype</em> value is equal to <em>3</em>.
+                </td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="history" class="copy-link">history</td>
                 <td>
                     Defines the object with the document changes history.
@@ -211,6 +252,7 @@
                     <ul>
                         <li>If <em>forcesavetype</em> parameter is set to <b>1</b>, the <em>callbackUrl</em> from the user who clicked the <b>Save</b> button is used.</li>
                         <li>If <em>forcesavetype</em> parameter is set to <b>0</b> or <b>2</b>, the <em>callbackUrl</em> from the user who made the last changes to the file is used.</li>
+                        <li>If <em>forcesavetype</em> parameter is set to <b>3</b>, the <em>callbackUrl</em> from the user who clicked the <b>Submit</b> button is used.</li>
                     </ul>
                     <p>Starting from version 5.5 to version 6.1, the <em>callbackUrl</em> from the user who made the last changes to the file is always used.</p>
                 </td>

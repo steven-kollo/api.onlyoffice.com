@@ -80,7 +80,7 @@
     }
   },
   "events": {},
-  "comment": "/**\n     * Base class.\n     * @global\n     * @class\n     * @name Api\n     */",
+  "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t */",
   "description": "<p>Base class.</p>",
   "scope": "global"
 }

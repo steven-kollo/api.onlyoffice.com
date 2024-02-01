@@ -18,6 +18,7 @@
 </ul>
 
 <p>Check <a href="<%= Url.Action("howitworks/globalvariable") %>">Exchanging data among files</a> and <a href="<%= Url.Action("integrationapi/arguments") %>">Using command line arguments</a> to learn more options for passing external data in the DocBuilder script.</p>
+<p>This sample is available for the <b>C++ and .Net DocBuilder Frameworks</b>.<br />Download the sample and get more information on the <a href="<%= Url.Action("builderframeworksamples") %>">Builder framework samples</a> page.</p>
 
 <textarea disabled="disabled" id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 
@@ -31,5 +32,5 @@
     $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
 </script>
 <div id="generator">
-    <UserControl:Generator runat="server" docTitle="Filled form" documentType="word" ext="oform" runScript="false" template="filled_form" zoom="80" />
+    <UserControl:Generator runat="server" docTitle="Filled form" documentType="word" ext="docxf" runScript="false" template="filled_form" zoom="80" />
 </div>

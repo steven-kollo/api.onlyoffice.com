@@ -448,6 +448,44 @@
         }
       ]
     },
+    "GetFormsData": {
+      "memberof": "ApiDocument",
+      "name": "GetFormsData",
+      "description": "<p>Returns the data from all forms present in the current document.\nIf a form was created and not assigned to any part of the document, it won't appear in this list.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<FormData>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFormsData": {
+      "memberof": "ApiDocument",
+      "name": "SetFormsData",
+      "description": "<p>Sets the data to the specified forms.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<FormData>",
+          "name": "arrData",
+          "description": "<p>An array of form data to set to the specified forms.</p>",
+          "optional": false
+        }
+      ]
+    },
     "SetTrackRevisions": {
       "memberof": "ApiDocument",
       "name": "SetTrackRevisions",
@@ -605,6 +643,12 @@
           "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sUserId",
+          "description": "<p>The user ID of the comment author (optional).</p>",
+          "optional": false
         }
       ]
     },
@@ -672,6 +716,49 @@
           "type": "number",
           "name": "nPage",
           "description": "<p>The page number.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddDrawingToPage": {
+      "memberof": "ApiDocument",
+      "name": "AddDrawingToPage",
+      "description": "<p>Adds a shape to the specified page.\n<note>This method can be a little bit slow, because it runs the document calculation\nprocess to arrange tables on the specified page.</note></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiDrawing",
+          "name": "oDrawing",
+          "description": "<p>A shape to add to the page.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nPage",
+          "description": "<p>The page number.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "x",
+          "description": "<p>The X coordinate in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "y",
+          "description": "<p>The Y coordinate in English measure units.</p>",
           "optional": false
         }
       ]

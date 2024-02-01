@@ -75,7 +75,7 @@
         "de": "Typograf"
     },
     "guid": "asc.{55159EC6-C91A-4DDB-8E1E-558454666461}",
-    "version": "1.0.0",
+    "version": "1.0.1",
 
     "variations": [
         {
@@ -97,7 +97,7 @@
                     "200%": { "normal": "resources/img/icon@2x.png" }
                 }
 			],
-            "isViewer": true,
+            "isViewer": false,
             "EditorsSupport": [ "word", "slide", "cell" ],
 
             "isVisual": true,
@@ -112,14 +112,15 @@
             "initOnSelectionChanged": true,
             "store": {
                 "background": {
-                    "light" : "#AE1717",
-                    "dark" : "#AE1717"
+                    "light" : "#00ACC7",
+                    "dark" : "#00ACC7"
                 },
                 "screenshots" : ["resources/store/screenshots/screen_1.png"],
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities"]
             }
         }
     ]

@@ -272,6 +272,13 @@
                         <b>example</b>: "78e1e841";
                     </li>
                     <li>
+                        <b>image</b> - the path to the user avatar,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "https://example.com/url-to-user-avatar.png";
+                    </li>
+                    <li>
                         <b>lastname</b> - the last name of the user.
                         Deprecated since version 4.2, please use <em>name</em> instead,
                         <br />
@@ -294,6 +301,7 @@
             <td>{
     "group": "Group1",
     "id": "78e1e841",
+    "image": "https://example.com/url-to-user-avatar.png",
     "name": "John Smith"
 }</td>
         </tr>
@@ -743,6 +751,7 @@
         "user": {
             "group": ${getFieldValue("editorConfig_user_group")},
             "id": ${getFieldValue("editorConfig_user_id")},
+            "image": "https://example.com/url-to-user-avatar.png",
             "name": ${getFieldValue("editorConfig_user_name")}
         }`;
 

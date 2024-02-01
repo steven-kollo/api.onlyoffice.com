@@ -249,10 +249,6 @@
             <summary>
             </summary>
         </member>
-        <member name="T:ASC.Files.Core.ApiModels.RequestDto.RoomFilterType">
-            <summary>
-            </summary>
-        </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto">
             <summary>
             </summary>
@@ -393,6 +389,14 @@
             <summary>File properties that are represented as the EntryPropertiesRequestDto object</summary>
             <type>ASC.Files.Core.ApiModels.RequestDto.EntryPropertiesRequestDto, ASC.Files.Core</type>
         </member>
+        <member name="T:ASC.Files.Core.ApiModels.RequestDto.ExternalShareRequestDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.ExternalShareRequestDto.Password">
+            <summary>Password</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto">
             <summary>
             </summary>
@@ -473,21 +477,37 @@
             <summary>Request input stream</summary>
             <type>System.IO.Stream, System.IO</type>
         </member>
-        <member name="T:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto">
+        <member name="T:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto">
             <summary>
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto.LinkId">
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.LinkId">
             <summary>Link ID</summary>
             <type>System.Guid, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto.Title">
-            <summary>External link name</summary>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.Title">
+            <summary>Link name</summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.InvintationLinkRequestDto.Access">
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.Access">
             <summary>Sharing rights</summary>
             <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.ExpirationDate">
+            <summary>Link expiration date</summary>
+            <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.LinkType">
+            <summary>Link type</summary>
+            <type>ASC.Files.Core.ApiModels.ResponseDto.LinkType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.Password">
+            <summary>Link password</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.DenyDownload">
+            <summary>Specifies whether downloading a file from a link is disabled or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.LockFileRequestDto">
             <summary>
@@ -798,11 +818,11 @@
             <summary>Request input stream</summary>
             <type>System.IO.Stream, System.IO</type>
         </member>
-        <member name="T:ASC.Files.Core.ApiModels.RequestDto.UserInvintationRequestDto">
+        <member name="T:ASC.Files.Core.ApiModels.RequestDto.UserInvitationRequestDto">
             <summary>
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UserInvintationRequestDto.UsersIds">
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UserInvitationRequestDto.UsersIds">
             <summary>List of user IDs</summary>
             <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
         </member>
@@ -854,52 +874,70 @@
             <summary>Error message</summary>
             <type>System.String, System</type>
         </member>
-        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1">
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto">
             <summary>
             Result of file conversation operation.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Id">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Id">
             <summary>
             Operation ID
             </summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.OperationType">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.OperationType">
             <summary>
             Operation type
             </summary>
             <type>ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType, ASC.Files.Core</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Progress">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Progress">
             <summary>
             Operation progress
             </summary>
             <type>System.Int32, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Source">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Source">
             <summary>
             Source file
             </summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.File">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.File">
             <summary>
             Resulting file
             </summary>
             <type>System.Object, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Error">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Error">
             <summary>
             Error
             </summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto`1.Processed">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto.Processed">
             <summary>
             Specifies if the operation is processed or not
             </summary>
             <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.Version">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrlApi">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrl">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServiceUrlInternal">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.DocServicePortalUrl">
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto.IsDefault">
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto">
             <summary>
@@ -940,6 +978,42 @@
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto.ServerVersion">
             <summary>Server version</summary>
             <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Status">
+            <summary>External data status</summary>
+            <type>ASC.Files.Core.Security.Status, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Id">
+            <summary>External data ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Title">
+            <summary>External data title</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.RoomType">
+            <summary>Type of a room where the external data is located</summary>
+            <type>System.Nullable{ASC.Files.Core.ApiModels.RequestDto.RoomType}, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.TenantId">
+            <summary>Tenant ID</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Logo">
+            <summary>Room logo</summary>
+            <type>ASC.Files.Core.VirtualRooms.Logo, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.Shared">
+            <summary>Specifies whether to share the external data or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ExternalShareDto.LinkId">
+            <summary>Link ID</summary>
+            <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1">
             <summary>
@@ -1021,9 +1095,183 @@
             <summary>Denies file sharing or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ViewAccessability">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.ViewAccessibility">
             <summary>File accessibility</summary>
-            <type>System.Collections.IDictionary{ASC.Files.Core.Helpers.Accessability, System.Boolean}, System.Collections</type>
+            <type>System.Collections.IDictionary{ASC.Files.Core.Helpers.Accessibility, System.Boolean}, System.Collections</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Int32">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.String">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Int64">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableInt64">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileStatus">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Boolean">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableBoolean">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Thumbnail">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Accessibility">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryAccessibilityBoolean">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FilesSecurityActions">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryFilesSecurityActionsBoolean">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileShare">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.ApiDateTime">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Guid">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.EmployeeDto">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableInt32">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileDtoInt32">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileDtoInt32Array">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileDtoString">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileDtoStringArray">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IEnumerableString">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Logo">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.RoomType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableRoomType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderDtoInt32">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderDtoInt32Array">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderDtoString">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderDtoStringArray">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Default">
+            <summary>
+            The default <see cref="T:System.Text.Json.Serialization.JsonSerializerContext"/> associated with a default <see cref="T:System.Text.Json.JsonSerializerOptions"/> instance.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.GeneratedSerializerOptions">
+            <summary>
+            The source-generated options associated with this context.
+            </summary>
+        </member>
+        <member name="M:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.#ctor(System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.GetTypeInfo(System.Type)">
+            <inheritdoc/>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto">
             <summary>
@@ -1141,6 +1389,10 @@
             <summary>Spceifies if this user can edit the access to the specified file or not</summary>
             <type>System.Boolean, System</type>
         </member>
+        <member name="T:ASC.Files.Core.ApiModels.ResponseDto.LinkType">
+            <summary>
+            </summary>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.FolderContentDto`1">
             <summary>
             </summary>
@@ -1257,6 +1509,10 @@
             <summary>Message</summary>
             <type>System.String, System</type>
         </member>
+        <member name="T:ASC.Files.Core.Core.ApplyFilterOption">
+            <summary>
+            </summary>
+        </member>
         <member name="M:ASC.Files.Core.IFileDao`1.InvalidateCacheAsync(`0)">
             <summary>
                 Clear the application cache for the specific file
@@ -1309,7 +1565,7 @@
             <param name="fileIds">id file</param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesFilteredAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesFilteredAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String[],System.Boolean,System.Boolean)">
             <summary>
                 Gets the file (s) by ID (s) for share
             </summary>
@@ -1318,6 +1574,7 @@
             <param name="subjectGroup"></param>
             <param name="subjectID"></param>
             <param name="searchText"></param>
+            <param name="extension"></param>
             <param name="searchInContent"></param>
             <param name="checkShared"></param>
             <returns></returns>
@@ -1329,7 +1586,7 @@
             <param name="parentId"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String[],System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
             <summary>
                 Get files in folder
             </summary>
@@ -1339,11 +1596,13 @@
             <param name="subjectGroup"></param>
             <param name="subjectID"></param>
             <param name="searchText"> </param>
+            <param name="extension"></param>
             <param name="searchInContent"></param>
             <param name="withSubfolders"> </param>
-            <param name="exludeSubject"> </param>
+            <param name="excludeSubject"> </param>
             <param name="offset"></param>
             <param name="count"></param>
+            <param name="roomId"></param>
             <returns>list of files</returns>
             <remarks>
                Return only the latest versions of files of a folder
@@ -1467,14 +1726,15 @@
             <param name="file"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.ReassignFilesAsync(`0[],System.Guid)">
+        <member name="M:ASC.Files.Core.IFileDao`1.ReassignFilesAsync(System.Guid,System.Guid,System.Collections.Generic.IEnumerable{`0})">
             <summary>
             Set created by
             </summary>
-            <param name="fileIds"></param>
+            <param name="oldOwnerId"></param>
             <param name="newOwnerId"></param>
+            <param name="exceptFolderIds"></param>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String[],System.Boolean)">
             <summary>
             Search files in SharedWithMe &amp; Projects
             </summary>
@@ -1483,6 +1743,7 @@
             <param name="subjectGroup"></param>
             <param name="subjectID"></param>
             <param name="searchText"></param>
+            <param name="extension"></param>
             <param name="searchInContent"></param>
             <returns></returns>
         </member>
@@ -1537,7 +1798,7 @@
             </summary>
             <param name="parentId"></param>
         </member>
-        <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32)">
+        <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
             <summary>
             Get a list of folders.
             </summary>
@@ -1548,9 +1809,10 @@
             <param name="subjectID"></param>
             <param name="searchText"></param>
             <param name="withSubfolders"></param>
-            <param name="exludeSubject"></param>
+            <param name="excludeSubject"></param>
             <param name="offset"></param>
             <param name="count"></param>
+            <param name="roomId"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Nullable{System.Guid},System.String,System.Boolean,System.Boolean,System.Boolean)">
@@ -1558,13 +1820,13 @@
             Gets the folder (s) by ID (s)
             </summary>
             <param name="folderIds"></param>
-            <param name="filterTypes"></param>
+            <param name="filterType"></param>
             <param name="subjectGroup"></param>
             <param name="subjectID"></param>
             <param name="searchText"></param>
             <param name="searchSubfolders"></param>
             <param name="checkShare"></param>
-            <param name="exludeSubject"></param>
+            <param name="excludeSubject"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.GetParentFoldersAsync(`0)">
@@ -1605,7 +1867,7 @@
             <returns> 
             </returns>
         </member>
-        <member name="M:ASC.Files.Core.IFolderDao`1.CanMoveOrCopyAsync(`0[],`0)">
+        <member name="M:ASC.Files.Core.IFolderDao`1.CanMoveOrCopyAsync(System.Collections.Generic.IEnumerable{`0},`0)">
             <summary>
             Validate the transfer operation directory to another directory.
             </summary>
@@ -1666,12 +1928,13 @@
             <param name="chunkedUpload">Determines whenever supposed upload will be chunked (true) or not (false)</param>
             <returns>Maximum size of file which can be uploaded to folder</returns>
         </member>
-        <member name="M:ASC.Files.Core.IFolderDao`1.ReassignFoldersAsync(`0[],System.Guid)">
+        <member name="M:ASC.Files.Core.IFolderDao`1.ReassignFoldersAsync(System.Guid,System.Guid,System.Collections.Generic.IEnumerable{`0})">
             <summary>
             Set created by
             </summary>
-            <param name="folderIds"></param>
+            <param name="oldOwnerId"></param>
             <param name="newOwnerId"></param>
+            <param name="exceptFolderIds"></param>
         </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.SearchFoldersAsync(System.String,System.Boolean)">
             <summary>
@@ -1806,12 +2069,21 @@
             <param name="fileEntry"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.Data.SecurityDao`1.GetSharesAsync(ASC.Files.Core.FileEntry{`0})">
+        <member name="T:ASC.Files.Core.DateToAutoCleanUp">
             <summary>
-            Get file share records with hierarchy.
             </summary>
-            <param name="entry"></param>
-            <returns></returns>
+        </member>
+        <member name="T:ASC.Files.Core.AutoCleanUpData">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.AutoCleanUpData.IsAutoCleanUp">
+            <summary>Specifies if the auto-clearing setting is enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.AutoCleanUpData.Gap">
+            <summary>The period when the trash bin will be cleared</summary>
+            <type>ASC.Files.Core.DateToAutoCleanUp, ASC.Files.Core</type>
         </member>
         <member name="T:ASC.Files.Core.EditHistoryDataDto">
             <summary>
@@ -1877,7 +2149,59 @@
             <summary>File name mask</summary>
             <type>System.String, System</type>
         </member>
+        <member name="T:ASC.Files.Core.FolderType">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:ASC.Files.Core.Security.ValidationInfo">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Status">
+            <summary>External data status</summary>
+            <type>ASC.Files.Core.Security.Status, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Id">
+            <summary>External data ID</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Title">
+            <summary>External data title</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Access">
+            <summary>Sharing rights</summary>
+            <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.FolderType">
+            <summary>Type of a folder where the external data is located</summary>
+            <type>ASC.Files.Core.FolderType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Logo">
+            <summary>Room logo</summary>
+            <type>ASC.Files.Core.VirtualRooms.Logo, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.TenantId">
+            <summary>Tenant ID</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.Shared">
+            <summary>Specifies whether to share the external data or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.Security.ValidationInfo.LinkId">
+            <summary>Link ID</summary>
+            <type>System.Guid, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.Security.Status">
+            <summary>
+            </summary>
+        </member>
         <member name="T:ASC.Files.Core.Security.FileShare">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:ASC.Files.Core.Security.ShareFilterType">
             <summary>
             </summary>
         </member>
@@ -2116,6 +2440,16 @@
               Looks up a localized string similar to Uploaded.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.DefaultExternalLinkTitle">
+            <summary>
+              Looks up a localized string similar to Shared link.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.DefaultInvitationLinkTitle">
+            <summary>
+              Looks up a localized string similar to Invitation link.
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.DocuSignStatusDeclined">
             <summary>
               Looks up a localized string similar to Declined.
@@ -2148,7 +2482,7 @@
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_ChangeOwner">
             <summary>
-              Looks up a localized string similar to You can not select this user.
+              Looks up a localized string similar to You cannot select this user.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_ConvertTimeout">
@@ -2391,6 +2725,11 @@
               Looks up a localized string similar to The invitation link is invalid or its validity has expired.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_MaxLinksCount">
+            <summary>
+              Looks up a localized string similar to The maximum number of links may not exceed {0}.
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_ProviderAlreadyConnect">
             <summary>
               Looks up a localized string similar to This provider is already connected to the room.
@@ -2424,6 +2763,11 @@
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_UnarchiveRoom">
             <summary>
               Looks up a localized string similar to You don&apos;t have enough permission to unarchive the room.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SharePasswordManyAttempts">
+            <summary>
+              Looks up a localized string similar to You have tried too many times to enter your password. Please try again later.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_UpdateArchivedRoom">
@@ -3290,6 +3634,14 @@
             <summary>File type</summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.Key">
+            <summary>Key</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.Link">
+            <summary>Link</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="P:ASC.Web.Files.Services.DocumentService.FileReference`1.Token">
             <summary>Token</summary>
             <type>System.String, System</type>
@@ -3305,6 +3657,15 @@
         <member name="P:ASC.Web.Files.Services.DocumentService.FileReferenceData`1.InstanceId">
             <summary>Instance ID</summary>
             <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Files.Utils.FileMarkerCacheItemReflection">
+            <summary>Holder for reflection information generated from proto/file_marker_cache_item.proto</summary>
+        </member>
+        <member name="P:ASC.Web.Files.Utils.FileMarkerCacheItemReflection.Descriptor">
+            <summary>File descriptor for proto/file_marker_cache_item.proto</summary>
+        </member>
+        <member name="F:ASC.Web.Files.Utils.FileMarkerCacheItem.KeyFieldNumber">
+            <summary>Field number for the "key" field.</summary>
         </member>
     </members>
 </doc>

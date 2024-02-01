@@ -9,7 +9,7 @@
 <p>The user can choose a username from the list and all the fields in the form editor will be filled with the user contact information.
 At the same time, this data is displayed in the inputs of the custom interface.</p>
 <p>When the user edits the input data in the custom interface, it is automatically updated in the form editor as well.</p>
-<p>When the document is ready, it can be downloaded by clicking the <b>Download</b> button and printed.</p>
+<p>When the document is ready, the form data can be submitted by clicking the <b>Submit</b> button.</p>
 
 <select id="persons" name="persons" required disabled>
     <option disabled selected value="">Choose Example</option>
@@ -144,13 +144,13 @@ function onChangeContentControl(e) {
             {
                 Document = new Config.DocumentConfig
                     {
-                        FileType = "oform",
+                        FileType = "pdf",
                         Key = "apiwh" + Guid.NewGuid(),
                         Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                        Title = "Demo.oform",
-                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "withtags.oform"
+                        Title = "Demo.pdf",
+                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "withtags.pdf"
                     },
-                DocumentType = "word",
+                DocumentType = "pdf",
                 EditorConfig = new Config.EditorConfigConfiguration
                     {
                         CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),

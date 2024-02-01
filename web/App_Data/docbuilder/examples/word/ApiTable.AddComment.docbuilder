@@ -10,6 +10,6 @@ var oParagraph = Api.CreateParagraph();
 oParagraph.AddText("This is just a sample text in the first cell.");
 var oCell = oTable.GetCell(0,0);
 oTable.AddElement(oCell, 0, oParagraph);
-oTable.AddComment("comment", "John Smith");
+oTable.AddComment("comment", "John Smith", "uid-1");
 builder.SaveFile("docx", "AddComment.docx");
 builder.CloseFile();

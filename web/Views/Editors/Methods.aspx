@@ -38,7 +38,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> - insert recipient data for mail merge into the file.</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
-        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
         <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
     </ul>
 
@@ -308,10 +308,8 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes,
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
@@ -720,7 +718,7 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
-                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em> or <em>path</em> parameters.
+                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em>, <em>path</em>, or <em>link</em> parameters.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event.
             </p>
             <note>Please note that this method is executed only when the user has permissions to the file from which the data is taken.</note>
@@ -1211,7 +1209,7 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments or grant the access rights to edit the specific sheet ranges.
+                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> events.
             </p>
             <pre>
@@ -1221,11 +1219,13 @@ docEditor.setUsers({
         {
             "email": "john@example.com",
             "id": "78e1e841",
+            "image": "https://example.com/url-to-user-avatar1.png",
             "name": "John Smith"
         },
         {
             "email": "kate@example.com",
             "id": "F89d8069ba2b",
+            "image": "https://example.com/url-to-user-avatar2.png",
             "name": "Kate Cage"
         },
         ...
@@ -1256,7 +1256,7 @@ docEditor.setUsers({
                         <td>c</td>
                         <td>
                             Defines the operation type from the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event.
-                            It can take one of the following values - <em>mention</em> or <em>protect</em>.
+                            It can take one of the following values - <em>mention</em>, <em>protect</em>, or <em>info</em>.
                             The default value is <em>mention</em>.
                         </td>
                         <td>string</td>
@@ -1277,6 +1277,12 @@ docEditor.setUsers({
                     <tr class="tablerow">
                         <td>users.id</td>
                         <td>Defines the identification of the user. This field is only used when the <em>c</em> parameter is <em>protect</em>.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>users.image</td>
+                        <td>Defines the path to the user avatar. This field is only used when the <em>c</em> parameter is <em>info</em>.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>

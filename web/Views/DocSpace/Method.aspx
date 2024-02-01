@@ -66,7 +66,7 @@
                 <tr class="tablerow">
                     <td>
                         <%= param.Name %>
-                        <div class="infotext">sent in <%= param.Method %></div>
+                        <div class="infotext">sent in <%= method.HttpMethod == "GET" ? "url" : param.Method %></div>
                     </td>
                     <td>
                         <%= param.Description %>

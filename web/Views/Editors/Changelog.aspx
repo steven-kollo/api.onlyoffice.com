@@ -16,6 +16,20 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="80" class="copy-link">Version 8.0</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> query parameter to the requests from the browser to the server.</li>
+        <li>Added the <a href="<%= Url.Action("conversionapi") %>#watermark">watermark</a> field to the conversion request.</li>
+        <li>Added the <em>pdf</em> document type to the <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter.</li>
+        <li>Added the <a href="<%= Url.Action("callback") %>#formsdataurl">formsdataurl</a> parameter to the <em>Callback handler</em>.</li>
+        <li>Added the <em>data.id</em> parameter to the <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event.</li>
+        <li>Added the <em>users.image</em> field to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</li>
+        <li>Added the <em>info</em> operation type to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method and <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event.</li>
+        <li>Added the <em>image</em> field to the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a> parameter.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#mobileForceView">editorConfig.customization.mobileForceView</a> parameter.</li>
+        <li>Added the <em>link</em> field to the <em>data</em> object which is sent to the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">events.onRequestReferenceData</a> event.</li>
+    </ul>
+
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
         <li>Added the <b>3</b> type for the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> parameter of the callback handler.</li>

@@ -71,11 +71,18 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             foreach (var mod in _entries)
             {
+                var keysToRemove = new List<string>();
+
                 foreach (var section in mod.Value)
                 {
-                    var sharedMethods = section.Value.Methods.Values.Where(m => m.Tags != null && m.Tags.EditorTypes != null);
+                    var sharedMethods = section.Value.Methods.Values.Where(m => m.Tags != null && m.Tags.EditorTypes != null).ToList();
                     foreach (var method in sharedMethods)
                     {
+                        if (!method.Tags.EditorTypes.Select(tag => EditorsTypeMapping[tag]).Contains(mod.Key))
+                        {
+                            section.Value.Methods.Remove(method.Name);
+                        }
+
                         foreach (var type in method.Tags.EditorTypes)
                         {
                             if (!EditorsTypeMapping.ContainsKey(type)) continue;
@@ -131,6 +138,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 });
                             }
                         }
+                    }
+
+                    if (section.Value.Methods.Count == 0 && section.Value.Events.Count == 0)
+                    {
+                        keysToRemove.Add(section.Key);
+                    }
+                }
+
+                if (keysToRemove.Any())
+                {
+                    foreach (var key in keysToRemove)
+                    {
+                        mod.Value.Remove(key);
                     }
                 }
             }
