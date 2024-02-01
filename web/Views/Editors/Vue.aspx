@@ -15,23 +15,39 @@
         <span class="hdr">ONLYOFFICE Docs Vue component</span>
     </h1>
 
-    <p>This <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">component</a> enables users to build ONLYOFFICE Docs user interface using <a href="https://vuejs.org/" target="_blank">Vue</a>.</p>
+    <p>The ONLYOFFICE Docs Vue.js <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">component</a> integrates ONLYOFFICE Docs
+        into <a href="https://vuejs.org/" target="_blank">Vue.js</a> projects.</p>
 
 
-    <h2 id="install" class="copy-link">Installing ONLYOFFICE Docs Vue component</h2>
-    <p>Install ONLYOFFICE Docs Vue component from <b>npm</b> in your project. Run:</p>
-    <pre>
+    <h2 id="prerequisites" class="copy-link">Prerequisites</h2>
+    <p>This procedure requires <a href="https://nodejs.org/en" target="_blank">Node.js (and npm)</a>.</p>
+
+    <h2 id="install" class="copy-link">Creating the demo Vue.js application with ONLYOFFICE Docs editor</h2>
+    <p>This procedure creates a <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank">basic Vue.js application</a>
+        and installs an ONLYOFFICE Docs editor in it.</p>
+    <ol>
+        <li>
+            <p>Open a command line or command prompt and create a Vue.js 3.x project named <em>onlyoffice-vue-demo</em>
+                using the <a href="https://github.com/vuejs/create-vue" target="_blank">Create Vue Tool</a>:</p>
+            <pre>
+npm create vue@3
+</pre>
+        </li>
+        <li>
+            <p>Go to the newly created directory:</p>
+            <pre>
+cd onlyoffice-vue-demo
+</pre>
+        </li>
+        <li>
+            <p>Install ONLYOFFICE Docs Vue.js component from <b>npm</b> and save it to the <em>package.json</em> file with <em>--save</em>:</p>
+            <pre>
 npm install --save @onlyoffice/document-editor-vue
 </pre>
-    <p>or</p>
-    <pre>
-yarn add @onlyoffice/document-editor-vue
-</pre>
-
-
-    <h2 id="use" class="copy-link">Using ONLYOFFICE Docs Vue component</h2>
-    <p>Find below the component usage example:</p>
-    <pre>
+        </li>
+        <li>
+            <p>Open the <em>./src/App.vue</em> file in the <em>onlyoffice-vue-demo</em> project and replace its contents with the following code:</p>
+            <pre>
 &lt;template&gt;
     &lt;DocumentEditor 
         id="docEditor" 
@@ -74,8 +90,68 @@ export default defineComponent({
 });
 &lt;/script&gt;
 </pre>
-    <p>where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
+            <p>Replace the following lines with your own data:</p>
+            <ul>
+                <li><b>"http://documentserver/"</b> - replace with the URL of your server;</li>
+                <li><b>"https://example.com/url-to-example-document.docx"</b> - replace with the URL to your file;</li>
+                <li><b>"https://example.com/url-to-callback.ashx"</b> - replace with your callback URL (this is required for the saving functionality to work).</li>
+            </ul>
+        </li>
+        <li>
+            <p>Test the application using the Vue development server:</p>
+            <ul>
+                <li>
+                    <p>To start the development server, navigate to the <em>onlyoffice-vue-demo</em> directory and run:</p>
+                    <pre>
+npm run dev
+</pre>
+                </li>
+                <li>To stop the development server, select on the command line or command prompt and press <em>Ctrl+C</em>.</li>
+            </ul>
+        </li>
+    </ol>
 
+    <h2 id="deploy" class="copy-link">Deploying the demo Vue.js application</h2>
+    <p>The easiest way to deploy the application to a production environment is to install <a href="https://github.com/vercel/serve" target="_blank">serve</a> and create a static server:</p>
+    <ol>
+        <li>
+            <p>Install the <em>serve</em> package globally:</p>
+            <pre>
+npm install -g serve
+</pre>
+        </li>
+        <li>
+            <p>Serve your static site on the 3000 port:</p>
+            <pre>
+serve -s build
+</pre>
+            <p>Another port can be adjusted using the <em>-l</em> or <em>--listen</em> flags:</p>
+            <pre>
+serve -s build -l 4000
+</pre>
+        </li>
+        <li>
+            <p>To serve the project folder, go to it and run the <em>serve</em> command:</p>
+            <pre>
+cd onlyoffice-vue-demo
+serve
+</pre>
+        </li>
+    </ol>
+    <p>Now you can deploy the application to the created server:</p>
+    <ol>
+        <li>
+            <p>Navigate to the <em>onlyoffice-vue-demo</em> directory and run:</p>
+            <pre>
+npm run build
+</pre>
+            <p>The <em>dist</em> directory will be created with a production build of your app.</p>
+        </li>
+        <li>
+            <p>Copy the contents of the <em>onlyoffice-vue-demo/dist</em> directory to the root directory of the web server (to the <em>onlyoffice-vue-demo</em> folder).</p>
+        </li>
+    </ol>
+    <p>The application will be deployed on the web server (<em>http://localhost:3000</em> by default).</p>
 
     <h2 id="api" class="copy-link">ONLYOFFICE Docs Vue component API</h2>
     <div class="header-gray">Properties</div>
