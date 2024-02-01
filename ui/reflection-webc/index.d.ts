@@ -1,3 +1,79 @@
+interface ArrayType extends NodeType {
+  children: NodeType[]
+  render: ArrayMarkup
+}
+
+interface ArrayMarkup {
+  (t: ArrayType): string
+}
+
+interface GenericType extends NodeType {
+  name: string
+  children: NodeType[]
+  render: GenericMarkup
+}
+
+interface GenericMarkup {
+  (t: GenericType): string
+}
+
+interface LiteralType extends NodeType {
+  value: unknown
+  render: LiteralMarkup
+}
+
+interface LiteralMarkup {
+  (t: LiteralType): string
+}
+
+interface OptionalType extends NodeType {
+  children: NodeType[]
+  render: OptionalMarkup
+}
+
+interface OptionalMarkup {
+  (t: OptionalType): string
+}
+
+interface UnionType extends NodeType {
+  children: NodeType[]
+  render: UnionMarkup
+}
+
+interface UnionMarkup {
+  (t: UnionType): string
+}
+
+interface NodeType extends NodeType {
+  render: NodeMarkup
+}
+
+interface NodeMarkup {
+  (t: NodeType): string
+}
+
+export {
+  ArrayMarkup,
+  ArrayType,
+  GenericMarkup,
+  GenericType,
+  LiteralMarkup,
+  LiteralType,
+  NodeMarkup,
+  NodeType,
+  OptionalMarkup,
+  OptionalType,
+  UnionMarkup,
+  UnionType
+}
+
+
+
+
+
+
+
+
 interface ReflectionParameters {
   values: ReflectionValue[]
 
@@ -16,9 +92,13 @@ interface ReflectionParameters {
   }
 }
 
+// use dl-dt
+// name may be a link, may be a anchor
+
 interface ReflectionValue {
   name: string
   description?: ReflectionContent
+  // badges?: string[]
   type: ReflectionType
   required?: boolean
   default?: unknown

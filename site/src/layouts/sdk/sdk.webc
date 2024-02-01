@@ -1,0 +1,25 @@
+---
+layout: page/page.webc
+---
+<template webc:for="d of pagination.items" webc:nokeep>
+  <content>
+    <span @text="d.kind"></span>
+    <h1 @text="d.name"></h1>
+    <is :@component="d.signature"></is>
+    <!-- todo: since -->
+    <!-- todo: its topic too -->
+    <template webc:nokeep webc:if="d.description">
+      <content-h2 @anchor="/"><l>Description</l></content-h2>
+      <template webc:nokeep @html="d.description()"></template>
+    </template>
+    <template webc:nokeep webc:for="topic of d.topics">
+      <content-h2 @html="topic.title()"></content-h2>
+      <dl>
+        <template webc:for="item of topic.items" webc:nokeep>
+          <dt><a :href="item.link"><is :@component="item.term"></is></a></dt>
+          <dd @html="item.description()"></dd>
+        </template>
+      </dl>
+    </template>
+  </content>
+</template>

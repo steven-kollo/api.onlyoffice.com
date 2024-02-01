@@ -2,6 +2,7 @@
 interface Doclet {
   description?: string
   examples?: string[]
+  fires?: string[]
   inherits?: string
   kind?: DocletKind
   longname?: string

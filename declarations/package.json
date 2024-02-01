@@ -6,11 +6,6 @@
     ".": {
       "types": "./index.d.ts"
     },
-    "./builtin.js": {
-      "import": "./dist/builtin.js",
-      "require": "./dist/builtin.cjs",
-      "types": "./dist/builtin.d.ts"
-    },
     "./helpers.js": {
       "import": "./dist/helpers.js",
       "require": "./dist/helpers.cjs",

@@ -3,6 +3,12 @@
 // todo: migrate to esm.
 
 /**
+ * @typedef {import("../index.js").ArrayMarkup} ArrayMarkup
+ * @typedef {import("../index.js").GenericMarkup} GenericMarkup
+ * @typedef {import("../index.js").LiteralMarkup} LiteralMarkup
+ * @typedef {import("../index.js").NodeType} NodeType
+ * @typedef {import("../index.js").OptionalMarkup} OptionalMarkup
+ * @typedef {import("../index.js").UnionMarkup} UnionMarkup
  * @typedef {import("../index.js").ReflectionContentRender} ReflectionContentRender
  * @typedef {import("../index.js").ReflectionType} ReflectionType
  * @typedef {import("../index.js").ReflectionTypeRender} ReflectionTypeRender
@@ -45,6 +51,57 @@ function escapeHTML(s) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;")
 }
+
+/** @type {ArrayMarkup} */
+function ArrayMarkup(t) {
+  let m = renderChildren(t.children, ", ")
+  m += "[]"
+  return m
+}
+
+/** @type {GenericMarkup} */
+function GenericMarkup(t) {
+  let m = t.name
+  let c = renderChildren(t.children, ", ")
+  c = brackets(c)
+  m += c
+  return m
+}
+
+/** @type {LiteralMarkup} */
+function LiteralMarkup(t) {
+  return `${t.value}`
+}
+
+/** @type {OptionalMarkup} */
+function OptionalMarkup(t) {
+  let m = renderChildren(t.children)
+  m += "?"
+  return m
+}
+
+/** @type {UnionMarkup} */
+function UnionMarkup(t) {
+  return renderChildren(t.children, " | ")
+}
+
+/**
+ * @param {NodeType[]} ch
+ * @param {string} sp
+ * @returns {string}
+ */
+function renderChildren(ch, sp = "") {
+  return ch.map((t) => t.render(t)).join(sp)
+}
+
+// /**
+//  * @param {string} l
+//  * @param {string} t
+//  * @returns {string}
+//  */
+// function renderLink(l, t) {
+//   return `<a href="${l}">${t}</a>`
+// }
 
 /** @type {ReflectionTypeRender} */
 function renderArrayType(t) {
@@ -114,6 +171,12 @@ function brackets(s) {
 }
 
 module.exports = {
+  ArrayMarkup,
+  GenericMarkup,
+  LiteralMarkup,
+  OptionalMarkup,
+  UnionMarkup,
+
   components,
   renderTextContent,
   renderArrayType,

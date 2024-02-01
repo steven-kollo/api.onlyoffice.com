@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * @typedef {import("../index")}
+ */
+
 // import { createReadStream, createWriteStream } from "node:fs"
 // import Chain from "stream-chain"
 // import StreamArray from "stream-json/streamers/StreamArray.js"

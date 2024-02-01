@@ -4,13 +4,21 @@
  * @typedef {import("../types/doclet.js").Doclet} Doclet
  * @typedef {import("../types/doclet.js").DocletCatharsis} DocletCatharsis
  * @typedef {import("../types/doclet.js").DocletParam} DocletParam
- * @typedef {import("../index.js").ClassType} ClassType
- * @typedef {import("../index.js").ConstructorType} ConstructorType
+ * @typedef {import("../index.js").AliasDeclaration} AliasDeclaration
+ * @typedef {import("../index.js").ClassDeclaration} ClassDeclaration
+ * @typedef {import("../index.js").ConstructorDeclaration} ConstructorDeclaration
  * @typedef {import("../index.js").CustomType} CustomType
  * @typedef {import("../index.js").Declaration} Declaration
  * @typedef {import("../index.js").DeclarationContent} DeclarationContent
  * @typedef {import("../index.js").DeclarationType} DeclarationType
  * @typedef {import("../index.js").DeclarationValue} DeclarationValue
+ * @typedef {import("../index.js").EventDeclaration} EventDeclaration
+ * @typedef {import("../index.js").FunctionDeclaration} FunctionDeclaration
+ * @typedef {import("../index.js").InstanceMethodDeclaration} InstanceMethodDeclaration
+ * @typedef {import("../index.js").InstancePropertyDeclaration} InstancePropertyDeclaration
+ * @typedef {import("../index.js").ObjectDeclaration} ObjectDeclaration
+ * @typedef {import("../index.js").PropertyDeclaration} PropertyDeclaration
+ * @typedef {import("../index.js").UnionDeclaration} UnionDeclaration
  */
 
 import { Transform } from "node:stream"
@@ -147,12 +155,13 @@ class PreprocessDeclarations extends Transform {
     }
 
     /** @type {Declaration} */
-    const d = {
+    let d = {
       id: "",
       meta: {
         package: "main"
       },
       name: "",
+      kind: "type",
       type: {
         name: "unknown"
       }
@@ -184,6 +193,9 @@ class PreprocessDeclarations extends Transform {
       }
       return
     }
+
+    /** @type {Declaration[]} */
+    const ms = []
 
     if (Object.hasOwn(doc, "name")) {
       d.name = doc.name
@@ -222,143 +234,184 @@ class PreprocessDeclarations extends Transform {
 
     if (Object.hasOwn(doc, "kind")) {
       if (doc.kind === "class") {
-        /** @type {ClassType} */
-        const dt = {
-          name: doc.kind,
-          constructors: []
+        /** @type {ClassDeclaration} */
+        const cl = {
+          ...d,
+          kind: "class"
         }
-        /** @type {ConstructorType} */
-        const ct = {
-          name: "constructor"
-        }
-        if (Object.hasOwn(doc, "params")) {
-          ct.parameters = doc.params.map((p) => {
-            return praseValue(d, p)
+        delete cl.type
+        if (Object.hasOwn(doc, "properties")) {
+          cl.instanceProperties = doc.properties.map((p) => {
+            const v = praseValue(cl, p)
+            /** @type {InstancePropertyDeclaration} */
+            const pr = {
+              id: createID(cl.meta.package, `${cl.name}#${p.name}`),
+              meta: {
+                package: cl.meta.package
+              },
+              name: v.name,
+              kind: "instanceProperty",
+              parent: {
+                id: cl.id
+              },
+              type: v.type
+            }
+            if (Object.hasOwn(v, "description")) {
+              pr.description = v.description
+            }
+            ms.push(pr)
+            return {
+              name: "custom",
+              id: pr.id
+            }
           })
         }
-        /** @type {Declaration} */
-        const cd = {
-          id: createID(d.meta.package, `${d.name}#constructor`),
+
+        /** @type {ConstructorDeclaration} */
+        const co = {
+          id: createID(cl.meta.package, `${cl.name}#constructor`),
           meta: {
-            package: d.meta.package
+            package: cl.meta.package
           },
           name: "constructor",
           parent: {
-            id: d.id
+            id: cl.id
           },
-          type: ct
-        }
-        this.push(cd)
-        dt.constructors.push({
-          name: "custom",
-          id: cd.id
-        })
-        if (Object.hasOwn(doc, "properties")) {
-          dt.properties = doc.properties.map((p) => {
-            const v = praseValue(d, p)
-            /** @type {Declaration} */
-            const pd = {
-              id: createID(d.meta.package, `${d.name}#${p.name}`),
-              meta: {
-                package: d.meta.package
-              },
-              name: v.name,
-              parent: {
-                id: d.id
-              },
-              type: v.type
-            }
-            if (Object.hasOwn(v, "description")) {
-              pd.description = v.description
-            }
-            this.push(pd)
-            return {
-              name: "custom",
-              id: pd.id
-            }
-          })
-        }
-        d.type = dt
-      } else {
-        if (Object.hasOwn(doc, "type") && Object.hasOwn(doc.type, "parsedType")) {
-          d.type = parseType(d, doc.type.parsedType)
-        }
-        switch (doc.kind) {
-          case "event":
-            d.type.name = doc.kind
-            if (Object.hasOwn(d, "parent")) {
-              this._cache.populate(d.parent.id, "events", d.id)
-            }
-            break
-          case "function":
-            d.type.name = doc.kind
-            if (Object.hasOwn(d, "parent")) {
-              this._cache.populate(d.parent.id, "methods", d.id)
-              d.type.name = "method"
-            }
-            break
-        }
-        if (Object.hasOwn(doc, "properties")) {
-          // todo: resolve ignoring.
-          // @ts-ignore
-          d.type.properties = doc.properties.map((p) => {
-            const v = praseValue(d, p)
-            /** @type {Declaration} */
-            const pd = {
-              id: createID(d.meta.package, `${d.name}#${p.name}`),
-              meta: {
-                package: d.meta.package
-              },
-              name: v.name,
-              parent: {
-                id: d.id
-              },
-              type: v.type
-            }
-            if (Object.hasOwn(v, "description")) {
-              pd.description = v.description
-            }
-            this.push(pd)
-            return {
-              name: "custom",
-              id: pd.id
-            }
-          })
+          kind: "constructor",
+          type: {
+            name: "function"
+          }
         }
         if (Object.hasOwn(doc, "params")) {
-          // todo: resolve ignoring.
-          // @ts-ignore
-          d.type.parameters = doc.params.map((p) => {
+          co.type.parameters = doc.params.map((p) => {
+            return praseValue(cl, p)
+          })
+        }
+        ms.push(co)
+        cl.constructors = [{
+          name: "custom",
+          id: co.id
+        }]
+
+        d = cl
+      } else if (doc.kind === "event") {
+        /** @type {EventDeclaration} */
+        const ev = {
+          ...d,
+          kind: "event",
+          type: {
+            name: "function"
+          }
+        }
+
+        if (Object.hasOwn(doc, "params")) {
+          ev.type.parameters = doc.params.map((p) => {
+            return praseValue(ev, p)
+          })
+        }
+
+        if (Object.hasOwn(ev, "parent")) {
+          this._cache.populate(ev.parent.id, "events", ev.id)
+        }
+
+        d = ev
+      } else if (doc.kind === "function") {
+        /** @type {FunctionDeclaration} */
+        const fu = {
+          ...d,
+          kind: "function",
+          type: {
+            name: "function"
+          }
+        }
+
+        if (Object.hasOwn(doc, "params")) {
+          fu.type.parameters = doc.params.map((p) => {
             return praseValue(d, p)
           })
         }
         if (Object.hasOwn(doc, "returns")) {
           // There is no way that the `returns` contains more than one element.
           if (doc.returns.length === 1) {
-            // todo: resolve ignoring.
-            // @ts-ignore
-            d.type.returns = praseValue(d, doc.returns[0]).type
+            fu.type.returns = praseValue(d, doc.returns[0]).type
+          }
+        }
+
+        if (Object.hasOwn(fu, "parent")) {
+          /** @type {InstanceMethodDeclaration} */
+          const me = {
+            ...fu,
+            kind: "instanceMethod"
+          }
+          this._cache.populate(fu.parent.id, "instanceMethods", fu.id)
+          d = me
+        } else {
+          d = fu
+        }
+      } else if (doc.kind === "typedef") {
+        if (Object.hasOwn(doc, "type") && Object.hasOwn(doc.type, "parsedType")) {
+          const t = parseType(d, doc.type.parsedType)
+          if (t.name === "object") {
+            /** @type {ObjectDeclaration} */
+            const ob = {
+              ...d,
+              kind: "object",
+              type: {
+                name: "object"
+              }
+            }
+
+            if (Object.hasOwn(doc, "properties")) {
+              ob.type.properties = doc.properties.map((p) => {
+                const v = praseValue(ob, p)
+                /** @type {PropertyDeclaration} */
+                const pr = {
+                  id: createID(ob.meta.package, `${ob.name}#${p.name}`),
+                  meta: {
+                    package: ob.meta.package
+                  },
+                  name: v.name,
+                  kind: "property",
+                  parent: {
+                    id: ob.id
+                  },
+                  type: v.type
+                }
+                if (Object.hasOwn(v, "description")) {
+                  pr.description = v.description
+                }
+                ms.push(pr)
+                return {
+                  name: "custom",
+                  id: pr.id
+                }
+              })
+            }
+
+            d = ob
+          } else if (t.name === "union") {
+            /** @type {UnionDeclaration} */
+            const un = {
+              ...d,
+              kind: "union",
+              type: t
+            }
+            d = un
+          } else {
+            d.type = t
           }
         }
       }
     }
 
     if (Object.hasOwn(doc, "examples")) {
-      d.examples = await Promise.all(doc.examples.map(async (e) => {
-        /** @type {DeclarationContent} */
-        const c = {
-          syntax: "js",
-          text: e
-        }
-        const [r] = await eslint.lintText(e)
-        if (r.output !== undefined) {
-          c.text = r.output
-        }
-        return c
-      }))
+      d.examples = await parseExamples(doc.examples)
     }
 
     this.push(d)
+    ms.forEach((d) => {
+      this.push(d)
+    })
   }
 }
 
@@ -377,10 +430,22 @@ class PostprocessDeclarations extends Transform {
 
     const dc = this._cache.retrieve(d.id)
     if (dc !== undefined) {
+      if (Object.hasOwn(dc, "instanceMethods")) {
+        // todo: resolve ignoring.
+        // @ts-ignore
+        d.instanceMethods = dc.instanceMethods.map((id) => {
+          /** @type {CustomType} */
+          const t = {
+            name: "custom",
+            id
+          }
+          return t
+        })
+      }
       if (Object.hasOwn(dc, "methods")) {
         // todo: resolve ignoring.
         // @ts-ignore
-        d.type.methods = dc.methods.map((id) => {
+        d.methods = dc.methods.map((id) => {
           /** @type {CustomType} */
           const t = {
             name: "custom",
@@ -392,7 +457,7 @@ class PostprocessDeclarations extends Transform {
       if (Object.hasOwn(dc, "events")) {
         // todo: resolve ignoring.
         // @ts-ignore
-        d.type.events = dc.events.map((id) => {
+        d.events = dc.events.map((id) => {
           /** @type {CustomType} */
           const t = {
             name: "custom",
@@ -404,7 +469,7 @@ class PostprocessDeclarations extends Transform {
       if (Object.hasOwn(dc, "extends")) {
         // todo: resolve ignoring.
         // @ts-ignore
-        d.type.extends = dc.extends.map((id) => {
+        d.extends = dc.extends.map((id) => {
           /** @type {CustomType} */
           const t = {
             name: "custom",
@@ -416,7 +481,7 @@ class PostprocessDeclarations extends Transform {
       if (Object.hasOwn(dc, "implements")) {
         // todo: resolve ignoring.
         // @ts-ignore
-        d.type.implements = dc.implements.map((id) => {
+        d.implements = dc.implements.map((id) => {
           /** @type {CustomType} */
           const t = {
             name: "custom",
@@ -499,6 +564,7 @@ function parseType(d, ca) {
           case "Number":
             // todo: non-obvious behavior.
             t = {
+              // @ts-ignore
               name: "literal",
               value: ca.name
             }
@@ -513,6 +579,7 @@ function parseType(d, ca) {
           case "String":
             // todo: non-obvious behavior.
             t = {
+              // @ts-ignore
               name: "literal",
               value: ca.name
             }
@@ -521,6 +588,7 @@ function parseType(d, ca) {
             if (isNumberLiteral(ca.name)) {
               // todo: what if `Number(ca.name)` is `NaN`?
               t = {
+                // @ts-ignore
                 name: "literal",
                 value: Number(ca.name)
               }
@@ -528,6 +596,7 @@ function parseType(d, ca) {
             }
             if (isStringLiteral(ca.name)) {
               t = {
+                // @ts-ignore
                 name: "literal",
                 value: ca.name.slice(1, -1)
               }
@@ -542,6 +611,7 @@ function parseType(d, ca) {
         break
       case "NullLiteral":
         t = {
+          // @ts-ignore
           name: "literal",
           value: "null"
         }
@@ -582,6 +652,7 @@ function parseType(d, ca) {
         break
       case "UndefinedLiteral":
         t = {
+          // @ts-ignore
           name: "literal",
           value: "undefined"
         }
@@ -601,6 +672,25 @@ function parseType(d, ca) {
     }
   }
   return t
+}
+
+/**
+ * @param {string[]} es
+ * @returns {Promise<DeclarationContent[]>}
+ */
+function parseExamples(es) {
+  return Promise.all(es.map(async (e) => {
+    /** @type {DeclarationContent} */
+    const c = {
+      syntax: "js",
+      text: e
+    }
+    const [r] = await eslint.lintText(e)
+    if (r.output !== undefined) {
+      c.text = r.output
+    }
+    return c
+  }))
 }
 
 /**
@@ -631,6 +721,7 @@ function isStringLiteral(s) {
 
 /**
  * @typedef {Object} CacheDeclaration
+ * @property {string[]=} instanceMethods
  * @property {string[]=} methods
  * @property {string[]=} events
  * @property {string[]=} extends

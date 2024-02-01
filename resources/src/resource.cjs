@@ -5,7 +5,7 @@
  */
 
 /** @type {Declaration[]} */
-const declarations = require("./document-builder.declarations.json")
+const declarations = require("./resource.declarations.json")
 
 /**
  * @returns {Declaration[]}
@@ -15,7 +15,7 @@ function list() {
 }
 
 /** @type {Record<string, number>} */
-const indexes = require("./document-builder.indexes.json")
+const indexes = require("./resource.indexes.json")
 
 /**
  * @param {string} id

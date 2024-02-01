@@ -117,6 +117,9 @@ importers:
       '@onlyoffice/documentation-ui-reflection-webc':
         specifier: workspace:^
         version: link:../ui/reflection-webc
+      '@shikijs/rehype':
+        specifier: 1.0.0-beta.1
+        version: 1.0.0-beta.1
       esbuild:
         specifier: ^0.19.11
         version: 0.19.11
@@ -138,6 +141,9 @@ importers:
       remark-rehype:
         specifier: ^11.1.0
         version: 11.1.0
+      shiki:
+        specifier: 1.0.0-beta.1
+        version: 1.0.0-beta.1
 
   ui/code-example: {}
 
@@ -725,6 +731,27 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.16.0
+    dev: true
+
+  /@shikijs/core@1.0.0-beta.1:
+    resolution: {integrity: sha512-z3gdznaRj/DJSLQdR2Gdx6AB3e5+Il/kSGdLTGHI7HnalgPL15RbGgBSdLHW8rKAz4+dezAcTdnxm8z6YTu7nA==}
+    dev: true
+
+  /@shikijs/rehype@1.0.0-beta.1:
+    resolution: {integrity: sha512-ezZtmZjy10CWcSfrNadFPoTfZO7AAniWtcwKlkhfbDYHZ1XLPwIpOigjey38ewaYj2OiTU1ZUD++65inFipOvA==}
+    dependencies:
+      '@shikijs/transformers': 1.0.0-beta.1
+      '@types/hast': 3.0.3
+      hast-util-to-string: 3.0.0
+      shiki: 1.0.0-beta.1
+      unified: 11.0.4
+      unist-util-visit: 5.0.0
+    dev: true
+
+  /@shikijs/transformers@1.0.0-beta.1:
+    resolution: {integrity: sha512-JBqx7GbxNUu1jYJTUV+GTz0g5jY0bF2Q5GyrLdCZO0W4y9vmXuaewdUJdNgZtoHDTdeH4j0lTPNIAa9OIGlayg==}
+    dependencies:
+      shiki: 1.0.0-beta.1
     dev: true
 
   /@sindresorhus/slugify@1.1.2:
@@ -1820,6 +1847,12 @@ packages:
       space-separated-tokens: 2.0.2
       web-namespaces: 2.0.1
       zwitch: 2.0.4
+    dev: true
+
+  /hast-util-to-string@3.0.0:
+    resolution: {integrity: sha512-OGkAxX1Ua3cbcW6EJ5pT/tslVb90uViVkcJ4ZZIMW/R33DX/AkcJcRrPebPwJkHYwlDHXz4aIwvAAaAdtrACFA==}
+    dependencies:
+      '@types/hast': 3.0.3
     dev: true
 
   /hast-util-whitespace@3.0.0:
@@ -3178,6 +3211,12 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
     requiresBuild: true
+    dev: true
+
+  /shiki@1.0.0-beta.1:
+    resolution: {integrity: sha512-iq32WxjemJVlAHg5HjYoL1qCxGmvyh3Z8kr2E/gMTQdcxyXxTpMhahIC7myxFBapAk9o8QN8mxCpr4JT5rqpRQ==}
+    dependencies:
+      '@shikijs/core': 1.0.0-beta.1
     dev: true
 
   /slash@1.0.0:

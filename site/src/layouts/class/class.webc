@@ -1,7 +1,7 @@
 ---
 layout: page/page.webc
 ---
-<!-- todo: it is about rest api not class, rename it -->
+<!-- todo: it is about rest api not class, rename it. rest/sdk -->
 <template webc:for="d of pagination.items" webc:nokeep>
   <content>
     <h1 @text="d.name"></h1>
@@ -13,6 +13,14 @@ layout: page/page.webc
         <code-example @tab="Unknown" @language="js" @text="s"></code-example>
       </template> -->
     </template>
+    <!-- constructors -->
+    <!-- properties -->
+    <!-- methods -->
+    <!-- events -->
+    <!-- extends -->
+    <!-- implements -->
+    <!-- parameters -->
+    <!-- returns -->
     <template webc:nokeep webc:if="d._properties">
       <content-h2 @anchor="/"><l>Properties</l></content-h2>
       <reflection :@values="d._properties">

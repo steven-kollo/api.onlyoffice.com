@@ -1,7 +1,125 @@
-interface Declaration extends NodeDeclaration {
+// todo: split into JS*Type and UniversalType. JSDeclaration, UniversalDeclaration.
+// constructors have only js classes
+
+type Declaration = DeclarationMap[keyof DeclarationMap]
+
+interface DeclarationMap {
+  alias: AliasDeclaration
+  class: ClassDeclaration
+  constructor: ConstructorDeclaration
+  event: EventDeclaration
+  function: FunctionDeclaration
+  initializer: InitializerDeclaration
+  instanceMethod: InstanceMethodDeclaration
+  instanceProperty: InstancePropertyDeclaration
+  method: MethodDeclaration
+  object: ObjectDeclaration
+  property: PropertyDeclaration
+  staticMethod: StaticMethodDeclaration // todo: rename to type*
+  staticProperty: StaticPropertyDeclaration // todo: rename to type*
+  type: TypeDeclaration
+  union: UnionDeclaration
+  unknown: UnknownDeclaration
+}
+
+// todo: kind: constant, enum, interface, variable, etc.
+
+interface AliasDeclaration extends DeclarationNode {
+  kind: "alias"
+  type: DeclarationType
+}
+
+interface ClassDeclaration extends DeclarationNode {
+  kind: "class"
+  constructors?: CustomType[]
+  events?: CustomType[]
+  extends?: CustomType[] // todo: what about built-in classes?
+  implements?: CustomType[]
+  initializers?: CustomType[]
+  instanceMethods?: CustomType[]
+  instanceProperties?: CustomType[]
+  staticMethods?: CustomType[]
+  staticProperties?: CustomType[]
+}
+
+interface ConstructorDeclaration extends DeclarationNode {
+  kind: "constructor"
+  type: FunctionType
+}
+
+interface EventDeclaration extends DeclarationNode {
+  kind: "event"
+  type: FunctionType
+}
+
+interface FunctionDeclaration extends DeclarationNode {
+  kind: "function"
+  type: FunctionType
+}
+
+interface InitializerDeclaration extends DeclarationNode {
+  kind: "initializer"
+  type: FunctionType
+}
+
+interface InstanceMethodDeclaration extends DeclarationNode {
+  kind: "instanceMethod"
+  type: FunctionType
+}
+
+interface InstancePropertyDeclaration extends DeclarationNode {
+  kind: "instanceProperty"
+  type: DeclarationType
+}
+
+interface MethodDeclaration extends DeclarationNode {
+  kind: "method"
+  type: FunctionType
+}
+
+interface ObjectDeclaration extends DeclarationNode {
+  kind: "object"
+  type: ObjectType
+}
+
+interface PropertyDeclaration extends DeclarationNode {
+  kind: "property"
+  type: DeclarationType
+}
+
+interface StaticMethodDeclaration extends DeclarationNode {
+  kind: "staticMethod"
+  type: FunctionType
+}
+
+interface StaticPropertyDeclaration extends DeclarationNode {
+  kind: "staticProperty"
+  type: DeclarationType
+}
+
+interface TypeDeclaration extends DeclarationNode {
+  kind: "type"
+  type: DeclarationType
+}
+
+interface UnionDeclaration extends DeclarationNode {
+  kind: "union"
+  type: UnionType
+}
+
+interface UnknownDeclaration extends DeclarationNode {
+  kind: "unknown"
+  type: UnknownType
+}
+
+interface DeclarationNode {
   id: string
   meta: DeclarationMeta
+  name: string
   summary?: string
+  description?: DeclarationContent
+  kind: string
+  type: DeclarationType
   parent?: DeclarationParent
   examples?: DeclarationContent[]
 }
@@ -14,15 +132,14 @@ interface DeclarationParent {
   id: string
 }
 
-interface DeclarationValue extends NodeDeclaration {
-  default?: LiteralValue
-  // todo: example?: unknown
-}
+// todo: StringValue...
 
-interface NodeDeclaration {
+interface DeclarationValue {
   name: string
   description?: DeclarationContent
   type: DeclarationType
+  default?: bigint | boolean | number | string | symbol
+  // todo: example?: unknown
 }
 
 type DeclarationContent = DeclarationContentMap[keyof DeclarationContentMap]
@@ -34,23 +151,23 @@ interface DeclarationContentMap {
   txt: TextContent
 }
 
-interface JavaScriptContent extends NodeContent {
+interface JavaScriptContent extends ContentNode {
   syntax: "js"
 }
 
-interface MarkdownContent extends NodeContent {
+interface MarkdownContent extends ContentNode {
   syntax: "md"
 }
 
-interface TypeScriptContent extends NodeContent {
+interface TypeScriptContent extends ContentNode {
   syntax: "ts"
 }
 
-interface TextContent extends NodeContent {
+interface TextContent extends ContentNode {
   syntax: "txt"
 }
 
-interface NodeContent {
+interface ContentNode {
   text: string
 }
 
@@ -58,82 +175,79 @@ type DeclarationType = DeclarationTypeMap[keyof DeclarationTypeMap]
 
 interface DeclarationTypeMap {
   array: ArrayType
+  bigint: BigIntType
+  bigintLiteral: BigIntLiteral
+  boolean: BooleanType
+  booleanLiteral: BooleanLiteral
   custom: CustomType
-  class: ClassType
-  constructor: ConstructorType
-  event: EventType
   function: FunctionType
-  initializer: InitializerType
-  literal: LiteralType
-  method: MethodType
+  null: NullType
+  number: NumberType
+  numberLiteral: NumberLiteral
   object: ObjectType
   optional: OptionalType
   readonly: ReadonlyType
   record: RecordType
   setonly: SetonlyType
+  string: StringType
+  stringLiteral: StringLiteral
+  symbol: SymbolType
+  symbolLiteral: SymbolLiteral
+  undefined: UndefinedType
   union: UnionType
   unknown: UnknownType
 }
-
-// todo: split into JS*Type and UniversalType. JSDeclaration, UniversalDeclaration.
-// constructors have only js classes
 
 interface ArrayType extends ParentType {
   name: "array"
 }
 
-interface CustomType extends NodeType {
+interface BigIntType extends TypeNode {
+  name: "bigint"
+}
+
+interface BigIntLiteral extends TypeNode {
+  name: "bigintLiteral",
+  value: bigint
+}
+
+interface BooleanType extends TypeNode {
+  name: "boolean"
+}
+
+interface BooleanLiteral extends TypeNode {
+  name: "booleanLiteral",
+  value: boolean
+}
+
+interface CustomType extends TypeNode {
   name: "custom"
   id: string
 }
 
-interface ClassType extends NodeType {
-  name: "class"
-  constructors?: CustomType[]
-  initializers?: CustomType[]
-  // staticProperties?: CustomType[]
-  properties?: CustomType[]
-  // staticMethods?: CustomType[]
-  methods?: CustomType[]
-  events?: CustomType[]
-  extends?: CustomType[] // todo: what about built-in classes?
-  implements?: CustomType[]
-}
-
-interface ConstructorType extends NodeType {
-  name: "constructor"
-  parameters?: DeclarationValue[]
-}
-
-interface EventType extends NodeType {
-  name: "event"
-  parameters?: DeclarationValue[]
-}
-
-interface FunctionType extends NodeType {
+interface FunctionType extends TypeNode {
   name: "function"
   parameters?: DeclarationValue[]
   returns?: DeclarationType
 }
 
-interface InitializerType extends NodeType {
-  name: "initializer"
-  parameters?: DeclarationValue[]
+interface NullType extends TypeNode {
+  name: "null"
 }
 
-interface LiteralType extends NodeType {
-  name: "literal"
-  // todo: remove quotes from string, use typedef to check if it is a string literal
-  value: LiteralValue
+interface NumberType extends TypeNode {
+  name: "number"
 }
 
-interface MethodType extends FunctionType {
-  name: "method"
+interface NumberLiteral extends TypeNode {
+  name: "numberLiteral",
+  value: number
 }
 
-interface ObjectType extends NodeType {
+interface ObjectType extends TypeNode {
   name: "object"
-  properties?: NodeType[]
+  methods?: FunctionType[]
+  properties?: DeclarationType[]
 }
 
 interface OptionalType extends ParentType {
@@ -152,54 +266,98 @@ interface SetonlyType extends ParentType {
   name: "setonly"
 }
 
+interface StringType extends TypeNode {
+  name: "string"
+}
+
+interface StringLiteral extends TypeNode {
+  name: "stringLiteral",
+  value: string
+}
+
+interface SymbolType extends TypeNode {
+  name: "symbol"
+}
+
+interface SymbolLiteral extends TypeNode {
+  name: "symbolLiteral",
+  value: symbol
+}
+
+interface UndefinedType extends TypeNode {
+  name: "undefined"
+}
+
 interface UnionType extends ParentType {
   name: "union"
 }
 
-interface UnknownType extends NodeType {
+interface UnknownType extends TypeNode {
   name: "unknown"
 }
 
-interface ParentType extends NodeType {
+interface ParentType extends TypeNode {
   children: DeclarationType[]
 }
 
-interface NodeType {
+interface TypeNode {
   name: string
 }
 
-type LiteralValue = bigint | boolean | number | string | symbol
-
 export {
+  AliasDeclaration,
   ArrayType,
-  ClassType,
-  ConstructorType,
+  BigIntLiteral,
+  BigIntType,
+  BooleanLiteral,
+  BooleanType,
+  ClassDeclaration,
+  ConstructorDeclaration,
+  ContentNode,
   CustomType,
   Declaration,
   DeclarationContent,
   DeclarationContentMap,
+  DeclarationMap,
   DeclarationMeta,
+  DeclarationNode,
   DeclarationParent,
   DeclarationType,
+  DeclarationTypeMap,
   DeclarationValue,
-  EventType,
+  EventDeclaration,
+  FunctionDeclaration,
   FunctionType,
-  InitializerType,
+  InitializerDeclaration,
+  InstanceMethodDeclaration,
+  InstancePropertyDeclaration,
   JavaScriptContent,
-  LiteralType,
-  LiteralValue,
   MarkdownContent,
-  MethodType,
-  NodeContent,
-  NodeDeclaration,
-  NodeType,
+  MethodDeclaration,
+  NullType,
+  NumberLiteral,
+  NumberType,
+  ObjectDeclaration,
   ObjectType,
   OptionalType,
+  ParentType,
+  PropertyDeclaration,
   ReadonlyType,
   RecordType,
   SetonlyType,
+  StaticMethodDeclaration,
+  StaticPropertyDeclaration,
+  StringLiteral,
+  StringType,
+  SymbolLiteral,
+  SymbolType,
   TextContent,
+  TypeDeclaration,
+  TypeNode,
   TypeScriptContent,
+  UndefinedType,
+  UnionDeclaration,
   UnionType,
+  UnknownDeclaration,
   UnknownType
 }

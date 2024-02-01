@@ -9,23 +9,35 @@
  */
 
 const { basename } = require("node:path")
-const builtin = require("@onlyoffice/documentation-declarations/builtin.js")
 const { list, retrieve } = require("@onlyoffice/documentation-resources/document-builder.cjs")
-const reflection = require("@onlyoffice/documentation-ui-reflection-webc/reflection.cjs")
+const { InlineSignature } = require("../../../blocks/inline-signature/inline-signature.js")
+
+// function L() {
+//   return {
+//     tag: "l"
+//   }
+// }
 
 function data() {
   return {
-    layout: "class/class.webc",
+    layout: "sdk/sdk.webc",
     pagination: {
       data: "items",
       size: 1,
       addAllPagesToCollections: true,
       before(data) {
-        return data.map(resolveDeclaration)
+        return data.map(parse)
       }
     },
     // todo: do not forget to remove slice.
-    items: list().slice(0, 201),
+    items: (() => {
+      const l = list()
+      const i = l.find((d) => Object.hasOwn(d, "extends"))
+      const r = l.slice(0, 101)
+      const i2 = l.find((d) => Object.hasOwn(d, "implements"))
+      r.push(i, i2)
+      return r
+    })(),
     permalink(data) {
       return resolveLink(data.pagination.items[0])
     },
@@ -41,146 +53,277 @@ function data() {
 }
 
 /**
- * @param {Declaration} d
- * @returns {Declaration}
+ * @typedef {Object} U
+ * @property {string} name
+ * @property {string} description
  */
-function resolveDeclaration(d) {
-  if (d.parameters !== undefined) {
-    d._parameters = d.parameters.map(resolveValue)
-  }
-  if (d.properties !== undefined) {
-    d._properties = d.properties.map(resolveValue)
-  }
-  if (d.returns !== undefined) {
-    d._returns = d.returns.map(resolveValue)
-  }
-  return d
-}
 
 /**
- * @param {DeclarationValue} dv
- * @returns {ReflectionValue}
+ * @typedef {Object} Topic
+ * @property {string} id
+ * @property {() => string} title
+ * @property {TopicItem[]} items
  */
-function resolveValue(dv) {
-  /** @type {ReflectionValue} */
-  const rv = {
-    name: dv.name,
-    // todo: permalink
-    type: resolveType(dv.type)
+
+/**
+ * @typedef {Object} TopicItem
+ * @property {string} id
+ * @property {() => string} signature
+ * @property {() => string} description
+ */
+
+/**
+ * @param {Declaration} d
+ */
+function parse(d) {
+  const r = {
+    meta: d.meta,
+    name: d.name,
+    kind: d.kind,
+    signature: InlineSignature(d, retrieve),
+    topics: []
   }
 
-  if (dv.description !== undefined) {
-    rv.description = {
-      text: dv.description.text,
-      render: reflection.renderTextContent
+  if (Object.hasOwn(d, "description")) {
+    r.description = () => d.description.text
+  }
+
+  if (Object.hasOwn(d, "parent")) {
+    r.parent = d.parent
+  }
+
+  switch (d.kind) {
+    case "class":
+      if (Object.hasOwn(d, "constructors")) {
+        r.topics.push({
+          id: "#constructors",
+          title() {
+            return "Constructors"
+          },
+          items: d.constructors.flatMap(handle)
+        })
+      }
+      if (Object.hasOwn(d, "instanceProperties")) {
+        r.topics.push(handleInstanceProperties(d.instanceProperties))
+      }
+      if (Object.hasOwn(d, "instanceMethods")) {
+        r.topics.push(handleInstanceMethods(d.instanceMethods))
+      }
+      if (Object.hasOwn(d, "events")) {
+        r.topics.push({
+          id: "#events",
+          title() {
+            return "Events"
+          },
+          items: d.events.flatMap(handle)
+        })
+      }
+      if (Object.hasOwn(d, "extends")) {
+        r.topics.push({
+          id: "#extends",
+          title() {
+            return "Extends"
+          },
+          items: d.extends.flatMap(handle)
+        })
+      }
+      if (Object.hasOwn(d, "implements")) {
+        r.topics.push({
+          id: "#implements",
+          title() {
+            return "Implements"
+          },
+          items: d.implements.flatMap(handle)
+        })
+      }
+      break
+    case "constructor":
+      if (Object.hasOwn(d.type, "parameters")) {
+        r.topics.push(handleParameters(d.type.parameters))
+      }
+      break
+    case "event":
+    case "function":
+    case "instanceMethod":
+      if (Object.hasOwn(d.type, "parameters")) {
+        r.topics.push(handleParameters(d.type.parameters))
+      }
+      if (Object.hasOwn(d.type, "returns")) {
+        r.topics.push(handleReturns(d.type.returns))
+      }
+      break
+    case "instanceProperty":
+      r.topics.push(handleType(d.type))
+      break
+    case "object":
+      break
+    case "property":
+      r.topics.push(handleType(d.type))
+      break
+    case "staticMethod":
+      if (Object.hasOwn(d.type, "parameters")) {
+        r.topics.push(handleParameters(d.type.parameters))
+      }
+      if (Object.hasOwn(d.type, "returns")) {
+        r.topics.push(handleReturns(d.type.returns))
+      }
+      break
+    case "staticProperty":
+      break
+    case "type":
+      break
+    case "union":
+      break
+    case "unknown":
+      break
+  }
+
+  function handle(r) {
+    const t = retrieve(r.id)
+    if (t === undefined) {
+      // todo: thrown an error.
+      return []
+    }
+    return inner(t)
+  }
+
+  function inner(t) {
+    return {
+      term: InlineSignature(t, retrieve),
+      id: "/",
+      link: resolveLink(t),
+      description() {
+        return t.description?.text || ""
+      }
     }
   }
 
-  if (dv.default !== undefined) {
-    rv.default = dv.default
+  // function DescriptionTopic() {}
+  // function PropertiesTopic() {}
+  // function SeeAlsoTopic() {}
+
+  function handleInstanceProperties(properties) {
+    return {
+      id: "#instance-properties",
+      title() {
+        return "Instance Properties"
+      },
+      items: properties.flatMap(handle)
+    }
   }
 
-  return rv
+  function handleProperties(properties) {
+    return {
+      id: "#properties",
+      title() {
+        return "Properties"
+      },
+      items: properties.flatMap(handle)
+    }
+  }
+
+  function handleInstanceMethods(methods) {
+    return {
+      id: "#instance-methods",
+      title() {
+        return "Instance Methods"
+      },
+      items: methods.flatMap(handle)
+    }
+  }
+
+  function handleParameters(parameters) {
+    return {
+      id: "#parameters",
+      title() {
+        return "Parameters"
+      },
+      items: parameters.map((p) => {
+        return {
+          term: InlineSignature(p, retrieve),
+          id: "/",
+          description() {
+            return p.description?.text || ""
+          }
+        }
+      })
+    }
+  }
+
+  function handleReturns(type) {
+    return {
+      id: "#returns",
+      title() {
+        return "Returns"
+      },
+      items: [
+        {
+          term: InlineSignature(type, retrieve),
+          id: "/",
+          description() {
+            // todo
+            return ""
+            // return d.type.returns.description?.text || ""
+          }
+        }
+      ]
+    }
+  }
+
+  function handleType(type) {
+    return {
+      id: "#type",
+      title() {
+        return "Type"
+      },
+      items: [
+        {
+          term: InlineSignature(type, retrieve),
+          id: "/",
+          description() {
+            // todo
+            return ""
+            // return d.type.returns.description?.text || ""
+          }
+        }
+      ]
+    }
+  }
+
+  return r
 }
 
 /**
- * @param {DeclarationType} dt
- * @returns {ReflectionType}
- */
-function resolveType(dt) {
-  /** @type {ReflectionType} */
-  const rt = {
-    name: "",
-    render: reflection.renderLiteralType
-  }
-
-  if (dt.value !== undefined) {
-    rt.value = dt.value
-  }
-
-  switch (dt.id) {
-    case "array":
-      rt.render = reflection.renderArrayType
-      break
-    case "literal":
-    case "object":
-      rt.render = reflection.renderLiteralType
-      break
-    case "optional":
-      rt.render = reflection.renderOptionalType
-      break
-    case "readonly":
-      rt.name = "Readonly"
-      rt.render = reflection.renderGenericType
-      break
-    case "record":
-      rt.name = "Record"
-      rt.render = reflection.renderGenericType
-      break
-    case "setonly":
-      rt.name = "Setonly"
-      rt.render = reflection.renderGenericType
-      break
-    case "union":
-      rt.render = reflection.renderUnionType
-      break
-    default:
-      const d = retrieve(dt.id)
-      if (d === undefined) {
-        // todo: thrown an error on production.
-        // throw new Error(`pages: unknown type: ${dt.id}`)
-        break
-      }
-      rt.link = resolveLink(d)
-      if (dt.children === undefined) {
-        rt.value = d.name
-      } else {
-        rt.name = d.name
-        rt.render = reflection.renderGenericType
-      }
-      break
-  }
-
-  if (dt.children !== undefined) {
-    rt.children = dt.children.flatMap((dt) => {
-      const rt = resolveType(dt)
-      if (rt === undefined) {
-        return []
-      }
-      return rt
-    })
-  }
-
-  return rt
-}
-
-/**
- * @param {Declaration} d
  * @returns {string}
  */
 function resolveLink(d) {
   let p = d.meta.package
-  switch (d.meta.package) {
-    case "word":
-      p = "text"
-      break
-    case "cell":
-      p = "spreadsheet"
-      break
-    case "slide":
-      p = "presentation"
-      break
-    case "forms":
-      p = "form"
-      break
-    default:
-      throw new Error(`pages: unknown package: ${d.meta.package}`)
+  if (d.meta.package.startsWith("word")) {
+    p = "text"
+  } else if (d.meta.package.startsWith("cell")) {
+    p = "spreadsheet"
+  } else if (d.meta.package.startsWith("slide")) {
+    p = "presentation"
+  } else if (d.meta.package.startsWith("forms")) {
+    p = "form"
+  } else if (d.meta.package.startsWith("common")) {
+    p = "common"
+  } else {
+    throw new Error(`pages: unknown package: ${d.meta.package}`)
   }
   let u = `/document-builder/javascript-sdk/${p}/`
-  if (d.memberof !== undefined) {
-    u += `${d.memberof}/`
+  if (Object.hasOwn(d, "parent")) {
+    const r = retrieve(d.parent.id)
+    if (r !== undefined) {
+      u += `${r.name}/`
+    }
   }
-  u += `${d.name}/index.html`
+  // todo: fix this in the declarations package.
+  let n = d.name
+  if (n.includes("\"")) {
+    n = n.replace(/"/g, "")
+  }
+  u += `${n}/index.html`
   return u
 }
 

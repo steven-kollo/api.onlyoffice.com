@@ -1,13 +1,3 @@
-<script webc:setup>
-/**
- * Resolve a tag to a template.
- * https://github.com/11ty/webc/issues/143
- *
- * @param {string} tag
- * @returns {string}
- */
-function resolve(tag) {
-  return `<template webc:is="${tag}"></template>`
-}
+<script webc:type="js">
+`<template webc:is="${this.component.tag}" @attributes="component.attributes"></template>`
 </script>
-<template webc:nokeep @html="resolve(tag)"></template>
