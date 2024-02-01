@@ -1,7 +1,6 @@
 ---
 title: Spreadsheet
 layout: page/page.webc
-permalink: /document-builder/javascript-sdk/spreadsheet/index.html
 order: -2
 ---
 A spreadsheet document has a more simple structure than that of a text document, most of the spreadsheet elements are nested within the worksheet element with all the other elements placed on it.

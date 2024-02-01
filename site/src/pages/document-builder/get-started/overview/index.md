@@ -1,8 +1,7 @@
 ---
 title: Overview
 description: none
-permalink: /document-builder/get-started/overview/index.html
-order: 0
+order: -1
 ---
 # Overview
 

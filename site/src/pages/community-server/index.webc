@@ -1,7 +1,6 @@
 ---
 title: Community Server
 description: Create your own productivity platform based on ONLYOFFICE Groups. In this section, you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.
-permalink: /community-server/index.html
 logo: community-server-logo
 tags: product
 ---

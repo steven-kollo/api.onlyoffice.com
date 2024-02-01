@@ -1,7 +1,6 @@
 ---
 title: Presentation
 layout: page/page.webc
-permalink: /document-builder/javascript-sdk/presentation/index.html
 order: -1
 ---
 A presentation document has a more simple structure than that of a text document, most of the presentation elements are nested within the slide element with all the other elements placed on it. The single or multiple slide elements are a part of the presentation element.
