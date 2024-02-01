@@ -110,7 +110,7 @@
     <table class="demo-tab-panel">
         <tr>
             <td>
-                <a class="<%= Request["type"] != "spreadsheet" && Request["type"] != "presentation"  ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=text#DemoPreview">Demo Document editor</a>
+                <a class="<%= Request["type"] != "spreadsheet" && Request["type"] != "presentation" && Request["type"] != "pdf"  ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=text#DemoPreview">Demo Document editor</a>
             </td>
             <td>
                 <a class="<%= Request["type"] == "spreadsheet" ? "active" : "" %> demo-tab-center" href="<%= Url.Action("demopreview") %>?type=spreadsheet#DemoPreview">Demo Spreadsheet editor</a>
