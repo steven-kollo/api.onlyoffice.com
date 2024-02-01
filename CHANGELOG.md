@@ -1,5 +1,6 @@
 # Change Log
 
+- docspace: storybook v2.0.2
 - docspace: v2.0.2
 - docspace: added the How it works section
 - docspace: added the information about webhooks
