@@ -210,10 +210,7 @@ class PreprocessDeclarations extends Transform {
     } else if (Object.hasOwn(doc, "summary")) {
       d.summary = doc.summary
     } else if (Object.hasOwn(doc, "description")) {
-      const l = doc.description.split("\n")
-      if (l.length > 1) {
-        d.summary = l[0]
-      }
+      d.summary = doc.description.split("\n")[0]
       d.description = {
         syntax: "txt",
         text: doc.description
@@ -257,6 +254,7 @@ class PreprocessDeclarations extends Transform {
               type: v.type
             }
             if (Object.hasOwn(v, "description")) {
+              pr.summary = v.description.text.split("\n")[0]
               pr.description = v.description
             }
             ms.push(pr)
@@ -378,6 +376,7 @@ class PreprocessDeclarations extends Transform {
                   type: v.type
                 }
                 if (Object.hasOwn(v, "description")) {
+                  pr.summary = v.description.text.split("\n")[0]
                   pr.description = v.description
                 }
                 ms.push(pr)
