@@ -482,6 +482,10 @@
                     <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
                 </div>
                 <div class="line input_line">
+                    <label for="editorConfig_user_image">Image</label>
+                    <input type="text" id="editorConfig_user_image" name="editorConfig_user_image" value="https://example.com/url-to-user-avatar.png">
+                </div>
+                <div class="line input_line">
                     <label for="editorConfig_user_name">Name</label>
                     <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
                 </div>
@@ -751,7 +755,7 @@
         "user": {
             "group": ${getFieldValue("editorConfig_user_group")},
             "id": ${getFieldValue("editorConfig_user_id")},
-            "image": "https://example.com/url-to-user-avatar.png",
+            "image": ${getFieldValue("editorConfig_user_image")},
             "name": ${getFieldValue("editorConfig_user_name")}
         }`;
 

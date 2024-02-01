@@ -1541,6 +1541,13 @@
         </div>
         <div class="line">
             <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_mobileForceView" name="editorConfig_customization_mobileForceView" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_mobileForceView">Mobile force view</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_plugins" name="editorConfig_customization_plugins" hidden="hidden" checked>
                 <span></span>
                 <label for="editorConfig_customization_plugins">Plugins</label>
@@ -1869,7 +1876,7 @@
             "hideRulers": ${getFieldValue("editorConfig_customization_hideRulers")},${integrationMode}
             ${logo}"macros": ${getFieldValue("editorConfig_customization_macros")},${macrosMode}
             "mentionShare": ${getFieldValue("editorConfig_customization_mentionShare")},
-            "mobileForceView": true,
+            "mobileForceView": ${getFieldValue("editorConfig_customization_mobileForceView")},
             "plugins": ${getFieldValue("editorConfig_customization_plugins")},
             ${review}"toolbarHideFileName": ${getFieldValue("editorConfig_customization_toolbarHideFileName")},
             "toolbarNoTabs": ${getFieldValue("editorConfig_customization_toolbarNoTabs")},
