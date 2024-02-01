@@ -279,7 +279,7 @@
     </table>
     <div class="mobile-content"></div>
     <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - to be able to open the format for editing,
-        check it in the <a href="#formats-settings" target="_blank">formats settings</a>.
+        check it in the <a href="#formats-settings">formats settings</a>.
         Due to some format restrictions, data loss may occur.</em></span>
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
@@ -372,10 +372,10 @@ RAILS_ENV=production bundle exec rake redmine:plugins:migrate NAME=onlyoffice_re
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>The plugin uses the <a href="<%= Url.Action("basic") %>">ONLYOFFICE Docs API</a> and is integrated into various Redmine pages,
-        including <a href="#documents" target="_blank">Documents</a>, <a href="#attachments" target="_blank">Attachments</a>, <a href="#files" target="_blank">Files</a>,
-        <a href="#issues" target="_blank">Issue</a>, <a href="#news" target="_blank">News</a>, <a href="#wiki" target="_blank">Wiki</a>,
-        and <a href="#forums" target="_blank">Forums</a>. Additionally, the plugin adds general pages
-        such as <a href="#create-page" target="_blank">"Create in ONLYOFFICE"</a> and <a href="#convert" target="_blank">"Convert with ONLYOFFICE"</a>.</p>
+        including <a href="#documents">Documents</a>, <a href="#attachments">Attachments</a>, <a href="#files">Files</a>,
+        <a href="#issues">Issue</a>, <a href="#news">News</a>, <a href="#wiki">Wiki</a>,
+        and <a href="#forums">Forums</a>. Additionally, the plugin adds general pages
+        such as <a href="#create-page">"Create in ONLYOFFICE"</a> and <a href="#convert">"Convert with ONLYOFFICE"</a>.</p>
 
     <ul>
         <li>
@@ -620,7 +620,7 @@ RAILS_ENV=production bundle exec rake redmine:plugins:migrate NAME=onlyoffice_re
             <p id="create-page" class="copy-link"><b>Create in ONLYOFFICE</b></p>
             <img alt="Create in ONLYOFFICE" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/create-page.png") %>"  />
             <p>On the <b>Create in ONLYOFFICE</b> page, users can create the attachment using templates that consider the user's language preference.
-                Take a look at <a href="#formats" target="_blank">supported formats</a>. The visibility of this page depends on the user's permissions for the module.</p>
+                Take a look at <a href="#formats">supported formats</a>. The visibility of this page depends on the user's permissions for the module.</p>
         </li>
         <li>
             <p id="convert" class="copy-link"><b>Convert with ONLYOFFICE</b></p>
