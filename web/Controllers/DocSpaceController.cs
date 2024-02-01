@@ -121,6 +121,18 @@ namespace ASC.Api.Web.Help.Controllers
                 "PluginsSdk/CodingPlugin/PluginTypes/EventListenerPlugin",
                 "PluginsSdk/CodingPlugin/PluginTypes/FilePlugin",
                 "PluginsSdk/AddingPlugin",
+                "PluginsSdk/PluginTutorial",
+                "PluginsSdk/PluginTutorial/Developing",
+                "PluginsSdk/PluginTutorial/Developing/addingicons",
+                "PluginsSdk/PluginTutorial/Developing/configuringentrypoint",
+                "PluginsSdk/PluginTutorial/Developing/configuringinterfaceelements",
+                "PluginsSdk/PluginTutorial/Developing/creatingcodefile",
+                "PluginsSdk/PluginTutorial/Developing/creatingplugintypes",
+                "PluginsSdk/PluginTutorial/Developing/creatingsettingstype",
+                "PluginsSdk/PluginTutorial/Developing/creatingtemplate",
+                "PluginsSdk/PluginTutorial/Planning",
+                "PluginsSdk/PluginTutorial/Testing",
+                "PluginsSdk/PluginTutorial/Using",
                 "Basic",
             };
 
