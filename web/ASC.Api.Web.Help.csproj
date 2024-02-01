@@ -2335,7 +2335,6 @@
     <Content Include="App_Data\portals\references\ASC.Notify.xml" />
     <Content Include="App_Data\portals\references\ASC.Resource.Data.xml" />
     <Content Include="App_Data\portals\references\ASC.Specific.xml" />
-    <Content Include="App_Data\portals\references\ASC.Thrdparty.xml" />
     <Content Include="App_Data\portals\references\ASC.VoipService.xml" />
     <Content Include="App_Data\portals\references\ASC.Web.Calendar.xml" />
     <Content Include="App_Data\portals\references\ASC.Web.Community.xml" />

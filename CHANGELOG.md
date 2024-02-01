@@ -1,5 +1,6 @@
 # Change Log
 
+- portals: v12.6
 - docspace: storybook v2.0.2
 - docspace: v2.0.2
 - docspace: added the Plugin Tutorial
