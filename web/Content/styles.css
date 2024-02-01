@@ -3085,6 +3085,9 @@ select {
 }
 
 .new-select__list {
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
     padding-top: 4px;
     padding-bottom: 4px;
     border-radius: 3px;
@@ -3099,6 +3102,14 @@ select {
     background: #fff;
     user-select: none;
 }
+    .new-select__list::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    .new-select__list::-webkit-scrollbar-thumb {
+        background: #999999;
+        border-radius: 10px;
+    }
 
     .new-select__list.on {
         display: block;
