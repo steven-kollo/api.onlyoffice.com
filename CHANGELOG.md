@@ -1,7 +1,9 @@
 # Change Log
 
+- docspace: storybook v2.0.2
+- docspace: v2.0.2
+- docspace: added the Plugin Tutorial
 - editors: updated the Redmine page
-- docspace: v2.0.1
 - docspace: added the How it works section
 - docspace: added the information about webhooks
 - editors: added the WOPISrc query parameter to the requests from the browser to the server
