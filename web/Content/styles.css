@@ -301,16 +301,24 @@ body {
 
 .table-conversion-matrix-text,
 .table-conversion-matrix-spreadsheet,
-.table-conversion-matrix-presentation {
+.table-conversion-matrix-presentation,
+.table-formats {
     vertical-align: middle;
     padding: 5px;
     font-size: 12px;
     width: 100%;
 }
 
+    .table-formats {
+        display: block;
+        max-width: 832px;
+        overflow-x: scroll;
+    }
+
     .table-conversion-matrix-text td,
     .table-conversion-matrix-spreadsheet td,
-    .table-conversion-matrix-presentation td {
+    .table-conversion-matrix-presentation td,
+    .table-formats td {
         border: medium none;
         text-align: center;
         vertical-align: middle;
@@ -320,6 +328,10 @@ body {
     }
 
     .table-conversion-matrix-text td {
+        width: 5%;
+    }
+
+    .table-formats td {
         width: 5%;
     }
 
@@ -333,7 +345,8 @@ body {
 
     .table-conversion-matrix-text th,
     .table-conversion-matrix-spreadsheet th,
-    .table-conversion-matrix-presentation th {
+    .table-conversion-matrix-presentation th,
+    .table-formats th {
         text-align: center;
         vertical-align: bottom;
         padding: 5px;
@@ -523,6 +536,10 @@ td.table-style.copy-link[id]:hover:before {
 
 li b.copy-link[id]:hover:before {
     margin-left: -40px;
+}
+
+p.copy-link[id]:hover:before {
+    margin-left: -45px;
 }
 
 li.copy-link[id]:hover:before {
@@ -2518,7 +2535,7 @@ article {
         margin-top: 16px;
     }
 
-    .table-conversion-matrix-text, .table-conversion-matrix-spreadsheet, .table-conversion-matrix-presentation {
+    .table-conversion-matrix-text, .table-conversion-matrix-spreadsheet, .table-conversion-matrix-presentation, .table-formats {
         display: block;
         width: 90vw;
         overflow-x: scroll;
