@@ -65,6 +65,14 @@
       </value>
     </entry>
     <entry>
+      <key>System.Double</key>
+      <value>
+        <Description>number</Description>
+        <Example>1234</Example>
+        <ExampleJson>1234</ExampleJson>
+      </value>
+    </entry>
+    <entry>
       <key>System.Int64</key>
       <value>
         <Description>number</Description>
@@ -157,7 +165,7 @@
       </value>
     </entry>
     <entry>
-      <key>ASC.Specific.ApiDateTime</key>
+      <key>ASC.Api.Core.ApiDateTime</key>
       <value>
         <Description>Date and Time</Description>
         <Example>Roundtrip format: 2008-04-10T06-30-00.000Z</Example>
@@ -250,6 +258,14 @@
       <Description>	Active, Terminated, LeaveOfAbsence, Default, All</Description>
         <Example>Active</Example>
         <ExampleJson>"Active"</ExampleJson>
+      </value>
+    </entry>
+    <entry>
+      <key>ASC.Core.Users.MobilePhoneActivationStatus</key>
+      <value>
+      <Description>NotActivated, Activated</Description>
+        <Example>NotActivated</Example>
+        <ExampleJson>"NotActivated"</ExampleJson>
       </value>
     </entry>
     <entry>
