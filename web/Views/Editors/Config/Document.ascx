@@ -131,7 +131,6 @@
                 <option value="xlsx" selected>xlsx</option>
                 <option value="csv">csv</option>
                 <option value="xls">xls</option>
-                <option value="xlsb">xlsb</option>
             </select>
         </div>
         <div class="line input_line">
@@ -163,7 +162,7 @@
         </div>
         <div class="line input_line" style="margin-bottom: 0;">
             <label for="document_url">URL</label>
-            <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.docx">
+            <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.xlsx">
         </div>
 
     </div>
@@ -240,14 +239,45 @@
 <script type="text/javascript">
 
     // Editor window
-    var config = <%= Config.Serialize(
+    var config_csv = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "csv",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "csv" 
+            },
+        DocumentType = "cell",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+
+    var config_xlsx = <%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
                 FileType = "xlsx",
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                Title = "Example Title." + "xlsx",
+                Title = "Example Title",
                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx" 
             },
         DocumentType = "cell",
@@ -270,6 +300,7 @@
         Height = "550px",
         Width = "100%"
     }) %>;
+    var config = config_xlsx;
     window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
@@ -303,7 +334,7 @@
         var document_string = `{
         "fileType": ${getFieldValue("document_file_type")},
         "key": ${getFieldValue("document_key")},${referenceData}
-        "title": ${getFieldValue("document_title").slice(0, -1)}.${getFieldValue("document_file_type").slice(1) },
+        "title": ${getFieldValue("document_title") },
         "url": ${getFieldValue("document_url")}
     }`;
         var config_string =
@@ -312,11 +343,14 @@
     ...
 });
 `;
-
         var fakeFields = ['document_key', 'document_reference_data', 'document_file_key', 'document_instance_id', 'document_url'];
         if (!fakeFields.includes(id)) {
             var document_object = JSON.parse(document_string);
-            config.document.fileType = document_object.fileType;
+            if (document_object.fileType == 'csv') {
+                config = config_csv;
+            } else {
+                config = config_xlsx;
+            }
             config.document.title = document_object.title;
             window.docEditor.destroyEditor();
             window.docEditor = new DocsAPI.DocEditor("placeholder", config);
