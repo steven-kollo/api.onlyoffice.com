@@ -190,7 +190,7 @@
                     FileType = "docx",
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                    Title = "Example Title." + "docx",
+                    Title = "Example Title",
                     Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
                 },
             DocumentType = "word",
@@ -222,7 +222,7 @@
                     FileType = "xlsx",
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                    Title = "Example Title." + "xlsx",
+                    Title = "Example Title",
                     Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx" 
                 },
             DocumentType = "cell",
@@ -253,7 +253,7 @@
                     FileType = "pptx",
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                    Title = "Example Title." + "pptx",
+                    Title = "Example Title",
                     Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pptx" 
                 },
             DocumentType = "slide",
@@ -284,7 +284,7 @@
                 FileType = "pdf",
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                Title = "Example Title." + "pdf",
+                Title = "Example Title",
                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pdf" 
             },
         DocumentType = "pdf",
