@@ -35,7 +35,8 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, PDF.</li>
+        <li>Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.</li>
+        <li>The following format is available for viewing only: PDF.</li>
         <li>The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.</li>
         <li>
             The app will create an item in the <b>new (+)</b> menu to create <b>Document</b>, <b>Spreadsheet</b>, <b>Presentation</b>.
