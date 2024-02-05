@@ -281,7 +281,8 @@ namespace ASC.Api.Web.Help.Controllers
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = JsonConvert.DeserializeObject<Config>(jsonConfig).Document.Permissions,
                     Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx"
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                    Info = new Config.DocumentConfig.InfoConfig()
                 },
                 DocumentType = "word",
                 EditorConfig = new Config.EditorConfigConfiguration

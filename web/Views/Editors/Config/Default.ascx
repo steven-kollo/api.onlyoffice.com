@@ -191,7 +191,8 @@
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
                     Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx" 
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                    Info = new Config.DocumentConfig.InfoConfig()
                 },
             DocumentType = "word",
             EditorConfig = new Config.EditorConfigConfiguration
@@ -223,7 +224,8 @@
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
                     Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx" 
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx",
+                    Info = new Config.DocumentConfig.InfoConfig()
                 },
             DocumentType = "cell",
             EditorConfig = new Config.EditorConfigConfiguration
@@ -254,7 +256,8 @@
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
                     Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pptx" 
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pptx",
+                    Info = new Config.DocumentConfig.InfoConfig()
                 },
             DocumentType = "slide",
             EditorConfig = new Config.EditorConfigConfiguration
@@ -285,7 +288,8 @@
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                 Title = "Example Title",
-                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pdf" 
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pdf",
+                Info = new Config.DocumentConfig.InfoConfig()
             },
         DocumentType = "pdf",
         EditorConfig = new Config.EditorConfigConfiguration

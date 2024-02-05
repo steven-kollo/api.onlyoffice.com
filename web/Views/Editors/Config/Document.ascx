@@ -247,7 +247,8 @@
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                 Title = "Example Title",
-                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "csv" 
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "csv",
+                Info = new Config.DocumentConfig.InfoConfig()
             },
         DocumentType = "cell",
         EditorConfig = new Config.EditorConfigConfiguration
@@ -278,7 +279,8 @@
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                 Title = "Example Title",
-                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx" 
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx",
+                Info = new Config.DocumentConfig.InfoConfig()
             },
         DocumentType = "cell",
         EditorConfig = new Config.EditorConfigConfiguration
