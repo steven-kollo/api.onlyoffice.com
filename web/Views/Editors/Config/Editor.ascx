@@ -779,9 +779,9 @@
         var fakeFields = ['editorConfig_actionLink', 'editorConfig_callbackUrl'];
         if (!fakeFields.includes(id)) {
             var editorConfig_object = JSON.parse(editorConfig);
-            config.editorConfig = editorConfig_object;
+            editorConfig_object.callbackUrl = config.editorConfig.callbackUrl;
             delete editorConfig_object["actionLink"];
-            delete editorConfig_object["callbackUrl"];
+            config.editorConfig = editorConfig_object;
             config.editorConfig.customization = {
                 "integrationMode": "embed"
             };
