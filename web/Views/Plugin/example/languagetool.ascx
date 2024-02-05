@@ -55,18 +55,18 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <pre>
 {
     "name": "LanguageTool",
-	 "nameLocale": {
+    "nameLocale": {
         "fr": "LanguageTool",
         "es": "LanguageTool",
         "de": "LanguageTool"
     },
     "guid": "asc.{7CDB02C9-A0BF-4B56-9A1A-71C860B8498F}",
-    "version": "1.0.0",
+    "version": "1.0.2",
 
     "variations": [
         {
             "description": "Improve spelling, grammar, and style in your texts.",
-			"descriptionLocale": {
+            "descriptionLocale": {
                 "fr": "Am&#233;liorez l'orthographe, la grammaire et le style de vos textes.",
                 "es": "Mejore la ortograf&#237;a, la gram&#225;tica y el estilo de sus textos.",
                 "de": "Verbessern Sie Rechtschreibung, Grammatik und Stil in Ihren Texten."
@@ -115,7 +115,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
                 }
             ],
             "isViewer": true,
-            "EditorsSupport": [ "word", "cell", "slide" ],
+            "EditorsSupport": [ "word", "cell", "slide", "pdf" ],
 
             "isVisual": true,
             "isModal": true,
@@ -133,11 +133,16 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
                     "light" : "#357EE5",
                     "dark" : "#357EE5"
                 },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
+                "screenshots" : [
+                    "resources/store/screenshots/screen_1.png",
+                    "resources/store/screenshots/screen_2.png",
+                    "resources/store/screenshots/screen_3.png"
+                ],
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities", "work", "recommended"]
             }
         },
         {
@@ -150,7 +155,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "url": "index_about.html",
 
             "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon.png", "resources/img/icon@2x.png" ],
-            "isViewer": false,
+            "isViewer": true,
             "EditorsSupport": [ "word", "cell", "slide" ],
 
             "isVisual": true,

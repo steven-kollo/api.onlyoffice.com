@@ -86,7 +86,7 @@ namespace ASC.Api.Web.Help.Helpers
 
         public static bool IfAction(this HtmlHelper helper, string action)
         {
-            var currentAction = helper.ViewContext.RequestContext.RouteData.Values["controller"];
+            var currentAction = helper.ViewContext.RequestContext.RouteData.Values["action"];
             return string.Equals((string)currentAction, action, StringComparison.OrdinalIgnoreCase);
         }
 

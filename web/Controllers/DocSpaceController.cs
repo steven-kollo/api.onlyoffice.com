@@ -46,7 +46,11 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Backend",
-                "Backend/Auth",
+                "Backend/HowItWorks",
+                "Backend/HowItWorks/Auth",
+                "Backend/HowItWorks/LongRunningOperations",
+                "Backend/HowItWorks/UploadingLargeFiles",
+                "Backend/HowItWorks/Webhooks",
                 "Changelog",
                 "Faq",
                 "Filters",
@@ -117,6 +121,18 @@ namespace ASC.Api.Web.Help.Controllers
                 "PluginsSdk/CodingPlugin/PluginTypes/EventListenerPlugin",
                 "PluginsSdk/CodingPlugin/PluginTypes/FilePlugin",
                 "PluginsSdk/AddingPlugin",
+                "PluginsSdk/PluginTutorial",
+                "PluginsSdk/PluginTutorial/Developing",
+                "PluginsSdk/PluginTutorial/Developing/addingicons",
+                "PluginsSdk/PluginTutorial/Developing/configuringentrypoint",
+                "PluginsSdk/PluginTutorial/Developing/configuringinterfaceelements",
+                "PluginsSdk/PluginTutorial/Developing/creatingcodefile",
+                "PluginsSdk/PluginTutorial/Developing/creatingplugintypes",
+                "PluginsSdk/PluginTutorial/Developing/creatingsettingstype",
+                "PluginsSdk/PluginTutorial/Developing/creatingtemplate",
+                "PluginsSdk/PluginTutorial/Planning",
+                "PluginsSdk/PluginTutorial/Testing",
+                "PluginsSdk/PluginTutorial/Using",
                 "Basic",
             };
 

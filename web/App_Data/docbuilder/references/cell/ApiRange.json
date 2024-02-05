@@ -889,7 +889,8 @@
       },
       "returns": [
         [
-          "boolean"
+          "ApiComment",
+          "null"
         ]
       ],
       "see": null,
@@ -899,6 +900,12 @@
           "type": "string",
           "name": "sText",
           "description": "<p>The comment text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sAuthor",
+          "description": "<p>The author's name (optional).</p>",
           "optional": false
         }
       ]

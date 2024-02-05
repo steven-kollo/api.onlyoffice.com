@@ -28,7 +28,7 @@
     <p>ONLYOFFICE Docs also supports the <b>WOPI protocol</b> that is used to integrate your application with an online office. 
     Further information about WOPI can be found <a href="<%= Url.Action("wopi") %>">here</a>.</p>
 
-    <p><b>ONLYOFFICE Docs API</b> is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
+    <p><b>ONLYOFFICE Docs API</b> is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation/Pdf Editors into their own web sites and setup and manage the editors.</p>
 
     <p>The API JavaScript file can normally be found in the following editors folder:</p>
     <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>

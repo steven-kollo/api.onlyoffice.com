@@ -100,7 +100,7 @@
             </tr>
             <tr>
                 <th>Filling in forms</th>
-                <td><a title="Open OFORM file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">OFORM</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
+                <td><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
@@ -148,7 +148,7 @@
                 <td><a title="Open PPTX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="rebrandingPptxEditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
-            <tr>
+<%--            <tr>
                 <th>Edit on mobile</th>
                 <td><a title="Open DOCX file for editing on mobile" href="<%= Url.Action("editor") %>?method=docxEditorMobile" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorMobileCode">&lt;/&gt;</a>
                 </td>
@@ -165,7 +165,7 @@
                 </td>
                 <td><a title="Open PPTX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=pptxViewerMobile" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxViewerMobileCode">&lt;/&gt;</a>
                 </td>
-            </tr>
+            </tr>--%>
             <tr>
                 <th>Embedded view</th>
                 <td><a title="Open DOCX file for embedded viewing" href="<%= Url.Action("editor") %>?method=docxEmbed" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEmbedCode">&lt;/&gt;</a>
@@ -635,7 +635,7 @@
                     "title": "Example Document Title.pdf",
                     "url": "https://example.com/url-to-example-document.pdf"
                 },
-                "documentType": "word",
+                "documentType": "pdf",
                 "editorConfig": {
                     "mode": "view"
                 },
@@ -1465,7 +1465,7 @@
             </div>
 
             <div id="fillFormsCode">
-                <div class="popap-header">Open oform for filling in forms</div>
+                <div class="popap-header">Open pdf for filling in forms</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1481,16 +1481,16 @@
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
                 "document": {
-                    "fileType": "oform",
+                    "fileType": "pdf",
                     "key": "DEEC57D9",
-                    "title": "Example Form Title.oform",
-                    "url": "https://example.com/url-to-example-document.oform",
+                    "title": "Example Form Title.pdf",
+                    "url": "https://example.com/url-to-example-document.pdf",
                     "permissions": {
                         "edit": false,
                         "fillForms": true
                     }
                 },
-                "documentType": "word",
+                "documentType": "pdf",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"

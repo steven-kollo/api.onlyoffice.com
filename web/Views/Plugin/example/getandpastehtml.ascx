@@ -56,7 +56,7 @@
         "de": "HTML"
     },
     "guid": "asc.{E581C417-3C80-4BC2-B42D-502850FDC1E7}",
-    "version": "1.0.0",
+    "version": "1.0.3",
 
     "variations": [
         {
@@ -121,11 +121,15 @@
                     "light" : "#F5F5F5",
                     "dark" : "#444444"
                 },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
+                "screenshots" : [
+                    "resources/store/screenshots/screen_1.png",
+                    "resources/store/screenshots/screen_2.png"
+                ],
                 "icons"       : {
                     "light" : "resources/store/icons",
                     "dark"  : "resources/store/icons"
-                }
+                },
+                "categories": ["specAbilities", "work", "devTools"]
             }
         }
     ]

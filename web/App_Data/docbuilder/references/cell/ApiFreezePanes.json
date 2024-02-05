@@ -1,0 +1,105 @@
+{
+  "methods": {
+    "FreezeAt": {
+      "memberof": "ApiFreezePanes",
+      "name": "FreezeAt",
+      "description": "<p>Sets the frozen cells in the active worksheet view. The range provided corresponds to the cells that will be frozen in the top- and left-most pane.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiRange | String",
+          "name": "frozenRange",
+          "description": "<p>A range that represents the cells to be frozen.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "FreezeColumns": {
+      "memberof": "ApiFreezePanes",
+      "name": "FreezeColumns",
+      "description": "<p>Freezes the first column or columns of the current worksheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "count",
+          "description": "<p>Optional number of columns to freeze, or zero to unfreeze all columns.</p>",
+          "optional": true,
+          "defaultValue": 0
+        }
+      ]
+    },
+    "FreezeRows": {
+      "memberof": "ApiFreezePanes",
+      "name": "FreezeRows",
+      "description": "<p>Freezes the top row or rows of the current worksheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "count",
+          "description": "<p>Optional number of rows to freeze, or zero to unfreeze all rows.</p>",
+          "optional": true,
+          "defaultValue": 0
+        }
+      ]
+    },
+    "GetLocation": {
+      "memberof": "ApiFreezePanes",
+      "name": "GetLocation",
+      "description": "<p>Returns a range that describes the frozen cells in the active worksheet view.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Unfreeze": {
+      "memberof": "ApiFreezePanes",
+      "name": "Unfreeze",
+      "description": "<p>Removes all frozen panes in the current worksheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "events": {},
+  "comment": "/**\n\t * Class representing freeze panes.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing freeze panes.</p>",
+  "scope": "global",
+  "params": []
+}

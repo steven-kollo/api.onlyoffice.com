@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Inserts a unique id into the OFORM.</p>
+<p class="dscr">Inserts a unique id into a form document.</p>
 
 <pre>(function()
 {
