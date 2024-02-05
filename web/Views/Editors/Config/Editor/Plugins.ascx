@@ -74,7 +74,7 @@
             <div class="line input_line" style="margin-top: 0px;">
                 <label for="plugins_autostart_0">Autostart</label>
                 <div id="plugins_autostart_0" style="margin-top: 0px;" class="line input_line plugins_autostart">
-                    <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}">
+                    <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}">
                 </div>
             </div>
         </div>
