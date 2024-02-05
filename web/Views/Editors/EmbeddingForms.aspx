@@ -15,8 +15,9 @@
     </h1>
     <p class="dscr">从7.0版开始，ONLYOFFICE Docs提供了创建、编辑和协作编辑在线表单、填写表单以及将表单保存为PDF的可能性。</p>
     <p>ONLYOFFICE表格有两种主要格式。DOCXF用于从空白或任何现有的DOCX文件创建表单模板。
-        OFORM格式用于填写准备好的表单。</p>
-    <p>这些说明可以帮助您将在线表单添加到网站，使其可以以PDF格式填写和下载。</p>
+        PDF格式用于填写准备好的表单。</p>
+    <note>Please note that starting from version 8.0, the OFORM format is deprecated. To fill out the ready forms, only the PDF format is used.</note>
+    <p>These instructions help you add an online form to your website, making it available for saving as PDF and filling in.</p>
     <note>请注意，这些说明仅在JWT被禁用时有效。从7.2版本开始，默认情况下会启用JWT，因此需要禁用它。
         有关令牌的更多信息可以 <a href="<%= Url.Action("signature/") %>">在此</a>处找到。</note>
 
@@ -109,12 +110,12 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>完成后，可以打开表单模板进行编辑。编辑此文件后，您可以获得表单本身。要执行此操作，请单击 <b>另存为</b> 按钮。</p>
+            <p>Once done, a form template can be opened for editing. After editing this file, you can get the form itself. To do so, click the <b>Save as pdf</b> button.</p>
             <img class="screenshot max-width-832" alt="嵌入docxf" src="<%= Url.Content("~/content/img/editor/embed-docxf.png") %>" />
         </div>
         <div id="filling" class="content">
-            <h2 id="oform" class="copy-link">如何从网站打开OFORM进行填写</h2>
-            <p>要使OFORM格式的在线表单可以从您的网站以PDF格式填写和下载，请遵循以下步骤：</p>
+            <h2 id="pdf" class="copy-link">How to open PDF for filling from website</h2>
+            <p>To make an online form in the PDF format available for filling in, follow the steps below:</p>
             <ol>
                 <li>查找并打开ONLYOFFICE文档的 <em>index.html</em> 文件。</li>
                 <li>
@@ -146,16 +147,16 @@ if (this.docEditor) {
                 <li>
                     <p>创建需要打开的表单模板的完整URL地址：</p>
                     <pre>
-const url = "https://example.com/url-to-example-document.oform";
+const url = "https://example.com/url-to-example-document.pdf";
 </pre>
                 </li>
                 <li>
                     <p>创建用于标识文件的key</p>
                     <pre>
-const key = filename + ".oform";
+const key = filename + ".pdf";
 </pre>
                     <note>请注意， <em>key</em> 字段不会传递给编辑器的配置。该字段将自动生成为一个随机数。
-                        这使得打开表单的所有会话都是独立的。因此，OFORM文件上的协作被禁用。
+                        这使得打开表单的所有会话都是独立的。因此，PDF文件上的协作被禁用。
                         这就是为什么任何人都可以在不打扰他人的情况下打开表单并填写。</note>
                 </li>
                 <li>
@@ -164,11 +165,11 @@ const key = filename + ".oform";
 this.docEditor = new DocsAPI.DocEditor("placeholder",
 {
     "document": {
-        "fileType": "oform",
+        "fileType": "pdf",
         "title": "Form",
         "url": url
     },
-    "documentType": "word"
+    "documentType": "pdf"
 });
 </pre>
                 </li>
@@ -183,23 +184,23 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         if (this.docEditor) {
             this.docEditor.destroyEditor()
         }
-        const url = "https://example.com/url-to-example-document.oform";
-        const key = filename + ".oform";
+        const url = "https://example.com/url-to-example-document.pdf";
+        const key = filename + ".pdf";
         this.docEditor = new DocsAPI.DocEditor("placeholder",
         {
             "document": {
-                "fileType": "oform",
+                "fileType": "pdf",
                 "title": "Form",
                 "url": url
             },
-            "documentType": "word"
+            "documentType": "pdf"
         });
     }
 &lt;/script&gt;
 </pre>
-            <p>完成后，可以打开表单进行填写。填写完字段（必填字段用红色边框突出显示）后，您可以获得一个PDF文件。
-                要执行此操作，请单击 <b>&ldquo;另存为PDF&rdquo;</b> 按钮。</p>
-            <img class="screenshot max-width-832" alt="嵌入oform" src="<%= Url.Content("~/content/img/editor/embed-oform.png") %>" />
+            <p>Once done, a form can be opened for filling. After filling in the fields (the required ones are highlighted with the red border), you can submit your data.
+                To do so, click the <b>Submit</b> button.</p>
+            <img class="screenshot max-width-832" alt="嵌入pdf" src="<%= Url.Content("~/content/img/editor/embed-pdf.png") %>" />
         </div>
     </div>
 

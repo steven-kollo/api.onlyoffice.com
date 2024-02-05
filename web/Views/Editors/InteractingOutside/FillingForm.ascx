@@ -9,7 +9,7 @@
 <p>用户可以从列表中选择用户名，表单编辑器中的所有字段都将填充用户联系信息。
 同时，这些数据显示在自定义界面的输入框中。</p>
 <p>当用户在自定义界面中编辑输入数据时，它也会在表单编辑器中自动更新。</p>
-<p>文档准备好后，可以通过单击 <b>下载</b> 按钮下载并打印。</p>
+<p>When the document is ready, the form data can be submitted by clicking the <b>Submit</b> button.</p>
 
 <select id="persons" name="persons" required disabled>
     <option disabled selected value="">选择示例</option>
@@ -144,13 +144,13 @@ function onChangeContentControl(e) {
             {
                 Document = new Config.DocumentConfig
                     {
-                        FileType = "oform",
+                        FileType = "pdf",
                         Key = "apiwh" + Guid.NewGuid(),
                         Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                        Title = "Demo.oform",
-                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "withtags.oform"
+                        Title = "Demo.pdf",
+                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "withtags.pdf"
                     },
-                DocumentType = "word",
+                DocumentType = "pdf",
                 EditorConfig = new Config.EditorConfigConfiguration
                     {
                         CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),

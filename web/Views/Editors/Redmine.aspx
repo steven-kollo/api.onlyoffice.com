@@ -12,135 +12,622 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Redmine ONLYOFFICE 集成插件</span>
+        <span class="hdr">Redmine ONLYOFFICE integration plugin</span>
     </h1>
 
-    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-redmine" target="_blank">插件</a> 使用户能够从 <a href="https://www.redmine.org/" target="_blank">Redmine</a> 中用 ONLYOFFICE 文档编辑office文档。</p>
+    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-redmine" target="_blank">plugin</a> enables users to edit attachments from <a href="https://www.redmine.org/" target="_blank">Redmine</a> using ONLYOFFICE Docs.</p>
 
-    <p>该插件可以在官方 <a href="https://www.redmine.org/plugins/onlyoffice_redmine" target="_blank">Redmine插件目录</a>中获得。</p>
+    <p>The plugin is available in the official <a href="https://www.redmine.org/plugins/onlyoffice_redmine" target="_blank">Redmine Plugins Directory</a>.</p>
 
-    <h2 id="features" class="copy-link">特性</h2>
+    <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
-        <li>以下格式仅供查看：DOC、DOCM、DOT、DOTX、DOTM、ODT、FODT、OTT、RTF、TXT、HTML、HTM、MHT、XML、PDF、DJVU、FB2、EPUB、XPS、XLS、XLSM、XLT、XLTX、XLTM、ODS、FODS、OTS、CSV、PPS、PPSX、PPSM、PPT、PPTM、POT、POTX、POTM、ODP、FODP、OTP。</li>
-        <li>该插件将在 Office 文档的文档库中创建一个新的菜单选项 <b>在ONLYOFFICE 中编辑</b>。这允许多个用户实时协作并将这些更改保存到Redmine中。</li>
+        <li>Viewing and editing text documents, spreadsheets, presentations, and forms.</li>
+        <li>Co-editing documents in real time using two co-editing modes (Fast and Strict), Track Changes, comments, built-in chat.</li>
+        <li>Settings page to set up connection to the server and JWT authentication, customize the editor's appearance.</li>
+        <li>Mobile view for licensed editors.</li>
+        <li>Creating new attachments using templates that consider the user's language preference.</li>
+        <li>Converting attachments and saving or downloading them.</li>
     </ul>
 
+    <h2 id="formats" class="copy-link">Supported formats</h2>
+    <table class="table-formats">
+        <tbody>
+            <tr class="scroll-arrow" style="margin-top:247px;"></tr>
+            <tr>
+                <th rowspan="2"></th>
+            </tr>
+            <tr>
+                <td>djvu</td>
+                <td>doc</td>
+                <td>docm</td>
+                <td>docx</td>
+                <td>docxf</td>
+                <td>dot</td>
+                <td>dotm</td>
+                <td>dotx</td>
+                <td>epub<span class="required">*</span></td>
+                <td>fb2<span class="required">*</span></td>
+                <td>fodt</td>
+                <td>htm</td>
+                <td>html<span class="required">*</span></td>
+                <td>mht</td>
+                <td>mhtml</td>
+                <td>odt<span class="required">*</span></td>
+                <td>oform</td>
+                <td>ott<span class="required">*</span></td>
+                <td>oxps</td>
+                <td>pdf</td>
+                <td>rtf<span class="required">*</span></td>
+                <td>stw</td>
+                <td>sxw</td>
+                <td>txt<span class="required">*</span></td>
+                <td>wps</td>
+                <td>wpt</td>
+                <td>xml</td>
+                <td>xps</td>
+                <td>csv<a href="#requiredDescr" class="required">*</a></td>
+                <td>et</td>
+                <td>ett</td>
+                <td>fods</td>
+                <td>ods<a href="#requiredDescr" class="required">*</a></td>
+                <td>ots<a href="#requiredDescr" class="required">*</a></td>
+                <td>sxc</td>
+                <td>xls</td>
+                <td>xlsb</td>
+                <td>xlsm</td>
+                <td>xlsx</td>
+                <td>xlt</td>
+                <td>xltm</td>
+                <td>xltx</td>
+                <td>dps</td>
+                <td>dpt</td>
+                <td>fodp</td>
+                <td>odp<span class="required">*</span></td>
+                <td>otp<span class="required">*</span></td>
+                <td>pot</td>
+                <td>potm</td>
+                <td>potx</td>
+                <td>pps</td>
+                <td>ppsm</td>
+                <td>ppsx</td>
+                <td>ppt</td>
+                <td>pptm</td>
+                <td>pptx</td>
+                <td>sxi</td>
+            </tr>
+            <tr>
+                <td>View</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>Edit</td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+            </tr>
+            <tr>
+                <td>Create</td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mobile-content"></div>
+    <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - to be able to open the format for editing,
+        check it in the <a href="#formats-settings">formats settings</a>.
+        Due to some format restrictions, data loss may occur.</em></span>
 
-    <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
+    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
     <p>
-        您需要一个可从 Redmine 和任何客户终端解析和连接的 ONLYOFFICE 文档（文档服务器）实例。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
-        ONLYOFFICE 文档还必须能够直接发布到 Redmine。
+        Before you proceed to the plugin installation, make sure you have an instance of ONLYOFFICE Docs (Document Server)
+        that is resolvable and connectable both from Redmine and any end clients.
+        Additionally, ensure that ONLYOFFICE Docs can directly POST to Redmine.
     </p>
-    <p>启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>We recommend using <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a> to install ONLYOFFICE Docs.
+        Alternatively, you can follow <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">these instructions</a>
+        for Debian, Ubuntu, or derivatives.</p>
 
 
-    <h2 id="install" class="copy-link">安装 Redmine ONLYOFFICE 集成插件</h2>
-    <p>要开始使用带有 Redmine 的 ONLYOFFICE 文档，必须执行以下步骤：</p>
+    <h2 id="install" class="copy-link">Installing Redmine ONLYOFFICE integration plugin</h2>
+    <p>To install the plugin, you will need Redmine version 4.2 or higher, or version 5.0 or higher.
+        It is also important to note that the plugin is compatible with Ruby version 2.7.2 or higher, or 3.0.0 or higher.
+        We recommend using Redmine 5 along with Ruby 3.</p>
     <ol>
-        <li>如果您是 Redmine 的新手，请按照 <a href="https://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank">这些说明</a>进行安装。</li>
+        <li>If you are new to Redmine, install it by following <a href="https://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank">these instructions</a>.</li>
         <li>
-            <p>下载Redmine ONLYOFFICE 集成插件。您可以克隆主分支或下载最新的压缩版本。
-            在安装之前，请确保 Redmine 实例已停止。</p>
+            <p>Download the <a href="https://github.com/ONLYOFFICE/onlyoffice-redmine/releases" target="_blank">plugin</a>:</p>
             <pre>
-git clone https://github.com/ONLYOFFICE/onlyoffice-redmine
-</pre>
-            <p>转到 Redmine ONLYOFFICE 集成插件文件夹并获取子模块：</p>
-            <pre>
-cd onlyoffice-redmine
-git submodule update --init --recursive
-</pre>
-        </li>
-        <li>将 <b>onlyoffice_redmine</b> 插件目录放入 plugins 中。plugins 子目录必须命名为 <b>onlyoffice_redmine</b>。
-            如有必要，将 <b>onlyoffice_redmine-x.y.z</b> 重命名为 <b>onlyoffice_redmine</b>。</li>
-        <li>
-            <p>转到Redmine目录：</p>
-            <pre>
-cd redmine
+curl --location https://github.com/ONLYOFFICE/onlyoffice-redmine/releases/latest/download/onlyoffice_redmine.tar.zst --output onlyoffice_redmine.tar.zst
 </pre>
         </li>
         <li>
-            <p>安装依赖项：</p>
+            <p>Unzip it into the plugins directory:</p>
+            <pre>
+tar --extract --file onlyoffice_redmine.tar.zst --directory plugins
+</pre>
+        </li>
+        <li>
+            <p>Install the dependencies of the plugin if Redmine did not do it automatically:</p>
             <pre>
 bundle install
 </pre>
         </li>
         <li>
-            <p>初始化/更新数据库：</p>
+            <p>Perform the migration:</p>
             <pre>
-RAILS_ENV=production bundle exec rake db:migrate
 RAILS_ENV=production bundle exec rake redmine:plugins:migrate NAME=onlyoffice_redmine
 </pre>
         </li>
+        <li>Restart Redmine.</li>
     </ol>
+    <p>Read more about the plugin installation on the Redmine <a href="https://www.redmine.org/projects/redmine/wiki/Plugins#Installing-a-plugin" target="_blank">Wiki page</a>.</p>
 
 
-    <h2 id="configuration" class="copy-link">配置 Redmine ONLYOFFICE 集成插件</h2>
-    <p>通过 Redmine 界面配置插件。转到 <b>管理 -> 插件 -> Onlyoffice Redmine 插件 -> 配置</b> 并指定以下参数：</p>
+    <h2 id="configuration" class="copy-link">Configuring Redmine ONLYOFFICE integration plugin</h2>
+    <p>Configure the plugin via the Redmine interface. Go to <b>Administration -> Plugins</b>, find the ONLYOFFICE integration plugin for Redmine and click <b>Configure</b>:</p>
+    <img alt="Redmine settings" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/redmine-settings.png") %>"  />
+
+    <p id="general-settings" class="copy-link"><b>General Settings</b></p>
     <ul>
         <li>
-            <p><b>文件编辑服务地址</b>: 要连接 ONLYOFFICE 文档，请输入以下地址：</p>
-            <pre>
-https://&lt;documentserver&gt;:&lt;port&gt;/
-</pre>
-            <p>其中 <b>documentserver</b> 是服务器的名称， <b>port</b> 是安装了 <b>ONLYOFFICE 文档</b> 的端口号。</p>
-        </li>
-        <li><b>密钥</b>：从7.2版本开始，默认启用JWT，并自动生成密钥以限制对ONLYOFFICE 文档的访问，这也是出于安全原因和数据完整性考虑。
-            在 Redmine 配置页面上指定您自己的密钥。 在 ONLYOFFICE 文档 <a href="/editors/signature/">配置文件</a>中，指定相同的密钥并启用验证。</li>
-    </ul>
-    <p>您还可以配置 <b>编辑器定制设置</b>：</p>
-    <ul>
-        <li>显示或隐藏 <b>聊天</b> 菜单按钮</li>
-        <li>更紧凑显示标题</li>
-        <li>显示或隐藏 <b>反馈和支持</b> 菜单按钮</li>
-        <li>显示或隐藏 <b>帮助</b> 菜单按钮</li>
-        <li>显示单色工具栏标题</li>
-    </ul>
-
-
-    <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
-    <p>遵循 <a href="<%= Url.Action("basic") %>">此处</a>的 API 文档集成ONLYOFFICE。</p>
-    <p>Redmine ONLYOFFICE 集成插件允许打开上传到 <b>Issues</b>、 <b>Files</b>、 <b>Documents</b>、 <b>Wiki</b>或 <b>News</b> 模块的文件以进行查看和共同编辑。
-        对于每个模块，查看/编辑文件的访问权限取决于用户角色的设置（权限）。</p>
-
-    <ul>
-        <li>
-            <p><b>问题模块</b></p>
-            <p>创建任务时添加的文件或任务注释中添加的文件是可供查看和编辑的。</p>
-            <p>文件编辑适用于具有 <b>编辑问题</b> 权限的用户角色。</p>
-            <p>具有 <b>查看问题</b> 权限的用户角色可以打开文件进行查看。</p>
-        </li>
-        <li>
-            <p><b>文件模块</b></p>
-            <p>文件仅供具有 <b>查看文件</b> 或 <b>管理文件</b> 权限的用户查看。</p>
-        </li>
-        <li>
-            <p><b>文档模块</b></p>
-            <p>此模块中上传的文件可供查看和编辑。</p>
-            <p>文档编辑适用于具有 <b>编辑文档</b> 权限的用户角色。</p>
-            <p>具有 <b>查看文档</b> 权限的用户角色可以打开文档进行查看。</p>
-        </li>
-        <li>
-            <p><b>维基模块</b></p>
-            <p>此模块中上传的文件可供查看和编辑。</p>
-            <p>文件编辑适用于具有 <b>编辑 Wiki 页面</b> 权限的用户角色。</p>
-            <p>具有 <b>查看 Wiki</b> 权限的用户角色可以打开文件进行查看。</p>
-        </li>
-        <li>
-            <p><b>新闻模块</b></p>
-            <p>此模块中上传的文件可供查看和编辑。</p>
-            <p>文件编辑适用于具有 <b>编辑新闻</b> 权限的用户角色。</p>
-            <p>具有 <b>查看新闻</b> 权限的用户角色可以打开文件进行查看。</p>
-        </li>
-        <li>
-            <p><b>保存更改</b></p>
-            <p>在文档中所做的所有更改都保存在原始文件中。</p>
+            <p><b>Document Editing Service address</b>. The URL of the installed ONLYOFFICE Docs (Document Server). Leave blank to disable the plugin.</p>
         </li>
     </ul>
 
-    <br />
+    <p id="advanced-settings" class="copy-link"><b>Advanced Server Settings</b></p>
+    <ul>
+        <li>ONLYOFFICE Docs address for internal requests from the server.</li>
+        <li>Server address for internal requests from ONLYOFFICE Docs.</li>
+        <li>Connect to the demo ONLYOFFICE Docs server.</li>
+    </ul>
 
-    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-redmine" target="_blank">此处</a>下载 Redmine ONLYOFFICE 集成插件。</p>
+    <p id="security-settings" class="copy-link"><b>Security</b></p>
+    <ul>
+        <li><b>Secret key</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs
+            and for security reasons and data integrity. Specify your secret key in the ONLYOFFICE Docs
+            <a href="/editors/signature/">config file</a>, then specify the same key in the settings page of the plugin. Leave blank to disable authentication.</li>
+        <li>Authorization header.</li>
+        <li>Disable certificate verification (insecure).</li>
+    </ul>
+
+    <p id="editor-customization-settings" class="copy-link"><b>Editor customization settings</b></p>
+    <ul>
+        <li>Display Chat menu button.</li>
+        <li>Display the header more compact.</li>
+        <li>Display Feedback & Support menu button.</li>
+        <li>Display Help menu button.</li>
+        <li>Display monochrome toolbar header.</li>
+    </ul>
+
+    <p id="formats-settings" class="copy-link"><b>Formats</b></p>
+    <ul>
+        <li>Specify the list of formats allowed to be opened directly for editing.</li>
+    </ul>
+
+
+    <h2 id="howitworks" class="copy-link">How it works</h2>
+    <p>The plugin uses the <a href="<%= Url.Action("basic") %>">ONLYOFFICE Docs API</a> and is integrated into various Redmine pages,
+        including <a href="#documents">Documents</a>, <a href="#attachments">Attachments</a>, <a href="#files">Files</a>,
+        <a href="#issues">Issue</a>, <a href="#news">News</a>, <a href="#wiki">Wiki</a>,
+        and <a href="#forums">Forums</a>. Additionally, the plugin adds general pages
+        such as <a href="#create-page">"Create in ONLYOFFICE"</a> and <a href="#convert">"Convert with ONLYOFFICE"</a>.</p>
+
+    <ul>
+        <li>
+            <p id="documents" class="copy-link"><b>Documents</b></p>
+            <img alt="Documents page" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/documents-page.png") %>"  />
+            <p>On the <b>Documents</b> page, users can open the attachment to view, edit, create, or convert it.
+                The options displayed in the interface may vary depending on the user permissions.</p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Option</td>
+                        <td>Permissions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td id="view" class="copy-link">View</td>
+                        <td>View documents</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="edit" class="copy-link">Edit</td>
+                        <td>View documents, Edit documents</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="create" class="copy-link">Create</td>
+                        <td>View documents, Edit documents</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-save" class="copy-link">Convert: Save</td>
+                        <td>View documents, Edit documents</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-download" class="copy-link">Convert: Download</td>
+                        <td>View documents</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+        <li>
+            <p id="attachments" class="copy-link"><b>Attachment</b></p>
+            <img alt="Attachment page" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/attachment-page.png") %>"  />
+            <p>On the <b>Attachment</b> page, users can open the attachment to view, edit, or convert it.
+                The options displayed in the interface may vary depending on the user's permissions for the module where the attachment is located.</p>
+        </li>
+        <li>
+            <p id="files" class="copy-link"><b>Files</b></p>
+            <img alt="Files page" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/files-page.png") %>"  />
+            <p>On the <b>Files</b> page, users can open the attachment to view, edit, or convert it.
+                The options displayed in the interface may vary depending on the user's permissions.</p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Option</td>
+                        <td>Permissions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td id="view" class="copy-link">View</td>
+                        <td>View files</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="edit" class="copy-link">Edit</td>
+                        <td>View files, Manage files</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-save" class="copy-link">Convert: Save</td>
+                        <td>View files, Manage files</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-download" class="copy-link">Convert: Download</td>
+                        <td>View files</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+        <li>
+            <p id="issues" class="copy-link"><b>Issues</b></p>
+            <img alt="Issues page" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/issues-page.png") %>"  />
+            <p>On the <b>Issues</b> page, users can open the attachment to view, edit, or convert it.
+                The options displayed in the interface may vary depending on the user's permissions.</p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Option</td>
+                        <td>Permissions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td id="view" class="copy-link">View</td>
+                        <td>View issues</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="edit" class="copy-link">Edit</td>
+                        <td>View issues, Edit own issues</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-save" class="copy-link">Convert: Save</td>
+                        <td>View issues, Edit own issues</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-download" class="copy-link">Convert: Download</td>
+                        <td>View issues</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+        <li>
+            <p id="news" class="copy-link"><b>News</b></p>
+            <img alt="News page" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/news-page.png") %>"  />
+            <p>On the <b>News</b> page, users can open the attachment to view, edit, or convert it.
+                The options displayed in the interface may vary depending on the user's permissions.</p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Option</td>
+                        <td>Permissions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td id="view" class="copy-link">View</td>
+                        <td>View news</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="edit" class="copy-link">Edit</td>
+                        <td>View news, Manage news</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-save" class="copy-link">Convert: Save</td>
+                        <td>View news, Manage news</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-download" class="copy-link">Convert: Download</td>
+                        <td>View news</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+        <li>
+            <p id="wiki" class="copy-link"><b>Wiki</b></p>
+            <img alt="Wiki page" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/wiki-page.png") %>"  />
+            <p>On the <b>Wiki</b> page, users can open the attachment to view, edit, or convert it.
+                The options displayed in the interface may vary depending on the user's permissions.</p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Option</td>
+                        <td>Permissions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td id="view" class="copy-link">View</td>
+                        <td>View wiki</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="edit" class="copy-link">Edit</td>
+                        <td>View wiki, Edit wiki pages</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-save" class="copy-link">Convert: Save</td>
+                        <td>View wiki, Edit wiki pages</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-download" class="copy-link">Convert: Download</td>
+                        <td>View wiki</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+        <li>
+            <p id="forums" class="copy-link"><b>Forums</b></p>
+            <img alt="Forums page" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/forums-page.png") %>"  />
+            <p>On the <b>Forums</b> page, users can open the attachment to view, edit, or convert it.
+                The options displayed in the interface may vary depending on the user's permissions.</p>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Option</td>
+                        <td>Permissions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td id="view" class="copy-link">View</td>
+                        <td>View messages</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="edit" class="copy-link">Edit</td>
+                        <td>View messages, Edit messages</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-save" class="copy-link">Convert: Save</td>
+                        <td>View messages, Edit messages</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="convert-download" class="copy-link">Convert: Download</td>
+                        <td>View messages</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+        </li>
+        <li>
+            <p id="view-or-edit" class="copy-link"><b>View Or Edit In ONLYOFFICE</b></p>
+            <img alt="View Or Edit In ONLYOFFICE" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/view-or-edit.png") %>"  />
+            <p>On the <b>View Or Edit In ONLYOFFICE</b> page, users can view or edit the attachment.
+                The visibility of this page depends on the user's permissions for the module where the attachment is located.</p>
+        </li>
+        <li>
+            <p id="create-page" class="copy-link"><b>Create in ONLYOFFICE</b></p>
+            <img alt="Create in ONLYOFFICE" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/create-page.png") %>"  />
+            <p>On the <b>Create in ONLYOFFICE</b> page, users can create the attachment using templates that consider the user's language preference.
+                Take a look at <a href="#formats">supported formats</a>. The visibility of this page depends on the user's permissions for the module.</p>
+        </li>
+        <li>
+            <p id="convert" class="copy-link"><b>Convert with ONLYOFFICE</b></p>
+            <img alt="Convert with ONLYOFFICE" class="screenshot max-width-832" src="<%= Url.Content("~/content/img/editor/convert-page.png") %>"  />
+            <p>On the <b>Convert with ONLYOFFICE</b> page, the user can convert the attachment.
+                The visibility of this page depends on the user's permissions for the module where the attachment is located.</p>
+        </li>
+    </ul>
 
 </asp:Content>

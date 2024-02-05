@@ -48,6 +48,7 @@
     <li><a href="#macros">macros</a></li>
     <li><a href="#macrosMode">macrosMode</a></li>
     <li><a href="#mentionShare">mentionShare</a></li>
+    <li><a href="#mobileForceView">mobileForceView</a></li>
     <li><a href="#plugins">plugins</a></li>
     <li><a href="#review">review</a></li>
     <li><a href="#reviewDisplay">reviewDisplay</a></li>
@@ -961,6 +962,14 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="mobileForceView" class="copy-link">mobileForceView</td>
+            <td>
+                Defines if the mobile document editor is opened in the view/edit mode on launch. The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
             <td id="plugins" class="copy-link">plugins</td>
             <td>
                 定义 <a href="<%= Url.Action("basic", "plugin") %>">插件</a> 是否将启动并可用。
@@ -1133,7 +1142,7 @@
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
                 定义顶部工具栏上是否显示或隐藏<b>提交</b>按钮。
-                按钮仅适用于 <em>oform</em> 格式。 默认值为<b>false</b>。
+                按钮仅适用于 <em>pdf</em> 格式。 默认值为<b>false</b>。
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -1381,6 +1390,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "macros": true,
             "macrosMode": "warn",
             "mentionShare": true,
+            "mobileForceView": true,
             "plugins": true,
             "review": {
                 "hideReviewDisplay": false,

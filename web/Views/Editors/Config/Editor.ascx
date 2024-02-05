@@ -272,6 +272,13 @@
                         <b>例如</b>："78e1e841"；
                     </li>
                     <li>
+                        <b>image</b> - the path to the user avatar,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "https://example.com/url-to-user-avatar.png";
+                    </li>
+                    <li>
                         <b>lastname</b> - 用户的姓氏。
                         自 4.2 版起已弃用，请改用 <em>name</em>，
                         <br />
@@ -294,6 +301,7 @@
             <td>{
     "group": "Group1",
     "id": "78e1e841",
+    "image": "https://example.com/url-to-user-avatar.png",
     "name": "John Smith"
 }</td>
         </tr>
@@ -346,6 +354,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "user": {
             "group": "Group1",
             "id": "78e1e841",
+            "image": "https://example.com/url-to-user-avatar.png",
             "name": "John Smith"
         }
     },

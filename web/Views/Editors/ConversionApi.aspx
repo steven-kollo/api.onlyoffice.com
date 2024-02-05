@@ -23,6 +23,24 @@
     <div class="note">在 <b>ONLYOFFICE 文档服务器</b>4.2之前的版本中，使用了GET请求,请求参数在 <em>QueryString</em> 中。</div>
 
     <h2 id="request" class="copy-link">请求参数及其说明：</h2>
+    <ul class="columns-4" style="list-style: none;">
+        <li><a href="#async">async</a></li>
+        <li><a href="#codePage">codePage</a></li>
+        <li><a href="#delimiter">delimiter</a></li>
+        <li><a href="#documentLayout">documentLayout</a></li>
+        <li><a href="#documentRenderer">documentRenderer</a></li>
+        <li><a href="#filetype">filetype</a></li>
+        <li><a href="#key">key</a></li>
+        <li><a href="#outputtype">outputtype</a></li>
+        <li><a href="#password">password</a></li>
+        <li><a href="#region">region</a></li>
+        <li><a href="#spreadsheetLayout">spreadsheetLayout</a></li>
+        <li><a href="#thumbnail">thumbnail</a></li>
+        <li><a href="#title">title</a></li>
+        <li><a href="#token">token</a></li>
+        <li><a href="#url">url</a></li>
+        <li><a href="#watermark">watermark</a></li>
+    </ul>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -418,6 +436,152 @@
                 </td>
                 <td>string</td>
                 <td>必需的</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark" class="copy-link">watermark</td>
+                <td>Defines a JSON object containing the <a href="<%= Url.Action("global", "plugin") %>#watermark_on_draw">properties</a> of a watermark
+                    which is inserted into the pdf and image files during conversion.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-transparent" class="copy-link">watermark.transparent</td>
+                <td>Defines the watermark transparency degree.</td>
+                <td>float</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-type" class="copy-link">watermark.type</td>
+                <td>Defines the <a href="<%= Url.Action("global", "DocBuilder") %>#ShapeType">shape type</a> which specifies the preset shape geometry for the current watermark.</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-width" class="copy-link">watermark.width</td>
+                <td>Defines the watermark width measured in millimeters.</td>
+                <td>number</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-height" class="copy-link">watermark.height</td>
+                <td>Defines the watermark height measured in millimeters.</td>
+                <td>number</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-rotate" class="copy-link">watermark.rotate</td>
+                <td>Defines the watermark rotation angle measured in degrees.</td>
+                <td>number</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-margins" class="copy-link">watermark.margins</td>
+                <td>Defines the text margins measured in millimeters in the watermark shape.</td>
+                <td>array of numbers</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-fill" class="copy-link">watermark.fill</td>
+                <td>Defines the watermark fill color in the RGB format, or the URL to image (base64 support: <em>data:image/png;...</em>).
+                    The empty array [] means that the watermark has no fill.</td>
+                <td>array of numbers | string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-stroke-width" class="copy-link">watermark.stroke-width</td>
+                <td>Defines the watermark stroke width measured in millimeters.</td>
+                <td>number</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-stroke" class="copy-link">watermark.stroke</td>
+                <td>Defines the watermark stroke color in the RGB format. The empty array [] means that the watermark stroke has no fill.</td>
+                <td>array of numbers</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-align" class="copy-link">watermark.align</td>
+                <td>Defines the vertical text align in the watermark shape: <b>0</b> - bottom, <b>1</b> - center, <b>4</b> - top.</td>
+                <td>number</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs" class="copy-link">watermark.paragraphs</td>
+                <td>Defines the array with paragraphs from the current watermark with their properties.</td>
+                <td>array of objects</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-align" class="copy-link">watermark.paragraphs.align</td>
+                <td>Defines the horizontal text align in the current paragraph: <b>0</b> - right, <b>1</b> - left, <b>2</b> - center, <b>3</b> - justify.</td>
+                <td>number</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-fill" class="copy-link">watermark.paragraphs.fill</td>
+                <td>Defines the paragraph highlight in the RGB format. The empty array [] means that the paragraph is not highlighted.</td>
+                <td>array of numbers</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-linespacing" class="copy-link">watermark.paragraphs.linespacing</td>
+                <td>Defines the text linespacing in the current paragraph.</td>
+                <td>number</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs" class="copy-link">watermark.paragraphs.runs</td>
+                <td>Defines the array with runs from the current paragraph with their properties.</td>
+                <td>array of objects</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs-text" class="copy-link">watermark.paragraphs.runs.text</td>
+                <td>Defines the run text.</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs-fill" class="copy-link">watermark.paragraphs.runs.fill</td>
+                <td>Defines the text highlight in the RGB format. The empty array [] means that the text is not highlighted.</td>
+                <td>array of numbers</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs-font-family" class="copy-link">watermark.paragraphs.runs.font-family</td>
+                <td>Defines the text font family.</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs-font-size" class="copy-link">watermark.paragraphs.runs.font-size</td>
+                <td>Defines the text font size measured in points (pt).</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs-bold" class="copy-link">watermark.paragraphs.runs.bold</td>
+                <td>Defines if the current text is displayed bold or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs-italic" class="copy-link">watermark.paragraphs.runs.italic</td>
+                <td>Defines if the current text is displayed italic or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs-strikeout" class="copy-link">watermark.paragraphs.runs.strikeout</td>
+                <td>Defines if the current text is displayed struck through or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="watermark-paragraphs-runs-underline" class="copy-link">watermark.paragraphs.runs.underline</td>
+                <td>Defines if the current text is displayed underlined or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
             </tr>
         </tbody>
     </table>
@@ -1604,6 +1768,56 @@
     <p>
         其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
         有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
+    </p>
+
+    <div id="sample-watermark" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format with a watermark inserted</div>
+    <pre>
+{
+    "async": false,
+    "filetype": "docx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "title": "Example Document Title.docx",
+    "url": "https://example.com/url-to-example-document.docx",
+    "watermark": {
+        "align": 1,
+        "fill": [255, 0, 0],
+        "height": 100,
+        "margins": [ 10, 10, 10, 10 ],
+        "paragraphs": [
+            {
+                "align": 2,
+                "fill": [255, 0, 0],
+                "linespacing": 1,
+                "runs": [
+                    {
+                        "bold": true,
+                        "italic": false,
+                        "fill": [0, 0, 0],
+                        "font-family": "Arial",
+                        "font-size": 40,
+                        "strikeout": false,
+                        "text": "Watermark",
+                        "underline": false
+                    },
+                    {
+                        "text": "&lt;%br%&gt;"
+                    }
+                ]
+            }
+        ],
+        "rotate": -45,
+        "transparent": 0.3,
+        "type": "rect",
+        "stroke-width": 1,
+        "stroke": [0, 0, 255],
+        "width": 100
+    }
+}
+</pre>
+    <p>
+        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
     <div id="sample-thumbnail" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于生成 <em>docx</em> 格式的文件的 <em>png</em> 缩略图</div>

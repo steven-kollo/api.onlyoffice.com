@@ -39,7 +39,7 @@
     <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - 用户尝试通过单击<em>邮件合并</em>按钮来选择收件人数据。</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - 用户在评论中被提及。</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - 用户尝试通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限。</li>
-    <li><a href="#onRequestUsers">onRequestUsers</a> - 评论者可以选择其他用户在评论中提及。</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
     <li><a href="#onWarning">onWarning</a> - 出现警告。</li>
 </ul>
 
@@ -551,12 +551,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p>
-            <b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - 当用户通过单击<em>数据</em>选项卡<em>外部链接</em>对话框中的<em>更新值</em>
-             按钮而尝试刷新从外部文件插入的数据时，函数被调用。
-             要通过事件参数指定的文件链接刷新数据，您必须调用 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法。
-             具有唯一文件数据和文件路径或名称的对象在 <em>data</em> 参数中发送。 如果未声明该事件，则不会显示<em>粘贴链接</em> 和<em>更新值</em> 按钮。
-        </p>
+        <p><b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - the function called when the user is trying to refresh data inserted from the external file
+            by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab.</p>
+        <p>An object with the unique file data from the source file, the file path or name, and the file URL are sent in the <em>data</em> parameter.</p>
+        <p>To refresh data by a link to a file which is specified with the event parameters, you must call the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.
+            When calling this method, the token must be added to validate the parameters.
+            If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.</p>
        <note>要将数据发送给<em>setReferenceData</em>方法，建议先通过<em>referenceData</em>参数搜索文件。
          如果没有这样的字段或找不到文件，则使用 <em>path</em> 参数。</note>
         <div class="img-block-2">
@@ -570,6 +570,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">示例</div>
         <pre>
 var onRequestReferenceData = function () {
+    var link = event.data.link;
     var referenceData =  event.data.referenceData;
     var path = event.data.path;
     ...
@@ -871,9 +872,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - 当用户可以选择其他用户在评论中提及或授予编辑特定工作表范围的访问权限时调用的函数。</p>
+        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</p>
         <p>从7.4版本开始，可以在<em>data.c</em>参数中指定操作类型。 它可以采用两个值 - <em>mention</em>或<em>protect</em>。
          在版本 7.4 之前，此事件仅支持mention操作。</p>
+        <p>Starting from version 8.0, the <em>info</em> operation type is added to set the avatars for the users with the ids specified in the <em>data.id</em> parameter.</p>
         <p>要设置用户列表，您必须调用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。
              当执行相应的操作时，每个 <em>c</em> 类型都会调用一次 <em>onRequestUsers</em> 事件。
              如果使用空列表调用<em>setUsers</em>，则<em>onRequestUsers</em>事件将再次触发。</p>
@@ -888,17 +890,23 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">示例</div>
         <pre>
 var onRequestUsers = function (event) {
+    var c = event.data.c;
+    var id = event.data.id;
+    ...
+
     docEditor.setUsers({
         "c": event.data.c,
         "users": [
             {
                 "email": "john@example.com",
                 "id": "78e1e841",
+                "image": "https://example.com/url-to-user-avatar1.png",
                 "name": "John Smith"
             },
             {
                 "email": "kate@example.com",
                 "id": "F89d8069ba2b",
+                "image": "https://example.com/url-to-user-avatar2.png",
                 "name": "Kate Cage"
             },
             ...

@@ -38,7 +38,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> - 将邮件合并的收件人数据插入到文件中。</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - 选择一个文档进行比较。</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
-        <li><a href="#setUsers">setUsers</a> - 设置要在评论中提及的用户列表或授予编辑特定工作表范围的访问权限。</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
         <li><a href="#showMessage">showMessage</a> - 显示带有消息的工具提示。</li>
     </ul>
 
@@ -718,7 +718,7 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
-                <b id="setReferenceData" class="copy-link">setReferenceData</b> - 通过指向由 <em>referenceData</em> 或 <em>path</em> 参数指定的文件链接来刷新数据。
+                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em>, <em>path</em>, or <em>link</em> parameters.
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> 事件之后调用。
             </p>
             <note>请注意，仅当用户有权访问要从中获取数据的文件时，才会执行此方法。</note>
@@ -1209,7 +1209,7 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - 设置要在评论中提及的用户列表或授予编辑特定工作表范围的访问权限。
+                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件之后调用。
             </p>
             <pre>
@@ -1219,11 +1219,13 @@ docEditor.setUsers({
         {
             "email": "john@example.com",
             "id": "78e1e841",
+            "image": "https://example.com/url-to-user-avatar1.png",
             "name": "John Smith"
         },
         {
             "email": "kate@example.com",
             "id": "F89d8069ba2b",
+            "image": "https://example.com/url-to-user-avatar2.png",
             "name": "Kate Cage"
         },
         ...
@@ -1254,7 +1256,7 @@ docEditor.setUsers({
                         <td>c</td>
                         <td>
                            定义 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件的操作类型。
-                             它可以采用以下值之一 - <em>mention</em>或<em>protect</em>。
+                             它可以采用以下值之一 - <em>mention</em>、<em>protect</em>或<em>info</em>。
                              默认值为<em>mention</em>。
                         </td>
                         <td>string</td>
@@ -1277,6 +1279,12 @@ docEditor.setUsers({
                         <td>定义用户的身份。仅当<em>c</em>参数为<em>protect</em>时才使用该字段。</td>
                         <td>string</td>
                         <td>必需的</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>users.image</td>
+                        <td>Defines the path to the user avatar. This field is only used when the <em>c</em> parameter is <em>info</em>.</td>
+                        <td>string</td>
+                        <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>

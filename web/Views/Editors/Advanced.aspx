@@ -163,6 +163,7 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#macros">macros</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#macrosMode">macrosMode</a>": "warn",
             "<a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a>": true,
+            "<a href="<%= Url.Action("config/editor/customization") %>#mobileForceView">mobileForceView</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#plugins">plugins</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#review">review</a>": {
                 "hideReviewDisplay": false,
@@ -230,6 +231,7 @@
         "<a href="<%= Url.Action("config/editor") %>#user">user</a>": {
             "group": "Group1",
             "id": "78e1e841",
+            "image": "https://example.com/url-to-user-avatar.png",
             "name": "John Smith"
         }
     },

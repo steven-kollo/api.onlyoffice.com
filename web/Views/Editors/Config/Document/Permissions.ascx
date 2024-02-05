@@ -166,7 +166,7 @@
             <td id="fillForms" class="copy-link">fillForms</td>
             <td>
                 定义是否可以填写表单。
-                只有将 <a href="<%= Url.Action("config/editor") %>#mode">mode</a> 参数设置为 <b>edit</b>时，文档编辑器才可以填写表单。
+                Filling in forms will only be available for the document and pdf editors if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.
                 默认值与 <a href="#edit">edit</a> 或 <a href="#review">review</a> 参数的值一致。
             </td>
             <td>boolean</td>
