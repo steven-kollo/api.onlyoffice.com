@@ -72,8 +72,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config/Editor/Embedded",
                 "Config/Editor/Plugins",
                 "Config/Events",
-                "ConfigCreateEditor",
-                "ConfigCreatePermissions",
+                "ConfigCreate",
                 "Confluence",
                 "Connector",
                 "Conversion",
@@ -269,85 +268,17 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Config", (object) catchall);
         }
 
+        
+
         [HttpPost]
-        public JsonResult ConfigCreateEditor(
+        public JsonResult ConfigCreate(
             string jsonConfig
         )
         {
-            Config config = new Config
-            {
-                Document = new Config.DocumentConfig
-                {
-                    FileType = "docx",
-                    Key = "apiwh" + Guid.NewGuid(),
-                    Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                    Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
-                    Info = new Config.DocumentConfig.InfoConfig()
-                },
-                DocumentType = "word",
-                EditorConfig = JsonConvert.DeserializeObject<Config>(jsonConfig).EditorConfig,
-                Height = "550px",
-                Width = "100%"
-            };
+            Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
+            config.Document.Key = "apiwh" + Guid.NewGuid();
+            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx";
             config.EditorConfig.CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme);
-            config.EditorConfig.Customization = new Config.EditorConfigConfiguration.CustomizationConfig
-            {
-                Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
-                {
-                    Request = false
-                },
-                Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
-                {
-                    Visible = true
-                },
-                IntegrationMode = "embed",
-            };
-            return Json(Helpers.Config.Serialize(config));
-        }
-
-        [HttpPost]
-        public JsonResult ConfigCreatePermissions(
-            string jsonConfig
-        )
-        {
-            Config config = new Config
-            {
-                Document = new Config.DocumentConfig
-                {
-                    FileType = "docx",
-                    Key = "apiwh" + Guid.NewGuid(),
-                    Permissions = JsonConvert.DeserializeObject<Config>(jsonConfig).Document.Permissions,
-                    Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
-                    Info = new Config.DocumentConfig.InfoConfig()
-                },
-                DocumentType = "word",
-                EditorConfig = new Config.EditorConfigConfiguration
-                {
-                    CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
-                    Customization = new Config.EditorConfigConfiguration.CustomizationConfig
-                    {
-                        CompactToolbar = true,
-                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
-                        {
-                            Visible = true
-                        },
-                        HideRightMenu = true,
-                        HideRulers = true,
-                        IntegrationMode = "embed",
-                        ToolbarNoTabs = true
-                    },
-                    User = new Config.EditorConfigConfiguration.UserConfig
-                    {
-                        Name = "John Smith",
-                        Id = "79e1e841"
-                    }
-                },
-                Height = "550px",
-                Width = "100%"
-            };
-
             return Json(Helpers.Config.Serialize(config));
         }
 

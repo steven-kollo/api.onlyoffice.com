@@ -527,7 +527,7 @@
         window.docEditor.destroyEditor();
         $.ajax({
             type: "POST",
-            url: "<%= Url.Action("configcreatepermissions", null, null, Request.Url.Scheme) %>",
+            url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
             data: JSON.stringify({ jsonConfig: JSON.stringify(config) }),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
