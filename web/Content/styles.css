@@ -3008,6 +3008,10 @@ select {
         cursor: pointer;
     }
 
+#editorSpace iframe {
+    position: relative !important;
+}
+
 #configArea {
     width: 55%;
     display: inline-block;
