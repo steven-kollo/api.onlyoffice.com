@@ -456,11 +456,11 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "templates", Namespace = "")]
             public class TemplatesConfig
             {
-                [DataMember(Name = "icon", EmitDefaultValue = false)]
-                public string Icon;
+                [DataMember(Name = "image", EmitDefaultValue = false)]
+                public string Image;
 
-                [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-                public string Name;
+                [DataMember(Name = "title", IsRequired = true, EmitDefaultValue = false)]
+                public string Title;
 
                 [DataMember(Name = "url", IsRequired = true, EmitDefaultValue = false)]
                 public string Url;
@@ -469,8 +469,14 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "user", Namespace = "")]
             public class UserConfig
             {
+                [DataMember(Name = "group", EmitDefaultValue = false)]
+                public string Group;
+
                 [DataMember(Name = "id", EmitDefaultValue = false)]
                 public string Id;
+
+                [DataMember(Name = "image", EmitDefaultValue = false)]
+                public string Image;
 
                 [DataMember(Name = "name", EmitDefaultValue = false)]
                 public string Name;
