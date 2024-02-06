@@ -785,8 +785,19 @@
             config.editorConfig.customization = {
                 "integrationMode": "embed"
             };
+
             window.docEditor.destroyEditor();
-            window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+            $.ajax({
+                type: "POST",
+                url: "<%= Url.Action("configcreateeditor", null, null, Request.Url.Scheme) %>",
+                data: JSON.stringify({ jsonConfig: JSON.stringify(config) }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
+                }
+            });
+            //window.docEditor = new DocsAPI.DocEditor("placeholder", config);
         }
 
         var pre = document.getElementById("configPre");

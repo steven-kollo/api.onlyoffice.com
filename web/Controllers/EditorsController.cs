@@ -72,7 +72,8 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config/Editor/Embedded",
                 "Config/Editor/Plugins",
                 "Config/Events",
-                "ConfigCreate",
+                "ConfigCreateEditor",
+                "ConfigCreatePermissions",
                 "Confluence",
                 "Connector",
                 "Conversion",
@@ -269,7 +270,44 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         [HttpPost]
-        public JsonResult ConfigCreate(
+        public JsonResult ConfigCreateEditor(
+            string jsonConfig
+        )
+        {
+            Config config = new Config
+            {
+                Document = new Config.DocumentConfig
+                {
+                    FileType = "docx",
+                    Key = "apiwh" + Guid.NewGuid(),
+                    Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                    Title = "Example Title",
+                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                    Info = new Config.DocumentConfig.InfoConfig()
+                },
+                DocumentType = "word",
+                EditorConfig = JsonConvert.DeserializeObject<Config>(jsonConfig).EditorConfig,
+                Height = "550px",
+                Width = "100%"
+            };
+            config.EditorConfig.CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme);
+            config.EditorConfig.Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+            {
+                Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                {
+                    Request = false
+                },
+                Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                {
+                    Visible = true
+                },
+                IntegrationMode = "embed",
+            };
+            return Json(Helpers.Config.Serialize(config));
+        }
+
+        [HttpPost]
+        public JsonResult ConfigCreatePermissions(
             string jsonConfig
         )
         {
