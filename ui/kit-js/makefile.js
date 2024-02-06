@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // @ts-check
 
+import { exec } from "node:child_process"
 import { copyFile, mkdir } from "node:fs/promises"
 import { existsSync } from "node:fs"
 import { join } from "node:path"
@@ -25,6 +26,19 @@ async function build() {
   }
 
   await Promise.all([
+    await new Promise((res, rej) => {
+      const tsc = join(root, "node_modules", ".bin", "tsc")
+      const p = join(root, "tsconfig.json")
+      exec(`${tsc} --project ${p}`, (err, stdout, stderr) => {
+        if (err) {
+          return rej(err)
+        }
+        if (stderr) {
+          return rej(stderr)
+        }
+        return res(stdout)
+      })
+    }),
     await Promise.all([
       "kit.css"
     ].map(async (n) => {

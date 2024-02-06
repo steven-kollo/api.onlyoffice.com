@@ -17,7 +17,7 @@
     "./makefile.js": "./makefile.js"
   },
   "scripts": {
-    "build": "tsc && node ./makefile.js build"
+    "build": "node ./makefile.js build"
   },
   "dependencies": {
     "common-tags": "^1.8.2"
