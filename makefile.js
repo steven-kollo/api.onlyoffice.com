@@ -11,6 +11,11 @@ import sade from "sade"
 import * as documentBuilder from "./resources/makefile.js"
 // const uiKit = require("./ui/kit/makefile.js")
 
+import * as codeListingJS from "@onlyoffice/documentation-ui-code-listing-js/makefile.js"
+import * as contentJS from "@onlyoffice/documentation-ui-content-js/makefile.js"
+import * as declarationToken from "@onlyoffice/documentation-ui-declaration-token-js/makefile.js"
+import * as kitJS from "@onlyoffice/documentation-ui-kit-js/makefile.js"
+
 const root = fileURLToPath(new URL(".", import.meta.url))
 const make = sade("./makefile.js")
 
@@ -19,6 +24,29 @@ make
   .option("-p, --prettify", "Prettify the output")
   .action(async (o) => {
     await documentBuilder.build(o)
+  })
+
+make
+  .command("build2")
+  .action(async () => {
+    await Promise.all([
+      (() => {
+        console.log("@onlyoffice/documentation-ui-code-listing-js")
+        return codeListingJS.build()
+      })(),
+      (() => {
+        console.log("@onlyoffice/documentation-ui-content-js")
+        return contentJS.build()
+      })(),
+      (() => {
+        console.log("@onlyoffice/documentation-ui-declaration-token-js")
+        return declarationToken.build()
+      })(),
+      (() => {
+        console.log("@onlyoffice/documentation-ui-kit-js")
+        return kitJS.build()
+      })()
+    ])
   })
 
 // todo: separate build and watch commands

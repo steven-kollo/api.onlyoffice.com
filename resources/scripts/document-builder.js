@@ -172,6 +172,11 @@ class PreprocessDeclarations extends JSDocPreprocessDeclarations {
         return
       }
     }
+    if (Object.hasOwn(doc, "name")) {
+      if (doc.name.startsWith("\"") && doc.name.endsWith("\"")) {
+        doc.name = doc.name.slice(1, -1)
+      }
+    }
     super._transform(ch, enc, cb)
   }
 }

@@ -1,1 +1,0 @@
-<script webc:setup src="./inline-signature.setup.js"></script><code @raw="signature"></code>

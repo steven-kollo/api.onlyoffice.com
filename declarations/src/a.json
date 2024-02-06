@@ -1,0 +1,38 @@
+{
+  "signature": [
+    {
+      "type": "text",
+      "text": ""
+    },
+    {
+      "type": "keyword",
+      "text": ""
+    },
+    {
+      "type": "identifier",
+      "text": ""
+    },
+    {
+      "type": "reference",
+      "text": ""
+    }
+  ],
+
+  "sections": [
+    {
+      "type": "hero",
+      "title": "",
+      "summary": ""
+    },
+    {
+      "type": "primary",
+      "content": {
+        "syntax": "",
+        "text": ""
+      }
+    },
+    {
+      "type": "topics"
+    }
+  ]
+}

@@ -3,9 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "node ./makefile.js build2",
     "build-ui-kit": "node ./makefile.js build-ui-kit"
   },
   "devDependencies": {
+    "@onlyoffice/documentation-ui-code-listing-js": "workspace:^",
+    "@onlyoffice/documentation-ui-content-js": "workspace:^",
+    "@onlyoffice/documentation-ui-declaration-token-js": "workspace:^",
+    "@onlyoffice/documentation-ui-kit-js": "workspace:^",
     "esbuild": "^0.19.11",
     "html-minifier-terser": "^7.2.0",
     "lightningcss": "^1.23.0",

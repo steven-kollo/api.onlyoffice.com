@@ -1,0 +1,58 @@
+{
+  "name": "@onlyoffice/documentation-ui-declaration-token-js",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/declaration-token.js",
+      "require": "./dist/declaration-token.cjs",
+      "types": "./dist/declaration-token.d.ts"
+    },
+    "./declaration-token.css": "./dist/declaration-token.css",
+    "./DeclarationToken.js": {
+      "import": "./dist/DeclarationToken.js",
+      "require": "./dist/DeclarationToken.cjs",
+      "types": "./dist/DeclarationToken.d.ts"
+    },
+    "./DeclarationTokenDecoration.js": {
+      "import": "./dist/DeclarationTokenDecoration.js",
+      "require": "./dist/DeclarationTokenDecoration.cjs",
+      "types": "./dist/DeclarationTokenDecoration.d.ts"
+    },
+    "./DeclarationTokenIdentifier.js": {
+      "import": "./dist/DeclarationTokenIdentifier.js",
+      "require": "./dist/DeclarationTokenIdentifier.cjs",
+      "types": "./dist/DeclarationTokenIdentifier.d.ts"
+    },
+    "./DeclarationTokenKeyword.js": {
+      "import": "./dist/DeclarationTokenKeyword.js",
+      "require": "./dist/DeclarationTokenKeyword.cjs",
+      "types": "./dist/DeclarationTokenKeyword.d.ts"
+    },
+    "./DeclarationTokenReference.js": {
+      "import": "./dist/DeclarationTokenReference.js",
+      "require": "./dist/DeclarationTokenReference.cjs",
+      "types": "./dist/DeclarationTokenReference.d.ts"
+    },
+    "./makefile.js": "./makefile.js"
+  },
+  "scripts": {
+    "build": "tsc && node ./makefile.js build"
+  },
+  "dependencies": {
+    "common-tags": "^1.8.2"
+  },
+  "devDependencies": {
+    "@types/common-tags": "^1.8.4",
+    "es-main": "^1.3.0",
+    "esbuild": "^0.19.11",
+    "lightningcss": "^1.23.0",
+    "sade": "^1.8.1",
+    "typescript": "^5.3.3",
+    "uvu": "^0.5.6"
+  },
+  "packageManager": "pnpm@8.13.0",
+  "engines": {
+    "node": "21.5.0"
+  }
+}

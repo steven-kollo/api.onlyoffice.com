@@ -1,3 +1,0 @@
-<script webc:type="js">
-`<template webc:is="${this.component.tag}" @attributes="component.attributes"></template>`
-</script>

@@ -6,6 +6,9 @@
     "build": "eleventy",
     "serve": "eleventy --serve --quiet"
   },
+  "dependencies": {
+    "@onlyoffice/documentation-ui-kit-js": "workspace:^"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
@@ -13,10 +16,14 @@
     "@11ty/webc": "^0.11.4",
     "@onlyoffice/documentation-declarations": "workspace:^",
     "@onlyoffice/documentation-resources": "workspace:^",
+    "@onlyoffice/documentation-ui-code-example-webc": "workspace:^",
     "@onlyoffice/documentation-ui-kit": "workspace:^",
     "@onlyoffice/documentation-ui-kit-webc": "workspace:^",
     "@onlyoffice/documentation-ui-reflection-webc": "workspace:^",
     "@shikijs/rehype": "1.0.0-beta.1",
+    "@types/common-tags": "^1.8.4",
+    "clsx": "^2.1.0",
+    "common-tags": "^1.8.2",
     "esbuild": "^0.19.11",
     "html-minifier-terser": "^7.2.0",
     "lightningcss": "^1.23.0",

@@ -41,6 +41,7 @@ function config(c) {
     "npm:@onlyoffice/documentation-ui-kit/node_modules/@onlyoffice/documentation-ui-sr-only/dist/*.webc",
     // todo: read from package.json exports
     "npm:@onlyoffice/documentation-ui-kit-webc/dist/**/*.webc",
+    "npm:@onlyoffice/documentation-ui-code-example-webc/dist/**/*.webc",
     "./src/blocks/**/*.webc"
   ]
   c.addPlugin(webc, { components })
@@ -50,7 +51,7 @@ function config(c) {
   // c.addPlugin(productsPlugin)
 
   return {
-    templateFormats: ["md", "webc"],
+    templateFormats: ["md", "webc", "njk", "11ty.js"],
     dir: {
       data: "_",
       includes: "",
