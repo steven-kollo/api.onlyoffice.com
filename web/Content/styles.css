@@ -3007,6 +3007,9 @@ select {
         font-weight: 100;
         cursor: pointer;
     }
+#editorSpace {
+    min-height: 550px;
+}
 
 #editorSpace iframe {
     position: relative !important;
