@@ -1212,7 +1212,8 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx",
+                                Info = new Config.DocumentConfig.InfoConfig()
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -1244,7 +1245,8 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx",
+                                Info = new Config.DocumentConfig.InfoConfig()
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -1276,7 +1278,8 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx",
+                                Info = new Config.DocumentConfig.InfoConfig()
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -1308,7 +1311,8 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx",
+                                Info = new Config.DocumentConfig.InfoConfig()
                             },
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
@@ -1341,7 +1345,8 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx",
+                                Info = new Config.DocumentConfig.InfoConfig()
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
@@ -1374,7 +1379,8 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx",
+                                Info = new Config.DocumentConfig.InfoConfig()
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {

@@ -23,7 +23,7 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently, the following document formats can be edited or viewed: DOCX, XLSX, PPTX, DOCXF, PDF.</li>
+        <li>Currently, the following document formats can be edited or viewed: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
         <li>
             The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents. 
             This allows multiple users to collaborate in real time and to save back those changes to Confluence.

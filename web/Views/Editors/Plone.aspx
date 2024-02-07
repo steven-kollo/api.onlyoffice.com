@@ -20,8 +20,8 @@
     <h2 id="features" class="copy-link">Features</h2>
 
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, PDF.</li>
-        <li>The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT.</li>
+        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
+        <li>The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT.</li>
         <li>The plugin will create a new <b>ONLYOFFICE Edit</b> menu option within the document library for Office documents. 
             This allows multiple users to collaborate in real time and to save back those changes to Plone.</li>
     </ul>

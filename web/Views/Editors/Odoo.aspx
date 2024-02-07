@@ -19,8 +19,8 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, DOCXF, XLSX, PPTX, PDF.</li>
-        <li>The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.</li>
+        <li>Currently, the following document formats can be edited: DOCX, DOCXF, XLSX, PPTX.</li>
+        <li>The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OFORM, OTT, OXPS, PDF, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.</li>
         <li>The app will create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents. 
             This allows multiple users to collaborate in real time and to save back those changes to Odoo.</li>
     </ul>
