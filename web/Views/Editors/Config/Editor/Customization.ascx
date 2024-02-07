@@ -1376,7 +1376,7 @@
             </div>
             <div class="line input_line">
                 <label for="editorConfig_customization_customer_logoDark">Logo Dark</label>
-                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user_profile.png">
+                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
             </div>
             <div class="line input_line">
                 <label for="editorConfig_customization_customer_mail">Mail</label>
