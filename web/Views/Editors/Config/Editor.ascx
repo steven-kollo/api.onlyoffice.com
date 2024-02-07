@@ -483,7 +483,7 @@
                 </div>
                 <div class="line input_line">
                     <label for="editorConfig_user_image">Image</label>
-                    <input type="text" id="editorConfig_user_image" name="editorConfig_user_image" value="https://example.com/url-to-user-avatar.png">
+                    <input type="text" id="editorConfig_user_image" name="editorConfig_user_image" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
                 </div>
                 <div class="line input_line">
                     <label for="editorConfig_user_name">Name</label>

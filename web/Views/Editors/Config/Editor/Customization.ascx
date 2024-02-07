@@ -1372,11 +1372,11 @@
             </div>
             <div class="line input_line">
                 <label for="editorConfig_customization_customer_logo">Logo</label>
-                <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo" value="https://example.com/logo-big.png">
+                <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
             </div>
             <div class="line input_line">
                 <label for="editorConfig_customization_customer_logoDark">Logo Dark</label>
-                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://example.com/dark-logo-big.png">
+                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user_profile.png">
             </div>
             <div class="line input_line">
                 <label for="editorConfig_customization_customer_mail">Mail</label>
@@ -1514,11 +1514,11 @@
         <div id="holder_editorConfig_customization_logo" class="config_object_holder" hidden>
             <div class="line input_line">
                 <label for="editorConfig_customization_logo_image">Image</label>
-                <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://example.com/logo.png">
+                <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
             </div>
             <div class="line input_line">
                 <label for="editorConfig_customization_logo_imageDark">Image Dark</label>
-                <input type="text" id="editorConfig_customization_logo_imageDark" name="editorConfig_customization_logo_imageDark" value="https://example.com/dark-logo.png">
+                <input type="text" id="editorConfig_customization_logo_imageDark" name="editorConfig_customization_logo_imageDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
             </div>
             <div class="line input_line">
                 <label for="editorConfig_customization_logo_url">Url</label>
