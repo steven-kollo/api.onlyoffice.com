@@ -35,8 +35,8 @@
     
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, PDF.</li>
-        <li>The following formats are available for viewing only: DJVU, XPS.</li>
+        <li>Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.</li>
+        <li>The following formats are available for viewing only: PDF, DJVU, XPS.</li>
         <li>The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.
             ODT, ODS, and ODP are also available for instant conversion. After you enable the corresponding option in the admin settings, ODF-formatted documents are immediately converted in the editor and opened after you click on it.
         </li>

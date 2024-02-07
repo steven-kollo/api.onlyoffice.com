@@ -1,11 +1,12 @@
 # Change Log
 
+## 4.5.0
 - docspace: storybook v2.0.2
 - docspace: v2.0.2
 - docspace: added the Plugin Tutorial
-- editors: updated the Redmine page
 - docspace: added the How it works section
 - docspace: added the information about webhooks
+- editors: updated the Redmine page
 - editors: added the WOPISrc query parameter to the requests from the browser to the server
 - editors: added the watermark field to the conversion request
 - editors: added the pdf document type to the documentType parameter
