@@ -1311,7 +1311,7 @@
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" hidden="hidden" checked>
                     <span></span>
-                    <label for="editorConfig_customization_anonymous">Request</label>
+                    <label for="editorConfig_customization_anonymous_request">Request</label>
                 </label>
             </div>
             <div class="line input_line">
