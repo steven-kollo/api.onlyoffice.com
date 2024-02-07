@@ -60,8 +60,8 @@ ng version
 
     <div class="container">
         <ul class="browser">
-            <li class="browser tab active copy-link" id="old-versions">Versions below 17.0.0</li>
-            <li class="browser tab copy-link" id="new-versions">Versions 17.0.0 and higher</li>
+            <li class="browser tab active copy-link" id="old-versions">Versions prior to 17.0.0</li>
+            <li class="browser tab copy-link" id="new-versions">Versions 17.0.0 and above</li>
         </ul>
         <div id="old-versions" class="content active">
             <ol>
