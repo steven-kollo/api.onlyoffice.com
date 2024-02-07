@@ -8,6 +8,67 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).</p>
 
+<div class="header-gray">Example</div>
+<p>
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+
+<div id="controlFields">
+    <div id="viewedit" class="control-panel">
+        <div class="line input_line" style="margin-top: 0;">
+            <label for="document_file_type">File type</label>
+            <select class="select" id="document_file_type" name="document_file_type">
+                <option disabled>xlsx</option>
+                <option value="xlsx" selected>xlsx</option>
+                <option value="csv">csv</option>
+                <option value="xls">xls</option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="document_key">Key</label>
+            <input type="text" id="document_key" name="document_key" value="Khirz6zTPdfd7">
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="document_reference_data" name="document_reference_data" hidden="hidden" checked>
+                <span></span>
+                <label for="document_reference_data">Reference data</label>
+            </label>
+        </div>
+        <div class="config_object_holder" id="holder_document_reference_data">
+            <div class="config_nested_group">
+                <div class="line input_line">
+                    <label for="document_file_key">File key</label>
+                    <input type="text" id="document_file_key" name="document_file_key" value="BCFA2CED">
+                </div>
+                <div class="line input_line">
+                     <label for="document_instance_id">Instance Id</label>
+                    <input type="text" id="document_instance_id" name="document_instance_id" value="https://example.com">
+                </div>
+            </div>
+        </div>
+        <div class="line input_line">
+            <label for="document_title">Title</label>
+            <input type="text" id="document_title" name="document_title" value="Example Title">
+        </div>
+        <div class="line input_line" style="margin-bottom: 0;">
+            <label for="document_url">URL</label>
+            <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.xlsx">
+        </div>
+
+    </div>
+</div>
+
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -116,66 +177,7 @@
 
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-<div class="header-gray">Example</div>
-<p>
-    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
 
-<div id="controlFields">
-    <div id="viewedit" class="control-panel">
-        <div class="line input_line" style="margin-top: 0;">
-            <label for="document_file_type">File type</label>
-            <select class="select" id="document_file_type" name="document_file_type">
-                <option disabled>xlsx</option>
-                <option value="xlsx" selected>xlsx</option>
-                <option value="csv">csv</option>
-                <option value="xls">xls</option>
-            </select>
-        </div>
-        <div class="line input_line">
-            <label for="document_key">Key</label>
-            <input type="text" id="document_key" name="document_key" value="Khirz6zTPdfd7">
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="document_reference_data" name="document_reference_data" hidden="hidden" checked>
-                <span></span>
-                <label for="document_reference_data">Reference data</label>
-            </label>
-        </div>
-        <div class="config_object_holder" id="holder_document_reference_data">
-            <div class="config_nested_group">
-                <div class="line input_line">
-                    <label for="document_file_key">File key</label>
-                    <input type="text" id="document_file_key" name="document_file_key" value="BCFA2CED">
-                </div>
-                <div class="line input_line">
-                     <label for="document_instance_id">Instance Id</label>
-                    <input type="text" id="document_instance_id" name="document_instance_id" value="https://example.com">
-                </div>
-            </div>
-        </div>
-        <div class="line input_line">
-            <label for="document_title">Title</label>
-            <input type="text" id="document_title" name="document_title" value="Example Title">
-        </div>
-        <div class="line input_line" style="margin-bottom: 0;">
-            <label for="document_url">URL</label>
-            <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.xlsx">
-        </div>
-
-    </div>
-</div>
-
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
-</div>
-
-
-<div id="editorSpace">
-    <div id="placeholder"></div>
-</div>
 <script>
     $('.select').each(function () {
         const _this = $(this),

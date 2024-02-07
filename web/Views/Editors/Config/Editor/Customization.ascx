@@ -75,6 +75,385 @@
     <li><a href="#zoom">zoom</a></li>
 </ul>
 
+<div class="header-gray">Example</div>
+<p>
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+
+<p>
+    If you have any further questions, please contact us at
+    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+</p>
+
+<div id="controlFields">
+    <div id="customization" class="control-panel">
+        <div class="line" style="margin-top: 0px;">
+            <label class="dataItemSpan" style="margin-top: 0px;">
+                <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_anonymous">Anonymous</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder">
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_anonymous_request">Request</label>
+                </label>
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_anonymous_label">Label</label>
+                <input type="text" id="editorConfig_customization_anonymous_label" name="editorConfig_customization_anonymous_label" value="Guest">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_autosave" name="editorConfig_customization_autosave" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_autosave">Autosave</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_comments" name="editorConfig_customization_comments" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_comments">Comments</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_compactHeader" name="editorConfig_customization_compactHeader" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_compactHeader">Compact Header</label>
+            </label>
+        </div>
+       <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_compactToolbar" name="editorConfig_customization_compactToolbar" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_compactToolbar">Compact Toolbar</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_compatibleFeatures" name="editorConfig_customization_compatibleFeatures" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_compatibleFeatures">Compatible Features</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_customer" name="editorConfig_customization_customer" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_customer">Customer</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_customer" class="config_object_holder" hidden>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_address">Address</label>
+                <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_info">Info</label>
+                <input type="text" id="editorConfig_customization_customer_info" name="editorConfig_customization_customer_info" value="Some additional information">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_logo">Logo</label>
+                <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_logoDark">Logo Dark</label>
+                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_mail">Mail</label>
+                <input type="text" id="editorConfig_customization_customer_mail" name="editorConfig_customization_customer_mail" value="john@example.com">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_name">Name</label>
+                <input type="text" id="editorConfig_customization_customer_name" name="editorConfig_customization_customer_name" value="John Smith and Co.">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_phone">phone</label>
+                <input type="text" id="editorConfig_customization_customer_phone" name="editorConfig_customization_customer_phone" value="123456789">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_www">www</label>
+                <input type="text" id="editorConfig_customization_customer_www" name="editorConfig_customization_customer_www" value="example.com">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_features" name="editorConfig_customization_features" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_features">Features</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_features" class="config_object_holder" hidden>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_spellcheck" name="editorConfig_customization_features_spellcheck" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_features_spellcheck">Features.Spellcheck</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_spellcheck_mode" name="editorConfig_customization_features_spellcheck_mode" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_features_spellcheck_mode">Features.Spellcheck.Mode</label>
+                </label>
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_feedback" name="editorConfig_customization_feedback" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_feedback">Feedback</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" hidden>
+            <div class="line input_line">
+                <label for="editorConfig_customization_feedback_url">url</label>
+                <input type="text" id="editorConfig_customization_feedback_url" name="editorConfig_customization_feedback_url" value="https://example.com">
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_feedback_visible" name="editorConfig_customization_feedback_visible" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_feedback_visible">Visible</label>
+                </label>
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_forcesave" name="editorConfig_customization_forcesave" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_forcesave">Force Save</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_goback" name="editorConfig_customization_goback" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_goback">Go back</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_goback" class="config_object_holder" hidden>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_goback_blank">Blank</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_goback_requestClose" name="editorConfig_customization_goback_requestClose" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_goback_requestClose">Request Close</label>
+                </label>
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_goback_text">Text</label>
+                <input type="text" id="editorConfig_customization_goback_text" name="editorConfig_customization_goback_text" value="Open file location">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_goback_url">Url</label>
+                <input type="text" id="editorConfig_customization_goback_url" name="editorConfig_customization_goback_url" value="https://example.com">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_help" name="editorConfig_customization_help" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_help">Help</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_hideRightMenu">Hide Right Menu</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_hideRulers" name="editorConfig_customization_hideRulers" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_hideRulers">Hide Rulers</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_integrationMode" name="editorConfig_customization_integrationMode" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_integrationMode">Integration Mode</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_logo" name="editorConfig_customization_logo" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_logo">Logo</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_logo" class="config_object_holder" hidden>
+            <div class="line input_line">
+                <label for="editorConfig_customization_logo_image">Image</label>
+                <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_logo_imageDark">Image Dark</label>
+                <input type="text" id="editorConfig_customization_logo_imageDark" name="editorConfig_customization_logo_imageDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_logo_url">Url</label>
+                <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url" value="https://example.com">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_macros" name="editorConfig_customization_macros" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_macros">Macros</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_mentionShare" name="editorConfig_customization_mentionShare" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_mentionShare">Mention share</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_mobileForceView" name="editorConfig_customization_mobileForceView" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_mobileForceView">Mobile force view</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_plugins" name="editorConfig_customization_plugins" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_plugins">Plugins</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_review" name="editorConfig_customization_review" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_review">Review</label>
+            </label>
+        </div>
+
+        <div id="holder_editorConfig_customization_review" class="config_object_holder" hidden>
+            <div class="line input_line">
+                <label for="editorConfig_customization_review_reviewDisplay">Review Display</label>
+                <select class="select" id="editorConfig_customization_review_reviewDisplay" name="editorConfig_customization_review_reviewDisplay">
+                    <option value="original" disabled>original</option>
+                    <option value="markup">markup</option>
+                    <option value="simple">simple</option>
+                    <option value="final">final</option>
+                    <option value="original" selected>original</option>
+                </select>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_review_hideReviewDisplay" name="editorConfig_customization_review_hideReviewDisplay" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_review_hideReviewDisplay">Hide Review Display</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_review_showReviewChanges" name="editorConfig_customization_review_showReviewChanges" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_review_showReviewChanges">Show Review Changes</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_review_trackChanges" name="editorConfig_customization_review_trackChanges" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_review_trackChanges">Track Changes</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_review_hoverMode" name="editorConfig_customization_review_hoverMode" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_review_hoverMode">Hover Mode</label>
+                </label>
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_submitForm" name="editorConfig_customization_submitForm" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_submitForm">Submit Form</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_toolbarHideFileName" name="editorConfig_customization_toolbarHideFileName" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_toolbarHideFileName">Toolbar Hide File Name</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
+            </label>
+        </div>
+        <div class="line input_line" id="macrosModeLine">
+            <label for="editorConfig_customization_macrosMode">Macros Mode</label>
+            <select class="select" id="editorConfig_customization_macrosMode" name="editorConfig_customization_macrosMode">
+                <option value="warn" disabled>Warn</option>
+                <option value="warn" selected>Warn</option>
+                <option value="disable">Disable</option>
+                <option value="enable">Enable</option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_customization_uiTheme">UiTheme</label>
+            <select class="select" id="editorConfig_customization_uiTheme" name="editorConfig_customization_uiTheme">
+                <option value="theme-dark" disabled>theme-dark</option>
+                <option value="theme-classic-light">theme-classic-light</option>
+                <option value="theme-light">theme-light</option>
+                <option value="theme-dark" selected>theme-dark</option>
+                <option value="theme-contrast-dark">theme-contrast-dark</option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_customization_unit">Unit</label>
+            <select class="select" id="editorConfig_customization_unit" name="editorConfig_customization_unit">
+                <option value="cm" disabled>cm</option>
+                <option value="cm" selected>cm</option>
+                <option value="pt">pt</option>
+                <option value="inch ">inch </option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_customization_zoom">Zoom</label>
+            <input type="text" id="editorConfig_customization_zoom" name="editorConfig_customization_zoom" value="100">
+        </div>
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -1286,384 +1665,7 @@
 <span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - extended white label option for Developer Edition</em></span>
 <% } %>
 
-<div class="header-gray">Example</div>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
 
-<p>
-    If you have any further questions, please contact us at
-    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
-</p>
-
-<div id="controlFields">
-    <div id="customization" class="control-panel">
-        <div class="line" style="margin-top: 0px;">
-            <label class="dataItemSpan" style="margin-top: 0px;">
-                <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_anonymous">Anonymous</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder">
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" hidden="hidden" checked>
-                    <span></span>
-                    <label for="editorConfig_customization_anonymous_request">Request</label>
-                </label>
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_anonymous_label">Label</label>
-                <input type="text" id="editorConfig_customization_anonymous_label" name="editorConfig_customization_anonymous_label" value="Guest">
-            </div>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_autosave" name="editorConfig_customization_autosave" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_autosave">Autosave</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_comments" name="editorConfig_customization_comments" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_comments">Comments</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_compactHeader" name="editorConfig_customization_compactHeader" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_compactHeader">Compact Header</label>
-            </label>
-        </div>
-       <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_compactToolbar" name="editorConfig_customization_compactToolbar" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_compactToolbar">Compact Toolbar</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_compatibleFeatures" name="editorConfig_customization_compatibleFeatures" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_compatibleFeatures">Compatible Features</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_customer" name="editorConfig_customization_customer" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_customer">Customer</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_customization_customer" class="config_object_holder" hidden>
-            <div class="line input_line">
-                <label for="editorConfig_customization_customer_address">Address</label>
-                <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_customer_info">Info</label>
-                <input type="text" id="editorConfig_customization_customer_info" name="editorConfig_customization_customer_info" value="Some additional information">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_customer_logo">Logo</label>
-                <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_customer_logoDark">Logo Dark</label>
-                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_customer_mail">Mail</label>
-                <input type="text" id="editorConfig_customization_customer_mail" name="editorConfig_customization_customer_mail" value="john@example.com">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_customer_name">Name</label>
-                <input type="text" id="editorConfig_customization_customer_name" name="editorConfig_customization_customer_name" value="John Smith and Co.">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_customer_phone">phone</label>
-                <input type="text" id="editorConfig_customization_customer_phone" name="editorConfig_customization_customer_phone" value="123456789">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_customer_www">www</label>
-                <input type="text" id="editorConfig_customization_customer_www" name="editorConfig_customization_customer_www" value="example.com">
-            </div>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_features" name="editorConfig_customization_features" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_features">Features</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_customization_features" class="config_object_holder" hidden>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_features_spellcheck" name="editorConfig_customization_features_spellcheck" hidden="hidden" checked>
-                    <span></span>
-                    <label for="editorConfig_customization_features_spellcheck">Features.Spellcheck</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_features_spellcheck_mode" name="editorConfig_customization_features_spellcheck_mode" hidden="hidden">
-                    <span></span>
-                    <label for="editorConfig_customization_features_spellcheck_mode">Features.Spellcheck.Mode</label>
-                </label>
-            </div>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_feedback" name="editorConfig_customization_feedback" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_feedback">Feedback</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" hidden>
-            <div class="line input_line">
-                <label for="editorConfig_customization_feedback_url">url</label>
-                <input type="text" id="editorConfig_customization_feedback_url" name="editorConfig_customization_feedback_url" value="https://example.com">
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_feedback_visible" name="editorConfig_customization_feedback_visible" hidden="hidden" checked>
-                    <span></span>
-                    <label for="editorConfig_customization_feedback_visible">Visible</label>
-                </label>
-            </div>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_forcesave" name="editorConfig_customization_forcesave" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_forcesave">Force Save</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_goback" name="editorConfig_customization_goback" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_goback">Go back</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_customization_goback" class="config_object_holder" hidden>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" hidden="hidden" checked>
-                    <span></span>
-                    <label for="editorConfig_customization_goback_blank">Blank</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_goback_requestClose" name="editorConfig_customization_goback_requestClose" hidden="hidden">
-                    <span></span>
-                    <label for="editorConfig_customization_goback_requestClose">Request Close</label>
-                </label>
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_goback_text">Text</label>
-                <input type="text" id="editorConfig_customization_goback_text" name="editorConfig_customization_goback_text" value="Open file location">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_goback_url">Url</label>
-                <input type="text" id="editorConfig_customization_goback_url" name="editorConfig_customization_goback_url" value="https://example.com">
-            </div>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_help" name="editorConfig_customization_help" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_help">Help</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_hideRightMenu">Hide Right Menu</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_hideRulers" name="editorConfig_customization_hideRulers" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_hideRulers">Hide Rulers</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_integrationMode" name="editorConfig_customization_integrationMode" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_integrationMode">Integration Mode</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_logo" name="editorConfig_customization_logo" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_logo">Logo</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_customization_logo" class="config_object_holder" hidden>
-            <div class="line input_line">
-                <label for="editorConfig_customization_logo_image">Image</label>
-                <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_logo_imageDark">Image Dark</label>
-                <input type="text" id="editorConfig_customization_logo_imageDark" name="editorConfig_customization_logo_imageDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
-            </div>
-            <div class="line input_line">
-                <label for="editorConfig_customization_logo_url">Url</label>
-                <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url" value="https://example.com">
-            </div>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_macros" name="editorConfig_customization_macros" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_macros">Macros</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_mentionShare" name="editorConfig_customization_mentionShare" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_mentionShare">Mention share</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_mobileForceView" name="editorConfig_customization_mobileForceView" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_mobileForceView">Mobile force view</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_plugins" name="editorConfig_customization_plugins" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_plugins">Plugins</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_review" name="editorConfig_customization_review" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_review">Review</label>
-            </label>
-        </div>
-
-        <div id="holder_editorConfig_customization_review" class="config_object_holder" hidden>
-            <div class="line input_line">
-                <label for="editorConfig_customization_review_reviewDisplay">Review Display</label>
-                <select class="select" id="editorConfig_customization_review_reviewDisplay" name="editorConfig_customization_review_reviewDisplay">
-                    <option value="original" disabled>original</option>
-                    <option value="markup">markup</option>
-                    <option value="simple">simple</option>
-                    <option value="final">final</option>
-                    <option value="original" selected>original</option>
-                </select>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_review_hideReviewDisplay" name="editorConfig_customization_review_hideReviewDisplay" hidden="hidden">
-                    <span></span>
-                    <label for="editorConfig_customization_review_hideReviewDisplay">Hide Review Display</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_review_showReviewChanges" name="editorConfig_customization_review_showReviewChanges" hidden="hidden">
-                    <span></span>
-                    <label for="editorConfig_customization_review_showReviewChanges">Show Review Changes</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_review_trackChanges" name="editorConfig_customization_review_trackChanges" hidden="hidden" checked>
-                    <span></span>
-                    <label for="editorConfig_customization_review_trackChanges">Track Changes</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_review_hoverMode" name="editorConfig_customization_review_hoverMode" hidden="hidden">
-                    <span></span>
-                    <label for="editorConfig_customization_review_hoverMode">Hover Mode</label>
-                </label>
-            </div>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_submitForm" name="editorConfig_customization_submitForm" hidden="hidden" checked>
-                <span></span>
-                <label for="editorConfig_customization_submitForm">Submit Form</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_toolbarHideFileName" name="editorConfig_customization_toolbarHideFileName" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_toolbarHideFileName">Toolbar Hide File Name</label>
-            </label>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
-            </label>
-        </div>
-        <div class="line input_line" id="macrosModeLine">
-            <label for="editorConfig_customization_macrosMode">Macros Mode</label>
-            <select class="select" id="editorConfig_customization_macrosMode" name="editorConfig_customization_macrosMode">
-                <option value="warn" disabled>Warn</option>
-                <option value="warn" selected>Warn</option>
-                <option value="disable">Disable</option>
-                <option value="enable">Enable</option>
-            </select>
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_customization_uiTheme">UiTheme</label>
-            <select class="select" id="editorConfig_customization_uiTheme" name="editorConfig_customization_uiTheme">
-                <option value="theme-dark" disabled>theme-dark</option>
-                <option value="theme-classic-light">theme-classic-light</option>
-                <option value="theme-light">theme-light</option>
-                <option value="theme-dark" selected>theme-dark</option>
-                <option value="theme-contrast-dark">theme-contrast-dark</option>
-            </select>
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_customization_unit">Unit</label>
-            <select class="select" id="editorConfig_customization_unit" name="editorConfig_customization_unit">
-                <option value="cm" disabled>cm</option>
-                <option value="cm" selected>cm</option>
-                <option value="pt">pt</option>
-                <option value="inch ">inch </option>
-            </select>
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_customization_zoom">Zoom</label>
-            <input type="text" id="editorConfig_customization_zoom" name="editorConfig_customization_zoom" value="100">
-        </div>
-    </div>
-</div>
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
-</div>
-
-
-<div id="editorSpace">
-    <div id="placeholder"></div>
-</div>
 <script>
     $('.select').each(function () {
         const _this = $(this),

@@ -8,6 +8,47 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The plugins section allows to connect the special add-ons to your Document Server installation which will help you add additional features to document editors.</p>
 
+<div class="header-gray">Example</div>
+<p>
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+
+<p>
+    If you have any further questions, please contact us at
+    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+</p>
+
+<div id="controlFields">
+    <div id="plugins" class="control-panel">
+        <div id="holder_editorConfig_plugins_autostart">
+            <div class="line input_line" style="margin-top: 0px;">
+                <label for="plugins_autostart_0">Autostart</label>
+                <div id="plugins_autostart_0" style="margin-top: 0px;" class="line input_line plugins_autostart">
+                    <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}">
+                </div>
+            </div>
+        </div>
+        <button id="addButton_plugins_autostart" class="add-button" style="margin-top: 12px;">+</button>
+        <div id="holder_editorConfig_plugins_pluginsData">
+            <div class="line input_line">
+                <label for="plugins_pluginsData_0">Plugins Data</label>
+                <div id="plugins_pluginsData_0" style="margin-top: 0px;" class="line input_line plugins_pluginsData">
+                    <input type="text" id="editorConfig_plugins_pluginsData_0" name="editorConfig_plugins_pluginsData_0" value="https://example.com/plugins/chess-plugin/config.json">
+                </div>
+            </div>
+        </div>
+        <button id="addButton_plugins_pluginsData" class="add-button" style="margin-top: 12px;">+</button>
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre style="word-wrap: break-word;" id="configPre"></pre>
+</div>
+
+<div id="editorSpace">
+    <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <div id="mobile-content"></div>
 <table class="table">
@@ -55,49 +96,6 @@
     </tbody>
 </table>
 <div class="mobile-content"></div>
-
-<div class="header-gray">Example</div>
-<p>
-    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
-
-<p>
-    If you have any further questions, please contact us at
-    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
-</p>
-
-
-<div id="controlFields">
-    <div id="plugins" class="control-panel">
-        <div id="holder_editorConfig_plugins_autostart">
-            <div class="line input_line" style="margin-top: 0px;">
-                <label for="plugins_autostart_0">Autostart</label>
-                <div id="plugins_autostart_0" style="margin-top: 0px;" class="line input_line plugins_autostart">
-                    <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}">
-                </div>
-            </div>
-        </div>
-        <button id="addButton_plugins_autostart" class="add-button" style="margin-top: 12px;">+</button>
-        <div id="holder_editorConfig_plugins_pluginsData">
-            <div class="line input_line">
-                <label for="plugins_pluginsData_0">Plugins Data</label>
-                <div id="plugins_pluginsData_0" style="margin-top: 0px;" class="line input_line plugins_pluginsData">
-                    <input type="text" id="editorConfig_plugins_pluginsData_0" name="editorConfig_plugins_pluginsData_0" value="https://example.com/plugins/chess-plugin/config.json">
-                </div>
-            </div>
-        </div>
-        <button id="addButton_plugins_pluginsData" class="add-button" style="margin-top: 12px;">+</button>
-    </div>
-</div>
-<div id="configPreHolder">
-    <pre style="word-wrap: break-word;" id="configPre"></pre>
-</div>
-
-
-<div id="editorSpace">
-    <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
-</div>
 
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">

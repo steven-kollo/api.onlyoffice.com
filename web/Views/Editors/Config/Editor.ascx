@@ -22,6 +22,196 @@
     <li><a href="#user">user</a></li>
 </ul>
 
+<div class="header-gray">Example</div>
+<p>
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+<div id="controlFields">
+    <div id="info" class="control-panel">
+        <div class="line input_line" style="margin-top: 0;">
+            <label for="editorConfig_actionLink">Action Link</label>
+            <input type="text" id="editorConfig_actionLink" name="editorConfig_actionLink" value="ACTION_DATA">
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_callbackUrl">Callback Url</label>
+            <input type="text" id="editorConfig_callbackUrl" name="editorConfig_callbackUrl" value="https://example.com/url-to-callback.ashx">
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_coEditing" name="editorConfig_coEditing" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_coEditing">coEditing</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_coEditing" class="config_object_holder" hidden>
+            <div class="config_nested_group">
+                <div class="line input_line">
+                    <label for="editorConfig_coEditing_mode">Mode</label>
+                    <select class="select" id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
+                        <option disabled>fast</option>
+                        <option value="fast">fast</option>
+                        <option value="strict">strict </option>
+                    </select>
+                </div>
+                <div class="line">
+                    <label class="dataItemSpan">
+                        <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" hidden="hidden" checked>
+                        <span></span>
+                        <label for="editorConfig_coEditing_change">Change</label>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_createUrl">Create Url</label>
+            <input type="text" id="editorConfig_createUrl" name="editorConfig_createUrl" value="https://example.com/url-to-create-document/">
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_lang">Lang</label>
+            <select class="select" id="editorConfig_lang" name="editorConfig_lang">
+                <option disabled>en</option>
+                <option value="az">az</option>
+                <option value="be">be</option>
+                <option value="bg">bg</option>
+                <option value="ca">ca</option>
+                <option value="cs">cs</option>
+                <option value="da">da</option>
+                <option value="de">de</option>
+                <option value="el">el</option>
+                <option value="en">en</option>
+                <option value="es">es</option>
+                <option value="eu">eu</option>
+                <option value="fi">fi</option>
+                <option value="fr">fr</option>
+                <option value="gl">gl</option>
+                <option value="hu">hu</option>
+                <option value="hy">hy</option>
+                <option value="id">id</option>
+                <option value="it">it</option>
+                <option value="ja">ja</option>
+                <option value="ko">ko</option>
+                <option value="lo">lo</option>
+                <option value="lv">lv</option>
+                <option value="ms">ms</option>
+                <option value="nl">nl</option>
+                <option value="no">no</option>
+                <option value="pl">pl</option>
+                <option value="pt">pt</option>
+                <option value="pt-PT">pt-PT</option>
+                <option value="ro">ro</option>
+                <option value="ru">ru</option>
+                <option value="si">si</option>
+                <option value="sk">sk</option>
+                <option value="sl">sl</option>
+                <option value="sv">sv</option>
+                <option value="tr">tr</option>
+                <option value="uk">uk</option>
+                <option value="vi">vi</option>
+                <option value="zh">zh</option>
+                <option value="zh-TW">zh-TW</option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_location">Location</label>
+            <input type="text" id="editorConfig_location" name="editorConfig_location" value="">
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_mode">Mode</label>
+            <select class="select" id="editorConfig_mode" name="editorConfig_mode">
+                <option disabled>edit</option>
+                <option value="edit">edit</option>
+                <option value="view">view </option>
+            </select>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_recent" name="editorConfig_recent" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_recent">Recent</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_recent" class="config_object_holder" hidden>
+            <div id="holder_editorConfig_recent_0" class="editorConfig_recentItem config_nested_group">
+                <div class="line input_line">
+                    <label for="editorConfig_recent_folder_0">Folder</label>
+                    <input type="text" id="editorConfig_recent_folder_0" name="editorConfig_recent_folder_0" value="Example Folder">
+                </div>
+                <div class="line input_line">
+                    <label for="editorConfig_recent_title_0">Title</label>
+                    <input type="text" id="editorConfig_recent_title_0" name="editorConfig_recent_title_0" value="exampledocument1.docx">
+                </div>
+               <div class="line input_line">
+                    <label for="editorConfig_recent_url_0">Url</label>
+                    <input type="text" id="editorConfig_recent_url_0" name="editorConfig_recent_url_0" value="https://example.com/exampledocument1.docx">
+                </div>
+            </div> 
+        </div>
+        <div style="padding-left: 24px;">
+            <button id="addButton_editorConfig_recent" class="add-button" hidden>+</button>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_templates" name="editorConfig_templates" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_templates">Templates</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_templates" class="config_object_holder"hidden>
+            <div id="holder_editorConfig_templates_0" class="editorConfig_templatesItem config_nested_group">
+                <div class="line input_line">
+                    <label for="editorConfig_templates_image_0">Image</label>
+                    <input type="text" id="editorConfig_templates_image_0" name="editorConfig_templates_image_0" value="https://example.com/exampletemplate1.png">
+                </div>
+                <div class="line input_line">
+                    <label for="editorConfig_templates_title_0">Title</label>
+                    <input type="text" id="editorConfig_templates_title_0" name="editorConfig_templates_title_0" value="exampledocument1.docx">
+                </div>
+               <div class="line input_line">
+                    <label for="editorConfig_templates_url_0">Url</label>
+                    <input type="text" id="editorConfig_templates_url_0" name="editorConfig_templates_url_0" value="https://example.com/url-to-create-template1">
+                </div>
+            </div> 
+        </div>
+        <div style="padding-left: 24px; margin-bottom: 18px;">
+            <button id="addButton_editorConfig_templates" class="add-button" hidden>+</button>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_user" name="editorConfig_user" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_user">User</label>
+            </label>
+        </div>
+        <div class="config_nested_group" style="margin-bottom: 0;">
+            <div id="holder_editorConfig_user" class="config_object_holder" hidden>
+                <div class="line input_line">
+                    <label for="editorConfig_user_group">Group</label>
+                    <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
+                </div>
+                <div class="line input_line">
+                    <label for="editorConfig_user_id">Id</label>
+                    <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
+                </div>
+                <div class="line input_line">
+                    <label for="editorConfig_user_image">Image</label>
+                    <input type="text" id="editorConfig_user_image" name="editorConfig_user_image" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
+                </div>
+                <div class="line input_line">
+                    <label for="editorConfig_user_name">Name</label>
+                    <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -310,197 +500,7 @@
 <div class="mobile-content"></div>
 
 <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - required field</em></span>
-<div class="header-gray">Example</div>
-<p>
-    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
-<div id="controlFields">
-    <div id="info" class="control-panel">
-        <div class="line input_line" style="margin-top: 0;">
-            <label for="editorConfig_actionLink">Action Link</label>
-            <input type="text" id="editorConfig_actionLink" name="editorConfig_actionLink" value="ACTION_DATA">
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_callbackUrl">Callback Url</label>
-            <input type="text" id="editorConfig_callbackUrl" name="editorConfig_callbackUrl" value="https://example.com/url-to-callback.ashx">
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_coEditing" name="editorConfig_coEditing" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_coEditing">coEditing</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_coEditing" class="config_object_holder" hidden>
-            <div class="config_nested_group">
-                <div class="line input_line">
-                    <label for="editorConfig_coEditing_mode">Mode</label>
-                    <select class="select" id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
-                        <option disabled>fast</option>
-                        <option value="fast">fast</option>
-                        <option value="strict">strict </option>
-                    </select>
-                </div>
-                <div class="line">
-                    <label class="dataItemSpan">
-                        <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" hidden="hidden" checked>
-                        <span></span>
-                        <label for="editorConfig_coEditing_change">Change</label>
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_createUrl">Create Url</label>
-            <input type="text" id="editorConfig_createUrl" name="editorConfig_createUrl" value="https://example.com/url-to-create-document/">
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_lang">Lang</label>
-            <select class="select" id="editorConfig_lang" name="editorConfig_lang">
-                <option disabled>en</option>
-                <option value="az">az</option>
-                <option value="be">be</option>
-                <option value="bg">bg</option>
-                <option value="ca">ca</option>
-                <option value="cs">cs</option>
-                <option value="da">da</option>
-                <option value="de">de</option>
-                <option value="el">el</option>
-                <option value="en">en</option>
-                <option value="es">es</option>
-                <option value="eu">eu</option>
-                <option value="fi">fi</option>
-                <option value="fr">fr</option>
-                <option value="gl">gl</option>
-                <option value="hu">hu</option>
-                <option value="hy">hy</option>
-                <option value="id">id</option>
-                <option value="it">it</option>
-                <option value="ja">ja</option>
-                <option value="ko">ko</option>
-                <option value="lo">lo</option>
-                <option value="lv">lv</option>
-                <option value="ms">ms</option>
-                <option value="nl">nl</option>
-                <option value="no">no</option>
-                <option value="pl">pl</option>
-                <option value="pt">pt</option>
-                <option value="pt-PT">pt-PT</option>
-                <option value="ro">ro</option>
-                <option value="ru">ru</option>
-                <option value="si">si</option>
-                <option value="sk">sk</option>
-                <option value="sl">sl</option>
-                <option value="sv">sv</option>
-                <option value="tr">tr</option>
-                <option value="uk">uk</option>
-                <option value="vi">vi</option>
-                <option value="zh">zh</option>
-                <option value="zh-TW">zh-TW</option>
-            </select>
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_location">Location</label>
-            <input type="text" id="editorConfig_location" name="editorConfig_location" value="">
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_mode">Mode</label>
-            <select class="select" id="editorConfig_mode" name="editorConfig_mode">
-                <option disabled>edit</option>
-                <option value="edit">edit</option>
-                <option value="view">view </option>
-            </select>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_recent" name="editorConfig_recent" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_recent">Recent</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_recent" class="config_object_holder" hidden>
-            <div id="holder_editorConfig_recent_0" class="editorConfig_recentItem config_nested_group">
-                <div class="line input_line">
-                    <label for="editorConfig_recent_folder_0">Folder</label>
-                    <input type="text" id="editorConfig_recent_folder_0" name="editorConfig_recent_folder_0" value="Example Folder">
-                </div>
-                <div class="line input_line">
-                    <label for="editorConfig_recent_title_0">Title</label>
-                    <input type="text" id="editorConfig_recent_title_0" name="editorConfig_recent_title_0" value="exampledocument1.docx">
-                </div>
-               <div class="line input_line">
-                    <label for="editorConfig_recent_url_0">Url</label>
-                    <input type="text" id="editorConfig_recent_url_0" name="editorConfig_recent_url_0" value="https://example.com/exampledocument1.docx">
-                </div>
-            </div> 
-        </div>
-        <div style="padding-left: 24px;">
-            <button id="addButton_editorConfig_recent" class="add-button" hidden>+</button>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_templates" name="editorConfig_templates" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_templates">Templates</label>
-            </label>
-        </div>
-        <div id="holder_editorConfig_templates" class="config_object_holder"hidden>
-            <div id="holder_editorConfig_templates_0" class="editorConfig_templatesItem config_nested_group">
-                <div class="line input_line">
-                    <label for="editorConfig_templates_image_0">Image</label>
-                    <input type="text" id="editorConfig_templates_image_0" name="editorConfig_templates_image_0" value="https://example.com/exampletemplate1.png">
-                </div>
-                <div class="line input_line">
-                    <label for="editorConfig_templates_title_0">Title</label>
-                    <input type="text" id="editorConfig_templates_title_0" name="editorConfig_templates_title_0" value="exampledocument1.docx">
-                </div>
-               <div class="line input_line">
-                    <label for="editorConfig_templates_url_0">Url</label>
-                    <input type="text" id="editorConfig_templates_url_0" name="editorConfig_templates_url_0" value="https://example.com/url-to-create-template1">
-                </div>
-            </div> 
-        </div>
-        <div style="padding-left: 24px; margin-bottom: 18px;">
-            <button id="addButton_editorConfig_templates" class="add-button" hidden>+</button>
-        </div>
-        <div class="line">
-            <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_user" name="editorConfig_user" hidden="hidden">
-                <span></span>
-                <label for="editorConfig_user">User</label>
-            </label>
-        </div>
-        <div class="config_nested_group" style="margin-bottom: 0;">
-            <div id="holder_editorConfig_user" class="config_object_holder" hidden>
-                <div class="line input_line">
-                    <label for="editorConfig_user_group">Group</label>
-                    <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
-                </div>
-                <div class="line input_line">
-                    <label for="editorConfig_user_id">Id</label>
-                    <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
-                </div>
-                <div class="line input_line">
-                    <label for="editorConfig_user_image">Image</label>
-                    <input type="text" id="editorConfig_user_image" name="editorConfig_user_image" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
-                </div>
-                <div class="line input_line">
-                    <label for="editorConfig_user_name">Name</label>
-                    <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
-</div>
 
-
-<div id="editorSpace">
-    <div id="placeholder"></div>
-</div>
 <script>
     $('.select').each(function () {
         const _this = $(this),

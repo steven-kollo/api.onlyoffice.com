@@ -8,6 +8,134 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The document permission section allows to change the permission for the document to be edited and downloaded or not.</p>
 
+<div class="header-gray">Example</div>
+<div>
+    <div id="controlFields">
+        <div id="permissions" class="control-panel">
+            <div class="line" style="margin-top: 0px;">
+                <label class="dataItemSpan" style="margin-top: 0px;">
+                    <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_chat">Chat</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_comment" name="documentConfig_permissions_comment" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_comment">Comment</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_copy" name="documentConfig_permissions_copy" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_copy">Copy</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
+                </label>
+            </div>
+            <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder">
+                <div class="line input_line">
+                    <label for="documentConfig_permissions_commentGroups_edit">Edit</label>
+                    <input type="text" id="documentConfig_permissions_commentGroups_edit" name="documentConfig_permissions_commentGroups_edit" value='["Group2", ""]'>
+                </div>
+                <div class="line input_line">
+                    <label for="documentConfig_permissions_commentGroups_remove">Remove</label>
+                    <input type="text" id="documentConfig_permissions_commentGroups_remove" name="documentConfig_permissions_commentGroups_remove" value='[""]'>
+                </div>
+                <div class="line input_line">
+                    <label for="documentConfig_permissions_commentGroups_view">View</label>
+                    <input type="text" id="documentConfig_permissions_commentGroups_view" name="documentConfig_permissions_commentGroups_view" value='""'>
+                </div>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_deleteCommentAuthorOnly" name="documentConfig_permissions_deleteCommentAuthorOnly" hidden="hidden">
+                    <span></span>
+                    <label for="documentConfig_permissions_deleteCommentAuthorOnly">Delete Comment Author Only</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_download" name="documentConfig_permissions_download" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_download">Download</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_edit" name="documentConfig_permissions_edit" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_edit">Edit</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_editCommentAuthorOnly" name="documentConfig_permissions_editCommentAuthorOnly" hidden="hidden">
+                    <span></span>
+                    <label for="documentConfig_permissions_editCommentAuthorOnly">Edit Comment Author Only</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_fillForms" name="documentConfig_permissions_fillForms" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_fillForms">Fill Forms</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_modifyContentControl" name="documentConfig_permissions_modifyContentControl" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_modifyContentControl">Modify Content Control</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_print">Print</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_protect" name="documentConfig_permissions_protect" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_permissions_protect">Protect</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review" hidden="hidden">
+                    <span></span>
+                    <label for="documentConfig_permissions_review">Review</label>
+                </label>
+            </div>
+            <div class="line input_line">
+                <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
+                <input type="text" id="documentConfig_permissions_reviewGroups" name="documentConfig_permissions_reviewGroups" value='["Group1", "Group2", ""]'>
+            </div>
+            <div class="line input_line" style="margin-bottom: 0px;">
+                <label for="documentConfig_permissions_userInfoGroups">User Info Groups</label>
+                <input type="text" id="documentConfig_permissions_userInfoGroups" name="documentConfig_permissions_userInfoGroups" value='["Group1", ""]'>
+            </div>
+        </div>
+    </div>
+    <div id="configPreHolder">
+        <pre id="configPre"></pre>
+    </div>
+</div>
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -298,133 +426,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Example</div>
-<div>
-    <div id="controlFields">
-        <div id="permissions" class="control-panel">
-            <div class="line" style="margin-top: 0px;">
-                <label class="dataItemSpan" style="margin-top: 0px;">
-                    <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_chat">Chat</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_comment" name="documentConfig_permissions_comment" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_comment">Comment</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_copy" name="documentConfig_permissions_copy" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_copy">Copy</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
-                </label>
-            </div>
-            <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder">
-                <div class="line input_line">
-                    <label for="documentConfig_permissions_commentGroups_edit">Edit</label>
-                    <input type="text" id="documentConfig_permissions_commentGroups_edit" name="documentConfig_permissions_commentGroups_edit" value='["Group2", ""]'>
-                </div>
-                <div class="line input_line">
-                    <label for="documentConfig_permissions_commentGroups_remove">Remove</label>
-                    <input type="text" id="documentConfig_permissions_commentGroups_remove" name="documentConfig_permissions_commentGroups_remove" value='[""]'>
-                </div>
-                <div class="line input_line">
-                    <label for="documentConfig_permissions_commentGroups_view">View</label>
-                    <input type="text" id="documentConfig_permissions_commentGroups_view" name="documentConfig_permissions_commentGroups_view" value='""'>
-                </div>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_deleteCommentAuthorOnly" name="documentConfig_permissions_deleteCommentAuthorOnly" hidden="hidden">
-                    <span></span>
-                    <label for="documentConfig_permissions_deleteCommentAuthorOnly">Delete Comment Author Only</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_download" name="documentConfig_permissions_download" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_download">Download</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_edit" name="documentConfig_permissions_edit" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_edit">Edit</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_editCommentAuthorOnly" name="documentConfig_permissions_editCommentAuthorOnly" hidden="hidden">
-                    <span></span>
-                    <label for="documentConfig_permissions_editCommentAuthorOnly">Edit Comment Author Only</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_fillForms" name="documentConfig_permissions_fillForms" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_fillForms">Fill Forms</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_modifyContentControl" name="documentConfig_permissions_modifyContentControl" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_modifyContentControl">Modify Content Control</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_print">Print</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_protect" name="documentConfig_permissions_protect" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_permissions_protect">Protect</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review" hidden="hidden">
-                    <span></span>
-                    <label for="documentConfig_permissions_review">Review</label>
-                </label>
-            </div>
-            <div class="line input_line">
-                <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
-                <input type="text" id="documentConfig_permissions_reviewGroups" name="documentConfig_permissions_reviewGroups" value='["Group1", "Group2", ""]'>
-            </div>
-            <div class="line input_line" style="margin-bottom: 0px;">
-                <label for="documentConfig_permissions_userInfoGroups">User Info Groups</label>
-                <input type="text" id="documentConfig_permissions_userInfoGroups" name="documentConfig_permissions_userInfoGroups" value='["Group1", ""]'>
-            </div>
-        </div>
-    </div>
-    <div id="configPreHolder">
-        <pre id="configPre"></pre>
-    </div>
-</div>
 
-<div id="editorSpace">
-    <div id="placeholder"></div>
-</div>
 
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">

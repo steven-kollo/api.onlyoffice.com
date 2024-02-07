@@ -11,6 +11,47 @@
     It allows to change the settings which define the behavior of the buttons in the embedded mode.
 </p>
 
+<div class="header-gray">Example</div>
+<p>
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+<div id="controlFields">
+    <div id="embedded" class="control-panel">
+        <div class="line input_line" style="margin-top: 0px;">
+            <label for="editorConfig_embedded_embedUrl">Embed Url</label>
+            <input type="text" id="editorConfig_embedded_embedUrl" name="editorConfig_embedded_embedUrl" value="https://example.com/embedded?doc=exampledocument1.docx">
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_embedded_fullscreenUrl">Fullscreen Url</label>
+            <input type="text" id="editorConfig_embedded_fullscreenUrl" name="editorConfig_embedded_fullscreenUrl" value="https://example.com/embedded?doc=exampledocument1.docx#fullscreen">
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_embedded_saveUrl">Save Url</label>
+            <input type="text" id="editorConfig_embedded_saveUrl" name="editorConfig_embedded_saveUrl" value="https://example.com/download?doc=exampledocument1.docx">
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_embedded_shareUrl">Share Url</label>
+            <input type="text" id="editorConfig_embedded_shareUrl" name="editorConfig_embedded_shareUrl" value="https://example.com/view?doc=exampledocument1.docx">
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_embedded_toolbarDocked">Toolbar Docked</label>
+            <select class="select" id="editorConfig_embedded_toolbarDocked" name="editorConfig_embedded_toolbarDocked">
+                <option value="top" disabled>top</option>
+                <option value="top" selected>top</option>
+                <option value="bottom">bottom</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div id="configPreHolder">
+    <pre id="configPre"></pre>
+</div>
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -67,47 +108,6 @@
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Example</div>
-<p>
-    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
-<div id="controlFields">
-    <div id="embedded" class="control-panel">
-        <div class="line input_line" style="margin-top: 0px;">
-            <label for="editorConfig_embedded_embedUrl">Embed Url</label>
-            <input type="text" id="editorConfig_embedded_embedUrl" name="editorConfig_embedded_embedUrl" value="https://example.com/embedded?doc=exampledocument1.docx">
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_embedded_fullscreenUrl">Fullscreen Url</label>
-            <input type="text" id="editorConfig_embedded_fullscreenUrl" name="editorConfig_embedded_fullscreenUrl" value="https://example.com/embedded?doc=exampledocument1.docx#fullscreen">
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_embedded_saveUrl">Save Url</label>
-            <input type="text" id="editorConfig_embedded_saveUrl" name="editorConfig_embedded_saveUrl" value="https://example.com/download?doc=exampledocument1.docx">
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_embedded_shareUrl">Share Url</label>
-            <input type="text" id="editorConfig_embedded_shareUrl" name="editorConfig_embedded_shareUrl" value="https://example.com/view?doc=exampledocument1.docx">
-        </div>
-        <div class="line input_line">
-            <label for="editorConfig_embedded_toolbarDocked">Toolbar Docked</label>
-            <select class="select" id="editorConfig_embedded_toolbarDocked" name="editorConfig_embedded_toolbarDocked">
-                <option value="top" disabled>top</option>
-                <option value="top" selected>top</option>
-                <option value="bottom">bottom</option>
-            </select>
-        </div>
-    </div>
-</div>
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
-</div>
-
-
-<div id="editorSpace">
-    <div id="placeholder"></div>
-</div>
 <script>
     $('.select').each(function () {
         const _this = $(this),

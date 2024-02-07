@@ -8,6 +8,84 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The document info section allows to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).</p>
 
+<div class="header-gray">Example</div>
+<div>
+    <div id="controlFields">
+        <div id="info" class="control-panel">
+            <div class="line input_line" style="margin-top: 0px;">
+                <label for="documentConfig_info_folder">Folder</label>
+                <input type="text" id="documentConfig_info_folder" name="documentConfig_info_folder" value="Example Files">
+            </div>
+            <div class="line input_line">
+                <label for="documentConfig_info_owner">Owner</label>
+                <input type="text" id="documentConfig_info_owner" name="documentConfig_info_owner" value="John Smith">
+            </div>
+            <div class="line input_line">
+                <label for="documentConfig_info_uploaded">Uploaded</label>
+                <input type="text" id="documentConfig_info_uploaded" name="documentConfig_info_uploaded" value="2010-07-07 3:46 PM">
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_info_favorite" name="documentConfig_info_favorite" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_info_favorite">Favorite</label>
+                </label>
+            </div>
+            <div class="config_object_holder">
+                <div id="holder_documentConfig_info_favorite" class="config_nested_group">
+                    <div class="line input_line">
+                        <select class="select" id="documentConfig_info_favorite_bool" name="documentConfig_info_favorite_bool">
+                            <option value=0 disabled>False</option>
+                            <option value=0 selected>False</option>
+                            <option value=1>True</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
+                </label>
+            </div>
+            <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder">
+                <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem config_nested_group">
+                    <div class="line input_line">
+                        <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
+                        <select class="select" id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
+                            <option value="Full Access" disabled>Full Access</option>
+                            <option value="Full Access" selected>Full Access</option>
+                            <option value="Read Only">Read Only</option>
+                            <option value="Deny Access">Deny Access</option>
+                        </select>
+                    </div>
+                    <div class="line input_line">
+                        <label for="documentConfig_info_sharingSettings_user_0">User</label>
+                        <input type="text" id="documentConfig_info_sharingSettings_user_0" name="documentConfig_info_sharingSettings_user_0" value="John Smith">
+                    </div>
+                    <div class="line">
+                        <label class="dataItemSpan">
+                            <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_0" name="documentConfig_info_sharingSettings_isLink_0" hidden="hidden">
+                            <span></span>
+                            <label for="documentConfig_info_sharingSettings_isLink_0">Is link</label>
+                        </label>
+                    </div>
+                </div> 
+            </div>
+            <div style="padding-left: 24px;">
+                <button id="addButton_info_sharingSettings" class="add-button">+</button>
+            </div>
+        </div>
+    </div>
+    <div id="configPreHolder">
+        <pre id="configPre"></pre>
+    </div>
+</div>
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -126,83 +204,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Example</div>
-<div>
-    <div id="controlFields">
-        <div id="info" class="control-panel">
-            <div class="line input_line" style="margin-top: 0px;">
-                <label for="documentConfig_info_folder">Folder</label>
-                <input type="text" id="documentConfig_info_folder" name="documentConfig_info_folder" value="Example Files">
-            </div>
-            <div class="line input_line">
-                <label for="documentConfig_info_owner">Owner</label>
-                <input type="text" id="documentConfig_info_owner" name="documentConfig_info_owner" value="John Smith">
-            </div>
-            <div class="line input_line">
-                <label for="documentConfig_info_uploaded">Uploaded</label>
-                <input type="text" id="documentConfig_info_uploaded" name="documentConfig_info_uploaded" value="2010-07-07 3:46 PM">
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_info_favorite" name="documentConfig_info_favorite" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_info_favorite">Favorite</label>
-                </label>
-            </div>
-            <div class="config_object_holder">
-                <div id="holder_documentConfig_info_favorite" class="config_nested_group">
-                    <div class="line input_line">
-                        <select class="select" id="documentConfig_info_favorite_bool" name="documentConfig_info_favorite_bool">
-                            <option value=0 disabled>False</option>
-                            <option value=0 selected>False</option>
-                            <option value=1>True</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" hidden="hidden" checked>
-                    <span></span>
-                    <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
-                </label>
-            </div>
-            <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder">
-                <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem config_nested_group">
-                    <div class="line input_line">
-                        <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
-                        <select class="select" id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
-                            <option value="Full Access" disabled>Full Access</option>
-                            <option value="Full Access" selected>Full Access</option>
-                            <option value="Read Only">Read Only</option>
-                            <option value="Deny Access">Deny Access</option>
-                        </select>
-                    </div>
-                    <div class="line input_line">
-                        <label for="documentConfig_info_sharingSettings_user_0">User</label>
-                        <input type="text" id="documentConfig_info_sharingSettings_user_0" name="documentConfig_info_sharingSettings_user_0" value="John Smith">
-                    </div>
-                    <div class="line">
-                        <label class="dataItemSpan">
-                            <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_0" name="documentConfig_info_sharingSettings_isLink_0" hidden="hidden">
-                            <span></span>
-                            <label for="documentConfig_info_sharingSettings_isLink_0">Is link</label>
-                        </label>
-                    </div>
-                </div> 
-            </div>
-            <div style="padding-left: 24px;">
-                <button id="addButton_info_sharingSettings" class="add-button">+</button>
-            </div>
-        </div>
-    </div>
-    <div id="configPreHolder">
-        <pre id="configPre"></pre>
-    </div>
-</div>
-<div id="editorSpace">
-    <div id="placeholder"></div>
-</div>
+
 <script>
     function buildSelects(id) {
         $('.select').each(function () {

@@ -7,6 +7,47 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The config base section allows to change the platform type used, document display size (width and height) and type of the document opened.</p>
 
+<div class="header-gray">Example</div>
+<div>
+    <div id="controlFields">
+        <div id="info" class="control-panel">
+            <div class="line input_line" style="margin-top: 0;">
+                <label for="config_documentType">Document Type</label>
+                <select class="select" id="config_documentType" name="config_documentType">
+                    <option disabled>word</option>
+                    <option value="word" selected>word</option>
+                    <option value="cell">cell</option>
+                    <option value="slide">slide</option>
+                    <option value="pdf">pdf</option>
+                </select>
+            </div>
+            <div class="line input_line">
+                <label for="config_type">Type</label>
+                <select class="select" id="config_type" name="config_type">
+                    <option disabled>desktop</option>
+                    <option value="desktop" selected>desktop</option>
+                    <option value="mobile">mobile </option>
+                </select>
+            </div>
+            <div class="line input_line">
+                <label for="config_height">Height</label>
+                <input type="text" id="config_height" name="config_height" value="550px">
+            </div>
+            <div class="line input_line" style="margin-bottom: 0;">
+                <label for="config_width">Width</label>
+                <input type="text" id="config_width" name="config_width" value="100%">
+            </div>
+        </div>
+    </div>
+    <div id="configPreHolder">
+        <pre id="configPre"></pre>
+    </div>
+</div>
+
+<div id="editorSpace">
+    <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -80,46 +121,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Example</div>
-<div>
-    <div id="controlFields">
-        <div id="info" class="control-panel">
-            <div class="line input_line" style="margin-top: 0;">
-                <label for="config_documentType">Document Type</label>
-                <select class="select" id="config_documentType" name="config_documentType">
-                    <option disabled>word</option>
-                    <option value="word" selected>word</option>
-                    <option value="cell">cell</option>
-                    <option value="slide">slide</option>
-                    <option value="pdf">pdf</option>
-                </select>
-            </div>
-            <div class="line input_line">
-                <label for="config_type">Type</label>
-                <select class="select" id="config_type" name="config_type">
-                    <option disabled>desktop</option>
-                    <option value="desktop" selected>desktop</option>
-                    <option value="mobile">mobile </option>
-                </select>
-            </div>
-            <div class="line input_line">
-                <label for="config_height">Height</label>
-                <input type="text" id="config_height" name="config_height" value="550px">
-            </div>
-            <div class="line input_line" style="margin-bottom: 0;">
-                <label for="config_width">Width</label>
-                <input type="text" id="config_width" name="config_width" value="100%">
-            </div>
-        </div>
-    </div>
-    <div id="configPreHolder">
-        <pre id="configPre"></pre>
-    </div>
-</div>
 
-<div id="editorSpace">
-    <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
-</div>
 <script>
     $('.select').each(function () {
         const _this = $(this),
