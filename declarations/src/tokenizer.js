@@ -261,6 +261,14 @@ function tokenizeTypeDeclaration(d) {
       type: "text",
       text: " "
     },
+    {
+      type: "identifier",
+      text: d.identifier
+    },
+    {
+      type: "text",
+      text: ": "
+    },
     ...tokenizeType(d.type)
   ]
 }
@@ -302,7 +310,14 @@ function tokenizeType(t) {
     tk = [
       {
         type: "text",
-        text: String(t.value)
+        text: (() => {
+          switch (typeof t.value) {
+          case "string":
+            return `"${t.value}"`
+          default:
+            return String(t.value)
+          }
+        })()
       }
     ]
     break
@@ -473,7 +488,7 @@ function tokenizeRecord(t) {
     },
     {
       type: "text",
-      text: "<"
+      text: "&lt;"
     }
   ]
   t.children.forEach((t) => {
@@ -489,7 +504,7 @@ function tokenizeRecord(t) {
   tk.push(
     {
       type: "text",
-      text: ">"
+      text: "&gt;"
     }
   )
   return tk
