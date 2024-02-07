@@ -1,6 +1,0 @@
----
-layout: site/site.webc
----
-<main class="blank__main">
-  <div class="blank__inner" @raw="content"></div>
-</main>

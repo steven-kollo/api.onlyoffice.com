@@ -1,6 +1,6 @@
 ---
 title: Form
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 ---
 # Structure of a form
 

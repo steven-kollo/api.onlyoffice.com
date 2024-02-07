@@ -1,0 +1,18 @@
+.dr {
+  text-decoration: none;
+}
+
+.dr:hover .dr__t_id {
+  color: var(--color-scale-orange-0);
+}
+
+.dr__line {
+  color: var(--color-scale-neutral-7);
+  font-family: var(--text-font-monospace);
+}
+
+.dr__t {}
+
+.dr__t_id {
+  color: var(--color-scale-black);
+}

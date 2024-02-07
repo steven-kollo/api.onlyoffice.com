@@ -12,6 +12,18 @@
   width: 100%;
 }
 
+.content > dl {
+  margin: 8px 0 0 0;
+}
+
+.content > dl dt {
+  margin: 16px 0 0 0;
+}
+
+.content > dl dd {
+  margin: 6px 0 0 24px;
+}
+
 .content-h2 {
   color: inherit;
   font-size: 14px;
@@ -29,34 +41,4 @@
 .content-h2__anchor {
   color: inherit;
   text-decoration: none;
-}
-
-/* todo: in progress */
-
-.content dl {
-  margin: 8px 0 0 0;
-}
-
-.content dt {
-  margin: 12px 0 0 0;
-}
-
-.content dd {
-  margin: 6px 0 0 16px;
-}
-
-.content dl code {
-  border-radius: 3px;
-  font-family: var(--text-font-monospace);
-  font-size: 13px;
-}
-
-.content dl a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.content dl a:hover {
-  text-decoration: underline;
-  color: var(--color-scale-orange-0);
 }

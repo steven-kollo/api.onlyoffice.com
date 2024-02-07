@@ -1,6 +1,6 @@
 ---
 title: Creating Basic Form
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 ---
 # [](/docbuilder/buildersamples/)Creating basic form
 

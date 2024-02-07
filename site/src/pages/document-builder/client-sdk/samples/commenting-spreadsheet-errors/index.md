@@ -1,6 +1,6 @@
 ---
 title: Commenting Spreadsheet Errors
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 ---
 # [](/docbuilder/buildersamples/)Commenting spreadsheet errors
 

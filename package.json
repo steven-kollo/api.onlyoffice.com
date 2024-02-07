@@ -3,13 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node ./makefile.js build2",
-    "build-ui-kit": "node ./makefile.js build-ui-kit"
+    "build": "node ./makefile.js build"
   },
   "devDependencies": {
     "@onlyoffice/documentation-ui-code-listing-js": "workspace:^",
     "@onlyoffice/documentation-ui-content-js": "workspace:^",
+    "@onlyoffice/documentation-ui-declaration-reference-js": "workspace:^",
     "@onlyoffice/documentation-ui-declaration-token-js": "workspace:^",
+    "@onlyoffice/documentation-ui-fonts": "workspace:^",
     "@onlyoffice/documentation-ui-kit-js": "workspace:^",
     "esbuild": "^0.19.11",
     "html-minifier-terser": "^7.2.0",
@@ -19,5 +20,9 @@
   "packageManager": "pnpm@8.13.0",
   "engines": {
     "node": "21.5.0"
+  },
+  "dependencies": {
+    "@onlyoffice/documentation-ui-icon-js": "workspace:^",
+    "@onlyoffice/documentation-ui-logo-js": "workspace:^"
   }
 }

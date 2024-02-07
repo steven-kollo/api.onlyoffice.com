@@ -1,3 +1,8 @@
+@import "../node_modules/@onlyoffice/documentation-ui-fonts/dist/fonts.css";
+@import "../node_modules/@onlyoffice/documentation-ui-primitives/dist/light.css";
+@import "../node_modules/@onlyoffice/documentation-ui-sr-only/dist/sr-only.css";
+
 @import "../node_modules/@onlyoffice/documentation-ui-content-js/dist/content.css";
 @import "../node_modules/@onlyoffice/documentation-ui-code-listing-js/dist/code-listing.css";
+@import "../node_modules/@onlyoffice/documentation-ui-declaration-reference-js/dist/declaration-reference.css";
 @import "../node_modules/@onlyoffice/documentation-ui-declaration-token-js/dist/declaration-token.css";

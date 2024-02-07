@@ -1,6 +1,6 @@
 ---
 title: Samples
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 ---
 # Builder samples
 

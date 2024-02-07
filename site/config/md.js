@@ -32,15 +32,15 @@ async function render(options, raw) {
   const p = await remark()
   let { value } = await p.process(raw)
   if (typeof value === "string") {
-    // https://github.com/11ty/eleventy-plugin-bundle/issues/17
-    const { WebC } = await import("@11ty/webc")
-    const page = new WebC()
-    page.setBundlerMode(false)
-    page.defineComponents(options.components)
-    value = `<content>${value}</content>`
-    page.setContent(value)
-    const { html } = await page.compile()
-    value = html
+    // // https://github.com/11ty/eleventy-plugin-bundle/issues/17
+    // const { WebC } = await import("@11ty/webc")
+    // const page = new WebC()
+    // page.setBundlerMode(false)
+    // page.defineComponents(options.components)
+    // value = `<content>${value}</content>`
+    // page.setContent(value)
+    // const { html } = await page.compile()
+    // value = html
   }
   return value
 }

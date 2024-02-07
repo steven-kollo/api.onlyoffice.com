@@ -1,6 +1,6 @@
 ---
 title: Creating Report Document
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 ---
 # [](/docbuilder/buildersamples/)Creating report document
 

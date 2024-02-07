@@ -1,6 +1,6 @@
 ---
 title: Spreadsheet
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 order: -2
 ---
 # Structure of a spreadsheet

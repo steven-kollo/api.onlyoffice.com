@@ -3,7 +3,8 @@ const {
   CodeListing,
   Content,
   ContentH2,
-  DeclarationToken
+  DeclarationToken,
+  DeclarationReference
 } = require("@onlyoffice/documentation-ui-kit-js/kit.js")
 
 /**
@@ -119,6 +120,15 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
         items: d.typeProperties
       })
     }
+    if (d.examples !== undefined) {
+      s += html`
+        ${ContentH2(() => "Examples")}
+        ${d.examples.map((e) => CodeListing(() => e))}
+      `
+    }
+
+    // todo: p = onRetrieve(d.parent)
+
     break
   case "constructor":
     if (d.type.parameters !== undefined) {
@@ -131,6 +141,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     p = onRetrieve(d.parent)
     if (p === undefined || p.kind !== "class") {
       break
+    }
+
+    if (d.examples !== undefined) {
+      s += html`
+        ${ContentH2(() => "Examples")}
+        ${d.examples.map((e) => CodeListing(() => e))}
+      `
     }
 
     items = p.constructors.filter((c) => c.id !== d.id)
@@ -160,6 +177,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
       `
     }
 
+    if (d.examples !== undefined) {
+      s += html`
+        ${ContentH2(() => "Examples")}
+        ${d.examples.map((e) => CodeListing(() => e))}
+      `
+    }
+
     p = onRetrieve(d.parent)
     if (p === undefined || p.kind !== "class") {
       break
@@ -177,6 +201,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
 
     break
   case "instanceProperty":
+    if (d.examples !== undefined) {
+      s += html`
+        ${ContentH2(() => "Examples")}
+        ${d.examples.map((e) => CodeListing(() => e))}
+      `
+    }
+
     p = onRetrieve(d.parent)
     if (p === undefined || p.kind !== "class") {
       break
@@ -206,6 +237,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
       `
     }
 
+    if (d.examples !== undefined) {
+      s += html`
+        ${ContentH2(() => "Examples")}
+        ${d.examples.map((e) => CodeListing(() => e))}
+      `
+    }
+
     p = onRetrieve(d.parent)
     if (p === undefined || p.kind !== "class") {
       break
@@ -222,6 +260,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     }
     break
   case "typeProperty":
+    if (d.examples !== undefined) {
+      s += html`
+        ${ContentH2(() => "Examples")}
+        ${d.examples.map((e) => CodeListing(() => e))}
+      `
+    }
+
     p = onRetrieve(d.parent)
     if (p === undefined || p.kind !== "class") {
       break
@@ -243,6 +288,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
         title: "Parameters",
         items: d.type.parameters
       })
+    }
+
+    if (d.examples !== undefined) {
+      s += html`
+        ${ContentH2(() => "Examples")}
+        ${d.examples.map((e) => CodeListing(() => e))}
+      `
     }
 
     p = onRetrieve(d.parent)
@@ -267,6 +319,12 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
   case "property":
     break
   case "type":
+    if (d.examples !== undefined) {
+      s += html`
+        ${ContentH2(() => "Examples")}
+        ${d.examples.map((e) => CodeListing(() => e))}
+      `
+    }
     break
   default:
     // todo: log.
@@ -292,9 +350,7 @@ function DeclarationTopic({ onRetrieve, onLink, title, items }) {
           return
         }
         return html`
-          <dt><a href="${onLink(d)}">${d.signature
-            .map((t) => DeclarationToken({ onLink, token: t }))
-            .join("")}</a></dt>
+          <dt>${DeclarationReference({ onLink, declaration: d })}</dt>
           <dd>${d.description}</dd>
         `
       })}

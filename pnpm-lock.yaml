@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@onlyoffice/documentation-ui-icon-js':
+        specifier: workspace:^
+        version: link:ui/icon-js
+      '@onlyoffice/documentation-ui-logo-js':
+        specifier: workspace:^
+        version: link:ui/logo-js
     devDependencies:
       '@onlyoffice/documentation-ui-code-listing-js':
         specifier: workspace:^
@@ -14,9 +21,15 @@ importers:
       '@onlyoffice/documentation-ui-content-js':
         specifier: workspace:^
         version: link:ui/content-js
+      '@onlyoffice/documentation-ui-declaration-reference-js':
+        specifier: workspace:^
+        version: link:ui/declaration-reference-js
       '@onlyoffice/documentation-ui-declaration-token-js':
         specifier: workspace:^
         version: link:ui/declaration-token-js
+      '@onlyoffice/documentation-ui-fonts':
+        specifier: workspace:^
+        version: link:ui/fonts
       '@onlyoffice/documentation-ui-kit-js':
         specifier: workspace:^
         version: link:ui/kit-js
@@ -113,33 +126,12 @@ importers:
       '@11ty/eleventy':
         specifier: ^2.0.1
         version: 2.0.1
-      '@11ty/eleventy-plugin-syntaxhighlight':
-        specifier: ^5.0.0
-        version: 5.0.0
-      '@11ty/eleventy-plugin-webc':
-        specifier: ^0.11.2
-        version: 0.11.2
-      '@11ty/webc':
-        specifier: ^0.11.4
-        version: 0.11.4
       '@onlyoffice/documentation-declarations':
         specifier: workspace:^
         version: link:../declarations
       '@onlyoffice/documentation-resources':
         specifier: workspace:^
         version: link:../resources
-      '@onlyoffice/documentation-ui-code-example-webc':
-        specifier: workspace:^
-        version: link:../ui/code-example-webc
-      '@onlyoffice/documentation-ui-kit':
-        specifier: workspace:^
-        version: link:../ui/kit
-      '@onlyoffice/documentation-ui-kit-webc':
-        specifier: workspace:^
-        version: link:../ui/kit-webc
-      '@onlyoffice/documentation-ui-reflection-webc':
-        specifier: workspace:^
-        version: link:../ui/reflection-webc
       '@shikijs/rehype':
         specifier: 1.0.0-beta.1
         version: 1.0.0-beta.1
@@ -177,27 +169,6 @@ importers:
         specifier: 1.0.0-beta.1
         version: 1.0.0-beta.1
 
-  ui/code-example: {}
-
-  ui/code-example-webc:
-    dependencies:
-      '@11ty/webc':
-        specifier: ^0.11.4
-        version: 0.11.4
-    devDependencies:
-      es-main:
-        specifier: ^1.3.0
-        version: 1.3.0
-      lightningcss:
-        specifier: ^1.23.0
-        version: 1.23.0
-      sade:
-        specifier: ^1.8.1
-        version: 1.8.1
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
   ui/code-listing-js:
     dependencies:
       common-tags:
@@ -223,8 +194,6 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  ui/content: {}
-
   ui/content-js:
     dependencies:
       common-tags:
@@ -243,6 +212,31 @@ importers:
       lightningcss:
         specifier: ^1.23.0
         version: 1.23.0
+      sade:
+        specifier: ^1.8.1
+        version: 1.8.1
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
+  ui/declaration-reference-js:
+    dependencies:
+      common-tags:
+        specifier: ^1.8.2
+        version: 1.8.2
+    devDependencies:
+      '@types/common-tags':
+        specifier: ^1.8.4
+        version: 1.8.4
+      es-main:
+        specifier: ^1.3.0
+        version: 1.3.0
+      esbuild:
+        specifier: ^0.19.11
+        version: 0.19.11
       sade:
         specifier: ^1.8.1
         version: 1.8.1
@@ -281,37 +275,35 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  ui/fonts: {}
+  ui/fonts:
+    devDependencies:
+      es-main:
+        specifier: ^1.3.0
+        version: 1.3.0
+      sade:
+        specifier: ^1.8.1
+        version: 1.8.1
 
   ui/icon: {}
 
-  ui/kit:
+  ui/icon-js:
     dependencies:
-      '@onlyoffice/documentation-ui-code-example':
+      '@onlyoffice/documentation-ui-icon':
         specifier: workspace:^
-        version: link:../code-example
-      '@onlyoffice/documentation-ui-content':
-        specifier: workspace:^
-        version: link:../content
-      '@onlyoffice/documentation-ui-fonts':
-        specifier: workspace:^
-        version: link:../fonts
-      '@onlyoffice/documentation-ui-l':
-        specifier: workspace:^
-        version: link:../l
-      '@onlyoffice/documentation-ui-logo':
-        specifier: workspace:^
-        version: link:../logo
-      '@onlyoffice/documentation-ui-primitives':
-        specifier: workspace:^
-        version: link:../primitives
-      '@onlyoffice/documentation-ui-sr-only':
-        specifier: workspace:^
-        version: link:../sr-only
+        version: link:../icon
     devDependencies:
-      lightningcss:
-        specifier: ^1.23.0
-        version: 1.23.0
+      es-main:
+        specifier: ^1.3.0
+        version: 1.3.0
+      esbuild:
+        specifier: ^0.19.11
+        version: 0.19.11
+      sade:
+        specifier: ^1.8.1
+        version: 1.8.1
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
 
   ui/kit-js:
     dependencies:
@@ -321,9 +313,27 @@ importers:
       '@onlyoffice/documentation-ui-content-js':
         specifier: workspace:^
         version: link:../content-js
+      '@onlyoffice/documentation-ui-declaration-reference-js':
+        specifier: workspace:^
+        version: link:../declaration-reference-js
       '@onlyoffice/documentation-ui-declaration-token-js':
         specifier: workspace:^
         version: link:../declaration-token-js
+      '@onlyoffice/documentation-ui-fonts':
+        specifier: workspace:^
+        version: link:../fonts
+      '@onlyoffice/documentation-ui-icon-js':
+        specifier: workspace:^
+        version: link:../icon-js
+      '@onlyoffice/documentation-ui-logo-js':
+        specifier: workspace:^
+        version: link:../logo-js
+      '@onlyoffice/documentation-ui-primitives':
+        specifier: workspace:^
+        version: link:../primitives
+      '@onlyoffice/documentation-ui-sr-only':
+        specifier: workspace:^
+        version: link:../sr-only
     devDependencies:
       es-main:
         specifier: ^1.3.0
@@ -341,22 +351,26 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  ui/kit-webc:
+  ui/logo: {}
+
+  ui/logo-js:
     dependencies:
-      '@onlyoffice/documentation-ui-reflection-webc':
+      '@onlyoffice/documentation-ui-logo':
         specifier: workspace:^
-        version: link:../reflection-webc
+        version: link:../logo
     devDependencies:
       es-main:
         specifier: ^1.3.0
         version: 1.3.0
+      esbuild:
+        specifier: ^0.19.11
+        version: 0.19.11
       sade:
         specifier: ^1.8.1
         version: 1.8.1
-
-  ui/l: {}
-
-  ui/logo: {}
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
 
   ui/primitives: {}
 
@@ -371,21 +385,6 @@ importers:
       lightningcss:
         specifier: ^1.23.0
         version: 1.23.0
-      sade:
-        specifier: ^1.8.1
-        version: 1.8.1
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
-  ui/sc-webc:
-    devDependencies:
-      '@11ty/webc':
-        specifier: ^0.11.4
-        version: 0.11.4
-      es-main:
-        specifier: ^1.3.0
-        version: 1.3.0
       sade:
         specifier: ^1.8.1
         version: 1.8.1
@@ -425,36 +424,12 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@11ty/eleventy-plugin-bundle@1.0.5:
-    resolution: {integrity: sha512-Esv97j+mOo/yfxjaWl4j8CyszOBsRjU/DOUWOBqVnnDLM8VDXeus2LTJUxF70nAU0g+z+b6fRn8fKnm6b2a/UQ==}
-    engines: {node: '>=14'}
-    dependencies:
-      debug: 4.3.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@11ty/eleventy-plugin-syntaxhighlight@5.0.0:
-    resolution: {integrity: sha512-y9BUmP1GofmbJgxM1+ky/UpFCpD8JSOeLeKItUs0WApgnrHk9haHziW7lS86lbArX5SiCVo4zTTw9x53gvRCaA==}
-    dependencies:
-      prismjs: 1.29.0
-    dev: true
-
-  /@11ty/eleventy-plugin-webc@0.11.2:
-    resolution: {integrity: sha512-oa/XlAqI5KtVO7M14qaN92D2yJfBEMMSb66YWY6YZVbRqFSVbjO4WmRJ2Ti2ZZb1FNvxj4ypGNV8VJleGE69xw==}
-    engines: {node: '>=14.18'}
-    dependencies:
-      '@11ty/eleventy-plugin-bundle': 1.0.5
-      '@11ty/webc': 0.11.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@11ty/eleventy-utils@1.0.2:
     resolution: {integrity: sha512-Zy2leMK1DQR6Q6ZPSagv7QpJaAz9uVbb+RmVetYFp3foMeQtOSZx7w2u5daRFmP+PeNq9vO9H4xtBToYFWZwHA==}
     engines: {node: '>=12'}
     dependencies:
       normalize-path: 3.0.0
+    dev: true
 
   /@11ty/eleventy@2.0.1:
     resolution: {integrity: sha512-t8XVUbCJByhVEa1RzO0zS2QzbL3wPY8ot1yUw9noqiSHxJWUwv6jiwm1/MZDPTYtkZH2ZHvdQIRQ5/SjG9XmLw==}
@@ -525,6 +500,7 @@ packages:
       nanoid: 4.0.2
       node-retrieve-globals: 2.0.8
       parse5: 7.1.2
+    dev: true
 
   /@aashutoshrathi/word-wrap@1.2.6:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
@@ -1026,6 +1002,7 @@ packages:
   /acorn-walk@8.3.2:
     resolution: {integrity: sha512-cjkyv4OtNCIeqhHrfS81QWXoCBPExR/J62oyEqepVw8WaQeSqpW2uhuLPh1m9eWhDuOo/jUXVTlifvesOWp/4A==}
     engines: {node: '>=0.4.0'}
+    dev: true
 
   /acorn@7.4.1:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
@@ -1210,6 +1187,7 @@ packages:
     requiresBuild: true
     dependencies:
       fill-range: 7.0.1
+    dev: true
 
   /buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
@@ -1356,6 +1334,7 @@ packages:
     dependencies:
       mdn-data: 2.0.30
       source-map-js: 1.0.2
+    dev: true
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -1403,6 +1382,7 @@ packages:
   /dependency-graph@0.11.0:
     resolution: {integrity: sha512-JeMq7fEshyepOWDfcfHK06N3MhyPhz++vtqWhMT5O9A3K42rdsEDpfdVqjaqaAhsw6a+ZqeDvQVtD0hFHQWrzg==}
     engines: {node: '>= 0.6.0'}
+    dev: true
 
   /dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
@@ -1516,6 +1496,7 @@ packages:
   /entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
+    dev: true
 
   /errno@0.1.8:
     resolution: {integrity: sha512-dJ6oBr5SQ1VSd9qkk7ByRgb/1SH4JZjCHSW/mr63/QcXO9zLVxvJ6Oy13nio03rxpSnVDDjFor75SjVeZWPW/A==}
@@ -1692,6 +1673,7 @@ packages:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.5
+    dev: true
 
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
@@ -1723,6 +1705,7 @@ packages:
     requiresBuild: true
     dependencies:
       to-regex-range: 5.0.1
+    dev: true
 
   /finalhandler@1.2.0:
     resolution: {integrity: sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==}
@@ -1790,6 +1773,7 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       is-glob: 4.0.3
+    dev: true
 
   /glob-parent@6.0.2:
     resolution: {integrity: sha512-XxwI8EOhVQgWp6iDL+3b0r86f4d6AX6zSU55HfB4ydCEuXLXc5FcYeOu+nnGftS4TEju/11rt4KJPTMgbfmv4A==}
@@ -2113,6 +2097,7 @@ packages:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
     requiresBuild: true
+    dev: true
 
   /is-path-inside@3.0.3:
     resolution: {integrity: sha512-Fd4gABb+ycGAmKou8eMftCupSir5lRxqf4aD/vd0cD2qc4HL07OjCeuHMr8Ro4CoMaeCKDB0/ECBOVWjTwUvPQ==}
@@ -2466,6 +2451,7 @@ packages:
 
   /mdn-data@2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
+    dev: true
 
   /mdurl@1.0.1:
     resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
@@ -2475,6 +2461,7 @@ packages:
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
+    dev: true
 
   /micromark-core-commonmark@2.0.0:
     resolution: {integrity: sha512-jThOz/pVmAYUtkroV3D5c1osFXAMv9e0ypGDOIZuCeAe91/sD6BoE2Sjzt30yuXtwOYUmySOhMas/PVyh02itA==}
@@ -2657,6 +2644,7 @@ packages:
     dependencies:
       braces: 3.0.2
       picomatch: 2.3.1
+    dev: true
 
   /mime@3.0.0:
     resolution: {integrity: sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==}
@@ -2753,6 +2741,7 @@ packages:
     resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
     engines: {node: ^14 || ^16 || >=18}
     hasBin: true
+    dev: true
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
@@ -2774,10 +2763,12 @@ packages:
     dependencies:
       acorn: 8.11.3
       acorn-walk: 8.3.2
+    dev: true
 
   /normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
+    dev: true
 
   /nunjucks@3.2.4(chokidar@3.5.3):
     resolution: {integrity: sha512-26XRV6BhkgK0VOxfbU5cQI+ICFUtMLixv1noZn1tGU38kQH5A5nmmbk/O45xdyBhD1esk47nKrY0mvQpZIhRjQ==}
@@ -2861,6 +2852,7 @@ packages:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
     dependencies:
       entities: 4.5.0
+    dev: true
 
   /parseurl@1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
@@ -2903,6 +2895,7 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
     requiresBuild: true
+    dev: true
 
   /pify@2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
@@ -2956,11 +2949,6 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
-
-  /prismjs@1.29.0:
-    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
-    engines: {node: '>=6'}
-    dev: true
 
   /promise-each@2.2.0:
     resolution: {integrity: sha512-67roqt1k3QDA41DZ8xi0V+rF3GoaMiX7QilbXu0vXimut+9RcKBNZ/t60xCRgcsihmNUsEjh48xLfNqOrKblUg==}
@@ -3311,6 +3299,7 @@ packages:
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
+    dev: true
 
   /source-map-support@0.5.21:
     resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
@@ -3432,6 +3421,7 @@ packages:
     requiresBuild: true
     dependencies:
       is-number: 7.0.0
+    dev: true
 
   /token-stream@1.0.0:
     resolution: {integrity: sha512-VSsyNPPW74RpHwR8Fc21uubwHY7wMDeJLys2IX5zJNih+OnAnaifKHo+1LHT7DAdloQ7apeaaWg8l7qnf/TnEg==}

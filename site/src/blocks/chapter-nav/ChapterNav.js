@@ -6,7 +6,7 @@ function ChapterNav({ page, chapter }) {
     <o-page-nav>
       <div class="tree">
         <ul class="tree__limb tree__limb_bole">
-          ${chapter.children.map((c) => html`
+          ${chapter.children && chapter.children.map((c) => html`
             <li class="tree__branch tree__branch_bole">
               <div class="tree__twig">
                 <a class="tree__leaf tree__leaf_bole" href="${c.link}">${c.title}</a>

@@ -1,6 +1,6 @@
 ---
 title: Text Document
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 order: -3
 ---
 # Structure of a text document

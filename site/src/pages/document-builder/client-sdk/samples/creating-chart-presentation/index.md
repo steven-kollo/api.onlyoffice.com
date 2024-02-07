@@ -1,6 +1,6 @@
 ---
 title: Creating Chart Presentation
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 ---
 # [](/docbuilder/buildersamples/)Creating chart presentation
 

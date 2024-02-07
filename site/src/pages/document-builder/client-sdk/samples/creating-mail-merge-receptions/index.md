@@ -1,6 +1,6 @@
 ---
 title: Creating Mail Merge Receptions
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 ---
 # [](/docbuilder/buildersamples/)Creating mail merge receptions
 

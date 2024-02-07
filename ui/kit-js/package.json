@@ -17,7 +17,13 @@
   "dependencies": {
     "@onlyoffice/documentation-ui-code-listing-js": "workspace:^",
     "@onlyoffice/documentation-ui-content-js": "workspace:^",
-    "@onlyoffice/documentation-ui-declaration-token-js": "workspace:^"
+    "@onlyoffice/documentation-ui-declaration-reference-js": "workspace:^",
+    "@onlyoffice/documentation-ui-declaration-token-js": "workspace:^",
+    "@onlyoffice/documentation-ui-fonts": "workspace:^",
+    "@onlyoffice/documentation-ui-icon-js": "workspace:^",
+    "@onlyoffice/documentation-ui-logo-js": "workspace:^",
+    "@onlyoffice/documentation-ui-primitives": "workspace:^",
+    "@onlyoffice/documentation-ui-sr-only": "workspace:^"
   },
   "devDependencies": {
     "es-main": "^1.3.0",

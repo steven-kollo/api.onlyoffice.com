@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/documentation-ui-logo",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
   "packageManager": "pnpm@8.13.0",
   "engines": {
     "node": "21.5.0"

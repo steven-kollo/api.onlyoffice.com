@@ -1,6 +1,6 @@
 ---
 title: Presentation
-layout: page/page.webc
+layout: chapter/chapter.11ty.js
 order: -1
 ---
 # Structure of a presentation

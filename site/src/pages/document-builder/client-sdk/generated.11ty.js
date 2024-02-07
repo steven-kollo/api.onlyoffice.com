@@ -17,7 +17,8 @@ function data() {
       const i = l.find((d) => Object.hasOwn(d, "extends"))
       const r = l.slice(0, 101)
       const i2 = l.find((d) => Object.hasOwn(d, "implements"))
-      r.push(i, i2)
+      const i3 = l.find((d) => d.id === "word/apiBuilder;ReviewReport")
+      r.push(i, i2, i3)
       return r
     })(),
     permalink(data) {
