@@ -16,6 +16,7 @@
     "@onlyoffice/documentation-resources": "workspace:^",
     "@shikijs/rehype": "1.0.0-beta.1",
     "@types/common-tags": "^1.8.4",
+    "@types/node": "^20.11.5",
     "clsx": "^2.1.0",
     "common-tags": "^1.8.2",
     "esbuild": "^0.19.11",

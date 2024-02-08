@@ -27,9 +27,6 @@ importers:
       '@onlyoffice/documentation-ui-declaration-token-js':
         specifier: workspace:^
         version: link:ui/declaration-token-js
-      '@onlyoffice/documentation-ui-fonts':
-        specifier: workspace:^
-        version: link:ui/fonts
       '@onlyoffice/documentation-ui-kit-js':
         specifier: workspace:^
         version: link:ui/kit-js
@@ -144,6 +141,9 @@ importers:
       '@types/common-tags':
         specifier: ^1.8.4
         version: 1.8.4
+      '@types/node':
+        specifier: ^20.11.5
+        version: 20.11.5
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -244,14 +244,7 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  ui/fonts:
-    devDependencies:
-      es-main:
-        specifier: ^1.3.0
-        version: 1.3.0
-      sade:
-        specifier: ^1.8.1
-        version: 1.8.1
+  ui/fonts: {}
 
   ui/icon: {}
 
@@ -287,9 +280,6 @@ importers:
       '@onlyoffice/documentation-ui-declaration-token-js':
         specifier: workspace:^
         version: link:../declaration-token-js
-      '@onlyoffice/documentation-ui-fonts':
-        specifier: workspace:^
-        version: link:../fonts
       '@onlyoffice/documentation-ui-icon-js':
         specifier: workspace:^
         version: link:../icon-js

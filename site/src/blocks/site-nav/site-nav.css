@@ -10,7 +10,7 @@
 
 .site-nav__link {
   align-items: center;
-  color: hsl(0, 0%, 80%);
+  color: var(--site-header-navigation-foreground-color);
   display: flex;
   font-size: 12px;
   font-weight: 600;
@@ -41,20 +41,20 @@
 }
 
 .site-nav__link_current {
-  color: hsl(15deg, 100%, 62%);
+  color: var(--site-header-navigation-focus-foreground-color);
 }
 
 .site-nav__link_current:hover,
 .site-nav__link_current:focus {
-  color: hsl(15deg, 100%, 62%);
+  color: var(--site-header-navigation-focus-foreground-color);
 }
 
 .site-nav__link_current::before {
   content: "";
-  background-color: hsl(15deg, 100%, 62%);
+  background-color: var(--site-header-navigation-focus-foreground-color);
 }
 
 .site-nav__link_current:hover::before,
 .site-nav__link_current:focus::before {
-  background-color: hsl(15deg, 100%, 62%);
+  background-color: var(--site-header-navigation-focus-foreground-color);
 }

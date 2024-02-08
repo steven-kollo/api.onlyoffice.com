@@ -10,7 +10,6 @@
     "@onlyoffice/documentation-ui-content-js": "workspace:^",
     "@onlyoffice/documentation-ui-declaration-reference-js": "workspace:^",
     "@onlyoffice/documentation-ui-declaration-token-js": "workspace:^",
-    "@onlyoffice/documentation-ui-fonts": "workspace:^",
     "@onlyoffice/documentation-ui-kit-js": "workspace:^",
     "@onlyoffice/documentation-ui-syntax-highlight-js": "workspace:^",
     "esbuild": "^0.19.11",

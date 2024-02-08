@@ -7,7 +7,6 @@ import sade from "sade"
 // import * as contentJS from "@onlyoffice/documentation-ui-content-js/makefile.js"
 // import * as declarationReferenceJS from "@onlyoffice/documentation-ui-declaration-reference-js/makefile.js"
 // import * as declarationTokenJS from "@onlyoffice/documentation-ui-declaration-token-js/makefile.js"
-import * as fonts from "@onlyoffice/documentation-ui-fonts/makefile.js"
 import * as iconJS from "@onlyoffice/documentation-ui-icon-js/makefile.js"
 // import * as kitJS from "@onlyoffice/documentation-ui-kit-js/makefile.js"
 import * as logoJS from "@onlyoffice/documentation-ui-logo-js/makefile.js"
@@ -35,7 +34,6 @@ make
       // ["@onlyoffice/documentation-ui-content-js", contentJS],
       // ["@onlyoffice/documentation-ui-declaration-reference-js", declarationReferenceJS],
       // ["@onlyoffice/documentation-ui-declaration-token-js", declarationTokenJS],
-      ["@onlyoffice/documentation-ui-fonts", fonts],
       ["@onlyoffice/documentation-ui-icon-js", iconJS],
       // ["@onlyoffice/documentation-ui-kit-js", kitJS],
       ["@onlyoffice/documentation-ui-logo-js", logoJS],

@@ -1,5 +1,5 @@
 .footer {
-  background-color: hsl(0, 0%, 20%);
+  background-color: var(--site-footer-background-color);
   padding: 13px 0 28px 0;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .footer-nav__anchor {
-  color: hsl(0, 0%, 94%);
+  color: var(--site-footer-navigation-foreground-color);
   font-size: 12px;
   margin-left: 16px;
   text-decoration: none;
@@ -31,7 +31,7 @@
 
 .footer-nav__anchor:hover,
 .footer-nav__anchor:focus {
-  color: hsl(15deg, 100%, 62%);
+  color: var(--site-footer-navigation-focus-foreground-color);
   text-decoration: underline;
 }
 

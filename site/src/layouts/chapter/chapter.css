@@ -1,5 +1,5 @@
 .product__main {
-  background-color: var(--color-scale-neutral-1);
+  background-color: var(--chapter-navigation-background-color);
 }
 
 .product__inner {
@@ -10,7 +10,7 @@
 .product__main2 {
   width: 100%;
   /* padding-right: calc((100% - 1168px) / 2); */
-  background-color: var(--color-scale-white);
+  background-color: var(--content-background-color);
 }
 
 .product__inner2 {

@@ -1,4 +1,6 @@
-.tree {}
+.tree {
+  color: var(--chapter-navigation-foreground-color);
+}
 
 .tree__limb {
   list-style: none;
@@ -61,17 +63,17 @@
 
 .tree__leaf:hover,
 .tree__leaf:focus {
-  color: var(--color-scale-orange-0);
+  color: var(--chapter-navigation-focus-foreground-color);
 }
 
 .tree__leaf_current {
-  color: var(--color-scale-orange-0);
+  color: var(--chapter-navigation-focus-foreground-color);
 }
 
 .tree__leaf_bole {
   font-weight: 700;
   text-transform: uppercase;
-
+  color: var(--chapter-navigation-heading-foreground-color);
   padding-inline-start: 0;
 }
 

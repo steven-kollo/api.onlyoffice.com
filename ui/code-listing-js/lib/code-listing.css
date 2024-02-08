@@ -1,10 +1,10 @@
 .code-listing {
-  border: 1px solid var(--color-scale-gray-1);
+  border: 1px solid var(--code-listing-border-color);
   font-family: var(--text-font-monospace);
   margin-top: 24px;
 }
 
-.code-listing__header {
+/* .code-listing__header {
   display: flex;
   background-color: var(--color-scale-neutral-1);
 }
@@ -38,11 +38,12 @@
 
 .code-listing__action svg {
   display: block;
-}
+} */
 
 .code-listing pre {
-  background-color: var(--color-scale-neutral-0);
-  border-top: 1px solid var(--color-scale-gray-1);
+  background-color: var(--code-listing-background-color);
+  border-top: 1px solid var(--code-listing-border-color);
+  color: var(--code-listing-foreground-color);
   font-family: inherit;
   font-size: 13px;
   margin: 0;

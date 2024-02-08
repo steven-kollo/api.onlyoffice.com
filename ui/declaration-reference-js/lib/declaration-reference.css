@@ -3,16 +3,16 @@
 }
 
 .dr:hover .dr__t_id {
-  color: var(--color-scale-orange-0);
+  color: var(--declaration-reference-foreground-color);
 }
 
 .dr__line {
-  color: var(--color-scale-neutral-7);
+  color: var(--declaration-decoration-foreground-color);
   font-family: var(--text-font-monospace);
 }
 
 .dr__t {}
 
 .dr__t_id {
-  color: var(--color-scale-black);
+  color: var(--declaration-text-foreground-color);
 }

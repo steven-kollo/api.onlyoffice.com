@@ -1,3 +1,4 @@
+import { Content } from "@onlyoffice/documentation-ui-kit-js"
 import { h } from "preact"
 
 function data() {
@@ -7,9 +8,7 @@ function data() {
 }
 
 function render({ content }) {
-  return (
-    <div>{content}</div>
-  )
+  return <Content>{content}</Content>
 }
 
 export { data, render }

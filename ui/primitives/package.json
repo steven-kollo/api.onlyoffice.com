@@ -1,7 +1,13 @@
 {
   "name": "@onlyoffice/documentation-ui-primitives",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
+  "exports": {
+    "./static/*": "./static/*",
+    "./dark.css": "./lib/dark.css",
+    "./light.css": "./lib/light.css",
+    "./typography.css": "./lib/typography.css"
+  },
   "packageManager": "pnpm@8.13.0",
   "engines": {
     "node": "21.5.0"

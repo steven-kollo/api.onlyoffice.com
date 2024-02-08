@@ -19,7 +19,7 @@ const { navigationPlugin } = require("./config/navigation.js")
 function config(c) {
   c.setServerPassthroughCopyBehavior("passthrough")
   c.addPassthroughCopy({
-    "./node_modules/@onlyoffice/documentation-ui-kit-js/node_modules/@onlyoffice/documentation-ui-fonts/static/*.{woff,woff2}": "."
+    "./node_modules/@onlyoffice/documentation-ui-kit-js/node_modules/@onlyoffice/documentation-ui-primitives/static/*.{woff,woff2}": "."
   })
 
   c.addPlugin(html)

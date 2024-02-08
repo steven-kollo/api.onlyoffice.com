@@ -1,5 +1,5 @@
 html {
-  color: hsl(0deg, 0%, 20%);
+  color: var(--site-foreground-color);
   font-family: "Open Sans";
   font-size: 14px;
   line-height: 1.5;
