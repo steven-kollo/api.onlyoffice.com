@@ -2354,6 +2354,7 @@
     <Content Include="Content\highlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\arrow-gray.svg" />
+	<Content Include="Content\img\arrow-select.svg" />
     <Content Include="Content\img\close.svg" />
     <Content Include="Content\img\csharp\add.png" />
     <Content Include="Content\img\csharp\browse.png" />
@@ -2534,6 +2535,7 @@
     <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\forums-page.png" />
     <Content Include="Content\img\Editor\goback.png" />
+    <Content Include="Content\img\Editor\green-checkbox.svg" />
     <Content Include="Content\img\Editor\help.png" />
     <Content Include="Content\img\Editor\hideNotes.png" />
     <Content Include="Content\img\Editor\hideRulers.png" />
