@@ -3,14 +3,15 @@
 
 import { argv } from "node:process"
 import sade from "sade"
-import * as codeListingJS from "@onlyoffice/documentation-ui-code-listing-js/makefile.js"
-import * as contentJS from "@onlyoffice/documentation-ui-content-js/makefile.js"
-import * as declarationReferenceJS from "@onlyoffice/documentation-ui-declaration-reference-js/makefile.js"
-import * as declarationTokenJS from "@onlyoffice/documentation-ui-declaration-token-js/makefile.js"
+// import * as codeListingJS from "@onlyoffice/documentation-ui-code-listing-js/makefile.js"
+// import * as contentJS from "@onlyoffice/documentation-ui-content-js/makefile.js"
+// import * as declarationReferenceJS from "@onlyoffice/documentation-ui-declaration-reference-js/makefile.js"
+// import * as declarationTokenJS from "@onlyoffice/documentation-ui-declaration-token-js/makefile.js"
 import * as fonts from "@onlyoffice/documentation-ui-fonts/makefile.js"
 import * as iconJS from "@onlyoffice/documentation-ui-icon-js/makefile.js"
-import * as kitJS from "@onlyoffice/documentation-ui-kit-js/makefile.js"
+// import * as kitJS from "@onlyoffice/documentation-ui-kit-js/makefile.js"
 import * as logoJS from "@onlyoffice/documentation-ui-logo-js/makefile.js"
+// import * as syntaxHighlightJS from "@onlyoffice/documentation-ui-syntax-highlight-js/makefile.js"
 import * as documentBuilder from "./resources/makefile.js"
 
 // @onlyoffice/documentation-ui-logo-js
@@ -30,39 +31,19 @@ make
   .command("build")
   .action(async () => {
     await Promise.all([
-      (() => {
-        console.log("@onlyoffice/documentation-ui-code-listing-js")
-        return codeListingJS.build()
-      })(),
-      (() => {
-        console.log("@onlyoffice/documentation-ui-content-js")
-        return contentJS.build()
-      })(),
-      (() => {
-        console.log("@onlyoffice/documentation-ui-declaration-reference-js")
-        return declarationReferenceJS.build()
-      })(),
-      (() => {
-        console.log("@onlyoffice/documentation-ui-declaration-token-js")
-        return declarationTokenJS.build()
-      })(),
-      (() => {
-        console.log("@onlyoffice/documentation-ui-fonts")
-        return fonts.build()
-      })(),
-      (() => {
-        console.log("@onlyoffice/documentation-ui-icon-js")
-        return iconJS.build()
-      })(),
-      (() => {
-        console.log("@onlyoffice/documentation-ui-logo-js")
-        return logoJS.build()
-      })(),
-      (() => {
-        console.log("@onlyoffice/documentation-ui-kit-js")
-        return kitJS.build()
-      })()
-    ])
+      // ["@onlyoffice/documentation-ui-code-listing-js", codeListingJS],
+      // ["@onlyoffice/documentation-ui-content-js", contentJS],
+      // ["@onlyoffice/documentation-ui-declaration-reference-js", declarationReferenceJS],
+      // ["@onlyoffice/documentation-ui-declaration-token-js", declarationTokenJS],
+      ["@onlyoffice/documentation-ui-fonts", fonts],
+      ["@onlyoffice/documentation-ui-icon-js", iconJS],
+      // ["@onlyoffice/documentation-ui-kit-js", kitJS],
+      ["@onlyoffice/documentation-ui-logo-js", logoJS],
+      // ["@onlyoffice/documentation-ui-syntax-highlight-js", syntaxHighlightJS],
+    ].map(([name, make]) => {
+      console.log(name)
+      return make.build()
+    }))
   })
 
 make.parse(argv)

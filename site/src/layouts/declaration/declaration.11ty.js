@@ -6,10 +6,10 @@ function data() {
   }
 }
 
-function render({ pagination, onRetrieve, onLink }) {
-  return pagination.items.map((d) => {
+async function render({ pagination, onRetrieve, onLink }) {
+  return await Promise.all(pagination.items.map((d) => {
     return Declaration({ onRetrieve, onLink, declaration: d })
-  })
+  }))
 }
 
 module.exports = { data, render }

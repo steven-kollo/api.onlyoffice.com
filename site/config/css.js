@@ -62,7 +62,7 @@ function compile(p, b, f) {
       ...b,
       filename: f
     })
-    return code
+    return code.toString()
   }
 }
 

@@ -1,16 +1,16 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "./src",
-    "declaration": true,
-    "noEmit": false,
-    "emitDeclarationOnly": true,
-    "outDir": "./dist"
+    "rootDir": "./lib",
+    "outDir": "./dist",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
   },
   "include": [
-    "./src/*"
+    "./lib/*"
   ],
   "exclude": [
-    "./src/*.test.js"
+    "./lib/*.test.js"
   ]
 }

@@ -8,6 +8,8 @@ const { plugin: css } = require("./config/css.js")
 const { plugin: html } = require("./config/html.js")
 const { plugin: js } = require("./config/js.js")
 const { plugin: md } = require("./config/md.js")
+const { jsxPlugin } = require("./config/jsx.js")
+const { mdxPlugin } = require("./config/mdx.js")
 const { navigationPlugin } = require("./config/navigation.js")
 
 /**
@@ -34,8 +36,11 @@ function config(c) {
   c.addPlugin(navigationPlugin)
   // c.addPlugin(productsPlugin)
 
+  c.addPlugin(jsxPlugin)
+  c.addPlugin(mdxPlugin)
+
   return {
-    templateFormats: ["md", "njk", "11ty.js"],
+    templateFormats: ["md", "mdx", "njk", "11ty.js"],
     dir: {
       data: "_",
       includes: "",

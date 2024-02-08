@@ -5,7 +5,7 @@ const { list, retrieve } = require("@onlyoffice/documentation-resources/document
 
 function data() {
   return {
-    layout: "declaration/declaration.11ty.js",
+    layout: "declaration/declaration.tsx",
     pagination: {
       data: "items",
       size: 1,
@@ -18,7 +18,8 @@ function data() {
       const r = l.slice(0, 101)
       const i2 = l.find((d) => Object.hasOwn(d, "implements"))
       const i3 = l.find((d) => d.id === "word/apiBuilder;ReviewReport")
-      r.push(i, i2, i3)
+      const i4 = l.find((d) => d.id === "word/api_plugins;Api#AddContentControl")
+      r.push(i, i2, i3, i4)
       return r
     })(),
     permalink(data) {

@@ -1,3 +1,4 @@
+// const { ChevronRightIcon } = require("@onlyoffice/documentation-ui-kit-js/kit.js")
 const { clsx } = require("clsx")
 const { html } = require("common-tags")
 
@@ -20,6 +21,7 @@ function ChapterNav({ page, chapter }) {
   `
 }
 
+// todo: chevron #808080.
 function ChapterNavItem({ page, chapter }) {
   return html`
     <ul class="tree__limb">
@@ -35,7 +37,7 @@ function ChapterNavItem({ page, chapter }) {
           : html`
             <li class="tree__branch">
               <div class="tree__twig ${page.url.startsWith(c.link) ? "" : "tree__twig_closed"}">
-                <button class="tree__fruit" type="button"><svg fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.531 2.5923 1e-6 18.815c0 1.3326 1.5415 2.0735 2.5821 1.241l11.76-9.4077c0.79529-0.63623 0.79529-1.8458 0-2.4821l-11.76-9.4077c-1.0406-0.8325-2.5821-0.091605-2.5821 1.241z" fill="#808080" /></svg></button>${ChapterNavLink({ page, chapter: c })}
+                <button class="tree__fruit" type="button">h</button>${ChapterNavLink({ page, chapter: c })}
               </div>
               ${ChapterNavItem({ page, chapter: c })}
             </li>

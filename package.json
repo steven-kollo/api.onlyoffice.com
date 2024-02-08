@@ -12,6 +12,7 @@
     "@onlyoffice/documentation-ui-declaration-token-js": "workspace:^",
     "@onlyoffice/documentation-ui-fonts": "workspace:^",
     "@onlyoffice/documentation-ui-kit-js": "workspace:^",
+    "@onlyoffice/documentation-ui-syntax-highlight-js": "workspace:^",
     "esbuild": "^0.19.11",
     "html-minifier-terser": "^7.2.0",
     "lightningcss": "^1.23.0",

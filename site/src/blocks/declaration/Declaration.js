@@ -1,11 +1,12 @@
 const { html } = require("common-tags")
-const {
-  CodeListing,
-  Content,
-  ContentH2,
-  DeclarationToken,
-  DeclarationReference
-} = require("@onlyoffice/documentation-ui-kit-js/kit.js")
+// const {
+//   // CodeListing,
+//   // Content,
+//   // ContentH2,
+//   // DeclarationReference,
+//   // DeclarationToken,
+//   // SyntaxHighlight
+// } = require("@onlyoffice/documentation-ui-kit-js")
 
 /**
  *
@@ -13,13 +14,15 @@ const {
  * @param {import("@onlyoffice/documentation-declarations").Declaration} param0.declaration
  * @returns
  */
-function Declaration({ onRetrieve, onLink, declaration: d }) {
+async function Declaration({ onRetrieve, onLink, declaration: d }) {
+  // let t = await DeclarationTopics({ onRetrieve, onLink, declaration: d })
+  return ""
   return Content(() => html`
     <h1>${d.title}</h1>
     ${DeclarationSignature({ onLink, declaration: d })}
     ${ContentH2(() => "Description")}
     <p>${d.description}</p>
-    ${DeclarationTopics({ onRetrieve, onLink, declaration: d })}
+    ${t}
   `)
 }
 
@@ -37,10 +40,11 @@ function DeclarationSignature({ onLink, declaration: d }) {
  * @param {import("@onlyoffice/documentation-declarations").Declaration} param0.declaration
  * @returns
  */
-function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
+async function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
   let s = ""
   let p = undefined
   let items = []
+  let h = undefined
 
   // todo: this logic should be part of the declaration package.
 
@@ -121,9 +125,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
       })
     }
     if (d.examples !== undefined) {
+      h = await Promise.all(d.examples.map(async (e) => {
+        const s = await SyntaxHighlight({ syntax: "js" }, () => e)
+        return CodeListing(() => s)
+      }))
       s += html`
         ${ContentH2(() => "Examples")}
-        ${d.examples.map((e) => CodeListing(() => e))}
+        ${h}
       `
     }
 
@@ -144,9 +152,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     }
 
     if (d.examples !== undefined) {
+      h = await Promise.all(d.examples.map(async (e) => {
+        const s = await SyntaxHighlight({ syntax: "js" }, () => e)
+        return CodeListing(() => s)
+      }))
       s += html`
         ${ContentH2(() => "Examples")}
-        ${d.examples.map((e) => CodeListing(() => e))}
+        ${h}
       `
     }
 
@@ -178,9 +190,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     }
 
     if (d.examples !== undefined) {
+      h = await Promise.all(d.examples.map(async (e) => {
+        const s = await SyntaxHighlight({ syntax: "js" }, () => e)
+        return CodeListing(() => s)
+      }))
       s += html`
         ${ContentH2(() => "Examples")}
-        ${d.examples.map((e) => CodeListing(() => e))}
+        ${h}
       `
     }
 
@@ -202,9 +218,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     break
   case "instanceProperty":
     if (d.examples !== undefined) {
+      h = await Promise.all(d.examples.map(async (e) => {
+        const s = await SyntaxHighlight({ syntax: "js" }, () => e)
+        return CodeListing(() => s)
+      }))
       s += html`
         ${ContentH2(() => "Examples")}
-        ${d.examples.map((e) => CodeListing(() => e))}
+        ${h}
       `
     }
 
@@ -238,9 +258,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     }
 
     if (d.examples !== undefined) {
+      h = await Promise.all(d.examples.map(async (e) => {
+        const s = await SyntaxHighlight({ syntax: "js" }, () => e)
+        return CodeListing(() => s)
+      }))
       s += html`
         ${ContentH2(() => "Examples")}
-        ${d.examples.map((e) => CodeListing(() => e))}
+        ${h}
       `
     }
 
@@ -261,9 +285,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     break
   case "typeProperty":
     if (d.examples !== undefined) {
+      h = await Promise.all(d.examples.map(async (e) => {
+        const s = await SyntaxHighlight({ syntax: "js" }, () => e)
+        return CodeListing(() => s)
+      }))
       s += html`
         ${ContentH2(() => "Examples")}
-        ${d.examples.map((e) => CodeListing(() => e))}
+        ${h}
       `
     }
 
@@ -291,9 +319,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     }
 
     if (d.examples !== undefined) {
+      h = await Promise.all(d.examples.map(async (e) => {
+        const s = await SyntaxHighlight({ syntax: "js" }, () => e)
+        return CodeListing(() => s)
+      }))
       s += html`
         ${ContentH2(() => "Examples")}
-        ${d.examples.map((e) => CodeListing(() => e))}
+        ${h}
       `
     }
 
@@ -320,9 +352,13 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     break
   case "type":
     if (d.examples !== undefined) {
+      h = await Promise.all(d.examples.map(async (e) => {
+        const s = await SyntaxHighlight({ syntax: "js" }, () => e)
+        return CodeListing(() => s)
+      }))
       s += html`
         ${ContentH2(() => "Examples")}
-        ${d.examples.map((e) => CodeListing(() => e))}
+        ${h}
       `
     }
     break

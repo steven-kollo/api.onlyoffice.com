@@ -3,42 +3,19 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist/declaration-reference.js",
-      "require": "./dist/declaration-reference.cjs",
-      "types": "./dist/declaration-reference.d.ts"
-    },
-    "./declaration-reference.css": "./dist/declaration-reference.css",
-    "./DeclarationReference.js": {
-      "import": "./dist/DeclarationReference.js",
-      "require": "./dist/DeclarationReference.cjs",
-      "types": "./dist/DeclarationReference.d.ts"
-    },
-    "./DeclarationReferenceIdentifier.js": {
-      "import": "./dist/DeclarationReferenceIdentifier.js",
-      "require": "./dist/DeclarationReferenceIdentifier.cjs",
-      "types": "./dist/DeclarationReferenceIdentifier.d.ts"
-    },
-    "./DeclarationReferenceText.js": {
-      "import": "./dist/DeclarationReferenceText.js",
-      "require": "./dist/DeclarationReferenceText.cjs",
-      "types": "./dist/DeclarationReferenceText.d.ts"
-    },
-    "./makefile.js": "./makefile.js"
-  },
-  "scripts": {
-    "build": "node ./makefile.js build"
-  },
-  "dependencies": {
-    "common-tags": "^1.8.2"
+    ".": "./lib/declaration-reference.tsx",
+    "./declaration-reference.css": "./lib/declaration-reference.css",
+    "./DeclarationReference.js": "./lib/DeclarationReference.tsx",
+    "./DeclarationReferenceIdentifier.js": "./lib/DeclarationReferenceIdentifier.tsx",
+    "./DeclarationReferenceText.js": "./lib/DeclarationReferenceText.tsx"
   },
   "devDependencies": {
-    "@types/common-tags": "^1.8.4",
-    "es-main": "^1.3.0",
-    "esbuild": "^0.19.11",
-    "sade": "^1.8.1",
+    "preact": "^10.19.3",
     "typescript": "^5.3.3",
     "uvu": "^0.5.6"
+  },
+  "peerDependencies": {
+    "preact": "^10.19.3"
   },
   "packageManager": "pnpm@8.13.0",
   "engines": {

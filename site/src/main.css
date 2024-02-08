@@ -1,4 +1,4 @@
-@import "../node_modules/@onlyoffice/documentation-ui-kit-js/dist/kit.css";
+@import "../node_modules/@onlyoffice/documentation-ui-kit-js/lib/kit.css";
 
 @import "./blocks/site-header/site-header.css";
 @import "./blocks/site-nav/site-nav.css";

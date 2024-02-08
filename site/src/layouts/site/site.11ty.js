@@ -1,5 +1,5 @@
 const { html } = require("common-tags")
-const { OnlyofficeLogo } = require("@onlyoffice/documentation-ui-kit-js/kit.js")
+// const { OnlyofficeLogo } = require("@onlyoffice/documentation-ui-kit-js/kit.js")
 const { SiteHeader } = require("../../blocks/site-header/SiteHeader.js")
 const { SiteFooter } = require("../../blocks/site-footer/SiteFooter.js")
 const { SiteNav } = require("../../blocks/site-nav/SiteNav.js")
@@ -18,7 +18,8 @@ function render({ collections, page, title, content }) {
       <body>
         ${SiteHeader({
           logo() {
-            return OnlyofficeLogo()
+            return ""
+            // return OnlyofficeLogo()
           },
           nav() {
             return SiteNav({ page, nav: collections.navigation })
