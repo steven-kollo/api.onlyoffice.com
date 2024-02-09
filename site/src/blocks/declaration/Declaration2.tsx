@@ -1,7 +1,6 @@
 import {
   CodeListing,
   Content,
-  ContentH2,
   DeclarationReference,
   DeclarationToken,
   SyntaxHighlight
@@ -20,7 +19,7 @@ function Declaration({ onRetrieve, onLink, declaration: d }) {
         {/* todo: join("") */}
         {d.signature.map((t) => <DeclarationToken onLink={onLink} token={t} />)}
       </CodeListing>
-      <ContentH2>Description</ContentH2>
+      <h2>Description</h2>
       <p>{d.description}</p>
       <DeclarationTopics onRetrieve={onRetrieve} onLink={onLink} declaration={d} />
     </Content>
@@ -127,7 +126,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.examples !== undefined) {
       s.push(
         <>
-          <ContentH2>Examples</ContentH2>
+          <h2>Examples</h2>
           {d.examples.map((e) => (
             <CodeListing>
               <SyntaxHighlight syntax={"js"}>{e}</SyntaxHighlight>
@@ -158,7 +157,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.examples !== undefined) {
       s.push(
         <>
-          <ContentH2>Examples</ContentH2>
+          <h2>Examples</h2>
           {d.examples.map((e) => (
             <CodeListing>
               <SyntaxHighlight syntax={"js"}>{e}</SyntaxHighlight>
@@ -195,7 +194,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.type.returns !== undefined) {
       s.push(
         <>
-          <ContentH2>Return</ContentH2>
+          <h2>Return</h2>
           <p>{d.type.returns.description}</p>
         </>
       )
@@ -204,7 +203,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.examples !== undefined) {
       s.push(
         <>
-          <ContentH2>Examples</ContentH2>
+          <h2>Examples</h2>
           {d.examples.map((e) => (
             <CodeListing>
               <SyntaxHighlight syntax={"js"}>{e}</SyntaxHighlight>
@@ -236,7 +235,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.examples !== undefined) {
       s.push(
         <>
-          <ContentH2>Examples</ContentH2>
+          <h2>Examples</h2>
           {d.examples.map((e) => (
             <CodeListing>
               <SyntaxHighlight syntax={"js"}>{e}</SyntaxHighlight>
@@ -275,7 +274,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.type.returns !== undefined) {
       s.push(
         <>
-          <ContentH2>Return</ContentH2>
+          <h2>Return</h2>
           <p>{d.type.returns.description}</p>
         </>
       )
@@ -284,7 +283,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.examples !== undefined) {
       s.push(
         <>
-          <ContentH2>Examples</ContentH2>
+          <h2>Examples</h2>
           {d.examples.map((e) => (
             <CodeListing>
               <SyntaxHighlight syntax={"js"}>{e}</SyntaxHighlight>
@@ -315,7 +314,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.examples !== undefined) {
       s.push(
         <>
-          <ContentH2>Examples</ContentH2>
+          <h2>Examples</h2>
           {d.examples.map((e) => (
             <CodeListing>
               <SyntaxHighlight syntax={"js"}>{e}</SyntaxHighlight>
@@ -355,7 +354,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.examples !== undefined) {
       s.push(
         <>
-          <ContentH2>Examples</ContentH2>
+          <h2>Examples</h2>
           {d.examples.map((e) => (
             <CodeListing>
               <SyntaxHighlight syntax={"js"}>{e}</SyntaxHighlight>
@@ -392,7 +391,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
     if (d.examples !== undefined) {
       s.push(
         <>
-          <ContentH2>Examples</ContentH2>
+          <h2>Examples</h2>
           {d.examples.map((e) => (
             <CodeListing>
               <SyntaxHighlight syntax={"js"}>{e}</SyntaxHighlight>
@@ -419,7 +418,7 @@ function DeclarationTopics({ onRetrieve, onLink, declaration: d }) {
 function DeclarationTopic({ onRetrieve, onLink, title, items }) {
   return (
     <>
-      <ContentH2>{title}</ContentH2>
+      <h2>{title}</h2>
       <dl>
         {items.map((item) => {
           const d = onRetrieve(item)
@@ -446,7 +445,7 @@ function DeclarationTopic({ onRetrieve, onLink, title, items }) {
 function DeclarationTopic2({ title, items }) {
   return (
     <>
-      <ContentH2>{title}</ContentH2>
+      <h2>{title}</h2>
       <dl>
         {items.map((item) => (
           <>

@@ -42,6 +42,11 @@
   --content-foreground-color: var(--color-scale-black);
   --content-heading-foreground-color: var(--color-scale-orange-0);
   --content-link-foreground-color: var(--color-scale-orange-0);
+  --content-separator-color: var(--color-scale-gray-5);
+  --content-blockquote-border-color: var(--color-scale-gray-4);
+  --content-code-background-color: var(--color-scale-gray-7);
+  --content-code-border-color: var(--color-scale-gray-5);
+  --content-table-separator-color: var(--color-scale-gray-5);
   --content-section-heading-background-color: var(--color-scale-gray-6);
   --content-section-heading-foreground-color: var(--color-scale-black);
 
