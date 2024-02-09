@@ -2354,7 +2354,7 @@
     <Content Include="Content\highlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\arrow-gray.svg" />
-	<Content Include="Content\img\arrow-select.svg" />
+    <Content Include="Content\img\arrow-select.svg" />
     <Content Include="Content\img\close.svg" />
     <Content Include="Content\img\csharp\add.png" />
     <Content Include="Content\img\csharp\browse.png" />
@@ -4732,6 +4732,39 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\docbuilder\examples\cell\Api.AddComment.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.GetAllComments.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.GetCommentById.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.GetComments.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.AddReply.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetAuthorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetQuoteText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetRepliesCount.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetReply.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetTimeUTC.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.GetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.IsSolved.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.RemoveReplies.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.SetAuthorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.SetSolved.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.SetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.SetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.SetTimeUTC.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiComment.SetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.GetAuthorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.GetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.GetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.GetTimeUTC.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.GetUserId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.SetAuthorName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.SetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.SetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.SetTimeUTC.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiCommentReply.SetUserId.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

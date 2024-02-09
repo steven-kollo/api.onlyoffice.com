@@ -51,6 +51,34 @@
         <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apirun/addcomment") %>">ApiRun/AddComment</a> method of Text document API.</li>
         <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apitable/addcomment") %>">ApiTable/AddComment</a> method of Text document API.</li>
     </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getallcomments") %>">Api/GetAllComments</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/addreply") %>">ApiComment/AddReply</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/delete") %>">ApiComment/Delete</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/getauthorname") %>">ApiComment/GetAuthorName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/getclasstype") %>">ApiComment/GetClassType</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/getquotetext") %>">ApiComment/GetQuoteText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/getrepliescount") %>">ApiComment/GetRepliesCount</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/gettext") %>">ApiComment/GetText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/gettime") %>">ApiComment/GetTime</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/gettimeutc") %>">ApiComment/GetTimeUTC</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/issolved") %>">ApiComment/IsSolved</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/removereplies") %>">ApiComment/RemoveReplies</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/setauthorname") %>">ApiComment/SetAuthorName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/setsolved") %>">ApiComment/SetSolved</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/settext") %>">ApiComment/SetText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/settime") %>">ApiComment/SetTime</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/settimeutc") %>">ApiComment/SetTimeUTC</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/setuserid") %>">ApiComment/SetUserId</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/getauthorname") %>">ApiCommentReply/GetAuthorName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/getclasstype") %>">ApiCommentReply/GetClassType</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/gettext") %>">ApiCommentReply/GetText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/setauthorname") %>">ApiCommentReply/SetAuthorName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/settext") %>">ApiCommentReply/SetText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/setuserid") %>">ApiCommentReply/SetUserId</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getallcomments") %>">ApiPresentation/GetAllComments</a> method to Presentation API.</li>
+    </ul>
     <br />
 
     <p><b>Section methods</b></p>
