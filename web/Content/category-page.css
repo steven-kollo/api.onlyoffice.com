@@ -55,12 +55,14 @@
     font-size: 32px;
     line-height: 43px;
     letter-spacing: -0.64px;
-    color: var(--color-text-senary);
+    color: var(--color-text-quaternary);
 }
 
 .category-description {
+    margin: 0;
     font-size: 16px;
     line-height: 24px;
+    color: var(--color-text-senary);
 }
 
 .category-items {
@@ -76,10 +78,14 @@
     border-radius: 2px;
     border: 1px solid var(--color-border-quaternary);
     background-color: var(--color-bg-quaternary);
-    /* transition: border-color 0.3s, box-shadow 0.3s; */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.category-item:after {
+.category-item:hover {
+    box-shadow: 0px 7px 15px 0px rgba(85, 85, 85, 0.1);
+}
+
+.theme-dark .category-item:after {
     content: "";
     position: absolute;
     top: 0;
@@ -93,12 +99,12 @@
     transition: opacity 0.3s, visibility 0.3s;
 }
 
-.category-item:hover {
+.theme-dark .category-item:hover {
     border-color: #ED7309;
     box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.40);
 }
 
-.category-item:hover::after {
+.theme-dark .category-item:hover::after {
     opacity: 1;
     visibility: visible;
 }
@@ -108,14 +114,15 @@
     display: flex;
     align-items: center;
     margin: 0 0 24px;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: -0.36px;
     z-index: 1;
 }
 
 .category-item-title a {
     display: block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
     color: var(--color-text-secondary);
     text-decoration: none;
 }
@@ -125,12 +132,17 @@
     display: inline-flex;
     margin-right: 24px;
     width: 64px;
+    min-width: 64px;
     height: 64px;
-    background-image: url("img/category-page/icons.svg");
+    background-image: url("img/category-page/icons-light.svg");
+}
+
+.theme-dark .category-item-title:before {
+    background-image: url("img/category-page/icons-dark.svg");
 }
 
 .category-item-title a:hover {
-    color: var(--color-accent-primary);
+    color: #FF6F3D;
 }
 
 .category-item-title.docspace.javascript-sdk:before {
@@ -139,28 +151,29 @@
 
 .category-item-title.docspace.plugins:before,
 .category-item-title.docs.plugin:before {
-    background-position-y: -128px;
+    background-position-y: -132px;
 }
 
 .category-item-title.docs.desktop:before {
-    background-position-y: -320px;
+    background-position-y: -330px;
 }
 
-.category-item-title.docs.editors:before {
-    background-position-y: -256px;
+.category-item-title.docs.docs-api:before {
+    background-position-y: -396px;
 }
 
 .category-item-title.docs.docbuilder:before {
-    background-position-y: -384px;
+    background-position-y: -460px;
 }
 
+.category-item-title.docs.editors:before,
 .category-item-title.docs.mobile-editors:before {
-    background-position-y: -448px;
+    background-position-y: -264px;
 }
 
 .category-item-title.docspace.hosting-providers:before,
 .category-item-title.workspace.hosting-providers:before {
-    background-position-y: -192px;
+    background-position-y: -198px;
 }
 
 .category-item-description {
@@ -172,6 +185,7 @@
 
 .help {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -181,11 +195,11 @@
 
 .help-title {
     margin-bottom: 32px;
-    color: var(--color-accent-primary);
+    color: #FF6F3D;
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
-    letter-spacing: -0.48px;
+    letter-spacing: -0.02em;
 }
 
 .help-list {
@@ -214,14 +228,155 @@
     border-radius: 50%;
     width: 6px;
     height: 6px;
-    background-color: var(--color-accent-primary);
+    background-color: #FF6F3D;
 }
 
 .help-img {
     margin: 0 32px;
     width: 188px;
+    min-width: 188px;
     height: 188px;
-    background-image: url("img/category-page/help.svg");
+    background-image: url("img/category-page/help-light.svg");
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.theme-dark .help-img {
+    background-image: url("img/category-page/help-dark.svg");
+}
+
+@media screen and (max-width: 1024px) {
+    .category-section {
+        padding: 64px 0;
+    }
+
+    .category-heading {
+        margin: 0 auto 32px;
+    }
+
+    .category-description {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .category-item {
+        padding: 24px;
+    }
+
+    .category-item-title {
+        margin: 0 0 16px;
+    }
+
+    .category-item-title:before {
+        margin-right: 16px;
+    }
+
+    .help-wrapper {
+        padding: 0;
+    }
+
+    .help-img {
+        margin: 0 10px 0 42px;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    .category-section {
+        padding: 42px 0;
+    }
+
+    .category-heading {
+        margin: 0 auto 42px;
+    }
+
+    .category-title {
+        margin: 0 0 32px;
+        font-size: 28px;
+        line-height: 37px;
+    }
+
+    .category-items {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 42px
+    }
+
+    .category-item {
+        padding: 16px;
+    }
+
+    .category-item-title a {
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: initial;
+    }
+
+    .category-item-title:before {
+        width: 48px;
+        min-width: 48px;
+        height: 48px;
+        background-image: url("img/category-page/icons-light-mobile.svg");
+    }
+
+    .theme-dark .category-item-title:before {
+        background-image: url("img/category-page/icons-dark-mobile.svg");
+    }
+    
+    .category-item-title.docspace.javascript-sdk:before {
+        background-position-y: -48px;
+    }
+    
+    .category-item-title.docspace.plugins:before,
+    .category-item-title.docs.plugin:before {
+        background-position-y: -100px;
+    }
+    
+    .category-item-title.docs.desktop:before {
+        background-position-y: -250px;
+    }
+    
+    .category-item-title.docs.docs-api:before {
+        background-position-y: -300px;
+    }
+    
+    .category-item-title.docs.docbuilder:before {
+        background-position-y: -348px;
+    }
+    
+    .category-item-title.docs.editors:before,
+    .category-item-title.docs.mobile-editors:before {
+        background-position-y: -200px;
+    }
+    
+    .category-item-title.docspace.hosting-providers:before,
+    .category-item-title.workspace.hosting-providers:before {
+        background-position-y: -150px;
+    }
+
+    .category-item-description {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .help {
+        display: block;
+    }
+
+    .help-title {
+        margin-bottom: 24px;
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .help-list {
+        padding: 0;
+    }
+
+    .help-list li {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .help-img {
+        display: none;
+    }
 }

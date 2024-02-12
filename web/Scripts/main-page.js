@@ -44,11 +44,13 @@ $(document).ready(function () {
 	animateEllipses($(".line-3-ellipse-1"), $(".line-3-ellipse-2"));
 
 	function handleMouseMoveEllipse(selector, lineClass, offset) {
-		selector.each((index, el) => {
-			$(el).on("mousemove", function () {
-				lineClass.css("top", $(this).position().top - offset);
+		if ($(selector).length > 0) {
+			selector.each((index, el) => {
+				$(el).on("mousemove", function () {
+					lineClass.css("top", $(this).position().top - offset);
+				});
 			});
-		});
+		}
 	};
 
 	handleMouseMoveEllipse($(".main-item-links.docs li a"), $(".line-ellipse.line-1-ellipse-4"), 450);
@@ -56,15 +58,17 @@ $(document).ready(function () {
 	handleMouseMoveEllipse($(".main-item-links.workspace li a"), $(".line-ellipse.line-3-ellipse-3"), 380);
 
 	function createIntersectionObserver(selector, callback) {
-		const observer = new IntersectionObserver(function (entries, observer) {
-			entries.forEach(function (entry) {
-				if (entry.isIntersecting) {
-					callback(entry.target);
-				}
-			});
-		}, { root: null, threshold: 0 });
-
-		observer.observe($(selector)[0]);
+		if ($(selector).length > 0) {
+			const observer = new IntersectionObserver(function (entries, observer) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) {
+						callback(entry.target);
+					}
+				});
+			}, { root: null, threshold: 0 });
+	
+			observer.observe($(selector)[0]);
+		}
 	};
 
 	createIntersectionObserver(".main-item.docs", function () {

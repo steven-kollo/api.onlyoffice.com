@@ -68,7 +68,7 @@
                         </ul>
                     </div>
                     <div class="footer-item">
-                        <h6 class="footer-item-title">Gt help</h6>
+                        <h6 class="footer-item-title">Get help</h6>
                         <ul class="footer-item-list">
                             <li><a href="https://forum.onlyoffice.com" target="_blank">Forum</a></li>
                             <li><a href="" target="_blank">Code on GitHub</a></li>
@@ -83,13 +83,13 @@
                         </ul>
                     </div>
                 </div>
-               <%-- <div class="footer-switch-theme">
+                <div class="footer-switch-theme">
                     <ul>
                         <li><button id="theme-light-btn" class="theme-btn">Light</button></li>
                         <li><button id="theme-dark-btn"class="theme-btn">Dark</button></li>
                         <li><button id="theme-auto-btn" class="theme-btn active">Auto</button></li>
                     </ul>
-                </div>--%>
+                </div>
                 <div class="footer-info">
                     <div class="footer-text">onlyoffice.com</div>
                     <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>

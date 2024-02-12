@@ -43,7 +43,7 @@
             </ul>
         </div>
     </nav>
-    <%--<div class="header-try-now">
+    <div class="header-try-now">
         <button class="header-btn">Try now</button>
 
         <div class="header-tn-popup">
@@ -51,10 +51,10 @@
                 <h4 class="header-tn-title">Create your Developer Profile</h4>
                 <p class="header-tn-description">Try the examples presented in the API documentation using our new service, just register.</p>
                 <div class="header-tn-btns">
-                    <a class="header-tn-btn" href="">Start</a>
+                    <a class="header-tn-btn" href="<%= Url.Action("", "developerprofile/registration") %>">Start</a>
                     <a class="header-tn-link" href="">Try again later</a>
                 </div>
             </div>
         </div>
-    </div>--%>
+    </div>
 </div>

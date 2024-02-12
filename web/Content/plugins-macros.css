@@ -19,6 +19,11 @@
     margin-bottom: 12px;
 }
 
+.macro-info p:not(.name-example-macros) {
+    margin: 9px 0 18px;
+    color: #333;
+}
+
 .macro-block, .plugin-block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

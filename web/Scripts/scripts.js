@@ -23,9 +23,9 @@
  *
 */
 $(window).on("load", function () {
-    localStorage.setItem("theme", "light");
     const localStorageTheme = localStorage.getItem("theme");
     const themeBtn = $(".theme-btn");
+    const themeSwitchWrapper = $(".footer-switch-theme ul")
     const body = $("html");
 
     const applyDarkTheme = () => {
@@ -40,13 +40,19 @@ $(window).on("load", function () {
         body.addClass("theme-dark");
         themeBtn.removeClass("active");
         $("#theme-dark-btn").addClass("active");
+        themeSwitchWrapper.removeClass();
+        themeSwitchWrapper.addClass("dark");
     } else if (localStorageTheme === "light") {
         body.removeClass("theme-dark");
         themeBtn.removeClass("active");
         $("#theme-light-btn").addClass("active");
+        themeSwitchWrapper.removeClass();
+        themeSwitchWrapper.addClass("light");
     } else if (localStorageTheme === "auto" || !localStorageTheme) {
         themeBtn.removeClass("active");
         $("#theme-auto-btn").addClass("active");
+        themeSwitchWrapper.removeClass();
+        themeSwitchWrapper.addClass("auto");
         applyDarkTheme();
     }
 
@@ -59,12 +65,35 @@ $(window).on("load", function () {
         if ($(this).attr("id") === "theme-light-btn") {
             localStorage.setItem("theme", "light");
             body.removeClass("theme-dark");
+            themeSwitchWrapper.removeClass();
+            themeSwitchWrapper.addClass("light");
         } else if ($(this).attr("id") === "theme-dark-btn") {
             localStorage.setItem("theme", "dark");
             body.addClass("theme-dark");
+            themeSwitchWrapper.removeClass();
+            themeSwitchWrapper.addClass("dark");
         } else {
             localStorage.setItem("theme", "auto");
+            themeSwitchWrapper.removeClass();
+            themeSwitchWrapper.addClass("auto");
             applyDarkTheme();
+        }
+    });
+
+    $(".footer-item-title").click(function () {
+        if ($(window).width() <= 592) {
+            $(this).toggleClass("active");
+            $(this).next(".footer-item-list").slideToggle(300);
+        }
+    });
+
+    $(window).resize(function () {
+        $(".footer-item-title").removeClass("active");
+
+        if ($(window).width() <= 592) {
+            $(".footer-item-list").css("display", "none");
+        } else {
+            $(".footer-item-list").css("display", "block");
         }
     });
 });

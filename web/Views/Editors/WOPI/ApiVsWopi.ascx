@@ -13,7 +13,7 @@
             <col class="table-api" />
             <col class="table-wopi" />
         </colgroup>
-        <thead style="background-color: #ebebeb">
+        <thead class="table-header-gray">
             <tr class="tablerow">
                 <td class="borders"></td>
                 <td style="text-align: center" class="borders"><h2>API</h2></td>

@@ -32,6 +32,5 @@
     </div>
     <div class="main-item-img">
         <span class="img"></span>
-        <span class="box-shadow"></span>
     </div>
 </div>

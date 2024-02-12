@@ -10,6 +10,11 @@
     padding-bottom: 8px;
 }
 
+.connector-info p:not(.name-example-connector) {
+    margin: 9px 0 18px;
+    color: #333;
+}
+
 .connector-block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

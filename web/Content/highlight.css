@@ -7,8 +7,8 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #f9f9f9;
-  color: black;
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
 }
 
 .hljs-comment,
@@ -19,22 +19,36 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
 
 .hljs-keyword,
 .hljs-selector-tag,
-.hljs-built_in,
-.hljs-name,
-.hljs-tag {
+.hljs-name {
   color: #00f;
 }
 
-.hljs-string,
+.hljs-built_in,
+.hljs-keyword {
+  color: var(--color-code-keyword);
+}
+
+.hljs-tag {
+  color: var(--color-code-tag);
+}
+
 .hljs-title,
 .hljs-section,
 .hljs-attribute,
-.hljs-literal,
 .hljs-template-tag,
 .hljs-template-variable,
 .hljs-type,
 .hljs-addition {
-  color: #a31515;
+  color: var(--color-code-title);
+}
+
+.hljs-literal,
+.hljs-string {
+  color: var(--color-code-string);
+}
+
+.hljs-number {
+  color: var(--color-code-text);
 }
 
 .hljs-deletion,

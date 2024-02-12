@@ -36,6 +36,15 @@
     margin-bottom: 12px;
 }
 
+.sample-info p:not(.name-example-sample) {
+    margin: 9px 0 18px;
+    color: #333;
+}
+
+.sample-example p {
+    color: #333;
+}
+
 .framework-sample-info {
     padding: 24px;
     margin-bottom: 40px;
