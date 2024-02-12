@@ -47,6 +47,9 @@
   --text-font-monospace:  monospace;
   --text-font-sans-serif: "Open Sans";
 
+  --text-monospace-font: monospace;
+  --text-sans-serif-font: "Open Sans";
+
   /* Code Inline */
 
   /* --text-code-inline-font-family: var(--text-font-monospace); */

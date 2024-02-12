@@ -54,7 +54,7 @@ async function build() {
     let c = await readFile(f, { encoding: "utf8" })
     c = c.trim()
     c = SVGToJSComponent(n, c)
-    f = join(lib, `${n}.tsx`)
+    f = join(lib, `${n}.ts`)
     await writeFile(f, c)
     entryPoints.push(f)
     f = f.replace(lib, ".")

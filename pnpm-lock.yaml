@@ -156,6 +156,63 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
 
+  ui/article-card-js:
+    optionalDependencies:
+      '@onlyoffice/documentation-ui-content-js':
+        specifier: workspace:^
+        version: link:../content-js
+    devDependencies:
+      preact:
+        specifier: ^10.19.3
+        version: 10.19.3
+      preact-render-to-string:
+        specifier: ^6.3.1
+        version: 6.3.1(preact@10.19.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
+  ui/badge-js:
+    dependencies:
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
+    devDependencies:
+      preact:
+        specifier: ^10.19.3
+        version: 10.19.3
+      preact-render-to-string:
+        specifier: ^6.3.1
+        version: 6.3.1(preact@10.19.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
+  ui/button-js:
+    dependencies:
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
+    devDependencies:
+      preact:
+        specifier: ^10.19.3
+        version: 10.19.3
+      preact-render-to-string:
+        specifier: ^6.3.1
+        version: 6.3.1(preact@10.19.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
   ui/code-listing-js:
     devDependencies:
       preact:
@@ -171,8 +228,34 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  ui/content-js:
+  ui/content-alert-js:
+    dependencies:
+      '@onlyoffice/documentation-ui-sr-only':
+        specifier: workspace:^
+        version: link:../sr-only
     devDependencies:
+      preact:
+        specifier: ^10.19.3
+        version: 10.19.3
+      preact-render-to-string:
+        specifier: ^6.3.1
+        version: 6.3.1(preact@10.19.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
+  ui/content-js:
+    optionalDependencies:
+      '@onlyoffice/documentation-content-alert-js':
+        specifier: workspace:^
+        version: link:../content-alert-js
+    devDependencies:
+      '@onlyoffice/documentation-ui-sr-only':
+        specifier: workspace:^
+        version: link:../sr-only
       preact:
         specifier: ^10.19.3
         version: 10.19.3
@@ -215,8 +298,6 @@ importers:
       uvu:
         specifier: ^0.5.6
         version: 0.5.6
-
-  ui/fonts: {}
 
   ui/icon: {}
 
@@ -4546,7 +4627,6 @@ packages:
   /clsx@2.1.0:
     resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
     engines: {node: '>=6'}
-    dev: true
 
   /collapse-white-space@2.1.0:
     resolution: {integrity: sha512-loKTxY1zCOuG4j9f6EPnuyyYkf58RnhhWTvRoZEokgB+WbdXehfjFviyOVYkqzEWz1Q5kRiZdBYS5SwxbQYwzw==}

@@ -1,14 +1,16 @@
 {
-  "name": "@onlyoffice/documentation-ui-content-js",
+  "name": "@onlyoffice/documentation-button-js",
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./lib/content.ts",
-    "./content.css": "./lib/content.css",
-    "./Content.tsx": "./lib/Content.tsx"
+    ".": "./lib/button.ts",
+    "./button.css": "./lib/button.css",
+    "./Button.tsx": "./lib/Button.tsx"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0"
   },
   "devDependencies": {
-    "@onlyoffice/documentation-ui-sr-only": "workspace:^",
     "preact": "^10.19.3",
     "preact-render-to-string": "^6.3.1",
     "typescript": "^5.3.3",
@@ -17,9 +19,6 @@
   "peerDependencies": {
     "preact": "^10.19.3",
     "preact-render-to-string": "^6.3.1"
-  },
-  "optionalDependencies": {
-    "@onlyoffice/documentation-content-alert-js": "workspace:^"
   },
   "packageManager": "pnpm@8.13.0",
   "engines": {

@@ -1,5 +1,5 @@
 @import "../node_modules/@onlyoffice/documentation-ui-primitives/lib/typography.css";
-@import "../node_modules/@onlyoffice/documentation-ui-sr-only/dist/sr-only.css";
+@import "../node_modules/@onlyoffice/documentation-ui-sr-only/lib/sr-only.css";
 
 @import "../node_modules/@onlyoffice/documentation-ui-content-js/lib/content.css";
 @import "../node_modules/@onlyoffice/documentation-ui-code-listing-js/lib/code-listing.css";

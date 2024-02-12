@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
     "strict": false,
+    "allowImportingTsExtensions": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
-    // "noEmit": true,
+    "noEmit": true,
     "allowJs": true,
     "checkJs": true,
     "allowSyntheticDefaultImports": true,
@@ -12,11 +13,6 @@
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "target": "ESNext",
-    "skipLibCheck": true,
-
-
-    "declaration": true,
-    "noEmit": false,
-    "emitDeclarationOnly": true,
+    "skipLibCheck": true
   }
 }

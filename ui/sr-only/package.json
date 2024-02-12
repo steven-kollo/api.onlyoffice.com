@@ -1,7 +1,10 @@
 {
   "name": "@onlyoffice/documentation-ui-sr-only",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
+  "exports": {
+    "./sr-only.css": "./lib/sr-only.css"
+  },
   "packageManager": "pnpm@8.13.0",
   "engines": {
     "node": "21.5.0"
