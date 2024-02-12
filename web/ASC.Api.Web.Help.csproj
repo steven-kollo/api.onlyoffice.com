@@ -109,7 +109,6 @@
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\DocSpaceController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\DeveloperProfileController.cs" />
     <Compile Include="DocumentGenerator\DocSpaceDocumentation.cs" />
     <Compile Include="DocumentGenerator\CSharpDocumentation.cs" />
@@ -132,7 +131,6 @@
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
     <Compile Include="Helpers\Persons.cs" />
     <Compile Include="Helpers\Products.cs" />
-    <Compile Include="Helpers\Categories.cs" />
     <Compile Include="Helpers\RedirectAttribute.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
     <Compile Include="Helpers\Url.cs" />
@@ -4101,9 +4099,6 @@
     <Content Include="Scripts\developer-profile.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="version.txt" />
-    <Content Include="Views\Category\Docspace.aspx" />
-    <Content Include="Views\Category\Docs.aspx" />
-    <Content Include="Views\Category\Workspace.aspx" />
     <Content Include="Views\DeveloperProfile\Registration.aspx" />
     <Content Include="Views\Desktop\AddingDMS.aspx" />
     <Content Include="Views\Desktop\AddingDMS\ChangingTheme.ascx" />
