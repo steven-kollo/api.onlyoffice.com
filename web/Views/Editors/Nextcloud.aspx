@@ -188,7 +188,7 @@ git submodule update --init --recursive</span>
             <p>This will disable the certificate verification and allow Nextcloud to establish connection with Document Server.</p>
             <note>Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.</note>
         </li>
-        <li>
+        <li id="editors_check_interval">
             <p><b>Background task</b>. If the editors don't open or save documents after a period of proper functioning,
                 the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.</p>
             <p>To solve this, we added an asynchronous background task which runs on the server to check availability of the editors.
