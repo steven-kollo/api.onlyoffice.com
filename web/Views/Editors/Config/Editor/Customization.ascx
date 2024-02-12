@@ -454,6 +454,9 @@
     <div id="placeholder"></div>
 </div>
 
+<note>Please note that only the following parameters are available for the mobile editors: <a href="#feedback">feedback</a>, <a href="#goback">goback</a>,
+<a href="#help">help</a>, <a href="#macrosMode">macrosMode</a>, <a href="#mobileForceView">mobileForceView</a>.</note>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -772,6 +775,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/feedback.png") %>" alt="" />
             </td>
         </tr>
@@ -861,6 +865,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
             </td>
         </tr>
@@ -875,6 +880,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
@@ -1321,6 +1327,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.macrosMode</em> parameter.</div>
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
             </td>
         </tr>
         <tr>
@@ -1340,13 +1347,18 @@
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="mobileForceView" class="copy-link">mobileForceView</td>
             <td>
                 Defines if the mobile document editor is opened in the view/edit mode on launch. The default value is <b>true</b>.
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that this parameter is only available for the mobile editors.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="plugins" class="copy-link">plugins</td>
