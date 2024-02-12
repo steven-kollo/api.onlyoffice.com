@@ -188,6 +188,25 @@ git submodule update --init --recursive</span>
             <p>This will disable the certificate verification and allow Nextcloud to establish connection with Document Server.</p>
             <note>Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.</note>
         </li>
+        <li id="editors_check_interval">
+            <p><b>Background task</b>. If the editors don't open or save documents after a period of proper functioning,
+                the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.</p>
+            <p>To solve this, we added an asynchronous background task which runs on the server to check availability of the editors.
+                It allows testing the connection between your <b>Nextcloud instance</b> and <b>ONLYOFFICE Document Server</b>,
+                namely availability of server addresses and the validity of the JWT secret are being checked.</p>
+            <p>If any issue is detected, the ONLYOFFICE integration connector (consequently, the ability to create and open files) will be disabled.
+                As a Nextcloud admin, you will get the corresponding notification.</p>
+            <p>This option allows you to avoid issues when the server settings become incorrect and require changes.</p>
+            <p>By default, this background task runs once a day. If necessary, you can change the frequency.
+                To do so, open the Nextcloud config file (<em>_/nextcloud/config/config.php_</em>).
+                Insert the following section and enter the required value in minutes:</p>
+            <pre>
+"onlyoffice" => array (
+    "editors_check_interval" => 3624
+)
+</pre>
+            <p>To disable this check running, enter 0 value.</p>
+        </li>
         <li>
             <b>Federated Cloud Sharing</b>. If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing between the Nextcloud instances connected to different ONLYOFFICE servers will not be available.
             The users from one and the same Document Server can edit the document in the co-editing mode, but the users from two (or more) different Document Servers will not be able to collaborate on the same document in real time.
