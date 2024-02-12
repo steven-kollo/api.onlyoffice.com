@@ -1,4 +1,4 @@
-import { ChapterNav } from "@/blocks/chapter-nav/ChapterNav2.tsx"
+import { ChapterNav } from "@/components/chapter-nav/ChapterNav.tsx"
 import { h } from "preact"
 
 function data() {

@@ -1,9 +1,10 @@
 import { join } from "node:path"
+import { env } from "node:process"
 import { URL, fileURLToPath } from "node:url"
 import { OnlyofficeLogo } from "@onlyoffice/documentation-ui-kit-js"
-import { SiteFooter } from "@/blocks/site-footer/SiteFooter2.tsx"
-import { SiteHeader } from "@/blocks/site-header/SiteHeader2.tsx"
-import { SiteNav } from "@/blocks/site-nav/SiteNav2.tsx"
+import { SiteFooter } from "@/components/site-footer/SiteFooter.tsx"
+import { SiteHeader } from "@/components/site-header/SiteHeader.tsx"
+import { SiteNav } from "@/components/site-nav/SiteNav.tsx"
 import { bundleAsync } from "lightningcss"
 import { h, isValidElement } from "preact"
 import { renderToString } from "preact-render-to-string"
@@ -13,6 +14,7 @@ const src = fileURLToPath(new URL("../..", import.meta.url))
 async function render({ eleventy, collections, page, title, content }) {
   const dark = await build("dark.css")
   const light = await build("light.css")
+
   const el = (
     // todo: do not forget to change the lang after localization.
     <html lang="en">
@@ -25,7 +27,7 @@ async function render({ eleventy, collections, page, title, content }) {
         <meta name="description" content="todo" />
         <meta name="generator" content={eleventy.generator} />
 
-        {/* <link rel="preload" href="/SourceCodePro-Medium.woff2" crossorigin as="font" type="font/woff2" /> */}
+        {/* <link rel="preload" href="/SourceCodePro-Medium.woff2" crossorigin="" as="font" type="font/woff2" /> */}
 
         <link rel="stylesheet" href="/main.css" />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#000000" /> {/* todo: content */}
@@ -45,19 +47,28 @@ async function render({ eleventy, collections, page, title, content }) {
       </body>
     </html>
   )
-  if (isValidElement(el)) {
-    return "<!DOCTYPE html>" + renderToString(el)
+
+  if (!isValidElement(el)) {
+    throw new Error("Invalid element")
   }
-  // todo: log
-  return ""
+
+  return "<!DOCTYPE html>\n" + renderToString(el)
 }
 
 async function build(f) {
   const { code } = await bundleAsync({
     filename: join(src, f),
-    minify: true
+    minify: isBuild()
   })
   return code.toString()
+}
+
+/**
+ * Checks if the Eleventy run mode is set to `build`.
+ * Returns `true` if the run mode is `build`, `false` otherwise.
+ */
+function isBuild(): boolean {
+  return env.ELEVENTY_RUN_MODE === "build"
 }
 
 export { render }

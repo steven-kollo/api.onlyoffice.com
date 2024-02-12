@@ -1,9 +1,9 @@
 {
   "name": "@onlyoffice/documentation-site",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "build": "eleventy",
+    "build": "node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js --quiet",
     "serve": "node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js --serve --quiet"
   },
   "dependencies": {
@@ -15,10 +15,8 @@
     "@onlyoffice/documentation-declarations": "workspace:^",
     "@onlyoffice/documentation-resources": "workspace:^",
     "@shikijs/rehype": "1.0.0-beta.1",
-    "@types/common-tags": "^1.8.4",
     "@types/node": "^20.11.5",
     "clsx": "^2.1.0",
-    "common-tags": "^1.8.2",
     "esbuild": "^0.19.11",
     "esbuild-register": "^3.5.0",
     "html-minifier-terser": "^7.2.0",

@@ -1,4 +1,4 @@
-import { Declaration } from "@/blocks/declaration/Declaration2.tsx"
+import { Declaration } from "@/components/declaration/Declaration.tsx"
 import { h, Fragment } from "preact"
 
 function data() {
