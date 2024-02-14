@@ -12,8 +12,6 @@ const { render } = require("preact-render-to-string")
 const requireFromString = require("require-from-string")
 const { isBuild } = require("./env.cjs")
 
-// todo: merge with mdx.cjs
-
 const minify = isBuild()
 
 /**

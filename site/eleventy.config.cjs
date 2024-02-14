@@ -9,6 +9,7 @@ const { scriptsPlugin } = require("./config/scripts.cjs")
 const { stylesPlugin } = require("./config/styles.cjs")
 const { staticPlugin } = require("./config/static.cjs")
 const { navigationPlugin } = require("./config/navigation.cjs")
+const { syntaxHighlightPlugin } = require("./config/syntax-highlight.cjs")
 
 /**
  * @param {UserConfig} uc
@@ -20,6 +21,7 @@ function config(uc) {
   uc.addPlugin(stylesPlugin)
   uc.addPlugin(scriptsPlugin)
   uc.addPlugin(navigationPlugin)
+  uc.addPlugin(syntaxHighlightPlugin)
   return {
     dir: {
       includes: "components",

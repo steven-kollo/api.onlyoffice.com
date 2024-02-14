@@ -1,13 +1,23 @@
-function define() {
-  if (window.customElements.get("o-page-nav")) {
-    return
+declare global {
+  interface Window {
+    OChapterNavigation: typeof OChapterNavigation
   }
-  window.OPageNav = OPageNav
-  window.customElements.define("o-page-nav", OPageNav)
+
+  interface HTMLElementTagNameMap {
+    "o-chapter-nav": OChapterNavigation
+  }
 }
 
-class OPageNav extends HTMLElement {
-  connectedCallback() {
+function define(): void {
+  if (window.customElements.get("o-chapter-nav")) {
+    return
+  }
+  window.OChapterNavigation = OChapterNavigation
+  window.customElements.define("o-chapter-nav", OChapterNavigation)
+}
+
+class OChapterNavigation extends HTMLElement {
+  connectedCallback(): void {
     this.addEventListener("click", (e) => {
       const b = e.target
       if (!(
@@ -36,4 +46,4 @@ class OPageNav extends HTMLElement {
 
 define()
 
-module.exports = { OPageNav }
+export { OChapterNavigation }

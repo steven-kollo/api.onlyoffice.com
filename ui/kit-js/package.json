@@ -3,13 +3,18 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./lib/kit.tsx",
-    "./kit.css": "./lib/kit.css"
+    ".": "./lib/server.ts",
+    "./dark.css": "./lib/dark.css",
+    "./light.css": "./lib/light.css",
+    "./main.css": "./lib/main.css",
+    "./client.ts": "./lib/client.ts",
+    "./server.ts": "./lib/server.ts"
   },
   "scripts": {
     "storybook": "storybook dev --no-open --port 6006"
   },
   "dependencies": {
+    "@onlyoffice/documentation-ui-chapter-navigation-js": "workspace:^",
     "@onlyoffice/documentation-ui-code-listing-js": "workspace:^",
     "@onlyoffice/documentation-ui-content-js": "workspace:^",
     "@onlyoffice/documentation-ui-declaration-reference-js": "workspace:^",
@@ -17,8 +22,7 @@
     "@onlyoffice/documentation-ui-icon-js": "workspace:^",
     "@onlyoffice/documentation-ui-logo-js": "workspace:^",
     "@onlyoffice/documentation-ui-primitives": "workspace:^",
-    "@onlyoffice/documentation-ui-sr-only": "workspace:^",
-    "@onlyoffice/documentation-ui-syntax-highlight-js": "workspace:^"
+    "@onlyoffice/documentation-ui-sr-only": "workspace:^"
   },
   "devDependencies": {
     "@storybook/blocks": "^7.6.13",

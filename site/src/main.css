@@ -1,10 +1,12 @@
-@import "../node_modules/@onlyoffice/documentation-ui-kit-js/lib/kit.css";
+@import "../node_modules/@onlyoffice/documentation-ui-kit-js/lib/main.css";
+
+/* todo: write own theme */
+@import "../node_modules/@wooorm/starry-night/style/both.css";
+
 
 @import "./components/site-header/site-header.css";
 @import "./components/site-nav/site-nav.css";
 @import "./components/site-footer/site-footer.css";
-
-@import "./components/page-nav/page-nav.css";
 
 @import "./layouts/site/site.css";
 @import "./layouts/chapter/chapter.css";

@@ -1,4 +1,4 @@
-import { ChapterNav } from "@/components/chapter-nav/ChapterNav.tsx"
+import { ChapterNavigation } from "@onlyoffice/documentation-ui-kit-js"
 import { h } from "preact"
 
 function data() {
@@ -13,7 +13,17 @@ function render({ collections, page, content }) {
       <div class="product__inner">
         <nav class="product-nav">
           {collections.navigation.map((c) => (
-            page.url.startsWith(c.link) && ChapterNav({ page, chapter: c })
+            page.url.startsWith(c.link) && (
+              <ChapterNavigation
+                chapter={c}
+                isExpanded={(c) => {
+                  return page.url.startsWith(c.link)
+                }}
+                isCurrent={(c) => {
+                  return page.url === c.link
+                }}
+              />
+            )
           ))}
         </nav>
         <main class="product__main2">

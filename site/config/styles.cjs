@@ -19,8 +19,7 @@ const minify = isBuild()
  * @returns {void}
  */
 function stylesPlugin(uc) {
-  uc.addPassthroughCopy("./src", {
-    filter: ["**/main.css"],
+  uc.addPassthroughCopy("./src/main.css", {
     /**
      * @param {string} f
      * @returns {Transform}

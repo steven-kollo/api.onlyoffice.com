@@ -3,9 +3,9 @@ import {
   Content,
   DeclarationReference,
   DeclarationToken,
-  SyntaxHighlight
 } from "@onlyoffice/documentation-ui-kit-js"
 import { h, Fragment } from "preact"
+import { SyntaxHighlight } from "../syntax-highlight/SyntaxHighlight.tsx"
 
 /**
  * @param {Object} param0

@@ -10,7 +10,6 @@ import sade from "sade"
 import * as iconJS from "@onlyoffice/documentation-ui-icon-js/makefile.js"
 // import * as kitJS from "@onlyoffice/documentation-ui-kit-js/makefile.js"
 import * as logoJS from "@onlyoffice/documentation-ui-logo-js/makefile.js"
-// import * as syntaxHighlightJS from "@onlyoffice/documentation-ui-syntax-highlight-js/makefile.js"
 import * as documentBuilder from "./resources/makefile.js"
 
 // @onlyoffice/documentation-ui-logo-js
@@ -36,8 +35,7 @@ make
       // ["@onlyoffice/documentation-ui-declaration-token-js", declarationTokenJS],
       ["@onlyoffice/documentation-ui-icon-js", iconJS],
       // ["@onlyoffice/documentation-ui-kit-js", kitJS],
-      ["@onlyoffice/documentation-ui-logo-js", logoJS],
-      // ["@onlyoffice/documentation-ui-syntax-highlight-js", syntaxHighlightJS],
+      ["@onlyoffice/documentation-ui-logo-js", logoJS]
     ].map(([name, make]) => {
       console.log(name)
       return make.build()
