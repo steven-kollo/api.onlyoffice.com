@@ -205,7 +205,7 @@
 				break;
 			case "location":
 				var current = this.find("a").filter(function() {
-					return this.href.toLowerCase() == (location.href.split("#")[0]).toLowerCase();
+					return this.href.toLowerCase() == (location.href.split("#")[0]).toLowerCase() || this.href.toLowerCase() == (location.href.split("#")[0]).toLowerCase() + "/";
 				});
 				if (!current.length && $("h1 a.up").length) {
 					current = this.find("a").filter(function () {
