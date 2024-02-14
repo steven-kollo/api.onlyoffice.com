@@ -24,7 +24,14 @@
             foreach (var section in sections) {
                 var productSection = Products.Get(section); %>
             <div class="category-item">
-                <h4 class="category-item-title <%= product.Id %> <%: productSection.Id %>"><a href="<%= Url.Action("basic", productSection.Id) %>"><%: productSection.Title %></a></h4>
+               <%
+                  var productUrl = Url.Action(productSection.Id, product.Id, null);
+                  if (product.Id == "docs")
+                  {
+                     productUrl = Url.Action("basic", productSection.Id, null);
+                  }
+                  %>
+                <h4 class="category-item-title <%= product.Id %> <%: productSection.Id %>"><a href="<%= productUrl %>"><%: productSection.Title %></a></h4>
                 <div class="category-item-description"><%: Html.Raw(productSection.Description) %></div>
             </div>
         <% } %>

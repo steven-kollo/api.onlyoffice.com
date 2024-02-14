@@ -31,9 +31,14 @@
                            <ul class="pushy-dropdown">
                                 <% foreach (var section in product.Sections)
                                    {
-                                        var sectionProduct = Products.Get(section);
+                                       var sectionProduct = Products.Get(section);
+                                       var productUrl = Url.Action(sectionProduct.Id, product.Id, null);
+                                       if (product.Id == "docs")
+                                       {
+                                          productUrl = Url.Action("basic", sectionProduct.Id, null);
+                                       }
                                         %>
-                                        <li><a href="<%= Url.Action("basic", sectionProduct.Id) %>" class="pushy-dropdown-link <%: sectionProduct.Id %>"><%: sectionProduct.Title %></a></li>
+                                        <li><a href="<%= productUrl %>" class="pushy-dropdown-link <%: sectionProduct.Id %>"><%: sectionProduct.Title %></a></li>
                                 <% } %>
                            </ul>
                         <% } %>

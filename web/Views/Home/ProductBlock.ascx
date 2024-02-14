@@ -25,8 +25,13 @@
                     foreach (var section in sections)
                     {
                         var productSection = Products.Get(section);
+                        var productUrl = Url.Action(productSection.Id, product.Id, null);
+                        if (product.Id == "docs")
+                        {
+                           productUrl = Url.Action("basic", productSection.Id, null);
+                        }
                     %>
-                <li><a href="<%= Url.Action("basic", productSection.Id) %>" class="<%: productSection.Id %>"><%: productSection.Title %></a></li>
+                <li><a href="<%= productUrl %>" class="<%: productSection.Id %>"><%: productSection.Title %></a></li>
             <% } } %>
         </ul>
     </div>
