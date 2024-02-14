@@ -6,10 +6,17 @@
       "sections": [ "editors", "plugin", "docbuilder", "desktop" ]
    },
    {
-      "id":"docspace",
-      "title":"DocSpace",
-      "description":"Create your own productivity platform based on ONLYOFFICE DocSpace. In this section, you will learn how to make GET, POST, PUT and DELETE requests to collaborate on documents with teams, clients, partners, etc., based on the concept of rooms – special spaces with predefined permissions.",
+      "id": "docspace",
+      "title": "DocSpace",
+      "description": "Create your own productivity platform based on ONLYOFFICE DocSpace. In this section, you will learn how to make GET, POST, PUT and DELETE requests to collaborate on documents with teams, clients, partners, etc., based on the concept of rooms – special spaces with predefined permissions.",
+      "sections": [ "jssdk", "pluginssdk", "backend", "apisystem" ]
+   },
+   {
+      "id":"jssdk",
+      "title":"JavaScript SDK",
+      "description":"",
       "version":"2.0",
+      "parent": "docspace",
       "links":{
          "Get started":[
             {
@@ -38,7 +45,16 @@
                "Item1":"Events",
                "Item2":"jssdk/events"
             }
-         ],
+         ]
+      }
+   },
+   {
+      "id":"pluginssdk",
+      "title":"Plugins SDK",
+      "description":"",
+      "version":"2.0",
+      "parent": "docspace",
+      "links":{
          "Plugins SDK":[
             {
                "Item1":"Basic concepts",
@@ -68,7 +84,16 @@
                "Item1":"Adding plugin",
                "Item2":"pluginssdk/addingplugin"
             }
-         ],
+         ]
+      }
+   },
+   {
+      "id":"backend",
+      "title":"API Backend",
+      "description":"",
+      "version":"2.0",
+      "parent": "docspace",
+      "links":{
          "API Backend":[
             {
                "Item1":"Basic concepts",
@@ -122,7 +147,16 @@
                "Item1":"thirdparty",
                "Item2":"section/thirdparty"
             }
-         ],
+         ]
+      }
+   },
+   {
+      "id":"apisystem",
+      "title":"API System",
+      "description":"",
+      "version":"2.0",
+      "parent": "docspace",
+      "links":{
          "API System":[
             {
                "Item1":"Basic concepts",
