@@ -18,6 +18,7 @@ import { StreamIndexes } from "@onlyoffice/documentation-declarations/helpers.js
 import {
   DeclarationsCache,
   PostprocessDeclarations,
+  PostPostprocessDeclarations,
   PreprocessDeclarations as JSDocPreprocessDeclarations
 } from "@onlyoffice/documentation-declarations/jsdoc.js"
 import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-scripts/jq.js"
@@ -28,6 +29,9 @@ import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
 import pack from "../package.json" assert { type: "json" }
+
+import { createRequire } from "module"
+const require = createRequire(import.meta.url)
 
 const root = fileURLToPath(new URL("..", import.meta.url))
 const dist = join(root, "dist")
@@ -82,7 +86,7 @@ async function build(options) {
         createWriteStream(to)
       ])
       c.on("error", rej)
-      c.on("finish", res)
+      c.on("close", res)
     })
 
     from = to
@@ -98,7 +102,57 @@ async function build(options) {
         createWriteStream(to)
       ])
       c.on("error", rej)
-      c.on("finish", res)
+      c.on("close", res)
+    })
+
+    const _list = require(to)
+    // @ts-ignore
+    cache._onRetrieve = function _onRetrieve(id) {
+      // @ts-ignore
+      return _list[cache.retrieve(id).index]
+    }
+
+    // let _to = to
+    // // @ts-ignore
+    // cache._onRetrieve = async function _onRetrieve(id) {
+    //   let d
+    //   await new Promise((res, rej) => {
+    //     const c = new Chain([
+    //       createReadStream(_to),
+    //       parser(),
+    //       new StreamArray(),
+    //       new Transform({
+    //         objectMode: true,
+    //         transform(ch, _, cb) {
+    //           if (ch.value.id === id) {
+    //             d = ch.value
+    //           } else {
+    //             cb(null)
+    //           }
+    //         }
+    //       })
+    //     ])
+    //     c.on("error", rej)
+    //     c.on("close", res)
+    //   })
+    //   // @ts-ignore
+    //   return d
+    // }
+
+    from = to
+    to = join(temp, num(file, 2))
+    await new Promise((res, rej) => {
+      const c = new Chain([
+        createReadStream(from),
+        parser(),
+        new StreamArray(),
+        new PostPostprocessDeclarations(cache),
+        new Disassembler(),
+        new Stringer({ makeArray: true }),
+        createWriteStream(to)
+      ])
+      c.on("error", rej)
+      c.on("close", res)
     })
 
     froms.push(to)
@@ -200,7 +254,7 @@ function mergeDeclarations(froms, to) {
       createWriteStream(to)
     ])
     c.on("error", rej)
-    c.on("finish", res)
+    c.on("close", res)
   })
 }
 
@@ -221,7 +275,7 @@ function createIndexes(from, to) {
       createWriteStream(to)
     ])
     c.on("error", rej)
-    c.on("finish", res)
+    c.on("close", res)
   })
 }
 

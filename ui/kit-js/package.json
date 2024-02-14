@@ -18,6 +18,7 @@
     "@onlyoffice/documentation-ui-code-listing-js": "workspace:^",
     "@onlyoffice/documentation-ui-content-js": "workspace:^",
     "@onlyoffice/documentation-ui-declaration-reference-js": "workspace:^",
+    "@onlyoffice/documentation-ui-declaration-signature-js": "workspace:^",
     "@onlyoffice/documentation-ui-declaration-token-js": "workspace:^",
     "@onlyoffice/documentation-ui-icon-js": "workspace:^",
     "@onlyoffice/documentation-ui-logo-js": "workspace:^",

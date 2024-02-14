@@ -146,6 +146,7 @@ class PreprocessDeclarations extends Transform {
    */
   constructor(cache) {
     super({ objectMode: true })
+    this._i = 0
     this._cache = cache
   }
 
@@ -301,8 +302,12 @@ class PreprocessDeclarations extends Transform {
       d.examples = await parseExamples(doc.examples)
     }
 
+    this._cache.index(d.id, this._i)
+    this._i += 1
     this.push(d)
     ms.forEach((d) => {
+      this._cache.index(d.id, this._i)
+      this._i += 1
       this.push(d)
     })
   }
@@ -392,6 +397,278 @@ class PostprocessDeclarations extends Transform {
 
     this.push(d)
     cb(null)
+  }
+}
+
+class PostPostprocessDeclarations extends Transform {
+  /**
+   * @param {DeclarationsCache} cache
+   */
+  constructor(cache) {
+    super({ objectMode: true })
+    this._cache = cache
+  }
+
+  _transform(ch, _, cb) {
+    this._asyncTransform(ch).then(() => {
+      cb(null)
+    })
+  }
+
+  async _asyncTransform(ch, _, cb) {
+    /** @type {Declaration} */
+    const d = ch.value
+
+    // todo: remove the postfixes.
+
+    // const heroSection = {
+    //   title: d.title,
+    //   signature: d.signature
+    // }
+    // /** @type {any} */
+    // const descriptionSection = {
+    //   type: "description",
+    //   description: d.description
+    // }
+    /** @type {any} */
+    const parametersSection = {
+      type: "parameters",
+      items: []
+    }
+    /** @type {any} */
+    const returnsSection = {
+      type: "returns",
+      items: []
+    }
+    /** @type {any} */
+    const examplesSection = {
+      type: "examples",
+      items: []
+    }
+    /** @type {any} */
+    const topicsSection = {
+      type: "topics",
+      items: []
+    }
+    /** @type {any} */
+    const relationshipSection = {
+      type: "relationship",
+      items: []
+    }
+    /** @type {any} */
+    const seeAlsoSection = {
+      type: "seeAlso",
+      items: []
+    }
+
+    let p
+    let items
+
+    switch (d.kind) {
+    case "class":
+      if (d.examples !== undefined) {
+        examplesSection.items = d.examples
+      }
+      if (d.constructors !== undefined) {
+        topicsSection.items.push({
+          title: "Constructors",
+          items: d.constructors
+        })
+      }
+      if (d.instanceProperties !== undefined) {
+        topicsSection.items.push({
+          title: "Instance Properties",
+          items: d.instanceProperties
+        })
+      }
+      if (d.instanceMethods !== undefined) {
+        topicsSection.items.push({
+          title: "Instance Methods",
+          items: d.instanceMethods
+        })
+      }
+      if (d.typeMethods !== undefined) {
+        topicsSection.items.push({
+          title: "Type Methods",
+          items: d.typeMethods
+        })
+      }
+      if (d.typeProperties !== undefined) {
+        topicsSection.items.push({
+          title: "Type Properties",
+          items: d.typeProperties
+        })
+      }
+      if (d.events !== undefined) {
+        topicsSection.items.push({
+          title: "Events",
+          items: d.events
+        })
+      }
+      if (d.extends !== undefined) {
+        relationshipSection.items.push({
+          title: "Extends",
+          items: d.extends
+        })
+      }
+      if (d.implements !== undefined) {
+        relationshipSection.items.push({
+          title: "Implements",
+          items: d.implements
+        })
+      }
+      break
+    case "constructor":
+      if (d.examples !== undefined) {
+        examplesSection.items = d.examples
+      }
+      if (d.type.parameters !== undefined) {
+        parametersSection.items = d.type.parameters
+      }
+      if (d.parent !== undefined) {
+        // @ts-ignore
+        p = await this._cache._onRetrieve(d.parent.id)
+        if (p !== undefined && p.kind === "class") {
+          items = p.constructors.filter((c) => d.id !== c.id)
+          if (items.length > 0) {
+            seeAlsoSection.items = items
+          }
+        }
+      }
+      break
+    case "instanceMethod":
+      if (d.examples !== undefined) {
+        examplesSection.items = d.examples
+      }
+      if (d.type.parameters !== undefined) {
+        parametersSection.items = d.type.parameters
+      }
+      if (d.type.returns !== undefined) {
+        returnsSection.items.push(d.type.returns)
+      }
+      if (d.parent !== undefined) {
+        // @ts-ignore
+        p = await this._cache._onRetrieve(d.parent.id)
+        if (p !== undefined && p.kind === "class") {
+          items = p.instanceMethods.filter((c) => d.id !== c.id)
+          if (items.length > 0) {
+            seeAlsoSection.items = items
+          }
+        }
+      }
+      break
+    case "instanceProperty":
+      if (d.examples !== undefined) {
+        examplesSection.items = d.examples
+      }
+      if (d.parent !== undefined) {
+        // @ts-ignore
+        p = await this._cache._onRetrieve(d.parent.id)
+        if (p !== undefined && p.kind === "class") {
+          items = p.instanceProperties.filter((c) => d.id !== c.id)
+          if (items.length > 0) {
+            seeAlsoSection.items = items
+          }
+        }
+      }
+      break
+    case "typeMethod":
+      if (d.examples !== undefined) {
+        examplesSection.items = d.examples
+      }
+      if (d.type.parameters !== undefined) {
+        parametersSection.items = d.type.parameters
+      }
+      if (d.type.returns !== undefined) {
+        returnsSection.items.push(d.type.returns)
+      }
+      if (d.parent !== undefined) {
+        // @ts-ignore
+        p = await this._cache._onRetrieve(d.parent.id)
+        if (p !== undefined && p.kind === "class") {
+          items = p.typeMethods.filter((c) => d.id !== c.id)
+          if (items.length > 0) {
+            seeAlsoSection.items = items
+          }
+        }
+      }
+      break
+    case "typeProperty":
+      if (d.examples !== undefined) {
+        examplesSection.items = d.examples
+      }
+      if (d.parent !== undefined) {
+        // @ts-ignore
+        p = await this._cache._onRetrieve(d.parent.id)
+        if (p !== undefined && p.kind === "class") {
+          items = p.typeProperties.filter((c) => d.id !== c.id)
+          if (items.length > 0) {
+            seeAlsoSection.items = items
+          }
+        }
+      }
+      break
+    case "event":
+      if (d.examples !== undefined) {
+        examplesSection.items = d.examples
+      }
+      if (d.type.parameters !== undefined) {
+        parametersSection.items = d.type.parameters
+      }
+      if (d.parent !== undefined) {
+        // @ts-ignore
+        p = await this._cache._onRetrieve(d.parent.id)
+        if (p !== undefined && p.kind === "class") {
+          items = p.events.filter((c) => d.id !== c.id)
+          if (items.length > 0) {
+            seeAlsoSection.items = items
+          }
+        }
+      }
+      break
+    case "object":
+      break
+    case "method":
+      break
+    case "property":
+      break
+    case "type":
+      if (d.examples !== undefined) {
+        examplesSection.items = d.examples
+      }
+      break
+    default:
+      // todo: throw new Error(`Unknown kind: ${d.kind}`)
+    }
+
+    const sections = []
+    // if (descriptionSection.description !== undefined) {
+    //   sections.push(descriptionSection)
+    // }
+    if (parametersSection.items.length > 0) {
+      sections.push(parametersSection)
+    }
+    if (returnsSection.items.length > 0) {
+      sections.push(returnsSection)
+    }
+    if (examplesSection.items.length > 0) {
+      sections.push(examplesSection)
+    }
+    if (topicsSection.items.length > 0) {
+      sections.push(topicsSection)
+    }
+    if (relationshipSection.items.length > 0) {
+      sections.push(relationshipSection)
+    }
+    if (seeAlsoSection.items.length > 0) {
+      sections.push(seeAlsoSection)
+    }
+    if (sections.length > 0) {
+      // @ts-ignore
+      d.sections = sections
+    }
+
+    this.push(d)
   }
 }
 
@@ -991,7 +1268,7 @@ class DeclarationsCache {
 
   /**
    * @param {string} id
-   * @param {keyof CacheDeclaration} k
+   * @param {keyof Omit<CacheDeclaration, "index">} k
    * @param {string} v
    * @returns {void}
    */
@@ -1006,6 +1283,19 @@ class DeclarationsCache {
       return
     }
     this.m[id][k].push(v)
+  }
+
+  /**
+   * @param {string} id
+   * @param {number} i
+   * @returns {void}
+   */
+  index(id, i) {
+    if (!Object.hasOwn(this.m, id)) {
+      this.setup(id)
+    }
+    // @ts-ignore
+    this.m[id].index = i
   }
 
   /**
@@ -1027,5 +1317,6 @@ class DeclarationsCache {
 export {
   DeclarationsCache,
   PostprocessDeclarations,
+  PostPostprocessDeclarations,
   PreprocessDeclarations
 }

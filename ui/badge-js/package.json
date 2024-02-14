@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/documentation-badge-js",
+  "name": "@onlyoffice/documentation-ui-badge-js",
   "private": true,
   "type": "module",
   "exports": {

@@ -2,9 +2,9 @@ import { h } from "preact"
 
 function CodeListing({ children }) {
   return (
-    <div class="code-listing">
+      // <pre><code>{children}</code></pre>
       <pre><code>{children}</code></pre>
-    </div>
+    // <div class="code-listing"></div>
   )
 }
 

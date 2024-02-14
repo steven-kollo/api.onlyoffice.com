@@ -7,7 +7,7 @@
 
 .content h1 {
   color: var(--content-heading-foreground-color);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 24px;
@@ -92,6 +92,7 @@
   border-width: 1px;
   margin-bottom: 0;
   margin-top: 16px;
+  overflow: auto;
   padding: 12px 32px;
 }
 
