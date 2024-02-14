@@ -1,0 +1,25 @@
+---
+title: Logout
+order: -3
+---
+Use the [execCommand](/desktop/execcommand) method to remove a cloud from the **Connected clouds** list. When the *portal:logout* command is sent, the cloud will be removed from the list on the **Connected clouds** page. Cookies for this domain will be cleared. Parameters are specified in the format of a string with the serialized *json* as follows:
+
+```
+{
+    "domain": "domain name"
+}
+```
+
+Parameters
+
+| Name   | Description                                       | Type   | Example                      |
+| ------ | ------------------------------------------------- | ------ | ---------------------------- |
+| domain | Defines the cloud name and the cloud entry point. | string | "https\://exampledomain.com" |
+
+Example
+
+```
+window.AscDesktopEditor.execCommand ("portal:logout", JSON.stringify ({
+    "domain": "https://exampledomain.com"
+}));
+```

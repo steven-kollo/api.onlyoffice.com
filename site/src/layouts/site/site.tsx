@@ -1,19 +1,15 @@
-import { join } from "node:path"
-import { env } from "node:process"
-import { URL, fileURLToPath } from "node:url"
 import { OnlyofficeLogo } from "@onlyoffice/documentation-ui-kit-js"
 import { SiteFooter } from "@/components/site-footer/SiteFooter.tsx"
 import { SiteHeader } from "@/components/site-header/SiteHeader.tsx"
+import { transformMarkup } from "@/../config/markup.cjs"
+import { buildDarkStyles, buildLightStyles } from "@/../config/styles.cjs"
 import { SiteNav } from "@/components/site-nav/SiteNav.tsx"
-import { bundleAsync } from "lightningcss"
 import { h, isValidElement } from "preact"
 import { renderToString } from "preact-render-to-string"
 
-const src = fileURLToPath(new URL("../..", import.meta.url))
-
 async function render({ eleventy, collections, page, title, content }) {
-  const dark = await build("dark.css")
-  const light = await build("light.css")
+  const dark = await buildDarkStyles()
+  const light = await buildLightStyles()
 
   const el = (
     // todo: do not forget to change the lang after localization.
@@ -52,23 +48,8 @@ async function render({ eleventy, collections, page, title, content }) {
     throw new Error("Invalid element")
   }
 
-  return "<!DOCTYPE html>\n" + renderToString(el)
-}
-
-async function build(f) {
-  const { code } = await bundleAsync({
-    filename: join(src, f),
-    minify: isBuild()
-  })
-  return code.toString()
-}
-
-/**
- * Checks if the Eleventy run mode is set to `build`.
- * Returns `true` if the run mode is `build`, `false` otherwise.
- */
-function isBuild(): boolean {
-  return env.ELEVENTY_RUN_MODE === "build"
+  let c = "<!DOCTYPE html>\n" + renderToString(el)
+  return transformMarkup(c)
 }
 
 export { render }

@@ -5,6 +5,7 @@
  */
 
 const { extname } = require("node:path")
+const { isBuild } = require("./env.cjs")
 
 /**
  * @typedef {Object} NavigationItem
@@ -25,6 +26,7 @@ const { extname } = require("node:path")
  */
 
 const cache = new WeakMap()
+const doCache = isBuild()
 
 /**
  * @param {UserConfig} uc
@@ -32,12 +34,15 @@ const cache = new WeakMap()
  */
 function navigationPlugin(uc) {
   uc.addCollection(navigation.name, (tc) => {
-    if (cache.has(navigation)) {
-      return cache.get(navigation)
+    if (doCache) {
+      if (cache.has(navigation)) {
+        return cache.get(navigation)
+      }
+      const n = navigation(tc)
+      cache.set(navigation, n)
+      return n
     }
-    const n = navigation(tc)
-    cache.set(navigation, n)
-    return n
+    return navigation(tc)
   })
 }
 
