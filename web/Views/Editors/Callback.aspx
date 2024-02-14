@@ -98,43 +98,43 @@
             <tr class="tablerow">
                 <td id="formsdataurl" class="copy-link">formsdataurl</td>
                 <td>
-                    Defines the URL to the JSON file with the submitted form data.
-                    The array structure with the form data is described <a href="<%= Url.Action("global", "docbuilder") %>#FormData">here</a>.
-                    This file contains the following parameters:
+                    用提交的表单数据,定义 JSON 文件的 URL。
+                     <a href="<%= Url.Action("global", "docbuilder") %>#FormData">此处</a>描述了包含表单数据的数组结构。
+                     该文件包含以下参数：
                     <ul>
                         <li>
-                            <b>key</b> - the form key. If the current form is a radio button, then this field contains the form group key,
+                            <b>key</b> - 表单键。 如果当前表单是单选按钮，则该字段包含表单组键，
                             <br />
                             <b>type</b>: string,
                             <br />
                             <b>example</b>: "Text1";
                         </li>
                         <li>
-                            <b>tag</b> - the form tag,
+                            <b>tag</b> - 表单标签,
                             <br />
                             <b>type</b>: string,
                             <br />
                             <b>example</b>: "";
                         </li>
                         <li>
-                            <b>value</b> - the current form value,
+                            <b>value</b> - 当前表单值,
                             <br />
                             <b>type</b>: string,
                             <br />
                             <b>example</b>: "inner text";
                         </li>
                         <li>
-                            <b>type</b> - the form type (<b>text</b>, <b>checkBox</b>, <b>picture</b>, <b>comboBox</b>, <b>dropDownList</b>, <b>dateTime</b>, <b>radio</b>),
+                            <b>type</b> - 表单类型 (<b>text</b>, <b>checkBox</b>, <b>picture</b>, <b>comboBox</b>, <b>dropDownList</b>, <b>dateTime</b>, <b>radio</b>),
                             <br />
                             <b>type</b>: string,
                             <br />
                             <b>example</b>: "text".
                         </li>
                     </ul>
-                    The object is present when the <em>status</em> value is equal to <em>6</em> and the <em>forcesavetype</em> value is equal to <em>3</em>.
+                    当 <em>status</em> 值等于 <em>6</em> 并且 <em>forcesavetype</em> 值等于 <em>3</em> 时,该对象才存在。
                 </td>
-                <td>object</td>
-                <td>optional</td>
+                <td>对象</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="history" class="copy-link">history</td>

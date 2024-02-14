@@ -439,149 +439,149 @@
             </tr>
             <tr class="tablerow">
                 <td id="watermark" class="copy-link">watermark</td>
-                <td>Defines a JSON object containing the <a href="<%= Url.Action("global", "plugin") %>#watermark_on_draw">properties</a> of a watermark
-                    which is inserted into the pdf and image files during conversion.</td>
+                <td>定义一个 JSON 对象，其中包含水印的<a href="<%= Url.Action("global", "plugin") %>#watermark_on_draw">属性</a>
+                    ,在转换过程中将其插入到 pdf 和图像文件中。</td>
                 <td>object</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-transparent" class="copy-link">watermark.transparent</td>
-                <td>Defines the watermark transparency degree.</td>
+                <td>定义水印透明度。</td>
                 <td>float</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-type" class="copy-link">watermark.type</td>
-                <td>Defines the <a href="<%= Url.Action("global", "DocBuilder") %>#ShapeType">shape type</a> which specifies the preset shape geometry for the current watermark.</td>
+                <td>定义<a href="<%= Url.Action("global", "DocBuilder") %>#ShapeType">形状类型</a>，指定当前水印的预设形状几何形状。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-width" class="copy-link">watermark.width</td>
-                <td>Defines the watermark width measured in millimeters.</td>
+                <td>定义以毫米为单位测量的水印宽度。</td>
                 <td>number</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-height" class="copy-link">watermark.height</td>
-                <td>Defines the watermark height measured in millimeters.</td>
+                <td>定义以毫米为单位测量的水印高度。</td>
                 <td>number</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-rotate" class="copy-link">watermark.rotate</td>
-                <td>Defines the watermark rotation angle measured in degrees.</td>
+                <td>定义水印旋转角度（以度为单位）。</td>
                 <td>number</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-margins" class="copy-link">watermark.margins</td>
-                <td>Defines the text margins measured in millimeters in the watermark shape.</td>
-                <td>array of numbers</td>
-                <td>optional</td>
+                <td>定义水印形状中的文本边距（以毫米为单位）。</td>
+                <td>数值数组</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-fill" class="copy-link">watermark.fill</td>
-                <td>Defines the watermark fill color in the RGB format, or the URL to image (base64 support: <em>data:image/png;...</em>).
-                    The empty array [] means that the watermark has no fill.</td>
-                <td>array of numbers | string</td>
-                <td>optional</td>
+                <td>以 RGB 格式定义水印填充颜色，或图像的 URL（base64 支持：<em>data:image/png;...</em>）。
+                    空数组[]表示水印没有填充。</td>
+                <td>数值数组 | string</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-stroke-width" class="copy-link">watermark.stroke-width</td>
-                <td>Defines the watermark stroke width measured in millimeters.</td>
+                <td>定义以毫米为单位测量的水印描边宽度。</td>
                 <td>number</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-stroke" class="copy-link">watermark.stroke</td>
-                <td>Defines the watermark stroke color in the RGB format. The empty array [] means that the watermark stroke has no fill.</td>
-                <td>array of numbers</td>
-                <td>optional</td>
+                <td>以 RGB 格式定义水印描边颜色。 空数组[]表示水印笔划没有填充。</td>
+                <td>数值数组</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-align" class="copy-link">watermark.align</td>
-                <td>Defines the vertical text align in the watermark shape: <b>0</b> - bottom, <b>1</b> - center, <b>4</b> - top.</td>
+                <td>定义水印形状中的垂直文本对齐方式：<b>0</b> - 底部、<b>1</b> - 中心、<b>4</b> - 顶部。</td>
                 <td>number</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs" class="copy-link">watermark.paragraphs</td>
-                <td>Defines the array with paragraphs from the current watermark with their properties.</td>
-                <td>array of objects</td>
-                <td>optional</td>
+                <td>使用当前水印中的段落及其属性定义数组。</td>
+                <td>对象数组</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-align" class="copy-link">watermark.paragraphs.align</td>
-                <td>Defines the horizontal text align in the current paragraph: <b>0</b> - right, <b>1</b> - left, <b>2</b> - center, <b>3</b> - justify.</td>
+                <td>定义当前段落中的水平文本对齐方式：<b>0</b> - 右、<b>1</b> - 左、<b>2</b> - 居中、<b>3</b > - 两端对齐。</td>
                 <td>number</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-fill" class="copy-link">watermark.paragraphs.fill</td>
-                <td>Defines the paragraph highlight in the RGB format. The empty array [] means that the paragraph is not highlighted.</td>
-                <td>array of numbers</td>
-                <td>optional</td>
+                <td>以 RGB 格式定义段落突出显示。 空数组[]表示该段落不突出显示。</td>
+                <td>数值数组</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-linespacing" class="copy-link">watermark.paragraphs.linespacing</td>
-                <td>Defines the text linespacing in the current paragraph.</td>
+                <td>定义当前段落中的文本行间距。</td>
                 <td>number</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs" class="copy-link">watermark.paragraphs.runs</td>
-                <td>Defines the array with runs from the current paragraph with their properties.</td>
-                <td>array of objects</td>
-                <td>optional</td>
+                <td>定义包含当前段落中的runs及其属性的数组。</td>
+                <td>对象数组</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs-text" class="copy-link">watermark.paragraphs.runs.text</td>
-                <td>Defines the run text.</td>
+                <td>定义run文本。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs-fill" class="copy-link">watermark.paragraphs.runs.fill</td>
-                <td>Defines the text highlight in the RGB format. The empty array [] means that the text is not highlighted.</td>
-                <td>array of numbers</td>
-                <td>optional</td>
+                <td>以 RGB 格式定义文本突出显示。 空数组[]表示文本不突出显示。</td>
+                <td>数值数组</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs-font-family" class="copy-link">watermark.paragraphs.runs.font-family</td>
-                <td>Defines the text font family.</td>
+                <td>定义文本字体系列。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs-font-size" class="copy-link">watermark.paragraphs.runs.font-size</td>
-                <td>Defines the text font size measured in points (pt).</td>
+                <td>定义以磅 (pt) 为单位测量的文本字体大小。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs-bold" class="copy-link">watermark.paragraphs.runs.bold</td>
-                <td>Defines if the current text is displayed bold or not.</td>
+                <td>定义当前文本是否显示为粗体。</td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs-italic" class="copy-link">watermark.paragraphs.runs.italic</td>
-                <td>Defines if the current text is displayed italic or not.</td>
+                <td>定义当前文本是否显示为斜体。</td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs-strikeout" class="copy-link">watermark.paragraphs.runs.strikeout</td>
-                <td>Defines if the current text is displayed struck through or not.</td>
+                <td>定义当前文本是否显示为删除线。</td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="watermark-paragraphs-runs-underline" class="copy-link">watermark.paragraphs.runs.underline</td>
-                <td>Defines if the current text is displayed underlined or not.</td>
+                <td>定义当前文本是否显示下划线。</td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
         </tbody>
     </table>

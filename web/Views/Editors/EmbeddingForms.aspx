@@ -16,8 +16,8 @@
     <p class="dscr">从7.0版开始，ONLYOFFICE Docs提供了创建、编辑和协作编辑在线表单、填写表单以及将表单保存为PDF的可能性。</p>
     <p>ONLYOFFICE表格有两种主要格式。DOCXF用于从空白或任何现有的DOCX文件创建表单模板。
         PDF格式用于填写准备好的表单。</p>
-    <note>Please note that starting from version 8.0, the OFORM format is deprecated. To fill out the ready forms, only the PDF format is used.</note>
-    <p>These instructions help you add an online form to your website, making it available for saving as PDF and filling in.</p>
+    <note>请注意，从版本 8.0 开始，OFORM 格式已被弃用。 要填写准备好的表格时，仅使用 PDF 格式。</note>
+    <p>这些说明可帮助您将在线表单添加到您的网站，使其可保存为 PDF 并填写。</p>
     <note>请注意，这些说明仅在JWT被禁用时有效。从7.2版本开始，默认情况下会启用JWT，因此需要禁用它。
         有关令牌的更多信息可以 <a href="<%= Url.Action("signature/") %>">在此</a>处找到。</note>
 
@@ -110,12 +110,12 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, a form template can be opened for editing. After editing this file, you can get the form itself. To do so, click the <b>Save as pdf</b> button.</p>
+            <p>完成后，可以打开表单模板进行编辑。 编辑此文件后，请单击<b>另存为 pdf</b> 按钮，您可以得到表单文件。</p>
             <img class="screenshot max-width-832" alt="嵌入docxf" src="<%= Url.Content("~/content/img/editor/embed-docxf.png") %>" />
         </div>
         <div id="filling" class="content">
-            <h2 id="pdf" class="copy-link">How to open PDF for filling from website</h2>
-            <p>To make an online form in the PDF format available for filling in, follow the steps below:</p>
+            <h2 id="pdf" class="copy-link">如何从网站打开PDF进行填写</h2>
+            <p>要制作可供填写的 PDF 格式的在线表格，请按照以下步骤操作：</p>
             <ol>
                 <li>查找并打开ONLYOFFICE文档的 <em>index.html</em> 文件。</li>
                 <li>
@@ -198,8 +198,8 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, a form can be opened for filling. After filling in the fields (the required ones are highlighted with the red border), you can submit your data.
-                To do so, click the <b>Submit</b> button.</p>
+            <p>完成后，可以打开表格进行填写。 填写字段后（必填字段以红色边框突出显示），
+                单击<b>提交</b>按钮,您就可以提交数据。</p>
             <img class="screenshot max-width-832" alt="嵌入pdf" src="<%= Url.Content("~/content/img/editor/embed-pdf.png") %>" />
         </div>
     </div>

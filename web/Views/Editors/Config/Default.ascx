@@ -29,9 +29,9 @@
             <td>定义要打开的文档类型：
                 <ul>
                     <li><b>word</b> - 文本文档 （<em>.doc、.docm、.docx、.docxf、.dot、.dotm、.dotx、.epub、.fb2、.fodt、.htm、.html、.mht、.mhtml、.odt、.oform、.ott、.rtf、.stw、.sxw、.txt、.wps、.wpt、.xml</em>），</li>
-                    <li><b>cell</b> - 电子表格 (<em>.csv、.et、.ett、.fods、.ods、.ots、.sxc、.xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx、.xml</em>），</li>
+                    <li><b>cell</b> - 电子表格 （<em>.csv、.et、.ett、.fods、.ods、.ots、.sxc、.xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx、.xml</em>），</li>
                     <li><b>slide</b> - 演示文稿 （<em>.dps、.dpt、.fodp、.odp、.otp、.pot、.potm、.potx、.pps、.ppsm、.ppsx、.ppt、.pptm、.pptx、.sxi</em>），</li>
-                    <li><b>pdf</b> - portable document format (<em>djvu, oxps, pdf, xps</em>).</li>
+                    <li><b>pdf</b> - 便携式文档格式 （<em>djvu, oxps, pdf, xps</em>）。</li>
                 </ul>
             </td>
             <td>string</td>

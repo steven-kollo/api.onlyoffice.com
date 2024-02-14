@@ -28,7 +28,7 @@
     <p>ONLYOFFICE 文档还支持用于将您的应用程序与online office集成的 <b>WOPI 协议</b>。
     有关 WOPI 的更多信息，请参见 <a href="<%= Url.Action("wopi") %>">此处</a>。</p>
 
-    <p><b>ONLYOFFICE Docs API</b> is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation/Pdf Editors into their own web sites and setup and manage the editors.</p>
+    <p><b>ONLYOFFICE文档API</b>用于让开发人员将ONLYOFFICE文档/电子表格/演示文稿/Pdf编辑器集成到自己的网站中，并设置和管理编辑器。</p>
 
     <p>API JavaScript 文件通常可以在以下编辑器文件夹中找到：</p>
     <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>

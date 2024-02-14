@@ -138,17 +138,17 @@ ui=en-us&thm=1&"/&gt;
             </tr>
             <tr>
                 <td id="wopisrc" class="copy-link">wopisrc</td>
-                <td>Indicates that the WOPI server includes the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> value. 
-                It tells the WOPI client what URL to call back to when running WOPI operations on a file.
-                This parameter is required.</td>
+                <td>指示 WOPI 服务器包含 <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> 值。
+                 它告诉 WOPI 客户端在对文件运行 WOPI 操作时回调到哪个 URL。
+                 此参数是必需的。</td>
                 <td>https://&lt;host_address&gt;/wopi/files/(file_id)</td>
             </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
 
-    <h2 id="nextcloud-specific" class="copy-link">Nextcloud specific</h2>
-    <div class="header-gray">Parameters</div>
+    <h2 id="nextcloud-specific" class="copy-link">Nextcloud 特性</h2>
+    <div class="header-gray">参数</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -157,16 +157,18 @@ ui=en-us&thm=1&"/&gt;
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Example</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>示例</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td id="lang" class="copy-link">lang</td>
-                <td>Indicates that the Nextcloud WOPI server includes the document language in the format described in <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a>.
-                This language is used when creating a new document with the <a href="#editnew">editnew</a> action.</td>
+                <td> 表示Nextcloud WOPI服务器包含<a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a>中所述格式的文档语言。
+使用<a href="#editnew">editnew</a>操作创建新文档时使用此语言。
+                
+                </td>
                 <td>en-us</td>
             </tr>
         </tbody>

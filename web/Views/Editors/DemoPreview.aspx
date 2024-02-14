@@ -119,7 +119,7 @@
                 <a class="<%= Request["type"] == "presentation" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=presentation#DemoPreview">演示演示文稿编辑器</a>
             </td>
             <td>
-                <a class="<%= Request["type"] == "pdf" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=pdf#DemoPreview">Demo Pdf editor</a>
+                <a class="<%= Request["type"] == "pdf" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=pdf# DemoPreview">演示 Pdf 编辑器</a>
             </td>
         </tr>
     </table>

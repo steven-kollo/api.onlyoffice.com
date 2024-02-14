@@ -123,7 +123,7 @@ supervisorctl restart all
     </ol>
 
     <h2 id="wopisrc" class="copy-link">WOPISrc</h2>
-    <p>Starting from version 8.0, the WOPISrc query parameter is added to the requests from the browser to the server.
-    This allows you to create several independent instances of ONLYOFFICE.
-    Load balancing requests with WOPISrc ensure that collaborative editing works correctly: all users editing the same document are served by the same server.</p>
-    <p>For WOPI, the parameter sent by the integrator is used. For Docs API, the <a href="<%= Url.Action("config/document") %>#key">document.key</a> parameter is written to WOPISrc.</p>
+    <p>从8.0版本开始，浏览器向服务器的请求中添加了WOPISrc查询参数。
+     这允许您创建多个独立的 ONLYOFFICE 实例。
+     使用 WOPISrc 进行负载平衡请求可确保协作编辑正常工作：编辑同一文档的所有用户都由同一服务器提供服务。</p>
+    <p>对于WOPI，使用集成器发送的参数。 对于 Docs API，<a href="<%= Url.Action("config/document") %>#key">document.key</a> 参数被写入 WOPISrc。</p>

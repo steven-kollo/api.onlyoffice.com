@@ -120,11 +120,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 但在这种情况下， <em>onRequestReferenceData</em> 事件将仅使用 <em>path</em> 参数执行。</note>
         </li>
         <li>
-            <p>When the user is trying to refresh data from the source file by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab,
-                the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> event is called. An object with the unique file data received
-                from the source file, the file path or name, and the file URL are sent in the <em>data</em> parameter.</p>
-            <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
-                If there is no such a field or a file cannot be found, then the <em>path</em> or <em>link</em> parameters are used.</note>
+            <p>当用户尝试通过单击<em>数据</em>选项卡的<em>外部链接</em>对话框中的<em>更新值</em>按钮来刷新源文件中的数据时，
+                调用 <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> 事件。 含有从源文件接收的唯一文件数据的对象、
+                文件路径或名称以及文件 URL 在 <em>data</em> 参数中发送。</p>
+            <note>要将数据发送到<em>setReferenceData</em>方法，建议首先通过<em>referenceData</em>参数搜索文件。
+                    如果没有这样的字段或找不到文件，则使用<em>path</em>或<em>link</em>参数。</note>
             <pre>
 var onRequestReferenceData = function (event) {
     var link = event.data.link;

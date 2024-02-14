@@ -272,11 +272,11 @@
                         <b>例如</b>："78e1e841"；
                     </li>
                     <li>
-                        <b>image</b> - the path to the user avatar,
+                        <b>image</b> - 用户头像的路径,
                         <br />
-                        <b>type</b>: string,
+                        <b>类型</b>: string,
                         <br />
-                        <b>example</b>: "https://example.com/url-to-user-avatar.png";
+                        <b>例如</b>: "https://example.com/url-to-user-avatar.png";
                     </li>
                     <li>
                         <b>lastname</b> - 用户的姓氏。

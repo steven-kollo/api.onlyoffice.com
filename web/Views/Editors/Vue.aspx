@@ -15,38 +15,38 @@
         <span class="hdr">ONLYOFFICE 文档 Vue 组件</span>
     </h1>
 
-    <p>The ONLYOFFICE Docs Vue.js <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">component</a> integrates ONLYOFFICE Docs
-        into <a href="https://vuejs.org/" target="_blank">Vue.js</a> projects.</p>
+    <p>ONLYOFFICE Docs Vue.js <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">组件</a> 集成 ONLYOFFICE Docs
+        到 <a href="https://vuejs.org/" target="_blank">Vue.js</a> 项目。</p>
 
 
-    <h2 id="prerequisites" class="copy-link">Prerequisites</h2>
-    <p>This procedure requires <a href="https://nodejs.org/en" target="_blank">Node.js (and npm)</a>.</p>
+    <h2 id="prerequisites" class="copy-link">先决条件</h2>
+    <p>此过程需要 <a href="https://nodejs.org/en" target="_blank">Node.js（和 npm）</a>。</p>
 
-    <h2 id="install" class="copy-link">Creating the demo Vue.js application with ONLYOFFICE Docs editor</h2>
-    <p>This procedure creates a <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank">basic Vue.js application</a>
-        and installs an ONLYOFFICE Docs editor in it.</p>
+    <h2 id="install" class="copy-link">使用 ONLYOFFICE 文档编辑器创建演示 Vue.js 应用程序</h2>
+    <p>此过程创建一个<a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank">基本 Vue.js 应用程序</a>
+        并在其中安装 ONLYOFFICE 文档编辑器。</p>
     <ol>
         <li>
-            <p>Open a command line or command prompt and create a Vue.js 3.x project named <em>onlyoffice-vue-demo</em>
-                using the <a href="https://github.com/vuejs/create-vue" target="_blank">Create Vue Tool</a>:</p>
+            <p>打开命令行或命令提示符，并使用
+                <a href="https://github.com/vuejs/create-vue" target="_blank">创建 Vue 工具</a>，创建一个名为 <em>onlyoffice-vue-demo</em> 的 Vue.js 3.x 项目：</p>
             <pre>
 npm create vue@3
 </pre>
         </li>
         <li>
-            <p>Go to the newly created directory:</p>
+            <p>进入新创建的目录：</p>
             <pre>
 cd onlyoffice-vue-demo
 </pre>
         </li>
         <li>
-            <p>Install ONLYOFFICE Docs Vue.js component from <b>npm</b> and save it to the <em>package.json</em> file with <em>--save</em>:</p>
+            <p>从 <b>npm</b> 安装 ONLYOFFICE Docs Vue.js 组件，并使用 <em>--save</em> 将其保存到 <em>package.json</em> 文件中：</p>
             <pre>
 npm install --save @onlyoffice/document-editor-vue
 </pre>
         </li>
         <li>
-            <p>Open the <em>./src/App.vue</em> file in the <em>onlyoffice-vue-demo</em> project and replace its contents with the following code:</p>
+            <p>打开 <em>onlyoffice-vue-demo</em> 项目中的 <em>./src/App.vue</em> 文件，并将其内容替换为以下代码：</p>
             <pre>
 &lt;template&gt;
     &lt;DocumentEditor 
@@ -90,68 +90,68 @@ export default defineComponent({
 });
 &lt;/script&gt;
 </pre>
-            <p>Replace the following lines with your own data:</p>
+            <p>将以下行替换为您自己的数据：</p>
             <ul>
-                <li><b>"http://documentserver/"</b> - replace with the URL of your server;</li>
-                <li><b>"https://example.com/url-to-example-document.docx"</b> - replace with the URL to your file;</li>
-                <li><b>"https://example.com/url-to-callback.ashx"</b> - replace with your callback URL (this is required for the saving functionality to work).</li>
+                <li><b>"http://documentserver/"</b> - 替换为您的服务器的 URL；</li>
+                <li><b>"https://example.com/url-to-example-document.docx"</b> - 替换为您的文件的 URL；</li>
+                <li><b>"https://example.com/url-to-callback.ashx"</b> - 替换为您的回调 URL（这是保存功能正常工作所必需的）。</li>
             </ul>
         </li>
         <li>
-            <p>Test the application using the Vue development server:</p>
+            <p>使用 Vue 开发服务器测试应用程序：</p>
             <ul>
                 <li>
-                    <p>To start the development server, navigate to the <em>onlyoffice-vue-demo</em> directory and run:</p>
+                    <p>要启动开发服务器，请导航到 <em>onlyoffice-vue-demo</em> 目录并运行：</p>
                     <pre>
 npm run dev
 </pre>
                 </li>
-                <li>To stop the development server, select on the command line or command prompt and press <em>Ctrl+C</em>.</li>
+                <li>要停止开发服务器，请选择命令行或命令提示符，然后按 <em>Ctrl+C</em>。</li>
             </ul>
         </li>
     </ol>
 
-    <h2 id="deploy" class="copy-link">Deploying the demo Vue.js application</h2>
-    <p>The easiest way to deploy the application to a production environment is to install <a href="https://github.com/vercel/serve" target="_blank">serve</a> and create a static server:</p>
+    <h2 id="deploy" class="copy-link">部署演示 Vue.js 应用程序</h2>
+    <p>将应用程序部署到生产环境的最简单方法是安装 <a href="https://github.com/vercel/serve" target="_blank">serve</a> 并创建静态服务器：</p>
     <ol>
         <li>
-            <p>Install the <em>serve</em> package globally:</p>
+            <p>全局安装 <em>serve</em> 包：</p>
             <pre>
 npm install -g serve
 </pre>
         </li>
         <li>
-            <p>Serve your static site on the 3000 port:</p>
+            <p>在 3000 端口上为您的静态站点提供服务：</p>
             <pre>
 serve -s build
 </pre>
-            <p>Another port can be adjusted using the <em>-l</em> or <em>--listen</em> flags:</p>
+            <p>可以使用 <em>-l</em> 或 <em>--listen</em> 标志调整另一个端口：</p>
             <pre>
 serve -s build -l 4000
 </pre>
         </li>
         <li>
-            <p>To serve the project folder, go to it and run the <em>serve</em> command:</p>
+            <p>要提供项目文件夹，请转到该文件夹并运行 <em>serve</em> 命令：</p>
             <pre>
 cd onlyoffice-vue-demo
 serve
 </pre>
         </li>
     </ol>
-    <p>Now you can deploy the application to the created server:</p>
+    <p>现在您可以将应用程序部署到创建的服务器：</p>
     <ol>
         <li>
-            <p>Navigate to the <em>onlyoffice-vue-demo</em> directory and run:</p>
+            <p>导航到 <em>onlyoffice-vue-demo</em> 目录并运行：</p>
             <pre>
 npm run build
 </pre>
-            <p>The <em>dist</em> directory will be created with a production build of your app.</p>
+            <p><em>dist</em> 目录将使用您的应用程序的产品版本创建。</p>
         </li>
         <li>
-            <p>Copy the contents of the <em>onlyoffice-vue-demo/dist</em> directory to the root directory of the web server (to the <em>onlyoffice-vue-demo</em> folder).</p>
+            <p>将 <em>onlyoffice-vue-demo/dist</em> 目录的内容复制到 Web 服务器的根目录（复制到 <em>onlyoffice-vue-demo</em> 文件夹）。</p>
         </li>
     </ol>
-    <p>The application will be deployed on the web server (<em>http://localhost:3000</em> by default).</p>
+    <p>该应用程序将部署在 Web 服务器上（默认情况下<em>http://localhost:3000</em>）。</p>
 
     <h2 id="api" class="copy-link">ONLYOFFICE 文档 Vue 组件 API</h2>
     <div class="header-gray">属性</div>

@@ -16,18 +16,18 @@
     </h1>
 
     <p class="dscr">ONLYOFFICE文档服务器API的更改列表。</p>
-    <h2 id="80" class="copy-link">Version 8.0</h2>
+    <h2 id="80" class="copy-link">版本 8.0</h2>
     <ul>
-        <li>Added the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> query parameter to the requests from the browser to the server.</li>
-        <li>Added the <a href="<%= Url.Action("conversionapi") %>#watermark">watermark</a> field to the conversion request.</li>
-        <li>Added the <em>pdf</em> document type to the <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter.</li>
-        <li>Added the <a href="<%= Url.Action("callback") %>#formsdataurl">formsdataurl</a> parameter to the <em>Callback handler</em>.</li>
-        <li>Added the <em>data.id</em> parameter to the <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event.</li>
-        <li>Added the <em>users.image</em> field to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</li>
-        <li>Added the <em>info</em> operation type to the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method and <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event.</li>
-        <li>Added the <em>image</em> field to the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a> parameter.</li>
-        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#mobileForceView">editorConfig.customization.mobileForceView</a> parameter.</li>
-        <li>Added the <em>link</em> field to the <em>data</em> object which is sent to the <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">events.onRequestReferenceData</a> event.</li>
+         <li>在浏览器向服务器的请求中添加了 <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> 查询参数。</li>
+         <li>向转化请求添加了<a href="<%= Url.Action("conversionapi") %>#watermark">watermark</a>字段。</li>
+         <li>在 <a href="<%= Url.Action("config/") %>#documentType">documentType</a> 参数中添加了 <em>pdf</em> 文档类型。</li>
+         <li>向回调处理程序添加了 <a href="<%= Url.Action("callback") %>#formsdataurl">formsdataurl</a> 参数。</li>
+         <li>向 <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> 事件添加了 <em>data.id</em> 参数。</li>
+         <li>将<em>users.image</em>字段添加到<a href="<%= Url.Action("methods") %>#setUsers">setUsers</a>方法中。</li>
+         <li>向 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法和<a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> 事件。</li>
+         <li>在 <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a> 参数中添加了<em>image</em>字段。</li>
+         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#mobileForceView">editorConfig.customization.mobileForceView</a> 参数。</li>
+         <li>将<em>link</em>字段添加到<em>data</em>对象，该对象发送到<a href="<%= Url.Action("config/events") %> #onRequestReferenceData">events.onRequestReferenceData</a> 事件。</li>
     </ul>
 
     <h2 id="75" class="copy-link">版本 7.5</h2>

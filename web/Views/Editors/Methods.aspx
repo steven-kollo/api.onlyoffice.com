@@ -38,7 +38,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setRequestedSpreadsheet">setRequestedSpreadsheet</a> - 将邮件合并的收件人数据插入到文件中。</li>
         <li><a href="#setRevisedFile">setRevisedFile</a> - 选择一个文档进行比较。</li>
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
-        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
+        <li><a href="#setUsers">setUsers</a> - 设置用户列表,用来在评论中提及、授予编辑特定工作表范围的访问权限，或设置用户头像。</li>
         <li><a href="#showMessage">showMessage</a> - 显示带有消息的工具提示。</li>
     </ul>
 
@@ -718,7 +718,7 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
-                <b id="setReferenceData" class="copy-link">setReferenceData</b> - refresh data by a link to a file which is specified with the <em>referenceData</em>, <em>path</em>, or <em>link</em> parameters.
+                <b id="setReferenceData" class="copy-link">setReferenceData</b> - 通过指向文件的链接刷新数据, 该链接使用 <em>referenceData</em>、<em>path</em> 或 <em>link</em> 参数指定。
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestReferenceData">onRequestReferenceData</a> 事件之后调用。
             </p>
             <note>请注意，仅当用户有权访问要从中获取数据的文件时，才会执行此方法。</note>
@@ -1209,7 +1209,7 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.
+                <b id="setUsers" class="copy-link">setUsers</b> - 设置用户列表,用以在评论中提及、授予编辑特定工作表范围的访问权限，或设置用户头像。
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件之后调用。
             </p>
             <pre>
@@ -1282,9 +1282,9 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.image</td>
-                        <td>Defines the path to the user avatar. This field is only used when the <em>c</em> parameter is <em>info</em>.</td>
+                        <td>定义用户头像的路径。 仅当<em>c</em>参数为<em>info</em>时才使用此字段。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>

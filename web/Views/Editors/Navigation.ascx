@@ -177,7 +177,7 @@
                     <a href="<%= Url.Action("protectingranges") %>">保护范围</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("javasdk") %>">Integrating editors using Java SDK</a>
+                    <a href="<%= Url.Action("javasdk") %>">使用 Java SDK 集成编辑器</a>
                 </li>
             </ul>
         </li>

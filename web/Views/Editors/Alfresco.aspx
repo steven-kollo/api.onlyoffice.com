@@ -17,7 +17,7 @@
 
     <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">插件</a> 让用户能够从 <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share 中用 ONLYOFFICE 文档编辑办公文档。</p>
 
-    <p>该插件在官方 <a href="https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco" target="_blank">Alfresco Add-ons directory</a>中可用。</p>
+    <p>该插件在官方 <a href="https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco" target="_blank">Alfresco 插件目录</a>中可以找到。</p>
 
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
@@ -30,7 +30,7 @@
         <li>要将 ODT、ODP、ODS、DOC、XLS、PPT 文件转换为其 OOXML 对应文件，请选择 <b>用 ONLYOFFICE 转换</b> 选项。生成的文件将放置在同一文件夹中。
             您还可以为文件夹配置规则，这将在上传或更改时自动转换文件。您可以在 <a href="https://docs.alfresco.com/content-services/latest/using/content/rules/" target="_blank">此处</a>找到详细信息。</li>
         <li>
-            To create a new document, open the folder where you want to create a document and click the <b>Create...</b> button.
+            要创建新文档，请打开要在其中创建文档的文件夹，然后单击<b>创建...</b>按钮。
             <img class="screenshot max-width-832" alt="新建..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
         </li>
     </ul>

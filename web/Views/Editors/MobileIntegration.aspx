@@ -14,7 +14,7 @@
         <span class="hdr">集成ONLYOFFICE移动web编辑器</span>
     </h1>
     <p>要访问移动应用程序中的编辑器功能，请通过WebView组件（一个负责在应用程序中打开网页的系统组件）将其与ONLYOFFICE编辑器集成。
-        After that, users will be able to view, create and edit text documents, spreadsheets, and presentations, fill out and read PDFs directly on their iOS or Android devices.</p>
+        之后，用户将能够直接在 iOS 或 Android 设备上查看、创建和编辑文本文档、电子表格和演示文稿，填写和阅读 PDF。</p>
     <note>请注意，ONLYOFFICE移动web编辑器仅适用于 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx" target="_blank">企业</a> 和 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本的商业版本。</note>
     <div class="container">
         <ul class="browser">
