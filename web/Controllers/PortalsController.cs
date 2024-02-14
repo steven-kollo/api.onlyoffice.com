@@ -75,7 +75,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Index()
         {
-            return View("basic");
+            return View();
         }
 
         public ActionResult Navigation()

@@ -12,6 +12,12 @@
       "sections": [ "jssdk", "pluginssdk", "backend", "apisystem" ]
    },
    {
+      "id": "portals",
+      "title": "Community Server",
+      "description": "Create your own productivity platform based on ONLYOFFICE Groups. In this section, you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.",
+      "sections": [ "section", "apisystem" ]
+   },
+   {
       "id":"jssdk",
       "title":"JavaScript SDK",
       "description":"",
@@ -606,10 +612,11 @@
       }
    },
    {
-      "id":"portals",
-      "title":"Community Server",
-      "description":"Create your own productivity platform based on ONLYOFFICE Groups. In this section, you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.",
-      "version":"12.5",
+      "id":"section",
+      "title":"API Backend",
+      "description":"",
+      "version": "12.5",
+      "parent": "portals",
       "links":{
          "Get started":[
             {
@@ -682,7 +689,16 @@
                "Item1":"settings",
                "Item2":"section/settings"
             }
-         ],
+         ]
+      }
+   },
+   {
+      "id":"apisystem",
+      "title":"API System",
+      "description":"",
+      "version": "12.5",
+      "parent": "portals",
+      "links": {
          "API System":[
             {
                "Item1":"Basic concepts",
