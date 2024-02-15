@@ -595,7 +595,6 @@
         Height = "550px",
         Width = "100%"
     }) %>;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -785,7 +784,9 @@
             config.editorConfig.customization = {
                 "integrationMode": "embed"
             };
-            window.docEditor.destroyEditor();
+            if (window.docEditor) {
+                window.docEditor.destroyEditor();
+            }
             $.ajax({
                 type: "POST",
                 url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",

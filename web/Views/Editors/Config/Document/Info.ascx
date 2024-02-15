@@ -314,7 +314,6 @@
         Height = "550px",
         Width = "100%"
     }) %>;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -434,7 +433,9 @@
 `;
         var info_object = JSON.parse(info);
         config.document.info = info_object;
-        window.docEditor.destroyEditor();
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 
         var pre = document.getElementById("configPre");

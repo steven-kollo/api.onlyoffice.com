@@ -305,7 +305,6 @@
         Width = "100%"
     }) %>;
     var config = config_xlsx;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -356,7 +355,9 @@
                 config = config_xlsx;
             }
             config.document.title = document_object.title;
-            window.docEditor.destroyEditor();
+            if (window.docEditor) {
+                window.docEditor.destroyEditor();
+            }
             window.docEditor = new DocsAPI.DocEditor("placeholder", config);
         }
 

@@ -131,8 +131,6 @@
             Height = "550px",
             Width = "100%"
         }) %>;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-
 </script>
 
 <script>
@@ -207,10 +205,10 @@
 });
 `;
         var config_object = JSON.parse(config_str);
-
-        config.editorConfig.plugins = config_object;
-        
-        window.docEditor.destroyEditor();
+        config.editorConfig.plugins = config_object;        
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 
         var pre = document.getElementById("configPre");
