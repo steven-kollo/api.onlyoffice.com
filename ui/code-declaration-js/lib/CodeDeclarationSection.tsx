@@ -1,12 +1,13 @@
 import { Fragment, JSX, h } from "preact"
 import { CodeDeclarationReference } from "./CodeDeclarationReference.tsx"
+import { CodeDeclarationToken } from "./CodeDeclarationToken.tsx"
 
 function CodeDeclarationSection({ section: s, onHighlight, onRetrieve, onLink }): JSX.Element {
   switch (s.type) {
   case "parameters":
-    return <Parameters parameters={s.items} />
+    return <Parameters parameters={s.items} onLink={onLink} />
   case "returns":
-    return <Returns returns={s} />
+    return <Returns returns={s} onLink={onLink} />
   case "examples":
     return <Examples examples={s.items} onHighlight={onHighlight} />
   case "topics":
@@ -21,27 +22,45 @@ function CodeDeclarationSection({ section: s, onHighlight, onRetrieve, onLink })
   }
 }
 
-function Parameters({ parameters: pa }): JSX.Element {
+function Parameters({ parameters: pa, onLink }): JSX.Element {
   return (
     <>
       <h2>Parameters</h2>
       <dl>
-        {pa.map((p) => (
-          <>
-            <dt><code>{p.name}</code></dt>
-            <dd><p>{p.description}</p></dd>
-          </>
-        ))}
+        {pa.map((p) => {
+          const c = p.signature.map((t) => (
+            <CodeDeclarationToken onLink={onLink} token={t} />
+          ))
+          return (
+            <>
+              <dt><code>{p.name}</code> <code>{c}</code></dt>
+              <dd>
+                <p>{p.description}</p>
+                {p.default !== undefined && <p>Default: <code>{p.default}</code></p>}
+              </dd>
+            </>
+          )
+        })}
       </dl>
     </>
   )
 }
 
-function Returns({ returns: re }): JSX.Element {
+function Returns({ returns: re, onLink }): JSX.Element {
+  const c = re.signature.map((t) => (
+    <CodeDeclarationToken onLink={onLink} token={t} />
+  ))
   return (
     <>
       <h2>Returns</h2>
-      <p>{re.description}</p>
+      <dl>
+        <dt><code>{c}</code></dt>
+        {re.description !== undefined && (
+          <dd>
+            <p>{re.description}</p>
+          </dd>
+        )}
+      </dl>
     </>
   )
 }
@@ -84,7 +103,25 @@ function SeeAlso({ seeAlso: sa, onRetrieve, onLink }): JSX.Element {
     title: "See Also",
     items: sa
   }
-  return <Topic topic={t} onRetrieve={onRetrieve} onLink={onLink} />
+  return (
+    <>
+      <h2>{t.title}</h2>
+      <dl>
+        {t.items.map((item) => {
+          const d = onRetrieve(item)
+          if (d === undefined) {
+            return <></>
+          }
+          return (
+            <>
+              <dt><CodeDeclarationReference declaration={d} onLink={onLink} /></dt>
+              <dd>{d.description}</dd>
+            </>
+          )
+        })}
+      </dl>
+    </>
+  )
 }
 
 function Topic({ topic: t, onRetrieve, onLink }): JSX.Element {

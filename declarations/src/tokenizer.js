@@ -529,4 +529,4 @@ function tokenizeUnion(t) {
   return tk
 }
 
-export { tokenizeDeclaration }
+export { tokenizeDeclaration, tokenizeType }

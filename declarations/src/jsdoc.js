@@ -27,7 +27,7 @@ import { Transform } from "node:stream"
 import { ESLint } from "eslint"
 import { English } from "sentence-splitter/lang"
 import { split } from "sentence-splitter"
-import { tokenizeDeclaration } from "./tokenizer.js"
+import { tokenizeDeclaration, tokenizeType } from "./tokenizer.js"
 
 // todo: rename name to identifier (parameters too)
 // todo: rename custom to reference
@@ -438,7 +438,6 @@ class PostPostprocessDeclarations extends Transform {
     /** @type {any} */
     const returnsSection = {
       type: "returns",
-      items: []
     }
     /** @type {any} */
     const examplesSection = {
@@ -523,7 +522,19 @@ class PostPostprocessDeclarations extends Transform {
         examplesSection.items = d.examples
       }
       if (d.type.parameters !== undefined) {
-        parametersSection.items = d.type.parameters
+        parametersSection.items = d.type.parameters.map((v) => {
+          const o = {
+            name: v.name,
+            signature: tokenizeType(v.type)
+          }
+          if (v.description !== undefined) {
+            o.description = v.description
+          }
+          if (v.default !== undefined) {
+            o.default = v.default
+          }
+          return o
+        })
       }
       if (d.parent !== undefined) {
         // @ts-ignore
@@ -541,10 +552,25 @@ class PostPostprocessDeclarations extends Transform {
         examplesSection.items = d.examples
       }
       if (d.type.parameters !== undefined) {
-        parametersSection.items = d.type.parameters
+        parametersSection.items = d.type.parameters.map((v) => {
+          const o = {
+            name: v.name,
+            signature: tokenizeType(v.type)
+          }
+          if (v.description !== undefined) {
+            o.description = v.description
+          }
+          if (v.default !== undefined) {
+            o.default = v.default
+          }
+          return o
+        })
       }
       if (d.type.returns !== undefined) {
-        returnsSection.items.push(d.type.returns)
+        returnsSection.signature = tokenizeType(d.type.returns.type)
+        if (d.type.returns.description !== undefined) {
+          returnsSection.description = d.type.returns.description
+        }
       }
       if (d.parent !== undefined) {
         // @ts-ignore
@@ -577,10 +603,25 @@ class PostPostprocessDeclarations extends Transform {
         examplesSection.items = d.examples
       }
       if (d.type.parameters !== undefined) {
-        parametersSection.items = d.type.parameters
+        parametersSection.items = d.type.parameters.map((v) => {
+          const o = {
+            name: v.name,
+            signature: tokenizeType(v.type)
+          }
+          if (v.description !== undefined) {
+            o.description = v.description
+          }
+          if (v.default !== undefined) {
+            o.default = v.default
+          }
+          return o
+        })
       }
       if (d.type.returns !== undefined) {
-        returnsSection.items.push(d.type.returns)
+        returnsSection.signature = tokenizeType(d.type.returns.type)
+        if (d.type.returns.description !== undefined) {
+          returnsSection.description = d.type.returns.description
+        }
       }
       if (d.parent !== undefined) {
         // @ts-ignore
@@ -613,7 +654,19 @@ class PostPostprocessDeclarations extends Transform {
         examplesSection.items = d.examples
       }
       if (d.type.parameters !== undefined) {
-        parametersSection.items = d.type.parameters
+        parametersSection.items = d.type.parameters.map((v) => {
+          const o = {
+            name: v.name,
+            signature: tokenizeType(v.type)
+          }
+          if (v.description !== undefined) {
+            o.description = v.description
+          }
+          if (v.default !== undefined) {
+            o.default = v.default
+          }
+          return o
+        })
       }
       if (d.parent !== undefined) {
         // @ts-ignore
@@ -648,7 +701,7 @@ class PostPostprocessDeclarations extends Transform {
     if (parametersSection.items.length > 0) {
       sections.push(parametersSection)
     }
-    if (returnsSection.items.length > 0) {
+    if (returnsSection.description !== undefined || returnsSection.signature !== undefined) {
       sections.push(returnsSection)
     }
     if (examplesSection.items.length > 0) {
