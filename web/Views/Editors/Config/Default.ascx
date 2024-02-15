@@ -216,7 +216,6 @@
             Height = "550px",
             Width = "100%"
         }) %>;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config_word);
 
     var config_cell = <%= Config.Serialize(
         new Config {
@@ -360,7 +359,9 @@
         config.type = config_object.type;
         config.height = config_object.height;
         config.width = config_object.width;
-        window.docEditor.destroyEditor();
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 
         var pre = document.getElementById("configPre");
