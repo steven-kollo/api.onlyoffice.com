@@ -42,7 +42,244 @@
     <li><a href="#onRequestUsers">onRequestUsers</a> - 用户可以选择的其他用户, 用来在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像。</li>
     <li><a href="#onWarning">onWarning</a> - 出现警告。</li>
 </ul>
+<div class="header-gray">Example</div>
+<p>
+Event messages will be available in your browser's DevTools console.
+</p>
+<div id="controlFields" style="width: 100%; padding-right:20px; margin-bottom: 20px;">
+    <div id="info" class="control-panel">
+        <table id="events-table" style="text-align: left;"></table>
+    </div>
+</div>
 
+<script id="event-methods">
+    var eventMethods = {
+        "onAppReady": function () {
+            console.log("ONLYOFFICE Document Editor is ready");
+        },
+        "onCollaborativeChanges": function () {
+            console.log("The document changed by collaborative user");
+        },
+        "onDocumentReady": function () {
+            console.log("Document is loaded");
+        },
+        "onDocumentStateChange": function (event) {
+            if (event.data) {
+                console.log("The document changed");
+            } else {
+                console.log("Changes are collected on document editing service");
+            }
+        },
+        "onDownloadAs": function (event) {
+            console.log(`ONLYOFFICE Document Editor create file of type ${event.data.fileType}: "${event.data.url}")`);
+        },
+        "onError": function (event) {
+            console.log("ONLYOFFICE Document Editor reports an error: code " + event.data.errorCode + ", description " + event.data.errorDescription);
+        },
+        "onInfo": function (event) {
+            console.log("ONLYOFFICE Document Editor is opened in mode " + event.data.mode);
+        },
+        "onMetaChange": function (event) {
+            console.log("Meta changed");
+        },
+        "onMakeActionLink": function (event) {
+            console.log("Action link was made");
+        },
+        "onOutdatedVersion": function () {
+            console.log("Outdataed version");
+        },
+        "onPluginsReady": function () {
+            console.log("Plugin is ready");
+        },
+        "onRequestClose": function () {
+            console.log("Close requested");
+        },
+        "onRequestCreateNew": function () {
+            console.log("Create new requested");
+        },
+        "onRequestEditRights": function () {
+            console.log("ONLYOFFICE Document Editor requests editing rights");
+        },
+        "onRequestHistory": function () {
+            console.log("History requested");
+        },
+        "onRequestHistoryClose": function () {
+            console.log("History close requested");
+        },
+        "onRequestHistoryData": function (event) {
+            console.log("History data requested");
+        },
+        "onRequestInsertImage": function (event) {
+            console.log("Insert image requested");
+        },
+        "onRequestOpen": function (event) {
+            console.log("Open requested");
+        },
+        "onRequestReferenceData": function () {
+            console.log("Reference data requested");
+        },
+        "onRequestReferenceSource": function () {
+            console.log("Reference source requested");
+        },
+        "onRequestRename": function (event) {
+            console.log("Rename requested");
+        },
+        "onRequestRestore": function (event) {
+            console.log("Restore requested");
+        },
+        "onRequestSaveAs": function (event) {
+            console.log("Save as requested");
+        },
+        "onRequestSelectDocument": function () {
+            console.log("Select document requested");
+        },
+        "onRequestSelectSpreadsheet": function () {
+            console.log("Select spreadsheet requested");
+        },
+        "onRequestSendNotify": function (event) {
+            console.log("Send notify requested");
+        },
+        "onRequestSharingSettings": function () {
+            console.log("Sharing settings requested");
+        },
+        "onRequestUsers": function (event) {
+            console.log("Users requested");
+        },
+        "onWarning": function (event) {
+            console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
+        }
+    };
+</script>
+
+<script>
+    const eventNames = [
+        "onAppReady",
+        "onCollaborativeChanges",
+        "onDocumentReady",
+        "onDocumentStateChange",
+        "onDownloadAs",
+        "onError",
+        "onInfo",
+        "onMetaChange",
+        "onMakeActionLink",
+        "onOutdatedVersion",
+        "onPluginsReady",
+        "onReady",
+        "onRequestClose",
+        "onRequestCompareFile",
+        "onRequestCreateNew",
+        "onRequestEditRights",
+        "onRequestHistory",
+        "onRequestHistoryClose",
+        "onRequestHistoryData",
+        "onRequestInsertImage",
+        "onRequestMailMergeRecipients",
+        "onRequestOpen",
+        "onRequestReferenceData",
+        "onRequestReferenceSource",
+        "onRequestRename",
+        "onRequestRestore",
+        "onRequestSaveAs",
+        "onRequestSelectDocument",
+        "onRequestSelectSpreadsheet",
+        "onRequestSendNotify",
+        "onRequestSharingSettings",
+        "onRequestUsers",
+        "onWarning"
+    ];
+
+    for (var i = 0; i < eventNames.length / 3; i++) {
+        let tr = document.createElement("tr");
+        tr.innerHTML = `
+        <th>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i]}" name="event_${eventNames[i]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i]}">${eventNames[i]}</label>
+                </label>
+            </div>
+        </th>
+        <th>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i + 11]}" name="event_${eventNames[i + 11]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i + 11]}">${eventNames[i + 11]}</label>
+                </label>
+            </div>
+        </th>
+        <th>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i + 22]}" name="event_${eventNames[i + 22]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i + 22]}">${eventNames[i + 22]}</label>
+                </label>
+            </div>
+        </th>`;
+        document.getElementById("events-table").appendChild(tr);
+    }
+</script>
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                Info = new Config.DocumentConfig.InfoConfig()
+            },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+    config.events = {};
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+
+<script>
+    $("#controlFields").find("input").change(function () {
+        updateConfigEvents();
+    });
+    function updateConfigEvents() {
+        config.events = {};
+        for (var i = 0; i < eventNames.length; i++) {
+            if (document.getElementById(`event_${eventNames[i]}`).checked) {
+                config.events[eventNames[i]] = eventMethods[eventNames[i]];
+            }
+        }
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    }
+</script>
 <h2>事件及其描述：</h2>
 <ul>
     <li>

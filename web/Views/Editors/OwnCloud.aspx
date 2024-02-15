@@ -216,6 +216,25 @@ git submodule update --init --recursive</span>
             <p>这将禁用证书验证并允许 ownCloud 与文档服务器建立连接。</p>
             <note>请记住，这是一种临时的不安全解决方案，我们强烈建议您将证书替换为某个 CA 颁发的证书。完成此操作后，不要忘记取消选中相应的设置框或从 ownCloud 配置文件中删除上述部分。</note>
         </li>
+        <li id="editors_check_interval">
+            <p><b>Background task</b>. If the editors don't open or save documents after a period of proper functioning,
+                the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.</p>
+            <p>To solve this, we added an asynchronous background task which runs on the server to check availability of the editors.
+                It allows testing the connection between your <b>ownCloud instance</b> and <b>ONLYOFFICE Document Server</b>,
+                namely availability of server addresses and the validity of the JWT secret are being checked.</p>
+            <p>If any issue is detected, the ONLYOFFICE integration connector (consequently, the ability to create and open files) will be disabled.
+                As an ownCloud admin, you will get the corresponding notification.</p>
+            <p>This option allows you to avoid issues when the server settings become incorrect and require changes.</p>
+            <p>By default, this background task runs once a day. If necessary, you can change the frequency.
+                To do so, open the ownCloud config file (<em>_/owncloud/config/config.php_</em>).
+                Insert the following section and enter the required value in minutes:</p>
+            <pre>
+"onlyoffice" => array (
+    "editors_check_interval" => 3624
+)
+</pre>
+            <p>To disable this check running, enter 0 value.</p>
+        </li>
         <li>
             <b>联合云共享</b>。如果使用 <b>联合云共享</b> 应用程序共享文档，则连接到不同 ONLYOFFICE 服务器的 ownCloud 实例之间的共同编辑将不可用。
             来自同一个文档服务器的用户可以在共同编辑模式下编辑文档，但来自两个（或多个）不同文档服务器的用户将无法实时协作处理同一个文档。
