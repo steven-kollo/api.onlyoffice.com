@@ -1,5 +1,0 @@
-export * from "./DeclarationToken.tsx"
-export * from "./DeclarationTokenDecoration.tsx"
-export * from "./DeclarationTokenIdentifier.tsx"
-export * from "./DeclarationTokenKeyword.tsx"
-export * from "./DeclarationTokenReference.tsx"

@@ -303,44 +303,11 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  ui/declaration-reference-js:
-    devDependencies:
-      preact:
-        specifier: ^10.19.3
-        version: 10.19.3
-      preact-render-to-string:
-        specifier: ^6.3.1
-        version: 6.3.1(preact@10.19.3)
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
-  ui/declaration-signature-js:
+  ui/declaration-js:
     dependencies:
-      '@onlyoffice/documentation-ui-declaration-token-js':
-        specifier: workspace:^
-        version: link:../declaration-token-js
-    devDependencies:
       '@onlyoffice/documentation-ui-content-js':
         specifier: workspace:^
         version: link:../content-js
-      preact:
-        specifier: ^10.19.3
-        version: 10.19.3
-      preact-render-to-string:
-        specifier: ^6.3.1
-        version: 6.3.1(preact@10.19.3)
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
-  ui/declaration-token-js:
     devDependencies:
       preact:
         specifier: ^10.19.3
@@ -389,15 +356,9 @@ importers:
       '@onlyoffice/documentation-ui-content-js':
         specifier: workspace:^
         version: link:../content-js
-      '@onlyoffice/documentation-ui-declaration-reference-js':
+      '@onlyoffice/documentation-ui-declaration-js':
         specifier: workspace:^
-        version: link:../declaration-reference-js
-      '@onlyoffice/documentation-ui-declaration-signature-js':
-        specifier: workspace:^
-        version: link:../declaration-signature-js
-      '@onlyoffice/documentation-ui-declaration-token-js':
-        specifier: workspace:^
-        version: link:../declaration-token-js
+        version: link:../declaration-js
       '@onlyoffice/documentation-ui-icon-js':
         specifier: workspace:^
         version: link:../icon-js

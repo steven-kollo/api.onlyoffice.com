@@ -161,10 +161,22 @@
   margin-top: 16px;
 }
 
+.content dt code {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  font-size: 90%;
+  padding: 0;
+}
+
 .content dd {
   margin-left: 0;
   margin-top: 2px;
   padding-inline-start: 32px;
+}
+
+.content dd :first-child {
+  margin-top: 0;
 }
 
 .content hr {

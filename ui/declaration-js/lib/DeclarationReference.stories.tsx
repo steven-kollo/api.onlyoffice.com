@@ -1,8 +1,8 @@
 import { h } from "preact"
-import { DeclarationToken } from "./DeclarationToken.js"
+import { DeclarationReference } from "./DeclarationReference.js"
 
 export default {
-  title: "Components/DeclarationToken",
+  title: "Declaration/DeclarationReference",
   render() {
     function onLink() {
       return "/"
@@ -56,7 +56,7 @@ export default {
       ]
     }
     return (
-      <DeclarationToken onLink={onLink} token={d.signature[0]} />
+      <DeclarationReference onLink={onLink} declaration={d} />
     )
   }
 }
