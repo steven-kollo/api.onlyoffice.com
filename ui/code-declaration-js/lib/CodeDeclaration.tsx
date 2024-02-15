@@ -1,17 +1,17 @@
 import { Content } from "@onlyoffice/documentation-ui-content-js"
 import { JSX, h } from "preact"
-import { DeclarationSection } from "./DeclarationSection.tsx"
-import { DeclarationSignature } from "./DeclarationSignature.tsx"
+import { CodeDeclarationSection } from "./CodeDeclarationSection.tsx"
+import { CodeDeclarationSignature } from "./CodeDeclarationSignature.tsx"
 
-function Declaration({ declaration: d, onHighlight, onRetrieve, onLink }): JSX.Element {
+function CodeDeclaration({ declaration: d, onHighlight, onRetrieve, onLink }): JSX.Element {
   return (
     <Content>
       <h1>{d.title}</h1>
-      <DeclarationSignature tokens={d.signature} onLink={onLink} />
+      <CodeDeclarationSignature tokens={d.signature} onLink={onLink} />
       <h2>Description</h2>
       <p>{d.description}</p>
       {d.sections && d.sections.map((s) => (
-        <DeclarationSection
+        <CodeDeclarationSection
           section={s}
           onHighlight={onHighlight}
           onRetrieve={onRetrieve}
@@ -22,4 +22,4 @@ function Declaration({ declaration: d, onHighlight, onRetrieve, onLink }): JSX.E
   )
 }
 
-export { Declaration }
+export { CodeDeclaration }

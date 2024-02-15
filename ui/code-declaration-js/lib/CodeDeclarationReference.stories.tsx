@@ -1,8 +1,8 @@
 import { h } from "preact"
-import { DeclarationReference } from "./DeclarationReference.js"
+import { CodeDeclarationReference } from "./CodeDeclarationReference.tsx"
 
 export default {
-  title: "Declaration/DeclarationReference",
+  title: "CodeDeclaration/CodeDeclarationReference",
   render() {
     function onLink() {
       return "/"
@@ -56,7 +56,7 @@ export default {
       ]
     }
     return (
-      <DeclarationReference onLink={onLink} declaration={d} />
+      <CodeDeclarationReference onLink={onLink} declaration={d} />
     )
   }
 }

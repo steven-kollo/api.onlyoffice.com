@@ -1,10 +1,10 @@
 {
-  "name": "@onlyoffice/documentation-ui-declaration-js",
+  "name": "@onlyoffice/documentation-ui-code-declaration-js",
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./lib/declaration.ts",
-    "./declaration.css": "./lib/declaration.css"
+    ".": "./lib/code-declaration.ts",
+    "./code-declaration.css": "./lib/code-declaration.css"
   },
   "dependencies": {
     "@onlyoffice/documentation-ui-content-js": "workspace:^"

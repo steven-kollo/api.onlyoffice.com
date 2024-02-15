@@ -1,6 +1,6 @@
 import { Fragment, JSX, h } from "preact"
 
-function DeclarationToken({ onLink, token: t }): JSX.Element {
+function CodeDeclarationToken({ onLink, token: t }): JSX.Element {
   switch (t.type) {
   case "decoration":
     return <Decoration>{t.text}</Decoration>
@@ -41,4 +41,4 @@ function Text({ children: c }): JSX.Element {
   return <>{c}</>
 }
 
-export { DeclarationToken }
+export { CodeDeclarationToken }

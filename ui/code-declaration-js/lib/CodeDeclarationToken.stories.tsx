@@ -1,8 +1,8 @@
 import { h } from "preact"
-import { DeclarationToken } from "./DeclarationToken.js"
+import { CodeDeclarationToken } from "./CodeDeclarationToken.tsx"
 
 export default {
-  title: "Declaration/DeclarationToken",
+  title: "CodeDeclaration/CodeDeclarationToken",
   render() {
     function onLink() {
       return "/"
@@ -56,7 +56,7 @@ export default {
       ]
     }
     return (
-      <DeclarationToken onLink={onLink} token={d.signature[0]} />
+      <CodeDeclarationToken onLink={onLink} token={d.signature[0]} />
     )
   }
 }

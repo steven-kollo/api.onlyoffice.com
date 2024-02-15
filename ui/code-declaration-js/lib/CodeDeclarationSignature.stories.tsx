@@ -1,17 +1,17 @@
 import "@onlyoffice/documentation-ui-content-js/content.css"
 import { Content } from "@onlyoffice/documentation-ui-content-js"
 import { h } from "preact"
-import { DeclarationSignature } from "./DeclarationSignature.tsx"
+import { CodeDeclarationSignature } from "./CodeDeclarationSignature.tsx"
 
 export default {
-  title: "Declaration/DeclarationSignature"
+  title: "CodeDeclaration/CodeDeclarationSignature"
 }
 
 export const Decomposition = {
   render() {
     return (
       <Content>
-        <DeclarationSignature
+        <CodeDeclarationSignature
           tokens={[
             {
               "type": "decoration",

@@ -1,6 +1,6 @@
 import { Fragment, JSX, h } from "preact"
 
-function DeclarationReference({ onLink, declaration: d }): JSX.Element {
+function CodeDeclarationReference({ onLink, declaration: d }): JSX.Element {
   const c = d.signature.map((t) => (
     <Token token={t} />
   ))
@@ -31,4 +31,4 @@ function Text({ children: c }): JSX.Element {
   return <>{c}</>
 }
 
-export { DeclarationReference }
+export { CodeDeclarationReference }

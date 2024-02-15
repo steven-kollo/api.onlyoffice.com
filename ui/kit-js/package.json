@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@onlyoffice/documentation-ui-chapter-navigation-js": "workspace:^",
+    "@onlyoffice/documentation-ui-code-declaration-js": "workspace:^",
     "@onlyoffice/documentation-ui-code-listing-js": "workspace:^",
     "@onlyoffice/documentation-ui-content-js": "workspace:^",
-    "@onlyoffice/documentation-ui-declaration-js": "workspace:^",
     "@onlyoffice/documentation-ui-icon-js": "workspace:^",
     "@onlyoffice/documentation-ui-logo-js": "workspace:^",
     "@onlyoffice/documentation-ui-primitives": "workspace:^",

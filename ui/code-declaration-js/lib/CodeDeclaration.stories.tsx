@@ -1,17 +1,17 @@
 import "@onlyoffice/documentation-ui-content-js/content.css"
-import "./declaration.css"
+import "./code-declaration.css"
 import { h } from "preact"
-import { Declaration } from "./Declaration.tsx"
+import { CodeDeclaration } from "./CodeDeclaration.tsx"
 
 export default {
-  title: "Declaration/Declaration"
+  title: "CodeDeclaration/CodeDeclaration"
 }
 
 export const Composition = {
   render() {
     return (
-      <Declaration
-        declaration={declaration}
+      <CodeDeclaration
+        declaration={d}
         onHighlight={({ children }) => children}
         onLink={() => "https://example.com/"}
         onRetrieve={() => undefined}
@@ -20,7 +20,7 @@ export const Composition = {
   }
 }
 
-const declaration = {
+const d = {
   "id": "word/api_plugins;Api#AddContentControl",
   "meta": {
     "package": "word/api_plugins"

@@ -1,5 +1,5 @@
 import { SyntaxHighlight } from "@/components/syntax-highlight/SyntaxHighlight.tsx"
-import { Declaration } from "@onlyoffice/documentation-ui-kit-js"
+import { CodeDeclaration } from "@onlyoffice/documentation-ui-kit-js"
 import { h, Fragment } from "preact"
 
 function data() {
@@ -12,7 +12,7 @@ function render({ pagination, onRetrieve, onLink }) {
   return (
     <>
       {pagination.items.map((d) => (
-        <Declaration
+        <CodeDeclaration
           declaration={d}
           onHighlight={SyntaxHighlight}
           onLink={onLink}
