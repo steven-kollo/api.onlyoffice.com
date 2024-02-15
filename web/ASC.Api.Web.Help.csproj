@@ -2449,7 +2449,12 @@
     <Content Include="Content\img\docspace\file-icon.png" />
     <Content Include="Content\img\docspace\file-icon-tile.png" />
     <Content Include="Content\img\docspace\file-selector-mode.png" />
+    <Content Include="Content\img\docspace\flask-localhost.png" />
+    <Content Include="Content\img\docspace\flask-structure.png" />
     <Content Include="Content\img\docspace\input.png" />
+    <Content Include="Content\img\docspace\jssdk-devtools-localhost.png" />
+    <Content Include="Content\img\docspace\jssdk-login.png" />
+    <Content Include="Content\img\docspace\jssdk-test-method.png" />
     <Content Include="Content\img\docspace\label.png" />
     <Content Include="Content\img\docspace\loading-button.png" />
     <Content Include="Content\img\docspace\main-button-icon.png" />
@@ -2457,6 +2462,7 @@
     <Content Include="Content\img\docspace\manager-mode.png" />
     <Content Include="Content\img\docspace\modal-dialog.png" />
     <Content Include="Content\img\docspace\more-icon.png" />
+    <Content Include="Content\img\docspace\nodejs-structure.png" />
     <Content Include="Content\img\docspace\plugin-archive.png" />
     <Content Include="Content\img\docspace\plugin-logo.png" />
     <Content Include="Content\img\docspace\plugin-samples.png" />

@@ -67,6 +67,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "ApiSystem/TariffSection/TariffGet",
                 "ApiSystem/TariffSection/TariffSet",
                 "JsSdk",
+                "JsSdk/GettingStarted",
                 "JsSdk/InitModes",
                 "JsSdk/InitModes/Manager",
                 "JsSdk/InitModes/RoomSelector",

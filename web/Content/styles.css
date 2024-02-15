@@ -3173,3 +3173,37 @@ select {
             -o-transform: rotate(180deg);
             transform: rotate(180deg);
         }
+
+.docspace-js-sdk-sample {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 0;
+}
+
+    .docspace-js-sdk-sample .tab {
+        text-align: center;
+        float: left;
+        border: 1px solid #ECEEF1;
+        color: #f94a0c;
+        background-color: #ECEEF1;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 50px;
+        outline: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 0 7px;
+    }
+
+        .docspace-js-sdk-sample .tab:hover {
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .docspace-js-sdk-sample .tab.active {
+            background-color: #fff;
+            box-shadow: 0px 0px 15px rgba(85, 85, 85, 0.1);
+        }

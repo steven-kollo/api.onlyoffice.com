@@ -19,6 +19,9 @@
                 <a href="<%= Url.Action("jssdk/") %>">Basic concepts</a>
             </li>
             <li>
+                <a href="<%= Url.Action("jssdk/gettingstarted") %>">Getting started</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("jssdk/initmodes") %>">Initialization modes</a>
                 <ul>
                     <li>
