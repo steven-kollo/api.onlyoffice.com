@@ -3173,3 +3173,13 @@ select {
             -o-transform: rotate(180deg);
             transform: rotate(180deg);
         }
+
+.copyConfigHolder {
+    position: relative;
+}
+
+.copyConfig {
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+}

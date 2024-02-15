@@ -39,8 +39,13 @@
             </div>
         </div>
     </div>
-    <div id="configPreHolder">
+     <div id="configPreHolder">
         <pre id="configPre"></pre>
+        <div class="copyConfigHolder" >
+            <div class="copyConfig">
+                <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+            </div>
+        </div>
     </div>
 </div>
 
@@ -316,9 +321,55 @@
 </script>
 
 <script>
+    var config_global = "";
     $(document).ready(function () {
         resizeCodeInput();
         updateConfig();
+    });
+
+    $(".copyConfig").click(function () {
+        var html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"><\/script>
+</head>
+<body>
+    <div id="editorSpace">
+        <div id="placeholder"></div>
+    </div>
+    <script>
+new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')});
+    <\/script>
+</body>
+`;
+        navigator.clipboard.writeText(html).then(function () {
+            console.log('Sample Editor HTML page copied to clipboard');
+        }, function (err) {
+            console.error('Could not copy HTML: ', err);
+        });
+    })
+    $(".copyConfig").click(function () {
+        var html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"><\/script>
+</head>
+<body>
+    <div id="editorSpace">
+        <div id="placeholder"></div>
+    </div>
+    <script>
+new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')});
+    <\/script>
+</body>
+`;
+        navigator.clipboard.writeText(html).then(function () {
+            console.log('Sample Editor HTML page copied to clipboard');
+        }, function (err) {
+            console.error('Could not copy HTML: ', err);
+        });
     });
 
     $("#controlFields").find("input,select").change(function () {
@@ -332,7 +383,7 @@
     }
 
     function updateConfig() {
-        
+
         var config_str = `{
             "documentType": ${getFieldValue("config_documentType")},
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
@@ -362,7 +413,7 @@
         config.width = config_object.width;
         window.docEditor.destroyEditor();
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-
+        config_global = config;
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
