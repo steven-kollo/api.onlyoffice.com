@@ -1992,12 +1992,12 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesCommonResource.MessageFileCreatedForm">
             <summary>
-              Looks up a localized string similar to The fillable OFORM document is ready. It is saved in the {0}.
+              Looks up a localized string similar to The fillable PDF document is ready. It is saved in the {0}.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesCommonResource.MessageFillFormDraftCreated">
             <summary>
-              Looks up a localized string similar to The oform copy is created in the {0} folder. Please fill out the form and download the result as a PDF or DOCX file..
+              Looks up a localized string similar to The PDF copy is created in the {0} folder. Please fill out the form and download the result as a PDF or DOCX file..
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesCommonResource.MessageFillFormDraftDiscard">
@@ -3440,7 +3440,7 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCreateFormTemplate">
             <summary>
-              Looks up a localized string similar to Form template.
+              Looks up a localized string similar to PDF Form.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCreateMasterFormFromBlank">
@@ -3600,7 +3600,7 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonMakeForm">
             <summary>
-              Looks up a localized string similar to Save as oform.
+              Looks up a localized string similar to Save as PDF Form.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonMoveCopy">
@@ -4010,7 +4010,7 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.CreateFormTemplateFromFile">
             <summary>
-              Looks up a localized string similar to Create Form Template from file.
+              Looks up a localized string similar to Create PDF Form from file.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.Date">
