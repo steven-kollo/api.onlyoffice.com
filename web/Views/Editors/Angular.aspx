@@ -15,58 +15,58 @@
         <span class="hdr">ONLYOFFICE 文档 Angular 组件</span>
     </h1>
 
-    <p>The ONLYOFFICE Docs Angular <a href="https://github.com/ONLYOFFICE/document-editor-angular-workspace" target="_blank">component</a> integrates ONLYOFFICE Docs into <a href="https://angularjs.org/" target="_blank">Angular</a> projects.</p>
+    <p>ONLYOFFICE Docs Angular <a href="https://github.com/ONLYOFFICE/document-editor-angular-workspace" target="_blank">组件</a>将 ONLYOFFICE Docs 集成到 <a href="https:/ /angularjs.org/" target="_blank">Angular</a> 项目。</p>
 
-    <h2 id="prerequisites" class="copy-link">Prerequisites</h2>
-    <p>This procedure requires <a href="https://nodejs.org/en" target="_blank">Node.js (and npm)</a>.</p>
+    <h2 id="prerequisites" class="copy-link">先决条件</h2>
+    <p>此过程需要 <a href="https://nodejs.org/en" target="_blank">Node.js（和 npm）</a>。</p>
 
-    <h2 id="demo-angular-app" class="copy-link">Creating the demo Angular application with ONLYOFFICE Docs editor</h2>
-    <p>This procedure creates a <a href="https://angular.io/guide/setup-local" target="_blank">basic Angular application</a> and installs an ONLYOFFICE Docs editor in it.</p>
+    <h2 id="demo-angular-app" class="copy-link">使用 ONLYOFFICE 文档编辑器创建演示 Angular 应用程序</h2>
+    <p>此过程创建一个<a href="https://angular.io/guide/setup-local" target="_blank">基本 Angular 应用程序</a>，并在其中安装 ONLYOFFICE 文档编辑器。</p>
     <ol>
         <li>
-            <p>Open a command line or command prompt and install the <a href="https://angular.io/cli" target="_blank">Angular CLI Tool</a> package:</p>
+            <p>打开命令行或命令提示符并安装 <a href="https://angular.io/cli" target="_blank">Angular CLI Tool</a> 包：</p>
             <pre>
 npm install -g @angular/cli
 </pre>
         </li>
         <li>
-            <p>Create a new Angular project named <em>onlyoffice-angular-demo</em>:</p>
+            <p>创建一个名为 <em>onlyoffice-angular-demo</em> 的新 Angular 项目：</p>
             <pre>
 ng new --defaults --skip-git onlyoffice-angular-demo
 </pre>
         </li>
         <li>
-            <p>Go to the newly created directory:</p>
+            <p>进入新创建的目录：</p>
             <pre>
 cd onlyoffice-angular-demo
 </pre>
         </li>
         <li>
-            <p>Install ONLYOFFICE Docs Angular component from <b>npm</b> and save it to the <em>package.json</em> file with <em>--save</em>:</p>
+            <p>从 <b>npm</b> 安装 ONLYOFFICE Docs Angular 组件，并使用 <em>--save</em> 将其保存到 <em>package.json</em> 文件中：</p>
             <pre>
 npm install --save @onlyoffice/document-editor-angular
 </pre>
-            <p>You can also use the following <b>yarn</b> command:</p>
+            <p>您还可以使用以下 <b>yarn</b> 命令：</p>
             <pre>
 yarn add @onlyoffice/document-editor-angular
 </pre>
         </li>
     </ol>
 
-    <p>The following steps depend on the Angular version you use. To check the installed version, run the following command:</p>
+    <p>以下步骤取决于您使用的 Angular 版本。 要检查已安装的版本，请运行以下命令：</p>
     <pre>
 ng version
 </pre>
 
     <div class="container">
         <ul class="browser">
-            <li class="browser tab active copy-link" id="old-versions">Versions prior to 17.0.0</li>
-            <li class="browser tab copy-link" id="new-versions">Versions 17.0.0 and above</li>
+            <li class="browser tab active copy-link" id="old-versions">17.0.0 之前的版本</li>
+            <li class="browser tab copy-link" id="new-versions">17.0.0 及以上的版本</li>
         </ul>
         <div id="old-versions" class="content active">
             <ol>
                 <li>
-                    <p>Open the <em>./src/app/app.module.ts</em> file in the <em>onlyoffice-angular-demo</em> project and import the <b>DocumentEditorModule</b>:</p>
+                    <p>打开 <em>onlyoffice-angular-demo</em> 项目中的 <em>./src/app/app.module.ts</em> 文件并导入 <b>DocumentEditorModule</b>：</p>
                     <pre>
 import { NgModule } from "@angular/core";
 import { DocumentEditorModule } from "@onlyoffice/document-editor-angular";
@@ -88,7 +88,7 @@ export class AppModule { }
  </pre>
                 </li>
                 <li>
-                    <p>Open the <em>./src/app/app.component.ts</em> file in the <em>onlyoffice-angular-demo</em> project and define options in your consuming component:</p>
+                    <p>打开 <em>onlyoffice-angular-demo</em> 项目中的 <em>./src/app/app.component.ts</em> 文件，并在您的使用组件中定义选项：</p>
                     <pre>
 import { Component } from "@angular/core";
 import { IConfig } from "@onlyoffice/document-editor-angular";
@@ -116,15 +116,15 @@ export class AppComponent {
     };
 }
 </pre>
-                    <p>Replace the following lines with your own data:</p>
+                    <p>将以下行替换为您自己的数据：</p>
                     <ul>
-                        <li><b>"https://example.com/url-to-example-document.docx"</b> - replace with the URL to your file;</li>
-                        <li><b>"https://example.com/url-to-callback.ashx"</b> - replace with your callback URL (this is required for the saving functionality to work).</li>
+                        <li><b>"https://example.com/url-to-example-document.docx"</b> - 替换为您的文件的 URL；</li>
+                        <li><b>"https://example.com/url-to-callback.ashx"</b> - 替换为您的回调 URL（这是保存功能正常工作所必需的）。</li>
                     </ul>
-                    <p>This TypeScript file will create the <em>AppComponent</em> component containing the ONLYOFFICE Docs editor configured with basic features.</p>
+                    <p>此 TypeScript 文件将创建 <em>AppComponent</em> 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。</p>
                 </li>
                 <li>
-                    <p>In template, use the <em>document-editor</em> component with your options:</p>
+                    <p>在模板中，将<em>文档编辑器</em>组件与您的选项一起使用：</p>
                     <pre>
 &lt;document-editor
     id="docxEditor"
@@ -133,16 +133,16 @@ export class AppComponent {
     [events_onDocumentReady]="onDocumentReady"
 &gt;&lt;/document-editor&gt;
 </pre>
-                    <p>Replace the <b>"http://documentserver/"</b> line with the URL of your server.</p>
+                    <p>将 <b>"http://documentserver/"</b> 行替换为您的服务器的 URL。</p>
                 </li>
             </ol>
         </div>
         <div id="new-versions" class="content">
             <ol>
                 <li>
-                    <p>Open the <em>./src/app/app.component.ts</em> file in the <em>onlyoffice-angular-demo</em> project and define options in your consuming component:</p>
-                    <note>Please note that starting from Angular v17.0.0, the <em>app.module.ts</em> file is not added to the new projects by default.
-                        You must specify <em>DocumentEditorModule</em> in the <em>imports</em> property of the <em>Component</em> decorator and set <em>standalone</em> to <em>true</em>.</note>
+                    <p>打开 <em>onlyoffice-angular-demo</em> 项目中的 <em>./src/app/app.component.ts</em> 文件，并在您的使用组件中定义选项：</p>
+                    <note>请注意，从 Angular v17.0.0 开始，默认情况下，<em>app.module.ts</em> 文件不会添加到新项目中。
+                        您必须在 <em>Component</em> 装饰器的 <em>imports</em> 属性中指定 <em>DocumentEditorModule</em>，并将 <em>standalone</em> 设置为 <em>true</em>。</note>
                     <pre>
 import { Component } from "@angular/core";
 import { IConfig } from "@onlyoffice/document-editor-angular";
@@ -173,15 +173,15 @@ export class AppComponent {
     };
 }
 </pre>
-                    <p>Replace the following lines with your own data:</p>
+                    <p>将以下行替换为您自己的数据：</p>
                     <ul>
-                        <li><b>"https://example.com/url-to-example-document.docx"</b> - replace with the URL to your file;</li>
-                        <li><b>"https://example.com/url-to-callback.ashx"</b> - replace with your callback URL (this is required for the saving functionality to work).</li>
+                        <li><b>"https://example.com/url-to-example-document.docx"</b> - 替换为您的文件的 URL；</li>
+                        <li><b>"https://example.com/url-to-callback.ashx"</b> - 替换为您的回调 URL（这是保存功能正常工作所必需的）。</li>
                     </ul>
-                    <p>This TypeScript file will create the <em>AppComponent</em> component containing the ONLYOFFICE Docs editor configured with basic features.</p>
+                    <p>此 TypeScript 文件将创建 <em>AppComponent</em> 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。</p>
                 </li>
                 <li>
-                    <p>In template, use the <em>document-editor</em> component with your options:</p>
+                    <p>在模板中，将<em>document-editor</em>组件与您的选项一起使用：</p>
                     <pre>
 &lt;document-editor
     id="docxEditor"
@@ -190,49 +190,49 @@ export class AppComponent {
     [events_onDocumentReady]="onDocumentReady"
 &gt;&lt;/document-editor&gt;
 </pre>
-                    <p>Replace the <b>"http://documentserver/"</b> line with the URL of your server.</p>
+                    <p>将 <b>"http://documentserver/"</b> 行替换为您的服务器的 URL。</p>
                 </li>
             </ol>
         </div>
     </div>
-    <p>Test the application using the Node.js development server:</p>
+    <p>使用 Node.js 开发服务器测试应用程序：</p>
     <ul>
         <li>
-            <p>To start the development server, navigate to the <em>onlyoffice-angular-demo</em> directory and run:</p>
+            <p>要启动开发服务器，请导航到 <em>onlyoffice-angular-demo</em> 目录并运行：</p>
             <pre>
 npm run start
 </pre>
         </li>
-        <li>To stop the development server, select on the command line or command prompt and press <em>Ctrl+C</em>.</li>
+        <li>要停止开发服务器，请选择命令行或命令提示符，然后按 <em>Ctrl+C</em>。</li>
     </ul>
 
 
-    <h2 id="deploy" class="copy-link">Deploying the demo Angular application</h2>
-    <p>To deploy the application to a production environment, create the build-specific configuration options for Angular projects:</p>
+    <h2 id="deploy" class="copy-link">部署演示 Angular 应用程序</h2>
+    <p>要将应用程序部署到产品环境，请为 Angular 项目创建特定于构建的配置选项：</p>
     <ol>
         <li>
-            <p>Create the <em>src/environments/</em> directory and configure the project to use these files by running the following command:</p>
+            <p>创建 <em>src/environments/</em> 目录并通过运行以下命令将项目配置来使用这些文件：</p>
             <pre>
 ng generate environments
 </pre>
-            <p>The newly created directory contains the <em>environment.ts</em> base configuration file, which provides configuration for the default <em>production</em> environment.
-                The default values can be overridden for the additional environments, such as <em>development</em> and <em>staging</em>, in target-specific configuration files.</p>
-                <p>The base <em>environment.ts</em> file contains the default environment settings:</p>
+            <p>新创建的目录包含<em>environment.ts</em>基本配置文件，它提供默认<em>production</em>环境的配置。
+                可以在特定于目标的配置文件中覆盖其他环境的默认值，例如<em>development</em>和<em>staging</em>。</p>
+                <p>基础 <em>environment.ts</em> 文件包含默认环境设置：</p>
                 <pre>
 export const environment = {
     production: false
 }
 </pre>
-            <p>The <em>build</em> command uses this as the build target when no environment is specified.</p>
-            <p>You can add additional properties to the <em>environment</em> object, or as separate objects.
-                For example, the default <em>apiUrl</em> variable is added to the default environment:</p>
+            <p>当未指定环境时，<em>build</em> 命令使用它作为构建目标。</p>
+            <p>您可以将其他属性添加到<em>environment</em>对象中，或者作为单独的对象。
+                例如，默认的 <em>apiUrl</em> 变量被添加到默认环境中：</p>
                 <pre>
 export const environment = {
     production: true,
     apiUrl: "http://my-prod-url"
 };
 </pre>
-            <p>The target-specific configuration files, such as <em>environment.development.ts</em>, set default values for the <em>development</em> build target:</p>
+            <p>特定于目标的配置文件（例如<em>environment.development.ts</em>）为<em>development</em>构建目标设置默认值：</p>
             <pre>
 export const environment = {
     production: true
@@ -240,17 +240,17 @@ export const environment = {
 </pre>
         </li>
         <li>
-            <p>Import the original environment file in the <em>app.component.ts</em> component file to use the environment configurations you have defined:</p>
+            <p>在 <em>app.component.ts</em> 组件文件中导入原始环境文件，以使用您定义的环境配置：</p>
             <pre>
 import { environment } from "./../environments/environment";
 </pre>
-            <p>This ensures that the <em>build</em> and <em>serve</em> commands can find the configurations for the specific build targets.</p>
+            <p>这可确保 <em>build</em> 和 <em>serve</em> 命令可以找到特定构建目标的配置。</p>
         </li>
         <li>
-            <p>Add the <em>fileReplacements</em> parameter to the configuration for each build target of the <em>angular.json</em> configuration file.
-                This parameter replaces any file in the TypeScript program with the target-specific file version and includes the target-specific code or variables
-                in a build that targets a specific environment, such as <em>development</em> or <em>staging</em>.</p>
-            <p>By default no files are replaced. But you can add file replacements for the specific build targets:</p>
+            <p>将 <em>fileReplacements</em> 参数添加到 <em>angular.json</em> 配置文件的每个构建目标的配置中。
+                此参数将 TypeScript 程序中的任何文件替换为特定于目标的文件版本，并在针对特定环境的构建中包含特定于目标的代码或变量，
+                例如<em>development</em>或<em>staging</em>。</p>
+            <p>默认情况下不替换任何文件。 但您可以为特定构建目标添加文件替换：</p>
             <pre>
 "configurations": {
     "development": {
@@ -264,10 +264,10 @@ import { environment } from "./../environments/environment";
     }
 }
 </pre>
-            <p>This means that when you build your development configuration with <em>ng build --configuration development</em>,
-                the <em>src/environments/environment.ts</em> file is replaced with the <em>src/environments/environment.development.ts</em> target-specific version of the file.</p>
-            <p>You can add additional configurations. For example, to add a <em>staging</em> environment, copy the <em>src/environments/environment.ts</em> file
-                with the <em>src/environments/environment.staging.ts</em> title, then add a <em>staging</em> configuration to <em>angular.json</em>:</p>
+            <p>这意味着当您使用<em>ng build --configurationdevelopment</em>构建开发配置时，
+                <em>src/environments/environment.ts</em> 文件将替换为 <em>src/environments/environment.development.ts</em> 特定目标的文件版本。</p>
+            <p>您可以添加其他配置。 例如，要添加 <em>staging</em> 环境，请复制 <em>src/environments/environment.ts</em> 文件以及
+                <em>src/environments/environment.staging.ts</em> 标题，然后将 <em>staging</em> 配置添加到 <em>angular.json</em>：</p>
             <pre>
 "configurations": {
     "production": { ... },
@@ -283,7 +283,7 @@ import { environment } from "./../environments/environment";
 </pre>
         </li>
         <li>
-            <p>Configure the <em>serve</em> command to use the targeted build configuration by adding it to the <em>serve.configurations</em> section of <em>angular.json</em>:</p>
+            <p>>将 <em>serve</em> 命令配置为使用目标构建配置，方法是将其添加到 <em>angular.json</em> 的 <em>serve.configurations</em> 部分：</p>
             <pre>
 "serve": {
     "builder": "@angular-devkit/build-angular:dev-server",
@@ -299,20 +299,20 @@ import { environment } from "./../environments/environment";
 </pre>
         </li>
     </ol>
-    <p>Now you can deploy the application to the created server:</p>
+    <p>现在您可以将应用程序部署到创建的服务器：</p>
     <ol>
         <li>
-            <p>Navigate to the <em>onlyoffice-angular-demo</em> directory and run:</p>
+            <p>导航到 <em>onlyoffice-angular-demo</em> 目录并运行：</p>
             <pre>
 ng build
 </pre>
-            <p>The <em>dist</em> directory will be created with a production build of your app.</p>
+            <p><em>dist</em> 目录将使用您的应用程序的产品版本创建。</p>
         </li>
         <li>
-            <p>Copy the contents of the <em>dist/onlyoffice-angular-demo</em> directory to the root directory of the web server (to the <em>onlyoffice-angular-demo</em> folder).</p>
+            <p>将 <em>dist/onlyoffice-angular-demo</em> 目录的内容复制到 Web 服务器的根目录（复制到 <em>onlyoffice-angular-demo</em> 文件夹）。</p>
         </li>
     </ol>
-    <p>The application will be deployed on the web server (<em>http://localhost:3000</em> by default).</p>
+    <p>该应用程序将部署在 Web 服务器上（默认情况下<em>http://localhost:3000</em>）。</p>
 
 
     <h2 id="api" class="copy-link">ONLYOFFICE 文档 Angular 组件API</h2>

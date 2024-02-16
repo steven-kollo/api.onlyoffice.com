@@ -250,9 +250,9 @@
                     <p>在执行强制保存请求时接收到。</p>
                     <p><em>callbackUrl</em> 依赖于 <em>forcesavetype</em> 参数：</p>
                     <ul>
-                        <li>如果 <em>forcesavetype</em> 参数设置为 <b>1</b>，则使用来自单击 <b>保存</b> 按钮的用户的 <em>callbackUrl</em>。</li>
+                        <li>如果 <em>forcesavetype</em> 参数设置为 <b>1</b>，则使用点击 <b>保存</b> 按钮的用户的 <em>callbackUrl</em>。</li>
                         <li>如果 <em>forcesavetype</em> 参数设置为 <b>0</b> 或 <b>2</b>，则使用对文件进行最后更改的用户的 <em>callbackUrl</em>。</li>
-                        <li>If <em>forcesavetype</em> parameter is set to <b>3</b>, the <em>callbackUrl</em> from the user who clicked the <b>Submit</b> button is used.</li>
+                        <li>如果 <em>forcesavetype</em> 参数设置为<b>3</b>，则使用点击 <b>提交</b> 按钮的用户的 <em>callbackUrl</em>。</li>
                     </ul>
                     <p>从版本 5.5 到版本 6.1，始终使用对文件进行最后更改的用户的 <em>callbackUrl</em>。</p>
                 </td>

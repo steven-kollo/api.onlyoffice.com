@@ -12,7 +12,7 @@
     <li><a href="#onCollaborativeChanges">onCollaborativeChanges</a> - 文档由其他用户以 <em>严格</em> 共同编辑模式共同编辑。</li>
     <li><a href="#onDocumentReady">onDocumentReady</a> - 文档被加载到文档编辑器中。</li>
     <li><a href="#onDocumentStateChange">onDocumentStateChange</a> - 文档被修改。</li>
-    <li><a href="#onDownloadAs">onDownloadAs</a> - 调用 <em>downloadAs</em> 方法时编辑文件的绝对 URL 。</li>
+    <li><a href="#onDownloadAs">onDownloadAs</a> - 调用 <em>downloadAs</em> 方法时编辑文件的绝对 URL。</li>
     <li><a href="#onError">onError</a> - 发生错误或其他特定事件。</li>
     <li><a href="#onInfo">onInfo</a> - 应用程序打开了文件。</li>
     <li><a href="#onMetaChange">onMetaChange</a> - 通过meta命令更改文档的 <em>元</em> 信息。</li>
@@ -42,9 +42,9 @@
     <li><a href="#onRequestUsers">onRequestUsers</a> - 用户可以选择的其他用户, 用来在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像。</li>
     <li><a href="#onWarning">onWarning</a> - 出现警告。</li>
 </ul>
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <p>
-Event messages will be available in your browser's DevTools console.
+事件消息将在浏览器的 DevTools 控制台中提供。
 </p>
 <div id="controlFields" style="width: 100%; padding-right:20px; margin-bottom: 20px;">
     <div id="info" class="control-panel">
@@ -788,12 +788,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - the function called when the user is trying to refresh data inserted from the external file
-            by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab.</p>
-        <p>An object with the unique file data from the source file, the file path or name, and the file URL are sent in the <em>data</em> parameter.</p>
-        <p>To refresh data by a link to a file which is specified with the event parameters, you must call the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.
-            When calling this method, the token must be added to validate the parameters.
-            If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.</p>
+        <p><b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - 当用户尝试通过单击
+            <em>数据</em>选项卡的<em>外部链接</em>对话框中的<em>更新值</em>按钮来刷新从外部文件插入的数据时调用的函数。</p>
+        <p>含有来自源文件的唯一文件数据、文件路径或名称以及文件 URL 的对象在 <em>data</em> 参数中发送。</p>
+        <p>要通过事件参数指定的文件链接刷新数据，您必须调用 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法。
+             调用该方法时，必须添加token来验证参数。
+             如果未声明该事件，则不会显示<em>粘贴链接</em>和<em>更新值</em>按钮。</p>
        <note>要将数据发送给<em>setReferenceData</em>方法，建议先通过<em>referenceData</em>参数搜索文件。
          如果没有这样的字段或找不到文件，则使用 <em>path</em> 参数。</note>
         <div class="img-block-2">
@@ -1109,10 +1109,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</p>
+        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - 当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。</p>
         <p>从7.4版本开始，可以在<em>data.c</em>参数中指定操作类型。 它可以采用两个值 - <em>mention</em>或<em>protect</em>。
          在版本 7.4 之前，此事件仅支持mention操作。</p>
-        <p>Starting from version 8.0, the <em>info</em> operation type is added to set the avatars for the users with the ids specified in the <em>data.id</em> parameter.</p>
+        <p>从8.0版本开始，新增<em>info</em>操作类型，为<em>data.id</em>参数中指定id的用户设置头像。</p>
         <p>要设置用户列表，您必须调用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。
              当执行相应的操作时，每个 <em>c</em> 类型都会调用一次 <em>onRequestUsers</em> 事件。
              如果使用空列表调用<em>setUsers</em>，则<em>onRequestUsers</em>事件将再次触发。</p>

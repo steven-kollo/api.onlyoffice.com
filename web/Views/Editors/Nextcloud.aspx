@@ -189,23 +189,23 @@ git submodule update --init --recursive</span>
             <note>请记住，这是一种临时的不安全解决方案，我们强烈建议您将证书替换为某个 CA 颁发的证书。完成此操作后，不要忘记取消选中相应的设置框或从 Nextcloud 配置文件中删除上述部分。</note>
         </li>
         <li id="editors_check_interval">
-            <p><b>Background task</b>. If the editors don't open or save documents after a period of proper functioning,
-                the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.</p>
-            <p>To solve this, we added an asynchronous background task which runs on the server to check availability of the editors.
-                It allows testing the connection between your <b>Nextcloud instance</b> and <b>ONLYOFFICE Document Server</b>,
-                namely availability of server addresses and the validity of the JWT secret are being checked.</p>
-            <p>If any issue is detected, the ONLYOFFICE integration connector (consequently, the ability to create and open files) will be disabled.
-                As a Nextcloud admin, you will get the corresponding notification.</p>
-            <p>This option allows you to avoid issues when the server settings become incorrect and require changes.</p>
-            <p>By default, this background task runs once a day. If necessary, you can change the frequency.
-                To do so, open the Nextcloud config file (<em>_/nextcloud/config/config.php_</em>).
-                Insert the following section and enter the required value in minutes:</p>
+            <p><b>后台任务</b>。 如果编辑器在正常运行一段时间后没有打开或保存文档，
+                原因可能是更改网络设置或禁用任何相关服务时出现问题，或者 SSL 证书出现问题。</p>
+            <p>为了解决这个问题，我们添加了一个在服务器上运行的异步后台任务来检查编辑器的可用性。
+                它允许测试您的 <b>Nextcloud 实例</b> 和 <b>ONLYOFFICE Document Server</b> 之间的连接，
+                即检查服务器地址的可用性和 JWT 密钥的有效性。</p>
+            <p>如果检测到任何问题，ONLYOFFICE 集成连接器（相应的，创建和打开文件的功能）将被禁用。
+                作为 Nextcloud 管理员，您将收到相应的通知。</p>
+            <p>此选项可让在您服务器设置不正确并需要更改时避免出现问题。</p>
+            <p>默认情况下，此后台任务每天运行一次。 如有必要，您可以更改频率。
+                为此，请打开 Nextcloud 配置文件 (<em>_/nextcloud/config/config.php_</em>)。
+                插入以下部分并输入所需的分钟值：</p>
             <pre>
 "onlyoffice" => array (
     "editors_check_interval" => 3624
 )
 </pre>
-            <p>To disable this check running, enter 0 value.</p>
+            <p>要禁用此检查运行，请输入 0 值。</p>
         </li>
         <li>
             <b>联合云共享</b>。如果使用 <b>联合云共享</b> 应用程序共享文档，则连接到不同 ONLYOFFICE 服务器的 Nextcloud 实例之间的共同编辑将不可用。

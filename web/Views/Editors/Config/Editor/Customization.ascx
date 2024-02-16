@@ -75,15 +75,15 @@
     <li><a href="#zoom">zoom</a></li>
 </ul>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <p>
-    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+     请参阅<a href="<%= Url.Action("howitworks") %>">工作原理</a>部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
 </p>
 
 <p>
-    If you have any further questions, please contact us at
-    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+    如果您还有任何疑问，请通过以下方式联系我们：
+    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>。
 </p>
 
 <div id="controlFields">
@@ -92,7 +92,7 @@
             <label class="dataItemSpan" style="margin-top: 0px;">
                 <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_anonymous">Anonymous</label>
+                <label for="editorConfig_customization_anonymous">匿名的</label>
             </label>
         </div>
         <div id="holder_editorConfig_customization_anonymous" class="config_object_holder">
@@ -100,11 +100,11 @@
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" hidden="hidden" checked>
                     <span></span>
-                    <label for="editorConfig_customization_anonymous_request">Request</label>
+                    <label for="editorConfig_customization_anonymous_request">请求</label>
                 </label>
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_anonymous_label">Label</label>
+                <label for="editorConfig_customization_anonymous_label">标签</label>
                 <input type="text" id="editorConfig_customization_anonymous_label" name="editorConfig_customization_anonymous_label" value="Guest">
             </div>
         </div>
@@ -112,71 +112,71 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_autosave" name="editorConfig_customization_autosave" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_autosave">Autosave</label>
+                <label for="editorConfig_customization_autosave">自动保存</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_comments" name="editorConfig_customization_comments" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_comments">Comments</label>
+                <label for="editorConfig_customization_comments">评论</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_compactHeader" name="editorConfig_customization_compactHeader" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_compactHeader">Compact Header</label>
+                <label for="editorConfig_customization_compactHeader">紧凑型头部</label>
             </label>
         </div>
        <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_compactToolbar" name="editorConfig_customization_compactToolbar" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_compactToolbar">Compact Toolbar</label>
+                <label for="editorConfig_customization_compactToolbar">紧凑型工具栏</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_compatibleFeatures" name="editorConfig_customization_compatibleFeatures" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_compatibleFeatures">Compatible Features</label>
+                <label for="editorConfig_customization_compatibleFeatures">兼容功能</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_customer" name="editorConfig_customization_customer" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_customer">Customer</label>
+                <label for="editorConfig_customization_customer">客户</label>
             </label>
         </div>
         <div id="holder_editorConfig_customization_customer" class="config_object_holder" hidden>
             <div class="line input_line">
-                <label for="editorConfig_customization_customer_address">Address</label>
+                <label for="editorConfig_customization_customer_address">地址</label>
                 <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_customer_info">Info</label>
+                <label for="editorConfig_customization_customer_info">信息</label>
                 <input type="text" id="editorConfig_customization_customer_info" name="editorConfig_customization_customer_info" value="Some additional information">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_customer_logo">Logo</label>
+                <label for="editorConfig_customization_customer_logo">Logo标志</label>
                 <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_customer_logoDark">Logo Dark</label>
+                <label for="editorConfig_customization_customer_logoDark">深色Logo标志</label>
                 <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_customer_mail">Mail</label>
+                <label for="editorConfig_customization_customer_mail">邮件</label>
                 <input type="text" id="editorConfig_customization_customer_mail" name="editorConfig_customization_customer_mail" value="john@example.com">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_customer_name">Name</label>
+                <label for="editorConfig_customization_customer_name">姓名</label>
                 <input type="text" id="editorConfig_customization_customer_name" name="editorConfig_customization_customer_name" value="John Smith and Co.">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_customer_phone">phone</label>
+                <label for="editorConfig_customization_customer_phone">电话</label>
                 <input type="text" id="editorConfig_customization_customer_phone" name="editorConfig_customization_customer_phone" value="123456789">
             </div>
             <div class="line input_line">
@@ -188,7 +188,7 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_features" name="editorConfig_customization_features" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_features">Features</label>
+                <label for="editorConfig_customization_features">特性</label>
             </label>
         </div>
         <div id="holder_editorConfig_customization_features" class="config_object_holder" hidden>
@@ -211,19 +211,19 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_feedback" name="editorConfig_customization_feedback" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_feedback">Feedback</label>
+                <label for="editorConfig_customization_feedback">反馈</label>
             </label>
         </div>
         <div id="holder_editorConfig_customization_feedback" class="config_object_holder" hidden>
             <div class="line input_line">
-                <label for="editorConfig_customization_feedback_url">url</label>
+                <label for="editorConfig_customization_feedback_url">url地址</label>
                 <input type="text" id="editorConfig_customization_feedback_url" name="editorConfig_customization_feedback_url" value="https://example.com">
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_feedback_visible" name="editorConfig_customization_feedback_visible" hidden="hidden" checked>
                     <span></span>
-                    <label for="editorConfig_customization_feedback_visible">Visible</label>
+                    <label for="editorConfig_customization_feedback_visible">可见</label>
                 </label>
             </div>
         </div>
@@ -231,14 +231,14 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_forcesave" name="editorConfig_customization_forcesave" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_forcesave">Force Save</label>
+                <label for="editorConfig_customization_forcesave">强制保存</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_goback" name="editorConfig_customization_goback" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_goback">Go back</label>
+                <label for="editorConfig_customization_goback">返回</label>
             </label>
         </div>
         <div id="holder_editorConfig_customization_goback" class="config_object_holder" hidden>
@@ -246,22 +246,22 @@
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" hidden="hidden" checked>
                     <span></span>
-                    <label for="editorConfig_customization_goback_blank">Blank</label>
+                    <label for="editorConfig_customization_goback_blank">空白页</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_goback_requestClose" name="editorConfig_customization_goback_requestClose" hidden="hidden">
                     <span></span>
-                    <label for="editorConfig_customization_goback_requestClose">Request Close</label>
+                    <label for="editorConfig_customization_goback_requestClose">请求关闭</label>
                 </label>
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_goback_text">Text</label>
+                <label for="editorConfig_customization_goback_text">文本</label>
                 <input type="text" id="editorConfig_customization_goback_text" name="editorConfig_customization_goback_text" value="Open file location">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_goback_url">Url</label>
+                <label for="editorConfig_customization_goback_url">Url地址</label>
                 <input type="text" id="editorConfig_customization_goback_url" name="editorConfig_customization_goback_url" value="https://example.com">
             </div>
         </div>
@@ -269,48 +269,48 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_help" name="editorConfig_customization_help" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_help">Help</label>
+                <label for="editorConfig_customization_help">帮助</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_hideRightMenu">Hide Right Menu</label>
+                <label for="editorConfig_customization_hideRightMenu">隐藏右侧菜单</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_hideRulers" name="editorConfig_customization_hideRulers" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_hideRulers">Hide Rulers</label>
+                <label for="editorConfig_customization_hideRulers">隐藏标尺</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_integrationMode" name="editorConfig_customization_integrationMode" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_integrationMode">Integration Mode</label>
+                <label for="editorConfig_customization_integrationMode">整合模式</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_logo" name="editorConfig_customization_logo" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_logo">Logo</label>
+                <label for="editorConfig_customization_logo">Logo标志</label>
             </label>
         </div>
         <div id="holder_editorConfig_customization_logo" class="config_object_holder" hidden>
             <div class="line input_line">
-                <label for="editorConfig_customization_logo_image">Image</label>
+                <label for="editorConfig_customization_logo_image">图像</label>
                 <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_logo_imageDark">Image Dark</label>
+                <label for="editorConfig_customization_logo_imageDark">深色图像</label>
                 <input type="text" id="editorConfig_customization_logo_imageDark" name="editorConfig_customization_logo_imageDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
             </div>
             <div class="line input_line">
-                <label for="editorConfig_customization_logo_url">Url</label>
+                <label for="editorConfig_customization_logo_url">Url地址</label>
                 <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url" value="https://example.com">
             </div>
         </div>
@@ -318,75 +318,75 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_macros" name="editorConfig_customization_macros" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_macros">Macros</label>
+                <label for="editorConfig_customization_macros">宏</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_mentionShare" name="editorConfig_customization_mentionShare" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_mentionShare">Mention share</label>
+                <label for="editorConfig_customization_mentionShare">提及分享</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_mobileForceView" name="editorConfig_customization_mobileForceView" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_mobileForceView">Mobile force view</label>
+                <label for="editorConfig_customization_mobileForceView">移动设备强制视图</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_plugins" name="editorConfig_customization_plugins" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_plugins">Plugins</label>
+                <label for="editorConfig_customization_plugins">插件</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_review" name="editorConfig_customization_review" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_review">Review</label>
+                <label for="editorConfig_customization_review">审阅</label>
             </label>
         </div>
 
         <div id="holder_editorConfig_customization_review" class="config_object_holder" hidden>
             <div class="line input_line">
-                <label for="editorConfig_customization_review_reviewDisplay">Review Display</label>
+                <label for="editorConfig_customization_review_reviewDisplay">审阅显示</label>
                 <select class="select" id="editorConfig_customization_review_reviewDisplay" name="editorConfig_customization_review_reviewDisplay">
-                    <option value="original" disabled>original</option>
-                    <option value="markup">markup</option>
-                    <option value="simple">simple</option>
-                    <option value="final">final</option>
-                    <option value="original" selected>original</option>
+                    <option value="original" disabled>原始</option>
+                    <option value="markup">标记</option>
+                    <option value="simple">简单</option>
+                    <option value="final">最终</option>
+                    <option value="original" selected>原始</option>
                 </select>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_review_hideReviewDisplay" name="editorConfig_customization_review_hideReviewDisplay" hidden="hidden">
                     <span></span>
-                    <label for="editorConfig_customization_review_hideReviewDisplay">Hide Review Display</label>
+                    <label for="editorConfig_customization_review_hideReviewDisplay">隐藏审阅显示</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_review_showReviewChanges" name="editorConfig_customization_review_showReviewChanges" hidden="hidden">
                     <span></span>
-                    <label for="editorConfig_customization_review_showReviewChanges">Show Review Changes</label>
+                    <label for="editorConfig_customization_review_showReviewChanges">显示审阅更改</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_review_trackChanges" name="editorConfig_customization_review_trackChanges" hidden="hidden" checked>
                     <span></span>
-                    <label for="editorConfig_customization_review_trackChanges">Track Changes</label>
+                    <label for="editorConfig_customization_review_trackChanges">跟踪变化</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_review_hoverMode" name="editorConfig_customization_review_hoverMode" hidden="hidden">
                     <span></span>
-                    <label for="editorConfig_customization_review_hoverMode">Hover Mode</label>
+                    <label for="editorConfig_customization_review_hoverMode">悬停模式</label>
                 </label>
             </div>
         </div>
@@ -394,34 +394,34 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_submitForm" name="editorConfig_customization_submitForm" hidden="hidden" checked>
                 <span></span>
-                <label for="editorConfig_customization_submitForm">Submit Form</label>
+                <label for="editorConfig_customization_submitForm">提交表单</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_toolbarHideFileName" name="editorConfig_customization_toolbarHideFileName" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_toolbarHideFileName">Toolbar Hide File Name</label>
+                <label for="editorConfig_customization_toolbarHideFileName">工具栏隐藏文件名</label>
             </label>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
+                <label for="editorConfig_customization_toolbarNoTabs">工具栏无选项卡</label>
             </label>
         </div>
         <div class="line input_line" id="macrosModeLine">
-            <label for="editorConfig_customization_macrosMode">Macros Mode</label>
+            <label for="editorConfig_customization_macrosMode">宏模式</label>
             <select class="select" id="editorConfig_customization_macrosMode" name="editorConfig_customization_macrosMode">
-                <option value="warn" disabled>Warn</option>
-                <option value="warn" selected>Warn</option>
-                <option value="disable">Disable</option>
-                <option value="enable">Enable</option>
+                <option value="warn" disabled>警告</option>
+                <option value="warn" selected>警告</option>
+                <option value="disable">禁用</option>
+                <option value="enable">启用</option>
             </select>
         </div>
         <div class="line input_line">
-            <label for="editorConfig_customization_uiTheme">UiTheme</label>
+            <label for="editorConfig_customization_uiTheme">主题UI</label>
             <select class="select" id="editorConfig_customization_uiTheme" name="editorConfig_customization_uiTheme">
                 <option value="theme-dark" disabled>theme-dark</option>
                 <option value="theme-classic-light">theme-classic-light</option>
@@ -431,16 +431,16 @@
             </select>
         </div>
         <div class="line input_line">
-            <label for="editorConfig_customization_unit">Unit</label>
+            <label for="editorConfig_customization_unit">单位</label>
             <select class="select" id="editorConfig_customization_unit" name="editorConfig_customization_unit">
-                <option value="cm" disabled>cm</option>
-                <option value="cm" selected>cm</option>
-                <option value="pt">pt</option>
-                <option value="inch ">inch </option>
+                <option value="cm" disabled>厘米</option>
+                <option value="cm" selected>厘米</option>
+                <option value="pt">像素</option>
+                <option value="inch">英寸</option>
             </select>
         </div>
         <div class="line input_line">
-            <label for="editorConfig_customization_zoom">Zoom</label>
+            <label for="editorConfig_customization_zoom">缩放</label>
             <input type="text" id="editorConfig_customization_zoom" name="editorConfig_customization_zoom" value="100">
         </div>
     </div>
@@ -454,8 +454,8 @@
     <div id="placeholder"></div>
 </div>
 
-<note>Please note that only the following parameters are available for the mobile editors: <a href="#feedback">feedback</a>, <a href="#goback">goback</a>,
-<a href="#help">help</a>, <a href="#macrosMode">macrosMode</a>, <a href="#mobileForceView">mobileForceView</a>.</note>
+<note>请注意，只有以下参数可用于移动编辑器：<a href="#feedback">feedback</a>、<a href="#goback">goback</a>、
+<a href="# 帮助">help</a>、<a href="#macrosMode">宏模式</a>、<a href="#mobileForceView">mobileForceView</a>。</note>
 
 <div class="header-gray">参数</div>
 <table class="table">
@@ -775,7 +775,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+                <div class="note">请注意，此参数也适用于移动编辑器。</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/feedback.png") %>" alt="" />
             </td>
         </tr>
@@ -865,7 +865,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+                <div class="note">请注意，此参数也适用于移动编辑器。</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
             </td>
         </tr>
@@ -880,7 +880,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+                <div class="note">请注意，此参数也适用于移动编辑器。</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
@@ -1327,7 +1327,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">请注意，如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 <em>editorConfig.customization.macrosMode</em> 参数发送的任何值。</div>
-                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+                <div class="note">请注意，此参数也适用于移动编辑器。</div>
             </td>
         </tr>
         <tr>
@@ -1350,14 +1350,14 @@
         <tr>
             <td id="mobileForceView" class="copy-link">mobileForceView</td>
             <td>
-                Defines if the mobile document editor is opened in the view/edit mode on launch. The default value is <b>true</b>.
+               定义移动文档编辑器在启动时是否以查看/编辑模式打开。 默认值为<b>true</b>。
             </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Please note that this parameter is only available for the mobile editors.</div>
+                <div class="note">请注意，此参数仅适用于移动编辑器。</div>
             </td>
         </tr>
         <tr class="tablerow">

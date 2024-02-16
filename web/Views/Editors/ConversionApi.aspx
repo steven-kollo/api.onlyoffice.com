@@ -1770,7 +1770,7 @@
         有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
     </p>
 
-    <div id="sample-watermark" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format with a watermark inserted</div>
+    <div id="sample-watermark" class="header-gray copy-link">发送到<b>文档转换服务</b>的 JSON 对象示例，用于将文件从 <em>docx</em> 格式转换为插入水印的 <em>pdf</em> 格式</div>
     <pre>
 {
     "async": false,
