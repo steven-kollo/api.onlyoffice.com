@@ -8,10 +8,10 @@
 <div class="header-gray">描述</div>
 <p class="dscr">文档部分允许更改与文档有关的所有参数（标题、url、文件类型等）。</p>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <p>
-    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+    请参阅<a href="<%= Url.Action("howitworks") %>">工作原理</a>部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
 </p>
 
 <div id="controlFields">

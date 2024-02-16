@@ -8,10 +8,10 @@
 <div class="header-gray">描述</div>
 <p class="dscr">插件部分允许将特殊附加组件连接到您的文档服务器安装，这将帮助您向文档编辑器添加附加功能。</p>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <p>
     The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    请参阅<a href="<%= Url.Action("howitworks") %>">工作原理</a>部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
 </p>
 
 <p>

@@ -7,7 +7,7 @@
 <div class="header-gray">描述</div>
 <p class="dscr">config base 部分允许更改使用的平台类型、文档显示大小（宽度和高度）和打开文档的类型。</p>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <div>
     <div id="controlFields">
         <div id="info" class="control-panel">

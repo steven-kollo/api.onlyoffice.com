@@ -1816,8 +1816,8 @@
 }
 </pre>
     <p>
-        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+        请参阅<a href="<%= Url.Action("howitworks") %>">工作原理</a>部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
     </p>
 
     <div id="sample-thumbnail" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于生成 <em>docx</em> 格式的文件的 <em>png</em> 缩略图</div>

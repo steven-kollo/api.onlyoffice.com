@@ -8,7 +8,7 @@
 <div class="header-gray">描述</div>
 <p class="dscr">文档权限部分允许更改要编辑和下载的文档的权限。</p>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <div>
     <div id="controlFields">
         <div id="permissions" class="control-panel">

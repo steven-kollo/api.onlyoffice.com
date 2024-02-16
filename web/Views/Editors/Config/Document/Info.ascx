@@ -8,7 +8,7 @@
 <div class="header-gray">描述</div>
 <p class="dscr">文档信息部分允许更改文档的其他参数（文档所有者、存储文档的文件夹、上传日期、共享设置）。</p>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <div>
     <div id="controlFields">
         <div id="info" class="control-panel">
