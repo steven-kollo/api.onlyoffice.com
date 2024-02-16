@@ -197,7 +197,8 @@
                                 Visible = true
                             },
                         IntegrationMode = "embed",
-                }
+                },
+                Lang = "zh"
             },
         Height = "550px",
         Width = "100%"

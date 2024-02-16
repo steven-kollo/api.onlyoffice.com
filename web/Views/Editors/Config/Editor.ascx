@@ -70,7 +70,7 @@
         <div class="line input_line">
             <label for="editorConfig_lang">Lang</label>
             <select class="select" id="editorConfig_lang" name="editorConfig_lang">
-                <option disabled>en</option>
+                <option value="en">en</option>
                 <option value="az">az</option>
                 <option value="be">be</option>
                 <option value="bg">bg</option>
@@ -108,7 +108,7 @@
                 <option value="tr">tr</option>
                 <option value="uk">uk</option>
                 <option value="vi">vi</option>
-                <option value="zh">zh</option>
+                <option disabled>zh</option>
                 <option value="zh-TW">zh-TW</option>
             </select>
         </div>
@@ -591,7 +591,8 @@
                                 Visible = true
                             },
                         IntegrationMode = "embed",
-                }
+                },
+                Lang = "zh"
             },
         Height = "550px",
         Width = "100%"

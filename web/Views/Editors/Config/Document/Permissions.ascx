@@ -459,7 +459,8 @@
                 User = new Config.EditorConfigConfiguration.UserConfig {
                     Name = "John Smith",
                     Id = "79e1e841"
-                }
+                },
+                Lang = "zh"
             },
         Height = "550px",
         Width = "100%"
