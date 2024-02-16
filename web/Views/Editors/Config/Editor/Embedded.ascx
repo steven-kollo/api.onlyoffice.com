@@ -203,7 +203,6 @@
         Width = "100%"
     }) %>;
     config.type = "embedded";
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -237,7 +236,9 @@
 
         var embedded_object = JSON.parse(embedded);
         config.editorConfig.embedded = embedded_object;
-        window.docEditor.destroyEditor();
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 
         var pre = document.getElementById("configPre");

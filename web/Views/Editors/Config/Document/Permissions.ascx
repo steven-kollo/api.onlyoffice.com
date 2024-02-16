@@ -464,7 +464,6 @@
         Height = "550px",
         Width = "100%"
     }) %>;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -524,7 +523,9 @@
 
         var info_object = JSON.parse(permissions);
         config.document.permissions = info_object;
-        window.docEditor.destroyEditor();
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         $.ajax({
             type: "POST",
             url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",

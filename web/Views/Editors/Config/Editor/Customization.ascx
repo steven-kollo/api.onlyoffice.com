@@ -1771,7 +1771,6 @@
         Height = "550px",
         Width = "100%"
     }) %>;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -1913,7 +1912,9 @@
             customization_object.anonymous = { request: false }
         }
         config.editorConfig.customization = customization_object;
-        window.docEditor.destroyEditor();
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
