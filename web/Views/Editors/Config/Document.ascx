@@ -279,7 +279,7 @@
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                 Title = "Example Title",
-                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + "xlsx",
                 Info = new Config.DocumentConfig.InfoConfig()
             },
         DocumentType = "cell",

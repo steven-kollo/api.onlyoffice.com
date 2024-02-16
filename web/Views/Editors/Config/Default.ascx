@@ -193,7 +193,7 @@
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
                     Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                    Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + "docx",
                     Info = new Config.DocumentConfig.InfoConfig()
                 },
             DocumentType = "word",
@@ -225,7 +225,7 @@
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
                     Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx",
+                    Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + "xlsx",
                     Info = new Config.DocumentConfig.InfoConfig()
                 },
             DocumentType = "cell",
@@ -257,7 +257,7 @@
                     Key = "apiwh" + Guid.NewGuid(),
                     Permissions = new Config.DocumentConfig.PermissionsConfig(),
                     Title = "Example Title",
-                    Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pptx",
+                    Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + "pptx",
                     Info = new Config.DocumentConfig.InfoConfig()
                 },
             DocumentType = "slide",
@@ -289,7 +289,7 @@
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                 Title = "Example Title",
-                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "pdf",
+                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + "pdf",
                 Info = new Config.DocumentConfig.InfoConfig()
             },
         DocumentType = "pdf",

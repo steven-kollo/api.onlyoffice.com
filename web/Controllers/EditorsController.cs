@@ -277,7 +277,7 @@ namespace ASC.Api.Web.Help.Controllers
         {
             Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
             config.Document.Key = "apiwh" + Guid.NewGuid();
-            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx";
+            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + "docx";
             config.EditorConfig.CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme);
             return Json(Helpers.Config.Serialize(config));
         }

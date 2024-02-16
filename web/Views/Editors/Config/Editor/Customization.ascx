@@ -1748,7 +1748,7 @@
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
                 Title = "Example Title",
-                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + "docx",
                 Info = new Config.DocumentConfig.InfoConfig()
             },
         DocumentType = "word",
