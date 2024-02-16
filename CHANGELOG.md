@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: sandbox on configuration pages
+
 ## 4.5.0
 - docspace: storybook v2.0.2
 - docspace: v2.0.2
