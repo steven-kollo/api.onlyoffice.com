@@ -19,8 +19,8 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, PDF.</li>
-        <li>The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, TXT, CSV.</li>
+        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
+        <li>The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, TXT, CSV.</li>
         <li>The plugin allows users to edit text documents, spreadsheets, presentations, and create and fill out digital forms.</li>
         <li>The plugin will create a new <b>Open in ONLYOFFICE</b> menu option within the document library for office documents.
             This allows multiple users to collaborate in real time and save back those changes to SuiteCRM.</li>

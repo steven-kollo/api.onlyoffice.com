@@ -148,7 +148,7 @@
                 <td><a title="Open PPTX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="rebrandingPptxEditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
-            <tr>
+<%--            <tr>
                 <th>Edit on mobile</th>
                 <td><a title="Open DOCX file for editing on mobile" href="<%= Url.Action("editor") %>?method=docxEditorMobile" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorMobileCode">&lt;/&gt;</a>
                 </td>
@@ -165,7 +165,7 @@
                 </td>
                 <td><a title="Open PPTX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=pptxViewerMobile" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxViewerMobileCode">&lt;/&gt;</a>
                 </td>
-            </tr>
+            </tr>--%>
             <tr>
                 <th>Embedded view</th>
                 <td><a title="Open DOCX file for embedded viewing" href="<%= Url.Action("editor") %>?method=docxEmbed" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEmbedCode">&lt;/&gt;</a>

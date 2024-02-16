@@ -73,7 +73,7 @@ var onLoadComponentError = function (errorCode, errorDescription) {
 
 export default function App() {
     return (
-        &lt;pre&gt;
+        &lt;&gt;
             &lt;DocumentEditor
                 id="docxEditor"
                 documentServerUrl="http://documentserver/"
