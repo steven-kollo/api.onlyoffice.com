@@ -54,7 +54,7 @@ async function build() {
     let c = await readFile(f, { encoding: "utf8" })
     c = c.trim()
     c = SVGToJSComponent(n, c)
-    f = join(lib, `${n}.ts`)
+    f = join(lib, `${n}.tsx`)
     await writeFile(f, c)
     entryPoints.push(f)
     f = f.replace(lib, ".")
@@ -65,7 +65,7 @@ async function build() {
 
   // todo: allowImportingTsExtensions
   let index = relativeEntryPoints.map((f) => `export * from "${f}"`).join("\n")
-  let f = join(lib, "icon.tsx")
+  let f = join(lib, "icon.ts")
   await writeFile(f, index)
   entryPoints.push(f)
 }

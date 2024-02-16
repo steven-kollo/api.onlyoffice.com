@@ -10,11 +10,9 @@
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises"
 import { createReadStream, createWriteStream, existsSync } from "node:fs"
 import { tmpdir } from "node:os"
-import { basename, dirname, extname, join } from "node:path"
-import { finished } from "node:stream/promises"
-import { Readable, Transform } from "node:stream"
+import { join } from "node:path"
+import { Transform } from "node:stream"
 import { URL, fileURLToPath } from "node:url"
-import { StreamIndexes } from "@onlyoffice/documentation-declarations/helpers.js"
 import {
   DeclarationsCache,
   PostprocessDeclarations,
@@ -28,6 +26,7 @@ import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
+import { UnStreamObject, download, makeObject, num } from "./utils.js"
 import pack from "../package.json" assert { type: "json" }
 
 import { createRequire } from "module"
@@ -69,7 +68,7 @@ async function build(options) {
   await Promise.all(files.map(async (file) => {
     const f = join(temp, file)
     const u = `${ref}/${file}`
-    await fetchFile(u, f)
+    await download(u, f)
 
     const cache = new DeclarationsCache()
 
@@ -178,26 +177,13 @@ async function build(options) {
   to = join(dist, pi)
   await prettifyJSON(from, to)
 
-  from = join(src, "resource.cjs")
+  from = join(src, "code.cjs")
   to = join(dist, `${pn}.cjs`)
   let c = await readFile(from, { encoding: "utf8" })
   c = c.replaceAll("resource", pn)
   await writeFile(to, c, { encoding: "utf8" })
 
   await rm(temp, { recursive: true, force: true })
-}
-
-/**
- * @param {string} from
- * @param {string} to
- * @returns {Promise<void>}
- */
-async function fetchFile(from, to) {
-  const res = await fetch(from)
-  const r = Readable.fromWeb(res.body)
-  const s = createWriteStream(to)
-  const w = r.pipe(s)
-  await finished(w)
 }
 
 class PreprocessDeclarations extends JSDocPreprocessDeclarations {
@@ -269,7 +255,21 @@ function createIndexes(from, to) {
       createReadStream(from),
       parser(),
       new StreamArray(),
-      new StreamIndexes(),
+      new class extends Transform {
+        constructor() {
+          super({ objectMode: true })
+          this._i = 0
+        }
+        _transform(ch, _, cb) {
+          this.push({
+            key: ch.value.id,
+            value: this._i
+          })
+          this._i += 1
+          cb(null)
+        }
+      },
+      new UnStreamObject(),
       makeObject(),
       new Stringer(),
       createWriteStream(to)
@@ -277,48 +277,6 @@ function createIndexes(from, to) {
     c.on("error", rej)
     c.on("close", res)
   })
-}
-
-/**
- * @returns {Transform}
- */
-function makeObject() {
-  // https://github.com/uhop/stream-json/pull/143
-  return new Transform({
-    objectMode: true,
-    transform(ch, enc, cb) {
-      this.push({ name: "startObject" })
-      this._transform = transformPassThrough
-      return this._transform(ch, enc, cb)
-    },
-    flush(cb) {
-      if (this._transform === transformPassThrough) {
-        this.push({ name: "endObject" })
-      }
-      cb(null)
-    }
-  })
-}
-
-/**
- * @this {Transform}
- * @param {any} ch
- * @param {BufferEncoding} enc
- * @param {TransformCallback} cb
- */
-function transformPassThrough(ch, enc, cb) {
-  this.push(ch, enc)
-  cb(null)
-}
-
-/**
- * @param {string} s
- * @param {number} n
- * @returns {string}
- */
-function num(s, n) {
-  const e = extname(s)
-  return join(dirname(s), `${basename(s, e)}${n}${e}`)
 }
 
 export { build }

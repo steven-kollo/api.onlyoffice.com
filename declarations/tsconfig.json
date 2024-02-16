@@ -10,7 +10,7 @@
   },
   "include": [
     "./src/*"
-  ],
+, ".local/a.ts", ".local/logger.js"  ],
   "exclude": [
     "./src/*.test.js"
   ]

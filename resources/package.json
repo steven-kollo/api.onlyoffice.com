@@ -3,8 +3,7 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./document-builder.cjs": "./dist/document-builder.cjs",
-    "./makefile.js": "./makefile.js"
+    "./document-builder.cjs": "./dist/document-builder.cjs"
   },
   "scripts": {
     "build": "node ./makefile.js build"

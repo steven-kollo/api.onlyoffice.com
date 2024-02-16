@@ -1,6 +1,67 @@
 // todo: split into JS*Type and UniversalType. JSDeclaration, UniversalDeclaration.
 // constructors have only js classes
 
+interface RESTEntity {
+  // id: string
+  // title: string
+  // summary?: string
+  // description?: string
+  type: RESTEntityType
+}
+
+type RESTEntityType = RESTEntityTypeMap[keyof RESTEntityTypeMap]
+
+interface RESTEntityTypeMap {
+  array: RESTArrayType
+  enum: RESTEnumType
+  nullable: RESTNullableType
+  object: RESTObjectType
+  primitive: RESTPrimitiveType
+  reference: RESTReferenceType
+  union: RESTUnionType
+}
+
+interface RESTArrayType extends RESTTypeNode {
+  type: "array"
+  items: RESTEntityType[]
+}
+
+interface RESTEnumType extends RESTTypeNode {
+  type: "enum"
+  // cases
+}
+
+interface RESTNullableType extends RESTTypeNode {
+  type: "nullable"
+  children: RESTEntityType
+}
+
+interface RESTObjectType extends RESTTypeNode {
+  type: "object"
+  // properties
+}
+
+interface RESTPrimitiveType extends RESTTypeNode {
+  type: "primitive"
+  value: "boolean" | "integer" | "null" | "number" | "string"
+  format?: string
+}
+
+interface RESTReferenceType extends RESTTypeNode {
+  type: "reference"
+  id: string
+}
+
+interface RESTUnionType extends RESTTypeNode {
+  type: "union"
+  // types:
+}
+
+interface RESTTypeNode {
+  type: string
+  description?: string
+}
+
 type Declaration = DeclarationMap[keyof DeclarationMap]
 
 interface DeclarationMap {
@@ -141,6 +202,7 @@ interface DeclarationTypeMap {
   array: ArrayType
   function: FunctionType
   literal: LiteralType
+  nullable: NullableType
   object: ObjectType
   optional: OptionalType
   primitive: PrimitiveType
@@ -160,6 +222,10 @@ interface PrimitiveType extends TypeNode {
 interface LiteralType extends TypeNode {
   type: "literal"
   value: bigint | boolean | null | number | string | symbol | undefined
+}
+
+interface NullableType extends TypeNode {
+  type: "nullable"
 }
 
 interface ArrayType extends ParentType {
@@ -236,6 +302,7 @@ export {
   InstanceMethodDeclaration,
   InstancePropertyDeclaration,
   MethodDeclaration,
+  NullableType,
   ObjectDeclaration,
   ObjectType,
   OptionalType,

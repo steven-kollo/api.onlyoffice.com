@@ -1,7 +1,7 @@
 // @ts-check
 
 const { basename } = require("node:path")
-const { list, retrieve } = require("@onlyoffice/documentation-resources/document-builder.cjs")
+const { list, retrieve } = require("@/resources/document-builder.cjs")
 
 function data() {
   return {
@@ -11,17 +11,7 @@ function data() {
       size: 1,
       addAllPagesToCollections: true
     },
-    // todo: do not forget to remove slice.
-    items: (() => {
-      const l = list()
-      const i = l.find((d) => Object.hasOwn(d, "extends"))
-      const r = l.slice(0, 101)
-      const i2 = l.find((d) => Object.hasOwn(d, "implements"))
-      const i3 = l.find((d) => d.id === "word/api_plugins;Api#AddContentControlDatePicker")
-      const i4 = l.find((d) => d.id === "word/api_plugins;Api#AddContentControl")
-      r.push(i, i2, i3, i4)
-      return r
-    })(),
+    items: list(),
     permalink(data) {
       return permalink(data.pagination.items[0])
     },
@@ -48,19 +38,28 @@ function data() {
 
 function permalink(d) {
   let p = d.meta.package
-  if (d.meta.package.startsWith("word")) {
+  if (d.meta.package.startsWith("word/api_plugins")) {
+    p = "text/_plugins"
+  } else if (d.meta.package.startsWith("word")) {
     p = "text"
+  } else if (d.meta.package.startsWith("cell/api_plugins")) {
+    p = "spreadsheet/_plugins"
   } else if (d.meta.package.startsWith("cell")) {
     p = "spreadsheet"
+  } else if (d.meta.package.startsWith("slide/api_plugins")) {
+    p = "presentation/_plugins"
   } else if (d.meta.package.startsWith("slide")) {
     p = "presentation"
   } else if (d.meta.package.startsWith("forms")) {
     p = "form"
+  } else if (d.meta.package.startsWith("common/apiBase_plugins")) {
+    p = "common/_plugins"
   } else if (d.meta.package.startsWith("common")) {
     p = "common"
   } else {
     throw new Error(`pages: unknown package: ${d.meta.package}`)
   }
+  // todo: use onRetrieve
   let u = `/document-builder/client-sdk/${p}/`
   if (Object.hasOwn(d, "parent")) {
     const r = retrieve(d.parent.id)

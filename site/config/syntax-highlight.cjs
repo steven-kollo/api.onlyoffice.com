@@ -6,19 +6,13 @@
 /**
  * @typedef {import("@11ty/eleventy").UserConfig} UserConfig
  * @typedef {Awaited<ReturnType<typeof import("@wooorm/starry-night").createStarryNight>>} StarryNight
+ * @typedef {ReturnType<StarryNight["highlight"]>} Root
  */
 
 /**
  * @type {Map<string, StarryNight>}
  */
 const cache = new Map()
-
-/**
- * @returns {StarryNight | undefined}
- */
-function starryNight() {
-  return cache.get("starryNight")
-}
 
 /**
  * @param {UserConfig} uc
@@ -35,4 +29,23 @@ function syntaxHighlightPlugin(uc) {
   })
 }
 
-module.exports = { syntaxHighlightPlugin, starryNight }
+/**
+ * @param {string} code
+ * @param {string} syntax
+ * @returns {Root}
+ */
+function highlight(code, syntax) {
+  const n = cache.get("starryNight")
+  if (n === undefined) {
+    throw new Error("Highlighter is not ready")
+  }
+
+  const s = n.flagToScope(syntax)
+  if (s === undefined) {
+    throw new Error(`Unknown syntax: ${syntax}`)
+  }
+
+  return n.highlight(code, s)
+}
+
+module.exports = { highlight, syntaxHighlightPlugin }

@@ -30,8 +30,8 @@ async function build() {
   function build(o = {}) {
     return esbuild.build({
       entryPoints:[
-        join(src, "helpers.js"),
         join(src, "jsdoc.js"),
+        join(src, "openapi.js"),
         join(src, "tokenizer.js")
       ],
       outdir: dist,

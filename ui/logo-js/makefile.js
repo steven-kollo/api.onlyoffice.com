@@ -65,7 +65,7 @@ async function build() {
 
   // todo: allowImportingTsExtensions
   let index = relativeEntryPoints.map((f) => `export * from "${f}"`).join("\n")
-  let f = join(lib, "logo.tsx")
+  let f = join(lib, "logo.ts")
   await writeFile(f, index)
   entryPoints.push(f)
 }

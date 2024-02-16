@@ -1,4 +1,4 @@
-import { SyntaxHighlight } from "@/components/syntax-highlight/SyntaxHighlight.tsx"
+import { SyntaxHighlight } from "@/src/components/syntax-highlight/SyntaxHighlight.tsx"
 import { CodeDeclaration } from "@onlyoffice/documentation-ui-kit-js"
 import { h, Fragment } from "preact"
 
