@@ -10,12 +10,12 @@
 
 <div class="header-gray">示例</div>
 <p>
-    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed.
+    服务器名称为 <b>example.com</b>，安装了<b>文档管理器</b>和<b>文档存储服务</b>，并且插件也被放置在此服务器上。
     请参阅<a href="<%= Url.Action("howitworks") %>">工作原理</a>部分，了解有关文档服务器服务客户端与服务器交互的更多信息。
 </p>
 
 <p>
-    If you have any further questions, please contact us at
+    如果您有任何其他问题，请通过以下方式联系我们：
     <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
 </p>
 
@@ -23,7 +23,7 @@
     <div id="plugins" class="control-panel">
         <div id="holder_editorConfig_plugins_autostart">
             <div class="line input_line" style="margin-top: 0px;">
-                <label for="plugins_autostart_0">Autostart</label>
+                <label for="plugins_autostart_0">自动启动</label>
                 <div id="plugins_autostart_0" style="margin-top: 0px;" class="line input_line plugins_autostart">
                     <input type="text" id="editorConfig_plugins_autostart_0" name="editorConfig_plugins_autostart_0" value="asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}">
                 </div>
@@ -32,7 +32,7 @@
         <button id="addButton_plugins_autostart" class="add-button" style="margin-top: 12px;">+</button>
         <div id="holder_editorConfig_plugins_pluginsData">
             <div class="line input_line">
-                <label for="plugins_pluginsData_0">Plugins Data</label>
+                <label for="plugins_pluginsData_0">插件数据</label>
                 <div id="plugins_pluginsData_0" style="margin-top: 0px;" class="line input_line plugins_pluginsData">
                     <input type="text" id="editorConfig_plugins_pluginsData_0" name="editorConfig_plugins_pluginsData_0" value="https://example.com/plugins/chess-plugin/config.json">
                 </div>
