@@ -17,6 +17,9 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
+    <ul>
+        <li>Change the default value of the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> parameter to <em>true</em>.</li>
+    </ul>
 
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <ul>
