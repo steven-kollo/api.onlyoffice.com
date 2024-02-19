@@ -109,15 +109,6 @@
             <param name="text">The text to convert</param>
             <returns>The enum value</returns>
         </member>
-        <member name="P:ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription.SocialNetwork">
-            <example type="int">0</example>
-        </member>
-        <member name="P:ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription.ImageUrl">
-            <example>url to img</example>
-        </member>
-        <member name="P:ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription.Identity">
-            <example>Identity</example>
-        </member>
         <member name="M:ASC.Web.CRM.Classes.Global.DecodeFrom64(System.String)">
             <summary>
             The method to Decode your Base64 strings.
@@ -152,6 +143,21 @@
         </member>
         <member name="P:ASC.Web.CRM.Classes.InvoiceSetting.CompanyAddress">
             <example>CompanyAddress</example>
+        </member>
+        <member name="M:ASC.Web.CRM.Classes.ExportDataOperation.#ctor">
+            <summary>
+            Constructor for serialization/deserialization public properties (redis cache)
+            </summary>
+        </member>
+        <member name="M:ASC.Web.CRM.Classes.ImportDataOperation.#ctor">
+            <summary>
+            Constructor for serialization/deserialization public properties (redis cache)
+            </summary>
+        </member>
+        <member name="M:ASC.Web.CRM.Classes.SendBatchEmailsOperation.#ctor">
+            <summary>
+            Constructor for serialization/deserialization public properties (redis cache)
+            </summary>
         </member>
         <member name="P:ASC.Web.CRM.Classes.ConverterData.StorageUrl">
             <example>Storage Url</example>
@@ -2425,11 +2431,6 @@
               Looks up a localized string similar to Upload photo from PC.
             </summary>
         </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMContactResource.LoadPhotoFromSocialMedia">
-            <summary>
-              Looks up a localized string similar to Select from social networks.
-            </summary>
-        </member>
         <member name="P:ASC.Web.CRM.Resources.CRMContactResource.MakePublicPanelCheckBoxLabelForCompany">
             <summary>
               Looks up a localized string similar to Allow access to the company for all CRM users.
@@ -2518,11 +2519,6 @@
         <member name="P:ASC.Web.CRM.Resources.CRMContactResource.NoMatchSelect">
             <summary>
               Looks up a localized string similar to No matches in ONLYOFFICE™ CRM, select from list.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMContactResource.NoPhotoFromSocialMedia">
-            <summary>
-              Looks up a localized string similar to There are no available photos corresponding to the profile.
             </summary>
         </member>
         <member name="P:ASC.Web.CRM.Resources.CRMContactResource.NotifyContactManager">
@@ -3851,11 +3847,6 @@
               Looks up a localized string similar to Next record.
             </summary>
         </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMCommonResource.NoLoadedMessages">
-            <summary>
-              Looks up a localized string similar to No records.
-            </summary>
-        </member>
         <member name="P:ASC.Web.CRM.Resources.CRMCommonResource.NoMailAccountsAvailableError">
             <summary>
               Looks up a localized string similar to No mail accounts available.
@@ -4409,11 +4400,6 @@
             Are you sure you want to continue anyway?.
              </summary>
         </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMJSResource.ContactTwitterDescription">
-            <summary>
-              Looks up a localized string similar to Please enter the name of your Twitter account. For example, teamlabdotcom.
-            </summary>
-        </member>
         <member name="P:ASC.Web.CRM.Resources.CRMJSResource.CountryWatermark">
             <summary>
               Looks up a localized string similar to Country.
@@ -4634,11 +4620,6 @@
               Looks up a localized string similar to Estimated deal due date.
             </summary>
         </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMJSResource.FindTwitter">
-            <summary>
-              Looks up a localized string similar to Find account in Twitter.
-            </summary>
-        </member>
         <member name="P:ASC.Web.CRM.Resources.CRMJSResource.GenerateLinkInfo">
             <summary>
               Looks up a localized string similar to Your recipient list has been generated. {0} Click the links below to pass your email addresses over to the email program..
@@ -4827,11 +4808,6 @@
         <member name="P:ASC.Web.CRM.Resources.CRMJSResource.PleaseWait">
             <summary>
               Looks up a localized string similar to Please wait....
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMJSResource.PossibleSocialMediaAccounts">
-            <summary>
-              Looks up a localized string similar to Possible profiles for {0}.
             </summary>
         </member>
         <member name="P:ASC.Web.CRM.Resources.CRMJSResource.Previous">
@@ -6942,87 +6918,6 @@
         <member name="P:ASC.Web.CRM.Resources.CRMSettingResource.WebToLeadsFormHeader">
             <summary>
               Looks up a localized string similar to Use the Website Contact Form functionality to build a form that you can publish on your site. It will allow you to capture new contacts automatically. Define the form properties, select the necessary fields and generate the code to create your own web form..
-            </summary>
-        </member>
-        <member name="T:ASC.Web.CRM.Resources.CRMSocialMediaResource">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.EmptyContentTwitterAccountsDescribe">
-            <summary>
-              Looks up a localized string similar to Be aware of what your clients think about your produce and brand in the social network. Simply link the twitter account with the contact and follow the tweet news feed right on your portal..
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.EmptyContentTwitterAccountsHeader">
-            <summary>
-              Looks up a localized string similar to No linked Twitter accounts.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.ErrorInternalServer">
-            <summary>
-              Looks up a localized string similar to Internal error.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.ErrorTwitterAccountNotFound">
-            <summary>
-              Looks up a localized string similar to Twitter account could not be found.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.ErrorTwitterConnectionFailure">
-            <summary>
-              Looks up a localized string similar to Could not connect to Twitter.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.ErrorTwitterRateLimit">
-            <summary>
-              Looks up a localized string similar to Maximal allowed number of requests to Twitter is exceeded. Try again later..
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.ErrorTwitterUnauthorized">
-            <summary>
-              Looks up a localized string similar to The application has no Twitter access. Please reconnect the Twitter account..
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.ErrorUnknownTwitterAccount">
-            <summary>
-              Looks up a localized string similar to Unknown Twitter account.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.LinkTwitterAccount">
-            <summary>
-              Looks up a localized string similar to Link Twitter account.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.NoAccountsHasBeenFound">
-            <summary>
-              Looks up a localized string similar to No accounts could be found.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.NoCompaniesHasBeenFound">
-            <summary>
-              Looks up a localized string similar to No companies could be found.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.PleaseWait">
-            <summary>
-              Looks up a localized string similar to Please wait....
-            </summary>
-        </member>
-        <member name="P:ASC.Web.CRM.Resources.CRMSocialMediaResource.SocialMediaAccountNotFoundTwitter">
-            <summary>
-              Looks up a localized string similar to Twitter account is not connected.
             </summary>
         </member>
         <member name="T:ASC.Web.CRM.Resources.CRMTaskResource">

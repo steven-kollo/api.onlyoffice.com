@@ -8,6 +8,84 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The document info section allows to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).</p>
 
+<div class="header-gray">Example</div>
+<div>
+    <div id="controlFields">
+        <div id="info" class="control-panel">
+            <div class="line input_line" style="margin-top: 0px;">
+                <label for="documentConfig_info_folder">Folder</label>
+                <input type="text" id="documentConfig_info_folder" name="documentConfig_info_folder" value="Example Files">
+            </div>
+            <div class="line input_line">
+                <label for="documentConfig_info_owner">Owner</label>
+                <input type="text" id="documentConfig_info_owner" name="documentConfig_info_owner" value="John Smith">
+            </div>
+            <div class="line input_line">
+                <label for="documentConfig_info_uploaded">Uploaded</label>
+                <input type="text" id="documentConfig_info_uploaded" name="documentConfig_info_uploaded" value="2010-07-07 3:46 PM">
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_info_favorite" name="documentConfig_info_favorite" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_info_favorite">Favorite</label>
+                </label>
+            </div>
+            <div class="config_object_holder">
+                <div id="holder_documentConfig_info_favorite" class="config_nested_group">
+                    <div class="line input_line">
+                        <select class="select" id="documentConfig_info_favorite_bool" name="documentConfig_info_favorite_bool">
+                            <option value=0 disabled>False</option>
+                            <option value=0 selected>False</option>
+                            <option value=1>True</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_info_sharingSettings" name="documentConfig_info_sharingSettings" hidden="hidden" checked>
+                    <span></span>
+                    <label for="documentConfig_info_sharingSettings">Sharing Settings</label>
+                </label>
+            </div>
+            <div id="holder_documentConfig_info_sharingSettings" class="config_object_holder">
+                <div id="holder_documentConfig_info_sharingSettings_0" class="documentConfig_info_sharingSettingsItem config_nested_group">
+                    <div class="line input_line">
+                        <label for="documentConfig_info_sharingSettings_permissions_0">Permissions</label>
+                        <select class="select" id="documentConfig_info_sharingSettings_permissions_0" name="documentConfig_info_sharingSettings_permissions_0">
+                            <option value="Full Access" disabled>Full Access</option>
+                            <option value="Full Access" selected>Full Access</option>
+                            <option value="Read Only">Read Only</option>
+                            <option value="Deny Access">Deny Access</option>
+                        </select>
+                    </div>
+                    <div class="line input_line">
+                        <label for="documentConfig_info_sharingSettings_user_0">User</label>
+                        <input type="text" id="documentConfig_info_sharingSettings_user_0" name="documentConfig_info_sharingSettings_user_0" value="John Smith">
+                    </div>
+                    <div class="line">
+                        <label class="dataItemSpan">
+                            <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_0" name="documentConfig_info_sharingSettings_isLink_0" hidden="hidden">
+                            <span></span>
+                            <label for="documentConfig_info_sharingSettings_isLink_0">Is link</label>
+                        </label>
+                    </div>
+                </div> 
+            </div>
+            <div style="padding-left: 24px;">
+                <button id="addButton_info_sharingSettings" class="add-button">+</button>
+            </div>
+        </div>
+    </div>
+    <div id="configPreHolder">
+        <pre id="configPre"></pre>
+    </div>
+</div>
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -126,30 +204,269 @@
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Example</div>
-<pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "document": {
-        "info": {
-            "favorite": true,
-            "folder": "Example Files",
-            "owner": "John Smith",
-            "sharingSettings": [
+
+<script>
+    function buildSelects(id) {
+        $('.select').each(function () {
+            const item = $(this);
+            if (id != null && item[0].id.toString().includes(id)) {
+                buildSelect(item);
+            } 
+        });
+    }
+    function buildSelect(item, isNew) {
+        _this = item;
+        if (isNew) {
+            _this = $('.select')[1];
+        }
+        selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 120;
+
+        _this.hide();
+        _this.wrap('<div class="select"></div>');
+        $('<div>', {
+            class: 'new-select',
+            text: _this.children('option:disabled').text()
+        }).insertAfter(_this);
+
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
+            $('<div>', {
+                class: 'new-select__item',
+                html: $('<span>', {
+                    text: selectOption.eq(i).text()
+                })
+            })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
+
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function () {
+            if (!$(this).hasClass('on')) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
+                selectItem.on('click', function () {
+                    let chooseItem = $(this).data('value');
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text($(this).find('span').text());
+                    selectList.slideUp(duration);
+                    selectHead.removeClass('on');
+                    updateConfig();
+                });
+                window.addEventListener('click', function (e) {
+                    if (e.target != selectList[0] && e.target != selectHead[0] && e.target != selectItem[0]) {
+                        selectHead.removeClass('on');
+                        selectList.slideUp(duration);
+                    }
+                });
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
+        });
+    }
+    $('.select').each(function () {
+        const item = $(this);
+        buildSelect(item);
+    });
+</script>
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                Info = new Config.DocumentConfig.InfoConfig()
+            },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
+    });
+
+    $('#addButton_info_sharingSettings').click(addSharingSettingItem);
+    $("#documentConfig_info_sharingSettings").change(showHideConfigObject);
+    $("#documentConfig_info_favorite").change(showHideConfigObject);
+
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
+
+    function addSharingSettingItem() {
+        var sharingSettingElements = document.getElementsByClassName("documentConfig_info_sharingSettingsItem");
+        var i = 0;
+        while (sharingSettingElements[i] != undefined) {
+            i++;
+        }
+        let div = document.createElement("div");
+        div.innerHTML = `
+        <div id="holder_documentConfig_info_sharingSettings_${i}" class="documentConfig_info_sharingSettingsItem config_nested_group">
+            <div class="line input_line">
+                <label for="documentConfig_info_sharingSettings_permissions_${i}">Permissions</label>
+                <select class="select" id="documentConfig_info_sharingSettings_permissions_${i}" name="documentConfig_info_sharingSettings_permissions_${i}">
+                    <option value="Read Only" disabled>Read Only</option>    
+                    <option value="Full Access">Full Access</option>
+                    <option value="Read Only" selected>Read Only</option>
+                    <option value="Deny Access">Deny Access</option>
+                </select>
+            </div>
+            <div class="line input_line">
+                <label for="documentConfig_info_sharingSettings_user_${i}">User</label>
+                <input type="text" id="documentConfig_info_sharingSettings_user_${i}" name="documentConfig_info_sharingSettings_user_${i}" value="New user ${i}">
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="documentConfig_info_sharingSettings_isLink_${i}" name="documentConfig_info_sharingSettings_isLink_${i}" hidden="hidden">
+                    <span></span>
+                    <label for="documentConfig_info_sharingSettings_isLink_${i}">Is link</label>
+                </label>
+            </div>
+        </div>`;
+        document.getElementById("holder_documentConfig_info_sharingSettings").appendChild(div);
+        buildSelects(i);
+        $("#controlFields").find("input,select").change(function () {
+            updateConfig();
+        });
+        resizeCodeInput();
+        updateConfig();
+    }
+
+    function getSharingSettings() {
+        if (!getFieldValue("documentConfig_info_sharingSettings")) {
+            return "";
+        }
+        var sharingSettingsString = "";
+        var sharingSettingElements = document.getElementsByClassName("documentConfig_info_sharingSettingsItem");
+        var i = 0;
+        while (sharingSettingElements[i] != undefined) {
+            var isLink = !getFieldValue("documentConfig_info_sharingSettings_isLink_" + i) ? "" : `,
+                    "isLink": ${true}`;
+        
+            var string = `
                 {
-                    "permissions": "Full Access",
-                    "user": "John Smith"
-                },
-                {
-                    "isLink": true,
-                    "permissions": "Read Only",
-                    "user": "External link"
-                },
-                ...
+                    "permissions": ${getFieldValue("documentConfig_info_sharingSettings_permissions_" + i)},
+                    "user": ${getFieldValue("documentConfig_info_sharingSettings_user_" + i)}${isLink}
+                }`;
+            sharingSettingsString += sharingSettingsString == "" ? string : "," + string;
+            i++;
+        }
+        return sharingSettingsString == "" ? "" : `"sharingSettings": [${sharingSettingsString}
             ],
-            "uploaded": "2010-07-07 3:46 PM"
-        },
+            `;
+    }
+
+    function updateConfig() {
+        var sharingSettings = "";
+        if (getFieldValue("documentConfig_info_sharingSettings")) {
+            sharingSettings = getSharingSettings();
+            document.getElementById("addButton_info_sharingSettings").hidden = false;
+        } else {
+            document.getElementById("addButton_info_sharingSettings").hidden = true;
+        }
+        var favorite = () => {
+            if (getFieldValue("documentConfig_info_favorite")) {
+                var value = getFieldValue("documentConfig_info_favorite_bool") == `"True"` ? true : false;
+                return `
+            "favorite": ${value},`;
+            }
+            return "";
+        };
+
+        var info = `{${favorite()}
+            "folder": ${getFieldValue("documentConfig_info_folder")},
+            "owner": ${getFieldValue("documentConfig_info_owner")},
+            ${sharingSettings}"uploaded": ${getFieldValue("documentConfig_info_uploaded")}     
+        }`;
+        var config_string =
+            `var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "document": {
+        "info": ${info}
+        ,
         ...
     },
     ...
 });
-</pre>
+`;
+        var info_object = JSON.parse(info);
+        config.document.info = info_object;
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+        hljs.highlightBlock(pre);
+    }
+
+    function getFieldValue(id) {
+        var element = document.getElementById(id);
+        if (document.getElementById(id).parentElement.className == "select") {
+            return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
+        } else if (element.type == "checkbox") {
+            return element.checked;
+        } else if (`${element.value}` == ``) {
+            return `""`;
+        } else if (isNaN(element.value)) {
+            return `"${element.value}"`;
+        } else {
+            return Number(element.value);
+        }
+    }
+
+    function resizeCodeInput() {
+        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
+
+        var offset = paddingTop + paddingBottom + (borderSize * 2);
+        var height = controlFieldsHeight - offset;
+
+        document.getElementById("configPre").style.height = `${height}px`;
+    }
+</script>

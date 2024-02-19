@@ -25,5 +25,61 @@
               Looks up a localized string similar to The backup file is invalid. Please, use a file created in ONLYOFFICE v11.5 or later..
             </summary>
         </member>
+        <member name="P:ASC.Data.Backup.Service.BackupMailServerFilesService.IsConnected">
+            <summary>
+            State of the mail server connection
+            </summary>
+        </member>
+        <member name="M:ASC.Data.Backup.Service.BackupMailServerFilesService.Connect">
+            <summary>
+            Connect to Mail Server
+            </summary>
+            <returns>True if connect establish, False if not.</returns>
+        </member>
+        <member name="M:ASC.Data.Backup.Service.BackupMailServerFilesService.GetSingleFile(System.String)">
+            <summary>
+            Download single file from the mail server and return the path to file on the local temp directory 
+            </summary>
+            <param name="pathRemoteFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Data.Backup.Service.BackupMailServerFilesService.GetFilesList(System.String)">
+            <summary>
+            Get List of files pathes on the mail server directory, if connection establish
+            </summary>
+            <param name="remoteDirectory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Data.Backup.Service.BackupMailServerFilesService.GetDirectoryList(System.String)">
+            <summary>
+            Get List of directories on the mail server directory, if connection establish
+            </summary>
+            <param name="remoteDirectory"></param>
+            <returns></returns>
+            <exception cref="T:ASC.Data.Backup.Exceptions.DbBackupException"></exception>
+        </member>
+        <member name="M:ASC.Data.Backup.Service.BackupMailServerFilesService.SaveDirectory(System.String,System.Action{System.String,System.IO.Stream})">
+            <summary>
+            Recursively download and save by fileSaver action the directory from the mail server
+            </summary>
+            <param name="path">Directory on the mail server</param>
+            <param name="fileSaver">Action for save file</param>
+            <returns>Count of saved files</returns>
+        </member>
+        <member name="M:ASC.Data.Backup.Service.BackupMailServerFilesService.UploadMailDirectory(ASC.Data.Storage.ZipOperators.IDataReadOperator)">
+            <summary>
+            Upload the directory to the mail server
+            </summary>
+            <param name="dataReader"></param>
+            <returns>Count of uploaded files</returns>
+        </member>
+        <member name="M:ASC.Data.Backup.Service.BackupMailServerFilesService.UploadDirectory(System.String,ASC.Data.Storage.ZipOperators.IDataReadOperator)">
+            <summary>
+            Upload the directory to the mail server
+            </summary>
+            <param name="path"></param>
+            <param name="dataReader"></param>
+            <returns>Count of uploaded files</returns>
+        </member>
     </members>
 </doc>
