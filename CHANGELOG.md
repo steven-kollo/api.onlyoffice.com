@@ -1,5 +1,6 @@
 # Change Log
 
+- portals: v12.6
 - editors: sandbox on configuration pages
 
 ## 4.5.0
