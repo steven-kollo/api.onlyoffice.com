@@ -16,6 +16,8 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="81" class="copy-link">Version 8.1</h2>
+
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> query parameter to the requests from the browser to the server.</li>
