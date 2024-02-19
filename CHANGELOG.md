@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: change the default value of the editorConfig.customization.hideRightMenu parameter to true
 - editors: sandbox on configuration pages
 
 ## 4.5.0
