@@ -1,6 +1,9 @@
 # Change Log
 
+## 4.6.0
+- docspace: fix examples for dto
 - editors: sandbox on configuration pages
+- portals: v12.6
 
 ## 4.5.0
 - docspace: storybook v2.0.2
