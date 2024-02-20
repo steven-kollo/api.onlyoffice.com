@@ -274,7 +274,7 @@
         </div>
         <div class="line">
             <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden">
+                <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden" checked>
                 <span></span>
                 <label for="editorConfig_customization_hideRightMenu">Hide Right Menu</label>
             </label>
@@ -907,10 +907,10 @@
             <td id="hideRightMenu" class="copy-link">hideRightMenu</td>
             <td>
                 Defines if the right menu is displayed or hidden on first loading.
-                The default value is <b>false</b>.
+                The default value is <b>true</b>.
             </td>
             <td>boolean</td>
-            <td>false</td>
+            <td>true</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">

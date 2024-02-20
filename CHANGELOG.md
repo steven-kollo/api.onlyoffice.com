@@ -1,6 +1,7 @@
 # Change Log
 
 - editors: the editorConfig.customization.layout.toolbar.home.mailmerge field is deprecated, please use the editorConfig.customization.layout.toolbar.collaboration.mailmerge field instead
+- editors: change the default value of the editorConfig.customization.hideRightMenu parameter to true
 - editors: sandbox on configuration pages
 
 ## 4.5.0
