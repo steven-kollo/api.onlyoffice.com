@@ -17,6 +17,9 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Plugins and Macros API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("config") %>#menu">menu</a> config parameter.</li>
+    </ul>
 
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <ul>
