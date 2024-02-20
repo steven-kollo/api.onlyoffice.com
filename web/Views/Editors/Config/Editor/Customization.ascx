@@ -1060,7 +1060,16 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>toolbar.collaboration</b> - defines if the <b>Collaboration</b> tab is displayed or hidden.
+                        <b>toolbar.collaboration</b> - defines the <b>Collaboration</b> tab settings.
+                        If this parameter is a boolean value, then it specifies whether the <b>Collaboration</b> tab will be displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.collaboration.mailmerge</b> - defines if the button for choosing the mail merge base is displayed or hidden.
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
@@ -1117,7 +1126,8 @@
                         <b>type</b>: object,
                     </li>
                     <li>
-                        <b>toolbar.home.mailmerge</b> - defines if the button for choosing the mail merge base is displayed or hidden. The default value is <b>true</b>,
+                        <b>toolbar.home.mailmerge</b> - defines if the button for choosing the mail merge base is displayed or hidden.
+                        This parameter is deprecated, please use the <em>toolbar.collaboration.mailmerge</em> parameter instead,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -1199,7 +1209,9 @@
         "textLang": true
     },
     "toolbar": {
-        "collaboration": true,
+        "collaboration": {
+            "mailmerge": true
+        },
         "draw": true,
         "file": {
             "close": true,
@@ -1207,9 +1219,7 @@
             "save": true,
             "settings": true
         },
-        "home": {
-            "mailmerge": true
-        },
+        "home": {},
         "layout": true,
         "plugins": true,
         "protect": true,
