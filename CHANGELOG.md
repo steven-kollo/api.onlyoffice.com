@@ -1,5 +1,7 @@
 # Change Log
 
+- plugins: v8.1.0
+
 ## 4.6.0
 - docspace: fix examples for dto
 - editors: sandbox on configuration pages

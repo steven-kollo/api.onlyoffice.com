@@ -16,6 +16,8 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Plugins and Macros API.</p>
+    <h2 id="81" class="copy-link">Version 8.1</h2>
+
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("executemethod/slide/endslideshow") %>">EndSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
