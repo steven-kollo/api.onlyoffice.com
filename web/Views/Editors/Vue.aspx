@@ -54,6 +54,7 @@ npm install --save @onlyoffice/document-editor-vue
         documentServerUrl="http://documentserver/"
         :config="config"
         :events_onDocumentReady="onDocumentReady"
+        :onLoadComponentError="onLoadComponentError"
     /&gt; 
 &lt;/template&gt;
 
