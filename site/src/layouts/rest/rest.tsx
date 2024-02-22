@@ -498,7 +498,7 @@ function ReferenceParameter(
       onRetrieve={retrieve}
     />
   )
-  // teardown()
+  teardown()
   return e
 }
 
@@ -842,7 +842,7 @@ function ReferenceProperty(
       onRetrieve={retrieve}
     />
   )
-  // teardown()
+  teardown()
   return e
 }
 
