@@ -1,7 +1,7 @@
 // @ts-check
 
 /**
- * @typedef {import("../index")}
+ * @typedef {import("../index.js")}
  */
 
 // import { createReadStream, createWriteStream } from "node:fs"

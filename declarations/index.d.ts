@@ -1,66 +1,161 @@
 // todo: split into JS*Type and UniversalType. JSDeclaration, UniversalDeclaration.
 // constructors have only js classes
 
-interface RESTEntity {
-  // id: string
-  // title: string
-  // summary?: string
-  // description?: string
-  type: RESTEntityType
-}
+// export interface RESTEntity {
+//   // id: string
+//   // title: string
+//   // summary?: string
+//   // description?: string
+//   type: RESTEntityType
+// }
 
-type RESTEntityType = RESTEntityTypeMap[keyof RESTEntityTypeMap]
+// export type RESTEntityType = RESTEntityTypeMap[keyof RESTEntityTypeMap]
 
-interface RESTEntityTypeMap {
-  array: RESTArrayType
-  enum: RESTEnumType
-  nullable: RESTNullableType
-  object: RESTObjectType
-  primitive: RESTPrimitiveType
-  reference: RESTReferenceType
-  union: RESTUnionType
-}
+// export interface RESTEntityTypeMap extends RESTEntityPrimitiveTypeMap {
+//   array: RESTArrayType
+//   enum: RESTEnumType
+//   nullable: RESTNullableType
+//   object: RESTObjectType
+//   reference: RESTReferenceType
+//   union: RESTUnionType
+// }
 
-interface RESTArrayType extends RESTTypeNode {
-  type: "array"
-  items: RESTEntityType[]
-}
+// export interface RESTArrayType extends RESTTypeNode {
+//   type: "array"
+//   items: RESTEntityType
+// }
 
-interface RESTEnumType extends RESTTypeNode {
-  type: "enum"
-  // cases
-}
+// export interface RESTNullableType extends RESTTypeNode {
+//   type: "nullable"
+//   children: RESTEntityType
+// }
 
-interface RESTNullableType extends RESTTypeNode {
-  type: "nullable"
-  children: RESTEntityType
-}
+// export interface RESTObjectType extends RESTTypeNode {
+//   type: "object"
+//   properties: (RESTEntityType & { identifier: string })[]
+// }
 
-interface RESTObjectType extends RESTTypeNode {
-  type: "object"
-  // properties
-}
+// export interface RESTReferenceType extends RESTTypeNode {
+//   type: "reference"
+//   id: string
+// }
 
-interface RESTPrimitiveType extends RESTTypeNode {
-  type: "primitive"
-  value: "boolean" | "integer" | "null" | "number" | "string"
-  format?: string
-}
+// export interface RESTUnionType extends RESTTypeNode {
+//   type: "union"
+//   types: RESTEntityType[]
+// }
 
-interface RESTReferenceType extends RESTTypeNode {
-  type: "reference"
-  id: string
-}
+// // EnumType
 
-interface RESTUnionType extends RESTTypeNode {
-  type: "union"
-  // types:
-}
+// export type RESTEnumerationType = RESTEnumerationTypeMap[keyof RESTEnumerationTypeMap]
 
-interface RESTTypeNode {
-  type: string
-  description?: string
-}
+// export interface RESTEnumerationTypeMap {
+//   boolean: RESTBooleanEnumerationType
+//   integer: RESTIntegerEnumerationType
+//   number: RESTNumberEnumerationType
+//   string: RESTStringEnumerationType
+// }
+
+// export interface RESTBooleanEnumerationType extends RESTEnumerationTypeNode {
+//   cases: boolean[]
+// }
+
+// export interface RESTIntegerEnumerationType extends RESTEnumerationTypeNode {
+//   cases: number[]
+// }
+
+// export interface RESTNumberEnumerationType extends RESTEnumerationTypeNode {
+//   cases: number[]
+// }
+
+// export interface RESTStringEnumerationType extends RESTEnumerationTypeNode {
+//   cases: string[]
+// }
+
+// export interface RESTEnumerationTypeNode extends RESTTypeNode {
+//   type: "enum"
+//   cases: unknown[]
+// }
+
+// // // LiteralType
+
+// // export interface RESTLiteralType extends RESTTypeNode {
+// //   type: "literal"
+// //   value: RESTLiteralValue
+// // }
+
+// // export type RESTLiteralValue = RESTLiteralValueMap[keyof RESTLiteralValueMap]
+
+// // export interface RESTLiteralValueMap {
+// //   boolean: RESTBooleanLiteralValue
+// //   integer: RESTIntegerLiteralValue
+// //   number: RESTNumberLiteralValue
+// //   string: RESTStringLiteralValue
+// // }
+
+// // export interface RESTBooleanLiteralValue extends RESTBooleanType {
+// //   value: boolean
+// // }
+
+// // export interface RESTIntegerLiteralValue extends RESTIntegerType {
+// //   value: number
+// // }
+
+// // export interface RESTNumberLiteralValue extends RESTNumberType {
+// //   value: number
+// // }
+
+// // export interface RESTStringLiteralValue extends RESTStringType {
+// //   value: string
+// // }
+
+// // PrimitiveType
+
+// export type RESTEntityPrimitiveType = RESTEntityPrimitiveTypeMap[keyof RESTEntityPrimitiveTypeMap]
+
+// export interface RESTEntityPrimitiveTypeMap {
+//   boolean: RESTBooleanType
+//   integer: RESTIntegerType
+//   number: RESTNumberType
+//   string: RESTStringType
+// }
+
+// export interface RESTBooleanType extends RESTTypeNode {
+//   type: "boolean"
+//   example?: boolean
+// }
+
+// export interface RESTIntegerType extends RESTTypeNode {
+//   type: "integer"
+//   example?: number
+// }
+
+// export interface RESTNumberType extends RESTTypeNode {
+//   type: "number"
+//   example?: number
+// }
+
+// export interface RESTStringType extends RESTTypeNode {
+//   type: "string"
+//   example?: string
+// }
+
+// export interface RESTTypeNode {
+//   type: string
+//   description?: string
+//   example?: unknown
+//   format?: string
+// }
+
+
+
+
+
+
+
+
+
+
 
 type Declaration = DeclarationMap[keyof DeclarationMap]
 

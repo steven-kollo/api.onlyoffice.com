@@ -4,8 +4,7 @@
  * @typedef {import("@11ty/eleventy").UserConfig} UserConfig
  */
 
-const { join } = require("node:path")
-const { Transform } = require("node:stream")
+const { join, parse } = require("node:path")
 const { bundleAsync } = require("lightningcss")
 const { isBuild } = require("./env.cjs")
 
@@ -19,20 +18,22 @@ const minify = isBuild()
  * @returns {void}
  */
 function stylesPlugin(uc) {
-  uc.addPassthroughCopy("./src/main.css", {
+  uc.addTemplateFormats("css")
+  uc.addExtension("css", {
+    outputFileExtension: "css",
     /**
+     * @param {string} _
      * @param {string} f
-     * @returns {Transform}
+     * @returns {(() => Promise<Uint8Array>) | undefined}
      */
-    transform(f) {
-      return new Transform({
-        transform(_, __, cb) {
-          buildStyles(f).then((c) => {
-            this.push(c)
-            cb(null)
-          })
-        }
-      })
+    compile(_, f) {
+      const { name } = parse(f)
+      if (name !== "main") {
+        return
+      }
+      return () => {
+        return buildStyles(f)
+      }
     }
   })
 }

@@ -34,8 +34,9 @@ function prettifyJSON(from, to) {
  * @returns {Promise<void>}
  */
 function jq(w, args = []) {
+  const a = ["--monochrome-output", ...args]
   return new Promise((res, rej) => {
-    const s = spawn("jq", args)
+    const s = spawn("jq", a)
     s.stdout.on("data", (ch) => {
       w.write(ch)
     })

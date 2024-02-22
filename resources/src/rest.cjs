@@ -1,15 +1,15 @@
 // @ts-ignore
 
-const declarations = require("./resource.declarations.json")
+const paths = require("./resource.paths.json")
 
 function list() {
-  return declarations
+  return paths
 }
 
-const entities = require("./resource.entities.json")
+const references = require("./resource.references.json")
 
 function retrieve(id) {
-  return entities[id]
+  return references[id]
 }
 
 module.exports = { list, retrieve }

@@ -38,6 +38,7 @@ function data() {
 
 function permalink(d) {
   let p = d.meta.package
+  // todo: it should be part of the declarations packages.
   if (d.meta.package.startsWith("word/api_plugins")) {
     p = "text/_plugins"
   } else if (d.meta.package.startsWith("word")) {
@@ -71,8 +72,4 @@ function permalink(d) {
   return u
 }
 
-function render() {
-  return ""
-}
-
-module.exports = { data, render }
+module.exports = { data }

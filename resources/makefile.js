@@ -16,8 +16,8 @@ make
 
 async function build() {
   await Promise.all([
-    // docspace.build(),
-    documentBuilder.build()
+    docspace.build(),
+    // documentBuilder.build()
   ])
 }
 

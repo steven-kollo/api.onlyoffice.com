@@ -20,13 +20,12 @@ import {
   PreprocessDeclarations as JSDocPreprocessDeclarations
 } from "@onlyoffice/documentation-declarations/jsdoc.js"
 import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-scripts/jq.js"
-import MultiStream from "multistream"
 import Chain from "stream-chain"
 import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
-import { UnStreamObject, download, makeObject, num } from "./utils.js"
+import { UnStreamObject, download, makeObject, mergeArrays, num } from "./utils.js"
 import pack from "../package.json" assert { type: "json" }
 
 import { createRequire } from "module"
@@ -37,7 +36,10 @@ const dist = join(root, "dist")
 const src = join(root, "src")
 
 const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-definitions-demo/dist/"
-const files = ["sdkjs-forms.json", "sdkjs.json"]
+const files = [
+  "sdkjs-forms.json",
+  "sdkjs.json"
+]
 
 /**
  * @typedef {Object} BuildOptions
@@ -163,7 +165,7 @@ async function build(options) {
 
   let from = ""
   let to = join(temp, pd)
-  await mergeDeclarations(froms, to)
+  await mergeArrays(froms, to)
 
   from = to
   to = join(dist, pd)
@@ -219,29 +221,6 @@ class PreprocessDeclarations extends JSDocPreprocessDeclarations {
     }
     super._transform(ch, enc, cb)
   }
-}
-
-/**
- * @param {string[]} froms
- * @param {string} to
- * @returns {Promise<void>}
- */
-function mergeDeclarations(froms, to) {
-  return new Promise((res, rej) => {
-    const c = new Chain([
-      new MultiStream(froms.map((from) => createReadStream(from))),
-      parser({ jsonStreaming: true }),
-      new StreamArray(),
-      (ch) => {
-        return ch.value
-      },
-      new Disassembler(),
-      new Stringer({ makeArray: true }),
-      createWriteStream(to)
-    ])
-    c.on("error", rej)
-    c.on("close", res)
-  })
 }
 
 /**

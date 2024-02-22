@@ -4,8 +4,9 @@
  * @typedef {import("@11ty/eleventy").UserConfig} UserConfig
  */
 
+const { Buffer } = require("node:buffer")
 const { tmpdir } = require("node:os")
-const { Transform } = require("node:stream")
+const { parse } = require("node:path")
 const { build } = require("esbuild")
 const { isBuild } = require("./env.cjs")
 
@@ -16,28 +17,22 @@ const minify = isBuild()
  * @returns {void}
  */
 function scriptsPlugin(uc) {
-  uc.addPassthroughCopy("./src", {
-    filter: ["**/main.ts"],
+  uc.addTemplateFormats("ts")
+  uc.addExtension("ts", {
+    outputFileExtension: "js",
     /**
+     * @param {string} _
      * @param {string} f
-     * @returns {Transform}
+     * @returns {(() => Promise<Uint8Array>) | undefined}
      */
-    transform(f) {
-      return new Transform({
-        transform(_, __, cb) {
-          buildScripts(f).then((c) => {
-            this.push(c)
-            cb(null)
-          })
-        }
-      })
-    },
-    /**
-     * @param {string} f
-     * @returns {string}
-     */
-    rename(f) {
-      return f.replace(/\.ts$/, ".js")
+    compile(_, f) {
+      const { name } = parse(f)
+      if (name !== "main") {
+        return
+      }
+      return () => {
+        return buildScripts(f)
+      }
     }
   })
 }
@@ -54,7 +49,7 @@ async function buildScripts(f) {
     outdir: tmpdir(),
     write: false,
   })
-  return r.outputFiles[0].contents
+  return Buffer.from(r.outputFiles[0].contents)
 }
 
 module.exports = { buildScripts, scriptsPlugin }

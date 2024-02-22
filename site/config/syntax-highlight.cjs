@@ -23,8 +23,8 @@ function syntaxHighlightPlugin(uc) {
     if (cache.has("starryNight")) {
       return
     }
-    const { common, createStarryNight } = await import("@wooorm/starry-night")
-    const starryNight = await createStarryNight(common)
+    const { all, createStarryNight } = await import("@wooorm/starry-night")
+    const starryNight = await createStarryNight(all)
     cache.set("starryNight", starryNight)
   })
 }

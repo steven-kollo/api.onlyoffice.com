@@ -5,6 +5,7 @@ const documentBuilder = true // todo: isBuild() || isPreview()
   : require("./code/code.cjs")
 
 function list() {
+  return []
   const l = documentBuilder.list()
   const i = l.find((d) => Object.hasOwn(d, "extends"))
   const r = l.slice(0, 101)
