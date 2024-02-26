@@ -76,7 +76,7 @@ export function RESTDeclaration(
       <Retriever>
         {({ setup, isLoop, teardown }) => (
           <>
-            {/* {(
+            {(
               d.queryParameters !== undefined ||
               d.pathParameters !== undefined ||
               d.bodyParameters !== undefined
@@ -86,11 +86,17 @@ export function RESTDeclaration(
                 {sections.map((s) => (
                   <>
                     <h3>{s.title}</h3>
-                    <Parameters parameters={s.parameters} onRetrieve={onRetrieve} />
+                    <Parameters
+                      parameters={s.parameters}
+                      isLoop={isLoop}
+                      onRetrieve={retrieve}
+                      onSetup={setup}
+                      onTeardown={teardown}
+                    />
                   </>
                 ))}
               </>
-            )} */}
+            )}
             {d.examples !== undefined && (
               <>
                 <h2>Examples</h2>
@@ -158,14 +164,17 @@ function Retriever({ children }: RetrieverParameters): ReturnType<RetrieverParam
   }
 
   function isLoop(): boolean {
-    if (n !== -1) {
-      const c = h[h.length - 1]
-      const p = h[(h.length - 1) - (n + 1)]
-      if (c === p) {
-        return true
-      }
-    }
     return false
+
+    // if (n !== -1) {
+    //   const c = h[h.length - 1]
+    //   const p = h[(h.length - 1) - (n + 1)]
+    //   if (c === p) {
+    //     return true
+    //   }
+    // }
+    // return false
+
     // if (n === -1) {
     //   return false
     // }
@@ -889,9 +898,17 @@ function data() {
 function render({ pagination, onRetrieve, onLink }) {
   return (
     <>
-      {pagination.items.map((d) => (
-        <RESTDeclaration declaration={d} onRetrieve={onRetrieve} />
-      ))}
+      {pagination.items.map((d) => {
+        if (
+          d.slug === "web/save-the-documents-firebase-device-token" ||
+          d.slug === "web/subscribe-to-documents-push-notification" ||
+          d.slug === "web/update-a-storage" ||
+          d.slug === "web/update-the-cdn-storage"
+        ) {
+          return <>recursive</>
+        }
+        return <RESTDeclaration declaration={d} onRetrieve={onRetrieve} />
+      })}
     </>
   )
 }

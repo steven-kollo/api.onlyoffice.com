@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "DOCUMENTATION_RUN_MODE=build node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js",
-    "preview": "DOCUMENTATION_RUN_MODE=preview node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js --serve",
+    "preview": "DOCUMENTATION_RUN_MODE=preview node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js",
     "serve": "DOCUMENTATION_RUN_MODE=serve node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js --serve --quiet"
   },
   "dependencies": {
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-dev-server": "^1.0.4",
     "@mdx-js/mdx": "^3.0.0",
     "@onlyoffice/documentation-declarations": "workspace:^",
     "@onlyoffice/documentation-resources": "workspace:^",
@@ -26,6 +27,10 @@
     "hast-util-to-jsx-runtime": "^2.3.0",
     "html-minifier-terser": "^7.2.0",
     "lightningcss": "^1.23.0",
+    "mdast-util-from-markdown": "^2.0.0",
+    "mdast-util-gfm-table": "^2.0.0",
+    "mdast-util-to-hast": "^13.1.0",
+    "micromark-extension-gfm-table": "^2.0.0",
     "preact": "^10.19.3",
     "preact-render-to-string": "^6.3.1",
     "rehype-raw": "^7.0.0",

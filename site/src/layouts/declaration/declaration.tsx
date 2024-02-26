@@ -1,3 +1,4 @@
+import { Markdown } from "@/src/components/markdown/markdown.tsx"
 import { SyntaxHighlight } from "@/src/components/syntax-highlight/SyntaxHighlight.tsx"
 import { CodeDeclaration } from "@onlyoffice/documentation-ui-kit-js"
 import { h, Fragment } from "preact"
@@ -14,7 +15,8 @@ function render({ pagination, onRetrieve, onLink }) {
       {pagination.items.map((d) => (
         <CodeDeclaration
           declaration={d}
-          onHighlight={SyntaxHighlight}
+          onProcessMarkdown={Markdown}
+          onHighlightSyntax={SyntaxHighlight}
           onLink={onLink}
           onRetrieve={onRetrieve}
         />

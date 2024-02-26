@@ -4,7 +4,7 @@
  * @typedef {import("@11ty/eleventy").UserConfig} UserConfig
  */
 
-const { isBuild } = require("./env.cjs")
+const { isBuild, isPreview } = require("./env.cjs")
 
 /**
  * @param {UserConfig} uc
@@ -20,7 +20,7 @@ function staticPlugin(uc) {
   // https://github.com/11ty/eleventy/issues/3010
   uc.addPassthroughCopy({ "./src/pages": "." }, {
     filter: ["**/_static/*"],
-    ...(isBuild()
+    ...(isBuild() || isPreview()
       ? {
         rename(path) {
           // todo

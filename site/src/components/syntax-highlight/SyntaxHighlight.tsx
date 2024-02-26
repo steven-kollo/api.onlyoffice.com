@@ -9,8 +9,8 @@ interface SyntaxHighlightProperties {
 }
 
 function SyntaxHighlight({ syntax, children }: SyntaxHighlightProperties): JSX.Element {
-  const tree = highlight(children, syntax)
-  return toJsxRuntime(tree, { Fragment, jsx, jsxs })
+  const t = highlight(children, syntax)
+  return toJsxRuntime(t, { Fragment, jsx, jsxs })
 }
 
 export { SyntaxHighlight }

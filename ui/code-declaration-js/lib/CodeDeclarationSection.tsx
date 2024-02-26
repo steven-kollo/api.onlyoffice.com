@@ -2,40 +2,108 @@ import { Fragment, JSX, h } from "preact"
 import { CodeDeclarationReference } from "./CodeDeclarationReference.tsx"
 import { CodeDeclarationToken } from "./CodeDeclarationToken.tsx"
 
-function CodeDeclarationSection({ section: s, onHighlight, onRetrieve, onLink }): JSX.Element {
+export interface CodeDeclarationSectionParameters {
+  section: any
+  onHighlightSyntax: any
+  onLink: any
+  onProcessMarkdown: any
+  onRetrieve: any
+}
+
+export function CodeDeclarationSection(
+  {
+    section: s,
+    onHighlightSyntax: SyntaxHighlight,
+    onLink: link,
+    onProcessMarkdown: Markdown,
+    onRetrieve: retrieve
+  }: CodeDeclarationSectionParameters
+): JSX.Element {
   switch (s.type) {
   case "parameters":
-    return <Parameters parameters={s.items} onLink={onLink} />
+    return (
+      <CodeDeclarationParametersSection
+        parameters={s.items}
+        onLink={link}
+        onProcessMarkdown={Markdown}
+      />
+    )
   case "returns":
-    return <Returns returns={s} onLink={onLink} />
+    return (
+      <CodeDeclarationReturnsSection
+        returns={s}
+        onLink={link}
+        onProcessMarkdown={Markdown}
+      />
+    )
   case "examples":
-    return <Examples examples={s.items} onHighlight={onHighlight} />
+    return (
+      <CodeDeclarationExamplesSection
+        examples={s.items}
+        onHighlightSyntax={SyntaxHighlight}
+      />
+    )
   case "topics":
-    return <Topics topics={s.items} onRetrieve={onRetrieve} onLink={onLink} />
+    return (
+      <CodeDeclarationTopicsSection
+        topics={s.items}
+        onLink={link}
+        onProcessMarkdown={Markdown}
+        onRetrieve={retrieve}
+      />
+    )
   case "relationship":
-    return <Relationship relationship={s.items} onRetrieve={onRetrieve} onLink={onLink} />
+    return (
+      <CodeDeclarationRelationshipSection
+        relationship={s.items}
+        onLink={link}
+        onProcessMarkdown={Markdown}
+        onRetrieve={retrieve}
+      />
+    )
   case "seeAlso":
-    return <SeeAlso seeAlso={s.items} onRetrieve={onRetrieve} onLink={onLink} />
+    return (
+      <CodeDeclarationSeeAlsoSection
+        seeAlso={s.items}
+        onLink={link}
+        onProcessMarkdown={Markdown}
+        onRetrieve={retrieve}
+      />
+    )
   default:
     // todo: throw new Error(`Unknown section type: ${s.type}`)
     return <></>
   }
 }
 
-function Parameters({ parameters: pa, onLink }): JSX.Element {
+interface CodeDeclarationParametersSectionParameters {
+  parameters: any
+  onLink: any
+  onProcessMarkdown: any
+}
+
+function CodeDeclarationParametersSection(
+  {
+    parameters: pa,
+    onLink: link,
+    onProcessMarkdown: Markdown
+  }: CodeDeclarationParametersSectionParameters
+): JSX.Element {
   return (
     <>
       <h2>Parameters</h2>
       <dl>
         {pa.map((p) => {
           const c = p.signature.map((t) => (
-            <CodeDeclarationToken onLink={onLink} token={t} />
+            <CodeDeclarationToken onLink={link} token={t} />
           ))
           return (
             <>
               <dt><code>{p.name}</code> <code>{c}</code></dt>
               <dd>
-                <p>{p.description}</p>
+                {p.description !== undefined && (
+                  <Markdown>{p.description}</Markdown>
+                )}
                 {p.default !== undefined && <p>Default: <code>{p.default}</code></p>}
               </dd>
             </>
@@ -46,59 +114,136 @@ function Parameters({ parameters: pa, onLink }): JSX.Element {
   )
 }
 
-function Returns({ returns: re, onLink }): JSX.Element {
-  const c = re.signature.map((t) => (
-    <CodeDeclarationToken onLink={onLink} token={t} />
-  ))
+interface CodeDeclarationReturnsSectionParameters {
+  returns: any
+  onLink: any
+  onProcessMarkdown: any
+}
+
+function CodeDeclarationReturnsSection(
+  {
+    returns: re,
+    onLink: link,
+    onProcessMarkdown: Markdown
+  }: CodeDeclarationReturnsSectionParameters
+): JSX.Element {
   return (
     <>
       <h2>Returns</h2>
       <dl>
-        <dt><code>{c}</code></dt>
+        <dt><code><Signature /></code></dt>
         {re.description !== undefined && (
           <dd>
-            <p>{re.description}</p>
+            <Markdown>{re.description}</Markdown>
           </dd>
         )}
       </dl>
     </>
   )
+
+  function Signature(): JSX.Element {
+    return re.signature.map((t) => (
+      <CodeDeclarationToken token={t} onLink={link} />
+    ))
+  }
 }
 
-function Examples({ examples: ex, onHighlight: SyntaxHighlight }): JSX.Element {
+interface CodeDeclarationExamplesSectionParameters {
+  examples: any
+  onHighlightSyntax: any
+}
+
+function CodeDeclarationExamplesSection(
+  {
+    examples: ex,
+    onHighlightSyntax: SyntaxHighlight
+  }: CodeDeclarationExamplesSectionParameters
+): JSX.Element {
   return (
     <>
       <h2>Examples</h2>
-      {ex.map((e) => {
+      {ex.map((e) => (
         <pre><code><SyntaxHighlight syntax="js">{e}</SyntaxHighlight></code></pre>
-      })}
-    </>
-  )
-}
-
-function Topics({ topics, onRetrieve, onLink }): JSX.Element {
-  return (
-    <>
-      <h2>Topics</h2>
-      {topics.map((t) => (
-        <Topic topic={t} onRetrieve={onRetrieve} onLink={onLink} />
       ))}
     </>
   )
 }
 
-function Relationship({ relationship: re, onRetrieve, onLink }): JSX.Element {
+interface CodeDeclarationTopicsSectionParameters {
+  topics: any
+  onLink: any
+  onProcessMarkdown: any
+  onRetrieve: any
+}
+
+function CodeDeclarationTopicsSection(
+  {
+    topics: ts,
+    onLink: link,
+    onProcessMarkdown: Markdown,
+    onRetrieve: retrieve
+  }: CodeDeclarationTopicsSectionParameters
+): JSX.Element {
+  return (
+    <>
+      <h2>Topics</h2>
+      {ts.map((t) => (
+        <CodeDeclarationTopicSection
+          topic={t}
+          onLink={link}
+          onProcessMarkdown={Markdown}
+          onRetrieve={retrieve}
+        />
+      ))}
+    </>
+  )
+}
+
+interface CodeDeclarationRelationshipParameters {
+  relationship: any
+  onLink: any
+  onProcessMarkdown: any
+  onRetrieve: any
+}
+
+function CodeDeclarationRelationshipSection(
+  {
+    relationship: re,
+    onLink: link,
+    onProcessMarkdown: Markdown,
+    onRetrieve: retrieve
+  }: CodeDeclarationRelationshipParameters
+): JSX.Element {
   return (
     <>
       <h2>Relationship</h2>
       {re.map((r) => (
-        <Topic topic={r} onRetrieve={onRetrieve} onLink={onLink} />
+        <CodeDeclarationTopicSection
+          topic={r}
+          onLink={link}
+          onProcessMarkdown={Markdown}
+          onRetrieve={retrieve}
+        />
       ))}
     </>
   )
 }
 
-function SeeAlso({ seeAlso: sa, onRetrieve, onLink }): JSX.Element {
+interface CodeDeclarationSeeAlsoParameters {
+  seeAlso: any
+  onLink: any
+  onProcessMarkdown: any
+  onRetrieve: any
+}
+
+function CodeDeclarationSeeAlsoSection(
+  {
+    seeAlso: sa,
+    onLink: link,
+    onProcessMarkdown: Markdown,
+    onRetrieve: retrieve
+  }: CodeDeclarationSeeAlsoParameters
+): JSX.Element {
   const t = {
     title: "See Also",
     items: sa
@@ -108,14 +253,18 @@ function SeeAlso({ seeAlso: sa, onRetrieve, onLink }): JSX.Element {
       <h2>{t.title}</h2>
       <dl>
         {t.items.map((item) => {
-          const d = onRetrieve(item)
+          const d = retrieve(item)
           if (d === undefined) {
             return <></>
           }
           return (
             <>
-              <dt><CodeDeclarationReference declaration={d} onLink={onLink} /></dt>
-              <dd>{d.description}</dd>
+              <dt><CodeDeclarationReference declaration={d} onLink={link} /></dt>
+              {d.summary !== undefined && (
+                <dd>
+                  <Markdown>{d.summary}</Markdown>
+                </dd>
+              )}
             </>
           )
         })}
@@ -124,20 +273,38 @@ function SeeAlso({ seeAlso: sa, onRetrieve, onLink }): JSX.Element {
   )
 }
 
-function Topic({ topic: t, onRetrieve, onLink }): JSX.Element {
+interface CodeDeclarationTopicSectionParameters {
+  topic: any
+  onLink: any
+  onProcessMarkdown: any
+  onRetrieve: any
+}
+
+function CodeDeclarationTopicSection(
+  {
+    topic: t,
+    onRetrieve: retrieve,
+    onProcessMarkdown: Markdown,
+    onLink: link
+  }: CodeDeclarationTopicSectionParameters
+): JSX.Element {
   return (
     <>
       <h3>{t.title}</h3>
       <dl>
         {t.items.map((item) => {
-          const d = onRetrieve(item)
+          const d = retrieve(item)
           if (d === undefined) {
             return <></>
           }
           return (
             <>
-              <dt><CodeDeclarationReference declaration={d} onLink={onLink} /></dt>
-              <dd>{d.description}</dd>
+              <dt><CodeDeclarationReference declaration={d} onLink={link} /></dt>
+              {d.summary !== undefined && (
+                <dd>
+                  <Markdown>{d.summary}</Markdown>
+                </dd>
+              )}
             </>
           )
         })}
@@ -145,5 +312,3 @@ function Topic({ topic: t, onRetrieve, onLink }): JSX.Element {
     </>
   )
 }
-
-export { CodeDeclarationSection }

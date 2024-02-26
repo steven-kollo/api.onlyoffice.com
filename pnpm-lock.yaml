@@ -95,6 +95,9 @@ importers:
       '@11ty/eleventy':
         specifier: ^2.0.1
         version: 2.0.1
+      '@11ty/eleventy-dev-server':
+        specifier: ^1.0.4
+        version: 1.0.4
       '@mdx-js/mdx':
         specifier: ^3.0.0
         version: 3.0.0
@@ -137,6 +140,18 @@ importers:
       lightningcss:
         specifier: ^1.23.0
         version: 1.23.0
+      mdast-util-from-markdown:
+        specifier: ^2.0.0
+        version: 2.0.0
+      mdast-util-gfm-table:
+        specifier: ^2.0.0
+        version: 2.0.0
+      mdast-util-to-hast:
+        specifier: ^13.1.0
+        version: 13.1.0
+      micromark-extension-gfm-table:
+        specifier: ^2.0.0
+        version: 2.0.0
       preact:
         specifier: ^10.19.3
         version: 10.19.3

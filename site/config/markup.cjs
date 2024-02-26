@@ -10,9 +10,9 @@ const htmlMinifier = require("html-minifier-terser")
 const { isValidElement } = require("preact")
 const { render } = require("preact-render-to-string")
 const requireFromString = require("require-from-string")
-const { isBuild } = require("./env.cjs")
+const { isBuild, isPreview } = require("./env.cjs")
 
-const minify = isBuild()
+const minify = isBuild() || isPreview()
 
 /**
  * @param {UserConfig} uc

@@ -6,12 +6,12 @@
 
 const { join, parse } = require("node:path")
 const { bundleAsync } = require("lightningcss")
-const { isBuild } = require("./env.cjs")
+const { isBuild, isPreview } = require("./env.cjs")
 
 const src = join(__dirname, "../src")
 const dark = join(src, "dark.css")
 const light = join(src, "light.css")
-const minify = isBuild()
+const minify = isBuild() || isPreview()
 
 /**
  * @param {UserConfig} uc

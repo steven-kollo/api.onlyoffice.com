@@ -5,14 +5,19 @@ const documentBuilder = true // todo: isBuild() || isPreview()
   : require("./code/code.cjs")
 
 function list() {
-  return []
   const l = documentBuilder.list()
-  const i = l.find((d) => Object.hasOwn(d, "extends"))
+  if (isBuild() || isPreview()) {
+    return l
+  }
   const r = l.slice(0, 101)
-  const i2 = l.find((d) => Object.hasOwn(d, "implements"))
-  const i3 = l.find((d) => d.id === "word/api_plugins;Api#AddContentControlDatePicker")
-  const i4 = l.find((d) => d.id === "word/api_plugins;Api#AddContentControl")
-  r.push(i, i2, i3, i4)
+  r.push(
+    l.find((d) => Object.hasOwn(d, "extends")),
+    l.find((d) => Object.hasOwn(d, "implements")),
+    l.find((d) => d.id === "word/api_plugins;Api#AddContentControlDatePicker"),
+    l.find((d) => d.id === "word/api_plugins;Api#AddContentControl"),
+    l.find((d) => d.id === "common/plugins/plugin_base_api;Plugin"),
+    l.find((d) => d.id === "common/plugins/plugin_base_api;Plugin#callCommand"),
+  )
   return r
 }
 

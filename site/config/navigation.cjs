@@ -5,7 +5,7 @@
  */
 
 const { extname } = require("node:path")
-const { isBuild } = require("./env.cjs")
+const { isBuild, isPreview } = require("./env.cjs")
 
 /**
  * @typedef {Object} NavigationItem
@@ -26,7 +26,7 @@ const { isBuild } = require("./env.cjs")
  */
 
 const cache = new WeakMap()
-const doCache = isBuild()
+const doCache = isBuild() || isPreview()
 
 /**
  * @param {UserConfig} uc

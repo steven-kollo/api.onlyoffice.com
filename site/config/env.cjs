@@ -13,7 +13,11 @@ const { env } = require("node:process")
  * @returns {boolean} `true` if the run mode is `build`, `false` otherwise.
  */
 function isBuild() {
-  return env.DOCUMENTATION_RUN_MODE === "build"
+  const m = env.DOCUMENTATION_RUN_MODE
+  if (m === undefined) {
+    throw new Error("DOCUMENTATION_RUN_MODE is not defined")
+  }
+  return m === "build"
 }
 
 /**
@@ -21,7 +25,11 @@ function isBuild() {
  * @returns {boolean} `true` if the run mode is `preview`, `false` otherwise.
  */
 function isPreview() {
-  return env.DOCUMENTATION_RUN_MODE === "preview"
+  const m = env.DOCUMENTATION_RUN_MODE
+  if (m === undefined) {
+    throw new Error("DOCUMENTATION_RUN_MODE is not defined")
+  }
+  return m === "preview"
 }
 
 /**
@@ -29,7 +37,23 @@ function isPreview() {
  * @returns {boolean} `true` if the run mode is `serve`, `false` otherwise.
  */
 function isServe() {
-  return env.DOCUMENTATION_RUN_MODE === "serve"
+  const m = env.DOCUMENTATION_RUN_MODE
+  if (m === undefined) {
+    throw new Error("DOCUMENTATION_RUN_MODE is not defined")
+  }
+  return m === "serve"
 }
 
-module.exports = { isBuild, isPreview, isServe }
+/**
+ * Returns the root directory of the Eleventy project.
+ * @returns {string}
+ */
+function root() {
+  const r = env.ELEVENTY_ROOT
+  if (r === undefined) {
+    throw new Error("ELEVENTY_ROOT is not defined")
+  }
+  return r
+}
+
+module.exports = { isBuild, isPreview, isServe, root }
