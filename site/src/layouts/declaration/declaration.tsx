@@ -1,4 +1,4 @@
-import { Markdown } from "@/src/components/markdown/markdown.tsx"
+import { Markdown } from "@/src/components/markdown/Markdown.tsx"
 import { SyntaxHighlight } from "@/src/components/syntax-highlight/SyntaxHighlight.tsx"
 import { CodeDeclaration } from "@onlyoffice/documentation-ui-kit-js"
 import { h, Fragment } from "preact"
