@@ -1,6 +1,5 @@
 // @ts-check
 
-const { basename } = require("node:path")
 const { list, retrieve } = require("@/resources/document-builder.cjs")
 
 function data() {
@@ -17,10 +16,7 @@ function data() {
     },
     eleventyComputed: {
       title(data) {
-        return basename(data.page.url)
-      },
-      currentName(data) {
-        return basename(data.page.url)
+        return data.pagination.items[0].title
       }
     },
     onRetrieve(t) {
