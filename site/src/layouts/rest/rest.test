@@ -492,3 +492,124 @@ console.log(
     ]
   )
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // function setup(id: string): void {
+  //   // const i = s.lastIndexOf(id)
+  //   const i = s.indexOf(id)
+  //   if (i !== -1) {
+  //     if (n === -1) {
+  //       n = i
+  //       c = 0
+  //     } else {
+  //       console.log("?: ", i - (n + c) === 1)
+  //       c += 1
+  //       // if (i - (n + c) === 1) {
+  //       //   c += 1
+  //       // } else {
+  //       //   n = -1
+  //       //   c = -1
+  //       // }
+  //     }
+  //   }
+  //   s.push(id)
+  //   y += 1
+  // }
+
+  // function isLoop(): boolean {
+  //   console.log()
+  //   console.log("s: ", s)
+  //   console.log("n: ", n)
+  //   console.log("c: ", c)
+  //   console.log(s[n] !== undefined && s[n] === s[n + c + 1])
+  //   return s[n] !== undefined && s[n] === s[n + c + 1]
+
+  //   // console.log(s[n])
+  //   // console.log(s[s.length - 1])
+  //   // console.log(!(n === -1 || c === 0) && s[n] === s[s.length - 1])
+
+  //   return false
+
+  //   // if (n === -1 || c === 0) {
+  //   //   return false
+  //   // }
+  //   // const a = s[n]
+  //   // if (a === undefined) {
+  //   //   return false
+  //   // }
+  //   // const b = s[s.length - 1]
+  //   // if (b === undefined) {
+  //   //   return false
+  //   // }
+  //   // if (a !== b) {
+  //   //   return false
+  //   // }
+
+  //   // if (n === -1) {
+  //   //   return false
+  //   // }
+  //   // const c = s[s.length - 1]
+  //   // if (c === undefined) {
+  //   //   return false
+  //   // }
+  //   // const p = s[(s.length - 1) - (n + 1)]
+  //   // if (p === undefined) {
+  //   //   return false
+  //   // }
+  //   // if (c !== p) {
+  //   //   return false
+  //   // }
+  //   return true
+  // }
+
+  // function register() {
+  //   r.add(y)
+  //   n = -1
+  //   c = -1
+  // }
+
+  // function isRegistered(i: number): boolean {
+  //   return r.has(i)
+  // }
+
+  // function teardown(): void {
+  //   s.pop()
+  // }
+
+
+    // x += 1
+    // if (isRegistered(x)) {
+    //   return {
+    //     type: "unknown"
+    //   }
+    // }
+    // return retrieve(id)
+
+
+		      // setup(t.id)
+      // if (isLoop()) {
+      //   register()
+      // } else {
+      //   const r = retrieve(t.id)
+      //   if (r === undefined) {
+      //     throw new Error(`unable to retrieve reference: ${t.id}`)
+      //   }
+      //   process(r)
+      //   teardown()
+      // }
+
+
+			  // let n = -1
+  // let c = -1

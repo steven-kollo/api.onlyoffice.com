@@ -14,6 +14,7 @@ import {
   RESTNumberProperty,
   RESTObjectParameter,
   RESTObjectProperty,
+  RESTObjectType,
   RESTParameter,
   RESTPath,
   RESTProperty,
@@ -73,187 +74,177 @@ export function RESTDeclaration(
       <pre><code>{d.endpoint}</code></pre>
       <h2>Description</h2>
       <p>{d.description}</p>
-      <Retriever>
-        {({ setup, isLoop, teardown }) => (
-          <>
-            {(
-              d.queryParameters !== undefined ||
-              d.pathParameters !== undefined ||
-              d.bodyParameters !== undefined
-            ) && (
-              <>
-                <h2>Request</h2>
-                {sections.map((s) => (
-                  <>
-                    <h3>{s.title}</h3>
-                    <Parameters
-                      parameters={s.parameters}
-                      isLoop={isLoop}
-                      onRetrieve={retrieve}
-                      onSetup={setup}
-                      onTeardown={teardown}
-                    />
-                  </>
-                ))}
-              </>
-            )}
-            {d.examples !== undefined && (
-              <>
-                <h2>Examples</h2>
-                {d.examples.map((e) => (
-                  // todo: use tabs
-                  <pre><code><SyntaxHighlight syntax={e.syntax}>{e.code}</SyntaxHighlight></code></pre>
-                ))}
-              </>
-            )}
-            {d.responses !== undefined && (
-              <>
-                <h2>Responses</h2>
-                {d.responses.map((r) => (
-                  <>
-                    <h3>Response Status of {r.status}</h3>
-                    {r.description !== undefined && (
-                      <p>{r.description}</p>
-                    )}
-                    <Parameters
-                      parameters={[{ ...r, identifier: r.contentType }]}
-                      onSetup={setup}
-                      isLoop={isLoop}
-                      onTeardown={teardown}
-                      onRetrieve={retrieve}
-                    />
-                  </>
-                ))}
-              </>
-            )}
-          </>
-        )}
-      </Retriever>
+      {(
+        d.queryParameters !== undefined ||
+        d.pathParameters !== undefined ||
+        d.bodyParameters !== undefined
+      ) && (
+        <>
+          <h2>Request</h2>
+          {sections.map((s) => (
+            <>
+              <h3>{s.title}</h3>
+              <Parameters
+                parameters={s.parameters}
+                onRetrieve={retrieve}
+              />
+            </>
+          ))}
+        </>
+      )}
+      {d.examples !== undefined && (
+        <>
+          <h2>Examples</h2>
+          {d.examples.map((e) => (
+            // todo: use tabs
+            <pre><code><SyntaxHighlight syntax={e.syntax}>{e.code}</SyntaxHighlight></code></pre>
+          ))}
+        </>
+      )}
+      {d.responses !== undefined && (
+        <>
+          <h2>Responses</h2>
+          {d.responses.map((r) => (
+            <>
+              <h3>Response Status of {r.status}</h3>
+              {r.description !== undefined && (
+                <p>{r.description}</p>
+              )}
+              <Parameters
+                parameters={[{ ...r, identifier: r.contentType }]}
+                onRetrieve={retrieve}
+              />
+            </>
+          ))}
+        </>
+      )}
     </Content>
   )
 }
 
-interface RetrieverParameters {
-  children(p: RetrieverChildrenParameters): any
+interface RetrieverProperties {
+  object: RESTObjectType
+  onRetrieve(id: string): RESTType | undefined
+  children(...a: any[]): any
 }
 
-interface RetrieverChildrenParameters {
-  setup(id: string): void
-  isLoop(): boolean
-  teardown(): void
-}
+function Retriever(
+  {
+    object,
+    onRetrieve: retrieve,
+    children
+  }: RetrieverProperties
+) {
+  // todo: something needs to be done about this...
+  const s: string[] = []
 
-function Retriever({ children }: RetrieverParameters): ReturnType<RetrieverParameters["children"]> {
-  const h: string[] = []
-  let n = -1
+  const rs: Set<number> = new Set()
+  let x = -1
+  let y = -1
 
-  function setup(id: string): void {
-    const i = h.lastIndexOf(id)
-    if (i !== -1) {
-      if (n === -1) {
-        n = i
-      } else {
-        if (i - n === 1) {
-          n += 1
-        } else {
-          n = -1
-        }
+  process(object)
+  return children({ retrieve: proxy, retrieve2: proxy2 })
+
+  function process(t: RESTType) {
+    switch (t.type) {
+    case "array":
+      process(t.items)
+      break
+    case "boolean":
+    case "integer":
+    case "number":
+      break
+    case "object":
+      t.properties.forEach(process)
+      break
+    case "reference":
+      y += 1
+      if (s.includes(t.id)) {
+        rs.add(y)
+        break
+      }
+      s.push(t.id)
+      const r = retrieve(t.id)
+      if (r === undefined) {
+        throw new Error(`unable to retrieve reference: ${t.id}`)
+      }
+      process(r)
+      s.pop()
+      break
+    case "string":
+    case "unknown":
+      break
+    }
+  }
+
+  function proxy(id: string): RESTType | undefined {
+    x += 1
+    if (rs.has(x)) {
+      return {
+        type: "unknown"
       }
     }
-    h.push(id)
+    return retrieve(id)
   }
 
-  function isLoop(): boolean {
-    return false
-
-    // if (n !== -1) {
-    //   const c = h[h.length - 1]
-    //   const p = h[(h.length - 1) - (n + 1)]
-    //   if (c === p) {
-    //     return true
-    //   }
-    // }
-    // return false
-
-    // if (n === -1) {
-    //   return false
-    // }
-    // const c = h[h.length - 1]
-    // if (c === undefined) {
-    //   return false
-    // }
-    // const p = h[(h.length - 1) - (n + 1)]
-    // if (p === undefined) {
-    //   return false
-    // }
-    // if (c !== p) {
-    //   return false
-    // }
-    // return true
-  }
-
-  function teardown(): void {
-    if (isLoop()) {
-      n = -1
+  function proxy2(id: string): RESTType | undefined {
+    if (rs.has(x)) {
+      return {
+        type: "unknown"
+      }
     }
-    h.pop()
+    return retrieve(id)
   }
-
-  return children({ setup, isLoop, teardown })
 }
 
 interface ParametersProperties {
   parameters: RESTParameter[]
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
 }
 
 function Parameters(
   {
     parameters: ps,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
     onRetrieve: retrieve
   }: ParametersProperties
 ): JSX.Element {
+  const o: RESTObjectType = {
+    type: "object",
+    properties: ps
+  }
   return (
-    <dl>
-      {ps.map((p) => (
-        <Parameter
-          parameter={p}
-          onSetup={setup}
-          isLoop={isLoop}
-          onTeardown={teardown}
-          onRetrieve={retrieve}
-        />
-      ))}
-    </dl>
+    <Retriever object={o} onRetrieve={retrieve}>
+      {({ retrieve, retrieve2 }) => (
+        <dl>
+          {ps.map((p) => (
+            <Parameter
+              parameter={p}
+              onRetrieve={retrieve}
+              onRetrieve2={retrieve2}
+            />
+          ))}
+        </dl>
+      )}
+    </Retriever>
   )
 }
 
 interface ParameterParameters {
   parameter: RESTParameter
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function Parameter(
   {
     parameter: p,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: ParameterParameters
 ): JSX.Element {
   switch (p.type) {
   case "array":
-    return <ArrayParameter parameter={p} onSetup={setup} isLoop={isLoop} onTeardown={teardown} onRetrieve={retrieve} />
+    return <ArrayParameter parameter={p} onRetrieve={retrieve} onRetrieve2={retrieve2} />
   case "boolean":
     return <BooleanParameter parameter={p} />
   case "integer":
@@ -261,9 +252,9 @@ function Parameter(
   case "number":
     return <NumberParameter parameter={p} />
   case "object":
-    return <ObjectParameter parameter={p} onSetup={setup} isLoop={isLoop} onTeardown={teardown} onRetrieve={retrieve} />
+    return <ObjectParameter parameter={p} onRetrieve={retrieve} onRetrieve2={retrieve2} />
   case "reference":
-    return <ReferenceParameter parameter={p} onSetup={setup} isLoop={isLoop} onTeardown={teardown} onRetrieve={retrieve} />
+    return <ReferenceParameter parameter={p} onRetrieve={retrieve} onRetrieve2={retrieve2} />
   case "string":
     return <StringParameter parameter={p} />
   case "unknown":
@@ -275,19 +266,15 @@ function Parameter(
 
 interface ArrayParameterParameters {
   parameter: RESTArrayParameter
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function ArrayParameter(
   {
     parameter: p,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: ArrayParameterParameters
 ): JSX.Element {
   return (
@@ -317,7 +304,7 @@ function ArrayParameter(
       s += "of objects"
       break
     case "reference":
-      const d = retrieve(t.id)
+      const d = retrieve2(t.id)
       if (d === undefined) {
         throw new Error(`unable to retrieve reference: ${t.id}`)
       }
@@ -355,10 +342,8 @@ function ArrayParameter(
             <summary>Properties of <code>{p.identifier}</code></summary>
             <Properties
               properties={t.properties}
-              onSetup={setup}
-              isLoop={isLoop}
-              onTeardown={teardown}
               onRetrieve={retrieve}
+              onRetrieve2={retrieve2}
             />
           </details>
         </dd>
@@ -432,19 +417,15 @@ function NumberParameter({ parameter: p }: NumberParameterParameters): JSX.Eleme
 
 interface ObjectParameterParameters {
   parameter: RESTObjectParameter
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function ObjectParameter(
   {
     parameter: p,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: ObjectParameterParameters
 ): JSX.Element {
   return (
@@ -458,10 +439,8 @@ function ObjectParameter(
           <summary>Properties of <code>{p.identifier}</code></summary>
           <Properties
             properties={p.properties}
-            onSetup={setup}
-            isLoop={isLoop}
-            onTeardown={teardown}
             onRetrieve={retrieve}
+            onRetrieve2={retrieve2}
           />
         </details>
       </dd>
@@ -471,44 +450,29 @@ function ObjectParameter(
 
 interface ReferenceParameterParameters {
   parameter: RESTReferenceParameter
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function ReferenceParameter(
   {
     parameter: p,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: ReferenceParameterParameters
 ): JSX.Element {
-  setup(p.id)
-  if (isLoop()) {
-    teardown()
-    return <></>
-  }
-
   const d = retrieve(p.id)
   if (d === undefined) {
     throw new Error(`unable to retrieve reference: ${p.id}`)
   }
-
   const r: RESTParameter = { ...p, ...d }
-  const e = (
+  return (
     <Parameter
       parameter={r}
-      onSetup={setup}
-      isLoop={isLoop}
-      onTeardown={teardown}
       onRetrieve={retrieve}
+      onRetrieve2={retrieve2}
     />
   )
-  teardown()
-  return e
 }
 
 interface StringParameterParameters {
@@ -547,19 +511,15 @@ function UnknownParameter({ parameter: p }: UnknownParameterParameters): JSX.Ele
 
 interface PropertiesProperties {
   properties: RESTProperty[]
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function Properties(
   {
     properties: ps,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: PropertiesProperties
 ): JSX.Element {
   return (
@@ -567,10 +527,8 @@ function Properties(
       {ps.map((p) => (
         <Property
           property={p}
-          onSetup={setup}
-          isLoop={isLoop}
-          onTeardown={teardown}
           onRetrieve={retrieve}
+          onRetrieve2={retrieve2}
         />
       ))}
     </dl>
@@ -579,24 +537,20 @@ function Properties(
 
 interface PropertyProperties {
   property: RESTProperty
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function Property(
   {
     property: p,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: PropertyProperties
 ): JSX.Element {
   switch (p.type) {
   case "array":
-    return <ArrayProperty property={p} onSetup={setup} isLoop={isLoop} onTeardown={teardown} onRetrieve={retrieve} />
+    return <ArrayProperty property={p} onRetrieve={retrieve} onRetrieve2={retrieve2} />
   case "boolean":
     return <BooleanProperty property={p} />
   case "integer":
@@ -604,9 +558,9 @@ function Property(
   case "number":
     return <NumberProperty property={p} />
   case "object":
-    return <ObjectProperty property={p} onSetup={setup} isLoop={isLoop} onTeardown={teardown} onRetrieve={retrieve} />
+    return <ObjectProperty property={p} onRetrieve={retrieve} onRetrieve2={retrieve2} />
   case "reference":
-    return <ReferenceProperty property={p} onSetup={setup} isLoop={isLoop} onTeardown={teardown} onRetrieve={retrieve} />
+    return <ReferenceProperty property={p} onRetrieve={retrieve} onRetrieve2={retrieve2} />
   case "string":
     return <StringProperty property={p} />
   case "unknown":
@@ -618,19 +572,15 @@ function Property(
 
 interface ArrayPropertyParameters {
   property: RESTArrayProperty
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function ArrayProperty(
   {
     property: p,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: ArrayPropertyParameters
 ): JSX.Element {
   return (
@@ -660,7 +610,7 @@ function ArrayProperty(
       s += "of objects"
       break
     case "reference":
-      const d = retrieve(t.id)
+      const d = retrieve2(t.id)
       if (d === undefined) {
         throw new Error(`unable to retrieve reference: ${t.id}`)
       }
@@ -698,10 +648,8 @@ function ArrayProperty(
             <summary>Properties of <code>{p.identifier}</code></summary>
             <Properties
               properties={t.properties}
-              onSetup={setup}
-              isLoop={isLoop}
-              onTeardown={teardown}
               onRetrieve={retrieve}
+              onRetrieve2={retrieve2}
             />
           </details>
         </dd>
@@ -775,19 +723,15 @@ function NumberProperty({ property: p }: NumberPropertyParameters): JSX.Element 
 
 interface ObjectPropertyParameters {
   property: RESTObjectProperty
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function ObjectProperty(
   {
     property: p,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: ObjectPropertyParameters
 ): JSX.Element {
   return (
@@ -801,10 +745,8 @@ function ObjectProperty(
           <summary>Properties of <code>{p.identifier}</code></summary>
           <Properties
             properties={p.properties}
-            onSetup={setup}
-            isLoop={isLoop}
-            onTeardown={teardown}
             onRetrieve={retrieve}
+            onRetrieve2={retrieve2}
           />
         </details>
       </dd>
@@ -815,44 +757,29 @@ function ObjectProperty(
 
 interface ReferencePropertyParameters {
   property: RESTReferenceProperty
-  onSetup(id: string): void
-  isLoop(): boolean
-  onTeardown(): void
   onRetrieve(id: string): RESTType | undefined
+  onRetrieve2(id: string): RESTType | undefined
 }
 
 function ReferenceProperty(
   {
     property: p,
-    onSetup: setup,
-    isLoop,
-    onTeardown: teardown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
+    onRetrieve2: retrieve2
   }: ReferencePropertyParameters
 ): JSX.Element {
-  setup(p.id)
-  if (isLoop()) {
-    teardown()
-    return <></>
-  }
-
   const d = retrieve(p.id)
   if (d === undefined) {
     throw new Error(`unable to retrieve reference: ${p.id}`)
   }
-
   const r: RESTProperty = { ...p, ...d }
-  const e = (
+  return (
     <Property
       property={r}
-      onSetup={setup}
-      isLoop={isLoop}
-      onTeardown={teardown}
       onRetrieve={retrieve}
+      onRetrieve2={retrieve2}
     />
   )
-  teardown()
-  return e
 }
 
 interface StringPropertyParameters {
@@ -898,17 +825,9 @@ function data() {
 function render({ pagination, onRetrieve, onLink }) {
   return (
     <>
-      {pagination.items.map((d) => {
-        if (
-          d.slug === "web/save-the-documents-firebase-device-token" ||
-          d.slug === "web/subscribe-to-documents-push-notification" ||
-          d.slug === "web/update-a-storage" ||
-          d.slug === "web/update-the-cdn-storage"
-        ) {
-          return <>recursive</>
-        }
-        return <RESTDeclaration declaration={d} onRetrieve={onRetrieve} />
-      })}
+      {pagination.items.map((d) => (
+        <RESTDeclaration declaration={d} onRetrieve={onRetrieve} />
+      ))}
     </>
   )
 }
