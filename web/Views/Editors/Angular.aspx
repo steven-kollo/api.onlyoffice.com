@@ -114,6 +114,22 @@ export class AppComponent {
     onDocumentReady = () => {
         console.log("Document is loaded");
     };
+
+    onLoadComponentError = (errorCode, errorDescription) => {
+        switch(errorCode) {
+            case -1: // Unknown error loading component
+                console.log(errorDescription);
+                break;
+
+            case -2: // Error load DocsAPI from http://documentserver/
+                console.log(errorDescription);
+                break;
+
+            case -3: // DocsAPI is not defined
+                console.log(errorDescription);
+                break;
+        }
+    }
 }
 </pre>
                     <p>将以下行替换为您自己的数据：</p>
@@ -131,6 +147,7 @@ export class AppComponent {
     documentServerUrl="http://documentserver/"
     [config]="config"
     [events_onDocumentReady]="onDocumentReady"
+    [onLoadComponentError]="onLoadComponentError"
 &gt;&lt;/document-editor&gt;
 </pre>
                     <p>将 <b>"http://documentserver/"</b> 行替换为您的服务器的 URL。</p>
@@ -171,6 +188,22 @@ export class AppComponent {
     onDocumentReady = () => {
         console.log("Document is loaded");
     };
+
+    onLoadComponentError = (errorCode, errorDescription) => {
+        switch(errorCode) {
+            case -1: // Unknown error loading component
+                console.log(errorDescription);
+                break;
+
+            case -2: // Error load DocsAPI from http://documentserver/
+                console.log(errorDescription);
+                break;
+
+            case -3: // DocsAPI is not defined
+                console.log(errorDescription);
+                break;
+        }
+    }
 }
 </pre>
                     <p>将以下行替换为您自己的数据：</p>
@@ -188,6 +221,7 @@ export class AppComponent {
     documentServerUrl="http://documentserver/"
     [config]="config"
     [events_onDocumentReady]="onDocumentReady"
+    [onLoadComponentError]="onLoadComponentError"
 &gt;&lt;/document-editor&gt;
 </pre>
                     <p>将 <b>"http://documentserver/"</b> 行替换为您的服务器的 URL。</p>

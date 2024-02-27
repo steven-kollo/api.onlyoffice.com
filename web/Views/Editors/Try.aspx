@@ -55,6 +55,8 @@
                     <br />
                     <a title="打开 PPT 文件进行编辑" href="<%= Url.Action("editor") %>?method=pptEditor" class="button button-upper present" target="blank">PPT</a><a title="查看源代码" class="button-popap-try" data-code="pptEditorCode">&lt;/&gt;</a>
                     <br />
+                    <a title="Open PPSX file for editing" href="<%= Url.Action("editor") %>?method=ppsxEditor" class="button button-upper present" target="blank">PPSX</a><a title="View source code" class="button-popap-try" data-code="ppsxEditorCode">&lt;/&gt;</a>
+                    <br />
                     <a title="打开 ODP 文件进行编辑" href="<%= Url.Action("editor") %>?method=odpEditor" class="button button-upper present" target="blank">ODP</a><a title="查看源代码" class="button-popap-try" data-code="odpEditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
@@ -310,6 +312,42 @@
                     "key": "9E2BDFCD1D75",
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
+                },
+                "documentType": "slide",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="ppsxEditorCode">
+                <div class="popap-header">Open ppsx for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "ppsx",
+                    "key": "3DAB8BAA68E4",
+                    "title": "Example Presentation Title.ppsx",
+                    "url": "https://example.com/url-to-example-presentation.ppsx"
                 },
                 "documentType": "slide",
                 "editorConfig": {
