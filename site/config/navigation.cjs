@@ -177,14 +177,17 @@ function resolveLink(ch) {
     const i = l.lastIndexOf("/", l.lastIndexOf("/") - 1)
     l = l.substring(0, i + 1)
   } else {
+    let s = l.split("/")
     for (let i = 1; i < ch.length; i += 1) {
-      for (let j = 0; j < l.length; j += 1) {
-        if (l[j] !== ch[i].link[j]) {
-          l = l.slice(0, j)
+      let u = ch[i].link.split("/")
+      for (let j = 0; j < s.length; j += 1) {
+        if (s[j] !== u[j]) {
+          s = s.slice(0, j)
           break
         }
       }
     }
+    l = s.join("/") + "/"
   }
   return l
 }
