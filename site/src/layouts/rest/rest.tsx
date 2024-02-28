@@ -1,6 +1,7 @@
 import { Content } from "@onlyoffice/documentation-ui-kit-js"
+import { Markdown } from "@/src/components/markdown/Markdown.tsx"
 import { SyntaxHighlight } from "@/src/components/syntax-highlight/SyntaxHighlight.tsx"
-import { Fragment, JSX, h } from "preact"
+import { Fragment, JSX, h, isValidElement } from "preact"
 
 import {
   RESTArrayParameter,
@@ -33,12 +34,16 @@ import {
 
 export interface RESTDeclarationParameters {
   declaration: RESTPath
+  onRenderDescription({ children }: { children: any }): any
   onRetrieve(id: string): RESTType | undefined
 }
+
+export function RESTDeclarationDescription() {}
 
 export function RESTDeclaration(
   {
     declaration: d,
+    onRenderDescription: Description,
     onRetrieve: retrieve
   }: RESTDeclarationParameters
 ): JSX.Element {
@@ -73,7 +78,7 @@ export function RESTDeclaration(
       <h1>{d.title}</h1>
       <pre><code>{d.endpoint}</code></pre>
       <h2>Description</h2>
-      <p>{d.description}</p>
+      <Description>{d.description}</Description>
       {(
         d.queryParameters !== undefined ||
         d.pathParameters !== undefined ||
@@ -826,7 +831,11 @@ function render({ pagination, onRetrieve, onLink }) {
   return (
     <>
       {pagination.items.map((d) => (
-        <RESTDeclaration declaration={d} onRetrieve={onRetrieve} />
+        <RESTDeclaration
+          declaration={d}
+          onRenderDescription={Markdown}
+          onRetrieve={onRetrieve}
+        />
       ))}
     </>
   )
