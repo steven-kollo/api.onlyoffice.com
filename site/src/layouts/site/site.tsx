@@ -1,8 +1,9 @@
 import { OnlyofficeLogo } from "@onlyoffice/documentation-ui-kit-js"
-import { SiteFooter } from "@/src/components/site-footer/SiteFooter.tsx"
-import { SiteHeader } from "@/src/components/site-header/SiteHeader.tsx"
 import { transformMarkup } from "@/config/markup.cjs"
 import { buildDarkStyles, buildLightStyles } from "@/config/styles.cjs"
+import { Fonts } from "@/src/components/fonts/Fonts.tsx"
+import { SiteFooter } from "@/src/components/site-footer/SiteFooter.tsx"
+import { SiteHeader } from "@/src/components/site-header/SiteHeader.tsx"
 import { SiteNav } from "@/src/components/site-nav/SiteNav.tsx"
 import { h, isValidElement } from "preact"
 import { renderToString } from "preact-render-to-string"
@@ -23,7 +24,7 @@ async function render({ eleventy, collections, page, title, content }) {
         <meta name="description" content="todo" />
         <meta name="generator" content={eleventy.generator} />
 
-        {/* <link rel="preload" href="/SourceCodePro-Medium.woff2" crossorigin="" as="font" type="font/woff2" /> */}
+        <Fonts root="/" />
 
         <link rel="stylesheet" href="/main.css" />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#000000" /> {/* todo: content */}
