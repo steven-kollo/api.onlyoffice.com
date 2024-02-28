@@ -119,6 +119,10 @@
                 "label": "Guest"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#autosave">autosave</a>": true,
+            "<a href="<%= Url.Action("config/editor/customization") %>#close">close</a>": {
+                "visible": true,
+                "text": "Close file"
+            },
             "<a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactToolbar">compactToolbar</a>": false,
@@ -146,7 +150,6 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#goback">goback</a>": {
                 "blank": true,
-                "requestClose": false,
                 "text": "Open file location",
                 "url": "https://example.com"
             },

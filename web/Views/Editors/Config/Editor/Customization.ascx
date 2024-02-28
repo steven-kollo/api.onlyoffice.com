@@ -18,6 +18,7 @@
     <li><a href="#anonymous">anonymous</a></li>
     <li><a href="#autosave">autosave</a></li>
     <li><a href="#chat">chat</a></li>
+    <li><a href="#close">close</a></li>
     <li><a href="#commentAuthorOnly">commentAuthorOnly</a></li>
     <li><a href="#comments">comments</a></li>
     <li><a href="#compactHeader">compactHeader</a></li>
@@ -121,6 +122,26 @@
                 <span></span>
                 <label for="editorConfig_customization_comments">Comments</label>
             </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_close" name="editorConfig_customization_close" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_close">Close</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_close" class="config_object_holder" hidden>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_close_visible" name="editorConfig_customization_close_visible" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_close_visible">Visible</label>
+                </label>
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_close_text">Text</label>
+                <input type="text" id="editorConfig_customization_close_text" name="editorConfig_customization_close_text" value="Close file">
+            </div>
         </div>
         <div class="line">
             <label class="dataItemSpan">
@@ -247,13 +268,6 @@
                     <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" hidden="hidden" checked>
                     <span></span>
                     <label for="editorConfig_customization_goback_blank">Blank</label>
-                </label>
-            </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_goback_requestClose" name="editorConfig_customization_goback_requestClose" hidden="hidden">
-                    <span></span>
-                    <label for="editorConfig_customization_goback_requestClose">Request Close</label>
                 </label>
             </div>
             <div class="line input_line">
@@ -454,7 +468,7 @@
     <div id="placeholder"></div>
 </div>
 
-<note>Please note that only the following parameters are available for the mobile editors: <a href="#feedback">feedback</a>, <a href="#goback">goback</a>,
+<note>Please note that only the following parameters are available for the mobile editors: <a href="#close">close</a>, <a href="#feedback">feedback</a>, <a href="#goback">goback</a>,
 <a href="#help">help</a>, <a href="#macrosMode">macrosMode</a>, <a href="#mobileForceView">mobileForceView</a>.</note>
 
 <div class="header-gray">Parameters</div>
@@ -549,6 +563,42 @@
         <tr class="tablerow">
             <td colspan="4">
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/chat.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
+            <td id="close" class="copy-link">close</td>
+            <td>
+                Defines settings for the cross button to close the editor:
+                <ul>
+                    <li>
+                        <b>visible</b> - defines if the cross button to close the editor is displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>text</b> - defines the tooltip text for a button in the editor header or the menu item text in the mobile editors and in the <b>File</b> menu of the web editors,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Close file".
+                    </li>
+                </ul>
+
+            </td>
+            <td>object</td>
+            <td>{
+    "visible": true,
+    "text": "Close file"
+}</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <div class="note">Please note that it will only be available if the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event is set.</div>
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+                <img class="screenshot max-width-832" alt="Cross button in the header" src="<%= Url.Content("~/content/img/editor/cross-button.jpg") %>" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -838,7 +888,7 @@
                     </li>
                     <li>
                         <b>requestClose</b> - defines that if the <b>Open file location</b> button is clicked, <a href="<%= Url.Action("config/events") %>#onRequestClose">events.onRequestClose</a> event is called instead of opening a browser tab or window.
-                        The default value is <b>false</b>,
+                        Deprecated since version 8.1. Please use the <a href="#close">close</a> parameter instead,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -1795,6 +1845,7 @@
     });
 
     $("#editorConfig_customization_anonymous").change(showHideConfigObject);
+    $("#editorConfig_customization_close").change(showHideConfigObject);
     $("#editorConfig_customization_customer").change(showHideConfigObject);
     $("#editorConfig_customization_feedback").change(showHideConfigObject);
     $("#editorConfig_customization_features").change(showHideConfigObject);
@@ -1843,6 +1894,12 @@
                 "label": ${getFieldValue("editorConfig_customization_anonymous_label")}
             },
             ` : "";
+        var close = !getFieldValue("editorConfig_customization_close") ? "" : 
+            `"close": {
+                "visible": ${getFieldValue("editorConfig_customization_close_visible")},
+                "text": ${getFieldValue("editorConfig_customization_close_text")}
+            },
+            `;
         var customer = getFieldValue("editorConfig_customization_customer") ?
             `"customer": {
                 "address": ${getFieldValue("editorConfig_customization_customer_address")},
@@ -1865,7 +1922,6 @@
         var goback = getFieldValue("editorConfig_customization_goback") ?
             `"goback": {
                 "blank": ${getFieldValue("editorConfig_customization_goback_blank")},
-                "requestClose": ${getFieldValue("editorConfig_customization_goback_requestClose")},
                 "text": ${getFieldValue("editorConfig_customization_goback_text")},
                 "url": ${getFieldValue("editorConfig_customization_goback_url")}
             },
@@ -1890,7 +1946,7 @@
             "integrationMode": "embed",` : "";
         var customization = `{
             ${anonymous}"autosave": ${getFieldValue("editorConfig_customization_autosave")},
-            "comments": ${getFieldValue("editorConfig_customization_comments")},
+            ${close}"comments": ${getFieldValue("editorConfig_customization_comments")},
             "compactHeader": ${getFieldValue("editorConfig_customization_compactHeader")},
             "compactToolbar": ${getFieldValue("editorConfig_customization_compactToolbar")},
             "compatibleFeatures": ${getFieldValue("editorConfig_customization_compatibleFeatures")},
