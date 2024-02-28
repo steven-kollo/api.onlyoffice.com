@@ -3,6 +3,7 @@
 
 @import "../node_modules/@onlyoffice/documentation-ui-chapter-navigation-js/lib/chapter-navigation.css";
 
+@import "../node_modules/@onlyoffice/documentation-ui-badge-js/lib/badge.css";
 @import "../node_modules/@onlyoffice/documentation-ui-content-js/lib/content.css";
 @import "../node_modules/@onlyoffice/documentation-ui-code-listing-js/lib/code-listing.css";
 @import "../node_modules/@onlyoffice/documentation-ui-code-declaration-js/lib/code-declaration.css";

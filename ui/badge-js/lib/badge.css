@@ -7,18 +7,13 @@
   padding: 4px 7px;
 }
 
-.badge_dangerous {
+.badge_variant_danger {
   background-color: var(--badge-dangerous-background-color);
   color: var(--badge-dangerous-foreground-color);
 }
 
-.badge_subtle {
+.badge_variant_support {
   background-color: var(--badge-subtle-background-color);
   color: var(--badge-subtle-foreground-color);
   text-decoration: underline;
-}
-
-.badge_value {
-  background-color: var(--badge-value-background-color);
-  color: var(--badge-value-foreground-color);
 }

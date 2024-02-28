@@ -1,3 +1,4 @@
+export * from "@onlyoffice/documentation-ui-badge-js"
 export * from "@onlyoffice/documentation-ui-chapter-navigation-js"
 export * from "@onlyoffice/documentation-ui-code-declaration-js"
 export * from "@onlyoffice/documentation-ui-code-listing-js"

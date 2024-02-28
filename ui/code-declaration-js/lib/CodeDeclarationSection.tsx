@@ -1,3 +1,4 @@
+import { Badge } from "@onlyoffice/documentation-ui-badge-js"
 import { Fragment, JSX, h } from "preact"
 import { CodeDeclarationReference } from "./CodeDeclarationReference.tsx"
 import { CodeDeclarationToken } from "./CodeDeclarationToken.tsx"
@@ -99,7 +100,7 @@ function CodeDeclarationParametersSection(
           ))
           return (
             <>
-              <dt><code>{p.name}</code> <code>{c}</code></dt>
+              <dt><code>{p.name}</code> <Badge>{c}</Badge></dt>
               <dd>
                 {p.description !== undefined && (
                   <Markdown>{p.description}</Markdown>

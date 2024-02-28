@@ -11,9 +11,8 @@ export const Default = {
     return (
       <p>
         <Badge>info</Badge>
-        <Badge sensitive="dangerous">dangerous</Badge>
-        <Badge sensitive="subtle">subtle</Badge>
-        <Badge sensitive="value">value</Badge>
+        <Badge variant="danger">dangerous</Badge>
+        <Badge variant="support">subtle</Badge>
       </p>
     )
   }

@@ -15,19 +15,23 @@
 
 .product__inner2 {
   /* max-width: calc(936px - 24px * 2); */
-  max-width: calc(888px - 24px * 2);
-  padding: 0 24px;
+  max-width: calc(888px - 32px * 2);
+  padding-left: 32px;
+  padding-right: 32px;
   margin-bottom: 20%;
 }
 
 .product-nav {
   margin-left: calc((100% - 1168px) / 2);
   max-height: calc(100vh - 72px - 20px * 2);
-  min-width: 232px;
+  min-width: calc(232px - 1px);
+  max-width: calc(232px - 1px);
+  width: 100%;
   overflow-x: scroll;
   padding: 20px 24px;
   position: sticky;
   top: 72px;
+  border-right: solid 1px var(--chapter-navigation-border-color);
 }
 
 .site-header {

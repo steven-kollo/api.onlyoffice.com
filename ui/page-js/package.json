@@ -1,14 +1,13 @@
 {
-  "name": "@onlyoffice/documentation-ui-code-declaration-js",
+  "name": "@onlyoffice/documentation-ui-page-js",
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./lib/code-declaration.ts",
-    "./code-declaration.css": "./lib/code-declaration.css"
-  },
-  "dependencies": {
-    "@onlyoffice/documentation-ui-badge-js": "workspace:^",
-    "@onlyoffice/documentation-ui-content-js": "workspace:^"
+    ".": "./lib/page.ts",
+    "./dark.css": "./lib/dark.css",
+    "./light.css": "./lib/light.css",
+    "./page.css": "./lib/page.css",
+    "./Page.tsx": "./lib/Page.tsx"
   },
   "devDependencies": {
     "preact": "^10.19.3",

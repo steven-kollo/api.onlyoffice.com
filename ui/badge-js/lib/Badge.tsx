@@ -1,21 +1,34 @@
+import type { ClassValue } from "clsx"
 import { clsx } from "clsx"
-import { JSX, h } from "preact"
+import type { JSX } from "preact"
+import { h } from "preact"
 
-interface BadgeProperties extends JSX.ElementChildrenAttribute {
-  sensitive?: "dangerous" | "subtle" | "value"
+export interface BadgeProperties extends JSX.ElementChildrenAttribute {
+  variant?: Variant
 }
 
-function Badge({ sensitive, children }: BadgeProperties): JSX.Element {
-  return (
-    <span
-      class={clsx(
-        "badge",
-        sensitive === "dangerous" && "badge_dangerous",
-        sensitive === "subtle" && "badge_subtle",
-        sensitive === "value" && "badge_value"
-      )}
-    >{children}</span>
-  )
+export function Badge(
+  {
+    variant: v,
+    children
+  }: BadgeProperties
+): JSX.Element {
+  const cs: ClassValue = ["badge"]
+  if (v !== undefined) {
+    const c = resolveVariant(v)
+    cs.push(c)
+  }
+
+  return <span class={clsx(cs)}>{children}</span>
 }
 
-export { Badge }
+type Variant = "danger" | "support"
+
+function resolveVariant(v: Variant): string {
+  switch (v) {
+  case "danger":
+    return "badge_variant_danger"
+  case "support":
+    return "badge_variant_support"
+  }
+}

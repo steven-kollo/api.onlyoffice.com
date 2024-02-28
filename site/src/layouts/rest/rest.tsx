@@ -1,4 +1,4 @@
-import { Content } from "@onlyoffice/documentation-ui-kit-js"
+import { Badge, Content } from "@onlyoffice/documentation-ui-kit-js"
 import { Markdown } from "@/src/components/markdown/Markdown.tsx"
 import { SyntaxHighlight } from "@/src/components/syntax-highlight/SyntaxHighlight.tsx"
 import { Fragment, JSX, h, isValidElement } from "preact"
@@ -284,7 +284,7 @@ function ArrayParameter(
 ): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>array {of(p.items)}</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>array {of(p.items)}</Badge> {p.required && <Badge variant="danger">required</Badge>}</dt>
       <Description type={p.items} />
     </>
   )
@@ -376,7 +376,7 @@ interface BooleanParameterParameters {
 function BooleanParameter({ parameter: p }: BooleanParameterParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>boolean</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>boolean</Badge> {p.required && <Badge variant="danger">required</Badge>}</dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -393,7 +393,7 @@ interface IntegerParameterParameters {
 function IntegerParameter({ parameter: p }: IntegerParameterParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>integer</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>integer</Badge> {p.required && <Badge variant="danger">required</Badge>}</dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -410,7 +410,7 @@ interface NumberParameterParameters {
 function NumberParameter({ parameter: p }: NumberParameterParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>number</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>number</Badge> {p.required && <Badge variant="danger">required</Badge>}</dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -435,7 +435,7 @@ function ObjectParameter(
 ): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>object</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>object</Badge> {p.required && <Badge variant="danger">required</Badge>}</dt>
       <dd>
         {p.description !== undefined && (
           <p>{p.description}</p>
@@ -487,7 +487,7 @@ interface StringParameterParameters {
 function StringParameter({ parameter: p }: StringParameterParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>string</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>string</Badge> {p.required && <Badge variant="danger">required</Badge>}</dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -504,7 +504,7 @@ interface UnknownParameterParameters {
 function UnknownParameter({ parameter: p }: UnknownParameterParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>unknown</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>unknown</Badge> {p.required && <Badge variant="danger">required</Badge>}</dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -590,7 +590,7 @@ function ArrayProperty(
 ): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>array {of(p.items)}</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>array {of(p.items)}</Badge></dt>
       <Description type={p.items} />
     </>
   )
@@ -682,7 +682,7 @@ interface BooleanPropertyParameters {
 function BooleanProperty({ property: p }: BooleanPropertyParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>boolean</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>boolean</Badge></dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -699,7 +699,7 @@ interface IntegerPropertyParameters {
 function IntegerProperty({ property: p }: IntegerPropertyParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>integer</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>integer</Badge></dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -716,7 +716,7 @@ interface NumberPropertyParameters {
 function NumberProperty({ property: p }: NumberPropertyParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>number</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>number</Badge></dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -741,7 +741,7 @@ function ObjectProperty(
 ): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>object</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>object</Badge></dt>
       <dd>
         {p.description !== undefined && (
           <p>{p.description}</p>
@@ -794,7 +794,7 @@ interface StringPropertyParameters {
 function StringProperty({ property: p }: StringPropertyParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>string</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>string</Badge></dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -811,7 +811,7 @@ interface UnknownPropertyParameters {
 function UnknownProperty({ property: p }: UnknownPropertyParameters): JSX.Element {
   return (
     <>
-      <dt><code>{p.identifier}</code> <code>unknown</code></dt>
+      <dt><code>{p.identifier}</code> <Badge>unknown</Badge></dt>
       {p.description !== undefined && (
         <dd>
           <p>{p.description}</p>
@@ -827,7 +827,7 @@ function data() {
   }
 }
 
-function render({ pagination, onRetrieve, onLink }) {
+function render({ pagination, onRetrieve }) {
   return (
     <>
       {pagination.items.map((d) => (

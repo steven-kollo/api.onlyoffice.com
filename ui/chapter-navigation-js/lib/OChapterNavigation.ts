@@ -41,6 +41,14 @@ class OChapterNavigation extends HTMLElement {
         d.classList.add("tree__twig_closed")
       }
     })
+
+    const c = this.querySelector(".tree__leaf_current")
+    console.log(c)
+    if (c !== undefined && c instanceof HTMLElement) {
+      this.parentElement.scrollTo({
+        top: c.offsetTop - window.innerHeight / 6
+      })
+    }
   }
 }
 
