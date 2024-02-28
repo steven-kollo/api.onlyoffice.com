@@ -148,9 +148,9 @@ function remapPackage(f) {
 }
 
 class PreprocessPath extends OpenAPIPreprocessPath {
-  constructor(file, ...args) {
+  constructor(pack, ...args) {
     super(...args)
-    this._file = file
+    this._pack = pack
   }
 
   _transform(ch, _, cb) {
@@ -170,9 +170,10 @@ class PreprocessPath extends OpenAPIPreprocessPath {
       if (o === undefined) {
         return
       }
-      o.meta = {
-        package: this._file
+      if (o.tags === undefined) {
+        o.tags = [this._pack]
       }
+      o.tags = o.tags.map(titleCase)
       if (o.description !== undefined) {
         o.description = `**Note**: ${o.description}`
       }
@@ -233,6 +234,16 @@ function declarationConsole() {
   const f = join(root, "report.log")
   const s = createWriteStream(f)
   return new DeclarationConsole(s, s)
+}
+
+function titleCase(s) {
+  return s
+    .toLowerCase()
+    .split(" ")
+    .map((w) => {
+      return w.charAt(0).toUpperCase() + w.slice(1)
+    })
+    .join(" ")
 }
 
 export { build }

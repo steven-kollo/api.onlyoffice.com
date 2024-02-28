@@ -4,6 +4,7 @@
  * @typedef {import("node:console").Console["prototype"]} Console
  * @typedef {import("node:stream").TransformCallback} TransformCallback
  * @typedef {import("openapi-types").OpenAPIV3_1.ArraySchemaObject} ArraySchemaObject
+ * @typedef {import("openapi-types").OpenAPIV3_1.HttpMethods} HttpMethods
  * @typedef {import("openapi-types").OpenAPIV3_1.MediaTypeObject} MediaTypeObject
  * @typedef {import("openapi-types").OpenAPIV3_1.NonArraySchemaObject} NonArraySchemaObject
  * @typedef {import("openapi-types").OpenAPIV3_1.OperationObject} OperationObject
@@ -77,38 +78,25 @@ export class PreprocessPath extends Transform {
 
     this._console.info(`start processing ${p}`)
 
-    if (o.delete !== undefined) {
-      const r = createPath(this._console, "DELETE", p, o.delete)
-      this.push(r)
-    }
-    if (o.get !== undefined) {
-      const r = createPath(this._console, "GET", p, o.get)
-      this.push(r)
-    }
-    if (o.head !== undefined) {
-      const r = createPath(this._console, "HEAD", p, o.head)
-      this.push(r)
-    }
-    if (o.options !== undefined) {
-      const r = createPath(this._console, "OPTIONS", p, o.options)
-      this.push(r)
-    }
-    if (o.patch !== undefined) {
-      const r = createPath(this._console, "PATCH", p, o.patch)
-      this.push(r)
-    }
-    if (o.post !== undefined) {
-      const r = createPath(this._console, "POST", p, o.post)
-      this.push(r)
-    }
-    if (o.put !== undefined) {
-      const r = createPath(this._console, "PUT", p, o.put)
-      this.push(r)
-    }
-    if (o.trace !== undefined) {
-      const r = createPath(this._console, "TRACE", p, o.trace)
-      this.push(r)
-    }
+    /** @type {HttpMethods[]} */
+    const ms = ["delete", "get", "head", "options", "patch", "post", "put", "trace"]
+    ms.forEach((m) => {
+      const s = o[m]
+      if (s !== undefined) {
+        if (s.tags === undefined) {
+          this._console.warn("missing tags")
+        } else {
+          const u = m.toUpperCase()
+          s.tags.forEach((t) => {
+            const r = createPath(this._console, u, p, {
+              ...s,
+              tags: [t]
+            })
+            this.push(r)
+          })
+        }
+      }
+    })
 
     cb(null)
   }
@@ -157,7 +145,7 @@ function createPath(c, m, p, s) {
   }
 
   if (s.summary !== undefined) {
-    path.slug = `${s.meta.package}/${slugify(s.summary)}`
+    path.slug = `${slugify(s.tags[0])}/${slugify(s.summary)}`
     path.title = s.summary
     path.summary = s.summary
   } else {
