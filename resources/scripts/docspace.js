@@ -181,7 +181,7 @@ class PreprocessPath extends OpenAPIPreprocessPath {
         if (o.description === undefined) {
           o.description = o.summary
         } else {
-          o.description = `${o.summary}\n${o.description}`
+          o.description = `${o.summary}\n\n${o.description}`
         }
       }
       if (o["x-shortName"] !== undefined) {
