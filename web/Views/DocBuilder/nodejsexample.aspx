@@ -24,7 +24,7 @@
 
     <h2 id="win-2"><span class="style_step">Step 2. </span>Download the Node.js code for the editors integration</h2>
     <p>Download the <a href="<%= Url.Action("integratingdocumentbuilder") %>">Node.js Example</a> from our site.</p>
-    <p>You need to connnect the ONLYOFFICE Document Builder to your web site. For that specify the path in the <em>config/default.js</em> file:</p>
+    <p>You need to connnect the ONLYOFFICE Document Builder to your web site. For that specify the path in the <em>config/default.json</em> file:</p>
     <pre class="commandline">
 "builderPath": "C:\\ONLYOFFICE\\DocumentBuilder\\docbuilder.exe"
 </pre>
@@ -74,8 +74,8 @@
         <li>Install the dependencies:
         <div class="commandline">npm install</div>
         </li>
-        <li>Edit the <em>config/default.js</em> configuration file. Specify the path to the ONLYOFFICE Document Builder.
-        <div class="commandline">nano config/default.js</div>
+        <li>Edit the <em>config/default.json</em> configuration file. Specify the path to the ONLYOFFICE Document Builder.
+        <div class="commandline">nano config/default.json</div>
             <p>Edit the following lines:</p>
 
             <pre>
