@@ -1295,6 +1295,8 @@ docEditor.setUsers({
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <div class="note">Please note that the request to the user avatar is sent without the authorization because the avatar URL is inserted into the editor frame HTML.
+                Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, <em>"data:image/png,base64,*****"</em>.</div>
         </li>
 
         <li>
