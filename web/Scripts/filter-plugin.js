@@ -92,6 +92,7 @@ $(function () {
 
     function closeFilter() {
         $(".filter-selector").removeClass("show");
+        $(".img-plugin").removeClass("rotate");
     }
 
     function toggleFilterButton() {
