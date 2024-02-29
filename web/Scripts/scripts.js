@@ -131,7 +131,7 @@ $(function() {
                 },
 
                 focusInput: true,
-                baseZ: 666,
+                baseZ: 1001,
 
                 fadeIn: 0,
                 fadeOut: 0,
@@ -387,4 +387,16 @@ $(document).ready(function () {
 
     var $tables = $(".table");
     if ($tables.length) renderMobileContent($tables);
+
+    var timeoutId;
+
+    $(".nav-list").on("scroll", function() {
+        $(".nav-list").addClass("scroll-active");
+    
+        clearTimeout(timeoutId);
+    
+        timeoutId = setTimeout(function() {
+            $(".nav-list").removeClass("scroll-active");
+        }, 100);
+    });
 });
