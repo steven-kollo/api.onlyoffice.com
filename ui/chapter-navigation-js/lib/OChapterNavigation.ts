@@ -43,7 +43,6 @@ class OChapterNavigation extends HTMLElement {
     })
 
     const c = this.querySelector(".tree__leaf_current")
-    console.log(c)
     if (c !== undefined && c instanceof HTMLElement) {
       this.parentElement.scrollTo({
         top: c.offsetTop - window.innerHeight / 6

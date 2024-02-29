@@ -38,7 +38,7 @@ export function Root(
       </header>
       <pre class="code-listing__body"><code>{groups[0][1]}</code></pre>
       {groups.map(([g, c]) => (
-        <Template data-group={g}>{c}</Template>
+        <Template data-group={g}><pre class="code-listing__body"><code>{c}</code></pre></Template>
       ))}
     </o-code-listing>
   )

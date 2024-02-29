@@ -36,14 +36,13 @@ class CodeListing extends HTMLElement {
               const b = this.querySelector(".code-listing__body")
               if (b !== null && b instanceof HTMLElement) {
                 b.innerHTML = ""
-                b.appendChild(c.content.cloneNode(true))
+                b.replaceWith(c.content.cloneNode(true))
               }
             }
           }
         }
       })
     }
-    console.log("here")
   }
 }
 
