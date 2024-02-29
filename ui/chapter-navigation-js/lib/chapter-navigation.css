@@ -56,6 +56,10 @@
   pointer-events: none;
 }
 
+.tree__fruit svg {
+  color: var(--chapter-navigation-dropdown-color);
+}
+
 .tree__leaf {
   pointer-events: auto;
   color: inherit;

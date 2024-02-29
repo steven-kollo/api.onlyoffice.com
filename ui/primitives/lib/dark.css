@@ -39,6 +39,7 @@
   --chapter-navigation-border-color: var(--color-scale-gray-2);
   --chapter-navigation-heading-foreground-color: var(--color-scale-gray-6);
   --chapter-navigation-focus-foreground-color: var(--color-scale-orange-1);
+  --chapter-navigation-dropdown-color: var(--color-scale-gray-5);
 
   --content-background-color: var(--color-scale-gray-1);
   --content-foreground-color: var(--color-scale-gray-9);
