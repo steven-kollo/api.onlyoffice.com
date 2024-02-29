@@ -134,46 +134,58 @@
     width: 64px;
     min-width: 64px;
     height: 64px;
-    background-image: url("img/category-page/icons-light.svg");
-}
-
-.theme-dark .category-item-title:before {
-    background-image: url("img/category-page/icons-dark.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .category-item-title a:hover {
     color: #FF6F3D;
 }
 
-.category-item-title.docspace.javascript-sdk:before {
-    background-position-y: -64px;
+.category-item-title.jssdk:before {
+    background-image: url("img/category-page/jssdk.svg");
 }
 
-.category-item-title.docspace.plugins:before,
-.category-item-title.docs.plugin:before {
-    background-position-y: -132px;
+.theme-dark .category-item-title.jssdk:before {
+    background-image: url("img/category-page/jssdk-dark.svg");
 }
 
-.category-item-title.docs.desktop:before {
-    background-position-y: -330px;
+.category-item-title.plugin:before,
+.category-item-title.pluginssdk:before {
+    background-image: url("img/category-page/plugins.svg");
 }
 
-.category-item-title.docs.docs-api:before {
-    background-position-y: -396px;
+.theme-dark .category-item-title.plugin:before,
+.theme-dark .category-item-title.pluginssdk:before {
+    background-image: url("img/category-page/plugins-dark.svg");
 }
 
-.category-item-title.docs.docbuilder:before {
-    background-position-y: -460px;
+.category-item-title.docbuilder:before {
+    background-image: url("img/category-page/docbuilder.svg");
 }
 
-.category-item-title.docs.editors:before,
-.category-item-title.docs.mobile-editors:before {
-    background-position-y: -264px;
+.theme-dark .category-item-title.docbuilder:before {
+    background-image: url("img/category-page/docbuilder-dark.svg");
 }
 
-.category-item-title.docspace.hosting-providers:before,
-.category-item-title.workspace.hosting-providers:before {
-    background-position-y: -198px;
+.category-item-title.desktop:before {
+    background-image: url("img/category-page/desktop.svg");
+}
+
+.theme-dark .category-item-title.desktop:before {
+    background-image: url("img/category-page/desktop-dark.svg");
+}
+
+.category-item-title.backend:before,
+.category-item-title.apisystem:before,
+.category-item-title.section:before {
+    background-image: url("img/category-page/api.svg");
+}
+
+.theme-dark .category-item-title.backend:before,
+.theme-dark .category-item-title.apisystem:before,
+.theme-dark .category-item-title.section:before {
+    background-image: url("img/category-page/api-dark.svg");
 }
 
 .category-item-description {
@@ -314,42 +326,6 @@
         width: 48px;
         min-width: 48px;
         height: 48px;
-        background-image: url("img/category-page/icons-light-mobile.svg");
-    }
-
-    .theme-dark .category-item-title:before {
-        background-image: url("img/category-page/icons-dark-mobile.svg");
-    }
-    
-    .category-item-title.docspace.javascript-sdk:before {
-        background-position-y: -48px;
-    }
-    
-    .category-item-title.docspace.plugins:before,
-    .category-item-title.docs.plugin:before {
-        background-position-y: -100px;
-    }
-    
-    .category-item-title.docs.desktop:before {
-        background-position-y: -250px;
-    }
-    
-    .category-item-title.docs.docs-api:before {
-        background-position-y: -300px;
-    }
-    
-    .category-item-title.docs.docbuilder:before {
-        background-position-y: -348px;
-    }
-    
-    .category-item-title.docs.editors:before,
-    .category-item-title.docs.mobile-editors:before {
-        background-position-y: -200px;
-    }
-    
-    .category-item-title.docspace.hosting-providers:before,
-    .category-item-title.workspace.hosting-providers:before {
-        background-position-y: -150px;
     }
 
     .category-item-description {
