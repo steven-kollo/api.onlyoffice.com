@@ -1,15 +1,15 @@
 [
    {
-      "id": "docs",
-      "title": "Docs",
-      "description": "Docs ONLYOFFICE Docs is a collaborative office suite that includes editors for text documents, spreadsheets, presentations, fillable forms, and PDFs. Search in all sections",
-      "sections": [ "editors", "plugin", "docbuilder", "desktop" ]
-   },
-   {
       "id": "docspace",
       "title": "DocSpace",
       "description": "Create your own productivity platform based on ONLYOFFICE DocSpace. In this section, you will learn how to make GET, POST, PUT and DELETE requests to collaborate on documents with teams, clients, partners, etc., based on the concept of rooms – special spaces with predefined permissions.",
       "sections": [ "jssdk", "pluginssdk", "backend", "apisystem" ]
+   },
+   {
+      "id": "docs",
+      "title": "Docs",
+      "description": "Docs ONLYOFFICE Docs is a collaborative office suite that includes editors for text documents, spreadsheets, presentations, fillable forms, and PDFs. Search in all sections",
+      "sections": [ "editors", "plugin", "docbuilder", "desktop" ]
    },
    {
       "id": "portals",
