@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Save Copy As functionality to WOPI
 - editors: the editorConfig.customization.layout.toolbar.home.mailmerge field is deprecated, please use the editorConfig.customization.layout.toolbar.collaboration.mailmerge field instead
 - editors: change the default value of the editorConfig.customization.hideRightMenu parameter to true
 - editors: sandbox on configuration pages
