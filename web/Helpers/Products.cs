@@ -54,9 +54,6 @@ namespace ASC.Api.Web.Help.Helpers
 
         [DataMember(Name = "parent")]
         public String Parent;
-
-        [DataMember(Name = "links")]
-        public Dictionary<string, List<Tuple<string, string>>> Links;
     }
 
     public static class Products
