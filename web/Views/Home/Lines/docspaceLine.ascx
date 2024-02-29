@@ -1,10 +1,10 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <div class="line line-2">
-    <svg width="106" height="895" viewBox="0 0 106 895" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M94.5 833V652L61.5 631V334" stroke="url(#paint0_linear_104_17150)"/>
+    <svg width="106" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="path-line-2" stroke="url(#paint0_linear_104_17150)"/>
 
-        <path d="M62 633V279" stroke="url(#paint6_linear_104_17150)"/>
+        <path class="path-line-2-2" stroke="url(#paint6_linear_104_17150)"/>
         <path d="M30 389V315L63 294V187" stroke="url(#paint8_linear_104_17150)"/>
 
         <path d="M63 282V199" stroke="transparent"/>

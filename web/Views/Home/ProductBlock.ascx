@@ -11,11 +11,18 @@
     <% Html.RenderPartial("Lines/workspaceLine"); %>
 <% } %>
     <div class="main-item-wrapper">
-        <h2 class="main-item-title">
-            <a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><%= product.Title %></a>
-        </h2>
-        <p class="main-item-description"><%= product.Description %></p>
-        <div class="main-item-more"><a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>">More</a></div>
+        <div class="main-item-body">
+            <div class="main-item-inner">
+                <h2 class="main-item-title">
+                    <a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><%= product.Title %></a>
+                </h2>
+                <p class="main-item-description"><%= product.Description %></p>
+                <div class="main-item-more"><a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>">More</a></div>
+            </div>
+            <div class="main-item-img mobile">
+                <span class="img"></span>
+            </div>
+        </div>
 
         <ul class="main-item-links <%= product.Id %>">
             <%
@@ -35,7 +42,7 @@
             <% } } %>
         </ul>
     </div>
-    <div class="main-item-img">
+    <div class="main-item-img desktop">
         <span class="img"></span>
     </div>
 </div>

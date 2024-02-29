@@ -1,8 +1,8 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <div class="line line-1">
-    <svg width="109" height="819" viewBox="0 0 109 819" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M96.5 808V658L63.5 637V310" stroke="url(#paint0_linear_102_15884)"/>
+    <svg width="109" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="path-line-1" stroke="url(#paint0_linear_102_15884)"/>
         <path d="M97 414V340L64 319V212" stroke="url(#paint1_linear_102_15884)"/>
         <path d="M64 214.5V213L97 187V20" stroke="url(#paint10_linear_102_15884)"/>
 
