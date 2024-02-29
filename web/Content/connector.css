@@ -10,22 +10,34 @@
     padding-bottom: 8px;
 }
 
+.connector-info > a {
+    position: relative;
+    display: block;
+    padding-bottom: 38.797%;
+    width: 100%;
+}
+
 .connector-info p:not(.name-example-connector) {
     margin: 9px 0 18px;
-    color: #333;
+    color: var(--color-text-tertiary-2);
 }
 
 .connector-block {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px 32px;
     margin: 0;
     margin-top: 32px;
 }
 
 .example-img {
-    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: 100%;
+    background-color: var(--color-bg-nonary);
 }
 
 .comments {
@@ -44,15 +56,19 @@
 }
 
 .connector-example {
-    background-color: #fff;
-    border: 1px solid #EFEFEF;
+    border: 1px solid var(--color-border-decimal);
     box-sizing: border-box;
     box-shadow: 0px 7px 25px rgba(85, 85, 85, 0.15);
     border-radius: 3px;
     padding: 24px;
+    margin: 0;
     list-style-type: none;
     position: relative;
-    max-width: 256px;
+    transition: box-shadow 0.3s;
+}
+
+.theme-dark .connector-example:hover {
+    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.4);
 }
 
 .connector-example.hidden {
@@ -64,7 +80,7 @@
 }
 
 .name-example-connector a {
-    color: #333;
+    color: var(--color-text-secondary);
     font-weight: 700;
     text-decoration: none;
     font-size: 18px;
@@ -75,25 +91,24 @@ img {
 }
 
 @media screen and (max-width: 1024px) {
-
     .connector-block {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 16px;
-    }
-
-    .example-img {
-        background-size: 208px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 592px) {
     .connector-block {
-        grid-template-columns: 1fr;
+        gap: 16px 24px;
         padding: 0;
     }
 
     .connector-example {
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .connector-block {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
