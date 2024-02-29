@@ -1,13 +1,6 @@
 
 .block_more {
-    margin: 9px 0 0;
-    position: absolute;
-    bottom: 12px;
-    padding-bottom: 6px;
-}
-
-.plug_more {
-    margin: 9px 0 0 24px;
+    margin: auto 0 0 0;
 }
 
 .macro-info {
@@ -15,26 +8,42 @@
 }
 
 .plugin-info {
+    display: flex;
+    flex-direction: column;
     padding: 24px;
-    margin-bottom: 12px;
+    height: 100%;
 }
 
-.macro-info p:not(.name-example-macros) {
+.plugin-info > p:not(.name-example-plugin):not(.block_more) {
+    margin: 0 0 12px;
+}
+
+.macro-info > a {
+    position: relative;
+    display: block;
+    padding-bottom: 38.76%;
+}
+
+.macro-info p {
     margin: 9px 0 18px;
-    color: #333;
+    color: var(--color-text-tertiary-2);
 }
 
 .macro-block, .plugin-block {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 32px;
     margin: 0;
     margin-top: 32px;
 }
 
 .example-img {
-    height: 80px;
-    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
 }
 
 .worksheet {
@@ -136,7 +145,7 @@
     height: 120px;
     margin: auto;
     background-position: 50% 50%;
-    background-color: #F9F9F9;
+    background-color: var(--color-bg-duodecimal);
 }
 
 .autocomplete {
@@ -274,6 +283,10 @@
     background-repeat: no-repeat;
 }
 
+.theme-dark .ocr {
+    background-image: url("img/plugin/ocr-dark.svg");
+}
+
 .photo-editor-example {
     background-image: url("img/plugin/photoeditor.svg");
     background-repeat: no-repeat;
@@ -315,15 +328,27 @@
 }
 
 .macro-example, .plugin-example {
-    background-color: #fff;
-    border: 1px solid #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-border-decimal);
     box-sizing: border-box;
-    box-shadow: 0px 7px 25px rgba(85, 85, 85, 0.15);
     border-radius: 3px;
     padding: 24px;
+    margin: 0;
+    height: 100%;
     list-style-type: none;
     position: relative;
-    max-width: 256px;
+    transition: box-shadow 0.3s;
+}
+
+.macro-example:hover, 
+.plugin-example:hover {
+    box-shadow: 0px 7px 25px 0px rgba(85, 85, 85, 0.15);
+}
+
+.theme-dark .macro-example:hover,
+.theme-dark .plugin-example:hover {
+    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.4);
 }
 
 .plugin-example {
@@ -343,10 +368,12 @@
 }
 
 .name-example-macros a, .name-example-plugin a {
-    color: #333;
+    color: var(--color-text-secondary);
     font-weight: 700;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
 }
 
 img {
@@ -356,7 +383,7 @@ img {
 #filter-plugin {
     z-index: 2;
     width: 196px;
-    border: 1px solid #D0D5DA;
+    border: 1px solid var(--color-border-duodecimal);
     box-sizing: border-box;
     border-radius: 3px;
     position: relative;
@@ -368,7 +395,7 @@ img {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
-    color: #444;
+    color: var(--color-text-secondary);
     width: 50px;
 }
 
@@ -376,10 +403,10 @@ img {
     background-image: url("img/plugin/arrow.svg");
     background-repeat: no-repeat;
     height: 10px;
-    margin-top: 16px;
+    margin-top: 14px;
     float: right;
     width: 6px;
-    margin-right: 8px;
+    margin-right: 16px;
     transition: all 0.1s linear;
 }
 
@@ -389,13 +416,13 @@ img {
 
 .filter-selector {
     width: 196px;
-    border: 1px solid #D0D5DA;
+    border: 1px solid var(--color-border-duodecimal);
     box-sizing: border-box;
     box-shadow: 0px 7px 25px rgba(85, 85, 85, 0.15);
     border-radius: 3px;
     position: absolute;
     z-index: 2;
-    background-color: #fff;
+    background-color: var(--color-bg-secondary);
     display: none;
     margin-top: 10px;
 }
@@ -410,7 +437,7 @@ img {
 }
 
 .filter-selector li.selected {
-     background-color: #F9F9F9;
+     background-color: var(--color-bg-duodecimal);
      color: #FF6F3D;
 }
 
@@ -440,30 +467,25 @@ img {
 
 
 @media screen and (max-width: 1024px) {
-
     .macro-block, .plugin-block {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 16px;
-    }
-
-    .example-img {
-        background-size: 208px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 592px) {
     .macro-block, .plugin-block {
-        grid-template-columns: 1fr;
         padding: 0;
-    }
-
-    .macro-example, .plugin-example {
-        max-width: 100%;
     }
 
     .filter-selector ul {
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .macro-block, .plugin-block {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
