@@ -1,10 +1,71 @@
+import type { JSX } from "preact"
 import { h } from "preact"
+import { renderToString } from "preact-render-to-string"
 
-function CodeListing({ children }) {
+declare global {
+  namespace preact {
+    namespace JSX {
+      interface IntrinsicElements {
+        "o-code-listing": any
+      }
+    }
+  }
+}
+
+export interface RootProperties {
+  // todo: replace with slots
+  groups: ([string, any])[]
+  // children: any
+}
+
+export function Root(
+  {
+    groups
+    // children
+  }: RootProperties
+): JSX.Element {
   return (
-      // <pre><code>{children}</code></pre>
-      <pre><code>{children}</code></pre>
-    // <div class="code-listing"></div>
+    <o-code-listing class="code-listing">
+      <header class="code-listing__header">
+        <div class="code-listing__tabs">
+          {groups.map(([g], i) => {
+            if (i === 0) {
+              return <button class="code-listing__tab code-listing__tab_active">{g}</button>
+            }
+            return <button class="code-listing__tab">{g}</button>
+          })}
+        </div>
+      </header>
+      <pre class="code-listing__body"><code>{groups[0][1]}</code></pre>
+      {groups.map(([g, c]) => (
+        <Template data-group={g}>{c}</Template>
+      ))}
+    </o-code-listing>
+  )
+}
+
+// todo: move to separate file
+
+declare global {
+  namespace preact {
+    namespace JSX {
+      interface IntrinsicElements {
+        template: HTMLAttributes<HTMLTemplateElement>
+      }
+    }
+  }
+}
+
+type TemplateElement = JSX.IntrinsicElements["template"]
+
+interface TemplateProperties extends TemplateElement {
+  children: any
+}
+
+function Template({ children, ...attrs }: TemplateProperties) {
+  const s = renderToString(children)
+  return (
+    <template {...attrs} dangerouslySetInnerHTML={{ __html: s }} />
   )
 }
 
@@ -24,5 +85,3 @@ function CodeListing({ children }) {
 //   </div> -->
 // </header>
 // }
-
-export { CodeListing }

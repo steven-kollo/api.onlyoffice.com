@@ -1,4 +1,4 @@
-import { Badge, Content } from "@onlyoffice/documentation-ui-kit-js"
+import { Badge, CodeListing, Content } from "@onlyoffice/documentation-ui-kit-js"
 import { Markdown } from "@/src/components/markdown/Markdown.tsx"
 import { SyntaxHighlight } from "@/src/components/syntax-highlight/SyntaxHighlight.tsx"
 import { Fragment, JSX, h, isValidElement } from "preact"
@@ -100,10 +100,21 @@ export function RESTDeclaration(
       {d.examples !== undefined && (
         <>
           <h2>Examples</h2>
-          {d.examples.map((e) => (
-            // todo: use tabs
-            <pre><code><SyntaxHighlight syntax={e.syntax}>{e.code}</SyntaxHighlight></code></pre>
-          ))}
+          <CodeListing
+            groups={d.examples.map((e) => [
+              (() => {
+                switch (e.syntax) {
+                case "http":
+                  return "HTTP"
+                case "shell":
+                  return "cURL"
+                default:
+                  return e.syntax
+                }
+              })(),
+              <SyntaxHighlight syntax={e.syntax}>{e.code}</SyntaxHighlight>
+            ])}
+          />
         </>
       )}
       {d.responses !== undefined && (
