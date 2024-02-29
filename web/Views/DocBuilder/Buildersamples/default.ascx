@@ -12,8 +12,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>">Creating formal document</a></p>
             <p>Creates multi-page document with formal styles.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createreports") %>">
@@ -22,8 +22,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createreports") %>">Creating report document</a></p>
             <p>Creates report tables in the document.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createreports") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createreports") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">
@@ -32,8 +32,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">Creating mail merge receptions</a></p>
             <p>Creates custom mail merge receptions.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">
@@ -42,8 +42,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet</a></p>
             <p>Fills spreadsheet with array-based values.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/commenterrors") %>">
@@ -52,8 +52,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a></p>
             <p>Comments spreadsheet cells with formula errors.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/commenterrors") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createpresentation") %>">
@@ -62,8 +62,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createpresentation") %>">Creating presentation</a></p>
             <p>Creates presentation with multiple slides, images and text.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createpresentation") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createpresentation") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createchartpresentation") %>">
@@ -72,8 +72,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createchartpresentation") %>">Creating chart presentation</a></p>
             <p>Creates single-slide chart presentation.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createchartpresentation") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createchartpresentation") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createbasicform") %>">
@@ -82,8 +82,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createbasicform") %>">Creating basic form</a></p>
             <p>Creates basic form with text and image inputs.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createbasicform") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createbasicform") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createadvancedform") %>">
@@ -92,8 +92,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>">Creating advanced form</a></p>
             <p>Creates advanced form with table structure.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createadvancedform") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/fillform") %>">
@@ -102,7 +102,7 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/fillform") %>">Filling form</a></p>
             <p>Fills form with text values and image.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillform") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillform") %>">More</a></p>
     </li>
 </ul>
