@@ -6,7 +6,7 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
+  padding: 12px 24px;
   background: var(--color-code-bg);
   color: var(--color-code-text);
 }
