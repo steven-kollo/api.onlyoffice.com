@@ -121,42 +121,52 @@
     height: 24px;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-image: url("img/menu-icons-light.svg");
-}
-
-.theme-dark .pushy-dropdown a::before {
-    background-image: url("img/menu-icons-dark.svg");
-}
-
-.pushy-dropdown a.office-api::before,
-.pushy-dropdown a.workspace-api::before,
-.pushy-dropdown a.docspace-api::before {
-    background-position-y: 0;
-}
-
-.pushy-dropdown a.editors::before {
-    background-position-y: 0;
 }
 
 .pushy-dropdown a.plugin::before,
-.pushy-dropdown a.plugins-macros::before {
-    background-position-y: -52px;
+.pushy-dropdown a.pluginssdk::before {
+    background-image: url("img/header/plugins.svg");
+}
+
+.theme-dark .pushy-dropdown a.plugin::before,
+.theme-dark .pushy-dropdown a.pluginssdk::before {
+    background-image: url("img/header/plugins-dark.svg");
 }
 
 .pushy-dropdown a.docbuilder::before {
-    background-position-y: -78px;
+    background-image: url("img/header/docbuilder.svg");
+}
+
+.theme-dark .pushy-dropdown a.docbuilder::before {
+    background-image: url("img/header/docbuilder-dark.svg");
 }
 
 .pushy-dropdown a.desktop::before {
-    background-position-y: -104px;
+    background-image: url("img/header/desktop.svg");
 }
 
-.pushy-dropdown a.javascript-sdk::before {
-    background-position-y: -130px;
+.theme-dark .pushy-dropdown a.desktop::before {
+    background-image: url("img/header/desktop-dark.svg");
 }
 
-.pushy-dropdown a.hosting-providers::before {
-    background-position-y: -156px;
+.pushy-dropdown a.jssdk::before {
+    background-image: url("img/header/jssdk.svg");
+}
+
+.theme-dark .pushy-dropdown a.jssdk::before {
+    background-image: url("img/header/jssdk-dark.svg");
+}
+
+.pushy-dropdown a.backend::before,
+.pushy-dropdown a.apisystem::before,
+.pushy-dropdown a.section::before {
+    background-image: url("img/header/api.svg");
+}
+
+.theme-dark .pushy-dropdown a.backend::before,
+.theme-dark .pushy-dropdown a.apisystem::before,
+.theme-dark .pushy-dropdown a.section::before {
+    background-image: url("img/header/api-dark.svg");
 }
 
 @keyframes menuLineLeft {
@@ -210,6 +220,7 @@
     }
 
     .pushy-submenu {
+        display: flex;
         border-bottom: 1px solid #f2f2f2;
     }
 
@@ -376,12 +387,12 @@
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .pushy {
         -webkit-overflow-scrolling: touch;
         background: #333;
         border-right: none;
-        height: 264px;
+        height: initial;
         overflow: auto;
         position: absolute;
         top: 0;
@@ -391,12 +402,6 @@
         -webkit-overflow-scrolling: touch;
         margin-top: 48px;
         border-top: 1px solid #444;
-    }
-
-    .pushy-content {
-        width: 300px;
-        position: absolute;
-        right: 0;
     }
 
     .pushy a {
@@ -413,6 +418,10 @@
 
     .pushy-submenu {
         border-bottom: none;
+    }
+
+    .pushy-submenu-open ul {
+        padding: 8px 0;
     }
 
     .top-nav li.active a {
