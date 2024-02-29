@@ -1295,6 +1295,10 @@ docEditor.setUsers({
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <div class="note">Please note that if you are subscribed to the <em>onRequestUsers</em> event and send an avatar using the <em>setUsers</em> method,
+                the <a href="<%= Url.Action("config/editor") %>#user">user.image</a> field in the initialization config is not required.
+            We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT.
+            In this case, the token will be too long.</div>
         </li>
 
         <li>
