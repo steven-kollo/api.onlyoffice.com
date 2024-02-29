@@ -84,7 +84,7 @@
     height: 56px;
     background-color: var(--color-bg-quinary);
     outline: none;
-    color: var(--color-text-octonary);
+    color: var(--color-text-secondary);
     transition: border-color 0.3s;
 }
 
