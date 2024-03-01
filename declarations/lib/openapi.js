@@ -145,7 +145,9 @@ function createPath(c, m, p, s) {
   }
 
   if (s.summary !== undefined) {
-    path.slug = `${slugify(s.tags[0])}/${slugify(s.summary)}`
+    const p = s.tags[0].split("/").map(slugify).join("/")
+    const c = slugify(s.summary)
+    path.slug = `${p}/${c}`
     path.title = s.summary
     path.summary = s.summary
   } else {

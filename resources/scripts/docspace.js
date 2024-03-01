@@ -4,7 +4,7 @@
  * @typedef {import("node:stream").TransformCallback} TransformCallback
  */
 
-import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises"
+import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises"
 import { createReadStream, createWriteStream, existsSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { join } from "node:path"
@@ -18,7 +18,7 @@ import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
-import { UnStreamObject, download, makeObject, mergeArrays, mergeObjects, num, rmrf } from "./utils.js"
+import { UnStreamObject, downloadFile, makeObject, mergeArrays, mergeObjects, num, rmrf, capitalizeTitle } from "./utils.js"
 import pack from "../package.json" assert { type: "json" }
 
 // import { createRequire } from "module"
@@ -54,7 +54,7 @@ async function build() {
   await Promise.all(files.map(async (file) => {
     const f = join(temp, file)
     const u = `${ref}/${file}`
-    await download(u, f)
+    await downloadFile(u, f)
 
     const p = remapPackage(file)
 
@@ -125,7 +125,7 @@ async function build() {
   c = c.replaceAll("resource", pn)
   await writeFile(to, c, { encoding: "utf8" })
 
-  await rm(temp, { recursive: true, force: true })
+  await rmrf(temp)
 }
 
 /**
@@ -173,7 +173,7 @@ class PreprocessPath extends OpenAPIPreprocessPath {
       if (o.tags === undefined) {
         o.tags = [this._pack]
       }
-      o.tags = o.tags.map(titleCase)
+      o.tags = o.tags.map(capitalizeTitle)
       if (o.description !== undefined) {
         o.description = `**Note**: ${o.description}`
       }
@@ -234,16 +234,6 @@ function declarationConsole() {
   const f = join(root, "report.log")
   const s = createWriteStream(f)
   return new DeclarationConsole(s, s)
-}
-
-function titleCase(s) {
-  return s
-    .toLowerCase()
-    .split(" ")
-    .map((w) => {
-      return w.charAt(0).toUpperCase() + w.slice(1)
-    })
-    .join(" ")
 }
 
 export { build }

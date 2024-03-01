@@ -4,25 +4,26 @@
 import { argv } from "node:process"
 import esMain from "es-main"
 import sade from "sade"
+import * as communityServer from "./scripts/community-server.js"
 import * as docspace from "./scripts/docspace.js"
 import * as documentBuilder from "./scripts/document-builder.js"
 
-const make = sade("./makefile.js")
+function main() {
+  sade("./makefile.js")
+    .command("build")
+    .option("-p, --prettify", "Prettify the output")
+    .action(build)
+    .parse(argv)
+}
 
-make
-  .command("build")
-  .option("-p, --prettify", "Prettify the output")
-  .action(build)
-
-async function build() {
+export async function build() {
   await Promise.all([
+    communityServer.build(),
     docspace.build(),
-    // documentBuilder.build()
+    documentBuilder.build()
   ])
 }
 
 if (esMain(import.meta)) {
-  make.parse(argv)
+  main()
 }
-
-export { build }

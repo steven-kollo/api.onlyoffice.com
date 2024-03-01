@@ -25,7 +25,7 @@ import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
-import { UnStreamObject, download, makeObject, mergeArrays, num } from "./utils.js"
+import { UnStreamObject, downloadFile, makeObject, mergeArrays, num } from "./utils.js"
 import pack from "../package.json" assert { type: "json" }
 
 import { createRequire } from "module"
@@ -70,7 +70,7 @@ async function build(options) {
   await Promise.all(files.map(async (file) => {
     const f = join(temp, file)
     const u = `${ref}/${file}`
-    await download(u, f)
+    await downloadFile(u, f)
 
     const cache = new DeclarationsCache()
 
