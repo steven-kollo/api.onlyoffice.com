@@ -123,6 +123,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult ApiSystem(string catchall)
         {
+            ViewData["viewName"] = "apisystem";
+
             if (!_actionMap.Contains("apisystem/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
@@ -142,6 +144,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Backend(string catchall)
         {
+            ViewData["viewName"] = "backend";
+
             if (!_actionMap.Contains("backend/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
@@ -166,6 +170,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult JsSdk(string catchall)
         {
+            ViewData["viewName"] = "jssdk";
+
             if (!_actionMap.Contains("jssdk/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
@@ -175,6 +181,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult PluginsSdk(string catchall)
         {
+            ViewData["viewName"] = "pluginssdk";
+
             if (!_actionMap.Contains("pluginssdk/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;

@@ -42,7 +42,7 @@
                 <div class="layout-table-side">
                     <div class="layout-side">
                         <% Html.RenderPartial("SearchForm"); %>
-                        <% Html.RenderAction("Navigation"); %>
+                        <% Html.RenderAction("Navigation", new { viewName = ViewData["viewName"] }); %>
                     </div>
                 </div>
                 <% } %>

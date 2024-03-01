@@ -99,5 +99,10 @@ namespace ASC.Api.Web.Help.Helpers
         {
             return helper.ViewContext.RequestContext.RouteData.Values["action"];
         }
+
+        public static object GetCurrentViewName(this HtmlHelper helper)
+        {
+            return helper.ViewContext.RequestContext.RouteData.Values["viewName"];
+        }
     }
 }
