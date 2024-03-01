@@ -14,15 +14,17 @@ const { isBuild, isPreview } = require("./env.cjs")
  * @property {NavigationItem[]=} children
  */
 
-// todo: @property hasChildren(link: string)
-// todo: @property {(link: string) => boolean} isCurrent; it should be a property
-
 /**
  * @typedef {Object} TemporalNavigationItem
  * @property {string} title
  * @property {string} link
  * @property {number} order
  * @property {Record<string, TemporalNavigationItem>} children
+ */
+
+/**
+ * @typedef {Object} Context
+ * @property {string[]} hierarchy
  */
 
 const cache = new WeakMap()
@@ -51,9 +53,16 @@ function navigationPlugin(uc) {
  * @returns {NavigationItem[]}
  */
 function navigation(tc) {
+  /** @type {Context} */
+  const ctx = {
+    hierarchy: []
+  }
   const l = tc.getFilteredByTag("navigation")
   const t = collectNavigation(l)
-  const r = resolveNavigation(t)
+  const r = processNavigation(ctx, t)
+  if (r.children === undefined) {
+    return []
+  }
   return r.children
 }
 
@@ -117,88 +126,71 @@ function collectNavigation(l) {
 }
 
 /**
+ * @param {Context} ctx
  * @param {TemporalNavigationItem} t
  * @returns {NavigationItem}
  */
-function resolveNavigation(t) {
+function processNavigation(ctx, t) {
   /** @type {NavigationItem} */
   const item = {
     title: t.title,
     link: t.link
   }
 
-  const ch = Object.values(t.children)
-  if (ch.length > 0) {
-    item.children = resolveChildren(ch)
+  const en = Object.entries(t.children)
+  if (en.length > 0) {
+    item.children = en
+      .map(([s, t]) => {
+        ctx.hierarchy.push(s)
+        t = preprocessNavigation(ctx, t)
+        const r = processNavigation(ctx, t)
+        ctx.hierarchy.pop()
+        return {
+          o: t.order,
+          r
+        }
+      })
+      .sort((a, b) => {
+        const d = a.o - b.o
+        if (d !== 0) {
+          return d
+        }
+        return a.r.title.localeCompare(b.r.title)
+      })
+      .map((t) => {
+        return t.r
+      })
   }
 
   return item
 }
 
 /**
- * @param {TemporalNavigationItem[]} ch
- * @returns {NavigationItem[]}
+ * @param {Context} ctx
+ * @param {TemporalNavigationItem} t
+ * @returns {TemporalNavigationItem}
  */
-function resolveChildren(ch) {
-  return ch
-    .map((t) => {
-      // todo: is it okay? explain why it might happen.
-      // todo: thrown an error on production.
-      // todo: print a warning on development.
-      if (t.link === "" || t.title === "") {
-        const ch = Object.values(t.children)
-        if (ch.length > 0) {
-          t.link = resolveLink(ch)
-          t.title = resolveTitle(t.link)
-        } else {
-          t.link = "/404/index.html"
-          t.title = "404"
-        }
-      }
-      return t
-    })
-    .sort((a, b) => {
-      const d = a.order - b.order
-      if (d !== 0) {
-        return d
-      }
-      return a.title.localeCompare(b.title)
-    })
-    .map(resolveNavigation)
-}
+function preprocessNavigation(ctx, t) {
+  // todo: is it okay? explain why it might happen.
+  // todo: thrown an error on production.
+  // todo: print a warning on development.
 
-/**
- * @param {TemporalNavigationItem[]} ch
- * @returns {string}
- */
-function resolveLink(ch) {
-  let l = ch[0].link
-  if (ch.length === 1) {
-    const i = l.lastIndexOf("/", l.lastIndexOf("/") - 1)
-    l = l.substring(0, i + 1)
-  } else {
-    let s = l.split("/")
-    for (let i = 1; i < ch.length; i += 1) {
-      let u = ch[i].link.split("/")
-      for (let j = 0; j < s.length; j += 1) {
-        if (s[j] !== u[j]) {
-          s = s.slice(0, j)
-          break
-        }
-      }
+  if (t.link === "") {
+    t.link = ctx.hierarchy.join("/")
+    if (!t.link.startsWith("/")) {
+      t.link = `/${t.link}`
     }
-    l = s.join("/") + "/"
+    if (!t.link.endsWith("/")) {
+      t.link += "/"
+    }
   }
-  return l
-}
 
-/**
- * @param {string} l
- * @returns {string}
- */
-function resolveTitle(l) {
-  const i = l.lastIndexOf("/", l.lastIndexOf("/") - 1)
-  return l.substring(i + 1, l.length - 1)
+  if (t.title === "") {
+    const i = t.link.lastIndexOf("/", t.link.lastIndexOf("/") - 1)
+    t.title = t.link.substring(i + 1, t.link.length - 1)
+  }
+
+  return t
 }
 
 module.exports = { navigationPlugin }
