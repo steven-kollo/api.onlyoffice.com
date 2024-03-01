@@ -90,10 +90,13 @@ namespace DocumentationUtility.Shared.XmlDocs
         {
             var key = "M:" + XmlDocumentationKeyHelper(methodInfo.DeclaringType.FullName, methodInfo.Name);
 
-            //var typeGenericMap = new Dictionary<string, int>();
-            //var tempTypeGeneric = 0;
+            var typeGenericMap = new Dictionary<string, int>();
+            var tempTypeGeneric = 0;
 
-            //Array.ForEach(methodInfo.DeclaringType.GetGenericArguments(), x => typeGenericMap[x.Name] = tempTypeGeneric++);
+            Array.ForEach(methodInfo.DeclaringType.GetGenericArguments(),  x => {
+                if (x.FullName == null) return;
+                typeGenericMap[x.FullName] = tempTypeGeneric++;
+            });
 
             //var methodGenericMap = new Dictionary<string, int>();
             //var tempMethodGeneric = 0;
@@ -129,7 +132,14 @@ namespace DocumentationUtility.Shared.XmlDocs
                 }
                 else
                 {
-                    parameterKeys.Add(XmlDocumentationKeyHelper(parameterInfo.ParameterType.FullName, null));
+                    if (typeGenericMap.TryGetValue(parameterInfo.ParameterType.FullName, out var index))
+                    {
+                        parameterKeys.Add($"`{index}");
+                    }
+                    else
+                    {
+                        parameterKeys.Add(XmlDocumentationKeyHelper(parameterInfo.ParameterType.FullName, null));
+                    }
                 }
             }
 
