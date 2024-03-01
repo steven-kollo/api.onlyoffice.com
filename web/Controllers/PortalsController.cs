@@ -66,6 +66,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult ApiSystem(string catchall)
         {
+            ViewData["viewName"] = "apisystem";
+
             if (!_actionMap.Contains("apisystem/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
@@ -116,6 +118,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Section(string section, string category)
         {
+            ViewData["viewName"] = "section";
+
             if (string.IsNullOrEmpty(section))
             {
                 var firstPoint = CommunityServerDocumentation.GetAll().OrderBy(x => x.Name).ToList().FirstOrDefault();
