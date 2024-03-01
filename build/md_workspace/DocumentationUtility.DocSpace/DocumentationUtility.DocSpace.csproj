@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
@@ -31,18 +31,15 @@
     <ProjectReference Include="..\DocSpace\server\common\ASC.Notify.Textile\ASC.Notify.Textile.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\ASC.Textile\ASC.Textile.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\ASC.Webhooks.Core\ASC.Webhooks.Core.csproj" />
-    <ProjectReference Include="..\DocSpace\server\common\services\ASC.ApiCache\ASC.ApiCache.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.ApiSystem\ASC.ApiSystem.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.AuditTrail\ASC.AuditTrail.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.ClearEvents\ASC.ClearEvents.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.Data.Backup.BackgroundTasks\ASC.Data.Backup.BackgroundTasks.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.Data.Backup\ASC.Data.Backup.csproj" />
-    <ProjectReference Include="..\DocSpace\server\common\services\ASC.Data.Storage.Encryption\ASC.Data.Storage.Encryption.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.ElasticSearch\ASC.ElasticSearch.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.Feed.Aggregator\ASC.Feed.Aggregator.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.Notify\ASC.Notify.csproj" />
     <ProjectReference Include="..\DocSpace\server\common\services\ASC.Studio.Notify\ASC.Studio.Notify.csproj" />
-    <ProjectReference Include="..\DocSpace\server\common\services\ASC.TelegramService\ASC.TelegramService.csproj" />
     <ProjectReference Include="..\DocSpace\server\products\ASC.Files\Core\ASC.Files.Core.csproj" />
     <ProjectReference Include="..\DocSpace\server\products\ASC.Files\Server\ASC.Files.csproj" />
     <ProjectReference Include="..\DocSpace\server\products\ASC.Files\Service\ASC.Files.Service.csproj" />

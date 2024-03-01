@@ -11,6 +11,8 @@ namespace DocumentationUtility.Shared.Models.Abstract
         public string Description { get; protected set; }
         public string Remarks { get; protected set; }
 
+        // ToDo: do not even export those to json
+        // ToDo: do not go through system types like String
         public bool IsVisible { get; protected set; } = true;
 
         public DocCSharpItem(MemberInfo type)
@@ -26,8 +28,9 @@ namespace DocumentationUtility.Shared.Models.Abstract
             if (xml == null) return;
             using (var xmlReader = XmlReader.Create(new StringReader(xml), xmlReaderSettings))
             {
-                while (xmlReader.Read())
+                while (true)
                 {
+                    var readResult = true;
                     switch (xmlReader.NodeType)
                     {
                         case XmlNodeType.Element:
@@ -36,9 +39,10 @@ namespace DocumentationUtility.Shared.Models.Abstract
                             break;
 
                         default:
+                            readResult = xmlReader.Read();
                             break;
-
                     }
+                    if (!readResult) break;
                 }
             }
         }
