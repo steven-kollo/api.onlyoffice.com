@@ -36,6 +36,6 @@ foreach (var controller in controllers)
     result.Add(new DocSpaceApiController(controller));
 }
 
-MarkdownRenderer.RenderApiControllers(result.Cast<DocApiController>().ToList(), "ds_out");
+JsonRenderer.RenderApiControllers(result.Cast<DocApiController>().ToList(), "json_out", "docspace.json");
 
 Console.WriteLine();

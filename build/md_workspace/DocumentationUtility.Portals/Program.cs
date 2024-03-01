@@ -42,7 +42,7 @@ public class Program
             result.Add(new PortalApiController(controller));
         }
 
-        MarkdownRenderer.RenderApiControllers(result.Cast<DocApiController>().ToList(), "portals_out");
+        JsonRenderer.RenderApiControllers(result.Cast<DocApiController>().ToList(), "json_out", "portals.json");
 
         Console.WriteLine();
     }
