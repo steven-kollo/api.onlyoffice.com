@@ -9,11 +9,6 @@
 
 <div class="nav-list">
     <ul class="side-nav root">
-        <div class="treeheader">Get Started</div>
-        <li>
-            <a href="<%= Url.Action("basic") %>">Overview</a>
-        </li>
-
         <%
             var currentViewName = "";
             if (Html.GetCurrentViewName() != null)
@@ -24,11 +19,12 @@
             {
                 case "jssdk":
                     %>
+                    <div class="treeheader">Get Started</div>
+                    <li>
+                        <a href="<%= Url.Action("jssdk/") %>">Basic concepts</a>
+                    </li>
                     <div class="treeheader">JavaScript SDK</div>
                     <ul class="side-nav root">
-                        <li>
-                           <a href="<%= Url.Action("jssdk/") %>">Basic concepts</a>
-                        </li>
                         <li>
                            <a href="<%= Url.Action("jssdk/initmodes") %>">Initialization modes</a>
                            <ul>
@@ -66,7 +62,7 @@
                     break;
                 case "pluginssdk":
                     %>
-                    <div class="treeheader">Plugins SDK</div>
+                    <div class="treeheader">Get Started</div>
                     <ul class="side-nav root">
                         <li>
                             <a href="<%= Url.Action("pluginssdk/") %>">Basic concepts</a>
@@ -74,6 +70,9 @@
                         <li>
                             <a href="<%= Url.Action("pluginssdk/gettingstarted") %>">Getting started</a>
                         </li>
+                    </ul>
+                    <div class="treeheader">Plugins SDK</div>
+                    <ul class="side-nav root">
                         <li>
                             <a href="<%= Url.Action("pluginssdk/creatingtemplate") %>">Creating plugin template</a>
                         </li>
@@ -212,11 +211,17 @@
                             <a href="/docspace-storybook" target="_blank">Storybook</a>
                         </li>
                     </ul>
+                    <div class="treeheader">More information</div>
+                    <ul class="side-nav root">
+                        <li>
+                            <a href="<%= Url.Action("pluginssdk/changelog") %>">Changelog</a>
+                        </li>
+                    </ul>
                 <%
                     break;
                 case "backend":
                     %>
-                    <div class="treeheader">API backend</div>
+                    <div class="treeheader">Get Started</div>
                     <ul class="side-nav root">
                         <li>
                             <a href="<%= Url.Action("backend/") %>">Basic concepts</a>
@@ -227,6 +232,9 @@
                         <li>
                             <a href="<%= Url.Action("backend/webhooks") %>">Webhooks</a>
                         </li>
+                    </ul>
+                    <div class="treeheader">API backend</div>
+                    <ul class="side-nav root">
                         <% if (entryPoints != null && entryPoints.Any())
                         { %>
                         <% foreach (var entryPoint in entryPoints.OrderBy(x => x.Name).ToList())
@@ -269,11 +277,23 @@
                         <% } %>
                         <% } %>
                     </ul>
+                    <div class="treeheader">More information</div>
+                    <ul class="side-nav root">
+                        <li>
+                            <a href="<%= Url.Action("backend/faq") %>">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("backend/filters") %>">Filtering</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("backend/batch") %>">Batching</a>
+                        </li>
+                    </ul>
                 <%
                     break;
                 case "apisystem":
                     %>
-                    <div class="treeheader">API system</div>
+                    <div class="treeheader">Get Started</div>
                     <ul class="side-nav root">
                         <li>
                             <a href="<%= Url.Action("apisystem/") %>">Basic concepts</a>
@@ -281,6 +301,9 @@
                         <li>
                             <a href="<%= Url.Action("apisystem/authentication") %>">Authentication</a>
                         </li>
+                    </ul>
+                    <div class="treeheader">For hosting providers</div>
+                    <ul class="side-nav root">
                         <li>
                             <a href="<%= Url.Action("apisystem/portalsection") %>">Portals</a>
                             <ul>
@@ -313,25 +336,21 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="treeheader">More information</div>
+                    <ul class="side-nav root">
+                        <li>
+                            <a href="<%= Url.Action("apisystem/faq") %>">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("apisystem/filters") %>">Filtering</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("apisystem/batch") %>">Batching</a>
+                        </li>
+                    </ul>
                 <%
                     break;
             }
             %>
-
-        <div class="treeheader">More information</div>
-        <ul class="side-nav root">
-            <li>
-                <a href="<%= Url.Action("changelog") %>">Changelog</a>
-            </li>
-            <li>
-                <a href="<%= Url.Action("faq") %>">FAQ</a>
-            </li>
-            <li>
-                <a href="<%= Url.Action("filters") %>">Filtering</a>
-            </li>
-            <li>
-                <a href="<%= Url.Action("batch") %>">Batching</a>
-            </li>
-        </ul>
     </ul>
 </div>

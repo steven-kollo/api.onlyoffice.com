@@ -1,26 +1,12 @@
-﻿<%@ Page
-    Title=""
-    Language="C#"
-    MasterPageFile="~/Views/Shared/Site.Master"
-    Inherits="System.Web.Mvc.ViewPage<string>"
-    ContentType="text/html" %>
-<%@ Import Namespace="System.Web.Optimization" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<asp:Content ID="FaqHead" ContentPlaceHolderID="HeadContent" runat="server">
-    <%= Scripts.Render("~/bundles/faq") %>
-</asp:Content>
+<h1>
+    <span class="hdr">Frequently asked questions: DocSpace</span>
+</h1>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Frequently asked questions
-</asp:Content>
+<%= Scripts.Render("~/bundles/faq") %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-    <h1>
-        <span class="hdr">Frequently asked questions: DocSpace</span>
-    </h1>
-
-    <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
+<% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 
 <dl class="faq_block" id="community_1">
     <dt>What is the date/time format used in the response to the requests?</dt>
@@ -39,6 +25,17 @@
     </dd>
 </dl>
 <dl class="faq_block" id="community_2">
+    <dt>How to get json or xml format?</dt>
+    <dd>
+        <p>
+            You can get <em>json</em> or <em>xml</em> format adding <em>.json</em> or <em>.xml</em> to the request or pointing the request <em>Content-Type</em> in application/json or text/xml.
+        </p>
+        <p>
+            E.g.: <a href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "portals") %>">api/2.0/people.json</a> 
+        </p>
+    </dd>
+</dl>
+<dl class="faq_block" id="community_3">
     <dt>Is the response data pagination supported?</dt>
     <dd>
         <p>
@@ -46,5 +43,3 @@
         </p>
     </dd>
 </dl>
-
-</asp:Content>

@@ -46,13 +46,16 @@ namespace ASC.Api.Web.Help.Controllers
 
         private readonly string[] _actionMap = new[]
             {
-                "Auth",
-                "Basic",
-                "Faq",
-                "Filters",
-                "Batch",
+                "Backend",
+                "Backend/Auth",
+                "Backend/Faq",
+                "Backend/Filters",
+                "Backend/Batch",
                 "ApiSystem",
                 "ApiSystem/Authentication",
+                "ApiSystem/Faq",
+                "ApiSystem/Filters",
+                "ApiSystem/Batch",
                 "ApiSystem/PortalSection",
                 "ApiSystem/PortalSection/PortalGet",
                 "ApiSystem/PortalSection/PortalRegister",
@@ -75,6 +78,17 @@ namespace ASC.Api.Web.Help.Controllers
             return View("ApiSystem", (object)catchall);
         }
 
+        public ActionResult Backend(string catchall)
+        {
+            ViewData["viewName"] = "backend";
+
+            if (!_actionMap.Contains("backend/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Backend", (object)catchall);
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -83,31 +97,6 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Navigation()
         {
             return View(CommunityServerDocumentation.GetAll());
-        }
-
-        public ActionResult Auth()
-        {
-            return View();
-        }
-
-        public ActionResult Basic()
-        {
-            return View();
-        }
-
-        public ActionResult Faq()
-        {
-            return View();
-        }
-
-        public ActionResult Filters()
-        {
-            return View();
-        }
-
-        public ActionResult Batch()
-        {
-            return View();
         }
 
         [ValidateInput(false)]

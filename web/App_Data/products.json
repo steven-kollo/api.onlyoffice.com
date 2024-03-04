@@ -2,7 +2,7 @@
    {
       "id": "docspace",
       "title": "DocSpace",
-      "description": "Create your own productivity platform based on ONLYOFFICE DocSpace. In this section, you will learn how to make GET, POST, PUT and DELETE requests to collaborate on documents with teams, clients, partners, etc., based on the concept of rooms – special spaces with predefined permissions.",
+      "description": "ONLYOFFICE DocSpace is a collaborative cloud platform that allows users to store, manage, edit, and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.",
       "sections": [ "jssdk", "pluginssdk", "backend", "apisystem" ]
    },
    {
@@ -14,34 +14,34 @@
    {
       "id": "portals",
       "title": "Community Server",
-      "description": "Create your own productivity platform based on ONLYOFFICE Groups. In this section, you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.",
-      "sections": [ "section", "apisystem" ]
+      "description": "ONLYOFFICE Workspace is a collaborative cloud platform that allows users to manage documents, projects, emails, client relations, and timetables in one place.",
+      "sections": [ "backend", "apisystem" ]
    },
    {
       "id":"jssdk",
       "title":"JavaScript SDK",
-      "description":"",
+      "description":"In this section, you will learn how to connect DocSpace as a frame to your website using api.js. You can embed an entire DocSpace portal, a single room, or a document.",
       "version":"2.0",
       "parent": "docspace"
    },
    {
       "id":"pluginssdk",
       "title":"Plugins SDK",
-      "description":"",
+      "description":"In this section, you will learn how to create your own plugins and add them to the DocSpace portal.",
       "version":"2.0",
       "parent": "docspace"
    },
    {
       "id":"backend",
       "title":"API Backend",
-      "description":"",
+      "description":"In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend  which is implemented as REST over HTTP using GET/POST/PUT/DELETE.",
       "version":"2.0",
       "parent": "docspace"
    },
    {
       "id":"apisystem",
-      "title":"API System",
-      "description":"",
+      "title":"For hosting providers",
+      "description":"In this section, you will learn how to provide the DocSpace portal as a SaaS solution on your own servers using our API methods.",
       "version":"2.0",
       "parent": "docspace"
    },
@@ -74,16 +74,16 @@
       "version":"7.5"
    },
    {
-      "id":"section",
+      "id":"backend",
       "title":"API Backend",
-      "description":"",
+      "description":"In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API Backend  which is implemented as REST over HTTP using GET/POST/PUT/DELETE. This solution is provided without editors, you need to install ONLYOFFICE Docs separately.",
       "version": "12.5",
       "parent": "portals"
    },
    {
       "id":"apisystem",
-      "title":"API System",
-      "description":"",
+      "title":"For hosting providers",
+      "description":"In this section, you will learn how to provide the Workspace portal as a SaaS solution on your own servers using our API methods.",
       "version": "12.5",
       "parent": "portals"
    }

@@ -1,21 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" ContentType="text/html"%>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Filters
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    
-    <h1>
-        <span class="hdr">Request filtering</span>
-    </h1>
+<h1>
+    <span class="hdr">Request filtering</span>
+</h1>
 
-    <p>Every request to the API supports a certain number of parameters sent in the URL.</p>
-    <p>For example, the <a href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "docspace") %>">api/2.0/people</a> request can be appended with several parameters:</p>
-    <pre>
+<p>Every request to the API supports a certain number of parameters sent in the URL.</p>
+<p>For example, the <a href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "portals") %>">api/2.0/people</a> request can be appended with several parameters:</p>
+<pre>
 api/2.0/people?startIndex=10&amp;count=25
 </pre>
-
-<div class="header-gray">Request parameters</div>    
+ 
+<div class="header-gray">Request parameters</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -69,5 +64,3 @@ api/2.0/people?startIndex=10&amp;count=25
     </tbody>
 </table>
 <div class="mobile-content"></div>
-
-</asp:Content>

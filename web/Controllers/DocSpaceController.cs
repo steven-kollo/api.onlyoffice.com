@@ -47,13 +47,15 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Backend",
                 "Backend/Auth",
+                "Backend/Batch",
+                "Backend/Faq",
+                "Backend/Filters",
                 "Backend/Webhooks",
-                "Changelog",
-                "Faq",
-                "Filters",
-                "Batch",
                 "ApiSystem",
                 "ApiSystem/Authentication",
+                "ApiSystem/Batch",
+                "ApiSystem/Faq",
+                "ApiSystem/Filters",
                 "ApiSystem/PortalSection",
                 "ApiSystem/PortalSection/PortalGet",
                 "ApiSystem/PortalSection/PortalRegister",
@@ -76,6 +78,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "JsSdk/Events",
                 "PluginsSdk",
                 "PluginsSdk/BuildingPlugin",
+                "PluginsSdk/Changelog",
                 "PluginsSdk/Config",
                 "PluginsSdk/CreatingTemplate",
                 "PluginsSdk/CodingPlugin/Events",
@@ -118,7 +121,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "PluginsSdk/CodingPlugin/PluginTypes/EventListenerPlugin",
                 "PluginsSdk/CodingPlugin/PluginTypes/FilePlugin",
                 "PluginsSdk/AddingPlugin",
-                "Basic",
             };
 
         public ActionResult ApiSystem(string catchall)
@@ -153,21 +155,6 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Backend", (object)catchall);
         }
 
-        public ActionResult Changelog()
-        {
-            return View();
-        }
-
-        public ActionResult Faq()
-        {
-            return View();
-        }
-
-        public ActionResult Filters()
-        {
-            return View();
-        }
-
         public ActionResult JsSdk(string catchall)
         {
             ViewData["viewName"] = "jssdk";
@@ -188,16 +175,6 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("PluginsSdk", (object)catchall);
-        }
-
-        public ActionResult Batch()
-        {
-            return View();
-        }
-
-        public ActionResult Basic()
-        {
-            return View();
         }
 
         [ValidateInput(false)]
