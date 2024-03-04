@@ -31,7 +31,7 @@
             {
                     foreach (var section in sections)
                     {
-                        var productSection = Products.Get(section);
+                        var productSection = Products.GetSection(product.Id, section);
                         var productUrl = Url.Action(productSection.Id, product.Id, null);
                         if (product.Id == "docs")
                         {

@@ -90,5 +90,10 @@ namespace ASC.Api.Web.Help.Helpers
         {
             return EnabledProducts().FirstOrDefault(product => product.Id == id);
         }
+
+        public static Product GetSection(string productId, string sectionId)
+        {
+            return EnabledProducts().FirstOrDefault(product => product.Id == sectionId && product.Parent == productId);
+        }
     }
 }

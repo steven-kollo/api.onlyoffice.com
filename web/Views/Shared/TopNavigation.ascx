@@ -32,7 +32,7 @@
                            <ul class="pushy-dropdown">
                                 <% foreach (var section in product.Sections)
                                    {
-                                       var sectionProduct = Products.Get(section);
+                                       var sectionProduct = Products.GetSection(product.Id, section);
                                        var productUrl = Url.Action(sectionProduct.Id, product.Id, null);
                                        if (product.Id == "docs")
                                        {
