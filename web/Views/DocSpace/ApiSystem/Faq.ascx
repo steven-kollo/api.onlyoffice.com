@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Import Namespace="System.Web.Optimization" %>
 
 <h1>
     <span class="hdr">Frequently asked questions: DocSpace</span>

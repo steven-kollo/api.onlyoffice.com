@@ -2754,7 +2754,7 @@
     <Content Include="Content\connector.css" />
     <Content Include="Content\jquery.treeview.css" />
     <Content Include="Content\main-page.css" />
-    <Content Include="Content\phone-controller.css" /> 
+    <Content Include="Content\phone-controller.css" />
     <Content Include="Content\category-page.css" />
     <Content Include="Content\developer-profile.css" />
     <Content Include="Content\plugins-macros.css" />
@@ -4341,7 +4341,6 @@
     <Content Include="Views\DocSpace\ApiSystem\Batch.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Default.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Faq.ascx" />
-    <Content Include="Views\DocSpace\ApiSystem\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Filters.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\PortalSection.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\PortalSection\PortalGet.ascx" />
@@ -4357,7 +4356,7 @@
     <Content Include="Views\DocSpace\Backend\Batch.ascx" />
     <Content Include="Views\DocSpace\Backend\Default.ascx" />
     <Content Include="Views\DocSpace\Backend\Faq.ascx" />
-    <Content Include="Views\DocSpace\Backend\FAQ\FAQShared\ExpandCollapse.ascx" />
+    <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\Backend\Filters.ascx" />
     <Content Include="Views\DocSpace\Backend\Webhooks.ascx" />
     <Content Include="Views\DocSpace\JsSdk.aspx" />
@@ -4647,7 +4646,6 @@
     <Content Include="Views\Portals\ApiSystem\Default.ascx" />
     <Content Include="Views\Portals\ApiSystem\Batch.ascx" />
     <Content Include="Views\Portals\ApiSystem\Faq.ascx" />
-    <Content Include="Views\Portals\ApiSystem\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Portals\ApiSystem\Filters.ascx" />
     <Content Include="Views\Portals\ApiSystem\PortalSection.ascx" />
     <Content Include="Views\Portals\ApiSystem\PortalSection\PortalGet.ascx" />
@@ -4663,8 +4661,8 @@
     <Content Include="Views\Portals\Backend\Default.ascx" />
     <Content Include="Views\Portals\Backend\Batch.ascx" />
     <Content Include="Views\Portals\Backend\Faq.ascx" />
-    <Content Include="Views\Portals\Backend\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Portals\Backend\Filters.ascx" />
+    <Content Include="Views\Portals\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
