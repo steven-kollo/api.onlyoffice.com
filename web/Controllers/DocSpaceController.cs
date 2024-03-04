@@ -185,6 +185,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Section(string section, string category)
         {
+            ViewData["viewName"] = "backend";
+
             if (string.IsNullOrEmpty(section))
             {
                 var firstPoint = DocSpaceDocumentation.GetAll().OrderBy(x => x.Name).ToList().FirstOrDefault();
@@ -225,6 +227,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Method(string section, string type, string url)
         {
+            ViewData["viewName"] = "backend";
+
             if (string.IsNullOrEmpty(section))
                 return View("sectionnotfound");
 
