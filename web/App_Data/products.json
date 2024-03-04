@@ -13,7 +13,7 @@
    },
    {
       "id": "portals",
-      "title": "Community Server",
+      "title": "Workspace",
       "description": "ONLYOFFICE Workspace is a collaborative cloud platform that allows users to manage documents, projects, emails, client relations, and timetables in one place.",
       "sections": [ "backend", "apisystem" ]
    },
