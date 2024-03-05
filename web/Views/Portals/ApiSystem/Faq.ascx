@@ -40,7 +40,7 @@
     <dt>Is the response data pagination supported?</dt>
     <dd>
         <p>
-            Yes. More information you can find in the <a href="<%= Url.Action("filters") %>">Request filtering</a> section.
+            Yes. More information you can find in the <a href="<%= Url.Action("apisystem/filters") %>">Request filtering</a> section.
         </p>
     </dd>
 </dl>
