@@ -40,6 +40,7 @@
         <li><a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a></li>
         <li><a href="<%= Url.Action("protectingranges") %>">Protecting ranges</a></li>
         <li><a href="<%= Url.Action("javasdk") %>">Integrating editors using Java SDK</a></li>
+        <li><a href="<%= Url.Action("settingavatars") %>">Setting avatars</a></li>
     </ul>
     
     <br />
