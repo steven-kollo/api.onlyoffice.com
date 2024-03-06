@@ -4419,6 +4419,8 @@
     <Content Include="Views\DocSpace\PluginsSdk\CodingPlugin\PluginTypes\EventListenerPlugin.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk\CodingPlugin\PluginTypes\FilePlugin.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk\AddingPlugin.ascx" />
+    <Content Include="Views\DocSpace\Help.ascx" />
+    <Content Include="Views\Docs\Help.ascx" />
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
@@ -4663,6 +4665,7 @@
     <Content Include="Views\Portals\Backend\Faq.ascx" />
     <Content Include="Views\Portals\Backend\Filters.ascx" />
     <Content Include="Views\Portals\FAQ\FAQShared\ExpandCollapse.ascx" />
+    <Content Include="Views\Portals\Help.ascx" />
     <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
