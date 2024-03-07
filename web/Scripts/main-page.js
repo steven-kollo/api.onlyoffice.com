@@ -60,12 +60,6 @@ function adaptiveSvgPath() {
 
 $(window).on("load", function() {
 	adaptiveSvgPath();
-});
-
-$(document).ready(function () {
-	$(window).resize(function() {
-    adaptiveSvgPath();
-  });
 
 	function animateEllipses(...ellipses) {
 		let currentEllipseIndex = 0;
@@ -127,4 +121,10 @@ $(document).ready(function () {
 		$(".line-3-circle-1").addClass("animate");
 		$(".line-3-circle-2").addClass("animate");
 	});
+});
+
+$(document).ready(function () {
+	$(window).resize(function() {
+    adaptiveSvgPath();
+  });
 });
