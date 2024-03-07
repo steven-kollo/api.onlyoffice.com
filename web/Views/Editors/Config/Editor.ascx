@@ -429,7 +429,7 @@
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/templates.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="user" class="copy-link">user</td>
             <td>Defines the user currently viewing or editing the document:
                 <ul>
@@ -462,7 +462,7 @@
                         <b>example</b>: "78e1e841";
                     </li>
                     <li>
-                        <b>image</b> - the path to the user avatar,
+                        <b>image</b> - the path to the user's avatar,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -494,6 +494,12 @@
     "image": "https://example.com/url-to-user-avatar.png",
     "name": "John Smith"
 }</td>
+        </tr>
+        <tr class="tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame.
+                Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, <em>"data:image/png,base64,*****"</em>.</div>
+            </td>
         </tr>
     </tbody>
 </table>
