@@ -2510,6 +2510,7 @@
     <Content Include="Content\img\Editor\convert-page.png" />
     <Content Include="Content\img\Editor\create.png" />
     <Content Include="Content\img\Editor\create-page.png" />
+    <Content Include="Content\img\Editor\cross-button.jpg" />
     <Content Include="Content\img\Editor\customer.png" />
     <Content Include="Content\img\Editor\customization.png" />
     <Content Include="Content\img\Editor\documents-page.png" />
