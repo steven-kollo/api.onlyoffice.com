@@ -142,6 +142,37 @@
             );
         <% break; %>
 
+        <% case "ppsxEditor": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "ppsx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                                Title = "Example Presentation Title.ppsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ppsx"
+                            },
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
+                            },
+                        DocumentType = "slide",
+                        Height = "100%",
+                        Width = "100%"
+                    }) %>
+            );
+        <% break; %>
+
         <% case "docEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             <%= Config.Serialize(

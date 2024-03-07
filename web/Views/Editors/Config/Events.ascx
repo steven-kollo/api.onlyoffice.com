@@ -237,7 +237,7 @@ Event messages will be available in your browser's DevTools console.
                 FileType = "docx",
                 Key = "apiwh" + Guid.NewGuid(),
                 Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                Title = "Example Title",
+                Title = "Example Title.docx",
                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
                 Info = new Config.DocumentConfig.InfoConfig()
             },

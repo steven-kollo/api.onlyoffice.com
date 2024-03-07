@@ -1,9 +1,16 @@
 # Change Log
 
+##
+- editors: try ppsx
+- editors: added the Save Copy As functionality to WOPI
 - editors: the editorConfig.customization.goback.requestClose field is deprecated, please use the editorConfig.customization.close field instead
 - editors: the editorConfig.customization.layout.toolbar.home.mailmerge field is deprecated, please use the editorConfig.customization.layout.toolbar.collaboration.mailmerge field instead
 - editors: change the default value of the editorConfig.customization.hideRightMenu parameter to true
+
+## 4.6.0
+- docspace: fix examples for dto
 - editors: sandbox on configuration pages
+- portals: v12.6
 
 ## 4.5.0
 - docspace: storybook v2.0.2

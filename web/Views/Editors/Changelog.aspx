@@ -19,6 +19,7 @@
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#goback">editorConfig.customization.goback.requestClose</a> field is deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> field instead.</li>
+        <li>Added the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>#save-as">Save Copy As</a> functionality to WOPI.</li>
         <li>Change the default value of the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> parameter to <em>true</em>.</li>
     </ul>
 

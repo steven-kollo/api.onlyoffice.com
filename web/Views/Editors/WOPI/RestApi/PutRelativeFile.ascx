@@ -196,3 +196,9 @@
         </tbody>
     </table>
     <div class="mobile-content"></div>
+
+    <h2 id="save-as" class="copy-link">Save Copy As</h2>
+    <p>Starting from version 8.1, the <em>Save Copy As</em> functionality is added to the WOPI protocol through the <em>PutRelativeFile</em> operation.
+    In the ONLYOFFICE Docs API, this action is implemented as the <a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a> event.</p>
+    <p>When the <em>PutRelativeFile</em> operation is executed to save a copy of the current file, the <em>X-WOPI-FileConversion</em> header is not sent in the request.</p>
+    <p>To restrict the <em>Save Copy As</em> functionality, set the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#UserCanNotWriteRelative">UserCanNotWriteRelative</a> property in <em>CheckFileInfo</em> to <em>true</em>.</p>
