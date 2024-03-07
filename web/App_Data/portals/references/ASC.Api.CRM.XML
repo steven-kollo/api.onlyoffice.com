@@ -1699,31 +1699,6 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.GetUserTweets(System.Int32,System.Int32)">
-            <summary>
-            Returns a certain number of tweets created by a user with the ID specified in the request.
-            </summary>
-            <param type="System.Int32, System" method="url" name="contactid">Contact ID</param>
-            <param type="System.Int32, System" method="url" name="count">Number of tweets</param>
-            <short>Get user tweets</short>
-            <category>Contacts</category>
-            <returns type="ASC.Thrdparty.Message, ASC.Thrdparty">List of tweets</returns>
-            <path>api/2.0/crm/contact/{contactid}/tweets</path>
-            <httpMethod>GET</httpMethod>
-            <collection>list</collection>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.FindTwitterProfiles(System.String)">
-            <summary>
-            Returns a list of twitter profiles by the search text specified in the request.
-            </summary>
-            <param type="System.String, System" method="url" name="searchText">Search text</param>
-            <short>Get twitter profiles</short>
-            <category>Contacts</category>
-            <returns type="ASC.Thrdparty.Twitter.TwitterUserInfo, ASC.Thrdparty">List of twitter profiles</returns>
-            <path>api/2.0/crm/contact/twitterprofile</path>
-            <httpMethod>GET</httpMethod>
-            <collection>list</collection>
-        </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactAvatar(System.Int32,System.String,System.Boolean)">
             <summary>
             Deletes an avatar of the contact with the ID specified in the request.
@@ -1736,45 +1711,6 @@
             <returns>Default photo</returns>
             <path>api/2.0/crm/contact/{contactid}/avatar</path>
             <httpMethod>DELETE</httpMethod>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImages(System.Int32)">
-            <summary>
-            Returns a list of the social media images for the contact with the ID specified in the request.
-            </summary>
-            <param type="System.Int32, System" method="url" name="contactId">Contact ID</param>
-            <short>Get contact social media images by contact ID</short>
-            <category>Contacts</category>
-            <returns type="ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription, ASC.Web.CRM">List of social media images</returns>
-            <path>api/2.0/crm/contact/{contactid}/socialmediaavatar</path>
-            <httpMethod>GET</httpMethod>
-            <collection>list</collection>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImagesByNetworks(System.Collections.Generic.List{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
-            <summary>
-            Returns a list of the contact social media images from the social networks specified in the request.
-            </summary>
-            <param type="System.Collections.Generic.List{ASC.Api.CRM.Wrappers.ContactInfoWrapper}, System.Collections.Generic" name="socialNetworks">List of contact social networks</param>
-            <short>Get contact social media images by networks</short>
-            <category>Contacts</category>
-            <returns type="ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription, ASC.Web.CRM">List of social media images</returns>
-            <path>api/2.0/crm/contact/socialmediaavatar</path>
-            <httpMethod>POST</httpMethod>
-            <collection>list</collection>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.Thrdparty.SocialNetworks,System.String,System.Boolean,System.String)">
-            <summary>
-            Uploads an avatar of the contact with the ID specified in the request from the social network.
-            </summary>
-            <param type="System.Int32, System" method="url" name="contactId">Contact ID</param>
-            <param type="ASC.Thrdparty.SocialNetworks, ASC.Thrdparty" name="socialNetwork">Contact social network</param>
-            <param type="System.String, System" name="userIdentity">User identity</param>
-            <param type="System.Boolean, System" name="uploadOnly">Defines whether to upload an avatar only or also save it to a folder</param>
-            <param type="System.String, System" name="tmpDirName" visible="false">Temporary directory name</param>
-            <short>Upload an avatar from social network</short>
-            <category>Contacts</category>
-            <returns type="ASC.Web.CRM.Classes.ContactPhotoManager.PhotoData, ASC.Web.CRM">Avatar</returns>
-            <path>api/2.0/crm/contact/{contactid}/avatar</path>
-            <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SendMailSMTPToContacts(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String,System.String,System.Boolean)">
             <summary>

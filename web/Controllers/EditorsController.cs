@@ -32,6 +32,7 @@ using System.Security;
 using System.Web.Mvc;
 using System.Web.WebPages;
 using ASC.Api.Web.Help.Helpers;
+using log4net;
 using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.Controllers
@@ -268,13 +269,12 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Config", (object) catchall);
         }
 
-        
 
         [HttpPost]
-        public JsonResult ConfigCreate(
-            string jsonConfig
-        )
+        public JsonResult ConfigCreate(string jsonConfig)
         {
+            LogManager.GetLogger("ASC.Api").Debug("Editor Config create: " + jsonConfig);
+
             Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
             config.Document.Key = "apiwh" + Guid.NewGuid();
             config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx";
