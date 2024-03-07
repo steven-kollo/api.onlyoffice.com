@@ -1282,7 +1282,7 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.image</td>
-                        <td>Defines the path to the user avatar. This field is only used when the <em>c</em> parameter is <em>info</em>.</td>
+                        <td>Defines the path to the user's avatar. This field is only used when the <em>c</em> parameter is <em>info</em>.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -1295,6 +1295,8 @@ docEditor.setUsers({
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <div class="note">Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame.
+                Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, <em>"data:image/png,base64,*****"</em>.</div>
             <div class="note">Please note that if you are subscribed to the <em>onRequestUsers</em> event and send an avatar using the <em>setUsers</em> method,
                 the <a href="<%= Url.Action("config/editor") %>#user">user.image</a> field in the initialization config is not required.
             We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT.
