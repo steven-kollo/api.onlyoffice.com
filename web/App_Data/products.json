@@ -2,19 +2,22 @@
    {
       "id": "docspace",
       "title": "DocSpace",
-      "description": "ONLYOFFICE DocSpace is a collaborative cloud platform that allows users to store, manage, edit, and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.",
+      "description": "In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend. You will also find the information on how to embed DocSpace using JavaScript SDK, create your own plugins with our Plugins SDK, and host a portal on your own servers using our methods for hosting providers.",
+      "abstract": "ONLYOFFICE DocSpace is a collaborative cloud platform that allows users to store, manage, edit, and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.",
       "sections": [ "jssdk", "pluginssdk", "backend", "apisystem" ]
    },
    {
       "id": "docs",
       "title": "Docs",
-      "description": "Docs ONLYOFFICE Docs is a collaborative office suite that includes editors for text documents, spreadsheets, presentations, fillable forms, and PDFs. Search in all sections",
-      "sections": [ "editors", "plugin", "docbuilder", "desktop" ]
+      "description": "In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure and integrate ONLYOFFICE Docs, extend its functionality using your own plugins/macros, and integrate document editors into the desktop applications. You will also find the information on how to use Document Builder to generate documents easily without running document editors. Use our Office JavaScript API to write code for your plugins, macros, builder scripts, etc.",
+      "abstract": "ONLYOFFICE Docs is a collaborative office suite that includes editors for text documents, spreadsheets, presentations, fillable forms, and PDFs.",
+      "sections": [ "officeapi", "docbuilder", "editors", "desktop", "plugin" ]
    },
    {
       "id": "portals",
       "title": "Workspace",
-      "description": "ONLYOFFICE Workspace is a collaborative cloud platform that allows users to manage documents, projects, emails, client relations, and timetables in one place.",
+      "description": "In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API Backend. This solution is provided without editors, you need to install ONLYOFFICE Docs separately. You can also host a portal and interact with it using our methods for hosting providers.",
+      "abstract": "ONLYOFFICE Workspace is a collaborative cloud platform that allows users to manage documents, projects, emails, client relations, and timetables in one place.",
       "sections": [ "backend", "apisystem" ]
    },
    {
@@ -46,37 +49,37 @@
       "parent": "docspace"
    },
    {
-      "id":"editors",
-      "title":"Document Server",
-      "description":"Bring document editing and co-authoring to your web app users. In this section, you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
-      "version":"7.5",
-      "parent": "docs"
-   },
-   {
-      "id":"plugin",
-      "title":"Plugins and Macros",
-      "description":"Extend the ONLYOFFICE Docs functionality. In this section, you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"7.5",
-      "parent": "docs"
-   },
-   {
       "id":"docbuilder",
       "title":"Document Builder",
-      "description":"Generate documents easily without running a document editor. In this section, you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
+      "description":"In this section, you will learn how to generate documents easily without running a document editor and integrate Document builder into your DMS, CRM system, etc.",
       "version": "7.5",
+      "parent": "docs"
+   },
+   {
+      "id":"editors",
+      "title":"Docs API",
+      "description":"In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure, and integrate ONLYOFFICE Docs.",
+      "version":"7.5",
       "parent": "docs"
    },
    {
       "id":"desktop",
       "title":"Desktop Editors",
-      "description":"Extend the ONLYOFFICE Desktop Editors functionality. In this section, you will learn how to set up, customize and integrate them with the document management systems.",
+      "description":"In this section, you will learn how to extend the ONLYOFFICE Desktop Editors functionality by setting up, customizing and integrating them with the document management systems.",
       "parent": "docs",
       "version":"7.5"
    },
    {
+      "id":"plugin",
+      "title":"Plugins and Macros",
+      "description":"In this section, you will learn how to extend the ONLYOFFICE Docs functionality by creating your own plugins/macros. Here you will find the information about their structure, development lifecycle, and examples.",
+      "version":"7.5",
+      "parent": "docs"
+   },
+   {
       "id":"backend",
       "title":"API Backend",
-      "description":"In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API Backend  which is implemented as REST over HTTP using GET/POST/PUT/DELETE. This solution is provided without editors, you need to install ONLYOFFICE Docs separately.",
+      "description":"In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API Backend which is implemented as REST over HTTP using GET/POST/PUT/DELETE. This solution is provided without editors, you need to install ONLYOFFICE Docs separately.",
       "version": "12.5",
       "parent": "portals"
    },

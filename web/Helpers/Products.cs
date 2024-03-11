@@ -46,6 +46,9 @@ namespace ASC.Api.Web.Help.Helpers
         [DataMember(Name = "description")]
         public string Description;
 
+        [DataMember(Name = "abstract")]
+        public string Abstract;
+
         [DataMember(Name = "version")]
         public string Version;
 

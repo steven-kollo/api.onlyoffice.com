@@ -158,15 +158,31 @@
 }
 
 .pushy-dropdown a.backend::before,
-.pushy-dropdown a.apisystem::before,
+.pushy-dropdown a.officeapi::before,
 .pushy-dropdown a.section::before {
     background-image: url("img/header/api.svg");
 }
 
 .theme-dark .pushy-dropdown a.backend::before,
-.theme-dark .pushy-dropdown a.apisystem::before,
+.theme-dark .pushy-dropdown a.officeapi::before,
 .theme-dark .pushy-dropdown a.section::before {
     background-image: url("img/header/api-dark.svg");
+}
+
+.pushy-dropdown a.apisystem::before {
+    background-image: url("img/header/api-system.svg");
+}
+
+.theme-dark .pushy-dropdown a.apisystem::before {
+    background-image: url("img/header/api-system-dark.svg");
+}
+
+.pushy-dropdown a.editors::before {
+    background-image: url("img/header/docs-api.svg");
+}
+
+.theme-dark .pushy-dropdown a.editors::before {
+    background-image: url("img/header/docs-api-dark.svg");
 }
 
 @keyframes menuLineLeft {

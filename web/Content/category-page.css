@@ -177,15 +177,37 @@
 }
 
 .category-item-title.backend:before,
-.category-item-title.apisystem:before,
 .category-item-title.section:before {
     background-image: url("img/category-page/api.svg");
 }
 
 .theme-dark .category-item-title.backend:before,
-.theme-dark .category-item-title.apisystem:before,
 .theme-dark .category-item-title.section:before {
     background-image: url("img/category-page/api-dark.svg");
+}
+
+.category-item-title.apisystem:before {
+    background-image: url("img/category-page/hosting-providers.svg");
+}
+
+.theme-dark .category-item-title.apisystem:before {
+    background-image: url("img/category-page/hosting-providers-dark.svg");
+}
+
+.category-item-title.officeapi:before {
+    background-image: url("img/category-page/office-api.svg");
+}
+
+.theme-dark .category-item-title.officeapi:before {
+    background-image: url("img/category-page/office-api-dark.svg");
+}
+
+.category-item-title.editors:before {
+    background-image: url("img/category-page/docs-api.svg");
+}
+
+.theme-dark .category-item-title.editors:before {
+    background-image: url("img/category-page/docs-api-dark.svg");
 }
 
 .category-item-description {

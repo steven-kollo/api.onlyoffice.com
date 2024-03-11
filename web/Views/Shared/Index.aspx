@@ -15,7 +15,7 @@
     <div class="category-section">
     <div class="category-heading">
         <h2 class="category-title"><%= product.Title %></h2>
-        <p class="category-description"><%= product.Description %></p>
+        <p class="category-description"><%= product.Abstract %></p>
     </div>
 
     <div class="category-items">

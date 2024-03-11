@@ -55,8 +55,3 @@
     The following notation is used in the documentation:<br />
     <b>{text}</b>: indicates the text that should be replaced with your own data (ID, search query, etc.)
 </p>
-<h2>Get help</h2>
-
-<p>If you have any questions about ONLYOFFICE Workspace, try the <a href="<%= Url.Action("backend/faq") %>">FAQ</a> section first.</p>
-<p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/CommunityServer/issues" target="_blank">GitHub</a>.</p>
-<p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/workspace/33" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
