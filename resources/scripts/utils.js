@@ -2,13 +2,14 @@
 
 /**
  * @typedef {import("node:stream").TransformCallback} TransformCallback
+ * @typedef {import("@onlyoffice/documentation-declarations-scripts/openapi.js").OpenAPIComponentsKey} OpenAPIComponentsKey
  * @typedef {import("@onlyoffice/documentation-declarations").Declaration} Declaration
  */
 
 import { mkdir, mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises"
 import { createReadStream, createWriteStream, existsSync } from "node:fs"
 import { tmpdir } from "node:os"
-import { basename, dirname, extname, join } from "node:path"
+import { basename, dirname, extname, format, join, parse } from "node:path"
 import { finished } from "node:stream/promises"
 import { Readable, Transform } from "node:stream"
 import { URL, fileURLToPath } from "node:url"
@@ -17,13 +18,10 @@ import Chain from "stream-chain"
 import StreamArray from "stream-json/streamers/StreamArray.js"
 import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
+import Pick from "stream-json/filters/Pick.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
 import pack from "../package.json" assert { type: "json" }
-
-const rootDir = fileURLToPath(new URL("..", import.meta.url))
-const distDir = join(rootDir, "dist")
-const srcDir = join(rootDir, "src")
 
 /**
  * Creates a temporary directory.
@@ -39,10 +37,35 @@ export async function createTempDir() {
  * @returns {Promise<string>} The path of the distribution directory.
  */
 export async function prepareDistDir() {
-  if (!existsSync(distDir)) {
-    await mkdir(distDir)
+  const d = distDir()
+  if (!existsSync(d)) {
+    await mkdir(d)
   }
-  return distDir
+  return d
+}
+
+/**
+ * Returns the path of the distribution directory.
+ * @returns {string}
+ */
+export function distDir() {
+  return join(rootDir(), "dist")
+}
+
+/**
+ * Returns the path of the source directory.
+ * @returns {string}
+ */
+export function srcDir() {
+  return join(rootDir(), "src")
+}
+
+/**
+ * Returns the path of the root directory.
+ * @returns {string}
+ */
+export function rootDir() {
+  return fileURLToPath(new URL("..", import.meta.url))
 }
 
 /**
@@ -63,46 +86,46 @@ export async function downloadFile(u, p) {
 }
 
 /**
- * Safely joins multiple path segments into a single path. If the resulting path
- * already exists, it appends a number to the filename to make it unique.
- * @param {...string} args The path segments to join.
- * @returns {Promise<string>} The joined path.
+ * Appends a postfix to the file path.
+ * @param {string} f The file path.
+ * @param {string} p The postfix to append.
+ * @returns {string} The updated file path with the postfix.
  */
-export async function safeJoin(...args) {
-  let f = join(...args)
-  if (existsSync(f)) {
-    const d = dirname(f)
-    const e = extname(f)
-    const n = basename(f, e)
-    const r = new RegExp(`^${n}(\\d+)?${e}$`)
-    const nl = await readdir(d)
-    const il = nl.map((n) => {
-      const m = n.match(r)
-      if (m === null) {
-        return 0
-      }
-      const [s] = m
-      if (s === undefined) {
-        return 0
-      }
-      return parseInt(s, 10)
-    })
-    const i = Math.max(...il) + 1
-    f = join(d, `${n}${i}${e}`)
-  }
-  return f
+export function appendPathPostfix(f, p) {
+  const o = parse(f)
+  const n = o.name
+  o.name += `.${p}`
+  o.base = o.base.replace(n, o.name)
+  return format(o)
 }
 
 /**
  * @param {string} n
- * @param {string} d
  * @returns {Promise<void>}
  */
-export async function createRESTFile(n, d) {
-  const f = join(srcDir, "rest.cjs")
+export async function writeComponents(n) {
+  const f = join(distDir(), `${n}.components.json`)
+  const c = "{}"
+  await writeFile(f, c, "utf-8")
+}
+
+/**
+ * @param {string} r
+ * @returns {Promise<void>}
+ */
+export async function createREST(r) {
+  await writeTemplate("rest", r)
+}
+
+/**
+ * @param {"code" | "rest"} n
+ * @param {string} r
+ */
+export async function writeTemplate(n, r) {
+  const f = join(srcDir(), `${n}.cjs`)
   let c = await readFile(f, "utf-8")
-  c = c.replaceAll("resource", n)
-  const t = join(d, `${n}.cjs`)
+  c = c.replaceAll("resource", r)
+  const t = join(distDir(), `${r}.cjs`)
   await writeFile(t, c, "utf-8")
 }
 
@@ -129,18 +152,6 @@ export function capitalizeTitle(s) {
 export function num(s, n) {
   const e = extname(s)
   return join(dirname(s), `${basename(s, e)}${n}${e}`)
-}
-
-/**
- * Removes a directory and its contents recursively.
- * @param {string} p The path of the directory to remove.
- * @returns {Promise<void>}
- */
-export async function rmrf(p) {
-  await rm(p, {
-    recursive: true,
-    force: true
-  })
 }
 
 /**
@@ -227,6 +238,21 @@ export function makeObject() {
   function transformPassThrough(ch, enc, cb) {
     this.push(ch, enc)
     cb(null)
+  }
+}
+
+export class PickPath extends Pick {
+  constructor() {
+    super({ filter: "paths" })
+  }
+}
+
+export class PickComponent extends Pick {
+  /**
+   * @param {OpenAPIComponentsKey} key
+   */
+  constructor(key) {
+    super({ filter: `components.${key}` })
   }
 }
 

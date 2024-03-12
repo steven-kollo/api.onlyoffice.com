@@ -4,29 +4,32 @@
  * @typedef {import("node:stream").TransformCallback} TransformCallback
  */
 
-import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises"
-import { createReadStream, createWriteStream, existsSync } from "node:fs"
-import { tmpdir } from "node:os"
+import { mkdir, rm, rmdir } from "node:fs/promises"
+import { createReadStream, createWriteStream } from "node:fs"
 import { join } from "node:path"
-import { URL, fileURLToPath } from "node:url"
-import { Console as DeclarationConsole } from "@onlyoffice/documentation-declarations/console.js"
-import { PreprocessPath as OpenAPIPreprocessPath, PreprocessComponent } from "@onlyoffice/documentation-declarations/openapi.js"
-import { prettifyJSON } from "@onlyoffice/documentation-scripts/jq.js"
+import {
+  Cache,
+  ProcessComponent,
+  ProcessPath as OpenAPIProcessPath
+} from "@onlyoffice/documentation-declarations-scripts/openapi.js"
+import { prettifyJSON } from "@onlyoffice/documentation-utils/jq.js"
 import Chain from "stream-chain"
-import Pick from "stream-json/filters/Pick.js"
 import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
+import Parser from "stream-json/Parser.js"
 import Stringer from "stream-json/Stringer.js"
-import parser from "stream-json"
-import { UnStreamObject, downloadFile, makeObject, mergeArrays, mergeObjects, num, rmrf, capitalizeTitle } from "./utils.js"
-import pack from "../package.json" assert { type: "json" }
-
-// import { createRequire } from "module"
-// const require = createRequire(import.meta.url)
-
-const root = fileURLToPath(new URL("..", import.meta.url))
-const dist = join(root, "dist")
-const src = join(root, "src")
+import {
+  PickComponent,
+  PickPath,
+  UnStreamObject,
+  appendPathPostfix,
+  capitalizeTitle,
+  createREST,
+  downloadFile,
+  makeObject,
+  mergeArrays,
+  mergeObjects
+} from "./utils.js"
 
 const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-declarations-demo2/dist/"
 const files = [
@@ -35,97 +38,148 @@ const files = [
   "asc.people.swagger.json",
   "asc.web.api.swagger.json"
 ]
+const resource = "docspace"
 
-async function build() {
-  const tmp = join(tmpdir(), pack.name.replace("/", "+"))
-  const temp = await mkdtemp(`${tmp}-`)
+/**
+ * @param {string} tempDir
+ * @param {string} distDir
+ * @returns {Promise<void>}
+ */
+export async function build(tempDir, distDir) {
+  tempDir = join(tempDir, resource)
+  await mkdir(tempDir)
 
-  if (!existsSync(dist)) {
-    await mkdir(dist)
-  }
-
-  const de = declarationConsole()
-
-  /** @type {string[]} */
-  const paths = []
   /** @type {string[]} */
   const components = []
+  /** @type {string[]} */
+  const requests = []
 
   await Promise.all(files.map(async (file) => {
-    const f = join(temp, file)
-    const u = `${ref}/${file}`
+    const f = join(tempDir, file)
+    const u = `${ref}${file}`
     await downloadFile(u, f)
 
-    const p = remapPackage(file)
+    const cache = new Cache()
 
-    let from = f
-    let to = join(temp, num(file, 0))
-    await new Promise((res, rej) => {
-      const c = new Chain([
-        createReadStream(from),
-        parser(),
-        new Pick({ filter: "paths" }),
-        new StreamObject(),
-        new PreprocessPath(p, de),
-        new Disassembler(),
-        new Stringer({ makeArray: true }),
-        createWriteStream(to)
-      ])
-      c.on("error", rej)
-      c.on("close", res)
-    })
-    paths.push(to)
-
-    from = f
-    to = join(temp, num(file, 1))
-    await new Promise((res, rej) => {
-      const c = new Chain([
-        createReadStream(from),
-        parser(),
-        new Pick({ filter: "components.schemas" }),
-        new StreamObject(),
-        new PreprocessComponent(de),
-        new UnStreamObject(),
-        makeObject(),
-        new Stringer(),
-        createWriteStream(to)
-      ])
-      c.on("error", rej)
-      c.on("close", res)
-    })
+    let to = await writeTempComponents(tempDir, f, file, cache)
     components.push(to)
+
+    to = await writeTempRequests(tempDir, f, file, cache)
+    requests.push(to)
+
+    await rm(f)
   }))
 
-  const pn = "docspace"
-  const pp = `${pn}.paths.json`
-  const pc = `${pn}.references.json`
+  await Promise.all([
+    writeComponents(tempDir, distDir, components),
+    writeRequests(tempDir, distDir, requests),
+    createREST(resource)
+  ])
+  await rmdir(tempDir)
+}
 
-  let from = ""
-  let to = ""
+/**
+ * @param {string} tempDir
+ * @param {string} from
+ * @param {string} file
+ * @param {Cache} cache
+ * @returns {Promise<string>}
+ */
+async function writeTempComponents(tempDir, from, file, cache) {
+  let n = appendPathPostfix(file, "components")
 
-  // todo: use promise all
+  const k = "schemas"
+  n = appendPathPostfix(n, k)
+  const to = join(tempDir, n)
+  await new Promise((res, rej) => {
+    const c = new Chain([
+      createReadStream(from),
+      new Parser(),
+      new PickComponent(k),
+      new StreamObject(),
+      new ProcessComponent(cache, k),
+      new UnStreamObject(),
+      makeObject(),
+      new Stringer(),
+      createWriteStream(to)
+    ])
+    c.on("error", rej)
+    c.on("close", res)
+  })
 
-  to = join(temp, pp)
-  await mergeArrays(paths, to)
+  return to
+}
 
-  from = to
-  to = join(dist, pp)
-  await prettifyJSON(from, to)
+/**
+ * @param {string} tempDir
+ * @param {string} distDir
+ * @param {string[]} components
+ * @returns {Promise<void>}
+ */
+async function writeComponents(tempDir, distDir, components) {
+  const n = `${resource}.components.json`
 
-  to = join(temp, pc)
+  let to = join(tempDir, n)
   await mergeObjects(components, to)
+  await Promise.all(components.map(async (f) => {
+    await rm(f)
+  }))
 
-  from = to
-  to = join(dist, pc)
+  const from = to
+  to = join(distDir, n)
   await prettifyJSON(from, to)
+  await rm(from)
+}
 
-  from = join(src, "rest.cjs")
-  to = join(dist, `${pn}.cjs`)
-  let c = await readFile(from, { encoding: "utf8" })
-  c = c.replaceAll("resource", pn)
-  await writeFile(to, c, { encoding: "utf8" })
+/**
+ * @param {string} tempDir
+ * @param {string} from
+ * @param {string} file
+ * @param {Cache} cache
+ * @returns {Promise<string>}
+ */
+async function writeTempRequests(tempDir, from, file, cache) {
+  let n = appendPathPostfix(file, "requests")
 
-  await rmrf(temp)
+  const p = remapPackage(file)
+  const to = join(tempDir, n)
+  await new Promise((res, rej) => {
+    const c = new Chain([
+      createReadStream(from),
+      new Parser(),
+      new PickPath(),
+      new StreamObject(),
+      new ProcessPath(cache, p),
+      new Disassembler(),
+      new Stringer({ makeArray: true }),
+      createWriteStream(to)
+    ])
+    c.on("error", rej)
+    c.on("close", res)
+  })
+
+  return to
+}
+
+/**
+ * @param {string} tempDir
+ * @param {string} distDir
+ * @param {string[]} requests
+ * @returns {Promise<void>}
+ */
+async function writeRequests(tempDir, distDir, requests) {
+  const n = `${resource}.requests.json`
+
+  let to = join(tempDir, n)
+  await mergeArrays(requests, to)
+  await Promise.all(requests.map(async (f) => {
+    await rm(f)
+  }))
+
+  const from = to
+  to = join(distDir, n)
+  await prettifyJSON(from, to)
+  await rm(from)
 }
 
 /**
@@ -147,9 +201,9 @@ function remapPackage(f) {
   }
 }
 
-class PreprocessPath extends OpenAPIPreprocessPath {
-  constructor(pack, ...args) {
-    super(...args)
+class ProcessPath extends OpenAPIProcessPath {
+  constructor(cache, pack) {
+    super(cache)
     this._pack = pack
   }
 
@@ -188,26 +242,6 @@ class PreprocessPath extends OpenAPIPreprocessPath {
         o.summary = o["x-shortName"]
         ss.push(o.summary)
       }
-      if (o.requestBody !== undefined) {
-        if (o.requestBody.content !== undefined) {
-          ["application/*+json", "text/json", "text/plain"].forEach((t) => {
-            if (o.requestBody.content[t] !== undefined) {
-              delete o.requestBody.content[t]
-            }
-          })
-        }
-      }
-      if (o.responses !== undefined) {
-        Object.entries(o.responses).forEach(([_, r]) => {
-          if (r.content !== undefined) {
-            ["application/*+json", "text/json", "text/plain"].forEach((t) => {
-              if (r.content[t] !== undefined) {
-                delete r.content[t]
-              }
-            })
-          }
-        })
-      }
       // https://github.com/ONLYOFFICE/DocSpace-server/blob/v2.0.2-server/products/ASC.People/Server/Api/UserController.cs#L2028
       if (o.summary === undefined) {
         delete ch.value[v]
@@ -229,11 +263,3 @@ class PreprocessPath extends OpenAPIPreprocessPath {
     super._transform(ch, _, cb)
   }
 }
-
-function declarationConsole() {
-  const f = join(root, "report.log")
-  const s = createWriteStream(f)
-  return new DeclarationConsole(s, s)
-}
-
-export { build }

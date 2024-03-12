@@ -25,14 +25,11 @@
 }
 
 .content h3 {
-  background-color: var(--content-section-heading-background-color);
-  color: var(--content-section-heading-foreground-color);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.25;
   margin-bottom: 24px;
   margin-top: 32px;
-  padding: 8px 14px;
   word-break: break-word;
 }
 

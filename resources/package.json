@@ -8,9 +8,12 @@
   "scripts": {
     "build": "node ./makefile.js build"
   },
+  "dependencies": {
+    "@onlyoffice/documentation-declarations-types": "workspace:^"
+  },
   "devDependencies": {
-    "@onlyoffice/documentation-declarations": "workspace:^",
-    "@onlyoffice/documentation-scripts": "workspace:^",
+    "@onlyoffice/documentation-declarations-scripts": "workspace:^",
+    "@onlyoffice/documentation-utils": "workspace:^",
     "@stylistic/eslint-plugin-js": "^1.5.4",
     "@types/multistream": "^4.1.3",
     "@types/stream-chain": "^2.0.4",

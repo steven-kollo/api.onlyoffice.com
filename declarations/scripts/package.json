@@ -1,0 +1,32 @@
+{
+  "name": "@onlyoffice/documentation-declarations-scripts",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./console.js": "./lib/console.js",
+    "./jsdoc.js": "./lib/jsdoc.js",
+    "./openapi.js": "./lib/openapi.js",
+    "./tokenizer.js": "./lib/tokenizer.js"
+  },
+  "scripts": {
+    "build": "tsc && node ./makefile.js build"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin-js": "^1.5.4",
+    "eslint": "^8.56.0",
+    "sentence-splitter": "^5.0.0"
+  },
+  "devDependencies": {
+    "@onlyoffice/documentation-declarations-types": "workspace:^",
+    "@onlyoffice/documentation-utils": "workspace:^",
+    "@sindresorhus/slugify": "^2.2.1",
+    "@types/eslint": "^8.56.2",
+    "@types/node": "^20.11.5",
+    "openapi-types": "^12.1.3",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "pnpm@8.13.0",
+  "engines": {
+    "node": "21.5.0"
+  }
+}

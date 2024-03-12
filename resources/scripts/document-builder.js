@@ -7,9 +7,8 @@
  * @typedef {import("@onlyoffice/documentation-declarations").DeclarationValue} DeclarationValue
  */
 
-import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises"
-import { createReadStream, createWriteStream, existsSync } from "node:fs"
-import { tmpdir } from "node:os"
+import { readFile, rm, writeFile } from "node:fs/promises"
+import { createReadStream, createWriteStream } from "node:fs"
 import { join } from "node:path"
 import { Transform } from "node:stream"
 import { URL, fileURLToPath } from "node:url"
@@ -18,21 +17,19 @@ import {
   PostprocessDeclarations,
   PostPostprocessDeclarations,
   PreprocessDeclarations as JSDocPreprocessDeclarations
-} from "@onlyoffice/documentation-declarations/jsdoc.js"
-import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-scripts/jq.js"
+} from "@onlyoffice/documentation-declarations-scripts/jsdoc.js"
+import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-utils/jq.js"
 import Chain from "stream-chain"
 import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
 import { UnStreamObject, downloadFile, makeObject, mergeArrays, num } from "./utils.js"
-import pack from "../package.json" assert { type: "json" }
 
 import { createRequire } from "module"
 const require = createRequire(import.meta.url)
 
 const root = fileURLToPath(new URL("..", import.meta.url))
-const dist = join(root, "dist")
 const src = join(root, "src")
 
 const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-definitions-demo/dist/"
@@ -42,40 +39,23 @@ const files = [
 ]
 
 /**
- * @typedef {Object} BuildOptions
- * @property {boolean} [prettify=false]
- */
-
-/**
- * @param {BuildOptions=} options
+ * @param {string} tempDir
+ * @param {string} distDir
  * @returns {Promise<void>}
  */
-async function build(options) {
-  // /** @type {BuildOptions} */
-  // const opts = {
-  //   prettify: false,
-  //   ...options
-  // }
-
-  const tmp = join(tmpdir(), pack.name.replace("/", "+"))
-  const temp = await mkdtemp(tmp)
-
-  if (!existsSync(dist)) {
-    await mkdir(dist)
-  }
-
+export async function build(tempDir, distDir) {
   /** @type {string[]} */
   const froms = []
 
   await Promise.all(files.map(async (file) => {
-    const f = join(temp, file)
-    const u = `${ref}/${file}`
+    const f = join(tempDir, file)
+    const u = `${ref}${file}`
     await downloadFile(u, f)
 
     const cache = new DeclarationsCache()
 
     let from = f
-    let to = join(temp, num(file, 0))
+    let to = join(tempDir, num(file, 0))
     await new Promise((res, rej) => {
       const c = new Chain([
         createReadStream(from),
@@ -91,7 +71,7 @@ async function build(options) {
     })
 
     from = to
-    to = join(temp, num(file, 1))
+    to = join(tempDir, num(file, 1))
     await new Promise((res, rej) => {
       const c = new Chain([
         createReadStream(from),
@@ -141,7 +121,7 @@ async function build(options) {
     // }
 
     from = to
-    to = join(temp, num(file, 2))
+    to = join(tempDir, num(file, 2))
     await new Promise((res, rej) => {
       const c = new Chain([
         createReadStream(from),
@@ -164,28 +144,28 @@ async function build(options) {
   const pi = `${pn}.indexes.json`
 
   let from = ""
-  let to = join(temp, pd)
+  let to = join(tempDir, pd)
   await mergeArrays(froms, to)
 
   from = to
-  to = join(dist, pd)
+  to = join(distDir, pd)
   await sortJSON(from, to, ".id")
 
   from = to
-  to = join(temp, pi)
+  to = join(tempDir, pi)
   await createIndexes(from, to)
 
   from = to
-  to = join(dist, pi)
+  to = join(distDir, pi)
   await prettifyJSON(from, to)
 
   from = join(src, "code.cjs")
-  to = join(dist, `${pn}.cjs`)
-  let c = await readFile(from, { encoding: "utf8" })
+  to = join(distDir, `${pn}.cjs`)
+  let c = await readFile(from, "utf-8")
   c = c.replaceAll("resource", pn)
-  await writeFile(to, c, { encoding: "utf8" })
+  await writeFile(to, c, "utf-8")
 
-  await rm(temp, { recursive: true, force: true })
+  await rm(tempDir, { recursive: true, force: true })
 }
 
 class PreprocessDeclarations extends JSDocPreprocessDeclarations {
@@ -257,5 +237,3 @@ function createIndexes(from, to) {
     c.on("close", res)
   })
 }
-
-export { build }

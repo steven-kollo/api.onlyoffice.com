@@ -1,51 +1,69 @@
 // @ts-check
 
+import { mkdir, rm, rmdir } from "node:fs/promises"
 import { createReadStream, createWriteStream } from "node:fs"
 import { join } from "node:path"
-import { URL, fileURLToPath } from "node:url"
-import { Console as DeclarationConsole } from "@onlyoffice/documentation-declarations/console.js"
-import { PreprocessPath } from "@onlyoffice/documentation-declarations/openapi.js"
-import { prettifyJSON } from "@onlyoffice/documentation-scripts/jq.js"
+import { Cache, ProcessPath } from "@onlyoffice/documentation-declarations-scripts/openapi.js"
+import { prettifyJSON } from "@onlyoffice/documentation-utils/jq.js"
 import Chain from "stream-chain"
-import Pick from "stream-json/filters/Pick.js"
 import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Parser from "stream-json/Parser.js"
 import Stringer from "stream-json/Stringer.js"
 import {
-  createRESTFile,
-  createTempDir,
-  downloadFile,
-  prepareDistDir,
-  rmrf,
-  safeJoin
+  PickPath,
+  writeComponents,
+  createREST,
+  downloadFile
 } from "./utils.js"
-import { writeFile } from "node:fs/promises"
 
-const root = fileURLToPath(new URL("..", import.meta.url))
+const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-community-server-declarations-demo/dist/"
+const file = "portals.json"
+const resource = "community-server"
 
-const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-community-server-declarations-demo/dist"
-const file = "/portals.json"
-
-export async function build() {
-  const temp = await createTempDir()
-  const dist = await prepareDistDir()
-
-  const de = declarationConsole()
+/**
+ * @param {string} tempDir
+ * @param {string} distDir
+ * @returns {Promise<void>}
+ */
+export async function build(tempDir, distDir) {
+  tempDir = join(tempDir, resource)
+  await mkdir(tempDir)
 
   const u = `${ref}${file}`
-  const f = join(temp, file)
+  const f = join(tempDir, file)
   await downloadFile(u, f)
 
-  const from = f
-  const to = await safeJoin(temp, file)
+  const cache = new Cache()
+
+  await Promise.all([
+    writeRequests(cache, tempDir, distDir, f),
+    writeComponents(resource),
+    createREST(resource)
+  ])
+
+  await rm(f)
+  await rmdir(tempDir)
+}
+
+/**
+ * @param {Cache} cache
+ * @param {string} tempDir
+ * @param {string} distDir
+ * @param {string} from
+ * @returns {Promise<void>}
+ */
+async function writeRequests(cache, tempDir, distDir, from) {
+  const n = `${resource}.requests.json`
+
+  let to = join(tempDir, n)
   await new Promise((res, rej) => {
     const c = new Chain([
       createReadStream(from),
       new Parser(),
-      new Pick({ filter: "paths" }),
+      new PickPath(),
       new StreamObject(),
-      new PreprocessPath(de),
+      new ProcessPath(cache),
       new Disassembler(),
       new Stringer({ makeArray: true }),
       createWriteStream(to)
@@ -54,28 +72,8 @@ export async function build() {
     c.on("close", res)
   })
 
-  const rn = "community-server"
-  const rp = `${rn}.paths.json`
-  const rc = `${rn}.references.json`
-
-  await Promise.all([
-    (async () => {
-      const f = to
-      const t = join(dist, rp)
-      await prettifyJSON(f, t)
-    })(),
-    createRESTFile(rn, dist),
-    (async () => {
-      const t = join(dist, rc)
-      const c = "{}"
-      await writeFile(t, c, "utf-8")
-    })()
-  ])
-  await rmrf(temp)
-}
-
-function declarationConsole() {
-  const f = join(root, "report.log")
-  const s = createWriteStream(f)
-  return new DeclarationConsole(s, s)
+  from = to
+  to = join(distDir, n)
+  await prettifyJSON(from, to)
+  await rm(from)
 }

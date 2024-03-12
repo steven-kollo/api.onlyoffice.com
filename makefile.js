@@ -3,29 +3,31 @@
 
 import { argv } from "node:process"
 import sade from "sade"
-import * as declarations from "./declarations/makefile.js"
 import * as resources from "./resources/makefile.js"
 import * as iconJS from "./ui/icon-js/makefile.js"
 import * as logoJS from "./ui/logo-js/makefile.js"
 
-const make = sade("./makefile.js")
+/**
+ * @returns {void}
+ */
+function main() {
+  sade("./makefile.js")
+    .command("build")
+    .action(build)
+    .parse(argv)
+}
 
-make
-  .command("build")
-  .action(async () => {
-    console.log("@onlyoffice/documentation-declarations")
-    declarations.build()
+/**
+ * @returns {Promise<void>}
+ */
+async function build() {
+  await Promise.all([
+    resources.build(),
 
-    console.log("@onlyoffice/documentation-resources")
-    resources.build()
+    // todo: move to ui/kit-js.
+    iconJS.build(),
+    logoJS.build()
+  ])
+}
 
-    await Promise.all([
-      ["@onlyoffice/documentation-ui-icon-js", iconJS],
-      ["@onlyoffice/documentation-ui-logo-js", logoJS]
-    ].map(async ([name, make]) => {
-      console.log(name)
-      await make.build()
-    }))
-  })
-
-make.parse(argv)
+main()

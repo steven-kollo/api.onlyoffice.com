@@ -1,77 +1,39 @@
 #!/usr/bin/env node
 // @ts-check
 
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises"
+import { mkdir } from "node:fs/promises"
 import { existsSync } from "node:fs"
-import { basename, extname, join } from "node:path"
+import { join } from "node:path"
 import { argv } from "node:process"
 import { URL, fileURLToPath } from "node:url"
+import { buildTSX } from "@onlyoffice/documentation-utils/svg.js"
 import sade from "sade"
 import esMain from "es-main"
 
 const root = fileURLToPath(new URL(".", import.meta.url))
 const lib = join(root, "lib")
-const make = sade("./makefile.js")
 
 /**
- * @param {string} s
- * @returns {string}
+ * @returns {void}
  */
-function capitalizeKebab(s) {
-  return s
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join("")
+function main() {
+  sade("./makefile.js")
+    .command("build")
+    .action(build)
+    .parse(argv)
 }
 
 /**
- * @param {string} n
- * @param {string} c
- * @returns {string}
+ * @returns {Promise<void>}
  */
-function SVGToJSComponent(n, c) {
-  return `import { h } from "preact"\n\nfunction ${n}() {\n  return (${c})\n}\n\nexport { ${n} }\n`
-}
-
-make
-  .command("build")
-  .action(build)
-
-async function build() {
+export async function build() {
   if (!existsSync(lib)) {
     await mkdir(lib)
   }
-
-  const entryPoints = []
-  const relativeEntryPoints = []
-
-  const module = join(root, "node_modules/@onlyoffice/documentation-ui-logo/static")
-  const list = await readdir(module)
-  await Promise.all(list.map(async (item) => {
-    let n = basename(item, extname(item))
-    n = `${capitalizeKebab(n)}Logo`
-    let f = join(module, item)
-    let c = await readFile(f, { encoding: "utf8" })
-    c = c.trim()
-    c = SVGToJSComponent(n, c)
-    f = join(lib, `${n}.tsx`)
-    await writeFile(f, c)
-    entryPoints.push(f)
-    f = f.replace(lib, ".")
-    relativeEntryPoints.push(f)
-  }))
-
-  // todo: update package.json exports.
-
-  // todo: allowImportingTsExtensions
-  let index = relativeEntryPoints.map((f) => `export * from "${f}"`).join("\n")
-  let f = join(lib, "logo.ts")
-  await writeFile(f, index)
-  entryPoints.push(f)
+  const m = join(root, "node_modules/@onlyoffice/documentation-ui-logo/static")
+  await buildTSX(m, lib, "logo")
 }
 
 if (esMain(import.meta)) {
-  make.parse(argv)
+  main()
 }
-
-export { build }
