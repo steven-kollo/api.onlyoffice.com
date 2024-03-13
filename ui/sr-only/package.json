@@ -3,7 +3,20 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./sr-only.css": "./lib/sr-only.css"
+    ".": "./lib/sr-only.server.ts",
+    "./sr-only.css": "./lib/sr-only.css",
+    "./sr-only.server.ts": "./lib/sr-only.server.ts",
+    "./SROnly.tsx": "./lib/SROnly.tsx"
+  },
+  "devDependencies": {
+    "preact": "^10.19.3",
+    "preact-render-to-string": "^6.3.1",
+    "typescript": "^5.3.3",
+    "uvu": "^0.5.6"
+  },
+  "peerDependencies": {
+    "preact": "^10.19.3",
+    "preact-render-to-string": "^6.3.1"
   },
   "packageManager": "pnpm@8.13.0",
   "engines": {

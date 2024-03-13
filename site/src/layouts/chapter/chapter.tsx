@@ -1,4 +1,4 @@
-import { ChapterNavigation } from "@onlyoffice/documentation-ui-kit-js"
+import { ChapterNavigation } from "@onlyoffice/documentation-ui-kit"
 import { h } from "preact"
 
 function data() {

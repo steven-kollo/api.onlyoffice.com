@@ -1,7 +1,0 @@
-export * from "@onlyoffice/documentation-ui-badge-js"
-export * from "@onlyoffice/documentation-ui-chapter-navigation-js"
-export * from "@onlyoffice/documentation-ui-code-declaration-js"
-export * from "@onlyoffice/documentation-ui-code-listing-js"
-export * from "@onlyoffice/documentation-ui-content-js"
-export * from "@onlyoffice/documentation-ui-icon-js"
-export * from "@onlyoffice/documentation-ui-logo-js"

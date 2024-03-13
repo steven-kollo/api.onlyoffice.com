@@ -1,1 +1,1 @@
-import "@onlyoffice/documentation-ui-kit-js/client.ts"
+import "@onlyoffice/documentation-ui-kit/client.ts"

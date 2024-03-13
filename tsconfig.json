@@ -1,18 +1,13 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "strict": true,
-    "allowImportingTsExtensions": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "resolveJsonModule": true,
-    "noEmit": true,
-    "allowJs": true,
-    "checkJs": true,
-    "allowSyntheticDefaultImports": true,
+    "rootDir": ".",
+    "outDir": "./dist",
     "jsx": "react",
     "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment",
-    "target": "ESNext",
-    "skipLibCheck": true
-  }
+    "jsxFragmentFactory": "Fragment"
+  },
+  "include": [
+    "./.storybook/*"
+  ]
 }

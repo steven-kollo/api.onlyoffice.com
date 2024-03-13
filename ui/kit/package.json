@@ -1,0 +1,33 @@
+{
+  "name": "@onlyoffice/documentation-ui-kit",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./lib/kit.server.ts",
+    "./kit.css": "./lib/kit.css",
+    "./kit.font.css": "./lib/kit.font.css",
+    "./kit.regular.css": "./lib/kit.regular.css",
+    "./kit.client.ts": "./lib/kit.client.ts",
+    "./kit.server.ts": "./lib/kit.server.ts"
+  },
+  "dependencies": {
+    "@onlyoffice/documentation-ui-article-card": "workspace:^",
+    "@onlyoffice/documentation-ui-badge": "workspace:^",
+    "@onlyoffice/documentation-ui-button": "workspace:^",
+    "@onlyoffice/documentation-ui-code-listing": "workspace:^",
+    "@onlyoffice/documentation-ui-color": "workspace:^",
+    "@onlyoffice/documentation-ui-content": "workspace:^",
+    "@onlyoffice/documentation-ui-font": "workspace:^",
+    "@onlyoffice/documentation-ui-icon": "workspace:^",
+    "@onlyoffice/documentation-ui-logo": "workspace:^",
+    "@onlyoffice/documentation-ui-sr-only": "workspace:^"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "uvu": "^0.5.6"
+  },
+  "packageManager": "pnpm@8.13.0",
+  "engines": {
+    "node": "21.5.0"
+  }
+}

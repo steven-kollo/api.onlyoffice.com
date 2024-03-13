@@ -1,0 +1,26 @@
+{
+  "name": "@onlyoffice/documentation-ui-page",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./lib/page.ts",
+    "./dark.css": "./lib/dark.css",
+    "./light.css": "./lib/light.css",
+    "./page.css": "./lib/page.css",
+    "./Page.tsx": "./lib/Page.tsx"
+  },
+  "devDependencies": {
+    "preact": "^10.19.3",
+    "preact-render-to-string": "^6.3.1",
+    "typescript": "^5.3.3",
+    "uvu": "^0.5.6"
+  },
+  "peerDependencies": {
+    "preact": "^10.19.3",
+    "preact-render-to-string": "^6.3.1"
+  },
+  "packageManager": "pnpm@8.13.0",
+  "engines": {
+    "node": "21.5.0"
+  }
+}

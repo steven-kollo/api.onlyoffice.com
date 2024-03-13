@@ -1,4 +1,4 @@
-import { OnlyofficeLogo } from "@onlyoffice/documentation-ui-kit-js"
+import { OnlyofficeLogo } from "@onlyoffice/documentation-ui-kit"
 import { transformMarkup } from "@/config/markup.cjs"
 import { buildDarkStyles, buildLightStyles } from "@/config/styles.cjs"
 import { Fonts } from "@/src/components/fonts/Fonts.tsx"
@@ -14,7 +14,12 @@ async function render({ eleventy, collections, page, title, content }) {
 
   const el = (
     // todo: do not forget to change the lang after localization.
-    <html lang="en">
+    <html
+      lang="en"
+      data-dark-theme="regular"
+      data-light-theme="regular"
+      data-theme-preference="auto"
+    >
       <head>
         <meta charset="utf-8" />
         <title>{title}</title>

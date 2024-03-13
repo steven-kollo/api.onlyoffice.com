@@ -13,7 +13,7 @@ const { isBuild, isPreview } = require("./env.cjs")
 function staticPlugin(uc) {
   // todo: export the passthrough copy options from primitives.
   uc.addPassthroughCopy({
-    "./node_modules/@onlyoffice/documentation-ui-kit-js/node_modules/@onlyoffice/documentation-ui-primitives/static/*.{woff,woff2}": "."
+    "./node_modules/@onlyoffice/documentation-ui-kit/node_modules/@onlyoffice/documentation-ui-primitives/static/*.{woff,woff2}": "."
   })
 
   // Do not use a glob for passthrough copy.
