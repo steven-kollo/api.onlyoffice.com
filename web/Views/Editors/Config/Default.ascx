@@ -11,7 +11,7 @@
 <div>
     <div id="controlFields">
         <div id="info" class="control-panel">
-            <div class="line input_line" style="margin-top: 0;">
+            <div class="line input_line" style="margin-top: 0px">
                 <label for="config_documentType">Document Type</label>
                 <select class="select" id="config_documentType" name="config_documentType">
                     <option disabled>word</option>
@@ -39,13 +39,24 @@
             </div>
         </div>
     </div>
-     <div id="configPreHolder">
-        <pre id="configPre"></pre>
-        <div class="copyConfigHolder" >
-            <div class="copyConfig">
-                <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+    <div id="configPreHolder" style="display: flex; margin-top: 18px;">
+        <div>
+            <div id="configHeader" class="configHeader">
+                <div class="preContentType">
+                    <span style="font-family: monospace">Config.js</span>
+                </div>
+                <div>
+                    <div class="tooltip">
+                        <div class="copyConfig">
+                            <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                            <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                            <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <pre id="configPre"></pre>
+        </div>  
     </div>
 </div>
 
@@ -188,7 +199,6 @@
 </script>
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
-
     // Editor window
     var config_word = <%= Config.Serialize(
         new Config {
@@ -322,54 +332,40 @@
 
 <script>
     var config_global = "";
+    $(".copyConfig").click(function () {
+        var html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"><\/script>
+</head>
+<body>
+    <div id="editorSpace">
+        <div id="placeholder"></div>
+    </div>
+    <script>
+new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')});
+    <\/script>
+</body>
+`;
+
+    navigator.clipboard.writeText(html).then(function () {
+        document.getElementById("tooltiptext-hover").style = "display: none;";
+        document.getElementById("tooltiptext-click").style = "display: inline; width: 95px!important;";
+        }, function (err) {
+            console.error('Could not copy content: ', err);
+        });
+    })
+    $(".tooltip").mouseleave(function () {
+        document.getElementById("tooltiptext-hover").style = "display: inline;";
+        document.getElementById("tooltiptext-click").style = "display: none;";
+    })
+</script>
+
+<script>
     $(document).ready(function () {
         resizeCodeInput();
         updateConfig();
-    });
-
-    $(".copyConfig").click(function () {
-        var html = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"><\/script>
-</head>
-<body>
-    <div id="editorSpace">
-        <div id="placeholder"></div>
-    </div>
-    <script>
-new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')});
-    <\/script>
-</body>
-`;
-        navigator.clipboard.writeText(html).then(function () {
-            console.log('Sample Editor HTML page copied to clipboard');
-        }, function (err) {
-            console.error('Could not copy HTML: ', err);
-        });
-    })
-    $(".copyConfig").click(function () {
-        var html = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"><\/script>
-</head>
-<body>
-    <div id="editorSpace">
-        <div id="placeholder"></div>
-    </div>
-    <script>
-new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')});
-    <\/script>
-</body>
-`;
-        navigator.clipboard.writeText(html).then(function () {
-            console.log('Sample Editor HTML page copied to clipboard');
-        }, function (err) {
-            console.error('Could not copy HTML: ', err);
-        });
     });
 
     $("#controlFields").find("input,select").change(function () {
@@ -439,9 +435,10 @@ new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')
         var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
         var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
         var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
+        var headerHeight = document.getElementById("configHeader").getBoundingClientRect().height;
 
         var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset;
+        var height = controlFieldsHeight - offset - headerHeight;
 
         document.getElementById("configPre").style.height = `${height}px`;
     }
