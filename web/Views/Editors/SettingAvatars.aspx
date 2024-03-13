@@ -26,6 +26,21 @@
     <ol>
         <li>Create an empty <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
         <li>
+            <p>To set the current user avatar, use the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user.image</a> field of the initialization config:</p>
+            <pre>
+new DocsAPI.DocEditor("placeholder", {
+    "editorConfig": {
+        "user": {
+            "group": "Group1",
+            "id": "78e1e841",
+            "image": "https://example.com/url-to-user-avatar.png",
+            "name": "John Smith"
+        }
+    },
+});
+</pre>
+        </li>
+        <li>
             <p>
                 In the configuration script for Document Editor initialization, specify the event handler for setting the users' avatars.
                 When the user opens the comments or a list of the co-editors, the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event is called
@@ -44,25 +59,6 @@ var onRequestUsers = function (event) {
     var c = event.data.c;
     var id = event.data.id;
     ...
-
-    docEditor.setUsers({
-        "c": event.data.c,
-        "users": [
-            {
-                "email": "john@example.com",
-                "id": "78e1e841",
-                "image": "https://example.com/url-to-user-avatar1.png",
-                "name": "John Smith"
-            },
-            {
-                "email": "kate@example.com",
-                "id": "F89d8069ba2b",
-                "image": "https://example.com/url-to-user-avatar2.png",
-                "name": "Kate Cage"
-            },
-            ...
-        ]
-    });
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -102,21 +98,6 @@ docEditor.setUsers({
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
-        </li>
-        <li>
-            <p>To set the current user avatar, use the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user.image</a> field of the initialization config:</p>
-            <pre>
-new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "user": {
-            "group": "Group1",
-            "id": "78e1e841",
-            "image": "https://example.com/url-to-user-avatar.png",
-            "name": "John Smith"
-        }
-    },
-});
-</pre>
         </li>
     </ol>
 
