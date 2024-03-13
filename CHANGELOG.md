@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: added the formsubmit action to the WOPI discovery
 - editors: try ppsx
 - editors: added the Save Copy As functionality to WOPI
 - editors: the editorConfig.customization.goback.requestClose field is deprecated, please use the editorConfig.customization.close field instead
