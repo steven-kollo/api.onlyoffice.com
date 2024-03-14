@@ -8,14 +8,14 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Welcome
+    ONLYOFFICE API documentation
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="background-body mainBody">
         <div class="products-info">
             <h1>
-                <span class="hdr title-main">Welcome to ONLYOFFICE API</span>
+                <span class="hdr title-main">ONLYOFFICE API documentation</span>
             </h1>
         </div>
         <div class="search-box-main">

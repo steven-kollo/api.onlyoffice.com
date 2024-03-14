@@ -21,7 +21,7 @@
     <p>In this section you will learn how to:</p>
     <ul class="columns-2">
         <li><a href="<%= Url.Action("open") %>">Open a file</a></li>
-        <li><a href="<%= Url.Action("save") %>">Save a file</a></li>
+        <li><a href="<%= Url.Action("save") %>">Save a document</a></li>
         <li><a href="<%= Url.Action("coedit") %>">Co-edit a file</a></li>
         <li><a href="<%= Url.Action("history") %>">View the document history</a></li>
         <li><a href="<%= Url.Action("actionlink") %>">Work with action links</a></li>

@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Callback handler
+    Callback URL handler
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Callback handler</span>
+        <span class="hdr">Callback URL handler</span>
     </h1>
 
     <p class="dscr">

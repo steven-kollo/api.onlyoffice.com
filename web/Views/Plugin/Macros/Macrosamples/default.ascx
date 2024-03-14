@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Macro samples</span>
+    <span class="hdr">Macro examples</span>
 </h1>
 
 <p class="dscr">The following examples will show you how to use ONLYOFFICE macros and compare the JavaScript code with 

@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-   <span class="hdr">Structure of a text document</span>
+   <span class="hdr">Structure of a text document API</span>
 </h1>
 
 <p class="dscr">Although a text document consists of various elements, most of them are nested in each other and three main elements can be outlined: <em>paragraph</em>, <em>table</em> and <em>block content control</em>. All the other elements are a part of these three larger ones.</p>

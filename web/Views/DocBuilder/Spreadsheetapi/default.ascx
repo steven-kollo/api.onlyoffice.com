@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-   <span class="hdr">Structure of a spreadsheet</span>
+   <span class="hdr">Structure of a spreadsheet API</span>
 </h1>
 
 <p class="dscr">A spreadsheet document has a more simple structure than that of a text document, most of the spreadsheet elements are nested within the <em>worksheet</em> element with all the other elements placed on it.</p>

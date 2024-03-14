@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Language-specific examples
+    Language-specific examples for editors
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Language-specific examples</span>
+        <span class="hdr">Language-specific examples for editors</span>
     </h1>
 
     <p>With ONLYOFFICE Docs, any of collaborative solutions can be enhanced with document editing and co-editing. 

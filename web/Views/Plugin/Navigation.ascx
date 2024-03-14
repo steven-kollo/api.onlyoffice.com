@@ -23,7 +23,7 @@
     <div class="treeheader">Usage API</div>
     <ul class="side-nav root">
         <li>
-            <a href="<%= Url.Action("config") %>">Config</a>
+            <a href="<%= Url.Action("config") %>">Config.json</a>
             <ul>
                 <li>
                     <a href="<%= Url.Action("variations") %>">Plugin variations</a>
@@ -283,7 +283,7 @@
             <a href="<%= Url.Action("convertingvbamacros") %>">Converting VBA macros</a>
         </li>
         <li>
-            <a href="<%= Url.Action("macrosamples/") %>">Macro samples</a>
+            <a href="<%= Url.Action("macrosamples/") %>">Macro examples</a>
             <ul>
                 <li>
                     <a href="<%= Url.Action("macrosamples/writedatatoworksheetcell") %>">Write data to worksheet cell</a>

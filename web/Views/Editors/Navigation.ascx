@@ -123,7 +123,7 @@
                     <a href="<%= Url.Action("open") %>">Opening file</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("save") %>">Saving file</a>
+                    <a href="<%= Url.Action("save") %>">Saving document</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("coedit") %>">Co-editing</a>
@@ -242,7 +242,7 @@
             <a href="<%= Url.Action("connector") %>">Automation API</a>
         </li>
         <li>
-            <a href="<%= Url.Action("callback") %>">Callback handler</a>
+            <a href="<%= Url.Action("callback") %>">Callback URL handler</a>
         </li>
     </ul>
 
@@ -290,7 +290,7 @@
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
+            <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage API</a>
         </li>
         <li>
             <a href="<%= Url.Action("wopi/conversionapi") %>">Conversion API</a>

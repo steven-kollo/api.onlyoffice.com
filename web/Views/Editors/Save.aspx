@@ -6,12 +6,12 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Saving File
+    Saving document
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Saving file</span>
+        <span class="hdr">Saving document</span>
     </h1>
     <p class="dscr">The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Document Server.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/saving.jpg") %>" />

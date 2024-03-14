@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-   <span class="hdr">Structure of a form</span>
+   <span class="hdr">Structure of a form API</span>
 </h1>
 
 <p class="dscr">A form document has exactly the same structure as a <a href="<%= Url.Action("textdocumentapi") %>">text document</a>.

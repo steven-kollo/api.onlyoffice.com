@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">How to integrate online editors into your own website on Java Spring</span>
+    <span class="hdr">How to integrate Docs into website on Java Spring</span>
 </h1>
 
 <h2>Overview</h2>

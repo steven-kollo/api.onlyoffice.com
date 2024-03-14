@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-   <span class="hdr">Structure of a presentation</span>
+   <span class="hdr">Structure of a presentation API</span>
 </h1>
 
 <p class="dscr">A presentation document has a more simple structure than that of a text document, most of the presentation elements are nested within the <em>slide</em> element with all the other elements placed on it. The single or multiple <em>slide</em> elements are a part of the <em>presentation</em> element.</p>
