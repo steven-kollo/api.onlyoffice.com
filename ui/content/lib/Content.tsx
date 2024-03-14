@@ -1,3 +1,4 @@
+import { SROnly } from "@onlyoffice/documentation-ui-sr-only"
 import type { JSX } from "preact"
 import { h } from "preact"
 
@@ -19,31 +20,41 @@ export function Root(
 
 export interface AlertProperties {
   children: any
-  variant?: "note" | "warning"
+  variant?: AlertVariant
 }
+
+export type AlertVariant =
+  "note" |
+  "warning"
 
 export function Alert(
   {
     children,
-    variant
+    variant: v
   }: AlertProperties
 ): JSX.Element {
   return (
     <div class="content-alert">
-      <p class="sr-only"><strong>{title()}</strong></p>
+      <SROnly>
+        <p><strong>{alertTitle(v)}</strong></p>
+      </SROnly>
       {children}
     </div>
   )
+}
 
-  function title(): string {
-    switch (variant) {
-    case undefined:
-    case "note":
-      return "Note"
-    case "warning":
-      return "Warning"
-    default:
-      throw new Error(`unknown variant: ${variant}`)
-    }
+function alertTitle(v?: AlertVariant): string {
+  const def = "Note"
+  if (v === undefined) {
+    return def
+  }
+  switch (v) {
+  case "note":
+    return "Note"
+  case "warning":
+    return "Warning"
+  default:
+    console.error(`unknown variant: ${v}`)
+    return def
   }
 }

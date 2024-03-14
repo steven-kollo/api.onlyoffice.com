@@ -1,7 +1,9 @@
 import type { JSX } from "preact"
 import { h } from "preact"
 
-export interface ArticleCardParameters {
+// todo: rename to root
+
+export interface ArticleCardProperties {
   children: any
   // variant?: "accent" // todo
 }
@@ -10,7 +12,7 @@ export function ArticleCard(
   {
     children,
     // variant
-  }: ArticleCardParameters
+  }: ArticleCardProperties
 ): JSX.Element {
   return (
     <article class="article-card">

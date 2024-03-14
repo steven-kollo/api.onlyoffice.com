@@ -69,8 +69,8 @@ const preview: Preview = {
           console.error(`unknown color theme: ${a}`)
           break
         }
-        document.body.setAttribute("data-dark-theme", c)
-        document.body.setAttribute("data-light-theme", c)
+        document.documentElement.setAttribute("data-dark-theme", c)
+        document.documentElement.setAttribute("data-light-theme", c)
 
         let t = "auto"
         switch (b) {
@@ -83,7 +83,7 @@ const preview: Preview = {
           console.error(`unknown theme preference: ${b}`)
           break
         }
-        document.body.setAttribute("data-theme-preference", t)
+        document.documentElement.setAttribute("data-theme-preference", t)
       }, [theme])
 
       return <Story />

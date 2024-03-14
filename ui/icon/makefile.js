@@ -31,7 +31,7 @@ export async function build() {
     await mkdir(lib)
   }
   const m = join(root, "static")
-  await buildTSX(m, lib, "logo")
+  await buildTSX(m, lib, "icon")
 }
 
 if (esMain(import.meta)) {

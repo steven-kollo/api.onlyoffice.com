@@ -1,17 +1,22 @@
 import "./sr-only.css"
 
-import { Fragment, h } from "preact"
-import { SROnly } from "./SROnly.tsx"
+import type { JSX } from "preact"
+import { h } from "preact"
+import { SROnly } from "./sr-only.server.ts"
 
 export default {
-  title: "UI Kit/SR Only",
-  render() {
-    return (
-      <>
-        <SROnly>
-          text
-        </SROnly>
-      </>
-    )
-  }
+  title: "UI Kit/SROnly"
+}
+
+export function Composition(): JSX.Element {
+  return (
+    <div>
+      <p>The paragraph below should be hidden from sight, but still read by screen readers.</p>
+      <SROnly>
+        <p>
+          This is a paragraph of text that should be hidden from sight, but still read by screen readers.
+        </p>
+      </SROnly>
+    </div>
+  )
 }

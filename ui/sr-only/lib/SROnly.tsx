@@ -1,14 +1,14 @@
 import type { JSX } from "preact"
 import { Fragment, cloneElement, h, toChildArray } from "preact"
 
-export interface SROnlyProperties {
+export interface RootProperties {
   children: any
 }
 
-export function SROnly(
+export function Root(
   {
     children
-  }: SROnlyProperties
+  }: RootProperties
 ): JSX.Element {
   return (
     <>

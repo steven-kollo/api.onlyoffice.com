@@ -30,7 +30,7 @@ export async function buildTSX(from, to, postfix) {
     .map((n) => `export { ${n} } from "./${n}.tsx"`)
     .join("\n")
   c += "\n"
-  const f = join(to, "logo.ts")
+  const f = join(to, `${postfix}.server.ts`)
   await writeFile(f, c)
 }
 
