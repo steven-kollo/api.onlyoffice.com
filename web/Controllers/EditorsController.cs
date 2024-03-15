@@ -135,6 +135,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Review",
                 "Save",
                 "Security",
+                "SettingAvatars",
                 "SharePoint",
                 "Signature",
                 "Signature/Body",
@@ -495,6 +496,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Security()
+        {
+            return View();
+        }
+
+        public ActionResult SettingAvatars()
         {
             return View();
         }
