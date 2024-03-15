@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Plugin example</span>
+    <span class="hdr">Plugin examples</span>
 </h1>
 
 <div id="back-drop"></div>

@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">How to integrate ONLYOFFICE Document Builder into your own web site on PHP</span>
+        <span class="hdr">How to integrate ONLYOFFICE Document Builder into your application on PHP</span>
     </h1>
 
     <h2>Introduction</h2>
