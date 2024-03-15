@@ -4402,6 +4402,7 @@
     <Content Include="Views\DocSpace\Faq.aspx" />
     <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\Filters.aspx" />
+    <Content Include="Views\DocSpace\GetDocspace.aspx" />
     <Content Include="Views\DocSpace\JsSdk.aspx" />
     <Content Include="Views\DocSpace\JsSdk\Config.ascx" />
     <Content Include="Views\DocSpace\JsSdk\Default.ascx" />

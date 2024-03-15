@@ -54,6 +54,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Changelog",
                 "Faq",
                 "Filters",
+                "GetDocspace",
                 "Batch",
                 "ApiSystem",
                 "ApiSystem/Authentication",
@@ -175,6 +176,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Filters()
+        {
+            return View();
+        }
+
+        public ActionResult GetDocspace()
         {
             return View();
         }
