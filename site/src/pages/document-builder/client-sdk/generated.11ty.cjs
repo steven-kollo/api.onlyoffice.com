@@ -4,7 +4,7 @@ const { list, retrieve } = require("@/resources/document-builder.ts")
 
 function data() {
   return {
-    layout: "blank/blank.tsx",
+    layout: "blank",
     pagination: {
       data: "items",
       size: 1,

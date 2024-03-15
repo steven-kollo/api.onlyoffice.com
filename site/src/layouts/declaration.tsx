@@ -5,7 +5,7 @@ import { Fragment, h } from "preact"
 
 function data() {
   return {
-    layout: "chapter/chapter.tsx"
+    layout: "chapter"
   }
 }
 

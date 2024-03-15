@@ -4,7 +4,7 @@ const { list, retrieve } = require("@/resources/docspace.ts")
 
 function data() {
   return {
-    layout: "rest/rest.tsx",
+    layout: "rest",
     pagination: {
       data: "items",
       size: 1,

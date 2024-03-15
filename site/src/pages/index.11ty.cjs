@@ -1,7 +1,7 @@
 function data() {
   return {
     title: "Welcome to ONLYOFFICE API",
-    layout: "blank/blank.tsx",
+    layout: "blank",
     eleventyExcludeFromCollections: "true",
   }
 }

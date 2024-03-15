@@ -4,7 +4,7 @@ import { h } from "preact"
 
 export function data() {
   return {
-    layout: "page/page.tsx"
+    layout: "page"
   }
 }
 
