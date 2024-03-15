@@ -517,68 +517,10 @@
 
 <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-<script>
-    $('.select').each(function () {
-        const _this = $(this),
-            selectOption = _this.find('option'),
-            selectOptionLength = selectOption.length,
-            selectedOption = selectOption.filter(':selected'),
-            duration = 120;
 
-        _this.hide();
-        _this.wrap('<div class="select"></div>');
-        $('<div>', {
-            class: 'new-select',
-            text: _this.children('option:disabled').text()
-        }).insertAfter(_this);
-
-        const selectHead = _this.next('.new-select');
-        $('<div>', {
-            class: 'new-select__list'
-        }).insertAfter(selectHead);
-
-        const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
-            $('<div>', {
-                class: 'new-select__item',
-                html: $('<span>', {
-                    text: selectOption.eq(i).text()
-                })
-            })
-                .attr('data-value', selectOption.eq(i).val())
-                .appendTo(selectList);
-        }
-
-        const selectItem = selectList.find('.new-select__item');
-        selectList.slideUp(0);
-        selectHead.on('click', function () {
-            if (!$(this).hasClass('on')) {
-                $(this).addClass('on');
-                selectList.slideDown(duration);
-                selectItem.on('click', function () {
-                    let chooseItem = $(this).data('value');
-                    $('select').val(chooseItem).attr('selected', 'selected');
-                    selectHead.text($(this).find('span').text());
-                    selectList.slideUp(duration);
-                    selectHead.removeClass('on');
-                    updateConfig();
-                });
-                window.addEventListener('click', function (e) {
-                    if (e.target != selectList[0] && e.target != selectHead[0] && e.target != selectItem[0]) {
-                        selectHead.removeClass('on');
-                        selectList.slideUp(duration);
-                    }
-                });
-            } else {
-                $(this).removeClass('on');
-                selectList.slideUp(duration);
-            }
-        });
-    });
-</script>
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
-
+    handleSelects();
     // Editor window
     var config = <%= Config.Serialize(
     new Config {
@@ -615,34 +557,14 @@
 </script>
 <script>
     var config_global = "";
-    $(".copyConfig").click(function () {
-        var html = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"><\/script>
-</head>
-<body>
-    <div id="editorSpace">
-        <div id="placeholder"></div>
-    </div>
-    <script>
-new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')});
-    <\/script>
-</body>
-`;
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
 
-        navigator.clipboard.writeText(html).then(function () {
-            document.getElementById("tooltiptext-hover").style = "display: none;";
-            document.getElementById("tooltiptext-click").style = "display: inline; width: 95px!important;";
-        }, function (err) {
-            console.error('Could not copy content: ', err);
-        });
+    $(".copyConfig").click(function () {
+        var json = JSON.stringify(config_global, null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
     })
-    $(".tooltip").mouseleave(function () {
-        document.getElementById("tooltiptext-hover").style = "display: inline;";
-        document.getElementById("tooltiptext-click").style = "display: none;";
-    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave());
 </script>
 <script>
     $(document).ready(function () {
@@ -848,33 +770,5 @@ new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
-    }
-
-    function getFieldValue(id) {
-        var element = document.getElementById(id);
-        if (document.getElementById(id).parentElement.className == "select") {
-            return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
-        } else if (element.type == "checkbox") {
-            return element.checked;
-        } else if (`${element.value}` == ``) {
-            return `""`;
-        } else if (isNaN(element.value)) {
-            return `"${element.value}"`;
-        } else {
-            return Number(element.value);
-        }
-    }
-
-    function resizeCodeInput() {
-        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
-        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
-        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
-        var headerHeight = document.getElementById("configHeader").getBoundingClientRect().height;
-
-        var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset - headerHeight;
-
-        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>

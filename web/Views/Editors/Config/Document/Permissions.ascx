@@ -442,8 +442,6 @@
 </table>
 <div class="mobile-content"></div>
 
-
-
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
 
@@ -487,34 +485,14 @@
 
 <script>
     var config_global = "";
-    $(".copyConfig").click(function () {
-        var html = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"><\/script>
-</head>
-<body>
-    <div id="editorSpace">
-        <div id="placeholder"></div>
-    </div>
-    <script>
-new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')});
-    <\/script>
-</body>
-`;
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
 
-        navigator.clipboard.writeText(html).then(function () {
-            document.getElementById("tooltiptext-hover").style = "display: none;";
-            document.getElementById("tooltiptext-click").style = "display: inline; width: 95px!important;";
-        }, function (err) {
-            console.error('Could not copy content: ', err);
-        });
+    $(".copyConfig").click(function () {
+        var json = JSON.stringify(config_global, null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
     })
-    $(".tooltip").mouseleave(function () {
-        document.getElementById("tooltiptext-hover").style = "display: inline;";
-        document.getElementById("tooltiptext-click").style = "display: none;";
-    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave());
 </script>
 
 <script>
@@ -589,34 +567,5 @@ new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
-    }
-
-    function getFieldValue(id) {
-        var element = document.getElementById(id);
-        if (element.type == "checkbox") {
-            return element.checked;
-        } else if (`${element.value}` == ``) {
-            return `""`;
-        } else if (isNaN(element.value)) {
-            if (element.value.includes("[") || element.value.includes('""')) {
-                return element.value;
-            }
-            return `"${element.value}"`;
-        } else {
-            return Number(element.value);
-        }
-    }
-
-    function resizeCodeInput() {
-        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
-        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
-        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
-        var headerHeight = document.getElementById("configHeader").getBoundingClientRect().height;
-
-        var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset - headerHeight;
-
-        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>
