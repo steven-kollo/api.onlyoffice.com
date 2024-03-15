@@ -22,7 +22,10 @@
 
     <h2 id="Windows" class="copy-link">Running the example on Windows OS</h2>
     <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and install ONLYOFFICE Document Builder</h2>
-    <p>First, download <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx"><b>ONLYOFFICE Document Builder</b></a> and install it to your computer.</p>
+    <p>First, download <b>ONLYOFFICE Document Builder</b> and install it to your computer:</p>
+    <div class="list-buttons">
+        <a class="button" href="https://www.onlyoffice.com/download-builder.aspx?from=api" target="_blank">Get ONLYOFFICE Document Builder</a>
+    </div>
 
     <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP example code for the builder integration</h2>
     <p>Download the <a href="<%= Url.Action("integratingdocumentbuilder") %>">PHP Example</a> from our site and unpack it somewhere to your computer.</p>

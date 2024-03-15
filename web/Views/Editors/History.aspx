@@ -21,7 +21,7 @@
         When you select a document version from the list it will be displayed for preview.
     </p>
 
-    <p>The reference figure and the steps below explain the process of viewing the history in ONLYOFFICE Document Server.</p>
+    <p>The reference figure and the steps below explain the process of viewing the history in ONLYOFFICE Docs.</p>
     <img alt="Document history" src="<%= Url.Content("~/content/img/editor/viewing-history.svg") %>" />
     <ol>
         <li>The user clicks the <em>Version History</em> button while editing the document within the <b>document editor</b>.</li>
@@ -256,7 +256,7 @@ docEditor.setHistoryData({
 });
 </pre>
             <div id="changesurl-cors" class="note">
-                The <em>changesurl</em> request is made in the browser from the added iframe with the <b>documentserver</b> domain, where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+                The <em>changesurl</em> request is made in the browser from the added iframe with the <b>documentserver</b> domain, where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
                 For its correct work the cross-origin HTTP requests must be allowed (CORS).
                 This can be achieved using the <em>Access-Control-Allow-Origin</em> header.
             </div>

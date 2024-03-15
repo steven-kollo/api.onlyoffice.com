@@ -16,7 +16,10 @@
     <h2 id="introduction">Introduction</h2>
             <p class="dscr">To integrate <b>ONLYOFFICE Document Builder</b> into your own application on <b>.Net (C#) or .Net (C# MVC)</b> you need to download and install <b>ONLYOFFICE Document Builder</b> to your computer and use the <a href="<%= Url.Action("integratingdocumentbuilder") %>">.Net (C#) or .Net (C# MVC) example</a> for the integration. This guide will show you the sequence of actions to integrate <b>ONLYOFFICE Document Builder</b> successfully.</p>
             <h2 id="CSharp1"><span class="style_step">Step 1. </span>Download and install ONLYOFFICE Document Builder</h2>
-            <p>First, download <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx"><b>ONLYOFFICE Document Builder</b></a> and install it to your computer.</p>
+            <p>First, download <b>ONLYOFFICE Document Builder</b> and install it to your computer:</p>
+            <div class="list-buttons">
+                <a class="button" href="https://www.onlyoffice.com/download-builder.aspx?from=api" target="_blank">Get ONLYOFFICE Document Builder</a>
+            </div>
             <h2 id="CSharp2"><span class="style_step">Step 2. </span>Install the prerequisites</h2>
             <p>To run your website with the <b>ONLYOFFICE Document Builder</b> successfully, check if your system meets the necessary system requirements. It has got to have the following components installed:</p>
             <div class="builder_description">

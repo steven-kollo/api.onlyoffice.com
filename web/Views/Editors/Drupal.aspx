@@ -82,8 +82,8 @@ drush pm:enable onlyoffice
     <pre>
 https://&lt;documentserver&gt;/
 </pre>
-    <p>where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed. The address must be accessible for the user browser and from the Drupal server.
-        The Drupal server address must also be accessible from ONLYOFFICE Document Server for correct work.</p>
+    <p>where <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed. The address must be accessible for the user browser and from the Drupal server.
+        The Drupal server address must also be accessible from ONLYOFFICE Docs for correct work.</p>
     <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
         Specify your own <b>Secret key</b> in the Drupal administrative configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 

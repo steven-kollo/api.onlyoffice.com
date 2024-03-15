@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
+    <span class="hdr">ONLYOFFICE Docs FAQ: <br />
         Renaming questions</span>
 </h1>
 
@@ -9,7 +9,7 @@
 <dl class="faq_block" id="renaming_1">
     <dt>How to rename the created document?</dt>
     <dd>
-        <p>Please see the <a href="<%= Url.Action("rename") %>">Renaming file</a> section to find out how file renaming works in Document Server and what is needed to rename the created document.</p>
+        <p>Please see the <a href="<%= Url.Action("rename") %>">Renaming file</a> section to find out how file renaming works in ONLYOFFICE Docs and what is needed to rename the created document.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="renaming_2">

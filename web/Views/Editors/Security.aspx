@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Security</span>
     </h1>
-    <p class="dscr">To prevent the substitution of important parameters in ONLYOFFICE Document Server requests an encrypted signature is added to it in the form of <b>token</b>.</p>
+    <p class="dscr">To prevent the substitution of important parameters in ONLYOFFICE Docs requests an encrypted signature is added to it in the form of <b>token</b>.</p>
     <p>The <b>token</b> is added in the configuration when initializing <b>Document Editor</b> and during the exchange of commands between <b>document storage service</b> and <b>document editing service</b>, <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</p>
 
     <p>
@@ -29,7 +29,7 @@
     </p>
 
     <p>
-        <b>ONLYOFFICE Document Server</b> validates the <b>token</b>.
+        <b>ONLYOFFICE Docs</b> validates the <b>token</b>.
         The data from the <em>payload</em> is considered valid and is used instead of the corresponding data from the main parameters.
         If the <b>token</b> is invalid, the command is not executed.<p>
 

@@ -64,7 +64,7 @@
             <span class="commandline">java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps_share/onlyoffice-integration-share.amp /usr/local/tomcat/webapps/share</span>
             <p>More details about using MMT can be found at the following address - <em>https://docs.alfresco.com/content-services/latest/install/zip/amp/</em>.</p>
         </li>
-        <li>Make sure that Document Server will be able to POST to Alfresco.
+        <li>Make sure that ONLYOFFICE Docs will be able to POST to Alfresco.
             <p>You may need to change these lines in <b>alfresco-global.properties</b> or you can set it using <a href="#configuration">configuration page</a>:</p>
             <span class="commandline">alfresco.host=&lt;hostname&gt;
 alfresco.port=443

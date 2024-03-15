@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Saving file</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Docs.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/saving.jpg") %>" />
     <ol>
         <li>The user edits the document in the <b>document editor</b>.</li>
@@ -71,7 +71,7 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing.
-        The default conversion start delay time is defined with the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> parameter in <b>Document Server</b> configuration file, which can be found at the following path:
+        The default conversion start delay time is defined with the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> parameter in <b>ONLYOFFICE Docs</b> configuration file, which can be found at the following path:
     </p>
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
     <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
@@ -81,7 +81,7 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <div class="note">
         Please do not edit the contents of the <em>default.json</em> file directly.
-        The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+        The default values will be restored each time you restart Docker container or upgrade <b>ONLYOFFICE Docs</b> to a new version and all your changes will be lost.
     </div>
 
     <div class="header-gray">Parameters</div>
@@ -129,7 +129,7 @@ new DocsAPI.DocEditor("placeholder", {
 
     <p>
         <b>Document editing service</b> allows to get the current document state before the editing is finished.
-        The process is called <em>forcesave</em> in ONLYOFFICE Document Server.
+        The process is called <em>forcesave</em> in ONLYOFFICE Docs.
         When forcesave is initiated, <b>document editing service</b> performs request to the <a href="<%= Url.Action("callback") %>">callback handler</a> with the link to the document as the <em>url</em> parameter and with the <b>6</b> value for the <em>status</em> parameter.
         The forcesave process can be initiated the following ways:
     </p>
@@ -138,7 +138,7 @@ new DocsAPI.DocEditor("placeholder", {
             The <em>forcesavetype</em> parameter will have the <b>0</b> value when sending the request to the <b>callback handler</b>.</li>
         <li>Enable the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> mode setting it to <b>true</b> in the editor initialization configuration.
             In this case each time the user clicks the <b>Save</b> button, the forcesave will be done, and the <em>forcesavetype</em> parameter will have the <b>1</b> value when sending the request to the <b>callback handler</b>.</li>
-        <li>You can enable <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly" target="_blank">the repeating forcesave start</a> in the <b>Document Server</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
+        <li>You can enable <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly" target="_blank">the repeating forcesave start</a> in the <b>ONLYOFFICE Docs</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
             <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
             <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
 
