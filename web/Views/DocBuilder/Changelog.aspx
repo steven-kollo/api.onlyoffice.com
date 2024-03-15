@@ -16,6 +16,8 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <h2 id="81" class="copy-link">Version 8.1</h2>
+
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <p><b>Form methods</b></p>
     <ul>
