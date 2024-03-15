@@ -1,7 +1,7 @@
-import { Badge } from "@onlyoffice/documentation-ui-badge"
+import { Badge } from "@onlyoffice/documentation-ui-kit"
 import { Fragment, JSX, h } from "preact"
-import { CodeDeclarationReference } from "./CodeDeclarationReference.js"
-import { CodeDeclarationToken } from "./CodeDeclarationToken.js"
+import { CodeDeclarationReference } from "./CodeDeclarationReference.tsx"
+import { CodeDeclarationToken } from "./CodeDeclarationToken.tsx"
 
 export interface CodeDeclarationSectionParameters {
   section: any

@@ -1,6 +1,6 @@
 // @ts-check
 
-const { list, retrieve } = require("@/resources/docspace.cjs")
+const { list, retrieve } = require("@/resources/docspace.ts")
 
 function data() {
   return {

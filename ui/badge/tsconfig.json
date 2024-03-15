@@ -8,6 +8,7 @@
     "jsxFragmentFactory": "Fragment"
   },
   "include": [
+    "../../index.d.ts",
     "./lib/*"
   ],
   "exclude": [

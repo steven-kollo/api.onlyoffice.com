@@ -1,17 +1,22 @@
+import type { Eleventy } from "@/config/context.ts"
+import type { JSX } from "preact"
 import { h } from "preact"
 
-function data() {
+export function data() {
   return {
-    layout: "site/site.tsx"
+    layout: "page/page.tsx"
   }
 }
 
-function render({ content }) {
-  return (
-    <main class="blank__main">
-      <div class="blank__inner">{content}</div>
-    </main>
-  )
+export function render(
+  {
+    content
+  }: Eleventy.RenderContext
+): JSX.Element {
+  return content
+  // return (
+  //   <main class="blank__main">
+  //     <div class="blank__inner">{content}</div>
+  //   </main>
+  // )
 }
-
-export { data, render }

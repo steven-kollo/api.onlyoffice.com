@@ -1,10 +1,34 @@
-import "@onlyoffice/documentation-ui-sr-only/sr-only.css"
-import "./content.css"
-
+import colorRegular from "@onlyoffice/documentation-ui-color/color.regular.css?inline"
+import srOnly from "@onlyoffice/documentation-ui-sr-only/sr-only.css?inline"
 import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
+import typography from "@onlyoffice/documentation-ui-typography/typography.css?inline"
 import type { JSX } from "preact"
-import { h } from "preact"
+import { Fragment, h } from "preact"
 import { Content } from "./content.server.ts"
+import content from "./content.css?inline"
+import contentRegular from "./content.regular.css?inline"
+
+const styles: string[] = [
+  colorRegular,
+  typography,
+  srOnly,
+  content,
+  contentRegular
+]
+
+export default {
+  title: "UI Kit/Content",
+  decorators: [
+    (Story: any): JSX.Element => (
+      <>
+        {styles.map((s) => (
+          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
+        ))}
+        <Story />
+      </>
+    )
+  ]
+}
 
 const code = `builder.CreateFile("xlsx");                      // create a spreadsheet file in the .xlsx format with ONLYOFFICE Document Builder
 var oWorksheet = Api.GetActiveSheet();           // create a new 'oWorksheet' variable and get the created spreadsheet contents
@@ -13,10 +37,6 @@ oWorksheet.SetColumnWidth(0, 20);                // set the width of the first c
 oWorksheet.GetRange("A1").SetValue("New cell");  // set the 'New cell' value to the A1 spreadsheet cell
 builder.SaveFile("xlsx", "example.xlsx");        // save the resulting spreadsheet as a file in the .xlsx format with a new 'example.xlsx' name
 builder.CloseFile();                             // close the spreadsheet file and finish work with ONLYOFFICE Document Builder`
-
-export default {
-  title: "UI Kit/Content",
-}
 
 export function Composition(): JSX.Element {
   return (

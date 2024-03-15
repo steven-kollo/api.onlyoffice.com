@@ -1,9 +1,7 @@
-import "../ui/kit/lib/kit.font.css"
-import "../ui/kit/lib/kit.regular.css"
-
 import type { Preview } from "@storybook/preact"
 import { useEffect } from "preact/hooks"
 import { h } from "preact"
+import "./preview.css"
 
 const preview: Preview = {
   globalTypes: {

@@ -4,15 +4,15 @@
  * @typedef {import("@11ty/eleventy").UserConfig} UserConfig
  */
 
-const { cleanPlugin } = require("./config/clean.cjs")
-const { markdownPlugin } = require("./config/markdown.cjs")
-const { markupPlugin } = require("./config/markup.cjs")
-const { navigationPlugin } = require("./config/navigation.cjs")
-const { previewPlugin } = require("./config/preview.cjs")
-const { scriptsPlugin } = require("./config/scripts.cjs")
-const { staticPlugin } = require("./config/static.cjs")
-const { stylesPlugin } = require("./config/styles.cjs")
-const { syntaxHighlightPlugin } = require("./config/syntax-highlight.cjs")
+const { cleanPlugin } = require("./config/clean.ts")
+const { markdownPlugin } = require("./config/markdown.ts")
+const { markupPlugin } = require("./config/markup.ts")
+const { navigationPlugin } = require("./config/navigation.ts")
+const { previewPlugin } = require("./config/preview.ts")
+const { scriptPlugin } = require("./config/script.ts")
+const { staticPlugin } = require("./config/static.ts")
+const { stylePlugin } = require("./config/style.ts")
+const { syntaxHighlightPlugin } = require("./config/syntax-highlight.ts")
 
 /**
  * @param {UserConfig} uc
@@ -22,8 +22,8 @@ function config(uc) {
   uc.addPlugin(cleanPlugin)
   uc.addPlugin(staticPlugin)
   uc.addPlugin(markupPlugin)
-  uc.addPlugin(stylesPlugin)
-  uc.addPlugin(scriptsPlugin)
+  uc.addPlugin(stylePlugin)
+  uc.addPlugin(scriptPlugin)
   uc.addPlugin(navigationPlugin)
   uc.addPlugin(markdownPlugin)
   uc.addPlugin(syntaxHighlightPlugin)

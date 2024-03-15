@@ -1,7 +1,7 @@
 .code-listing {
   border: 1px solid var(--code-listing-border-color);
   display: block;
-  font-family: var(--text-font-monospace);
+  font-family: var(--typography-monospace-font);
 }
 
 .code-listing__header {

@@ -12,6 +12,8 @@
     "jsxFragmentFactory": "Fragment"
   },
   "include": [
+    "./config/**/*",
+    "./resources/**/*",
     "./src/**/*"
   ]
 }

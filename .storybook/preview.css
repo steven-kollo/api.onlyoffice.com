@@ -1,0 +1,7 @@
+@import "../ui/font/lib/font.css";
+@import "../ui/typography/lib/typography.css";
+
+html {
+  font-family: var(--typography-sans-serif-font);
+  line-height: var(--typography-line-height);
+}

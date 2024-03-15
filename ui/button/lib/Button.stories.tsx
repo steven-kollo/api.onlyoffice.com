@@ -1,12 +1,31 @@
-import "./button.css"
-
+import colorRegular from "@onlyoffice/documentation-ui-color/color.regular.css?inline"
 import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
+import typography from "@onlyoffice/documentation-ui-typography/typography.css?inline"
 import type { JSX } from "preact"
-import { h } from "preact"
+import { Fragment, h } from "preact"
+import button from "./button.css?inline"
+import buttonRegular from "./button.regular.css?inline"
 import { Button } from "./button.server.ts"
 
+const styles: string[] = [
+  colorRegular,
+  typography,
+  button,
+  buttonRegular
+]
+
 export default {
-  title: "UI Kit/Button"
+  title: "UI Kit/Button",
+  decorators: [
+    (Story: any): JSX.Element => (
+      <>
+        {styles.map((s) => (
+          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
+        ))}
+        <Story />
+      </>
+    )
+  ]
 }
 
 export function Composition(): JSX.Element {

@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/documentation-declarations-scripts",
+  "name": "@onlyoffice/documentation-declarations-fixtures",
   "private": true,
   "type": "module",
   "exports": {

@@ -1,11 +1,25 @@
-import "./color.client.ts"
-
 import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
-import { h } from "preact"
+import { Fragment, h } from "preact"
+import colorRegular from "./color.regular.css?inline"
+import "./color.client.ts"
+
+const styles: string[] = [
+  colorRegular
+]
 
 export default {
   title: "UI Kit/Color",
+  decorators: [
+    (Story: any): JSX.Element => (
+      <>
+        {styles.map((s) => (
+          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
+        ))}
+        <Story />
+      </>
+    )
+  ]
 }
 
 const colors: string[] = [

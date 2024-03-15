@@ -6,7 +6,13 @@ function data() {
       let p = data.page.filePathStem.replace(/^\/pages/, "")
       p += `.${data.page.outputFileExtension}`
       return p
-    }
+    },
+    // eleventyComputed: {
+    //   layout(data) {
+    //     console.log(data)
+    //     return "content/content.tsx"
+    //   }
+    // }
   }
 }
 

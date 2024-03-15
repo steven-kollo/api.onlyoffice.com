@@ -2,7 +2,7 @@ import type { REST } from "@onlyoffice/documentation-declarations-types/rest.ts"
 import { Markdown } from "@/src/components/markdown/Markdown.tsx"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-import { Declaration } from "./declaration.tsx"
+// import { Declaration } from "./declaration.tsx"
 
 export function data() {
   return {
@@ -26,11 +26,12 @@ export function render(
   return (
     <>
       {pagination.items.map((d) => (
-        <Declaration
-          declaration={d}
-          onRenderDescription={Markdown}
-          onRetrieve={retrieve}
-        />
+        <div></div>
+        // <Declaration
+        //   declaration={d}
+        //   onRenderDescription={Markdown}
+        //   onRetrieve={retrieve}
+        // />
       ))}
     </>
   )

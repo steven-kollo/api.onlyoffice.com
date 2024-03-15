@@ -1,11 +1,24 @@
-import "./sr-only.css"
-
 import type { JSX } from "preact"
-import { h } from "preact"
+import { Fragment, h } from "preact"
+import srOnly from "./sr-only.css?inline"
 import { SROnly } from "./sr-only.server.ts"
 
+const styles: string[] = [
+  srOnly
+]
+
 export default {
-  title: "UI Kit/SROnly"
+  title: "UI Kit/SROnly",
+  decorators: [
+    (Story: any): JSX.Element => (
+      <>
+        {styles.map((s) => (
+          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
+        ))}
+        <Story />
+      </>
+    )
+  ]
 }
 
 export function Composition(): JSX.Element {

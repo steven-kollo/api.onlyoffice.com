@@ -1,12 +1,31 @@
-import "./badge.css"
-
+import colorRegular from "@onlyoffice/documentation-ui-color/color.regular.css?inline"
 import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
+import typography from "@onlyoffice/documentation-ui-typography/typography.css?inline"
 import type { JSX } from "preact"
-import { h } from "preact"
+import { Fragment, h } from "preact"
+import badge from "./badge.css?inline"
+import badgeRegular from "./badge.regular.css?inline"
 import { Badge } from "./badge.server.ts"
 
+const styles: string[] = [
+  colorRegular,
+  typography,
+  badge,
+  badgeRegular
+]
+
 export default {
-  title: "UI Kit/Badge"
+  title: "UI Kit/Badge",
+  decorators: [
+    (Story: any): JSX.Element => (
+      <>
+        {styles.map((s) => (
+          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
+        ))}
+        <Story />
+      </>
+    )
+  ]
 }
 
 export function Composition(): JSX.Element {

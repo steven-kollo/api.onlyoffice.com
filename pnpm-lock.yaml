@@ -44,6 +44,9 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
+      vite:
+        specifier: ^5.1.6
+        version: 5.1.6
 
   declarations/fixtures:
     dependencies:
@@ -154,12 +157,21 @@ importers:
       '@mdx-js/mdx':
         specifier: ^3.0.0
         version: 3.0.1
+      '@onlyoffice/documentation-declarations-fixtures':
+        specifier: workspace:^
+        version: link:../declarations/fixtures
       '@onlyoffice/documentation-declarations-types':
         specifier: workspace:^
         version: link:../declarations/types
       '@onlyoffice/documentation-resources':
         specifier: workspace:^
         version: link:../resources
+      '@onlyoffice/documentation-ui-storybook':
+        specifier: workspace:^
+        version: link:../ui/storybook
+      '@onlyoffice/documentation-utils':
+        specifier: workspace:^
+        version: link:../utils
       '@shikijs/rehype':
         specifier: 1.0.0-beta.1
         version: 1.0.0-beta.1
@@ -241,9 +253,15 @@ importers:
 
   ui/article-card:
     optionalDependencies:
+      '@onlyoffice/documentation-ui-color':
+        specifier: workspace:^
+        version: link:../color
       '@onlyoffice/documentation-ui-content':
         specifier: workspace:^
         version: link:../content
+      '@onlyoffice/documentation-ui-typography':
+        specifier: workspace:^
+        version: link:../typography
     devDependencies:
       '@onlyoffice/documentation-ui-storybook':
         specifier: workspace:^
@@ -257,15 +275,19 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/badge:
     dependencies:
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
+    optionalDependencies:
+      '@onlyoffice/documentation-ui-color':
+        specifier: workspace:^
+        version: link:../color
+      '@onlyoffice/documentation-ui-typography':
+        specifier: workspace:^
+        version: link:../typography
     devDependencies:
       '@onlyoffice/documentation-ui-storybook':
         specifier: workspace:^
@@ -279,15 +301,19 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/button:
     dependencies:
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
+    optionalDependencies:
+      '@onlyoffice/documentation-ui-color':
+        specifier: workspace:^
+        version: link:../color
+      '@onlyoffice/documentation-ui-typography':
+        specifier: workspace:^
+        version: link:../typography
     devDependencies:
       '@onlyoffice/documentation-ui-storybook':
         specifier: workspace:^
@@ -301,11 +327,15 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/code-listing:
+    optionalDependencies:
+      '@onlyoffice/documentation-ui-color':
+        specifier: workspace:^
+        version: link:../color
+      '@onlyoffice/documentation-ui-typography':
+        specifier: workspace:^
+        version: link:../typography
     devDependencies:
       '@onlyoffice/documentation-ui-storybook':
         specifier: workspace:^
@@ -319,9 +349,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/color:
     devDependencies:
@@ -337,15 +364,19 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/content:
     dependencies:
       '@onlyoffice/documentation-ui-sr-only':
         specifier: workspace:^
         version: link:../sr-only
+    optionalDependencies:
+      '@onlyoffice/documentation-ui-color':
+        specifier: workspace:^
+        version: link:../color
+      '@onlyoffice/documentation-ui-typography':
+        specifier: workspace:^
+        version: link:../typography
     devDependencies:
       '@onlyoffice/documentation-ui-storybook':
         specifier: workspace:^
@@ -359,9 +390,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/font:
     devDependencies:
@@ -374,9 +402,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/icon:
     devDependencies:
@@ -431,6 +456,9 @@ importers:
       '@onlyoffice/documentation-ui-sr-only':
         specifier: workspace:^
         version: link:../sr-only
+      '@onlyoffice/documentation-ui-typography':
+        specifier: workspace:^
+        version: link:../typography
     devDependencies:
       preact:
         specifier: ^10.19.3
@@ -441,9 +469,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/logo:
     devDependencies:
@@ -477,12 +502,12 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   ui/storybook:
     devDependencies:
+      color2k:
+        specifier: ^2.0.3
+        version: 2.0.3
       preact:
         specifier: ^10.19.3
         version: 10.19.6
@@ -492,9 +517,21 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
+
+  ui/typography:
+    devDependencies:
+      '@onlyoffice/documentation-ui-storybook':
+        specifier: workspace:^
+        version: link:../storybook
+      preact:
+        specifier: ^10.19.3
+        version: 10.19.6
+      preact-render-to-string:
+        specifier: ^6.3.1
+        version: 6.4.0(preact@10.19.6)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.4.2
 
   utils:
     devDependencies:
@@ -4674,6 +4711,10 @@ packages:
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+  /color2k@2.0.3:
+    resolution: {integrity: sha512-zW190nQTIoXcGCaU08DvVNFTmQhUpnJfVuAKfWqUQkflXKpaDdpaYoM0iluLS9lgJNHyBF58KKA2FBEwkD7wog==}
+    dev: true
+
   /comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
     dev: true
@@ -4938,11 +4979,6 @@ packages:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
     dependencies:
       dequal: 2.0.3
-    dev: true
-
-  /diff@5.2.0:
-    resolution: {integrity: sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==}
-    engines: {node: '>=0.3.1'}
     dev: true
 
   /dir-glob@3.0.1:
@@ -8399,6 +8435,7 @@ packages:
   /react-remove-scroll-bar@2.3.5(@types/react@18.2.65)(react@18.2.0):
     resolution: {integrity: sha512-3cqjOqg6s0XbOjWvmasmqHch+RLxIEk2r/70rzGXuz3iIGQsQheEQyqYCBb5EECoD01Vo2SIbDqW4paLeLTASw==}
     engines: {node: '>=10'}
+    deprecated: please update to the following version as this contains a bug (https://github.com/theKashey/react-remove-scroll-bar/issues/57)
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -9565,17 +9602,6 @@ packages:
   /uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
-    dev: true
-
-  /uvu@0.5.6:
-    resolution: {integrity: sha512-+g8ENReyr8YsOc6fv/NVJs2vFdHBnBNdfE49rshrTzDWOlUx4Gq7KOS2GD8eqhy2j+Ejq29+SbKH8yjkAqXqoA==}
-    engines: {node: '>=8'}
-    hasBin: true
-    dependencies:
-      dequal: 2.0.3
-      diff: 5.2.0
-      kleur: 4.1.5
-      sade: 1.8.1
     dev: true
 
   /validate-npm-package-license@3.0.4:

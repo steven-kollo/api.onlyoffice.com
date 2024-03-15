@@ -9,7 +9,7 @@
   border-radius: 0;
   border: none;
   color: var(--declaration-decoration-foreground-color);
-  font-family: var(--text-font-monospace);
+  font-family: var(--typography-monospace-font);
   font-size: 90%;
   padding: 0;
 }

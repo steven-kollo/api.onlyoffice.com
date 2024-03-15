@@ -1,10 +1,10 @@
 // @ts-check
 
-const { list, retrieve } = require("@/resources/document-builder.cjs")
+const { list, retrieve } = require("@/resources/document-builder.ts")
 
 function data() {
   return {
-    layout: "declaration/declaration.tsx",
+    layout: "blank/blank.tsx",
     pagination: {
       data: "items",
       size: 1,

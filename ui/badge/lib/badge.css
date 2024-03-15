@@ -2,7 +2,7 @@
   background-color: var(--badge-neutral-background-color);
   border-radius: 3px;
   color: var(--badge-neutral-foreground-color);
-  font-family: var(--text-monospace-font);
+  font-family: var(--typography-monospace-font);
   font-size: 90%;
   padding: 4px 7px;
 }

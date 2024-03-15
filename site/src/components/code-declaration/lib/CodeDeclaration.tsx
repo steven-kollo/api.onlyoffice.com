@@ -1,7 +1,7 @@
-import { Content } from "@onlyoffice/documentation-ui-content"
+import { Content } from "@onlyoffice/documentation-ui-kit"
 import { Fragment, JSX, h } from "preact"
-import { CodeDeclarationSection } from "./CodeDeclarationSection.js"
-import { CodeDeclarationSignature } from "./CodeDeclarationSignature.js"
+import { CodeDeclarationSection } from "./CodeDeclarationSection.tsx"
+import { CodeDeclarationSignature } from "./CodeDeclarationSignature.tsx"
 
 export interface CodeDeclarationParameters {
   declaration: any

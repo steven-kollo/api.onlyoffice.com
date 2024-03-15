@@ -8,7 +8,7 @@
     "jsxFragmentFactory": "Fragment"
   },
   "include": [
-    "./.storybook/ui/*",
-    "./.storybook/*"
+    "./.storybook/*",
+    "./index.d.ts"
   ]
 }

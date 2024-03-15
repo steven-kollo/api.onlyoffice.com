@@ -1,8 +1,8 @@
-import "./theme.css"
-
+import { readableColor, toHex } from "color2k"
 import { useEffect, useRef, useState } from "preact/hooks"
 import type { JSX } from "preact"
 import { h } from "preact"
+import "./theme.css"
 
 export interface RootProperties {
   children: any
@@ -46,7 +46,9 @@ export function Scale(
   }: ScaleProperties
 ): JSX.Element {
   const ref = useRef<HTMLDivElement>(null)
-  const [bg, setBG] = useState<string | null>(null)
+  const [hex, setHex] = useState<string | null>(null)
+
+  const textColor = hex ? readableColor(hex) : "currentColor"
 
   useEffect(() => {
     window.requestAnimationFrame(() => {
@@ -54,8 +56,8 @@ export function Scale(
         return
       }
       const s = getComputedStyle(ref.current)
-      const v = s.getPropertyValue("background-color")
-      setBG(v)
+      const rgb = s.getPropertyValue("background-color")
+      setHex(toHex(rgb))
     })
   }, [scale])
 
@@ -64,10 +66,11 @@ export function Scale(
       ref={ref}
       class="storybook-theme-scale"
       style={{
-        backgroundColor: `var(--${scale})`,
+        color: textColor,
+        backgroundColor: `var(--${scale})`
       }}
     >
-      <code>{bg}</code>
+      <code>--{scale}; {hex}</code>
     </div>
   )
 }

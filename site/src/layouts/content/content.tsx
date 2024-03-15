@@ -8,12 +8,13 @@ function data() {
 }
 
 function render({ title, content }) {
-  return (
-    <Content>
-      <h1>{title}</h1>
-      {content}
-    </Content>
-  )
+  return content
+  // return (
+  //   <Content>
+  //     <h1>{title}</h1>
+  //     {content}
+  //   </Content>
+  // )
 }
 
 export { data, render }

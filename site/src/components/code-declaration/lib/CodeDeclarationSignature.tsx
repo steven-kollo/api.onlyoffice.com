@@ -1,5 +1,5 @@
 import { JSX, h } from "preact"
-import { CodeDeclarationToken } from "./CodeDeclarationToken.js"
+import { CodeDeclarationToken } from "./CodeDeclarationToken.tsx"
 
 function CodeDeclarationSignature({ tokens, onLink }): JSX.Element {
   const c = tokens.map((t) => (

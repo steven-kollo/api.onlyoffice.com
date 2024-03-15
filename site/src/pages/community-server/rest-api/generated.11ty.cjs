@@ -1,6 +1,6 @@
 // @ts-check
 
-const { list, retrieve } = require("@/resources/community-server.cjs")
+const { list, retrieve } = require("@/resources/community-server.ts")
 
 function data() {
   return {

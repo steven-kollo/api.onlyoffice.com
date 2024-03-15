@@ -1,7 +1,7 @@
 import type { StorybookConfig } from "@storybook/preact-vite"
 import { h } from "preact"
 import { renderToString } from "preact-render-to-string"
-import { Font } from "../ui/kit/lib/kit.server.ts"
+import { Font } from "../ui/font/lib/font.server.ts"
 
 const config: StorybookConfig = {
   framework: "@storybook/preact-vite",
@@ -11,7 +11,8 @@ const config: StorybookConfig = {
   ],
   stories: [
     "../ui/*/lib/*.stories.tsx",
-    "./ui/*.stories.tsx"
+    "../site/src/components/*/*.stories.tsx",
+    "./*.stories.tsx"
   ],
   staticDirs: [
     "../ui/font/static"
