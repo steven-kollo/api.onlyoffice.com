@@ -12,7 +12,7 @@ export async function render(
     page,
     title,
     content
-  }: Eleventy.RenderContext
+  }: Eleventy.Context
 ): Promise<string> {
   // todo: cache it!
   // const regular = await buildRegularTheme()

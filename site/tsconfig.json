@@ -12,8 +12,14 @@
     "jsxFragmentFactory": "Fragment"
   },
   "include": [
+    "../index.d.ts",
     "./config/**/*",
     "./resources/**/*",
     "./src/**/*"
+  ],
+  "exclude": [
+    "./dist",
+    "./node_modules",
+    "./src/**/fixtures/*"
   ]
 }

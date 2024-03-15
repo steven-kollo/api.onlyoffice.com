@@ -1,13 +1,14 @@
 @import "../node_modules/@onlyoffice/documentation-ui-kit/lib/kit.css";
+@import "./components/chapter/chapter.css";
 @import "./components/page/page.css";
 @import "./components/syntax-highlight/syntax-highlight.css";
 
 html {
   background-color: var(--page-background-color);
   color: var(--page-foreground-color);
-  font-family: "Open Sans";
+  font-family: var(--typography-sans-serif-font);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: var(--typography-line-height);
 }
 
 body {

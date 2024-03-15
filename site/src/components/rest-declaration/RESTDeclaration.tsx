@@ -1,6 +1,5 @@
 import type { REST } from "@onlyoffice/documentation-declarations-types/rest.ts"
-import { Badge } from "@onlyoffice/documentation-ui-badge"
-import { CodeListing } from "@onlyoffice/documentation-ui-code-listing"
+import { Badge, CodeListing } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 

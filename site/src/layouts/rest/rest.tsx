@@ -1,5 +1,5 @@
 import type { REST } from "@onlyoffice/documentation-declarations-types/rest.ts"
-import { Markdown } from "@/src/components/markdown/Markdown.tsx"
+// import { Markdown } from "@/src/components/markdown/markdown.ts"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 // import { Declaration } from "./declaration.tsx"

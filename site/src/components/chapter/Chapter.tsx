@@ -1,6 +1,7 @@
 import { ChevronRightIcon } from "@onlyoffice/documentation-ui-kit"
 import { clsx } from "clsx"
-import { JSX, h } from "preact"
+import type { JSX } from "preact"
+import { h } from "preact"
 
 declare global {
   namespace preact {
@@ -12,19 +13,31 @@ declare global {
   }
 }
 
-interface ChapterNavigationProperties {
+// todo
+// chapter
+//   chapter-navigation
+//   chapter-content
+// chapter
+
+export interface ChapterNavigationProperties {
   chapter: Chapter
   isExpanded(chapter: Chapter): boolean
   isCurrent(chapter: Chapter): boolean
 }
 
-interface Chapter {
+export interface Chapter {
   title: string
   link: string
   children?: Chapter[]
 }
 
-function ChapterNavigation({ chapter, isExpanded, isCurrent }: ChapterNavigationProperties): JSX.Element {
+export function ChapterNavigation(
+  {
+    chapter,
+    isExpanded,
+    isCurrent
+  }: ChapterNavigationProperties
+): JSX.Element {
   return (
     <o-chapter-nav class="tree" role="navigation">
       <div class="tree">
@@ -45,8 +58,13 @@ function ChapterNavigation({ chapter, isExpanded, isCurrent }: ChapterNavigation
   )
 }
 
-// todo: chevron #808080.
-function ChapterNavigationItem({ chapter, isExpanded, isCurrent }: ChapterNavigationProperties): JSX.Element {
+export function ChapterNavigationItem(
+  {
+    chapter,
+    isExpanded,
+    isCurrent
+  }: ChapterNavigationProperties
+): JSX.Element {
   return (
     <ul class="tree__limb">
       {chapter.children && chapter.children.map((c) => (
@@ -71,7 +89,12 @@ function ChapterNavigationItem({ chapter, isExpanded, isCurrent }: ChapterNaviga
   )
 }
 
-function ChapterNavigationLink({ chapter, isCurrent }: Omit<ChapterNavigationProperties, "isExpanded">): JSX.Element {
+export function ChapterNavigationLink(
+  {
+    chapter,
+    isCurrent
+  }: Omit<ChapterNavigationProperties, "isExpanded">
+): JSX.Element {
   return (
     <a
       class={clsx("tree__leaf", isCurrent(chapter) && "tree__leaf_current")}
@@ -79,5 +102,3 @@ function ChapterNavigationLink({ chapter, isCurrent }: Omit<ChapterNavigationPro
     >{chapter.title}</a>
   )
 }
-
-export { Chapter, ChapterNavigation, ChapterNavigationProperties }

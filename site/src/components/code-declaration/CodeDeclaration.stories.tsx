@@ -3,19 +3,20 @@ import kitRegular from "@onlyoffice/documentation-ui-kit/kit.regular.css?inline"
 import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-import page from "./page.css?inline"
-import pageRegular from "./page.regular.css?inline"
-import { Page } from "./page.ts"
+import { list, retrieve } from "./fixtures/resource.ts"
+import codeDeclaration from "./code-declaration.css?inline"
+import codeDeclarationRegular from "./code-declaration.regular.css?inline"
+import { CodeDeclaration } from "./code-declaration.ts"
 
 const styles: string[] = [
   kit,
   kitRegular,
-  page,
-  pageRegular
+  codeDeclaration,
+  codeDeclarationRegular
 ]
 
 export default {
-  title: "Site/Page",
+  title: "Site/CodeDeclaration",
   decorators: [
     (Story: any): JSX.Element => (
       <>
@@ -30,36 +31,22 @@ export default {
 
 export function Composition(): JSX.Element {
   return (
-    <Page>
-      <Page.Header>
-        <Page.HeaderLogo>
-          logo
-        </Page.HeaderLogo>
-        <Page.HeaderNavigation
-          nav={[]}
-          isCurrent={(link) => false}
-        />
-      </Page.Header>
-      <div>
-        content
-      </div>
-      <Page.Footer />
-    </Page>
+    <CodeDeclaration
+      declaration={list()[0]}
+      onProcessMarkdown={({ children }) => children }
+      onHighlightSyntax={({ children }) => children}
+      onLink={() => "https://example.com/"}
+      onRetrieve={retrieve}
+    />
   )
 }
 
 const colors: string[] = [
-  "page-background-color",
-  "page-foreground-color",
-  "page-header-background-color",
-  "page-header-border-color",
-  "page-header-navigation-foreground-color",
-  "page-header-navigation-focus-foreground-color",
-  "page-footer-background-color",
-  "page-footer-border-color",
-  "page-footer-navigation-foreground-color",
-  "page-footer-navigation-heading-foreground-color",
-  "page-footer-navigation-focus-foreground-color"
+  "code-declaration-decoration-foreground-color",
+  "code-declaration-identifier-foreground-color",
+  "code-declaration-keyword-foreground-color",
+  "code-declaration-reference-foreground-color",
+  "code-declaration-text-foreground-color"
 ]
 
 export function Theme(): JSX.Element {

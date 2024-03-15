@@ -11,7 +11,7 @@ export function data() {
 export function render(
   {
     content
-  }: Eleventy.RenderContext
+  }: Eleventy.Context
 ): JSX.Element {
   return content
   // return (

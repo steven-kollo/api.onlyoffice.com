@@ -1,15 +1,11 @@
 export namespace Eleventy {
-  export interface RenderContext {
+  export interface Context {
     eleventy: any
     collections: any
     page: any
     content: any
-    title: string
-  }
 
-  // todo
-  // export interface PageMetadata {
-  //   title: string
-  //   description: string
-  // }
+    title: string
+    description: string
+  }
 }

@@ -1,9 +1,98 @@
-import { Badge } from "@onlyoffice/documentation-ui-kit"
-import { Fragment, JSX, h } from "preact"
-import { CodeDeclarationReference } from "./CodeDeclarationReference.tsx"
-import { CodeDeclarationToken } from "./CodeDeclarationToken.tsx"
+import { Content } from "@onlyoffice/documentation-ui-kit"
+import type { JSX } from "preact"
+import { Fragment, h } from "preact"
 
-export interface CodeDeclarationSectionParameters {
+export interface CodeDeclarationParameters {
+  declaration: any
+  onProcessMarkdown: any
+  onHighlightSyntax: any
+  onRetrieve: any
+  onLink: any
+}
+
+export function CodeDeclaration(
+  {
+    declaration: d,
+    onProcessMarkdown: Markdown,
+    onHighlightSyntax: SyntaxHighlight,
+    onRetrieve: retrieve,
+    onLink: link
+  }: CodeDeclarationParameters
+): JSX.Element {
+  return (
+    <Content>
+      <h1>{d.title}</h1>
+      {d.signature && (
+        <CodeDeclarationSignature tokens={d.signature} onLink={link} />
+      )}
+      {d.description && (
+        <>
+          <h2>Description</h2>
+          <Markdown>{d.description}</Markdown>
+        </>
+      )}
+      {d.sections && d.sections.map((s) => (
+        <CodeDeclarationSection
+          section={s}
+          onProcessMarkdown={Markdown}
+          onHighlightSyntax={SyntaxHighlight}
+          onRetrieve={retrieve}
+          onLink={link}
+        />
+      ))}
+    </Content>
+  )
+}
+
+function CodeDeclarationSignature({ tokens, onLink }): JSX.Element {
+  const c = tokens.map((t) => (
+    <CodeDeclarationToken onLink={onLink} token={t} />
+  ))
+  return <pre><code>{c}</code></pre>
+}
+
+function CodeDeclarationToken({ onLink, token: t }): JSX.Element {
+  switch (t.type) {
+  case "decoration":
+    return <Decoration>{t.text}</Decoration>
+  case "identifier":
+    return <Identifier>{t.text}</Identifier>
+  case "keyword":
+    return <Keyword>{t.text}</Keyword>
+  case "reference":
+    return <Reference link={onLink(t)}>{t.text}</Reference>
+  case "text":
+    return <Text>{t.text}</Text>
+  default:
+    // todo: throw new Error(`Unknown token type: ${t.type}`)
+    return <></>
+  }
+}
+
+function Decoration({ children: c }): JSX.Element {
+  return <span class="dt-de">{c}</span>
+}
+
+function Identifier({ children: c }): JSX.Element {
+  return <span class="dt-id">{c}</span>
+}
+
+function Keyword({ children: c }): JSX.Element {
+  return <span class="dt-ke">{c}</span>
+}
+
+function Reference({ link: l, children: c }): JSX.Element {
+  if (l === undefined) {
+    return <span class="dt-re">{c}</span>
+  }
+  return <a href={l} class="dt-re">{c}</a>
+}
+
+function Text({ children: c }): JSX.Element {
+  return <>{c}</>
+}
+
+interface CodeDeclarationSectionParameters {
   section: any
   onHighlightSyntax: any
   onLink: any
@@ -11,7 +100,7 @@ export interface CodeDeclarationSectionParameters {
   onRetrieve: any
 }
 
-export function CodeDeclarationSection(
+function CodeDeclarationSection(
   {
     section: s,
     onHighlightSyntax: SyntaxHighlight,
@@ -312,4 +401,35 @@ function CodeDeclarationTopicSection(
       </dl>
     </>
   )
+}
+
+function CodeDeclarationReference({ onLink, declaration: d }): JSX.Element {
+  const c = d.signature.map((t) => (
+    <ReferenceToken token={t} />
+  ))
+  return <a class="dr" href={onLink(d)}><code>{c}</code></a>
+}
+
+function ReferenceToken({ token: t }): JSX.Element {
+  switch (t.type) {
+  case "decoration":
+    return <ReferenceText>{t.text}</ReferenceText>
+  case "identifier":
+    return <ReferenceIdentifier>{t.text}</ReferenceIdentifier>
+  case "keyword":
+  case "reference":
+  case "text":
+    return <ReferenceText>{t.text}</ReferenceText>
+  default:
+    // todo: throw new Error(`Unknown token type: ${t.type}`)
+    return <></>
+  }
+}
+
+function ReferenceIdentifier({ children: c }): JSX.Element {
+  return <span class="dr-id">{c}</span>
+}
+
+function ReferenceText({ children: c }): JSX.Element {
+  return <>{c}</>
 }

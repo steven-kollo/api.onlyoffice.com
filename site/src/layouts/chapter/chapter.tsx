@@ -1,13 +1,12 @@
-import { ChapterNavigation } from "@/src/components/chapter-navigation/lib/ChapterNavigation.tsx"
 import { h } from "preact"
 
-function data() {
+export function data() {
   return {
     layout: "page/page.tsx"
   }
 }
 
-function render({ collections, page, content }) {
+export function render({ collections, page, content }) {
   return content
   // return (
   //   <div class="product__main">
@@ -34,5 +33,3 @@ function render({ collections, page, content }) {
   //   </div>
   // )
 }
-
-export { data, render }

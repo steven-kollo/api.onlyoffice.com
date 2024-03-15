@@ -1,24 +1,36 @@
-import "./syntax-highlight.css"
-
 import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
-import { h } from "preact"
+import { Fragment, h } from "preact"
 import { register } from "../../../config/syntax-highlight.ts"
-import { SyntaxHighlight } from "./SyntaxHighlight.tsx"
+import code from "./fixtures/code.js?raw"
+import syntaxHighlight from "./syntax-highlight.css?inline"
+import syntaxHighlightRegular from "./syntax-highlight.regular.css?inline"
+import { SyntaxHighlight } from "./syntax-highlight.ts"
 
 await register()
 
+const styles: string[] = [
+  syntaxHighlight,
+  syntaxHighlightRegular
+]
+
 export default {
-  title: "Site Components/SyntaxHighlight"
+  title: "Site/SyntaxHighlight",
+  decorators: [
+    (Story: any): JSX.Element => (
+      <>
+        {styles.map((s) => (
+          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
+        ))}
+        <Story />
+      </>
+    )
+  ]
 }
 
 export function Composition(): JSX.Element {
   return (
-    <div>
-      <SyntaxHighlight syntax="javascript">
-        {`import { h } from "preact"`}
-      </SyntaxHighlight>
-    </div>
+    <pre><code><SyntaxHighlight syntax="javascript">{code}</SyntaxHighlight></code></pre>
   )
 }
 

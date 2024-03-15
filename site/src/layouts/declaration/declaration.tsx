@@ -1,7 +1,7 @@
 // import { CodeDeclaration } from "@/src/components/code-declaration/lib/CodeDeclaration.tsx"
 // import { Markdown } from "@/src/components/markdown/Markdown.tsx"
 // import { SyntaxHighlight } from "@/src/components/syntax-highlight/SyntaxHighlight.tsx"
-import { h, Fragment } from "preact"
+import { Fragment, h } from "preact"
 
 function data() {
   return {
