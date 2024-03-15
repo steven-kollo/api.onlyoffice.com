@@ -1217,11 +1217,15 @@ docEditor.setUsers({
     "c": "protect",
     "users": [
         {
+            "email": "john@example.com",
             "id": "78e1e841",
+            "image": "https://example.com/url-to-user-avatar1.png",
             "name": "John Smith"
         },
         {
+            "email": "kate@example.com",
             "id": "F89d8069ba2b",
+            "image": "https://example.com/url-to-user-avatar2.png",
             "name": "Kate Cage"
         },
         ...
