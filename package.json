@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "node ./makefile.js build",
-    "storybook": "storybook dev --no-open --port 6006"
+    "serve-storybook": "storybook dev --no-open --port 6006",
+    "build-storybook": "storybook build --disable-telemetry --output-dir dist"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.0.0",

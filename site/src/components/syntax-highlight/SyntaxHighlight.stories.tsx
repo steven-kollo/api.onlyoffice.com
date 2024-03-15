@@ -7,8 +7,6 @@ import syntaxHighlight from "./syntax-highlight.css?inline"
 import syntaxHighlightRegular from "./syntax-highlight.regular.css?inline"
 import { SyntaxHighlight } from "./syntax-highlight.ts"
 
-await register()
-
 const styles: string[] = [
   syntaxHighlight,
   syntaxHighlightRegular
@@ -16,6 +14,9 @@ const styles: string[] = [
 
 export default {
   title: "Site/SyntaxHighlight",
+  loaders: [
+    register
+  ],
   decorators: [
     (Story: any): JSX.Element => (
       <>

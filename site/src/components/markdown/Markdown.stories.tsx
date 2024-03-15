@@ -5,10 +5,11 @@ import composition from "./fixtures/composition.md?raw"
 import decomposition from "./fixtures/decomposition.md?raw"
 import { Markdown } from "./markdown.ts"
 
-await register()
-
 export default {
-  title: "Site/Markdown"
+  title: "Site/Markdown",
+  loaders: [
+    register
+  ]
 }
 
 export function Composition(): JSX.Element {
