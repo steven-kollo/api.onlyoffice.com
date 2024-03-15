@@ -1270,27 +1270,27 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>Defines the email address of the user. This field is only used when the <em>c</em> parameter is <em>mention</em>.</td>
+                        <td>Defines the email address of the user. This field is required when the <em>c</em> parameter is <em>mention</em>.</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.id</td>
-                        <td>Defines the identification of the user. This field is only used when the <em>c</em> parameter is <em>protect</em>.</td>
+                        <td>Defines the identification of the user. This field is required when the <em>c</em> parameter is <em>protect</em>.</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.image</td>
-                        <td>Defines the path to the user's avatar. This field is only used when the <em>c</em> parameter is <em>info</em>.</td>
+                        <td>Defines the path to the user's avatar. This field is required when the <em>c</em> parameter is <em>info</em>.</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>
                         <td>Defines the full name of the user.</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>optional</td>
                     </tr>
                 </tbody>
             </table>
