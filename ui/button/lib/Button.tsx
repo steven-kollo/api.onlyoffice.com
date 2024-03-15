@@ -3,7 +3,7 @@ import { clsx } from "clsx"
 import type { JSX } from "preact"
 import { h } from "preact"
 
-export interface RootProperties {
+export interface RootParameters {
   children: any
   variant?: RootVariant
 }
@@ -16,7 +16,7 @@ export function Root(
   {
     children,
     variant: v
-  }: RootProperties
+  }: RootParameters
 ): JSX.Element {
   const cv: ClassValue = ["button"]
   if (v !== undefined) {

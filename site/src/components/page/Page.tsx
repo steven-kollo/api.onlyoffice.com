@@ -3,14 +3,14 @@ import type { JSX } from "preact"
 import { h } from "preact"
 import { useSlots } from "../slots.ts"
 
-export interface RootProperties {
+export interface RootParameters {
   children: any
 }
 
 export function Root(
   {
     children
-  }: RootProperties
+  }: RootParameters
 ): JSX.Element {
   return (
     <div class="page">
@@ -19,14 +19,14 @@ export function Root(
   )
 }
 
-export interface HeaderProperties {
+export interface HeaderParameters {
   children: any
 }
 
 export function Header(
   {
     children
-  }: HeaderProperties
+  }: HeaderParameters
 ): JSX.Element {
   const [slots] = useSlots(children, {
     logo: HeaderLogo,
@@ -46,19 +46,19 @@ export function Header(
   )
 }
 
-export interface HeaderLogoProperties {
+export interface HeaderLogoParameters {
   children: any
 }
 
 export function HeaderLogo(
   {
     children
-  }: HeaderLogoProperties
+  }: HeaderLogoParameters
 ): JSX.Element {
   return children
 }
 
-export interface HeaderNavigationProperties {
+export interface HeaderNavigationParameters {
   nav: any[]
   isCurrent(link: string): boolean
 }
@@ -67,7 +67,7 @@ export function HeaderNavigation(
   {
     nav,
     isCurrent
-  }: HeaderNavigationProperties
+  }: HeaderNavigationParameters
 ): JSX.Element {
   return (
     <nav class="page-header-nav">

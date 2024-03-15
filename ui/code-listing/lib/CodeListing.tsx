@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-export interface RootProperties {
+export interface RootParameters {
   // todo: replace with slots
   groups: ([string, any])[]
   // children: any
@@ -22,7 +22,7 @@ export function Root(
   {
     groups
     // children
-  }: RootProperties
+  }: RootParameters
 ): JSX.Element {
   return (
     <o-code-listing class="code-listing">
@@ -58,11 +58,11 @@ declare global {
 
 type TemplateElement = JSX.IntrinsicElements["template"]
 
-interface TemplateProperties extends TemplateElement {
+interface TemplateParameters extends TemplateElement {
   children: any
 }
 
-function Template({ children, ...attrs }: TemplateProperties) {
+function Template({ children, ...attrs }: TemplateParameters) {
   const s = renderToString(children)
   return (
     <template {...attrs} dangerouslySetInnerHTML={{ __html: s }} />

@@ -1,6 +1,6 @@
 import type { JSX } from "preact"
 import { h } from "preact"
-import { default as chapter, Theme as ChapterTheme } from "../site/src/components/chapter/ChapterNavigation.stories.tsx"
+import { default as chapter, Theme as ChapterTheme } from "../site/src/components/chapter/Chapter.stories.tsx"
 import { default as page, Theme as PageTheme } from "../site/src/components/page/Page.stories.tsx"
 import { default as syntaxHighlight, Theme as SyntaxHighlightTheme } from "../site/src/components/syntax-highlight/SyntaxHighlight.stories.tsx"
 import { default as articleCard, Theme as ArticleCardTheme } from "../ui/article-card/lib/ArticleCard.stories.tsx"

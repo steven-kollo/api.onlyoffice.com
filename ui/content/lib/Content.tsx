@@ -2,14 +2,14 @@ import { SROnly } from "@onlyoffice/documentation-ui-sr-only"
 import type { JSX } from "preact"
 import { h } from "preact"
 
-export interface RootProperties {
+export interface RootParameters {
   children: any
 }
 
 export function Root(
   {
     children
-  }: RootProperties
+  }: RootParameters
 ): JSX.Element {
   return (
     <div class="content">
@@ -18,7 +18,7 @@ export function Root(
   )
 }
 
-export interface AlertProperties {
+export interface AlertParameters {
   children: any
   variant?: AlertVariant
 }
@@ -31,7 +31,7 @@ export function Alert(
   {
     children,
     variant: v
-  }: AlertProperties
+  }: AlertParameters
 ): JSX.Element {
   return (
     <div class="content-alert">

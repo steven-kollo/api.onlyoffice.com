@@ -1,8 +1,9 @@
-import type { REST } from "@onlyoffice/documentation-declarations-types/rest.ts"
-// import { Markdown } from "@/src/components/markdown/markdown.ts"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-// import { Declaration } from "./declaration.tsx"
+import { Eleventy } from "../../config/context.ts"
+import { RESTDeclaration } from "../components/rest-declaration/rest-declaration.ts"
+import { Markdown } from "../components/markdown/markdown.ts"
+import { SyntaxHighlight } from "../components/syntax-highlight/syntax-highlight.ts"
 
 export function data() {
   return {
@@ -10,28 +11,21 @@ export function data() {
   }
 }
 
-export interface Parameters {
-  pagination: {
-    items: REST.Request[]
-  }
-  onRetrieve(id: string): REST.Component | undefined
-}
-
 export function render(
   {
     pagination,
     onRetrieve: retrieve
-  }: Parameters
+  }: Eleventy.Context
 ): JSX.Element {
   return (
     <>
       {pagination.items.map((d) => (
-        <div></div>
-        // <Declaration
-        //   declaration={d}
-        //   onRenderDescription={Markdown}
-        //   onRetrieve={retrieve}
-        // />
+        <RESTDeclaration
+          declaration={d}
+          onHighlightSyntax={SyntaxHighlight}
+          onRenderDescription={Markdown}
+          onRetrieve={retrieve}
+        />
       ))}
     </>
   )

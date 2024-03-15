@@ -5,20 +5,20 @@ import * as C1 from "./Properties.tsx"
 import type * as T2 from "./Theme.tsx"
 import * as C2 from "./Theme.tsx"
 
-export type ContentProperties = T0.RootProperties
+export type ContentParameters = T0.RootParameters
 
 export const Content = Object.assign(C0.Root, {})
 
-export type PropertiesProperties = T1.RootProperties
-export type PropertyProperties = T1.PropertyProperties
+export type PropertiesParameters = T1.RootParameters
+export type PropertyParameters = T1.PropertyParameters
 
 export const Properties = Object.assign(C1.Root, {
   Property: C1.Property
 })
 
-export type ThemeProperties = T2.RootProperties
-export type ThemeColorProperties = T2.ColorProperties
-export type ThemeScaleProperties = T2.ScaleProperties
+export type ThemeParameters = T2.RootParameters
+export type ThemeColorParameters = T2.ColorParameters
+export type ThemeScaleParameters = T2.ScaleParameters
 
 export const Theme = Object.assign(C2.Root, {
   Color: C2.Color,

@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from "preact/hooks"
 import type { JSX } from "preact"
 import { h } from "preact"
 
-export interface RootProperties {
+export interface RootParameters {
   children: any
 }
 
 export function Root(
   {
     children
-  }: RootProperties
+  }: RootParameters
 ): JSX.Element {
   return (
     <table>
@@ -26,14 +26,14 @@ export function Root(
   )
 }
 
-export interface PropertyProperties {
+export interface PropertyParameters {
   property: string
 }
 
 export function Property(
   {
     property: p
-  }: PropertyProperties
+  }: PropertyParameters
 ): JSX.Element {
   const ref = useRef<HTMLTableRowElement>(null)
   const [v, setValue] = useState<string | null>(null)

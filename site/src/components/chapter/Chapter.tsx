@@ -1,7 +1,8 @@
 import { ChevronRightIcon } from "@onlyoffice/documentation-ui-kit"
 import { clsx } from "clsx"
 import type { JSX } from "preact"
-import { h } from "preact"
+import { Fragment, h } from "preact"
+import { useSlots } from "../slots.ts"
 
 declare global {
   namespace preact {
@@ -13,30 +14,66 @@ declare global {
   }
 }
 
-// todo
-// chapter
-//   chapter-navigation
-//   chapter-content
-// chapter
-
-export interface ChapterNavigationProperties {
-  chapter: Chapter
-  isExpanded(chapter: Chapter): boolean
-  isCurrent(chapter: Chapter): boolean
-}
-
 export interface Chapter {
   title: string
   link: string
   children?: Chapter[]
 }
 
-export function ChapterNavigation(
+export interface RootParameters {
+  children: any
+}
+
+export function Root(
+  {
+    children
+  }: RootParameters
+): JSX.Element {
+  const [slots] = useSlots(children, {
+    nav: Navigation,
+    content: Content
+  })
+  return (
+    <div class="product__main">
+      <div class="product__inner">
+        <nav class="product-nav">
+          {slots.nav}
+          {/* {collections.navigation.map((c) => (
+            page.url.startsWith(c.link) && (
+              <Navigation
+                chapter={c}
+                isExpanded={(c) => {
+                  return page.url.startsWith(c.link)
+                }}
+                isCurrent={(c) => {
+                  return page.url === c.link
+                }}
+              />
+            )
+          ))} */}
+        </nav>
+        <main class="product__main2">
+          <div class="product__inner2">
+            {slots.content}
+          </div>
+        </main>
+      </div>
+    </div>
+  )
+}
+
+export interface NavigationParameters {
+  chapter: Chapter
+  isExpanded(chapter: Chapter): boolean
+  isCurrent(chapter: Chapter): boolean
+}
+
+export function Navigation(
   {
     chapter,
     isExpanded,
     isCurrent
-  }: ChapterNavigationProperties
+  }: NavigationParameters
 ): JSX.Element {
   return (
     <o-chapter-nav class="tree" role="navigation">
@@ -48,7 +85,7 @@ export function ChapterNavigation(
                 <a class="tree__leaf tree__leaf_bole" href={c.link}>{c.title}</a>
               </div>
               {c.children && (
-                <ChapterNavigationItem chapter={c} isExpanded={isExpanded} isCurrent={isCurrent} />
+                <NavigationItem chapter={c} isExpanded={isExpanded} isCurrent={isCurrent} />
               )}
             </li>
           ))}
@@ -58,12 +95,12 @@ export function ChapterNavigation(
   )
 }
 
-export function ChapterNavigationItem(
+export function NavigationItem(
   {
     chapter,
     isExpanded,
     isCurrent
-  }: ChapterNavigationProperties
+  }: NavigationParameters
 ): JSX.Element {
   return (
     <ul class="tree__limb">
@@ -72,16 +109,16 @@ export function ChapterNavigationItem(
           ? (
             <li class="tree__branch">
               <div class="tree__twig">
-                <ChapterNavigationLink chapter={c} isCurrent={isCurrent} />
+                <NavigationLink chapter={c} isCurrent={isCurrent} />
               </div>
             </li>
           )
           : (
             <li class="tree__branch">
               <div class={clsx("tree__twig", !isExpanded(c) && "tree__twig_closed")}>
-                <button class="tree__fruit" type="button"><ChevronRightIcon /></button><ChapterNavigationLink chapter={c} isCurrent={isCurrent} />
+                <button class="tree__fruit" type="button"><ChevronRightIcon /></button><NavigationLink chapter={c} isCurrent={isCurrent} />
               </div>
-              <ChapterNavigationItem chapter={c} isExpanded={isExpanded} isCurrent={isCurrent} />
+              <NavigationItem chapter={c} isExpanded={isExpanded} isCurrent={isCurrent} />
             </li>
         )
       ))}
@@ -89,16 +126,32 @@ export function ChapterNavigationItem(
   )
 }
 
-export function ChapterNavigationLink(
+export function NavigationLink(
   {
     chapter,
     isCurrent
-  }: Omit<ChapterNavigationProperties, "isExpanded">
+  }: Omit<NavigationParameters, "isExpanded">
 ): JSX.Element {
   return (
     <a
       class={clsx("tree__leaf", isCurrent(chapter) && "tree__leaf_current")}
       href={chapter.link}
     >{chapter.title}</a>
+  )
+}
+
+export interface ContentParameters {
+  children: any
+}
+
+export function Content(
+  {
+    children
+  }: ContentParameters
+): JSX.Element {
+  return (
+    <>
+      {children}
+    </>
   )
 }

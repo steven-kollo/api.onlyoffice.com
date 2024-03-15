@@ -1,6 +1,5 @@
 import type { JSX } from "preact"
 import { h } from "preact"
-import "./content.css"
 
 export interface RootParameters {
   children: any
@@ -12,8 +11,8 @@ export function Root(
   }: RootParameters
 ): JSX.Element {
   return (
-    <div class="storybook-content">
-      {children}
-    </div>
+    <main class="blank__main">
+      <div class="blank__inner">{children}</div>
+    </main>
   )
 }

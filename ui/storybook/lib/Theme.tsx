@@ -4,14 +4,14 @@ import type { JSX } from "preact"
 import { h } from "preact"
 import "./theme.css"
 
-export interface RootProperties {
+export interface RootParameters {
   children: any
 }
 
 export function Root(
   {
     children
-  }: RootProperties
+  }: RootParameters
 ): JSX.Element {
   return (
     <div class="storybook-theme">
@@ -20,14 +20,14 @@ export function Root(
   )
 }
 
-export interface ColorProperties {
+export interface ColorParameters {
   children: any
 }
 
 export function Color(
   {
     children
-  }: ColorProperties
+  }: ColorParameters
 ): JSX.Element {
   return (
     <div>
@@ -36,14 +36,14 @@ export function Color(
   )
 }
 
-export interface ScaleProperties {
+export interface ScaleParameters {
   scale: string
 }
 
 export function Scale(
   {
     scale
-  }: ScaleProperties
+  }: ScaleParameters
 ): JSX.Element {
   const ref = useRef<HTMLDivElement>(null)
   const [hex, setHex] = useState<string | null>(null)

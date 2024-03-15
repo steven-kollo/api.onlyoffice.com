@@ -1,14 +1,14 @@
 import type { JSX } from "preact"
 import { Fragment, cloneElement, h, toChildArray } from "preact"
 
-export interface RootProperties {
+export interface RootParameters {
   children: any
 }
 
 export function Root(
   {
     children
-  }: RootProperties
+  }: RootParameters
 ): JSX.Element {
   return (
     <>

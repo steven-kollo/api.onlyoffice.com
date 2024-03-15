@@ -1,4 +1,8 @@
+import { Content } from "@onlyoffice/documentation-ui-kit"
+import type { JSX } from "preact"
 import { h } from "preact"
+import { Eleventy } from "../../config/context.ts"
+import { Chapter } from "../components/chapter/chapter.ts"
 
 export function data() {
   return {
@@ -6,30 +10,33 @@ export function data() {
   }
 }
 
-export function render({ collections, page, content }) {
-  return content
-  // return (
-  //   <div class="product__main">
-  //     <div class="product__inner">
-  //       <nav class="product-nav">
-  //         {collections.navigation.map((c) => (
-  //           page.url.startsWith(c.link) && (
-  //             <ChapterNavigation
-  //               chapter={c}
-  //               isExpanded={(c) => {
-  //                 return page.url.startsWith(c.link)
-  //               }}
-  //               isCurrent={(c) => {
-  //                 return page.url === c.link
-  //               }}
-  //             />
-  //           )
-  //         ))}
-  //       </nav>
-  //       <main class="product__main2">
-  //         <div class="product__inner2">{content}</div>
-  //       </main>
-  //     </div>
-  //   </div>
-  // )
+export function render(
+  {
+    collections,
+    page,
+    content
+  }: Eleventy.Context
+): JSX.Element {
+  const c = collections.navigation.find((c) => {
+    return page.url.startsWith(c.link)
+  })
+  // todo: check if c is undefined, in ideal case it should never be undefined.
+  return (
+    <Chapter>
+      <Chapter.Navigation
+        chapter={c}
+        isExpanded={(c) => {
+          return page.url.startsWith(c.link)
+        }}
+        isCurrent={(c) => {
+          return page.url === c.link
+        }}
+      />
+      <Chapter.Content>
+        <Content>
+          {content}
+        </Content>
+      </Chapter.Content>
+    </Chapter>
+  )
 }

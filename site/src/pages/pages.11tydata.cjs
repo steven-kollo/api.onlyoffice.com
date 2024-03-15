@@ -1,6 +1,6 @@
 function data() {
   return {
-    layout: "content",
+    layout: "chapter",
     tags: ["navigation"],
     permalink(data) {
       let p = data.page.filePathStem.replace(/^\/pages/, "")

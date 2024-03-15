@@ -1,4 +1,3 @@
-import { Content } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 
@@ -20,7 +19,7 @@ export function CodeDeclaration(
   }: CodeDeclarationParameters
 ): JSX.Element {
   return (
-    <Content>
+    <>
       <h1>{d.title}</h1>
       {d.signature && (
         <CodeDeclarationSignature tokens={d.signature} onLink={link} />
@@ -40,7 +39,7 @@ export function CodeDeclaration(
           onLink={link}
         />
       ))}
-    </Content>
+    </>
   )
 }
 

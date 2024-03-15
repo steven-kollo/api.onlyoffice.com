@@ -1,7 +1,7 @@
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 
-export interface LinksProperties {
+export interface LinksParameters {
   root?: string
 }
 
@@ -15,7 +15,7 @@ const fonts: string[] = [
 export function Links(
   {
     root = "/"
-  }: LinksProperties
+  }: LinksParameters
 ): JSX.Element {
   return (
     <>

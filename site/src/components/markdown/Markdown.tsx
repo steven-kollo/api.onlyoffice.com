@@ -3,14 +3,14 @@ import { Fragment, jsx, jsxs } from "preact/jsx-runtime"
 import type { JSX } from "preact"
 import { process } from "../../../config/markdown.ts"
 
-export interface RootProperties {
+export interface RootParameters {
   children: any
 }
 
 export function Root(
   {
     children
-  }: RootProperties
+  }: RootParameters
 ): JSX.Element {
   const t = process(children)
   return toJsxRuntime(t, { Fragment, jsx, jsxs })
