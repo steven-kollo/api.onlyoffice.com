@@ -15,7 +15,7 @@
         "identifier": "members",
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/animal"
+          "id": "#/components/schemas/animal"
         }
       }
     ]
@@ -30,7 +30,7 @@
       },
       {
         "identifier": "pack",
-        "$ref": "#/components/schemas/pack"
+        "id": "#/components/schemas/pack"
       },
       {
         "identifier": "name",

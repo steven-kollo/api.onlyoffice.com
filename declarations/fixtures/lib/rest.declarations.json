@@ -173,7 +173,7 @@
         "required": true
       }
     ],
-    "body": {
+    "bodyParameters": {
       "type": "object",
       "properties": [
         {
@@ -201,7 +201,7 @@
         "status": 200,
         "description": "Success.",
         "body": {
-          "$ref": "#/components/schemas/animal"
+          "id": "#/components/schemas/animal"
         }
       },
       {
