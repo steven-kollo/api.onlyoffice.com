@@ -524,7 +524,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - the function called when the work with the editor must be ended and the editor must be closed.</p>
+        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - the function called when the user is trying to end the work with the editor and close it by clicking the cross button.
+        If the method is not declared, the <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> parameter will not be available, and
+        the cross button will not be displayed.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestClose = function () {
