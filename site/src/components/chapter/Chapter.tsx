@@ -1,8 +1,7 @@
-import { ChevronRightIcon } from "@onlyoffice/documentation-ui-kit"
+import { ChevronRightIcon, useSlots } from "@onlyoffice/documentation-ui-kit"
 import { clsx } from "clsx"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-import { useSlots } from "../slots.ts"
 
 declare global {
   namespace preact {

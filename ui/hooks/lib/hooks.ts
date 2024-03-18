@@ -1,6 +1,6 @@
 import { isValidElement } from "preact"
 
-// todo: make it normal and extract to a separate file
+// todo: refactor it.
 // https://github.com/primer/react/blob/ea44386e4d7afae7bfd07a679604baaecca55965/packages/react/src/hooks/useSlots.ts#L35
 export function useSlots<C extends Record<string, any>>(children: any, config: C): [C, any] {
   const n = {}

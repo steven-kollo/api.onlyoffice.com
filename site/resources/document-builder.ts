@@ -3,7 +3,7 @@ import { isBuild, isPreview } from "../config/mode.ts"
 
 const require = createRequire(import.meta.url)
 
-const r = isBuild() || isPreview()
+const r = false // isBuild() || isPreview()
   ? require("@onlyoffice/documentation-resources/document-builder.cjs")
   : require("@onlyoffice/documentation-declarations-fixtures/code.js")
 

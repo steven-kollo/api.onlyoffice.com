@@ -4,6 +4,7 @@ export * from "@onlyoffice/documentation-ui-button"
 export * from "@onlyoffice/documentation-ui-code-listing"
 export * from "@onlyoffice/documentation-ui-content"
 export * from "@onlyoffice/documentation-ui-font"
+export * from "@onlyoffice/documentation-ui-hooks"
 export * from "@onlyoffice/documentation-ui-sr-only"
 
 export * from "@onlyoffice/documentation-ui-icon"

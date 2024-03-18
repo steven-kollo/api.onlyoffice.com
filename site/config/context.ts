@@ -1,9 +1,10 @@
 export namespace Eleventy {
   export interface Context {
-    eleventy: any
     collections: any
-    page: any
     content: any
+    eleventy: any
+    page: any
+    pagination: any
 
     title: string
     description: string
