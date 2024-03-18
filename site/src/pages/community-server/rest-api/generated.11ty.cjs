@@ -4,7 +4,7 @@ const { list, retrieve } = require("@/resources/community-server.ts")
 
 function data() {
   return {
-    layout: "rest",
+    layout: "rest-declaration",
     pagination: {
       data: "items",
       size: 1,

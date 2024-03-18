@@ -1,7 +1,22 @@
 import type { REST } from "@onlyoffice/documentation-declarations-types/rest.ts"
 import { Badge, CodeListing } from "@onlyoffice/documentation-ui-kit"
+import { useContext } from "preact/hooks"
 import type { JSX } from "preact"
-import { Fragment, h } from "preact"
+import { Fragment, createContext, h } from "preact"
+import { Callback } from "../callback/callback.ts"
+
+interface RetrieverContext {
+  stack: string[]
+}
+
+const Retriever = createContext<RetrieverContext>({ stack: [] })
+
+export interface DeclarationParameters {
+  declaration: REST.Request
+  onHighlightSyntax: onHighlightSyntax
+  onRenderDescription: onRenderDescription
+  onRetrieve: onRetrieve
+}
 
 interface onHighlightSyntax {
   (
@@ -29,22 +44,17 @@ interface onRetrieve {
   (id: string): REST.Component | undefined
 }
 
-export interface DeclarationParameters {
-  declaration: REST.Request
-  onHighlightSyntax: onHighlightSyntax
-  onRenderDescription: onRenderDescription
-  onRetrieve: onRetrieve
-}
-
 export function Declaration(
   {
     declaration: d,
+    // onHighlightSignature: SignatureHighlight,
+    onHighlightSyntax: SyntaxHighlight,
     onRenderDescription: Description,
     onRetrieve: retrieve
   }: DeclarationParameters
 ): JSX.Element {
   return (
-    <>
+    <Retriever.Provider value={{ stack: [] }}>
       <h1>{d.title}</h1>
       <pre><code>{d.endpoint}</code></pre>
       <h2>Description</h2>
@@ -52,43 +62,31 @@ export function Declaration(
       {d.headerParameters !== undefined && (
         <>
           <h2>Headers</h2>
-          <Properties
-            properties={d.headerParameters}
-            onRetrieve={retrieve}
-          />
+          <Properties properties={d.headerParameters} onRetrieve={retrieve} />
         </>
       )}
       {d.pathParameters !== undefined && (
         <>
           <h2>Path Parameters</h2>
-          <Properties
-            properties={d.pathParameters}
-            onRetrieve={retrieve}
-          />
+          <Properties properties={d.pathParameters} onRetrieve={retrieve} />
         </>
       )}
       {d.queryParameters !== undefined && (
         <>
           <h2>Query Parameters</h2>
-          <Properties
-            properties={d.queryParameters}
-            onRetrieve={retrieve}
-          />
+          <Properties properties={d.queryParameters} onRetrieve={retrieve} />
         </>
       )}
-      {/* {d.bodyParameters !== undefined && (
+      {d.bodyParameters !== undefined && (
         <>
           <h2>Body Parameters</h2>
+          <Value value={d.bodyParameters} onRetrieve={retrieve} />
         </>
-        // <Properties
-        //   properties={d.bodyParameters}
-        //   onRetrieve={retrieve}
-        // />
-      )} */}
+      )}
       {d.examples !== undefined && (
         <>
           <h2>Request Examples</h2>
-          {/* <CodeListing
+          <CodeListing
             groups={d.examples.map((e) => [
               (() => {
                 switch (e.syntax) {
@@ -102,31 +100,89 @@ export function Declaration(
               })(),
               <SyntaxHighlight syntax={e.syntax}>{e.code}</SyntaxHighlight>
             ])}
-          /> */}
+          />
         </>
       )}
-      {/* {d.responses !== undefined && (
+      {d.responses !== undefined && (
         <>
           <h2>Responses</h2>
           {d.responses.map((r) => (
-            <>
-              <h3>Response Status of {r.status}</h3>
-              {r.description !== undefined && (
-                <p>{r.description}</p>
-              )}
-              <Parameters
-                parameters={[{ ...r, identifier: r.contentType }]}
-                onRetrieve={retrieve}
-              />
-            </>
+            <Response key={r.status} response={r} onRetrieve={retrieve} />
           ))}
         </>
-      )} */}
+      )}
+    </Retriever.Provider>
+  )
+}
+
+interface ResponseParameters {
+  response: REST.Response
+  onRetrieve: onRetrieve
+}
+
+function Response(
+  {
+    response: r,
+    onRetrieve: retrieve
+  }: ResponseParameters
+): JSX.Element | null {
+  if ("id" in r) {
+    const retriever = useContext(Retriever)
+    if (retriever.stack.includes(r.id)) {
+      return null
+    }
+    retriever.stack.push(r.id)
+    const d = retrieve(r.id)
+    if (d === undefined) {
+      console.error(`unable to retrieve reference: ${r.id}`)
+      return null
+    }
+    switch (true) {
+    case "status" in d:
+      return (
+        <>
+          <Response response={d} onRetrieve={retrieve} />
+          <Callback cb={() => {
+            retriever.stack.pop()
+          }} />
+        </>
+      )
+    default:
+      console.error("unknown reference type")
+      return null
+    }
+  }
+  return (
+    <>
+      <h3>{ResponseHeading({ status: r.status })}</h3>
+      {r.description !== undefined && (
+        <p>{r.description}</p>
+      )}
+      {r.body !== undefined && (
+        <Value value={r.body} onRetrieve={retrieve} />
+      )}
     </>
   )
 }
 
-interface ValueProperties {
+interface ResponseHeadingParameters {
+  status: number
+}
+
+function ResponseHeading(
+  {
+    status
+  }: ResponseHeadingParameters
+): string {
+  return `${status}`
+  // const s = statuses[status]
+  // if (s === undefined) {
+  //   return `${status}`
+  // }
+  // return `${status} ${s}`
+}
+
+interface ValueParameters {
   value: REST.Value
   onRetrieve: onRetrieve
 }
@@ -135,59 +191,53 @@ function Value(
   {
     value: v,
     onRetrieve: retrieve
-  }: ValueProperties
-): JSX.Element {
+  }: ValueParameters
+): JSX.Element | null {
   if ("id" in v) {
+    const retriever = useContext(Retriever)
+    if (retriever.stack.includes(v.id)) {
+      return null
+    }
+    retriever.stack.push(v.id)
     const d = retrieve(v.id)
     if (d === undefined) {
-      throw new Error(`unable to retrieve reference: ${v.id}`)
+      console.error(`unable to retrieve reference: ${v.id}`)
+      return null
     }
-    // switch (true) {
-    // case "id" in d:
-    // case "type" in d:
-    //   v = {
-    //     identifier: v.identifier,
-    //     ...d
-    //   }
-    //   return (
-    //     <Value
-    //       value={v}
-    //       onRetrieve={retrieve}
-    //     />
-    //   )
-    // default:
-    //   throw new Error("unknown reference type")
-    // }
-    return <></>
+    switch (true) {
+    case "id" in d:
+    case "type" in d:
+      return (
+        <>
+          <Value value={d} onRetrieve={retrieve} />
+          <Callback cb={() => {
+            retriever.stack.pop()
+          }} />
+        </>
+      )
+    default:
+      console.error("unknown reference type")
+      return null
+    }
   }
 
   switch (v.type) {
   case "array":
     return (
       <>
-        {v.description !== undefined && (
-          <p>{v.description}</p>
+        <ValueDescription value={v} />
+        {v.items !== undefined && (
+          <Value value={v.items} onRetrieve={retrieve} />
         )}
-        {/* {v.items !== undefined && (
-          <Value
-            value={v.items}
-            onRetrieve={retrieve}
-          />
-        )} */}
       </>
     )
 
   case "object":
     return (
       <>
-        {v.description !== undefined && (
-          <p>{v.description}</p>
-        )}
+        <ValueDescription value={v} />
         {v.properties !== undefined && (
-          <Properties
-            properties={v.properties}
-            onRetrieve={retrieve}
-          />
+          <Properties properties={v.properties} onRetrieve={retrieve} />
         )}
       </>
     )
@@ -197,16 +247,11 @@ function Value(
   case "number":
   case "string":
   case "unknown":
-    if (v.description === undefined) {
-      return <></>
-    }
-    return (
-      <p>{v.description}</p>
-    )
+    return <ValueDescription value={v} />
   }
 }
 
-interface PropertiesProperties {
+interface PropertiesParameters {
   properties: REST.Property[]
   onRetrieve: onRetrieve
 }
@@ -215,12 +260,13 @@ function Properties(
   {
     properties: l,
     onRetrieve: retrieve
-  }: PropertiesProperties
+  }: PropertiesParameters
 ): JSX.Element {
   return (
     <dl>
       {l.map((p) => (
         <Property
+          key={p}
           property={p}
           onRetrieve={retrieve}
         />
@@ -229,7 +275,7 @@ function Properties(
   )
 }
 
-interface PropertyProperties {
+interface PropertyParameters {
   property: REST.Property
   onRetrieve: onRetrieve
 }
@@ -238,12 +284,18 @@ function Property(
   {
     property: p,
     onRetrieve: retrieve
-  }: PropertyProperties
-): JSX.Element {
+  }: PropertyParameters
+): JSX.Element | null {
   if ("id" in p) {
+    const retriever = useContext(Retriever)
+    if (retriever.stack.includes(p.id)) {
+      return null
+    }
+    retriever.stack.push(p.id)
     const d = retrieve(p.id)
     if (d === undefined) {
-      throw new Error(`unable to retrieve reference: ${p.id}`)
+      console.error(`unable to retrieve reference: ${p.id}`)
+      return null
     }
     switch (true) {
     case "id" in d:
@@ -253,25 +305,22 @@ function Property(
         ...d
       }
       return (
-        <Property
-          property={p}
-          onRetrieve={retrieve}
-        />
+        <>
+          <Property property={p} onRetrieve={retrieve} />
+          <Callback cb={() => {
+            retriever.stack.pop()
+          }} />
+        </>
       )
     default:
-      throw new Error("unknown reference type")
+      console.error("unknown reference type")
+      return null
     }
   }
   return (
     <>
-      <PropertyTerm
-        property={p}
-        onRetrieve={retrieve}
-      />
-      <PropertyDescription
-        property={p}
-        onRetrieve={retrieve}
-      />
+      <PropertyTerm property={p} onRetrieve={retrieve} />
+      <PropertyDescription property={p} onRetrieve={retrieve} />
     </>
   )
 }
@@ -289,7 +338,7 @@ function PropertyTerm(
 ): JSX.Element {
   return (
     <dt>
-      <code>{p.identifier}</code> <TypeBadge type={p} onRetrieve={retrieve} /> <RequiredBadge value={p} />
+      <code>{p.identifier}</code> <TypeBadge type={p} onRetrieve={retrieve} /> <ValueBadge value={p} />
     </dt>
   )
 }
@@ -304,11 +353,17 @@ function PropertyDescription(
     property: p,
     onRetrieve: retrieve
   }: PropertyDescriptionParameters
-): JSX.Element {
+): JSX.Element | null {
   if ("id" in p) {
+    const retriever = useContext(Retriever)
+    if (retriever.stack.includes(p.id)) {
+      return null
+    }
+    retriever.stack.push(p.id)
     const d = retrieve(p.id)
     if (d === undefined) {
-      throw new Error(`unable to retrieve reference: ${p.id}`)
+      console.error(`unable to retrieve reference: ${p.id}`)
+      return null
     }
     switch (true) {
     case "id" in d:
@@ -318,13 +373,16 @@ function PropertyDescription(
         ...d
       }
       return (
-        <PropertyDescription
-          property={p}
-          onRetrieve={retrieve}
-        />
+        <>
+          <PropertyDescription property={p} onRetrieve={retrieve} />
+          <Callback cb={() => {
+            retriever.stack.pop()
+          }} />
+        </>
       )
     default:
-      throw new Error("unknown reference type")
+      console.error("unknown reference type")
+      return null
     }
   }
 
@@ -347,15 +405,8 @@ function PropertyDescription(
   case "object":
     return (
       <dd>
-        {p.description !== undefined && (
-          <p>{p.description}</p>
-        )}
-        <p>
-          <TypeDescription
-            type={p}
-            onRetrieve={retrieve}
-          />
-        </p>
+        <ValueDescription value={p} />
+        <TypeDescription type={p} onRetrieve={retrieve} />
         {p.properties !== undefined && (
           <details>
             <summary>Properties of <code>{p.identifier}</code></summary>
@@ -375,21 +426,45 @@ function PropertyDescription(
   case "unknown":
     return (
       <dd>
-        {p.description !== undefined && (
-          <p>{p.description}</p>
-        )}
-        <p>
-          <TypeDescription
-            type={p}
-            onRetrieve={retrieve}
-          />
-        </p>
+        <ValueDescription value={p} />
+        <TypeDescription type={p} onRetrieve={retrieve} />
       </dd>
     )
 
   default:
-    throw new Error("unknown parameter type")
+    console.error("unknown parameter type")
+    return null
   }
+}
+
+interface ValueBadgeParameters {
+  value: REST.ValueNode
+}
+
+function ValueBadge(
+  {
+    value
+  }: ValueBadgeParameters
+): JSX.Element | null {
+  if (value.required !== true) {
+    return null
+  }
+  return <Badge variant="danger">required</Badge>
+}
+
+interface ValueDescriptionParameters {
+  value: REST.Value
+}
+
+function ValueDescription(
+  {
+    value: v
+  }: ValueDescriptionParameters
+): JSX.Element | null {
+  if (v.description === undefined) {
+    return null
+  }
+  return <p>{v.description}</p>
 }
 
 interface TypeBadgeParameters {
@@ -402,10 +477,10 @@ function TypeBadge(
     type: t,
     onRetrieve: retrieve
   }: TypeBadgeParameters
-): JSX.Element {
+): JSX.Element | null {
   const s = resolve(t)
   if (s === "") {
-    return <></>
+    return null
   }
   return <Badge>{s}</Badge>
 
@@ -413,10 +488,12 @@ function TypeBadge(
     if ("id" in t) {
       const d = retrieve(t.id)
       if (d === undefined) {
-        throw new Error(`unable to retrieve reference: ${t.id}`)
+        console.error(`unable to retrieve reference: ${t.id}`)
+        return ""
       }
       if (!("type" in d)) {
-        throw new Error(`reference does not have a type: ${t.id}`)
+        console.error(`reference does not have a type: ${t.id}`)
+        return ""
       }
       return resolve(d)
     }
@@ -439,29 +516,13 @@ function TypeBadge(
     case "unknown":
       break
     default:
-      throw new Error("unknown parameter type")
+      console.error("unknown parameter type")
+      return ""
     }
 
     return s
   }
 }
-
-interface RequiredBadgeParameters {
-  value: REST.ValueNode
-}
-
-function RequiredBadge(
-  {
-    value
-  }: RequiredBadgeParameters
-): JSX.Element {
-  if (value.required !== true) {
-    return <></>
-  }
-  return <Badge variant="danger">required</Badge>
-}
-
-// Can be one of: 1, 2.
 
 interface TypeDescriptionParameters {
   type: REST.Type
@@ -473,14 +534,16 @@ function TypeDescription(
     type: t,
     onRetrieve: retrieve
   }: TypeDescriptionParameters
-): JSX.Element {
+): JSX.Element | null {
   if ("id" in t) {
     const d = retrieve(t.id)
     if (d === undefined) {
-      throw new Error(`unable to retrieve reference: ${t.id}`)
+      console.error(`unable to retrieve reference: ${t.id}`)
+      return null
     }
     if (!("type" in d)) {
-      throw new Error(`reference does not have a type: ${t.id}`)
+      console.error(`reference does not have a type: ${t.id}`)
+      return null
     }
     return (
       <TypeDescription
@@ -511,5 +574,8 @@ function TypeDescription(
     )
   }
 
-  return <>{d}</>
+  if (d.length === 0) {
+    return null
+  }
+  return <p>{d}</p>
 }

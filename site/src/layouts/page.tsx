@@ -28,9 +28,7 @@ export function render(
           isCurrent={(link) => page.url.startsWith(link)}
         />
       </Page.Header>
-      <div>
-        {content}
-      </div>
+      {content}
       <Page.Footer />
     </Page>
   )
