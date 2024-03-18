@@ -3,11 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build-storybook": "storybook build --disable-telemetry --output-dir dist",
     "build": "node ./makefile.js build",
-    "serve-storybook": "storybook dev --no-open --port 6006",
-    "build-storybook": "storybook build --disable-telemetry --output-dir dist"
+    "preview-storybook": "node ./makefile.js preview-storybook",
+    "serve-storybook": "storybook dev --no-open --port 6006"
   },
   "devDependencies": {
+    "@11ty/eleventy-dev-server": "^1.0.4",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/blocks": "^8.0.0",
     "@storybook/preact": "^8.0.0",
