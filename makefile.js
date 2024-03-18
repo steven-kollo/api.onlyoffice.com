@@ -4,8 +4,8 @@
 import { argv } from "node:process"
 import sade from "sade"
 import * as resources from "./resources/makefile.js"
-import * as iconJS from "./ui/icon-js/makefile.js"
-import * as logoJS from "./ui/logo-js/makefile.js"
+import * as iconJS from "./ui/icon/makefile.js"
+import * as logoJS from "./ui/logo/makefile.js"
 
 /**
  * @returns {void}
