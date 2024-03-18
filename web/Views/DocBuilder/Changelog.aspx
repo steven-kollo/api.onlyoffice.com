@@ -17,6 +17,57 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
+    <p><b>Methods for setting text properties</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getbold") %>">ApiTextPr/GetBold</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getcaps") %>">ApiTextPr/GetCaps</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getcolor") %>">ApiTextPr/GetColor</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getdoublestrikeout") %>">ApiTextPr/GetDoubleStrikeout</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getfontfamily") %>">ApiTextPr/GetFontFamily</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getfontsize") %>">ApiTextPr/GetFontSize</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/gethighlight") %>">ApiTextPr/GetHighlight</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getitalic") %>">ApiTextPr/GetItalic</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getlanguage") %>">ApiTextPr/GetLanguage</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getposition") %>">ApiTextPr/GetPosition</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getshd") %>">ApiTextPr/GetShd</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getsmallcaps") %>">ApiTextPr/GetSmallCaps</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getspacing") %>">ApiTextPr/GetSpacing</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getstrikeout") %>">ApiTextPr/GetStrikeout</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getstyle") %>">ApiTextPr/GetStyle</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getunderline") %>">ApiTextPr/GetUnderline</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getvertalign") %>">ApiTextPr/GetVertAlign</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getbold") %>">ApiTextPr/GetBold</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getcaps") %>">ApiTextPr/GetCaps</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getdoublestrikeout") %>">ApiTextPr/GetDoubleStrikeout</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getfill") %>">ApiTextPr/GetFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getfontfamily") %>">ApiTextPr/GetFontFamily</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getfontsize") %>">ApiTextPr/GetFontSize</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getitalic") %>">ApiTextPr/GetItalic</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getoutline") %>">ApiTextPr/GetOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getsmallcaps") %>">ApiTextPr/GetSmallCaps</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getspacing") %>">ApiTextPr/GetSpacing</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getstrikeout") %>">ApiTextPr/GetStrikeout</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/gettextfill") %>">ApiTextPr/GetTextFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getunderline") %>">ApiTextPr/GetUnderline</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getbold") %>">ApiTextPr/GetBold</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getcaps") %>">ApiTextPr/GetCaps</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getdoublestrikeout") %>">ApiTextPr/GetDoubleStrikeout</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getfill") %>">ApiTextPr/GetFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getfontfamily") %>">ApiTextPr/GetFontFamily</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getfontsize") %>">ApiTextPr/GetFontSize</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/gethighlight") %>">ApiTextPr/GetHighlight</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getitalic") %>">ApiTextPr/GetItalic</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getoutline") %>">ApiTextPr/GetOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getsmallcaps") %>">ApiTextPr/GetSmallCaps</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getspacing") %>">ApiTextPr/GetSpacing</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getstrikeout") %>">ApiTextPr/GetStrikeout</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/gettextfill") %>">ApiTextPr/GetTextFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getunderline") %>">ApiTextPr/GetUnderline</a> method to Presentation API.</li>
+    </ul>
+    <br />
 
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <p><b>Form methods</b></p>
