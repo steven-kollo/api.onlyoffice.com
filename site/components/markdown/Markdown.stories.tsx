@@ -1,6 +1,6 @@
 import type { JSX } from "preact"
 import { h } from "preact"
-import { register } from "../../../config/markdown.ts"
+import { register } from "../../config/markdown.ts"
 import composition from "./fixtures/composition.md?raw"
 import decomposition from "./fixtures/decomposition.md?raw"
 import { Markdown } from "./markdown.ts"

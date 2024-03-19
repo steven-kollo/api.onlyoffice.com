@@ -1,6 +1,6 @@
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-import { Eleventy } from "../../config/context.ts"
+import { Eleventy } from "../config/context.ts"
 import { RESTDeclaration } from "../components/rest-declaration/rest-declaration.ts"
 import { Markdown } from "../components/markdown/markdown.ts"
 import { SyntaxHighlight } from "../components/syntax-highlight/syntax-highlight.ts"

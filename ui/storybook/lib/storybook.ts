@@ -24,3 +24,5 @@ export const Theme = Object.assign(C2.Root, {
   Color: C2.Color,
   Scale: C2.Scale
 })
+
+export * from "./decorators.tsx"

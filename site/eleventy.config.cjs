@@ -31,7 +31,7 @@ function config(uc) {
   return {
     dir: {
       includes: "components",
-      input: "src",
+      input: ".",
       layouts: "layouts",
       output: "dist"
     }

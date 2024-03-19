@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./lib/hooks.ts"
+    ".": "./lib/hooks.ts",
+    "./hooks.ts": "./lib/hooks.ts"
   },
   "devDependencies": {
     "preact": "^10.19.3",

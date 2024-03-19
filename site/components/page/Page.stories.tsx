@@ -1,8 +1,8 @@
 import kit from "@onlyoffice/documentation-ui-kit/kit.css?inline"
 import kitRegular from "@onlyoffice/documentation-ui-kit/kit.regular.css?inline"
-import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
+import { Theme as StorybookTheme, useStyles } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
-import { Fragment, h } from "preact"
+import { h } from "preact"
 import page from "./page.css?inline"
 import pageRegular from "./page.regular.css?inline"
 import { Page } from "./page.ts"
@@ -17,18 +17,15 @@ const styles: string[] = [
 export default {
   title: "Site/Page",
   decorators: [
-    (Story: any): JSX.Element => (
-      <>
-        {styles.map((s) => (
-          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
-        ))}
-        <Story />
-      </>
-    )
+    useStyles(...styles)
   ]
 }
 
-export function Composition(): JSX.Element {
+export function Composition(
+  {
+    children
+  }
+): JSX.Element {
   return (
     <Page>
       <Page.Header>
@@ -41,7 +38,7 @@ export function Composition(): JSX.Element {
         />
       </Page.Header>
       <div>
-        content
+        {children}
       </div>
       <Page.Footer />
     </Page>

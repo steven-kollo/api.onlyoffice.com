@@ -11,7 +11,7 @@ const config: StorybookConfig = {
   ],
   stories: [
     "../ui/*/lib/*.stories.tsx",
-    "../site/src/components/*/*.stories.tsx",
+    "../site/components/*/*.stories.tsx",
     "./*.stories.tsx"
   ],
   staticDirs: [

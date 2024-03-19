@@ -13,13 +13,15 @@
   },
   "include": [
     "../index.d.ts",
-    "./config/**/*",
-    "./resources/**/*",
-    "./src/**/*"
+    "./config",
+    "./resources",
+    "./components",
+    "./layouts",
+    "./main.ts"
   ],
   "exclude": [
     "./dist",
     "./node_modules",
-    "./src/**/fixtures/*"
+    "./**/fixtures"
   ]
 }

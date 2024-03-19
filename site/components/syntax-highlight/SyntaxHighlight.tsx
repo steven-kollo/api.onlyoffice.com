@@ -1,7 +1,7 @@
 import { toJsxRuntime } from "hast-util-to-jsx-runtime"
 import { Fragment, jsx, jsxs } from "preact/jsx-runtime"
 import type { JSX } from "preact"
-import { highlight } from "../../../config/syntax-highlight.ts"
+import { highlight } from "../../config/syntax-highlight.ts"
 
 export interface RootParameters {
   syntax: string

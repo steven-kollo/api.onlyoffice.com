@@ -1,6 +1,6 @@
 import type { JSX } from "preact"
 import { h } from "preact"
-import type { Eleventy } from "../../config/context.ts"
+import type { Eleventy } from "../config/context.ts"
 import { Blank } from "../components/blank/blank.ts"
 
 export function data() {

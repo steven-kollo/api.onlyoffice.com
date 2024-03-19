@@ -1,7 +1,7 @@
 import { Content } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { h } from "preact"
-import { Eleventy } from "../../config/context.ts"
+import { Eleventy } from "../config/context.ts"
 import { Chapter } from "../components/chapter/chapter.ts"
 
 export function data() {
