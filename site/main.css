@@ -1,9 +1,9 @@
 @import "./node_modules/@onlyoffice/documentation-ui-kit/lib/kit.css";
 @import "./node_modules/@onlyoffice/documentation-ui-kit/lib/kit.font.css";
-@import "./components/blank/blank.css";
 @import "./components/chapter/chapter.css";
 @import "./components/page/page.css";
 @import "./components/syntax-highlight/syntax-highlight.css";
+@import "./components/tree/tree.css";
 
 /* todo: temp */
 @import "./regular.css";

@@ -10,12 +10,24 @@ export function data() {
   }
 }
 
-export function render(
+export function render(ctx: Eleventy.Context): JSX.Element {
+  return (
+    <PageLayout {...ctx}>
+      {ctx.content}
+    </PageLayout>
+  )
+}
+
+export interface PageLayoutProperties extends Omit<Eleventy.Context, "content"> {
+  children: any
+}
+
+export function PageLayout(
   {
+    children,
     collections,
-    page,
-    content
-  }: Eleventy.Context
+    page
+  }: PageLayoutProperties
 ): JSX.Element {
   return (
     <Page>
@@ -23,12 +35,19 @@ export function render(
         <Page.HeaderLogo>
           <a href="/"><OnlyofficeLogo /></a>
         </Page.HeaderLogo>
-        <Page.HeaderNavigation
-          nav={collections.navigation}
-          isCurrent={(link) => page.url.startsWith(link)}
-        />
+        <Page.HeaderNavigation>
+          {collections.navigation.map((item) => (
+            <Page.HeaderNavigationLink
+              key={item.link}
+              href={item.link}
+              active={page.url.startsWith(item.link)}
+            >
+              {item.title}
+            </Page.HeaderNavigationLink>
+          ))}
+        </Page.HeaderNavigation>
       </Page.Header>
-      {content}
+      {children}
       <Page.Footer />
     </Page>
   )

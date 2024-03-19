@@ -1,7 +1,8 @@
 import { useSlots } from "@onlyoffice/documentation-ui-kit"
 import { clsx } from "clsx"
 import type { JSX } from "preact"
-import { h } from "preact"
+import { Fragment, h } from "preact"
+import { Clone } from "../clone/clone.ts"
 
 export interface RootParameters {
   children: any
@@ -12,20 +13,31 @@ export function Root(
     children
   }: RootParameters
 ): JSX.Element {
+  const [slots, outer] = useSlots(children, {
+    header: Header,
+    footer: Footer
+  })
   return (
     <div class="page">
-      {children}
+      <Clone class="page__header">
+        {slots.header}
+      </Clone>
+      <div class="page__content">
+        {outer}
+      </div>
+      {slots.footer}
     </div>
   )
 }
 
-export interface HeaderParameters {
-  children: any
+export interface HeaderParameters extends JSX.HTMLAttributes<HTMLElement> {
+  // children: any
 }
 
 export function Header(
   {
-    children
+    children,
+    ...attributes
   }: HeaderParameters
 ): JSX.Element {
   const [slots] = useSlots(children, {
@@ -33,7 +45,7 @@ export function Header(
     nav: HeaderNavigation,
   })
   return (
-    <header class="page-header">
+    <header {...attributes} class={clsx(attributes.class, "page-header")}>
       <div class="page-header__inner">
         <div class="page-header__logo">
           {slots.logo}
@@ -55,32 +67,39 @@ export function HeaderLogo(
     children
   }: HeaderLogoParameters
 ): JSX.Element {
-  return children
+  return <>{children}</>
 }
 
 export interface HeaderNavigationParameters {
-  nav: any[]
-  isCurrent(link: string): boolean
+  children?: any
 }
 
 export function HeaderNavigation(
   {
-    nav,
-    isCurrent
+    children
   }: HeaderNavigationParameters
 ): JSX.Element {
   return (
     <nav class="page-header-nav">
-      {nav.map((item) => (
-        <div class="page-header-nav__container">
-          <a
-            class={clsx("page-header-nav__link", isCurrent(item.link) && "page-header-nav__link_current")}
-            href={item.link}
-          >{item.title}</a>
-        </div>
-      ))}
+      {children}
     </nav>
   )
+}
+
+export interface HeaderNavigationLinkParameters {
+  active?: boolean
+  href?: string
+  children?: any
+}
+
+export function HeaderNavigationLink(
+  {
+    active,
+    href,
+    children
+  }: HeaderNavigationLinkParameters
+): JSX.Element {
+  return <a class={clsx("page-header-nav__link", active && "page-header-nav__link_active")} href={href}>{children}</a>
 }
 
 export function Footer() {

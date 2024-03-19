@@ -2,11 +2,13 @@ import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 
 export function useStyles(...styles: string[]) {
-  styles = [...new Set(styles)]
+  const uniq = styles.filter((s, i, a) => {
+    return a.indexOf(s) === i
+  })
   return [
     (Story: any): JSX.Element => (
       <>
-        {styles.map((s) => (
+        {uniq.map((s) => (
           <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
         ))}
         <Story />

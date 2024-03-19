@@ -9,6 +9,8 @@
   --page-header-navigation-foreground-color: var(--color-scale-gray-8);
   --page-header-navigation-focus-foreground-color: var(--color-scale-orange-1);
 
+  --page-content-background-color: var(--color-scale-black);
+
   --page-footer-background-color: var(--color-scale-gray-1);
   --page-footer-border-color: var(--color-scale-gray-2);
   --page-footer-navigation-foreground-color: var(--color-scale-white);
@@ -27,6 +29,8 @@
     --page-header-border-color: var(--color-scale-gray-2);
     --page-header-navigation-foreground-color: var(--color-scale-gray-8);
     --page-header-navigation-focus-foreground-color: var(--color-scale-orange-1);
+
+    --page-content-background-color: var(--color-scale-black);
 
     --page-footer-background-color: var(--color-scale-gray-1);
     --page-footer-border-color: var(--color-scale-gray-2);
@@ -47,6 +51,8 @@
   --page-header-navigation-foreground-color: var(--color-scale-gray-3);
   --page-header-navigation-focus-foreground-color: var(--color-scale-orange-1);
 
+  --page-content-background-color: var(--color-scale-gray-7);
+
   --page-footer-background-color: var(--color-scale-black);
   --page-footer-border-color: var(--color-scale-black);
   --page-footer-navigation-foreground-color: var(--color-scale-white);
@@ -65,6 +71,8 @@
     --page-header-border-color: var(--color-scale-black);
     --page-header-navigation-foreground-color: var(--color-scale-gray-3);
     --page-header-navigation-focus-foreground-color: var(--color-scale-orange-1);
+
+    --page-content-background-color: var(--color-scale-gray-7);
 
     --page-footer-background-color: var(--color-scale-black);
     --page-footer-border-color: var(--color-scale-black);

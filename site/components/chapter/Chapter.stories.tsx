@@ -1,16 +1,23 @@
 import kit from "@onlyoffice/documentation-ui-kit/kit.css?inline"
 import kitRegular from "@onlyoffice/documentation-ui-kit/kit.regular.css?inline"
-import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
+import { Theme as StorybookTheme, useStyles } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
-import { Fragment, h } from "preact"
-import "./chapter.client.ts"
+import { h } from "preact"
+import { Composition as PageComposition, styles as pageStyles } from "../page/Page.stories.tsx"
+import tree from "../tree/tree.css?inline"
+import treeRegular from "../tree/tree.regular.css?inline"
+import { Tree } from "../tree/tree.ts"
+import "../tree/tree.client.ts"
 import chapter from "./chapter.css?inline"
 import chapterRegular from "./chapter.regular.css?inline"
 import { Chapter } from "./chapter.ts"
 
 const styles: string[] = [
+  ...pageStyles,
   kit,
   kitRegular,
+  tree,
+  treeRegular,
   chapter,
   chapterRegular
 ]
@@ -18,14 +25,7 @@ const styles: string[] = [
 export default {
   title: "Site/Chapter",
   decorators: [
-    (Story: any): JSX.Element => (
-      <>
-        {styles.map((s) => (
-          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
-        ))}
-        <Story />
-      </>
-    )
+    ...useStyles(...styles)
   ]
 }
 
@@ -90,34 +90,30 @@ const c = {
 
 export function Composition(): JSX.Element {
   return (
-    <Chapter>
-      <Chapter.Navigation
-        chapter={c}
-        isExpanded={(c) => {
-          return c.link.startsWith("/third-chapter")
-        }}
-        isCurrent={(c) => {
-          return c.link === "/third-chapter/first-subchapter/first-subsubchapter"
-        }}
-      />
-      <Chapter.Content>
+    <PageComposition>
+      <Chapter>
+        <Chapter.Navigation>
+          <Tree>
+            <Tree.Group>
+              <Tree.Link href="/section">Section</Tree.Link>
+              <Tree.Item>
+                <Tree.Link href="/section/first">First Item</Tree.Link>
+              </Tree.Item>
+              <Tree.Item>
+                <Tree.Link href="/section/second">Second Item</Tree.Link>
+              </Tree.Item>
+              <Tree.Item>
+                <Tree.Link href="/section/third">Third Item</Tree.Link>
+                <Tree.Item>
+                  <Tree.Link href="/section/third/first">First Subitem</Tree.Link>
+                </Tree.Item>
+              </Tree.Item>
+            </Tree.Group>
+          </Tree>
+        </Chapter.Navigation>
         content
-      </Chapter.Content>
-    </Chapter>
-  )
-}
-
-export function Navigation(): JSX.Element {
-  return (
-    <Chapter.Navigation
-      chapter={c}
-      isExpanded={(c) => {
-        return c.link.startsWith("/third-chapter")
-      }}
-      isCurrent={(c) => {
-        return c.link === "/third-chapter/first-subchapter/first-subsubchapter"
-      }}
-    />
+      </Chapter>
+    </PageComposition>
   )
 }
 

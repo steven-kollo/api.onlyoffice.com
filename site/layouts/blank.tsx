@@ -1,22 +1,25 @@
 import type { JSX } from "preact"
 import { h } from "preact"
 import type { Eleventy } from "../config/context.ts"
-import { Blank } from "../components/blank/blank.ts"
+import { PageLayout } from "./page.tsx"
 
 export function data() {
   return {
-    layout: "page"
+    layout: "base"
   }
 }
 
 export function render(
   {
-    content
+    content,
+    ...ctx
   }: Eleventy.Context
 ): JSX.Element {
   return (
-    <Blank>
-      {content}
-    </Blank>
+    <PageLayout {...ctx}>
+      <main>
+        {content}
+      </main>
+    </PageLayout>
   )
 }

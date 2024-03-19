@@ -5,6 +5,5 @@ export type ChapterParameters = T.RootParameters
 export type ChapterNavigationParameters = T.NavigationParameters
 
 export const Chapter = Object.assign(C.Root, {
-  Navigation: C.Navigation,
-  Content: C.Content
+  Navigation: C.Navigation
 })
