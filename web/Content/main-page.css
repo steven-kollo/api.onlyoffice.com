@@ -192,17 +192,13 @@
     text-align: left;
 }
 
-.main-item.docs {
-    order: -1;
-}
-
-.main-item.docs .main-item-links {
+.main-item.docspace .main-item-links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
 }
 
-.main-item.docspace {
+.main-item.docs {
     grid-template-columns: auto 352px;
 }
 
@@ -210,7 +206,7 @@
     grid-template-columns: 352px auto;
 }
 
-.main-item.docspace .main-item-img {
+.main-item.docs .main-item-img {
     order: -1;
 }
 
