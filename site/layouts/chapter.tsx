@@ -18,6 +18,23 @@ export function render(
     ...ctx
   }: Eleventy.Context
 ): JSX.Element {
+  return (
+    <ChapterLayout {...ctx}>
+      {content}
+    </ChapterLayout>
+  )
+}
+
+export interface ChapterLayoutProperties extends Omit<Eleventy.Context, "content"> {
+  children: any
+}
+
+export function ChapterLayout(
+  {
+    children,
+    ...ctx
+  }: ChapterLayoutProperties
+): JSX.Element {
   const c = ctx.collections.navigation.find((c) => {
     return ctx.page.url.startsWith(c.link)
   })
@@ -36,7 +53,7 @@ export function render(
           </Tree>
         </Chapter.Navigation>
         <Content>
-          {content}
+          {children}
         </Content>
       </Chapter>
     </PageLayout>
