@@ -4,6 +4,10 @@
     <span class="hdr">Basic concepts</span>
 </h1>
 
+<%var product = Products.GetSection("docspace", "pluginssdk"); %>
+
+<span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+
 <p>
     <b>DocSpace Plugins SDK</b> allows developers to create their own plugins and add them to the DocSpace portal.
 </p>

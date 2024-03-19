@@ -4,7 +4,9 @@
     <span class="hdr">Basic concepts</span>
 </h1>
 
-<span class="pvl_product">ONLYOFFICE Workspace</span><span class="pvl_version">v<%= Products.Get("portals").Version %></span>
+<%var product = Products.GetSection("portals", "backend"); %>
+
+<span class="pvl_product">ONLYOFFICE Workspace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
 
 <p>
     The ONLYOFFICE Workspace API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
