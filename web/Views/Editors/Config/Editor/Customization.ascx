@@ -596,7 +596,8 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <div class="note">Please note that it will only be available if the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event is set.</div>
+                <div class="note">Please note that it will only be available if the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event is set.
+                If the event is not declared and the <em>close</em> parameter is not specified, the cross button will not be displayed.</div>
                 <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot max-width-832" alt="Cross button in the header" src="<%= Url.Content("~/content/img/editor/cross-button.jpg") %>" />
             </td>
