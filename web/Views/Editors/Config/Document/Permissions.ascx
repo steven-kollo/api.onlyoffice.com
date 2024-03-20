@@ -553,6 +553,7 @@
         var info_object = JSON.parse(permissions);
         config.document.permissions = info_object;
         window.docEditor.destroyEditor();
+        delete config.token;
         $.ajax({
             type: "POST",
             url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
@@ -563,7 +564,7 @@
                 config_global = JSON.parse(data);
                 window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
             }
-        });;
+        });
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);

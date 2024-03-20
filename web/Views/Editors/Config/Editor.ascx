@@ -749,6 +749,7 @@
             var editorConfig_object = JSON.parse(editorConfig);
             editorConfig_object.callbackUrl = config.editorConfig.callbackUrl;
             delete editorConfig_object["actionLink"];
+            delete config.token;
             config.editorConfig = editorConfig_object;
             config.editorConfig.customization = {
                 "integrationMode": "embed"
