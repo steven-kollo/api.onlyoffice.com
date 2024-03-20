@@ -94,7 +94,7 @@
         </tr>
         <tr class="tablerow">
             <td id="token" class="copy-link">token</td>
-            <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a>.</td>
+            <td>Defines the encrypted signature added to the <b>ONLYOFFICE Docs</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a>.</td>
             <td>string</td>
             <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"</td>
         </tr>

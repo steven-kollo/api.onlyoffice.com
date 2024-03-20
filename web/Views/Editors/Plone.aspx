@@ -152,7 +152,7 @@ onlyoffice.plone = 1.0.1
     <ol>
         <li>User navigates to a document within Plone and selects the <b>ONLYOFFICE Edit</b> action.</li>
         <li>
-            <p>Plone prepares a JSON object for the Document Server with the following properties:</p>
+            <p>Plone prepares a JSON object for the ONLYOFFICE Docs with the following properties:</p>
             <ul>
                 <li><b>url</b>: the URL that ONLYOFFICE Docs uses to download the document;</li>
                 <li><b>callbackUrl</b>: the URL that ONLYOFFICE Docs informs about status of the document editing;</li>

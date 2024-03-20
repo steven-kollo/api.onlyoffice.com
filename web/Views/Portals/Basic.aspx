@@ -17,13 +17,13 @@
     <span class="pvl_product">ONLYOFFICE Community Server</span><span class="pvl_version">v<%= Products.Get("portals").Version %></span>
 
     <p>
-        The ONLYOFFICE Community Server API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
+        The ONLYOFFICE Workspace API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
             All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.
     </p>
     <h2>Authentication
     </h2>
     <p>
-        Authentication in the ONLYOFFICE Community Server API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
+        Authentication in the ONLYOFFICE Workspace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
             For information and examples please visit the <a href="<%= Url.Action("auth") %>">Authentication</a> section.
     </p>
     <h2>Making requests
@@ -67,7 +67,7 @@
     </p>
     <h2>Get help</h2>
 
-    <p>If you have any questions about ONLYOFFICE Community Server, try the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
+    <p>If you have any questions about ONLYOFFICE Workspace, try the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
     <p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/CommunityServer/issues" target="_blank">GitHub</a>.</p>
     <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/workspace/33" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 </asp:Content>

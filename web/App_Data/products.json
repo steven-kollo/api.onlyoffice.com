@@ -9,6 +9,10 @@
             {
                "Item1":"Overview",
                "Item2":"basic"
+            },
+            {
+               "Item1":"Get ONLYOFFICE DocSpace",
+               "Item2":"getdocspace"
             }
          ],
          "JavaScript SDK":[

@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
+    <span class="hdr">ONLYOFFICE Docs FAQ: <br />
         Using WOPI</span>
 </h1>
 
@@ -9,7 +9,7 @@
 <dl class="faq_block" id="wopi_1">
     <dt>How to enable WOPI?</dt>
     <dd>
-        <p>To enable WOPI, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> parameter in the Document Server config to <b>true</b>.</p>
+        <p>To enable WOPI, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> parameter in the ONLYOFFICE Docs config to <b>true</b>.</p>
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>
@@ -48,11 +48,11 @@
     </dd>
 </dl>
 <dl class="faq_block" id="wopi_2">
-    <dt>How can I configure the Document Server to accept WOPI requests only from the trusted integrator?</dt>
+    <dt>How can I configure the ONLYOFFICE Docs to accept WOPI requests only from the trusted integrator?</dt>
     <dd>
         <p>The IP address of such the trusted integrator must be included in the <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list" target="_blank">WOPI domain allow list</a>. 
         At the same time, access for all the other integrators must be denied.</p>
-        <p>Follow the steps <a href="<%= Url.Action("wopi/") %>#ip-filter">in this section</a> to configure the Document Server IP filter.</p>
+        <p>Follow the steps <a href="<%= Url.Action("wopi/") %>#ip-filter">in this section</a> to configure the ONLYOFFICE Docs IP filter.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="wopi_3">
@@ -131,7 +131,7 @@ ui=en-us&thm=1&"/&gt;
         <p>To restrict public access to your data, a secure exchange of requests between an online office and an integrator must be configured.</p>
 
         <p>The integrator must check that the request is received from ONLYOFFICE Docs. It uses <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys" target="_blank">proof keys</a> for this purpose. 
-        Document Server signs the request with a private key. The corresponding public key is written in the proof-key element in the <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery XML</a>. 
+        ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery XML</a>. 
         The integrator checks the private key with the public key. The signature is sent with every request in the <b>X-WOPI-Proof</b> and <b>X-WOPI-ProofOld</b> HTTP headers.</p>
         <p>More information about proof keys can be found <a href="<%= Url.Action("wopi/proofkeys") %>">on this page</a>.</p>
     </dd>

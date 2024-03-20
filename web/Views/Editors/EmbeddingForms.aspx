@@ -32,7 +32,7 @@
             <ol>
                 <li>Find and open the <em>index.html</em> file of your ONLYOFFICE Docs.</li>
                 <li>
-                    <p>Connect it to the Document Server API by specifying the path to the API JavaScript file:</p>
+                    <p>Connect it to the ONLYOFFICE Docs API by specifying the path to the API JavaScript file:</p>
                     <pre>
 &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 </pre>
@@ -119,7 +119,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
             <ol>
                 <li>Find and open the <em>index.html</em> file of your ONLYOFFICE Docs.</li>
                 <li>
-                    <p>Connect it to the Document Server API by specifying the path to the API JavaScript file:</p>
+                    <p>Connect it to the ONLYOFFICE Docs API by specifying the path to the API JavaScript file:</p>
                     <pre>
 &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 </pre>

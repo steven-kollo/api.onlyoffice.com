@@ -34,7 +34,7 @@
     </p>
     <p>
         ONLYOFFICE Docs and Mattermost can be installed either on different computers, or on the same machine.
-        If you use one machine, set up a custom port for Document Server.
+        If you use one machine, set up a custom port for ONLYOFFICE Docs.
     </p>
     <p>The easiest way to install an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 

@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Setting avatars</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of setting the avatars for the users in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of setting the avatars for the users in ONLYOFFICE Docs.</p>
     <img alt="Avatars" src="<%= Url.Content("~/content/img/editor/avatars.png") %>" />
     <ol>
         <li>The user sends a request to get a list of users and set their avatars in the <b>document editor</b>.</li>
@@ -96,7 +96,7 @@ docEditor.setUsers({
 </pre>
             <p>
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
         </li>
     </ol>

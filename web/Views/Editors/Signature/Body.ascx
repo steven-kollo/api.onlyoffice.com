@@ -6,12 +6,12 @@
 </h1>
 
 <p class="dscr">
-    When performing the HTTP requests from ONLYOFFICE Document Server the <em>token</em> is added to the parameters to validate the data.
-    When performing the HTTP requests to ONLYOFFICE Document Server the <em>token</em> must be added to the parameters to validate the data.
+    When performing the HTTP requests from ONLYOFFICE Docs the <em>token</em> is added to the parameters to validate the data.
+    When performing the HTTP requests to ONLYOFFICE Docs the <em>token</em> must be added to the parameters to validate the data.
 </p>
 
 <p>
-    Starting from version 5.2, it is possible to use the token in body parameters with <b>Document Server</b>.
+    Starting from version 5.2, it is possible to use the token in body parameters with <b>ONLYOFFICE Docs</b>.
     To enable it set the <em>services.CoAuthoring.token.inbox.inBody</em> and <em>services.CoAuthoring.token.outbox.inBody</em> in configuration file to <b>true</b>.
 </p>
 <p>
@@ -116,7 +116,7 @@ Content-Type: application/json
 </pre>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
         <div class="header-gray">Sample of request to convert the document</div>
         <pre>
@@ -130,7 +130,7 @@ Content-Type: application/json
 </pre>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
     </li>
     <li>
@@ -146,7 +146,7 @@ Content-Type: application/json
 </pre>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
         <div class="header-gray">Sample of request to document builder service</div>
         <pre>
@@ -160,7 +160,7 @@ Content-Type: application/json
 </pre>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
     </li>
 </ul>
@@ -191,9 +191,9 @@ Content-Type: application/json
 </pre>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
-        <p>When performing the GET requests from ONLYOFFICE Document Server an <a href="<%= Url.Action("signature/request") %>">authorization header</a> with the token is added.</p>
+        <p>When performing the GET requests from ONLYOFFICE Docs an <a href="<%= Url.Action("signature/request") %>">authorization header</a> with the token is added.</p>
     </li>
 </ul>

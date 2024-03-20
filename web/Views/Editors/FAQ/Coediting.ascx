@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
+    <span class="hdr">ONLYOFFICE Docs FAQ: <br />
         Co-editing questions</span>
 </h1>
 

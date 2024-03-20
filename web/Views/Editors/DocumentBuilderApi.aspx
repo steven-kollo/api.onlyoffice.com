@@ -17,7 +17,7 @@
     <p class="dscr">
         For the interaction with the <b>web document builder service</b> the POST requests are used.
         The request parameters are entered in JSON format in the request body.
-        The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
     </p>
 
     <h2>Parameters and their description:</h2>
@@ -70,7 +70,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="token" class="copy-link">token</td>
-                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#builder">token</a>.</td>
+                <td>Defines the encrypted signature added to the <b>ONLYOFFICE Docs</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#builder">token</a>.</td>
                 <td>string</td>
                 <td>required by configuration</td>
             </tr>
@@ -108,7 +108,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div class="header-gray">Response format</div>
@@ -149,7 +149,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div class="header-gray">Response example</div>
@@ -188,7 +188,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div class="header-gray">Response format</div>
