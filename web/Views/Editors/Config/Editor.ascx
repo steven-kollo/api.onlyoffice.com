@@ -761,12 +761,12 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
+                    config_global = JSON.parse(data);
                     window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
                 }
             });
             //window.docEditor = new DocsAPI.DocEditor("placeholder", config);
         }
-        config_global = config;
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
