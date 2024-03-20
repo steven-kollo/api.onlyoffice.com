@@ -12,6 +12,11 @@ export async function render(
     content
   }: Eleventy.Context
 ): Promise<string> {
+  // todo: explain. DO NOT DELETE THE HACK BELLOW!
+  await new Promise((res) => {
+    setTimeout(res, 0)
+  })
+
   // todo: validate the context.
   // For example, if description is missing, print an error.
 
