@@ -1196,57 +1196,58 @@ function parseExamples(es) {
  * @returns {string}
  */
 function createTitle(d) {
-  let t = ""
-  switch (d.kind) {
-  // case "alias":
-  case "class":
-    t = d.identifier
-    break
-  case "constructor":
-  case "event":
-    t = createFunctionTitle(d)
-    break
-  // case "initializer":
-  case "instanceMethod":
-    t = createFunctionTitle(d)
-    break
-  case "instanceProperty":
-    t = d.identifier
-    break
-  case "method":
-    // t = createFunctionTitle(d)
-    break
-  case "object":
-    t = d.identifier
-    break
-  case "property":
-    t = d.identifier
-    break
-  // case "staticMethod":
-  // case "staticProperty":
-  case "type":
-    t = d.identifier
-    break
-  }
-  return t
+  return d.identifier
+  // let t = ""
+  // switch (d.kind) {
+  // // case "alias":
+  // case "class":
+  //   t = d.identifier
+  //   break
+  // case "constructor":
+  // case "event":
+  //   t = createFunctionTitle(d)
+  //   break
+  // // case "initializer":
+  // case "instanceMethod":
+  //   t = createFunctionTitle(d)
+  //   break
+  // case "instanceProperty":
+  //   t = d.identifier
+  //   break
+  // case "method":
+  //   // t = createFunctionTitle(d)
+  //   break
+  // case "object":
+  //   t = d.identifier
+  //   break
+  // case "property":
+  //   t = d.identifier
+  //   break
+  // // case "staticMethod":
+  // // case "staticProperty":
+  // case "type":
+  //   t = d.identifier
+  //   break
+  // }
+  // return t
 }
 
-/**
- * @param {ConstructorDeclaration | EventDeclaration | InstanceMethodDeclaration} d
- * @returns {string}
- */
-function createFunctionTitle(d) {
-  let t = `${d.identifier}(`
-  if (d.type.parameters !== undefined) {
-    t += d.type.parameters
-      .map((p) => {
-        return p.name
-      })
-      .join(", ")
-  }
-  t += ")"
-  return t
-}
+// /**
+//  * @param {ConstructorDeclaration | EventDeclaration | InstanceMethodDeclaration} d
+//  * @returns {string}
+//  */
+// function createFunctionTitle(d) {
+//   let t = `${d.identifier}(`
+//   if (d.type.parameters !== undefined) {
+//     t += d.type.parameters
+//       .map((p) => {
+//         return p.name
+//       })
+//       .join(", ")
+//   }
+//   t += ")"
+//   return t
+// }
 
 /**
  * @param {string} s
