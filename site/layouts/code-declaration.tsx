@@ -16,8 +16,8 @@ export function data() {
 export function render(ctx: Eleventy.Context): JSX.Element {
   return (
     <ChapterLayout {...ctx}>
-      {ctx.pagination.items.map((d) => (
-        <Content>
+      <Content>
+        {ctx.pagination.items.map((d) => (
           <CodeDeclaration
             declaration={d}
             onProcessMarkdown={Markdown}
@@ -25,8 +25,8 @@ export function render(ctx: Eleventy.Context): JSX.Element {
             onLink={ctx.onLink}
             onRetrieve={ctx.onRetrieve}
           />
-        </Content>
-      ))}
+        ))}
+      </Content>
     </ChapterLayout>
   )
 }

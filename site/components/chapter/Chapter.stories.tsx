@@ -3,7 +3,7 @@ import kitRegular from "@onlyoffice/documentation-ui-kit/kit.regular.css?inline"
 import { Theme as StorybookTheme, useStyles } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
 import { h } from "preact"
-import { Composition as PageComposition, styles as pageStyles } from "../page/Page.stories.tsx"
+import { default as page, Composition as PageComposition } from "../page/Page.stories.tsx"
 import tree from "../tree/tree.css?inline"
 import treeRegular from "../tree/tree.regular.css?inline"
 import { Tree } from "../tree/tree.ts"
@@ -13,7 +13,7 @@ import chapterRegular from "./chapter.regular.css?inline"
 import { Chapter } from "./chapter.ts"
 
 const styles: string[] = [
-  ...pageStyles,
+  ...page.styles,
   kit,
   kitRegular,
   tree,
@@ -24,6 +24,7 @@ const styles: string[] = [
 
 export default {
   title: "Site/Chapter",
+  styles,
   decorators: [
     ...useStyles(...styles)
   ]
@@ -88,7 +89,15 @@ const c = {
   ]
 }
 
-export function Composition(): JSX.Element {
+export interface CompositionProperties {
+  children: any
+}
+
+export function Composition(
+  {
+    children
+  }: CompositionProperties
+): JSX.Element {
   return (
     <PageComposition>
       <Chapter>
@@ -111,10 +120,14 @@ export function Composition(): JSX.Element {
             </Tree.Group>
           </Tree>
         </Chapter.Navigation>
-        content
+        {children}
       </Chapter>
     </PageComposition>
   )
+}
+
+Composition.args = {
+  children: "content"
 }
 
 const colors: string[] = [

@@ -12,8 +12,9 @@
 .chapter__navigation {
   border-right: solid 1px var(--chapter-navigation-border-color);
   margin-left: var(--c);
-  min-width: calc(var(--temp-left-column-width-size) - 1px);
+  max-width: calc(var(--temp-left-column-width-size) - 1px);
   padding: 20px var(--temp-left-column-padding-size);
+  width: 100%;
 
   position: sticky;
   overflow-y: scroll;

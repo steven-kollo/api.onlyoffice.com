@@ -8,7 +8,7 @@ import page from "./page.css?inline"
 import pageRegular from "./page.regular.css?inline"
 import { Page } from "./page.ts"
 
-export const styles: string[] = [
+const styles: string[] = [
   kit,
   kitRegular,
   page,
@@ -17,6 +17,7 @@ export const styles: string[] = [
 
 export default {
   title: "Site/Page",
+  styles,
   decorators: [
     ...useStyles(...styles)
   ]

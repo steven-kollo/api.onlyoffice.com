@@ -1,3 +1,4 @@
+import { Badge } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 

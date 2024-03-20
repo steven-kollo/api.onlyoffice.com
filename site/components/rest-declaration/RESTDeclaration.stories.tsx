@@ -1,36 +1,38 @@
 import kit from "@onlyoffice/documentation-ui-kit/kit.css?inline"
 import kitRegular from "@onlyoffice/documentation-ui-kit/kit.regular.css?inline"
+import { Content } from "@onlyoffice/documentation-ui-kit"
+import { useStyles } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
-import { Fragment, h } from "preact"
+import { h } from "preact"
+import { default as chapterMeta, Composition as ChapterComposition } from "../chapter/Chapter.stories.tsx"
 import { list, retrieve } from "./fixtures/resource.ts"
 import { RESTDeclaration } from "./rest-declaration.ts"
 
 const styles: string[] = [
+  ...chapterMeta.styles,
   kit,
   kitRegular
 ]
 
 export default {
   title: "Site/RESTDeclaration",
+  styles,
   decorators: [
-    (Story: any): JSX.Element => (
-      <>
-        {styles.map((s) => (
-          <style key={s} dangerouslySetInnerHTML={{ __html: s }} />
-        ))}
-        <Story />
-      </>
-    )
+    ...useStyles(...styles)
   ]
 }
 
 export function Composition(): JSX.Element {
   return (
-    <RESTDeclaration
-      declaration={list()[0]}
-      onHighlightSyntax={({ children }) => children}
-      onRenderDescription={({ children }) => children}
-      onRetrieve={retrieve}
-    />
+    <ChapterComposition>
+      <Content>
+        <RESTDeclaration
+          declaration={list()[0]}
+          onHighlightSyntax={({ children }) => children}
+          onRenderDescription={({ children }) => children}
+          onRetrieve={retrieve}
+        />
+      </Content>
+    </ChapterComposition>
   )
 }

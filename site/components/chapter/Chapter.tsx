@@ -2,12 +2,6 @@ import { useSlots } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 
-export interface Chapter {
-  title: string
-  link: string
-  children?: Chapter[]
-}
-
 export interface RootParameters {
   children: any
 }

@@ -46,13 +46,11 @@ export function Header(
   })
   return (
     <header {...attributes} class={clsx(attributes.class, "page-header")}>
-      <div class="page-header__inner">
-        <div class="page-header__logo">
-          {slots.logo}
-        </div>
-        <div class="page-header__navigation">
-          {slots.nav}
-        </div>
+      <div class="page-header__logo">
+        {slots.logo}
+      </div>
+      <div class="page-header__navigation">
+        {slots.nav}
       </div>
     </header>
   )

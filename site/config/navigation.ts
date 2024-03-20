@@ -20,7 +20,7 @@ interface Context {
 }
 
 const cache = new WeakMap()
-const doCache = isBuild() || isPreview()
+const doCache = true // isBuild() || isPreview()
 
 export function navigationPlugin(uc: UserConfig): void {
   uc.addCollection(navigation.name, (tc) => {

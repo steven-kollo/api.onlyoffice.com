@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "DOCUMENTATION_RUN_MODE=build node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js",
-    "preview": "DOCUMENTATION_RUN_MODE=preview node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js",
-    "serve": "DOCUMENTATION_RUN_MODE=serve node --require esbuild-register ./node_modules/@11ty/eleventy/cmd.js --serve --quiet"
+    "build": "DOCUMENTATION_RUN_MODE=build node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js",
+    "preview": "DOCUMENTATION_RUN_MODE=preview node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js",
+    "serve": "DOCUMENTATION_RUN_MODE=serve node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --serve --quiet"
   },
   "dependencies": {
     "@onlyoffice/documentation-ui-kit": "workspace:^"
