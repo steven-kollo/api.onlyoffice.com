@@ -13,9 +13,10 @@ import { createWriteStream } from "node:fs"
  * @param {string} by
  * @returns {Promise<void>}
  */
-export function sortJSON(from, to, by) {
+export async function sortJSON(from, to, by) {
   const w = createWriteStream(to)
-  return jq(w, [`. |= sort_by(${by})`, from])
+  await jq(w, [`. |= sort_by(${by})`, from])
+  w.close()
 }
 
 /**
@@ -23,30 +24,22 @@ export function sortJSON(from, to, by) {
  * @param {string} to
  * @returns {Promise<void>}
  */
-export function prettifyJSON(from, to) {
+export async function prettifyJSON(from, to) {
   const w = createWriteStream(to)
-  return jq(w, [".", from])
+  await jq(w, [".", from])
+  w.close()
 }
 
 /**
  * @param {WriteStream} w
- * @param {string[]} [args=[]]
+ * @param {string[]} [options=[]]
  * @returns {Promise<void>}
  */
-export function jq(w, args = []) {
-  const a = ["--monochrome-output", ...args]
+export function jq(w, options = []) {
   return new Promise((res, rej) => {
-    const s = spawn("jq", a)
-    s.stdout.on("data", (ch) => {
-      w.write(ch)
-    })
-    s.stdout.on("close", () => {
-      w.close()
-      res(undefined)
-    })
-    s.stdout.on("error", (e) => {
-      w.close()
-      rej(e)
-    })
+    const s = spawn("jq", ["--monochrome-output", ...options])
+    s.on("data", w.write)
+    s.on("close", res)
+    s.on("error", rej)
   })
 }
