@@ -23,7 +23,7 @@
 }
 
 .chapter__content {
-  background-color: white;
+  background-color: var(--chapter-content-background-color);
   padding-bottom: var(--temp-content-bottom-padding-size);
   padding-left: var(--temp-right-column-padding-size);
   padding-right: calc(var(--c) + var(--temp-right-column-padding-size));

@@ -19,6 +19,7 @@ interface Context {
   hierarchy: string[]
 }
 
+// todo: do not use weak map
 const cache = new WeakMap()
 const doCache = true // isBuild() || isPreview()
 

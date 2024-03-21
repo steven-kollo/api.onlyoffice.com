@@ -9,7 +9,7 @@
 }
 
 .page {
-  background-color: var(--page-background-color);
+  /* background-color: var(--page-background-color); */
   /* color: var(--page-foreground-color); */
   display: grid;
   grid-template-rows: min-content 1fr min-content;
