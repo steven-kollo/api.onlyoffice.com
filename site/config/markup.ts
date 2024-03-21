@@ -2,9 +2,12 @@ import { tmpdir } from "node:os"
 import type { UserConfig } from "@11ty/eleventy"
 import { build } from "esbuild"
 import htmlMinifier from "html-minifier-terser"
-import { isValidElement } from "preact"
-import { render } from "preact-render-to-string"
+// import { isValidElement } from "preact"
+// import { render } from "preact-render-to-string"
 import requireFromString from "require-from-string"
+import { read } from "to-vfile"
+import { matter } from "vfile-matter"
+import { remarkPlugins, rehypePlugins } from "../components/markdown/markdown.config.ts"
 import { isBuild, isPreview } from "./mode.ts"
 
 export function markupPlugin(uc: UserConfig): void {
@@ -16,10 +19,9 @@ export function markupPlugin(uc: UserConfig): void {
   uc.addTemplateFormats("mdx")
   uc.addExtension("mdx", {
     outputFileExtension: "html",
-    compile(_, f) {
-      return async (data) => {
+    compile(_: string, f: string) {
+      return async () => {
         const { compile } = await import("@mdx-js/mdx")
-        const { default: remarkGFM } = await import("remark-gfm")
         const r = await build({
           entryPoints: [f],
           format: "cjs",
@@ -33,33 +35,35 @@ export function markupPlugin(uc: UserConfig): void {
                   // todo: explain why this lib
                   // because vfile is already a third-party dependency.
                   // https://www.npmjs.com/package/gray-matter
-                  const { read } = await import("to-vfile")
-                  const { matter } = await import("vfile-matter")
                   let vf = await read(f)
                   matter(vf, { strip: true })
                   vf = await compile(vf.value, {
                     jsxImportSource: "preact",
-                    remarkPlugins: [remarkGFM]
+                    rehypePlugins,
+                    remarkPlugins
                   })
                   return {
                     contents: vf.value
                   }
                 })
-              },
+              }
             }
           ]
         })
         const m = requireFromString(r.outputFiles[0].text)
-        const p = m.default()
-        if (isValidElement(p)) {
-          if (data.layout && (data.layout.endsWith(".jsx") || data.layout.endsWith(".tsx"))) {
-            return p
-          }
-          return render(p)
-        }
-        console.log(data.page)
-        console.log("warn")
-        return ""
+        return m.default()
+        // todo: add validation and error handling.
+        // const p = m.default()
+        // if (isValidElement(p)) {
+        //   if (data.layout && (data.layout.endsWith(".jsx") || data.layout.endsWith(".tsx"))) {
+        //     return p
+        //   }
+        //   // todo: delete it, thrown an error.
+        //   return render(p)
+        // }
+        // console.log(data.page)
+        // console.log("warn")
+        // return ""
       }
     }
   })

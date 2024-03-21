@@ -1,10 +1,10 @@
 import { Theme as StorybookTheme } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-import { register } from "../../config/syntax-highlight.ts"
 import code from "./fixtures/code.js?raw"
 import syntaxHighlight from "./syntax-highlight.css?inline"
 import syntaxHighlightRegular from "./syntax-highlight.regular.css?inline"
+import { register } from "./syntax-highlight.config.ts"
 import { SyntaxHighlight } from "./syntax-highlight.ts"
 
 const styles: string[] = [
