@@ -38,7 +38,9 @@ export async function prettifyJSON(from, to) {
 export function jq(w, options = []) {
   return new Promise((res, rej) => {
     const s = spawn("jq", ["--monochrome-output", ...options])
-    s.on("data", w.write)
+    s.stdout.on("data", (ch) => {
+      w.write(ch)
+    })
     s.on("close", res)
     s.on("error", rej)
   })
