@@ -16,6 +16,7 @@ export function render(ctx: Eleventy.Context): JSX.Element {
   return (
     <ChapterLayout {...ctx}>
       <Content>
+        {ctx.title && <h1>{ctx.title}</h1>}
         {children}
       </Content>
     </ChapterLayout>
