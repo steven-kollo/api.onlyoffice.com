@@ -9,7 +9,7 @@ import { ChapterLayout } from "./chapter.tsx"
 
 export function data() {
   return {
-    layout: "base"
+    layout: "html"
   }
 }
 

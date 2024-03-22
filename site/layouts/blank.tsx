@@ -5,7 +5,7 @@ import { PageLayout } from "./page.tsx"
 
 export function data() {
   return {
-    layout: "base"
+    layout: "html"
   }
 }
 

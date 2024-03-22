@@ -3,7 +3,7 @@
 import { rm } from "node:fs/promises"
 import { join } from "node:path"
 import type { UserConfig } from "@11ty/eleventy"
-import { once } from "@onlyoffice/documentation-utils/once.js"
+import { once } from "@onlyoffice/documentation-utils/once.ts"
 import { rootDir } from "./basedir.ts"
 
 export function cleanPlugin(uc: UserConfig): void {

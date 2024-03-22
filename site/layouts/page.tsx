@@ -6,7 +6,7 @@ import { Page } from "../components/page/page.ts"
 
 export function data() {
   return {
-    layout: "base"
+    layout: "html"
   }
 }
 

@@ -1,12 +1,12 @@
+import { wait } from "@onlyoffice/documentation-utils/wait.ts"
 import { h, isValidElement } from "preact"
 import { renderToString } from "preact-render-to-string"
 import type { Eleventy } from "../config/types.ts"
 import { transformMarkup } from "../config/markup.ts"
 
 export async function render({ content }: Eleventy.Context): Promise<string> {
-  await new Promise((res) => {
-    setTimeout(res, 0)
-  })
+  // See the `layouts/html.tsx` for explanation.
+  await wait()
 
   if (!isValidElement(content)) {
     throw new Error("Invalid element")

@@ -1,4 +1,5 @@
 import { Font } from "@onlyoffice/documentation-ui-kit"
+import { wait } from "@onlyoffice/documentation-utils/wait.ts"
 import { h, isValidElement } from "preact"
 import { renderToString } from "preact-render-to-string"
 import type { Eleventy } from "../config/types.ts"
@@ -13,9 +14,7 @@ export async function render(
   }: Eleventy.Context
 ): Promise<string> {
   // todo: explain. DO NOT DELETE THE HACK BELLOW!
-  await new Promise((res) => {
-    setTimeout(res, 0)
-  })
+  await wait()
 
   // todo: validate the context.
   // For example, if description is missing, print an error.
@@ -23,7 +22,7 @@ export async function render(
   // todo: cache it!
   // const regular = await buildRegularTheme()
 
-  const base = (
+  const html = (
     // todo: do not forget to change the lang after localization.
     <html
       lang="en"
@@ -57,10 +56,10 @@ export async function render(
     </html>
   )
 
-  if (!isValidElement(base)) {
+  if (!isValidElement(html)) {
     throw new Error("Invalid element")
   }
 
-  const c = "<!DOCTYPE html>\n" + renderToString(base)
+  const c = "<!DOCTYPE html>\n" + renderToString(html)
   return transformMarkup(c)
 }
