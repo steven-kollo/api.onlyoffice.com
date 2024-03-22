@@ -327,6 +327,13 @@
                 <label for="editorConfig_customization_logo_url">Url</label>
                 <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url" value="https://example.com">
             </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_logo_visible" name="editorConfig_customization_logo_visible" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_logo_visible">Visible</label>
+                </label>
+            </div>
         </div>
         <div class="line">
             <label class="dataItemSpan">
@@ -469,7 +476,7 @@
 </div>
 
 <note>Please note that only the following parameters are available for the mobile editors: <a href="#close">close</a>, <a href="#feedback">feedback</a>, <a href="#goback">goback</a>,
-<a href="#help">help</a>, <a href="#macrosMode">macrosMode</a>, <a href="#mobileForceView">mobileForceView</a>.</note>
+<a href="#help">help</a>, <a href="#logo">logo</a>, <a href="#macrosMode">macrosMode</a>, <a href="#mobileForceView">mobileForceView</a>.</note>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -1312,7 +1319,7 @@
             <td>"The document is loading, please wait..."</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="logo" class="copy-link">logo<a href="#requiredDescr" class="required">*</a></td>
             <td>
                 Changes the image file at the top left corner of the editor header.
@@ -1350,7 +1357,14 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "https://example.com".
+                        <b>example</b>: "https://example.com";
+                    </li>
+                    <li>
+                        <b>visible</b> - shows or hides the logo. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true.
                     </li>
                 </ul>
             </td>
@@ -1358,8 +1372,14 @@
             <td>{
     "image": "https://example.com/logo.png",
     "imageDark": "https://example.com/dark-logo.png",
-    "url": "https://example.com"
+    "url": "https://example.com",
+    "visible": true
 }</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
@@ -1931,7 +1951,8 @@
             `"logo": {
                 "image": ${getFieldValue("editorConfig_customization_logo_image")},
                 "imageDark": ${getFieldValue("editorConfig_customization_logo_imageDark")},
-                "url": ${getFieldValue("editorConfig_customization_logo_url")}
+                "url": ${getFieldValue("editorConfig_customization_logo_url")},
+                "visible": ${getFieldValue("editorConfig_customization_logo_visible")}
             },
             ` : "";
         var review = getFieldValue("editorConfig_customization_review") ?

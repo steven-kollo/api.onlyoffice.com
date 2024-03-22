@@ -1,6 +1,8 @@
 # Change Log
 
 ##
+- editors: the editorConfig.customization.logo parameter is now available in the mobile editors
+- editors: added the visible field to the editorConfig.customization.logo parameter
 - editors: added the formsubmit action to the WOPI discovery
 - editors: try ppsx
 - editors: added the Save Copy As functionality to WOPI
