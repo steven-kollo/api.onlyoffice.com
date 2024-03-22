@@ -13,10 +13,12 @@
   },
   "include": [
     "../index.d.ts",
-    "./config",
-    "./resources",
     "./components",
+    "./config",
     "./layouts",
+    "./pages",
+    "./resources",
+    "./types/*.d.ts",
     "./main.ts"
   ],
   "exclude": [
