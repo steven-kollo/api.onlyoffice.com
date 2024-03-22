@@ -1,7 +1,7 @@
 import { Font } from "@onlyoffice/documentation-ui-kit"
 import { h, isValidElement } from "preact"
 import { renderToString } from "preact-render-to-string"
-import type { Eleventy } from "../config/context.ts"
+import type { Eleventy } from "../config/types.ts"
 import { transformMarkup } from "../config/markup.ts"
 
 export async function render(

@@ -9,8 +9,11 @@ function data() {
     },
     eleventyComputed: {
       layout(data) {
-        if (data === undefined) {
-          return data
+        if (
+          data === undefined ||
+          data.layout === null
+        ) {
+          return
         }
         // todo: use smarter logic.
         return `${data.layout}.tsx`

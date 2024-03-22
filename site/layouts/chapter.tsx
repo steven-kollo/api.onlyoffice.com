@@ -1,6 +1,6 @@
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-import { Eleventy } from "../config/context.ts"
+import { Eleventy } from "../config/types.ts"
 import { Chapter } from "../components/chapter/chapter.ts"
 import { Tree } from "../components/tree/tree.ts"
 import { PageLayout } from "./page.tsx"

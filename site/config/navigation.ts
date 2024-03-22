@@ -1,3 +1,5 @@
+// todo: replace it with sitemap.
+
 import { extname } from "node:path"
 import type { UserConfig } from "@11ty/eleventy"
 import { isBuild, isPreview } from "./mode.ts"
@@ -59,6 +61,9 @@ function collectNavigation(l: any[]): TemporalNavigationItem {
   }
 
   l.forEach((item) => {
+    if (item.url === "/") {
+      return
+    }
     if (extname(item.outputPath) !== ".html") {
       return
     }
@@ -74,6 +79,10 @@ function collectNavigation(l: any[]): TemporalNavigationItem {
     }
 
     let r = temp.children
+
+    // if (item.url === "/docspace/rest-api/wildlife/") {
+    //   console.log(item)
+    // }
 
     const us = u.split("/")
     us.forEach((s, i) => {
@@ -145,6 +154,7 @@ function preprocessNavigation(ctx: Context, t: TemporalNavigationItem): Temporal
 
   if (t.link === "") {
     t.link = ctx.hierarchy.join("/")
+    // console.log("nav", t.link, t)
     if (!t.link.startsWith("/")) {
       t.link = `/${t.link}`
     }

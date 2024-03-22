@@ -1,8 +1,7 @@
 function data() {
   return {
     title: "Welcome to ONLYOFFICE API",
-    layout: "blank",
-    eleventyExcludeFromCollections: "true",
+    layout: "blank"
   }
 }
 

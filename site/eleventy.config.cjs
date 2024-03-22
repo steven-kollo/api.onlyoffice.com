@@ -13,6 +13,9 @@ const { scriptPlugin } = require("./config/script.ts")
 const { staticPlugin } = require("./config/static.ts")
 const { stylePlugin } = require("./config/style.ts")
 
+const { eleventyPlugin: dataPlugin } = require("./config/data.ts")
+const { eleventyPlugin: sitemapPlugin } = require("./config/sitemap.ts")
+
 /**
  * @param {UserConfig} uc
  * @returns {unknown}
@@ -26,8 +29,13 @@ function config(uc) {
   uc.addPlugin(navigationPlugin)
   uc.addPlugin(syntaxHighlightPlugin)
   uc.addPlugin(previewPlugin)
+
+  uc.addPlugin(dataPlugin)
+  uc.addPlugin(sitemapPlugin)
+
   return {
     dir: {
+      data: "data",
       includes: "components",
       input: ".",
       layouts: "layouts",

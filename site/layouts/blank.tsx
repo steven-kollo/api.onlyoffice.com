@@ -1,6 +1,6 @@
 import type { JSX } from "preact"
 import { h } from "preact"
-import type { Eleventy } from "../config/context.ts"
+import type { Eleventy } from "../config/types.ts"
 import { PageLayout } from "./page.tsx"
 
 export function data() {

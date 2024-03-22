@@ -2,8 +2,8 @@ import { tmpdir } from "node:os"
 import type { UserConfig } from "@11ty/eleventy"
 import { build } from "esbuild"
 import htmlMinifier from "html-minifier-terser"
-// import { isValidElement } from "preact"
-// import { render } from "preact-render-to-string"
+import { isValidElement } from "preact"
+import { render } from "preact-render-to-string"
 import requireFromString from "require-from-string"
 import { read } from "to-vfile"
 import { matter } from "vfile-matter"
@@ -20,7 +20,7 @@ export function markupPlugin(uc: UserConfig): void {
   uc.addExtension("mdx", {
     outputFileExtension: "html",
     compile(_: string, f: string) {
-      return async () => {
+      return async (data) => {
         const { compile } = await import("@mdx-js/mdx")
         const r = await build({
           entryPoints: [f],
@@ -51,19 +51,16 @@ export function markupPlugin(uc: UserConfig): void {
           ]
         })
         const m = requireFromString(r.outputFiles[0].text)
-        return m.default()
-        // todo: add validation and error handling.
-        // const p = m.default()
-        // if (isValidElement(p)) {
-        //   if (data.layout && (data.layout.endsWith(".jsx") || data.layout.endsWith(".tsx"))) {
-        //     return p
-        //   }
-        //   // todo: delete it, thrown an error.
-        //   return render(p)
-        // }
-        // console.log(data.page)
-        // console.log("warn")
-        // return ""
+        const p = m.default()
+        if (isValidElement(p)) {
+          if (data.layout && data.layout.endsWith(".tsx")) {
+            return p
+          }
+          return render(p)
+        }
+        console.log(data.page)
+        console.log("warn")
+        return ""
       }
     }
   })
