@@ -1,8 +1,8 @@
 import { OnlyofficeLogo } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { h } from "preact"
-import type { Eleventy } from "../config/types.ts"
 import { Page } from "../components/page/page.ts"
+import type { Eleventy } from "../config/eleventy.ts"
 
 export function data() {
   return {

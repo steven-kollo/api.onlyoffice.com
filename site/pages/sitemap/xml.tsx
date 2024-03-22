@@ -1,5 +1,5 @@
+import type { Eleventy } from "@/config/eleventy.ts"
 import { list } from "@/config/sitemap.ts"
-import type { Eleventy } from "@/config/types.ts"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 

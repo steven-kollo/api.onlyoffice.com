@@ -1,9 +1,9 @@
 import type { JSX } from "preact"
 import { h } from "preact"
 import { TableOfContents } from "../components/table-of-contents/table-of-contents.ts"
+import type { Eleventy } from "../config/eleventy.ts"
+import { useChildren } from "../config/eleventy.ts"
 import { retrieve } from "../config/sitemap.ts"
-import type { Eleventy } from "../config/types.ts"
-import { useChildren } from "../config/types.ts"
 import { render as ArticleLayout } from "./article.tsx"
 
 export function data() {

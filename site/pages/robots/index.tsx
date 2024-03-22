@@ -1,4 +1,4 @@
-import type { Eleventy } from "@/config/types.ts"
+import type { Eleventy } from "@/config/eleventy.ts"
 import { h } from "preact"
 import { data as sitemapData } from "../sitemap/xml.tsx"
 

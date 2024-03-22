@@ -2,12 +2,12 @@
 
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-import { retrieve } from "../config/sitemap.ts"
-import type { Eleventy } from "../config/types.ts"
-import { useChildren } from "../config/types.ts"
 import { Breadcrumbs as NativeBreadcrumbs } from "../components/breadcrumbs/breadcrumbs.ts"
 import { Chapter } from "../components/chapter/chapter.ts"
 import { Tree } from "../components/tree/tree.ts"
+import type { Eleventy } from "../config/eleventy.ts"
+import { useChildren } from "../config/eleventy.ts"
+import { retrieve } from "../config/sitemap.ts"
 import { PageLayout } from "./page.tsx"
 
 export function data() {

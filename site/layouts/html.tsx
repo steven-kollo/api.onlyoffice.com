@@ -2,7 +2,7 @@ import { Font } from "@onlyoffice/documentation-ui-kit"
 import { wait } from "@onlyoffice/documentation-utils/wait.ts"
 import { h, isValidElement } from "preact"
 import { renderToString } from "preact-render-to-string"
-import type { Eleventy } from "../config/types.ts"
+import type { Eleventy } from "../config/eleventy.ts"
 import { transformMarkup } from "../config/markup.ts"
 
 export async function render(

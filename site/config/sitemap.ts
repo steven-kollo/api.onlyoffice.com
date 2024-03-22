@@ -1,5 +1,5 @@
 import { extname } from "node:path"
-import type { Eleventy } from "./types.ts"
+import type { Eleventy } from "./eleventy.ts"
 
 export type Pages = Page[]
 

@@ -1,8 +1,8 @@
 import { Content } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { h } from "preact"
-import type { Eleventy } from "../config/types.ts"
-import { useChildren } from "../config/types.ts"
+import type { Eleventy } from "../config/eleventy.ts"
+import { useChildren } from "../config/eleventy.ts"
 import { render as ChapterLayout } from "./chapter.tsx"
 
 export function data() {
