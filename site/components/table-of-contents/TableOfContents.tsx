@@ -3,8 +3,8 @@ import { Fragment, h } from "preact"
 import { Callback } from "../callback/callback.ts"
 
 export interface Page {
-  url: string
   title: string
+  url?: string
   children?: string[]
 }
 
@@ -30,7 +30,7 @@ export function Root(
       return <></>
     }
 
-    if (c === depth) {
+    if (c === depth && depth !== -1) {
       return <></>
     }
     c += 1

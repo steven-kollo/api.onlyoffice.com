@@ -1,7 +1,8 @@
 import { Content } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { h } from "preact"
-import { Eleventy } from "../config/types.ts"
+import type { Eleventy } from "../config/types.ts"
+import { useChildren } from "../config/types.ts"
 import { render as ChapterLayout } from "./chapter.tsx"
 
 export function data() {
@@ -11,22 +12,11 @@ export function data() {
 }
 
 export function render(ctx: Eleventy.Context): JSX.Element {
-  return (
-    <ArticleLayout {...ctx}>
-      {ctx.content}
-    </ArticleLayout>
-  )
-}
-
-export interface ArticleLayoutProperties extends Omit<Eleventy.Context, "content"> {
-  children: any
-}
-
-export function ArticleLayout(ctx: ArticleLayoutProperties): JSX.Element {
+  const children = useChildren(ctx)
   return (
     <ChapterLayout {...ctx}>
       <Content>
-        {ctx.children}
+        {children}
       </Content>
     </ChapterLayout>
   )

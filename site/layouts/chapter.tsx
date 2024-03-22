@@ -3,7 +3,8 @@
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 import { retrieve } from "../config/sitemap.ts"
-import { Eleventy, useChildren } from "../config/types.ts"
+import type { Eleventy } from "../config/types.ts"
+import { useChildren } from "../config/types.ts"
 import { Breadcrumbs as NativeBreadcrumbs } from "../components/breadcrumbs/breadcrumbs.ts"
 import { Chapter } from "../components/chapter/chapter.ts"
 import { Tree } from "../components/tree/tree.ts"
@@ -29,7 +30,9 @@ export function render(ctx: Eleventy.Context): JSX.Element {
             {breadcrumbs}
           </Chapter.Breadcrumbs>
         )}
-        {children}
+        <main>
+          {children}
+        </main>
       </Chapter>
     </PageLayout>
   )

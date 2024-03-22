@@ -1,5 +1,5 @@
 import { list } from "@/config/sitemap.ts"
-import { Eleventy } from "@/config/types.ts"
+import type { Eleventy } from "@/config/types.ts"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 
@@ -16,7 +16,7 @@ export function render({ site }: Eleventy.Context): JSX.Element {
   return (
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       {list().map((p) => {
-        if (p.url === "") {
+        if (p.url === undefined) {
           return <></>
         }
         return (

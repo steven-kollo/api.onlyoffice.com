@@ -1,6 +1,7 @@
 import type { JSX } from "preact"
 import { h } from "preact"
 import type { Eleventy } from "../config/types.ts"
+import { useChildren } from "../config/types.ts"
 import { PageLayout } from "./page.tsx"
 
 export function data() {
@@ -9,16 +10,12 @@ export function data() {
   }
 }
 
-export function render(
-  {
-    content,
-    ...ctx
-  }: Eleventy.Context
-): JSX.Element {
+export function render(ctx: Eleventy.Context): JSX.Element {
+  const children = useChildren(ctx)
   return (
     <PageLayout {...ctx}>
       <main>
-        {content}
+        {children}
       </main>
     </PageLayout>
   )
