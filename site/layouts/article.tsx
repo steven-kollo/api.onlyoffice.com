@@ -12,9 +12,21 @@ export function data() {
 
 export function render(ctx: Eleventy.Context): JSX.Element {
   return (
+    <ArticleLayout {...ctx}>
+      {ctx.content}
+    </ArticleLayout>
+  )
+}
+
+export interface ArticleLayoutProperties extends Omit<Eleventy.Context, "content"> {
+  children: any
+}
+
+export function ArticleLayout(ctx: ArticleLayoutProperties): JSX.Element {
+  return (
     <ChapterLayout {...ctx}>
       <Content>
-        {ctx.content}
+        {ctx.children}
       </Content>
     </ChapterLayout>
   )

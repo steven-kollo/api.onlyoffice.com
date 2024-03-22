@@ -1,11 +1,10 @@
-import { Content } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { h } from "preact"
 import { Eleventy } from "../config/types.ts"
 import { CodeDeclaration } from "../components/code-declaration/CodeDeclaration.tsx"
 import { Markdown } from "../components/markdown/markdown.ts"
 import { SyntaxHighlight } from "../components/syntax-highlight/syntax-highlight.ts"
-import { ChapterLayout } from "./chapter.tsx"
+import { ArticleLayout } from "./article.tsx"
 
 export function data() {
   return {
@@ -15,18 +14,16 @@ export function data() {
 
 export function render(ctx: Eleventy.Context): JSX.Element {
   return (
-    <ChapterLayout {...ctx}>
-      <Content>
-        {ctx.pagination.items.map((d) => (
-          <CodeDeclaration
-            declaration={d}
-            onProcessMarkdown={Markdown}
-            onHighlightSyntax={SyntaxHighlight}
-            onLink={ctx.onLink}
-            onRetrieve={ctx.onRetrieve}
-          />
-        ))}
-      </Content>
-    </ChapterLayout>
+    <ArticleLayout {...ctx}>
+      {ctx.pagination.items.map((d) => (
+        <CodeDeclaration
+          declaration={d}
+          onProcessMarkdown={Markdown}
+          onHighlightSyntax={SyntaxHighlight}
+          onLink={ctx.onLink}
+          onRetrieve={ctx.onRetrieve}
+        />
+      ))}
+    </ArticleLayout>
   )
 }
