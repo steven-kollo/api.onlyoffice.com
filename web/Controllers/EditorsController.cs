@@ -130,6 +130,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "Plugins",
                 "ProtectingRanges",
                 "React",
+                "ReactSamples",
+                "ReactSamples/Comments",
+                "ReactSamples/Review",
+                "ReactSamples/Forms",
                 "Redmine",
                 "Rename",
                 "Review",
@@ -473,6 +477,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult React()
         {
             return View();
+        }
+
+        public ActionResult ReactSamples(string catchall)
+        {
+            if (!_actionMap.Contains("reactsamples/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("ReactSamples", (object)catchall);
         }
 
         public ActionResult Redmine()

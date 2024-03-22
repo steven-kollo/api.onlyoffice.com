@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: added the React samples section
 - editors: added the Setting avatars page to How it works
 - editors: try ppsx
 
