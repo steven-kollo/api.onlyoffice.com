@@ -12,6 +12,6 @@ export async function render({ content }: Eleventy.Context): Promise<string> {
     throw new Error("Invalid element")
   }
 
-  let c = '<?xml version="1.0" encoding="utf-8"?>' + renderToString(content)
+  const c = '<?xml version="1.0" encoding="utf-8"?>' + renderToString(content)
   return transformMarkup(c)
 }

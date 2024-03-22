@@ -61,6 +61,6 @@ export async function render(
     throw new Error("Invalid element")
   }
 
-  let c = "<!DOCTYPE html>\n" + renderToString(base)
+  const c = "<!DOCTYPE html>\n" + renderToString(base)
   return transformMarkup(c)
 }
