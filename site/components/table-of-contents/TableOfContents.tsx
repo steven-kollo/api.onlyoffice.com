@@ -52,9 +52,9 @@ export function Root(
     }
     return (
       <li>
-        {p.url === ""
-          ? p.title
-          : <a href={p.url}>{p.title}</a>
+        {p.url
+          ? <a href={p.url}>{p.title}</a>
+          : p.title
         }
         <List url={url} />
       </li>

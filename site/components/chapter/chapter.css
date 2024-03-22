@@ -22,10 +22,14 @@
   top: var(--temp-header-height-size);
 }
 
-.chapter__content {
+.chapter__container {
   background-color: var(--chapter-content-background-color);
   padding-bottom: var(--temp-content-bottom-padding-size);
   padding-left: var(--temp-right-column-padding-size);
   padding-right: calc(var(--c) + var(--temp-right-column-padding-size));
   width: 100%;
+}
+
+.chapter__breadcrumbs {
+  padding-top: 20px;
 }

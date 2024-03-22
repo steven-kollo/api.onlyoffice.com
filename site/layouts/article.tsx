@@ -2,7 +2,7 @@ import { Content } from "@onlyoffice/documentation-ui-kit"
 import type { JSX } from "preact"
 import { h } from "preact"
 import { Eleventy } from "../config/types.ts"
-import { ChapterLayout } from "./chapter.tsx"
+import { render as ChapterLayout } from "./chapter.tsx"
 
 export function data() {
   return {

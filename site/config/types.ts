@@ -5,13 +5,15 @@ export namespace Eleventy {
 
   export interface Context {
     collections: any
-    content: any
+    content?: any
     eleventy: any
     page: any
     pagination: any
 
     title: string
     description: string
+
+    children?: any
   }
 
   // https://github.com/11ty/eleventy/blob/v2.0.1/src/TemplateCollection.js#L5
@@ -29,4 +31,19 @@ export namespace Eleventy {
     url: string
     date: Date
   }
+}
+
+export function useChildren(
+  {
+    children,
+    content
+  }: {
+    children?: any,
+    content?: any
+  }
+): any {
+  if (children !== undefined) {
+    return children
+  }
+  return content
 }

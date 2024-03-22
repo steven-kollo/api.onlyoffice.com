@@ -7,8 +7,9 @@ export type Indexes = Partial<Record<string, number>>
 
 export interface Page {
   title: string
-  url: string
+  url?: string
   date: Date
+  parent?: string
   children?: string[]
 }
 
@@ -73,6 +74,10 @@ function collect(templates: Eleventy.Template[]): [Pages, Indexes] {
   }
 
   function peri(p: Page): void {
+    if (p.url === undefined) {
+      return
+    }
+
     const a = p.url.split("/")
 
     let e = a.length - 1
@@ -91,9 +96,11 @@ function collect(templates: Eleventy.Template[]): [Pages, Indexes] {
     if (i === undefined) {
       i = setup(u)
       pages[i].title = title(u)
-      pages[i].url = ""
+      delete pages[i].url
       // todo: warn.
     }
+
+    p.parent = u
 
     let ch = pages[i].children
     if (ch === undefined) {
@@ -104,6 +111,9 @@ function collect(templates: Eleventy.Template[]): [Pages, Indexes] {
   }
 
   function post(p: Page): void {
+    if ("parent" in p && p.parent === undefined) {
+      delete p.parent
+    }
     if ("children" in p && p.children === undefined) {
       delete p.children
     }
@@ -157,8 +167,9 @@ function title(u: string): string {
 function page(): Page {
   return {
     title: "",
-    url: "",
+    url: undefined,
     date: new Date(),
+    parent: undefined,
     children: undefined
   }
 }

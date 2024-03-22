@@ -1,6 +1,10 @@
+// todo: replace with `config/sitemap.ts`.
+
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
-import { Eleventy } from "../config/types.ts"
+import { retrieve } from "../config/sitemap.ts"
+import { Eleventy, useChildren } from "../config/types.ts"
+import { Breadcrumbs as NativeBreadcrumbs } from "../components/breadcrumbs/breadcrumbs.ts"
 import { Chapter } from "../components/chapter/chapter.ts"
 import { Tree } from "../components/tree/tree.ts"
 import { PageLayout } from "./page.tsx"
@@ -11,49 +15,43 @@ export function data() {
   }
 }
 
-export function render(
-  {
-    content,
-    ...ctx
-  }: Eleventy.Context
-): JSX.Element {
-  return (
-    <ChapterLayout {...ctx}>
-      {content}
-    </ChapterLayout>
-  )
-}
-
-export interface ChapterLayoutProperties extends Omit<Eleventy.Context, "content"> {
-  children: any
-}
-
-export function ChapterLayout(
-  {
-    children,
-    ...ctx
-  }: ChapterLayoutProperties
-): JSX.Element {
-  const c = ctx.collections.navigation.find((c) => {
-    return ctx.page.url.startsWith(c.link)
-  })
-  // todo: check if c is undefined, in ideal case it should never be undefined.
+export function render(ctx: Eleventy.Context): JSX.Element {
+  const children = useChildren(ctx)
+  const breadcrumbs = <Breadcrumbs url={ctx.page.url} />
   return (
     <PageLayout {...ctx}>
       <Chapter>
         <Chapter.Navigation>
-          <Tree>
-            {c.children && c.children.map((c) => (
-              <Tree.Group key={c.link}>
-                <Tree.Link href={c.link} active={ctx.page.url === c.link}>{c.title}</Tree.Link>
-                {c.children && <SubTree {...ctx} chapter={c} />}
-              </Tree.Group>
-            ))}
-          </Tree>
+          <Navigation {...ctx} />
         </Chapter.Navigation>
+        {breadcrumbs && (
+          <Chapter.Breadcrumbs>
+            {breadcrumbs}
+          </Chapter.Breadcrumbs>
+        )}
         {children}
       </Chapter>
     </PageLayout>
+  )
+}
+
+function Navigation(ctx: Omit<Eleventy.Context, "children">): JSX.Element | null {
+  const c = ctx.collections.navigation.find((c) => {
+    return ctx.page.url.startsWith(c.link)
+  })
+  if (c === undefined) {
+    return null
+  }
+  // todo: check if c is undefined, in ideal case it should never be undefined.
+  return (
+    <Tree>
+      {c.children && c.children.map((c) => (
+        <Tree.Group key={c.link}>
+          <Tree.Link href={c.link} active={ctx.page.url === c.link}>{c.title}</Tree.Link>
+          {c.children && <SubTree {...ctx} chapter={c} />}
+        </Tree.Group>
+      ))}
+    </Tree>
   )
 }
 
@@ -72,5 +70,43 @@ function SubTree(
         </Tree.Item>
       ))}
     </>
+  )
+}
+
+interface BreadcrumbsProperties {
+  url: string
+}
+
+function Breadcrumbs({ url }: BreadcrumbsProperties): JSX.Element | null {
+  const crumbs: JSX.Element[] = []
+
+  let u = url
+  while (true) {
+    const p = retrieve(u)
+    if (p === undefined) {
+      break
+    }
+    crumbs.unshift(
+      <NativeBreadcrumbs.Crumb
+        active={p.url === url}
+        href={p.url}
+      >
+        {p.title}
+      </NativeBreadcrumbs.Crumb>
+    )
+    if (p.parent === undefined) {
+      break
+    }
+    u = p.parent
+  }
+
+  if (crumbs.length === 0) {
+    return null
+  }
+
+  return (
+    <NativeBreadcrumbs>
+      {crumbs}
+    </NativeBreadcrumbs>
   )
 }

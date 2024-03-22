@@ -12,16 +12,20 @@ export function Root(
   }: RootParameters
 ): JSX.Element {
   const [slots, outer] = useSlots(children, {
-    nav: Navigation
+    nav: Navigation,
+    breadcrumbs: Breadcrumbs
   })
   return (
     <div class="chapter">
       <div class="chapter__navigation">
         {slots.nav}
       </div>
-      <main class="chapter__content">
+      <div class="chapter__container">
+        <div class="chapter__breadcrumbs">
+          {slots.breadcrumbs}
+        </div>
         {outer}
-      </main>
+      </div>
     </div>
   )
 }
@@ -31,6 +35,18 @@ export interface NavigationParameters {
 }
 
 export function Navigation(
+  {
+    children
+  }: NavigationParameters
+): JSX.Element {
+  return <>{children}</>
+}
+
+export interface BreadcrumbsParameters {
+  children: any
+}
+
+export function Breadcrumbs(
   {
     children
   }: NavigationParameters
