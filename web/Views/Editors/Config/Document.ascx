@@ -197,7 +197,8 @@
 <script type="text/javascript">
     handleSelects();
 
-    var config_csv = <%= Config.Serialize(
+    
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -227,9 +228,11 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
+    }) %>);
+    var config_csv = config;
+    var config_csv_copy = copy;
 
-    var config_xlsx = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -259,17 +262,62 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
+    }) %>);
+   
+    var config_xlsx = config;
+    var config_xlsx_copy = copy;
+
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "xls",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx",
+                Info = new Config.DocumentConfig.InfoConfig()
+            },
+        DocumentType = "cell",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>);
+
+    var config_xls = config;
+    var config_xls_copy = copy;
+
+    const deepCopies = {
+        csv: config_csv_copy,
+        xlsx: config_xlsx_copy,
+        xls: config_xls_copy
+    };
+
     var config = config_xlsx;
     window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
-    var config_global = "";
     var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
 
     $(".copyConfig").click(function () {
-        var json = JSON.stringify(config_global, null, '\t');
+        var currentConfigName = getFieldValue("document_file_type").replaceAll(`"`, "");
+        var json = JSON.stringify(deepCopies[currentConfigName], null, '\t');
         var html = createConfigHTML(editor_url, json);
         copyConfigToClipboard(html);
     })
@@ -320,16 +368,24 @@
             var document_object = JSON.parse(document_string);
             if (document_object.fileType == 'csv') {
                 config = config_csv;
-            } else {
+            } else if (document_object.fileType == 'xlsx') {
                 config = config_xlsx;
+            } else {
+                config = config_xls;
             }
+           
             config.document.title = document_object.title;
+            deepCopies[document_object.fileType].document.title = document_object.title;
             window.docEditor.destroyEditor();
             window.docEditor = new DocsAPI.DocEditor("placeholder", config);
         }
-        config_global = config;
+
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
+    }
+
+    function itterateProperties(object) {
+        console.log(object);
     }
 </script>
