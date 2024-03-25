@@ -283,10 +283,6 @@
     background-repeat: no-repeat;
 }
 
-.theme-dark .ocr {
-    background-image: url("img/plugin/ocr-dark.svg");
-}
-
 .photo-editor-example {
     background-image: url("img/plugin/photoeditor.svg");
     background-repeat: no-repeat;
