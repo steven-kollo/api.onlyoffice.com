@@ -522,7 +522,7 @@
 <script type="text/javascript">
     handleSelects();
     // Editor window
-    var config = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -552,15 +552,14 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
+    }) %>);
     window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 <script>
-    var config_global = "";
     var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
 
     $(".copyConfig").click(function () {
-        var json = JSON.stringify(config_global, null, '\t');
+        var json = JSON.stringify(copy, null, '\t');
         var html = createConfigHTML(editor_url, json);
         copyConfigToClipboard(html);
     })
@@ -750,6 +749,10 @@
             editorConfig_object.callbackUrl = config.editorConfig.callbackUrl;
             delete editorConfig_object["actionLink"];
             delete config.token;
+            copy.editorConfig = editorConfig_object;
+            copy.editorConfig.customization = {
+                "integrationMode": "embed"
+            }
             config.editorConfig = editorConfig_object;
             config.editorConfig.customization = {
                 "integrationMode": "embed"
@@ -758,11 +761,12 @@
             $.ajax({
                 type: "POST",
                 url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
-                data: JSON.stringify({ jsonConfig: JSON.stringify(config) }),
+                data: JSON.stringify({ jsonConfig: JSON.stringify(copy) }),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                    config_global = JSON.parse(data);
+                    config = JSON.parse(data);
+                    copy = JSON.parse(data);
                     window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
                 }
             });
