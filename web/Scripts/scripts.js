@@ -435,3 +435,12 @@ function copyConfigMouseLeave() {
     document.getElementById("tooltiptext-hover").style = "display: inline;";
     document.getElementById("tooltiptext-click").style = "display: none;";
 }
+
+function deepCopyConfig(config) {
+    const copy = JSON.parse(JSON.stringify(config));
+    const result = {
+        config: config,
+        copy: copy
+    };
+    return result;
+}

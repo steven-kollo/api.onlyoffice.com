@@ -140,8 +140,8 @@
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
     handleSelects();
-    // Editor window
-    var config_word = <%= Config.Serialize(
+
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
         new Config {
             Document = new Config.DocumentConfig
                 {
@@ -171,10 +171,11 @@
                 },
             Height = "550px",
             Width = "100%"
-        }) %>;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config_word);
+        }) %>);
+    var config_word = config;
+    var config_word_copy = copy;
 
-    var config_cell = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
         new Config {
             Document = new Config.DocumentConfig
                 {
@@ -204,9 +205,11 @@
                 },
             Height = "550px",
             Width = "100%"
-        }) %>;
+        }) %>);
+    var config_cell = config;
+    var config_cell_copy = copy;
 
-    var config_slide = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
         new Config {
             Document = new Config.DocumentConfig
                 {
@@ -236,9 +239,11 @@
                 },
             Height = "550px",
             Width = "100%"
-        }) %>;
+        }) %>);
+    var config_slide = config;
+    var config_slide_copy = copy;
 
-    var config_pdf = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -268,15 +273,27 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
+    }) %>);
+    var config_pdf = config;
+    var config_pdf_copy = copy;
+
+    const deepCopies = {
+        word: config_word_copy,
+        cell: config_cell_copy,
+        slide: config_slide_copy,
+        pdf: config_pdf_copy
+    }
+
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config_word);
 </script>
 
 <script>
-    var config_global = "";
+
     var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
 
     $(".copyConfig").click(function () {
-        var json = JSON.stringify(config_global, null, '\t');
+        var currentConfigName = getFieldValue("config_documentType").replaceAll(`"`, "");
+        var json = JSON.stringify(deepCopies[currentConfigName], null, '\t');
         var html = createConfigHTML(editor_url, json);
         copyConfigToClipboard(html);
     })
@@ -302,7 +319,6 @@
     function updateConfig() {
         var config_str = `{
             "documentType": ${getFieldValue("config_documentType")},
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
             "type": ${getFieldValue("config_type")},
             "height": ${getFieldValue("config_height")},
             "width": ${getFieldValue("config_width")}     
@@ -327,11 +343,17 @@
         config.type = config_object.type;
         config.height = config_object.height;
         config.width = config_object.width;
+
+        deepCopies[config_object.documentType].documentType = config_object.documentType;
+        deepCopies[config_object.documentType].type = config_object.type;
+        deepCopies[config_object.documentType].height = config_object.height;
+        deepCopies[config_object.documentType].width = config_object.width;
+
         window.docEditor.destroyEditor();
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-        config_global = config;
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
+        console.log(config_word_copy);
     }
 </script>
