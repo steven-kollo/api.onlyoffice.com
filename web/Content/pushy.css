@@ -134,11 +134,11 @@
 }
 
 .pushy-dropdown a.docbuilder::before {
-    background-image: url("img/header/docbuilder.svg");
+    background-image: url("img/header/doc-builder.svg");
 }
 
 .theme-dark .pushy-dropdown a.docbuilder::before {
-    background-image: url("img/header/docbuilder-dark.svg");
+    background-image: url("img/header/doc-builder-dark.svg");
 }
 
 .pushy-dropdown a.desktop::before {
@@ -170,11 +170,11 @@
 }
 
 .pushy-dropdown a.apisystem::before {
-    background-image: url("img/header/api-system.svg");
+    background-image: url("img/header/seld-hosted.svg");
 }
 
 .theme-dark .pushy-dropdown a.apisystem::before {
-    background-image: url("img/header/api-system-dark.svg");
+    background-image: url("img/header/seld-hosted-dark.svg");
 }
 
 .pushy-dropdown a.editors::before {
