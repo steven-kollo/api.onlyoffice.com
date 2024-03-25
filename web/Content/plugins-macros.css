@@ -21,7 +21,8 @@
 .macro-info > a {
     position: relative;
     display: block;
-    padding-bottom: 38.76%;
+    margin-bottom: 32px;
+    padding-bottom: 38.39%;
 }
 
 .macro-info p {
@@ -329,7 +330,7 @@
     border: 1px solid var(--color-border-decimal);
     box-sizing: border-box;
     border-radius: 3px;
-    padding: 24px;
+    padding: 23px;
     margin: 0;
     height: 100%;
     list-style-type: none;
