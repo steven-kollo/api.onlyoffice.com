@@ -161,11 +161,11 @@
 }
 
 .category-item-title.docbuilder:before {
-    background-image: url("img/category-page/docbuilder.svg");
+    background-image: url("img/category-page/doc-builder.svg");
 }
 
 .theme-dark .category-item-title.docbuilder:before {
-    background-image: url("img/category-page/docbuilder-dark.svg");
+    background-image: url("img/category-page/doc-builder-dark.svg");
 }
 
 .category-item-title.desktop:before {
@@ -187,11 +187,11 @@
 }
 
 .category-item-title.apisystem:before {
-    background-image: url("img/category-page/hosting-providers.svg");
+    background-image: url("img/category-page/self-hosted.svg");
 }
 
 .theme-dark .category-item-title.apisystem:before {
-    background-image: url("img/category-page/hosting-providers-dark.svg");
+    background-image: url("img/category-page/self-hosted-dark.svg");
 }
 
 .category-item-title.officeapi:before {
