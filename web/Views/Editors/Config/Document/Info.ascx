@@ -298,7 +298,7 @@
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
     // Editor window
-    var config = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -328,16 +328,15 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
+    }) %>);
     window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
-    var config_global = "";
     var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
 
     $(".copyConfig").click(function () {
-        var json = JSON.stringify(config_global, null, '\t');
+        var json = JSON.stringify(copy, null, '\t');
         var html = createConfigHTML(editor_url, json);
         copyConfigToClipboard(html);
     })
@@ -461,9 +460,9 @@
 `;
         var info_object = JSON.parse(info);
         config.document.info = info_object;
+        copy.document.info = info_object;
         window.docEditor.destroyEditor();
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-        config_global = config;
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
