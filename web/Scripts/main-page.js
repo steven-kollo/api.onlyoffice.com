@@ -25,26 +25,26 @@
 
 function adaptiveSvgPath() {
 	if ($(window).width() > 1250) {
-		const docsBlockHeight = Number($(".main-item.docs").outerHeight(true).toFixed()) + 327;
-		const mainItemInnerHeightDocs = $(".main-item.docs .main-item-inner").outerHeight(true).toFixed();
-		const pathDocs = `M96.5 ${Number($(".main-item.docs .main-item-wrapper").outerHeight(true).toFixed()) + 327}V${380 + Number(mainItemInnerHeightDocs)}L63.5 ${354 + Number(mainItemInnerHeightDocs)}V310`;
-
-		$(".line.line-1 svg").attr("height", docsBlockHeight).attr("viewBox", `0 0 109 ${docsBlockHeight}`);
-		$(".path-line-1").attr("d", pathDocs);
-		$(".line-ellipse.line-1-ellipse-4").css("offset-path", "path('" + pathDocs + "')");
-		$(".line-circle.line-1-circle-2").css("offset-path", "path('" + pathDocs + "')");
-		$(".line-ellipse.line-1-ellipse-4").css("top", $(".main-item-links.docs li:first-child a").position().top - (Number($(".main-item.docs .main-item-wrapper").outerHeight(true).toFixed()) - 48));
-
-		const docspaceBlockHeight = Number($(".main-item.docspace").outerHeight(true).toFixed()) + 317;
+		const docspaceBlockHeight = Number($(".main-item.docspace").outerHeight(true).toFixed()) + 327;
 		const mainItemInnerHeightDocspace = $(".main-item.docspace .main-item-inner").outerHeight(true).toFixed();
-		const pathDocspace = `M94.5 ${Number($(".main-item.docspace .main-item-wrapper").outerHeight(true).toFixed()) + 281}V${368 + Number(mainItemInnerHeightDocspace)}L61.5 ${344 + Number(mainItemInnerHeightDocspace)}V334`;
+		const pathDocspace = `M96.5 ${Number($(".main-item.docspace .main-item-wrapper").outerHeight(true).toFixed()) + 327}V${380 + Number(mainItemInnerHeightDocspace)}L63.5 ${354 + Number(mainItemInnerHeightDocspace)}V310`;
 
-		$(".line.line-2 svg").attr("height", docspaceBlockHeight).attr("viewBox", `0 0 106 ${docspaceBlockHeight}`);
-		$(".path-line-2").attr("d", pathDocspace);
-		$(".line-ellipse.line-2-ellipse-3").css("offset-path", "path('" + pathDocspace + "')");
-		$(".line-circle.line-2-circle-2").css("offset-path", "path('" + pathDocspace + "')");
-		$(".path-line-2-2").attr("d", `M62 ${Number(mainItemInnerHeightDocspace) + Number("344")}V279`);
-		$(".line-ellipse.line-2-ellipse-3").css("top", $(".main-item-links.docspace li:first-child a").position().top - (Number($(".main-item.docspace .main-item-wrapper").outerHeight(true).toFixed()) - 55));
+		$(".line.line-1 svg").attr("height", docspaceBlockHeight).attr("viewBox", `0 0 109 ${docspaceBlockHeight}`);
+		$(".path-line-1").attr("d", pathDocspace);
+		$(".line-ellipse.line-1-ellipse-4").css("offset-path", "path('" + pathDocspace + "')");
+		$(".line-circle.line-1-circle-2").css("offset-path", "path('" + pathDocspace + "')");
+		$(".line-ellipse.line-1-ellipse-4").css("top", $(".main-item-links.docspace li:first-child a").position().top - (Number($(".main-item.docspace .main-item-wrapper").outerHeight(true).toFixed()) - 48));
+
+		const docsBlockHeight = Number($(".main-item.docs").outerHeight(true).toFixed()) + 317;
+		const mainItemInnerHeightDocs = $(".main-item.docs .main-item-inner").outerHeight(true).toFixed();
+		const pathDocs = `M94.5 ${Number($(".main-item.docs .main-item-wrapper").outerHeight(true).toFixed()) + 281}V${368 + Number(mainItemInnerHeightDocs)}L61.5 ${344 + Number(mainItemInnerHeightDocs)}V334`;
+
+		$(".line.line-2 svg").attr("height", docsBlockHeight).attr("viewBox", `0 0 106 ${docsBlockHeight}`);
+		$(".path-line-2").attr("d", pathDocs);
+		$(".line-ellipse.line-2-ellipse-3").css("offset-path", "path('" + pathDocs + "')");
+		$(".line-circle.line-2-circle-2").css("offset-path", "path('" + pathDocs + "')");
+		$(".path-line-2-2").attr("d", `M62 ${Number(mainItemInnerHeightDocs) + Number("344")}V279`);
+		$(".line-ellipse.line-2-ellipse-3").css("top", $(".main-item-links.docs li:first-child a").position().top - (Number($(".main-item.docs .main-item-wrapper").outerHeight(true).toFixed()) - 55));
 
 		const portalsBlockHeight = Number($(".main-item.portals").outerHeight(true).toFixed()) + 103;
 		const mainItemInnerHeightPortals = $(".main-item.portals .main-item-inner").outerHeight(true).toFixed();
@@ -89,8 +89,8 @@ $(window).on("load", function() {
 		}
 	};
 
-	handleMouseMoveEllipse($(".main-item-links.docs li a"), $(".line-ellipse.line-1-ellipse-4"), Number($(".main-item.docs .main-item-wrapper").outerHeight(true).toFixed()) - 48);
-	handleMouseMoveEllipse($(".main-item-links.docspace li a"), $(".line-ellipse.line-2-ellipse-3"), Number($(".main-item.docspace .main-item-wrapper").outerHeight(true).toFixed()) - 55);
+	handleMouseMoveEllipse($(".main-item-links.docspace li a"), $(".line-ellipse.line-1-ellipse-4"), Number($(".main-item.docspace .main-item-wrapper").outerHeight(true).toFixed()) - 48);
+	handleMouseMoveEllipse($(".main-item-links.docs li a"), $(".line-ellipse.line-2-ellipse-3"), Number($(".main-item.docs .main-item-wrapper").outerHeight(true).toFixed()) - 55);
 	handleMouseMoveEllipse($(".main-item-links.portals li a"), $(".line-ellipse.line-3-ellipse-3"), Number($(".main-item.portals .main-item-wrapper").outerHeight(true).toFixed()) - 53);
 
 	function createIntersectionObserver(selector, callback) {

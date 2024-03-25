@@ -410,11 +410,11 @@
 }
 
 .main-item-links a.docbuilder:before {
-    background-image: url("img/main-page/docbuilder.svg");
+    background-image: url("img/main-page/doc-builder.svg");
 }
 
 .theme-dark .main-item-links a.docbuilder:before {
-    background-image: url("img/main-page/docbuilder-dark.svg");
+    background-image: url("img/main-page/doc-builder-dark.svg");
 }
 
 .main-item-links a.desktop:before {
@@ -436,19 +436,19 @@
 }
 
 .main-item-links a.apisystem:before {
-    background-image: url("img/main-page/hosting-providers.svg");
+    background-image: url("img/main-page/self-hosted.svg");
 }
 
 .theme-dark .main-item-links a.apisystem:before {
-    background-image: url("img/main-page/hosting-providers-dark.svg");
+    background-image: url("img/main-page/self-hosted-dark.svg");
 }
 
 .main-item-links a.officeapi:before {
-    background-image: url("img/main-page/office-api.svg");
+    background-image: url("img/main-page/api.svg");
 }
 
 .theme-dark .main-item-links a.officeapi:before {
-    background-image: url("img/main-page/office-api-dark.svg");
+    background-image: url("img/main-page/api-dark.svg");
 }
 
 .main-item-links a.editors:before {
@@ -540,18 +540,21 @@
         margin-right: 12px;
     }
 
+    .main-item.docs {
+        grid-template-columns: initial;
+    }
+
     .main-item.docs .main-item-links {
         grid-template-columns: repeat(3, 1fr);
         gap: 4px;
     }
 
-    .main-item.docspace,
-    .main-item.portals {
-        grid-template-columns: initial;
+    .main-item.docs .main-item-img {
+        order: initial;
     }
 
-    .main-item.docspace .main-item-img {
-        order: initial;
+    .main-item.portals {
+        grid-template-columns: initial;
     }
 
     .main-item-links {
@@ -581,7 +584,12 @@
         padding: 4px 0;
     }
 
-    .main-item.docs .main-item-links {
+    .main-item.docs .main-item-img {
+        order: initial;
+    }
+
+    .main-item.docs .main-item-links,
+    .main-item.docspace .main-item-links {
         grid-template-columns: initial;
     }
 
