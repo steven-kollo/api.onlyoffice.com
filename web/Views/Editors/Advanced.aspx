@@ -161,7 +161,8 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://example.com"
+                "url": "https://example.com",
+                "visible": true
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#macros">macros</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#macrosMode">macrosMode</a>": "warn",

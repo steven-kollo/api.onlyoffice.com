@@ -18,6 +18,8 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
+        <li>The <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter is now available for the mobile editors.</li>
+        <li>Added the <em>visible</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter.</li>
         <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#formsubmit">formsubmit</a> action to the WOPI discovery.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#goback">editorConfig.customization.goback.requestClose</a> field is deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> field instead.</li>
         <li>Added the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>#save-as">Save Copy As</a> functionality to WOPI.</li>
