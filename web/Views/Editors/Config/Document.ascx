@@ -321,7 +321,7 @@
         var html = createConfigHTML(editor_url, json);
         copyConfigToClipboard(html);
     })
-    $(".tooltip").mouseleave(copyConfigMouseLeave());
+    $(".tooltip").mouseleave(copyConfigMouseLeave);
 </script>
 
 <script>
