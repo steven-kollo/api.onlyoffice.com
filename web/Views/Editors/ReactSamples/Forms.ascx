@@ -46,29 +46,29 @@ return (
 </pre>
         <ul>
             <li>When a user of the React application types any value in the input field,
-                the <a href="<%= Url.Action("executemethod/text/getformsbytag", "plugin") %>">executeMethod.GetFormsByTag</a> method is executed
+                the <a href="<%= Url.Action("executemethod/form/getformsbytag", "plugin") %>">executeMethod.GetFormsByTag</a> method is executed
                 and returns a list of forms with the specified tag from the ONLYOFFICE editor.</li>
-            <li>After that, the <a href="<%= Url.Action("executemethod/text/setformvalue", "plugin") %>">executeMethod.SetFormValue</a> method is executed
+            <li>After that, the <a href="<%= Url.Action("executemethod/form/setformvalue", "plugin") %>">executeMethod.SetFormValue</a> method is executed
                 and sets the entered value to the specified form.</li>
             <li>In this case, the <em>Select</em> control is set to <em>Custom Data</em> with the <em>setSelectedOption</em> function.</li>
         </ul>
-        <img class="screenshot" alt="Input control component" src="<%= Url.Content("~/content/img/editor/input-control-component.png") %>" />
+        <img class="screenshot max-width-832" alt="Input control component" src="<%= Url.Content("~/content/img/editor/input-control-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/ContentControls/RadioControl.tsx" target="_blank">RadioControl.tsx</a> file
         with the <em>RadioControl</em> component and specify the <em>onRadioControl</em> event in it:</p>
         <pre>
-const onRadioControl = (event: any) => {
+const onRadioControl = (event: any) =&gt; {
     setCheckedOptionState(event.target.id);
     setFormValue(event.target.id, "true");
-    setSelectedOption({label: "Custom Data"});
+    setSelectedOption({ "label": "Custom Data" });
 };
 
-const setFormValue = (formId: string, value: string) => {
+const setFormValue = (formId: string, value: string) =&gt; {
     connector.current.executeMethod(
         "GetFormsByTag",
         [formId],
-        (forms: any) => {
+        (forms: any) =&gt;{
             connector.current.executeMethod(
                 "SetFormValue",
                 [forms[0]["InternalId"], value],
@@ -96,19 +96,19 @@ return (
 </pre>
         <ul>
             <li>When a user of the React application checks any radio control,
-                the <a href="<%= Url.Action("executemethod/text/getformsbytag", "plugin") %>">executeMethod.GetFormsByTag</a> method is executed
+                the <a href="<%= Url.Action("executemethod/form/getformsbytag", "plugin") %>">executeMethod.GetFormsByTag</a> method is executed
                 and returns a list of forms with the specified tag from the ONLYOFFICE editor.</li>
-            <li>After that, the <a href="<%= Url.Action("executemethod/text/setformvalue", "plugin") %>">executeMethod.SetFormValue</a> method is executed
+            <li>After that, the <a href="<%= Url.Action("executemethod/form/setformvalue", "plugin") %>">executeMethod.SetFormValue</a> method is executed
                 and checks the specified radio form.</li>
             <li>In this case, the <em>Select</em> control is set to <em>Custom Data</em> with the <em>setSelectedOption</em> function.</li>
         </ul>
-        <img class="screenshot" alt="Radio control component" src="<%= Url.Content("~/content/img/editor/radio-control-component.png") %>" />
+        <img class="screenshot max-width-832" alt="Radio control component" src="<%= Url.Content("~/content/img/editor/radio-control-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/ContentControls/SelectDataControl.tsx" target="_blank">SelectDataControl.tsx</a> file
         with the <em>SelectDataControl</em> component and specify the <em>onChange</em> event in it:</p>
         <pre>
-const onChange = (option: any) => {
+const onChange = (option: any) =&gt; {
     setSelectedOption(option);
 
     for (var [key, value] of Object.entries&lt;string&gt;(option.value)) {
@@ -121,11 +121,11 @@ const onChange = (option: any) => {
     }
 };
 
-const setFormValue = (formId: string, value: string) => {
+const setFormValue = (formId: string, value: string) =&gt; {
     connector.current.executeMethod(
         "GetFormsByTag",
         [formId],
-        (forms: any) => {
+        (forms: any) =&gt; {
             connector.current.executeMethod(
                 "SetFormValue",
                 [forms[0]["InternalId"], value],
@@ -146,10 +146,10 @@ return (
 );
 </pre>
         <ul>
-            <li>When a user of the React application selects one of the options from the Select control,
-                the <a href="<%= Url.Action("executemethod/text/getformsbytag", "plugin") %>">executeMethod.GetFormsByTag</a> method is executed
+            <li>When a user of the React application selects one of the options from the <em>Select</em> control,
+                the <a href="<%= Url.Action("executemethod/form/getformsbytag", "plugin") %>">executeMethod.GetFormsByTag</a> method is executed
                 and returns a list of forms with the specified tag from the ONLYOFFICE editor.</li>
-            <li>After that, the <a href="<%= Url.Action("executemethod/text/setformvalue", "plugin") %>">executeMethod.SetFormValue</a> method is executed
+            <li>After that, the <a href="<%= Url.Action("executemethod/form/setformvalue", "plugin") %>">executeMethod.SetFormValue</a> method is executed
                 and sets the corresponding values to the specified forms.</li>
         </ul>
         <note>
@@ -158,7 +158,7 @@ return (
 npm install react-select
 </pre>
         </note>
-        <img class="screenshot" alt="Select control data" src="<%= Url.Content("~/content/img/editor/select-control-data.png") %>" />
+        <img class="screenshot max-width-832" alt="Select control data" src="<%= Url.Content("~/content/img/editor/select-control-data.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/ContentControls/ContentControls.tsx" target="_blank">ContentControls.tsx</a> file
@@ -212,8 +212,8 @@ export default {
     "component": DocumentEditor,
     "parameters": {},
     "decorators": [
-        (Story) => (
-            &lt;div style={{ height: "400px" }}&gt;
+        (Story) =&gt; (
+            &lt;div style={{ "height": "400px" }}&gt;
                 &lt;Story /&gt;
             &lt;/div&gt;
         ),
@@ -222,7 +222,7 @@ export default {
 </pre>
             </li>
             <li>
-                <p>Create the <em>FormsTemplate</em> export. It consists of the select control with the <em>oform</em> documents options and <em>DocumentEditor</em> component:</p>
+                <p>Create the <em>FormsTemplate</em> export. It consists of the select control with the <em>pdf</em> documents options and <em>DocumentEditor</em> component:</p>
                 <pre>
 return (
     &lt;div&gt;
@@ -236,17 +236,17 @@ return (
         /&gt;
 
         &lt;DocumentEditor {...args}
-            "id"="oformEditor"
+            "id"="pdfEditor"
             "config"={{
                 "document": {
-                    "fileType": "oform",
-                    "key": "oform" + Math.random(),
+                    "fileType": "pdf",
+                    "key": "pdf" + Math.random(),
                     "title": selectedOption1
                         ? selectedOption1.label
-                        : "demo.oform",
+                        : "oform.pdf",
                     "url": selectedOption1
                         ? selectedOption1.value
-                        : config.demoStorage + "demo.oform",
+                        : config.demoStorage + "oform.pdf",
                 },
                 "documentType": "word",
             }}
@@ -255,7 +255,7 @@ return (
     &lt;/div&gt;
 )
 </pre>
-                <p>The oform documents options are loaded from the storage which is specified in the <em>config.oformsUrl</em> parameters:</p>
+                <p>The <em>pdf</em> documents options are loaded from the storage which is specified in the <em>config.oformsUrl</em> parameters:</p>
                 <pre>
 const loadOptions = async () =&gt; {
     try {
@@ -267,7 +267,7 @@ const loadOptions = async () =&gt; {
       const fileOforms = jData.data.map(
         (item: { attributes: { file_oform: { data: any[] } } }) =&gt;
           item.attributes.file_oform.data.find(
-            (f) =&gt; f.attributes.ext === ".oform"
+            (f) =&gt; f.attributes.ext === ".pdf"
           )
         );
       const options = fileOforms
@@ -290,12 +290,12 @@ const loadOptions = async () =&gt; {
                 <pre>
 yarn storybook
 </pre>
-                <img class="screenshot" alt="Form template" src="<%= Url.Content("~/content/img/editor/form-template.png") %>" />
+                <img class="screenshot max-width-832" alt="Form template" src="<%= Url.Content("~/content/img/editor/form-template.png") %>" />
             </li>
         </ol>
     </li>
     <li>
-        <p>Сode the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/FillingForm.stories.tsx" target="_blank">FillingForm.stories.tsx</a> file.</p>
+        <p>Code the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/FillingForm.stories.tsx" target="_blank">FillingForm.stories.tsx</a> file.</p>
         <ol>
             <li>
                 <p>Define the default export which provides information used by other stories:</p>
@@ -306,7 +306,7 @@ export default {
     "parameters": {},
     "decorators": [
         (Story) =&gt; (
-            &lt;div style={{ height: "400px" }}>
+            &lt;div style={{ "height": "400px" }}&gt;
                 &lt;Story /&gt;
             &lt;/div&gt;
         ),
@@ -316,7 +316,7 @@ export default {
             </li>
             <li>
                 <p>Create the <em>FillingFormTemplate</em> export. It consists of the select control with the persons options,
-                <em>ContentControls</em> and <em>DocumentEditor</em> components</p>
+                <em>ContentControls</em> and <em>DocumentEditor</em> components:</p>
                 <pre>
 return (
     &lt;div&gt;
@@ -326,13 +326,13 @@ return (
       &lt;ContentControls contentControls={contentControls} connector={connectorRef} setSelectedOption={setSelectedPerson}/&gt;
 
       &lt;DocumentEditor {...args.DocumentEditor}
-        "id"="oformEditor"
+        "id"="pdfEditor"
         "config"={{
             "document": {
-                "fileType": "oform",
+                "fileType": "pdf",
                 "key":  args.key,
-                "title": "demo.oform",
-                "url": config.demoStorage + "withtags.oform",
+                "title": "withtags.pdf",
+                "url": config.demoStorage + "withtags.pdf",
             },
             "documentType": "word",
         }}
@@ -383,7 +383,7 @@ function getPersonsOptions(){
                         <p>When the document is loaded into the document editor,
                         the <a href="<%= Url.Action("executemethod/text/getallcontentcontrols", "plugin") %>">executeMethod.GetAllContentControls</a> method is executed,
                         collects all the content controls from the current document, and specifies the types and group keys for them.
-                        The <a href="<%= Url.Action("executemethod/text/getformvalue", "plugin") %>">executeMethod.GetFormValue</a> method returns a value for each form
+                        The <a href="<%= Url.Action("executemethod/form/getformvalue", "plugin") %>">executeMethod.GetFormValue</a> method returns a value for each form
                         and write it in the controls of the <em>ContentControls</em> component:</p>
                         <pre>
 const getAllContentControls = () =&gt; {
@@ -417,16 +417,16 @@ const getAllContentControls = () =&gt; {
                         <p>Define the <a href="<%= Url.Action("events/onchangecontentcontrol", "plugin") %>">onChangeContentControl</a> event:
                         when the content control is changed in the document, all the content controls values are updated in the React application:</p>
                         <pre>
-const onChangeContentControl = (oPr: { Tag?: string; InternalId?: string }) => {
+const onChangeContentControl = (oPr: { Tag?: string; InternalId?: string }) =&gt; {
     getAllContentControls();
 };
 </pre>
                     </li>
                     <li>
                         <p>Define the <a href="<%= Url.Action("events/onblurcontentcontrol", "plugin") %>">onBlurContentControl</a> event:
-                        when the content control is blurred in the document, the “Custom Data” label is set in the select content control:</p>
+                        when the content control is blurred in the document, the "Custom Data" label is set in the select content control:</p>
                         <pre>
-const onBlurContentControl = (oPr: { Tag?: string; InternalId?: string }) => {
+const onBlurContentControl = (oPr: { Tag?: string; InternalId?: string }) =&gt; {
     setSelectedPerson({ label: "Custom Data" });
 };
 </pre>
@@ -438,7 +438,7 @@ const onBlurContentControl = (oPr: { Tag?: string; InternalId?: string }) => {
                 <pre>
 yarn storybook
 </pre>
-                <img class="screenshot" alt="Filling form template" src="<%= Url.Content("~/content/img/editor/filling-form-template.png") %>" />
+                <img class="screenshot max-width-832" alt="Filling form template" src="<%= Url.Content("~/content/img/editor/filling-form-template.png") %>" />
             </li>
         </ol>
     </li>

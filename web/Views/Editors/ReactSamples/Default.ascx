@@ -123,7 +123,7 @@ yarn add typescript
                 </tr>
                 <tr class="tablerow">
                     <td id="oformsUrl" class="copy-link">oformsUrl</td>
-                    <td>Defines your storage URL where the oform sample files are stored.</td>
+                    <td>Defines your storage URL where the pdf sample files are stored.</td>
                     <td>string</td>
                     <td>"https://cmsoforms.onlyoffice.com/api/oforms?populate=*&locale=all"</td>
                 </tr>
@@ -137,8 +137,8 @@ yarn add typescript
         <em>Comments</em>, <em>ContentControls</em>, and <em>Review</em>. All the related files will be placed in these folders (<em>css</em> files, <em>tsx</em> files, etc.).</li>
     <li>
         <p>Each component has its own story file that captures the rendered state of the UI component.
-        These files store the component variations - stories.
-        They will be placed in the src folder with the titles in the following format:</p>
+        These files store the component variations - <em>stories</em>.
+        They will be placed in the <em>src</em> folder with the titles in the following format:</p>
         <pre>
 component_name.stories.tsx
 </pre>
@@ -155,7 +155,7 @@ export default {
     "parameters": {},
     "decorators": [
         (Story) =&gt; (
-            &lt;div style={{ height: "400px" }}&gt;
+            &lt;div style={{ "height": "400px" }}&gt;
                 &lt;Story /&gt;
             &lt;/div&gt;
         ),
@@ -191,7 +191,7 @@ export default {
         "events_onRequestInsertImage": { "action": "onRequestInsertImage" },
         "events_onRequestSaveAs": { "action": "onRequestSaveAs" },
         "events_onRequestMailMergeRecipients": { "action": "onRequestMailMergeRecipients" },
-        "events_onRequestCompareFile": { "action":" "onRequestCompareFile" },
+        "events_onRequestCompareFile": { "action": "onRequestCompareFile" },
         "events_onRequestEditRights": { "action": "onRequestEditRights" },
         "events_onRequestHistory": { "action": "onRequestHistory" },
         "events_onRequestHistoryClose": { "action": "onRequestHistoryClose" },
@@ -210,16 +210,16 @@ export default {
 export const DocumentTemplate = Template.bind({});
 DocumentTemplate.storyName = "Document";
 DocumentTemplate.args = {
-    id: "docxEditor",
-    documentServerUrl: config.documentServerUrl,
-    config: {
-        document: {
-            fileType: "docx",
-            key: "docx" + Math.random(),
-            title: "demo.docx",
-            url: config.demoStorage + "demo.docx",
+    "id": "docxEditor",
+    "documentServerUrl": config.documentServerUrl,
+    "config": {
+        "document": {
+            "fileType": "docx",
+            "key": "docx" + Math.random(),
+            "title": "demo.docx",
+            "url": config.demoStorage + "demo.docx",
         },
-        documentType: "word",
+        "documentType": "word",
     },
 };
 </pre>
@@ -232,5 +232,5 @@ yarn storybook
             </li>
         </ol>
     </li>
-    <img class="screenshot" alt="Document editor component" src="<%= Url.Content("~/content/img/editor/document-editor-component.png") %>" />
+    <img class="screenshot max-width-832" alt="Document editor component" src="<%= Url.Content("~/content/img/editor/document-editor-component.png") %>" />
 </ol>

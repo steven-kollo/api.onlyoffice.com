@@ -28,8 +28,8 @@ function addComment () {
         <p>Specify the component HTML structure by adding the <b>Enter your comment:</b> field and the <b>Send</b> button:</p>
         <pre>
 return (
-    &lt;div style={{ textAlign: "right" }}&gt;
-        &lt;span style={{display: "block", textAlign: "left" }}&gt;Enter your comment:&lt;/span&gt;
+    &lt;div style={{ "textAlign": "right" }}&gt;
+        &lt;span style={{ "display": "block", "textAlign": "left" }}&gt;Enter your comment:&lt;/span&gt;
         &lt;textarea value={comment} onChange={ function(event) {
             setComment(event.target.value);
         }}&gt;&lt;/textarea&gt;
@@ -39,9 +39,9 @@ return (
 );
 </pre>
         <p>When a user of the React application types a comment in the <b>Enter your comment:</b> field and clicks the <b>Send</b> button,
-        the <a href="<%= Url.Action("executemethod/text/addcomments", "plugin") %>">executeMethod.AddComment</a> method is executed
+        the <a href="<%= Url.Action("executemethod/text/addcomment", "plugin") %>">executeMethod.AddComment</a> method is executed
         and sends this comment to the ONLYOFFICE editor.</p>
-        <img class="screenshot max-width-260" alt="Add comment component" src="<%= Url.Content("~/content/img/editor/add-comment-component.png") %>" />
+        <img class="screenshot max-width-300" alt="Add comment component" src="<%= Url.Content("~/content/img/editor/add-comment-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/Comments/AddCommentReply.tsx" target="_blank">AddCommentReply.tsx</a> file
@@ -67,7 +67,7 @@ return (
     displayAddReply
     ?
         &lt;div&gt;
-            &lt;textarea style={{ width:"270px", marginRight: "8px" }} value={reply} onChange={ function(event) {
+            &lt;textarea style={{ "width": "270px", "marginRight": "8px" }} value={reply} onChange={ function(event) {
                 setReply(event.target.value);
             }} &gt;&lt;/textarea&gt;
             &lt;button onClick={addReply}&gt;Add&lt;/button&gt;
@@ -81,7 +81,7 @@ return (
             <li>When a user of the React application clicks the <b>Add reply</b> button, the <em>setDisplayAddReply</em> function is executed with the <em>true</em> value
             allowing the users to enter a comment reply.</li>
             <li>When the user types the comment reply in this field and clicks the <b>Add</b> button,
-            the <a href="<%= Url.Action("executemethod/text/changecomments", "plugin") %>">executeMethod.ChangeComment</a> method is executed
+            the <a href="<%= Url.Action("executemethod/text/changecomment", "plugin") %>">executeMethod.ChangeComment</a> method is executed
             and adds the comment reply to the ONLYOFFICE editor.</li>
             <li>When the user clicks the <b>Cancel</b> button, the <em>setDisplayAddReply</em> function is executed with the <em>false</em> value and closes the comment reply field.</li>
         </ul>
@@ -149,7 +149,7 @@ return (
         <p>When a user of your React application clicks the red cross near the comment,
         the <a href="<%= Url.Action("executemethod/text/removecomments", "plugin") %>">executeMethod.RemoveComments</a> method is executed
         and removes the comment from the ONLYOFFICE editor.</p>
-        <img class="screenshot" alt="Remove comment component" src="<%= Url.Content("~/content/img/editor/remove-comment-component.png") %>" />
+        <img class="screenshot max-width-300" alt="Remove comment component" src="<%= Url.Content("~/content/img/editor/remove-comment-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/Comments/RemoveCommentReply.tsx" target="_blank">RemoveCommentReply.tsx</a> file
@@ -173,7 +173,7 @@ return (
         <p>When a user of your React application clicks the red cross near the comment reply,
         the <a href="<%= Url.Action("executemethod/text/changecomment", "plugin") %>">executeMethod.ChangeComment</a> method is executed
         and removes the comment reply from the ONLYOFFICE editor.</p>
-        <img class="screenshot" alt="Remove reply component" src="<%= Url.Content("~/content/img/editor/remove-reply-component.png") %>" />
+        <img class="screenshot max-width-300" alt="Remove reply component" src="<%= Url.Content("~/content/img/editor/remove-reply-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/Comments/ListComments.tsx" target="_blank">ListComments.tsx</a> file
@@ -207,7 +207,7 @@ return (
                 &lt;/div&gt;
                 &lt;div className="comment-replies"&gt;
                     {comment["Data"]["Replies"].map((reply: any, index: any) =&gt;
-                        &lt;div key={index} style={{ marginBottom: "10px" }}&gt;
+                        &lt;div key={index} style={{ "marginBottom": "10px" }}&gt;
                             &lt;RemoveCommentReply connector={connector} comment={comment} replyId={index} /&gt;
                             &lt;span className="comment-span"&gt;Author: {reply["UserName"]}&lt;/span&gt;
                             &lt;span className="comment-span"&gt;Date: {new Date(parseInt(reply["Time"], 10)).toLocaleString()}&lt;/span&gt;
@@ -234,7 +234,7 @@ import "./Comments.css";
 import AddComment from "./AddComment";
 import ListComments from "./ListComments";
 </pre>
-        <p>The following events are added to this component with the attachEvent method:</p>
+        <p>The following events are added to this component with the <a href="<%= Url.Action("connector") %>#attachEvent">attachEvent</a> method:</p>
         <ul>
             <li>
                 <p><a href="<%= Url.Action("events/onaddcomment", "plugin") %>">onAddComments</a> - adds a comment to the list of comments when it is added to the document:</p>
@@ -271,11 +271,11 @@ connector.attachEvent("onChangeCommentData",  function (val:any) {
 </pre>
             </li>
         </ul>
-        <p>Specify the component HTML structure by adding the AddComment and ListComments components:</p>
+        <p>Specify the component HTML structure by adding the <em>AddComment</em> and <em>ListComments</em> components:</p>
         <pre>
 return (
     &lt;div id="blockComments"&gt;
-        &lt;h3 style={{textAlign: "left"}}&gt;Comments&lt;/h3&gt;
+        &lt;h3 style={{ "textAlign": "left" }}&gt;Comments&lt;/h3&gt;
         &lt;AddComment connector={connector} userName={userName}/&gt;
         &lt;ListComments connector={connector} userName={userName} comments={comments} /&gt;
     &lt;/div&gt;
@@ -295,7 +295,7 @@ export default {
     "parameters": {},
     "decorators": [
         (Story) =&gt; (
-            &lt;div style={{ height: "400px" }}&gt;
+            &lt;div style={{ "height": "400px" }}&gt;
                 &lt;Story /&gt;
             &lt;/div&gt;
         ),
@@ -360,6 +360,6 @@ yarn storybook
 </pre>
             </li>
         </ol>
-        <img class="screenshot" alt="Comments template" src="<%= Url.Content("~/content/img/editor/comments-template.png") %>" />
+        <img class="screenshot max-width-832" alt="Comments template" src="<%= Url.Content("~/content/img/editor/comments-template.png") %>" />
     </li>
 </ol>

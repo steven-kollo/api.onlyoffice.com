@@ -14,7 +14,7 @@
         with the <em>Review</em> component and specify the following functions in it:</p>
         <ul>
             <li>
-                <p><em>prevReview</em></p>
+                <p><em>prevReview</em>:</p>
                 <pre>
 function prevReview() {
     connector.executeMethod("MoveToNextReviewChange", [false]);
@@ -26,7 +26,7 @@ function prevReview() {
                 <img class="screenshot max-width-130" alt="Prev button" src="<%= Url.Content("~/content/img/editor/prev-button.png") %>" />
             </li>
             <li>
-                <p><em>nextReview</em></p>
+                <p><em>nextReview</em>:</p>
                 <pre>
 function nextReview() {
     connector.executeMethod("MoveToNextReviewChange");
@@ -38,7 +38,7 @@ function nextReview() {
                 <img class="screenshot max-width-130" alt="Next button" src="<%= Url.Content("~/content/img/editor/next-button.png") %>" />
             </li>
             <li>
-                <p><em>acceptReview</em></p>
+                <p><em>acceptReview</em>:</p>
                 <pre>
 function acceptReview() {
     connector.executeMethod("AcceptReviewChanges");
@@ -50,7 +50,7 @@ function acceptReview() {
                 <img class="screenshot max-width-130" alt="Accept button" src="<%= Url.Content("~/content/img/editor/accept-button.png") %>" />
             </li>
             <li>
-                <p><em>rejectReview</em></p>
+                <p><em>rejectReview</em>:</p>
                 <pre>
 function rejectReview() {
     connector.executeMethod("RejectReviewChanges");
@@ -87,7 +87,7 @@ export default {
     "parameters": {},
     "decorators": [
         (Story) =&gt; (
-            &lt;div style={{ height: "400px" }}&gt;
+            &lt;div style={{ "height": "400px" }}&gt;
                 &lt;Story /&gt;
             &lt;/div&gt;
         ),
@@ -135,6 +135,6 @@ yarn storybook
 </pre>
             </li>
         </ol>
-        <img class="screenshot" alt="Review template" src="<%= Url.Content("~/content/img/editor/review-template.png") %>" />
+        <img class="screenshot max-width-832" alt="Review template" src="<%= Url.Content("~/content/img/editor/review-template.png") %>" />
     </li>
 </ol>
