@@ -50,7 +50,26 @@
                     <a href="<%= Url.Action("react") %>">React</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("vue") %>">Vue</a>
+                    <a href="<%= Url.Action("vue/") %>">Vue</a>
+                    <ul>
+                        <li>
+                            <a href="<%= Url.Action("vue/") %>">How it works</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("vuesamples/") %>">Vue samples</a>
+                            <ul>
+                                <li>
+                                    <a href="<%= Url.Action("vuesamples/comments") %>">Comments</a>
+                                </li>
+                                <li>
+                                    <a href="<%= Url.Action("vuesamples/review") %>">Review</a>
+                                </li>
+                                <li>
+                                    <a href="<%= Url.Action("vuesamples/forms") %>">Forms</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </li>

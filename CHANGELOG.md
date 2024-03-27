@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: added the Vue samples section
 - editors: added the Setting avatars page to How it works
 - editors: try ppsx
 

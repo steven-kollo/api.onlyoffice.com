@@ -147,6 +147,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "Try",
                 "Viewing",
                 "Vue",
+                "VueSamples",
+                "VueSamples/Comments",
+                "VueSamples/Review",
+                "VueSamples/Forms",
                 "WOPI",
                 "WOPI/ApiVsWopi",
                 "WOPI/ConversionApi",
@@ -547,6 +551,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Vue()
         {
             return View();
+        }
+
+        public ActionResult VueSamples(string catchall)
+        {
+            if (!_actionMap.Contains("vuesamples/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("VueSamples", (object)catchall);
         }
 
         public ActionResult WOPI(string catchall)

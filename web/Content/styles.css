@@ -2854,6 +2854,11 @@ select {
     max-width: 260px;
 }
 
+.max-width-130 {
+    width: 100%;
+    max-width: 130px;
+}
+
 #configArea {
     width: 55%;
     display: inline-block;
