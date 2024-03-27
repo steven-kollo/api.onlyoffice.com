@@ -22,7 +22,7 @@
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/addwatermark") %>">Adding watermark</a></p>
-            <p>Creates multi-page document with formal styles.</p>
+            <p>Adds a watermark to the document.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/addwatermark") %>">More</a></p>
     </li>
@@ -32,7 +32,7 @@
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createtabledocument") %>">Creating table document</a></p>
-            <p>Creates multi-page document with formal styles.</p>
+            <p>Creates a document with a styled table.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createtabledocument") %>">More</a></p>
     </li>
@@ -73,7 +73,7 @@
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">Creating chart spreadsheet</a></p>
-            <p>Fills spreadsheet with array-based values.</p>
+            <p>Creates a chart filled with array-based values in the spreadsheet.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">More</a></p>
     </li>
