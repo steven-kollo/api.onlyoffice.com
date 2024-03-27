@@ -2422,6 +2422,7 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\docbuilder\samples\add-watermark.svg" />
     <Content Include="Content\img\docbuilder\samples\comment-errors.svg" />
     <Content Include="Content\img\docbuilder\samples\create-advanced-form.svg" />
     <Content Include="Content\img\docbuilder\samples\create-basic-form.svg" />
@@ -2429,6 +2430,8 @@
     <Content Include="Content\img\docbuilder\samples\create-formal-document.svg" />
     <Content Include="Content\img\docbuilder\samples\create-presentation.svg" />
     <Content Include="Content\img\docbuilder\samples\create-reports.svg" />
+    <Content Include="Content\img\docbuilder\samples\create-spreadsheet-chart.svg" />
+    <Content Include="Content\img\docbuilder\samples\create-table-document.svg" />
     <Content Include="Content\img\docbuilder\samples\fill-form.svg" />
     <Content Include="Content\img\docbuilder\samples\fill-spreadsheet.svg" />
     <Content Include="Content\img\docbuilder\samples\mail-merge-reception.svg" />

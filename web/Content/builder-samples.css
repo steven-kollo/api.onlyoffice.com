@@ -116,12 +116,12 @@
 }
 
 .create-table-document {
-    background-image: url("img/docbuilder/samples/create-formal-document.svg");
+    background-image: url("img/docbuilder/samples/create-table-document.svg");
     background-repeat: no-repeat;
 }
 
 .add-watermark {
-    background-image: url("img/docbuilder/samples/create-formal-document.svg");
+    background-image: url("img/docbuilder/samples/add-watermark.svg");
     background-repeat: no-repeat;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .create-spreadsheet-chart {
-    background-image: url("img/docbuilder/samples/create-formal-document.svg");
+    background-image: url("img/docbuilder/samples/create-spreadsheet-chart.svg");
     background-repeat: no-repeat;
 }
 
