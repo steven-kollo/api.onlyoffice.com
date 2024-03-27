@@ -43,16 +43,19 @@ for (var i=1; i < 10; i++) {
         oParagraph = oCellContent.GetElement(0);
         oParagraph.AddText(data[j][i-1]);
         oParagraph.SetJc("center");
-        if(data[j][i-1].indexOf("%")!=-1){
-            if(data[j][i-1].indexOf("-")!=-1) {
-                oParagraph.SetColor(173, 35, 28);
-            } else {
-                oParagraph.SetColor(28, 173, 52);
-            }
-        }
+        setTextColor(oParagraph, data[j][i-1]);
     }
 }
 
+function setTextColor(oParagraph, value) {
+    if(value.indexOf("%")!=-1){
+        if(value.indexOf("-")!=-1) {
+            oParagraph.SetColor(173, 35, 28);
+        } else {
+            oParagraph.SetColor(28, 173, 52);
+        }
+    }
+}
 oDocument.Push(oTable);
 builder.SaveFile("docx", "SetBackgroundColor.docx");
 builder.CloseFile();
