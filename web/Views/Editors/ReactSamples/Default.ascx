@@ -232,5 +232,5 @@ yarn storybook
             </li>
         </ol>
     </li>
-    <img class="screenshot max-width-832" alt="Document editor component" src="<%= Url.Content("~/content/img/editor/document-editor-component.png") %>" />
+    <img class="screenshot max-width-832" alt="Document editor component" src="<%= Url.Content("~/content/img/editor/react/document-editor-component.png") %>" />
 </ol>

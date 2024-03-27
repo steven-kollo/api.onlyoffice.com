@@ -23,7 +23,7 @@ function prevReview() {
                 <p>When a user of the React application clicks the <b>Prev</b> button,
                     the <a href="<%= Url.Action("executemethod/text/movetonextreviewchange", "plugin") %>">executeMethod.MoveToNextReviewChange</a> method is executed
                     with the <em>isForward</em> parameter set to <em>false</em> and navigates to the previous review change in the ONLYOFFICE editor.</p>
-                <img class="screenshot max-width-130" alt="Prev button" src="<%= Url.Content("~/content/img/editor/prev-button.png") %>" />
+                <img class="screenshot max-width-130" alt="Prev button" src="<%= Url.Content("~/content/img/editor/react/prev-button.png") %>" />
             </li>
             <li>
                 <p><em>nextReview</em>:</p>
@@ -35,7 +35,7 @@ function nextReview() {
                 <p>When a user of the React application clicks the <b>Next</b> button,
                     the <a href="<%= Url.Action("executemethod/text/movetonextreviewchange", "plugin") %>">executeMethod.MoveToNextReviewChange</a> method is executed
                     and navigates to the next review change in the ONLYOFFICE editor.</p>
-                <img class="screenshot max-width-130" alt="Next button" src="<%= Url.Content("~/content/img/editor/next-button.png") %>" />
+                <img class="screenshot max-width-130" alt="Next button" src="<%= Url.Content("~/content/img/editor/react/next-button.png") %>" />
             </li>
             <li>
                 <p><em>acceptReview</em>:</p>
@@ -47,7 +47,7 @@ function acceptReview() {
                 <p>When a user of the React application clicks the <b>Accept</b> button,
                     the <a href="<%= Url.Action("executemethod/text/acceptreviewchanges", "plugin") %>">executeMethod.AcceptReviewChanges</a> method is executed
                     and accepts review changes in the ONLYOFFICE editor.</p>
-                <img class="screenshot max-width-130" alt="Accept button" src="<%= Url.Content("~/content/img/editor/accept-button.png") %>" />
+                <img class="screenshot max-width-130" alt="Accept button" src="<%= Url.Content("~/content/img/editor/react/accept-button.png") %>" />
             </li>
             <li>
                 <p><em>rejectReview</em>:</p>
@@ -59,7 +59,7 @@ function rejectReview() {
                 <p>When a user of the React application clicks the <b>Reject</b> button,
                     the <a href="<%= Url.Action("executemethod/text/rejectreviewchanges", "plugin") %>">executeMethod.RejectReviewChanges</a> method is executed
                     and rejects review changes in the ONLYOFFICE editor.</p>
-                <img class="screenshot max-width-130" alt="Reject button" src="<%= Url.Content("~/content/img/editor/reject-button.png") %>" />
+                <img class="screenshot max-width-130" alt="Reject button" src="<%= Url.Content("~/content/img/editor/react/reject-button.png") %>" />
             </li>
         </ul>
         <pre>
@@ -73,7 +73,7 @@ return (
 );
 </pre>
         <p>The review block and button styles are defined in the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/Review/Review.css" target="_blank">Review.css</a> file.</p>
-        <img class="screenshot max-width-400" alt="Review block" src="<%= Url.Content("~/content/img/editor/review-block.png") %>" />
+        <img class="screenshot max-width-400" alt="Review block" src="<%= Url.Content("~/content/img/editor/react/review-block.png") %>" />
     </li>
     <li>
         <p>Now that the component is ready, you can code the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/Review.stories.tsx" target="_blank">Review.stories.tsx</a> file.</p>
@@ -135,6 +135,6 @@ yarn storybook
 </pre>
             </li>
         </ol>
-        <img class="screenshot max-width-832" alt="Review template" src="<%= Url.Content("~/content/img/editor/review-template.png") %>" />
+        <img class="screenshot max-width-832" alt="Review template" src="<%= Url.Content("~/content/img/editor/react/review-template.png") %>" />
     </li>
 </ol>

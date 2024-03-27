@@ -41,7 +41,7 @@ return (
         <p>When a user of the React application types a comment in the <b>Enter your comment:</b> field and clicks the <b>Send</b> button,
         the <a href="<%= Url.Action("executemethod/text/addcomment", "plugin") %>">executeMethod.AddComment</a> method is executed
         and sends this comment to the ONLYOFFICE editor.</p>
-        <img class="screenshot max-width-300" alt="Add comment component" src="<%= Url.Content("~/content/img/editor/add-comment-component.png") %>" />
+        <img class="screenshot max-width-300" alt="Add comment component" src="<%= Url.Content("~/content/img/editor/react/add-comment-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/Comments/AddCommentReply.tsx" target="_blank">AddCommentReply.tsx</a> file
@@ -87,10 +87,10 @@ return (
         </ul>
         <div class="img-block-2">
             <div>
-                <img class="screenshot" alt="Add reply component" src="<%= Url.Content("~/content/img/editor/add-reply-component.png") %>" />
+                <img class="screenshot" alt="Add reply component" src="<%= Url.Content("~/content/img/editor/react/add-reply-component.png") %>" />
             </div>
             <div>
-                <img class="screenshot max-width-260" alt="Add and cancel button" src="<%= Url.Content("~/content/img/editor/add-and-cancel-buttons.png") %>" />
+                <img class="screenshot max-width-260" alt="Add and cancel button" src="<%= Url.Content("~/content/img/editor/react/add-and-cancel-buttons.png") %>" />
             </div>
         </div>
     </li>
@@ -149,7 +149,7 @@ return (
         <p>When a user of your React application clicks the red cross near the comment,
         the <a href="<%= Url.Action("executemethod/text/removecomments", "plugin") %>">executeMethod.RemoveComments</a> method is executed
         and removes the comment from the ONLYOFFICE editor.</p>
-        <img class="screenshot max-width-300" alt="Remove comment component" src="<%= Url.Content("~/content/img/editor/remove-comment-component.png") %>" />
+        <img class="screenshot max-width-300" alt="Remove comment component" src="<%= Url.Content("~/content/img/editor/react/remove-comment-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/Comments/RemoveCommentReply.tsx" target="_blank">RemoveCommentReply.tsx</a> file
@@ -173,7 +173,7 @@ return (
         <p>When a user of your React application clicks the red cross near the comment reply,
         the <a href="<%= Url.Action("executemethod/text/changecomment", "plugin") %>">executeMethod.ChangeComment</a> method is executed
         and removes the comment reply from the ONLYOFFICE editor.</p>
-        <img class="screenshot max-width-300" alt="Remove reply component" src="<%= Url.Content("~/content/img/editor/remove-reply-component.png") %>" />
+        <img class="screenshot max-width-300" alt="Remove reply component" src="<%= Url.Content("~/content/img/editor/react/remove-reply-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/Comments/ListComments.tsx" target="_blank">ListComments.tsx</a> file
@@ -224,7 +224,7 @@ return (
         <p>If the document contains any comments, they are dispalyed as a list.</p>
         <p>When a user clicks on the comment block, the <a href="<%= Url.Action("executemethod/text/movetocomment", "plugin") %>">executeMethod.MoveToComment</a> method is executed
         and moves the cursor to the corresponding comment.</p>
-        <img class="screenshot max-width-260" alt="List comments component" src="<%= Url.Content("~/content/img/editor/list-comments-component.png") %>" />
+        <img class="screenshot max-width-260" alt="List comments component" src="<%= Url.Content("~/content/img/editor/react/list-comments-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/Comments/Comments.tsx" target="_blank">Comments.tsx</a> file
@@ -281,7 +281,7 @@ return (
     &lt;/div&gt;
 );
 </pre>
-        <img class="screenshot max-width-260" alt="Comments component" src="<%= Url.Content("~/content/img/editor/comments-component.png") %>" />
+        <img class="screenshot max-width-260" alt="Comments component" src="<%= Url.Content("~/content/img/editor/react/comments-component.png") %>" />
     </li>
     <li>
         <p>Now that all the components are ready, you can code the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/Comments.stories.tsx" target="_blank">Comments.stories.tsx</a> file.</p>
@@ -360,6 +360,6 @@ yarn storybook
 </pre>
             </li>
         </ol>
-        <img class="screenshot max-width-832" alt="Comments template" src="<%= Url.Content("~/content/img/editor/comments-template.png") %>" />
+        <img class="screenshot max-width-832" alt="Comments template" src="<%= Url.Content("~/content/img/editor/react/comments-template.png") %>" />
     </li>
 </ol>

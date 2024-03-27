@@ -52,7 +52,7 @@ return (
                 and sets the entered value to the specified form.</li>
             <li>In this case, the <em>Select</em> control is set to <em>Custom Data</em> with the <em>setSelectedOption</em> function.</li>
         </ul>
-        <img class="screenshot max-width-832" alt="Input control component" src="<%= Url.Content("~/content/img/editor/input-control-component.png") %>" />
+        <img class="screenshot max-width-832" alt="Input control component" src="<%= Url.Content("~/content/img/editor/react/input-control-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/ContentControls/RadioControl.tsx" target="_blank">RadioControl.tsx</a> file
@@ -102,7 +102,7 @@ return (
                 and checks the specified radio form.</li>
             <li>In this case, the <em>Select</em> control is set to <em>Custom Data</em> with the <em>setSelectedOption</em> function.</li>
         </ul>
-        <img class="screenshot max-width-832" alt="Radio control component" src="<%= Url.Content("~/content/img/editor/radio-control-component.png") %>" />
+        <img class="screenshot max-width-832" alt="Radio control component" src="<%= Url.Content("~/content/img/editor/react/radio-control-component.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/ContentControls/SelectDataControl.tsx" target="_blank">SelectDataControl.tsx</a> file
@@ -158,7 +158,7 @@ return (
 npm install react-select
 </pre>
         </note>
-        <img class="screenshot max-width-832" alt="Select control data" src="<%= Url.Content("~/content/img/editor/select-control-data.png") %>" />
+        <img class="screenshot max-width-832" alt="Select control data" src="<%= Url.Content("~/content/img/editor/react/select-control-data.png") %>" />
     </li>
     <li>
         <p>Create the <a href="https://github.com/ONLYOFFICE/document-editor-react-samples/blob/master/src/components/ContentControls/ContentControls.tsx" target="_blank">ContentControls.tsx</a> file
@@ -290,7 +290,7 @@ const loadOptions = async () =&gt; {
                 <pre>
 yarn storybook
 </pre>
-                <img class="screenshot max-width-832" alt="Form template" src="<%= Url.Content("~/content/img/editor/form-template.png") %>" />
+                <img class="screenshot max-width-832" alt="Form template" src="<%= Url.Content("~/content/img/editor/react/form-template.png") %>" />
             </li>
         </ol>
     </li>
@@ -438,7 +438,7 @@ const onBlurContentControl = (oPr: { Tag?: string; InternalId?: string }) =&gt; 
                 <pre>
 yarn storybook
 </pre>
-                <img class="screenshot max-width-832" alt="Filling form template" src="<%= Url.Content("~/content/img/editor/filling-form-template.png") %>" />
+                <img class="screenshot max-width-832" alt="Filling form template" src="<%= Url.Content("~/content/img/editor/react/filling-form-template.png") %>" />
             </li>
         </ol>
     </li>
