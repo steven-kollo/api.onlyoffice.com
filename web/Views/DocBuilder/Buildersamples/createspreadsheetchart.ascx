@@ -10,19 +10,23 @@
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
     <span class="hdr">Creating spreadsheet chart</span>
 </h1>
-<p>This script checks all used cells for formula errors like "#DIV/0!" and comments each error:</p>
+<p>Creates a custom chart filled with array-based values in the spreadsheet:</p>
 
 <ul>
-    <li>open an existing spreadsheet file to check for errors;</li>
-    <li>create a loop for columns and nest another loop for rows;</li>
-    <li>get each cell (<a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrangebynumber") %>">ApiWorksheet/GetRangeByNumber</a>) and check the value for errors;</li>
-    <li>comment the cell (<a href="<%= Url.Action("spreadsheetapi/apirange/addcomment") %>">ApiRange/AddComment</a>) if an error exists.</li>
+    <li>create a spreadsheet and fill top cells with data (<a href="<%= Url.Action("spreadsheetapi/apirange/setvalue") %>">ApiRange/SetValue</a>);</li>
+    <li>create a chart using the data (<a href="<%= Url.Action("spreadsheetapi/apiworksheet/addchart") %>">ApiWorksheet/AddChart</a>);</li>
+    <li>customize the chart (<a href="<%= Url.Action("spreadsheetapi/apichart/settitle") %>">ApiChart/SetTitle</a>, <a href="<%= Url.Action("spreadsheetapi/apichart/setlegendpos") %>">ApiChart/SetLegendPos</a>);</li>
 </ul>
 
-<p>This sample is available for the <b>C++ and .Net DocBuilder Frameworks</b>.<br />Download the sample and get more information on the <a href="<%= Url.Action("builderframeworksamples") %>">Builder framework samples</a> page.</p>
-
-<textarea disabled="disabled" id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
-
+<textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
+<ul class="list-buttons doc-builder-list-buttons">
+    <li>
+        <a id="startButton" class="button red">Start script</a>
+    </li>
+    <li>
+        <a id="clearButton" class="button">Clear</a>
+    </li>
+</ul>
 <h2>Resulting document</h2>
 
 <div id="editorSpace">
