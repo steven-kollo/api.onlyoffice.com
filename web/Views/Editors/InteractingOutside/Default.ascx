@@ -22,7 +22,7 @@ To achieve this, use our <a href="<%= Url.Action("connector") %>">Automation API
     </li>
     <li class="connector-example">
         <div class="connector-info"><a href="<%= Url.Action("interactingoutside/fillingform") %>"><div class="example-img filling-form"></div></a>
-        <p class="name-example-connector"><a href="<%= Url.Action("interactingoutside/fillingform") %>">Filling out the form</a></p>
+        <p class="name-example-connector"><a href="<%= Url.Action("interactingoutside/fillingform") %>">Filling out forms</a></p>
         <p>Fills in the empty cells in the form.</p></div>
         <p class="block_more"><a href="<%= Url.Action("interactingoutside/fillingform") %>">More</a></p>
     </li>

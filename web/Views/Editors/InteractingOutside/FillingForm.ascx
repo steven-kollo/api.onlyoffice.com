@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("interactingoutside/") %>"></a>
-    <span class="hdr">Filling out the form</span>
+    <span class="hdr">Filling out forms</span>
 </h1>
 
 <p class="dscr">Fills in the empty cells in the form.</p>
