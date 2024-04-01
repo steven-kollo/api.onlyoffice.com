@@ -169,7 +169,7 @@ docEditor.insertImage({
 </pre>
             <p>
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <table class="table">
                 <colgroup>
@@ -446,7 +446,7 @@ docEditor.requestClose();
                 <b id="setActionLink" class="copy-link">setActionLink</b> - set the link to the document which contains a bookmark.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.
                 The software integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.
-                The link is created by the software integrators who use ONLYOFFICE Document Server in their <b>document manager</b>.
+                The link is created by the software integrators who use ONLYOFFICE Docs in their <b>document manager</b>.
             </p>
             <pre>
 docEditor.setActionLink(link);
@@ -529,7 +529,7 @@ docEditor.setHistoryData({
 </pre>
             <p>
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <p>
                 If after editing and saving the document the <em>changesurl</em> link to the file with changes data is returned, download the file by this link and send the file URL in the <em>changesUrl</em> parameter.
@@ -552,7 +552,7 @@ docEditor.setHistoryData({
 </pre>
             <p>
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <p>Send an error message explaining why the document version cannot be displayed:</p>
             <pre>
@@ -581,7 +581,7 @@ docEditor.setHistoryData({
                         <td>changesUrl</td>
                         <td>
                             Defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.
-                            The request for file is signed with a token which is checked by the Document Server.
+                            The request for file is signed with a token which is checked by the ONLYOFFICE Docs.
                         </td>
                         <td>string</td>
                         <td>optional</td>
@@ -671,7 +671,7 @@ docEditor.setMailMergeRecipients({
 </pre>
             <p>
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <table class="table">
                 <colgroup>
@@ -737,7 +737,7 @@ docEditor.setReferenceData({
 </pre>
             <p>
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <p>Show an error message explaining if any error occurred:</p>
             <pre>
@@ -855,7 +855,7 @@ docEditor.setReferenceSource({
 </pre>
             <p>
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <p>Show an error message explaining if any error occurred:</p>
             <pre>
@@ -967,7 +967,7 @@ docEditor.setRequestedDocument({
 </pre>
             <p>
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <table class="table">
                 <colgroup>
@@ -1035,7 +1035,7 @@ docEditor.setRequestedSpreadsheet({
 </pre>
             <p>
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <table class="table">
                 <colgroup>
@@ -1103,7 +1103,7 @@ docEditor.setRevisedFile({
 </pre>
             <p>
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <table class="table">
                 <colgroup>
@@ -1234,7 +1234,7 @@ docEditor.setUsers({
 </pre>
             <p>
                 Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
             <table class="table">
                 <colgroup>
@@ -1270,31 +1270,37 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>Defines the email address of the user. This field is only used when the <em>c</em> parameter is <em>mention</em>.</td>
+                        <td>Defines the email address of the user. This field is required when the <em>c</em> parameter is <em>mention</em>.</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.id</td>
-                        <td>Defines the identification of the user. This field is only used when the <em>c</em> parameter is <em>protect</em>.</td>
+                        <td>Defines the identification of the user. This field is required when the <em>c</em> parameter is <em>protect</em>.</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.image</td>
-                        <td>Defines the path to the user avatar. This field is only used when the <em>c</em> parameter is <em>info</em>.</td>
+                        <td>Defines the path to the user's avatar. This field is required when the <em>c</em> parameter is <em>info</em>.</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>
                         <td>Defines the full name of the user.</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>optional</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <div class="note">Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame.
+                Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, <em>"data:image/png,base64,*****"</em>.</div>
+            <div class="note">Please note that if you are subscribed to the <em>onRequestUsers</em> event and send an avatar using the <em>setUsers</em> method,
+                the <a href="<%= Url.Action("config/editor") %>#user">user.image</a> field in the initialization config is not required.
+            We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT.
+            In this case, the token will be too long.</div>
         </li>
 
         <li>

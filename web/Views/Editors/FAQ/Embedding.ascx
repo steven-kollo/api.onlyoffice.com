@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
+    <span class="hdr">ONLYOFFICE Docs FAQ: <br />
         Embedding questions</span>
 </h1>
 
@@ -47,7 +47,7 @@
 });</pre>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
         <p>To remove any of these buttons simply do not include the corresponding parameter into the configuration file.</p>
         <div class="note">If you decide to hide the <b>Download</b> button (<em>editorConfig.embedded.saveUrl</em> parameter), please do not forget to also set the <em>document.permission.download</em> parameter in the document configuration to <b>false</b> to completely disable the possibility to download the file.</div>

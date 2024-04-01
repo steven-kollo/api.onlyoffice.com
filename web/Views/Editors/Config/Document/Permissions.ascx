@@ -480,7 +480,6 @@
         Height = "550px",
         Width = "100%"
     }) %>);
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -553,7 +552,9 @@
         delete info_object.token;
         config.document.permissions = info_object;
         copy.document.permissions = info_object;
-        window.docEditor.destroyEditor();
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         
         $.ajax({
             type: "POST",

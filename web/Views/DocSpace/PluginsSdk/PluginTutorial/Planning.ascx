@@ -7,9 +7,12 @@
 <p><b>Step 1</b>. Install all the necessary packages and programs</p>
 <ul>
     <li>
-        <p><a href="https://www.onlyoffice.com/download-docspace.aspx?from=downloadintegrationmenu#docspace-enterprise" target="_blank">ONLYOFFICE DocSpace on-premises</a>.</p>
-        <p>Both <a href="https://helpcenter.onlyoffice.com/installation/docspace-enterprise-index.aspx" target="_blank">Enterprise</a>
-        and <a href="https://helpcenter.onlyoffice.com/installation/docspace-community-index.aspx" target="_blank">Community</a> versions are available.</p>
+        <p>ONLYOFFICE DocSpace on-premises.</p>
+        <div class="list-buttons">
+            <a class="button" href="https://www.onlyoffice.com/download-docspace.aspx?from=api#docspace-enterprise" target="_blank">Get ONLYOFFICE DocSpace</a>
+        </div>
+        <p>Both <a href="https://helpcenter.onlyoffice.com/installation/docspace-enterprise-index.aspx?from=api" target="_blank">Enterprise</a>
+        and <a href="https://helpcenter.onlyoffice.com/installation/docspace-community-index.aspx?from=api" target="_blank">Community</a> versions are available.</p>
     </li>
     <li>
         <p><em>@onlyoffice/docspace-plugin-sdk</em> npm package</p>

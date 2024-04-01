@@ -78,7 +78,7 @@
 
     <div class="note">
         Please note, that if you have subsites set up with SharePoint, you will need to additionally configure ONLYOFFICE Docs connection with each of them, in order for it to work properly.
-        Go to each subsite settings and enter the Document Server address to the proper field.
+        Go to each subsite settings and enter the ONLYOFFICE Docs address to the proper field.
     </div>
 
     <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
@@ -123,7 +123,7 @@
             <ul>
                 <li><b>url</b> - the URL that ONLYOFFICE Docs uses to download the document;</li>
                 <li><b>callbackUrl</b> - the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>DocumentSeverHost</b> - the URL that the client needs to reply to ONLYOFFICE Document Server (can be set at the settings page);</li>
+                <li><b>DocumentSeverHost</b> - the URL that the client needs to reply to ONLYOFFICE Docs (can be set at the settings page);</li>
                 <li><b>Key</b> - the file identifier from SharePoint;</li>
                 <li><b>FileName</b> - the document title (name);</li>
                 <li><b>CurrentUserId</b> - the user identifier;</li>

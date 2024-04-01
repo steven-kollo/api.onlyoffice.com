@@ -15,7 +15,7 @@
         <span class="hdr">Advanced parameters</span>
     </h1>
 
-    <p class="dscr">The parameters, which can be changed for ONLYOFFICE Document Server, can be subdivided into the following main sections:</p>
+    <p class="dscr">The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into the following main sections:</p>
 
     <a href="<%= Url.Action("config/") %>"><b>config</b></a> - allows to change the platform type used, document display size (width and height) and type of the document opened;
     <ul>
@@ -40,7 +40,7 @@
                     <a href="<%= Url.Action("config/editor/embedded") %>"><b>embedded</b></a> - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
                 </li>
                 <li>
-                    <a href="<%= Url.Action("config/editor/plugins") %>"><b>plugins</b></a> - is used to connect the necessary <a href="<%= Url.Action("basic", "plugin") %>">plugins</a> to your Document Server, so that they become visible to all document editor users;
+                    <a href="<%= Url.Action("config/editor/plugins") %>"><b>plugins</b></a> - is used to connect the necessary <a href="<%= Url.Action("basic", "plugin") %>">plugins</a> to your ONLYOFFICE Docs, so that they become visible to all document editor users;
                 </li>
             </ul>
         </li>
@@ -275,6 +275,6 @@
 </pre>
     <p>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 </asp:Content>

@@ -7,10 +7,10 @@
 <p class="dscr">
     For the interaction with the <b>document command service</b> the POST requests are used.
     The request parameters are entered in JSON format in the request body.
-    The requests are sent to the <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+    The requests are sent to the <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
 </p>
 
-<div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
+<div class="note">In <b>ONLYOFFICE Docs</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
 <p>See the available command types below to find more about them.</p>
 
@@ -54,7 +54,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/license") %>">license</a></td>
-            <td>This command allows to request the license from Document Server with information about the server and user quota.</td>
+            <td>This command allows to request the license from ONLYOFFICE Docs with information about the server and user quota.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/meta") %>">meta</a></td>
@@ -62,7 +62,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/version") %>">version</a></td>
-            <td>This command allows to request the current version number of Document Server.</td>
+            <td>This command allows to request the current version number of ONLYOFFICE Docs.</td>
         </tr>
     </tbody>
 </table>
@@ -95,7 +95,7 @@
     <tbody>
         <tr class="tablerow">
             <td>token</td>
-            <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#command">token</a>.</td>
+            <td>Defines the encrypted signature added to the <b>ONLYOFFICE Docs</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#command">token</a>.</td>
             <td>string</td>
             <td>required by configuration</td>
         </tr>

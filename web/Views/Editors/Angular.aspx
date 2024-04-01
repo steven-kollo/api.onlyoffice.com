@@ -114,6 +114,22 @@ export class AppComponent {
     onDocumentReady = () => {
         console.log("Document is loaded");
     };
+
+    onLoadComponentError = (errorCode, errorDescription) => {
+        switch(errorCode) {
+            case -1: // Unknown error loading component
+                console.log(errorDescription);
+                break;
+
+            case -2: // Error load DocsAPI from http://documentserver/
+                console.log(errorDescription);
+                break;
+
+            case -3: // DocsAPI is not defined
+                console.log(errorDescription);
+                break;
+        }
+    }
 }
 </pre>
                     <p>Replace the following lines with your own data:</p>
@@ -131,6 +147,7 @@ export class AppComponent {
     documentServerUrl="http://documentserver/"
     [config]="config"
     [events_onDocumentReady]="onDocumentReady"
+    [onLoadComponentError]="onLoadComponentError"
 &gt;&lt;/document-editor&gt;
 </pre>
                     <p>Replace the <b>"http://documentserver/"</b> line with the URL of your server.</p>
@@ -171,6 +188,22 @@ export class AppComponent {
     onDocumentReady = () => {
         console.log("Document is loaded");
     };
+
+    onLoadComponentError = (errorCode, errorDescription) => {
+        switch(errorCode) {
+            case -1: // Unknown error loading component
+                console.log(errorDescription);
+                break;
+
+            case -2: // Error load DocsAPI from http://documentserver/
+                console.log(errorDescription);
+                break;
+
+            case -3: // DocsAPI is not defined
+                console.log(errorDescription);
+                break;
+        }
+    }
 }
 </pre>
                     <p>Replace the following lines with your own data:</p>
@@ -188,6 +221,7 @@ export class AppComponent {
     documentServerUrl="http://documentserver/"
     [config]="config"
     [events_onDocumentReady]="onDocumentReady"
+    [onLoadComponentError]="onLoadComponentError"
 &gt;&lt;/document-editor&gt;
 </pre>
                     <p>Replace the <b>"http://documentserver/"</b> line with the URL of your server.</p>
@@ -343,7 +377,7 @@ ng build
                 <td id="documentServerUrl" class="copy-link">documentServerUrl<span class="required">*</span></td>
                 <td>string</td>
                 <td>null</td>
-                <td>Address of ONLYOFFICE Document Server.</td>
+                <td>Address of ONLYOFFICE Docs.</td>
             </tr>
             <tr class="tablerow">
                 <td id="config" class="copy-link">config<span class="required">*</span></td>

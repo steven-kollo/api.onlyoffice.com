@@ -103,7 +103,7 @@
 var URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
 </pre>
             <p>The <em>onlyoffice.github.io/store/plugin-dev/extension</em> folder is a new extension. Upload it to the <a href="<%= Url.Action("installation/cloud") %>#upload-extensions">browser</a>,
-                run your ONLYOFFICE Document Server and find the plugin in the <a href="<%= Url.Action("installation/onpremises") %>#plugin-manager">Plugin Manager</a>.</p>
+                run your ONLYOFFICE Docs and find the plugin in the <a href="<%= Url.Action("installation/onpremises") %>#plugin-manager">Plugin Manager</a>.</p>
             <p>To debug ONLYOFFICE plugins in the web editors, follow the instructions <a href="<%= Url.Action("developing") %>#web">here</a>.</p>
             <note>Please note that this is important to open your plugin in the <b>Plugin Manager</b> and check how it looks like in the <b>My Plugins</b> tab both in the light and dark themes.
                 Improve the plugin display if necessary.</note>

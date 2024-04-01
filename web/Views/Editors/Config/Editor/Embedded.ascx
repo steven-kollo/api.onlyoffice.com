@@ -14,7 +14,7 @@
 <div class="header-gray">Example</div>
 <p>
     The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
 </p>
 <div id="controlFields">
     <div id="embedded" class="control-panel">
@@ -160,7 +160,6 @@
     }) %>);
     config.type = "embedded";
     copy.type = "embedded";
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -206,7 +205,9 @@
         var embedded_object = JSON.parse(embedded);
         config.editorConfig.embedded = embedded_object;
         copy.editorConfig.embedded = embedded_object;
-        window.docEditor.destroyEditor();
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;

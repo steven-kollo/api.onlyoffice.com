@@ -87,9 +87,11 @@
                     </td>
                 </tr>
             <% } %>
-                <% if (inDto != null && inDto.Dto != null && inDto.Dto.Any()) { 
-                        foreach(var prop in inDto.Dto)
-                    { %>
+            <% if (inDto != null && inDto.Dto != null && inDto.Dto.Any())
+               { 
+                    foreach(var prop in inDto.Dto)
+                    { 
+                var paramModel = DocSpaceDocumentation.GetPluralizer().ToHumanName(prop.Type); %>
                 <tr class="tablerow">
                     <td>
                         <%= prop.Name %>
@@ -97,15 +99,20 @@
                     </td>
                     <td>
                         <%= prop.Description %>
-                    </td> 
-                    <td>
-                        <%= prop.Type %>
                     </td>
                     <td>
+                        <%= paramModel.Description %>
+                        <% if (DocSpaceDocumentation.GetPluralizer().IsCollection(prop.Type) || paramModel.IsCollection) { %>
+                        <div class="infotext">collection</div><% } %>
+                    </td>
+                    <td>
+                        <% if (!string.IsNullOrEmpty(paramModel.Example)) { %><%= paramModel.Example %><% } %>
+                        <% if (!string.IsNullOrEmpty(paramModel.Note)) { %>
+                        <div class="infotext"><%= paramModel.Note %></div><% } %>
                     </td>
                 </tr>
-                   <% }
-                 } %>
+                <% }
+               } %>
             </tbody>
         </table>
         <div class="mobile-content"></div>

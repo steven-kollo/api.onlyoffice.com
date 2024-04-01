@@ -78,7 +78,7 @@
 <div class="header-gray">Example</div>
 <p>
     The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
 </p>
 
 <p>
@@ -1727,7 +1727,6 @@
         Height = "550px",
         Width = "100%"
     }) %>);
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 </script>
 
 <script>
@@ -1881,7 +1880,9 @@
         }
         config.editorConfig.customization = customization_object;
         copy.editorConfig.customization = customization_object;
-        window.docEditor.destroyEditor();
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;

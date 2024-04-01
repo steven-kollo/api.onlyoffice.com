@@ -196,6 +196,18 @@
             <param name="quotaCheckFileSize"></param>
             <returns></returns>
         </member>
+        <member name="M:ASC.Data.Storage.IDataStore.Move(System.String,System.String,System.String,System.String,System.Guid,System.Boolean)">
+            <summary>
+             Moves file
+            </summary>
+            <param name="srcdomain"></param>
+            <param name="srcpath"></param>
+            <param name="newdomain"></param>
+            <param name="newpath"></param>
+            <param name="ownerId"></param>
+            <param name="quotaCheckFileSize"></param>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Data.Storage.IDataStore.SaveTemp(System.String,System.String@,System.IO.Stream)">
             <summary>
              Saves the file in the temp. In fact, almost no different from the usual Save except that generates the file name itself. An inconvenient thing.

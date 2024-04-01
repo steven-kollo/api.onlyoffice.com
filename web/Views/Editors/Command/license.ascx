@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Requests the license from Document Server with information about the server and user quota.</p>
+<p class="dscr">Requests the license from ONLYOFFICE Docs with information about the server and user quota.</p>
 
 <div class="header-gray">Request example</div>
 <pre>

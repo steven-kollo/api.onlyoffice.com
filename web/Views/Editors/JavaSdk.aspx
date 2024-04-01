@@ -15,7 +15,7 @@
         <span class="hdr">Integrating editors using Java SDK</span>
     </h1>
 
-    <p class="dscr"><a href="https://central.sonatype.com/artifact/com.onlyoffice/docs-integration-sdk" target="_blank">ONLYOFFICE Docs Integration SDK</a> provides common interfaces and default implementations for integrating ONLYOFFICE Document Server
+    <p class="dscr"><a href="https://central.sonatype.com/artifact/com.onlyoffice/docs-integration-sdk" target="_blank">ONLYOFFICE Docs Integration SDK</a> provides common interfaces and default implementations for integrating ONLYOFFICE Docs
         into your own website or application on Java.</p>
 
     <h2 id="prerequisites" class="copy-link">Prerequisites</h2>
@@ -48,7 +48,7 @@
             </tr>
             <tr class="tablerow">
                 <td><a href="https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/request/RequestManager.java" target="_blank">RequestManager</a></td>
-                <td>This manager is used to make requests to the ONLYOFFICE Document Server.</td>
+                <td>This manager is used to make requests to the ONLYOFFICE Docs.</td>
                 <td><a href="https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/request/DefaultRequestManager.java" target="_blank">DefaultRequestManager</a></td>
             </tr>
             <tr class="tablerow">

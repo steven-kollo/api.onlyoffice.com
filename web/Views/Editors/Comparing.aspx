@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Comparing documents</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of comparing documents in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of comparing documents in ONLYOFFICE Docs.</p>
     <img alt="Comparing documents" src="<%= Url.Content("~/content/img/editor/compare.png") %>" />
     <ol>
         <li>The user opens the document for viewing or editing using the <b>document manager</b> (found in his/her browser).</li>

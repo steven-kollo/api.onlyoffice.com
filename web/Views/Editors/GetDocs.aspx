@@ -22,31 +22,31 @@
     </h1>
 
     <p class="dscr">
-        <b>ONLYOFFICE Docs</b> is available for Windows, Linux and Docker.
+        <a href="https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer" target="_blank">ONLYOFFICE Docs</a> is available for Windows, Linux and Docker.
     </p>
 
     <p>To install it on your local server, follow the instructions in <b>ONLYOFFICE Help Center</b>:</p>
     <ul class="get-docs-block">
         <li class="get-docs-option">
-            <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx" target="_blank"><div class="get-docs-img windows"></div></a>
-            <p class="get-docs-link"><a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx" target="_blank">Get ONLYOFFICE Docs for Windows</a></p>
+            <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api" target="_blank"><div class="get-docs-img windows"></div></a>
+            <p class="get-docs-link"><a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api" target="_blank">Get ONLYOFFICE Docs for Windows</a></p>
         </li>
         <li class="get-docs-option">
-            <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx" target="_blank"><div class="get-docs-img linux"></div></a>
-            <p class="get-docs-link"><a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx" target="_blank">Get ONLYOFFICE Docs for Linux</a></p>
+            <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api" target="_blank"><div class="get-docs-img linux"></div></a>
+            <p class="get-docs-link"><a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api" target="_blank">Get ONLYOFFICE Docs for Linux</a></p>
         </li>
         <li class="get-docs-option">
-            <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx" target="_blank"><div class="get-docs-img docker"></div></a>
-            <p class="get-docs-link"><a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx" target="_blank">Get ONLYOFFICE Docs for Docker</a></p>
+            <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api" target="_blank"><div class="get-docs-img docker"></div></a>
+            <p class="get-docs-link"><a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api" target="_blank">Get ONLYOFFICE Docs for Docker</a></p>
         </li>
     </ul>
 
     <p>Before working with ONLYOFFICE Docs API documentation, it is recommended to make the following settings if necessary:</p>
     <ul>
-        <li>configure <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx" target="_blank">ONLYOFFICE Docs server settings</a> in ONLYOFFICE Docs configuration file;</li>
-        <li>switch ONLYOFFICE Docs to the HTTPS protocol for secure connection using <a href="https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx" target="_blank">SSL Certificates</a>;</li>
-        <li>add additional <a href="https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx" target="_blank">fonts</a> to ONLYOFFICE Docs to enhance the work with the editors;</li>
-        <li>add your own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">color themes</a> for the application interface.</li>
+        <li>configure <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api" target="_blank">ONLYOFFICE Docs server settings</a> in ONLYOFFICE Docs configuration file;</li>
+        <li>switch ONLYOFFICE Docs to the HTTPS protocol for secure connection using <a href="https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx?from=api" target="_blank">SSL Certificates</a>;</li>
+        <li>add additional <a href="https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx?from=api" target="_blank">fonts</a> to ONLYOFFICE Docs to enhance the work with the editors;</li>
+        <li>add your own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx?from=api" target="_blank">color themes</a> for the application interface.</li>
     </ul>
 
     <h2 class="copy-link" id="healthcheck">Health check</h2>

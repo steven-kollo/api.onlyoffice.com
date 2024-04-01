@@ -2335,7 +2335,6 @@
     <Content Include="App_Data\portals\references\ASC.Notify.xml" />
     <Content Include="App_Data\portals\references\ASC.Resource.Data.xml" />
     <Content Include="App_Data\portals\references\ASC.Specific.xml" />
-    <Content Include="App_Data\portals\references\ASC.Thrdparty.xml" />
     <Content Include="App_Data\portals\references\ASC.VoipService.xml" />
     <Content Include="App_Data\portals\references\ASC.Web.Calendar.xml" />
     <Content Include="App_Data\portals\references\ASC.Web.Community.xml" />
@@ -2492,6 +2491,9 @@
     <Content Include="Content\img\Editor\anonymous.png" />
     <Content Include="Content\img\Editor\anonymous-warning.jpg" />
     <Content Include="Content\img\Editor\attachment-page.png" />
+    <Content Include="Content\img\Editor\avatars.png" />
+    <Content Include="Content\img\Editor\avatars-coediting.png" />
+    <Content Include="Content\img\Editor\avatars-comments.png" />
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\change-source.png" />
@@ -4401,6 +4403,7 @@
     <Content Include="Views\DocSpace\Faq.aspx" />
     <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\Filters.aspx" />
+    <Content Include="Views\DocSpace\GetDocspace.aspx" />
     <Content Include="Views\DocSpace\JsSdk.aspx" />
     <Content Include="Views\DocSpace\JsSdk\Config.ascx" />
     <Content Include="Views\DocSpace\JsSdk\Default.ascx" />
@@ -4573,6 +4576,7 @@
     <Content Include="Views\Editors\Review.aspx" />
     <Content Include="Views\Editors\Save.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
+    <Content Include="Views\Editors\SettingAvatars.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\Signature.aspx" />
     <Content Include="Views\Editors\Signature\Body.ascx" />
