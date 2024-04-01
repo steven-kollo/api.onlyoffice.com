@@ -577,7 +577,24 @@
     "GetComments": {
       "memberof": "Api",
       "name": "GetComments",
-      "description": "<p>Returns an array of ApiComment objects.</p>",
+      "description": "<p>Returns all comments related to the whole workbook.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiComment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllComments": {
+      "memberof": "Api",
+      "name": "GetAllComments",
+      "description": "<p>Returns all comments from the current workbook including comments from all worksheets.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -647,7 +664,7 @@
       ]
     }
   },
-  "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\n\t * @property {ApiComment[]} Comments - Returns an array of ApiComment objects.\n\t * @property {FreezePaneType} FreezePanes - Returns or sets the type of freeze panes.\n\t */",
+  "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\n\t * @property {ApiComment[]} Comments - Returns all comments related to the whole workbook.\n\t * @property {FreezePaneType} FreezePanes - Returns or sets the type of freeze panes.\n\t * @property {ApiComment[]} AllComments - Returns all comments from the current workbook including comments from all worksheets.\n\t */",
   "description": "<p>Base class.</p>",
   "scope": "global",
   "properties": [
@@ -669,12 +686,17 @@
     {
       "type": "Array.<ApiComment>",
       "name": "Comments",
-      "description": "<p>Returns an array of ApiComment objects.</p>"
+      "description": "<p>Returns all comments related to the whole workbook.</p>"
     },
     {
       "type": "FreezePaneType",
       "name": "FreezePanes",
       "description": "<p>Returns or sets the type of freeze panes.</p>"
+    },
+    {
+      "type": "Array.<ApiComment>",
+      "name": "AllComments",
+      "description": "<p>Returns all comments from the current workbook including comments from all worksheets.</p>"
     }
   ]
 }

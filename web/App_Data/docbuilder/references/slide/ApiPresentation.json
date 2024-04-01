@@ -460,6 +460,23 @@
           "defaultValue": false
         }
       ]
+    },
+    "GetAllComments": {
+      "memberof": "ApiPresentation",
+      "name": "GetAllComments",
+      "description": "<p>Returns all comments from the current presentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiComment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "events": {},
