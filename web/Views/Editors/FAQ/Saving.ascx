@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
+    <span class="hdr">ONLYOFFICE Docs FAQ: <br />
         Saving questions</span>
 </h1>
 
@@ -31,7 +31,7 @@
     ...
 });</pre>
             </li>
-            <li>Enabling the repeating forcesave start in the <b>default.json</b> Document Server configuration file:
+            <li>Enabling the repeating forcesave start in the <b>default.json</b> ONLYOFFICE Docs configuration file:
                 <pre>{
     "services": {
         "CoAuthoring": {
@@ -50,7 +50,7 @@
 <dl class="faq_block" id="saving_2">
     <dt>How to save the created document?</dt>
     <dd>
-        <p>Please see the <a href="<%= Url.Action("save") %>">Saving file</a> section to find out how file saving works in Document Server and what is needed to save the created document.</p>
+        <p>Please see the <a href="<%= Url.Action("save") %>">Saving file</a> section to find out how file saving works in ONLYOFFICE Docs and what is needed to save the created document.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="saving_3">

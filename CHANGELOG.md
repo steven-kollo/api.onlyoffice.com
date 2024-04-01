@@ -1,5 +1,11 @@
 # Change Log
 
+##
+- docbuilder: new samples
+- editors: config to clipboard
+- editors: added the Setting avatars page to How it works
+- editors: try ppsx
+
 ## 4.6.0
 - docspace: fix examples for dto
 - editors: sandbox on configuration pages

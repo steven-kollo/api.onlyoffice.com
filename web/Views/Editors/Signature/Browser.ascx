@@ -4,11 +4,11 @@
     <a class="up" href="<%= Url.Action("signature/") %>"></a>
     <span class="hdr">Browser</span>
 </h1>
-<p class="dscr">When performing the client-side browser requests to ONLYOFFICE Document Server a <em>token</em> must be added to the parameters to validate the data.</p>
+<p class="dscr">When performing the client-side browser requests to ONLYOFFICE Docs a <em>token</em> must be added to the parameters to validate the data.</p>
 
 <h2 id="open" class="copy-link">Opening file</h2>
 
-<p id="config" class="copy-link">When a file is <a href="<%= Url.Action("open") %>">opened</a> for editing in ONLYOFFICE Document Server, the <a href="<%= Url.Action("config/") %>#token">token</a> must be added to the configuration to validate the parameters.</p>
+<p id="config" class="copy-link">When a file is <a href="<%= Url.Action("open") %>">opened</a> for editing in ONLYOFFICE Docs, the <a href="<%= Url.Action("config/") %>#token">token</a> must be added to the configuration to validate the parameters.</p>
 
 <p>
     The <em>payload</em> for the JWT token in the JSON format must have the same structure as the <a href="<%= Url.Action("advanced") %>">config</a>.
@@ -53,7 +53,7 @@
 </pre>
 <p>
     Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
 </p>
 
 <div class="header-gray">Sample token</div>
@@ -84,14 +84,14 @@
 </pre>
         <p>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
         <div class="header-gray">Sample token</div>
         <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UucG5nIn1dfQ._tPxpJrPbom_f83qgX4_AB9v1cfK2LSQsfomfl7zJ58</pre>
     </li>
     <li>
-        <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - when calling the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to view the document <a href="<%= Url.Action("history") %>">history</a> version in ONLYOFFICE Document Server, the <a href="<%= Url.Action("methods") %>#setHistoryData-token">token</a> must be added to validate the parameters.</p>
+        <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - when calling the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to view the document <a href="<%= Url.Action("history") %>">history</a> version in ONLYOFFICE Docs, the <a href="<%= Url.Action("methods") %>#setHistoryData-token">token</a> must be added to validate the parameters.</p>
 
         <p>
             The <em>payload</em> for the JWT token in the JSON format must have the same structure as the method parameter.
@@ -112,7 +112,7 @@
 </pre>
         <p>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
         <div class="header-gray">Sample token</div>
@@ -134,7 +134,7 @@
 </pre>
         <p>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
         <div class="header-gray">Sample token</div>
@@ -162,7 +162,7 @@
 </pre>
         <p>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
         <div class="header-gray">Sample token</div>
@@ -190,7 +190,7 @@
 </pre>
         <p>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
         <div class="header-gray">Sample token</div>
@@ -213,7 +213,7 @@
 </pre>
         <p>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
         <div class="header-gray">Sample token</div>
@@ -236,7 +236,7 @@
 </pre>
         <p>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
         <div class="header-gray">Sample token</div>
@@ -258,7 +258,7 @@
 </pre>
         <p>
             Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
 
         <div class="header-gray">Sample token</div>

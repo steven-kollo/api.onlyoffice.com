@@ -69,7 +69,7 @@
     <ol>
         <li>User navigates to the <b>Documents and Media</b> section within Liferay and selects the <b>Edit in ONLYOFFICE</b> action.</li>
         <li>
-            <p>Liferay prepares a JSON object for the Document Server with the following properties:</p>
+            <p>Liferay prepares a JSON object for the ONLYOFFICE Docs with the following properties:</p>
             <ul>
                 <li><b>url</b>: the URL that ONLYOFFICE Docs uses to download the document,</li>
                 <li><b>callbackUrl</b>: the URL that ONLYOFFICE Docs informs about status of the document editing;</li>

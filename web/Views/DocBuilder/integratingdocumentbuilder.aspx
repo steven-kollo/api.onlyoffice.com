@@ -17,8 +17,8 @@
     <p class="dscr">To start integrating <b>ONLYOFFICE Document Builder</b> into your own application you need to do the following:</p>
     <ol>
         <li>
-            <p>Download <b>ONLYOFFICE Document Builder</b> application and install it to your computer</p>
-            <a href="https://www.onlyoffice.com/document-builder.aspx" class="button" target="blank">Download</a>
+            <p>Download <b>ONLYOFFICE Document Builder</b> application and install it to your computer:</p>
+            <a href="https://www.onlyoffice.com/download-builder.aspx?from=api" class="button" target="blank">Get ONLYOFFICE Document Builder</a>
         </li>
 
         <li>

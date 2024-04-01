@@ -59,9 +59,9 @@
     <p>
         ONLYOFFICE Docs and ownCloud can be installed either on different computers, or on the same machine.
         In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Docs and ownCloud work on port 80.
-        Or you can use Document Server behind a proxy, please refer to <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx" target="_blank">this article</a> to learn how you can configure it.
+        Or you can use ONLYOFFICE Docs behind a proxy, please refer to <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx" target="_blank">this article</a> to learn how you can configure it.
     </p>
-    <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud">Docker installation</a> to get installed and configured Document Server and ownCloud installation with a couple of commands.</p>
+    <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud">Docker installation</a> to get installed and configured ONLYOFFICE Docs and ownCloud installation with a couple of commands.</p>
 
 
     <h2 id="install" class="copy-link">Installing ownCloud ONLYOFFICE integration app</h2>
@@ -167,7 +167,7 @@ git submodule update --init --recursive</span>
             <ul>
                 <li><b>url</b> - the URL that ONLYOFFICE Docs uses to download the document;</li>
                 <li><b>callbackUrl</b> - the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>documentServerUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (can be set at the administrative settings page);</li>
+                <li><b>documentServerUrl</b> - the URL that the client needs to respond to ONLYOFFICE Docs (can be set at the administrative settings page);</li>
                 <li><b>key</b> - the <em>UUID+Modified Timestamp</em> to instruct ONLYOFFICE Docs whether to download the document again or not.</li>
             </ul>
         </li>
@@ -201,7 +201,7 @@ git submodule update --init --recursive</span>
             </div>
         </li>
         <li>
-            <p><b>Validating certificate</b>. If you are using a self-signed certificate for your Document Server, ownCloud will not validate such a certificate and will not allow connection to/from Document Server.
+            <p><b>Validating certificate</b>. If you are using a self-signed certificate for your Document Server, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs.
             This issue can be solved in two ways:</p>
             <ol>
                 <li>Check the <b>Disable certificate verification (insecure)</b> box on the ONLYOFFICE administration page, Server settings section, within your ownCloud.</li>
@@ -212,14 +212,14 @@ git submodule update --init --recursive</span>
     'verify_peer_off' => true
 )
 </pre>
-            <p>This will disable the certificate verification and allow ownCloud to establish connection with Document Server.</p>
+            <p>This will disable the certificate verification and allow ownCloud to establish connection with ONLYOFFICE Docs.</p>
             <note>Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the ownCloud config file.</note>
         </li>
         <li id="editors_check_interval">
             <p><b>Background task</b>. If the editors don't open or save documents after a period of proper functioning,
                 the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.</p>
             <p>To solve this, we added an asynchronous background task which runs on the server to check availability of the editors.
-                It allows testing the connection between your <b>ownCloud instance</b> and <b>ONLYOFFICE Document Server</b>,
+                It allows testing the connection between your <b>ownCloud instance</b> and <b>ONLYOFFICE Docs</b>,
                 namely availability of server addresses and the validity of the JWT secret are being checked.</p>
             <p>If any issue is detected, the ONLYOFFICE integration connector (consequently, the ability to create and open files) will be disabled.
                 As an ownCloud admin, you will get the corresponding notification.</p>
@@ -241,7 +241,7 @@ git submodule update --init --recursive</span>
         <li>
             <p>
                 <b>Converting files</b>. ONLYOFFICE Docs uses Office Open XML format as a basis when opening and editing files.
-                If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the Document Server proper work and faster performance.
+                If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the ONLYOFFICE Docs proper work and faster performance.
                 After that you can edit the file, making any changes available for the base OOXML format and save the file to this base OOXML format.
             </p>
             <p>

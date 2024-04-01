@@ -92,7 +92,7 @@ zip onlyoffice.zip -r onlyoffice
 
 
     <h2 id="configuration" class="copy-link">Configuring Chamilo ONLYOFFICE integration plugin</h2>
-    <p>On the <b>Plugins</b> page, find ONLYOFFICE and click <b>Configure</b>. You'll see the <b>Settings</b> page. Enable the plugin and specify Document Server address:</p>
+    <p>On the <b>Plugins</b> page, find ONLYOFFICE and click <b>Configure</b>. You'll see the <b>Settings</b> page. Enable the plugin and specify ONLYOFFICE Docs address:</p>
     <span class="commandline">https://&lt;documentserver&gt;/</span>
     <p>
         where the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.

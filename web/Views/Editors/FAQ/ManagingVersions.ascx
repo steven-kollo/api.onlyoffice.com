@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
+    <span class="hdr">ONLYOFFICE Docs FAQ: <br />
         Managing versions questions</span>
 </h1>
 
@@ -9,7 +9,7 @@
 <dl class="faq_block" id="versions_1">
     <dt>Which methods can be used when working with the document history events?</dt>
     <dd>
-        <p>The document history can be shown using the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> function (with the <em>events.onRequestHistory</em> event). Unless you use them, the <b>Version History</b> menu option (<b>Version History</b> button in the <b>Collaboration</b> tab) is not shown in the Document Server interface.</p>
+        <p>The document history can be shown using the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> function (with the <em>events.onRequestHistory</em> event). Unless you use them, the <b>Version History</b> menu option (<b>Version History</b> button in the <b>Collaboration</b> tab) is not shown in the ONLYOFFICE Docs interface.</p>
         <p>Once you call this function in the configuration file (together with the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method), the menu option and button are shown and the program will display the existing document versions. The data which is shown in the document version history, can be taken from the <b>document editing service</b> <a href="<%= Url.Action("callback") %>#status-2">callback</a>.</p>
         <p>So the implementation of the document version history display should look like this:</p>
         <ol>

@@ -7,7 +7,7 @@
     <p class="dscr">To restrict public access to your data, a secure exchange of requests between an online office and an integrator must be configured.</p>
 
     <p>The integrator must check that the request is received from ONLYOFFICE Docs. It uses <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys" target="_blank">proof keys</a> for this purpose. 
-        Document Server signs the request with a private key. The corresponding public key is written in the proof-key element in the <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery XML</a>. 
+        ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery XML</a>. 
         The integrator checks the private key with the public key. The signature is sent with every request in the <b>X-WOPI-Proof</b> and <b>X-WOPI-ProofOld</b> HTTP headers. 
         Private and public keys are set up via the following config parameters:</p>
 
@@ -49,7 +49,7 @@
             </tr>
             <tr>
                 <td>wopi.privateKey</td>
-                <td>Defines the private key that signs the Document Server request.</td>
+                <td>Defines the private key that signs the ONLYOFFICE Docs request.</td>
                 <td>string</td>
                 <td>"private key example"</td>
             </tr>

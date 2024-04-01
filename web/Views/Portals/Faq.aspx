@@ -17,7 +17,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Frequently asked questions: Community Server</span>
+        <span class="hdr">Frequently asked questions: ONLYOFFICE Workspace</span>
     </h1>
 
     <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>

@@ -127,8 +127,24 @@
             </div>
         </div>
     </div>
-    <div id="configPreHolder">
-        <pre id="configPre"></pre>
+    <div id="configPreHolder" style="display: flex; margin-top: 18px;">
+        <div>
+            <div id="configHeader" class="configHeader">
+                <div class="preContentType">
+                    <span style="font-family: monospace">Config.js</span>
+                </div>
+                <div>
+                    <div class="tooltip">
+                        <div class="copyConfig">
+                            <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                            <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                            <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pre id="configPre"></pre>
+        </div>  
     </div>
 </div>
 
@@ -426,13 +442,11 @@
 </table>
 <div class="mobile-content"></div>
 
-
-
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
 
     // Editor window
-    var config = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -465,7 +479,18 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
+    }) %>);
+</script>
+
+<script>
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
+
+    $(".copyConfig").click(function () {
+        var json = JSON.stringify(copy, null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
+    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave);
 </script>
 
 <script>
@@ -524,51 +549,26 @@
 `;      
 
         var info_object = JSON.parse(permissions);
+        delete info_object.token;
         config.document.permissions = info_object;
+        copy.document.permissions = info_object;
         if (window.docEditor) {
             window.docEditor.destroyEditor();
         }
+        
         $.ajax({
             type: "POST",
             url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
-            data: JSON.stringify({ jsonConfig: JSON.stringify(config) }),
+            data: JSON.stringify({ jsonConfig: JSON.stringify(copy) }),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (data) {
+                copy = JSON.parse(data);
                 window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
             }
         });
-        
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
-    }
-
-    function getFieldValue(id) {
-        var element = document.getElementById(id);
-        if (element.type == "checkbox") {
-            return element.checked;
-        } else if (`${element.value}` == ``) {
-            return `""`;
-        } else if (isNaN(element.value)) {
-            if (element.value.includes("[") || element.value.includes('""')) {
-                return element.value;
-            }
-            return `"${element.value}"`;
-        } else {
-            return Number(element.value);
-        }
-    }
-
-    function resizeCodeInput() {
-        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
-        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
-        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
-
-        var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset;
-
-        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>

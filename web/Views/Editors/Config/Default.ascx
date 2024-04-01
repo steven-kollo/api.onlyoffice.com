@@ -11,7 +11,7 @@
 <div>
     <div id="controlFields">
         <div id="info" class="control-panel">
-            <div class="line input_line" style="margin-top: 0;">
+            <div class="line input_line" style="margin-top: 0px">
                 <label for="config_documentType">Document Type</label>
                 <select class="select" id="config_documentType" name="config_documentType">
                     <option disabled>word</option>
@@ -39,8 +39,24 @@
             </div>
         </div>
     </div>
-    <div id="configPreHolder">
-        <pre id="configPre"></pre>
+    <div id="configPreHolder" style="display: flex; margin-top: 18px;">
+        <div>
+            <div id="configHeader" class="configHeader">
+                <div class="preContentType">
+                    <span style="font-family: monospace">Config.js</span>
+                </div>
+                <div>
+                    <div class="tooltip">
+                        <div class="copyConfig">
+                            <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                            <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                            <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pre id="configPre"></pre>
+        </div>  
     </div>
 </div>
 
@@ -94,7 +110,7 @@
         </tr>
         <tr class="tablerow">
             <td id="token" class="copy-link">token</td>
-            <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a>.</td>
+            <td>Defines the encrypted signature added to the <b>ONLYOFFICE Docs</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a>.</td>
             <td>string</td>
             <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"</td>
         </tr>
@@ -121,71 +137,11 @@
 </table>
 <div class="mobile-content"></div>
 
-
-<script>
-    $('.select').each(function () {
-        const _this = $(this),
-            selectOption = _this.find('option'),
-            selectOptionLength = selectOption.length,
-            selectedOption = selectOption.filter(':selected'),
-            duration = 120;
-
-        _this.hide();
-        _this.wrap('<div class="select"></div>');
-        $('<div>', {
-            class: 'new-select',
-            text: _this.children('option:disabled').text()
-        }).insertAfter(_this);
-
-        const selectHead = _this.next('.new-select');
-        $('<div>', {
-            class: 'new-select__list'
-        }).insertAfter(selectHead);
-
-        const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
-            $('<div>', {
-                class: 'new-select__item',
-                html: $('<span>', {
-                    text: selectOption.eq(i).text()
-                })
-            })
-                .attr('data-value', selectOption.eq(i).val())
-                .appendTo(selectList);
-        }
-
-        const selectItem = selectList.find('.new-select__item');
-        selectList.slideUp(0);
-        selectHead.on('click', function () {
-            if (!$(this).hasClass('on')) {
-                $(this).addClass('on');
-                selectList.slideDown(duration);
-                selectItem.on('click', function () {
-                    let chooseItem = $(this).data('value');
-                    $('select').val(chooseItem).attr('selected', 'selected');
-                    selectHead.text($(this).find('span').text());
-                    selectList.slideUp(duration);
-                    selectHead.removeClass('on');
-                    updateConfig();
-                });
-                window.addEventListener('click', function (e) {
-                    if (e.target != selectList[0] && e.target != selectHead[0] && e.target != selectItem[0]) {
-                        selectHead.removeClass('on');
-                        selectList.slideUp(duration);
-                    }
-                });
-            } else {
-                $(this).removeClass('on');
-                selectList.slideUp(duration);
-            }
-        });
-    });
-</script>
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
+    handleSelects();
 
-    // Editor window
-    var config_word = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
         new Config {
             Document = new Config.DocumentConfig
                 {
@@ -215,9 +171,11 @@
                 },
             Height = "550px",
             Width = "100%"
-        }) %>;
+        }) %>);
+    var config_word = config;
+    var config_word_copy = copy;
 
-    var config_cell = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
         new Config {
             Document = new Config.DocumentConfig
                 {
@@ -247,9 +205,11 @@
                 },
             Height = "550px",
             Width = "100%"
-        }) %>;
+        }) %>);
+    var config_cell = config;
+    var config_cell_copy = copy;
 
-    var config_slide = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
         new Config {
             Document = new Config.DocumentConfig
                 {
@@ -279,9 +239,11 @@
                 },
             Height = "550px",
             Width = "100%"
-        }) %>;
+        }) %>);
+    var config_slide = config;
+    var config_slide_copy = copy;
 
-    var config_pdf = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -311,7 +273,31 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
+    }) %>);
+    var config_pdf = config;
+    var config_pdf_copy = copy;
+
+    const deepCopies = {
+        word: config_word_copy,
+        cell: config_cell_copy,
+        slide: config_slide_copy,
+        pdf: config_pdf_copy
+    }
+
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config_word);
+</script>
+
+<script>
+
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
+
+    $(".copyConfig").click(function () {
+        var currentConfigName = getFieldValue("config_documentType").replaceAll(`"`, "");
+        var json = JSON.stringify(deepCopies[currentConfigName], null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
+    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave);
 </script>
 
 <script>
@@ -331,10 +317,8 @@
     }
 
     function updateConfig() {
-        
         var config_str = `{
             "documentType": ${getFieldValue("config_documentType")},
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
             "type": ${getFieldValue("config_type")},
             "height": ${getFieldValue("config_height")},
             "width": ${getFieldValue("config_width")}     
@@ -359,40 +343,19 @@
         config.type = config_object.type;
         config.height = config_object.height;
         config.width = config_object.width;
+
+        deepCopies[config_object.documentType].documentType = config_object.documentType;
+        deepCopies[config_object.documentType].type = config_object.type;
+        deepCopies[config_object.documentType].height = config_object.height;
+        deepCopies[config_object.documentType].width = config_object.width;
+
         if (window.docEditor) {
             window.docEditor.destroyEditor();
         }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
-    }
-
-    function getFieldValue(id) {
-        var element = document.getElementById(id);
-        if (document.getElementById(id).parentElement.className == "select") {
-            return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
-        } else if (element.type == "checkbox") {
-            return element.checked;
-        } else if (`${element.value}` == ``) {
-            return `""`;
-        } else if (isNaN(element.value)) {
-            return `"${element.value}"`;
-        } else {
-            return Number(element.value);
-        }
-    }
-
-    function resizeCodeInput() {
-        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
-        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
-        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
-
-        var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset;
-
-        document.getElementById("configPre").style.height = `${height}px`;
+        console.log(config_word_copy);
     }
 </script>

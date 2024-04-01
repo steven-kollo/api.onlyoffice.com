@@ -15,8 +15,8 @@
     <li><a href="#onDownloadAs">onDownloadAs</a> - the absolute URL to the edited file when the <em>downloadAs</em> method is being called.</li>
     <li><a href="#onError">onError</a> - an error or some other specific event occurs.</li>
     <li><a href="#onInfo">onInfo</a> - the application opened the file.</li>
-    <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <em>meta</em> command.</li>
     <li><a href="#onMakeActionLink">onMakeActionLink</a> - the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</li>
+    <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <em>meta</em> command.</li>
     <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - the document is opened for editing with the old <em>document.key</em> value, which was used to edit the previous document version and was successfully saved.</li>
     <li><a href="#onPluginsReady">onPluginsReady</a> - all plugins are loaded and can be used.</li>
     <li><a href="#onReady">onReady</a> - the application is loaded into the browser.</li>
@@ -79,11 +79,11 @@ Event messages will be available in your browser's DevTools console.
         "onInfo": function (event) {
             console.log("ONLYOFFICE Document Editor is opened in mode " + event.data.mode);
         },
-        "onMetaChange": function (event) {
-            console.log("Meta changed");
-        },
         "onMakeActionLink": function (event) {
             console.log("Action link was made");
+        },
+        "onMetaChange": function (event) {
+            console.log("Meta changed");
         },
         "onOutdatedVersion": function () {
             console.log("Outdataed version");
@@ -160,8 +160,8 @@ Event messages will be available in your browser's DevTools console.
         "onDownloadAs",
         "onError",
         "onInfo",
-        "onMetaChange",
         "onMakeActionLink",
+        "onMetaChange",
         "onOutdatedVersion",
         "onPluginsReady",
         "onReady",
@@ -428,29 +428,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command.</p>
-        <p>The name of the document is sent in the <em>data.title</em> parameter. The <em>Favorite</em> icon highlighting state is sent in the <em>data.favorite</em> parameter.</p>
-        <p>When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
-            If the method is not declared, the <em>Favorite</em> icon will not be changed.</p>
-        <div class="header-gray">Example</div>
-        <pre>
-var onMetaChange = function (event) {
-    var title = event.data.title;
-    var favorite = event.data.favorite;
-    ...
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onMetaChange": onMetaChange,
-        ...
-    },
-    ...
-});
-</pre>
-    </li>
-
-    <li>
         <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</p>
         <p>To set the bookmark link, you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
             The bookmark data is received in the <em>data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
@@ -468,6 +445,29 @@ var onMakeActionLink = function (event){
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onMakeActionLink": onMakeActionLink,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command.</p>
+        <p>The name of the document is sent in the <em>data.title</em> parameter. The <em>Favorite</em> icon highlighting state is sent in the <em>data.favorite</em> parameter.</p>
+        <p>When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
+            If the method is not declared, the <em>Favorite</em> icon will not be changed.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onMetaChange = function (event) {
+    var title = event.data.title;
+    var favorite = event.data.favorite;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onMetaChange": onMetaChange,
         ...
     },
     ...
@@ -708,7 +708,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>Where the <b>changesUrl</b> is the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.</p>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
     </li>
 
@@ -748,7 +748,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </li>
 
     <li>
@@ -784,7 +784,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </li>
 
     <li>
@@ -957,7 +957,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
     </li>
 
@@ -1013,7 +1013,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </li>
 
     <li>
@@ -1043,7 +1043,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </li>
 
     <li>

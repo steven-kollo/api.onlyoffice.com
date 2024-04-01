@@ -16,7 +16,7 @@
     </h1>
 
     <p class="dscr">
-        Click the buttons with the format names below to try the main functionality of ONLYOFFICE Document Server.
+        Click the buttons with the format names below to try the main functionality of ONLYOFFICE Docs.
         You can open various file types for editing, viewing, co-editing, review or see how the rebranding works.
         Use the <b>&lt;/&gt;</b> buttons to view the corresponding example source code.
     </p>
@@ -52,6 +52,8 @@
                     <a title="Open CSV file for editing" href="<%= Url.Action("editor") %>?method=csvEditor" class="button button-upper spread" target="blank">CSV</a><a title="View source code" class="button-popap-try" data-code="csvEditorCode">&lt;/&gt;</a>
                 </td>
                 <td><a title="Open PPTX file for editing" href="<%= Url.Action("editor") %>?method=pptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxEditorCode">&lt;/&gt;</a>
+                    <br />
+                    <a title="Open PPSX file for editing" href="<%= Url.Action("editor") %>?method=ppsxEditor" class="button button-upper present" target="blank">PPSX</a><a title="View source code" class="button-popap-try" data-code="ppsxEditorCode">&lt;/&gt;</a>
                     <br />
                     <a title="Open PPT file for editing" href="<%= Url.Action("editor") %>?method=pptEditor" class="button button-upper present" target="blank">PPT</a><a title="View source code" class="button-popap-try" data-code="pptEditorCode">&lt;/&gt;</a>
                     <br />
@@ -310,6 +312,42 @@
                     "key": "9E2BDFCD1D75",
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
+                },
+                "documentType": "slide",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="ppsxEditorCode">
+                <div class="popap-header">Open ppsx for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "ppsx",
+                    "key": "3DAB8BAA68E4",
+                    "title": "Example Presentation Title.ppsx",
+                    "url": "https://example.com/url-to-example-presentation.ppsx"
                 },
                 "documentType": "slide",
                 "editorConfig": {

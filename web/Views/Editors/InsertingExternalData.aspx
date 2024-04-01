@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Inserting external data</span>
     </h1>
-    <p class="dscr">The steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Docs.</p>
     <img alt="Inserting external data" src="<%= Url.Content("~/content/img/editor/insert-external-data.svg") %>" />
     <ol>
         <li>The user copies the cell value to the clipboard from the <b>document editor</b> of the source spreadsheet. At the same time, the special data is also copied.</li>
@@ -154,7 +154,7 @@ docEditor.setReferenceData({
 </pre>
             <p>
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
         </li>
     </ol>
@@ -189,7 +189,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.</p>
         </li>
         <li>
             <p>Specify the event handler for the <em>Change source</em> button to be displayed in the configuration script for Document Editor initialization.

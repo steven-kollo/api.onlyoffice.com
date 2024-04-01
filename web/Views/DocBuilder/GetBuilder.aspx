@@ -28,12 +28,12 @@
     <p>You can download it from our website or compile from source codes and deploy the solution on your local server using the specially designed <b>build_tools</b>.</p>
     <ul class="get-docs-block">
         <li class="get-docs-option">
-            <a href="https://www.onlyoffice.com/download-builder.aspx?utm_source=api" target="_blank"></a>
-            <p class="get-docs-link"><a href="https://www.onlyoffice.com/download-builder.aspx?utm_source=api" target="_blank">Get ONLYOFFICE Document Builder</a></p>
+            <a href="https://www.onlyoffice.com/download-builder.aspx?from=api" target="_blank"></a>
+            <p class="get-docs-link"><a href="https://www.onlyoffice.com/download-builder.aspx?from=api" target="_blank">Get ONLYOFFICE Document Builder</a></p>
         </li>
         <li class="get-docs-option">
-            <a href="https://helpcenter.onlyoffice.com/installation/docs-community-compile-document-builder.aspx" target="_blank"></a>
-            <p class="get-docs-link"><a href="https://helpcenter.onlyoffice.com/installation/docs-community-compile-document-builder.aspx" target="_blank">Compile ONLYOFFICE Document Builder</a></p>
+            <a href="https://helpcenter.onlyoffice.com/installation/docs-community-compile-document-builder.aspx?from=api" target="_blank"></a>
+            <p class="get-docs-link"><a href="https://helpcenter.onlyoffice.com/installation/docs-community-compile-document-builder.aspx?from=api" target="_blank">Compile ONLYOFFICE Document Builder</a></p>
         </li>
     </ul>
 

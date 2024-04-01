@@ -73,6 +73,6 @@
     <p>The <b>document editing service</b> requests an encrypted <b>signature</b>.</p>
     <p>
         Check if the <a href="<%= Url.Action("config/") %>#token">token</a> is correct.
-        The token must be generated in accordance with the <a href="<%= Url.Action("security") %>">JWT (JSON Web Tokens) standard</a> and present in <b>ONLYOFFICE Document Server</b> config.
+        The token must be generated in accordance with the <a href="<%= Url.Action("security") %>">JWT (JSON Web Tokens) standard</a> and present in <b>ONLYOFFICE Docs</b> config.
     </p>
 </asp:Content>

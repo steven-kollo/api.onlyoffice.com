@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Anonymous users</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Docs.</p>
     <img alt="Anonymous" src="<%= Url.Content("~/content/img/editor/anonymous-user.png") %>" />
     <ol>
         <li>

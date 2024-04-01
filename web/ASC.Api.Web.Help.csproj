@@ -2088,13 +2088,16 @@
     <Content Include="App_Data\docbuilder\sample-files\mail_merge_result.docx" />
     <Content Include="App_Data\docbuilder\sample-files\mail_template.docx" />
     <Content Include="App_Data\docbuilder\sample-files\review_report.docx" />
+	<Content Include="App_Data\docbuilder\samples\addwatermark.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\commenterrors.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createadvancedform.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createbasicform.docbuilder" />
+	<Content Include="App_Data\docbuilder\samples\createspreadsheetchart.docbuilder" /> 
     <Content Include="App_Data\docbuilder\samples\createchartpresentation.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createformaldocument.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createpresentation.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createreports.docbuilder" />
+	<Content Include="App_Data\docbuilder\samples\createtabledocument.docbuilder" /> 
     <Content Include="App_Data\docbuilder\samples\fillform.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\fillspreadsheet.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\mailmergereceptions.docbuilder" />
@@ -2356,6 +2359,7 @@
     <Content Include="Content\img\arrow-gray.svg" />
 	<Content Include="Content\img\arrow-select.svg" />
     <Content Include="Content\img\close.svg" />
+    <Content Include="Content\img\copy-content.svg" />
     <Content Include="Content\img\csharp\add.png" />
     <Content Include="Content\img\csharp\browse.png" />
     <Content Include="Content\img\csharp\platform.png" />
@@ -2420,6 +2424,7 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\docbuilder\samples\add-watermark.svg" />
     <Content Include="Content\img\docbuilder\samples\comment-errors.svg" />
     <Content Include="Content\img\docbuilder\samples\create-advanced-form.svg" />
     <Content Include="Content\img\docbuilder\samples\create-basic-form.svg" />
@@ -2427,6 +2432,8 @@
     <Content Include="Content\img\docbuilder\samples\create-formal-document.svg" />
     <Content Include="Content\img\docbuilder\samples\create-presentation.svg" />
     <Content Include="Content\img\docbuilder\samples\create-reports.svg" />
+    <Content Include="Content\img\docbuilder\samples\create-spreadsheet-chart.svg" />
+    <Content Include="Content\img\docbuilder\samples\create-table-document.svg" />
     <Content Include="Content\img\docbuilder\samples\fill-form.svg" />
     <Content Include="Content\img\docbuilder\samples\fill-spreadsheet.svg" />
     <Content Include="Content\img\docbuilder\samples\mail-merge-reception.svg" />
@@ -2491,6 +2498,9 @@
     <Content Include="Content\img\Editor\anonymous.png" />
     <Content Include="Content\img\Editor\anonymous-warning.jpg" />
     <Content Include="Content\img\Editor\attachment-page.png" />
+    <Content Include="Content\img\Editor\avatars.png" />
+    <Content Include="Content\img\Editor\avatars-coediting.png" />
+    <Content Include="Content\img\Editor\avatars-comments.png" />
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\change-source.png" />
@@ -4168,13 +4178,16 @@
     <Content Include="Views\DocBuilder\Builderframeworksamples\cppbuildersamples.ascx" />
     <Content Include="Views\DocBuilder\Builderframeworksamples\default.ascx" />
     <Content Include="Views\DocBuilder\buildersamples.aspx" />
+	<Content Include="Views\DocBuilder\Buildersamples\addwatermark.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\commenterrors.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createadvancedform.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createbasicform.ascx" />
+    <Content Include="Views\DocBuilder\Buildersamples\createspreadsheetchart.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createchartpresentation.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createformaldocument.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createpresentation.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createreports.ascx" />
+	<Content Include="Views\DocBuilder\Buildersamples\createtabledocument.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\default.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\fillform.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\fillspreadsheet.ascx" />
@@ -4400,6 +4413,7 @@
     <Content Include="Views\DocSpace\Faq.aspx" />
     <Content Include="Views\DocSpace\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\DocSpace\Filters.aspx" />
+    <Content Include="Views\DocSpace\GetDocspace.aspx" />
     <Content Include="Views\DocSpace\JsSdk.aspx" />
     <Content Include="Views\DocSpace\JsSdk\Config.ascx" />
     <Content Include="Views\DocSpace\JsSdk\Default.ascx" />
@@ -4572,6 +4586,7 @@
     <Content Include="Views\Editors\Review.aspx" />
     <Content Include="Views\Editors\Save.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
+    <Content Include="Views\Editors\SettingAvatars.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\Signature.aspx" />
     <Content Include="Views\Editors\Signature\Body.ascx" />
