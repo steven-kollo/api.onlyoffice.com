@@ -276,7 +276,7 @@
       {
         "type": "number",
         "name": "paragraphs.linespacing",
-        "description": "<p>The text linespecing in the current paragraph.</p>"
+        "description": "<p>The text linespacing in the current paragraph.</p>"
       },
       {
         "type": "Array.<object>",

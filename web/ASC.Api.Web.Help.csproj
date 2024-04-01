@@ -2280,6 +2280,7 @@
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.ReplaceCurrentSentence.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.ReplaceCurrentWord.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SearchAndReplace.docbuilder" />
+    <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SearchNext.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectContentControl.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectOleObject.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SetDisplayModeInReview.docbuilder" />
