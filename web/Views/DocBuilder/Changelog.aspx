@@ -69,6 +69,31 @@
     </ul>
     <br />
 
+    <p><b>Protected range methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange") %>">ApiProtectedRange</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/adduser") %>">ApiProtectedRange/AddUser</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/deleteuser") %>">ApiProtectedRange/DeleteUser</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/getallusers") %>">ApiProtectedRange/GetAllUsers</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/getuser") %>">ApiProtectedRange/GetUser</a> method to Spreadsheet API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/setanyonetype") %>">ApiProtectedRange/SetAnyoneType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/setrange") %>">ApiProtectedRange/SetRange</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/settitle") %>">ApiProtectedRange/SetTitle</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrangeuserinfo") %>">ApiProtectedRangeUserInfo</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrangeuserinfo/getid") %>">ApiProtectedRangeUserInfo/GetId</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrangeuserinfo/getname") %>">ApiProtectedRangeUserInfo/GetName</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrangeuserinfo/gettype") %>">ApiProtectedRangeUserInfo/GetType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/addprotectedrange") %>">ApiWorksheet/AddProtectedRange</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallprotectedranges") %>">ApiWorksheet/GetAllProtectedRanges</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getprotectedrange") %>">ApiWorksheet/GetProtectedRange</a> method to Spreadsheet API.</li>
+        <li>Added the <em>AllProtectedRanges</em> property to the <a href="<%= Url.Action("spreadsheetapi/apiworksheet") %>">ApiWorksheet</a> object of Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ProtectedRangeUserType">ProtectedRangeUserType</a> type to the simple type definitions.</li>
+    </ul>
+    <br />
+
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <p><b>Form methods</b></p>
     <ul>
