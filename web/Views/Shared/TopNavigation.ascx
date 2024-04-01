@@ -5,17 +5,11 @@
        var categoryProduct = Products.EnabledProducts().FirstOrDefault(product => product.Parent == null && (Html.IfController(product.Id) || subControllerStr.Equals(product.Id, StringComparison.OrdinalIgnoreCase)));
        var isCategoryPage = categoryProduct != null && Request.Url.AbsolutePath.Equals("/" + categoryProduct.Id, StringComparison.OrdinalIgnoreCase);
     %>
-    <div id="menu-button" class="left_menu <%= Html.IfController("Home") || isCategoryPage ? "mainMenu" : string.Empty %>">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
     <a class="logo <%= Html.IfController("Home") || isCategoryPage ? string.Empty : "smallLogo" %>" href="<%= Url.Action("index", "home") %>"></a>
+    <div id="sidebar-button" class="sidebar-button <%= Html.IfController("Home") || isCategoryPage ? string.Empty : "show" %>"></div>
+    <div class="menu-header <%= Html.IfController("Home") || isCategoryPage ? string.Empty : "active" %>"></div>
     <div id="header-button" class="ham_menu push menu-btn pushy-link">
         <span></span>
-        <span></span>
-        <span></span>
-        <div class="menu-header <%= Html.IfController("Home") ? string.Empty : "heading-menu" %>"><%= Html.IfController("Home") ? "Menu" : string.Empty %></div>
     </div>
     <nav class="pushy pushy-left pushy-submenu-closed">
         <div class="pushy-content">
@@ -26,7 +20,7 @@
                         if (product.Parent == null)
                         { %>
                     <li class="pushy-submenu <%= Html.IfController(product.Id) || subControllerStr.Equals(product.Id, StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-                        <a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><%= product.Title %></a>
+                        <div class="pushy-submenu-item"><%= product.Title %></div>
                         <% if (product.Sections != null)
                            { %>
                            <ul class="pushy-dropdown">

@@ -36,21 +36,65 @@ $(function () {
                 $(".pushy-left")
                     .removeClass('pushy-submenu-closed')
                     .addClass('pushy-submenu-open');
-                $(".site-overlay").removeClass('hidden');
                 $("body").removeClass("hidden-body");
                 if ($(".layout-side").hasClass("open-menu")) {
                     $(".layout-side").removeClass("open-menu");
                 }
+                $("#header-button").addClass("open-menu");
+
+                if ($(".layout-table-side").hasClass("hide")) {
+                    $("#sidebar-button").removeClass("active");
+                    $(".layout-table-side").removeClass("hide");
+                }
+
+                function clickHandler(e) {
+                    if (window.innerWidth <= 592) {
+                        if (!$(e.target).closest(".layout-header").length && !$(e.target).closest(".pushy").length) {
+                            $("#header-button").removeClass("open-menu");
+                            $(".pushy-left").addClass("pushy-submenu-closed").removeClass("pushy-submenu-open");
+                            $(".pushy-submenu").removeClass("show");
+                            $(document).off("click", clickHandler);
+                        }
+                    }
+                };
+                
+                $(document).on("click", clickHandler);
             } else {
                 $(".pushy-left")
                     .addClass('pushy-submenu-closed')
                     .removeClass('pushy-submenu-open');
-                $(".site-overlay").addClass('hidden');
+                $("#header-button").removeClass("open-menu");
+                $(".pushy-submenu").removeClass("show");
             }
         });
     }
 
-    $(".site-overlay, .close-menu").on("click", function () {
+    $(".pushy-submenu-item").each(function (index, el) {
+        $(el).on("click", function () {
+            if (window.innerWidth <= 592) {
+                $(el).parent().toggleClass("show");
+            }
+        });
+    });
+
+    $("#sidebar-button").on("click", function() {
+        $(this).toggleClass("active");
+        $(".layout-table-side").toggleClass("hide");
+
+        if ($(this).hasClass("active")) {
+            localStorage.setItem("sidebar-navigation", false);
+        } else {
+            localStorage.setItem("sidebar-navigation", true);
+        }
+
+        if ($(".ham_menu").hasClass("open-menu")) {
+            $("#header-button").removeClass("open-menu");
+            $(".pushy-left").addClass("pushy-submenu-closed").removeClass("pushy-submenu-open");
+            $(".pushy-submenu").removeClass("show");
+        }
+    });
+
+    $(".site-overlay").on("click", function () {
         $(".pushy-left")
             .addClass('pushy-submenu-closed')
             .removeClass('pushy-submenu-open');

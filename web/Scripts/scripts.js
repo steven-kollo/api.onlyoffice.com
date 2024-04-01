@@ -96,6 +96,22 @@ $(window).on("load", function () {
             $(".footer-item-list").css("display", "block");
         }
     });
+
+    if (window.innerWidth > 592) {
+        if (localStorage.getItem("sidebar-navigation") === "false") {
+            $("#sidebar-button").addClass("active");
+            $(".layout-table-side").addClass("hide");
+        } else {
+            $("#sidebar-button").removeClass("active");
+            $(".layout-table-side").removeClass("hide");
+        }
+
+        if (window.innerWidth <= 1024) {
+            setTimeout(() => {
+                $(".layout-table-side").addClass("transition");
+            }, 50);
+        }
+    }
 });
 
 $(function() {
