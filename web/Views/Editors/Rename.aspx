@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Renaming files</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of renaming a document in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of renaming a document in ONLYOFFICE Docs.</p>
     <img alt="Renaming File" src="<%= Url.Content("~/content/img/editor/rename.svg") %>" />
     <ol>
         <li>The user gives a new name to the document in the <b>document editor</b>.</li>

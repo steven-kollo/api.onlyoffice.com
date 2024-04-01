@@ -1,15 +1,15 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
+    <span class="hdr">ONLYOFFICE Docs FAQ: <br />
         Customizing questions</span>
 </h1>
 
 <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="customizing_1">
-    <dt>How to whitelabel ONLYOFFICE Document Server?</dt>
+    <dt>How to whitelabel ONLYOFFICE Docs?</dt>
     <dd>
-        <p>The below options can be edited for whitelabeling your version of Document Server, changing the information which will be displayed at the <b>About</b> page and visible to all editor users.</p>
+        <p>The below options can be edited for whitelabeling your version of ONLYOFFICE Docs, changing the information which will be displayed at the <b>About</b> page and visible to all editor users.</p>
         <div class="note">Please note that changing these options is only available to the <a target="_blank" href="https://www.onlyoffice.com/developer-edition-prices.aspx">ONLYOFFICE Developer Edition</a> users.</div>
         <ul>
             <li><em>editorConfig.customization.customer</em> options:
@@ -59,9 +59,9 @@
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_2">
-    <dt>How to change the default language of the Document Server interface?</dt>
+    <dt>How to change the default language of the ONLYOFFICE Docs interface?</dt>
     <dd>
-        <p>If the interface language is present in the <a target="_blank" href="https://helpcenter.onlyoffice.com/server/document/available-languages.aspx">list of available Document Server languages</a>, you can simply use the <em>editorConfig.lang</em> property in the configuration file to set it to the necessary locale, like this:</p>
+        <p>If the interface language is present in the <a target="_blank" href="https://helpcenter.onlyoffice.com/server/document/available-languages.aspx">list of available ONLYOFFICE Docs languages</a>, you can simply use the <em>editorConfig.lang</em> property in the configuration file to set it to the necessary locale, like this:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "lang": "de",
@@ -69,7 +69,7 @@
     },
     ...
 });</pre>
-        <p>If the language is not available and you want to translate it or have already translated it to your own language, please see <a target="_blank" href="https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx">this article</a> to find out how to install it to your Document Server.</p>
+        <p>If the language is not available and you want to translate it or have already translated it to your own language, please see <a target="_blank" href="https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx">this article</a> to find out how to install it to your ONLYOFFICE Docs.</p>
         <p>Further information about the language settings can be found <a href="<%= Url.Action("config/editor") %>">at this page</a>.</p>
     </dd>
 </dl>
@@ -159,9 +159,9 @@
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_7">
-    <dt>How to connect plugins to Document Server so that they become visible for all editor users?</dt>
+    <dt>How to connect plugins to ONLYOFFICE Docs so that they become visible for all editor users?</dt>
     <dd>
-        <p>To enable plugins for all Document Server users, you need the following:</p>
+        <p>To enable plugins for all ONLYOFFICE Docs users, you need the following:</p>
         <ul>
             <li>Get the plugins (this can be done using our plugin repository on <a target="_blank" href="https://github.com/ONLYOFFICE/sdkjs-plugins">GitHub</a> or you can write your own plugin).</li>
             <li>Put the plugins to the folder accessible by Document Editor.</li>
@@ -185,7 +185,7 @@
     },
     ...
 });</pre>
-        <p>Where <em>editorConfig.plugins.autostart</em> is the array of the GUIDs for the plugins that you want to start automatically when Document Server is started (as defined in the plugin <a href="<%= Url.Action("config", "plugin") %>#guid">config.json</a> file), and <em>editorConfig.plugins.pluginsData</em> is the array of the <b>config.json</b> configuration files for all the plugins that you want to be available to Document Server users.</p>
-        <p>Further information about enabling the plugins for Document Server can be found <a href="<%= Url.Action("config/editor/plugins") %>">at this page</a>.</p>
+        <p>Where <em>editorConfig.plugins.autostart</em> is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin <a href="<%= Url.Action("config", "plugin") %>#guid">config.json</a> file), and <em>editorConfig.plugins.pluginsData</em> is the array of the <b>config.json</b> configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.</p>
+        <p>Further information about enabling the plugins for ONLYOFFICE Docs can be found <a href="<%= Url.Action("config/editor/plugins") %>">at this page</a>.</p>
     </dd>
 </dl>

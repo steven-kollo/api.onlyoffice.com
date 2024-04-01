@@ -13,6 +13,9 @@
         <li>
             <a href="<%= Url.Action("basic") %>">Overview</a>
         </li>
+        <li>
+            <a href="<%= Url.Action("getdocspace") %>">Get ONLYOFFICE DocSpace</a>
+        </li>
         <div class="treeheader">JavaScript SDK</div>
         <ul class="side-nav root">
             <li>

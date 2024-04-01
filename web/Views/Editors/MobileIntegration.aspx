@@ -33,7 +33,7 @@
                 <li>Download the mobile demo sample for iOS from <a href="https://github.com/ONLYOFFICE/editors-webview-ios" target="_blank">GitHub</a>.</li>
                 <li>Open the <em>EditorWebViewDemo.xcodeproj</em> project with <a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a> to modify code fragments of this example for your DMS to work correctly.</li>
                 <li>
-                    <p>To display the main page of your DMS, specify the address of the Document Server web interface in the value of the <b>DocumentServerURL</b> property in the <em>Info.plist</em> file:</p>
+                    <p>To display the main page of your DMS, specify the address of the ONLYOFFICE Docs web interface in the value of the <b>DocumentServerURL</b> property in the <em>Info.plist</em> file:</p>
                     <pre>
 &lt;dict&gt;
     ...
@@ -41,7 +41,7 @@
     &lt;string&gt;https://documentserver/&lt;/string&gt;
 &lt;/dict&gt;
 </pre>
-                    <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+                    <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.</p>
                     <p>If <b>DocumentServerURL</b> is specified, the DMS main page is loaded. Otherwise, an error occurs:</p>
                     <pre>
 private func load() {
@@ -204,11 +204,11 @@ func webView(_ webView: WKWebView,
 </pre>
                 </li>
                 <li>
-                    <p>Specify your ONLYOFFICE Document Server link with the JavaScript API that will be used for your website:</p>
+                    <p>Specify your ONLYOFFICE Docs link with the JavaScript API that will be used for your website:</p>
                     <pre>
 &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 </pre>
-                    <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+                    <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.</p>
                 </li>
                 <li>
                     <p>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open:</p>
@@ -384,11 +384,11 @@ func present(url: URL, in parent: UIViewController, complation: @escaping (() ->
                 <li>Download the mobile demo sample for Android from <a href="https://github.com/ONLYOFFICE/editors-webview-android" target="_blank">GitHub</a>.</li>
                 <li>Open the top-level <em>build.gradle</em> file with <a href="https://developer.android.com/studio" target="_blank">Android Studio</a> to modify code fragments of this example for your DMS to work correctly.</li>
                 <li>
-                    <p>To display the main page of your DMS, specify the address of the Document Server web interface in the value of the <b>DOCUMENT_SERVER_URL</b> property in the module-level <em>build.gradle</em> file:</p>
+                    <p>To display the main page of your DMS, specify the address of the ONLYOFFICE Docs web interface in the value of the <b>DOCUMENT_SERVER_URL</b> property in the module-level <em>build.gradle</em> file:</p>
                     <pre>
 buildConfigField("String", "DOCUMENT_SERVER_URL", "https://documentserver/")
 </pre>
-                    <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+                    <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.</p>
                     <p>If <b>DOCUMENT_SERVER_URL</b> is specified, the DMS main page is loaded. Otherwise, an error occurs:</p>
                     <pre>
 private fun showDialog() {

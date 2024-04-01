@@ -15,7 +15,7 @@
 
 
 <div class="header-gray">Installation</div>
-<p>Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Document Server + Community Server), and ONLYOFFICE cloud.</p>
+<p>Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.</p>
 <p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/zotero" target="_blank">ONLYOFFICE App Directory</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a> installation instruction.</p>
 

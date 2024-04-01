@@ -18,7 +18,7 @@
     <span class="pvl_product">ONLYOFFICE DocSpace</span><span class="pvl_version">v<%= Products.Get("docspace").Version %></span>
 
     <p class="dscr">
-        <a href="https://www.onlyoffice.com/docspace.aspx" target="_blank">ONLYOFFICE DocSpace</a> is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.
+        <a href="https://www.onlyoffice.com/docspace.aspx?from=api" target="_blank">ONLYOFFICE DocSpace</a> is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.
         It provides the following features:
     </p>
     <ul>

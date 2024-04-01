@@ -179,6 +179,9 @@
                 <li>
                     <a href="<%= Url.Action("javasdk") %>">Integrating editors using Java SDK</a>
                 </li>
+                <li>
+                    <a href="<%= Url.Action("settingavatars") %>">Setting avatars</a>
+                </li>
             </ul>
         </li>
         <li>

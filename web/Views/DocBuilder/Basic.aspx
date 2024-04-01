@@ -28,7 +28,7 @@
             <p>After you download and unpack the files, the library is ready for <a href="<%= Url.Action("framework") %>">integration</a>.</p>
         </li>
         <li>Use <a href="<%= Url.Action("integrationapi/default") %>">Builder.App</a>, the provided executive binary wrapper for an easy start.
-            The latest versions of executable files can always be downloaded <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx">here</a>.
+            The latest versions of executable files can always be downloaded <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx?from=api">here</a>.
             After the file download, run it and see the examples of how ONLYOFFICE Document Builder can be used without the need to write any application.</li>
     </ol>
 

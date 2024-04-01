@@ -68,7 +68,7 @@ pip install pyjwt
 
 
     <h2 id="configuration" class="copy-link">Configuring Odoo ONLYOFFICE integration app</h2>
-    <p>To configure the app, go to <b>Settings</b>. Find <b>ONLYOFFICE</b> on the left sidebar and press it. Specify the URL of the installed ONLYOFFICE Document Server:</p>
+    <p>To configure the app, go to <b>Settings</b>. Find <b>ONLYOFFICE</b> on the left sidebar and press it. Specify the URL of the installed ONLYOFFICE Docs:</p>
     <span class="commandline">https://&lt;documentserver&gt;/</span>
     <p>
         where the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.

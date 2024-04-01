@@ -87,7 +87,7 @@ return true;
 <p>When accessing the encrypted file, it is first is sent to the user's machine before the application begins the decryption.</p>
 
 <h3>Encrypted co-editing</h3>
-<p>The steps below explain the process of co-editing an encrypted document in ONLYOFFICE Document Server.</p>
+<p>The steps below explain the process of co-editing an encrypted document in ONLYOFFICE Docs.</p>
 <ol>
     <li>User 1 and user 2 open one and the same document in <b>document editor</b>.</li>
     <li>User 1 makes changes to the opened document.</li>

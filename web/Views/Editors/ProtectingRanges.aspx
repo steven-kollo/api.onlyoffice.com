@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Protecting ranges</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of protecting ranges in spreadsheets in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of protecting ranges in spreadsheets in ONLYOFFICE Docs.</p>
     <img alt="Protect ranges" src="<%= Url.Content("~/content/img/editor/protect-ranges-scheme.svg") %>" />
     <ol>
         <li>The user opens <em>Protection -> Protect Range</em> in the <b>document editor</b>, clicks <em>New</em>, and starts typing the user name in the <em>Who can edit</em> field.</li>
@@ -86,7 +86,7 @@ docEditor.setUsers({
 </pre>
             <p>
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
         </li>
     </ol>

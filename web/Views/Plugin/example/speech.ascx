@@ -16,7 +16,7 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
 
 
 <div class="header-gray">Installation</div>
-<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Document Server + Community Server), and ONLYOFFICE cloud.</p>
+<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace), and ONLYOFFICE cloud.</p>
 <p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/speech" target="_blank">ONLYOFFICE App Directory</a>.</p>
 
 

@@ -78,7 +78,7 @@
 <div class="header-gray">Example</div>
 <p>
     The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
 </p>
 
 <p>
@@ -445,14 +445,32 @@
         </div>
     </div>
 </div>
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
+<div id="configPreHolder" style="display: flex; margin-top: 18px;">
+    <div>
+        <div id="configHeader" class="configHeader">
+            <div class="preContentType">
+                <span style="font-family: monospace">Config.js</span>
+            </div>
+            <div>
+                <div class="tooltip">
+                    <div class="copyConfig">
+                        <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre id="configPre"></pre>
+    </div>  
 </div>
-
 
 <div id="editorSpace">
     <div id="placeholder"></div>
 </div>
+
+<note>Please note that only the following parameters are available for the mobile editors: <a href="#feedback">feedback</a>, <a href="#goback">goback</a>,
+<a href="#help">help</a>, <a href="#macrosMode">macrosMode</a>, <a href="#mobileForceView">mobileForceView</a>.</note>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -772,6 +790,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/feedback.png") %>" alt="" />
             </td>
         </tr>
@@ -861,6 +880,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
             </td>
         </tr>
@@ -875,6 +895,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
@@ -1321,6 +1342,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.macrosMode</em> parameter.</div>
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
             </td>
         </tr>
         <tr>
@@ -1340,13 +1362,18 @@
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="mobileForceView" class="copy-link">mobileForceView</td>
             <td>
                 Defines if the mobile document editor is opened in the view/edit mode on launch. The default value is <b>true</b>.
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that this parameter is only available for the mobile editors.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="plugins" class="copy-link">plugins</td>
@@ -1665,71 +1692,11 @@
 <span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - extended white label option for Developer Edition</em></span>
 <% } %>
 
-
-<script>
-    $('.select').each(function () {
-        const _this = $(this),
-            selectOption = _this.find('option'),
-            selectOptionLength = selectOption.length,
-            selectedOption = selectOption.filter(':selected'),
-            duration = 120;
-
-        _this.hide();
-        _this.wrap('<div class="select"></div>');
-        $('<div>', {
-            class: 'new-select',
-            text: _this.children('option:disabled').text()
-        }).insertAfter(_this);
-
-        const selectHead = _this.next('.new-select');
-        $('<div>', {
-            class: 'new-select__list'
-        }).insertAfter(selectHead);
-
-        const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
-            $('<div>', {
-                class: 'new-select__item',
-                html: $('<span>', {
-                    text: selectOption.eq(i).text()
-                })
-            })
-                .attr('data-value', selectOption.eq(i).val())
-                .appendTo(selectList);
-        }
-
-        const selectItem = selectList.find('.new-select__item');
-        selectList.slideUp(0);
-        selectHead.on('click', function () {
-            if (!$(this).hasClass('on')) {
-                $(this).addClass('on');
-                selectList.slideDown(duration);
-                selectItem.on('click', function () {
-                    let chooseItem = $(this).data('value');
-                    $('select').val(chooseItem).attr('selected', 'selected');
-                    selectHead.text($(this).find('span').text());
-                    selectList.slideUp(duration);
-                    selectHead.removeClass('on');
-                    updateConfig();
-                });
-                window.addEventListener('click', function (e) {
-                    if (e.target != selectList[0] && e.target != selectHead[0] && e.target != selectItem[0]) {
-                        selectHead.removeClass('on');
-                        selectList.slideUp(duration);
-                    }
-                });
-            } else {
-                $(this).removeClass('on');
-                selectList.slideUp(duration);
-            }
-        });
-    });
-</script>
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
-
+    handleSelects();
     // Editor window
-    var config = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -1759,8 +1726,18 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    }) %>);
+</script>
+
+<script>
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
+
+    $(".copyConfig").click(function () {
+        var json = JSON.stringify(copy, null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
+    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave);
 </script>
 
 <script>
@@ -1902,39 +1879,14 @@
             customization_object.anonymous = { request: false }
         }
         config.editorConfig.customization = customization_object;
-        window.docEditor.destroyEditor();
+        copy.editorConfig.customization = customization_object;
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
     }
 
-    function getFieldValue(id) {
-        var element = document.getElementById(id);
-        if (document.getElementById(id).parentElement.className == "select") {
-            return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
-        } else if (element.type == "checkbox") {
-            return element.checked;
-        } else if (element.id == `editorConfig_customization_zoom`) {
-            return isNaN(Number(element.value)) ? 0 : Number(element.value);
-        } else if (`${element.value}` == ``) {
-            return `""`;
-        } else if (isNaN(element.value)) {
-            return `"${element.value}"`;
-        } else {
-            return Number(element.value);
-        }
-    }
-
-    function resizeCodeInput() {
-        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
-        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
-        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
-
-        var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset;
-
-        document.getElementById("configPre").style.height = `${height}px`;
-    }
 </script>

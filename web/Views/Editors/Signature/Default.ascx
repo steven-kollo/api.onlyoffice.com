@@ -3,9 +3,9 @@
 <h1>
     <span class="hdr">Signature</span>
 </h1>
-<p class="dscr">ONLYOFFICE Document Server <a href="<%= Url.Action("security") %>">uses</a> <b>tokens</b> generated using the JSON Web Tokens standard.</p>
+<p class="dscr">ONLYOFFICE Docs <a href="<%= Url.Action("security") %>">uses</a> <b>tokens</b> generated using the JSON Web Tokens standard.</p>
 
-<div class="note">This feature is used in <b>Document Server</b> starting with version 4.2</div>
+<div class="note">This feature is used in <b>ONLYOFFICE Docs</b> starting with version 4.2</div>
 
 <p>For the validation setup it is necessary to edit the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey" target="_blank">secret key</a> and <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token" target="_blank">token</a> parameters in the configuration file which can be found (or created) at the following path:</p>
 <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
@@ -14,7 +14,7 @@
 <div class="note">
     The default values are available in the <em>default.json</em> configuration file, which is available in the folders above (for Linux and Windows).
     Please do not edit the contents of the <em>default.json</em> file directly.
-    The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+    The default values will be restored each time you restart Docker container or upgrade <b>ONLYOFFICE Docs</b> to a new version and all your changes will be lost.
 </div>
 
 <p>Restart the services for the config changes to take effect:</p>

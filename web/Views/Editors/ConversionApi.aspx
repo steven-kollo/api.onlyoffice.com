@@ -17,10 +17,10 @@
     <p class="dscr">
         For the interaction with the <b>document conversion service</b> the POST requests are used.
         The request parameters are entered in JSON format in the request body.
-        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
     </p>
 
-    <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
+    <div class="note">In <b>ONLYOFFICE Docs</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
     <h2 id="request" class="copy-link">Request parameters and their description</h2>
     <ul class="columns-4" style="list-style: none;">
@@ -423,7 +423,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="token" class="copy-link">token</td>
-                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#conversion">token</a>.</td>
+                <td>Defines the encrypted signature added to the <b>ONLYOFFICE Docs</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#conversion">token</a>.</td>
                 <td>string</td>
                 <td>required by configuration</td>
             </tr>
@@ -1750,7 +1750,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-password-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the password-protected file from <em>docx</em> format to <em>pdf</em> format</div>
@@ -1767,7 +1767,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-watermark" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format with a watermark inserted</div>
@@ -1817,7 +1817,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-thumbnail" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format</div>
@@ -1838,7 +1838,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-spreadsheet-to-pdf" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the <em>spreadsheet</em> file to <em>pdf</em> format</div>
@@ -1873,7 +1873,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-conversion-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
@@ -1884,7 +1884,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <h2 id="response" class="copy-link">Response parameters and their description</h2>

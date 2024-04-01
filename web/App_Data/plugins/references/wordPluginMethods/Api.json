@@ -344,6 +344,51 @@
         }
       ]
     },
+    "SearchNext": {
+      "memberof": "Api",
+      "name": "SearchNext",
+      "description": "<p>Finds and selects the next occurrence of the text starting at the current position.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Object",
+          "name": "oProperties",
+          "description": "<p>An object which contains the search string.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "oProperties.searchString",
+          "description": "<p>The search string.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "oProperties.matchCase",
+          "description": "<p>Case sensitive or not.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "isForward",
+          "description": "<p>Search direction.</p>",
+          "optional": true,
+          "defaultValue": true
+        }
+      ]
+    },
     "GetFileHTML": {
       "memberof": "Api",
       "name": "GetFileHTML",
