@@ -41,9 +41,26 @@
         <button id="addButton_plugins_pluginsData" class="add-button" style="margin-top: 12px;">+</button>
     </div>
 </div>
-<div id="configPreHolder">
-    <pre style="word-wrap: break-word;" id="configPre"></pre>
+<div id="configPreHolder" style="display: flex; margin-top: 18px;">
+    <div>
+        <div id="configHeader" class="configHeader">
+            <div class="preContentType">
+                <span style="font-family: monospace">Config.js</span>
+            </div>
+            <div>
+                <div class="tooltip">
+                    <div class="copyConfig">
+                        <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre style="word-wrap: break-word;" id="configPre"></pre>
+    </div>  
 </div>
+
 
 <div id="editorSpace">
     <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
@@ -100,7 +117,7 @@
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
     // Editor window
-    var config = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
         new Config {
             Document = new Config.DocumentConfig
                 {
@@ -130,9 +147,18 @@
                 },
             Height = "550px",
             Width = "100%"
-        }) %>;
+        }) %>);
 </script>
+<script>
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
 
+    $(".copyConfig").click(function () {
+        var json = JSON.stringify(copy, null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
+    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave);
+</script>
 <script>
     $(document).ready(function () {
         resizeCodeInput();
@@ -205,37 +231,14 @@
 });
 `;
         var config_object = JSON.parse(config_str);
-        config.editorConfig.plugins = config_object;        
+        config.editorConfig.plugins = config_object;
+        copy.editorConfig.plugins = config_object;
         if (window.docEditor) {
             window.docEditor.destroyEditor();
         }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
-    }
-
-    function getFieldValue(id) {
-        var element = document.getElementById(id);
-        if (element.type == "checkbox") {
-            return element.checked;
-        } else if (isNaN(element.value)) {
-            return `"${element.value}"`;
-        } else {
-            return Number(element.value);
-        }
-    }
-
-    function resizeCodeInput() {
-        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
-        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
-        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
-
-        var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset;
-
-        document.getElementById("configPre").style.height = `${height}px`;
     }
 </script>
