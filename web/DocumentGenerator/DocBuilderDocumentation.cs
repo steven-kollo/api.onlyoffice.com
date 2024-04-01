@@ -71,6 +71,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             foreach (var mod in _entries)
             {
+                var keysToRemove = new List<string>();
+
                 foreach (var section in mod.Value)
                 {
                     var sharedMethods = section.Value.Methods.Values.Where(m => m.Tags != null && m.Tags.EditorTypes != null).ToList();
@@ -136,6 +138,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 });
                             }
                         }
+                    }
+
+                    if (section.Value.Methods.Count == 0 && section.Value.Events.Count == 0)
+                    {
+                        keysToRemove.Add(section.Key);
+                    }
+                }
+
+                if (keysToRemove.Any())
+                {
+                    foreach (var key in keysToRemove)
+                    {
+                        mod.Value.Remove(key);
                     }
                 }
             }

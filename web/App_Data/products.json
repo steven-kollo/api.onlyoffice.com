@@ -52,21 +52,21 @@
       "id":"editors",
       "title":"Docs API",
       "description":"In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure, and integrate ONLYOFFICE Docs.",
-      "version":"7.5",
+      "version":"8.0",
       "parent": "docs"
    },
    {
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"In this section, you will learn how to generate documents easily without running a document editor and integrate Document builder into your DMS, CRM system, etc.",
-      "version": "7.5",
+      "version": "8.0",
       "parent": "docs"
    },
    {
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"In this section, you will learn how to extend the ONLYOFFICE Docs functionality by creating your own plugins/macros. Here you will find the information about their structure, development lifecycle, and examples.",
-      "version":"7.5",
+      "version":"8.0",
       "parent": "docs"
    },
    {
@@ -74,20 +74,20 @@
       "title":"Desktop Editors",
       "description":"In this section, you will learn how to extend the ONLYOFFICE Desktop Editors functionality by setting up, customizing and integrating them with the document management systems.",
       "parent": "docs",
-      "version":"7.5"
+      "version":"8.0"
    },
    {
       "id":"backend",
       "title":"API Backend",
       "description":"In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API Backend which is implemented as REST over HTTP using GET/POST/PUT/DELETE. This solution is provided without editors, you need to install ONLYOFFICE Docs separately.",
-      "version": "12.5",
+      "version": "12.6",
       "parent": "portals"
    },
    {
       "id":"apisystem",
       "title":"For hosting providers",
       "description":"In this section, you will learn how to provide the Workspace portal as a SaaS solution on your own servers using our API methods.",
-      "version": "12.5",
+      "version": "12.6",
       "parent": "portals"
    }
 ]

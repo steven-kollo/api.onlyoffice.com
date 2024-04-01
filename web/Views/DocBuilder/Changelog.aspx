@@ -16,6 +16,94 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <h2 id="80" class="copy-link">Version 8.0</h2>
+    <p><b>Form methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getformsdata") %>">ApiDocument/GetFormsData</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/setformsdata") %>">ApiDocument/SetFormsData</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Freeze panes methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getfreezepanestype") %>">Api/GetFreezePanesType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/setfreezepanestype") %>">Api/SetFreezePanesType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes") %>">ApiFreezePanes</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezeat") %>">ApiFreezePanes/FreezeAt</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezecolumns") %>">ApiFreezePanes/FreezeColumns</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezerows") %>">ApiFreezePanes/FreezeRows</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/getlocation") %>">ApiFreezePanes/GetLocation</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/unfreeze") %>">ApiFreezePanes/Unfreeze</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getfreezepanes") %>">ApiWorksheet/GetFreezePanes</a> method to Spreadsheet API.</li>
+        <li>Added the <em>FreezePanes</em> property to the <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a> object of Spreadsheet API.</li>
+        <li>Added the <em>FreezePanes</em> property to the <a href="<%= Url.Action("spreadsheetapi/apiworksheet") %>">ApiWorksheet</a> object of Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>Comment methods</b></p>
+    <ul>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/api/addcomment") %>">Api/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/addcomment") %>">ApiBlockLvlSdt/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apidocument/addcomment") %>">ApiDocument/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/addcomment") %>">ApiInlineLvlSdt/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apiparagraph/addcomment") %>">ApiParagraph/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apirange/addcomment") %>">ApiRange/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apirun/addcomment") %>">ApiRun/AddComment</a> method of Text document API.</li>
+        <li>Added the <em>sUserId</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apitable/addcomment") %>">ApiTable/AddComment</a> method of Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getallcomments") %>">Api/GetAllComments</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/addreply") %>">ApiComment/AddReply</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/delete") %>">ApiComment/Delete</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/getauthorname") %>">ApiComment/GetAuthorName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/getclasstype") %>">ApiComment/GetClassType</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/getquotetext") %>">ApiComment/GetQuoteText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/getrepliescount") %>">ApiComment/GetRepliesCount</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/gettext") %>">ApiComment/GetText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/gettime") %>">ApiComment/GetTime</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/gettimeutc") %>">ApiComment/GetTimeUTC</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/issolved") %>">ApiComment/IsSolved</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/removereplies") %>">ApiComment/RemoveReplies</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/setauthorname") %>">ApiComment/SetAuthorName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/setsolved") %>">ApiComment/SetSolved</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/settext") %>">ApiComment/SetText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/settime") %>">ApiComment/SetTime</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/settimeutc") %>">ApiComment/SetTimeUTC</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicomment/setuserid") %>">ApiComment/SetUserId</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/getauthorname") %>">ApiCommentReply/GetAuthorName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/getclasstype") %>">ApiCommentReply/GetClassType</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/gettext") %>">ApiCommentReply/GetText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/setauthorname") %>">ApiCommentReply/SetAuthorName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/settext") %>">ApiCommentReply/SetText</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apicommentreply/setuserid") %>">ApiCommentReply/SetUserId</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getallcomments") %>">ApiPresentation/GetAllComments</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>Section methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apisection/getpageheight") %>">ApiSection/GetPageHeight</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apisection/getpagewidth") %>">ApiSection/GetPageWidth</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Simple types</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("global") %>#FormData">FormData</a> object to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#FormSpecificType">FormSpecificType</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#FreezePaneType">FreezePaneType</a> type to the simple type definitions.</li>
+    </ul>
+    <br />
+
+    <p><b>Other methods</b></p>
+    <ul>
+        <li>Removed the <em>ApiBlockLvlSdt/SetBackgroundColor</em> method from Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/adddrawingtopage") %>">ApiDocument/AddDrawingToPage</a> method to Text document API.</li>
+        <li>Added the <em>bWithotPaddings</em> parameter to the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/setcolumnwidth") %>">ApiWorksheet/SetColumnWidth</a> method of Spreadsheet API.</li>
+    </ul>
+    <br />
+
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <p><b>Methods of combo box / dropdown list content control</b></p>
     <ul>
@@ -76,10 +164,10 @@
     </ul>
     <br />
 
-    <p><b>Global</b></p>
+    <p><b>Simple types</b></p>
     <ul>
-        <li>Added the <a href="<%= Url.Action("global") %>#SearchData">SearchData</a> object to Global type definitions.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#ReplaceData">ReplaceData</a> object to Global type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SearchData">SearchData</a> object to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ReplaceData">ReplaceData</a> object to the simple type definitions.</li>
     </ul>
     <br />
 
@@ -905,9 +993,9 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/convertdocument") %>">Api/ConvertDocument</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/tohtml") %>">ApiDocument/ToHtml</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/tomarkdown") %>">ApiDocument/ToMarkdown</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#SortOrientation">SortOrientation</a> global type.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#SortHeader">SortHeader</a> global type.</li>
-        <li>Added the <a href="<%= Url.Action("global") %>#SortOrder">SortOrder</a> global type.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortOrientation">SortOrientation</a> simple type.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortHeader">SortHeader</a> simple type.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortOrder">SortOrder</a> simple type.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/setsort") %>">ApiRange/SetSort</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/recalculateallformulas") %>">Api/RecalculateAllFormulas</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/setlanguage") %>">ApiPresentation/SetLanguage</a> method to Presentation API.</li>

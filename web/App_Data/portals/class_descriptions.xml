@@ -386,14 +386,6 @@
       </value>
     </entry>
     <entry>
-      <key>ASC.Thrdparty.SocialNetworks</key>
-      <value>
-      <Description>Twitter</Description>
-        <Example>twitter</Example>
-        <ExampleJson>"twitter"</ExampleJson>
-      </value>
-    </entry>
-    <entry>
       <key>ASC.CRM.Core.InvoiceStatus</key>
       <value>
       <Description>Draft, Sent, Rejected, Paid, Archived</Description>

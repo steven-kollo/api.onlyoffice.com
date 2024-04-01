@@ -16,7 +16,7 @@
     </h1>
 
     <p class="dscr">
-        The work with document files in ONLYOFFICE Document Server is quite a simple process but it requires some understanding of what is going on when you click your document link to open it in the browser, save the document or upload it from your computer to the document server.
+        The work with document files in ONLYOFFICE Docs is quite a simple process but it requires some understanding of what is going on when you click your document link to open it in the browser, save the document or upload it from your computer to the document server.
     </p>
     <p>In this section you will learn how to:</p>
     <ul class="columns-2">
@@ -40,6 +40,7 @@
         <li><a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a></li>
         <li><a href="<%= Url.Action("protectingranges") %>">Protecting ranges</a></li>
         <li><a href="<%= Url.Action("javasdk") %>">Integrating editors using Java SDK</a></li>
+        <li><a href="<%= Url.Action("settingavatars") %>">Setting avatars</a></li>
     </ul>
     
     <br />
@@ -78,8 +79,8 @@
     </ul>
 
     <p class="list-header">
-        Please note, that ONLYOFFICE Document Server includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.
-        The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators which use ONLYOFFICE Document Server on their own server.
+        Please note, that ONLYOFFICE Docs includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.
+        The <b>document manager</b> and <b>document storage service</b> are either included to ONLYOFFICE Workspace or must be implemented by the software integrators which use ONLYOFFICE Docs on their own server.
     </p>
 
 </asp:Content>

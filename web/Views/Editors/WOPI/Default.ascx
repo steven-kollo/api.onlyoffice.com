@@ -29,11 +29,11 @@
     <div class="note">
         The default values are available in the <em>default.json</em> configuration file, which is available in the folders above (for Linux and Windows).
         Please do not edit the contents of the <em>default.json</em> file directly.
-        The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+        The default values will be restored each time you restart Docker container or upgrade <b>ONLYOFFICE Docs</b> to a new version and all your changes will be lost.
     </div>
 
     <h2 id="enable" class="copy-link">Enabling WOPI</h2>
-    <p>To enable WOPI, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> parameter in the Document Server config to <b>true</b>:</p>
+    <p>To enable WOPI, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> parameter in the ONLYOFFICE Docs config to <b>true</b>:</p>
 
     <div class="header-gray">Parameters</div>
     <table class="table">
@@ -76,7 +76,7 @@
         The IP address of such an integrator must be included in the <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list" target="_blank">WOPI domain allow list</a>. 
         At the same time, access for all the other integrators must be denied.</p>
     <note>By default, all the IP addresses are considered trusted.</note>
-    <p>Follow the steps below to configure the Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter" target="_blank">IP filter</a>:</p>
+    <p>Follow the steps below to configure the ONLYOFFICE Docs <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter" target="_blank">IP filter</a>:</p>
     <ol>
         <li>
             <p>Open the <em>/etc/onlyoffice/documentserver/local.json</em> file using any available text editor:</p>
@@ -121,3 +121,9 @@ supervisorctl restart all
 </pre>
         </li>
     </ol>
+
+    <h2 id="wopisrc" class="copy-link">WOPISrc</h2>
+    <p>Starting from version 8.0, the WOPISrc query parameter is added to the requests from the browser to the server.
+    This allows you to create several independent instances of ONLYOFFICE.
+    Load balancing requests with WOPISrc ensure that collaborative editing works correctly: all users editing the same document are served by the same server.</p>
+    <p>For WOPI, the parameter sent by the integrator is used. For Docs API, the <a href="<%= Url.Action("config/document") %>#key">document.key</a> parameter is written to WOPISrc.</p>

@@ -28,7 +28,7 @@
                { %>
             <li>
                 <h3><a href="<%= res.Url %>"><%= res.Name %></a></h3>
-                <p><%= res.Description %></p>
+                <p><%= HttpUtility.HtmlEncode(res.Description) %></p>
             </li>
             <% } %>
         </ul>

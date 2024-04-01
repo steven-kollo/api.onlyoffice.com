@@ -490,16 +490,24 @@ body > .background-body {
 
 .table-conversion-matrix-text,
 .table-conversion-matrix-spreadsheet,
-.table-conversion-matrix-presentation {
+.table-conversion-matrix-presentation,
+.table-formats {
     vertical-align: middle;
     padding: 5px;
     font-size: 12px;
     width: 100%;
 }
 
+    .table-formats {
+        display: block;
+        max-width: 832px;
+        overflow-x: scroll;
+    }
+
     .table-conversion-matrix-text td,
     .table-conversion-matrix-spreadsheet td,
-    .table-conversion-matrix-presentation td {
+    .table-conversion-matrix-presentation td,
+    .table-formats td {
         border: medium none;
         text-align: center;
         vertical-align: middle;
@@ -509,6 +517,10 @@ body > .background-body {
     }
 
     .table-conversion-matrix-text td {
+        width: 5%;
+    }
+
+    .table-formats td {
         width: 5%;
     }
 
@@ -522,7 +534,8 @@ body > .background-body {
 
     .table-conversion-matrix-text th,
     .table-conversion-matrix-spreadsheet th,
-    .table-conversion-matrix-presentation th {
+    .table-conversion-matrix-presentation th,
+    .table-formats th {
         text-align: center;
         vertical-align: bottom;
         padding: 5px;
@@ -715,6 +728,10 @@ td.table-style.copy-link[id]:hover:before {
 
 li b.copy-link[id]:hover:before {
     margin-left: -40px;
+}
+
+p.copy-link[id]:hover:before {
+    margin-left: -45px;
 }
 
 li.copy-link[id]:hover:before {
@@ -1318,7 +1335,7 @@ pre,
 
     .demo-tab-panel td {
         height: 48px;
-        width: 30%;
+        width: 25%;
     }
 
 .demo-tab-center {
@@ -3266,7 +3283,6 @@ select {
     height: 48px;
     border: 1px solid #808080;
     border-radius: 3px;
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -3312,3 +3328,428 @@ select {
     width: 100%;
     max-width: 260px;
 }
+
+#configArea {
+    width: 55%;
+    display: inline-block;
+    float: right;
+}
+
+    #configArea .hljs {
+        max-height: calc(100vh - 236px);
+        margin: 8px 0;
+        white-space: pre;
+    }
+
+.screenshot {
+    outline: 1px solid #EFEFEF;
+    outline-offset: -1px;
+}
+
+.nav-item {
+    border-bottom: 1px #D9D9D9 solid;
+    color: #666666;
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+    .nav-item.active {
+        color: #F94A0C;
+        border-bottom: 1px #F94A0C solid;
+    }
+
+    .nav-item:hover {
+        color: #F94A0C;
+        border-bottom: 1px #F94A0C solid;
+    }
+
+
+#controlFields {
+    padding-right: 32px;
+    width: 40%;
+    display: inline-block;
+    float: left;
+}
+
+    #controlFields label {
+        color: #333333;
+        font-size: 12px;
+    }
+
+    #controlFields input {
+        color: #333333;
+        font-size: 12px;
+        background-color: #F9F9F9;
+        padding-left: 8px;
+    }
+
+        #controlFields input:focus {
+            outline: none;
+            border-color: #999999;
+            background-color: #ffffff;
+        }
+
+    #controlFields select {
+        color: #333333;
+        font-size: 12px;
+        width: 100%;
+        height: 36px;
+        border: 1px #E5E5E5 solid;
+        background-color: #F9F9F9;
+        -webkit-appearance: none;
+        background-image: url("img/arrow-select.svg");
+        background-position: right;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: block;
+        margin: 0;
+    }
+
+    #controlFields select:focus {
+        outline: none;
+        border-color: #999999;
+    }
+
+    #controlFields input[type="text"] {
+        box-sizing: border-box;
+        margin: 0;
+        height: 36px;
+    }
+
+    #controlFields input[type="checkbox"] {
+        cursor: pointer;
+    }
+
+    #controlFields .half-line {
+        width: 49%;
+        display: inline-block;
+        margin: 3px 0;
+    }
+
+    #controlFields .line {
+        margin-top: 16px;
+    }
+    #controlFields .line.input_line{
+        margin-top: 12px;
+    }
+        #controlFields .line.input_line label {
+            color: #666666;
+            text-transform: uppercase;
+        }
+
+    #controlFields #checkboxes {
+        display: none;
+        border: 1px #dadada solid;
+    }
+
+    #controlFields .selectBox {
+        position: relative;
+        cursor: pointer;
+    }
+
+    #controlFields .overSelect {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    #controlFields #checkboxes label {
+        display: block;
+        cursor: pointer;
+    }
+
+    #controlFields #events label {
+        cursor: pointer;
+        text-transform: none;
+        font-size: 14px;
+    }
+
+    #controlFields .hidden {
+        display: none;
+    }
+
+    #controlFields .add-button {
+        width: 23px;
+        height: 23px;
+        border-radius: 3px;
+        font-size: 28px;
+        line-height: 1px;
+        font-weight: 100;
+        cursor: pointer;
+    }
+#editorSpace {
+    min-height: 550px;
+}
+
+#editorSpace iframe {
+    position: relative !important;
+}
+
+#configArea {
+    width: 55%;
+    display: inline-block;
+    float: right;
+}
+
+    #configArea .hljs {
+        max-height: calc(100vh - 236px);
+        margin: 8px 0;
+        white-space: pre;
+    }
+
+.dataItemSpan {
+    display: flex;
+    margin-top: 16px;
+}
+
+.dataItemSpan span {
+    -webkit-appearance: none;
+    background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    margin-right: 2px;
+    margin-left: 0;
+    outline: none;
+    width: 16px;
+}
+
+    .dataItemSpan label {
+        padding: 0px 5px;
+    }
+
+.dataItemSpan span:hover,
+.dataItemSpan span:active {
+    border-color: #666
+}
+
+.dataItemSpan input:checked + span {
+    background-color: #f9feef;
+    border-color: #8bba25;
+    background-image: url("img/Editor/green-checkbox.svg");
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.config_object_holder {
+    padding-left: 24px;
+}
+
+.config_nested_group {
+    margin-bottom: 18px;
+}
+
+    .config_nested_group div.line {
+        margin-top: 6px !important;
+    }
+
+
+
+.select {
+    position: relative;
+    color: #333333 !important;
+    font-size: 12px;
+    width: 100%;
+    height: 36px;
+    background-color: #F9F9F9;
+    -webkit-appearance: none;
+    background-image: url("img/arrow-select.svg");
+    background-position: right;
+    background-origin: content-box;
+    background-position: calc(100% - 5px);
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0;
+}
+
+.new-select {
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid #DCDCDC;
+    padding: 10px 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.new-select__list {
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    position: absolute;
+    top: 41px;
+    left: 0;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    user-select: none;
+}
+    .new-select__list::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    .new-select__list::-webkit-scrollbar-thumb {
+        background: #999999;
+        border-radius: 10px;
+    }
+
+    .new-select__list.on {
+        display: block;
+    }
+
+.new-select__item span {
+    display: block;
+    padding: 10px 8px;
+}
+
+    .new-select__item span:hover {
+        background-color: #f9f9f9;
+    }
+
+.new-select:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+}
+    .new-select.on {
+        background-color: #ffffff !important;
+        border: 1px solid #aaa;
+    }
+        .new-select.on:after {
+            background-image: url("img/arrow-select.svg");
+            background-position: right;
+            background-origin: content-box;
+            background-position: calc(100% - 6px);
+            background-position-y: 5px !important;
+            background-repeat: no-repeat;
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+.copyConfigHolder {
+    position: relative;
+}
+
+.configHeader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    border-radius: 3px 3px 0px 0px;
+    margin-top: 0px;
+    height: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D5DA;
+    border-bottom: none;
+}
+
+.preContentType {
+    background-color: white;
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 3px 0px 0px 0px;
+    border-right: 1px solid #D0D5DA;
+}
+
+.copyConfig {
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+}
+
+.copyConfig:hover {
+    border-radius: 2px;
+    background-color: #E2E2E2;
+}
+
+#configPre {
+    border-radius: 0px 0px 3px 3px;
+    margin-top: 0px;
+    overflow-y: scroll;
+}
+    #configPre::-webkit-scrollbar {
+        width: 4px;
+    }
+    #configPre::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    #configPre::-webkit-scrollbar-thumb {
+        background: #E2E2E2;
+    }
+
+        #configPre::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+
+    #configPre::-webkit-scrollbar-button {
+        display: none;
+    }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 165px;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 6px 6px 6px 12px;
+        border-radius: 3px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        right: 0%;
+        margin-left: -60px;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 10px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }

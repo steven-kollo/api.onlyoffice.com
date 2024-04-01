@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Mentions</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Docs.</p>
     <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/mentions-create.png") %>" />
     <ol>
         <li>The user sends a request to get a list of users to mention by typing <b>+</b> sign in the comment field in the <b>document editor</b>.</li>
@@ -82,7 +82,7 @@ docEditor.setUsers({
 </pre>
             <p>
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
             </p>
         </li>
     </ol>

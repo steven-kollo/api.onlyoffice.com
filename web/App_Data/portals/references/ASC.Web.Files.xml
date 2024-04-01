@@ -1009,6 +1009,9 @@
         <member name="F:ASC.Web.Files.Services.DocumentService.Configuration.DocumentConfig.PermissionsConfig.Review">
             <example name="review">true</example>
         </member>
+        <member name="F:ASC.Web.Files.Services.DocumentService.Configuration.DocumentConfig.PermissionsConfig.Copy">
+            <example name="copy">true</example>
+        </member>
         <member name="F:ASC.Web.Files.Services.DocumentService.Configuration.EditorConfiguration.ActionLink">
             <type name="actionLink">ASC.Web.Files.Services.DocumentService.Configuration.EditorConfiguration.ActionLinkConfig, ASC.Web.Files</type>
         </member>
@@ -1989,12 +1992,12 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesCommonResource.MessageFileCreatedForm">
             <summary>
-              Looks up a localized string similar to The fillable OFORM document is ready. It is saved in the {0}.
+              Looks up a localized string similar to The fillable PDF document is ready. It is saved in the {0}.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesCommonResource.MessageFillFormDraftCreated">
             <summary>
-              Looks up a localized string similar to The oform copy is created in the {0} folder. Please fill out the form and download the result as a PDF or DOCX file..
+              Looks up a localized string similar to The PDF copy is created in the {0} folder. Please fill out the form and download the result as a PDF or DOCX file..
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesCommonResource.MessageFillFormDraftDiscard">
@@ -2689,6 +2692,11 @@
               Looks up a localized string similar to The portal storage has run out of free space. You cannot upload files larger than {0}..
             </summary>
         </member>
+        <member name="P:ASC.Web.Files.Resources.FilesJSResource.ErrorMessage_WrongExtension">
+            <summary>
+              Looks up a localized string similar to File extension must be .docx.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Files.Resources.FilesJSResource.ExternalLink">
             <summary>
               Looks up a localized string similar to External link.
@@ -3365,6 +3373,11 @@
               Looks up a localized string similar to Close.
             </summary>
         </member>
+        <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonComeBack">
+            <summary>
+              Looks up a localized string similar to Come back.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCopy">
             <summary>
               Looks up a localized string similar to Create a copy.
@@ -3427,7 +3440,7 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCreateFormTemplate">
             <summary>
-              Looks up a localized string similar to Form template.
+              Looks up a localized string similar to PDF Form.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCreateMasterFormFromBlank">
@@ -3435,9 +3448,14 @@
               Looks up a localized string similar to Blank.
             </summary>
         </member>
-        <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCreateMasterFormFromFile">
+        <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCreateMasterFormFromLocalFile">
             <summary>
-              Looks up a localized string similar to From text document.
+              Looks up a localized string similar to From local file.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCreateMasterFormFromPortalFile">
+            <summary>
+              Looks up a localized string similar to From portal file.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonCreateNewExternalLink">
@@ -3582,7 +3600,7 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonMakeForm">
             <summary>
-              Looks up a localized string similar to Save as oform.
+              Looks up a localized string similar to Save as PDF Form.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.ButtonMoveCopy">
@@ -3992,7 +4010,7 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.CreateFormTemplateFromFile">
             <summary>
-              Looks up a localized string similar to Create Form Template from file.
+              Looks up a localized string similar to Create PDF Form from file.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.Date">
@@ -5088,7 +5106,7 @@
             <param name="fileIds">id file</param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao.GetFilesFiltered(System.Collections.Generic.IEnumerable{System.Object},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao.GetFilesFiltered(System.Collections.Generic.IEnumerable{System.Object},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.String)">
             <summary>
                 Gets the file (s) by ID (s) for share
             </summary>
@@ -5098,6 +5116,7 @@
             <param name="subjectID"></param>
             <param name="searchText"></param>
             <param name="searchInContent"></param>
+            <param name="extension"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFileDao.GetFiles(System.Object)">
@@ -5107,7 +5126,7 @@
             <param name="parentId"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao.GetFiles(System.Object,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao.GetFiles(System.Object,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.String,System.Boolean)">
             <summary>
                 Get files in folder
             </summary>
@@ -5118,6 +5137,7 @@
             <param name="subjectID"></param>
             <param name="searchText"> </param>
             <param name="searchInContent"></param>
+            <param name="extension"></param>
             <param name="withSubfolders"> </param>
             <returns>list of files</returns>
             <remarks>
@@ -5256,7 +5276,7 @@
             <param name="fileIds"></param>
             <param name="newOwnerId"></param>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao.GetFiles(System.Collections.Generic.IEnumerable{System.Object},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFileDao.GetFiles(System.Collections.Generic.IEnumerable{System.Object},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.String)">
             <summary>
             Search files in SharedWithMe &amp; Projects
             </summary>
@@ -5266,6 +5286,7 @@
             <param name="subjectID"></param>
             <param name="searchText"></param>
             <param name="searchInContent"></param>
+            <param name="extension"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFileDao.Search(System.String,System.Boolean)">

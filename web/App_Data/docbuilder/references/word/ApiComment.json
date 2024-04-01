@@ -6,7 +6,8 @@
       "description": "<p>Returns a type of the ApiComment class.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -40,7 +41,8 @@
       "description": "<p>Returns the comment text.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -57,7 +59,8 @@
       "description": "<p>Sets the comment text.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -82,7 +85,8 @@
       "description": "<p>Returns the comment author's name.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -99,7 +103,8 @@
       "description": "<p>Sets the comment author's name.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -141,7 +146,8 @@
       "description": "<p>Sets the user ID to the comment author.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -166,7 +172,8 @@
       "description": "<p>Checks if a comment is solved or not.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -183,7 +190,8 @@
       "description": "<p>Marks a comment as solved.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -208,7 +216,8 @@
       "description": "<p>Returns the timestamp of the comment creation in UTC format.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -225,7 +234,8 @@
       "description": "<p>Sets the timestamp of the comment creation in UTC format.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -250,7 +260,8 @@
       "description": "<p>Returns the timestamp of the comment creation in the current time zone format.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -267,7 +278,8 @@
       "description": "<p>Sets the timestamp of the comment creation in the current time zone format.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -292,7 +304,8 @@
       "description": "<p>Returns the quote text of the current comment.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -309,7 +322,8 @@
       "description": "<p>Returns a number of the comment replies.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -352,7 +366,8 @@
       "description": "<p>Adds a reply to a comment.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -396,7 +411,8 @@
       "description": "<p>Removes the specified comment replies.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -436,7 +452,8 @@
       "description": "<p>Deletes the current comment from the document.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [

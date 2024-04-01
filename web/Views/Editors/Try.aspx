@@ -16,7 +16,7 @@
     </h1>
 
     <p class="dscr">
-        Click the buttons with the format names below to try the main functionality of ONLYOFFICE Document Server.
+        Click the buttons with the format names below to try the main functionality of ONLYOFFICE Docs.
         You can open various file types for editing, viewing, co-editing, review or see how the rebranding works.
         Use the <span class="try-icon-code"></span> buttons to view the corresponding example source code.
     </p>
@@ -52,6 +52,8 @@
                     <a title="Open CSV file for editing" href="<%= Url.Action("editor") %>?method=csvEditor" class="button button-upper spread" target="blank">CSV</a><a title="View source code" class="button-popap-try" data-code="csvEditorCode"></a>
                 </td>
                 <td><a title="Open PPTX file for editing" href="<%= Url.Action("editor") %>?method=pptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxEditorCode"></a>
+                    <br />
+                    <a title="Open PPSX file for editing" href="<%= Url.Action("editor") %>?method=ppsxEditor" class="button button-upper present" target="blank">PPSX</a><a title="View source code" class="button-popap-try" data-code="ppsxEditorCode"></a>
                     <br />
                     <a title="Open PPT file for editing" href="<%= Url.Action("editor") %>?method=pptEditor" class="button button-upper present" target="blank">PPT</a><a title="View source code" class="button-popap-try" data-code="pptEditorCode"></a>
                     <br />
@@ -100,7 +102,7 @@
             </tr>
             <tr>
                 <th>Filling in forms</th>
-                <td><a title="Open OFORM file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">OFORM</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a>
+                <td><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a>
                 </td>
                 <td></td>
                 <td></td>
@@ -148,7 +150,7 @@
                 <td><a title="Open PPTX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="rebrandingPptxEditorCode"></a>
                 </td>
             </tr>
-            <tr>
+<%--            <tr>
                 <th>Edit on mobile</th>
                 <td><a title="Open DOCX file for editing on mobile" href="<%= Url.Action("editor") %>?method=docxEditorMobile" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorMobileCode"></a>
                 </td>
@@ -165,7 +167,7 @@
                 </td>
                 <td><a title="Open PPTX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=pptxViewerMobile" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxViewerMobileCode"></a>
                 </td>
-            </tr>
+            </tr>--%>
             <tr>
                 <th>Embedded view</th>
                 <td><a title="Open DOCX file for embedded viewing" href="<%= Url.Action("editor") %>?method=docxEmbed" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEmbedCode"></a>
@@ -310,6 +312,42 @@
                     "key": "9E2BDFCD1D75",
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
+                },
+                "documentType": "slide",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="ppsxEditorCode">
+                <div class="popap-header">Open ppsx for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "ppsx",
+                    "key": "3DAB8BAA68E4",
+                    "title": "Example Presentation Title.ppsx",
+                    "url": "https://example.com/url-to-example-presentation.ppsx"
                 },
                 "documentType": "slide",
                 "editorConfig": {
@@ -635,7 +673,7 @@
                     "title": "Example Document Title.pdf",
                     "url": "https://example.com/url-to-example-document.pdf"
                 },
-                "documentType": "word",
+                "documentType": "pdf",
                 "editorConfig": {
                     "mode": "view"
                 },
@@ -1465,7 +1503,7 @@
             </div>
 
             <div id="fillFormsCode">
-                <div class="popap-header">Open oform for filling in forms</div>
+                <div class="popap-header">Open pdf for filling in forms</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1481,16 +1519,16 @@
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
                 "document": {
-                    "fileType": "oform",
+                    "fileType": "pdf",
                     "key": "DEEC57D9",
-                    "title": "Example Form Title.oform",
-                    "url": "https://example.com/url-to-example-document.oform",
+                    "title": "Example Form Title.pdf",
+                    "url": "https://example.com/url-to-example-document.pdf",
                     "permissions": {
                         "edit": false,
                         "fillForms": true
                     }
                 },
-                "documentType": "word",
+                "documentType": "pdf",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"

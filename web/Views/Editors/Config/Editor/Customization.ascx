@@ -48,6 +48,7 @@
     <li><a href="#macros">macros</a></li>
     <li><a href="#macrosMode">macrosMode</a></li>
     <li><a href="#mentionShare">mentionShare</a></li>
+    <li><a href="#mobileForceView">mobileForceView</a></li>
     <li><a href="#plugins">plugins</a></li>
     <li><a href="#review">review</a></li>
     <li><a href="#reviewDisplay">reviewDisplay</a></li>
@@ -73,6 +74,403 @@
     <li><a href="#unit">unit</a></li>
     <li><a href="#zoom">zoom</a></li>
 </ul>
+
+<div class="header-gray">Example</div>
+<p>
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
+</p>
+
+<p>
+    If you have any further questions, please contact us at
+    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+</p>
+
+<div id="controlFields">
+    <div id="customization" class="control-panel">
+        <div class="line" style="margin-top: 0px;">
+            <label class="dataItemSpan" style="margin-top: 0px;">
+                <input type="checkbox" id="editorConfig_customization_anonymous" name="editorConfig_customization_anonymous" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_anonymous">Anonymous</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_anonymous" class="config_object_holder">
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_anonymous_request" name="editorConfig_customization_anonymous_request" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_anonymous_request">Request</label>
+                </label>
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_anonymous_label">Label</label>
+                <input type="text" id="editorConfig_customization_anonymous_label" name="editorConfig_customization_anonymous_label" value="Guest">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_autosave" name="editorConfig_customization_autosave" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_autosave">Autosave</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_comments" name="editorConfig_customization_comments" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_comments">Comments</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_compactHeader" name="editorConfig_customization_compactHeader" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_compactHeader">Compact Header</label>
+            </label>
+        </div>
+       <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_compactToolbar" name="editorConfig_customization_compactToolbar" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_compactToolbar">Compact Toolbar</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_compatibleFeatures" name="editorConfig_customization_compatibleFeatures" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_compatibleFeatures">Compatible Features</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_customer" name="editorConfig_customization_customer" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_customer">Customer</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_customer" class="config_object_holder" hidden>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_address">Address</label>
+                <input type="text" id="editorConfig_customization_customer_address" name="editorConfig_customization_customer_address" value="My City, 123a-45">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_info">Info</label>
+                <input type="text" id="editorConfig_customization_customer_info" name="editorConfig_customization_customer_info" value="Some additional information">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_logo">Logo</label>
+                <input type="text" id="editorConfig_customization_customer_logo" name="editorConfig_customization_customer_logo" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_logoDark">Logo Dark</label>
+                <input type="text" id="editorConfig_customization_customer_logoDark" name="editorConfig_customization_customer_logoDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_mail">Mail</label>
+                <input type="text" id="editorConfig_customization_customer_mail" name="editorConfig_customization_customer_mail" value="john@example.com">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_name">Name</label>
+                <input type="text" id="editorConfig_customization_customer_name" name="editorConfig_customization_customer_name" value="John Smith and Co.">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_phone">phone</label>
+                <input type="text" id="editorConfig_customization_customer_phone" name="editorConfig_customization_customer_phone" value="123456789">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_customer_www">www</label>
+                <input type="text" id="editorConfig_customization_customer_www" name="editorConfig_customization_customer_www" value="example.com">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_features" name="editorConfig_customization_features" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_features">Features</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_features" class="config_object_holder" hidden>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_spellcheck" name="editorConfig_customization_features_spellcheck" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_features_spellcheck">Features.Spellcheck</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_spellcheck_mode" name="editorConfig_customization_features_spellcheck_mode" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_features_spellcheck_mode">Features.Spellcheck.Mode</label>
+                </label>
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_feedback" name="editorConfig_customization_feedback" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_feedback">Feedback</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_feedback" class="config_object_holder" hidden>
+            <div class="line input_line">
+                <label for="editorConfig_customization_feedback_url">url</label>
+                <input type="text" id="editorConfig_customization_feedback_url" name="editorConfig_customization_feedback_url" value="https://example.com">
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_feedback_visible" name="editorConfig_customization_feedback_visible" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_feedback_visible">Visible</label>
+                </label>
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_forcesave" name="editorConfig_customization_forcesave" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_forcesave">Force Save</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_goback" name="editorConfig_customization_goback" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_goback">Go back</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_goback" class="config_object_holder" hidden>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_goback_blank" name="editorConfig_customization_goback_blank" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_goback_blank">Blank</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_goback_requestClose" name="editorConfig_customization_goback_requestClose" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_goback_requestClose">Request Close</label>
+                </label>
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_goback_text">Text</label>
+                <input type="text" id="editorConfig_customization_goback_text" name="editorConfig_customization_goback_text" value="Open file location">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_goback_url">Url</label>
+                <input type="text" id="editorConfig_customization_goback_url" name="editorConfig_customization_goback_url" value="https://example.com">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_help" name="editorConfig_customization_help" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_help">Help</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_hideRightMenu">Hide Right Menu</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_hideRulers" name="editorConfig_customization_hideRulers" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_hideRulers">Hide Rulers</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_integrationMode" name="editorConfig_customization_integrationMode" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_integrationMode">Integration Mode</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_logo" name="editorConfig_customization_logo" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_logo">Logo</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_logo" class="config_object_holder" hidden>
+            <div class="line input_line">
+                <label for="editorConfig_customization_logo_image">Image</label>
+                <input type="text" id="editorConfig_customization_logo_image" name="editorConfig_customization_logo_image" value="https://api.onlyoffice.com/content/img/docbuilder/examples/blue_cloud.png">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_logo_imageDark">Image Dark</label>
+                <input type="text" id="editorConfig_customization_logo_imageDark" name="editorConfig_customization_logo_imageDark" value="https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png">
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_logo_url">Url</label>
+                <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url" value="https://example.com">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_macros" name="editorConfig_customization_macros" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_macros">Macros</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_mentionShare" name="editorConfig_customization_mentionShare" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_mentionShare">Mention share</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_mobileForceView" name="editorConfig_customization_mobileForceView" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_mobileForceView">Mobile force view</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_plugins" name="editorConfig_customization_plugins" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_plugins">Plugins</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_review" name="editorConfig_customization_review" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_review">Review</label>
+            </label>
+        </div>
+
+        <div id="holder_editorConfig_customization_review" class="config_object_holder" hidden>
+            <div class="line input_line">
+                <label for="editorConfig_customization_review_reviewDisplay">Review Display</label>
+                <select class="select" id="editorConfig_customization_review_reviewDisplay" name="editorConfig_customization_review_reviewDisplay">
+                    <option value="original" disabled>original</option>
+                    <option value="markup">markup</option>
+                    <option value="simple">simple</option>
+                    <option value="final">final</option>
+                    <option value="original" selected>original</option>
+                </select>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_review_hideReviewDisplay" name="editorConfig_customization_review_hideReviewDisplay" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_review_hideReviewDisplay">Hide Review Display</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_review_showReviewChanges" name="editorConfig_customization_review_showReviewChanges" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_review_showReviewChanges">Show Review Changes</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_review_trackChanges" name="editorConfig_customization_review_trackChanges" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_review_trackChanges">Track Changes</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_review_hoverMode" name="editorConfig_customization_review_hoverMode" hidden="hidden">
+                    <span></span>
+                    <label for="editorConfig_customization_review_hoverMode">Hover Mode</label>
+                </label>
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_submitForm" name="editorConfig_customization_submitForm" hidden="hidden" checked>
+                <span></span>
+                <label for="editorConfig_customization_submitForm">Submit Form</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_toolbarHideFileName" name="editorConfig_customization_toolbarHideFileName" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_toolbarHideFileName">Toolbar Hide File Name</label>
+            </label>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_toolbarNoTabs" name="editorConfig_customization_toolbarNoTabs" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_toolbarNoTabs">Toolbar No Tabs</label>
+            </label>
+        </div>
+        <div class="line input_line" id="macrosModeLine">
+            <label for="editorConfig_customization_macrosMode">Macros Mode</label>
+            <select class="select" id="editorConfig_customization_macrosMode" name="editorConfig_customization_macrosMode">
+                <option value="warn" disabled>Warn</option>
+                <option value="warn" selected>Warn</option>
+                <option value="disable">Disable</option>
+                <option value="enable">Enable</option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_customization_uiTheme">UiTheme</label>
+            <select class="select" id="editorConfig_customization_uiTheme" name="editorConfig_customization_uiTheme">
+                <option value="theme-dark" disabled>theme-dark</option>
+                <option value="theme-classic-light">theme-classic-light</option>
+                <option value="theme-light">theme-light</option>
+                <option value="theme-dark" selected>theme-dark</option>
+                <option value="theme-contrast-dark">theme-contrast-dark</option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_customization_unit">Unit</label>
+            <select class="select" id="editorConfig_customization_unit" name="editorConfig_customization_unit">
+                <option value="cm" disabled>cm</option>
+                <option value="cm" selected>cm</option>
+                <option value="pt">pt</option>
+                <option value="inch ">inch </option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="editorConfig_customization_zoom">Zoom</label>
+            <input type="text" id="editorConfig_customization_zoom" name="editorConfig_customization_zoom" value="100">
+        </div>
+    </div>
+</div>
+<div id="configPreHolder" style="display: flex; margin-top: 18px;">
+    <div>
+        <div id="configHeader" class="configHeader">
+            <div class="preContentType">
+                <span style="font-family: monospace">Config.js</span>
+            </div>
+            <div>
+                <div class="tooltip">
+                    <div class="copyConfig">
+                        <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre id="configPre"></pre>
+    </div>  
+</div>
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<note>Please note that only the following parameters are available for the mobile editors: <a href="#feedback">feedback</a>, <a href="#goback">goback</a>,
+<a href="#help">help</a>, <a href="#macrosMode">macrosMode</a>, <a href="#mobileForceView">mobileForceView</a>.</note>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -392,6 +790,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/feedback.png") %>" alt="" />
             </td>
         </tr>
@@ -481,6 +880,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
             </td>
         </tr>
@@ -495,6 +895,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
@@ -941,6 +1342,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.macrosMode</em> parameter.</div>
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
             </td>
         </tr>
         <tr>
@@ -958,6 +1360,19 @@
             <td colspan="4">
                 <div class="note">Please note that it will only be available for the comments if the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is set.</div>
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
+            <td id="mobileForceView" class="copy-link">mobileForceView</td>
+            <td>
+                Defines if the mobile document editor is opened in the view/edit mode on launch. The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that this parameter is only available for the mobile editors.</div>
             </td>
         </tr>
         <tr class="tablerow">
@@ -1133,7 +1548,7 @@
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
                 Defines if the <b>Submit</b> button is displayed or hidden on the top toolbar.
-                Button will only be available for the <em>oform</em> format. The default value is <b>false</b>.
+                Button will only be available for the <em>pdf</em> format. The default value is <b>false</b>.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -1277,140 +1692,201 @@
 <span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - extended white label option for Developer Edition</em></span>
 <% } %>
 
-<div class="header-gray">Example</div>
-<pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "customization": {
-            "anonymous": {
-                "request": true,
-                "label": "Guest"
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+    handleSelects();
+    // Editor window
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                Info = new Config.DocumentConfig.InfoConfig()
             },
-            <% if (license)
-               { %>"about": true,
-            <% } %>"comments": true,
-            "compactHeader": false,
-            "compactToolbar": false,
-            "compatibleFeatures": false,
-            "customer": {
-                "address": "My City, 123a-45",
-                "info": "Some additional information",
-                "logo": "https://example.com/logo-big.png",
-                "logoDark": "https://example.com/dark-logo-big.png",
-                "mail": "john@example.com",
-                "name": "John Smith and Co.",
-                "phone": "123456789",
-                "www": "example.com"
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {   
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = true
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
             },
-            "features": {
+        Height = "550px",
+        Width = "100%"
+    }) %>);
+</script>
+
+<script>
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
+
+    $(".copyConfig").click(function () {
+        var json = JSON.stringify(copy, null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
+    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave);
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig();
+    });
+
+    $("#editorConfig_customization_anonymous").change(showHideConfigObject);
+    $("#editorConfig_customization_customer").change(showHideConfigObject);
+    $("#editorConfig_customization_feedback").change(showHideConfigObject);
+    $("#editorConfig_customization_features").change(showHideConfigObject);
+    $("#editorConfig_customization_goback").change(showHideConfigObject);
+    $("#editorConfig_customization_logo").change(showHideConfigObject);
+    $("#editorConfig_customization_review").change(showHideConfigObject);
+
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
+
+    function getFeaturesValue() {
+        if (!getFieldValue("editorConfig_customization_features")) {
+            return "";
+        }
+        if (!getFieldValue("editorConfig_customization_features_spellcheck_mode")) {
+            return `"features": {
+                "spellcheck": ${getFieldValue("editorConfig_customization_features_spellcheck")}
+            },
+            `
+        } else {
+            return `"features": {
                 "spellcheck": {
-                    "mode": true<% if (license)
-                    { %>,
-                    "change": true<% } %>
-                }
-            },
-            "feedback": {
-                "url": "https://example.com",
-                "visible": true
-            },
-            <% if (license)
-               { %>"font": {
-                "name": "Arial",
-                "size": "11px"
-            },
-            <% } %>"forcesave": false,
-            "goback": {
-                "blank": true,
-                "requestClose": false,
-                "text": "Open file location",
-                "url": "https://example.com"
-            },
-            "help": true,
-            "hideNotes": false,
-            "hideRightMenu": false,
-            "hideRulers": false,
-            "integrationMode": "embed",
-            <% if (license)
-               { %>"layout": {
-                "header": {
-                    "save": true,
-                    "users": true
-                },
-                "leftMenu": {
-                    "mode": true,
-                    "navigation": true,
-                    "spellcheck": true
-                },
-                "rightMenu": {
                     "mode": true
-                },
-                "statusBar": {
-                    "actionStatus": true,
-                    "docLang": true,
-                    "textLang": true
-                },
-                "toolbar": {
-                    "collaboration": true,
-                    "draw": true,
-                    "file": {
-                        "close": true,
-                        "info": true,
-                        "save": true,
-                        "settings": true
-                    },
-                    "home": {
-                        "mailmerge": true
-                    },
-                    "layout": true,
-                    "plugins": true,
-                    "protect": true,
-                    "references": true,
-                    "save": true,
-                    "view": {
-                        "navigation": true
-                    }
                 }
             },
-            "loaderLogo": "https://example.com/loader-logo.png",
-            "loaderName": "The document is loading, please wait...",
-            <% } %>"logo": {
-                "image": "https://example.com/logo.png",
-                "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://example.com"
+            `
+        }
+    }
+
+    function updateConfig() {
+        var macrosMode = `
+            "macrosMode": ${getFieldValue("editorConfig_customization_macrosMode")},`;
+        if (!document.getElementById("editorConfig_customization_macros").checked) {
+            document.getElementById(`macrosModeLine`).hidden = true;
+            macrosMode = "";
+        } else {
+            document.getElementById(`macrosModeLine`).hidden = false;
+        }
+
+        var anonymous = getFieldValue("editorConfig_customization_anonymous") ?
+            `"anonymous": {
+                "request": ${getFieldValue("editorConfig_customization_anonymous_request")},
+                "label": ${getFieldValue("editorConfig_customization_anonymous_label")}
             },
-            "macros": true,
-            "macrosMode": "warn",
-            "mentionShare": true,
-            "plugins": true,
-            "review": {
-                "hideReviewDisplay": false,
-                "showReviewChanges": false,
-                "reviewDisplay": "original",
-                "trackChanges": true,
-                "hoverMode": false
+            ` : "";
+        var customer = getFieldValue("editorConfig_customization_customer") ?
+            `"customer": {
+                "address": ${getFieldValue("editorConfig_customization_customer_address")},
+                "info": ${getFieldValue("editorConfig_customization_customer_info")},
+                "logo": ${getFieldValue("editorConfig_customization_customer_logo")},
+                "logoDark": ${getFieldValue("editorConfig_customization_customer_logoDark")},
+                "mail": ${getFieldValue("editorConfig_customization_customer_mail")},
+                "name": ${getFieldValue("editorConfig_customization_customer_name")},
+                "phone": ${getFieldValue("editorConfig_customization_customer_phone")},
+                "www": ${getFieldValue("editorConfig_customization_customer_www")}
             },
-            <% if (license)
-               { %>"statusBar": true,
-            <% } %>"submitForm": true,
-            <% if (license)
-                { %>"toolbar": true,
-            <% } %>"toolbarHideFileName": false,
-            "toolbarNoTabs": false,
-            "uiTheme": "theme-dark",
-            "unit": "cm",
-            "zoom": 100
-        },
+            ` : "";
+        var features = getFeaturesValue();
+        var feedback = getFieldValue("editorConfig_customization_feedback") ?
+            `"feedback": {
+                "url": ${getFieldValue("editorConfig_customization_feedback_url")},
+                "visible": ${getFieldValue("editorConfig_customization_feedback_visible")}
+            },
+            ` : "";
+        var goback = getFieldValue("editorConfig_customization_goback") ?
+            `"goback": {
+                "blank": ${getFieldValue("editorConfig_customization_goback_blank")},
+                "requestClose": ${getFieldValue("editorConfig_customization_goback_requestClose")},
+                "text": ${getFieldValue("editorConfig_customization_goback_text")},
+                "url": ${getFieldValue("editorConfig_customization_goback_url")}
+            },
+            ` : "";
+        var logo = getFieldValue("editorConfig_customization_logo") ?
+            `"logo": {
+                "image": ${getFieldValue("editorConfig_customization_logo_image")},
+                "imageDark": ${getFieldValue("editorConfig_customization_logo_imageDark")},
+                "url": ${getFieldValue("editorConfig_customization_logo_url")}
+            },
+            ` : "";
+        var review = getFieldValue("editorConfig_customization_review") ?
+            `"review": {
+                "hideReviewDisplay": ${getFieldValue("editorConfig_customization_review_hideReviewDisplay")},
+                "showReviewChanges": ${getFieldValue("editorConfig_customization_review_showReviewChanges")},
+                "reviewDisplay": ${getFieldValue("editorConfig_customization_review_reviewDisplay")},
+                "trackChanges": ${getFieldValue("editorConfig_customization_review_trackChanges")},
+                "hoverMode": ${getFieldValue("editorConfig_customization_review_hoverMode")}
+            },
+            ` : "";
+        var integrationMode = getFieldValue("editorConfig_customization_integrationMode") ? `
+            "integrationMode": "embed",` : "";
+        var customization = `{
+            ${anonymous}"autosave": ${getFieldValue("editorConfig_customization_autosave")},
+            "comments": ${getFieldValue("editorConfig_customization_comments")},
+            "compactHeader": ${getFieldValue("editorConfig_customization_compactHeader")},
+            "compactToolbar": ${getFieldValue("editorConfig_customization_compactToolbar")},
+            "compatibleFeatures": ${getFieldValue("editorConfig_customization_compatibleFeatures")},
+            ${customer}${features}${feedback}"forcesave": ${getFieldValue("editorConfig_customization_forcesave")},
+            ${goback}"help": ${getFieldValue("editorConfig_customization_help")},
+            "hideRightMenu": ${getFieldValue("editorConfig_customization_hideRightMenu")},
+            "hideRulers": ${getFieldValue("editorConfig_customization_hideRulers")},${integrationMode}
+            ${logo}"macros": ${getFieldValue("editorConfig_customization_macros")},${macrosMode}
+            "mentionShare": ${getFieldValue("editorConfig_customization_mentionShare")},
+            "mobileForceView": ${getFieldValue("editorConfig_customization_mobileForceView")},
+            "plugins": ${getFieldValue("editorConfig_customization_plugins")},
+            ${review}"toolbarHideFileName": ${getFieldValue("editorConfig_customization_toolbarHideFileName")},
+            "toolbarNoTabs": ${getFieldValue("editorConfig_customization_toolbarNoTabs")},
+            "uiTheme": ${getFieldValue("editorConfig_customization_uiTheme")},
+            "unit": ${getFieldValue("editorConfig_customization_unit")},
+            "zoom": ${getFieldValue("editorConfig_customization_zoom")}
+        }`;
+        var config_string =
+`var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "editorConfig": {
+        "customization": ${customization}
+        ,
         ...
     },
     ...
 });
-</pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
+`;
+        var customization_object = JSON.parse(customization);
+        if (!customization_object.anonymous) {
+            customization_object.anonymous = { request: false }
+        }
+        config.editorConfig.customization = customization_object;
+        copy.editorConfig.customization = customization_object;
+        if (window.docEditor) {
+            window.docEditor.destroyEditor();
+        }
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+        hljs.highlightBlock(pre);
+    }
 
-<p>
-    If you have any further questions, please contact us at
-    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
-</p>
+</script>

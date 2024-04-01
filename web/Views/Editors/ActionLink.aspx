@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Action link</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of working with links in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of working with links in ONLYOFFICE Docs.</p>
     <img class="screenshot max-width-832" alt="Action link" src="<%= Url.Content("~/content/img/editor/actionLink-create.png") %>" />
     <ol>
         <li>The user sends a request to get a link to the document which contains a bookmark in the <b>document editor</b>.</li>

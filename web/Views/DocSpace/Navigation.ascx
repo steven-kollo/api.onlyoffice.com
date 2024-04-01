@@ -23,6 +23,9 @@
                     <li>
                         <a href="<%= Url.Action("jssdk/") %>">Basic concepts</a>
                     </li>
+        <li>
+            <a href="<%= Url.Action("getdocspace") %>">Get ONLYOFFICE DocSpace</a>
+        </li>
                     <div class="treeheader">JavaScript SDK</div>
                     <ul class="side-nav root">
                         <li>
@@ -210,8 +213,49 @@
                         <li>
                             <a href="/docspace-storybook" target="_blank">Storybook</a>
                         </li>
-                    </ul>
-                    <div class="treeheader">More information</div>
+            <li>
+                <a href="<%= Url.Action("pluginssdk/plugintutorial") %>">How to create plugin step by step</a>
+                <ul>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/plugintutorial/planning") %>">Planning</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/plugintutorial/developing") %>">Developing</a>
+                        <ul>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingtemplate") %>">Step 1. Create a plugin template</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/configuringentrypoint") %>">Step 2. Configure the plugin entry point</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/addingicons") %>">Step 3. Add plugin icons</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/configuringinterfaceelements") %>">Step 4. Configure the plugin's interface elements</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingplugintypes") %>">Step 5. Create plugin types</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingsettingstype") %>">Step 6. Create the settings plugin type</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingcodefile") %>">Step 7. Create the main plugin code file</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/plugintutorial/testing") %>">Testing</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("pluginssdk/plugintutorial/using") %>">Using</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="treeheader">API backend</div>
                     <ul class="side-nav root">
                         <li>
                             <a href="<%= Url.Action("pluginssdk/changelog") %>">Changelog</a>
@@ -227,14 +271,21 @@
                             <a href="<%= Url.Action("backend/") %>">Basic concepts</a>
                         </li>
                         <li>
-                            <a href="<%= Url.Action("backend/auth") %>">Passing authentication</a>
-                        </li>
-                        <li>
-                            <a href="<%= Url.Action("backend/webhooks") %>">Webhooks</a>
-                        </li>
-                    </ul>
-                    <div class="treeheader">API backend</div>
-                    <ul class="side-nav root">
+                <a href="<%= Url.Action("backend/howitworks") %>">How it works</a>
+                <ul>
+                    <li>
+                        <a href="<%= Url.Action("backend/howitworks/auth") %>">Passing authentication</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("backend/howitworks/longrunningoperations") %>">Long-running operations</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("backend/howitworks/uploadinglargefiles") %>">Uploading large files</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("backend/howitworks/webhooks") %>">Webhooks</a>
+                    </li>
+                </ul>
                         <% if (entryPoints != null && entryPoints.Any())
                         { %>
                         <% foreach (var entryPoint in entryPoints.OrderBy(x => x.Name).ToList())

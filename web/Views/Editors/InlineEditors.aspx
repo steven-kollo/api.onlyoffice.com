@@ -13,18 +13,18 @@
     <h1>
         <span class="hdr">Inline editors</span>
     </h1>
-    <p class="dscr">The steps below explain the process of connecting several editors to the same html page in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The steps below explain the process of connecting several editors to the same html page in ONLYOFFICE Docs.</p>
     <div class="note">Simultaneous work with several editors is available starting from version 5.5.</div>
     <img alt="Inline editors" src="<%= Url.Content("~/content/img/editor/inlineEditors.png") %>" />
     <ol>
         <li>Create an empty <em>html</em> file.</li>
         <li>
             <p>
-                Specify your ONLYOFFICE Document Server link with the JavaScript API that will be used for your website:
+                Specify your ONLYOFFICE Docs link with the JavaScript API that will be used for your website:
             </p>
             <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;https://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre>
             <p>
-                Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+                Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
             </p>
         </li>
         <li>

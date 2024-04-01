@@ -15,8 +15,8 @@
     <li><a href="#onDownloadAs">onDownloadAs</a> - the absolute URL to the edited file when the <em>downloadAs</em> method is being called.</li>
     <li><a href="#onError">onError</a> - an error or some other specific event occurs.</li>
     <li><a href="#onInfo">onInfo</a> - the application opened the file.</li>
-    <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <em>meta</em> command.</li>
     <li><a href="#onMakeActionLink">onMakeActionLink</a> - the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</li>
+    <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <em>meta</em> command.</li>
     <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - the document is opened for editing with the old <em>document.key</em> value, which was used to edit the previous document version and was successfully saved.</li>
     <li><a href="#onPluginsReady">onPluginsReady</a> - all plugins are loaded and can be used.</li>
     <li><a href="#onReady">onReady</a> - the application is loaded into the browser.</li>
@@ -39,10 +39,247 @@
     <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
-    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
 </ul>
+<div class="header-gray">Example</div>
+<p>
+Event messages will be available in your browser's DevTools console.
+</p>
+<div id="controlFields" style="width: 100%; padding-right:20px; margin-bottom: 20px;">
+    <div id="info" class="control-panel">
+        <table id="events-table" style="text-align: left;"></table>
+    </div>
+</div>
 
+<script id="event-methods">
+    var eventMethods = {
+        "onAppReady": function () {
+            console.log("ONLYOFFICE Document Editor is ready");
+        },
+        "onCollaborativeChanges": function () {
+            console.log("The document changed by collaborative user");
+        },
+        "onDocumentReady": function () {
+            console.log("Document is loaded");
+        },
+        "onDocumentStateChange": function (event) {
+            if (event.data) {
+                console.log("The document changed");
+            } else {
+                console.log("Changes are collected on document editing service");
+            }
+        },
+        "onDownloadAs": function (event) {
+            console.log(`ONLYOFFICE Document Editor create file of type ${event.data.fileType}: "${event.data.url}")`);
+        },
+        "onError": function (event) {
+            console.log("ONLYOFFICE Document Editor reports an error: code " + event.data.errorCode + ", description " + event.data.errorDescription);
+        },
+        "onInfo": function (event) {
+            console.log("ONLYOFFICE Document Editor is opened in mode " + event.data.mode);
+        },
+        "onMakeActionLink": function (event) {
+            console.log("Action link was made");
+        },
+        "onMetaChange": function (event) {
+            console.log("Meta changed");
+        },
+        "onOutdatedVersion": function () {
+            console.log("Outdataed version");
+        },
+        "onPluginsReady": function () {
+            console.log("Plugin is ready");
+        },
+        "onRequestClose": function () {
+            console.log("Close requested");
+        },
+        "onRequestCreateNew": function () {
+            console.log("Create new requested");
+        },
+        "onRequestEditRights": function () {
+            console.log("ONLYOFFICE Document Editor requests editing rights");
+        },
+        "onRequestHistory": function () {
+            console.log("History requested");
+        },
+        "onRequestHistoryClose": function () {
+            console.log("History close requested");
+        },
+        "onRequestHistoryData": function (event) {
+            console.log("History data requested");
+        },
+        "onRequestInsertImage": function (event) {
+            console.log("Insert image requested");
+        },
+        "onRequestOpen": function (event) {
+            console.log("Open requested");
+        },
+        "onRequestReferenceData": function () {
+            console.log("Reference data requested");
+        },
+        "onRequestReferenceSource": function () {
+            console.log("Reference source requested");
+        },
+        "onRequestRename": function (event) {
+            console.log("Rename requested");
+        },
+        "onRequestRestore": function (event) {
+            console.log("Restore requested");
+        },
+        "onRequestSaveAs": function (event) {
+            console.log("Save as requested");
+        },
+        "onRequestSelectDocument": function () {
+            console.log("Select document requested");
+        },
+        "onRequestSelectSpreadsheet": function () {
+            console.log("Select spreadsheet requested");
+        },
+        "onRequestSendNotify": function (event) {
+            console.log("Send notify requested");
+        },
+        "onRequestSharingSettings": function () {
+            console.log("Sharing settings requested");
+        },
+        "onRequestUsers": function (event) {
+            console.log("Users requested");
+        },
+        "onWarning": function (event) {
+            console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
+        }
+    };
+</script>
+
+<script>
+    const eventNames = [
+        "onAppReady",
+        "onCollaborativeChanges",
+        "onDocumentReady",
+        "onDocumentStateChange",
+        "onDownloadAs",
+        "onError",
+        "onInfo",
+        "onMakeActionLink",
+        "onMetaChange",
+        "onOutdatedVersion",
+        "onPluginsReady",
+        "onReady",
+        "onRequestClose",
+        "onRequestCompareFile",
+        "onRequestCreateNew",
+        "onRequestEditRights",
+        "onRequestHistory",
+        "onRequestHistoryClose",
+        "onRequestHistoryData",
+        "onRequestInsertImage",
+        "onRequestMailMergeRecipients",
+        "onRequestOpen",
+        "onRequestReferenceData",
+        "onRequestReferenceSource",
+        "onRequestRename",
+        "onRequestRestore",
+        "onRequestSaveAs",
+        "onRequestSelectDocument",
+        "onRequestSelectSpreadsheet",
+        "onRequestSendNotify",
+        "onRequestSharingSettings",
+        "onRequestUsers",
+        "onWarning"
+    ];
+
+    for (var i = 0; i < eventNames.length / 3; i++) {
+        let tr = document.createElement("tr");
+        tr.innerHTML = `
+        <th>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i]}" name="event_${eventNames[i]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i]}">${eventNames[i]}</label>
+                </label>
+            </div>
+        </th>
+        <th>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i + 11]}" name="event_${eventNames[i + 11]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i + 11]}">${eventNames[i + 11]}</label>
+                </label>
+            </div>
+        </th>
+        <th>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="event_${eventNames[i + 22]}" name="event_${eventNames[i + 22]}" hidden="hidden">
+                    <span></span>
+                    <label style="text-transform: none;" for="event_${eventNames[i + 22]}">${eventNames[i + 22]}</label>
+                </label>
+            </div>
+        </th>`;
+        document.getElementById("events-table").appendChild(tr);
+    }
+</script>
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+
+    // Editor window
+    var config = <%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "docx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title.docx",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx",
+                Info = new Config.DocumentConfig.InfoConfig()
+            },
+        DocumentType = "word",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>;
+    config.events = {};
+    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+</script>
+
+<script>
+    $("#controlFields").find("input").change(function () {
+        updateConfigEvents();
+    });
+    function updateConfigEvents() {
+        config.events = {};
+        for (var i = 0; i < eventNames.length; i++) {
+            if (document.getElementById(`event_${eventNames[i]}`).checked) {
+                config.events[eventNames[i]] = eventMethods[eventNames[i]];
+            }
+        }
+        window.docEditor.destroyEditor();
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    }
+</script>
 <h2>Events and their description:</h2>
 <ul>
     <li>
@@ -191,29 +428,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command.</p>
-        <p>The name of the document is sent in the <em>data.title</em> parameter. The <em>Favorite</em> icon highlighting state is sent in the <em>data.favorite</em> parameter.</p>
-        <p>When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
-            If the method is not declared, the <em>Favorite</em> icon will not be changed.</p>
-        <div class="header-gray">Example</div>
-        <pre>
-var onMetaChange = function (event) {
-    var title = event.data.title;
-    var favorite = event.data.favorite;
-    ...
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onMetaChange": onMetaChange,
-        ...
-    },
-    ...
-});
-</pre>
-    </li>
-
-    <li>
         <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</p>
         <p>To set the bookmark link, you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
             The bookmark data is received in the <em>data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
@@ -231,6 +445,29 @@ var onMakeActionLink = function (event){
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onMakeActionLink": onMakeActionLink,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command.</p>
+        <p>The name of the document is sent in the <em>data.title</em> parameter. The <em>Favorite</em> icon highlighting state is sent in the <em>data.favorite</em> parameter.</p>
+        <p>When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
+            If the method is not declared, the <em>Favorite</em> icon will not be changed.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onMetaChange = function (event) {
+    var title = event.data.title;
+    var favorite = event.data.favorite;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onMetaChange": onMetaChange,
         ...
     },
     ...
@@ -471,7 +708,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>Where the <b>changesUrl</b> is the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.</p>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
     </li>
 
@@ -511,7 +748,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </li>
 
     <li>
@@ -547,18 +784,18 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </li>
 
     <li>
         <p><b id="onRequestReferenceData" class="copy-link">onRequestReferenceData</b> - the function called when the user is trying to refresh data inserted from the external file
             by clicking the <em>Update values</em> button in the <em>External links</em> dialog box of the <em>Data</em> tab.</p>
-        <p>An object with the unique file data and the file path or name are sent in the <em>data</em> parameter.</p>
+        <p>An object with the unique file data from the source file, the file path or name, and the file URL are sent in the <em>data</em> parameter.</p>
         <p>To refresh data by a link to a file which is specified with the event parameters, you must call the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method.
             When calling this method, the token must be added to validate the parameters.
             If the event is not declared, the <em>Paste link</em> and <em>Update values</em> buttons will not be displayed.</p>
         <note>To send the data to the <em>setReferenceData</em> method, it is recommended to search for the file by the <em>referenceData</em> parameter first.
-        If there is no such a field or a file cannot be found, then the <em>path</em> parameter is used.</note>
+        If there is no such a field or a file cannot be found, then the <em>path</em> or <em>link</em> parameters are used.</note>
         <div class="img-block-2">
             <div>
                 <img class="screenshot max-width-400" alt="Paste link" src="<%= Url.Content("~/content/img/editor/paste-link.png") %>" />
@@ -570,6 +807,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onRequestReferenceData = function () {
+    var link = event.data.link;
     var referenceData =  event.data.referenceData;
     var path = event.data.path;
     ...
@@ -719,7 +957,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
         </p>
     </li>
 
@@ -775,7 +1013,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </li>
 
     <li>
@@ -805,7 +1043,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </li>
 
     <li>
@@ -871,9 +1109,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments or grant the access rights to edit the specific sheet ranges.</p>
+        <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</p>
         <p>Starting from version 7.4, the operation type can be specified in the <em>data.c</em> parameter. It can take two values - <em>mention</em> or <em>protect</em>.
         Prior to version 7.4, only the mention operation was available with this event.</p>
+        <p>Starting from version 8.0, the <em>info</em> operation type is added to set the avatars for the users with the ids specified in the <em>data.id</em> parameter.</p>
         <p>To set a list of users, you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method which can take different lists of users depending on the specified operation type.
             The <em>onRequestUsers</em> event is called once for each <em>c</em> type when the corresponding operation is performed.
             If the <em>setUsers</em> is called with an empty list, then the <em>onRequestUsers</em> event will fire again.</p>
@@ -888,17 +1127,23 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onRequestUsers = function (event) {
+    var c = event.data.c;
+    var id = event.data.id;
+    ...
+
     docEditor.setUsers({
         "c": event.data.c,
         "users": [
             {
                 "email": "john@example.com",
                 "id": "78e1e841",
+                "image": "https://example.com/url-to-user-avatar1.png",
                 "name": "John Smith"
             },
             {
                 "email": "kate@example.com",
                 "id": "F89d8069ba2b",
+                "image": "https://example.com/url-to-user-avatar2.png",
                 "name": "Kate Cage"
             },
             ...

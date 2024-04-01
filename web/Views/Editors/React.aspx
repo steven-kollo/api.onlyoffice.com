@@ -73,7 +73,7 @@ var onLoadComponentError = function (errorCode, errorDescription) {
 
 export default function App() {
     return (
-        &lt;pre&gt;
+        &lt;&gt;
             &lt;DocumentEditor
                 id="docxEditor"
                 documentServerUrl="http://documentserver/"
@@ -188,7 +188,7 @@ npm run build
                 <td id="documentServerUrl" class="copy-link">documentServerUrl<span class="required">*</span></td>
                 <td>string</td>
                 <td>null</td>
-                <td>Address of ONLYOFFICE Document Server.</td>
+                <td>Address of ONLYOFFICE Docs.</td>
             </tr>
             <tr class="tablerow">
                 <td id="config" class="copy-link">config<span class="required">*</span></td>

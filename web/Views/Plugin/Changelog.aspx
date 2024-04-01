@@ -16,6 +16,17 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Plugins and Macros API.</p>
+    <h2 id="80" class="copy-link">Version 8.0</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/searchnext") %>">SearchNext</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide/endslideshow") %>">EndSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide/gotonextslideinslideshow") %>">GoToNextSlideInSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide/gotopreviousslideinslideshow") %>">GoToPreviousSlideInSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide/gotoslideinslideshow") %>">GoToSlideInSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide/pauseslideshow") %>">PauseSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide/resumeslideshow") %>">ResumeSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide/startslideshow") %>">StartSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+    </ul>
 
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>

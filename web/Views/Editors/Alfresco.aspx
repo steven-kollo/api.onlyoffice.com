@@ -30,7 +30,7 @@
         <li>To convert ODT, ODP, ODS, DOC, XLS, PPT files into their OOXML counterparts, select the <b>Convert using ONLYOFFICE</b> option. Resulting files will be placed in the same folder. 
             You can also configure rules for a folder, that will automatically convert files on upload or on change. Details you can find <a href="https://docs.alfresco.com/content-services/latest/using/content/rules/" target="_blank">here</a>.</li>
         <li>
-            To create a new document, choose the context menu <b>Create new...</b> option within document library.
+            To create a new document, open the folder where you want to create a document and click the <b>Create...</b> button.
             <img class="screenshot max-width-832" alt="Create new..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
         </li>
     </ul>
@@ -64,7 +64,7 @@
             <span class="commandline">java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps_share/onlyoffice-integration-share.amp /usr/local/tomcat/webapps/share</span>
             <p>More details about using MMT can be found at the following address - <em>https://docs.alfresco.com/content-services/latest/install/zip/amp/</em>.</p>
         </li>
-        <li>Make sure that Document Server will be able to POST to Alfresco.
+        <li>Make sure that ONLYOFFICE Docs will be able to POST to Alfresco.
             <p>You may need to change these lines in <b>alfresco-global.properties</b> or you can set it using <a href="#configuration">configuration page</a>:</p>
             <span class="commandline">alfresco.host=&lt;hostname&gt;
 alfresco.port=443

@@ -25,10 +25,15 @@
 
 
 using System;
+using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Security;
 using System.Web.Mvc;
+using System.Web.WebPages;
 using ASC.Api.Web.Help.Helpers;
+using log4net;
+using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -68,6 +73,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config/Editor/Embedded",
                 "Config/Editor/Plugins",
                 "Config/Events",
+                "ConfigCreate",
                 "Confluence",
                 "Connector",
                 "Conversion",
@@ -129,6 +135,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Review",
                 "Save",
                 "Security",
+                "SettingAvatars",
                 "SharePoint",
                 "Signature",
                 "Signature/Body",
@@ -261,6 +268,19 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Config", (object) catchall);
+        }
+
+
+        [HttpPost]
+        public JsonResult ConfigCreate(string jsonConfig)
+        {
+            LogManager.GetLogger("ASC.Api").Debug("Editor Config create: " + jsonConfig);
+
+            Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
+            config.Document.Key = "apiwh" + Guid.NewGuid();
+            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx";
+            config.EditorConfig.CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme);
+            return Json(Helpers.Config.Serialize(config));
         }
 
         public ActionResult Confluence()
@@ -476,6 +496,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Security()
+        {
+            return View();
+        }
+
+        public ActionResult SettingAvatars()
         {
             return View();
         }

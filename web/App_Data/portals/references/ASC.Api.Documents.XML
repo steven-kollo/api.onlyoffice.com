@@ -22,7 +22,7 @@
             <param name="context"></param>
             <param name="fileStorageService"></param>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetRootFolders(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetRootFolders(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             Returns all the sections matching the parameters specified in the request.
             </summary>
@@ -30,6 +30,7 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <param type="System.Boolean, System" name="withoutTrash">Specifies whether to return sections with or without trash folder</param>
             <param type="System.Boolean, System" name="withoutAdditionalFolder">Specifies whether to return sections with or without additional folders</param>
@@ -39,7 +40,7 @@
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetMyFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetMyFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "My documents" section.
             </summary>
@@ -48,12 +49,13 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">The "My documents" section contents</returns>
             <path>api/2.0/files/@my</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetProjectsFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetProjectsFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "In projects" section.
             </summary>
@@ -62,12 +64,13 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">The "In projects" section contents</returns>
             <path>api/2.0/files/@projects</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetCommonFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetCommonFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "Common" section.
             </summary>
@@ -76,12 +79,13 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">The "Common" section contents</returns>
             <path>api/2.0/files/@common</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetShareFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetShareFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "Shared with me" section.
             </summary>
@@ -90,12 +94,13 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">The "Shared with me" section contents</returns>
             <path>api/2.0/files/@share</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetRecentFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetRecentFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files located in the "Recent" section.
             </summary>
@@ -104,12 +109,13 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">The "Recent" section contents</returns>
             <path>api/2.0/files/@recent</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetFavoritesFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetFavoritesFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "Favorites" section.
             </summary>
@@ -118,12 +124,13 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">The "Favorites" section contents</returns>
             <path>api/2.0/files/@favorites</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetTemplatesFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetTemplatesFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files located in the "Templates" section.
             </summary>
@@ -132,12 +139,13 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">The "Templates" section contents</returns>
             <path>api/2.0/files/@templates</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetTrashFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetTrashFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "Trash" section.
             </summary>
@@ -146,12 +154,13 @@
             <param type="System.Guid, System" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" name="filterType" optional="true">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">The "Trash" section contents</returns>
             <path>api/2.0/files/@trash</path>
             <httpMethod>GET</httpMethod>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetFolder(System.String,System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetFolder(System.String,System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.String,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the folder with the ID specified in the request.
             </summary>
@@ -163,6 +172,7 @@
             <param type="System.Guid, System" method="url" name="userIdOrGroupId" optional="true">User or group ID</param>
             <param type="ASC.Files.Core.FilterType, ASC.Files.Core" method="url" name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5) or ImagesOnly (7)">Filter type</param>
             <param type="System.Boolean, System" name="searchInContent">Specifies whether to search within the section contents or not</param>
+            <param type="System.String, System" name="extension">File extension by which files will be searched for if the FilterType.ByExtension parameter is passed</param>
             <param type="System.Boolean, System" name="withSubfolders">Specifies whether to return sections with or without subfolders</param>
             <returns type="ASC.Api.Documents.FolderContentWrapper, ASC.Api.Documents">Folder contents</returns>
             <path>api/2.0/files/{folderId}</path>

@@ -28,10 +28,10 @@
     <p>You can download it from our website or compile from source codes and deploy the solution on your local server using the specially designed <b>build_tools</b>.</p>
     <ul class="get-docbuilder-block">
         <li class="get-docbuilder-option">
-            <a class="get-docbuilder-link get-docbuilder-link-start" href="https://www.onlyoffice.com/download-builder.aspx?utm_source=api" target="_blank">Get ONLYOFFICE Document Builder</a>
+            <a class="get-docbuilder-link get-docbuilder-link-start" href="https://www.onlyoffice.com/download-builder.aspx?from=api" target="_blank">Get ONLYOFFICE Document Builder</a>
         </li>
         <li class="get-docbuilder-option">
-            <a class="get-docbuilder-link get-docbuilder-link-info" href="https://helpcenter.onlyoffice.com/installation/docs-community-compile-document-builder.aspx" target="_blank">Compile ONLYOFFICE Document Builder</a>
+            <a class="get-docbuilder-link get-docbuilder-link-info" href="https://helpcenter.onlyoffice.com/installation/docs-community-compile-document-builder.aspx?from=api" target="_blank">Compile ONLYOFFICE Document Builder</a>
         </li>
     </ul>
 

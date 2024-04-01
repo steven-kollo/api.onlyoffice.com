@@ -8,6 +8,83 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).</p>
 
+<div class="header-gray">Example</div>
+<p>
+    The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
+</p>
+
+<div id="controlFields">
+    <div id="viewedit" class="control-panel">
+        <div class="line input_line" style="margin-top: 0;">
+            <label for="document_file_type">File type</label>
+            <select class="select" id="document_file_type" name="document_file_type">
+                <option disabled>xlsx</option>
+                <option value="xlsx" selected>xlsx</option>
+                <option value="csv">csv</option>
+                <option value="xls">xls</option>
+            </select>
+        </div>
+        <div class="line input_line">
+            <label for="document_key">Key</label>
+            <input type="text" id="document_key" name="document_key" value="Khirz6zTPdfd7">
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
+                <input type="checkbox" id="document_reference_data" name="document_reference_data" hidden="hidden" checked>
+                <span></span>
+                <label for="document_reference_data">Reference data</label>
+            </label>
+        </div>
+        <div class="config_object_holder" id="holder_document_reference_data">
+            <div class="config_nested_group">
+                <div class="line input_line">
+                    <label for="document_file_key">File key</label>
+                    <input type="text" id="document_file_key" name="document_file_key" value="BCFA2CED">
+                </div>
+                <div class="line input_line">
+                     <label for="document_instance_id">Instance Id</label>
+                    <input type="text" id="document_instance_id" name="document_instance_id" value="https://example.com">
+                </div>
+            </div>
+        </div>
+        <div class="line input_line">
+            <label for="document_title">Title</label>
+            <input type="text" id="document_title" name="document_title" value="Example Title">
+        </div>
+        <div class="line input_line" style="margin-bottom: 0;">
+            <label for="document_url">URL</label>
+            <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.xlsx">
+        </div>
+
+    </div>
+</div>
+
+<div id="configPreHolder" style="display: flex; margin-top: 18px;">
+    <div>
+        <div id="configHeader" class="configHeader">
+            <div class="preContentType">
+                <span style="font-family: monospace">Config.js</span>
+            </div>
+            <div>
+                <div class="tooltip">
+                    <div class="copyConfig">
+                        <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre id="configPre"></pre>
+    </div>  
+</div>
+
+
+<div id="editorSpace">
+    <div id="placeholder"></div>
+</div>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -116,24 +193,200 @@
 
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-<div class="header-gray">Example</div>
-<pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "document": {
-        "fileType": "docx",
-        "key": "Khirz6zTPdfd7",
+<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript">
+    handleSelects();
+
+    
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "csv",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "csv",
+                Info = new Config.DocumentConfig.InfoConfig()
+            },
+        DocumentType = "cell",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>);
+    var config_csv = config;
+    var config_csv_copy = copy;
+
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "xlsx",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx",
+                Info = new Config.DocumentConfig.InfoConfig()
+            },
+        DocumentType = "cell",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>);
+   
+    var config_xlsx = config;
+    var config_xlsx_copy = copy;
+
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
+    new Config {
+        Document = new Config.DocumentConfig
+            {
+                FileType = "xls",
+                Key = "apiwh" + Guid.NewGuid(),
+                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                Title = "Example Title",
+                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "xlsx",
+                Info = new Config.DocumentConfig.InfoConfig()
+            },
+        DocumentType = "cell",
+        EditorConfig = new Config.EditorConfigConfiguration
+            {
+                CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                    {
+                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            },
+                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                            {
+                                Visible = true
+                            },
+                        IntegrationMode = "embed",
+                }
+            },
+        Height = "550px",
+        Width = "100%"
+    }) %>);
+
+    var config_xls = config;
+    var config_xls_copy = copy;
+
+    const deepCopies = {
+        csv: config_csv_copy,
+        xlsx: config_xlsx_copy,
+        xls: config_xls_copy
+    };
+
+    var config = config_xlsx;
+</script>
+
+<script>
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
+
+    $(".copyConfig").click(function () {
+        var currentConfigName = getFieldValue("document_file_type").replaceAll(`"`, "");
+        var json = JSON.stringify(deepCopies[currentConfigName], null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
+    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave);
+</script>
+
+<script>
+    $(document).ready(function () {
+        resizeCodeInput();
+        updateConfig();
+    });
+
+    $("#controlFields").find("input,select").change(function () {
+        updateConfig(this.id);
+    });
+
+    $("#document_reference_data").change(showHideConfigObject);
+
+    function showHideConfigObject(e) {
+        var hidden = document.getElementById(`holder_${e.target.id}`).hidden;
+        document.getElementById(`holder_${e.target.id}`).hidden = !hidden;
+        resizeCodeInput();
+    }
+    function updateConfig(id) {
+        var referenceData = `
         "referenceData": {
-            "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com",
-            "key": "Khirz6zTPdfd7"
-        },
-        "title": "Example Document Title.docx",
-        "url": "https://example.com/url-to-example-document.docx",
-    },
+            "fileKey": ${getFieldValue("document_file_key")},
+            "instanceId": ${getFieldValue("document_instance_id")},
+            "key": ${getFieldValue("document_key")}
+        },`;
+        if (!document.getElementById('document_reference_data').checked) {
+            referenceData = "";
+        }
+        var document_string = `{
+        "fileType": ${getFieldValue("document_file_type")},
+        "key": ${getFieldValue("document_key")},${referenceData}
+        "title": ${getFieldValue("document_title") },
+        "url": ${getFieldValue("document_url")}
+    }`;
+        var config_string =
+            `var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "document": ${document_string},
     ...
 });
-</pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
+`;
+        var fakeFields = ['document_key', 'document_reference_data', 'document_file_key', 'document_instance_id', 'document_url'];
+        if (!fakeFields.includes(id)) {
+            var document_object = JSON.parse(document_string);
+            if (document_object.fileType == 'csv') {
+                config = config_csv;
+            } else if (document_object.fileType == 'xlsx') {
+                config = config_xlsx;
+            } else {
+                config = config_xls;
+            }
+           
+            config.document.title = document_object.title;
+            deepCopies[document_object.fileType].document.title = document_object.title;
+            if (window.docEditor) {
+                window.docEditor.destroyEditor();
+            }
+            window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+        }
+
+        var pre = document.getElementById("configPre");
+        pre.innerHTML = config_string;
+        hljs.highlightBlock(pre);
+    }
+
+    function itterateProperties(object) {
+        console.log(object);
+    }
+</script>

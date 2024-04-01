@@ -1,11 +1,12 @@
 {
   "editorType": {
     "name": "editorType",
-    "description": "<p>The editors which the plugin is available for:</p>\n<ul>\n<li><b>word</b> - text document editor,</li>\n<li><b>cell</b> - spreadsheet editor,</li>\n<li><b>slide</b> - presentation editor.</li>\n</ul>",
+    "description": "<p>The editors which the plugin is available for:</p>\n<ul>\n<li><b>word</b> - text document editor,</li>\n<li><b>cell</b> - spreadsheet editor,</li>\n<li><b>slide</b> - presentation editor,</li>\n<li><b>pdf</b> - pdf editor.</li>\n</ul>",
     "type": [
       "\"word\"",
       "\"cell\"",
-      "\"slide\""
+      "\"slide\"",
+      "\"pdf\""
     ]
   },
   "initDataType": {
@@ -275,7 +276,7 @@
       {
         "type": "number",
         "name": "paragraphs.linespacing",
-        "description": "<p>The text linespecing in the current paragraph.</p>"
+        "description": "<p>The text linespacing in the current paragraph.</p>"
       },
       {
         "type": "Array.<object>",

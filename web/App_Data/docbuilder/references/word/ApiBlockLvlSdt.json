@@ -641,48 +641,11 @@
           "name": "sAuthor",
           "description": "<p>The author's name (optional).</p>",
           "optional": false
-        }
-      ]
-    },
-    "SetBackgroundColor": {
-      "memberof": "ApiBlockLvlSdt",
-      "name": "SetBackgroundColor",
-      "description": "<p>Sets the background color to the current block content control.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "byte",
-          "name": "r",
-          "description": "<p>Red color component value.</p>",
-          "optional": false
         },
         {
-          "type": "byte",
-          "name": "g",
-          "description": "<p>Green color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "b",
-          "description": "<p>Blue color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "boolean",
-          "name": "bNone",
-          "description": "<p>Defines that background color will not be set.</p>",
+          "type": "string",
+          "name": "sUserId",
+          "description": "<p>The user ID of the comment author (optional).</p>",
           "optional": false
         }
       ]
