@@ -470,8 +470,15 @@ img {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .macro-block, .plugin-block {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media screen and (max-width: 592px) {
     .macro-block, .plugin-block {
+        grid-template-columns: repeat(2, 1fr);
         padding: 0;
     }
 

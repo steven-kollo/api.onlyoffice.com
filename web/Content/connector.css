@@ -96,6 +96,12 @@ img {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .connector-block {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media screen and (max-width: 592px) {
     .connector-block {
         gap: 16px 24px;
@@ -104,11 +110,5 @@ img {
 
     .connector-example {
         max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 475px) {
-    .connector-block {
-        grid-template-columns: repeat(1, 1fr);
     }
 }

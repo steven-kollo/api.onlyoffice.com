@@ -133,7 +133,7 @@ img {
 
 @media screen and (max-width: 768px) {
     .get-docs-block {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

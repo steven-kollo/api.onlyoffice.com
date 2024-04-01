@@ -38,6 +38,10 @@
     text-transform: uppercase;
 }
 
+.treeheader:not(:first-child) {
+    margin-top: 16px;
+}
+
 ul.side-nav,
 .side-nav ul,
 .treeview {
@@ -47,9 +51,6 @@ ul.side-nav,
 
 .treeview .selected {
     color: #FF6F3D;
-    max-width: 150px;
-    text-decoration: none;
-    text-overflow: ellipsis;
     font-weight: 700;
 }
 
@@ -59,9 +60,8 @@ ul.side-nav,
 
 .side-nav li,
 .treeview li {
-    line-height: 21px;
     margin: 0;
-    padding: 7px 0 7px 16px;
+    padding: 0 0 0 16px;
 }
 
 .side-nav > li,
@@ -76,6 +76,9 @@ ul.side-nav,
 .side-nav a,
 .treeview a,
 .treeview a:visited {
+    display: block;
+    padding: 5px 0;
+    line-height: 22px;
     color: var(--color-text-tertiary-2);
     cursor: pointer;
     overflow: hidden;
@@ -93,17 +96,81 @@ ul.side-nav,
 }
 
 .treeview .hitarea {
-    height: 16px;
-    width: 16px;
-    margin-left: -16px;
+    margin: 11px 0 0 -16px;
+    height: 11px;
+    width: 11px;
     float: left;
     cursor: pointer;
 }
 
 .treeview .collapsable-hitarea {
-    background: url("img/sprite.svg") no-repeat 0 -102px transparent;
+    background: url("img/sprite.svg") no-repeat -2px -106px transparent;
 }
 
 .treeview .expandable-hitarea {
-    background: url("img/sprite.svg") no-repeat 0 -82px transparent;
+    background: url("img/sprite.svg") no-repeat -2px -86px transparent;
+}
+
+@media screen and (max-width: 1024px) {
+    .side-nav a,
+    .treeview a,
+    .treeview a:visited {
+        word-wrap: initial;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    .treeheader {
+        padding: 6px 0;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        color: #808080;
+    }
+
+    .treeview .selected {
+        font-weight: 400;
+        max-width: 100%;
+    }
+
+    .side-nav:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    .side-nav a,
+    .treeview a,
+    .treeview a:visited {
+        padding: 6px 0;
+        font-size: 14px;
+        line-height: 22px;
+        color: #333333;
+    }
+
+    ul.side-nav,
+    .treeview {
+        padding: 0;
+    }
+
+    .side-nav > li ul {
+        padding: 0 0 0 19px;
+    }
+
+    .side-nav li,
+    .treeview li {
+        line-height: initial;
+        padding: 0;
+    }
+
+    .side-nav > li,
+    .treeview.root > li {
+        font-size: 14px;
+        line-height: 22px;
+        color: #333333;
+    }
+
+    .treeview .hitarea {
+        margin: 11px 8px 0 0;
+    }
 }
