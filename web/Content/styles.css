@@ -2698,13 +2698,16 @@ article {
 /********************************
     product versions
 ********************************/
+.pvl_wrapper {
+    display: flex;
+    margin: 0px 0 24px;
+}
+
 .pvl_product {
     display: inline-block;
     color: var(--color-text-duodecimal);
     background-color: var(--color-bg-tetradecimal);
     padding: 4px 8px;
-    margin: 0px 0 24px;
-    text-align: right;
     font-size: 12px;
     line-height: 19px;
     border-radius: 2px 0px 0px 2px;
@@ -2714,12 +2717,11 @@ article {
     color: #fff;
     background-color: #FF6F3D;
     padding: 4px 8px;
-    margin: 0px 0 24px;
-    text-align: left;
     font-size: 12px;
     line-height: 19px;
     font-weight: 600;
     border-radius: 0px 2px 2px 0px;
+    white-space: nowrap;
 }
 
 /********************************

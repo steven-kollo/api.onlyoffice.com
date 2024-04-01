@@ -6,7 +6,9 @@
 
 <%var product = Products.GetSection("docspace", "jssdk"); %>
 
-<span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+<div class="pvl_wrapper">
+    <span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+</div>
 
 <p class="dscr">
     The ONLYOFFICE DocSpace SDK based on JavaScript allows developers to use all the DocSpace possibilities with <em>api.js</em>.

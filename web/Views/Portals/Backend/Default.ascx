@@ -6,7 +6,9 @@
 
 <%var product = Products.GetSection("portals", "backend"); %>
 
-<span class="pvl_product">ONLYOFFICE Workspace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+<div class="pvl_wrapper">
+    <span class="pvl_product">ONLYOFFICE Workspace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+</div>
 
 <p>
     The ONLYOFFICE Workspace API is implemented as REST over HTTP using GET/POST/PUT/DELETE.

@@ -6,7 +6,9 @@
 
 <%var product = Products.GetSection("docspace", "pluginssdk"); %>
 
-<span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+<div class="pvl_wrapper">
+    <span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+</div>
 
 <p>
     <b>DocSpace Plugins SDK</b> allows developers to create their own plugins and add them to the DocSpace portal.

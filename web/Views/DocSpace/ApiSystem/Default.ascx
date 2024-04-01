@@ -6,7 +6,9 @@
 
 <%var product = Products.GetSection("docspace", "apisystem"); %>
 
-<span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+<div class="pvl_wrapper">
+    <span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+</div>
 
 <p class="dscr">
     The ONLYOFFICE Hosted Solution is implemented as REST over HTTP using GET/POST.

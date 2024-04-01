@@ -15,7 +15,9 @@
         <span class="hdr">Basic concepts</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
+    <div class="pvl_wrapper">
+        <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
+    </div>
 
     <p class="dscr">
         <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> is an open-source office suite that includes editors for text documents, spreadsheets, presentations and fillable forms. 
