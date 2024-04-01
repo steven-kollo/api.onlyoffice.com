@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: config to clipboard
 - editors: added the Setting avatars page to How it works
 - editors: try ppsx
 
