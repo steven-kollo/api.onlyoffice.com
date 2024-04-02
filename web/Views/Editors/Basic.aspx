@@ -16,7 +16,7 @@
     </h1>
 
     <div class="pvl_wrapper">
-        <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
+        <span class="pvl_product">ONLYOFFICE Docs</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
     </div>
 
     <p class="dscr">

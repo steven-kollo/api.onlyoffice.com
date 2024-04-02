@@ -53,6 +53,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Backend/Batch",
                 "Backend/Faq",
                 "Backend/Filters",
+                "Backend/GetDocspace",
                 "Backend/HowItWorks/Webhooks",
                 "GetDocspace",
                 "ApiSystem",
@@ -169,11 +170,6 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Backend", (object)catchall);
-        }
-
-        public ActionResult GetDocspace()
-        {
-            return View();
         }
 
         public ActionResult JsSdk(string catchall)

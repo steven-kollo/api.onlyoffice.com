@@ -15,7 +15,7 @@
     </h1>
 
     <div class="pvl_wrapper">
-        <span class="pvl_product">ONLYOFFICE DocumentBuilder</span><span class="pvl_version">v<%= Products.Get("docbuilder").Version %></span>
+        <span class="pvl_product">ONLYOFFICE Document Builder</span><span class="pvl_version">v<%= Products.Get("docbuilder").Version %></span>
     </div>
 
     <p><b>ONLYOFFICE Document Builder</b> is a C++ library used to create and edit Office Open XML format files (documents, spreadsheets and presentations) and save them to DOCX, XSLX, PPTX and PDF formats.</p>

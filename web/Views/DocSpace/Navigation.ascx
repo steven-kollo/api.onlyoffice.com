@@ -23,9 +23,6 @@
                     <li>
                         <a href="<%= Url.Action("jssdk/") %>">Basic concepts</a>
                     </li>
-        <li>
-            <a href="<%= Url.Action("getdocspace") %>">Get ONLYOFFICE DocSpace</a>
-        </li>
                     <div class="treeheader">JavaScript SDK</div>
                     <ul class="side-nav root">
                         <li>
@@ -255,7 +252,7 @@
             </li>
         </ul>
 
-        <div class="treeheader">API backend</div>
+        <div class="treeheader">More information</div>
                     <ul class="side-nav root">
                         <li>
                             <a href="<%= Url.Action("pluginssdk/changelog") %>">Changelog</a>
@@ -271,21 +268,28 @@
                             <a href="<%= Url.Action("backend/") %>">Basic concepts</a>
                         </li>
                         <li>
-                <a href="<%= Url.Action("backend/howitworks") %>">How it works</a>
-                <ul>
-                    <li>
-                        <a href="<%= Url.Action("backend/howitworks/auth") %>">Passing authentication</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("backend/howitworks/longrunningoperations") %>">Long-running operations</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("backend/howitworks/uploadinglargefiles") %>">Uploading large files</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("backend/howitworks/webhooks") %>">Webhooks</a>
-                    </li>
-                </ul>
+                            <a href="<%= Url.Action("backend/getdocspace") %>">Get ONLYOFFICE DocSpace</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("backend/howitworks") %>">How it works</a>
+                            <ul>
+			                    <li>
+			                        <a href="<%= Url.Action("backend/howitworks/auth") %>">Passing authentication</a>
+			                    </li>
+			                    <li>
+			                        <a href="<%= Url.Action("backend/howitworks/longrunningoperations") %>">Long-running operations</a>
+			                    </li>
+			                    <li>
+			                        <a href="<%= Url.Action("backend/howitworks/uploadinglargefiles") %>">Uploading large files</a>
+			                    </li>
+			                    <li>
+			                        <a href="<%= Url.Action("backend/howitworks/webhooks") %>">Webhooks</a>
+			                    </li>
+                			</ul>
+						</li>
+					</ul>
+					<div class="treeheader">API Backend</div>
+                    <ul class="side-nav root">
                         <% if (entryPoints != null && entryPoints.Any())
                         { %>
                         <% foreach (var entryPoint in entryPoints.OrderBy(x => x.Name).ToList())
