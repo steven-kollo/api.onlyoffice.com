@@ -202,102 +202,104 @@
         </ul>
         <p>You should bear this in mind when you set the necessary permissions and combine different permissions for the same document.</p>
         <p>See the interactive table below to find out how different parameters and parameter combinations influence each other and the resulting document permissions:</p>
-        <div class="table_wrapper">
-            <h5>Parameters</h5>
-            <table id="parameters" class="parameters_permissions">
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th colspan="2" style="text-align: center;">Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="mode">
-                        <th><p><a href="<%= Url.Action("config/editor") %>#mode">editorConfig.mode</a></th>
-                        <td class="paramEdit active_param"><p>edit</p></td>
-                        <td class="paramView inactive_param"><p>view</p></td>
-                    </tr>
-                    <tr id="edit">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#edit">document.permissions.edit</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="review">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="fillForms">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#fillForms">document.permissions.fillForms</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="comment">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a></a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="download">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#download">document.permissions.download</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="print">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#print">document.permissions.print</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="table_wrapper">
-            <h5>Resulting permissions</h5>
-            <table id="result" class="parameters_permissions">
-                <thead>
-                    <tr>
-                        <th>Document action</th>
-                        <th>Permission</th>
-                        <th>Note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="viewing">
-                        <td class="resultAction"><p>Viewing</p></td>
-                        <td class="resultPermission allowed"><p>allowed</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="editing">
-                        <td class="resultAction"><p>Editing</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="reviewing">
-                        <td class="resultAction"><p>Reviewing</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="formFilling">
-                        <td class="resultAction"><p>Form filling</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="commenting">
-                        <td class="resultAction"><p>Commenting</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="downloading">
-                        <td class="resultAction"><p>Downloading</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="printing">
-                        <td class="resultAction"><p>Printing</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="table-box">
+            <div class="table_wrapper">
+                <h5>Parameters</h5>
+                <table id="parameters" class="parameters_permissions">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th colspan="2" style="text-align: center;">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="mode">
+                            <th><p><a href="<%= Url.Action("config/editor") %>#mode">editorConfig.mode</a></th>
+                            <td class="paramEdit active_param"><p>edit</p></td>
+                            <td class="paramView inactive_param"><p>view</p></td>
+                        </tr>
+                        <tr id="edit">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#edit">document.permissions.edit</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="review">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="fillForms">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#fillForms">document.permissions.fillForms</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="comment">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a></a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="download">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#download">document.permissions.download</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="print">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#print">document.permissions.print</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table_wrapper">
+                <h5>Resulting permissions</h5>
+                <table id="result" class="parameters_permissions">
+                    <thead>
+                        <tr>
+                            <th>Document action</th>
+                            <th>Permission</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="viewing">
+                            <td class="resultAction"><p>Viewing</p></td>
+                            <td class="resultPermission allowed"><p>allowed</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="editing">
+                            <td class="resultAction"><p>Editing</p></td>
+                            <td class="resultPermission notallowed"><p>not allowed</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="reviewing">
+                            <td class="resultAction"><p>Reviewing</p></td>
+                            <td class="resultPermission notallowed"><p>not allowed</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="formFilling">
+                            <td class="resultAction"><p>Form filling</p></td>
+                            <td class="resultPermission notallowed"><p>not allowed</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="commenting">
+                            <td class="resultAction"><p>Commenting</p></td>
+                            <td class="resultPermission notallowed"><p>not allowed</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="downloading">
+                            <td class="resultAction"><p>Downloading</p></td>
+                            <td class="resultPermission notallowed"><p>not allowed</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="printing">
+                            <td class="resultAction"><p>Printing</p></td>
+                            <td class="resultPermission notallowed"><p>not allowed</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
     </dd>
