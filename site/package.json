@@ -35,6 +35,7 @@
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-gfm-table": "^2.0.0",
     "mdast-util-to-hast": "^13.1.0",
+    "mdast-util-to-markdown": "^2.1.0",
     "micromark-extension-gfm-table": "^2.0.0",
     "preact": "^10.19.3",
     "preact-render-to-string": "^6.3.1",

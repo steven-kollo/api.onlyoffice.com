@@ -21,3 +21,8 @@ html {
 body {
   margin: 0;
 }
+
+table {
+  display: block;
+  overflow: auto;
+}

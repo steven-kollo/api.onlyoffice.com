@@ -2,6 +2,8 @@ import { tmpdir } from "node:os"
 import type { UserConfig } from "@11ty/eleventy"
 import { build } from "esbuild"
 import htmlMinifier from "html-minifier-terser"
+import { fromMarkdown } from "mdast-util-from-markdown"
+import { toMarkdown } from "mdast-util-to-markdown"
 import { isValidElement } from "preact"
 import { render } from "preact-render-to-string"
 import requireFromString from "require-from-string"
@@ -18,6 +20,7 @@ export function markupPlugin(uc: UserConfig): void {
 
   uc.addTemplateFormats("mdx")
   uc.addExtension("mdx", {
+    // Do not delete the property bellow.
     outputFileExtension: "html",
     compile(_: string, f: string) {
       return async (data) => {
@@ -36,12 +39,56 @@ export function markupPlugin(uc: UserConfig): void {
                   // because vfile is already a third-party dependency.
                   // https://www.npmjs.com/package/gray-matter
                   let vf = await read(f)
+
+                  // todo: wrap front matter to a function which attach defaults at first
+                  // take defaults from the page.11tydata.cjs
+                  // or create `config/frontmatter` and take defaults from there
                   matter(vf, { strip: true })
+
+                  // todo: cache it
+                  // todo: support assets
+                  // todo: support relative links
+                  if (vf.data.matter.remote !== undefined) {
+                    if (!isGitHubURL(vf.data.matter.remote)) {
+                      throw new Error("Invalid remote URL")
+                    }
+                    vf.value = await fetchGitHubContent(vf.data.matter.remote)
+                    const t = fromMarkdown(vf.value)
+                    const i = t.children.findIndex((e) => e.type === "heading" && e.depth === 1)
+                    if (i !== -1) {
+                      t.children.splice(i, 1)
+                    }
+                    // t.children = t.children.flatMap((e) => {
+                    //   if (e.type === "html") {
+                    //     const r = e.value.match(markerExpression)
+                    //     if (r !== null) {
+                    //       return []
+                    //     }
+                    //   }
+                    //   return e
+                    // })
+                    vf.value = toMarkdown(t, {
+                      handlers: {
+                        html(node) {
+                          if (vf.data.matter.remote === "https://github.com/ONLYOFFICE/onlyoffice-redmine/blob/main/README.md/") {
+                            const r = node.value.match(markerExpression)
+                            if (r !== null) {
+                              node.type = "text"
+                              node.value = ""
+                            }
+                          }
+                          return node.value
+                        }
+                      }
+                    })
+                  }
+
                   vf = await compile(vf.value, {
                     jsxImportSource: "preact",
                     rehypePlugins,
                     remarkPlugins
                   })
+
                   return {
                     contents: vf.value
                   }
@@ -86,4 +133,33 @@ export async function transformMarkup(c: string): Promise<string> {
     removeRedundantAttributes: true,
     sortAttributes: true
   })
+}
+
+// https://github.com/syntax-tree/mdast-comment-marker/blob/44e67df88bf51ed2d80f6c54aedde7393ad8edff/lib/index.js#L32
+const commentExpression = /\s*([a-zA-Z\d-]+)(\s+([\s\S]*))?\s*/
+const markerExpression = new RegExp(
+  '(\\s*<!--' + commentExpression.source + '-->\\s*)'
+)
+
+function isGitHubURL(u: string): boolean {
+  const o = new URL(u)
+  return o.origin === "http://github.com" || o.origin === "https://github.com"
+}
+
+async function fetchGitHubContent(u: string): Promise<string> {
+  const o = new URL(u)
+  const [, owner, repo, blob, ref, ...path] = o.pathname.split("/")
+  if (blob !== "blob") {
+    throw new Error("Not a blob URL")
+  }
+  let p = path.join("/")
+  if (p.endsWith("/")) {
+    p = p.slice(0, -1)
+  }
+  u = `https://raw.githubusercontent.com/${owner}/${repo}/${ref}/${p}`
+  const res = await fetch(u)
+  if (res.status !== 200) {
+    throw new Error("Failed to fetch GitHub content")
+  }
+  return await res.text()
 }

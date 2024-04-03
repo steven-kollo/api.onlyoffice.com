@@ -1,5 +1,7 @@
 function data() {
   return {
+    title: "",
+    remote: "",
     layout: "article",
     tags: ["navigation"],
     permalink(data) {
@@ -8,6 +10,15 @@ function data() {
       return p
     },
     eleventyComputed: {
+      title(data) {
+        if (data === undefined) {
+          return
+        }
+        if (data.title === "") {
+          return data.page.fileSlug
+        }
+        return data.title
+      },
       layout(data) {
         if (
           data === undefined ||

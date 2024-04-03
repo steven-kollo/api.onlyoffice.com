@@ -361,6 +361,7 @@ function populateRequestExamples(req: REST.RequestDeclaration): void {
   // }
 
   // todo: add headers, query
+  // todo: use es6 string templates.
   const examples: REST.Example[] = [
     // {
     //   syntax: "http",

@@ -33,3 +33,8 @@
 .chapter__breadcrumbs {
   padding-top: 20px;
 }
+
+/* todo: simplify all the way of centering elements */
+.chapter__container > * {
+  max-width: var(--temp-right-column-width-size);
+}
