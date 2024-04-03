@@ -5,6 +5,7 @@ function data() {
     layout: "article",
     tags: ["navigation"],
     permalink(data) {
+      // todo: add support for new directory formats.
       let p = data.page.filePathStem.replace(/^\/pages/, "")
       p += `.${data.page.outputFileExtension}`
       return p
