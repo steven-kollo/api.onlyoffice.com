@@ -2047,6 +2047,10 @@
                 <td>Error when the converter cannot automatically determine the output file format. This error means that the client must explicitly specify
                     in which format the file should be converted (text document or spreadsheet). It is used to convert XML to OOXML in case the XML type is unknown.</td>
             </tr>
+            <tr class="tablerow">
+                <td>-10</td>
+                <td>Size limit exceeded.</td>
+            </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>
                 <td>Token signature is expired.</td>
