@@ -94,6 +94,12 @@
     </ul>
     <br />
 
+    <p><b>Other methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/addcustomfunction") %>">Api/AddCustomFunction</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <p><b>Form methods</b></p>
     <ul>

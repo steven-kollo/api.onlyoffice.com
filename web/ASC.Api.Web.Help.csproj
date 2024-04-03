@@ -388,6 +388,18 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiParaPr.SetTabs.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiPresetColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiPresetColor.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.AddUser.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.DeleteUser.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.GetAllUsers.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.GetUser.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.SetAnyoneType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.SetRange.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.SetTitle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRangeUserInfo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRangeUserInfo.GetId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRangeUserInfo.GetName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRangeUserInfo.GetType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.AutoFit.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRange.Clear.docbuilder" />
@@ -523,6 +535,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.AddDefName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.AddImage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.AddOleObject.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.AddProtectedRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.AddShape.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.AddWordArt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.Delete.docbuilder" />
@@ -533,6 +546,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetAllDrawings.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetAllImages.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetAllOleObjects.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetAllProtectedRanges.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetAllShapes.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetBottomMargin.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetCells.docbuilder" />
@@ -547,6 +561,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetPageOrientation.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetPrintGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetPrintHeadings.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetProtectedRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetRangeByNumber.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetRightMargin.docbuilder" />
@@ -613,6 +628,7 @@
     <Content Include="App_Data\docbuilder\examples\PositiveFixedAngle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\PositivePercentage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\PresetColor.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ProtectedRangeUserType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\pt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\pt_8.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\RelFromH.docbuilder" />
@@ -4779,22 +4795,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.AddUser.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.DeleteUser.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.GetAllUsers.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.GetUser.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.SetAnyoneType.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.SetRange.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRange.SetTitle.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRangeUserInfo.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRangeUserInfo.GetId.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRangeUserInfo.GetName.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiProtectedRangeUserInfo.GetType.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.AddProtectedRange.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetAllProtectedRanges.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetProtectedRange.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\ProtectedRangeUserType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.AddCustomFunction.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
