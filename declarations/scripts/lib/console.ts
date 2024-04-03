@@ -1,4 +1,4 @@
-import { Console as UtilsConsole } from "@onlyoffice/documentation-utils/console.js"
+import { Console as UtilsConsole } from "@onlyoffice/documentation-utils/console.ts"
 import pack from "../package.json" assert { type: "json" }
 
 export class Console extends UtilsConsole {

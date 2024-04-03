@@ -1,36 +1,24 @@
-// @ts-check
-
-/**
- * @typedef {import("node:stream").TransformCallback} TransformCallback
- * @typedef {import("@onlyoffice/documentation-declarations").Declaration} Declaration
- * @typedef {import("@onlyoffice/documentation-declarations").DeclarationType} DeclarationType
- * @typedef {import("@onlyoffice/documentation-declarations").DeclarationValue} DeclarationValue
- */
-
-import { readFile, rm, writeFile } from "node:fs/promises"
+import { rm } from "node:fs/promises"
 import { createReadStream, createWriteStream } from "node:fs"
 import { join } from "node:path"
-import { Transform } from "node:stream"
-import { URL, fileURLToPath } from "node:url"
 import {
   DeclarationsCache,
   PostprocessDeclarations,
   PostPostprocessDeclarations,
   PreprocessDeclarations as JSDocPreprocessDeclarations
-} from "@onlyoffice/documentation-declarations-scripts/jsdoc.js"
-import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-utils/jq.js"
+} from "@onlyoffice/documentation-declarations-scripts/jsdoc.ts"
+import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-utils/jq.ts"
 import Chain from "stream-chain"
 import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Stringer from "stream-json/Stringer.js"
 import parser from "stream-json"
-import { UnStreamObject, downloadFile, makeObject, mergeArrays, num } from "./utils.js"
+import { downloadFile } from "../utils/net.ts"
+import { createIndexes, mergeArrays } from "../utils/stream.ts"
+import { num, writeTemplate } from "./utils.ts"
 
-import { createRequire } from "module"
+import { createRequire } from "node:module"
 const require = createRequire(import.meta.url)
-
-const root = fileURLToPath(new URL("..", import.meta.url))
-const src = join(root, "src")
 
 const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-definitions-demo/dist/"
 const files = [
@@ -145,7 +133,7 @@ export async function build(tempDir, distDir) {
 
   let from = ""
   let to = join(tempDir, pd)
-  await mergeArrays(froms, to)
+  await mergeArrays(froms.map((f) => createReadStream(f)), to)
 
   from = to
   to = join(distDir, pd)
@@ -153,18 +141,13 @@ export async function build(tempDir, distDir) {
 
   from = to
   to = join(tempDir, pi)
-  await createIndexes(from, to)
+  await createIndexes(from, to, "id")
 
   from = to
   to = join(distDir, pi)
   await prettifyJSON(from, to)
 
-  from = join(src, "code.cjs")
-  to = join(distDir, `${pn}.cjs`)
-  let c = await readFile(from, "utf-8")
-  c = c.replaceAll("resource", pn)
-  await writeFile(to, c, "utf-8")
-
+  await writeTemplate("code", pn)
   await rm(tempDir, { recursive: true, force: true })
 }
 
@@ -201,39 +184,4 @@ class PreprocessDeclarations extends JSDocPreprocessDeclarations {
     }
     super._transform(ch, enc, cb)
   }
-}
-
-/**
- * @param {string} from
- * @param {string} to
- * @returns {Promise<void>}
- */
-function createIndexes(from, to) {
-  return new Promise((res, rej) => {
-    const c = new Chain([
-      createReadStream(from),
-      parser(),
-      new StreamArray(),
-      new class extends Transform {
-        constructor() {
-          super({ objectMode: true })
-          this._i = 0
-        }
-        _transform(ch, _, cb) {
-          this.push({
-            key: ch.value.id,
-            value: this._i
-          })
-          this._i += 1
-          cb(null)
-        }
-      },
-      new UnStreamObject(),
-      makeObject(),
-      new Stringer(),
-      createWriteStream(to)
-    ])
-    c.on("error", rej)
-    c.on("close", res)
-  })
 }

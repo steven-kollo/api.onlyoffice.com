@@ -1,21 +1,17 @@
-// @ts-check
-
 import { mkdir, rm, rmdir } from "node:fs/promises"
 import { createReadStream, createWriteStream } from "node:fs"
 import { join } from "node:path"
-import { Cache, ProcessPath } from "@onlyoffice/documentation-declarations-scripts/openapi.js"
-import { prettifyJSON } from "@onlyoffice/documentation-utils/jq.js"
-import Chain from "stream-chain"
+import { Cache, ProcessPath, ProcessRequest } from "@onlyoffice/documentation-declarations-scripts/openapi.ts"
+import { prettifyJSON } from "@onlyoffice/documentation-utils/jq.ts"
+import StreamArray from "stream-json/streamers/StreamArray.js"
 import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Parser from "stream-json/Parser.js"
 import Stringer from "stream-json/Stringer.js"
-import {
-  PickPath,
-  writeComponents,
-  createREST,
-  downloadFile
-} from "./utils.js"
+import { downloadFile } from "../utils/net.ts"
+import { PickPath } from "../utils/openapi.ts"
+import { chain, createStringStream, mergeArrays } from "../utils/stream.ts"
+import { createREST, writeComponents } from "./utils.ts"
 
 const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-community-server-declarations-demo/dist/"
 const file = "portals.json"
@@ -54,23 +50,37 @@ export async function build(tempDir, distDir) {
  * @returns {Promise<void>}
  */
 async function writeRequests(cache, tempDir, distDir, from) {
-  const n = `${resource}.requests.json`
+  const n = `${resource}.declarations.json`
 
   let to = join(tempDir, n)
-  await new Promise((res, rej) => {
-    const c = new Chain([
-      createReadStream(from),
-      new Parser(),
-      new PickPath(),
-      new StreamObject(),
-      new ProcessPath(cache),
-      new Disassembler(),
-      new Stringer({ makeArray: true }),
-      createWriteStream(to)
-    ])
-    c.on("error", rej)
-    c.on("close", res)
-  })
+  await chain(
+    createReadStream(from),
+    new Parser(),
+    new PickPath(),
+    new StreamObject(),
+    new ProcessPath(cache),
+    new Disassembler(),
+    new Stringer({ makeArray: true }),
+    createWriteStream(to)
+  )
+
+  from = to
+  to = join(tempDir, `${n}0`)
+  await chain(
+    createReadStream(from),
+    new Parser(),
+    new StreamArray(),
+    new ProcessRequest(cache),
+    new Disassembler(),
+    new Stringer({makeArray: true}),
+    createWriteStream(to)
+  )
+  await rm(from)
+
+  from = to
+  to = join(tempDir, `${n}1`)
+  await mergeArrays([createStringStream(JSON.stringify(Object.values(cache.groups))), createReadStream(from)], to)
+  await rm(from)
 
   from = to
   to = join(distDir, n)

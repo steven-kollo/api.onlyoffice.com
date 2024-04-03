@@ -5,14 +5,22 @@ import type { Code } from "./code.ts"
 // Unauthorized Response
 
 export namespace REST {
-  export type Component = Response | Type
+  export type Declaration = DeclarationMap[keyof DeclarationMap]
 
-  // todo: rename to declaration?
-  export interface Request {
-    slug: string
-    title: string
+  export interface DeclarationMap {
+    group: GroupDeclaration
+    request: RequestDeclaration
+  }
+
+  export interface GroupDeclaration extends DeclarationNode {
+    kind: "group"
+    // requests: string[]
+  }
+
+  export interface RequestDeclaration extends DeclarationNode {
+    id: string
+    kind: "request"
     endpoint: string
-    description?: string
     headerParameters?: Property[]
     cookieParameters?: Property[]
     pathParameters?: Property[]
@@ -21,6 +29,15 @@ export namespace REST {
     examples?: Example[]
     responses?: Response[]
   }
+
+  export interface DeclarationNode {
+    kind: string
+    slug: string
+    title: string
+    description?: string
+  }
+
+  export type Component = Response | Type
 
   export type Response = InlineResponse | ResponseReference
 

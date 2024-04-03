@@ -2,7 +2,7 @@
 
 import { readFile, readdir, writeFile } from "node:fs/promises"
 import { join, parse } from "node:path"
-import { capitalizeKebab } from "./strings.js"
+import { capitalizeKebab } from "./strings.ts"
 
 /**
  * @param {string} from

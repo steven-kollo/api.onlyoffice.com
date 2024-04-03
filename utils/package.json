@@ -3,9 +3,22 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./*": "./lib/*"
+    "./console.ts": "./lib/console.ts",
+    "./eslint.ts": "./lib/eslint.ts",
+    "./http.ts": "./lib/http.ts",
+    "./jq.ts": "./lib/jq.ts",
+    "./once.ts": "./lib/once.ts",
+    "./strings.ts": "./lib/strings.ts",
+    "./svg.ts": "./lib/svg.ts",
+    "./wait.ts": "./lib/wait.ts"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin-js": "^1.5.4",
+    "eslint": "^8.56.0"
   },
   "devDependencies": {
+    "@types/eslint": "^8.56.2",
+    "@types/node": "^20.11.5",
     "typescript": "^5.3.3"
   },
   "packageManager": "pnpm@8.13.0",

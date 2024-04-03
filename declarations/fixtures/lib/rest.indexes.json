@@ -1,0 +1,6 @@
+{
+  "wildlife": 0,
+  "wildlife/list-wildlife-animals": 1,
+  "wildlife/get-wildlife-animal": 2,
+  "wildlife/update-wildlife-animal": 3
+}

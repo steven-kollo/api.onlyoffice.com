@@ -3,13 +3,10 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./console.js": "./lib/console.js",
-    "./jsdoc.js": "./lib/jsdoc.js",
-    "./openapi.js": "./lib/openapi.js",
-    "./tokenizer.js": "./lib/tokenizer.js"
-  },
-  "scripts": {
-    "build": "tsc && node ./makefile.js build"
+    "./console.ts": "./lib/console.ts",
+    "./jsdoc.ts": "./lib/jsdoc.ts",
+    "./openapi.ts": "./lib/openapi.ts",
+    "./tokenizer.ts": "./lib/tokenizer.ts"
   },
   "dependencies": {
     "@stylistic/eslint-plugin-js": "^1.5.4",

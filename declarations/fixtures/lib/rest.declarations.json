@@ -1,5 +1,12 @@
 [
   {
+    "kind": "group",
+    "slug": "wildlife",
+    "title": "Wildlife",
+    "description": "The Wildlife API allows you to manage wildlife animals."
+  },
+  {
+    "kind": "request",
     "slug": "wildlife/list-wildlife-animals",
     "title": "List Wildlife Animals",
     "endpoint": "GET /wildlife/animals",
@@ -59,6 +66,7 @@
     ]
   },
   {
+    "kind": "request",
     "slug": "wildlife/get-wildlife-animal",
     "title": "Get Wildlife Animal",
     "endpoint": "GET /wildlife/animals/{id}",
@@ -134,6 +142,7 @@
     ]
   },
   {
+    "kind": "request",
     "slug": "wildlife/update-wildlife-animal",
     "title": "Update Wildlife Animal",
     "endpoint": "PUT /wildlife/animals/{id}",

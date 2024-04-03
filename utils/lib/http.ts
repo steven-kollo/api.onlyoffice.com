@@ -1,5 +1,4 @@
-/** @type {Record<number, string>} */
-export const statuses = {
+export const statusMessages: Partial<Record<number, string>> = {
   100: "Continue",
   101: "Switching Protocols",
   102: "Processing",
