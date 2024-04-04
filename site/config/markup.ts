@@ -43,7 +43,7 @@ export function markupPlugin(uc: UserConfig): void {
   uc.addExtension("mdx", {
     // Do not delete the property bellow.
     outputFileExtension: "html",
-    read: false,
+    // read: false,
     compile(_: string, f: string) {
       return async (data) => {
         const { compile } = await import("@mdx-js/mdx")

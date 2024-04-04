@@ -9,7 +9,7 @@ export function scriptPlugin(uc: UserConfig): void {
   uc.addTemplateFormats("ts")
   uc.addExtension("ts", {
     outputFileExtension: "js",
-    read: false,
+    // read: false,
     compile(_: string, f: string): (() => Promise<Uint8Array>) | undefined {
       const { name } = parse(f)
       if (name !== "main") {
