@@ -12,12 +12,18 @@ import { matter } from "vfile-matter"
 import { remarkPlugins, rehypePlugins } from "../components/markdown/markdown.config.ts"
 import { isBuild, isPreview } from "./mode.ts"
 
+// todo: refactor it.
+// add support for hot reload
+// profile memory usage
+
 export function markupPlugin(uc: UserConfig): void {
+  // https://github.com/11ty/eleventy/issues/235
   uc.addTemplateFormats("11ty.js")
   uc.addExtension("tsx", {
     key: "11ty.js"
   })
 
+  // https://github.com/11ty/eleventy/issues/636
   uc.addTemplateFormats("mdx")
   uc.addExtension("mdx", {
     // Do not delete the property bellow.
@@ -48,6 +54,7 @@ export function markupPlugin(uc: UserConfig): void {
                   // todo: cache it
                   // todo: support assets
                   // todo: support relative links
+                  // todo: move to config/remote
                   if (vf.data.matter.remote !== undefined) {
                     if (!isGitHubURL(vf.data.matter.remote)) {
                       throw new Error("Invalid remote URL")
@@ -140,6 +147,8 @@ const commentExpression = /\s*([a-zA-Z\d-]+)(\s+([\s\S]*))?\s*/
 const markerExpression = new RegExp(
   '(\\s*<!--' + commentExpression.source + '-->\\s*)'
 )
+
+// todo: move to config/remote
 
 function isGitHubURL(u: string): boolean {
   const o = new URL(u)
