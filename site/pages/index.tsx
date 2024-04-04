@@ -1,11 +1,9 @@
-function data() {
+export function data() {
   return {
     title: "Welcome to ONLYOFFICE API",
     layout: "blank"
   }
 }
-
-module.exports = { data }
 
 // ---
 // title: Welcome to ONLYOFFICE API

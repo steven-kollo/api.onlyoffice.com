@@ -1,14 +1,21 @@
-function data() {
+import {default as slugify} from "@sindresorhus/slugify"
+
+export function data() {
   return {
     title: "",
     remote: "",
     layout: "article",
     tags: ["navigation"],
     permalink(data) {
-      // todo: add support for new directory formats.
-      let p = data.page.filePathStem.replace(/^\/pages/, "")
-      p += `.${data.page.outputFileExtension}`
-      return p
+      const a = data.page.filePathStem.split("/")
+      const s = a
+        .slice(2, a.length)
+        .map((s) => {
+          s = s.toLowerCase()
+          return slugify.default(s)
+        })
+        .join("/")
+      return `/${s}.${data.page.outputFileExtension}`
     },
     eleventyComputed: {
       title(data) {
@@ -33,5 +40,3 @@ function data() {
     }
   }
 }
-
-module.exports = data()

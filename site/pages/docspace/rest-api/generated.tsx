@@ -1,8 +1,6 @@
-// @ts-check
+import {list, retrieve} from "@/resources/docspace.ts"
 
-const { list, retrieve } = require("@/resources/community-server.ts")
-
-function data() {
+export function data() {
   return {
     layout: "rest-declaration",
     pagination: {
@@ -13,15 +11,16 @@ function data() {
     items: list(),
     onRetrieve: retrieve,
     permalink(data) {
-      const d = data.pagination.items[0]
-      return `/community-server/rest-api/${d.slug}/index.html`
+      return permalink(data.pagination.items[0])
     },
     eleventyComputed: {
       title(data) {
         return data.pagination.items[0].title
-      }
+      },
     }
   }
 }
 
-module.exports = { data }
+function permalink(d) {
+  return `/docspace/rest-api/${d.slug}/index.html`
+}

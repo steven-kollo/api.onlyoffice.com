@@ -2,22 +2,37 @@ import { join, parse } from "node:path"
 import type { UserConfig } from "@11ty/eleventy"
 import { bundleAsync } from "lightningcss"
 import { isBuild, isPreview } from "./mode.ts"
+import {Transform} from "node:stream"
 
 export function stylePlugin(uc: UserConfig): void {
-  uc.addTemplateFormats("css")
-  uc.addExtension("css", {
-    outputFileExtension: "css",
-    // read: false,
-    compile(_: string, f: string): (() => Promise<Uint8Array>) | undefined {
-      const { name } = parse(f)
-      if (name !== "main") {
-        return
-      }
-      return () => {
-        return buildStyle(f)
-      }
+  uc.addWatchTarget("./**/*.css")
+  uc.addPassthroughCopy("./main.css", {
+    transform(f: string) {
+      return new Transform({
+        transform(_, __, cb) {
+          buildStyle(f).then((c) => {
+            this.push(c)
+            cb(null)
+          })
+        }
+      })
     }
   })
+
+  // uc.addTemplateFormats("css")
+  // uc.addExtension("css", {
+  //   outputFileExtension: "css",
+  //   // read: false,
+  //   compile(_: string, f: string): (() => Promise<Uint8Array>) | undefined {
+  //     const { name } = parse(f)
+  //     if (name !== "main") {
+  //       return
+  //     }
+  //     return () => {
+  //       return buildStyle(f)
+  //     }
+  //   }
+  // })
 }
 
 export async function buildRegularTheme(): Promise<string> {

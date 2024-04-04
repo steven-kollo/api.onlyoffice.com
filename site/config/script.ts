@@ -4,22 +4,37 @@ import { parse } from "node:path"
 import type { UserConfig } from "@11ty/eleventy"
 import { build } from "esbuild"
 import { isBuild, isPreview } from "./mode.ts"
+import {Transform} from "node:stream"
 
 export function scriptPlugin(uc: UserConfig): void {
-  uc.addTemplateFormats("ts")
-  uc.addExtension("ts", {
-    outputFileExtension: "js",
-    // read: false,
-    compile(_: string, f: string): (() => Promise<Uint8Array>) | undefined {
-      const { name } = parse(f)
-      if (name !== "main") {
-        return
-      }
-      return () => {
-        return buildScript(f)
-      }
+  uc.addWatchTarget("./**/*.ts")
+  uc.addPassthroughCopy({"./main.ts": "./main.js"}, {
+    transform(f) {
+      return new Transform({
+        transform(_, __, cb) {
+          buildScript(f).then((c) => {
+            this.push(c)
+            cb(null)
+          })
+        }
+      })
     }
   })
+
+  // uc.addTemplateFormats("ts")
+  // uc.addExtension("ts", {
+  //   outputFileExtension: "js",
+  //   // read: false,
+  //   compile(_: string, f: string): (() => Promise<Uint8Array>) | undefined {
+  //     const { name } = parse(f)
+  //     if (name !== "main") {
+  //       return
+  //     }
+  //     return () => {
+  //       return buildScript(f)
+  //     }
+  //   }
+  // })
 }
 
 /**

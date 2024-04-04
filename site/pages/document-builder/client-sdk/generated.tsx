@@ -1,8 +1,6 @@
-// @ts-check
+import {list, retrieve} from "@/resources/document-builder.ts"
 
-const { list, retrieve } = require("@/resources/document-builder.ts")
-
-function data() {
+export function data() {
   return {
     layout: "code-declaration",
     pagination: {
@@ -67,5 +65,3 @@ function permalink(d) {
   u += `${d.identifier}/index.html`
   return u
 }
-
-module.exports = { data }

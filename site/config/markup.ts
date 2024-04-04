@@ -23,20 +23,21 @@ export function markupPlugin(uc: UserConfig): void {
     key: "11ty.js"
   })
 
-  // todo: conflict with the config/script.
-  // uc.addDataExtension("ts", {
-  //   read: false,
-  //   async parser(_: string, f: string) {
-  //     const r = await build({
-  //       entryPoints: [f],
-  //       format: "cjs",
-  //       outdir: tmpdir(),
-  //       write: false
-  //     })
-  //     const m = requireFromString(r.outputFiles[0].text)
-  //     return m.default()
-  //   }
-  // })
+  uc.setDataFileSuffixes([".data"])
+  uc.addDataExtension("ts", {
+    // read: false,
+    async parser(_: string, f: string) {
+      const r = await build({
+        entryPoints: [f],
+        format: "cjs",
+        // bundle: true, ?
+        outdir: tmpdir(),
+        write: false
+      })
+      const m = requireFromString(r.outputFiles[0].text)
+      return m.data()
+    }
+  })
 
   // https://github.com/11ty/eleventy/issues/636
   uc.addTemplateFormats("mdx")
