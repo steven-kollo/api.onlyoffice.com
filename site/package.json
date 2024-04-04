@@ -19,6 +19,7 @@
     "@onlyoffice/documentation-resources": "workspace:^",
     "@onlyoffice/documentation-ui-storybook": "workspace:^",
     "@onlyoffice/documentation-utils": "workspace:^",
+    "@sindresorhus/slugify": "^2.2.1",
     "@types/hast": "^3.0.4",
     "@types/html-minifier-terser": "^7.0.2",
     "@types/mdast": "^4.0.3",
