@@ -23,11 +23,27 @@ export function markupPlugin(uc: UserConfig): void {
     key: "11ty.js"
   })
 
+  // todo: conflict with the config/script.
+  // uc.addDataExtension("ts", {
+  //   read: false,
+  //   async parser(_: string, f: string) {
+  //     const r = await build({
+  //       entryPoints: [f],
+  //       format: "cjs",
+  //       outdir: tmpdir(),
+  //       write: false
+  //     })
+  //     const m = requireFromString(r.outputFiles[0].text)
+  //     return m.default()
+  //   }
+  // })
+
   // https://github.com/11ty/eleventy/issues/636
   uc.addTemplateFormats("mdx")
   uc.addExtension("mdx", {
     // Do not delete the property bellow.
     outputFileExtension: "html",
+    read: false,
     compile(_: string, f: string) {
       return async (data) => {
         const { compile } = await import("@mdx-js/mdx")
@@ -104,6 +120,13 @@ export function markupPlugin(uc: UserConfig): void {
             }
           ]
         })
+
+        // todo: huh?
+        // const _t = Buffer.from(r.outputFiles[0].text).toString("base64")
+        // console.log(_t, r.outputFiles[0].text)
+        // const u = await import(`data:text/javascript;base64,${_t}`)
+        // console.log(u)
+
         const m = requireFromString(r.outputFiles[0].text)
         const p = m.default()
         if (isValidElement(p)) {
