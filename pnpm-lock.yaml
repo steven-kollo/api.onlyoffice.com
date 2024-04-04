@@ -190,7 +190,7 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
       '@types/node':
-        specifier: ^20.11.5
+        specifier: ^20.11.26
         version: 20.11.26
       '@types/require-from-string':
         specifier: ^1.2.3

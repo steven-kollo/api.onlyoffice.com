@@ -22,7 +22,7 @@
     "@types/hast": "^3.0.4",
     "@types/html-minifier-terser": "^7.0.2",
     "@types/mdast": "^4.0.3",
-    "@types/node": "^20.11.5",
+    "@types/node": "^20.11.26",
     "@types/require-from-string": "^1.2.3",
     "@wooorm/starry-night": "^3.2.0",
     "clsx": "^2.1.0",

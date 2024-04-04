@@ -19,6 +19,7 @@
     "./pages",
     "./resources",
     "./types/*.d.ts",
+    "./eleventy.config.ts",
     "./main.ts"
   ],
   "exclude": [
