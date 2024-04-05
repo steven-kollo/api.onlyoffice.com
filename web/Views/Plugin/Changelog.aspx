@@ -30,6 +30,7 @@
         <li>Added the <a href="<%= Url.Action("global") %>#ToolbarMenuTab">ToolbarMenuTab</a> type to the simple type definitions.</li>
         <li>Added the <a href="<%= Url.Action("global") %>#ToolbarMenuItemType">ToolbarMenuItemType</a> type to the simple type definitions.</li>
         <li>Added the <em>icons</em> and <em>data</em> parameters to the <a href="<%= Url.Action("global") %>#ContextMenuItem">ContextMenuItem</a> object.</li>
+        <li>Added the <a href="<%= Url.Action("config") %>#menu">menu</a> config parameter.</li>
     </ul>
 
     <h2 id="80" class="copy-link">Version 8.0</h2>
