@@ -1,9 +1,8 @@
-import { Font } from "@onlyoffice/documentation-ui-kit"
-import { wait } from "@onlyoffice/documentation-utils/wait.ts"
-import { h, isValidElement } from "preact"
-import { renderToString } from "preact-render-to-string"
-import type { Eleventy } from "../config/eleventy.ts"
-import { transformMarkup } from "../config/markup.ts"
+import {Font} from "@onlyoffice/documentation-ui-kit"
+// import {wait} from "@onlyoffice/documentation-utils/wait.ts"
+import {h} from "preact"
+import type {Eleventy} from "../config/eleventy.ts"
+import {renderToString} from "../config/preact.ts"
 
 export async function render(
   {
@@ -13,8 +12,8 @@ export async function render(
     content
   }: Eleventy.Context
 ): Promise<string> {
-  // todo: explain. DO NOT DELETE THE HACK BELLOW!
-  await wait()
+  // // todo: explain. DO NOT DELETE THE HACK BELLOW!
+  // await wait()
 
   // todo: validate the context.
   // For example, if description is missing, print an error.
@@ -22,7 +21,7 @@ export async function render(
   // todo: cache it!
   // const regular = await buildRegularTheme()
 
-  const html = (
+  const c = await renderToString(
     // todo: do not forget to change the lang after localization.
     <html
       lang="en"
@@ -55,11 +54,5 @@ export async function render(
       </body>
     </html>
   )
-
-  if (!isValidElement(html)) {
-    throw new Error("Invalid element")
-  }
-
-  const c = "<!DOCTYPE html>\n" + renderToString(html)
-  return transformMarkup(c)
+  return `"<!DOCTYPE html>${c}`
 }

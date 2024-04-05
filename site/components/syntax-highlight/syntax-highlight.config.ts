@@ -2,7 +2,6 @@ import type { UserConfig } from "@11ty/eleventy"
 import type { createStarryNight } from "@wooorm/starry-night"
 import type { Element, Root } from "hast"
 import { toText } from "hast-util-to-text"
-import type { State } from "mdast-util-to-hast"
 import { visit } from "unist-util-visit"
 import type { VFile } from "vfile"
 
@@ -13,6 +12,16 @@ const cache = new Map<string, StarryNight>()
 
 export function eleventyPlugin(uc: UserConfig): void {
   uc.on("eleventy.before", register)
+}
+
+export async function register(): Promise<void> {
+  if (cache.has("starryNight")) {
+    return
+  }
+  // todo: explain why import is here.
+  const { all, createStarryNight } = await import("@wooorm/starry-night")
+  const starryNight = await createStarryNight(all)
+  cache.set("starryNight", starryNight)
 }
 
 // based on https://github.com/rehypejs/rehype-highlight/tree/main
@@ -35,7 +44,7 @@ export function rehypePlugin(): any {
 
       try {
         const t = toText(parent)
-        const { children } = toHast(s, t)
+        const { children } = highlight(s, t)
         node.children = children
       } catch {
         // todo
@@ -55,47 +64,7 @@ export function rehypePlugin(): any {
   }
 }
 
-export function codeHastHandler(_: State, node: Element) {
-  if (node.tagName !== "pre") {
-    return
-  }
-
-  const [child] = node.children
-  if (
-    child === undefined ||
-    child.type !== "element" ||
-    child.tagName !== "code"
-  ) {
-    return
-  }
-
-  const [s, no] = syntax(child)
-  if (s === undefined || no) {
-    return
-  }
-
-  try {
-    const t = toText(node)
-    const { children } = toHast(s, t)
-    child.children = children
-  } catch {
-    // todo
-  }
-
-  return
-}
-
-export async function register(): Promise<void> {
-  if (cache.has("starryNight")) {
-    return
-  }
-  // todo: explain why import is here.
-  const { all, createStarryNight } = await import("@wooorm/starry-night")
-  const starryNight = await createStarryNight(all)
-  cache.set("starryNight", starryNight)
-}
-
-export function toHast(syntax: string, code: string): Root {
+export function highlight(syntax: string, code: string): Root {
   const n = cache.get("starryNight")
   if (n === undefined) {
     throw new Error("Highlighter is not ready")

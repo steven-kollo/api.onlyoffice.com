@@ -9,8 +9,11 @@ import { render } from "preact-render-to-string"
 import requireFromString from "require-from-string"
 import { read } from "to-vfile"
 import { matter } from "vfile-matter"
-import { remarkPlugins, rehypePlugins } from "../components/markdown/markdown.config.ts"
 import { isBuild, isPreview } from "./mode.ts"
+
+import {rehypePlugin as rehypeImage} from "../components/image/image.config.ts"
+import {rehypePlugin as rehypeSyntax} from "../components/syntax-highlight/syntax-highlight.config.ts"
+import remarkGFM from "remark-gfm"
 
 // todo: refactor it.
 // add support for hot reload
@@ -30,9 +33,21 @@ export function markupPlugin(uc: UserConfig): void {
       const r = await build({
         entryPoints: [f],
         format: "cjs",
-        // bundle: true, ?
+        // bundle: true,
         outdir: tmpdir(),
-        write: false
+        write: false,
+        plugins: [
+        //   {
+        //     name: "fix-slugify",
+        //     setup(build) {
+        //       console.log("setup")
+        //       build.onResolve({ filter: /^@sindresorhus\/slugify$/ }, () => {
+        //         console.log("here")
+        //         return { path: require.resolve("@sindresorhus/slugify") }
+        //       })
+        //     }
+        //   }
+        ]
       })
       const m = requireFromString(r.outputFiles[0].text)
       return m.data()
@@ -51,6 +66,7 @@ export function markupPlugin(uc: UserConfig): void {
         const r = await build({
           entryPoints: [f],
           format: "cjs",
+          // bundle: true,
           outdir: tmpdir(),
           write: false,
           plugins: [
@@ -72,45 +88,45 @@ export function markupPlugin(uc: UserConfig): void {
                   // todo: support assets
                   // todo: support relative links
                   // todo: move to config/remote
-                  if (vf.data.matter.remote !== undefined) {
-                    if (!isGitHubURL(vf.data.matter.remote)) {
-                      throw new Error("Invalid remote URL")
-                    }
-                    vf.value = await fetchGitHubContent(vf.data.matter.remote)
-                    const t = fromMarkdown(vf.value)
-                    const i = t.children.findIndex((e) => e.type === "heading" && e.depth === 1)
-                    if (i !== -1) {
-                      t.children.splice(i, 1)
-                    }
-                    // t.children = t.children.flatMap((e) => {
-                    //   if (e.type === "html") {
-                    //     const r = e.value.match(markerExpression)
-                    //     if (r !== null) {
-                    //       return []
-                    //     }
-                    //   }
-                    //   return e
-                    // })
-                    vf.value = toMarkdown(t, {
-                      handlers: {
-                        html(node) {
-                          if (vf.data.matter.remote === "https://github.com/ONLYOFFICE/onlyoffice-redmine/blob/main/README.md/") {
-                            const r = node.value.match(markerExpression)
-                            if (r !== null) {
-                              node.type = "text"
-                              node.value = ""
-                            }
-                          }
-                          return node.value
-                        }
-                      }
-                    })
-                  }
+                  // if (vf.data.matter.remote !== undefined) {
+                  //   if (!isGitHubURL(vf.data.matter.remote)) {
+                  //     throw new Error("Invalid remote URL")
+                  //   }
+                  //   vf.value = await fetchGitHubContent(vf.data.matter.remote)
+                  //   const t = fromMarkdown(vf.value)
+                  //   const i = t.children.findIndex((e) => e.type === "heading" && e.depth === 1)
+                  //   if (i !== -1) {
+                  //     t.children.splice(i, 1)
+                  //   }
+                  //   // t.children = t.children.flatMap((e) => {
+                  //   //   if (e.type === "html") {
+                  //   //     const r = e.value.match(markerExpression)
+                  //   //     if (r !== null) {
+                  //   //       return []
+                  //   //     }
+                  //   //   }
+                  //   //   return e
+                  //   // })
+                  //   vf.value = toMarkdown(t, {
+                  //     handlers: {
+                  //       html(node) {
+                  //         if (vf.data.matter.remote === "https://github.com/ONLYOFFICE/onlyoffice-redmine/blob/main/README.md/") {
+                  //           const r = node.value.match(markerExpression)
+                  //           if (r !== null) {
+                  //             node.type = "text"
+                  //             node.value = ""
+                  //           }
+                  //         }
+                  //         return node.value
+                  //       }
+                  //     }
+                  //   })
+                  // }
 
                   vf = await compile(vf.value, {
                     jsxImportSource: "preact",
-                    rehypePlugins,
-                    remarkPlugins
+                    rehypePlugins: [rehypeImage, rehypeSyntax],
+                    remarkPlugins: [remarkGFM]
                   })
 
                   return {
