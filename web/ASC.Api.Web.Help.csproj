@@ -2353,7 +2353,7 @@
     <Content Include="Content\highlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\arrow-gray.svg" />
-	<Content Include="Content\img\arrow-select.svg" />
+    <Content Include="Content\img\arrow-select.svg" />
     <Content Include="Content\img\close.svg" />
     <Content Include="Content\img\csharp\add.png" />
     <Content Include="Content\img\csharp\browse.png" />
@@ -4731,6 +4731,17 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.GetAllComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\OLEProperties.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onToolbarMenuClick.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ActivateWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddToolbarMenuItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectedOleObjects.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GetAllComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ToolbarMenuItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ToolbarMenuItemType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ToolbarMenuMainItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ToolbarMenuTab.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

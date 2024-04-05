@@ -17,6 +17,20 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Plugins and Macros API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("events/ontoolbarmenuclick") %>">onToolbarMenuClick</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/activatewindow") %>">ActivateWindow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/addtoolbarmenuitem") %>">AddToolbarMenuItem</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/getselectedoleobjects") %>">GetSelectedOleObjects</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/cell/getallcomments") %>">GetAllComments</a> method to <em>window.Asc.plugin.executeMethod</em> for Spreadsheet Api.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/slide/getallcomments") %>">GetAllComments</a> method to <em>window.Asc.plugin.executeMethod</em> for Presentation Api.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#OLEProperties">OLEProperties</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ToolbarMenuItem">ToolbarMenuItem</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ToolbarMenuMainItem">ToolbarMenuMainItem</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ToolbarMenuTab">ToolbarMenuTab</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ToolbarMenuItemType">ToolbarMenuItemType</a> type to the simple type definitions.</li>
+        <li>Added the <em>icons</em> and <em>data</em> parameters to the <a href="<%= Url.Action("global") %>#ContextMenuItem">ContextMenuItem</a> object.</li>
+    </ul>
 
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <ul>
