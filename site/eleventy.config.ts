@@ -1,3 +1,5 @@
+// todo: normalize naming of eleventy, remark, and other plugins.
+
 import {eleventyPlugin as syntaxHighlightPlugin} from "./components/syntax-highlight/syntax-highlight.config.ts"
 import {cleanPlugin} from "./config/clean.ts"
 import {markupPlugin} from "./config/markup.ts"
