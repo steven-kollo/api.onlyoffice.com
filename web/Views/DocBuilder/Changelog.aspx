@@ -17,6 +17,24 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
+    <p><b>Date form methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform") %>">ApiDateForm</a> class to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("formapi/api/createdateform") %>">Api/CreateDateForm</a> method to Form API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getformat") %>">ApiDateForm/GetFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getlanguage") %>">ApiDateForm/GetLanguage</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettime") %>">ApiDateForm/GetTime</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setformat") %>">ApiDateForm/SetFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setlanguage") %>">ApiDateForm/SetLanguage</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/settime") %>">ApiDateForm/SetTime</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#DateFormPr">DateFormPr</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#DateFormPrBase">DateFormPrBase</a> type to the simple type definitions.</li>
+    </ul>
+    <br />
+
     <p><b>Methods for setting text properties</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getbold") %>">ApiTextPr/GetBold</a> method to Text document API.</li>

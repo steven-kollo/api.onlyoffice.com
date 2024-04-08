@@ -166,6 +166,7 @@
     <Content Include="App_Data\docbuilder\examples\CaptionNumberingFormat.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\captionRefTo.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\CaptionSep.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.AddCustomFunction.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddDefName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddSheet.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.attachEvent.docbuilder" />
@@ -4795,7 +4796,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\cell\Api.AddCustomFunction.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\DateFormPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\DateFormPrBase.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\form\Api.CreateDateForm.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetFormat.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetLanguage.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetFormat.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetLanguage.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetTime.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

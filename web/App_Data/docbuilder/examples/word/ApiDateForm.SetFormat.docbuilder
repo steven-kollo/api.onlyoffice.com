@@ -1,0 +1,8 @@
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oDateForm = Api.CreateDateForm({"key": "Personal information", "tip": "Date of birth", "required": true, "placeholder": "Date of birth", "format": "mm.dd.yyyy", "lang": "en-US"});
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddElement(oDateForm);
+oDateForm.SetFormat("mm/dd/yyyy");
+builder.SaveFile("docxf", "SetFormat.docxf");
+builder.CloseFile();
