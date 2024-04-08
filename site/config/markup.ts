@@ -91,40 +91,40 @@ export function markupPlugin(uc: UserConfig): void {
                   // todo: support assets
                   // todo: support relative links
                   // todo: move to config/remote
-                  // if (vf.data.matter.remote !== undefined) {
-                  //   if (!isGitHubURL(vf.data.matter.remote)) {
-                  //     throw new Error("Invalid remote URL")
-                  //   }
-                  //   vf.value = await fetchGitHubContent(vf.data.matter.remote)
-                  //   const t = fromMarkdown(vf.value)
-                  //   const i = t.children.findIndex((e) => e.type === "heading" && e.depth === 1)
-                  //   if (i !== -1) {
-                  //     t.children.splice(i, 1)
-                  //   }
-                  //   // t.children = t.children.flatMap((e) => {
-                  //   //   if (e.type === "html") {
-                  //   //     const r = e.value.match(markerExpression)
-                  //   //     if (r !== null) {
-                  //   //       return []
-                  //   //     }
-                  //   //   }
-                  //   //   return e
-                  //   // })
-                  //   vf.value = toMarkdown(t, {
-                  //     handlers: {
-                  //       html(node) {
-                  //         if (vf.data.matter.remote === "https://github.com/ONLYOFFICE/onlyoffice-redmine/blob/main/README.md/") {
-                  //           const r = node.value.match(markerExpression)
-                  //           if (r !== null) {
-                  //             node.type = "text"
-                  //             node.value = ""
-                  //           }
-                  //         }
-                  //         return node.value
-                  //       }
-                  //     }
-                  //   })
-                  // }
+                  if (vf.data.matter.remote !== undefined) {
+                    if (!isGitHubURL(vf.data.matter.remote)) {
+                      throw new Error("Invalid remote URL")
+                    }
+                    vf.value = await fetchGitHubContent(vf.data.matter.remote)
+                    const t = fromMarkdown(vf.value)
+                    const i = t.children.findIndex((e) => e.type === "heading" && e.depth === 1)
+                    if (i !== -1) {
+                      t.children.splice(i, 1)
+                    }
+                    // t.children = t.children.flatMap((e) => {
+                    //   if (e.type === "html") {
+                    //     const r = e.value.match(markerExpression)
+                    //     if (r !== null) {
+                    //       return []
+                    //     }
+                    //   }
+                    //   return e
+                    // })
+                    vf.value = toMarkdown(t, {
+                      handlers: {
+                        html(node) {
+                          if (vf.data.matter.remote === "https://github.com/ONLYOFFICE/onlyoffice-redmine/blob/main/README.md/") {
+                            const r = node.value.match(markerExpression)
+                            if (r !== null) {
+                              node.type = "text"
+                              node.value = ""
+                            }
+                          }
+                          return node.value
+                        }
+                      }
+                    })
+                  }
 
                   vf = await compile(vf, {
                     jsxImportSource: "preact",
