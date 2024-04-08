@@ -21,7 +21,7 @@ let pages: Pages = []
 let indexes: Indexes = {}
 
 export function eleventyPlugin(uc: Eleventy.UserConfig): void {
-  uc.addCollection(sitemap.name, sitemap)
+  uc.addCollection("sitemap", sitemap)
 }
 
 function sitemap(tc: Eleventy.TemplateCollection): [] {

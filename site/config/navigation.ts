@@ -26,7 +26,7 @@ const cache = new WeakMap()
 const doCache = true // isBuild() || isPreview()
 
 export function navigationPlugin(uc: UserConfig): void {
-  uc.addCollection(navigation.name, (tc) => {
+  uc.addCollection("navigation", (tc) => {
     if (doCache) {
       if (cache.has(navigation)) {
         return cache.get(navigation)
