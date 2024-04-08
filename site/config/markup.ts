@@ -123,7 +123,7 @@ export function markupPlugin(uc: UserConfig): void {
                   //   })
                   // }
 
-                  vf = await compile(vf.value, {
+                  vf = await compile(vf, {
                     jsxImportSource: "preact",
                     rehypePlugins: [rehypeImage, rehypeSyntax],
                     remarkPlugins: [remarkGFM]

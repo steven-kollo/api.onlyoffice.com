@@ -4,5 +4,5 @@ import {h} from "preact"
 export interface RootProperties {}
 
 export function Root(): JSX.Element {
-  return <img />
+  throw new Error("Not implemented")
 }

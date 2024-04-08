@@ -54,5 +54,5 @@ export async function render(
       </body>
     </html>
   )
-  return `"<!DOCTYPE html>${c}`
+  return `<!DOCTYPE html>${c}`
 }
