@@ -15,6 +15,9 @@ import {rehypePlugin as rehypeImage} from "../components/image/image.config.ts"
 import {rehypePlugin as rehypeSyntax} from "../components/syntax-highlight/syntax-highlight.config.ts"
 import remarkGFM from "remark-gfm"
 
+import rehypeSlug from "rehype-slug"
+import rehypeAutolink from "rehype-autolink-headings"
+
 // todo: refactor it.
 // add support for hot reload
 // profile memory usage
@@ -125,7 +128,12 @@ export function markupPlugin(uc: UserConfig): void {
 
                   vf = await compile(vf, {
                     jsxImportSource: "preact",
-                    rehypePlugins: [rehypeImage, rehypeSyntax],
+                    rehypePlugins: [
+                      rehypeSlug,
+                      [rehypeAutolink, {behavior: "wrap"}],
+                      rehypeImage,
+                      rehypeSyntax
+                    ],
                     remarkPlugins: [remarkGFM]
                   })
 

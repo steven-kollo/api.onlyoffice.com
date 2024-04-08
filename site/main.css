@@ -26,3 +26,54 @@ table {
   display: block;
   overflow: auto;
 }
+
+/* todo: move to ui */
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  /* todo: use var */
+  scroll-margin-top: calc(72px + 20px);
+}
+
+.content h1 a[href^="#"],
+.content h2 a[href^="#"],
+.content h3 a[href^="#"],
+.content h4 a[href^="#"],
+.content h5 a[href^="#"],
+.content h6 a[href^="#"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+.content h1 a[href^="#"]:before,
+.content h2 a[href^="#"]:before,
+.content h3 a[href^="#"]:before,
+.content h4 a[href^="#"]:before,
+.content h5 a[href^="#"]:before,
+.content h6 a[href^="#"]:before {
+  /* todo: do not use opacity */
+  /* todo: use own colors */
+  /* todo: replace with svg icon */
+  color: var(--page-foreground-color);
+  content: "#";
+  display: inline-block;
+  font-size: 1em;
+  margin-left: -1.05em;
+  opacity: 0.3;
+  text-decoration: none;
+  visibility: hidden;
+  width: 1.05em;
+}
+
+.content h1 a[href^="#"]:hover:before,
+.content h2 a[href^="#"]:hover:before,
+.content h3 a[href^="#"]:hover:before,
+.content h4 a[href^="#"]:hover:before,
+.content h5 a[href^="#"]:hover:before,
+.content h6 a[href^="#"]:hover:before {
+  visibility: visible;
+}

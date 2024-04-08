@@ -9,6 +9,9 @@ import {rehypePlugin as rehypeImage} from "../image/image.config.ts"
 import {rehypePlugin as rehypeSyntax} from "../syntax-highlight/syntax-highlight.config.ts"
 import {useSuspense} from "../suspense.tsx"
 
+import rehypeSlug from "rehype-slug"
+import rehypeAutolink from "rehype-autolink-headings"
+
 export interface RootParameters {
   children: any
 }
@@ -21,6 +24,8 @@ export function Root({children}: RootParameters): JSX.Element {
       .use(remarkParse)
       .use(remarkGFM)
       .use(remarkRehype)
+      .use(rehypeSlug)
+      .use(rehypeAutolink, {behavior: "wrap"})
       .use(rehypeImage)
       .use(rehypeSyntax)
       .use(rehypePreact)
