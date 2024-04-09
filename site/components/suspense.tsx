@@ -29,20 +29,21 @@ export function createSuspense() {
   }
 
   function resolve(): void {
-    s.forEach((d) => {
-      d.resolve()
-      s.shift()
-    })
+    while (s.length > 0) {
+      const d = s.pop()
+      if (d) {
+        d.resolve()
+      }
+    }
   }
 }
 
 export function useSuspense(cb: any) {
-  const d = new Deferred()
+  const d = new Deferred(cb)
   ctx.register(d)
 
   let r = false
   d.promise.then(() => {
-    cb()
     r = true
   })
 
@@ -69,12 +70,12 @@ export function useSuspense(cb: any) {
 class Deferred {
   promise: Promise<any>
   _resolve: any
-  _reject: any
+  // _reject: any
 
-  constructor() {
+  constructor(cb: any) {
     this.promise = new Promise((res, rej) => {
-      this._resolve = res
-      this._reject = rej
+      this._resolve = res.bind(this, cb())
+      // this._reject = rej
     })
   }
 
@@ -84,9 +85,9 @@ class Deferred {
     }
   }
 
-  reject() {
-    if (this._reject) {
-      this._reject()
-    }
-  }
+  // reject() {
+  //   if (this._reject) {
+  //     this._reject()
+  //   }
+  // }
 }
