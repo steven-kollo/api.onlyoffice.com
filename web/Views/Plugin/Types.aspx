@@ -27,6 +27,10 @@
                         <a href="<%= Url.Action("example/ocr") %>">OCR</a>.</p>
                     <p>You can run multiple visual plugins at the same time. For each plugin, a separate button will appear on the left toolbar.</p>
                     <img alt="Visual plugins" class="screenshot" src="<%= Url.Content("~/content/img/plugins/visual-plugins.png") %>" />
+                    <p>Starting from version 8.1, plugins can change the toolbar: create their own tabs and fill them, add buttons to the standard tabs.
+                        To do this, use the <a href="<%= Url.Action("executemethod/common/addtoolbarmenuitem") %>">AddToolbarMenuItem</a> method.
+                    </p>
+                    <img alt="Toolbar plugins" class="screenshot" src="<%= Url.Content("~/content/img/plugins/toolbar-plugins.png") %>" />
                 </li>
                 <li>
                     <p><em>Non-visual (background) plugins</em> (<em>"isVisual": false</em>) provide a button (or buttons) to apply some transformations or manipulations to the document, 

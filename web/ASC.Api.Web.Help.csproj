@@ -2749,6 +2749,7 @@
     <Content Include="Content\img\plugins\submit-plugin.png" />
     <Content Include="Content\img\plugins\text_area.png" />
     <Content Include="Content\img\plugins\text_field.png" />
+    <Content Include="Content\img\plugins\toolbar-plugins.png" />
     <Content Include="Content\img\plugins\visual-plugins.png" />
     <Content Include="Content\img\plugins\unhide_all_rows.png" />
     <Content Include="Content\img\plugins\unmerge_cells_after.png" />
