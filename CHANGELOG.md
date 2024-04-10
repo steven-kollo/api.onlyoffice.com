@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: added the addContextMenuItem, addToolbarMenuItem and updateContextMenuItem methods to the Automation API
 - editors: added the -10 error code to the Conversion API
 - editors: the editorConfig.customization.logo parameter is now available in the mobile editors
 - editors: added the visible field to the editorConfig.customization.logo parameter
