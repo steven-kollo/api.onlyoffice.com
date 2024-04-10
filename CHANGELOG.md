@@ -3,6 +3,7 @@
 - plugins: v8.1.0
 
 ## 4.6.0
+- plugins: added the ability to create multiple left panels for plugins
 - docspace: fix examples for dto
 - editors: sandbox on configuration pages
 - portals: v12.6

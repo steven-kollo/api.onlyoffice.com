@@ -21,6 +21,7 @@
         <li>to display an <b>About</b> window, etc.</li>
     </ul>
 
+    <p>Starting from version 8.1, plugins can create not only multiple windows, but also multiple left panels.</p>
     <p>Let&#8217;s have a look at the <b>Translation</b> plugin. The plugin itself does not need a visual window for translation as it can be done just pressing a single button, 
         but its settings (the translation direction) and an <b>About</b> window must be visual. So we will need to have at least two plugin variations (translation itself and settings), 
         or three, in case we want to add an <b>About</b> window with the information about the plugin and its authors or the software used for the plugin creation.</p>
