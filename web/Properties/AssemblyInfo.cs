@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ascensio System SIA")]
 [assembly: AssemblyProduct("ASC.Api.Web.Help")]
-[assembly: AssemblyCopyright("Ascensio System SIA 2023")]
+[assembly: AssemblyCopyright("Ascensio System SIA 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
