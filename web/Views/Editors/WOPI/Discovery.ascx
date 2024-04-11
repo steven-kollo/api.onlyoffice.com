@@ -143,6 +143,12 @@ ui=en-us&thm=1&"/&gt;
                 This parameter is required.</td>
                 <td>https://&lt;host_address&gt;/wopi/files/(file_id)</td>
             </tr>
+            <tr>
+                <td id="favIconUrl" class="copy-link">favIconUrl</td>
+                <td>Indicates that the WOPI server includes a URL to an appropriate favicon for all online office applications.
+                Hosts should use this URL as the favicon for their host page, so that the appropriate application icon appears when the online office is used.</td>
+                <td>"/web-apps/apps/documenteditor/main/resources/img/favicon.ico"</td>
+            </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
