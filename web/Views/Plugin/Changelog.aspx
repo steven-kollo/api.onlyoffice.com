@@ -20,6 +20,7 @@
     <ul>
         <li>Added the ability to add the plugin <a href="<%= Url.Action("types") %>">toolbar menu items</a>.</li>
         <li>Added the ability to create <a href="<%= Url.Action("variations") %>">multiple left panels</a> for plugins.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ContextMenuInfo">information</a> about the current position of the context menu plugin event.</li>
         <li>Added the <a href="<%= Url.Action("events/ontoolbarmenuclick") %>">onToolbarMenuClick</a> event.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/common/activatewindow") %>">ActivateWindow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/common/addtoolbarmenuitem") %>">AddToolbarMenuItem</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
