@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes for ONLYOFFICE Plugins and Macros API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("global") %>#ContextMenuInfo">information</a> about the current position of the context menu plugin event.</li>
         <li>Added the <a href="<%= Url.Action("events/ontoolbarmenuclick") %>">onToolbarMenuClick</a> event.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/common/activatewindow") %>">ActivateWindow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/common/addtoolbarmenuitem") %>">AddToolbarMenuItem</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
