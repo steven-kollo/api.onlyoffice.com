@@ -594,6 +594,8 @@
     <Content Include="App_Data\docbuilder\examples\ComboBoxFormPrBase.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\CommentReport.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\CommentReportRecord.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\DateFormPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\DateFormPrBase.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\Direction.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\DocumentElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\EMU.docbuilder" />
@@ -606,6 +608,7 @@
     <Content Include="App_Data\docbuilder\examples\FormType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateCheckBoxForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateComboBoxForm.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\form\Api.CreateDateForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreatePictureForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateTextForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.docbuilder" />
@@ -1275,6 +1278,13 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.SetIndex.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.SetText.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiContentControlListEntry.SetValue.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetFormat.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetLanguage.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetFormat.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetLanguage.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetTime.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AcceptAllRevisionChanges.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddComment.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDocument.AddDrawingToPage.docbuilder" />
@@ -4796,16 +4806,25 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\DateFormPr.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\DateFormPrBase.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\form\Api.CreateDateForm.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetFormat.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetLanguage.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetTime.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetFormat.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetLanguage.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetTime.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.Clear.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.Copy.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetFormKey.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetFormType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetTipText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.GetWrapperShape.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.IsFixed.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.IsRequired.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetBackgroundColor.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetBorderColor.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetFormKey.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetPlaceholderText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetRequired.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.SetTipText.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDateForm.ToFixed.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

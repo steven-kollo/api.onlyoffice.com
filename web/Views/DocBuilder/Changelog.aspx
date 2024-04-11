@@ -21,15 +21,34 @@
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform") %>">ApiDateForm</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("formapi/api/createdateform") %>">Api/CreateDateForm</a> method to Form API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getformat") %>">ApiDateForm/GetFormat</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getlanguage") %>">ApiDateForm/GetLanguage</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettime") %>">ApiDateForm/GetTime</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/clear") %>">ApiDateForm/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/copy") %>">ApiDateForm/Copy</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getclasstype") %>">ApiDateForm/GetClassType</a> method to Text document API.</li>
     </ul>
     <p class="spoiler_heading spoiler_changelog">More</p>
     <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getformat") %>">ApiDateForm/GetFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getformkey") %>">ApiDateForm/GetFormKey</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getformtype") %>">ApiDateForm/GetFormType</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getlanguage") %>">ApiDateForm/GetLanguage</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettext") %>">ApiDateForm/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettextpr") %>">ApiDateForm/GetTextPr</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettime") %>">ApiDateForm/GetTime</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettiptext") %>">ApiDateForm/GetTipText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getwrappershape") %>">ApiDateForm/GetWrapperShape</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/isfixed") %>">ApiDateForm/IsFixed</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/isrequired") %>">ApiDateForm/IsRequired</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setbackgroundcolor") %>">ApiDateForm/SetBackgroundColor</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setbordercolor") %>">ApiDateForm/SetBorderColor</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setformat") %>">ApiDateForm/SetFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setformkey") %>">ApiDateForm/SetFormKey</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setlanguage") %>">ApiDateForm/SetLanguage</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setplaceholdertext") %>">ApiDateForm/SetPlaceholderText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setrequired") %>">ApiDateForm/SetRequired</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/settextpr") %>">ApiDateForm/SetTextPr</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/settime") %>">ApiDateForm/SetTime</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/settiptext") %>">ApiDateForm/SetTipText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/tofixed") %>">ApiDateForm/ToFixed</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("global") %>#DateFormPr">DateFormPr</a> type to the simple type definitions.</li>
         <li>Added the <a href="<%= Url.Action("global") %>#DateFormPrBase">DateFormPrBase</a> type to the simple type definitions.</li>
     </ul>
