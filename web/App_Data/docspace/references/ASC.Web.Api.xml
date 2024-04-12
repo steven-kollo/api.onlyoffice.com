@@ -68,16 +68,8 @@
             <summary>Email address</summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.Module">
-            <summary>Module</summary>
-            <type>System.String, System</type>
-        </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.First">
             <summary>Access an account for the first time or not</summary>
-            <type>System.Nullable{System.Boolean}, System</type>
-        </member>
-        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.Sms">
-            <summary>Sends SMS code or not</summary>
             <type>System.Nullable{System.Boolean}, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.ConfirmData.Key">
@@ -179,6 +171,18 @@
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.MobileAppRequestsDto.Type">
             <summary>Mobile app type</summary>
             <type>ASC.Core.Common.Notify.Push.MobileAppType, ASC.Web.Api</type>
+        </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto.EnableQuota">
+            <summary>Specifies if the quota settings are enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto.DefaultQuota">
+            <summary>Default quota value</summary>
+            <type>System.Int64, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto">
             <summary>
@@ -312,6 +316,18 @@
             <summary>Storage properties</summary>
             <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.String}}, System.Collections.Generic</type>
         </member>
+        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto.TenantId">
+            <summary>Specifies if the quota settings are enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto.Quota">
+            <summary>Default quota value</summary>
+            <type>System.Int64, System</type>
+        </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto">
             <summary>
             </summary>
@@ -401,18 +417,6 @@
             <summary>License attachments</summary>
             <type>System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Http.IFormFile}, System.Collections.Generic</type>
         </member>
-        <member name="T:ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto.EnableUserQuota">
-            <summary>Specifies if the quota settings are enabled or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto.DefaultUserQuota">
-            <summary>Default user quota</summary>
-            <type>System.Int64, System</type>
-        </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto">
             <summary>
             </summary>
@@ -465,6 +469,10 @@
         </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto.IsDark">
             <summary>Specifies if the logo is for a dark theme or not</summary>
+            <type>System.Nullable{System.Boolean}, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto.IsDefault">
+            <summary>Specifies if the logo is for a default tenant or not</summary>
             <type>System.Nullable{System.Boolean}, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto">
@@ -879,10 +887,6 @@
             <summary>Specifies if a user can connect third-party providers or not</summary>
             <type>System.Nullable{System.Boolean}, System</type>
         </member>
-        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.Personal">
-            <summary>Specifies if this is a Personal portal or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.DocSpace">
             <summary>Specifies if this is a DocSpace portal or not</summary>
             <type>System.Boolean, System</type>
@@ -949,6 +953,10 @@
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.ZendeskKey">
             <summary>Zendesk key</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.TagManagerId">
+            <summary>Tag manager id</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.BookTrainingEmail">
@@ -1724,6 +1732,31 @@
             <summary>The time to wait for a response from the server</summary>
             <type>System.Int32, System</type>
         </member>
+        <member name="T:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto.Progress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto.Error">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto.ParseResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto.IsCompleted">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto">
             <summary>
             </summary>
@@ -1767,6 +1800,18 @@
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.QuotaDto.Features">
             <summary>List of quota features</summary>
             <type>System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModels.ResponseDto.TenantQuotaFeatureDto}, ASC.Web.Api</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.QuotaDto.UsersQuota">
+            <summary>Users quota</summary>
+            <type>ASC.Core.Tenants.TenantEntityQuotaSettings, ASC.Core.Common</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.QuotaDto.RoomsQuota">
+            <summary>Rooms quota</summary>
+            <type>ASC.Core.Tenants.TenantEntityQuotaSettings, ASC.Core.Common</type>
+        </member>
+        <member name="P:ASC.Web.Api.ApiModels.ResponseDto.QuotaDto.TenantCustomQuota">
+            <summary>Rooms quota</summary>
+            <type>ASC.Core.Tenants.TenantQuotaSettings, ASC.Core.Common</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.TenantQuotaFeatureDto">
             <summary>
@@ -2082,6 +2127,12 @@
             </summary>
             <name>authentication</name>
         </member>
+        <member name="M:ASC.Web.Api.Controllers.AuthenticationController.#ctor(ASC.Core.UserManager,ASC.Core.TenantManager,ASC.Core.SecurityContext,ASC.Core.Tenants.TenantCookieSettingsHelper,ASC.Web.Core.CookiesManager,ASC.Security.Cryptography.PasswordHasher,ASC.Api.Core.Security.EmailValidationKeyModelHelper,ASC.Web.Studio.Core.SetupInfo,ASC.MessagingSystem.Core.MessageService,ASC.FederatedLogin.LoginProviders.ProviderManager,ASC.FederatedLogin.AccountLinker,ASC.Core.CoreBaseSettings,ASC.Web.Studio.Core.Notify.StudioNotifyService,ASC.Web.Core.Users.UserManagerWrapper,ASC.Web.Core.Users.UserHelpTourHelper,ASC.Common.Utils.Signature,ASC.Web.Core.Users.DisplayUserSettingsHelper,ASC.MessagingSystem.EF.Model.MessageTarget,ASC.Web.Studio.Core.SMS.StudioSmsNotificationSettingsHelper,ASC.Core.Common.Settings.SettingsManager,ASC.Web.Studio.Core.SMS.SmsManager,ASC.Web.Studio.Core.TFA.TfaManager,ASC.Common.Utils.TimeZoneConverter,ASC.Web.Core.Sms.SmsKeyStorage,ASC.Web.Studio.Utility.CommonLinkUtility,ASC.Api.Core.ApiContext,ASC.Core.AuthContext,ASC.Core.Security.Authentication.CookieStorage,ASC.Core.Data.DbLoginEventsManager,ASC.Web.Core.BruteForceLoginManager,ASC.Web.Studio.Core.TFA.TfaAppAuthSettingsHelper,ASC.Security.Cryptography.EmailValidationKeyProvider,Microsoft.Extensions.Logging.ILogger{ASC.Web.Api.Controllers.AuthenticationController},ASC.Files.Core.VirtualRooms.InvitationLinkService,ASC.FederatedLogin.Profile.LoginProfileTransport,AutoMapper.IMapper)">
+            <summary>
+            Authorization API.
+            </summary>
+            <name>authentication</name>
+        </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.GetIsAuthentificated">
             <summary>
             Checks if the current user is authenticated or not.
@@ -2090,6 +2141,7 @@
             <httpMethod>GET</httpMethod>
             <path>api/2.0/authentication</path>
             <returns type="System.Boolean, System">Boolean value: true if the current user is authenticated</returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.AuthenticateMeFromBodyWithCode(ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto)">
             <summary>
@@ -2102,6 +2154,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/{code}</path>
             <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api">Authentication data</returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.AuthenticateMeAsync(ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto)">
             <summary>
@@ -2114,6 +2167,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication</path>
             <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api">Authentication data</returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.LogoutAsync">
             <summary>
@@ -2125,6 +2179,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/logout</path>
             <returns></returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.CheckConfirm(ASC.Security.Cryptography.EmailValidationKeyModel)">
             <summary>
@@ -2137,6 +2192,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/confirm</path>
             <returns type="ASC.Security.Cryptography.EmailValidationKeyProvider.ValidationResult, ASC.Security.Cryptography">Validation result: Ok, Invalid, or Expired</returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.SaveMobilePhoneAsync(ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto)">
             <summary>
@@ -2149,6 +2205,7 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/setphone</path>
             <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api">Authentication data</returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Web.Api.Controllers.AuthenticationController.SendSmsCodeAsync(ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto)">
             <summary>
@@ -2161,8 +2218,15 @@
             <httpMethod>POST</httpMethod>
             <path>api/2.0/authentication/sendsms</path>
             <returns type="ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto, ASC.Web.Api">Authentication data</returns>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="T:ASC.Web.Api.Controllers.CapabilitiesController">
+            <summary>
+            Portal capabilities API.
+            </summary>
+            <name>capabilities</name>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.CapabilitiesController.#ctor(ASC.Core.CoreBaseSettings,ASC.Core.TenantManager,ASC.FederatedLogin.LoginProviders.ProviderManager,ASC.Core.Common.Settings.SettingsManager,Microsoft.Extensions.Logging.ILogger{ASC.Web.Api.Controllers.CapabilitiesController},ASC.Web.Studio.Utility.CommonLinkUtility)">
             <summary>
             Portal capabilities API.
             </summary>
@@ -2178,8 +2242,16 @@
             <returns type="ASC.Web.Api.ApiModel.ResponseDto.CapabilitiesDto, ASC.Web.Api">Portal capabilities</returns>
             <path>api/2.0/capabilities</path>
             <httpMethod>GET</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="T:ASC.Web.Api.Controllers.FeedController">
+            <summary>
+            Feed API.
+            </summary>
+            <name>feed</name>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.FeedController.#ctor(ASC.Feed.Data.FeedReadedDataProvider,ASC.Api.Core.ApiContext,ASC.Common.Caching.ICache,ASC.Feed.Data.FeedAggregateDataProvider,ASC.Core.Tenants.TenantUtil,ASC.Core.SecurityContext,AutoMapper.IMapper,ASC.Files.Core.IDaoFactory,ASC.Files.Core.Security.FileSecurity)">
             <summary>
             Feed API.
             </summary>
@@ -2233,6 +2305,11 @@
             Modules API.
             </summary>
         </member>
+        <member name="M:ASC.Web.Api.Controllers.ModulesController.#ctor(ASC.Web.Core.WebItemManagerSecurity)">
+            <summary>
+            Modules API.
+            </summary>
+        </member>
         <member name="M:ASC.Web.Api.Controllers.ModulesController.GetAll">
             <summary>
             Returns a list of all the portal modules.
@@ -2258,6 +2335,13 @@
             <collection>list</collection>
         </member>
         <member name="T:ASC.Web.Api.Controllers.PaymentController">
+            <summary>
+             Portal information access.
+            </summary>
+            <name>portal</name>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.PaymentController.#ctor(ASC.Core.UserManager,ASC.Core.TenantManager,ASC.Core.Billing.ITariffService,ASC.Core.SecurityContext,ASC.Core.RegionHelper,ASC.Web.Api.Core.QuotaHelper,Microsoft.Extensions.Caching.Memory.IMemoryCache,Microsoft.AspNetCore.Http.IHttpContextAccessor,ASC.MessagingSystem.Core.MessageService,ASC.Web.Studio.Core.Notify.StudioNotifyService)">
             <summary>
              Portal information access.
             </summary>
@@ -2367,6 +2451,12 @@
             <httpMethod>POST</httpMethod>
         </member>
         <member name="T:ASC.Web.Api.Controllers.PortalController">
+            <summary>
+             Portal information access.
+            </summary>
+            <name>portal</name>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.PortalController.#ctor(Microsoft.Extensions.Logging.ILogger{ASC.Web.Api.Controllers.PortalController},ASC.Core.UserManager,ASC.Core.TenantManager,ASC.Core.Billing.ITariffService,ASC.Web.Studio.Utility.CommonLinkUtility,ASC.Web.Core.Utility.IUrlShortener,ASC.Core.AuthContext,ASC.Web.Core.CookiesManager,ASC.Core.SecurityContext,ASC.Core.Common.Settings.SettingsManager,ASC.Web.Core.Mobile.IMobileAppInstallRegistrator,ASC.Web.Studio.Utility.TenantExtra,Microsoft.Extensions.Configuration.IConfiguration,ASC.Core.CoreBaseSettings,ASC.Core.Billing.LicenseReader,ASC.Web.Studio.Core.SetupInfo,ASC.Files.Core.Helpers.DocumentServiceLicense,System.Net.Http.IHttpClientFactory,ASC.Web.Core.Helpers.ApiSystemHelper,ASC.Core.CoreSettings,ASC.Core.PermissionContext,ASC.Web.Studio.Core.Notify.StudioNotifyService,ASC.MessagingSystem.Core.MessageService,ASC.MessagingSystem.EF.Model.MessageTarget,ASC.Web.Core.Users.DisplayUserSettingsHelper,ASC.Security.Cryptography.EmailValidationKeyProvider,ASC.Web.Studio.Core.SMS.StudioSmsNotificationSettingsHelper,ASC.Web.Studio.Core.TFA.TfaAppAuthSettingsHelper,AutoMapper.IMapper,Microsoft.AspNetCore.Http.IHttpContextAccessor,ASC.Web.Api.Core.QuotaHelper,ASC.EventBus.Abstractions.IEventBus,ASC.Web.Api.Core.CspSettingsHelper)">
             <summary>
              Portal information access.
             </summary>
@@ -2645,8 +2735,15 @@
             <returns></returns>
             <path>api/2.0/portal/sendcongratulations</path>
             <httpMethod>POST</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="T:ASC.Web.Api.Controllers.SecurityController">
+            <summary>
+            Security API.
+            </summary>
+            <name>security</name>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.SecurityController.#ctor(ASC.Core.PermissionContext,ASC.Core.TenantManager,ASC.MessagingSystem.Core.MessageService,ASC.AuditTrail.Repositories.LoginEventsRepository,ASC.AuditTrail.Repositories.AuditEventsRepository,ASC.AuditTrail.AuditReportCreator,ASC.AuditTrail.AuditReportUploader,ASC.Core.Common.Settings.SettingsManager,ASC.AuditTrail.Mappers.AuditActionMapper,ASC.Core.CoreBaseSettings,ASC.Api.Core.ApiContext,ASC.Web.Api.Core.CspSettingsHelper)">
             <summary>
             Security API.
             </summary>
@@ -2794,7 +2891,16 @@
             <path>api/2.0/security/audit/settings/lifetime</path>
             <httpMethod>POST</httpMethod>
         </member>
+        <member name="M:ASC.Web.Api.Controllers.SecurityController.Csp">
+            <requiresAuthorization>false</requiresAuthorization>
+        </member>
         <member name="T:ASC.Web.Api.Controllers.Settings.BaseSettingsController">
+            <summary>
+             Portal settings API.
+            </summary>
+            <name>settings</name>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.BaseSettingsController.#ctor(ASC.Api.Core.ApiContext,Microsoft.Extensions.Caching.Memory.IMemoryCache,ASC.Web.Core.WebItemManager,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
             <summary>
              Portal settings API.
             </summary>
@@ -2984,6 +3090,9 @@
             <httpMethod>PUT</httpMethod>
         </member>
         <member name="T:ASC.Web.Api.Controllers.Settings.LdapController">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.#ctor(ASC.Api.Core.ApiContext,ASC.Web.Core.WebItemManager,Microsoft.Extensions.Caching.Memory.IMemoryCache,ASC.Core.Common.Settings.SettingsManager,ASC.Core.TenantManager,ASC.ActiveDirectory.Base.LdapNotifyService,ASC.ActiveDirectory.ComplexOperations.LdapSaveSyncOperation,ASC.Core.AuthContext,ASC.Core.PermissionContext,ASC.Core.CoreBaseSettings,Microsoft.AspNetCore.Http.IHttpContextAccessor,AutoMapper.IMapper)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.LdapController.GetLdapSettingsAsync">
@@ -3486,6 +3595,22 @@
             <path>api/2.0/settings/security/loginsettings</path>
             <httpMethod>GET</httpMethod>
         </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.EmailDomainRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>^[a-z0-9]([a-z0-9-.]){1,253}[a-z0-9]$</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match if at the beginning of the string.<br/>
+            ○ Match a character in the set [0-9a-z].<br/>
+            ○ Loop greedily at least 1 and at most 253 times.<br/>
+                ○ 1st capture group.<br/>
+                    ○ Match a character in the set [-.0-9a-z].<br/>
+            ○ Match a character in the set [0-9a-z].<br/>
+            ○ Match if at the end of the string or if before an ending newline.<br/>
+            </code>
+            </remarks>
+        </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetSettingsAsync(System.Nullable{System.Boolean})">
             <summary>
             Returns a list of all the available portal settings with the current values for each parameter.
@@ -3526,7 +3651,7 @@
             <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveUserQuotaSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveUserQuotaSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto)">
             <summary>
             Saves the user quota settings specified in the request to the current portal.
             </summary>
@@ -3539,6 +3664,32 @@
             <path>api/2.0/settings/userquotasettings</path>
             <httpMethod>POST</httpMethod>
             <visible>false</visible>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SaveRoomQuotaSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto)">
+            <summary>
+            Saves the room quota settings specified in the request to the current portal.
+            </summary>
+            <short>
+            Save the room quota settings
+            </short>
+            <category>Quota</category>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto, ASC.Web.Api" name="inDto">Request parameters for the user quota settings</param>
+            <returns type="System.Object, System">Message about the result of saving the room quota settings</returns>
+            <path>api/2.0/settings/roomquotasettings</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SetTenantQuotaSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto)">
+            <summary>
+            Saves the tenant quota settings.
+            </summary>
+            <short>
+            Save the tenant quota settings
+            </short>
+            <category>Quota</category>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto, ASC.Web.Api" name="inDto">Request parameters for the user quota settings</param>
+            <returns type="System.Object, System">Message about the result of saving the tenant quota settings</returns>
+            <path>api/2.0/settings/tenantquotasettings</path>
+            <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.GetSupportedCultures">
             <summary>
@@ -3833,6 +3984,7 @@
             <returns type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Core">SSO settings</returns>
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>GET</httpMethod>
+            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SsoController.GetDefaultSsoSettingsV2Async">
             <summary>
@@ -4141,6 +4293,9 @@
         <member name="T:ASC.Web.Api.Controllers.Settings.VersionController">
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.#ctor(ASC.Core.PermissionContext,ASC.Api.Core.ApiContext,ASC.Core.TenantManager,ASC.Web.Core.WebItemManager,ASC.Api.Settings.BuildVersion,Microsoft.Extensions.Caching.Memory.IMemoryCache,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.VersionController.GetBuildVersionsAsync">
             <summary>
             Returns the current build version.
@@ -4305,7 +4460,7 @@
             <httpMethod>PUT</httpMethod>
             <returns type="ASC.Webhooks.Core.Webhook, ASC.Webhooks.Core">Webhook settings</returns>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto,ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
              <summary>
              Saves the white label settings specified in the request.
              </summary>
@@ -4314,12 +4469,13 @@
              </short>
              <category>Rebranding</category>
              <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto, ASC.Web.Api" name="inDto">Request parameters for white label settings</param>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
              <returns type="System.Boolean, System">Boolean value: true if the operation is sucessful</returns>
              <path>api/2.0/settings/whitelabel/save</path>
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsFromFilesAsync">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsFromFilesAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
              <summary>
              Saves the white label settings from files.
              </summary>
@@ -4327,12 +4483,13 @@
              Save the white label settings from files
              </short>
              <category>Rebranding</category>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
              <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
              <path>api/2.0/settings/whitelabel/savefromfiles</path>
              <httpMethod>POST</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogos(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogosAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
             <summary>
             Returns the white label logos.
             </summary>
@@ -4340,7 +4497,7 @@
             Get the white label logos
             </short>
             <category>Rebranding</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inDto">White label request parameters</param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
             <returns type="ASC.Web.Api.ApiModels.ResponseDto.WhiteLabelItemDto, ASC.Web.Api">White label logos</returns>
             <path>api/2.0/settings/whitelabel/logos</path>
             <httpMethod>GET</httpMethod>
@@ -4348,7 +4505,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetIsDefaultWhiteLabelLogos">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetIsDefaultWhiteLabelLogos(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
             <summary>
             Specifies if the white label logos are default or not.
             </summary>
@@ -4362,7 +4519,7 @@
             <collection>list</collection>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogoTextAsync">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogoTextAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
              <summary>
              Returns the white label logo text.
              </summary>
@@ -4370,12 +4527,13 @@
              Get the white label logo text
              </short>
              <category>Rebranding</category>
+             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
              <returns type="System.Object, System">Logo text</returns>
              <path>api/2.0/settings/whitelabel/logotext</path>
              <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.RestoreWhiteLabelOptionsAsync">
+        <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.RestoreWhiteLabelOptionsAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
             <summary>
             Restores the white label options.
             </summary>
@@ -4383,6 +4541,7 @@
             Restore the white label options
             </short>
             <category>Rebranding</category>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/settings/whitelabel/restore</path>
             <httpMethod>PUT</httpMethod>
@@ -4532,6 +4691,13 @@
             <name>thirdparty</name>
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Web.Api.Controllers.ThirdPartyController.#ctor(ASC.FederatedLogin.Helpers.OAuth20TokenHelper)">
+            <summary>
+             Third-party API.
+            </summary>
+            <name>thirdparty</name>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Web.Api.Controllers.ThirdPartyController.Get(ASC.FederatedLogin.LoginProviders.LoginProvider)">
             <summary>
             Returns a request to get the confirmation code from URL.
@@ -4556,6 +4722,12 @@
             <httpMethod>GET</httpMethod>
         </member>
         <member name="T:ASC.Web.Api.ConnectionsController">
+            <summary>
+            Security API.
+            </summary>
+            <name>security</name>
+        </member>
+        <member name="M:ASC.Web.Api.ConnectionsController.#ctor(ASC.Core.UserManager,ASC.Core.SecurityContext,ASC.Core.Data.DbLoginEventsManager,Microsoft.AspNetCore.Http.IHttpContextAccessor,ASC.Web.Core.Users.DisplayUserSettingsHelper,ASC.Web.Studio.Utility.CommonLinkUtility,Microsoft.Extensions.Logging.ILogger{ASC.Web.Api.ConnectionsController},ASC.Web.Core.WebItemSecurity,ASC.MessagingSystem.Core.MessageService,ASC.MessagingSystem.EF.Model.MessageTarget,ASC.Web.Core.CookiesManager,ASC.Core.Security.Authentication.CookieStorage,ASC.Geolocation.GeolocationHelper,ASC.Api.Core.ApiDateTimeHelper)">
             <summary>
             Security API.
             </summary>
@@ -4695,6 +4867,11 @@
              SMTP settings API.
             </summary>
         </member>
+        <member name="M:ASC.Api.Settings.SmtpSettingsController.#ctor(ASC.Core.PermissionContext,ASC.Core.CoreConfiguration,ASC.Core.CoreBaseSettings,AutoMapper.IMapper,ASC.Core.SecurityContext,ASC.Web.Api.Core.SmtpOperation,ASC.Core.TenantManager)">
+            <summary>
+             SMTP settings API.
+            </summary>
+        </member>
         <member name="M:ASC.Api.Settings.SmtpSettingsController.GetSmtpSettingsAsync">
             <summary>
             Returns the current portal SMTP settings.
@@ -4747,6 +4924,50 @@
         <member name="P:ASC.Api.Settings.BuildVersion.DocumentServer">
             <summary>Document Server version</summary>
             <type>System.String, System</type>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.EmailDomainRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the EmailDomainRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.EmailDomainRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.EmailDomainRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.EmailDomainRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.EmailDomainRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.EmailDomainRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.EmailDomainRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.EmailDomainRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.EmailDomainRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Utilities.StackPush(System.Int32[]@,System.Int32@,System.Int32,System.Int32)">
+            <summary>Pushes 2 values onto the backtracking stack.</summary>
         </member>
     </members>
 </doc>

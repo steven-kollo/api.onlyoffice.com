@@ -8,6 +8,10 @@
             <summary>
             </summary>
         </member>
+        <member name="M:ASC.Data.Reassigns.ReassignProgressItem.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)">
+            <summary>
+            </summary>
+        </member>
         <member name="P:ASC.Data.Reassigns.ReassignProgressItem.FromUser">
             <summary>The user whose data is reassigned</summary>
             <type>System.Guid, System</type>
@@ -17,6 +21,10 @@
             <type>System.Guid, System</type>
         </member>
         <member name="T:ASC.Data.Reassigns.RemoveProgressItem">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:ASC.Data.Reassigns.RemoveProgressItem.#ctor(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)">
             <summary>
             </summary>
         </member>

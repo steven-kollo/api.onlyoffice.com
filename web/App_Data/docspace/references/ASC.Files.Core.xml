@@ -277,6 +277,10 @@
             <summary>Message to send when notifying about the shared room</summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.Quota">
+            <summary>Room quota</summary>
+            <type>System.Int64, System</type>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.CreateTagRequestDto">
             <summary>
             </summary>
@@ -397,6 +401,14 @@
             <summary>Password</summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.FileLinkRequestDto.Internal">
+            <summary>Scope of the link</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.FileLinkRequestDto.Primary">
+            <summary>Primary link flag</summary>
+            <type>System.Boolean, System</type>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto">
             <summary>
             </summary>
@@ -416,14 +428,6 @@
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.FileStreamRequestDto.FileExtension">
             <summary>File extension</summary>
             <type>System.String, System</type>
-        </member>
-        <member name="T:ASC.Files.Core.ApiModels.RequestDto.GenerateSharedLinkRequestDto">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.GenerateSharedLinkRequestDto.Share">
-            <summary>Sharing rights</summary>
-            <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto`1">
             <summary>
@@ -467,7 +471,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.InsertFileRequestDto.CreateNewIfExist">
             <summary>Specifies whether to create a new file if it already exists or not</summary>
-            <type>System.Nullable{System.Boolean}, System</type>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.InsertFileRequestDto.KeepConvertStatus">
             <summary>Specifies whether to keep the file converting status or not</summary>
@@ -477,37 +481,17 @@
             <summary>Request input stream</summary>
             <type>System.IO.Stream, System.IO</type>
         </member>
-        <member name="T:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.LinkId">
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDtoBase.LinkId">
             <summary>Link ID</summary>
             <type>System.Guid, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.Title">
-            <summary>Link name</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.Access">
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDtoBase.Access">
             <summary>Sharing rights</summary>
             <type>ASC.Files.Core.Security.FileShare, ASC.Files.Core</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.ExpirationDate">
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDtoBase.ExpirationDate">
             <summary>Link expiration date</summary>
             <type>ASC.Api.Core.ApiDateTime, ASC.Api.Core</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.LinkType">
-            <summary>Link type</summary>
-            <type>ASC.Files.Core.ApiModels.ResponseDto.LinkType, ASC.Files.Core</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.Password">
-            <summary>Link password</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.LinkRequestDto.DenyDownload">
-            <summary>Specifies whether downloading a file from a link is disabled or not</summary>
-            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.LockFileRequestDto">
             <summary>
@@ -589,6 +573,26 @@
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.RoomInvitationRequestDto.Message">
             <summary>Message to send when notifying about the shared room</summary>
             <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.RequestDto.RoomLinkRequestDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.RoomLinkRequestDto.Title">
+            <summary>Link name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.RoomLinkRequestDto.LinkType">
+            <summary>Link type</summary>
+            <type>ASC.Files.Core.ApiModels.ResponseDto.LinkType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.RoomLinkRequestDto.Password">
+            <summary>Link password</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.RoomLinkRequestDto.DenyDownload">
+            <summary>Specifies whether downloading a file from a link is disabled or not</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto">
             <summary>
@@ -748,7 +752,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.ThirdPartyRequestDto.ProviderId">
             <summary>Provider ID</summary>
-            <type>System.String, System</type>
+            <type>System.Nullable{System.Int32}, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.UpdateCommentRequestDto">
             <summary>
@@ -782,6 +786,22 @@
             <summary>New room name</summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UpdateRoomRequestDto.Quota">
+            <summary>Room quota</summary>
+            <type>System.Int64, System</type>
+        </member>
+        <member name="T:ASC.Files.Core.ApiModels.RequestDto.UpdateRoomsQuotaRequestDto`1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UpdateRoomsQuotaRequestDto`1.RoomIds">
+            <summary>List of room IDs</summary>
+            <type>System.Collections.Generic.IEnumerable{System.Text.Json.JsonElement}, System.Collections.Generic</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.UpdateRoomsQuotaRequestDto`1.Quota">
+            <summary>Room quota</summary>
+            <type>System.Int64, System</type>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto">
             <summary>
             </summary>
@@ -804,7 +824,7 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.CreateNewIfExist">
             <summary>Specifies whether to create a new file if it already exists or not</summary>
-            <type>System.Nullable{System.Boolean}, System</type>
+            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.UploadRequestDto.StoreOriginalFileFlag">
             <summary>Specifies whether to upload documents in the original formats as well or not</summary>
@@ -1091,6 +1111,10 @@
             <summary>Denies file downloading or not</summary>
             <type>System.Boolean, System</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.HasDraft">
+            <summary>Is there a draft or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.DenySharing">
             <summary>Denies file sharing or not</summary>
             <type>System.Boolean, System</type>
@@ -1099,37 +1123,7 @@
             <summary>File accessibility</summary>
             <type>System.Collections.IDictionary{ASC.Files.Core.Helpers.Accessibility, System.Boolean}, System.Collections</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Int32">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.String">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Int64">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableInt64">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileStatus">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Boolean">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileType">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -1139,57 +1133,17 @@
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Thumbnail">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Accessibility">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryAccessibilityBoolean">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FilesSecurityActions">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryFilesSecurityActionsBoolean">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileShare">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.ApiDateTime">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Guid">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.RoomType">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.EmployeeDto">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderType">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableInt32">
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableRoomType">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -1214,26 +1168,6 @@
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IEnumerableString">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Logo">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.RoomType">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableRoomType">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderDtoInt32">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
@@ -1250,6 +1184,106 @@
             </summary>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderDtoStringArray">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileStatus">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FolderType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableFolderType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Accessibility">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FilesSecurityActions">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileShare">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Thumbnail">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Logo">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.EmployeeDto">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.FileType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryAccessibilityBoolean">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryFilesSecurityActionsBoolean">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IDictionaryStringBoolean">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.IEnumerableString">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Guid">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Int32">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableInt32">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.Int64">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.NullableInt64">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDtoContext.String">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -1481,6 +1515,22 @@
             <summary>Specifies if a folder is private or not</summary>
             <type>System.Boolean, System</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.Type">
+            <summary>Folder type</summary>
+            <type>ASC.Files.Core.FolderType, ASC.Files.Core</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.QuotaLimit">
+            <summary>Quota</summary>
+            <type>System.Int32, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.IsCustomQuota">
+            <summary>Specifies if the room has a custom quota or not.</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FolderDto`1.UsedSpace">
+            <summary>Counter</summary>
+            <type>System.Int32, System</type>
+        </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.RoomSecurityDto">
             <summary>
             </summary>
@@ -1512,6 +1562,12 @@
         <member name="T:ASC.Files.Core.Core.ApplyFilterOption">
             <summary>
             </summary>
+        </member>
+        <member name="T:ASC.Files.Core.Core.Thirdparty.ThirdPartyFolderDao`3">
+            <inheritdoc />
+        </member>
+        <member name="M:ASC.Files.Core.Core.Thirdparty.ThirdPartyFolderDao`3.#ctor(Microsoft.EntityFrameworkCore.IDbContextFactory{ASC.Files.Core.EF.FilesDbContext},ASC.Core.UserManager,ASC.Files.Core.Thirdparty.CrossDao,ASC.Files.Thirdparty.IDaoSelector{`0,`1,`2},ASC.Files.Core.IFileDao{System.Int32},ASC.Files.Core.IFolderDao{System.Int32},ASC.Web.Studio.Core.SetupInfo,ASC.Files.Core.Core.Thirdparty.IDaoBase{`0,`1,`2},ASC.Core.TenantManager)">
+            <inheritdoc />
         </member>
         <member name="M:ASC.Files.Core.IFileDao`1.InvalidateCacheAsync(`0)">
             <summary>
@@ -1586,7 +1642,7 @@
             <param name="parentId"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String[],System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetFilesAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.String[],System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,`0,System.Boolean)">
             <summary>
                 Get files in folder
             </summary>
@@ -1603,6 +1659,7 @@
             <param name="offset"></param>
             <param name="count"></param>
             <param name="roomId"></param>
+            <param name="withShared"></param>
             <returns>list of files</returns>
             <remarks>
                Return only the latest versions of files of a folder
@@ -1623,12 +1680,13 @@
             <param name="offset"></param>
             <returns>Stream</returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.GetPreSignedUriAsync(ASC.Files.Core.File{`0},System.TimeSpan)">
+        <member name="M:ASC.Files.Core.IFileDao`1.GetPreSignedUriAsync(ASC.Files.Core.File{`0},System.TimeSpan,System.String)">
             <summary>
             Get presigned uri
             </summary>
             <param name="file"></param>
             <param name="expires"></param>
+            <param name="shareKey"></param>
             <returns>Stream uri</returns>
         </member>
         <member name="M:ASC.Files.Core.IFileDao`1.IsSupportedPreSignedUriAsync(ASC.Files.Core.File{`0})">
@@ -1668,6 +1726,13 @@
             </summary>
             <param name="fileId">file id</param>
         </member>
+        <member name="M:ASC.Files.Core.IFileDao`1.DeleteFileAsync(`0,System.Guid)">
+            <summary>
+              Deletes a file including all previous versions
+            </summary>
+            <param name="fileId">file id</param>
+            <param name="ownerId">file owner id</param>
+        </member>
         <member name="M:ASC.Files.Core.IFileDao`1.IsExistAsync(System.String,System.Object)">
             <summary>
                 Checks whether or not file
@@ -1676,12 +1741,13 @@
             <param name="folderId">folder id</param>
             <returns>Returns true if the file exists, otherwise false</returns>
         </member>
-        <member name="M:ASC.Files.Core.IFileDao`1.MoveFileAsync(`0,`0)">
+        <member name="M:ASC.Files.Core.IFileDao`1.MoveFileAsync(`0,`0,System.Boolean)">
             <summary>
               Moves a file or set of files in a folder
             </summary>
             <param name="fileId">file id</param>
             <param name="toFolderId">The ID of the destination folder</param>
+            <param name="deleteLinks">Flag for removing links when moving</param>
         </member>
         <member name="M:ASC.Files.Core.IFileDao`1.CopyFileAsync(`0,`0)">
             <summary>
@@ -1798,6 +1864,13 @@
             </summary>
             <param name="parentId"></param>
         </member>
+        <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(`0,ASC.Files.Core.FolderType)">
+            <summary>
+                Get a list of folders in current folder.
+            </summary>
+            <param name="parentId"></param>
+            <param name="type"></param>
+        </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
             <summary>
             Get a list of folders.
@@ -1884,6 +1957,14 @@
             <param name="folder"></param>
             <param name="newTitle">new name</param>
         </member>
+        <member name="M:ASC.Files.Core.IFolderDao`1.UpdateFolderAsync(ASC.Files.Core.Folder{`0},System.String,System.Int64)">
+            <summary>
+               Update folder
+            </summary>
+            <param name="folder"></param>
+            <param name="newTitle">new name</param>
+            <param name="newQuota">new name</param>
+        </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.GetItemsCountAsync(`0)">
             <summary>
                Gets the number of files and folders to the container in your
@@ -1953,6 +2034,22 @@
             <param name="bunch"></param>
             <param name="data"></param>
             <param name="createIfNotExists"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Files.Core.IFolderDao`1.ChangeFolderQuotaAsync(ASC.Files.Core.Folder{`0},System.Int64)">
+            <summary>
+            Only in TMFolderDao
+            </summary>
+            <param name="folder"></param>
+            <param name="quota">new quota</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Files.Core.IFolderDao`1.ChangeTreeFolderSizeAsync(`0,System.Int64)">
+            <summary>
+            Only in TMFolderDao
+            </summary>
+            <param name="folderId"></param>
+            <param name="size">folder size</param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.GetFolderIDCommonAsync(System.Boolean)">
@@ -2061,12 +2158,12 @@
             <param name="folderIDs"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Files.Core.IFolderDao`1.GetParentRoomInfoFromFileEntryAsync``1(ASC.Files.Core.FileEntry{``0})">
+        <member name="M:ASC.Files.Core.IFolderDao`1.GetParentRoomInfoFromFileEntryAsync(ASC.Files.Core.FileEntry{`0})">
             <summary>
             Tries to return id of the parent virtual room
             Only in TMFolderDao
             </summary>
-            <param name="fileEntry"></param>
+            <param name="entry"></param>
             <returns></returns>
         </member>
         <member name="T:ASC.Files.Core.DateToAutoCleanUp">
@@ -2129,24 +2226,16 @@
             <summary>
             </summary>
         </member>
+        <member name="M:ASC.Files.Core.FormFillingProperties.#ctor">
+            <summary>
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.FormFillingProperties.CollectFillForm">
             <summary>Specifies whether to collect the data from the filled forms or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="P:ASC.Files.Core.FormFillingProperties.ToFolderId">
+        <member name="P:ASC.Files.Core.FormFillingProperties.Title">
             <summary>Folder ID where a file will be saved</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.FormFillingProperties.ToFolderPath">
-            <summary>Folder path where a file will be savedt</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.FormFillingProperties.CreateFolderTitle">
-            <summary>New folder title</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.FormFillingProperties.CreateFileMask">
-            <summary>File name mask</summary>
             <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.FolderType">
@@ -2192,10 +2281,6 @@
         <member name="P:ASC.Files.Core.Security.ValidationInfo.LinkId">
             <summary>Link ID</summary>
             <type>System.Guid, System</type>
-        </member>
-        <member name="T:ASC.Files.Core.Security.Status">
-            <summary>
-            </summary>
         </member>
         <member name="T:ASC.Files.Core.Security.FileShare">
             <summary>
@@ -2475,239 +2560,69 @@
               Looks up a localized string similar to Voided.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_BadRequest">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_BadRequest">
             <summary>
               Looks up a localized string similar to Bad request..
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_ChangeOwner">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_ChangeOwner">
             <summary>
               Looks up a localized string similar to You cannot select this user.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_ConvertTimeout">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_ConvertTimeout">
             <summary>
               Looks up a localized string similar to Conversion takes too much time..
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_DocServiceException">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_DocServiceException">
             <summary>
               Looks up a localized string similar to Error occurred in the Documents Service.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_EditingCoauth">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_EditingCoauth">
             <summary>
               Looks up a localized string similar to The file is opened for editing by {0}. Currently, the co-editing feature is not supported for this file format..
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_EditingMobile">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_EditingMobile">
             <summary>
               Looks up a localized string similar to The file is open for editing in a mobile application by {0}.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_EmptyFile">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_EmptyFile">
             <summary>
               Looks up a localized string similar to Empty file.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_FileNotFound">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_FileNotFound">
             <summary>
               Looks up a localized string similar to The required file was not found.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_FileSizeConvert">
-            <summary>
-              Looks up a localized string similar to File larger than {0} will not be converted.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_FileSizeCopy">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_FileSizeCopy">
             <summary>
               Looks up a localized string similar to File larger than {0} will not be copied.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_FileSizeEdit">
-            <summary>
-              Looks up a localized string similar to File larger than {0} will not be edited.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_FileSizeMove">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_FileSizeMove">
             <summary>
               Looks up a localized string similar to File larger than {0} will not be moved.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_FileUpdateToVersion">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_FileUpdateToVersion">
             <summary>
               Looks up a localized string similar to The new version cannot be the same as the current one.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_FolderCopyError">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_FolderCopyError">
             <summary>
               Looks up a localized string similar to You cannot copy the folder to its subfolder.
             </summary>
         </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_FolderNotFound">
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_FolderNotFound">
             <summary>
               Looks up a localized string similar to The required folder was not found.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_InvalidTitle">
-            <summary>
-              Looks up a localized string similar to Incorrect title.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_LockedFile">
-            <summary>
-              Looks up a localized string similar to The file is currently locked by another user.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_MailMergeCount">
-            <summary>
-              Looks up a localized string similar to At least {0} mail messages could not be sent. Please visit the Mail module to see what the reason for the failure could be..
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_ManyDownloads">
-            <summary>
-              Looks up a localized string similar to Too many downloads..
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_NotSupportedFormat">
-            <summary>
-              Looks up a localized string similar to Sorry, this file format isn&apos;t supported.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SaveAnonymous">
-            <summary>
-              Looks up a localized string similar to Author of the save is unknown.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SaveCorrupted">
-            <summary>
-              Looks up a localized string similar to The file was corrupted when you tried to save it.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SaveUrlLost">
-            <summary>
-              Looks up a localized string similar to Failed to get the file to be saved.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to perform the operation.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_Auth">
-            <summary>
-              Looks up a localized string similar to Can&apos;t authorize at {0} provider with given credentials..
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_CopyFile">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to copy the file.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_CopyFolder">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to copy the folder.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_Create">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to create.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_DeleteEditingFile">
-            <summary>
-              Looks up a localized string similar to Cannot delete the file because it is opened for editing.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_DeleteEditingFolder">
-            <summary>
-              Looks up a localized string similar to Cannot delete the folder because one of the files is opened for editing.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_DeleteFile">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to delete the file.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_DeleteFolder">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to delete the folder.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_EditFile">
-            <summary>
-              Looks up a localized string similar to You do not have enough permissions to edit the file.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_EditFileTwice">
-            <summary>
-              Looks up a localized string similar to This document is being edited by you in another tab.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_MoveFile">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to move the file.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_MoveFolder">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to move the folder.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_ReadFile">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to view the file.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_ReadFolder">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to view the folder content.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_RenameFile">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to rename the file.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_RenameFolder">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to rename the folder.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_UpdateEditingFile">
-            <summary>
-              Looks up a localized string similar to Cannot update the file because it&apos;s opened for editing.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SecurityException_ViewFolder">
-            <summary>
-              Looks up a localized string similar to You don&apos;t have enough permission to view the folder content.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_SharpBoxException">
-            <summary>
-              Looks up a localized string similar to The content of third party folder are not available. Try to reconnect the account..
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_StartEditing">
-            <summary>
-              Looks up a localized string similar to File editing start error.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_UpdateEditingFile">
-            <summary>
-              Looks up a localized string similar to You cannot update a file which is opened for editing.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_UserNotFound">
-            <summary>
-              Looks up a localized string similar to User could not be found.
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMassage_ViewTrashItem">
-            <summary>
-              Looks up a localized string similar to You are not allowed to preview the elements in the Trash.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_InvalidProvider">
@@ -2720,14 +2635,39 @@
               Looks up a localized string similar to It is not possible to use this folder to store the room.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_InvalidTitle">
+            <summary>
+              Looks up a localized string similar to Incorrect title.
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_InvintationLink">
             <summary>
               Looks up a localized string similar to The invitation link is invalid or its validity has expired.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_LockedFile">
+            <summary>
+              Looks up a localized string similar to The file is currently locked by another user.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_MailMergeCount">
+            <summary>
+              Looks up a localized string similar to At least {0} mail messages could not be sent. Please visit the Mail module to see what the reason for the failure could be..
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_ManyDownloads">
+            <summary>
+              Looks up a localized string similar to Too many downloads..
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_MaxLinksCount">
             <summary>
               Looks up a localized string similar to The maximum number of links may not exceed {0}.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_NotSupportedFormat">
+            <summary>
+              Looks up a localized string similar to Sorry, this file format isn&apos;t supported.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_ProviderAlreadyConnect">
@@ -2740,9 +2680,44 @@
               Looks up a localized string similar to The role is not available for this user type.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SaveAnonymous">
+            <summary>
+              Looks up a localized string similar to Author of the save is unknown.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SaveCorrupted">
+            <summary>
+              Looks up a localized string similar to The file was corrupted when you tried to save it.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SaveUrlLost">
+            <summary>
+              Looks up a localized string similar to Failed to get the file to be saved.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to perform the operation.
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_ArchiveRoom">
             <summary>
               Looks up a localized string similar to You don&apos;t have enough permission to archive the room.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_Auth">
+            <summary>
+              Looks up a localized string similar to Can&apos;t authorize at {0} provider with given credentials..
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_CopyFile">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to copy the file.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_CopyFolder">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to copy the folder.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_CopyToFolder">
@@ -2750,9 +2725,54 @@
               Looks up a localized string similar to You don&apos;t have permission to copy to this folder.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_Create">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to create.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_DeleteEditingFile">
+            <summary>
+              Looks up a localized string similar to Cannot delete the file because it is opened for editing.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_DeleteEditingFolder">
+            <summary>
+              Looks up a localized string similar to Cannot delete the folder because one of the files is opened for editing.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_DeleteFile">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to delete the file.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_DeleteFolder">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to delete the folder.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_EditFile">
+            <summary>
+              Looks up a localized string similar to You do not have enough permissions to edit the file.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_EditFileTwice">
+            <summary>
+              Looks up a localized string similar to This document is being edited by you in another tab.
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_EditRoom">
             <summary>
               Looks up a localized string similar to You don&apos;t have permission to edit the room.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_MoveFile">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to move the file.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_MoveFolder">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to move the folder.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_MoveToFolder">
@@ -2760,9 +2780,39 @@
               Looks up a localized string similar to You don&apos;t have permission to move to this folder.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_ReadFile">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to view the file.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_ReadFolder">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to view the folder content.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_RenameFile">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to rename the file.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_RenameFolder">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to rename the folder.
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_UnarchiveRoom">
             <summary>
               Looks up a localized string similar to You don&apos;t have enough permission to unarchive the room.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_UpdateEditingFile">
+            <summary>
+              Looks up a localized string similar to Cannot update the file because it&apos;s opened for editing.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SecurityException_ViewFolder">
+            <summary>
+              Looks up a localized string similar to You don&apos;t have enough permission to view the folder content.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SharePasswordManyAttempts">
@@ -2770,9 +2820,34 @@
               Looks up a localized string similar to You have tried too many times to enter your password. Please try again later.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_SharpBoxException">
+            <summary>
+              Looks up a localized string similar to The content of third party folder are not available. Try to reconnect the account..
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_StartEditing">
+            <summary>
+              Looks up a localized string similar to File editing start error.
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_UpdateArchivedRoom">
             <summary>
               Looks up a localized string similar to You cannot edit archived rooms.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_UpdateEditingFile">
+            <summary>
+              Looks up a localized string similar to You cannot update a file which is opened for editing.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_UserNotFound">
+            <summary>
+              Looks up a localized string similar to User could not be found.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorMessage_ViewTrashItem">
+            <summary>
+              Looks up a localized string similar to You are not allowed to preview the elements in the Trash.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.ErrorrMessage_PinRoom">
@@ -2802,12 +2877,12 @@
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.MessageFileCreatedForm">
             <summary>
-              Looks up a localized string similar to The fillable OFORM document is ready. It is saved in the {0}.
+              Looks up a localized string similar to The fillable PDF document is ready. It is saved in the {0}.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.MessageFillFormDraftCreated">
             <summary>
-              Looks up a localized string similar to The OFORM copy is created in the {0} folder. Please fill out the form and download the result as a PDF or DOCX file..
+              Looks up a localized string similar to The PDF copy is created in the {0} folder. Please fill out the form and download the result as a PDF or DOCX file..
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.MessageFillFormDraftDiscard">
@@ -2889,6 +2964,76 @@
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoleEnum_User">
             <summary>
               Looks up a localized string similar to User.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Author">
+            <summary>
+              Looks up a localized string similar to Author.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Company">
+            <summary>
+              Looks up a localized string similar to Company.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Created">
+            <summary>
+              Looks up a localized string similar to Created.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_DateGenerated">
+            <summary>
+              Looks up a localized string similar to Date Generated.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_ExportAuthor">
+            <summary>
+              Looks up a localized string similar to Export Author.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Folder">
+            <summary>
+              Looks up a localized string similar to Folder.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Index">
+            <summary>
+              Looks up a localized string similar to Index.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Modified">
+            <summary>
+              Looks up a localized string similar to Modified.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Name">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Room">
+            <summary>
+              Looks up a localized string similar to Room.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_SheetName">
+            <summary>
+              Looks up a localized string similar to Room index.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Size">
+            <summary>
+              Looks up a localized string similar to Size (MB).
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Total">
+            <summary>
+              Looks up a localized string similar to Total.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesCommonResource.RoomIndex_Type">
+            <summary>
+              Looks up a localized string similar to Type.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesCommonResource.UnknownFirstName">
@@ -2978,6 +3123,11 @@
               Looks up a localized string similar to Files will be compressed into the {0}.zip file{1}.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.Resources.FilesUCResource.InProcessFormFolder">
+            <summary>
+              Looks up a localized string similar to In process.
+            </summary>
+        </member>
         <member name="P:ASC.Files.Core.Resources.FilesUCResource.MyFiles">
             <summary>
               Looks up a localized string similar to My documents.
@@ -2996,6 +3146,11 @@
         <member name="P:ASC.Files.Core.Resources.FilesUCResource.ProjectFiles">
             <summary>
               Looks up a localized string similar to In projects.
+            </summary>
+        </member>
+        <member name="P:ASC.Files.Core.Resources.FilesUCResource.ReadyFormFolder">
+            <summary>
+              Looks up a localized string similar to Ready.
             </summary>
         </member>
         <member name="P:ASC.Files.Core.Resources.FilesUCResource.Recent">
@@ -3188,78 +3343,6 @@
               Looks up a localized string similar to Documents. Access granted to folder: [$DocumentTitle]($DocumentURL).
             </summary>
         </member>
-        <member name="T:ASC.Files.Thirdparty.Box.BoxCacheItemReflection">
-            <summary>Holder for reflection information generated from proto/box_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Files.Thirdparty.Box.BoxCacheItemReflection.Descriptor">
-            <summary>File descriptor for proto/box_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.Box.BoxCacheItem.ResetAllFieldNumber">
-            <summary>Field number for the "reset_all" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.Box.BoxCacheItem.IsFileFieldNumber">
-            <summary>Field number for the "is_file" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.Box.BoxCacheItem.IsFileExistsFieldNumber">
-            <summary>Field number for the "is_file_exists" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.Box.BoxCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="T:ASC.Files.Thirdparty.Dropbox.DropboxCacheItemReflection">
-            <summary>Holder for reflection information generated from proto/dropbox_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Files.Thirdparty.Dropbox.DropboxCacheItemReflection.Descriptor">
-            <summary>File descriptor for proto/dropbox_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.Dropbox.DropboxCacheItem.ResetAllFieldNumber">
-            <summary>Field number for the "reset_all" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.Dropbox.DropboxCacheItem.IsFileFieldNumber">
-            <summary>Field number for the "is_file" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.Dropbox.DropboxCacheItem.IsFileExistsFieldNumber">
-            <summary>Field number for the "is_file_exists" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.Dropbox.DropboxCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="T:ASC.Files.Thirdparty.GoogleDrive.GoogleDriveCacheItemReflection">
-            <summary>Holder for reflection information generated from proto/google_drive_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Files.Thirdparty.GoogleDrive.GoogleDriveCacheItemReflection.Descriptor">
-            <summary>File descriptor for proto/google_drive_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.GoogleDrive.GoogleDriveCacheItem.ResetAllFieldNumber">
-            <summary>Field number for the "reset_all" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.GoogleDrive.GoogleDriveCacheItem.ResetEntryFieldNumber">
-            <summary>Field number for the "reset_entry" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.GoogleDrive.GoogleDriveCacheItem.ResetChildsFieldNumber">
-            <summary>Field number for the "reset_childs" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.GoogleDrive.GoogleDriveCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.GoogleDrive.GoogleDriveCacheItem.ChildFolderFieldNumber">
-            <summary>Field number for the "child_folder" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.GoogleDrive.GoogleDriveCacheItem.ChildFolderExistFieldNumber">
-            <summary>Field number for the "child_folder_exist" field.</summary>
-        </member>
-        <member name="T:ASC.Files.Thirdparty.OneDrive.OneDriveCacheItemReflection">
-            <summary>Holder for reflection information generated from proto/one_drive_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Files.Thirdparty.OneDrive.OneDriveCacheItemReflection.Descriptor">
-            <summary>File descriptor for proto/one_drive_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.OneDrive.OneDriveCacheItem.ResetAllFieldNumber">
-            <summary>Field number for the "reset_all" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.OneDrive.OneDriveCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
         <member name="M:ASC.Files.Thirdparty.ProviderDao.ProviderFileDao.GetFileStreamAsync(ASC.Files.Core.File{System.String},System.Int64)">
             <summary>
             Get stream of file
@@ -3268,28 +3351,12 @@
             <param name="offset"></param>
             <returns>Stream</returns>
         </member>
-        <member name="T:ASC.Files.Thirdparty.SharePoint.SharePointProviderCacheItemReflection">
-            <summary>Holder for reflection information generated from proto/share_point_provider_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Files.Thirdparty.SharePoint.SharePointProviderCacheItemReflection.Descriptor">
-            <summary>File descriptor for proto/share_point_provider_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.SharePoint.SharePointProviderCacheItem.FileKeyFieldNumber">
-            <summary>Field number for the "file_key" field.</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.SharePoint.SharePointProviderCacheItem.FolderKeyFieldNumber">
-            <summary>Field number for the "folder_key" field.</summary>
-        </member>
-        <member name="T:ASC.Files.Thirdparty.ProviderAccountCacheItemReflection">
-            <summary>Holder for reflection information generated from proto/provider_account_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Files.Thirdparty.ProviderAccountCacheItemReflection.Descriptor">
-            <summary>File descriptor for proto/provider_account_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Files.Thirdparty.ProviderAccountCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
         <member name="T:ASC.Web.Files.Core.Compress.CompressToArchive">
+            <summary>
+            Archives the data stream in the format selected in the settings
+            </summary>
+        </member>
+        <member name="M:ASC.Web.Files.Core.Compress.CompressToArchive.#ctor(ASC.Web.Files.Classes.FilesSettingsHelper,ASC.Web.Files.Core.Compress.CompressToTarGz,ASC.Web.Files.Core.Compress.CompressToZip)">
             <summary>
             Archives the data stream in the format selected in the settings
             </summary>
@@ -3317,13 +3384,13 @@
             Closes the current entry.
             </summary>
         </member>
-        <member name="P:ASC.Web.Files.Core.Compress.CompressToArchive.Title">
+        <member name="M:ASC.Web.Files.Core.Compress.CompressToArchive.GetTitle">
             <summary>
             Resource title (does not affect the work of the class)
             </summary>
             <returns></returns>
         </member>
-        <member name="P:ASC.Web.Files.Core.Compress.CompressToArchive.ArchiveExtension">
+        <member name="M:ASC.Web.Files.Core.Compress.CompressToArchive.GetArchiveExtension">
             <summary>
             Extension the archive (does not affect the work of the class)
             </summary>
@@ -3364,13 +3431,13 @@
             Closes the current entry.
             </summary>
         </member>
-        <member name="P:ASC.Web.Files.Core.Compress.CompressToTarGz.Title">
+        <member name="M:ASC.Web.Files.Core.Compress.CompressToTarGz.GetTitle">
             <summary>
             Resource title (does not affect the work of the class)
             </summary>
             <returns></returns>
         </member>
-        <member name="P:ASC.Web.Files.Core.Compress.CompressToTarGz.ArchiveExtension">
+        <member name="M:ASC.Web.Files.Core.Compress.CompressToTarGz.GetArchiveExtension">
             <summary>
             Extension the archive (does not affect the work of the class)
             </summary>
@@ -3411,13 +3478,13 @@
             Closes the current entry.
             </summary>
         </member>
-        <member name="P:ASC.Web.Files.Core.Compress.CompressToZip.Title">
+        <member name="M:ASC.Web.Files.Core.Compress.CompressToZip.GetTitle">
             <summary>
             Resource title (does not affect the work of the class)
             </summary>
             <returns></returns>
         </member>
-        <member name="P:ASC.Web.Files.Core.Compress.CompressToZip.ArchiveExtension">
+        <member name="M:ASC.Web.Files.Core.Compress.CompressToZip.GetArchiveExtension">
             <summary>
             Extension the archive (does not affect the work of the class)
             </summary>
@@ -3449,13 +3516,13 @@
             Closes the current entry.
             </summary>
         </member>
-        <member name="P:ASC.Web.Files.Core.Compress.ICompress.Title">
+        <member name="M:ASC.Web.Files.Core.Compress.ICompress.GetTitle">
             <summary>
             Resource title (does not affect the work of the class)
             </summary>
             <returns></returns>
         </member>
-        <member name="P:ASC.Web.Files.Core.Compress.ICompress.ArchiveExtension">
+        <member name="M:ASC.Web.Files.Core.Compress.ICompress.GetArchiveExtension">
             <summary>
             Extension the archive (does not affect the work of the class)
             </summary>
@@ -3481,6 +3548,10 @@
             <summary>
             </summary>
         </member>
+        <member name="M:ASC.Web.Files.Services.WCFService.AceShortWrapper.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            </summary>
+        </member>
         <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.User">
             <summary>User</summary>
             <type>System.String, System</type>
@@ -3489,11 +3560,15 @@
             <summary>User access rights to the file</summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.IsLink">
-            <summary>Specifies if the external link is available or not</summary>
-            <type>System.Nullable{System.Boolean}, System</type>
+        <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.isLink">
+            <summary>Is link</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Files.Services.WCFService.MentionWrapper">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:ASC.Web.Files.Services.WCFService.MentionWrapper.#ctor(ASC.Core.Users.UserInfo,ASC.Web.Core.Users.DisplayUserSettingsHelper)">
             <summary>
             </summary>
         </member>
@@ -3555,7 +3630,7 @@
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.ProviderId">
             <summary>Provider ID</summary>
-            <type>System.String, System</type>
+            <type>System.Nullable{System.Int32}, System</type>
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.ProviderKey">
             <summary>Provider key</summary>
@@ -3578,15 +3653,11 @@
         <member name="P:ASC.Web.Files.Services.DocumentService.ActionLinkConfig.ActionConfig.Type">
             <summary>Action type</summary>
         </member>
-        <member name="T:ASC.Web.Files.Services.DocumentService.Configuration`1">
-            <summary>
-            </summary>
-        </member>
         <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.Document">
             <summary>Document config</summary>
             <type>ASC.Web.Files.Services.DocumentService.DocumentConfig, ASC.Files.Core</type>
         </member>
-        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.DocumentType">
+        <member name="M:ASC.Web.Files.Services.DocumentService.Configuration`1.GetDocumentType(ASC.Files.Core.File{`0})">
             <summary>Document type</summary>
             <type>System.String, System</type>
         </member>
@@ -3597,14 +3668,6 @@
         <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.EditorType">
             <summary>Editor type</summary>
             <type>ASC.Web.Files.Services.DocumentService.EditorType, ASC.Files.Core</type>
-        </member>
-        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.EditorUrl">
-            <summary>Editor URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.Token">
-            <summary>Token</summary>
-            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Files.Services.DocumentService.Configuration`1.Type">
             <summary>Platform type</summary>
@@ -3657,15 +3720,6 @@
         <member name="P:ASC.Web.Files.Services.DocumentService.FileReferenceData`1.InstanceId">
             <summary>Instance ID</summary>
             <type>System.String, System</type>
-        </member>
-        <member name="T:ASC.Web.Files.Utils.FileMarkerCacheItemReflection">
-            <summary>Holder for reflection information generated from proto/file_marker_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Web.Files.Utils.FileMarkerCacheItemReflection.Descriptor">
-            <summary>File descriptor for proto/file_marker_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Web.Files.Utils.FileMarkerCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
         </member>
     </members>
 </doc>

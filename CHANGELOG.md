@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- docspace: v2.5
 - docbuilder: new samples
 - editors: config to clipboard
 - editors: added the Setting avatars page to How it works

@@ -70,7 +70,16 @@
                 https://andrewlock.net/reducing-latency-by-pre-building-singletons-in-asp-net-core/
             </summary>
         </member>
+        <member name="M:ASC.Api.Core.Core.WarmupServicesStartupTask.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.IServiceProvider)">
+            <summary>
+                https://andrewlock.net/reducing-latency-by-pre-building-singletons-in-asp-net-core/
+            </summary>
+        </member>
         <member name="T:ASC.Api.Core.Module">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Core.Module.#ctor(ASC.Web.Core.Product)">
             <summary>
             </summary>
         </member>
@@ -110,7 +119,7 @@
             <summary>Specifies if the module is primary or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="M:ASC.Api.Core.Extensions.ServiceCollectionExtension.AddActivePassiveHostedService``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,ASC.Common.DIHelper)">
+        <member name="M:ASC.Api.Core.Extensions.ServiceCollectionExtension.AddActivePassiveHostedService``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,ASC.Common.DIHelper,Microsoft.Extensions.Configuration.IConfiguration,System.String)">
             <remarks>
             Add a IHostedService for given type. 
             Only one copy of this instance type will active in multi process architecture.
@@ -234,6 +243,10 @@
             <summary>Notes</summary>
             <type>System.String, System</type>
         </member>
+        <member name="P:ASC.Web.Api.Models.EmployeeFullDto.AvatarOriginal">
+            <summary>Original size avatar</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="P:ASC.Web.Api.Models.EmployeeFullDto.AvatarMax">
             <summary>Maximum size avatar</summary>
             <type>System.String, System</type>
@@ -301,6 +314,10 @@
         <member name="P:ASC.Web.Api.Models.EmployeeFullDto.UsedSpace">
             <summary>Portal used space</summary>
             <type>System.Double, System</type>
+        </member>
+        <member name="P:ASC.Web.Api.Models.EmployeeFullDto.IsCustomQuota">
+            <summary>Specifies if the user has a custom quota or not.</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Api.Models.GroupSummaryDto">
             <summary>

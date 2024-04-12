@@ -4,9 +4,6 @@
         <name>ASC.Web.Core</name>
     </assembly>
     <members>
-        <member name="T:ASC.Web.Core.Log.StudioPeriodicNotifyLogger.__InformationSendLetterPersonalStruct">
-            <summary> This API supports the logging infrastructure and is not intended to be used directly from your code. It is subject to change in the future. </summary>
-        </member>
         <member name="P:ASC.Web.Core.ModuleManagement.Common.SearchResultItem.URL">
             <summary>
             Absolute URL
@@ -32,6 +29,174 @@
         </member>
         <member name="T:ASC.Web.Core.Notify.NotificationType">
             <summary>
+            </summary>
+        </member>
+        <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper.Settings">
+            <summary>Additional white label settings</summary>
+            <type>ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core</type>
+        </member>
+        <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.AdditionalWhiteLabelSettingsHelper">
+            <summary>Additional white label settings helper</summary>
+            <type>ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit, ASC.Web.Core</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.StartDocsEnabled">
+            <summary>Specifies if the start document is enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.HelpCenterEnabled">
+            <summary>Specifies if the help center is enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.FeedbackAndSupportEnabled">
+            <summary>Specifies if feedback and support are available or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.FeedbackAndSupportUrl">
+            <summary>Feedback and support URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.UserForumEnabled">
+            <summary>Specifies if the user forum is enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.UserForumUrl">
+            <summary>User forum URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.VideoGuidesEnabled">
+            <summary>Specifies if the video guides are enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.VideoGuidesUrl">
+            <summary>Video guides URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.SalesEmail">
+            <summary>Sales email</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.BuyUrl">
+            <summary>URL to pay for the portal</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.LicenseAgreementsEnabled">
+            <summary>Specifies if the license agreements are enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.LicenseAgreementsUrl">
+            <summary>License agreements URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultHelpCenterUrl">
+            <summary>Default help center URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultFeedbackAndSupportUrl">
+            <summary>Default feedback and support URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultUserForumUrl">
+            <summary>Default user forum URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultVideoGuidesUrl">
+            <summary>Default video guides URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultMailSalesEmail">
+            <summary>Mail sales URL</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultBuyUrl">
+            <summary>Default URL to pay for the portal</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="T:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper.Settings">
+            <summary>Company white label settings</summary>
+            <type>ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings, ASC.Web.Core</type>
+        </member>
+        <member name="T:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.CoreSettings">
+            <summary>Core settings</summary>
+            <type>ASC.Core.CoreSettings, ASC.Core.Common</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.CompanyName">
+            <summary>Company name</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Site">
+            <summary>Site</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Email">
+            <summary>Email address</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Address">
+            <summary>Address</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Phone">
+            <summary>Phone</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.IsLicensor">
+            <summary>Specifies if a company is a licensor or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="M:ASC.Web.Core.WhiteLabel.TenantInfoSettingsHelper.GetStorageLogoData(ASC.Web.Core.WhiteLabel.TenantInfoSettings)">
+            <summary>
+            Get logo stream or null in case of default logo
+            </summary>
+        </member>
+        <member name="M:ASC.Web.Core.WhiteLabel.TenantLogoManager.GetWhitelabelMailLogoAsync">
+            <summary>
+            Get logo stream or null in case of default logo
+            </summary>
+        </member>
+        <member name="M:ASC.Web.Core.WhiteLabel.TenantWhiteLabelSettingsHelper.GetWhitelabelLogoData(ASC.Web.Core.WhiteLabel.TenantWhiteLabelSettings,ASC.Web.Core.WhiteLabel.WhiteLabelLogoType,System.Boolean)">
+            <summary>
+            Get logo stream or null in case of default whitelabel
+            </summary>
+        </member>
+        <member name="T:ASC.Web.Core.Users.UserManagerWrapper">
+            <summary>
+            Web studio user manager helper
+            </summary>
+            
+        </member>
+        <member name="M:ASC.Web.Core.Users.UserManagerWrapper.#ctor(ASC.Web.Studio.Core.Notify.StudioNotifyService,ASC.Core.UserManager,ASC.Core.SecurityContext,ASC.Web.Core.Users.CustomNamingPeople,ASC.Core.Tenants.TenantUtil,ASC.Core.Common.Settings.SettingsManager,ASC.Core.Users.UserFormatter,ASC.Web.Core.Quota.CountPaidUserChecker,ASC.Core.TenantManager,ASC.Web.Core.WebItemSecurityCache,ASC.Core.Common.Quota.QuotaSocketManager,ASC.Core.Common.Quota.TenantQuotaFeatureStatHelper,ASC.Common.Threading.DistributedLock.Abstractions.IDistributedLockProvider,ASC.Web.Core.Utility.PasswordSettingsManager)">
+            <summary>
+            Web studio user manager helper
+            </summary>
+            
+        </member>
+        <member name="T:ASC.Web.Core.Users.SizeExtend">
+            <summary>
+            Helper class for manipulating images.
             </summary>
         </member>
         <member name="T:ASC.Web.Core.PublicResources.CustomModeResource">
@@ -63,71 +228,6 @@
             * *Collaborate on documents* with two co-editing mo [rest of string was truncated]&quot;;.
              </summary>
         </member>
-        <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_personal_custom_mode_after_registration1">
-             <summary>
-               Looks up a localized string similar to h1.Welcome to ONLYOFFICE Personal
-            
-            You have just created your personal office in the cloud.
-            
-            h3.It&apos;s a virtual workspace where you can edit and store documents, work with them from anywhere providing access to your friends or colleagues.
-            
-            h3.For a quick start, here&apos;s what you can do in ONLYOFFICE:
-            
-            - Create, view and edit text documents, spreadsheets, presentations.
-            
-            - Work with all popular formats. Highest compatibility with MS Office files.
-            
-            - Create and co-edit &quot;ready-to-fill-out forms&quot;:&quot;http [rest of string was truncated]&quot;;.
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_personal_custom_mode_change_email_v115">
-             <summary>
-               Looks up a localized string similar to Want to change the email on your cloud office account?
-            
-            Click the button below and log in* to your cloud.
-            
-            $OrangeButton
-            
-            The link is valid for 7 days.
-            
-            *If you are not signed in to your cloud office in this browser, you’ll need to use your old email for confirmation.
-            
-            Don’t want to change your email? Just ignore this message..
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_personal_custom_mode_change_password_v115">
-             <summary>
-               Looks up a localized string similar to Want to change the password on your cloud office account? Click the button below to confirm.
-            
-            $OrangeButton
-            
-            The link is valid for 7 days.
-            
-            Don’t want to change your password? Just ignore this message..
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_personal_custom_mode_confirmation">
-             <summary>
-               Looks up a localized string similar to Hello,
-            
-            you&apos;ve just registered an account at the ONLYOFFICE solution for personal use. Click &quot;here&quot;:&quot;$InviteLink&quot; to confirm the registration and create a password.
-            
-            If you can&apos;t open the link, please copy the following &quot;$InviteLink&quot;:&quot;$InviteLink&quot; and paste it into your browser address bar.
-            
-            $TrulyYours.
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_personal_custom_mode_profile_delete">
-             <summary>
-               Looks up a localized string similar to You have requested a termination of your account at personal.onlyoffice.com. Follow the link to complete the request (the link is active for a 7-day period):
-            
-            $OrangeButton
-            
-            *Note*: After the deletion, your account and all data associated with it will be erased permanently in accordance with our &quot;Privacy statement&quot;:&quot;https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5048502&amp;doc=SXhWMEVzSEYxNlVVaXJJeUVtS0kyYk14YWdXTEFUQmRWL250NllHNUFGbz0_IjUwNDg1MDIi0&quot;.
-            
-            &quot;Read more about account terminati [rest of string was truncated]&quot;;.
-             </summary>
-        </member>
         <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.pattern_remove_user_data_completed_custom_mode">
              <summary>
                Looks up a localized string similar to Dear $UserName,
@@ -157,21 +257,6 @@
         <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.ProductUserOpportunitiesCustomMode">
             <summary>
               Looks up a localized string similar to Create and edit own documents as well as the shared documents with the proper access rights|Give reading/editing access to other users to the documents and folders|Link Dropbox, Box and other accounts in the &apos;My documents&apos; section.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.subject_personal_custom_mode_after_registration1">
-            <summary>
-              Looks up a localized string similar to Welcome to ONLYOFFICE Personal.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.subject_personal_custom_mode_confirmation">
-            <summary>
-              Looks up a localized string similar to ONLYOFFICE Personal. Please activate your email address.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.subject_personal_custom_mode_profile_delete">
-            <summary>
-              Looks up a localized string similar to ONLYOFFICE Personal account termination.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.CustomModeResource.subject_remove_user_data_completed_custom_mode">
@@ -1251,11 +1336,6 @@
               Looks up a localized string similar to Custom.
             </summary>
         </member>
-        <member name="P:ASC.Web.Core.PublicResources.Resource.DnsChangeMsg">
-            <summary>
-              Looks up a localized string similar to A link to confirm the operation has been sent to {0} (the email address of the portal owner)..
-            </summary>
-        </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.EmailAndPasswordIncorrectAmiId">
             <summary>
               Looks up a localized string similar to Incorrect Instance id..
@@ -1279,6 +1359,11 @@
         <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorBadKeys">
             <summary>
               Looks up a localized string similar to Bad keys.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorCannotDeleteLastSpace">
+            <summary>
+              Looks up a localized string similar to The last full access space cannot be deleted.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorDisabledProfile">
@@ -1473,7 +1558,7 @@
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.ErrorWebPluginToManyInputFiles">
             <summary>
-              Looks up a localized string similar to To many input files.
+              Looks up a localized string similar to Too many input files.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.EuServerRegion">
@@ -1791,11 +1876,6 @@
               Looks up a localized string similar to Owner.
             </summary>
         </member>
-        <member name="P:ASC.Web.Core.PublicResources.Resource.PersonalFreeSpaceException">
-            <summary>
-              Looks up a localized string similar to Disk space quota exceeded.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.PortalName">
             <summary>
               Looks up a localized string similar to Cloud space for your office docs.
@@ -1806,6 +1886,11 @@
               Looks up a localized string similar to Portal Access.
             </summary>
         </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.QuotaGreaterPortalError">
+            <summary>
+              Looks up a localized string similar to Failed to set the memory quota - the memory quota you set is greater than portals quota..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.ReassignDataRemoveUserError">
             <summary>
               Looks up a localized string similar to Data reassign process for {0} is not complete..
@@ -1814,6 +1899,11 @@
         <member name="P:ASC.Web.Core.PublicResources.Resource.RecaptchaInvalid">
             <summary>
               Looks up a localized string similar to Invalid Recaptcha.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.RoomFreeSpaceException">
+            <summary>
+              Looks up a localized string similar to Room space quota exceeded.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.SgServerRegion">
@@ -1941,6 +2031,11 @@
               Looks up a localized string similar to SSO.
             </summary>
         </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.TariffsFeature_statistic">
+            <summary>
+              Looks up a localized string similar to Storage quotas &amp; statistic.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.TariffsFeature_thirdparty">
             <summary>
               Looks up a localized string similar to Third-party integrations.
@@ -1948,7 +2043,7 @@
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.TariffsFeature_total_size">
             <summary>
-              Looks up a localized string similar to {0} storage space.
+              Looks up a localized string similar to {0} per admin/power user and ability to add space on request.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.TariffsFeature_total_size_exception">
@@ -2019,6 +2114,11 @@
         <member name="P:ASC.Web.Core.PublicResources.Resource.TfaTooMuchError">
             <summary>
               Looks up a localized string similar to You have sent too many text messages. Please try again later..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.UserFreeSpaceException">
+            <summary>
+              Looks up a localized string similar to User space quota exceeded.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.UsServerRegion">
@@ -2275,11 +2375,6 @@
               Looks up a localized string similar to CONFIRM.
             </summary>
         </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.ButtonConfirmPortalAddressChange">
-            <summary>
-              Looks up a localized string similar to Confirm Portal Address Change.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.ButtonConfirmPortalOwnerUpdate">
             <summary>
               Looks up a localized string similar to Confirm Portal Owner Update.
@@ -2469,21 +2564,6 @@
             $OrangeButton
             
             *Note*: this link is valid for 7 days only. Please complete the portal owner change process within that period..
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_dns_change">
-             <summary>
-               Looks up a localized string similar to h1.Change of portal address
-            
-            Dear $OwnerName,
-            
-            There has been a request to change the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal address to &quot;$PortalAddress&quot;:&quot;$PortalAddress&quot; #if($PortalDns != &quot;&quot;) (&quot;$PortalDns&quot;:&quot;$PortalDns&quot; )#end.
-            
-            Please follow the link below to confirm the operation:
-            
-            $OrangeButton
-            
-            *Note*: this link is valid for 7 days only. Please complete the portal address change process within that period..
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_enterprise_admin_activation_v1">
@@ -2925,108 +3005,6 @@
             &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; style=&quot;border: 0 none; border-collapse: collapse; border-spacing: 0; empty-cells: show; margin: 0 auto; max-width: 600px; padding: 0; vertical-align: top; width: 100%; text-align: left;&quot;&gt;&lt;tr border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;td s [rest of string was truncated]&quot;;.
              </summary>
         </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_activate">
-             <summary>
-               Looks up a localized string similar to Hello, $UserName
-            You’ve been successfully registered at ONLYOFFICE Personal &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;.
-            
-            Connect your favorite cloud storage: Dropbox, Google Drive, OneDrive or Box to create a single workspace for your documents accessible from anywhere.
-            
-            Learn more about ONLYOFFICE Personal in &quot;our blog&quot;:&quot;$TagBlogLink&quot;.
-            
-            We&apos;re glad you&apos;re here. Stay tuned!
-            
-            $TrulyYours.
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_after_registration1">
-             <summary>
-               Looks up a localized string similar to h1.Welcome to ONLYOFFICE Personal
-            
-            You have just created your personal office in the cloud.
-            
-            h3.It&apos;s a virtual workspace where you can edit and store documents, work with them from anywhere providing access to your friends or colleagues.
-            
-            h3.For a quick start, here&apos;s what you can do in ONLYOFFICE:
-            
-            - Create, view and edit text documents, spreadsheets, presentations.
-            
-            - Work with all popular formats. Highest compatibility with MS Office files.
-            
-            - Create and co-edit &quot;ready-to-fill-out forms&quot;:&quot;http [rest of string was truncated]&quot;;.
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_after_registration14_v1">
-             <summary>
-               Looks up a localized string similar to h1. Get &lt;span style=&quot;color:#FF6F3D;&quot;&gt;free&lt;/span&gt; ONLYOFFICE apps
-            
-            
-            Hello, $UserName!
-            
-            Get free ONLYOFFICE apps to work on documents from any of your devices.
-            
-            &lt;table bgcolor=&quot;#FF6F3D&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%)&quot; style=&quot;background: linear-gradient(136.1deg, #FF8E3D -1.99%, #FF6F3D 100%); order: 0 none; border-spacing: 0; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; color: #333333; empty-cells: show; he [rest of string was truncated]&quot;;.
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_already_exist">
-             <summary>
-               Looks up a localized string similar to Hi there!
-            There was an attempt to register a new &quot;ONLYOFFICE Personal&quot;:&quot;$PortalUrl&quot; account using this email. If it was you, we want to inform you that the account already exists — proceed to ONLYOFFICE Personal and log in.
-            If you lost your password, you can recover it on &quot;password recovery page&quot;:&quot;$LinkToRecovery&quot;.
-            If you didn’t attempt to register a new account, probably someone else did it by mistake. In this case, please ignore this email.
-            
-            Have a nice day!
-            ONLYOFFICE team.
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_change_email_v115">
-             <summary>
-               Looks up a localized string similar to Want to change the email on your ONLYOFFICE account?
-            
-            Click the button below and log in* to your cloud.
-            
-            $OrangeButton
-            
-            The link is valid for 7 days.
-            
-            *If you are not signed in to ONLYOFFICE in this browser, you’ll need to use your old email for confirmation.
-            
-            Don’t want to change your email? Just ignore this message..
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_change_password_v115">
-             <summary>
-               Looks up a localized string similar to Want to change the password on your ONLYOFFICE Personal account? Click the button below to confirm.
-            
-            $OrangeButton
-            
-            The link is valid for 7 days.
-            
-            Don’t want to change your password? Just ignore this message..
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_confirmation">
-             <summary>
-               Looks up a localized string similar to Hello,
-            
-            You&apos;ve just registered an account at the ONLYOFFICE solution for personal use. Click &quot;here&quot;:&quot;$InviteLink&quot; to confirm the registration and create a password.
-            
-            If you can&apos;t open the link, please copy the following &quot;$InviteLink&quot;:&quot;$InviteLink&quot; and paste it into your browser address bar.
-            
-            $TrulyYours.
-             </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_personal_profile_delete">
-             <summary>
-               Looks up a localized string similar to You have requested a termination of your account at personal.onlyoffice.com. Follow the link to complete the request (the link is active for a 7-day period): 
-            
-            $OrangeButton
-            
-            *Note*: After the deletion, your account and all data associated with it will be erased permanently in accordance with our &quot;Privacy statement&quot;:&quot;https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5048502&amp;doc=SXhWMEVzSEYxNlVVaXJJeUVtS0kyYk14YWdXTEFUQmRWL250NllHNUFGbz0_IjUwNDg1MDIi0&quot;.
-            
-            &quot;Read more about account terminat [rest of string was truncated]&quot;;.
-             </summary>
-        </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_portal_deactivate">
              <summary>
                Looks up a localized string similar to h1.Deactivation of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal
@@ -3461,7 +3439,7 @@
              <summary>
                Looks up a localized string similar to Hello!
             
-            You are invited to join $Message room at &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Accept the invitation by clicking the link:
+            You are invited to join a DocSpace room at &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;. Accept the invitation by clicking the link:
             
             $OrangeButton
             
@@ -3628,6 +3606,20 @@
             The link is only valid for 7 days..
              </summary>
         </member>
+        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_zoom_welcome">
+             <summary>
+               Looks up a localized string similar to h1. to &lt;span style=&quot;color:#FF6F3D;&quot;&gt;ONLYOFFICE&lt;/span&gt; DocSpace!
+            
+            
+            Hello, $UserName!
+            
+            You have just created ONLYOFFICE DocSpace, a document hub where you can boost collaboration with your team, customers, partners, and more. Its address is &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;.
+            
+            Your current tariff plan is STARTUP. It is absolutely free and includes:
+            
+            &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; background=&quot;#ffffff&quot; style=&quot;background-color: #ffffff; border: 0 none; border-collapse: collapse; borde [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_activate_email">
             <summary>
               Looks up a localized string similar to ${LetterLogoText}. Please activate your email address.
@@ -3666,11 +3658,6 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_confirm_owner_change">
             <summary>
               Looks up a localized string similar to ${LetterLogoText}. Change of portal owner.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_dns_change">
-            <summary>
-              Looks up a localized string similar to ${LetterLogoText}. Change of portal address.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_enterprise_admin_activation_v1">
@@ -3821,36 +3808,6 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_opensource_user_welcome_v1">
             <summary>
               Looks up a localized string similar to Welcome to ONLYOFFICE DocSpace!.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_personal_activate">
-            <summary>
-              Looks up a localized string similar to Welcome to ONLYOFFICE for personal use!.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_personal_after_registration1">
-            <summary>
-              Looks up a localized string similar to Welcome to ONLYOFFICE Personal.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_personal_after_registration14_v1">
-            <summary>
-              Looks up a localized string similar to Get free ONLYOFFICE apps.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_personal_already_exist">
-            <summary>
-              Looks up a localized string similar to Log in to your ONLYOFFICE Personal account.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_personal_confirmation">
-            <summary>
-              Looks up a localized string similar to ONLYOFFICE Personal. Please activate your email address.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_personal_profile_delete">
-            <summary>
-              Looks up a localized string similar to ONLYOFFICE Personal account termination.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_portal_deactivate">
@@ -4068,39 +4025,15 @@
               Looks up a localized string similar to You’re invited to join ${__VirtualRootPath}.
             </summary>
         </member>
+        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_zoom_welcome">
+            <summary>
+              Looks up a localized string similar to Welcome to ONLYOFFICE DocSpace!.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.TrulyYoursText">
             <summary>
               Looks up a localized string similar to Truly Yours, ONLYOFFICE Team.
             </summary>
-        </member>
-        <member name="T:ASC.Web.Core.Users.UserManagerWrapper">
-            <summary>
-            Web studio user manager helper
-            </summary>
-            
-        </member>
-        <member name="T:ASC.Web.Core.Users.SizeExtend">
-            <summary>
-            Helper class for manipulating images.
-            </summary>
-        </member>
-        <member name="T:ASC.Web.Core.Users.UserPhotoManagerCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/user_photo_manager_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Web.Core.Users.UserPhotoManagerCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/user_photo_manager_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Web.Core.Users.UserPhotoManagerCacheItem.UserIdFieldNumber">
-            <summary>Field number for the "user_id" field.</summary>
-        </member>
-        <member name="F:ASC.Web.Core.Users.UserPhotoManagerCacheItem.SizeFieldNumber">
-            <summary>Field number for the "size" field.</summary>
-        </member>
-        <member name="F:ASC.Web.Core.Users.UserPhotoManagerCacheItem.FileNameFieldNumber">
-            <summary>Field number for the "file_name" field.</summary>
-        </member>
-        <member name="F:ASC.Web.Core.Users.UserPhotoManagerCacheItem.TenantIdFieldNumber">
-            <summary>Field number for the "tenant_id" field.</summary>
         </member>
         <member name="T:ASC.Web.Core.Utility.PasswordSettings">
             <summary>
@@ -4110,10 +4043,6 @@
             <summary>Minimum password length</summary>
             <type>System.Int32, System</type>
         </member>
-        <member name="P:ASC.Web.Core.Utility.PasswordSettings.AllowedCharactersRegexStr">
-            <summary>Allowed characters for the password in the regex string format</summary>
-            <type>System.String, System</type>
-        </member>
         <member name="P:ASC.Web.Core.Utility.PasswordSettings.UpperCase">
             <summary>Specifies if the password must include the uppercase letters or not</summary>
             <type>System.Boolean, System</type>
@@ -4122,19 +4051,23 @@
             <summary>Specifies if the password must include the digits or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="P:ASC.Web.Core.Utility.PasswordSettings.DigitsRegexStr">
-            <summary>Allowed digits for the password in the regex string format</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.Utility.PasswordSettings.UpperCaseRegexStr">
-            <summary>Allowed uppercase letters for the password in the regex string format</summary>
-            <type>System.String, System</type>
-        </member>
         <member name="P:ASC.Web.Core.Utility.PasswordSettings.SpecSymbols">
             <summary>Specifies if the password must include the special symbols or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="P:ASC.Web.Core.Utility.PasswordSettings.SpecSymbolsRegexStr">
+        <member name="P:ASC.Web.Core.Utility.PasswordSettingsManager.AllowedCharactersRegexStr">
+            <summary>Allowed characters for the password in the regex string format</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.PasswordSettingsManager.DigitsRegexStr">
+            <summary>Allowed digits for the password in the regex string format</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.PasswordSettingsManager.UpperCaseRegexStr">
+            <summary>Allowed uppercase letters for the password in the regex string format</summary>
+            <type>System.String, System</type>
+        </member>
+        <member name="P:ASC.Web.Core.Utility.PasswordSettingsManager.SpecSymbolsRegexStr">
             <summary>Allowed special symbols for the password in the regex string format</summary>
             <type>System.String, System</type>
         </member>
@@ -4177,198 +4110,6 @@
         <member name="P:ASC.Web.Core.Utility.Settings.WizardSettings.Completed">
             <summary>Specifies if the Wizard settings are completed or not</summary>
             <type>System.Boolean, System</type>
-        </member>
-        <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper.Settings">
-            <summary>Additional white label settings</summary>
-            <type>ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core</type>
-        </member>
-        <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings">
-            <summary>
-            </summary>
-        </member>
-        <member name="F:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.AdditionalWhiteLabelSettingsHelper">
-            <summary>Additional white label settings helper</summary>
-            <type>ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit, ASC.Web.Core</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.StartDocsEnabled">
-            <summary>Specifies if the start document is enabled or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.HelpCenterEnabled">
-            <summary>Specifies if the help center is enabled or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.FeedbackAndSupportEnabled">
-            <summary>Specifies if feedback and support are available or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.FeedbackAndSupportUrl">
-            <summary>Feedback and support URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.UserForumEnabled">
-            <summary>Specifies if the user forum is enabled or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.UserForumUrl">
-            <summary>User forum URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.VideoGuidesEnabled">
-            <summary>Specifies if the video guides are enabled or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.VideoGuidesUrl">
-            <summary>Video guides URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.SalesEmail">
-            <summary>Sales email</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.BuyUrl">
-            <summary>URL to pay for the portal</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.LicenseAgreementsEnabled">
-            <summary>Specifies if the license agreements are enabled or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings.LicenseAgreementsUrl">
-            <summary>License agreements URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="T:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultHelpCenterUrl">
-            <summary>Default help center URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultFeedbackAndSupportUrl">
-            <summary>Default feedback and support URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultUserForumUrl">
-            <summary>Default user forum URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultVideoGuidesUrl">
-            <summary>Default video guides URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultMailSalesEmail">
-            <summary>Mail sales URL</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultBuyUrl">
-            <summary>Default URL to pay for the portal</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="T:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper.Settings">
-            <summary>Company white label settings</summary>
-            <type>ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings, ASC.Web.Core</type>
-        </member>
-        <member name="T:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings">
-            <summary>
-            </summary>
-        </member>
-        <member name="F:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.CoreSettings">
-            <summary>Core settings</summary>
-            <type>ASC.Core.CoreSettings, ASC.Core.Common</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.CompanyName">
-            <summary>Company name</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Site">
-            <summary>Site</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Email">
-            <summary>Email address</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Address">
-            <summary>Address</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.Phone">
-            <summary>Phone</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings.IsLicensor">
-            <summary>Specifies if a company is a licensor or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="M:ASC.Web.Core.WhiteLabel.TenantInfoSettingsHelper.GetStorageLogoData(ASC.Web.Core.WhiteLabel.TenantInfoSettings)">
-            <summary>
-            Get logo stream or null in case of default logo
-            </summary>
-        </member>
-        <member name="M:ASC.Web.Core.WhiteLabel.TenantLogoManager.GetWhitelabelMailLogoAsync">
-            <summary>
-            Get logo stream or null in case of default logo
-            </summary>
-        </member>
-        <member name="M:ASC.Web.Core.WhiteLabel.TenantWhiteLabelSettingsHelper.GetWhitelabelLogoData(ASC.Web.Core.WhiteLabel.TenantWhiteLabelSettings,ASC.Web.Core.WhiteLabel.WhiteLabelLogoType,System.Boolean)">
-            <summary>
-            Get logo stream or null in case of default whitelabel
-            </summary>
-        </member>
-        <member name="T:ASC.Web.Core.WhiteLabel.TenantLogoCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/tenant_logo_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Web.Core.WhiteLabel.TenantLogoCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/tenant_logo_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Web.Core.WhiteLabel.TenantLogoCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="T:ASC.Web.Core.WebPluginCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/web_plugin_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Web.Core.WebPluginCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/web_plugin_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Web.Core.WebPluginCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="T:ASC.Web.Core.SmsKeyCacheKeyReflection">
-            <summary>Holder for reflection information generated from protos/sms_key_cache_key.proto</summary>
-        </member>
-        <member name="P:ASC.Web.Core.SmsKeyCacheKeyReflection.Descriptor">
-            <summary>File descriptor for protos/sms_key_cache_key.proto</summary>
-        </member>
-        <member name="F:ASC.Web.Core.SmsKeyCacheKey.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="T:ASC.Web.Core.MailServiceHelperCacheReflection">
-            <summary>Holder for reflection information generated from protos/mail_service_helper_cache.proto</summary>
-        </member>
-        <member name="P:ASC.Web.Core.MailServiceHelperCacheReflection.Descriptor">
-            <summary>File descriptor for protos/mail_service_helper_cache.proto</summary>
-        </member>
-        <member name="F:ASC.Web.Core.MailServiceHelperCache.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="T:ASC.Web.Core.WebItemSecurityNotifierReflection">
-            <summary>Holder for reflection information generated from protos/web_item_security_notifier.proto</summary>
-        </member>
-        <member name="P:ASC.Web.Core.WebItemSecurityNotifierReflection.Descriptor">
-            <summary>File descriptor for protos/web_item_security_notifier.proto</summary>
-        </member>
-        <member name="F:ASC.Web.Core.WebItemSecurityNotifier.TenantFieldNumber">
-            <summary>Field number for the "tenant" field.</summary>
         </member>
         <member name="T:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2">
             <summary>
@@ -4577,45 +4318,6 @@
             <summary>Shown or hidden</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="P:ASC.Web.Studio.Core.FileSizeComment.FileImageSizeException">
-            <summary>
-            The maximum file size is exceeded (1 MB).
-            </summary>
-        </member>
-        <member name="M:ASC.Web.Studio.Core.FileSizeComment.GetFileSizeExceptionAsync">
-            <summary>
-            The maximum file size is exceeded (25 MB).
-            </summary>
-        </member>
-        <member name="M:ASC.Web.Studio.Core.FileSizeComment.GetFileSizeNoteAsync">
-            <summary>
-            Get note about maximum file size
-            </summary>
-            <returns>Note: the file size cannot exceed 25 MB</returns>
-        </member>
-        <member name="M:ASC.Web.Studio.Core.FileSizeComment.GetFileSizeNoteAsync(System.Boolean)">
-            <summary>
-            Get note about maximum file size
-            </summary>
-            <param name="withHtmlStrong">Highlight a word about size</param>
-            <returns>Note: the file size cannot exceed 25 MB</returns>
-        </member>
-        <member name="M:ASC.Web.Studio.Core.FileSizeComment.GetFileSizeNoteAsync(System.String,System.Boolean)">
-            <summary>
-            Get note about maximum file size
-            </summary>
-            <param name="note">Resource fromat of note</param>
-            <param name="withHtmlStrong">Highlight a word about size</param>
-            <returns>Note: the file size cannot exceed 25 MB</returns>
-        </member>
-        <member name="M:ASC.Web.Studio.Core.FileSizeComment.GetFileImageSizeNote(System.String,System.Boolean)">
-            <summary>
-            Get note about maximum file size of image
-            </summary>
-            <param name="note">Resource fromat of note</param>
-            <param name="withHtmlStrong">Highlight a word about size</param>
-            <returns>Note: the file size cannot exceed 1 MB</returns>
-        </member>
         <member name="M:ASC.Web.Studio.Core.FileSizeComment.FilesSizeToString(System.Int64)">
             <summary>
             Generates a string the file size
@@ -4635,16 +4337,6 @@
         <member name="P:ASC.Web.Studio.Core.TipsSettings.Show">
             <summary>Specifies if the tips will be shown or not</summary>
             <type>System.Boolean, System</type>
-        </member>
-        <member name="M:ASC.Web.Studio.Utility.TenantExtra.GetMaxUploadSizeAsync">
-            <summary>
-            Max possible file size for not chunked upload. Less or equal than 100 mb.
-            </summary>
-        </member>
-        <member name="M:ASC.Web.Studio.Utility.TenantExtra.GetMaxChunkedUploadSizeAsync">
-            <summary>
-            Max possible file size for chunked upload.
-            </summary>
         </member>
         <member name="M:System.StringExtension.ReplaceSingleQuote(System.String)">
             <summary>

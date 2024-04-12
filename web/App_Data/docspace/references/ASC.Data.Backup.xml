@@ -17,6 +17,11 @@
             <summary>Storage parameters</summary>
             <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Object, System.Object}}, System.Collections.Generic</type>
         </member>
+        <member name="P:ASC.Data.Backup.ApiModels.BackupDto.Dump">
+            <summary>Dump</summary>
+            <type>System.Bolean, System</type>
+            <example>true</example>
+        </member>
         <member name="T:ASC.Data.Backup.ApiModels.BackupRestoreDto">
             <summary>
             </summary>
@@ -59,6 +64,11 @@
             <summary>Cron parameters</summary>
             <type>ASC.Data.Backup.ApiModels.Cron, ASC.Data.Backup</type>
         </member>
+        <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.Dump">
+            <summary>Dump</summary>
+            <type>System.Bolean, System</type>
+            <example>true</example>
+        </member>
         <member name="T:ASC.Data.Backup.ApiModels.Cron">
             <summary>
             </summary>
@@ -79,6 +89,12 @@
             <example>0</example>
         </member>
         <member name="T:ASC.Data.Backup.Controllers.BackupController">
+            <summary>
+            Backup API.
+            </summary>
+            <name>backup</name>
+        </member>
+        <member name="M:ASC.Data.Backup.Controllers.BackupController.#ctor(ASC.Data.Backup.BackupAjaxHandler,ASC.Core.TenantManager,ASC.Core.SecurityContext,ASC.Core.CoreBaseSettings,ASC.Web.Studio.Utility.TenantExtra,ASC.EventBus.Abstractions.IEventBus,ASC.Web.Studio.Utility.CommonLinkUtility,ASC.Core.CoreSettings)">
             <summary>
             Backup API.
             </summary>

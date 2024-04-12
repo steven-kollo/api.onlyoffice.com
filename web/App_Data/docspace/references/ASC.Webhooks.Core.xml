@@ -66,14 +66,5 @@
             <summary>Endpoint</summary>
             <type>System.String, System</type>
         </member>
-        <member name="T:ASC.Web.Webhooks.WebhookRequestReflection">
-            <summary>Holder for reflection information generated from proto/webhook_request.proto</summary>
-        </member>
-        <member name="P:ASC.Web.Webhooks.WebhookRequestReflection.Descriptor">
-            <summary>File descriptor for proto/webhook_request.proto</summary>
-        </member>
-        <member name="F:ASC.Web.Webhooks.WebhookRequest.IdFieldNumber">
-            <summary>Field number for the "id" field.</summary>
-        </member>
     </members>
 </doc>

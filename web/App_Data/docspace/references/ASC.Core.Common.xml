@@ -4,18 +4,6 @@
         <name>ASC.Core.Common</name>
     </assembly>
     <members>
-        <member name="T:ASC.Core.Common.Configuration.ConsumerCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/consumer_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Common.Configuration.ConsumerCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/consumer_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Configuration.ConsumerCacheItem.NameFieldNumber">
-            <summary>Field number for the "name" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Configuration.ConsumerCacheItem.TenantIdFieldNumber">
-            <summary>Field number for the "tenant_id" field.</summary>
-        </member>
         <member name="T:ASC.Core.Common.EF.FireBaseUser">
             <summary>
             </summary>
@@ -46,51 +34,6 @@
         </member>
         <member name="T:ASC.Core.Common.Log.DispatchEngineLogger.__LogMessageStruct">
             <summary> This API supports the logging infrastructure and is not intended to be used directly from your code. It is subject to change in the future. </summary>
-        </member>
-        <member name="T:ASC.Core.Common.Notify.CreateClientProtoReflection">
-            <summary>Holder for reflection information generated from protos/create_client_proto.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Common.Notify.CreateClientProtoReflection.Descriptor">
-            <summary>File descriptor for protos/create_client_proto.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.CreateClientProto.TenantIdFieldNumber">
-            <summary>Field number for the "tenant_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.CreateClientProto.TokenFieldNumber">
-            <summary>Field number for the "token" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.CreateClientProto.TokenLifespanFieldNumber">
-            <summary>Field number for the "token_lifespan" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.CreateClientProto.ProxyFieldNumber">
-            <summary>Field number for the "proxy" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.CreateClientProto.TimeFieldNumber">
-            <summary>Field number for the "time" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Common.Notify.DisableClientProtoReflection">
-            <summary>Holder for reflection information generated from protos/disable_client_proto.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Common.Notify.DisableClientProtoReflection.Descriptor">
-            <summary>File descriptor for protos/disable_client_proto.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.DisableClientProto.TenantIdFieldNumber">
-            <summary>Field number for the "tenant_id" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Common.Notify.RegisterUserProtoReflection">
-            <summary>Holder for reflection information generated from protos/register_user_proto.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Common.Notify.RegisterUserProtoReflection.Descriptor">
-            <summary>File descriptor for protos/register_user_proto.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.RegisterUserProto.UserIdFieldNumber">
-            <summary>Field number for the "user_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.RegisterUserProto.TenantIdFieldNumber">
-            <summary>Field number for the "tenant_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Common.Notify.RegisterUserProto.TokenFieldNumber">
-            <summary>Field number for the "token" field.</summary>
         </member>
         <member name="T:ASC.Core.Billing.License">
             <summary>
@@ -168,6 +111,10 @@
             <summary>
             </summary>
         </member>
+        <member name="M:ASC.Core.Billing.Quota.#ctor(System.Int32,System.Int32)">
+            <summary>
+            </summary>
+        </member>
         <member name="P:ASC.Core.Billing.Quota.Id">
             <summary>ID</summary>
             <type>System.Int32, System</type>
@@ -175,102 +122,6 @@
         <member name="P:ASC.Core.Billing.Quota.Quantity">
             <summary>Quantity</summary>
             <type>System.Int32, System</type>
-        </member>
-        <member name="T:ASC.Core.Billing.TariffCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/tariff_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Billing.TariffCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/tariff_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Billing.TariffCacheItem.TenantIdFieldNumber">
-            <summary>Field number for the "tenant_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Billing.TariffCacheItem.TariffIdFieldNumber">
-            <summary>Field number for the "tariff_id" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Caching.TenantCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/tenant_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Caching.TenantCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/tenant_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.TenantCacheItem.TenantIdFieldNumber">
-            <summary>Field number for the "tenant_id" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Caching.GroupCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/group_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Caching.GroupCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/group_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.GroupCacheItem.IdFieldNumber">
-            <summary>Field number for the "id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.GroupCacheItem.TenantFieldNumber">
-            <summary>Field number for the "tenant" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Caching.UserGroupRefCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/user_group_ref_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Caching.UserGroupRefCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/user_group_ref_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserGroupRefCacheItem.UserIdFieldNumber">
-            <summary>Field number for the "user_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserGroupRefCacheItem.GroupIdFieldNumber">
-            <summary>Field number for the "group_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserGroupRefCacheItem.RemovedFieldNumber">
-            <summary>Field number for the "removed" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserGroupRefCacheItem.RefTypeFieldNumber">
-            <summary>Field number for the "ref_type" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserGroupRefCacheItem.LastModifiedFieldNumber">
-            <summary>Field number for the "last_modified" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserGroupRefCacheItem.TenantFieldNumber">
-            <summary>Field number for the "tenant" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Caching.UserInfoCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/user_info_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Caching.UserInfoCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/user_info_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserInfoCacheItem.IdFieldNumber">
-            <summary>Field number for the "id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserInfoCacheItem.TenantFieldNumber">
-            <summary>Field number for the "tenant" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Caching.UserPhotoCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/user_photo_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Caching.UserPhotoCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/user_photo_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.UserPhotoCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Caching.TenantSettingReflection">
-            <summary>Holder for reflection information generated from protos/tenant_setting.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Caching.TenantSettingReflection.Descriptor">
-            <summary>File descriptor for protos/tenant_setting.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.TenantSetting.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
-        </member>
-        <member name="T:ASC.Core.Caching.QuotaCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/quota_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Caching.QuotaCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/quota_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Caching.QuotaCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
         </member>
         <member name="T:ASC.Core.CoreSettings">
             <summary>
@@ -416,24 +267,6 @@
             <summary>
             </summary>
         </member>
-        <member name="F:ASC.Core.SubscriptionRecord.RecipientIdFieldNumber">
-            <summary>Field number for the "recipient_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionRecord.ActionIdFieldNumber">
-            <summary>Field number for the "action_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionRecord.ObjectIdFieldNumber">
-            <summary>Field number for the "object_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionRecord.SourceIdFieldNumber">
-            <summary>Field number for the "source_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionRecord.SubscribedFieldNumber">
-            <summary>Field number for the "subscribed" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionRecord.TenantFieldNumber">
-            <summary>Field number for the "tenant" field.</summary>
-        </member>
         <member name="T:ASC.Core.Tenants.TenantAuditSettings">
             <summary>
             </summary>
@@ -542,6 +375,10 @@
             <summary>Specifies if the SSO settings are available or not</summary>
             <type>System.Boolean, System</type>
         </member>
+        <member name="P:ASC.Core.Tenants.TenantQuota.Statistic">
+            <summary>Specifies if the statistic settings are available or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
         <member name="P:ASC.Core.Tenants.TenantQuota.WhiteLabel">
             <summary>Specifies if the white label settings are available or not</summary>
             <type>System.Boolean, System</type>
@@ -573,15 +410,6 @@
         <member name="T:ASC.Core.Tenants.TenantTrustedDomainsType">
             <summary>
             </summary>
-        </member>
-        <member name="T:ASC.Core.Data.SettingsCacheItemReflection">
-            <summary>Holder for reflection information generated from protos/settings_cache_item.proto</summary>
-        </member>
-        <member name="P:ASC.Core.Data.SettingsCacheItemReflection.Descriptor">
-            <summary>File descriptor for protos/settings_cache_item.proto</summary>
-        </member>
-        <member name="F:ASC.Core.Data.SettingsCacheItem.KeyFieldNumber">
-            <summary>Field number for the "key" field.</summary>
         </member>
         <member name="T:ASC.Core.Encryption.EncryptionSettings">
             <summary>
@@ -617,54 +445,6 @@
         <member name="P:ASC.Core.TenantVersion.Name">
             <summary>Name</summary>
             <type>System.String, System</type>
-        </member>
-        <member name="T:ASC.Core.SubscriptionMethodCacheReflection">
-            <summary>Holder for reflection information generated from protos/subscription_method_cache.proto</summary>
-        </member>
-        <member name="P:ASC.Core.SubscriptionMethodCacheReflection.Descriptor">
-            <summary>File descriptor for protos/subscription_method_cache.proto</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionMethodCache.RecipientIdFieldNumber">
-            <summary>Field number for the "recipient_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionMethodCache.ActionIdFieldNumber">
-            <summary>Field number for the "action_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionMethodCache.SourceIdFieldNumber">
-            <summary>Field number for the "source_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionMethodCache.MethodsFieldNumber">
-            <summary>Field number for the "methods" field.</summary>
-        </member>
-        <member name="F:ASC.Core.SubscriptionMethodCache.TenantFieldNumber">
-            <summary>Field number for the "tenant" field.</summary>
-        </member>
-        <member name="T:ASC.Core.SubscriptionRecordReflection">
-            <summary>Holder for reflection information generated from protos/subscription_record.proto</summary>
-        </member>
-        <member name="P:ASC.Core.SubscriptionRecordReflection.Descriptor">
-            <summary>File descriptor for protos/subscription_record.proto</summary>
-        </member>
-        <member name="T:ASC.Core.AzRecordCacheReflection">
-            <summary>Holder for reflection information generated from protos/az_record_cache.proto</summary>
-        </member>
-        <member name="P:ASC.Core.AzRecordCacheReflection.Descriptor">
-            <summary>File descriptor for protos/az_record_cache.proto</summary>
-        </member>
-        <member name="F:ASC.Core.AzRecordCache.SubjectIdFieldNumber">
-            <summary>Field number for the "subject_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.AzRecordCache.ActionIdFieldNumber">
-            <summary>Field number for the "action_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.AzRecordCache.ObjectIdFieldNumber">
-            <summary>Field number for the "object_id" field.</summary>
-        </member>
-        <member name="F:ASC.Core.AzRecordCache.ReactionFieldNumber">
-            <summary>Field number for the "reaction" field.</summary>
-        </member>
-        <member name="F:ASC.Core.AzRecordCache.TenantFieldNumber">
-            <summary>Field number for the "tenant" field.</summary>
         </member>
         <member name="T:ASC.MessagingSystem.Core.MessageAction">
             <summary>
@@ -733,6 +513,10 @@
         <member name="P:ASC.Security.Cryptography.EmailValidationKeyModel.Type">
             <summary>Confirmation email type</summary>
             <type>System.Nullabel{ASC.Web.Studio.Utility.ConfirmType}, System</type>
+        </member>
+        <member name="P:ASC.Security.Cryptography.EmailValidationKeyModel.First">
+            <summary>Access an account for the first time or not</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Security.Cryptography.EmailValidationKeyModel.RoomId">
             <summary>Room ID</summary>
