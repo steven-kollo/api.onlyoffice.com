@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: added the information about the favIconUrl parameter to the WOPI discovery
 - docbuilder: new samples
 - editors: config to clipboard
 - editors: added the Setting avatars page to How it works
