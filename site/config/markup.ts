@@ -17,6 +17,10 @@ import remarkGFM from "remark-gfm"
 
 import rehypeSlug from "rehype-slug"
 import rehypeAutolink from "rehype-autolink-headings"
+import {env} from "node:process"
+
+// todo: temp
+const doSkip = env.SKIP_REMOTE === "true"
 
 // todo: refactor it.
 // add support for hot reload
@@ -91,7 +95,7 @@ export function markupPlugin(uc: UserConfig): void {
                   // todo: support assets
                   // todo: support relative links
                   // todo: move to config/remote
-                  if (vf.data.matter.remote !== undefined) {
+                  if (!doSkip && vf.data.matter.remote !== undefined) {
                     if (!isGitHubURL(vf.data.matter.remote)) {
                       throw new Error("Invalid remote URL")
                     }
