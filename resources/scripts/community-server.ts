@@ -13,8 +13,8 @@ import { PickPath } from "../utils/openapi.ts"
 import { chain, createStringStream, mergeArrays } from "../utils/stream.ts"
 import { createREST, writeComponents } from "./utils.ts"
 
-const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-community-server-declarations-demo/dist/"
-const file = "portals.json"
+const ref = "https://raw.githubusercontent.com/onlyoffice/community-server-declarations/dist/"
+const file = "community-server.json"
 const resource = "community-server"
 
 /**

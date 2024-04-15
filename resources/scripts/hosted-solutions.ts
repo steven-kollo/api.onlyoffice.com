@@ -14,7 +14,7 @@ import { UnStreamObject, chain, createStringStream, makeObject, mergeArrays, mer
 import { appendPathPostfix, createREST } from "./utils.ts"
 
 const resource = "hosted-solutions"
-const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-hosted-solutions-declarations-demo/dist/"
+const ref = "https://raw.githubusercontent.com/onlyoffice/docspace-hosted-solutions-declarations/dist/"
 const file = "hosted-solutions.json"
 
 /**

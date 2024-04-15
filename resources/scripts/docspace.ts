@@ -26,7 +26,7 @@ import {
 } from "../utils/stream.ts"
 import { appendPathPostfix, capitalizeTitle, createREST } from "./utils.ts"
 
-const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-declarations-demo2/dist/"
+const ref = "https://raw.githubusercontent.com/onlyoffice/docspace-declarations/dist/"
 const files = [
   "asc.data.backup.swagger.json",
   "asc.files.swagger.json",

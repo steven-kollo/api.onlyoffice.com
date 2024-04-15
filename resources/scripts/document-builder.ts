@@ -20,7 +20,7 @@ import { num, writeTemplate } from "./utils.ts"
 import { createRequire } from "node:module"
 const require = createRequire(import.meta.url)
 
-const ref = "https://raw.githubusercontent.com/vanyauhalin/onlyoffice-docs-definitions-demo/dist/"
+const ref = "https://raw.githubusercontent.com/onlyoffice/document-builder-declarations/dist/master/"
 const files = [
   "sdkjs-forms.json",
   "sdkjs.json"
