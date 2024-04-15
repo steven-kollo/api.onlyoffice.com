@@ -5,7 +5,6 @@ import { Fragment, h } from "preact"
 
 export function data() {
   return {
-    title: "Sitemap",
     permalink: "/sitemap.xml",
     layout: "xml",
     eleventyExcludeFromCollections: true

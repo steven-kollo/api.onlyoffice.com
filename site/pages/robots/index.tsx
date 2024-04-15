@@ -1,10 +1,9 @@
 import type { Eleventy } from "@/config/eleventy.ts"
 import { h } from "preact"
-import { data as sitemapData } from "../sitemap/xml.tsx"
+import { data as sitemapData } from "../Sitemap/xml.tsx"
 
 export function data() {
   return {
-    title: "Robots",
     layout: null,
     permalink: "/robots.txt",
     eleventyExcludeFromCollections: true

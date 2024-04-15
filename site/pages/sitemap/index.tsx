@@ -6,7 +6,6 @@ import { h } from "preact"
 
 export function data() {
   return {
-    title: "Sitemap",
     layout: "blank",
     eleventyExcludeFromCollections: true
   }

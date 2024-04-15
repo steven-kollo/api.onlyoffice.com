@@ -77,3 +77,9 @@ table {
 .content h6 a[href^="#"]:hover:before {
   visibility: visible;
 }
+
+.breadcrumbs__crumb {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
