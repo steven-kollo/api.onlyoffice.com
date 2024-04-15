@@ -23,6 +23,9 @@ importers:
       '@storybook/preact-vite':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.19.6)(typescript@5.4.2)(vite@5.1.6)
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
       preact:
         specifier: ^10.19.3
         version: 10.19.6
@@ -44,12 +47,15 @@ importers:
       storybook-addon-paddings:
         specifier: ^5.0.1
         version: 5.0.1(@storybook/components@7.6.17)(@storybook/manager-api@7.6.17)(@storybook/preview-api@7.6.17)(@storybook/theming@7.6.17)(@storybook/types@7.6.17)(react-dom@18.2.0)(react@18.2.0)
+      tsx:
+        specifier: ^4.7.1
+        version: 4.7.1
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
       vite:
         specifier: ^5.1.6
-        version: 5.1.6
+        version: 5.1.6(@types/node@20.12.7)
 
   declarations/fixtures:
     devDependencies:
@@ -452,6 +458,9 @@ importers:
       '@onlyoffice/documentation-utils':
         specifier: workspace:^
         version: link:../../utils
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
       es-main:
         specifier: ^1.3.0
         version: 1.3.0
@@ -464,6 +473,9 @@ importers:
       sade:
         specifier: ^1.8.1
         version: 1.8.1
+      tsx:
+        specifier: ^4.7.1
+        version: 4.7.1
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
@@ -522,6 +534,9 @@ importers:
       '@onlyoffice/documentation-utils':
         specifier: workspace:^
         version: link:../../utils
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
       es-main:
         specifier: ^1.3.0
         version: 1.3.0
@@ -534,6 +549,9 @@ importers:
       sade:
         specifier: ^1.8.1
         version: 1.8.1
+      tsx:
+        specifier: ^4.7.1
+        version: 4.7.1
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
@@ -3556,7 +3574,7 @@ packages:
       magic-string: 0.30.8
       ts-dedent: 2.2.0
       typescript: 5.4.2
-      vite: 5.1.6
+      vite: 5.1.6(@types/node@20.12.7)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -3947,7 +3965,7 @@ packages:
       '@storybook/builder-vite': 8.0.0(typescript@5.4.2)(vite@5.1.6)
       '@storybook/preact': 8.0.0(preact@10.19.6)
       preact: 10.19.6
-      vite: 5.1.6
+      vite: 5.1.6(@types/node@20.12.7)
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - encoding
@@ -4159,19 +4177,19 @@ packages:
     resolution: {integrity: sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg==}
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
     dev: true
 
   /@types/connect@3.4.38:
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
     dependencies:
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
     dev: true
 
   /@types/cross-spawn@6.0.6:
     resolution: {integrity: sha512-fXRhhUkG4H3TQk5dBhQ7m/JDdSNHKwR2BBia62lhwEIq9xGiQKLxd6LymNhn47SjXhsUEPmxi+PKw2OkW4LLjA==}
     dependencies:
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
     dev: true
 
   /@types/debug@4.1.12:
@@ -4214,7 +4232,7 @@ packages:
   /@types/express-serve-static-core@4.17.43:
     resolution: {integrity: sha512-oaYtiBirUOPQGSWNGPWnzyAFJ0BP3cwvN4oWZQY+zUBwpVIGsKUkpBpSztp74drYcjavs7SKFZ4DX1V2QeN8rg==}
     dependencies:
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
       '@types/qs': 6.9.12
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -4283,7 +4301,7 @@ packages:
   /@types/multistream@4.1.3:
     resolution: {integrity: sha512-t57vmDEJOZuC0M3IrZYfCd9wolTcr3ZTCGk1iwHNosvgBX+7/SMvCGcR8wP9lidpelBZQ12crSuINOxkk0azPA==}
     dependencies:
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
     dev: true
 
   /@types/node@18.19.23:
@@ -4294,6 +4312,12 @@ packages:
 
   /@types/node@20.11.26:
     resolution: {integrity: sha512-YwOMmyhNnAWijOBQweOJnQPl068Oqd4K3OFbTc6AHJwzweUwwWG3GIFY74OKks2PJUDkQPeddOQES9mLn1CTEQ==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
+  /@types/node@20.12.7:
+    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -4346,7 +4370,7 @@ packages:
     resolution: {integrity: sha512-x2EM6TJOybec7c52BX0ZspPodMsQUd5L6PRwOunVyVUhXiBSKf3AezDL8Dgvgt5o0UfKNfuA0eMLr2wLT4AiBA==}
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
     dev: true
 
   /@types/serve-static@1.15.5:
@@ -4354,19 +4378,19 @@ packages:
     dependencies:
       '@types/http-errors': 2.0.4
       '@types/mime': 3.0.4
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
     dev: true
 
   /@types/stream-chain@2.0.4:
     resolution: {integrity: sha512-V7TsWLHrx79KumkHqSD7F8eR6POpEuWb6PuXJ7s/dRHAf3uVst3Jkp1yZ5XqIfECZLQ4a28vBVstTErmsMBvaQ==}
     dependencies:
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
     dev: true
 
   /@types/stream-json@1.7.7:
     resolution: {integrity: sha512-hHG7cLQ09H/m9i0jzL6UJAeLLxIWej90ECn0svO4T8J0nGcl89xZDQ2ujT4WKlvg0GWkcxJbjIDzW/v7BYUM6Q==}
     dependencies:
-      '@types/node': 20.11.26
+      '@types/node': 20.12.7
       '@types/stream-chain': 2.0.4
     dev: true
 
@@ -9728,7 +9752,7 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite@5.1.6:
+  /vite@5.1.6(@types/node@20.12.7):
     resolution: {integrity: sha512-yYIAZs9nVfRJ/AiOLCA91zzhjsHUgMjB+EigzFb6W2XTLO8JixBCKCjvhKZaye+NKYHCrkv3Oh50dH9EdLU2RA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -9756,6 +9780,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.12.7
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.13.0

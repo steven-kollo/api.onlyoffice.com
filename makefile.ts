@@ -1,18 +1,12 @@
-#!/usr/bin/env node
-// @ts-check
-
 import { argv } from "node:process"
 import { Cli, Logger } from "@11ty/eleventy-dev-server/cli.js"
 import EleventyDevServer from "@11ty/eleventy-dev-server/server.js"
 import sade from "sade"
-import * as resources from "./resources/makefile.js"
-import * as iconJS from "./ui/icon/makefile.js"
-import * as logoJS from "./ui/logo/makefile.js"
+import * as resources from "./resources/makefile.ts"
+import * as iconJS from "./ui/icon/makefile.ts"
+import * as logoJS from "./ui/logo/makefile.ts"
 
-/**
- * @returns {void}
- */
-function main() {
+function main(): void {
   sade("./makefile.js")
     .command("build")
     .action(build)
@@ -21,10 +15,7 @@ function main() {
     .parse(argv)
 }
 
-/**
- * @returns {Promise<void>}
- */
-async function build() {
+async function build(): Promise<void> {
   await Promise.all([
     resources.build(),
 
@@ -34,10 +25,7 @@ async function build() {
   ])
 }
 
-/**
- * @returns {Promise<void>}
- */
-async function previewStorybook() {
+async function previewStorybook(): Promise<void> {
   const o = {
     ...Cli.getDefaultOptions(),
     domDiff: false,

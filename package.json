@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "build-storybook": "storybook build --disable-telemetry --output-dir dist",
-    "build": "node ./makefile.js build",
-    "preview-storybook": "node ./makefile.js preview-storybook",
+    "build": "tsx ./makefile.ts build",
+    "preview-storybook": "tsx ./makefile.ts preview-storybook",
     "serve-storybook": "storybook dev --no-open --port 6006"
   },
   "devDependencies": {
@@ -14,6 +14,7 @@
     "@storybook/blocks": "^8.0.0",
     "@storybook/preact": "^8.0.0",
     "@storybook/preact-vite": "^8.0.0",
+    "@types/node": "^20.12.7",
     "preact": "^10.19.3",
     "preact-render-to-string": "^6.4.1",
     "react": "^18.2.0",
@@ -21,6 +22,7 @@
     "sade": "^1.8.1",
     "storybook": "^8.0.0",
     "storybook-addon-paddings": "^5.0.1",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3",
     "vite": "^5.1.6"
   },
