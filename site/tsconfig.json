@@ -16,7 +16,7 @@
     "./components",
     "./config",
     "./layouts",
-    "../.local/pages",
+    "./pages",
     "./resources",
     "./types/*.d.ts",
     "./eleventy.config.ts",
