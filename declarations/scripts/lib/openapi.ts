@@ -1,3 +1,4 @@
+import "./openapi.test.ts"
 import type {TransformCallback} from "node:stream"
 import {Transform} from "node:stream"
 import type {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
@@ -220,8 +221,8 @@ function createRequest(c: Cache, m: string, p: string, s: OpenAPI.OperationObjec
   }
   populateRequestHero(r, m, p, s)
   populateRequestParameters(r, s)
-  populateRequestExamples(r)
   populateRequestResponses(c, r, s)
+  populateRequestExamples(r)
   normalizeRequest(r)
   return r
 }
@@ -349,33 +350,66 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
   }
 }
 
-function populateRequestExamples(req: REST.RequestDeclaration): void {
-  // if (req.headerParameters) {
-  //   req.headerParameters.forEach((p) => {
-  //   })
-  // }
-
-  // if (req.pathParameters) {
-  //   req.pathParameters.forEach((p) => {
-  //   })
-  // }
-
-  // todo: add headers, query
+export function populateRequestExamples(req: REST.RequestDeclaration): void {
+  var hp = createHeadersParams(req)
+  var qp = createQueryParams(req)
+  const h = "{host}"
   // todo: use es6 string templates.
   const examples: REST.Example[] = [
-    // {
-    //   syntax: "http",
-    //   // todo: take host from the meta object.
-    //   code: `${req.endpoint} HTTP/1.1\nAccept: application/json\nHost: example.com\n`
-    // },
-    // {
-    //   syntax: "shell",
-    //   // todo: omit the -X flag if the method is GET
-    //   code: `curl -L\n  -X "${"todo: m"}"\n  -H "Accept: application/json"\n  "https://example.com${"todo: p"}"`
-    // }
+    createHTTPExample(req, hp, qp, h),
+    createShellExample(req, hp, qp, h)
   ]
   if (examples.length > 0) {
     req.examples = examples
+  }
+}
+
+export function createHeadersParams(req: REST.RequestDeclaration): string[] {
+  var hp = []
+  if (req.headerParameters) {
+    for (var i in req.headerParameters) {
+      const h =  req.headerParameters[i]
+      if ("id" in h) {} else {
+        h.cases?.join(", ")
+        hp.push(`\n${h.identifier}: ${h.cases?.join(", ")}`)
+      }
+    }
+  }
+  return hp
+}
+
+export function createQueryParams(req: REST.RequestDeclaration): string {
+  var qp = ""
+  if (req.queryParameters) {
+    for (var i in req.queryParameters) {
+      const q =  req.queryParameters[i]
+      if ("id" in q) {} else {
+        qp += qp == "" ? `?${q.identifier}={${q.identifier}}` : `&${q.identifier}={${q.identifier}}`
+      }
+    }
+  }
+  return qp
+}
+
+export function createHTTPExample(req: REST.RequestDeclaration, hp: string[], qp: string, host: string): REST.Example {
+  const h = hp.length == 0 ? "" : hp.join("")
+  return {
+    syntax: "http",
+    code: `${req.endpoint}${qp} HTTP/1.1${h}\nHost: ${host}`
+  }
+}
+
+export function createShellExample(req: REST.RequestDeclaration, hp: string[], qp: string, host: string): REST.Example {
+  const m = req.endpoint.split(" ")
+  var h = ""
+  if (hp.length > 0) {
+    for (var i in hp) {
+      h+= `\n  -H "${hp[i].replace("\n", "")}"`
+    }
+  }
+  return {
+    syntax: "shell",
+    code: `curl -X ${m[0]}\n  "${host}${m[1]}${qp}"${h}`
   }
 }
 
