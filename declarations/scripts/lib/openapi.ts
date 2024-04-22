@@ -1,4 +1,4 @@
-import "./openapi.test.ts"
+// import "./openapi.test.ts"
 import type {TransformCallback} from "node:stream"
 import {Transform} from "node:stream"
 import type {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
@@ -351,65 +351,68 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
 }
 
 export function populateRequestExamples(req: REST.RequestDeclaration): void {
-  var hp = createHeadersParams(req)
-  var qp = createQueryParams(req)
-  const h = "{host}"
+  const qp = queryParametersToString(req)
+
   // todo: use es6 string templates.
   const examples: REST.Example[] = [
-    createHTTPExample(req, hp, qp, h),
-    createShellExample(req, hp, qp, h)
+    createHTTPExample(req, qp),
+    createCURLExample(req, qp)
   ]
-  if (examples.length > 0) {
-    req.examples = examples
-  }
+  req.examples = examples
 }
 
-export function createHeadersParams(req: REST.RequestDeclaration): string[] {
-  var hp = []
-  if (req.headerParameters) {
-    for (var i in req.headerParameters) {
-      const h =  req.headerParameters[i]
-      if ("id" in h) {} else {
-        h.cases?.join(", ")
-        hp.push(`\n${h.identifier}: ${h.cases?.join(", ")}`)
-      }
-    }
-  }
-  return hp
-}
-
-export function createQueryParams(req: REST.RequestDeclaration): string {
-  var qp = ""
+export function queryParametersToString(req: REST.RequestDeclaration): string {
+  let qp = "?"
   if (req.queryParameters) {
-    for (var i in req.queryParameters) {
-      const q =  req.queryParameters[i]
-      if ("id" in q) {} else {
-        qp += qp == "" ? `?${q.identifier}={${q.identifier}}` : `&${q.identifier}={${q.identifier}}`
+    for (var q of req.queryParameters) {
+      if (!("id" in q)) {
+        qp += `${q.identifier}={${q.identifier}}&`
       }
     }
   }
-  return qp
+  return qp.slice(0, -1)
 }
 
-export function createHTTPExample(req: REST.RequestDeclaration, hp: string[], qp: string, host: string): REST.Example {
-  const h = hp.length == 0 ? "" : hp.join("")
-  return {
-    syntax: "http",
-    code: `${req.endpoint}${qp} HTTP/1.1${h}\nHost: ${host}`
-  }
-}
-
-export function createShellExample(req: REST.RequestDeclaration, hp: string[], qp: string, host: string): REST.Example {
-  const m = req.endpoint.split(" ")
-  var h = ""
-  if (hp.length > 0) {
-    for (var i in hp) {
-      h+= `\n  -H "${hp[i].replace("\n", "")}"`
+export function createHTTPExample(req: REST.RequestDeclaration, qp: string): REST.Example {
+  let hp = ""
+  if (req.headerParameters) {
+    for (let h of req.headerParameters) {
+      if (!("id" in h) && h.cases && h.cases.length > 0) {
+        hp+=`\n${h.identifier}: ${h.cases.join(", ")}`
+      }
     }
   }
+  const e = createRESTExample()
+  e.syntax = "http"
+  e.code = `${req.endpoint}${qp} HTTP/1.1${hp}\nHost: {host}`
+  return e
+}
+
+export function createCURLExample(req: REST.RequestDeclaration, qp: string): REST.Example {
+  let hp = ""
+  if (req.headerParameters) {
+    for (let h of req.headerParameters) {
+      if (!("id" in h) && h.cases && h.cases.length > 0) {
+        hp+=`\n  -H ${h.identifier}: ${h.cases.join(", ")}`
+      }
+    }
+  }
+  const m = req.endpoint.split(" ")
+  if (m[0] == "GET") {
+    m[0] = ""
+  } else {
+    m[0] = `\n  -X ${m[0]}`
+  }
+  const e = createRESTExample()
+  e.syntax = "shell"
+  e.code = `curl -L${m[0]}\n  {host}${m[1]}${qp}${hp}`
+  return e
+}
+
+export function createRESTExample(): REST.Example {
   return {
-    syntax: "shell",
-    code: `curl -X ${m[0]}\n  "${host}${m[1]}${qp}"${h}`
+    syntax: "",
+    code: ""
   }
 }
 

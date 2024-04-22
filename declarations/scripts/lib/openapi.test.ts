@@ -1,17 +1,16 @@
 import {test} from "uvu"
 import * as assert from 'uvu/assert';
-
 import {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
-import {populateRequestExamples, createHeadersParams, createQueryParams, createHTTPExample, createShellExample} from "./openapi.ts"
+import {populateRequestExamples, createRESTExample, queryParametersToString, createHTTPExample, createCURLExample} from "./openapi.ts"
 
 const httpExample: REST.Example = {
   syntax: "http",
-  code: "GET /api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view} HTTP/1.1\nAccept: text/plain, application/json, text/json\nHost: {host}"
+  code: "POST /api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view} HTTP/1.1\nAccept: text/plain, application/json, text/json\nHost: {host}"
 }
 
-const shellExample: REST.Example = {
+const curlExample: REST.Example = {
   syntax: "shell",
-  code: "curl -X GET\n  \"{host}/api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view}\"\n  -H \"Accept: text/plain, application/json, text/json\""
+  code: "curl -L\n  -X POST\n  {host}/api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view}\n  -H Accept: text/plain, application/json, text/json"
 }
 
 const sample: REST.RequestDeclaration = {
@@ -19,7 +18,7 @@ const sample: REST.RequestDeclaration = {
   kind: "request",
   slug: "files/open-a-file",
   title: "Open a file",
-  endpoint: "GET /api/2.0/files/file/{fileId}/openedit",
+  endpoint: "POST /api/2.0/files/file/{fileId}/openedit",
   description: "Returns the initialization configuration of a file to open it in the editor.",
   headerParameters: [
     {
@@ -57,45 +56,43 @@ const sample: REST.RequestDeclaration = {
   ]
 }
 
-test("create header params", () => {
-  const req: REST.RequestDeclaration = JSON.parse(JSON.stringify(sample))
-  assert.is(createHeadersParams(req)[0], '\nAccept: text/plain, application/json, text/json')
-  delete req.headerParameters
-  assert.is(createHeadersParams(req).length, 0)
+test("createRESTExample() creates a REST example object with 'code' and 'syntax' parameters as empty stings", () => {
+  const e = createRESTExample()
+  const expect = ["", ""]
+  const actual = [e.code, e.syntax]
+  assert.equal(expect, actual)
 })
 
-test("create query params", () => {
+test("queryParametersToString() creates a query parameters string if parameters exist", () => {
   const req: REST.RequestDeclaration = JSON.parse(JSON.stringify(sample))
-  assert.is(createQueryParams(req), "?version={version}&doc={doc}&view={view}")
-  delete req.queryParameters
-  assert.is(createQueryParams(req), "")
+  const expect = "?version={version}&doc={doc}&view={view}"
+  const actual = queryParametersToString(req)
+  console.log(actual)
+  assert.equal(expect, actual)
 })
 
-test("create http example", () => {
+test("createHTTPExample() creates an HTTP example", () => {
   const req: REST.RequestDeclaration = JSON.parse(JSON.stringify(sample))
-  const hp: string[] = createHeadersParams(req)
-  const qp: string = createQueryParams(req)
-  const h: string = "{host}"
-  const e: REST.Example = createHTTPExample(req, hp, qp, h)
-
-  assert.equal(e, httpExample)
+  const qp = queryParametersToString(req)
+  const expect = httpExample
+  const actual = createHTTPExample(req, qp)
+  assert.equal(actual, expect)
 })
 
-test("create shell example", () => {
+test("createCURLExample() creates a CURL example", () => {
   const req: REST.RequestDeclaration = JSON.parse(JSON.stringify(sample))
-  const hp: string[] = createHeadersParams(req)
-  const qp: string = createQueryParams(req)
-  const h: string = "{host}"
-  const e: REST.Example = createShellExample(req, hp, qp, h)
-
-  assert.equal(e, shellExample)
+  const qp = queryParametersToString(req)
+  const expect = curlExample
+  const actual = createCURLExample(req, qp)
+  assert.equal(actual, expect)
 })
 
-test("populate request examples", () => {
+test("populateRequestExamples() populates RequestDeclaration with request examples", () => {
   const req: REST.RequestDeclaration = JSON.parse(JSON.stringify(sample))
   populateRequestExamples(req)
-
-  assert.equal(req.examples, [httpExample, shellExample])
+  const expect = [httpExample, curlExample]
+  const actual = req.examples
+  assert.equal(actual, expect)
 })
 
 test.run()
