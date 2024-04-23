@@ -364,7 +364,7 @@ export function populateRequestExamples(req: REST.RequestDeclaration): void {
 export function queryParametersToString(req: REST.RequestDeclaration): string {
   let qp = "?"
   if (req.queryParameters) {
-    for (var q of req.queryParameters) {
+    for (let q of req.queryParameters) {
       if (!("id" in q)) {
         qp += `${q.identifier}={${q.identifier}}&`
       }
