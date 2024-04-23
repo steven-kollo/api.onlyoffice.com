@@ -1,7 +1,13 @@
+import {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
+import {
+  createCURLExample,
+  createHTTPExample,
+  createRESTExample,
+  populateRequestExamples,
+  queryParametersToString
+} from "./openapi.ts"
 import {test} from "uvu"
 import * as assert from 'uvu/assert';
-import {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
-import {populateRequestExamples, createRESTExample, queryParametersToString, createHTTPExample, createCURLExample} from "./openapi.ts"
 
 const httpExample: REST.Example = {
   syntax: "http",
@@ -67,7 +73,6 @@ test("queryParametersToString() creates a query parameters string if parameters 
   const req: REST.RequestDeclaration = JSON.parse(JSON.stringify(sample))
   const expect = "?version={version}&doc={doc}&view={view}"
   const actual = queryParametersToString(req)
-  console.log(actual)
   assert.equal(expect, actual)
 })
 
