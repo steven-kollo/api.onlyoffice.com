@@ -1,12 +1,11 @@
 // import "./openapi.test.ts"
 import type {TransformCallback} from "node:stream"
 import {Transform} from "node:stream"
+import {createHash} from "node:crypto"
 import type {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
 import slugify from "@sindresorhus/slugify"
 import type {OpenAPIV3_1 as OpenAPI} from "openapi-types"
 import {console} from "./console.ts"
-
-import {createHash} from "node:crypto"
 
 // todo: calc a chance of collision.
 function hash(s: string): string {
@@ -364,7 +363,7 @@ export function populateRequestExamples(req: REST.RequestDeclaration): void {
 export function queryParametersToString(req: REST.RequestDeclaration): string {
   let qp = "?"
   if (req.queryParameters) {
-    for (let q of req.queryParameters) {
+    for (const q of req.queryParameters) {
       if (!("id" in q)) {
         qp += `${q.identifier}={${q.identifier}}&`
       }
@@ -376,9 +375,9 @@ export function queryParametersToString(req: REST.RequestDeclaration): string {
 export function createHTTPExample(req: REST.RequestDeclaration, qp: string): REST.Example {
   let hp = ""
   if (req.headerParameters) {
-    for (let h of req.headerParameters) {
+    for (const h of req.headerParameters) {
       if (!("id" in h) && h.cases && h.cases.length > 0) {
-        hp+=`\n${h.identifier}: ${h.cases.join(", ")}`
+        hp += `\n${h.identifier}: ${h.cases.join(", ")}`
       }
     }
   }
@@ -391,14 +390,14 @@ export function createHTTPExample(req: REST.RequestDeclaration, qp: string): RES
 export function createCURLExample(req: REST.RequestDeclaration, qp: string): REST.Example {
   let hp = ""
   if (req.headerParameters) {
-    for (let h of req.headerParameters) {
+    for (const h of req.headerParameters) {
       if (!("id" in h) && h.cases && h.cases.length > 0) {
-        hp+=`\n  -H ${h.identifier}: ${h.cases.join(", ")}`
+        hp += `\n  -H ${h.identifier}: ${h.cases.join(", ")}`
       }
     }
   }
   const m = req.endpoint.split(" ")
-  if (m[0] == "GET") {
+  if (m[0] === "GET") {
     m[0] = ""
   } else {
     m[0] = `\n  -X ${m[0]}`

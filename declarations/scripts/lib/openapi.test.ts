@@ -1,3 +1,5 @@
+import {test} from "uvu"
+import * as assert from "uvu/assert"
 import {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
 import {
   createCURLExample,
@@ -6,17 +8,18 @@ import {
   populateRequestExamples,
   queryParametersToString
 } from "./openapi.ts"
-import {test} from "uvu"
-import * as assert from 'uvu/assert';
 
 const httpExample: REST.Example = {
   syntax: "http",
-  code: "POST /api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view} HTTP/1.1\nAccept: text/plain, application/json, text/json\nHost: {host}"
+  code: `POST /api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view} HTTP/1.1
+Accept: text/plain, application/json, text/json\nHost: {host}`
 }
 
 const curlExample: REST.Example = {
   syntax: "shell",
-  code: "curl -L\n  -X POST\n  {host}/api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view}\n  -H Accept: text/plain, application/json, text/json"
+  code: `curl -L\n  -X POST
+  {host}/api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view}
+  -H Accept: text/plain, application/json, text/json`
 }
 
 const sample: REST.RequestDeclaration = {
@@ -62,7 +65,7 @@ const sample: REST.RequestDeclaration = {
   ]
 }
 
-test("createRESTExample() creates a REST example object with 'code' and 'syntax' parameters as empty stings", () => {
+test("createRESTExample() creates a REST example object with parameters as empty stings", () => {
   const e = createRESTExample()
   const expect = ["", ""]
   const actual = [e.code, e.syntax]
