@@ -1,5 +1,9 @@
 import {test} from "uvu"
+<<<<<<< HEAD
 import {is, unreachable} from "uvu/assert"
+=======
+import * as assert from "uvu/assert"
+>>>>>>> 3abe35fb (Lint fixes)
 import {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
 import {
   createCURLExample,
@@ -11,6 +15,7 @@ import {
   queryParametersToString
 } from "./openapi.ts"
 
+<<<<<<< HEAD
 test("example() creates a REST example object with parameters as empty stings", () => {
   const e = example()
   is("", e.code)
@@ -23,6 +28,20 @@ test("httpExample() assigns 'http' to as syntax parameter of REST.Example", () =
   is("", e.syntax)
   is("http", eh.syntax)
 })
+=======
+const httpExample: REST.Example = {
+  syntax: "http",
+  code: `POST /api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view} HTTP/1.1
+Accept: text/plain, application/json, text/json\nHost: {host}`
+}
+
+const curlExample: REST.Example = {
+  syntax: "shell",
+  code: `curl -L\n  -X POST
+  {host}/api/2.0/files/file/{fileId}/openedit?version={version}&doc={doc}&view={view}
+  -H Accept: text/plain, application/json, text/json`
+}
+>>>>>>> 3abe35fb (Lint fixes)
 
 test("shellExample() assigns 'shell' to as syntax parameter of REST.Example", () => {
   const e = example()
@@ -155,6 +174,7 @@ function addQueryToTestRequets(r: REST.RequestDeclaration): REST.RequestDeclarat
   ]}
 }
 
+<<<<<<< HEAD
 function addHeadersToTestRequets(r: REST.RequestDeclaration): REST.RequestDeclaration {
   return {...r, headerParameters: [
     {
@@ -181,6 +201,14 @@ function addHeadersToTestRequets(r: REST.RequestDeclaration): REST.RequestDeclar
     }
   ]}
 }
+=======
+test("createRESTExample() creates a REST example object with parameters as empty stings", () => {
+  const e = createRESTExample()
+  const expect = ["", ""]
+  const actual = [e.code, e.syntax]
+  assert.equal(expect, actual)
+})
+>>>>>>> 3abe35fb (Lint fixes)
 
 function postTestRequest(r: REST.RequestDeclaration): REST.RequestDeclaration {
   return {...r, endpoint: "POST /api/2.0/files/file/referencedata"}
