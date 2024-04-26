@@ -351,13 +351,10 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
 
 export function populateRequestExamples(req: REST.RequestDeclaration): void {
   const qp = queryParametersToString(req)
-
-  // todo: use es6 string templates.
-  const examples: REST.Example[] = [
+  req.examples = [
     createHTTPExample(req, qp),
     createCURLExample(req, qp)
   ]
-  req.examples = examples
 }
 
 export function queryParametersToString(req: REST.RequestDeclaration): string {
@@ -373,46 +370,63 @@ export function queryParametersToString(req: REST.RequestDeclaration): string {
 }
 
 export function createHTTPExample(req: REST.RequestDeclaration, qp: string): REST.Example {
+  const e = example()
+  httpExample(e)
   let hp = ""
   if (req.headerParameters) {
     for (const h of req.headerParameters) {
-      if (!("id" in h) && h.cases && h.cases.length > 0) {
-        hp += `\n${h.identifier}: ${h.cases.join(", ")}`
+      if (!("id" in h)) {
+        if (h.cases && h.cases.length > 0) {
+          hp += `${h.identifier}: ${h.cases.join(", ")}\n`
+        }
+        else {
+          hp += `${h.identifier}\n`
+        }
       }
     }
   }
-  const e = createRESTExample()
-  e.syntax = "http"
-  e.code = `${req.endpoint}${qp} HTTP/1.1${hp}\nHost: {host}`
+  e.code = `${req.endpoint}${qp} HTTP/1.1\n${hp}`.trim()
   return e
 }
 
 export function createCURLExample(req: REST.RequestDeclaration, qp: string): REST.Example {
+  const e = example()
+  shellExample(e)
   let hp = ""
   if (req.headerParameters) {
     for (const h of req.headerParameters) {
-      if (!("id" in h) && h.cases && h.cases.length > 0) {
-        hp += `\n  -H ${h.identifier}: ${h.cases.join(", ")}`
+      if (!("id" in h)) {
+        if (h.cases && h.cases.length > 0) {
+          hp += `\t-H ${h.identifier}: ${h.cases.join(", ")}\n`
+        } else {
+          hp += `\t-H ${h.identifier}\n`
+        }
       }
     }
   }
-  const m = req.endpoint.split(" ")
-  if (m[0] === "GET") {
-    m[0] = ""
+  let [m, p] = req.endpoint.split(" ")
+  if (m === "GET") {
+    m = ""
   } else {
-    m[0] = `\n  -X ${m[0]}`
+    m = `\t-X ${m}\n`
   }
-  const e = createRESTExample()
-  e.syntax = "shell"
-  e.code = `curl -L${m[0]}\n  {host}${m[1]}${qp}${hp}`
+  e.code = `curl -L\n${m}\t{host}${p}${qp}\n${hp}`.trim()
   return e
 }
 
-export function createRESTExample(): REST.Example {
+export function example(): REST.Example {
   return {
     syntax: "",
     code: ""
   }
+}
+
+export function httpExample(e: REST.Example): void {
+  e.syntax = "http"
+}
+
+export function shellExample(e: REST.Example): void {
+  e.syntax = "shell"
 }
 
 function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s: OpenAPI.OperationObject): void {
