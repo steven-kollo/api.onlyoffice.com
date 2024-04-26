@@ -7,9 +7,6 @@ import {
   example,
   httpExample,
   shellExample,
-  example,
-  httpExample,
-  shellExample,
   populateRequestExamples,
   queryParametersToString
 } from "./openapi.ts"

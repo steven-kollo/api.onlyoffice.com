@@ -352,7 +352,6 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
 export function populateRequestExamples(req: REST.RequestDeclaration): void {
   const qp = queryParametersToString(req)
   req.examples = [
-  req.examples = [
     createHTTPExample(req, qp),
     createCURLExample(req, qp)
   ]
@@ -362,10 +361,6 @@ export function queryParametersToString(req: REST.RequestDeclaration): string {
   let qp = "?"
   if (req.queryParameters) {
     for (const q of req.queryParameters) {
-      if ("id" in q) {
-        continue
-      }
-      qp += `${q.identifier}={${q.identifier}}&`
       if ("id" in q) {
         continue
       }
@@ -433,7 +428,6 @@ export function createCURLExample(req: REST.RequestDeclaration, qp: string): RES
   if (m === "GET") {
     m = ""
   } else {
-    m = `\t-X ${m}\n`
     m = `\t-X ${m}\n`
   }
 
