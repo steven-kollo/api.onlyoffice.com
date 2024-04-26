@@ -366,6 +366,10 @@ export function queryParametersToString(req: REST.RequestDeclaration): string {
         continue
       }
       qp += `${q.identifier}={${q.identifier}}&`
+      if ("id" in q) {
+        continue
+      }
+      qp += `${q.identifier}={${q.identifier}}&`
     }
   }
   return qp.slice(0, -1)
@@ -375,8 +379,6 @@ export function createHTTPExample(req: REST.RequestDeclaration, qp: string): RES
   const e = example()
   const eh = httpExample(e)
 
-  const e = example()
-  httpExample(e)
   let hp = ""
   if (req.headerParameters) {
     for (const h of req.headerParameters) {
@@ -403,26 +405,12 @@ export function createHTTPExample(req: REST.RequestDeclaration, qp: string): RES
   }
 
   return eh
-      if (!("id" in h)) {
-        if (h.cases && h.cases.length > 0) {
-          hp += `${h.identifier}: ${h.cases.join(", ")}\n`
-        }
-        else {
-          hp += `${h.identifier}\n`
-        }
-      }
-    }
-  }
-  e.code = `${req.endpoint}${qp} HTTP/1.1\n${hp}`.trim()
-  return e
 }
 
 export function createCURLExample(req: REST.RequestDeclaration, qp: string): REST.Example {
   const e = example()
   const es = shellExample(e)
 
-  const e = example()
-  shellExample(e)
   let hp = ""
   if (req.headerParameters) {
     for (const h of req.headerParameters) {
@@ -444,18 +432,6 @@ export function createCURLExample(req: REST.RequestDeclaration, qp: string): RES
   let [m, p] = req.endpoint.split(" ")
   if (m === "GET") {
     m = ""
-      if (!("id" in h)) {
-        if (h.cases && h.cases.length > 0) {
-          hp += `\t-H ${h.identifier}: ${h.cases.join(", ")}\n`
-        } else {
-          hp += `\t-H ${h.identifier}\n`
-        }
-      }
-    }
-  }
-  let [m, p] = req.endpoint.split(" ")
-  if (m === "GET") {
-    m = ""
   } else {
     m = `\t-X ${m}\n`
     m = `\t-X ${m}\n`
@@ -467,8 +443,6 @@ export function createCURLExample(req: REST.RequestDeclaration, qp: string): RES
   }
 
   return es
-  e.code = `curl -L\n${m}\t{host}${p}${qp}\n${hp}`.trim()
-  return e
 }
 
 export function httpExample(e: REST.Example): REST.Example {
@@ -481,19 +455,6 @@ export function shellExample(e: REST.Example): REST.Example {
 
 export function example(): REST.Example {
   return {syntax: "", code: ""}
-export function example(): REST.Example {
-  return {
-    syntax: "",
-    code: ""
-  }
-}
-
-export function httpExample(e: REST.Example): void {
-  e.syntax = "http"
-}
-
-export function shellExample(e: REST.Example): void {
-  e.syntax = "shell"
 }
 
 function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s: OpenAPI.OperationObject): void {
