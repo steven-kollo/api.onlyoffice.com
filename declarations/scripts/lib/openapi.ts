@@ -1,11 +1,10 @@
-// import "./openapi.test.ts"
+import {createHash} from "node:crypto"
 import type {TransformCallback} from "node:stream"
 import {Transform} from "node:stream"
-import {createHash} from "node:crypto"
+import {console} from "./console.ts"
 import type {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
 import slugify from "@sindresorhus/slugify"
 import type {OpenAPIV3_1 as OpenAPI} from "openapi-types"
-import {console} from "./console.ts"
 
 // todo: calc a chance of collision.
 function hash(s: string): string {
@@ -424,14 +423,13 @@ export function createCURLExample(req: REST.RequestDeclaration, qp: string): RES
     hp = hp.slice(0, -1)
   }
 
-  let [m, p] = req.endpoint.split(" ")
-  if (m === "GET") {
-    m = ""
-  } else {
-    m = `\t-X ${m}\n`
+  const [m, p] = req.endpoint.split(" ")
+  let mt = ""
+  if (m !== "GET") {
+    mt = `\t-X ${m}\n`
   }
 
-  es.code = `curl -L\n${m}\t{host}${p}${qp}\n${hp}`
+  es.code = `curl -L\n${mt}\t{host}${p}${qp}\n${hp}`
   if (es.code.endsWith("\n")) {
     es.code = es.code.slice(0, -1)
   }

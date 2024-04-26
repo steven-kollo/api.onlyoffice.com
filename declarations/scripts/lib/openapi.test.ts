@@ -1,6 +1,3 @@
-import {test} from "uvu"
-import {is, unreachable} from "uvu/assert"
-import {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
 import {
   createCURLExample,
   createHTTPExample,
@@ -10,6 +7,9 @@ import {
   populateRequestExamples,
   queryParametersToString
 } from "./openapi.ts"
+import {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
+import {test} from "uvu"
+import {is, unreachable} from "uvu/assert"
 
 test("example() creates a REST example object with parameters as empty stings", () => {
   const e = example()
@@ -132,54 +132,55 @@ test("populateRequestExamples() populates RequestDeclaration with request exampl
     is(actual[0].code, expect[0])
     is(actual[1].code, expect[1])
   } else {
-    unreachable('Examples do not exist');
+    unreachable("Examples do not exist")
   }
-
 })
 
 function addQueryToTestRequets(r: REST.RequestDeclaration): REST.RequestDeclaration {
-  return {...r, queryParameters: [
-    {
-      "identifier": "version",
-      "type": "integer",
-      "format": "int32"
-    },
-    {
-      "identifier": "doc",
-      "type": "string"
-    },
-    {
-      "identifier": "view",
-      "type": "boolean"
-    }
-  ]}
+  return {...r,
+    queryParameters: [
+      {
+        identifier: "version",
+        type: "integer",
+        format: "int32"
+      },
+      {
+        identifier: "doc",
+        type: "string"
+      },
+      {
+        identifier: "view",
+        type: "boolean"
+      }
+    ]}
 }
 
 function addHeadersToTestRequets(r: REST.RequestDeclaration): REST.RequestDeclaration {
-  return {...r, headerParameters: [
-    {
-      "identifier": "Accept",
-      "type": "string",
-      "cases": [
-        "text/plain",
-        "application/json",
-        "text/json"
-      ]
-    },
-    {
-      "identifier": "Content-Type",
-      "type": "string",
-      "cases": [
-        "application/json",
-        "text/json",
-        "application/*+json"
-      ]
-    },
-    {
-      "identifier": "Auth",
-      "type": "string"
-    }
-  ]}
+  return {...r,
+    headerParameters: [
+      {
+        identifier: "Accept",
+        type: "string",
+        cases: [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ]
+      },
+      {
+        identifier: "Content-Type",
+        type: "string",
+        cases: [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ]
+      },
+      {
+        identifier: "Auth",
+        type: "string"
+      }
+    ]}
 }
 
 function postTestRequest(r: REST.RequestDeclaration): REST.RequestDeclaration {
