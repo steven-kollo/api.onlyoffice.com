@@ -18,9 +18,9 @@ const config = [
     name: "document-builder.document",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder/master/document.json"
     }
   },
@@ -28,9 +28,9 @@ const config = [
     name: "document-builder.form",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder/master/form.json"
     }
   },
@@ -38,9 +38,9 @@ const config = [
     name: "document-builder.presentation",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder/master/presentation.json"
     }
   },
@@ -48,9 +48,9 @@ const config = [
     name: "document-builder.spreadsheet",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder/master/spreadsheet.json"
     }
   },
@@ -59,9 +59,9 @@ const config = [
     name: "document-builder-plugin.common",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder-plugin/master/common.json"
     }
   },
@@ -69,9 +69,9 @@ const config = [
     name: "document-builder-plugin.document",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder-plugin/master/document.json"
     }
   },
@@ -79,9 +79,9 @@ const config = [
     name: "document-builder-plugin.form",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder-plugin/master/form.json"
     }
   },
@@ -89,9 +89,9 @@ const config = [
     name: "document-builder-plugin.presentation",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder-plugin/master/presentation.json"
     }
   },
@@ -99,9 +99,9 @@ const config = [
     name: "document-builder-plugin.spreadsheet",
     variant: "master",
     source: {
-      owner: "vanyauhalin",
-      repo: "onlyoffice-document-builder-test",
-      branch: "main",
+      owner: "onlyoffice",
+      repo: "document-builder-declarations",
+      branch: "master",
       path: "document-builder-plugin/master/spreadsheet.json"
     }
   }
