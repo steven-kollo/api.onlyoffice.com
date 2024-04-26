@@ -8,6 +8,9 @@
     "./openapi.ts": "./lib/openapi.ts",
     "./tokenizer.ts": "./lib/tokenizer.ts"
   },
+  "scripts": {
+    "test": "tsx ./node_modules/uvu/bin.js ./lib/ ^.*\\.test\\.ts$"
+  },
   "dependencies": {
     "@stylistic/eslint-plugin-js": "^1.5.4",
     "@vscode/vscode-languagedetection": "^1.0.22",
