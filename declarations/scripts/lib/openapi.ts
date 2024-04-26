@@ -361,9 +361,10 @@ export function queryParametersToString(req: REST.RequestDeclaration): string {
   let qp = "?"
   if (req.queryParameters) {
     for (const q of req.queryParameters) {
-      if (!("id" in q)) {
-        qp += `${q.identifier}={${q.identifier}}&`
+      if ("id" in q) {
+        continue
       }
+      qp += `${q.identifier}={${q.identifier}}&`
     }
   }
   return qp.slice(0, -1)
@@ -371,62 +372,83 @@ export function queryParametersToString(req: REST.RequestDeclaration): string {
 
 export function createHTTPExample(req: REST.RequestDeclaration, qp: string): REST.Example {
   const e = example()
-  httpExample(e)
+  const eh = httpExample(e)
+
   let hp = ""
   if (req.headerParameters) {
     for (const h of req.headerParameters) {
-      if (!("id" in h)) {
-        if (h.cases && h.cases.length > 0) {
-          hp += `${h.identifier}: ${h.cases.join(", ")}\n`
-        }
-        else {
-          hp += `${h.identifier}\n`
-        }
+      if ("id" in h) {
+        continue
       }
+
+      if (h.cases && h.cases.length > 0) {
+        hp += `${h.identifier}: ${h.cases.join(", ")}\n`
+        continue
+      }
+
+      hp += `${h.identifier}: ${h.identifier}\n`
     }
   }
-  e.code = `${req.endpoint}${qp} HTTP/1.1\n${hp}`.trim()
-  return e
+
+  if (hp.endsWith("\n")) {
+    hp = hp.slice(0, -1)
+  }
+
+  eh.code = `${req.endpoint}${qp} HTTP/1.1\n${hp}`
+  if (eh.code.endsWith("\n")) {
+    eh.code = eh.code.slice(0, -1)
+  }
+
+  return eh
 }
 
 export function createCURLExample(req: REST.RequestDeclaration, qp: string): REST.Example {
   const e = example()
-  shellExample(e)
+  const es = shellExample(e)
+
   let hp = ""
   if (req.headerParameters) {
     for (const h of req.headerParameters) {
-      if (!("id" in h)) {
-        if (h.cases && h.cases.length > 0) {
-          hp += `\t-H ${h.identifier}: ${h.cases.join(", ")}\n`
-        } else {
-          hp += `\t-H ${h.identifier}\n`
-        }
+      if ("id" in h) {
+        continue
       }
+      if (h.cases && h.cases.length > 0) {
+        hp += `\t-H ${h.identifier}: ${h.cases.join(", ")}\n`
+        continue
+      }
+      hp += `\t-H ${h.identifier}: ${h.identifier}\n`
     }
   }
+
+  if (hp.endsWith("\n")) {
+    hp = hp.slice(0, -1)
+  }
+
   let [m, p] = req.endpoint.split(" ")
   if (m === "GET") {
     m = ""
   } else {
     m = `\t-X ${m}\n`
   }
-  e.code = `curl -L\n${m}\t{host}${p}${qp}\n${hp}`.trim()
-  return e
+
+  es.code = `curl -L\n${m}\t{host}${p}${qp}\n${hp}`
+  if (es.code.endsWith("\n")) {
+    es.code = es.code.slice(0, -1)
+  }
+
+  return es
+}
+
+export function httpExample(e: REST.Example): REST.Example {
+  return {...e, syntax: "http"}
+}
+
+export function shellExample(e: REST.Example): REST.Example {
+  return {...e, syntax: "shell"}
 }
 
 export function example(): REST.Example {
-  return {
-    syntax: "",
-    code: ""
-  }
-}
-
-export function httpExample(e: REST.Example): void {
-  e.syntax = "http"
-}
-
-export function shellExample(e: REST.Example): void {
-  e.syntax = "shell"
+  return {syntax: "", code: ""}
 }
 
 function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s: OpenAPI.OperationObject): void {
