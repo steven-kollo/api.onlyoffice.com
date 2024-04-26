@@ -69,7 +69,9 @@ function config() {
         "no-self-compare": e,
         "no-unmodified-loop-condition": e,
         "no-unreachable-loop": e,
-        "no-useless-assignment": e,
+        // todo: This is a new rule introduced in ESLint 9.
+        // VSCode ESLint extension while does not support it.
+        // "no-useless-assignment": e,
 
         // core: Suggestions
         "camelcase": e,
