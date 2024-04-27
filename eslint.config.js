@@ -109,10 +109,8 @@ function config() {
         "no-proto": e,
         "no-return-assign": e,
         "no-sequences": e,
-        "no-shadow": e,
         "no-throw-literal": e,
         "no-undef-init": e,
-        "no-undefined": e,
         "no-unneeded-ternary": e,
         "no-unused-expressions": e,
         "no-useless-call": e,
@@ -152,29 +150,23 @@ function config() {
         "@stylistic/function-call-spacing": e,
         "@stylistic/function-paren-newline": [e, "consistent"],
         "@stylistic/implicit-arrow-linebreak": e,
-        "@stylistic/indent": [e, 2],
+        "@stylistic/indent": [e, 2, {SwitchCase: 0}],
         "@stylistic/indent-binary-ops": [e, 2],
         // todo: add jsx rules.
         "@stylistic/key-spacing": e,
         "@stylistic/keyword-spacing": e,
         "@stylistic/linebreak-style": e,
-        "@stylistic/lines-between-class-members": e,
         "@stylistic/max-len": [e, {
           code: 100,
+          ignorePattern: "^\\s*(async)?\\s*function\\s*(\\S*)\\(.*\\):\\s*(.*)$",
           ignoreComments: true,
           ignoreUrls: true,
           ignoreStrings: true
         }],
         "@stylistic/max-statements-per-line": e,
         "@stylistic/member-delimiter-style": [e, {
-          multiline: {
-            delimiter: "none",
-            requireLast: false
-          },
-          singleline: {
-            delimiter: "semi",
-            requireLast: false
-          },
+          multiline: {delimiter: "none", requireLast: false},
+          singleline: {delimiter: "semi", requireLast: false},
           multilineDetection: "brackets"
         }],
         "@stylistic/multiline-ternary": e,
@@ -183,7 +175,6 @@ function config() {
         "@stylistic/no-extra-parens": e,
         "@stylistic/no-extra-semi": e,
         "@stylistic/no-floating-decimal": e,
-        "@stylistic/no-mixed-operators": e,
         "@stylistic/no-mixed-spaces-and-tabs": e,
         "@stylistic/no-multi-spaces": e,
         "@stylistic/no-multiple-empty-lines": [e, {max: 1}],
@@ -198,7 +189,7 @@ function config() {
         "@stylistic/operator-linebreak": e,
         "@stylistic/padded-blocks": [e, "never"],
         "@stylistic/quote-props": [e, "consistent-as-needed"],
-        "@stylistic/quotes": e,
+        "@stylistic/quotes": [e, "double", {avoidEscape: true}],
         "@stylistic/rest-spread-spacing": e,
         "@stylistic/semi": [e, "never"],
         "@stylistic/semi-spacing": e,
@@ -223,6 +214,7 @@ function config() {
         "@stylistic/yield-star-spacing": e,
 
         // @typescript-eslint
+        "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-unused-vars": [e, {varsIgnorePattern: "^h$"}],
 
         // import: Helpful warnings
@@ -232,11 +224,8 @@ function config() {
         "import/first": e,
         "import/no-duplicates": e,
         "import/order": [e, {
-          "alphabetize": {
-            order: "asc",
-            orderImportKind: "asc"
-          },
-          "groups": ["builtin"],
+          "alphabetize": {order: "asc", orderImportKind: "asc"},
+          "groups": ["builtin", "external", "parent", "sibling", "index"],
           "newlines-between": "never"
         }],
 
@@ -258,6 +247,9 @@ function config() {
         // unicorn
         "unicorn/filename-case": "off",
         "unicorn/import-style": "off",
+        "unicorn/no-array-callback-reference": "off",
+        "unicorn/no-negated-condition": "off",
+        "unicorn/no-null": "off",
         "unicorn/prevent-abbreviations": "off",
         "unicorn/switch-case-braces": "off"
       }
