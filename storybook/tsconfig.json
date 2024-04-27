@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "./dist",
@@ -8,8 +8,9 @@
     "jsxFragmentFactory": "Fragment"
   },
   "include": [
-    "./eslint.config.js",
-    "./index.d.ts",
+    "../index.d.ts",
+    "./lib/*.ts",
+    "./lib/*.tsx",
     "./makefile.ts"
   ]
 }

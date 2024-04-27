@@ -1,17 +1,15 @@
-import { argv } from "node:process"
-import { Cli, Logger } from "@11ty/eleventy-dev-server/cli.js"
-import EleventyDevServer from "@11ty/eleventy-dev-server/server.js"
+import {argv} from "node:process"
 import sade from "sade"
 import * as resources from "./resources/makefile.ts"
 import * as iconJS from "./ui/icon/makefile.ts"
 import * as logoJS from "./ui/logo/makefile.ts"
 
+main()
+
 function main(): void {
   sade("./makefile.js")
     .command("build")
     .action(build)
-    .command("preview-storybook")
-    .action(previewStorybook)
     .parse(argv)
 }
 
@@ -24,19 +22,3 @@ async function build(): Promise<void> {
     logoJS.build()
   ])
 }
-
-async function previewStorybook(): Promise<void> {
-  const o = {
-    ...Cli.getDefaultOptions(),
-    domDiff: false,
-    input: "dist",
-    liveReload: false,
-    logger: Logger,
-    showVersion: true
-  }
-  EleventyDevServer
-    .getServer("eleventy-dev-server-cli", o.input, o)
-    .serve(o.port)
-}
-
-main()

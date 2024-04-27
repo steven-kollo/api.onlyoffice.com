@@ -1,0 +1,27 @@
+{
+  "name": "@onlyoffice/documentation-storybook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "storybook build --config-dir ./lib --disable-telemetry --output-dir ./dist",
+    "make": "tsx ./makefile.ts",
+    "preview": "pnpm build && pnpm make preview",
+    "serve": "storybook dev --config-dir ./lib --no-open --port 6006"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-dev-server": "^1.0.4",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/blocks": "^8.0.0",
+    "@storybook/preact": "^8.0.0",
+    "@storybook/preact-vite": "^8.0.0",
+    "preact": "^10.19.3",
+    "preact-render-to-string": "^6.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sade": "^1.8.1",
+    "storybook": "^8.0.0",
+    "storybook-addon-paddings": "^5.0.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.6"
+  }
+}

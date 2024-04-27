@@ -1,5 +1,5 @@
-@import "../ui/font/lib/font.css";
-@import "../ui/typography/lib/typography.css";
+@import "../../ui/font/lib/font.css";
+@import "../../ui/typography/lib/typography.css";
 
 html {
   font-family: var(--typography-sans-serif-font);
