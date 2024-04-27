@@ -1,0 +1,7 @@
+[tools]
+node = "prefix:21"
+pnpm = "prefix:8"
+
+# The tools listed below are used in the project.
+# However, you probably installed them globally.
+# jq = "prefix:1" # GNU
