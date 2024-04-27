@@ -7,7 +7,8 @@
     "build": "tsx ./makefile.ts build",
     "lint": "eslint .",
     "preview-storybook": "tsx ./makefile.ts preview-storybook",
-    "serve-storybook": "storybook dev --no-open --port 6006"
+    "serve-storybook": "storybook dev --no-open --port 6006",
+    "test": "tsx ./node_modules/uvu/bin.js ./ ^.*\\.test\\.ts$"
   },
   "devDependencies": {
     "@11ty/eleventy-dev-server": "^1.0.4",
@@ -36,6 +37,7 @@
     "tsx": "^4.7.1",
     "typescript": "^5.3.3",
     "typescript-eslint": "^7.7.1",
+    "uvu": "^0.5.6",
     "vite": "^5.1.6"
   },
   "packageManager": "pnpm@8.13.0",
