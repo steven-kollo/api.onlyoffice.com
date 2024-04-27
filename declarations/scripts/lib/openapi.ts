@@ -395,7 +395,7 @@ export function createHTTPExample(req: REST.RequestDeclaration, qp: string): RES
       if (h.cases && h.cases.length > 0) {
         s += h.cases.join(", ")
       } else {
-        s += h.identifier
+        s += `{${h.identifier}}`
       }
 
       s += "\n"
@@ -448,7 +448,7 @@ export function createCURLExample(req: REST.RequestDeclaration, qp: string): RES
       if (h.cases && h.cases.length > 0) {
         s += h.cases.join(", ")
       } else {
-        s += h.identifier
+        s += `{${h.identifier}}`
       }
 
       s += "\n"
