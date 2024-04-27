@@ -24,6 +24,13 @@ jobs:
     - name: Build Resources
       run: cd ./resources && pnpm build
 
+    - name: Build UI Kit
+      run: |
+        cd ./ui/icon
+        pnpm build
+        cd ./ui/logo
+        pnpm build
+
     - name: Build Site
       timeout-minutes: 15
       run: cd ./site && pnpm build
