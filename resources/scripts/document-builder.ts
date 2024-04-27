@@ -20,7 +20,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder/master/document.json"
     }
   },
@@ -30,7 +30,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder/master/form.json"
     }
   },
@@ -40,7 +40,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder/master/presentation.json"
     }
   },
@@ -50,7 +50,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder/master/spreadsheet.json"
     }
   },
@@ -61,7 +61,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder-plugin/master/common.json"
     }
   },
@@ -71,7 +71,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder-plugin/master/document.json"
     }
   },
@@ -81,7 +81,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder-plugin/master/form.json"
     }
   },
@@ -91,7 +91,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder-plugin/master/presentation.json"
     }
   },
@@ -101,7 +101,7 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "master",
+      branch: "dist",
       path: "document-builder-plugin/master/spreadsheet.json"
     }
   }
