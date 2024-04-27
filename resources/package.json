@@ -6,7 +6,8 @@
     "./*": "./lib/*"
   },
   "scripts": {
-    "build": "tsx ./makefile.ts build"
+    "build": "pnpm make build",
+    "make": "tsx ./makefile.ts"
   },
   "devDependencies": {
     "@onlyoffice/documentation-declarations-fixtures": "workspace:^",

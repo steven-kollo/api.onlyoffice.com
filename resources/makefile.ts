@@ -18,11 +18,45 @@ function main(): void {
     .parse(argv)
 }
 
-export async function build(): Promise<void> {
+export interface BuildOptions {
+  _: string[]
+}
+
+export async function build(opts: BuildOptions): Promise<void> {
   const tempDir = await createTempDir()
   const distDir = await prepareLibDir()
-  await communityServer.build(tempDir, distDir)
-  await docspace.build(tempDir, distDir)
-  await documentBuilder.build(tempDir, distDir)
-  await hostedSolutions.build(tempDir, distDir)
+
+  const a = resolve(opts._)
+  for (const m of a) {
+    await m.build(tempDir, distDir)
+  }
+
+  function resolve(a: string[]): typeof documentBuilder[] {
+    if (a.length === 0) {
+      return [communityServer, docspace, documentBuilder, hostedSolutions]
+    }
+    const r: typeof documentBuilder[] = []
+    for (const n of a) {
+      const m = module(n)
+      if (m) {
+        r.push(m)
+      }
+    }
+    return r
+  }
+
+  function module(n: string): typeof documentBuilder | undefined {
+    switch (n) {
+    case "community-server":
+      return communityServer
+    case "docspace":
+      return docspace
+    case "document-builder":
+      return documentBuilder
+    case "hosted-solutions":
+      return hostedSolutions
+    default:
+      return
+    }
+  }
 }
