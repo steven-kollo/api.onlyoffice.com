@@ -144,7 +144,7 @@ function config() {
         "@stylistic/comma-spacing": e,
         "@stylistic/comma-style": e,
         "@stylistic/computed-property-spacing": e,
-        "@stylistic/dot-location": e,
+        "@stylistic/dot-location": [e, "property"],
         "@stylistic/eol-last": e,
         "@stylistic/function-call-argument-newline": [e, "consistent"],
         "@stylistic/function-call-spacing": e,
@@ -215,6 +215,8 @@ function config() {
 
         // @typescript-eslint
         "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/consistent-type-imports": e,
+        "@typescript-eslint/explicit-function-return-type": e,
         "@typescript-eslint/no-unused-vars": [e, {varsIgnorePattern: "^h$"}],
 
         // import: Helpful warnings
@@ -245,11 +247,14 @@ function config() {
         "promise/valid-params": e,
 
         // unicorn
+        "unicorn/consistent-function-scoping": "off",
+        "unicorn/explicit-length-check": [e, {"non-zero": "not-equal"}],
         "unicorn/filename-case": "off",
         "unicorn/import-style": "off",
         "unicorn/no-array-callback-reference": "off",
         "unicorn/no-negated-condition": "off",
         "unicorn/no-null": "off",
+        "unicorn/prefer-ternary": "off",
         "unicorn/prevent-abbreviations": "off",
         "unicorn/switch-case-braces": "off"
       }
