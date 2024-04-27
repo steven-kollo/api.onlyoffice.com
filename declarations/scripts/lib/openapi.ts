@@ -1,10 +1,10 @@
 import {createHash} from "node:crypto"
 import type {TransformCallback} from "node:stream"
 import {Transform} from "node:stream"
-import {console} from "./console.ts"
 import type {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
 import slugify from "@sindresorhus/slugify"
 import type {OpenAPIV3_1 as OpenAPI} from "openapi-types"
+import {console} from "./console.ts"
 
 // todo: calc a chance of collision.
 function hash(s: string): string {
@@ -371,70 +371,109 @@ export function queryParametersToString(req: REST.RequestDeclaration): string {
 
 export function createHTTPExample(req: REST.RequestDeclaration, qp: string): REST.Example {
   const e = example()
-  const eh = httpExample(e)
+  const h = httpExample(e)
+  const [m, p] = req.endpoint.split(" ")
+  const hp = headers(req)
+  h.code = code(m, p, qp, hp)
+  return h
 
-  let hp = ""
-  if (req.headerParameters) {
+  function headers(req: REST.RequestDeclaration): string {
+    let s = ""
+
+    if (!req.headerParameters) {
+      return s
+    }
+
     for (const h of req.headerParameters) {
       if ("id" in h) {
         continue
       }
 
+      s += `${h.identifier}: `
+
+      // todo: remove the length check.
       if (h.cases && h.cases.length > 0) {
-        hp += `${h.identifier}: ${h.cases.join(", ")}\n`
-        continue
+        s += h.cases.join(", ")
+      } else {
+        s += h.identifier
       }
 
-      hp += `${h.identifier}: ${h.identifier}\n`
+      s += "\n"
     }
+
+    s = s.slice(0, -1)
+
+    return s
   }
 
-  if (hp.endsWith("\n")) {
-    hp = hp.slice(0, -1)
+  function code(m: string, p: string, qp: string, hp: string): string {
+    let s = `${m} ${p}${qp} HTTP/1.1`
+    if (hp !== "") {
+      s += `\n${hp}`
+    }
+    return s
   }
-
-  eh.code = `${req.endpoint}${qp} HTTP/1.1\n${hp}`
-  if (eh.code.endsWith("\n")) {
-    eh.code = eh.code.slice(0, -1)
-  }
-
-  return eh
 }
 
 export function createCURLExample(req: REST.RequestDeclaration, qp: string): REST.Example {
   const e = example()
-  const es = shellExample(e)
+  const s = shellExample(e)
+  const [m, p] = req.endpoint.split(" ")
+  const x = method(m)
+  const hp = headers(req)
+  s.code = code(x, p, qp, hp)
+  return s
 
-  let hp = ""
-  if (req.headerParameters) {
+  function method(m: string): string {
+    if (m === "GET") {
+      return ""
+    }
+    return `-X ${m}`
+  }
+
+  function headers(req: REST.RequestDeclaration): string {
+    let s = ""
+
+    if (!req.headerParameters) {
+      return s
+    }
+
     for (const h of req.headerParameters) {
       if ("id" in h) {
         continue
       }
+
+      s += `\t-H ${h.identifier}: `
+
       if (h.cases && h.cases.length > 0) {
-        hp += `\t-H ${h.identifier}: ${h.cases.join(", ")}\n`
-        continue
+        s += h.cases.join(", ")
+      } else {
+        s += h.identifier
       }
-      hp += `\t-H ${h.identifier}: ${h.identifier}\n`
+
+      s += "\n"
     }
+
+    s = s.slice(0, -1)
+
+    return s
   }
 
-  if (hp.endsWith("\n")) {
-    hp = hp.slice(0, -1)
-  }
+  function code(m: string, p: string, qp: string, hp: string): string {
+    let s = "curl -L"
 
-  const [m, p] = req.endpoint.split(" ")
-  let mt = ""
-  if (m !== "GET") {
-    mt = `\t-X ${m}\n`
-  }
+    if (m !== "") {
+      s += ` ${m}`
+    }
 
-  es.code = `curl -L\n${mt}\t{host}${p}${qp}\n${hp}`
-  if (es.code.endsWith("\n")) {
-    es.code = es.code.slice(0, -1)
-  }
+    s += `\n\t{host}${p}${qp}`
 
-  return es
+    if (hp !== "") {
+      s += `\n${hp}`
+    }
+
+    return s
+  }
 }
 
 export function httpExample(e: REST.Example): REST.Example {
