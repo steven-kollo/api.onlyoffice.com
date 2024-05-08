@@ -5,7 +5,7 @@
 //       what about class constructors?
 
 import {Readable, Writable} from "node:stream"
-import type {Library} from "@onlyoffice/documentation-declarations-types/library.ts"
+import type * as Library from "@onlyoffice/documentation-declarations-types/library.ts"
 import {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
 import {ESLint} from "@onlyoffice/documentation-utils/eslint.ts"
 import {AsyncTransform} from "@onlyoffice/documentation-utils/stream.ts"

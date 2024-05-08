@@ -1,4 +1,4 @@
-import type {Library} from "@onlyoffice/documentation-declarations-types/library.ts"
+import type * as Library from "@onlyoffice/documentation-declarations-types/library.ts"
 import type {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
 
 export function createData(list, retrieve) {
