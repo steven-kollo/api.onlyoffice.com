@@ -1,5 +1,5 @@
 import {Badge} from "@onlyoffice/documentation-ui-kit"
-import type {Library} from "@onlyoffice/documentation-declarations-types/library.js"
+import type * as Library from "@onlyoffice/documentation-declarations-types/library.js"
 import type {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.ts"
 import {toReferenceToken} from "@onlyoffice/documentation-declarations-scripts/tokenizer.ts"
 import {useContext} from "preact/hooks"

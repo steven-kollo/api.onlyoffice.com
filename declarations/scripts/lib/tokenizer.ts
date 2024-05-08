@@ -1,6 +1,6 @@
 // todo: add double quotes for string literals.
 
-import type {Library} from "@onlyoffice/documentation-declarations-types/library.js"
+import type * as Library from "@onlyoffice/documentation-declarations-types/library.js"
 import type {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.ts"
 
 export function toDeclarationTokens(d: Library.Declaration): Tokenizer.Token[] {
