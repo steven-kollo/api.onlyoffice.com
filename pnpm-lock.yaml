@@ -127,9 +127,9 @@ importers:
         specifier: ^5.3.3
         version: 5.4.2
 
-  internal/document-builder-types: {}
+  packages/document-builder-types: {}
 
-  internal/document-editor-element:
+  packages/document-editor-element:
     dependencies:
       '@onlyoffice/document-server-types':
         specifier: workspace:^
@@ -154,7 +154,7 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
-  internal/document-server-types: {}
+  packages/document-server-types: {}
 
   resources:
     devDependencies:
@@ -210,7 +210,7 @@ importers:
     dependencies:
       '@onlyoffice/document-editor-element':
         specifier: workspace:^
-        version: link:../internal/document-editor-element
+        version: link:../packages/document-editor-element
       '@onlyoffice/documentation-ui-kit':
         specifier: workspace:^
         version: link:../ui/kit
