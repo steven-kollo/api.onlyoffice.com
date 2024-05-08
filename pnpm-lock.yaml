@@ -127,7 +127,13 @@ importers:
         specifier: ^5.3.3
         version: 5.4.2
 
-  document-editor-element:
+  internal/document-builder-types: {}
+
+  internal/document-editor-element:
+    dependencies:
+      '@onlyoffice/document-server-types':
+        specifier: workspace:^
+        version: link:../document-server-types
     devDependencies:
       '@types/node':
         specifier: ^20.12.8
@@ -147,6 +153,8 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
+
+  internal/document-server-types: {}
 
   resources:
     devDependencies:
@@ -200,6 +208,9 @@ importers:
 
   site:
     dependencies:
+      '@onlyoffice/document-editor-element':
+        specifier: workspace:^
+        version: link:../internal/document-editor-element
       '@onlyoffice/documentation-ui-kit':
         specifier: workspace:^
         version: link:../ui/kit
@@ -7590,10 +7601,10 @@ snapshots:
       '@storybook/manager': 8.0.0
       '@storybook/node-logger': 8.0.0
       '@types/ejs': 3.1.5
-      '@yarnpkg/esbuild-plugin-pnp': 3.0.0-rc.15(esbuild@0.19.12)
+      '@yarnpkg/esbuild-plugin-pnp': 3.0.0-rc.15(esbuild@0.20.2)
       browser-assert: 1.2.1
       ejs: 3.1.9
-      esbuild: 0.19.12
+      esbuild: 0.20.2
       esbuild-plugin-alias: 0.2.1
       express: 4.18.3
       fs-extra: 11.2.0
@@ -7734,8 +7745,8 @@ snapshots:
       '@yarnpkg/libzip': 2.3.0
       chalk: 4.1.2
       cross-spawn: 7.0.3
-      esbuild: 0.19.12
-      esbuild-register: 3.5.0(esbuild@0.19.12)
+      esbuild: 0.20.2
+      esbuild-register: 3.5.0(esbuild@0.20.2)
       execa: 5.1.1
       file-system-cache: 2.3.0
       find-cache-dir: 3.3.2
@@ -8461,9 +8472,9 @@ snapshots:
       vscode-oniguruma: 2.0.1
       vscode-textmate: 9.0.0
 
-  '@yarnpkg/esbuild-plugin-pnp@3.0.0-rc.15(esbuild@0.19.12)':
+  '@yarnpkg/esbuild-plugin-pnp@3.0.0-rc.15(esbuild@0.20.2)':
     dependencies:
-      esbuild: 0.19.12
+      esbuild: 0.20.2
       tslib: 2.6.2
 
   '@yarnpkg/fslib@2.10.3':
@@ -9276,6 +9287,13 @@ snapshots:
     dependencies:
       debug: 4.3.4
       esbuild: 0.19.12
+    transitivePeerDependencies:
+      - supports-color
+
+  esbuild-register@3.5.0(esbuild@0.20.2):
+    dependencies:
+      debug: 4.3.4
+      esbuild: 0.20.2
     transitivePeerDependencies:
       - supports-color
 

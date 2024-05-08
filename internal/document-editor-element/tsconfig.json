@@ -10,7 +10,6 @@
     "target": "ESNext"
   },
   "files": [
-    "./lib/api.ts",
     "./lib/main.ts"
   ]
 }

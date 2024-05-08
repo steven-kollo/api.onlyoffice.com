@@ -8,6 +8,7 @@ Before publishing this library:
 4. Resolve todos
 5. Revise events
 6. Hardcode event names into their respective classes?
+7. Add types for JSX
 
 https://github.com/web-padawan/awesome-web-components
 https://w3ctag.github.io/webcomponents-design-guidelines/

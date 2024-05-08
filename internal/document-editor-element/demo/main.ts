@@ -6,7 +6,7 @@ import type {IncomingMessage, ServerResponse} from "node:http"
 import {createServer} from "node:http"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
-import type {DocEditorConfig} from "../lib/api.js"
+import type {DocEditorConfig} from "@onlyoffice/document-server-types"
 
 // todo: move to env variables
 const config = {

@@ -20,7 +20,7 @@ import type {
   DocEditorRequestSendNotifyEvent,
   DocEditorRequestUsersEvent,
   DocEditorWarningEvent
-} from "./api.ts"
+} from "@onlyoffice/document-server-types"
 
 declare global {
   interface Window {
@@ -62,6 +62,16 @@ declare global {
 
   interface HTMLElementTagNameMap {
     "document-editor": DocumentEditor
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace preact {
+    // eslint-disable-next-line @typescript-eslint/no-namespace
+    namespace JSX {
+      interface IntrinsicElements {
+        "document-editor": Partial<Omit<DocumentEditor, keyof HTMLElement>>
+      }
+    }
   }
 }
 
