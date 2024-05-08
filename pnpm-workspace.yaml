@@ -1,5 +1,6 @@
 packages:
   - "declarations/*"
+  - "document-editor-element"
   - "resources"
   - "server"
   - "site"
