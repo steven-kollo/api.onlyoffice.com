@@ -216,7 +216,15 @@ function config() {
         // @typescript-eslint
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/consistent-type-imports": e,
-        "@typescript-eslint/explicit-function-return-type": e,
+        "@typescript-eslint/explicit-function-return-type": [e, {
+          allowExpressions: true,
+          allowTypedFunctionExpressions: true,
+          allowHigherOrderFunctions: true,
+          allowDirectConstAssertionInArrowFunctions: true,
+          allowConciseArrowFunctionExpressionsStartingWithVoid: false,
+          allowFunctionsWithoutTypeParameters: false,
+          allowIIFEs: false
+        }],
         "@typescript-eslint/no-unused-vars": [e, {varsIgnorePattern: "^h$"}],
 
         // import: Helpful warnings
