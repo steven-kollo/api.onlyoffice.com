@@ -18,6 +18,9 @@
     "demo:site": "wds . --watch",
     "demo:store": "tsx ./demo/main.ts"
   },
+  "dependencies": {
+    "@onlyoffice/document-server-types": "workspace:^"
+  },
   "devDependencies": {
     "@types/node": "^20.12.8",
     "@web/dev-server": "^0.4.4",
@@ -25,8 +28,5 @@
     "esbuild": "^0.20.2",
     "tsx": "^4.9.3",
     "typescript": "^5.4.5"
-  },
-  "dependencies": {
-    "@onlyoffice/document-server-types": "workspace:^"
   }
 }

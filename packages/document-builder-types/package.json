@@ -1,5 +1,5 @@
 {
   "name": "@onlyoffice/document-builder-types",
   "type": "module",
-  "types": "types.d.ts"
+  "types": "lib/types.d.ts"
 }
