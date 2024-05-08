@@ -21,6 +21,7 @@
   "devDependencies": {
     "@onlyoffice/documentation-declarations-types": "workspace:^",
     "@onlyoffice/documentation-utils": "workspace:^",
+    "@onlyoffice/jsdoc-types": "workspace:^",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/eslint": "^8.56.2",
     "@types/mdast": "^4.0.3",

@@ -99,6 +99,9 @@ importers:
       '@onlyoffice/documentation-utils':
         specifier: workspace:^
         version: link:../../utils
+      '@onlyoffice/jsdoc-types':
+        specifier: workspace:^
+        version: link:../../packages/jsdoc-types
       '@sindresorhus/slugify':
         specifier: ^2.2.1
         version: 2.2.1
@@ -155,6 +158,8 @@ importers:
         version: 5.4.5
 
   packages/document-server-types: {}
+
+  packages/jsdoc-types: {}
 
   resources:
     devDependencies:

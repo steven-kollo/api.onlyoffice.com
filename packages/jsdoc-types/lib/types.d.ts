@@ -101,7 +101,7 @@ export type CatharsisType =
   "FunctionType" |
   "NameExpression" |
   "NullLiteral" |
-  "RecordType"  |
+  "RecordType" |
   "TypeApplication" |
   "TypeUnion" |
   "UndefinedLiteral" |
