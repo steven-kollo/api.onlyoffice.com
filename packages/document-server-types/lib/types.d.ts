@@ -199,7 +199,7 @@ export interface DocEditorConnector {
   /**
    * {@link https://api.onlyoffice.com/editors/connector#callCommand ONLYOFFICE Reference}
    */
-  callCommand(command: string, callback: any, isNoCalc: boolean): void
+  callCommand(command: any, callback?: any, isNoCalc?: boolean): void
 
   /**
    * {@link https://api.onlyoffice.com/editors/connector#connect ONLYOFFICE Reference}
