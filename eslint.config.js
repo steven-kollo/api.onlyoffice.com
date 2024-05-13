@@ -233,11 +233,12 @@ function config() {
         // import: Style guide
         "import/first": e,
         "import/no-duplicates": e,
-        "import/order": [e, {
-          "alphabetize": {order: "asc", orderImportKind: "asc"},
-          "groups": ["builtin", "external", "parent", "sibling", "index"],
-          "newlines-between": "never"
-        }],
+        // todo: explain
+        // "import/order": [e, {
+        //   "alphabetize": {order: "asc", orderImportKind: "asc"},
+        //   "groups": ["builtin", "external", "parent", "sibling", "index"],
+        //   "newlines-between": "never"
+        // }],
 
         // promise
         "promise/always-return": e,
