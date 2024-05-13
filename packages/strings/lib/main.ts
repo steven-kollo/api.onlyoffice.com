@@ -1,0 +1,31 @@
+import type {Paragraph} from "mdast"
+import {fromMarkdown} from "mdast-util-from-markdown"
+import {toMarkdown} from "mdast-util-to-markdown"
+import {English} from "sentence-splitter/lang"
+import {split} from "sentence-splitter"
+import {select} from "unist-util-select"
+
+export function firstParagraph(s: string): string {
+  const t = fromMarkdown(s)
+  const n = select("paragraph", t) as Paragraph | undefined
+  if (n) {
+    s = toMarkdown({type: "root", children: [n]})
+    if (s.endsWith("\n")) {
+      s = s.slice(0, -1)
+    }
+  }
+  return s
+}
+
+export function firstSentence(s: string): string {
+  const r = split(s, {AbbrMarker: {language: English}})
+  if (r.length !== 0) {
+    s = r[0].raw
+  }
+  return s
+}
+
+export function isStringLiteral(s: string): boolean {
+  return s.startsWith('"') && s.endsWith('"') ||
+    s.startsWith("'") && s.endsWith("'")
+}
