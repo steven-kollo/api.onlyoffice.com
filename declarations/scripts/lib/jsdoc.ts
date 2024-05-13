@@ -10,13 +10,12 @@ import {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.
 import {ESLint} from "@onlyoffice/documentation-utils/eslint.ts"
 import {AsyncTransform} from "@onlyoffice/documentation-utils/stream.ts"
 import type {Catharsis, Doclet, DocletParam} from "@onlyoffice/jsdoc-types"
+import {firstParagraph, firstSentence, isStringLiteral} from "@onlyoffice/strings"
 import languagedetection from "@vscode/vscode-languagedetection"
-import type {ListItem, Paragraph} from "mdast"
+import type {ListItem} from "mdast"
 import {fromMarkdown} from "mdast-util-from-markdown"
 import {toMarkdown} from "mdast-util-to-markdown"
-import {English} from "sentence-splitter/lang"
-import {split} from "sentence-splitter"
-import {select, selectAll} from "unist-util-select"
+import {selectAll} from "unist-util-select"
 import {SKIP, visit} from "unist-util-visit"
 import {console} from "./console.ts"
 import {toDeclarationTokens, toTypeTokens} from "./tokenizer.ts"
@@ -1018,23 +1017,6 @@ function resolveAbstract(dc: Doclet): [string, string] {
   }
 }
 
-function firstParagraph(s: string): string {
-  const t = fromMarkdown(s)
-  const n = select("paragraph", t) as Paragraph | undefined
-  if (n) {
-    s = toMarkdown({type: "root", children: [n]})
-  }
-  return s
-}
-
-function firstSentence(s: string): string {
-  const r = split(s, {AbbrMarker: {language: English}})
-  if (r.length > 0) {
-    s = r[0].raw
-  }
-  return s
-}
-
 function serializeString(s: string): string {
   return omitHTMLTags(s).trim()
 }
@@ -1064,11 +1046,6 @@ function omitHTMLTags(s: string): string {
 
 function isNumberLiteral(s: string): boolean {
   return !isNaN(parseFloat(s))
-}
-
-function isStringLiteral(s: string): boolean {
-  return s.startsWith('"') && s.endsWith('"') ||
-    s.startsWith("'") && s.endsWith("'")
 }
 
 function omitStringQuotes(s: string): string {

@@ -12,12 +12,12 @@
     "test": "tsx ./node_modules/uvu/bin.js ./ ^.*\\.test\\.ts$"
   },
   "dependencies": {
+    "@onlyoffice/strings": "workspace:^",
     "@stylistic/eslint-plugin-js": "^1.5.4",
     "@vscode/vscode-languagedetection": "^1.0.22",
     "eslint": "^8.56.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-to-markdown": "^2.1.0",
-    "sentence-splitter": "^5.0.0",
     "unist-util-select": "^5.1.0",
     "unist-util-visit": "^5.0.0"
   },

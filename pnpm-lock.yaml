@@ -68,6 +68,9 @@ importers:
 
   declarations/scripts:
     dependencies:
+      '@onlyoffice/strings':
+        specifier: workspace:^
+        version: link:../../packages/strings
       '@stylistic/eslint-plugin-js':
         specifier: ^1.5.4
         version: 1.6.3(eslint@8.57.0)
@@ -83,9 +86,6 @@ importers:
       mdast-util-to-markdown:
         specifier: ^2.1.0
         version: 2.1.0
-      sentence-splitter:
-        specifier: ^5.0.0
-        version: 5.0.0
       unist-util-select:
         specifier: ^5.1.0
         version: 5.1.0
