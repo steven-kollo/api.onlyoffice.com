@@ -1,0 +1,25 @@
+{
+  "name": "@onlyoffice/remark-document-builder",
+  "type": "module",
+  "main": "lib/main.ts",
+  "scripts": {
+    "test": "tsc && c8 --reporter html uvu ./dist ^.*\\.test\\.js$"
+  },
+  "dependencies": {
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.3",
+    "c8": "^9.1.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "typescript": "^5.4.5",
+    "unified": "^11.0.4",
+    "uvu": "^0.5.6"
+  },
+  "engines": {
+    "node": "^21"
+  }
+}
