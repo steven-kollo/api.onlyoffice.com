@@ -67,6 +67,7 @@ export interface DeclarationNode {
   examples?: Example[]
   overloads?: Reference[]
   overloadsBy?: Reference[]
+  tryIt?: string
 }
 
 export interface Value {

@@ -10,7 +10,7 @@ import {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.
 import {ESLint} from "@onlyoffice/documentation-utils/eslint.ts"
 import {AsyncTransform} from "@onlyoffice/documentation-utils/stream.ts"
 import type {Catharsis, Doclet, DocletParam} from "@onlyoffice/jsdoc-types"
-import {firstParagraph, firstSentence, isStringLiteral} from "@onlyoffice/strings"
+import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "@onlyoffice/strings"
 import languagedetection from "@vscode/vscode-languagedetection"
 import type {ListItem} from "mdast"
 import {fromMarkdown} from "mdast-util-from-markdown"
@@ -688,6 +688,15 @@ async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, 
     d.description = undefined
   }
 
+  // note: it is a temporary solution.
+  if (d.description) {
+    // todo: my bad, capitalize the title in the document builder declarations too.
+    const s = selectSection("Try it", d.description)
+    if (s !== "") {
+      d.tryIt = s
+    }
+  }
+
   if (dc.examples && dc.examples.length > 0) {
     d.examples = await Promise.all(dc.examples.map(toExample))
   }
@@ -707,7 +716,8 @@ function declarationNode(): Library.DeclarationNode {
     signature: undefined,
     examples: undefined,
     overloads: undefined,
-    overloadsBy: undefined
+    overloadsBy: undefined,
+    tryIt: undefined
   }
 }
 
