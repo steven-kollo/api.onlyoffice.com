@@ -8,6 +8,7 @@
     "serve": "DOCUMENTATION_RUN_MODE=serve node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --serve --quiet --config ./eleventy.config.ts"
   },
   "dependencies": {
+    "@onlyoffice/document-editor-element": "workspace:^",
     "@onlyoffice/documentation-ui-kit": "workspace:^"
   },
   "devDependencies": {
@@ -15,12 +16,14 @@
     "@11ty/eleventy-dev-server": "^1.0.4",
     "@11ty/eleventy-img": "^4.0.2",
     "@mdx-js/mdx": "^3.0.0",
+    "@onlyoffice/document-builder-element": "workspace:^",
     "@onlyoffice/documentation-declarations-fixtures": "workspace:^",
     "@onlyoffice/documentation-declarations-scripts": "workspace:^",
     "@onlyoffice/documentation-declarations-types": "workspace:^",
     "@onlyoffice/documentation-resources": "workspace:^",
     "@onlyoffice/documentation-ui-storybook": "workspace:^",
     "@onlyoffice/documentation-utils": "workspace:^",
+    "@onlyoffice/remark-document-builder": "workspace:^",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/hast": "^3.0.4",
     "@types/html-minifier-terser": "^7.0.2",
