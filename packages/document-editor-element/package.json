@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "description": "ONLYOFFICE Document Editor HTML Element",
   "type": "module",
-  "exports": {
-    ".": "./dist/main.js",
-    "./main.js": "./dist/main.js"
-  },
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
