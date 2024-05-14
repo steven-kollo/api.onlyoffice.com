@@ -256,6 +256,7 @@ function config() {
         "promise/valid-params": e,
 
         // unicorn
+        "unicorn/catch-error-name": "off",
         "unicorn/consistent-function-scoping": "off",
         "unicorn/explicit-length-check": [e, {"non-zero": "not-equal"}],
         "unicorn/filename-case": "off",
