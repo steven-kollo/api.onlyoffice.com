@@ -332,13 +332,6 @@ importers:
   server: {}
 
   site:
-    dependencies:
-      '@onlyoffice/document-editor-element':
-        specifier: workspace:^
-        version: link:../packages/document-editor-element
-      '@onlyoffice/documentation-ui-kit':
-        specifier: workspace:^
-        version: link:../ui/kit
     devDependencies:
       '@11ty/eleventy':
         specifier: ^2.0.1
@@ -355,6 +348,9 @@ importers:
       '@onlyoffice/document-builder-element':
         specifier: workspace:^
         version: link:../packages/document-builder-element
+      '@onlyoffice/document-editor-element':
+        specifier: workspace:^
+        version: link:../packages/document-editor-element
       '@onlyoffice/documentation-declarations-fixtures':
         specifier: workspace:^
         version: link:../declarations/fixtures
@@ -367,6 +363,9 @@ importers:
       '@onlyoffice/documentation-resources':
         specifier: workspace:^
         version: link:../resources
+      '@onlyoffice/documentation-ui-kit':
+        specifier: workspace:^
+        version: link:../ui/kit
       '@onlyoffice/documentation-ui-storybook':
         specifier: workspace:^
         version: link:../ui/storybook
