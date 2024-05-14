@@ -264,6 +264,7 @@ function config() {
         "unicorn/no-array-callback-reference": "off",
         "unicorn/no-negated-condition": "off",
         "unicorn/no-null": "off",
+        "unicorn/prefer-at": "off",
         "unicorn/prefer-ternary": "off",
         "unicorn/prevent-abbreviations": "off",
         "unicorn/switch-case-braces": "off"
