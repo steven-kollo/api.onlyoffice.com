@@ -1,0 +1,28 @@
+{
+  "name": "@onlyoffice/document-builder-element",
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "build:element": "esbuild --bundle ./lib/main.ts --format=esm --keep-names --outfile=./dist/main.js",
+    "build:types": "tsc",
+    "build": "pnpm run build:element & pnpm run build:types",
+    "clean": "rm -r ./dist",
+    "demo:editor": "docker run --env JWT_HEADER=Authorization --env JWT_SECRET=your-256-bit-secret --publish 3000:80 onlyoffice/documentserver-de:8.0",
+    "demo:site": "wds . --watch",
+    "demo:store": "tsx ./demo/main.ts"
+  },
+  "dependencies": {
+    "@onlyoffice/document-editor-element": "workspace:^"
+  },
+  "devDependencies": {
+    "@onlyoffice/document-builder-types": "workspace:^",
+    "@onlyoffice/document-server-types": "workspace:^",
+    "@types/node": "^20.12.8",
+    "@web/dev-server": "^0.4.4",
+    "@web/dev-server-esbuild": "^1.0.2",
+    "esbuild": "^0.20.2",
+    "tsx": "^4.9.3",
+    "typescript": "^5.4.5"
+  }
+}
