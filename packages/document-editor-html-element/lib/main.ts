@@ -166,7 +166,7 @@ class InstanceErrorEvent extends ErrorEvent {
         cp.message = cp.error.message
       }
     }
-    super(type, eventInitDict)
+    super(type, cp)
   }
 }
 
