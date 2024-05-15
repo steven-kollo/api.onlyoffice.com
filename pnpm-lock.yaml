@@ -136,7 +136,7 @@ importers:
         specifier: ^5.3.3
         version: 5.4.2
 
-  packages/document-builder-element:
+  packages/document-builder-html-element:
     dependencies:
       '@onlyoffice/document-editor-html-element':
         specifier: workspace:^
@@ -345,9 +345,9 @@ importers:
       '@mdx-js/mdx':
         specifier: ^3.0.0
         version: 3.0.1
-      '@onlyoffice/document-builder-element':
+      '@onlyoffice/document-builder-html-element':
         specifier: workspace:^
-        version: link:../packages/document-builder-element
+        version: link:../packages/document-builder-html-element
       '@onlyoffice/document-editor-html-element':
         specifier: workspace:^
         version: link:../packages/document-editor-html-element

@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/document-builder-element",
+  "name": "@onlyoffice/document-builder-html-element",
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {
