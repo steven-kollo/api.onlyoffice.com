@@ -9,6 +9,18 @@ Before publishing this library:
 5. Revise events
 6. Hardcode event names into their respective classes?
 7. Add types for JSX
+8. Add .gitignore
+9. Add .mise.toml
+10. Change ts in package.json to js
+11. Add "types": "dist/main.d.ts",
+12. Add build steps
+
+```json
+"build:element": "esbuild --bundle ./lib/main.ts --format=esm --keep-names --outfile=./dist/main.js",
+"build:types": "tsc",
+"build": "pnpm run build:element & pnpm run build:types",
+"clean": "rm -r ./dist",
+```
 
 https://github.com/web-padawan/awesome-web-components
 https://w3ctag.github.io/webcomponents-design-guidelines/

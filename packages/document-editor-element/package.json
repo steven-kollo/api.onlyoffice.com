@@ -1,15 +1,10 @@
 {
   "name": "@onlyoffice/document-editor-element",
-  "version": "0.0.1",
+  "private": true,
   "description": "ONLYOFFICE Document Editor HTML Element",
   "type": "module",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
+  "main": "lib/main.ts",
   "scripts": {
-    "build:element": "esbuild --bundle ./lib/main.ts --format=esm --keep-names --outfile=./dist/main.js",
-    "build:types": "tsc",
-    "build": "pnpm run build:element & pnpm run build:types",
-    "clean": "rm -r ./dist",
     "demo:editor": "docker run --env JWT_HEADER=Authorization --env JWT_SECRET=your-256-bit-secret --publish 3000:80 onlyoffice/documentserver:8.0",
     "demo:site": "wds . --watch",
     "demo:store": "tsx ./demo/main.ts"
