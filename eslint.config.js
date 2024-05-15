@@ -225,6 +225,7 @@ function config() {
           allowFunctionsWithoutTypeParameters: false,
           allowIIFEs: false
         }],
+        "@typescript-eslint/no-namespace": [e, {allowDeclarations: true}],
         "@typescript-eslint/no-unused-vars": [e, {varsIgnorePattern: "^h$"}],
 
         // import: Helpful warnings

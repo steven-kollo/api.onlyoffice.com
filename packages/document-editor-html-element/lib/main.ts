@@ -64,9 +64,7 @@ declare global {
     "document-editor": DocumentEditor
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace preact {
-    // eslint-disable-next-line @typescript-eslint/no-namespace
     namespace JSX {
       interface IntrinsicElements {
         "document-editor": Partial<Omit<DocumentEditor, keyof HTMLElement>>

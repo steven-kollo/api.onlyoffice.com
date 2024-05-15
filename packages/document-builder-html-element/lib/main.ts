@@ -13,9 +13,7 @@ declare global {
     "document-builder": DocumentBuilder
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace preact {
-    // eslint-disable-next-line @typescript-eslint/no-namespace
     namespace JSX {
       interface IntrinsicElements {
         "document-builder": Partial<Omit<DocumentBuilder, keyof HTMLElement>>
