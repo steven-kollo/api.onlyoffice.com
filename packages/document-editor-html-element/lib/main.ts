@@ -1,3 +1,6 @@
+/* eslint @stylistic/max-len: ["error", {code: 140}] */
+/* eslint-disable no-new-func */
+
 import type {
   DocEditor,
   DocEditorConfig,
@@ -71,14 +74,54 @@ declare global {
       }
     }
   }
+
+  interface GlobalEventHandlersEventMap {
+    documenteditorappready: DocumentEditorAppReadyEvent
+    documenteditorcollaborativechanges: DocumentEditorCollaborativeChangesEvent
+    documenteditordocumentready: DocumentEditorDocumentReadyEvent
+    documenteditordocumentstatechange: DocumentEditorDocumentStateChangeEvent
+    documenteditordownloadas: DocumentEditorDownloadAsEvent
+    documenteditorerror: DocumentEditorErrorEvent
+    documenteditorinfo: DocumentEditorInfoEvent
+    documenteditormakeactionlink: DocumentEditorMakeActionLinkEvent
+    documenteditormetachange: DocumentEditorMetaChangeEvent
+    documenteditoroutdatedversion: DocumentEditorOutdatedVersionEvent
+    documenteditorpluginsready: DocumentEditorPluginsReadyEvent
+    documenteditorready: DocumentEditorReadyEvent
+    documenteditorrequestclose: DocumentEditorRequestCloseEvent
+    documenteditorrequestcomparefile: DocumentEditorRequestCompareFileEvent
+    documenteditorrequestcreatenew: DocumentEditorRequestCreateNewEvent
+    documenteditorrequesteditrights: DocumentEditorRequestEditRightsEvent
+    documenteditorrequesthistory: DocumentEditorRequestHistoryEvent
+    documenteditorrequesthistoryclose: DocumentEditorRequestHistoryCloseEvent
+    documenteditorrequesthistorydata: DocumentEditorRequestHistoryDataEvent
+    documenteditorrequestinsertimage: DocumentEditorRequestInsertImageEvent
+    documenteditorrequestmailmergerecipients: DocumentEditorRequestMailMergeRecipientsEvent
+    documenteditorrequestopen: DocumentEditorRequestOpenEvent
+    documenteditorrequestreferencedata: DocumentEditorRequestReferenceDataEvent
+    documenteditorrequestreferencesource: DocumentEditorRequestReferenceSourceEvent
+    documenteditorrequestrename: DocumentEditorRequestRenameEvent
+    documenteditorrequestrestore: DocumentEditorRequestRestoreEvent
+    documenteditorrequestsaveas: DocumentEditorRequestSaveAsEvent
+    documenteditorrequestselectdocument: DocumentEditorRequestSelectDocumentEvent
+    documenteditorrequestselectspreadsheet: DocumentEditorRequestSelectSpreadsheetEvent
+    documenteditorrequestsendnotify: DocumentEditorRequestSendNotifyEvent
+    documenteditorrequestsharingsettings: DocumentEditorRequestSharingSettingsEvent
+    documenteditorrequestusers: DocumentEditorRequestUsersEvent
+    documenteditorwarning: DocumentEditorWarningEvent
+  }
+
+  interface GlobalEventHandlers {
+    // todo
+  }
 }
 
 function main(): void {
-  if (window.customElements.get("document-editor")) {
+  if (window.customElements.get(DocumentEditor.tagName)) {
     return
   }
   window.DocumentEditor = DocumentEditor
-  window.customElements.define("document-editor", DocumentEditor)
+  window.customElements.define(DocumentEditor.tagName, DocumentEditor)
   window.DocumentEditorAppReadyEvent = DocumentEditorAppReadyEvent
   window.DocumentEditorCollaborativeChangesEvent = DocumentEditorCollaborativeChangesEvent
   window.DocumentEditorDocumentReadyEvent = DocumentEditorDocumentReadyEvent
@@ -114,54 +157,31 @@ function main(): void {
   window.DocumentEditorWarningEvent = DocumentEditorWarningEvent
 }
 
-export interface DocumentEditor extends HTMLElement {
-  onerror: DocumentEditorOnErrorEventHandler
-  addEventListener<K extends keyof DocumentEditorEventMap>(type: K, listener: (this: DocumentEditor, ev: DocumentEditorEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void
-  addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void
-  removeEventListener<K extends keyof DocumentEditorEventMap>(type: K, listener: (this: DocumentEditor, ev: DocumentEditorEventMap[K]) => any, options?: boolean | EventListenerOptions): void
-  removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void
-}
-
-export interface DocumentEditorEventMap extends HTMLElementEventMap {
-  appready: DocumentEditorAppReadyEvent
-  collaborativechanges: DocumentEditorCollaborativeChangesEvent
-  documentready: DocumentEditorDocumentReadyEvent
-  documentstatechange: DocumentEditorDocumentStateChangeEvent
-  downloadas: DocumentEditorDownloadAsEvent
-  error: DocumentEditorErrorEvent
-  info: DocumentEditorInfoEvent
-  makeactionlink: DocumentEditorMakeActionLinkEvent
-  metachange: DocumentEditorMetaChangeEvent
-  outdatedversion: DocumentEditorOutdatedVersionEvent
-  pluginsready: DocumentEditorPluginsReadyEvent
-  ready: DocumentEditorReadyEvent
-  requestclose: DocumentEditorRequestCloseEvent
-  requestcomparefile: DocumentEditorRequestCompareFileEvent
-  requestcreatenew: DocumentEditorRequestCreateNewEvent
-  requesteditrights: DocumentEditorRequestEditRightsEvent
-  requesthistory: DocumentEditorRequestHistoryEvent
-  requesthistoryclose: DocumentEditorRequestHistoryCloseEvent
-  requesthistorydata: DocumentEditorRequestHistoryDataEvent
-  requestinsertimage: DocumentEditorRequestInsertImageEvent
-  requestmailmergerecipients: DocumentEditorRequestMailMergeRecipientsEvent
-  requestopen: DocumentEditorRequestOpenEvent
-  requestreferencedata: DocumentEditorRequestReferenceDataEvent
-  requestreferencesource: DocumentEditorRequestReferenceSourceEvent
-  requestrename: DocumentEditorRequestRenameEvent
-  requestrestore: DocumentEditorRequestRestoreEvent
-  requestsaveas: DocumentEditorRequestSaveAsEvent
-  requestselectdocument: DocumentEditorRequestSelectDocumentEvent
-  requestselectspreadsheet: DocumentEditorRequestSelectSpreadsheetEvent
-  requestsendnotify: DocumentEditorRequestSendNotifyEvent
-  requestsharingsettings: DocumentEditorRequestSharingSettingsEvent
-  requestusers: DocumentEditorRequestUsersEvent
-  warning: DocumentEditorWarningEvent
+class InstanceErrorEvent extends ErrorEvent {
+  constructor(type: string, eventInitDict?: ErrorEventInit) {
+    let cp: ErrorEventInit = {}
+    if (eventInitDict) {
+      cp = {...eventInitDict}
+      if (cp.error instanceof Error) {
+        cp.message = cp.error.message
+      }
+    }
+    super(type, eventInitDict)
+  }
 }
 
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onAppReady ONLYOFFICE Reference}
  */
-export class DocumentEditorAppReadyEvent extends Event {}
+export class DocumentEditorAppReadyEvent extends Event {
+  static get type(): string {
+    return "documenteditorappready"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorAppReadyEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorAppReadyListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorAppReadyEvent): void
@@ -170,7 +190,15 @@ export interface DocumentEditorAppReadyListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onCollaborativeChanges ONLYOFFICE Reference}
  */
-export class DocumentEditorCollaborativeChangesEvent extends Event {}
+export class DocumentEditorCollaborativeChangesEvent extends Event {
+  static get type(): string {
+    return "documenteditorcollaborativechanges"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorCollaborativeChangesEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorCollaborativeChangesListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorCollaborativeChangesEvent): void
@@ -179,7 +207,15 @@ export interface DocumentEditorCollaborativeChangesListener extends EventListene
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onDocumentReady ONLYOFFICE Reference}
  */
-export class DocumentEditorDocumentReadyEvent extends Event {}
+export class DocumentEditorDocumentReadyEvent extends Event {
+  static get type(): string {
+    return "documenteditordocumentready"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorDocumentReadyEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorDocumentReadyListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorDocumentReadyEvent): void
@@ -189,14 +225,18 @@ export interface DocumentEditorDocumentReadyListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onDocumentStateChange ONLYOFFICE Reference}
  */
 export class DocumentEditorDocumentStateChangeEvent extends Event {
+  static get type(): string {
+    return "documenteditordocumentstatechange"
+  }
+
   #data: DocumentEditorDocumentStateChangeEventInit["data"]
 
   get data(): DocumentEditorDocumentStateChangeEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorDocumentStateChangeEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorDocumentStateChangeEventInit) {
+    super(DocumentEditorDocumentStateChangeEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -211,14 +251,18 @@ export interface DocumentEditorDocumentStateChangeListener extends EventListener
  * {@link https://api.onlyoffice.com/editors/config/events#onDownloadAs ONLYOFFICE Reference}
  */
 export class DocumentEditorDownloadAsEvent extends Event {
+  static get type(): string {
+    return "documenteditordownloadas"
+  }
+
   #data: DocumentEditorDownloadAsEventInit["data"]
 
   get data(): DocumentEditorDownloadAsEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorDownloadAsEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorDownloadAsEventInit) {
+    super(DocumentEditorDownloadAsEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -232,24 +276,21 @@ export interface DocumentEditorDownloadAsListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onError ONLYOFFICE Reference}
  */
-export class DocumentEditorErrorEvent extends ErrorEvent {
+export class DocumentEditorErrorEvent extends InstanceErrorEvent {
+  static get type(): string {
+    return "documenteditorerror"
+  }
+
   #data?: DocumentEditorErrorEventInit["data"]
 
   get data(): DocumentEditorErrorEventInit["data"] | undefined {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict?: DocumentEditorErrorEventInit) {
-    let o: DocumentEditorErrorEventInit = {}
+  constructor(eventInitDict?: DocumentEditorErrorEventInit) {
+    super(DocumentEditorErrorEvent.type, eventInitDict)
     if (eventInitDict) {
-      o = {...eventInitDict}
-      if (o.error instanceof Error) {
-        o.message = o.error.message
-      }
-    }
-    super(type, o)
-    if (o) {
-      this.#data = o.data
+      this.#data = eventInitDict.data
     }
   }
 }
@@ -272,14 +313,18 @@ export interface DocumentEditorOnErrorEventHandlerNonNull extends OnErrorEventHa
  * {@link https://api.onlyoffice.com/editors/config/events#onInfo ONLYOFFICE Reference}
  */
 export class DocumentEditorInfoEvent extends Event {
+  static get type(): string {
+    return "documenteditorinfo"
+  }
+
   #data: DocumentEditorInfoEventInit["data"]
 
   get data(): DocumentEditorInfoEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorInfoEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorInfoEventInit) {
+    super(DocumentEditorInfoEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -294,14 +339,18 @@ export interface DocumentEditorInfoListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onMakeActionLink ONLYOFFICE Reference}
  */
 export class DocumentEditorMakeActionLinkEvent extends Event {
+  static get type(): string {
+    return "documenteditormakeactionlink"
+  }
+
   #data: DocumentEditorMakeActionLinkEventInit["data"]
 
   get data(): DocumentEditorMakeActionLinkEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorMakeActionLinkEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorMakeActionLinkEventInit) {
+    super(DocumentEditorMakeActionLinkEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -316,14 +365,18 @@ export interface DocumentEditorMakeActionLinkListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onMetaChange ONLYOFFICE Reference}
  */
 export class DocumentEditorMetaChangeEvent extends Event {
+  static get type(): string {
+    return "documenteditormetachange"
+  }
+
   #data: DocumentEditorMetaChangeEventInit["data"]
 
   get data(): DocumentEditorMetaChangeEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorMetaChangeEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorMetaChangeEventInit) {
+    super(DocumentEditorMetaChangeEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -337,7 +390,15 @@ export interface DocumentEditorMetaChangeListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onOutdatedVersion ONLYOFFICE Reference}
  */
-export class DocumentEditorOutdatedVersionEvent extends Event {}
+export class DocumentEditorOutdatedVersionEvent extends Event {
+  static get type(): string {
+    return "documenteditoroutdatedversion"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorOutdatedVersionEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorOutdatedVersionListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorOutdatedVersionEvent): void
@@ -346,7 +407,15 @@ export interface DocumentEditorOutdatedVersionListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onPluginsReady ONLYOFFICE Reference}
  */
-export class DocumentEditorPluginsReadyEvent extends Event {}
+export class DocumentEditorPluginsReadyEvent extends Event {
+  static get type(): string {
+    return "documenteditorpluginsready"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorPluginsReadyEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorPluginsReadyListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorPluginsReadyEvent): void
@@ -356,7 +425,15 @@ export interface DocumentEditorPluginsReadyListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onReady ONLYOFFICE Reference}
  * @deprecated Use {@link DocumentEditorAppReadyEvent} instead
  */
-export class DocumentEditorReadyEvent extends Event {}
+export class DocumentEditorReadyEvent extends Event {
+  static get type(): string {
+    return "documenteditorready"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorReadyEvent.type, eventInitDict)
+  }
+}
 
 /**
  * @deprecated Use {@link DocumentEditorAppReadyListener} instead
@@ -368,7 +445,15 @@ export interface DocumentEditorReadyListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestClose ONLYOFFICE Reference}
  */
-export class DocumentEditorRequestCloseEvent extends Event {}
+export class DocumentEditorRequestCloseEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestclose"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorRequestCloseEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorRequestCloseListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorRequestCloseEvent): void
@@ -378,7 +463,15 @@ export interface DocumentEditorRequestCloseListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestCompareFile ONLYOFFICE Reference}
  * @deprecated Prefer {@link DocumentEditorRequestSelectDocumentEvent} instead
  */
-export class DocumentEditorRequestCompareFileEvent extends Event {}
+export class DocumentEditorRequestCompareFileEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestcomparefile"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorRequestCompareFileEvent.type, eventInitDict)
+  }
+}
 
 /**
  * @deprecated Prefer {@link DocumentEditorRequestSelectDocumentListener} instead
@@ -390,7 +483,15 @@ export interface DocumentEditorRequestCompareFileListener extends EventListener 
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestCreateNew ONLYOFFICE Reference}
  */
-export class DocumentEditorRequestCreateNewEvent extends Event {}
+export class DocumentEditorRequestCreateNewEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestcreatenew"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorRequestCreateNewEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorRequestCreateNewListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorRequestCreateNewEvent): void
@@ -399,7 +500,15 @@ export interface DocumentEditorRequestCreateNewListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestEditRights ONLYOFFICE Reference}
  */
-export class DocumentEditorRequestEditRightsEvent extends Event {}
+export class DocumentEditorRequestEditRightsEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequesteditrights"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorRequestEditRightsEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorRequestEditRightsListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorRequestEditRightsEvent): void
@@ -408,7 +517,15 @@ export interface DocumentEditorRequestEditRightsListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestHistory ONLYOFFICE Reference}
  */
-export class DocumentEditorRequestHistoryEvent extends Event {}
+export class DocumentEditorRequestHistoryEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequesthistory"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorRequestHistoryEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorRequestHistoryListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorRequestHistoryEvent): void
@@ -417,7 +534,15 @@ export interface DocumentEditorRequestHistoryListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestHistoryClose ONLYOFFICE Reference}
  */
-export class DocumentEditorRequestHistoryCloseEvent extends Event {}
+export class DocumentEditorRequestHistoryCloseEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequesthistoryclose"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorRequestHistoryCloseEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorRequestHistoryCloseListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorRequestHistoryCloseEvent): void
@@ -427,14 +552,18 @@ export interface DocumentEditorRequestHistoryCloseListener extends EventListener
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestHistoryData ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestHistoryDataEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequesthistorydata"
+  }
+
   #data: DocumentEditorRequestHistoryDataEventInit["data"]
 
   get data(): DocumentEditorRequestHistoryDataEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestHistoryDataEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestHistoryDataEventInit) {
+    super(DocumentEditorRequestHistoryDataEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -449,14 +578,18 @@ export interface DocumentEditorRequestHistoryDataListener extends EventListener 
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestInsertImage ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestInsertImageEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestinsertimage"
+  }
+
   #data: DocumentEditorRequestInsertImageEventInit["data"]
 
   get data(): DocumentEditorRequestInsertImageEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestInsertImageEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestInsertImageEventInit) {
+    super(DocumentEditorRequestInsertImageEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -471,7 +604,15 @@ export interface DocumentEditorRequestInsertImageListener extends EventListener 
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestMailMergeRecipients ONLYOFFICE Reference}
  * @deprecated Prefer {@link DocumentEditorRequestSelectSpreadsheetEvent} instead.
  */
-export class DocumentEditorRequestMailMergeRecipientsEvent extends Event {}
+export class DocumentEditorRequestMailMergeRecipientsEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestmailmergerecipients"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorRequestMailMergeRecipientsEvent.type, eventInitDict)
+  }
+}
 
 /**
  * @deprecated Prefer {@link DocumentEditorRequestSelectSpreadsheetListener} instead.
@@ -484,14 +625,18 @@ export interface DocumentEditorRequestMailMergeRecipientsListener extends EventL
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestOpen ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestOpenEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestopen"
+  }
+
   #data: DocumentEditorRequestOpenEventInit["data"]
 
   get data(): DocumentEditorRequestOpenEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestOpenEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestOpenEventInit) {
+    super(DocumentEditorRequestOpenEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -506,14 +651,18 @@ export interface DocumentEditorRequestOpenListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestReferenceData ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestReferenceDataEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestreferencedata"
+  }
+
   #data: DocumentEditorRequestReferenceDataEventInit["data"]
 
   get data(): DocumentEditorRequestReferenceDataEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestReferenceDataEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestReferenceDataEventInit) {
+    super(DocumentEditorRequestReferenceDataEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -528,14 +677,18 @@ export interface DocumentEditorRequestReferenceDataListener extends EventListene
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestReferenceSource ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestReferenceSourceEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestreferencesource"
+  }
+
   #data: DocumentEditorRequestReferenceSourceEventInit["data"]
 
   get data(): DocumentEditorRequestReferenceSourceEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestReferenceSourceEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestReferenceSourceEventInit) {
+    super(DocumentEditorRequestReferenceSourceEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -550,14 +703,18 @@ export interface DocumentEditorRequestReferenceSourceListener extends EventListe
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestRename ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestRenameEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestrename"
+  }
+
   #data: DocumentEditorRequestRenameEventInit["data"]
 
   get data(): DocumentEditorRequestRenameEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestRenameEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestRenameEventInit) {
+    super(DocumentEditorRequestRenameEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -572,14 +729,18 @@ export interface DocumentEditorRequestRenameListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestRestore ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestRestoreEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestrestore"
+  }
+
   #data: DocumentEditorRequestRestoreEventInit["data"]
 
   get data(): DocumentEditorRequestRestoreEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestRestoreEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestRestoreEventInit) {
+    super(DocumentEditorRequestRestoreEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -594,14 +755,18 @@ export interface DocumentEditorRequestRestoreListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestSaveAs ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestSaveAsEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestsaveas"
+  }
+
   #data: DocumentEditorRequestSaveAsEventInit["data"]
 
   get data(): DocumentEditorRequestSaveAsEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestSaveAsEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestSaveAsEventInit) {
+    super(DocumentEditorRequestSaveAsEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -616,14 +781,18 @@ export interface DocumentEditorRequestSaveAsListener extends EventListener {
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestSelectDocument ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestSelectDocumentEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestselectdocument"
+  }
+
   #data: DocumentEditorRequestSelectDocumentEventInit["data"]
 
   get data(): DocumentEditorRequestSelectDocumentEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestSelectDocumentEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestSelectDocumentEventInit) {
+    super(DocumentEditorRequestSelectDocumentEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -638,14 +807,18 @@ export interface DocumentEditorRequestSelectDocumentListener extends EventListen
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestSelectSpreadsheet ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestSelectSpreadsheetEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestselectspreadsheet"
+  }
+
   #data: DocumentEditorRequestSelectSpreadsheetEventInit["data"]
 
   get data(): DocumentEditorRequestSelectSpreadsheetEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestSelectSpreadsheetEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestSelectSpreadsheetEventInit) {
+    super(DocumentEditorRequestSelectSpreadsheetEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -660,14 +833,18 @@ export interface DocumentEditorRequestSelectSpreadsheetListener extends EventLis
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestSendNotify ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestSendNotifyEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestsendnotify"
+  }
+
   #data: DocumentEditorRequestSendNotifyEventInit["data"]
 
   get data(): DocumentEditorRequestSendNotifyEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestSendNotifyEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestSendNotifyEventInit) {
+    super(DocumentEditorRequestSendNotifyEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -681,7 +858,15 @@ export interface DocumentEditorRequestSendNotifyListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestSharingSettings ONLYOFFICE Reference}
  */
-export class DocumentEditorRequestSharingSettingsEvent extends Event {}
+export class DocumentEditorRequestSharingSettingsEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestsharingsettings"
+  }
+
+  constructor(eventInitDict?: EventInit) {
+    super(DocumentEditorRequestSharingSettingsEvent.type, eventInitDict)
+  }
+}
 
 export interface DocumentEditorRequestSharingSettingsListener extends EventListener {
   (this: DocumentEditor, event: DocumentEditorRequestSharingSettingsEvent): void
@@ -691,14 +876,18 @@ export interface DocumentEditorRequestSharingSettingsListener extends EventListe
  * {@link https://api.onlyoffice.com/editors/config/events#onRequestUsers ONLYOFFICE Reference}
  */
 export class DocumentEditorRequestUsersEvent extends Event {
+  static get type(): string {
+    return "documenteditorrequestusers"
+  }
+
   #data: DocumentEditorRequestUsersEventInit["data"]
 
   get data(): DocumentEditorRequestUsersEventInit["data"] {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict: DocumentEditorRequestUsersEventInit) {
-    super(type, eventInitDict)
+  constructor(eventInitDict: DocumentEditorRequestUsersEventInit) {
+    super(DocumentEditorRequestUsersEvent.type, eventInitDict)
     this.#data = eventInitDict.data
   }
 }
@@ -712,24 +901,21 @@ export interface DocumentEditorRequestUsersListener extends EventListener {
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onWarning ONLYOFFICE Reference}
  */
-export class DocumentEditorWarningEvent extends ErrorEvent {
+export class DocumentEditorWarningEvent extends InstanceErrorEvent {
+  static get type(): string {
+    return "documenteditorwarning"
+  }
+
   #data?: DocumentEditorWarningEventInit["data"]
 
   get data(): DocumentEditorWarningEventInit["data"] | undefined {
     return this.#data
   }
 
-  constructor(type: string, eventInitDict?: DocumentEditorWarningEventInit) {
-    let o: DocumentEditorWarningEventInit = {}
+  constructor(eventInitDict?: DocumentEditorWarningEventInit) {
+    super(DocumentEditorWarningEvent.type, eventInitDict)
     if (eventInitDict) {
-      o = {...eventInitDict}
-      if (o.error instanceof Error) {
-        o.message = o.error.message
-      }
-    }
-    super(type, o)
-    if (o) {
-      this.#data = o.data
+      this.#data = eventInitDict.data
     }
   }
 }
@@ -745,6 +931,10 @@ export interface DocumentEditorWarningListener extends EventListener {
 export type DocumentEditorConfig = Omit<DocEditorConfig, "events">
 
 export class DocumentEditor extends HTMLElement {
+  static get tagName(): string {
+    return "document-editor"
+  }
+
   #documentServerURL: string = ""
 
   get documentServerURL(): string {
@@ -771,549 +961,549 @@ export class DocumentEditor extends HTMLElement {
     return this.#editor
   }
 
-  #onAppReady: DocumentEditorAppReadyListener | null = null
+  #ondocumenteditorappready: DocumentEditorAppReadyListener | null = null
 
-  get onAppReady(): DocumentEditorAppReadyListener | null {
-    return this.#onAppReady
+  get ondocumenteditorappready(): DocumentEditorAppReadyListener | null {
+    return this.#ondocumenteditorappready
   }
 
-  set onAppReady(l: DocumentEditorAppReadyListener | null) {
-    if (this.#onAppReady) {
-      this.removeEventListener("appready", this.#onAppReady)
+  set ondocumenteditorappready(l: DocumentEditorAppReadyListener | null) {
+    if (this.#ondocumenteditorappready) {
+      this.removeEventListener(DocumentEditorAppReadyEvent.type, this.#ondocumenteditorappready)
     }
-    this.#onAppReady = l
-    if (this.#onAppReady) {
-      this.addEventListener("appready", this.#onAppReady)
-    }
-  }
-
-  #onCollaborativeChanges: DocumentEditorCollaborativeChangesListener | null = null
-
-  get onCollaborativeChanges(): DocumentEditorCollaborativeChangesListener | null {
-    return this.#onCollaborativeChanges
-  }
-
-  set onCollaborativeChanges(l: DocumentEditorCollaborativeChangesListener | null) {
-    if (this.#onCollaborativeChanges) {
-      this.removeEventListener("collaborativechanges", this.#onCollaborativeChanges)
-    }
-    this.#onCollaborativeChanges = l
-    if (this.#onCollaborativeChanges) {
-      this.addEventListener("collaborativechanges", this.#onCollaborativeChanges)
+    this.#ondocumenteditorappready = l
+    if (this.#ondocumenteditorappready) {
+      this.addEventListener(DocumentEditorAppReadyEvent.type, this.#ondocumenteditorappready)
     }
   }
 
-  #onDocumentReady: DocumentEditorDocumentReadyListener | null = null
+  #ondocumenteditorcollaborativechanges: DocumentEditorCollaborativeChangesListener | null = null
 
-  get onDocumentReady(): DocumentEditorDocumentReadyListener | null {
-    return this.#onDocumentReady
+  get ondocumenteditorcollaborativechanges(): DocumentEditorCollaborativeChangesListener | null {
+    return this.#ondocumenteditorcollaborativechanges
   }
 
-  set onDocumentReady(l: DocumentEditorDocumentReadyListener | null) {
-    if (this.#onDocumentReady) {
-      this.removeEventListener("documentready", this.#onDocumentReady)
+  set ondocumenteditorcollaborativechanges(l: DocumentEditorCollaborativeChangesListener | null) {
+    if (this.#ondocumenteditorcollaborativechanges) {
+      this.removeEventListener(DocumentEditorCollaborativeChangesEvent.type, this.#ondocumenteditorcollaborativechanges)
     }
-    this.#onDocumentReady = l
-    if (this.#onDocumentReady) {
-      this.addEventListener("documentready", this.#onDocumentReady)
-    }
-  }
-
-  #onDocumentStateChange: DocumentEditorDocumentStateChangeListener | null = null
-
-  get onDocumentStateChange(): DocumentEditorDocumentStateChangeListener | null {
-    return this.#onDocumentStateChange
-  }
-
-  set onDocumentStateChange(l: DocumentEditorDocumentStateChangeListener | null) {
-    if (this.#onDocumentStateChange) {
-      this.removeEventListener("documentstatechange", this.#onDocumentStateChange)
-    }
-    this.#onDocumentStateChange = l
-    if (this.#onDocumentStateChange) {
-      this.addEventListener("documentstatechange", this.#onDocumentStateChange)
+    this.#ondocumenteditorcollaborativechanges = l
+    if (this.#ondocumenteditorcollaborativechanges) {
+      this.addEventListener(DocumentEditorCollaborativeChangesEvent.type, this.#ondocumenteditorcollaborativechanges)
     }
   }
 
-  #onDownloadAs: DocumentEditorDownloadAsListener | null = null
+  #ondocumenteditordocumentready: DocumentEditorDocumentReadyListener | null = null
 
-  get onDownloadAs(): DocumentEditorDownloadAsListener | null {
-    return this.#onDownloadAs
+  get ondocumenteditordocumentready(): DocumentEditorDocumentReadyListener | null {
+    return this.#ondocumenteditordocumentready
   }
 
-  set onDownloadAs(l: DocumentEditorDownloadAsListener | null) {
-    if (this.#onDownloadAs) {
-      this.removeEventListener("downloadas", this.#onDownloadAs)
+  set ondocumenteditordocumentready(l: DocumentEditorDocumentReadyListener | null) {
+    if (this.#ondocumenteditordocumentready) {
+      this.removeEventListener(DocumentEditorDocumentReadyEvent.type, this.#ondocumenteditordocumentready)
     }
-    this.#onDownloadAs = l
-    if (this.#onDownloadAs) {
-      this.addEventListener("downloadas", this.#onDownloadAs)
-    }
-  }
-
-  #onError: DocumentEditorErrorListener | null = null
-
-  get onError(): DocumentEditorErrorListener | null {
-    return this.#onError
-  }
-
-  set onError(l: DocumentEditorErrorListener | null) {
-    if (this.#onError) {
-      this.removeEventListener("error", this.#onError)
-    }
-    this.#onError = l
-    if (this.#onError) {
-      this.addEventListener("error", this.#onError)
+    this.#ondocumenteditordocumentready = l
+    if (this.#ondocumenteditordocumentready) {
+      this.addEventListener(DocumentEditorDocumentReadyEvent.type, this.#ondocumenteditordocumentready)
     }
   }
 
-  #onInfo: DocumentEditorInfoListener | null = null
+  #ondocumenteditordocumentstatechange: DocumentEditorDocumentStateChangeListener | null = null
 
-  get onInfo(): DocumentEditorInfoListener | null {
-    return this.#onInfo
+  get ondocumenteditordocumentstatechange(): DocumentEditorDocumentStateChangeListener | null {
+    return this.#ondocumenteditordocumentstatechange
   }
 
-  set onInfo(l: DocumentEditorInfoListener | null) {
-    if (this.#onInfo) {
-      this.removeEventListener("info", this.#onInfo)
+  set ondocumenteditordocumentstatechange(l: DocumentEditorDocumentStateChangeListener | null) {
+    if (this.#ondocumenteditordocumentstatechange) {
+      this.removeEventListener(DocumentEditorDocumentStateChangeEvent.type, this.#ondocumenteditordocumentstatechange)
     }
-    this.#onInfo = l
-    if (this.#onInfo) {
-      this.addEventListener("info", this.#onInfo)
-    }
-  }
-
-  #onMakeActionLink: DocumentEditorMakeActionLinkListener | null = null
-
-  get onMakeActionLink(): DocumentEditorMakeActionLinkListener | null {
-    return this.#onMakeActionLink
-  }
-
-  set onMakeActionLink(l: DocumentEditorMakeActionLinkListener | null) {
-    if (this.#onMakeActionLink) {
-      this.removeEventListener("makeactionlink", this.#onMakeActionLink)
-    }
-    this.#onMakeActionLink = l
-    if (this.#onMakeActionLink) {
-      this.addEventListener("makeactionlink", this.#onMakeActionLink)
+    this.#ondocumenteditordocumentstatechange = l
+    if (this.#ondocumenteditordocumentstatechange) {
+      this.addEventListener(DocumentEditorDocumentStateChangeEvent.type, this.#ondocumenteditordocumentstatechange)
     }
   }
 
-  #onMetaChange: DocumentEditorMetaChangeListener | null = null
+  #ondocumenteditordownloadas: DocumentEditorDownloadAsListener | null = null
 
-  get onMetaChange(): DocumentEditorMetaChangeListener | null {
-    return this.#onMetaChange
+  get ondocumenteditordownloadas(): DocumentEditorDownloadAsListener | null {
+    return this.#ondocumenteditordownloadas
   }
 
-  set onMetaChange(l: DocumentEditorMetaChangeListener | null) {
-    if (this.#onMetaChange) {
-      this.removeEventListener("metachange", this.#onMetaChange)
+  set ondocumenteditordownloadas(l: DocumentEditorDownloadAsListener | null) {
+    if (this.#ondocumenteditordownloadas) {
+      this.removeEventListener(DocumentEditorDownloadAsEvent.type, this.#ondocumenteditordownloadas)
     }
-    this.#onMetaChange = l
-    if (this.#onMetaChange) {
-      this.addEventListener("metachange", this.#onMetaChange)
-    }
-  }
-
-  #onOutdatedVersion: DocumentEditorOutdatedVersionListener | null = null
-
-  get onOutdatedVersion(): DocumentEditorOutdatedVersionListener | null {
-    return this.#onOutdatedVersion
-  }
-
-  set onOutdatedVersion(l: DocumentEditorOutdatedVersionListener | null) {
-    if (this.#onOutdatedVersion) {
-      this.removeEventListener("outdatedversion", this.#onOutdatedVersion)
-    }
-    this.#onOutdatedVersion = l
-    if (this.#onOutdatedVersion) {
-      this.addEventListener("outdatedversion", this.#onOutdatedVersion)
+    this.#ondocumenteditordownloadas = l
+    if (this.#ondocumenteditordownloadas) {
+      this.addEventListener(DocumentEditorDownloadAsEvent.type, this.#ondocumenteditordownloadas)
     }
   }
 
-  #onPluginsReady: DocumentEditorPluginsReadyListener | null = null
+  #ondocumenteditorerror: DocumentEditorErrorListener | null = null
 
-  get onPluginsReady(): DocumentEditorPluginsReadyListener | null {
-    return this.#onPluginsReady
+  get ondocumenteditorerror(): DocumentEditorErrorListener | null {
+    return this.#ondocumenteditorerror
   }
 
-  set onPluginsReady(l: DocumentEditorPluginsReadyListener | null) {
-    if (this.#onPluginsReady) {
-      this.removeEventListener("pluginsready", this.#onPluginsReady)
+  set ondocumenteditorerror(l: DocumentEditorErrorListener | null) {
+    if (this.#ondocumenteditorerror) {
+      this.removeEventListener(DocumentEditorErrorEvent.type, this.#ondocumenteditorerror)
     }
-    this.#onPluginsReady = l
-    if (this.#onPluginsReady) {
-      this.addEventListener("pluginsready", this.#onPluginsReady)
-    }
-  }
-
-  /**
-   * @deprecated Prefer {@link onAppReady} instead.
-   */
-  #onReady: DocumentEditorReadyListener | null = null
-
-  /**
-   * @deprecated Prefer {@link onAppReady} instead.
-   */
-  get onReady(): DocumentEditorReadyListener | null {
-    return this.#onReady
-  }
-
-  /**
-   * @deprecated Prefer {@link onAppReady} instead.
-   */
-  set onReady(l: DocumentEditorReadyListener | null) {
-    if (this.#onReady) {
-      this.removeEventListener("ready", this.#onReady)
-    }
-    this.#onReady = l
-    if (this.#onReady) {
-      this.addEventListener("ready", this.#onReady)
+    this.#ondocumenteditorerror = l
+    if (this.#ondocumenteditorerror) {
+      this.addEventListener(DocumentEditorErrorEvent.type, this.#ondocumenteditorerror)
     }
   }
 
-  #onRequestClose: DocumentEditorRequestCloseListener | null = null
+  #ondocumenteditorinfo: DocumentEditorInfoListener | null = null
 
-  get onRequestClose(): DocumentEditorRequestCloseListener | null {
-    return this.#onRequestClose
+  get ondocumenteditorinfo(): DocumentEditorInfoListener | null {
+    return this.#ondocumenteditorinfo
   }
 
-  set onRequestClose(l: DocumentEditorRequestCloseListener | null) {
-    if (this.#onRequestClose) {
-      this.removeEventListener("requestclose", this.#onRequestClose)
+  set ondocumenteditorinfo(l: DocumentEditorInfoListener | null) {
+    if (this.#ondocumenteditorinfo) {
+      this.removeEventListener(DocumentEditorInfoEvent.type, this.#ondocumenteditorinfo)
     }
-    this.#onRequestClose = l
-    if (this.#onRequestClose) {
-      this.addEventListener("requestclose", this.#onRequestClose)
-    }
-  }
-
-  #onRequestCompareFile: DocumentEditorRequestCompareFileListener | null = null
-
-  get onRequestCompareFile(): DocumentEditorRequestCompareFileListener | null {
-    return this.#onRequestCompareFile
-  }
-
-  set onRequestCompareFile(l: DocumentEditorRequestCompareFileListener | null) {
-    if (this.#onRequestCompareFile) {
-      this.removeEventListener("requestcomparefile", this.#onRequestCompareFile)
-    }
-    this.#onRequestCompareFile = l
-    if (this.#onRequestCompareFile) {
-      this.addEventListener("requestcomparefile", this.#onRequestCompareFile)
+    this.#ondocumenteditorinfo = l
+    if (this.#ondocumenteditorinfo) {
+      this.addEventListener(DocumentEditorInfoEvent.type, this.#ondocumenteditorinfo)
     }
   }
 
-  #onRequestCreateNew: DocumentEditorRequestCreateNewListener | null = null
+  #ondocumenteditormakeactionlink: DocumentEditorMakeActionLinkListener | null = null
 
-  get onRequestCreateNew(): DocumentEditorRequestCreateNewListener | null {
-    return this.#onRequestCreateNew
+  get ondocumenteditormakeactionlink(): DocumentEditorMakeActionLinkListener | null {
+    return this.#ondocumenteditormakeactionlink
   }
 
-  set onRequestCreateNew(l: DocumentEditorRequestCreateNewListener | null) {
-    if (this.#onRequestCreateNew) {
-      this.removeEventListener("requestcreatenew", this.#onRequestCreateNew)
+  set ondocumenteditormakeactionlink(l: DocumentEditorMakeActionLinkListener | null) {
+    if (this.#ondocumenteditormakeactionlink) {
+      this.removeEventListener(DocumentEditorMakeActionLinkEvent.type, this.#ondocumenteditormakeactionlink)
     }
-    this.#onRequestCreateNew = l
-    if (this.#onRequestCreateNew) {
-      this.addEventListener("requestcreatenew", this.#onRequestCreateNew)
-    }
-  }
-
-  #onRequestEditRights: DocumentEditorRequestEditRightsListener | null = null
-
-  get onRequestEditRights(): DocumentEditorRequestEditRightsListener | null {
-    return this.#onRequestEditRights
-  }
-
-  set onRequestEditRights(l: DocumentEditorRequestEditRightsListener | null) {
-    if (this.#onRequestEditRights) {
-      this.removeEventListener("requesteditrights", this.#onRequestEditRights)
-    }
-    this.#onRequestEditRights = l
-    if (this.#onRequestEditRights) {
-      this.addEventListener("requesteditrights", this.#onRequestEditRights)
+    this.#ondocumenteditormakeactionlink = l
+    if (this.#ondocumenteditormakeactionlink) {
+      this.addEventListener(DocumentEditorMakeActionLinkEvent.type, this.#ondocumenteditormakeactionlink)
     }
   }
 
-  #onRequestHistory: DocumentEditorRequestHistoryListener | null = null
+  #ondocumenteditormetachange: DocumentEditorMetaChangeListener | null = null
 
-  get onRequestHistory(): DocumentEditorRequestHistoryListener | null {
-    return this.#onRequestHistory
+  get ondocumenteditormetachange(): DocumentEditorMetaChangeListener | null {
+    return this.#ondocumenteditormetachange
   }
 
-  set onRequestHistory(l: DocumentEditorRequestHistoryListener | null) {
-    if (this.#onRequestHistory) {
-      this.removeEventListener("requesthistory", this.#onRequestHistory)
+  set ondocumenteditormetachange(l: DocumentEditorMetaChangeListener | null) {
+    if (this.#ondocumenteditormetachange) {
+      this.removeEventListener(DocumentEditorMetaChangeEvent.type, this.#ondocumenteditormetachange)
     }
-    this.#onRequestHistory = l
-    if (this.#onRequestHistory) {
-      this.addEventListener("requesthistory", this.#onRequestHistory)
-    }
-  }
-
-  #onRequestHistoryClose: DocumentEditorRequestHistoryCloseListener | null = null
-
-  get onRequestHistoryClose(): DocumentEditorRequestHistoryCloseListener | null {
-    return this.#onRequestHistoryClose
-  }
-
-  set onRequestHistoryClose(l: DocumentEditorRequestHistoryCloseListener | null) {
-    if (this.#onRequestHistoryClose) {
-      this.removeEventListener("requesthistoryclose", this.#onRequestHistoryClose)
-    }
-    this.#onRequestHistoryClose = l
-    if (this.#onRequestHistoryClose) {
-      this.addEventListener("requesthistoryclose", this.#onRequestHistoryClose)
+    this.#ondocumenteditormetachange = l
+    if (this.#ondocumenteditormetachange) {
+      this.addEventListener(DocumentEditorMetaChangeEvent.type, this.#ondocumenteditormetachange)
     }
   }
 
-  #onRequestHistoryData: DocumentEditorRequestHistoryDataListener | null = null
+  #ondocumenteditoroutdatedversion: DocumentEditorOutdatedVersionListener | null = null
 
-  get onRequestHistoryData(): DocumentEditorRequestHistoryDataListener | null {
-    return this.#onRequestHistoryData
+  get ondocumenteditoroutdatedversion(): DocumentEditorOutdatedVersionListener | null {
+    return this.#ondocumenteditoroutdatedversion
   }
 
-  set onRequestHistoryData(l: DocumentEditorRequestHistoryDataListener | null) {
-    if (this.#onRequestHistoryData) {
-      this.removeEventListener("requesthistorydata", this.#onRequestHistoryData)
+  set ondocumenteditoroutdatedversion(l: DocumentEditorOutdatedVersionListener | null) {
+    if (this.#ondocumenteditoroutdatedversion) {
+      this.removeEventListener(DocumentEditorOutdatedVersionEvent.type, this.#ondocumenteditoroutdatedversion)
     }
-    this.#onRequestHistoryData = l
-    if (this.#onRequestHistoryData) {
-      this.addEventListener("requesthistorydata", this.#onRequestHistoryData)
+    this.#ondocumenteditoroutdatedversion = l
+    if (this.#ondocumenteditoroutdatedversion) {
+      this.addEventListener(DocumentEditorOutdatedVersionEvent.type, this.#ondocumenteditoroutdatedversion)
     }
   }
 
-  #onRequestInsertImage: DocumentEditorRequestInsertImageListener | null = null
+  #ondocumenteditorpluginsready: DocumentEditorPluginsReadyListener | null = null
 
-  get onRequestInsertImage(): DocumentEditorRequestInsertImageListener | null {
-    return this.#onRequestInsertImage
+  get ondocumenteditorpluginsready(): DocumentEditorPluginsReadyListener | null {
+    return this.#ondocumenteditorpluginsready
   }
 
-  set onRequestInsertImage(l: DocumentEditorRequestInsertImageListener | null) {
-    if (this.#onRequestInsertImage) {
-      this.removeEventListener("requestinsertimage", this.#onRequestInsertImage)
+  set ondocumenteditorpluginsready(l: DocumentEditorPluginsReadyListener | null) {
+    if (this.#ondocumenteditorpluginsready) {
+      this.removeEventListener(DocumentEditorPluginsReadyEvent.type, this.#ondocumenteditorpluginsready)
     }
-    this.#onRequestInsertImage = l
-    if (this.#onRequestInsertImage) {
-      this.addEventListener("requestinsertimage", this.#onRequestInsertImage)
+    this.#ondocumenteditorpluginsready = l
+    if (this.#ondocumenteditorpluginsready) {
+      this.addEventListener(DocumentEditorPluginsReadyEvent.type, this.#ondocumenteditorpluginsready)
     }
   }
 
   /**
-   * @deprecated Prefer {@link onRequestSelectSpreadsheet} instead.
+   * @deprecated Prefer {@link ondocumenteditorappready} instead.
    */
-  #onRequestMailMergeRecipients: DocumentEditorRequestMailMergeRecipientsListener | null = null
+  #ondocumenteditorready: DocumentEditorReadyListener | null = null
 
   /**
-   * @deprecated Prefer {@link onRequestSelectSpreadsheet} instead.
+   * @deprecated Prefer {@link ondocumenteditorappready} instead.
    */
-  get onRequestMailMergeRecipients(): DocumentEditorRequestMailMergeRecipientsListener | null {
-    return this.#onRequestMailMergeRecipients
+  get ondocumenteditorready(): DocumentEditorReadyListener | null {
+    return this.#ondocumenteditorready
   }
 
   /**
-   * @deprecated Prefer {@link onRequestSelectSpreadsheet} instead.
+   * @deprecated Prefer {@link ondocumenteditorappready} instead.
    */
-  set onRequestMailMergeRecipients(l: DocumentEditorRequestMailMergeRecipientsListener | null) {
-    if (this.#onRequestMailMergeRecipients) {
-      this.removeEventListener("requestmailmergerecipients", this.#onRequestMailMergeRecipients)
+  set ondocumenteditorready(l: DocumentEditorReadyListener | null) {
+    if (this.#ondocumenteditorready) {
+      this.removeEventListener(DocumentEditorReadyEvent.type, this.#ondocumenteditorready)
     }
-    this.#onRequestMailMergeRecipients = l
-    if (this.#onRequestMailMergeRecipients) {
-      this.addEventListener("requestmailmergerecipients", this.#onRequestMailMergeRecipients)
-    }
-  }
-
-  #onRequestOpen: DocumentEditorRequestOpenListener | null = null
-
-  get onRequestOpen(): DocumentEditorRequestOpenListener | null {
-    return this.#onRequestOpen
-  }
-
-  set onRequestOpen(l: DocumentEditorRequestOpenListener | null) {
-    if (this.#onRequestOpen) {
-      this.removeEventListener("requestopen", this.#onRequestOpen)
-    }
-    this.#onRequestOpen = l
-    if (this.#onRequestOpen) {
-      this.addEventListener("requestopen", this.#onRequestOpen)
+    this.#ondocumenteditorready = l
+    if (this.#ondocumenteditorready) {
+      this.addEventListener(DocumentEditorReadyEvent.type, this.#ondocumenteditorready)
     }
   }
 
-  #onRequestReferenceData: DocumentEditorRequestReferenceDataListener | null = null
+  #ondocumenteditorrequestclose: DocumentEditorRequestCloseListener | null = null
 
-  get onRequestReferenceData(): DocumentEditorRequestReferenceDataListener | null {
-    return this.#onRequestReferenceData
+  get ondocumenteditorrequestclose(): DocumentEditorRequestCloseListener | null {
+    return this.#ondocumenteditorrequestclose
   }
 
-  set onRequestReferenceData(l: DocumentEditorRequestReferenceDataListener | null) {
-    if (this.#onRequestReferenceData) {
-      this.removeEventListener("requestreferencedata", this.#onRequestReferenceData)
+  set ondocumenteditorrequestclose(l: DocumentEditorRequestCloseListener | null) {
+    if (this.#ondocumenteditorrequestclose) {
+      this.removeEventListener(DocumentEditorRequestCloseEvent.type, this.#ondocumenteditorrequestclose)
     }
-    this.#onRequestReferenceData = l
-    if (this.#onRequestReferenceData) {
-      this.addEventListener("requestreferencedata", this.#onRequestReferenceData)
-    }
-  }
-
-  #onRequestReferenceSource: DocumentEditorRequestReferenceSourceListener | null = null
-
-  get onRequestReferenceSource(): DocumentEditorRequestReferenceSourceListener | null {
-    return this.#onRequestReferenceSource
-  }
-
-  set onRequestReferenceSource(l: DocumentEditorRequestReferenceSourceListener | null) {
-    if (this.#onRequestReferenceSource) {
-      this.removeEventListener("requestreferencesource", this.#onRequestReferenceSource)
-    }
-    this.#onRequestReferenceSource = l
-    if (this.#onRequestReferenceSource) {
-      this.addEventListener("requestreferencesource", this.#onRequestReferenceSource)
+    this.#ondocumenteditorrequestclose = l
+    if (this.#ondocumenteditorrequestclose) {
+      this.addEventListener(DocumentEditorRequestCloseEvent.type, this.#ondocumenteditorrequestclose)
     }
   }
 
-  #onRequestRename: DocumentEditorRequestRenameListener | null = null
+  #ondocumenteditorrequestcomparefile: DocumentEditorRequestCompareFileListener | null = null
 
-  get onRequestRename(): DocumentEditorRequestRenameListener | null {
-    return this.#onRequestRename
+  get ondocumenteditorrequestcomparefile(): DocumentEditorRequestCompareFileListener | null {
+    return this.#ondocumenteditorrequestcomparefile
   }
 
-  set onRequestRename(l: DocumentEditorRequestRenameListener | null) {
-    if (this.#onRequestRename) {
-      this.removeEventListener("requestrename", this.#onRequestRename)
+  set ondocumenteditorrequestcomparefile(l: DocumentEditorRequestCompareFileListener | null) {
+    if (this.#ondocumenteditorrequestcomparefile) {
+      this.removeEventListener(DocumentEditorRequestCompareFileEvent.type, this.#ondocumenteditorrequestcomparefile)
     }
-    this.#onRequestRename = l
-    if (this.#onRequestRename) {
-      this.addEventListener("requestrename", this.#onRequestRename)
-    }
-  }
-
-  #onRequestRestore: DocumentEditorRequestRestoreListener | null = null
-
-  get onRequestRestore(): DocumentEditorRequestRestoreListener | null {
-    return this.#onRequestRestore
-  }
-
-  set onRequestRestore(l: DocumentEditorRequestRestoreListener | null) {
-    if (this.#onRequestRestore) {
-      this.removeEventListener("requestrestore", this.#onRequestRestore)
-    }
-    this.#onRequestRestore = l
-    if (this.#onRequestRestore) {
-      this.addEventListener("requestrestore", this.#onRequestRestore)
+    this.#ondocumenteditorrequestcomparefile = l
+    if (this.#ondocumenteditorrequestcomparefile) {
+      this.addEventListener(DocumentEditorRequestCompareFileEvent.type, this.#ondocumenteditorrequestcomparefile)
     }
   }
 
-  #onRequestSaveAs: DocumentEditorRequestSaveAsListener | null = null
+  #ondocumenteditorrequestcreatenew: DocumentEditorRequestCreateNewListener | null = null
 
-  get onRequestSaveAs(): DocumentEditorRequestSaveAsListener | null {
-    return this.#onRequestSaveAs
+  get ondocumenteditorrequestcreatenew(): DocumentEditorRequestCreateNewListener | null {
+    return this.#ondocumenteditorrequestcreatenew
   }
 
-  set onRequestSaveAs(l: DocumentEditorRequestSaveAsListener | null) {
-    if (this.#onRequestSaveAs) {
-      this.removeEventListener("requestsaveas", this.#onRequestSaveAs)
+  set ondocumenteditorrequestcreatenew(l: DocumentEditorRequestCreateNewListener | null) {
+    if (this.#ondocumenteditorrequestcreatenew) {
+      this.removeEventListener(DocumentEditorRequestCreateNewEvent.type, this.#ondocumenteditorrequestcreatenew)
     }
-    this.#onRequestSaveAs = l
-    if (this.#onRequestSaveAs) {
-      this.addEventListener("requestsaveas", this.#onRequestSaveAs)
-    }
-  }
-
-  #onRequestSelectDocument: DocumentEditorRequestSelectDocumentListener | null = null
-
-  get onRequestSelectDocument(): DocumentEditorRequestSelectDocumentListener | null {
-    return this.#onRequestSelectDocument
-  }
-
-  set onRequestSelectDocument(l: DocumentEditorRequestSelectDocumentListener | null) {
-    if (this.#onRequestSelectDocument) {
-      this.removeEventListener("requestselectdocument", this.#onRequestSelectDocument)
-    }
-    this.#onRequestSelectDocument = l
-    if (this.#onRequestSelectDocument) {
-      this.addEventListener("requestselectdocument", this.#onRequestSelectDocument)
+    this.#ondocumenteditorrequestcreatenew = l
+    if (this.#ondocumenteditorrequestcreatenew) {
+      this.addEventListener(DocumentEditorRequestCreateNewEvent.type, this.#ondocumenteditorrequestcreatenew)
     }
   }
 
-  #onRequestSelectSpreadsheet: DocumentEditorRequestSelectSpreadsheetListener | null = null
+  #ondocumenteditorrequesteditrights: DocumentEditorRequestEditRightsListener | null = null
 
-  get onRequestSelectSpreadsheet(): DocumentEditorRequestSelectSpreadsheetListener | null {
-    return this.#onRequestSelectSpreadsheet
+  get ondocumenteditorrequesteditrights(): DocumentEditorRequestEditRightsListener | null {
+    return this.#ondocumenteditorrequesteditrights
   }
 
-  set onRequestSelectSpreadsheet(l: DocumentEditorRequestSelectSpreadsheetListener | null) {
-    if (this.#onRequestSelectSpreadsheet) {
-      this.removeEventListener("requestselectspreadsheet", this.#onRequestSelectSpreadsheet)
+  set ondocumenteditorrequesteditrights(l: DocumentEditorRequestEditRightsListener | null) {
+    if (this.#ondocumenteditorrequesteditrights) {
+      this.removeEventListener(DocumentEditorRequestEditRightsEvent.type, this.#ondocumenteditorrequesteditrights)
     }
-    this.#onRequestSelectSpreadsheet = l
-    if (this.#onRequestSelectSpreadsheet) {
-      this.addEventListener("requestselectspreadsheet", this.#onRequestSelectSpreadsheet)
-    }
-  }
-
-  #onRequestSendNotify: DocumentEditorRequestSendNotifyListener | null = null
-
-  get onRequestSendNotify(): DocumentEditorRequestSendNotifyListener | null {
-    return this.#onRequestSendNotify
-  }
-
-  set onRequestSendNotify(l: DocumentEditorRequestSendNotifyListener | null) {
-    if (this.#onRequestSendNotify) {
-      this.removeEventListener("requestsendnotify", this.#onRequestSendNotify)
-    }
-    this.#onRequestSendNotify = l
-    if (this.#onRequestSendNotify) {
-      this.addEventListener("requestsendnotify", this.#onRequestSendNotify)
+    this.#ondocumenteditorrequesteditrights = l
+    if (this.#ondocumenteditorrequesteditrights) {
+      this.addEventListener(DocumentEditorRequestEditRightsEvent.type, this.#ondocumenteditorrequesteditrights)
     }
   }
 
-  #onRequestSharingSettings: DocumentEditorRequestSharingSettingsListener | null = null
+  #ondocumenteditorrequesthistory: DocumentEditorRequestHistoryListener | null = null
 
-  get onRequestSharingSettings(): DocumentEditorRequestSharingSettingsListener | null {
-    return this.#onRequestSharingSettings
+  get ondocumenteditorrequesthistory(): DocumentEditorRequestHistoryListener | null {
+    return this.#ondocumenteditorrequesthistory
   }
 
-  set onRequestSharingSettings(l: DocumentEditorRequestSharingSettingsListener | null) {
-    if (this.#onRequestSharingSettings) {
-      this.removeEventListener("requestsharingsettings", this.#onRequestSharingSettings)
+  set ondocumenteditorrequesthistory(l: DocumentEditorRequestHistoryListener | null) {
+    if (this.#ondocumenteditorrequesthistory) {
+      this.removeEventListener(DocumentEditorRequestHistoryEvent.type, this.#ondocumenteditorrequesthistory)
     }
-    this.#onRequestSharingSettings = l
-    if (this.#onRequestSharingSettings) {
-      this.addEventListener("requestsharingsettings", this.#onRequestSharingSettings)
-    }
-  }
-
-  #onRequestUsers: DocumentEditorRequestUsersListener | null = null
-
-  get onRequestUsers(): DocumentEditorRequestUsersListener | null {
-    return this.#onRequestUsers
-  }
-
-  set onRequestUsers(l: DocumentEditorRequestUsersListener | null) {
-    if (this.#onRequestUsers) {
-      this.removeEventListener("requestusers", this.#onRequestUsers)
-    }
-    this.#onRequestUsers = l
-    if (this.#onRequestUsers) {
-      this.addEventListener("requestusers", this.#onRequestUsers)
+    this.#ondocumenteditorrequesthistory = l
+    if (this.#ondocumenteditorrequesthistory) {
+      this.addEventListener(DocumentEditorRequestHistoryEvent.type, this.#ondocumenteditorrequesthistory)
     }
   }
 
-  #onWarning: DocumentEditorWarningListener | null = null
+  #ondocumenteditorrequesthistoryclose: DocumentEditorRequestHistoryCloseListener | null = null
 
-  get onWarning(): DocumentEditorWarningListener | null {
-    return this.#onWarning
+  get ondocumenteditorrequesthistoryclose(): DocumentEditorRequestHistoryCloseListener | null {
+    return this.#ondocumenteditorrequesthistoryclose
   }
 
-  set onWarning(l: DocumentEditorWarningListener | null) {
-    if (this.#onWarning) {
-      this.removeEventListener("warning", this.#onWarning)
+  set ondocumenteditorrequesthistoryclose(l: DocumentEditorRequestHistoryCloseListener | null) {
+    if (this.#ondocumenteditorrequesthistoryclose) {
+      this.removeEventListener(DocumentEditorRequestHistoryCloseEvent.type, this.#ondocumenteditorrequesthistoryclose)
     }
-    this.#onWarning = l
-    if (this.#onWarning) {
-      this.addEventListener("warning", this.#onWarning)
+    this.#ondocumenteditorrequesthistoryclose = l
+    if (this.#ondocumenteditorrequesthistoryclose) {
+      this.addEventListener(DocumentEditorRequestHistoryCloseEvent.type, this.#ondocumenteditorrequesthistoryclose)
+    }
+  }
+
+  #ondocumenteditorrequesthistorydata: DocumentEditorRequestHistoryDataListener | null = null
+
+  get ondocumenteditorrequesthistorydata(): DocumentEditorRequestHistoryDataListener | null {
+    return this.#ondocumenteditorrequesthistorydata
+  }
+
+  set ondocumenteditorrequesthistorydata(l: DocumentEditorRequestHistoryDataListener | null) {
+    if (this.#ondocumenteditorrequesthistorydata) {
+      this.removeEventListener(DocumentEditorRequestHistoryDataEvent.type, this.#ondocumenteditorrequesthistorydata)
+    }
+    this.#ondocumenteditorrequesthistorydata = l
+    if (this.#ondocumenteditorrequesthistorydata) {
+      this.addEventListener(DocumentEditorRequestHistoryDataEvent.type, this.#ondocumenteditorrequesthistorydata)
+    }
+  }
+
+  #ondocumenteditorrequestinsertimage: DocumentEditorRequestInsertImageListener | null = null
+
+  get ondocumenteditorrequestinsertimage(): DocumentEditorRequestInsertImageListener | null {
+    return this.#ondocumenteditorrequestinsertimage
+  }
+
+  set ondocumenteditorrequestinsertimage(l: DocumentEditorRequestInsertImageListener | null) {
+    if (this.#ondocumenteditorrequestinsertimage) {
+      this.removeEventListener(DocumentEditorRequestInsertImageEvent.type, this.#ondocumenteditorrequestinsertimage)
+    }
+    this.#ondocumenteditorrequestinsertimage = l
+    if (this.#ondocumenteditorrequestinsertimage) {
+      this.addEventListener(DocumentEditorRequestInsertImageEvent.type, this.#ondocumenteditorrequestinsertimage)
+    }
+  }
+
+  /**
+   * @deprecated Prefer {@link ondocumenteditorrequestselectspreadsheet} instead.
+   */
+  #ondocumenteditorrequestmailmergerecipients: DocumentEditorRequestMailMergeRecipientsListener | null = null
+
+  /**
+   * @deprecated Prefer {@link ondocumenteditorrequestselectspreadsheet} instead.
+   */
+  get ondocumenteditorrequestmailmergerecipients(): DocumentEditorRequestMailMergeRecipientsListener | null {
+    return this.#ondocumenteditorrequestmailmergerecipients
+  }
+
+  /**
+   * @deprecated Prefer {@link ondocumenteditorrequestselectspreadsheet} instead.
+   */
+  set ondocumenteditorrequestmailmergerecipients(l: DocumentEditorRequestMailMergeRecipientsListener | null) {
+    if (this.#ondocumenteditorrequestmailmergerecipients) {
+      this.removeEventListener(DocumentEditorRequestMailMergeRecipientsEvent.type, this.#ondocumenteditorrequestmailmergerecipients)
+    }
+    this.#ondocumenteditorrequestmailmergerecipients = l
+    if (this.#ondocumenteditorrequestmailmergerecipients) {
+      this.addEventListener(DocumentEditorRequestMailMergeRecipientsEvent.type, this.#ondocumenteditorrequestmailmergerecipients)
+    }
+  }
+
+  #ondocumenteditorrequestopen: DocumentEditorRequestOpenListener | null = null
+
+  get ondocumenteditorrequestopen(): DocumentEditorRequestOpenListener | null {
+    return this.#ondocumenteditorrequestopen
+  }
+
+  set ondocumenteditorrequestopen(l: DocumentEditorRequestOpenListener | null) {
+    if (this.#ondocumenteditorrequestopen) {
+      this.removeEventListener(DocumentEditorRequestOpenEvent.type, this.#ondocumenteditorrequestopen)
+    }
+    this.#ondocumenteditorrequestopen = l
+    if (this.#ondocumenteditorrequestopen) {
+      this.addEventListener(DocumentEditorRequestOpenEvent.type, this.#ondocumenteditorrequestopen)
+    }
+  }
+
+  #ondocumenteditorrequestreferencedata: DocumentEditorRequestReferenceDataListener | null = null
+
+  get ondocumenteditorrequestreferencedata(): DocumentEditorRequestReferenceDataListener | null {
+    return this.#ondocumenteditorrequestreferencedata
+  }
+
+  set ondocumenteditorrequestreferencedata(l: DocumentEditorRequestReferenceDataListener | null) {
+    if (this.#ondocumenteditorrequestreferencedata) {
+      this.removeEventListener(DocumentEditorRequestReferenceDataEvent.type, this.#ondocumenteditorrequestreferencedata)
+    }
+    this.#ondocumenteditorrequestreferencedata = l
+    if (this.#ondocumenteditorrequestreferencedata) {
+      this.addEventListener(DocumentEditorRequestReferenceDataEvent.type, this.#ondocumenteditorrequestreferencedata)
+    }
+  }
+
+  #ondocumenteditorrequestreferencesource: DocumentEditorRequestReferenceSourceListener | null = null
+
+  get ondocumenteditorrequestreferencesource(): DocumentEditorRequestReferenceSourceListener | null {
+    return this.#ondocumenteditorrequestreferencesource
+  }
+
+  set ondocumenteditorrequestreferencesource(l: DocumentEditorRequestReferenceSourceListener | null) {
+    if (this.#ondocumenteditorrequestreferencesource) {
+      this.removeEventListener(DocumentEditorRequestReferenceSourceEvent.type, this.#ondocumenteditorrequestreferencesource)
+    }
+    this.#ondocumenteditorrequestreferencesource = l
+    if (this.#ondocumenteditorrequestreferencesource) {
+      this.addEventListener(DocumentEditorRequestReferenceSourceEvent.type, this.#ondocumenteditorrequestreferencesource)
+    }
+  }
+
+  #ondocumenteditorrequestrename: DocumentEditorRequestRenameListener | null = null
+
+  get ondocumenteditorrequestrename(): DocumentEditorRequestRenameListener | null {
+    return this.#ondocumenteditorrequestrename
+  }
+
+  set ondocumenteditorrequestrename(l: DocumentEditorRequestRenameListener | null) {
+    if (this.#ondocumenteditorrequestrename) {
+      this.removeEventListener(DocumentEditorRequestRenameEvent.type, this.#ondocumenteditorrequestrename)
+    }
+    this.#ondocumenteditorrequestrename = l
+    if (this.#ondocumenteditorrequestrename) {
+      this.addEventListener(DocumentEditorRequestRenameEvent.type, this.#ondocumenteditorrequestrename)
+    }
+  }
+
+  #ondocumenteditorrequestrestore: DocumentEditorRequestRestoreListener | null = null
+
+  get ondocumenteditorrequestrestore(): DocumentEditorRequestRestoreListener | null {
+    return this.#ondocumenteditorrequestrestore
+  }
+
+  set ondocumenteditorrequestrestore(l: DocumentEditorRequestRestoreListener | null) {
+    if (this.#ondocumenteditorrequestrestore) {
+      this.removeEventListener(DocumentEditorRequestRestoreEvent.type, this.#ondocumenteditorrequestrestore)
+    }
+    this.#ondocumenteditorrequestrestore = l
+    if (this.#ondocumenteditorrequestrestore) {
+      this.addEventListener(DocumentEditorRequestRestoreEvent.type, this.#ondocumenteditorrequestrestore)
+    }
+  }
+
+  #ondocumenteditorrequestsaveas: DocumentEditorRequestSaveAsListener | null = null
+
+  get ondocumenteditorrequestsaveas(): DocumentEditorRequestSaveAsListener | null {
+    return this.#ondocumenteditorrequestsaveas
+  }
+
+  set ondocumenteditorrequestsaveas(l: DocumentEditorRequestSaveAsListener | null) {
+    if (this.#ondocumenteditorrequestsaveas) {
+      this.removeEventListener(DocumentEditorRequestSaveAsEvent.type, this.#ondocumenteditorrequestsaveas)
+    }
+    this.#ondocumenteditorrequestsaveas = l
+    if (this.#ondocumenteditorrequestsaveas) {
+      this.addEventListener(DocumentEditorRequestSaveAsEvent.type, this.#ondocumenteditorrequestsaveas)
+    }
+  }
+
+  #ondocumenteditorrequestselectdocument: DocumentEditorRequestSelectDocumentListener | null = null
+
+  get ondocumenteditorrequestselectdocument(): DocumentEditorRequestSelectDocumentListener | null {
+    return this.#ondocumenteditorrequestselectdocument
+  }
+
+  set ondocumenteditorrequestselectdocument(l: DocumentEditorRequestSelectDocumentListener | null) {
+    if (this.#ondocumenteditorrequestselectdocument) {
+      this.removeEventListener(DocumentEditorRequestSelectDocumentEvent.type, this.#ondocumenteditorrequestselectdocument)
+    }
+    this.#ondocumenteditorrequestselectdocument = l
+    if (this.#ondocumenteditorrequestselectdocument) {
+      this.addEventListener(DocumentEditorRequestSelectDocumentEvent.type, this.#ondocumenteditorrequestselectdocument)
+    }
+  }
+
+  #ondocumenteditorrequestselectspreadsheet: DocumentEditorRequestSelectSpreadsheetListener | null = null
+
+  get ondocumenteditorrequestselectspreadsheet(): DocumentEditorRequestSelectSpreadsheetListener | null {
+    return this.#ondocumenteditorrequestselectspreadsheet
+  }
+
+  set ondocumenteditorrequestselectspreadsheet(l: DocumentEditorRequestSelectSpreadsheetListener | null) {
+    if (this.#ondocumenteditorrequestselectspreadsheet) {
+      this.removeEventListener(DocumentEditorRequestSelectSpreadsheetEvent.type, this.#ondocumenteditorrequestselectspreadsheet)
+    }
+    this.#ondocumenteditorrequestselectspreadsheet = l
+    if (this.#ondocumenteditorrequestselectspreadsheet) {
+      this.addEventListener(DocumentEditorRequestSelectSpreadsheetEvent.type, this.#ondocumenteditorrequestselectspreadsheet)
+    }
+  }
+
+  #ondocumenteditorrequestsendnotify: DocumentEditorRequestSendNotifyListener | null = null
+
+  get ondocumenteditorrequestsendnotify(): DocumentEditorRequestSendNotifyListener | null {
+    return this.#ondocumenteditorrequestsendnotify
+  }
+
+  set ondocumenteditorrequestsendnotify(l: DocumentEditorRequestSendNotifyListener | null) {
+    if (this.#ondocumenteditorrequestsendnotify) {
+      this.removeEventListener(DocumentEditorRequestSendNotifyEvent.type, this.#ondocumenteditorrequestsendnotify)
+    }
+    this.#ondocumenteditorrequestsendnotify = l
+    if (this.#ondocumenteditorrequestsendnotify) {
+      this.addEventListener(DocumentEditorRequestSendNotifyEvent.type, this.#ondocumenteditorrequestsendnotify)
+    }
+  }
+
+  #ondocumenteditorrequestsharingsettings: DocumentEditorRequestSharingSettingsListener | null = null
+
+  get ondocumenteditorrequestsharingsettings(): DocumentEditorRequestSharingSettingsListener | null {
+    return this.#ondocumenteditorrequestsharingsettings
+  }
+
+  set ondocumenteditorrequestsharingsettings(l: DocumentEditorRequestSharingSettingsListener | null) {
+    if (this.#ondocumenteditorrequestsharingsettings) {
+      this.removeEventListener(DocumentEditorRequestSharingSettingsEvent.type, this.#ondocumenteditorrequestsharingsettings)
+    }
+    this.#ondocumenteditorrequestsharingsettings = l
+    if (this.#ondocumenteditorrequestsharingsettings) {
+      this.addEventListener(DocumentEditorRequestSharingSettingsEvent.type, this.#ondocumenteditorrequestsharingsettings)
+    }
+  }
+
+  #ondocumenteditorrequestusers: DocumentEditorRequestUsersListener | null = null
+
+  get ondocumenteditorrequestusers(): DocumentEditorRequestUsersListener | null {
+    return this.#ondocumenteditorrequestusers
+  }
+
+  set ondocumenteditorrequestusers(l: DocumentEditorRequestUsersListener | null) {
+    if (this.#ondocumenteditorrequestusers) {
+      this.removeEventListener(DocumentEditorRequestUsersEvent.type, this.#ondocumenteditorrequestusers)
+    }
+    this.#ondocumenteditorrequestusers = l
+    if (this.#ondocumenteditorrequestusers) {
+      this.addEventListener(DocumentEditorRequestUsersEvent.type, this.#ondocumenteditorrequestusers)
+    }
+  }
+
+  #ondocumenteditorwarning: DocumentEditorWarningListener | null = null
+
+  get ondocumenteditorwarning(): DocumentEditorWarningListener | null {
+    return this.#ondocumenteditorwarning
+  }
+
+  set ondocumenteditorwarning(l: DocumentEditorWarningListener | null) {
+    if (this.#ondocumenteditorwarning) {
+      this.removeEventListener(DocumentEditorWarningEvent.type, this.#ondocumenteditorwarning)
+    }
+    this.#ondocumenteditorwarning = l
+    if (this.#ondocumenteditorwarning) {
+      this.addEventListener(DocumentEditorWarningEvent.type, this.#ondocumenteditorwarning)
     }
   }
 
@@ -1321,38 +1511,39 @@ export class DocumentEditor extends HTMLElement {
     return [
       "document-server-url",
       "config",
-      "onappready",
-      "oncollaborativechanges",
-      "ondocumentready",
-      "ondocumentstatechange",
-      "ondownloadas",
-      "oninfo",
-      "onmakeactionlink",
-      "onmetachange",
-      "onoutdatedversion",
-      "onpluginsready",
-      "onready",
-      "onrequestclose",
-      "onrequestcomparefile",
-      "onrequestcreatenew",
-      "onrequesteditrights",
-      "onrequesthistory",
-      "onrequesthistoryclose",
-      "onrequesthistorydata",
-      "onrequestinsertimage",
-      "onrequestmailmergerecipients",
-      "onrequestopen",
-      "onrequestreferencedata",
-      "onrequestreferencesource",
-      "onrequestrename",
-      "onrequestrestore",
-      "onrequestsaveas",
-      "onrequestselectdocument",
-      "onrequestselectspreadsheet",
-      "onrequestsendnotify",
-      "onrequestsharingsettings",
-      "onrequestusers",
-      "onwarning"
+      "ondocumenteditorappready",
+      "ondocumenteditorcollaborativechanges",
+      "ondocumenteditordocumentready",
+      "ondocumenteditordocumentstatechange",
+      "ondocumenteditordownloadas",
+      "ondocumenteditorerror",
+      "ondocumenteditorinfo",
+      "ondocumenteditormakeactionlink",
+      "ondocumenteditormetachange",
+      "ondocumenteditoroutdatedversion",
+      "ondocumenteditorpluginsready",
+      "ondocumenteditorready",
+      "ondocumenteditorrequestclose",
+      "ondocumenteditorrequestcomparefile",
+      "ondocumenteditorrequestcreatenew",
+      "ondocumenteditorrequesteditrights",
+      "ondocumenteditorrequesthistory",
+      "ondocumenteditorrequesthistoryclose",
+      "ondocumenteditorrequesthistorydata",
+      "ondocumenteditorrequestinsertimage",
+      "ondocumenteditorrequestmailmergerecipients",
+      "ondocumenteditorrequestopen",
+      "ondocumenteditorrequestreferencedata",
+      "ondocumenteditorrequestreferencesource",
+      "ondocumenteditorrequestrename",
+      "ondocumenteditorrequestrestore",
+      "ondocumenteditorrequestsaveas",
+      "ondocumenteditorrequestselectdocument",
+      "ondocumenteditorrequestselectspreadsheet",
+      "ondocumenteditorrequestsendnotify",
+      "ondocumenteditorrequestsharingsettings",
+      "ondocumenteditorrequestusers",
+      "ondocumenteditorwarning"
     ]
   }
 
@@ -1364,101 +1555,104 @@ export class DocumentEditor extends HTMLElement {
     case "config":
       this.config = JSON.parse(v) as DocumentEditorConfig
       break
-    case "onappready":
-      this.onAppReady = new Function("event", v) as DocumentEditorAppReadyListener
+    case "ondocumenteditorappready":
+      this.ondocumenteditorappready = new Function("event", v) as DocumentEditorAppReadyListener
       break
-    case "oncollaborativechanges":
-      this.onCollaborativeChanges = new Function("event", v) as DocumentEditorCollaborativeChangesListener
+    case "ondocumenteditorcollaborativechanges":
+      this.ondocumenteditorcollaborativechanges = new Function("event", v) as DocumentEditorCollaborativeChangesListener
       break
-    case "ondocumentready":
-      this.onDocumentReady = new Function("event", v) as DocumentEditorDocumentReadyListener
+    case "ondocumenteditordocumentready":
+      this.ondocumenteditordocumentready = new Function("event", v) as DocumentEditorDocumentReadyListener
       break
-    case "ondocumentstatechange":
-      this.onDocumentStateChange = new Function("event", v) as DocumentEditorDocumentStateChangeListener
+    case "ondocumenteditordocumentstatechange":
+      this.ondocumenteditordocumentstatechange = new Function("event", v) as DocumentEditorDocumentStateChangeListener
       break
-    case "ondownloadas":
-      this.onDownloadAs = new Function("event", v) as DocumentEditorDownloadAsListener
+    case "ondocumenteditordownloadas":
+      this.ondocumenteditordownloadas = new Function("event", v) as DocumentEditorDownloadAsListener
       break
-    case "oninfo":
-      this.onInfo = new Function("event", v) as DocumentEditorInfoListener
+    case "ondocumenteditorerror":
+      this.ondocumenteditorerror = new Function("event", v) as DocumentEditorErrorListener
       break
-    case "onmakeactionlink":
-      this.onMakeActionLink = new Function("event", v) as DocumentEditorMakeActionLinkListener
+    case "ondocumenteditorinfo":
+      this.ondocumenteditorinfo = new Function("event", v) as DocumentEditorInfoListener
       break
-    case "onmetachange":
-      this.onMetaChange = new Function("event", v) as DocumentEditorMetaChangeListener
+    case "ondocumenteditormakeactionlink":
+      this.ondocumenteditormakeactionlink = new Function("event", v) as DocumentEditorMakeActionLinkListener
       break
-    case "onoutdatedversion":
-      this.onOutdatedVersion = new Function("event", v) as DocumentEditorOutdatedVersionListener
+    case "ondocumenteditormetachange":
+      this.ondocumenteditormetachange = new Function("event", v) as DocumentEditorMetaChangeListener
       break
-    case "onpluginsready":
-      this.onPluginsReady = new Function("event", v) as DocumentEditorPluginsReadyListener
+    case "ondocumenteditoroutdatedversion":
+      this.ondocumenteditoroutdatedversion = new Function("event", v) as DocumentEditorOutdatedVersionListener
       break
-    case "onready":
-      this.onReady = new Function("event", v) as DocumentEditorReadyListener
+    case "ondocumenteditorpluginsready":
+      this.ondocumenteditorpluginsready = new Function("event", v) as DocumentEditorPluginsReadyListener
       break
-    case "onrequestclose":
-      this.onRequestClose = new Function("event", v) as DocumentEditorRequestCloseListener
+    case "ondocumenteditorready":
+      this.ondocumenteditorready = new Function("event", v) as DocumentEditorReadyListener
       break
-    case "onrequestcomparefile":
-      this.onRequestCompareFile = new Function("event", v) as DocumentEditorRequestCompareFileListener
+    case "ondocumenteditorrequestclose":
+      this.ondocumenteditorrequestclose = new Function("event", v) as DocumentEditorRequestCloseListener
       break
-    case "onrequestcreatenew":
-      this.onRequestCreateNew = new Function("event", v) as DocumentEditorRequestCreateNewListener
+    case "ondocumenteditorrequestcomparefile":
+      this.ondocumenteditorrequestcomparefile = new Function("event", v) as DocumentEditorRequestCompareFileListener
       break
-    case "onrequesteditrights":
-      this.onRequestEditRights = new Function("event", v) as DocumentEditorRequestEditRightsListener
+    case "ondocumenteditorrequestcreatenew":
+      this.ondocumenteditorrequestcreatenew = new Function("event", v) as DocumentEditorRequestCreateNewListener
       break
-    case "onrequesthistory":
-      this.onRequestHistory = new Function("event", v) as DocumentEditorRequestHistoryListener
+    case "ondocumenteditorrequesteditrights":
+      this.ondocumenteditorrequesteditrights = new Function("event", v) as DocumentEditorRequestEditRightsListener
       break
-    case "onrequesthistoryclose":
-      this.onRequestHistoryClose = new Function("event", v) as DocumentEditorRequestHistoryCloseListener
+    case "ondocumenteditorrequesthistory":
+      this.ondocumenteditorrequesthistory = new Function("event", v) as DocumentEditorRequestHistoryListener
       break
-    case "onrequesthistorydata":
-      this.onRequestHistoryData = new Function("event", v) as DocumentEditorRequestHistoryDataListener
+    case "ondocumenteditorrequesthistoryclose":
+      this.ondocumenteditorrequesthistoryclose = new Function("event", v) as DocumentEditorRequestHistoryCloseListener
       break
-    case "onrequestinsertimage":
-      this.onRequestInsertImage = new Function("event", v) as DocumentEditorRequestInsertImageListener
+    case "ondocumenteditorrequesthistorydata":
+      this.ondocumenteditorrequesthistorydata = new Function("event", v) as DocumentEditorRequestHistoryDataListener
       break
-    case "onrequestmailmergerecipients":
-      this.onRequestMailMergeRecipients = new Function("event", v) as DocumentEditorRequestMailMergeRecipientsListener
+    case "ondocumenteditorrequestinsertimage":
+      this.ondocumenteditorrequestinsertimage = new Function("event", v) as DocumentEditorRequestInsertImageListener
       break
-    case "onrequestopen":
-      this.onRequestOpen = new Function("event", v) as DocumentEditorRequestOpenListener
+    case "ondocumenteditorrequestmailmergerecipients":
+      this.ondocumenteditorrequestmailmergerecipients = new Function("event", v) as DocumentEditorRequestMailMergeRecipientsListener
       break
-    case "onrequestreferencedata":
-      this.onRequestReferenceData = new Function("event", v) as DocumentEditorRequestReferenceDataListener
+    case "ondocumenteditorrequestopen":
+      this.ondocumenteditorrequestopen = new Function("event", v) as DocumentEditorRequestOpenListener
       break
-    case "onrequestreferencesource":
-      this.onRequestReferenceSource = new Function("event", v) as DocumentEditorRequestReferenceSourceListener
+    case "ondocumenteditorrequestreferencedata":
+      this.ondocumenteditorrequestreferencedata = new Function("event", v) as DocumentEditorRequestReferenceDataListener
       break
-    case "onrequestrename":
-      this.onRequestRename = new Function("event", v) as DocumentEditorRequestRenameListener
+    case "ondocumenteditorrequestreferencesource":
+      this.ondocumenteditorrequestreferencesource = new Function("event", v) as DocumentEditorRequestReferenceSourceListener
       break
-    case "onrequestrestore":
-      this.onRequestRestore = new Function("event", v) as DocumentEditorRequestRestoreListener
+    case "ondocumenteditorrequestrename":
+      this.ondocumenteditorrequestrename = new Function("event", v) as DocumentEditorRequestRenameListener
       break
-    case "onrequestsaveas":
-      this.onRequestSaveAs = new Function("event", v) as DocumentEditorRequestSaveAsListener
+    case "ondocumenteditorrequestrestore":
+      this.ondocumenteditorrequestrestore = new Function("event", v) as DocumentEditorRequestRestoreListener
       break
-    case "onrequestselectdocument":
-      this.onRequestSelectDocument = new Function("event", v) as DocumentEditorRequestSelectDocumentListener
+    case "ondocumenteditorrequestsaveas":
+      this.ondocumenteditorrequestsaveas = new Function("event", v) as DocumentEditorRequestSaveAsListener
       break
-    case "onrequestselectspreadsheet":
-      this.onRequestSelectSpreadsheet = new Function("event", v) as DocumentEditorRequestSelectSpreadsheetListener
+    case "ondocumenteditorrequestselectdocument":
+      this.ondocumenteditorrequestselectdocument = new Function("event", v) as DocumentEditorRequestSelectDocumentListener
       break
-    case "onrequestsendnotify":
-      this.onRequestSendNotify = new Function("event", v) as DocumentEditorRequestSendNotifyListener
+    case "ondocumenteditorrequestselectspreadsheet":
+      this.ondocumenteditorrequestselectspreadsheet = new Function("event", v) as DocumentEditorRequestSelectSpreadsheetListener
       break
-    case "onrequestsharingsettings":
-      this.onRequestSharingSettings = new Function("event", v) as DocumentEditorRequestSharingSettingsListener
+    case "ondocumenteditorrequestsendnotify":
+      this.ondocumenteditorrequestsendnotify = new Function("event", v) as DocumentEditorRequestSendNotifyListener
       break
-    case "onrequestusers":
-      this.onRequestUsers = new Function("event", v) as DocumentEditorRequestUsersListener
+    case "ondocumenteditorrequestsharingsettings":
+      this.ondocumenteditorrequestsharingsettings = new Function("event", v) as DocumentEditorRequestSharingSettingsListener
       break
-    case "onwarning":
-      this.onWarning = new Function("event", v) as DocumentEditorWarningListener
+    case "ondocumenteditorrequestusers":
+      this.ondocumenteditorrequestusers = new Function("event", v) as DocumentEditorRequestUsersListener
+      break
+    case "ondocumenteditorwarning":
+      this.ondocumenteditorwarning = new Function("event", v) as DocumentEditorWarningListener
       break
     default:
       throw new Error(`The attribute '${n}' is not supported`)
@@ -1471,7 +1665,7 @@ export class DocumentEditor extends HTMLElement {
       const s = this.#createScript(p)
       this.append(p, s)
     } catch (error) {
-      const e = new DocumentEditorErrorEvent("error", {error})
+      const e = new DocumentEditorErrorEvent({error})
       this.dispatchEvent(e)
     }
   }
@@ -1507,13 +1701,13 @@ export class DocumentEditor extends HTMLElement {
     s.src = u
     s.addEventListener("error", () => {
       const error = new Error(`Failed to load the Document Editor API script from '${u}'`)
-      const e = new DocumentEditorErrorEvent("error", {error})
+      const e = new DocumentEditorErrorEvent({error})
       this.dispatchEvent(e)
     })
     s.addEventListener("load", () => {
       if (!window.DocsAPI) {
         const error = new Error("The Document Editor API is not defined")
-        const e = new DocumentEditorErrorEvent("error", {error})
+        const e = new DocumentEditorErrorEvent({error})
         this.dispatchEvent(e)
         return
       }
@@ -1542,137 +1736,137 @@ export class DocumentEditor extends HTMLElement {
       ...c,
       events: {
         onAppReady: () => {
-          const e = new DocumentEditorAppReadyEvent("appready")
+          const e = new DocumentEditorAppReadyEvent()
           this.dispatchEvent(e)
         },
         onCollaborativeChanges: () => {
-          const e = new DocumentEditorCollaborativeChangesEvent("collaborativechanges")
+          const e = new DocumentEditorCollaborativeChangesEvent()
           this.dispatchEvent(e)
         },
         onDocumentReady: () => {
-          const e = new DocumentEditorDocumentReadyEvent("documentready")
+          const e = new DocumentEditorDocumentReadyEvent()
           this.dispatchEvent(e)
         },
         onDocumentStateChange: (ev) => {
-          const e = new DocumentEditorDocumentStateChangeEvent("documentstatechange", ev)
+          const e = new DocumentEditorDocumentStateChangeEvent(ev)
           this.dispatchEvent(e)
         },
         onDownloadAs: (ev) => {
-          const e = new DocumentEditorDownloadAsEvent("downloadas", ev)
+          const e = new DocumentEditorDownloadAsEvent(ev)
           this.dispatchEvent(e)
         },
         onError: (ev) => {
           const error = new Error(`${ev.data.errorDescription} (${ev.data.errorCode})`)
-          const e = new DocumentEditorErrorEvent("error", {...ev, error})
+          const e = new DocumentEditorErrorEvent({...ev, error})
           this.dispatchEvent(e)
         },
         onInfo: (ev) => {
-          const e = new DocumentEditorInfoEvent("info", ev)
+          const e = new DocumentEditorInfoEvent(ev)
           this.dispatchEvent(e)
         },
         onMakeActionLink: (ev) => {
-          const e = new DocumentEditorMakeActionLinkEvent("makeactionlink", ev)
+          const e = new DocumentEditorMakeActionLinkEvent(ev)
           this.dispatchEvent(e)
         },
         onMetaChange: (ev) => {
-          const e = new DocumentEditorMetaChangeEvent("metachange", ev)
+          const e = new DocumentEditorMetaChangeEvent(ev)
           this.dispatchEvent(e)
         },
         onOutdatedVersion: () => {
-          const e = new DocumentEditorOutdatedVersionEvent("outdatedversion")
+          const e = new DocumentEditorOutdatedVersionEvent()
           this.dispatchEvent(e)
         },
         onPluginsReady: () => {
-          const e = new DocumentEditorPluginsReadyEvent("pluginsready")
+          const e = new DocumentEditorPluginsReadyEvent()
           this.dispatchEvent(e)
         },
         onReady: () => {
-          const e = new DocumentEditorReadyEvent("ready")
+          const e = new DocumentEditorReadyEvent()
           this.dispatchEvent(e)
         },
         onRequestClose: () => {
-          const e = new DocumentEditorRequestCloseEvent("requestclose")
+          const e = new DocumentEditorRequestCloseEvent()
           this.dispatchEvent(e)
         },
         onRequestCompareFile: () => {
-          const e = new DocumentEditorRequestCompareFileEvent("requestcomparefile")
+          const e = new DocumentEditorRequestCompareFileEvent()
           this.dispatchEvent(e)
         },
         onRequestCreateNew: () => {
-          const e = new DocumentEditorRequestCreateNewEvent("requestcreatenew")
+          const e = new DocumentEditorRequestCreateNewEvent()
           this.dispatchEvent(e)
         },
         onRequestEditRights: () => {
-          const e = new DocumentEditorRequestEditRightsEvent("requesteditrights")
+          const e = new DocumentEditorRequestEditRightsEvent()
           this.dispatchEvent(e)
         },
         onRequestHistory: () => {
-          const e = new DocumentEditorRequestHistoryEvent("requesthistory")
+          const e = new DocumentEditorRequestHistoryEvent()
           this.dispatchEvent(e)
         },
         onRequestHistoryClose: () => {
-          const e = new DocumentEditorRequestHistoryCloseEvent("requesthistoryclose")
+          const e = new DocumentEditorRequestHistoryCloseEvent()
           this.dispatchEvent(e)
         },
         onRequestHistoryData: (ev) => {
-          const e = new DocumentEditorRequestHistoryDataEvent("requesthistorydata", ev)
+          const e = new DocumentEditorRequestHistoryDataEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestInsertImage: (ev) => {
-          const e = new DocumentEditorRequestInsertImageEvent("requestinsertimage", ev)
+          const e = new DocumentEditorRequestInsertImageEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestMailMergeRecipients: () => {
-          const e = new DocumentEditorRequestMailMergeRecipientsEvent("requestmailmergerecipients")
+          const e = new DocumentEditorRequestMailMergeRecipientsEvent()
           this.dispatchEvent(e)
         },
         onRequestOpen: (ev) => {
-          const e = new DocumentEditorRequestOpenEvent("requestopen", ev)
+          const e = new DocumentEditorRequestOpenEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestReferenceData: (ev) => {
-          const e = new DocumentEditorRequestReferenceDataEvent("requestreferencedata", ev)
+          const e = new DocumentEditorRequestReferenceDataEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestReferenceSource: (ev) => {
-          const e = new DocumentEditorRequestReferenceSourceEvent("requestreferencesource", ev)
+          const e = new DocumentEditorRequestReferenceSourceEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestRename: (ev) => {
-          const e = new DocumentEditorRequestRenameEvent("requestrename", ev)
+          const e = new DocumentEditorRequestRenameEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestRestore: (ev) => {
-          const e = new DocumentEditorRequestRestoreEvent("requestrestore", ev)
+          const e = new DocumentEditorRequestRestoreEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestSaveAs: (ev) => {
-          const e = new DocumentEditorRequestSaveAsEvent("requestsaveas", ev)
+          const e = new DocumentEditorRequestSaveAsEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestSelectDocument: (ev) => {
-          const e = new DocumentEditorRequestSelectDocumentEvent("requestselectdocument", ev)
+          const e = new DocumentEditorRequestSelectDocumentEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestSelectSpreadsheet: (ev) => {
-          const e = new DocumentEditorRequestSelectSpreadsheetEvent("requestselectspreadsheet", ev)
+          const e = new DocumentEditorRequestSelectSpreadsheetEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestSendNotify: (ev) => {
-          const e = new DocumentEditorRequestSendNotifyEvent("requestsendnotify", ev)
+          const e = new DocumentEditorRequestSendNotifyEvent(ev)
           this.dispatchEvent(e)
         },
         onRequestSharingSettings: () => {
-          const e = new DocumentEditorRequestSharingSettingsEvent("requestsharingsettings")
+          const e = new DocumentEditorRequestSharingSettingsEvent()
           this.dispatchEvent(e)
         },
         onRequestUsers: (ev) => {
-          const e = new DocumentEditorRequestUsersEvent("requestusers", ev)
+          const e = new DocumentEditorRequestUsersEvent(ev)
           this.dispatchEvent(e)
         },
         onWarning: (ev) => {
           const error = new Error(`${ev.data.warningDescription} (${ev.data.warningCode})`)
-          const e = new DocumentEditorWarningEvent("warning", {...ev, error})
+          const e = new DocumentEditorWarningEvent({...ev, error})
           this.dispatchEvent(e)
         }
       }

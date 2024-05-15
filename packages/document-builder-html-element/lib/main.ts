@@ -35,11 +35,11 @@ declare global {
 }
 
 function main(): void {
-  if (window.customElements.get(DocumentBuilder.tag)) {
+  if (window.customElements.get(DocumentBuilder.tagName)) {
     return
   }
   window.DocumentBuilder = DocumentBuilder
-  window.customElements.define(DocumentBuilder.tag, DocumentBuilder)
+  window.customElements.define(DocumentBuilder.tagName, DocumentBuilder)
   window.DocumentBuilderErrorEvent = DocumentBuilderErrorEvent
   window.DocumentBuilderReadyEvent = DocumentBuilderReadyEvent
 }
@@ -89,7 +89,7 @@ export type DocumentBuilderCommand = Parameters<DocEditorConnector["callCommand"
 export type DocumentBuilderConnector = DocEditorConnector
 
 export class DocumentBuilder extends DocumentEditor {
-  static get tag(): string {
+  static get tagName(): string {
     return "document-builder"
   }
 

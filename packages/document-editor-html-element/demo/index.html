@@ -11,8 +11,9 @@
     <template>
       <document-editor
         document-server-url="http://0.0.0.0:3000/"
-        onappready='console.log("Document Editor is ready")'
-        onerror='console.error(event.message)'
+        ondocumenteditorappready='console.log("Document Editor is ready")'
+        ondocumenteditorerror="console.error(event.message)"
+        onerror="console.error(event.message)"
       >
       </document-editor>
     </template>
