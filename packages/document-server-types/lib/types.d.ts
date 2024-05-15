@@ -367,7 +367,7 @@ export interface DocEditorConfig {
   /**
    * {@link https://api.onlyoffice.com/editors/config/editor ONLYOFFICE Reference}
    */
-  editorConfig?: DocEditorConfigEditor
+  editorConfig?: DocEditorConfigEditorConfig
 
   /**
    * {@link https://api.onlyoffice.com/editors/config/events ONLYOFFICE Reference}
@@ -456,7 +456,7 @@ export interface DocEditorConfigDocumentInfo {
   /**
    * {@link https://api.onlyoffice.com/editors/config/document/info#sharingSettings ONLYOFFICE Reference}
    */
-  sharingSettings?: DocEditorConfigDocumentInfoSharingSettings[]
+  sharingSettings?: DocEditorConfigDocumentInfoSharingSetting[]
 
   /**
    * {@link https://api.onlyoffice.com/editors/config/document/info#uploaded ONLYOFFICE Reference}
@@ -467,7 +467,7 @@ export interface DocEditorConfigDocumentInfo {
 /**
  * {@link https://api.onlyoffice.com/editors/config/document/info#sharingSettings ONLYOFFICE Reference}
  */
-export interface DocEditorConfigDocumentInfoSharingSettings {
+export interface DocEditorConfigDocumentInfoSharingSetting {
   isLink: boolean
   permissions: "Full Access" | "Read Only" | "Deny Access"
   user: string
@@ -483,7 +483,7 @@ export interface DocEditorConfigDocumentPermissions {
 /**
  * {@link https://api.onlyoffice.com/editors/config/editor ONLYOFFICE Reference}
  */
-export interface DocEditorConfigEditor {
+export interface DocEditorConfigEditorConfig {
   // todo
 }
 
