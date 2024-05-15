@@ -215,7 +215,7 @@ export class DocumentBuilder extends DocumentEditor {
 
   connectedCallback(): void {
     super.connectedCallback()
-    this.addEventListener("documentready", () => {
+    this.addEventListener("documenteditordocumentready", () => {
       if (!this.editor) {
         const er = new Error("DocumentEditor is not initialized")
         const ev = new DocumentBuilderErrorEvent({error: er, message: er.message})
