@@ -138,9 +138,9 @@ importers:
 
   packages/document-builder-element:
     dependencies:
-      '@onlyoffice/document-editor-element':
+      '@onlyoffice/document-editor-html-element':
         specifier: workspace:^
-        version: link:../document-editor-element
+        version: link:../document-editor-html-element
     devDependencies:
       '@onlyoffice/document-builder-types':
         specifier: workspace:^
@@ -169,7 +169,7 @@ importers:
 
   packages/document-builder-types: {}
 
-  packages/document-editor-element:
+  packages/document-editor-html-element:
     dependencies:
       '@onlyoffice/document-server-types':
         specifier: workspace:^
@@ -177,7 +177,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.12.8
-        version: 20.12.10
+        version: 20.12.11
       '@web/dev-server':
         specifier: ^0.4.4
         version: 0.4.4
@@ -348,9 +348,9 @@ importers:
       '@onlyoffice/document-builder-element':
         specifier: workspace:^
         version: link:../packages/document-builder-element
-      '@onlyoffice/document-editor-element':
+      '@onlyoffice/document-editor-html-element':
         specifier: workspace:^
-        version: link:../packages/document-editor-element
+        version: link:../packages/document-editor-html-element
       '@onlyoffice/documentation-declarations-fixtures':
         specifier: workspace:^
         version: link:../declarations/fixtures
@@ -2556,9 +2556,6 @@ packages:
 
   '@types/node@20.11.26':
     resolution: {integrity: sha512-YwOMmyhNnAWijOBQweOJnQPl068Oqd4K3OFbTc6AHJwzweUwwWG3GIFY74OKks2PJUDkQPeddOQES9mLn1CTEQ==}
-
-  '@types/node@20.12.10':
-    resolution: {integrity: sha512-Eem5pH9pmWBHoGAT8Dr5fdc5rYA+4NAovdM4EktRPVAAiJhmWWfQrA0cFhAbOsQdSfIHjAud6YdkbL69+zSKjw==}
 
   '@types/node@20.12.11':
     resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
@@ -8679,10 +8676,6 @@ snapshots:
       undici-types: 5.26.5
 
   '@types/node@20.11.26':
-    dependencies:
-      undici-types: 5.26.5
-
-  '@types/node@20.12.10':
     dependencies:
       undici-types: 5.26.5
 

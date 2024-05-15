@@ -13,7 +13,7 @@
     "@11ty/eleventy-img": "^4.0.2",
     "@mdx-js/mdx": "^3.0.0",
     "@onlyoffice/document-builder-element": "workspace:^",
-    "@onlyoffice/document-editor-element": "workspace:^",
+    "@onlyoffice/document-editor-html-element": "workspace:^",
     "@onlyoffice/documentation-declarations-fixtures": "workspace:^",
     "@onlyoffice/documentation-declarations-scripts": "workspace:^",
     "@onlyoffice/documentation-declarations-types": "workspace:^",

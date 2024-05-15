@@ -6,7 +6,7 @@ import type {IncomingMessage, ServerResponse} from "node:http"
 import {createServer} from "node:http"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
-import type {DocumentEditorConfig} from "@onlyoffice/document-editor-element"
+import type {DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
 
 const config = {
   hostname: "0.0.0.0",

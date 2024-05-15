@@ -8,7 +8,7 @@
     "demo:store": "tsx ./demo/main.ts"
   },
   "dependencies": {
-    "@onlyoffice/document-editor-element": "workspace:^"
+    "@onlyoffice/document-editor-html-element": "workspace:^"
   },
   "devDependencies": {
     "@onlyoffice/document-builder-types": "workspace:^",

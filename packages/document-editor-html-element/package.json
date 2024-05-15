@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/document-editor-element",
+  "name": "@onlyoffice/document-editor-html-element",
   "private": true,
   "description": "ONLYOFFICE Document Editor HTML Element",
   "type": "module",
