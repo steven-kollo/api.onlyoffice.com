@@ -1,5 +1,4 @@
 /* eslint @stylistic/max-len: ["error", {code: 140}] */
-/* eslint-disable no-new-func */
 
 import type {
   DocEditor,

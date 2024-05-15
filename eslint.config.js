@@ -102,7 +102,6 @@ function config() {
         "no-multi-str": e,
         "no-nested-ternary": e,
         "no-new": e,
-        "no-new-func": e,
         "no-new-wrappers": e,
         "no-object-constructor": e,
         "no-plusplus": e,

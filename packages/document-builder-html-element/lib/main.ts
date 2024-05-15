@@ -1,5 +1,3 @@
-/* eslint-disable no-new-func */
-
 import type {DocumentBuilder as IDocumentBuilder} from "@onlyoffice/document-builder-types"
 import {DocumentEditor} from "@onlyoffice/document-editor-html-element"
 import type {DocEditorConnector} from "@onlyoffice/document-server-types"
