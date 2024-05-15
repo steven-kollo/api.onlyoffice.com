@@ -7,6 +7,8 @@ import type {DocEditorConnector} from "@onlyoffice/document-server-types"
 declare global {
   interface Window {
     DocumentBuilder: typeof DocumentBuilder
+    DocumentBuilderErrorEvent: typeof DocumentBuilderErrorEvent
+    DocumentBuilderReadyEvent: typeof DocumentBuilderReadyEvent
   }
 
   interface HTMLElementTagNameMap {
@@ -20,38 +22,77 @@ declare global {
       }
     }
   }
+
+  interface GlobalEventHandlersEventMap {
+    documentbuildererror: DocumentBuilderErrorEvent
+    documentbuilderready: DocumentBuilderReadyEvent
+  }
+
+  interface GlobalEventHandlers {
+    ondocumentbuildererror: GlobalDocumentBuilderErrorHandler | null
+    ondocumentbuilderready: GlobalDocumentBuilderReadyHandler | null
+  }
 }
 
 function main(): void {
-  if (window.customElements.get("document-builder")) {
+  if (window.customElements.get(DocumentBuilder.tag)) {
     return
   }
   window.DocumentBuilder = DocumentBuilder
-  window.customElements.define("document-builder", DocumentBuilder)
+  window.customElements.define(DocumentBuilder.tag, DocumentBuilder)
+  window.DocumentBuilderErrorEvent = DocumentBuilderErrorEvent
+  window.DocumentBuilderReadyEvent = DocumentBuilderReadyEvent
 }
 
-export class DocumentBuilderReady extends Event {
+export class DocumentBuilderErrorEvent extends ErrorEvent {
+  static get type(): string {
+    return "documentbuildererror"
+  }
+
+  constructor(eventInitDict?: ErrorEventInit) {
+    super(DocumentBuilderErrorEvent.type, eventInitDict)
+  }
+}
+
+export interface DocumentBuilderErrorListener extends EventListener {
+  (this: DocumentEditor, event: DocumentBuilderErrorEvent): void
+}
+
+export interface GlobalDocumentBuilderErrorHandler {
+  (this: GlobalEventHandlers, ev: DocumentBuilderErrorEvent): void
+}
+
+export class DocumentBuilderReadyEvent extends Event {
   static get type(): string {
     return "documentbuilderready"
   }
 
   constructor(eventInitDict?: EventInit) {
-    super(DocumentBuilderReady.type, eventInitDict)
+    super(DocumentBuilderReadyEvent.type, eventInitDict)
   }
 }
 
-export interface DocumentBuilderReadyListener extends EventListener {
-  (this: DocumentEditor, event: DocumentBuilderReady): void
+export interface DocumentBuilderReadyEventListener extends EventListener {
+  (this: DocumentEditor, event: DocumentBuilderReadyEvent): void
+}
+
+export interface GlobalDocumentBuilderReadyHandler {
+  (this: GlobalEventHandlers, ev: DocumentBuilderReadyEvent): void
 }
 
 interface DocumentBuilderCommandListener extends EventListener {
-  (this: DocumentBuilder, event: DocumentBuilderReady): void
+  (this: DocumentBuilder, event: DocumentBuilderReadyEvent): void
 }
 
-type DocumentBuilderCommand = Parameters<DocEditorConnector["callCommand"]>[0]
-type DocumentBuilderConnector = DocEditorConnector
+export type DocumentBuilderCommand = Parameters<DocEditorConnector["callCommand"]>[0]
+
+export type DocumentBuilderConnector = DocEditorConnector
 
 export class DocumentBuilder extends DocumentEditor {
+  static get tag(): string {
+    return "document-builder"
+  }
+
   #command: DocumentBuilderCommand | null = null
 
   get command(): DocumentBuilderCommand | null {
@@ -60,7 +101,7 @@ export class DocumentBuilder extends DocumentEditor {
 
   set command(c: DocumentBuilderCommand | null) {
     if (this.#commandListener) {
-      this.removeEventListener(DocumentBuilderReady.type, this.#commandListener)
+      this.removeEventListener(DocumentBuilderReadyEvent.type, this.#commandListener)
       this.#commandListener = null
     }
 
@@ -84,7 +125,7 @@ export class DocumentBuilder extends DocumentEditor {
       }
       this.#connector.callCommand(this.#command)
     }
-    this.addEventListener(DocumentBuilderReady.type, this.#commandListener)
+    this.addEventListener(DocumentBuilderReadyEvent.type, this.#commandListener)
   }
 
   #commandListener: DocumentBuilderCommandListener | null = null
@@ -95,30 +136,57 @@ export class DocumentBuilder extends DocumentEditor {
     return this.#connector
   }
 
-  #onDocumentBuilderReady: DocumentBuilderReadyListener | null = null
+  #ondocumentbuilderready: DocumentBuilderReadyEventListener | null = null
 
-  get onDocumentBuilderReady(): DocumentBuilderReadyListener | null {
-    return this.#onDocumentBuilderReady
+  get ondocumentbuilderready(): DocumentBuilderReadyEventListener | null {
+    return this.#ondocumentbuilderready
   }
 
-  set onDocumentBuilderReady(l: DocumentBuilderReadyListener | null) {
-    if (this.#onDocumentBuilderReady) {
-      this.removeEventListener(DocumentBuilderReady.type, this.#onDocumentBuilderReady)
+  set ondocumentbuilderready(l: DocumentBuilderReadyEventListener | null) {
+    if (this.#ondocumentbuilderready) {
+      this.removeEventListener(DocumentBuilderReadyEvent.type, this.#ondocumentbuilderready)
     }
-    this.#onDocumentBuilderReady = l
-    if (this.#onDocumentBuilderReady) {
-      this.addEventListener(DocumentBuilderReady.type, this.#onDocumentBuilderReady)
+    this.#ondocumentbuilderready = l
+    if (this.#ondocumentbuilderready) {
+      this.addEventListener(DocumentBuilderReadyEvent.type, this.#ondocumentbuilderready)
+    }
+  }
+
+  #ondocumentbuildererror: DocumentBuilderErrorListener | null = null
+
+  get ondocumentbuildererror(): DocumentBuilderErrorListener | null {
+    return this.#ondocumentbuildererror
+  }
+
+  set ondocumentbuildererror(l: DocumentBuilderErrorListener | null) {
+    if (this.#ondocumentbuildererror) {
+      this.removeEventListener(DocumentBuilderErrorEvent.type, this.#ondocumentbuildererror)
+    }
+    this.#ondocumentbuildererror = l
+    if (this.#ondocumentbuildererror) {
+      this.addEventListener(DocumentBuilderErrorEvent.type, this.#ondocumentbuildererror)
     }
   }
 
   static get observedAttributes(): string[] {
-    return [...DocumentEditor.observedAttributes, "command"]
+    return [
+      ...DocumentEditor.observedAttributes,
+      "command",
+      "ondocumentbuilderready",
+      "ondocumentbuildererror"
+    ]
   }
 
   attributeChangedCallback(n: string, _: string, v: string): void {
     switch (n) {
     case "command":
       this.command = new Function("builder", v) as DocumentBuilderCommand
+      break
+    case "ondocumentbuilderready":
+      this.ondocumentbuilderready = new Function("event", v) as DocumentBuilderReadyEventListener
+      break
+    case "ondocumentbuildererror":
+      this.ondocumentbuildererror = new Function("event", v) as DocumentBuilderErrorListener
       break
     default:
       super.attributeChangedCallback(n, _, v)
@@ -151,14 +219,15 @@ export class DocumentBuilder extends DocumentEditor {
     super.connectedCallback()
     this.addEventListener("documentready", () => {
       if (!this.editor) {
-        // throw custom event
-        // throw new Error("DocumentEditor is not initialized")
+        const er = new Error("DocumentEditor is not initialized")
+        const ev = new DocumentBuilderErrorEvent({error: er, message: er.message})
+        this.dispatchEvent(ev)
         return
       }
 
       this.#connector = this.editor.createConnector()
 
-      const e = new DocumentBuilderReady()
+      const e = new DocumentBuilderReadyEvent()
       this.dispatchEvent(e)
     })
   }

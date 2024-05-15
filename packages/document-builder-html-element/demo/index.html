@@ -23,7 +23,8 @@ builder.CloseFile();
       <document-builder
         document-server-url="http://0.0.0.0:3000/"
         onappready='console.log("Document Builder is ready")'
-        onerror='console.error(event.message)'
+        ondocumentbuildererror="console.error(event.message)"
+        onerror="console.error(event.message)"
       ></document-builder>
     </template>
     <script type="module">
