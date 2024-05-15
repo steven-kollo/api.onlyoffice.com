@@ -83,3 +83,9 @@ table {
   text-overflow: ellipsis;
   text-wrap: nowrap;
 }
+
+/* todo: temp solution */
+document-builder {
+  display: block;
+  height: 550px;
+}

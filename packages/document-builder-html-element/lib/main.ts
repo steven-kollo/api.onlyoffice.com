@@ -1,5 +1,5 @@
-import type {DocumentBuilder as IDocumentBuilder} from "@onlyoffice/document-builder-types"
 import {DocumentEditor} from "@onlyoffice/document-editor-html-element"
+import {builder, fileType} from "@onlyoffice/document-builder-utils"
 import type {DocEditorConnector} from "@onlyoffice/document-server-types"
 
 declare global {
@@ -191,26 +191,8 @@ export class DocumentBuilder extends DocumentEditor {
     }
   }
 
-  static fileType(c: string): string | null {
-    let t = ""
-
-    const b = builder()
-    b.CreateFile = (e) => {
-      t = e
-      throw new Error("Stop execution")
-    }
-
-    const f = new Function("builder", c) as DocumentBuilderCommand
-    try {
-      f(b)
-    } catch {
-      // continue
-    }
-
-    if (t === "") {
-      return null
-    }
-    return t
+  static fileType(c: string): string {
+    return fileType(c)
   }
 
   connectedCallback(): void {
@@ -242,14 +224,6 @@ function uniqString(): string {
   const date = new Date()
   const timestamp = date.getTime()
   return timestamp.toString(36)
-}
-
-function builder(): IDocumentBuilder {
-  return {
-    CloseFile: () => {},
-    CreateFile: () => {},
-    SaveFile: () => {}
-  }
 }
 
 main()

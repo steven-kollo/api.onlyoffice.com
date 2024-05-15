@@ -7,11 +7,10 @@
     "demo:site": "wds . --watch",
     "demo:store": "tsx ./demo/main.ts"
   },
-  "dependencies": {
-    "@onlyoffice/document-editor-html-element": "workspace:^"
-  },
   "devDependencies": {
     "@onlyoffice/document-builder-types": "workspace:^",
+    "@onlyoffice/document-builder-utils": "workspace:^",
+    "@onlyoffice/document-editor-html-element": "workspace:^",
     "@onlyoffice/document-server-types": "workspace:^",
     "@types/node": "^20.12.8",
     "@web/dev-server": "^0.4.4",

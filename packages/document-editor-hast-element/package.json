@@ -1,0 +1,19 @@
+{
+  "name": "@onlyoffice/document-editor-hast-element",
+  "type": "module",
+  "main": "lib/main.ts",
+  "scripts": {
+    "test": "tsc && c8 --reporter html --reporter text uvu dist ^.*\\.test\\.js$"
+  },
+  "devDependencies": {
+    "@onlyoffice/document-editor-html-element": "workspace:^",
+    "@types/hast": "^3.0.4",
+    "c8": "^9.1.0",
+    "hast-util-to-html": "^9.0.1",
+    "typescript": "^5.4.5",
+    "uvu": "^0.5.6"
+  },
+  "engines": {
+    "node": "^21"
+  }
+}

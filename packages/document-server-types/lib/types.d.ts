@@ -367,7 +367,7 @@ export interface DocEditorConfig {
   /**
    * {@link https://api.onlyoffice.com/editors/config/editor ONLYOFFICE Reference}
    */
-  editor?: DocEditorConfigEditor
+  editorConfig?: DocEditorConfigEditor
 
   /**
    * {@link https://api.onlyoffice.com/editors/config/events ONLYOFFICE Reference}

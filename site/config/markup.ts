@@ -19,6 +19,9 @@ import rehypeSlug from "rehype-slug"
 import rehypeAutolink from "rehype-autolink-headings"
 import {env} from "node:process"
 
+import {remarkDocumentBuilder} from "@onlyoffice/remark-document-builder"
+import {rehypeDocumentBuilderContainer} from "../components/document-builder-container/rehype.ts"
+
 // todo: temp
 const doSkip = env.SKIP_REMOTE === "true"
 // const doSkip = true
@@ -137,9 +140,13 @@ export function markupPlugin(uc: UserConfig): void {
                       rehypeSlug,
                       [rehypeAutolink, {behavior: "wrap"}],
                       rehypeImage,
-                      rehypeSyntax
+                      rehypeSyntax,
+                      rehypeDocumentBuilderContainer
                     ],
-                    remarkPlugins: [remarkGFM]
+                    remarkPlugins: [
+                      remarkDocumentBuilder,
+                      remarkGFM
+                    ]
                   })
 
                   return {
