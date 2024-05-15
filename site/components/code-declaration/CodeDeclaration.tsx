@@ -108,6 +108,7 @@ function ClassDeclaration({declaration: d}: ClassDeclarationParameters): JSX.Ele
     {d.extendsBy && <DeclarationExtendsBySection references={d.extendsBy} />}
     {d.overloads && <DeclarationOverloadsSection references={d.overloads} />}
     {d.overloadsBy && <DeclarationOverloadsBySection references={d.overloadsBy} />}
+    {d.tryIt && <DeclarationTryItSection content={d.tryIt} />}
   </>)
 }
 
@@ -134,6 +135,7 @@ function CEMDeclaration({declaration: d}: CEMDeclarationParameters): JSX.Element
     )}
     {d.overloads && <DeclarationOverloadsSection references={d.overloads} />}
     {d.overloadsBy && <DeclarationOverloadsBySection references={d.overloadsBy} />}
+    {d.tryIt && <DeclarationTryItSection content={d.tryIt} />}
   </>)
 }
 
@@ -155,6 +157,7 @@ function PropertyDeclaration({declaration: d}: PropertyDeclarationParameters): J
     )}
     {d.overloads && <DeclarationOverloadsSection references={d.overloads} />}
     {d.overloadsBy && <DeclarationOverloadsBySection references={d.overloadsBy} />}
+    {d.tryIt && <DeclarationTryItSection content={d.tryIt} />}
   </>)
 }
 
@@ -199,6 +202,7 @@ function AnyTypeDeclaration({declaration: d}: TypeDeclarationParameters): JSX.El
     )}
     {d.overloads && <DeclarationOverloadsSection references={d.overloads} />}
     {d.overloadsBy && <DeclarationOverloadsBySection references={d.overloadsBy} />}
+    {d.tryIt && <DeclarationTryItSection content={d.tryIt} />}
   </>)
 }
 
@@ -223,6 +227,7 @@ function FunctionTypeDeclaration({declaration: d, type: t}: FunctionTypeDeclarat
     )}
     {d.overloads && <DeclarationOverloadsSection references={d.overloads} />}
     {d.overloadsBy && <DeclarationOverloadsBySection references={d.overloadsBy} />}
+    {d.tryIt && <DeclarationTryItSection content={d.tryIt} />}
   </>)
 }
 
@@ -246,6 +251,7 @@ function ObjectTypeDeclaration({declaration: d, type: t}: ObjectTypeDeclarationP
     )}
     {d.overloads && <DeclarationOverloadsSection references={d.overloads} />}
     {d.overloadsBy && <DeclarationOverloadsBySection references={d.overloadsBy} />}
+    {d.tryIt && <DeclarationTryItSection content={d.tryIt} />}
   </>)
 }
 
@@ -425,6 +431,19 @@ function DeclarationTopicSection({title, references}: DeclarationTopicSectionPar
       })}
     </dl>
   </>)
+}
+
+interface DeclarationTryItSectionParameters {
+  content: string
+}
+
+function DeclarationTryItSection({content}: DeclarationTryItSectionParameters): JSX.Element {
+  const {onProcessMarkdown: Markdown} = useContext(Context)
+
+  return <>
+    <h2>Try It</h2>
+    <Markdown>{content}</Markdown>
+  </>
 }
 
 interface SignatureParameters {

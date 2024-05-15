@@ -12,6 +12,9 @@ import {useSuspense} from "../suspense.tsx"
 import rehypeSlug from "rehype-slug"
 import rehypeAutolink from "rehype-autolink-headings"
 
+import {remarkDocumentBuilder} from "@onlyoffice/remark-document-builder"
+import {rehypeDocumentBuilderContainer} from "../document-builder-container/rehype.ts"
+
 export interface RootParameters {
   children: any
 }
@@ -22,12 +25,14 @@ export function Root({children}: RootParameters): JSX.Element {
   const Suspense = useSuspense(async () => {
     const v = await unified()
       .use(remarkParse)
+      .use(remarkDocumentBuilder)
       .use(remarkGFM)
       .use(remarkRehype)
       .use(rehypeSlug)
       .use(rehypeAutolink, {behavior: "wrap"})
       .use(rehypeImage)
       .use(rehypeSyntax)
+      .use(rehypeDocumentBuilderContainer)
       .use(rehypePreact)
       .process(children)
     result = v.result as JSX.Element

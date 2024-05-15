@@ -688,11 +688,13 @@ async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, 
     d.description = undefined
   }
 
-  // note: it is a temporary solution.
+  // todo: it is a temporary solution.
   if (d.description) {
     // todo: my bad, capitalize the title in the document builder declarations too.
     const s = selectSection("Try it", d.description)
     if (s !== "") {
+      // do not do it, create a new utility function.
+      d.description = d.description.replace("## Try it", "").replace(s, "")
       d.tryIt = s
     }
   }
