@@ -3,7 +3,7 @@
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {
-    "test": "tsc && c8 --reporter html --reporter text uvu ./dist ^.*\\.test\\.js$"
+    "test": "tsc && c8 --reporter html --reporter text uvu dist ^.*\\.test\\.js$"
   },
   "dependencies": {
     "unist-util-visit": "^5.0.0"
