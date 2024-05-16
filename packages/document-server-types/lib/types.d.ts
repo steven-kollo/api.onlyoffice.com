@@ -237,7 +237,7 @@ export interface DocEditorRefreshHistoryPayload {
   currentVersion: number
   error?: string
   history: {
-    changes?: any
+    changes?: unknown
     created: string
     key: string
     serverVersion?: number
@@ -337,7 +337,7 @@ export interface DocEditorConfig {
   /**
    * {@link https://api.onlyoffice.com/editors/config/#documentType ONLYOFFICE Reference}
    */
-  documentType: "cell" | "pdf" | "slide" | "word"
+  documentType?: "cell" | "pdf" | "slide" | "word"
 
   /**
    * {@link https://api.onlyoffice.com/editors/config/#height ONLYOFFICE Reference}
@@ -362,7 +362,7 @@ export interface DocEditorConfig {
   /**
    * {@link https://api.onlyoffice.com/editors/config/document ONLYOFFICE Reference}
    */
-  document: DocEditorConfigDocument
+  document?: DocEditorConfigDocument
 
   /**
    * {@link https://api.onlyoffice.com/editors/config/editor ONLYOFFICE Reference}
@@ -477,18 +477,547 @@ export interface DocEditorConfigDocumentInfoSharingSetting {
  * {@link https://api.onlyoffice.com/editors/config/document/permissions ONLYOFFICE Reference}
  */
 export interface DocEditorConfigDocumentPermissions {
-  // todo
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#changeHistory ONLYOFFICE Reference}
+   */
+  changeHistory?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#chat ONLYOFFICE Reference}
+   */
+  chat?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#comment ONLYOFFICE Reference}
+   */
+  comment?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#commentGroups ONLYOFFICE Reference}
+   */
+  commentGroups?: DocEditorConfigDocumentPermissionsCommentGroup[] | string[]
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#copy ONLYOFFICE Reference}
+   */
+  copy?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#deleteCommentAuthorOnly ONLYOFFICE Reference}
+   */
+  deleteCommentAuthorOnly?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#download ONLYOFFICE Reference}
+   */
+  download?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#edit ONLYOFFICE Reference}
+   */
+  edit?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#editCommentAuthorOnly ONLYOFFICE Reference}
+   */
+  editCommentAuthorOnly?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#fillForms ONLYOFFICE Reference}
+   */
+  fillForms?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#modifyContentControl ONLYOFFICE Reference}
+   */
+  modifyContentControl?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#modifyFilter ONLYOFFICE Reference}
+   */
+  modifyFilter?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#print ONLYOFFICE Reference}
+   */
+  print?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#protect ONLYOFFICE Reference}
+   */
+  protect?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#rename ONLYOFFICE Reference}
+   */
+  rename?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#review ONLYOFFICE Reference}
+   */
+  review?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#reviewGroups ONLYOFFICE Reference}
+   */
+  reviewGroups?: string[]
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/document/permissions#userInfoGroups ONLYOFFICE Reference}
+   */
+  userInfoGroups?: string[]
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/document/permissions#commentGroups ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigDocumentPermissionsCommentGroup {
+  edit?: string[] | string
+  remove?: string[] | string
+  view?: string[] | string
 }
 
 /**
  * {@link https://api.onlyoffice.com/editors/config/editor ONLYOFFICE Reference}
  */
 export interface DocEditorConfigEditorConfig {
-  // todo
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#actionLink ONLYOFFICE Reference}
+   */
+  actionLink?: unknown
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#callbackUrl ONLYOFFICE Reference}
+   */
+  callbackUrl: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#coEditing ONLYOFFICE Reference}
+   */
+  coEditing?: DocEditorConfigEditorConfigCoEditing
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#createUrl ONLYOFFICE Reference}
+   */
+  createUrl?: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#lang ONLYOFFICE Reference}
+   */
+  lang?: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#location ONLYOFFICE Reference}
+   */
+  location?: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#mode ONLYOFFICE Reference}
+   */
+  mode?: "edit" | "view"
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#recent ONLYOFFICE Reference}
+   */
+  recent?: DocEditorConfigEditorConfigRecentItem[]
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#region ONLYOFFICE Reference}
+   */
+  region?: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#templates ONLYOFFICE Reference}
+   */
+  templates?: DocEditorConfigEditorConfigTemplate[]
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor#user ONLYOFFICE Reference}
+   */
+  user?: DocEditorConfigEditorConfigUser
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization ONLYOFFICE Reference}
+   */
+  customization?: DocEditorConfigEditorConfigCustomization
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/embedded ONLYOFFICE Reference}
+   */
+  embedded?: DocEditorConfigEditorConfigEmbedded
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/plugins ONLYOFFICE Reference}
+   */
+  plugins?: DocEditorConfigEditorConfigPlugins
 }
 
 /**
- * {@link https://api.onlyoffice.com/editors/config/events}
+ * {@link https://api.onlyoffice.com/editors/config/editor#coEditing ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCoEditing {
+  mode?: "fast" | "strict"
+  change?: boolean
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor#recent ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigRecentItem {
+  folder: string
+  title: string
+  url: string
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor#templates ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigTemplate {
+  image: string
+  title: string
+  url: string
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor#user ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigUser {
+  /**
+   * @deprecated Since 4.2, prefer {@link name} instead.
+   */
+  firstname?: string
+
+  group: string
+
+  id: string
+
+  image: string
+
+  /**
+   * @deprecated Since 4.2, prefer {@link name} instead.
+   */
+  lastname?: string
+
+  name: string
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/customization ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCustomization {
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#anonymous ONLYOFFICE Reference}
+   */
+  anonymous?: DocEditorConfigEditorConfigCustomizationAnonymous
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#autosave ONLYOFFICE Reference}
+   */
+  autosave?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#chat ONLYOFFICE Reference}
+   * @deprecated Since 7.1, prefer {@link DocEditorConfigDocumentPermissions.chat} instead.
+   */
+  chat?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#commentAuthorOnly ONLYOFFICE Reference}
+   * @deprecated Since 6.3, prefer {@link DocEditorConfigDocumentPermissions.editCommentAuthorOnly} with {@link DocEditorConfigDocumentPermissions.deleteCommentAuthorOnly} instead.
+   */
+  commentAuthorOnly?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#comments ONLYOFFICE Reference}
+   */
+  comments?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#compactHeader ONLYOFFICE Reference}
+   */
+  compactHeader?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#compactToolbar ONLYOFFICE Reference}
+   */
+  compactToolbar?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#compatibleFeatures ONLYOFFICE Reference}
+   */
+  compatibleFeatures?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#customer ONLYOFFICE Reference}
+   */
+  customer?: DocEditorConfigEditorConfigCustomizationCustomer
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#features ONLYOFFICE Reference}
+   */
+  features?: DocEditorConfigEditorConfigCustomizationFeatures
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#feedback ONLYOFFICE Reference}
+   */
+  feedback?: DocEditorConfigEditorConfigCustomizationFeedback | boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#forcesave ONLYOFFICE Reference}
+   */
+  forcesave?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#goback ONLYOFFICE Reference}
+   */
+  goback?: DocEditorConfigEditorConfigCustomizationGoback | boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#help ONLYOFFICE Reference}
+   */
+  help?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#hideNotes ONLYOFFICE Reference}
+   */
+  hideNotes?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#hideRightMenu ONLYOFFICE Reference}
+   */
+  hideRightMenu?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#hideRulers ONLYOFFICE Reference}
+   */
+  hideRulers?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#integrationMode ONLYOFFICE Reference}
+   */
+  integrationMode?: "embed"
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#logo ONLYOFFICE Reference}
+   */
+  logo: DocEditorConfigEditorConfigCustomizationLogo
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#macros ONLYOFFICE Reference}
+   */
+  macros?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#macrosMode ONLYOFFICE Reference}
+   */
+  macrosMode?: "disable" | "enable" | "warn"
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#mentionShare ONLYOFFICE Reference}
+   */
+  mentionShare?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#mobileForceView ONLYOFFICE Reference}
+   */
+  mobileForceView?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#plugins ONLYOFFICE Reference}
+   */
+  plugins?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#review ONLYOFFICE Reference}
+   */
+  review?: DocEditorConfigEditorConfigCustomizationReview
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#reviewDisplay ONLYOFFICE Reference}
+   * @deprecated Since 7.0, prefer {@link DocEditorConfigEditorConfigCustomizationReview.reviewDisplay} instead.
+   */
+  reviewDisplay?: "markup" | "simple" | "final" | "original"
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#showReviewChanges ONLYOFFICE Reference}
+   * @deprecated Since 7.0, prefer {@link DocEditorConfigEditorConfigCustomizationReview.showReviewChanges} instead.
+   */
+  showReviewChanges?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#spellcheck ONLYOFFICE Reference}
+   * @deprecated Since 7.0, prefer {@link DocEditorConfigEditorConfigCustomizationFeatures.spellcheck} instead.
+   */
+  spellcheck?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#submitForm ONLYOFFICE Reference}
+   */
+  submitForm?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#toolbarHideFileName ONLYOFFICE Reference}
+   */
+  toolbarHideFileName?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#toolbarNoTabs ONLYOFFICE Reference}
+   */
+  toolbarNoTabs?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#trackChanges ONLYOFFICE Reference}
+   * @deprecated Since 7.0, prefer {@link DocEditorConfigEditorConfigCustomizationReview.trackChanges} instead.
+   */
+  trackChanges?: boolean
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#uiTheme ONLYOFFICE Reference}
+   */
+  uiTheme?: "default-dark" | "default-light" | "theme-classic-light" | "theme-contrast-dark" | "theme-dark" | "theme-light"
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#unit ONLYOFFICE Reference}
+   */
+  unit?: "cm" | "inch" | "pt"
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/customization#zoom ONLYOFFICE Reference}
+   */
+  zoom?: number
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/customization#anonymous ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCustomizationAnonymous {
+  request?: boolean
+  label?: string
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/customization#customer ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCustomizationCustomer {
+  address: string
+  info: string
+  logo: string
+  logoDark: string
+  mail: string
+  name: string
+  phone: string
+  www: string
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/customization#features ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCustomizationFeatures {
+  spellcheck?: DocEditorConfigEditorConfigCustomizationFeaturesSpellcheck | boolean
+}
+
+export interface DocEditorConfigEditorConfigCustomizationFeaturesSpellcheck {
+  mode?: boolean
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/customization#feedback ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCustomizationFeedback {
+  url: string
+  visible: boolean
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/customization#goback ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCustomizationGoback {
+  blank?: boolean
+  requestClose?: boolean
+  text?: string
+  url: string
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/customization#logo ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCustomizationLogo {
+  image: string
+
+  imageDark: string
+
+  /**
+   * @deprecated Since 7.0, prefer {@link image} instead.
+   */
+  imageEmbedded?: string
+
+  url: string
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/customization#review ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigCustomizationReview {
+  hideReviewDisplay?: boolean
+  hoverMode?: boolean
+  reviewDisplay?: "markup" | "simple" | "final" | "original"
+  showReviewChanges?: boolean
+  trackChanges?: boolean
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/embedded ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigEmbedded {
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/embedded#embedUrl ONLYOFFICE Reference
+   */
+  embedUrl?: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/embedded#fullscreenUrl ONLYOFFICE Reference
+   */
+  fullscreenUrl?: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/embedded#saveUrl ONLYOFFICE Reference
+   */
+  saveUrl?: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/embedded#shareUrl ONLYOFFICE Reference
+   */
+  shareUrl?: string
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/embedded#toolbarDocked ONLYOFFICE Reference
+   */
+  toolbarDocked?: boolean
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/editor/plugins ONLYOFFICE Reference}
+ */
+export interface DocEditorConfigEditorConfigPlugins {
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/plugins#autostart ONLYOFFICE Reference}
+   */
+  autostart?: string[]
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/plugins#pluginsData ONLYOFFICE Reference}
+   */
+  pluginsData?: string[]
+
+  /**
+   * {@link https://api.onlyoffice.com/editors/config/editor/plugins#url ONLYOFFICE Reference}
+   * @deprecated Since 4.3, prefer {@link pluginsData} instead.
+   */
+  url?: string
+}
+
+/**
+ * {@link https://api.onlyoffice.com/editors/config/events ONLYOFFICE Reference}
  */
 export interface DocEditorConfigEvents {
   /**
