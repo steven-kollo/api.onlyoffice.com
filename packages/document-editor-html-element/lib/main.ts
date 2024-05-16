@@ -1686,11 +1686,7 @@ export class DocumentEditor extends HTMLElement {
   }
 
   #placeholderID(): string {
-    let id = "placeholder"
-    if (this.id !== "") {
-      id = `${this.id}-${id}`
-    }
-    return id
+    return `${uniqueString()}-placeholder`
   }
 
   #createScript(p: HTMLElement): HTMLScriptElement {
