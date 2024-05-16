@@ -1,12 +1,6 @@
 import {is} from "uvu/assert"
 import {test} from "uvu"
-import {
-  firstParagraph,
-  firstSentence,
-  isStringLiteral,
-  selectSection,
-  uniqString
-} from "./main.js"
+import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "./main.js"
 
 test("firstParagraph() returns an empty string for an empty content", () => {
   const e = firstParagraph("")
@@ -91,32 +85,6 @@ test("isStringLiteral() returns true for a string with double quotes", () => {
 test("isStringLiteral() returns true for a string with single quotes", () => {
   const e = isStringLiteral("'s'")
   is(e, true)
-})
-
-test("uniqString() returns a string", () => {
-  const s = uniqString()
-  is(typeof s, "string")
-})
-
-test("uniqString() returns a unique string", () => {
-  const a = uniqString()
-  const b = uniqString()
-  is.not(a, b)
-})
-
-test("uniqString() returns a base64 string", () => {
-  const s = uniqString()
-  is(s, btoa(atob(s)))
-})
-
-test("uniqString() returns a string with a word character in the first position", () => {
-  const r = /^[A-Za-z]/
-
-  let s = uniqString()
-  is(r.test(s[0]), true)
-
-  s = `1${s.slice(1)}`
-  is(r.test(s[0]), false)
 })
 
 test.run()

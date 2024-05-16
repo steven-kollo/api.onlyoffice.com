@@ -61,16 +61,3 @@ export function isStringLiteral(s: string): boolean {
   return s.startsWith('"') && s.endsWith('"') ||
     s.startsWith("'") && s.endsWith("'")
 }
-
-export const uniqString = (() => {
-  let c = -1
-  return function uniqString(): string {
-    let s = ""
-    const d = new Date()
-    const t = d.getTime()
-    s += t.toString(36)
-    c += 1
-    s += c.toString(36)
-    return btoa(s)
-  }
-})()

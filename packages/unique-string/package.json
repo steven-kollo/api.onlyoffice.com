@@ -1,0 +1,17 @@
+{
+  "name": "@onlyoffice/unique-string",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.ts",
+  "scripts": {
+    "test": "tsc && c8 --reporter html --reporter text uvu dist ^.*\\.test\\.js$"
+  },
+  "devDependencies": {
+    "c8": "^9.1.0",
+    "typescript": "^5.4.5",
+    "uvu": "^0.5.6"
+  },
+  "engines": {
+    "node": "^21"
+  }
+}
