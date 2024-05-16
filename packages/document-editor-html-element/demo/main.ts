@@ -64,9 +64,6 @@ async function routeConfig(res: Response): Promise<void> {
       key: uniqString(),
       title: "Document",
       url: `http://${config.internal.hostname}:${config.internal.port}/document`
-    },
-    editor: {
-      callbackUrl: `http://${config.internal.hostname}:${config.internal.port}/callback`
     }
   }
   let s = JSON.stringify(j)
