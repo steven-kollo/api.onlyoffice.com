@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/jsdoc",
+  "name": "@onlyoffice/jsdoc-utils",
   "type": "module",
   "main": "lib/main.ts",
   "types": "lib/types.d.ts",
