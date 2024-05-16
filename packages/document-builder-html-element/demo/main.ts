@@ -7,6 +7,7 @@ import {createServer} from "node:http"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
 import type {DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
+import {uniqueString} from "@onlyoffice/unique-string"
 
 const config = {
   hostname: "0.0.0.0",
@@ -65,7 +66,7 @@ async function route(req: IncomingMessage, res: ServerResponse): Promise<void> {
       documentType: documentType(fileType),
       document: {
         fileType,
-        key: uniqString(),
+        key: uniqueString(),
         title: "Document Builder Demo Document",
         url: du.toString()
       }
@@ -130,12 +131,6 @@ function contentType(t: string): string {
   default:
     throw new Error(`Unknown file type: ${t}`)
   }
-}
-
-function uniqString(): string {
-  const date = new Date()
-  const timestamp = date.getTime()
-  return timestamp.toString(36)
 }
 
 function encode(alg: string, secret: string, payload: string): string {

@@ -1,6 +1,7 @@
 import {DocumentEditor} from "@onlyoffice/document-editor-html-element"
 import {builder, fileType} from "@onlyoffice/document-builder-utils"
 import type {DocEditorConnector} from "@onlyoffice/document-server-types"
+import {uniqueString} from "@onlyoffice/unique-string"
 
 declare global {
   interface Window {
@@ -214,16 +215,10 @@ export class DocumentBuilder extends DocumentEditor {
 }
 
 function banner(): string {
-  const n = uniqString()
+  const n = `__${uniqueString()}`
   const m = builder.toString()
   return "// document-builder-element\n" +
     `function ${n}(){return (${m})()};const builder = ${n}();`
-}
-
-function uniqString(): string {
-  const date = new Date()
-  const timestamp = date.getTime()
-  return timestamp.toString(36)
 }
 
 main()

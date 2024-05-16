@@ -7,6 +7,7 @@ import {createServer} from "node:http"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
 import type {DocEditorConfig} from "@onlyoffice/document-server-types"
+import {uniqueString} from "@onlyoffice/unique-string"
 
 // todo: move to env variables
 const config = {
@@ -61,7 +62,7 @@ async function routeConfig(res: Response): Promise<void> {
     documentType: "word",
     document: {
       fileType: "docx",
-      key: uniqString(),
+      key: uniqueString(),
       title: "Document",
       url: `http://${config.internal.hostname}:${config.internal.port}/document`
     }
@@ -92,12 +93,6 @@ function currentDir(): string {
 
 function documentFile(d: string): string {
   return join(d, "document.docx")
-}
-
-function uniqString(): string {
-  const date = new Date()
-  const timestamp = date.getTime()
-  return timestamp.toString(36)
 }
 
 function encode(secret: string, payload: string): string {

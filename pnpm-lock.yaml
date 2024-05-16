@@ -181,6 +181,9 @@ importers:
       '@onlyoffice/document-server-types':
         specifier: workspace:^
         version: link:../document-server-types
+      '@onlyoffice/unique-string':
+        specifier: workspace:^
+        version: link:../unique-string
       '@types/node':
         specifier: ^20.12.8
         version: 20.12.11
@@ -243,6 +246,9 @@ importers:
       '@onlyoffice/document-server-types':
         specifier: workspace:^
         version: link:../document-server-types
+      '@onlyoffice/unique-string':
+        specifier: workspace:^
+        version: link:../unique-string
       '@types/node':
         specifier: ^20.12.8
         version: 20.12.11
