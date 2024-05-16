@@ -1,7 +1,8 @@
 import {starryNight} from "@onlyoffice/eleventy-starry-night"
+import {rehypePreact} from "@onlyoffice/rehype-preact"
+import {Fragment, jsx, jsxs} from "preact/jsx-runtime"
 import type {JSX} from "preact"
 import {unified} from "unified"
-import {rehypePlugin as rehypePreact} from "../../config/preact.ts"
 
 export interface RootParameters {
   syntax: string
@@ -19,7 +20,7 @@ export function Root({syntax, children}: RootParameters): JSX.Element {
         return starryNight.highlight(children, s)
       }
     })
-    .use(rehypePreact)
+    .use(rehypePreact, {Fragment, jsx, jsxs})
     .processSync(children)
   return v.result as JSX.Element
 }

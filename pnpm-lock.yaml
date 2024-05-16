@@ -562,6 +562,9 @@ importers:
       '@onlyoffice/eleventy-types':
         specifier: workspace:^
         version: link:../packages/eleventy-types
+      '@onlyoffice/rehype-preact':
+        specifier: workspace:^
+        version: link:../packages/rehype-preact
       '@onlyoffice/rehype-starry-night':
         specifier: workspace:^
         version: link:../packages/rehype-starry-night

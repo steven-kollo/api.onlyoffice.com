@@ -1,12 +1,13 @@
 import {starryNight} from "@onlyoffice/eleventy-starry-night"
 import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
+import {rehypePreact} from "@onlyoffice/rehype-preact"
+import {Fragment, jsx, jsxs} from "preact/jsx-runtime"
 import type {JSX} from "preact"
 import {h} from "preact"
 import remarkGFM from "remark-gfm"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import {unified} from "unified"
-import {rehypePlugin as rehypePreact} from "../../config/preact.ts"
 import {rehypePlugin as rehypeImage} from "../image/image.config.ts"
 import {useSuspense} from "../suspense.tsx"
 
@@ -34,7 +35,7 @@ export function Root({children}: RootParameters): JSX.Element {
       .use(rehypeImage)
       .use(rehypeStarryNight, starryNight)
       .use(rehypeDocumentBuilderContainer)
-      .use(rehypePreact)
+      .use(rehypePreact, {Fragment, jsx, jsxs})
       .process(children)
     result = v.result as JSX.Element
   })
