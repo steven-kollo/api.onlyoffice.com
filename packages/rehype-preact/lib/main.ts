@@ -8,7 +8,7 @@ import type {JSX} from "preact"
 import type {VFile} from "vfile"
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function rehypePlugin(this: any, options: Options): void {
+export function rehypePreact(this: any, options: Options): void {
   this.compiler = compiler
 
   function compiler(t: Root, f: VFile): JSX.Element {
