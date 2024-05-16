@@ -1,6 +1,6 @@
 // todo: normalize naming of eleventy, remark, and other plugins.
 
-import {eleventyPlugin as syntaxHighlightPlugin} from "./components/syntax-highlight/syntax-highlight.config.ts"
+import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {cleanPlugin} from "./config/clean.ts"
 import {markupPlugin} from "./config/markup.ts"
 import {navigationPlugin} from "./config/navigation.ts"
@@ -20,7 +20,7 @@ function config(uc: Eleventy.UserConfig): unknown {
   uc.addPlugin(stylePlugin)
   uc.addPlugin(scriptPlugin)
   uc.addPlugin(navigationPlugin)
-  uc.addPlugin(syntaxHighlightPlugin)
+  uc.addPlugin(eleventyStarryNight)
   uc.addPlugin(previewPlugin)
 
   uc.addPlugin(dataPlugin)

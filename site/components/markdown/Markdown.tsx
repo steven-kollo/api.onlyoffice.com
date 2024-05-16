@@ -1,3 +1,5 @@
+import {starryNight} from "@onlyoffice/eleventy-starry-night"
+import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
 import type {JSX} from "preact"
 import {h} from "preact"
 import remarkGFM from "remark-gfm"
@@ -6,7 +8,6 @@ import remarkRehype from "remark-rehype"
 import {unified} from "unified"
 import {rehypePlugin as rehypePreact} from "../../config/preact.ts"
 import {rehypePlugin as rehypeImage} from "../image/image.config.ts"
-import {rehypePlugin as rehypeSyntax} from "../syntax-highlight/syntax-highlight.config.ts"
 import {useSuspense} from "../suspense.tsx"
 
 import rehypeSlug from "rehype-slug"
@@ -31,7 +32,7 @@ export function Root({children}: RootParameters): JSX.Element {
       .use(rehypeSlug)
       .use(rehypeAutolink, {behavior: "wrap"})
       .use(rehypeImage)
-      .use(rehypeSyntax)
+      .use(rehypeStarryNight, starryNight)
       .use(rehypeDocumentBuilderContainer)
       .use(rehypePreact)
       .process(children)

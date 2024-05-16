@@ -537,6 +537,15 @@ importers:
       '@onlyoffice/documentation-utils':
         specifier: workspace:^
         version: link:../utils
+      '@onlyoffice/eleventy-starry-night':
+        specifier: workspace:^
+        version: link:../packages/eleventy-starry-night
+      '@onlyoffice/eleventy-types':
+        specifier: workspace:^
+        version: link:../packages/eleventy-types
+      '@onlyoffice/rehype-starry-night':
+        specifier: workspace:^
+        version: link:../packages/rehype-starry-night
       '@onlyoffice/remark-document-builder':
         specifier: workspace:^
         version: link:../packages/remark-document-builder

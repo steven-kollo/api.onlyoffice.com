@@ -12,8 +12,10 @@ import { matter } from "vfile-matter"
 import { isBuild, isPreview } from "./mode.ts"
 
 import {rehypePlugin as rehypeImage} from "../components/image/image.config.ts"
-import {rehypePlugin as rehypeSyntax} from "../components/syntax-highlight/syntax-highlight.config.ts"
 import remarkGFM from "remark-gfm"
+
+import {starryNight} from "@onlyoffice/eleventy-starry-night"
+import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
 
 import rehypeSlug from "rehype-slug"
 import rehypeAutolink from "rehype-autolink-headings"
@@ -140,7 +142,7 @@ export function markupPlugin(uc: UserConfig): void {
                       rehypeSlug,
                       [rehypeAutolink, {behavior: "wrap"}],
                       rehypeImage,
-                      rehypeSyntax,
+                      [rehypeStarryNight, starryNight],
                       rehypeDocumentBuilderContainer
                     ],
                     remarkPlugins: [
