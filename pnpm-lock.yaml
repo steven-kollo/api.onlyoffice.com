@@ -267,6 +267,21 @@ importers:
 
   packages/document-server-types: {}
 
+  packages/eleventy-starry-night:
+    dependencies:
+      '@wooorm/starry-night':
+        specifier: ^3.2.0
+        version: 3.2.0
+    devDependencies:
+      '@onlyoffice/eleventy-types':
+        specifier: workspace:^
+        version: link:../eleventy-types
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
+  packages/eleventy-types: {}
+
   packages/jsdoc-types: {}
 
   packages/jsdoc-utils:
@@ -6866,7 +6881,7 @@ snapshots:
       posthtml-urls: 1.0.0
       pug: 3.0.2
       recursive-copy: 2.0.14
-      semver: 7.6.0
+      semver: 7.6.2
       slugify: 1.6.6
     transitivePeerDependencies:
       - bufferutil
