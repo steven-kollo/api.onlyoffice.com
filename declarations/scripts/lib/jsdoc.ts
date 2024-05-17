@@ -5,10 +5,10 @@
 //       what about class constructors?
 
 import {Readable, Writable} from "node:stream"
+import {AsyncTransform} from "@onlyoffice/async-transform"
 import type * as Library from "@onlyoffice/documentation-declarations-types/library.ts"
 import {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
 import {ESLint} from "@onlyoffice/eslint-presentation"
-import {AsyncTransform} from "@onlyoffice/documentation-utils/stream.ts"
 import type {Catharsis, Doclet, DocletParam} from "@onlyoffice/jsdoc-types"
 import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "@onlyoffice/strings"
 import languagedetection from "@vscode/vscode-languagedetection"

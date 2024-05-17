@@ -6,7 +6,6 @@
     "./http.ts": "./lib/http.ts",
     "./jq.ts": "./lib/jq.ts",
     "./once.ts": "./lib/once.ts",
-    "./stream.ts": "./lib/stream.ts",
     "./strings.ts": "./lib/strings.ts",
     "./svg.ts": "./lib/svg.ts",
     "./wait.ts": "./lib/wait.ts"

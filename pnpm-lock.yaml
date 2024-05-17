@@ -93,6 +93,9 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
     devDependencies:
+      '@onlyoffice/async-transform':
+        specifier: workspace:^
+        version: link:../../packages/async-transform
       '@onlyoffice/console':
         specifier: workspace:^
         version: link:../../packages/console
