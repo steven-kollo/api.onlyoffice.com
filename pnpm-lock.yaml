@@ -99,6 +99,9 @@ importers:
       '@onlyoffice/documentation-utils':
         specifier: workspace:^
         version: link:../../utils
+      '@onlyoffice/eslint-presentation':
+        specifier: workspace:^
+        version: link:../../packages/eslint-presentation
       '@onlyoffice/jsdoc-types':
         specifier: workspace:^
         version: link:../../packages/jsdoc-types
@@ -132,6 +135,24 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
+
+  packages/console:
+    devDependencies:
+      '@onlyoffice/stream-string':
+        specifier: workspace:^
+        version: link:../stream-string
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tsx:
+        specifier: ^4.10.4
+        version: 4.10.4
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
 
   packages/document-builder-hast-element:
     dependencies:
@@ -488,6 +509,18 @@ importers:
       unified:
         specifier: ^11.0.4
         version: 11.0.4
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
+  packages/stream-string:
+    devDependencies:
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
       uvu:
         specifier: ^0.5.6
         version: 0.5.6
