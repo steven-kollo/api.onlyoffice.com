@@ -3,7 +3,6 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./jq.ts": "./lib/jq.ts",
     "./strings.ts": "./lib/strings.ts",
     "./svg.ts": "./lib/svg.ts",
     "./wait.ts": "./lib/wait.ts"

@@ -3,7 +3,6 @@ import {createWriteStream} from "node:fs"
 import {join} from "node:path"
 import {Readable} from "node:stream"
 import {Cache, FirstIteration, SecondIteration, ThirdIteration} from "@onlyoffice/documentation-declarations-scripts/jsdoc.ts"
-import {prettifyJSON} from "@onlyoffice/documentation-utils/jq.ts"
 import {StringWritable} from "@onlyoffice/stream-string"
 import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
@@ -12,7 +11,7 @@ import Stringer from "stream-json/Stringer.js"
 import {console} from "../utils/console.ts"
 import {download} from "../utils/net.ts"
 import {chain, createIndexes2} from "../utils/stream.ts"
-import {writeCode} from "./utils.ts"
+import {prettifyJSON, writeCode} from "./utils.ts"
 
 const config = [
   {

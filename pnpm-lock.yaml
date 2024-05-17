@@ -650,6 +650,9 @@ importers:
       '@onlyoffice/documentation-utils':
         specifier: workspace:^
         version: link:../utils
+      '@onlyoffice/jq':
+        specifier: workspace:^
+        version: link:../packages/jq
       '@onlyoffice/stream-string':
         specifier: workspace:^
         version: link:../packages/stream-string

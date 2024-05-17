@@ -1,9 +1,17 @@
 import {readFile, writeFile} from "node:fs/promises"
+import {createWriteStream} from "node:fs"
 import {createRequire} from "node:module"
 import {basename, dirname, extname, format, join, parse} from "node:path"
+import {jq} from "@onlyoffice/jq"
 import {libDir} from "../utils/basedir.ts"
 
 const {resolve} = createRequire(import.meta.url)
+
+export async function prettifyJSON(from: string, to: string): Promise<void> {
+  const w = createWriteStream(to)
+  await jq(w, [".", from])
+  w.close()
+}
 
 /**
  * Appends a postfix to the file path.

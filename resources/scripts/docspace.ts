@@ -7,7 +7,6 @@ import {
   ProcessPath as OpenAPIProcessPath,
   ProcessRequest
 } from "@onlyoffice/documentation-declarations-scripts/openapi.ts"
-import { prettifyJSON } from "@onlyoffice/documentation-utils/jq.ts"
 import StreamArray from "stream-json/streamers/StreamArray.js"
 import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
@@ -24,7 +23,7 @@ import {
   mergeArrays,
   mergeObjects
 } from "../utils/stream.ts"
-import { appendPathPostfix, capitalizeTitle, createREST } from "./utils.ts"
+import { appendPathPostfix, capitalizeTitle, prettifyJSON, createREST } from "./utils.ts"
 
 const ref = "https://raw.githubusercontent.com/onlyoffice/docspace-declarations/dist/"
 const files = [
