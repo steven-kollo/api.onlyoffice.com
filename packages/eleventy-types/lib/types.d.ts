@@ -3,6 +3,11 @@
  */
 export interface UserConfig {
   /**
+   * {@link https://www.11ty.dev/docs/config/ Eleventy Reference}
+   */
+  dir: UserConfigDir
+
+  /**
    * {@link https://www.11ty.dev/docs/data-global-custom/ Eleventy Reference}
    */
   globalData: GlobalData
@@ -36,6 +41,14 @@ export interface UserConfig {
    * {@link https://www.11ty.dev/docs/events/ Eleventy Reference}
    */
   on(type: string, cb: unknown): void
+}
+
+/**
+ * {@link https://www.11ty.dev/docs/config/ Eleventy Reference}
+ */
+export interface UserConfigDir {
+  input: string
+  output: string
 }
 
 /**
