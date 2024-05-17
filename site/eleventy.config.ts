@@ -1,6 +1,7 @@
 // todo: normalize naming of eleventy, remark, and other plugins.
 
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
+import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
 import {cleanPlugin} from "./config/clean.ts"
 import {markupPlugin} from "./config/markup.ts"
 import {navigationPlugin} from "./config/navigation.ts"
@@ -9,7 +10,6 @@ import {scriptPlugin} from "./config/script.ts"
 import {staticPlugin} from "./config/static.ts"
 import {stylePlugin} from "./config/style.ts"
 
-import {eleventyPlugin as dataPlugin} from "./config/data.ts"
 import type {Eleventy} from "./config/eleventy.ts"
 import {eleventyPlugin as sitemapPlugin} from "./config/sitemap.ts"
 
@@ -23,7 +23,7 @@ function config(uc: Eleventy.UserConfig): unknown {
   uc.addPlugin(eleventyStarryNight)
   uc.addPlugin(previewPlugin)
 
-  uc.addPlugin(dataPlugin)
+  uc.addPlugin(eleventyYAML)
   uc.addPlugin(sitemapPlugin)
 
   return {
