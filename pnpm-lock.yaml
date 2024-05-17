@@ -619,6 +619,9 @@ importers:
       '@onlyoffice/documentation-utils':
         specifier: workspace:^
         version: link:../utils
+      '@onlyoffice/eleventy-clean':
+        specifier: workspace:^
+        version: link:../packages/eleventy-clean
       '@onlyoffice/eleventy-starry-night':
         specifier: workspace:^
         version: link:../packages/eleventy-starry-night
