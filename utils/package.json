@@ -3,7 +3,6 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./http.ts": "./lib/http.ts",
     "./jq.ts": "./lib/jq.ts",
     "./once.ts": "./lib/once.ts",
     "./strings.ts": "./lib/strings.ts",
