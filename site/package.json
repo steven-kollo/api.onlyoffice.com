@@ -31,6 +31,7 @@
     "@onlyoffice/rehype-starry-night": "workspace:^",
     "@onlyoffice/remark-document-builder": "workspace:^",
     "@onlyoffice/template-hast-element": "workspace:^",
+    "@onlyoffice/xml-types": "workspace:^",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/hast": "^3.0.4",
     "@types/html-minifier-terser": "^7.0.2",

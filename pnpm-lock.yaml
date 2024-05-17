@@ -645,6 +645,9 @@ importers:
       '@onlyoffice/template-hast-element':
         specifier: workspace:^
         version: link:../packages/template-hast-element
+      '@onlyoffice/xml-types':
+        specifier: workspace:^
+        version: link:../packages/xml-types
       '@sindresorhus/slugify':
         specifier: ^2.2.1
         version: 2.2.1
