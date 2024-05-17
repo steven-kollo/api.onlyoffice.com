@@ -1,0 +1,5 @@
+{
+  "name": "@onlyoffice/xml-types",
+  "type": "module",
+  "types": "lib/types.d.ts"
+}

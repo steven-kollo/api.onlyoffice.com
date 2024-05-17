@@ -522,6 +522,8 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
+  packages/xml-types: {}
+
   resources:
     devDependencies:
       '@onlyoffice/documentation-declarations-fixtures':
