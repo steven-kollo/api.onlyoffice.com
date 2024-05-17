@@ -1137,26 +1137,7 @@ importers:
         version: 5.4.2
 
   utils:
-    dependencies:
-      '@eslint/js':
-        specifier: ^9.1.1
-        version: 9.1.1
-      '@stylistic/eslint-plugin-js':
-        specifier: ^1.7.2
-        version: 1.7.2(eslint@9.1.1)
-      eslint:
-        specifier: ^9.1.1
-        version: 9.1.1
-      eslint-plugin-jsonc:
-        specifier: ^2.15.1
-        version: 2.15.1(eslint@9.1.1)
     devDependencies:
-      '@types/eslint':
-        specifier: ^8.56.10
-        version: 8.56.10
-      '@types/eslint__js':
-        specifier: ^8.42.3
-        version: 8.42.3
       '@types/node':
         specifier: ^20.11.5
         version: 20.11.26
@@ -2837,12 +2818,6 @@ packages:
 
   '@stylistic/eslint-plugin-js@1.6.3':
     resolution: {integrity: sha512-ckdz51oHxD2FaxgY2piJWJVJiwgp8Uu96s+as2yB3RMwavn3nHBrpliVukXY9S/DmMicPRB2+H8nBk23GDG+qA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: '>=8.40.0'
-
-  '@stylistic/eslint-plugin-js@1.7.2':
-    resolution: {integrity: sha512-ZYX7C5p7zlHbACwFLU+lISVh6tdcRP/++PWegh2Sy0UgMT5kU0XkPa2tKWEtJYzZmPhJxu9LxbnWcnE/tTwSDQ==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -9016,15 +8991,6 @@ snapshots:
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
 
-  '@stylistic/eslint-plugin-js@1.7.2(eslint@9.1.1)':
-    dependencies:
-      '@types/eslint': 8.56.10
-      acorn: 8.11.3
-      escape-string-regexp: 4.0.0
-      eslint: 9.1.1
-      eslint-visitor-keys: 3.4.3
-      espree: 9.6.1
-
   '@stylistic/eslint-plugin-js@2.1.0(eslint@9.1.1)':
     dependencies:
       '@types/eslint': 8.56.10
@@ -10447,11 +10413,6 @@ snapshots:
 
   escape-string-regexp@5.0.0: {}
 
-  eslint-compat-utils@0.5.0(eslint@9.1.1):
-    dependencies:
-      eslint: 9.1.1
-      semver: 7.6.0
-
   eslint-compat-utils@0.5.0(eslint@9.2.0):
     dependencies:
       eslint: 9.2.0
@@ -10506,17 +10467,6 @@ snapshots:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
-
-  eslint-plugin-jsonc@2.15.1(eslint@9.1.1):
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@9.1.1)
-      eslint: 9.1.1
-      eslint-compat-utils: 0.5.0(eslint@9.1.1)
-      espree: 9.6.1
-      graphemer: 1.4.0
-      jsonc-eslint-parser: 2.4.0
-      natural-compare: 1.4.0
-      synckit: 0.6.2
 
   eslint-plugin-jsonc@2.15.1(eslint@9.2.0):
     dependencies:
