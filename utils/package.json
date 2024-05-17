@@ -3,7 +3,6 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./console.ts": "./lib/console.ts",
     "./http.ts": "./lib/http.ts",
     "./jq.ts": "./lib/jq.ts",
     "./once.ts": "./lib/once.ts",

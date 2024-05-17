@@ -10,6 +10,7 @@
     "make": "tsx ./makefile.ts"
   },
   "devDependencies": {
+    "@onlyoffice/console": "workspace:^",
     "@onlyoffice/documentation-declarations-fixtures": "workspace:^",
     "@onlyoffice/documentation-declarations-scripts": "workspace:^",
     "@onlyoffice/documentation-declarations-types": "workspace:^",

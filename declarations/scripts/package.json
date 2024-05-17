@@ -22,6 +22,7 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@onlyoffice/console": "workspace:^",
     "@onlyoffice/documentation-declarations-types": "workspace:^",
     "@onlyoffice/documentation-utils": "workspace:^",
     "@onlyoffice/eslint-presentation": "workspace:^",

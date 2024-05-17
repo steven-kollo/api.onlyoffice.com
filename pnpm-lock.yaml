@@ -93,6 +93,9 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
     devDependencies:
+      '@onlyoffice/console':
+        specifier: workspace:^
+        version: link:../../packages/console
       '@onlyoffice/documentation-declarations-types':
         specifier: workspace:^
         version: link:../types
@@ -593,6 +596,9 @@ importers:
 
   resources:
     devDependencies:
+      '@onlyoffice/console':
+        specifier: workspace:^
+        version: link:../packages/console
       '@onlyoffice/documentation-declarations-fixtures':
         specifier: workspace:^
         version: link:../declarations/fixtures

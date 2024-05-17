@@ -1,8 +1,5 @@
-import {Console as UtilsConsole} from "@onlyoffice/documentation-utils/console.ts"
-import pack from "../package.json" with {type: "json"}
+import process from "node:process"
+import {Console} from "@onlyoffice/console"
+import pack from "../package.json" assert {type: "json"}
 
-export class Console extends UtilsConsole {
-  static console = new Console(pack.name)
-}
-
-export const console = Console.console
+export const console = new Console(pack.name, process.stdout, process.stderr)
