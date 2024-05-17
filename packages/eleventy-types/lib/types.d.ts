@@ -8,6 +8,11 @@ export interface UserConfig {
   globalData: GlobalData
 
   /**
+   * {@link https://www.11ty.dev/docs/data-custom/ Eleventy Reference}
+   */
+  addDataExtension(extension: string, options: unknown): void
+
+  /**
    * {@link https://www.11ty.dev/docs/languages/custom/ Eleventy Reference}
    */
   addExtension(extension: string, options: unknown): void
