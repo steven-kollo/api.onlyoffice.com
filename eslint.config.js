@@ -269,6 +269,13 @@ function config() {
         "unicorn/prevent-abbreviations": "off",
         "unicorn/switch-case-braces": "off"
       }
+    },
+    {
+      files: ["**/*.js"],
+      rules: {
+        // Does not work with JSDoc @returns directive.
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
     }
   ]
 }
