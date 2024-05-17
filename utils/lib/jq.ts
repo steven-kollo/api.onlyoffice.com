@@ -2,12 +2,6 @@ import type { WriteStream } from "node:fs"
 import { spawn } from "node:child_process"
 import { createWriteStream } from "node:fs"
 
-export async function sortJSON(from: string, to: string, by: string): Promise<void> {
-  const w = createWriteStream(to)
-  await jq(w, [`. |= sort_by(${by})`, from])
-  w.close()
-}
-
 export async function prettifyJSON(from: string, to: string): Promise<void> {
   const w = createWriteStream(to)
   await jq(w, [".", from])
