@@ -139,6 +139,24 @@ importers:
         specifier: ^5.3.3
         version: 5.4.2
 
+  packages/async-transform:
+    devDependencies:
+      '@onlyoffice/stream-string':
+        specifier: workspace:^
+        version: link:../stream-string
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tsx:
+        specifier: ^4.10.4
+        version: 4.10.4
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
   packages/console:
     devDependencies:
       '@onlyoffice/stream-string':
