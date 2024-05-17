@@ -273,12 +273,24 @@ importers:
         specifier: ^3.2.0
         version: 3.2.0
     devDependencies:
+      '@11ty/eleventy':
+        specifier: ^2.0.1
+        version: 2.0.1
       '@onlyoffice/eleventy-types':
         specifier: workspace:^
         version: link:../eleventy-types
+      hast-util-to-html:
+        specifier: ^9.0.1
+        version: 9.0.1
+      tsx:
+        specifier: ^4.10.4
+        version: 4.10.4
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
 
   packages/eleventy-types: {}
 
@@ -4251,6 +4263,9 @@ packages:
   get-tsconfig@4.7.3:
     resolution: {integrity: sha512-ZvkrzoUA0PQZM6fy6+/Hce561s+faD1rsNwhnO5FelNjyy7EMGJ3Rz1AQ8GYDWjhRs/7dBLOEJvhK8MiEJOAFg==}
 
+  get-tsconfig@4.7.5:
+    resolution: {integrity: sha512-ZCuZCnlqNzjb4QprAzXKdpp/gh6KTxSJuw3IBsPnV/7fV4NxC9ckB+vPTt8w7fJA0TaSD7c55BR47JD6MEDyDw==}
+
   giget@1.2.1:
     resolution: {integrity: sha512-4VG22mopWtIeHwogGSy1FViXVo0YT+m6BrqZfz0JJFwbSsePsCdOzdLIIli5BtMp7Xe8f/o2OmBpQX2NBOC24g==}
     hasBin: true
@@ -6422,6 +6437,11 @@ packages:
   tsscmp@1.0.6:
     resolution: {integrity: sha512-LxhtAkPDTkVCMQjt2h6eBVY28KCjikZqZfMcC15YBeNjkgUpdCfBu5HoiOTDu86v6smE8yOjyEktJ8hlbANHQA==}
     engines: {node: '>=0.6.x'}
+
+  tsx@4.10.4:
+    resolution: {integrity: sha512-Gtg9qnZWNqC/OtcgiXfoAUdAKx3/cgKOYvEocAsv+m21MV/eKpV/WUjRXe6/sDCaGBl2/v8S6v29BpUnGMCX5A==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   tsx@4.7.1:
     resolution: {integrity: sha512-8d6VuibXHtlN5E3zFkgY8u4DX7Y3Z27zvvPKVmLon/D4AjuKzarkUBTLDBgj9iTQ0hg5xM7c/mYiRVM+HETf0g==}
@@ -10848,6 +10868,10 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
+  get-tsconfig@4.7.5:
+    dependencies:
+      resolve-pkg-maps: 1.0.0
+
   giget@1.2.1:
     dependencies:
       citty: 0.1.6
@@ -13502,6 +13526,13 @@ snapshots:
   tslib@2.6.2: {}
 
   tsscmp@1.0.6: {}
+
+  tsx@4.10.4:
+    dependencies:
+      esbuild: 0.20.2
+      get-tsconfig: 4.7.5
+    optionalDependencies:
+      fsevents: 2.3.3
 
   tsx@4.7.1:
     dependencies:

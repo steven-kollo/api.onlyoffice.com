@@ -5,6 +5,7 @@
     "outDir": "./dist"
   },
   "include": [
+    "../../index.d.ts",
     "./lib/*"
   ],
   "exclude": [
