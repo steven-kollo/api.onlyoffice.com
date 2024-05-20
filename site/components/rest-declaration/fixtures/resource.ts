@@ -1,6 +1,6 @@
 import declarations from "@onlyoffice/documentation-declarations-fixtures/rest.declarations.json"
 import components from "@onlyoffice/documentation-declarations-fixtures/rest.components.json"
-import type { REST } from "@onlyoffice/documentation-declarations-types/rest.ts"
+import type * as REST from "@onlyoffice/service-declaration"
 
 const d = declarations as REST.Request[]
 

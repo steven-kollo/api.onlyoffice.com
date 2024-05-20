@@ -1,5 +1,5 @@
 import {createRequire} from "node:module"
-import type {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
+import type * as REST from "@onlyoffice/service-declaration"
 
 const require = createRequire(import.meta.url)
 

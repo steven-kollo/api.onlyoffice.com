@@ -6,7 +6,7 @@
     "./*": "./lib/*"
   },
   "devDependencies": {
-    "@onlyoffice/documentation-declarations-types": "workspace:^",
+    "@onlyoffice/service-declaration": "workspace:^",
     "@types/node": "^20.11.5"
   },
   "engines": {

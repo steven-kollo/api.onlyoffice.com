@@ -13,7 +13,6 @@
     "@onlyoffice/console": "workspace:^",
     "@onlyoffice/documentation-declarations-fixtures": "workspace:^",
     "@onlyoffice/documentation-declarations-scripts": "workspace:^",
-    "@onlyoffice/documentation-declarations-types": "workspace:^",
     "@onlyoffice/documentation-utils": "workspace:^",
     "@onlyoffice/jq": "workspace:^",
     "@onlyoffice/jsdoc-library": "workspace:^",

@@ -1,4 +1,4 @@
-import type { REST } from "@onlyoffice/documentation-declarations-types/rest.ts"
+import type * as REST from "@onlyoffice/service-declaration"
 import { Badge, CodeListing } from "@onlyoffice/documentation-ui-kit"
 import { useContext } from "preact/hooks"
 import type { JSX } from "preact"

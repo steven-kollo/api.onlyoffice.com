@@ -59,21 +59,22 @@ importers:
 
   declarations/fixtures:
     devDependencies:
-      '@onlyoffice/documentation-declarations-types':
+      '@onlyoffice/service-declaration':
         specifier: workspace:^
-        version: link:../types
+        version: link:../../packages/service-declaration
       '@types/node':
         specifier: ^20.11.5
         version: 20.11.26
 
   declarations/scripts:
+    dependencies:
+      '@onlyoffice/service-declaration':
+        specifier: workspace:^
+        version: link:../../packages/service-declaration
     devDependencies:
       '@onlyoffice/console':
         specifier: workspace:^
         version: link:../../packages/console
-      '@onlyoffice/documentation-declarations-types':
-        specifier: workspace:^
-        version: link:../types
       '@sindresorhus/slugify':
         specifier: ^2.2.1
         version: 2.2.1
@@ -92,12 +93,6 @@ importers:
       uvu:
         specifier: ^0.5.6
         version: 0.5.6
-
-  declarations/types:
-    devDependencies:
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
 
   packages/async-transform:
     devDependencies:
@@ -734,9 +729,6 @@ importers:
       '@onlyoffice/documentation-declarations-scripts':
         specifier: workspace:^
         version: link:../declarations/scripts
-      '@onlyoffice/documentation-declarations-types':
-        specifier: workspace:^
-        version: link:../declarations/types
       '@onlyoffice/documentation-utils':
         specifier: workspace:^
         version: link:../utils
@@ -820,9 +812,6 @@ importers:
       '@onlyoffice/documentation-declarations-scripts':
         specifier: workspace:^
         version: link:../declarations/scripts
-      '@onlyoffice/documentation-declarations-types':
-        specifier: workspace:^
-        version: link:../declarations/types
       '@onlyoffice/documentation-resources':
         specifier: workspace:^
         version: link:../resources
@@ -859,6 +848,9 @@ importers:
       '@onlyoffice/remark-document-builder':
         specifier: workspace:^
         version: link:../packages/remark-document-builder
+      '@onlyoffice/service-declaration':
+        specifier: workspace:^
+        version: link:../packages/service-declaration
       '@onlyoffice/template-hast-element':
         specifier: workspace:^
         version: link:../packages/template-hast-element

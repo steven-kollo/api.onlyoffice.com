@@ -1,6 +1,6 @@
 import type {TransformCallback} from "node:stream"
 import {Transform} from "node:stream"
-import type {REST} from "@onlyoffice/documentation-declarations-types/rest.ts"
+import type * as REST from "@onlyoffice/service-declaration"
 import slugify from "@sindresorhus/slugify"
 import type {OpenAPIV3_1 as OpenAPI} from "openapi-types"
 import {console} from "./console.ts"

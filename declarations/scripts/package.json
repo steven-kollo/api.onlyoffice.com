@@ -9,9 +9,11 @@
   "scripts": {
     "test": "tsx ./node_modules/uvu/bin.js ./ ^.*\\.test\\.ts$"
   },
+  "dependencies": {
+    "@onlyoffice/service-declaration": "workspace:^"
+  },
   "devDependencies": {
     "@onlyoffice/console": "workspace:^",
-    "@onlyoffice/documentation-declarations-types": "workspace:^",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/node": "^20.11.5",
     "openapi-types": "^12.1.3",
