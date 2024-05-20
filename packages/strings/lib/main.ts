@@ -1,3 +1,5 @@
+// todo: split into markdown and strings packages.
+
 import type {Paragraph} from "mdast"
 import {fromMarkdown} from "mdast-util-from-markdown"
 import {toMarkdown} from "mdast-util-to-markdown"
