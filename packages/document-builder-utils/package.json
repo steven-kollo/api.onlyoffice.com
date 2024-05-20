@@ -3,11 +3,12 @@
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {
-    "test": "tsc && c8 --reporter html --reporter text uvu dist ^.*\\.test\\.js$"
+    "test": "c8 --reporter html --reporter text tsx ./node_modules/uvu/bin.js lib ^.*\\.test\\.ts$"
   },
   "devDependencies": {
     "@onlyoffice/document-builder-types": "workspace:^",
     "c8": "^9.1.0",
+    "tsx": "^4.10.5",
     "typescript": "^5.4.5",
     "uvu": "^0.5.6"
   },
