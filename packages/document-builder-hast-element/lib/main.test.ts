@@ -8,7 +8,6 @@ test("initializes a document-builder with correct order of properties", () => {
   const a = Object.keys(d)
   d.data.documentServerURL = "u"
   d.data.command = "hi"
-  console.log(d)
   eq(a, ["type", "tagName", "properties", "children", "data"])
 })
 
