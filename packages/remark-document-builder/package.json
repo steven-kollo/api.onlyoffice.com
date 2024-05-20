@@ -1,5 +1,6 @@
 {
   "name": "@onlyoffice/remark-document-builder",
+  "private": true,
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {

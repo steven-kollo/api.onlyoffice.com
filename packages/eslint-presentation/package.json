@@ -1,5 +1,6 @@
 {
   "name": "@onlyoffice/eslint-presentation",
+  "private": true,
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {

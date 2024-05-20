@@ -1,5 +1,6 @@
 {
   "name": "@onlyoffice/jq",
+  "private": true,
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {

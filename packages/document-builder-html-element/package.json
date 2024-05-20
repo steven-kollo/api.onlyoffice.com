@@ -1,5 +1,6 @@
 {
   "name": "@onlyoffice/document-builder-html-element",
+  "private": true,
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {

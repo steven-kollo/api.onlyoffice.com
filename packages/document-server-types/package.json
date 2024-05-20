@@ -1,5 +1,6 @@
 {
   "name": "@onlyoffice/document-server-types",
+  "private": true,
   "type": "module",
   "types": "lib/types.d.ts"
 }

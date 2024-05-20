@@ -1,5 +1,6 @@
 {
   "name": "@onlyoffice/async-transform",
+  "private": true,
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {

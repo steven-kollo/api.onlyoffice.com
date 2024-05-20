@@ -1,5 +1,6 @@
 {
   "name": "@onlyoffice/stream-string",
+  "private": true,
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {

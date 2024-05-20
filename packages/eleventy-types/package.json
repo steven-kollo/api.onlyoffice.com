@@ -1,5 +1,6 @@
 {
   "name": "@onlyoffice/eleventy-types",
+  "private": true,
   "type": "module",
   "types": "lib/types.d.ts"
 }
