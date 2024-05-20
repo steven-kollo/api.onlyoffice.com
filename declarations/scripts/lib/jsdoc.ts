@@ -6,7 +6,7 @@
 
 import {Readable, Writable} from "node:stream"
 import {AsyncTransform} from "@onlyoffice/async-transform"
-import {example} from "@onlyoffice/declaration-code-example"
+import * as code from "@onlyoffice/declaration-code-example"
 import type * as Library from "@onlyoffice/documentation-declarations-types/library.ts"
 import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
 import {ESLint} from "@onlyoffice/eslint-presentation"
@@ -45,7 +45,7 @@ export class FirstIteration extends AsyncTransform {
     const m = JSON.stringify({key: ch.key, longname: ch.value.longname})
     console.log(`Start processing '${m}' at first iteration`)
 
-    const [a, ...errs] = await toDeclaration(ch.value)
+    const [a, ...errs] = await declaration(ch.value)
 
     for (const e of errs) {
       console.error(e)
@@ -423,62 +423,47 @@ function cacheRecord(): CacheRecord {
   }
 }
 
-async function toDeclaration(dc: Doclet): Promise<[Library.Declaration[], ...Error[]]> {
+async function declaration(dc: Doclet): Promise<[Library.Declaration[], ...Error[]]> {
   switch (dc.kind) {
   case "class":
-    return toClassDeclaration(dc)
-
+    return classDeclaration(dc)
   case "constant":
     return [[], new Error("Constant is not supported")]
-
   case "event":
-    return toEventDeclaration(dc)
-
+    return eventDeclaration(dc)
   case "external":
     return [[], new Error("External is not supported")]
-
   case "file":
     return [[], new Error("File is not supported")]
-
   case "function":
-    return toFunctionDeclaration(dc)
-
+    return functionDeclaration(dc)
   case "interface":
     return [[], new Error("Interface is not supported")]
-
   case "member":
     return [[], new Error("Member is not supported")]
-
   case "mixin":
     return [[], new Error("Mixin is not supported")]
-
   case "module":
     return [[], new Error("Module is not supported")]
-
   case "namespace":
     return [[], new Error("Namespace is not supported")]
-
   case "package":
     return [[], new Error("Package is not supported")]
-
   case "param":
     return [[], new Error("Param is not supported")]
-
   case "typedef":
-    return toTypeDeclaration(dc)
-
+    return typeDeclaration(dc)
   case undefined:
     return [[], new Error("Doclet has no kind")]
-
   default:
     return [[], new Error(`Unknown kind: ${dc.kind}`)]
   }
 }
 
-async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaration, ...Library.Declaration[]], ...Error[]]> {
+async function classDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaration, ...Library.Declaration[]], ...Error[]]> {
   const pa: Library.Declaration[] = []
 
-  const [d, ...errs0] = await toDeclarationNode(dc)
+  const [d, ...errs0] = await declarationNode(dc)
   const cl = library.classDeclaration(d)
 
   if (dc.augments && dc.augments.length !== 0) {
@@ -502,7 +487,7 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
     }
 
     for (const dp of dc.properties) {
-      const [p] = await toPropertyDeclaration(cl, dp)
+      const [p] = await propertyDeclaration(cl, dp)
       pa.push(p)
 
       const r = library.reference(p.id)
@@ -510,7 +495,7 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
     }
   }
 
-  const [cd, ...errs1] = await toConstructorDeclaration(cl, dc)
+  const [cd, ...errs1] = await constructorDeclaration(cl, dc)
   pa.push(cd)
 
   let cs = cl.constructors
@@ -525,15 +510,15 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
   return [[cl, ...pa], ...errs0, ...errs1]
 }
 
-async function toConstructorDeclaration(dn: Library.DeclarationNode, dc: Doclet): Promise<[Library.ConstructorDeclaration, ...Error[]]> {
+async function constructorDeclaration(dn: Library.DeclarationNode, dc: Doclet): Promise<[Library.ConstructorDeclaration, ...Error[]]> {
   dc = {...dc, memberof: dn.id, name: "constructor"}
-  const [[f], ...errs0] = await toFunctionDeclarationUnits(dc)
-  const [d, ...errs1] = await toDeclarationNode(dc)
+  const [[f], ...errs0] = await functionDeclarationUnits(dc)
+  const [d, ...errs1] = await declarationNode(dc)
   const c = library.constructDeclaration(f, d)
 
   if (dc.params && dc.params.length !== 0) {
     c.type.parameters = dc.params.map((p) => {
-      const [v, ...e] = toValue(p)
+      const [v, ...e] = value(p)
       errs1.push(...e)
       return v
     })
@@ -542,9 +527,9 @@ async function toConstructorDeclaration(dn: Library.DeclarationNode, dc: Doclet)
   return [c, ...errs0, ...errs1]
 }
 
-async function toPropertyDeclaration(dn: Library.DeclarationNode, dp: DocletParam): Promise<[Library.PropertyDeclaration, ...Error[]]> {
-  const [v, ...errs0] = toValue(dp)
-  const [d, ...errs1] = await toDeclarationNode({...dp, memberof: dn.id})
+async function propertyDeclaration(dn: Library.DeclarationNode, dp: DocletParam): Promise<[Library.PropertyDeclaration, ...Error[]]> {
+  const [v, ...errs0] = value(dp)
+  const [d, ...errs1] = await declarationNode({...dp, memberof: dn.id})
 
   if ("id" in v) {
     v.id = d.id
@@ -557,27 +542,27 @@ async function toPropertyDeclaration(dn: Library.DeclarationNode, dp: DocletPara
   return [library.propertyDeclaration(v, d), ...errs0, ...errs1]
 }
 
-async function toEventDeclaration(dc: Doclet): Promise<[[Library.EventDeclaration], ...Error[]]> {
-  const [[f, d], ...errs] = await toFunctionDeclarationUnits(dc)
+async function eventDeclaration(dc: Doclet): Promise<[[Library.EventDeclaration], ...Error[]]> {
+  const [[f, d], ...errs] = await functionDeclarationUnits(dc)
   return [[library.eventDeclaration(f, d)], ...errs]
 }
 
-async function toFunctionDeclaration(dc: Doclet): Promise<[[Library.MethodDeclaration | Library.TypeDeclaration], ...Error[]]> {
-  const [[f, d], ...errs] = await toFunctionDeclarationUnits(dc)
+async function functionDeclaration(dc: Doclet): Promise<[[Library.MethodDeclaration | Library.TypeDeclaration], ...Error[]]> {
+  const [[f, d], ...errs] = await functionDeclarationUnits(dc)
   if (!d.parent) {
     return [[library.typeDeclaration(f, d)], ...errs]
   }
   return [[library.methodDeclaration(f, d)], ...errs]
 }
 
-async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.FunctionType, Library.DeclarationNode], ...Error[]]> {
+async function functionDeclarationUnits(dc: Doclet): Promise<[[Library.FunctionType, Library.DeclarationNode], ...Error[]]> {
   const t = library.typeNode()
   const f = library.functionType(t)
-  const [d, ...errs] = await toDeclarationNode(dc)
+  const [d, ...errs] = await declarationNode(dc)
 
   if (dc.params && dc.params.length !== 0) {
     f.parameters = dc.params.map((p) => {
-      const [v, ...e] = toValue(p)
+      const [v, ...e] = value(p)
       errs.push(...e)
       return v
     })
@@ -587,7 +572,7 @@ async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.Functio
     // JSDoc allows multiple @returns, in practice, the first one is used only.
     const [r] = dc.returns
 
-    const [t, ...e] = toVoidableType(r)
+    const [t, ...e] = voidableType(r)
     errs.push(...e)
 
     const fr = library.functionReturns(t)
@@ -603,8 +588,8 @@ async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.Functio
   return [[f, d], ...errs]
 }
 
-async function toTypeDeclaration(dc: Doclet): Promise<[[Library.TypeDeclaration], ...Error[]]> {
-  const [t, ...errs0] = toAnyableType(dc)
+async function typeDeclaration(dc: Doclet): Promise<[[Library.TypeDeclaration], ...Error[]]> {
+  const [t, ...errs0] = anyableType(dc)
 
   if (
     !("id" in t) &&
@@ -613,19 +598,19 @@ async function toTypeDeclaration(dc: Doclet): Promise<[[Library.TypeDeclaration]
     dc.properties.length !== 0
   ) {
     t.properties = dc.properties.map((p) => {
-      const [v, ...e] = toValue(p)
+      const [v, ...e] = value(p)
       errs0.push(...e)
       return v
     })
   }
 
-  const [d, ...errs1] = await toDeclarationNode(dc)
+  const [d, ...errs1] = await declarationNode(dc)
   const td = library.typeDeclaration(t, d)
 
   return [[td], ...errs0, ...errs1]
 }
 
-async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, ...Error[]]> {
+async function declarationNode(dc: Doclet): Promise<[Library.DeclarationNode, ...Error[]]> {
   const errs: Error[] = []
   const d = library.declarationNode()
 
@@ -662,14 +647,14 @@ async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, 
   }
 
   if (dc.examples && dc.examples.length !== 0) {
-    d.examples = await Promise.all(dc.examples.map(toExample))
+    d.examples = await Promise.all(dc.examples.map(example))
   }
 
   return [d, ...errs]
 }
 
-function toValue(dp: DocletParam): [Library.Value, ...Error[]] {
-  const [t, ...errs] = toAnyableType(dp)
+function value(dp: DocletParam): [Library.Value, ...Error[]] {
+  const [t, ...errs] = anyableType(dp)
   const v = library.value(t)
 
   if (!dp.name) {
@@ -683,7 +668,7 @@ function toValue(dp: DocletParam): [Library.Value, ...Error[]] {
   }
 
   if ("defaultvalue" in dp) {
-    const [t, ...e] = toLiteralType(dp.defaultvalue)
+    const [t, ...e] = literalType(dp.defaultvalue)
     errs.push(...e)
     v.default = t
   }
@@ -691,42 +676,42 @@ function toValue(dp: DocletParam): [Library.Value, ...Error[]] {
   return [v, ...errs]
 }
 
-function toAnyableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
+function anyableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
   if (!d.type || !d.type.parsedType) {
-    return toAnyType()
+    return anyType()
   }
-  return toType(d.type.parsedType)
+  return type(d.type.parsedType)
 }
 
-function toAnyType(): [Library.AnyType, ...Error[]] {
+function anyType(): [Library.AnyType, ...Error[]] {
   const t = library.typeNode()
   return [library.anyType(t)]
 }
 
-function toVoidableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
+function voidableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
   if (!d.type || !d.type.parsedType) {
-    return toVoidType()
+    return voidType()
   }
-  return toType(d.type.parsedType)
+  return type(d.type.parsedType)
 }
 
-function toVoidType(): [Library.VoidType, ...Error[]] {
+function voidType(): [Library.VoidType, ...Error[]] {
   const t = library.typeNode()
   return [library.voidType(t)]
 }
 
-function toLiteralType(value: Library.LiteralType["value"]): [Library.LiteralType, ...Error[]] {
+function literalType(value: Library.LiteralType["value"]): [Library.LiteralType, ...Error[]] {
   const t = library.typeNode()
   return [library.literalType(t, value)]
 }
 
-function toType(ca: Catharsis): [Library.Type, ...Error[]] {
+function type(ca: Catharsis): [Library.Type, ...Error[]] {
   if (ca.type === "AllLiteral") {
-    return toAnyType()
+    return anyType()
   }
 
   if (ca.type === "FieldType") {
-    const [t, ...errs] = toAnyType()
+    const [t, ...errs] = anyType()
     return [t, ...errs, new Error("FieldType is not supported")]
   }
 
@@ -738,7 +723,7 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
 
   if (ca.type === "NameExpression") {
     if (!ca.name) {
-      const [t, ...errs] = toAnyType()
+      const [t, ...errs] = anyType()
       return [t, ...errs, new Error("NameExpression has no name")]
     }
 
@@ -783,17 +768,17 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
   }
 
   if (ca.type === "RecordType") {
-    const [t, ...errs] = toAnyType()
+    const [t, ...errs] = anyType()
     return [t, ...errs, new Error("RecordType is not supported")]
   }
 
   if (ca.type === "TypeApplication") {
     if (!ca.expression) {
-      const [t, ...errs] = toAnyType()
+      const [t, ...errs] = anyType()
       return [t, ...errs, new Error("TypeApplication has no expression")]
     }
 
-    const [e, ...errs] = toType(ca.expression)
+    const [e, ...errs] = type(ca.expression)
 
     if (!ca.applications) {
       return [e, ...errs, new Error("TypeApplication has no applications")]
@@ -809,7 +794,7 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
 
     case "array":
       e.items = ca.applications.map((c) => {
-        const [t, ...e] = toType(c)
+        const [t, ...e] = type(c)
         errs.push(...e)
         return t
       })
@@ -834,7 +819,7 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
 
   if (ca.type === "TypeUnion") {
     if (!ca.elements || ca.elements.length === 0) {
-      const [t, ...errs] = toAnyType()
+      const [t, ...errs] = anyType()
       return [t, ...errs, new Error("TypeUnion has no elements")]
     }
 
@@ -843,7 +828,7 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
     const t = library.typeNode()
     const u = library.unionType(t)
     u.types = ca.elements.map((c) => {
-      const [t, ...e] = toType(c)
+      const [t, ...e] = type(c)
       errs.push(...e)
       return t
     })
@@ -861,12 +846,12 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
     return [library.unknownType(t)]
   }
 
-  const [t, ...errs] = toAnyType()
+  const [t, ...errs] = anyType()
   return [t, ...errs, new Error(`Unknown type: ${ca.type}`)]
 }
 
-async function toExample(c: string): Promise<Library.Example> {
-  const e = example()
+async function example(c: string): Promise<Library.Example> {
+  const e = code.example()
   e.syntax = "js"
   e.code = c
   const [m] = await model.runModel(c)
