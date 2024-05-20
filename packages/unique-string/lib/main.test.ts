@@ -1,6 +1,6 @@
 import {is, unreachable} from "uvu/assert"
 import {test} from "uvu"
-import {uniqueString} from "./main.js"
+import {uniqueString} from "./main.ts"
 
 test("generates a string", () => {
   const s = uniqueString()

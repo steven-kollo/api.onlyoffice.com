@@ -1,6 +1,6 @@
 import {is} from "uvu/assert"
 import {test} from "uvu"
-import {builder, fileType} from "./main.js"
+import {builder, fileType} from "./main.ts"
 
 declare global {
   // eslint-disable-next-line no-var, @typescript-eslint/no-explicit-any

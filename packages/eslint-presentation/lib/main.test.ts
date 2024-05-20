@@ -1,6 +1,6 @@
 import {is} from "uvu/assert"
 import {test} from "uvu"
-import {ESLint} from "./main.js"
+import {ESLint} from "./main.ts"
 
 test("lints JavaScript source", async () => {
   const e = new ESLint()

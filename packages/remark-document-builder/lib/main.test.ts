@@ -5,7 +5,7 @@ import remarkRehype from "remark-rehype"
 import {unified} from "unified"
 import {is, unreachable} from "uvu/assert"
 import {test} from "uvu"
-import {remarkDocumentBuilder} from "./main.js"
+import {remarkDocumentBuilder} from "./main.ts"
 import {visit} from "unist-util-visit"
 
 test("does nothing if no option is specified", async () => {

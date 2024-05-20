@@ -1,7 +1,7 @@
 // import {toHtml} from "hast-util-to-html"
 import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
-import {documentBuilder} from "./main.js"
+import {documentBuilder} from "./main.ts"
 
 test("initializes a document-builder with correct order of properties", () => {
   const d = documentBuilder()

@@ -1,7 +1,7 @@
 import {StringWritable} from "@onlyoffice/stream-string"
 import {is, match} from "uvu/assert"
 import {test} from "uvu"
-import {Console} from "./main.js"
+import {Console} from "./main.ts"
 
 test("logs to stdout", () => {
   const o = new StringWritable()

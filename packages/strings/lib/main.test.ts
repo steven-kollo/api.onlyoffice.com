@@ -1,6 +1,6 @@
 import {is} from "uvu/assert"
 import {test} from "uvu"
-import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "./main.js"
+import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "./main.ts"
 
 test("firstParagraph() returns an empty string for an empty content", () => {
   const e = firstParagraph("")

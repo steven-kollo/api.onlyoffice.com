@@ -3,7 +3,7 @@ import {URL, fileURLToPath} from "node:url"
 import {StringWritable} from "@onlyoffice/stream-string"
 import {is} from "uvu/assert"
 import {test} from "uvu"
-import {jq} from "./main.js"
+import {jq} from "./main.ts"
 
 test("executes jq", async () => {
   const f = join(fixturesDir(), "000.json")

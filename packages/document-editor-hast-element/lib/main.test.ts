@@ -2,7 +2,7 @@ import type {DocumentEditorConfig} from "@onlyoffice/document-editor-html-elemen
 import {toHtml} from "hast-util-to-html"
 import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
-import {documentEditor} from "./main.js"
+import {documentEditor} from "./main.ts"
 
 test("initializes a document-editor with correct orders", () => {
   const e = documentEditor()
