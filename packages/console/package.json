@@ -3,7 +3,7 @@
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {
-    "test": "c8 --reporter html --reporter text tsx ./node_modules/uvu/bin.js lib ^.*\\.test\\.ts$"
+    "test": "c8 --reporter html --reporter text tsx node_modules/uvu/bin.js lib ^.*\\.test\\.ts$"
   },
   "devDependencies": {
     "@onlyoffice/stream-string": "workspace:^",
