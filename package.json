@@ -6,7 +6,7 @@
     "build": "pnpm make build",
     "lint": "eslint .",
     "make": "tsx ./makefile.ts",
-    "test": "tsx ./node_modules/uvu/bin.js ./ ^.*\\.test\\.ts$"
+    "test": "pnpm make test"
   },
   "devDependencies": {
     "@eslint/js": "^9.1.1",
