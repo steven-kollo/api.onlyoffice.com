@@ -12,6 +12,7 @@ import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
 import {ESLint} from "@onlyoffice/eslint-presentation"
 import type {Catharsis, Doclet, DocletParam} from "@onlyoffice/jsdoc"
 import * as tokenizer from "@onlyoffice/library-declaration/tokenizer.ts"
+import * as library from "@onlyoffice/library-declaration"
 import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "@onlyoffice/strings"
 import languagedetection from "@vscode/vscode-languagedetection"
 import type {ListItem} from "mdast"
@@ -118,8 +119,8 @@ export class FirstIteration extends AsyncTransform {
     const u1 = ui(u0)
 
     if (u1 !== u0) {
-      const r0 = reference(u0)
-      const r1 = reference(u1)
+      const r0 = library.reference(u0)
+      const r1 = library.reference(u1)
 
       const i0 = b.indexes[u0]
       if (i0 === undefined) {
@@ -225,7 +226,7 @@ export class SecondIteration extends AsyncTransform {
         }
 
         for (const e of r.events) {
-          const r = reference(e)
+          const r = library.reference(e)
           a.push(r)
         }
       }
@@ -238,7 +239,7 @@ export class SecondIteration extends AsyncTransform {
         }
 
         for (const e of r.extendsBy) {
-          const r = reference(e)
+          const r = library.reference(e)
           a.push(r)
         }
       }
@@ -251,7 +252,7 @@ export class SecondIteration extends AsyncTransform {
         }
 
         for (const e of r.methods) {
-          const r = reference(e)
+          const r = library.reference(e)
           a.push(r)
         }
       }
@@ -478,7 +479,7 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
   const pa: Library.Declaration[] = []
 
   const [d, ...errs0] = await toDeclarationNode(dc)
-  const cl = classDeclaration(d)
+  const cl = library.classDeclaration(d)
 
   if (dc.augments && dc.augments.length !== 0) {
     let ex = cl.extends
@@ -488,7 +489,7 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
     }
 
     for (const a of dc.augments) {
-      const r = reference(a)
+      const r = library.reference(a)
       ex.push(r)
     }
   }
@@ -504,7 +505,7 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
       const [p] = await toPropertyDeclaration(cl, dp)
       pa.push(p)
 
-      const r = reference(p.id)
+      const r = library.reference(p.id)
       pr.push(r)
     }
   }
@@ -518,32 +519,17 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
     cl.constructors = cs
   }
 
-  const r = reference(cd.id)
+  const r = library.reference(cd.id)
   cs.push(r)
 
   return [[cl, ...pa], ...errs0, ...errs1]
-}
-
-function classDeclaration(d: Library.DeclarationNode): Library.ClassDeclaration {
-  return {
-    ...d,
-    kind: "class",
-    constructors: undefined,
-    events: undefined,
-    extends: undefined,
-    extendsBy: undefined,
-    instanceMethods: undefined,
-    instanceProperties: undefined,
-    typeMethods: undefined,
-    typeProperties: undefined
-  }
 }
 
 async function toConstructorDeclaration(dn: Library.DeclarationNode, dc: Doclet): Promise<[Library.ConstructorDeclaration, ...Error[]]> {
   dc = {...dc, memberof: dn.id, name: "constructor"}
   const [[f], ...errs0] = await toFunctionDeclarationUnits(dc)
   const [d, ...errs1] = await toDeclarationNode(dc)
-  const c = constructDeclaration(f, d)
+  const c = library.constructDeclaration(f, d)
 
   if (dc.params && dc.params.length !== 0) {
     c.type.parameters = dc.params.map((p) => {
@@ -554,10 +540,6 @@ async function toConstructorDeclaration(dn: Library.DeclarationNode, dc: Doclet)
   }
 
   return [c, ...errs0, ...errs1]
-}
-
-function constructDeclaration(f: Library.FunctionType, d: Library.DeclarationNode): Library.ConstructorDeclaration {
-  return {...d, kind: "constructor", type: f}
 }
 
 async function toPropertyDeclaration(dn: Library.DeclarationNode, dp: DocletParam): Promise<[Library.PropertyDeclaration, ...Error[]]> {
@@ -572,37 +554,25 @@ async function toPropertyDeclaration(dn: Library.DeclarationNode, dp: DocletPara
     v.description = serializeString(d.description)
   }
 
-  return [propertyDeclaration(v, d), ...errs0, ...errs1]
-}
-
-function propertyDeclaration(v: Library.Value, d: Library.DeclarationNode): Library.PropertyDeclaration {
-  return {...d, kind: "property", scope: "instance", ...v}
+  return [library.propertyDeclaration(v, d), ...errs0, ...errs1]
 }
 
 async function toEventDeclaration(dc: Doclet): Promise<[[Library.EventDeclaration], ...Error[]]> {
   const [[f, d], ...errs] = await toFunctionDeclarationUnits(dc)
-  return [[eventDeclaration(f, d)], ...errs]
-}
-
-function eventDeclaration(f: Library.FunctionType, d: Library.DeclarationNode): Library.EventDeclaration {
-  return {...d, kind: "event", type: f}
+  return [[library.eventDeclaration(f, d)], ...errs]
 }
 
 async function toFunctionDeclaration(dc: Doclet): Promise<[[Library.MethodDeclaration | Library.TypeDeclaration], ...Error[]]> {
   const [[f, d], ...errs] = await toFunctionDeclarationUnits(dc)
   if (!d.parent) {
-    return [[typeDeclaration(f, d)], ...errs]
+    return [[library.typeDeclaration(f, d)], ...errs]
   }
-  return [[methodDeclaration(f, d)], ...errs]
-}
-
-function methodDeclaration(f: Library.FunctionType, d: Library.DeclarationNode): Library.MethodDeclaration {
-  return {...d, kind: "method", scope: "instance", type: f}
+  return [[library.methodDeclaration(f, d)], ...errs]
 }
 
 async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.FunctionType, Library.DeclarationNode], ...Error[]]> {
-  const t = typeNode()
-  const f = functionType(t)
+  const t = library.typeNode()
+  const f = library.functionType(t)
   const [d, ...errs] = await toDeclarationNode(dc)
 
   if (dc.params && dc.params.length !== 0) {
@@ -620,7 +590,7 @@ async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.Functio
     const [t, ...e] = toVoidableType(r)
     errs.push(...e)
 
-    const fr = functionReturns(t)
+    const fr = library.functionReturns(t)
     if (r.description) {
       let s = omitSingleListItem(r.description)
       s = serializeString(s)
@@ -650,18 +620,14 @@ async function toTypeDeclaration(dc: Doclet): Promise<[[Library.TypeDeclaration]
   }
 
   const [d, ...errs1] = await toDeclarationNode(dc)
-  const td = typeDeclaration(t, d)
+  const td = library.typeDeclaration(t, d)
 
   return [[td], ...errs0, ...errs1]
 }
 
-function typeDeclaration(t: Library.Type, d: Library.DeclarationNode): Library.TypeDeclaration {
-  return {...d, kind: "type", type: t}
-}
-
 async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, ...Error[]]> {
   const errs: Error[] = []
-  const d = declarationNode()
+  const d = library.declarationNode()
 
   if (!dc.name) {
     errs.push(new Error("Doclet has no name"))
@@ -673,7 +639,7 @@ async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, 
 
   if (dc.memberof) {
     d.id = `${dc.memberof}#${d.id}`
-    d.parent = reference(dc.memberof)
+    d.parent = library.reference(dc.memberof)
   }
 
   [d.summary, d.description] = resolveAbstract(dc)
@@ -702,26 +668,9 @@ async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, 
   return [d, ...errs]
 }
 
-function declarationNode(): Library.DeclarationNode {
-  return {
-    id: "",
-    kind: "",
-    title: "",
-    summary: undefined,
-    description: undefined,
-    parent: undefined,
-    identifier: "",
-    signature: undefined,
-    examples: undefined,
-    overloads: undefined,
-    overloadsBy: undefined,
-    tryIt: undefined
-  }
-}
-
 function toValue(dp: DocletParam): [Library.Value, ...Error[]] {
   const [t, ...errs] = toAnyableType(dp)
-  const v = value(t)
+  const v = library.value(t)
 
   if (!dp.name) {
     errs.push(new Error("DocletParam has no name"))
@@ -742,16 +691,6 @@ function toValue(dp: DocletParam): [Library.Value, ...Error[]] {
   return [v, ...errs]
 }
 
-function value(t: Library.Type): Library.Value {
-  return {
-    identifier: "",
-    signature: undefined,
-    description: undefined,
-    default: undefined,
-    type: t
-  }
-}
-
 function toAnyableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
   if (!d.type || !d.type.parsedType) {
     return toAnyType()
@@ -760,8 +699,8 @@ function toAnyableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
 }
 
 function toAnyType(): [Library.AnyType, ...Error[]] {
-  const t = typeNode()
-  return [anyType(t)]
+  const t = library.typeNode()
+  return [library.anyType(t)]
 }
 
 function toVoidableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
@@ -772,13 +711,13 @@ function toVoidableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
 }
 
 function toVoidType(): [Library.VoidType, ...Error[]] {
-  const t = typeNode()
-  return [voidType(t)]
+  const t = library.typeNode()
+  return [library.voidType(t)]
 }
 
 function toLiteralType(value: Library.LiteralType["value"]): [Library.LiteralType, ...Error[]] {
-  const t = typeNode()
-  return [literalType(t, value)]
+  const t = library.typeNode()
+  return [library.literalType(t, value)]
 }
 
 function toType(ca: Catharsis): [Library.Type, ...Error[]] {
@@ -793,8 +732,8 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
 
   if (ca.type === "FunctionType") {
     // https://github.com/jsdoc/jsdoc/issues/1955/
-    const t = typeNode()
-    return [functionType(t)]
+    const t = library.typeNode()
+    return [library.functionType(t)]
   }
 
   if (ca.type === "NameExpression") {
@@ -803,44 +742,44 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
       return [t, ...errs, new Error("NameExpression has no name")]
     }
 
-    const t = typeNode()
+    const t = library.typeNode()
 
     switch (ca.name) {
     case "Array":
     case "array":
-      return [arrayType(t)]
+      return [library.arrayType(t)]
     case "Boolean":
     case "boolean":
-      return [passthroughType(t, ca.name)]
+      return [library.passthroughType(t, ca.name)]
     case "Number":
     case "number":
-      return [passthroughType(t, ca.name)]
+      return [library.passthroughType(t, ca.name)]
     case "Object":
     case "object":
-      return [objectType(t)]
+      return [library.objectType(t)]
     case "String":
     case "string":
-      return [passthroughType(t, ca.name)]
+      return [library.passthroughType(t, ca.name)]
     default:
       // continue
     }
 
     if (isNumberLiteral(ca.name)) {
       const v = Number(ca.name)
-      return [literalType(t, v)]
+      return [library.literalType(t, v)]
     }
 
     if (isStringLiteral(ca.name)) {
       // const v = omitStringQuotes(ca.name)
-      return [literalType(t, ca.name)]
+      return [library.literalType(t, ca.name)]
     }
 
-    return [reference(ca.name)]
+    return [library.reference(ca.name)]
   }
 
   if (ca.type === "NullLiteral") {
-    const t = typeNode()
-    return [literalType(t, null)]
+    const t = library.typeNode()
+    return [library.literalType(t, null)]
   }
 
   if (ca.type === "RecordType") {
@@ -901,8 +840,8 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
 
     const errs: Error[] = []
 
-    const t = typeNode()
-    const u = unionType(t)
+    const t = library.typeNode()
+    const u = library.unionType(t)
     u.types = ca.elements.map((c) => {
       const [t, ...e] = toType(c)
       errs.push(...e)
@@ -913,65 +852,17 @@ function toType(ca: Catharsis): [Library.Type, ...Error[]] {
   }
 
   if (ca.type === "UndefinedLiteral") {
-    const t = typeNode()
-    return [literalType(t, undefined)]
+    const t = library.typeNode()
+    return [library.literalType(t, undefined)]
   }
 
   if (ca.type === "UnknownLiteral") {
-    const t = typeNode()
-    return [unknownType(t)]
+    const t = library.typeNode()
+    return [library.unknownType(t)]
   }
 
   const [t, ...errs] = toAnyType()
   return [t, ...errs, new Error(`Unknown type: ${ca.type}`)]
-}
-
-function anyType(t: Library.TypeNode): Library.AnyType {
-  return {...t, type: "any"}
-}
-
-function arrayType(t: Library.TypeNode): Library.ArrayType {
-  return {...t, type: "array", items: undefined}
-}
-
-function functionType(t: Library.TypeNode): Library.FunctionType {
-  return {...t, type: "function", parameters: undefined, returns: undefined}
-}
-
-function functionReturns(t: Library.Type): Library.FunctionReturns {
-  return {signature: undefined, description: undefined, type: t}
-}
-
-function literalType(t: Library.TypeNode, value: Library.LiteralType["value"]): Library.LiteralType {
-  return {...t, type: "literal", value}
-}
-
-function objectType(t: Library.TypeNode): Library.ObjectType {
-  return {...t, type: "object", properties: undefined, methods: undefined}
-}
-
-function passthroughType(t: Library.TypeNode, value: Library.PassthroughType["value"]): Library.PassthroughType {
-  return {...t, type: "passthrough", value}
-}
-
-function unionType(t: Library.TypeNode): Library.UnionType {
-  return {...t, type: "union", types: []}
-}
-
-function unknownType(t: Library.TypeNode): Library.UnknownType {
-  return {...t, type: "unknown"}
-}
-
-function voidType(t: Library.TypeNode): Library.VoidType {
-  return {...t, type: "void"}
-}
-
-function typeNode(): Library.TypeNode {
-  return {type: ""}
-}
-
-function reference(id: Library.Reference["id"]): Library.Reference {
-  return {id}
 }
 
 async function toExample(c: string): Promise<Library.Example> {
