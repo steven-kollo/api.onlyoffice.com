@@ -743,6 +743,9 @@ importers:
       '@onlyoffice/jq':
         specifier: workspace:^
         version: link:../packages/jq
+      '@onlyoffice/jsdoc-library':
+        specifier: workspace:^
+        version: link:../packages/jsdoc-library
       '@onlyoffice/stream-string':
         specifier: workspace:^
         version: link:../packages/stream-string
