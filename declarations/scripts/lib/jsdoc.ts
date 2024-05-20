@@ -7,9 +7,10 @@
 import {Readable, Writable} from "node:stream"
 import {AsyncTransform} from "@onlyoffice/async-transform"
 import type * as Library from "@onlyoffice/documentation-declarations-types/library.ts"
-import type {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
+import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
 import {ESLint} from "@onlyoffice/eslint-presentation"
 import type {Catharsis, Doclet, DocletParam} from "@onlyoffice/jsdoc"
+import * as tokenizer from "@onlyoffice/library-declaration/tokenizer.ts"
 import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "@onlyoffice/strings"
 import languagedetection from "@vscode/vscode-languagedetection"
 import type {ListItem} from "mdast"
@@ -18,7 +19,6 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import {selectAll} from "unist-util-select"
 import {CONTINUE, SKIP, visit} from "unist-util-visit"
 import {console} from "./console.ts"
-import {toDeclarationTokens, toTypeTokens} from "./tokenizer.ts"
 
 const {ModelOperations} = languagedetection
 const model = new ModelOperations()
@@ -277,7 +277,7 @@ export class ThirdIteration extends AsyncTransform {
     const m = JSON.stringify({id: d.id})
     console.log(`Start processing '${m}' at third iteration`)
 
-    d.signature = toDeclarationTokens(d)
+    d.signature = tokenizer.declaration(d)
     if (d.signature.length === 0) {
       d.signature = undefined
     }
@@ -314,13 +314,13 @@ export class ThirdIteration extends AsyncTransform {
     if (t.parameters) {
       for (const p of t.parameters) {
         // Conceptually there should be toValueTokens.
-        p.signature = toTypeTokens(p.type)
+        p.signature = tokenizer.type(p.type)
         this._sig(p.signature)
       }
     }
 
     if (t.returns) {
-      t.returns.signature = toTypeTokens(t.returns.type)
+      t.returns.signature = tokenizer.type(t.returns.type)
       this._sig(t.returns.signature)
     }
   }

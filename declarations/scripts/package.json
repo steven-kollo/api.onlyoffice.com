@@ -22,10 +22,12 @@
   "devDependencies": {
     "@onlyoffice/async-transform": "workspace:^",
     "@onlyoffice/console": "workspace:^",
+    "@onlyoffice/declaration-tokenizer": "workspace:^",
     "@onlyoffice/documentation-declarations-types": "workspace:^",
     "@onlyoffice/documentation-utils": "workspace:^",
     "@onlyoffice/eslint-presentation": "workspace:^",
     "@onlyoffice/jsdoc": "workspace:^",
+    "@onlyoffice/library-declaration": "workspace:^",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/mdast": "^4.0.3",
     "@types/node": "^20.11.5",
