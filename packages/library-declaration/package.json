@@ -4,6 +4,7 @@
   "type": "module",
   "main": "lib/main.ts",
   "exports": {
+    ".": "./lib/main.ts",
     "./tokenizer.ts": "./lib/tokenizer.ts"
   },
   "scripts": {
