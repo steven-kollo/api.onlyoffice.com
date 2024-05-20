@@ -480,6 +480,64 @@ importers:
 
   packages/jsdoc: {}
 
+  packages/jsdoc-library:
+    dependencies:
+      '@onlyoffice/async-transform':
+        specifier: workspace:^
+        version: link:../async-transform
+      '@onlyoffice/console':
+        specifier: workspace:^
+        version: link:../console
+      '@onlyoffice/declaration-code-example':
+        specifier: workspace:^
+        version: link:../declaration-code-example
+      '@onlyoffice/eslint-presentation':
+        specifier: workspace:^
+        version: link:../eslint-presentation
+      '@onlyoffice/library-declaration':
+        specifier: workspace:^
+        version: link:../library-declaration
+      '@onlyoffice/strings':
+        specifier: workspace:^
+        version: link:../strings
+      '@vscode/vscode-languagedetection':
+        specifier: ^1.0.22
+        version: 1.0.22
+      mdast-util-from-markdown:
+        specifier: ^2.0.0
+        version: 2.0.0
+      mdast-util-to-markdown:
+        specifier: ^2.1.0
+        version: 2.1.0
+      unist-util-select:
+        specifier: ^5.1.0
+        version: 5.1.0
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
+    devDependencies:
+      '@onlyoffice/declaration-tokenizer':
+        specifier: workspace:^
+        version: link:../declaration-tokenizer
+      '@onlyoffice/jsdoc':
+        specifier: workspace:^
+        version: link:../jsdoc
+      '@types/mdast':
+        specifier: ^4.0.3
+        version: 4.0.3
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tsx:
+        specifier: ^4.10.5
+        version: 4.10.5
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
   packages/library-declaration:
     devDependencies:
       '@onlyoffice/declaration-code-example':
