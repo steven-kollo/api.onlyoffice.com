@@ -3,6 +3,9 @@
   "private": true,
   "type": "module",
   "main": "lib/main.ts",
+  "exports": {
+    "./tokenizer.ts": "./lib/tokenizer.ts"
+  },
   "scripts": {
     "test": "c8 --reporter html --reporter text tsx node_modules/uvu/bin.js lib ^.*\\.test\\.ts$"
   },
