@@ -108,9 +108,9 @@ importers:
       '@onlyoffice/eslint-presentation':
         specifier: workspace:^
         version: link:../../packages/eslint-presentation
-      '@onlyoffice/jsdoc-types':
+      '@onlyoffice/jsdoc':
         specifier: workspace:^
-        version: link:../../packages/jsdoc-types
+        version: link:../../packages/jsdoc
       '@sindresorhus/slugify':
         specifier: ^2.2.1
         version: 2.2.1
@@ -463,22 +463,7 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  packages/jsdoc-types: {}
-
-  packages/jsdoc-utils:
-    devDependencies:
-      '@onlyoffice/jsdoc-types':
-        specifier: workspace:^
-        version: link:../jsdoc-types
-      tsx:
-        specifier: ^4.10.5
-        version: 4.10.5
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
+  packages/jsdoc: {}
 
   packages/rehype-preact:
     dependencies:

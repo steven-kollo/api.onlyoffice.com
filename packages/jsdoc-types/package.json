@@ -1,6 +1,0 @@
-{
-  "name": "@onlyoffice/jsdoc-types",
-  "private": true,
-  "type": "module",
-  "types": "lib/types.d.ts"
-}

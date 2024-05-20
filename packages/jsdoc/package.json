@@ -1,0 +1,6 @@
+{
+  "name": "@onlyoffice/jsdoc",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.ts"
+}

@@ -22,6 +22,29 @@ export interface Doclet {
   type?: DocletType
 }
 
+export function doclet(): Doclet {
+  return {
+    augments: undefined,
+    description: undefined,
+    examples: undefined,
+    fires: undefined,
+    inherits: undefined,
+    kind: undefined,
+    longname: undefined,
+    memberof: undefined,
+    meta: undefined,
+    name: undefined,
+    nullable: undefined,
+    optional: undefined,
+    params: undefined,
+    properties: undefined,
+    returns: undefined,
+    scope: undefined,
+    summary: undefined,
+    type: undefined
+  }
+}
+
 /**
  * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L328 JSDoc Reference}
  */
