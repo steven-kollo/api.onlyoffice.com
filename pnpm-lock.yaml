@@ -566,6 +566,9 @@ importers:
       remark-rehype:
         specifier: ^11.1.0
         version: 11.1.0
+      tsx:
+        specifier: ^4.10.5
+        version: 4.10.5
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
