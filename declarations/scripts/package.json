@@ -13,9 +13,7 @@
   },
   "dependencies": {
     "@onlyoffice/strings": "workspace:^",
-    "@stylistic/eslint-plugin-js": "^1.5.4",
     "@vscode/vscode-languagedetection": "^1.0.22",
-    "eslint": "^8.56.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-to-markdown": "^2.1.0",
     "unist-util-select": "^5.1.0",
@@ -29,7 +27,6 @@
     "@onlyoffice/eslint-presentation": "workspace:^",
     "@onlyoffice/jsdoc": "workspace:^",
     "@sindresorhus/slugify": "^2.2.1",
-    "@types/eslint": "^8.56.2",
     "@types/mdast": "^4.0.3",
     "@types/node": "^20.11.5",
     "openapi-types": "^12.1.3",
