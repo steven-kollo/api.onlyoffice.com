@@ -1,5 +1,5 @@
-import type * as Library from "@onlyoffice/documentation-declarations-types/library.ts"
-import type {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
+import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
+import type * as Library from "@onlyoffice/library-declaration"
 
 export function createData(list, retrieve) {
   return {

@@ -1,7 +1,7 @@
+import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
 import {Badge} from "@onlyoffice/documentation-ui-kit"
-import type * as Library from "@onlyoffice/documentation-declarations-types/library.js"
-import type {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.ts"
-import {toReferenceToken} from "@onlyoffice/documentation-declarations-scripts/tokenizer.ts"
+import type * as Library from "@onlyoffice/library-declaration"
+import {referenceToken, tokenNode} from "@onlyoffice/declaration-tokenizer"
 import {useContext} from "preact/hooks"
 import type {JSX} from "preact"
 import {Fragment, createContext, h} from "preact"
@@ -511,7 +511,8 @@ interface FancyTitleParameters {
 
 function FancyTitle({id, signature}: FancyTitleParameters): JSX.Element {
   const {onLink} = useContext(Context)
-  const t = toReferenceToken()
+  const n = tokenNode()
+  const t = referenceToken(n)
   t.id = id
   const c = signature.map((t) => <FancyTitleToken token={t} />)
   return <a class="dr" href={onLink(t)}><code>{c}</code></a>

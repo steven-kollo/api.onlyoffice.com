@@ -799,6 +799,9 @@ importers:
       '@mdx-js/mdx':
         specifier: ^3.0.0
         version: 3.0.1
+      '@onlyoffice/declaration-tokenizer':
+        specifier: workspace:^
+        version: link:../packages/declaration-tokenizer
       '@onlyoffice/document-builder-hast-element':
         specifier: workspace:^
         version: link:../packages/document-builder-hast-element
@@ -844,6 +847,9 @@ importers:
       '@onlyoffice/eleventy-yaml':
         specifier: workspace:^
         version: link:../packages/eleventy-yaml
+      '@onlyoffice/library-declaration':
+        specifier: workspace:^
+        version: link:../packages/library-declaration
       '@onlyoffice/rehype-preact':
         specifier: workspace:^
         version: link:../packages/rehype-preact
