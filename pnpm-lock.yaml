@@ -93,6 +93,12 @@ importers:
       '@onlyoffice/console':
         specifier: workspace:^
         version: link:../../packages/console
+      '@onlyoffice/declaration-code-example':
+        specifier: workspace:^
+        version: link:../../packages/declaration-code-example
+      '@onlyoffice/declaration-tokenizer':
+        specifier: workspace:^
+        version: link:../../packages/declaration-tokenizer
       '@onlyoffice/documentation-declarations-types':
         specifier: workspace:^
         version: link:../types
@@ -105,6 +111,9 @@ importers:
       '@onlyoffice/jsdoc':
         specifier: workspace:^
         version: link:../../packages/jsdoc
+      '@onlyoffice/library-declaration':
+        specifier: workspace:^
+        version: link:../../packages/library-declaration
       '@sindresorhus/slugify':
         specifier: ^2.2.1
         version: 2.2.1
