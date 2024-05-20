@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/declaration-tokenizer-types",
+  "name": "@onlyoffice/declaration-tokenizer",
   "type": "module",
   "main": "lib/main.ts",
   "scripts": {
