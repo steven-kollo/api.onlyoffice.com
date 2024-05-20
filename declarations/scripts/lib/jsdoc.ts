@@ -7,7 +7,7 @@
 import {Readable, Writable} from "node:stream"
 import {AsyncTransform} from "@onlyoffice/async-transform"
 import type * as Library from "@onlyoffice/documentation-declarations-types/library.ts"
-import {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
+import type {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
 import {ESLint} from "@onlyoffice/eslint-presentation"
 import type {Catharsis, Doclet, DocletParam} from "@onlyoffice/jsdoc"
 import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "@onlyoffice/strings"
@@ -16,7 +16,7 @@ import type {ListItem} from "mdast"
 import {fromMarkdown} from "mdast-util-from-markdown"
 import {toMarkdown} from "mdast-util-to-markdown"
 import {selectAll} from "unist-util-select"
-import {SKIP, visit} from "unist-util-visit"
+import {CONTINUE, SKIP, visit} from "unist-util-visit"
 import {console} from "./console.ts"
 import {toDeclarationTokens, toTypeTokens} from "./tokenizer.ts"
 
@@ -59,7 +59,7 @@ export class FirstIteration extends AsyncTransform {
     console.log(`Finish processing '${m}' at first iteration`)
   }
 
-  _record(d: Library.Declaration) {
+  _record(d: Library.Declaration): void {
     const b = this._c.next
 
     if (d.kind === "class") {
@@ -106,12 +106,10 @@ export class FirstIteration extends AsyncTransform {
       }
 
       mp.methods.add(d.id)
-
-      return
     }
   }
 
-  _overload(d: Library.Declaration) {
+  _overload(d: Library.Declaration): void {
     const b = this._c.next
 
     const u0 = d.id
@@ -209,7 +207,7 @@ export class SecondIteration extends AsyncTransform {
     console.log(`Finish processing '${m}' at second iteration`)
   }
 
-  _populate(d: Library.Declaration) {
+  _populate(d: Library.Declaration): void {
     const b = this._c.current
 
     const r = b.records[d.id]
@@ -218,7 +216,7 @@ export class SecondIteration extends AsyncTransform {
     }
 
     if (d.kind === "class") {
-      if (r.events.size > 0) {
+      if (r.events.size !== 0) {
         let a = d.events
         if (!a) {
           a = []
@@ -231,7 +229,7 @@ export class SecondIteration extends AsyncTransform {
         }
       }
 
-      if (r.extendsBy.size > 0) {
+      if (r.extendsBy.size !== 0) {
         let a = d.extendsBy
         if (!a) {
           a = []
@@ -244,7 +242,7 @@ export class SecondIteration extends AsyncTransform {
         }
       }
 
-      if (r.methods.size > 0) {
+      if (r.methods.size !== 0) {
         let a = d.instanceMethods
         if (!a) {
           a = []
@@ -256,8 +254,6 @@ export class SecondIteration extends AsyncTransform {
           a.push(r)
         }
       }
-
-      return
     }
   }
 
@@ -314,7 +310,7 @@ export class ThirdIteration extends AsyncTransform {
     console.log(`Finish processing '${m}' at third iteration`)
   }
 
-  _func(t: Library.FunctionType) {
+  _func(t: Library.FunctionType): void {
     if (t.parameters) {
       for (const p of t.parameters) {
         // Conceptually there should be toValueTokens.
@@ -329,11 +325,10 @@ export class ThirdIteration extends AsyncTransform {
     }
   }
 
-  _sig(s: Tokenizer.Token[]) {
+  _sig(s: Tokenizer.Token[]): void {
     const b = this._c.current
     for (const t of s) {
       if (t.type === "reference" && t.text === "") {
-
         const i = b.indexes[t.id]
         if (i === undefined) {
           t.text = t.id
@@ -372,11 +367,11 @@ export class Cache {
     this.buffers = []
   }
 
-  setup() {
+  setup(): void {
     this.buffers = [cacheBuffer(), cacheBuffer()]
   }
 
-  step() {
+  step(): void {
     this.buffers.pop()
     this.buffers.unshift(cacheBuffer())
   }
@@ -484,7 +479,7 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
   const [d, ...errs0] = await toDeclarationNode(dc)
   const cl = classDeclaration(d)
 
-  if (dc.augments && dc.augments.length > 0) {
+  if (dc.augments && dc.augments.length !== 0) {
     let ex = cl.extends
     if (!ex) {
       ex = []
@@ -497,7 +492,7 @@ async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaratio
     }
   }
 
-  if (dc.properties && dc.properties.length > 0) {
+  if (dc.properties && dc.properties.length !== 0) {
     let pr = cl.instanceProperties
     if (!pr) {
       pr = []
@@ -549,7 +544,7 @@ async function toConstructorDeclaration(dn: Library.DeclarationNode, dc: Doclet)
   const [d, ...errs1] = await toDeclarationNode(dc)
   const c = constructDeclaration(f, d)
 
-  if (dc.params && dc.params.length > 0) {
+  if (dc.params && dc.params.length !== 0) {
     c.type.parameters = dc.params.map((p) => {
       const [v, ...e] = toValue(p)
       errs1.push(...e)
@@ -609,7 +604,7 @@ async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.Functio
   const f = functionType(t)
   const [d, ...errs] = await toDeclarationNode(dc)
 
-  if (dc.params && dc.params.length > 0) {
+  if (dc.params && dc.params.length !== 0) {
     f.parameters = dc.params.map((p) => {
       const [v, ...e] = toValue(p)
       errs.push(...e)
@@ -617,9 +612,9 @@ async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.Functio
     })
   }
 
-  if (dc.returns && dc.returns.length > 0) {
+  if (dc.returns && dc.returns.length !== 0) {
     // JSDoc allows multiple @returns, in practice, the first one is used only.
-    const r = dc.returns[0]
+    const [r] = dc.returns
 
     const [t, ...e] = toVoidableType(r)
     errs.push(...e)
@@ -644,7 +639,7 @@ async function toTypeDeclaration(dc: Doclet): Promise<[[Library.TypeDeclaration]
     !("id" in t) &&
     t.type === "object" &&
     dc.properties &&
-    dc.properties.length > 0
+    dc.properties.length !== 0
   ) {
     t.properties = dc.properties.map((p) => {
       const [v, ...e] = toValue(p)
@@ -680,7 +675,7 @@ async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, 
     d.parent = reference(dc.memberof)
   }
 
-  ;[d.summary, d.description] = resolveAbstract(dc)
+  [d.summary, d.description] = resolveAbstract(dc)
   if (!d.summary) {
     d.summary = undefined
   }
@@ -699,7 +694,7 @@ async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, 
     }
   }
 
-  if (dc.examples && dc.examples.length > 0) {
+  if (dc.examples && dc.examples.length !== 0) {
     d.examples = await Promise.all(dc.examples.map(toExample))
   }
 
@@ -993,7 +988,7 @@ async function toExample(c: string): Promise<Library.Example> {
   }
   return e
 
-  async function js(x: string) {
+  async function js(x: string): Promise<void> {
     e.syntax = x
     const [r] = await eslint.lintText(c, {filePath: `example.${x}`})
     if (r.output) {
@@ -1047,7 +1042,7 @@ function omitHTMLTags(s: string): string {
 
   visit(t, "html", (_, index, parent) => {
     if (!parent || index === undefined) {
-      return
+      return CONTINUE
     }
     parent.children.splice(index, 1)
     return [SKIP, index]
@@ -1057,9 +1052,9 @@ function omitHTMLTags(s: string): string {
 }
 
 function isNumberLiteral(s: string): boolean {
-  return !isNaN(parseFloat(s))
+  return !Number.isNaN(Number.parseFloat(s))
 }
 
-function omitStringQuotes(s: string): string {
-  return s.slice(1, -1)
-}
+// function omitStringQuotes(s: string): string {
+//   return s.slice(1, -1)
+// }
