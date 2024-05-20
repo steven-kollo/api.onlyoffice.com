@@ -67,59 +67,16 @@ importers:
         version: 20.11.26
 
   declarations/scripts:
-    dependencies:
-      '@onlyoffice/strings':
-        specifier: workspace:^
-        version: link:../../packages/strings
-      '@vscode/vscode-languagedetection':
-        specifier: ^1.0.22
-        version: 1.0.22
-      mdast-util-from-markdown:
-        specifier: ^2.0.0
-        version: 2.0.0
-      mdast-util-to-markdown:
-        specifier: ^2.1.0
-        version: 2.1.0
-      unist-util-select:
-        specifier: ^5.1.0
-        version: 5.1.0
-      unist-util-visit:
-        specifier: ^5.0.0
-        version: 5.0.0
     devDependencies:
-      '@onlyoffice/async-transform':
-        specifier: workspace:^
-        version: link:../../packages/async-transform
       '@onlyoffice/console':
         specifier: workspace:^
         version: link:../../packages/console
-      '@onlyoffice/declaration-code-example':
-        specifier: workspace:^
-        version: link:../../packages/declaration-code-example
-      '@onlyoffice/declaration-tokenizer':
-        specifier: workspace:^
-        version: link:../../packages/declaration-tokenizer
       '@onlyoffice/documentation-declarations-types':
         specifier: workspace:^
         version: link:../types
-      '@onlyoffice/documentation-utils':
-        specifier: workspace:^
-        version: link:../../utils
-      '@onlyoffice/eslint-presentation':
-        specifier: workspace:^
-        version: link:../../packages/eslint-presentation
-      '@onlyoffice/jsdoc':
-        specifier: workspace:^
-        version: link:../../packages/jsdoc
-      '@onlyoffice/library-declaration':
-        specifier: workspace:^
-        version: link:../../packages/library-declaration
       '@sindresorhus/slugify':
         specifier: ^2.2.1
         version: 2.2.1
-      '@types/mdast':
-        specifier: ^4.0.3
-        version: 4.0.3
       '@types/node':
         specifier: ^20.11.5
         version: 20.11.26
