@@ -11,6 +11,6 @@
     "./lib/*"
   ],
   "exclude": [
-    "./lib/*.test.js"
+    "./lib/*.test.ts"
   ]
 }

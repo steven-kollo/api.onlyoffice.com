@@ -12,6 +12,6 @@
     "./makefile.ts"
   ],
   "exclude": [
-    "./lib/*.test.js"
+    "./lib/*.test.ts"
   ]
 }
