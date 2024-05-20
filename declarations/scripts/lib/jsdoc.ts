@@ -6,6 +6,7 @@
 
 import {Readable, Writable} from "node:stream"
 import {AsyncTransform} from "@onlyoffice/async-transform"
+import {example} from "@onlyoffice/declaration-code-example"
 import type * as Library from "@onlyoffice/documentation-declarations-types/library.ts"
 import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
 import {ESLint} from "@onlyoffice/eslint-presentation"
@@ -995,10 +996,6 @@ async function toExample(c: string): Promise<Library.Example> {
       e.code = r.output
     }
   }
-}
-
-function example(): Library.Example {
-  return {syntax: "", code: ""}
 }
 
 function resolveAbstract(dc: Doclet): [string, string] {

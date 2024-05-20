@@ -22,6 +22,7 @@
   "devDependencies": {
     "@onlyoffice/async-transform": "workspace:^",
     "@onlyoffice/console": "workspace:^",
+    "@onlyoffice/declaration-code-example": "workspace:^",
     "@onlyoffice/declaration-tokenizer": "workspace:^",
     "@onlyoffice/documentation-declarations-types": "workspace:^",
     "@onlyoffice/documentation-utils": "workspace:^",
